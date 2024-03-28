@@ -91,9 +91,9 @@ class KafkaClient extends Client
     }
 
     /**
-     * Kafka实例批量删除Group
+     * Kafka实例批量删除消费组
      *
-     * 该接口用于向Kafka实例批量删除Group。
+     * 该接口用于向Kafka实例批量删除消费组。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -286,6 +286,71 @@ class KafkaClient extends Client
     }
 
     /**
+     * 批量删除消息积压诊断报告
+     *
+     * 批量删除消息积压诊断报告
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteMessageDiagnosisReports($request)
+    {
+        return $this->batchDeleteMessageDiagnosisReportsWithHttpInfo($request);
+    }
+
+    public function batchDeleteMessageDiagnosisReportsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/message-diagnosis-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\BatchDeleteMessageDiagnosisReportsResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\BatchDeleteMessageDiagnosisReportsRequest');
+    }
+
+    /**
      * 批量重启或删除实例
      *
      * 批量重启或删除实例。
@@ -418,7 +483,7 @@ class KafkaClient extends Client
      *
      * 创建实例。
      * 
-     * 该接口支持创建按需和包周期两种计费方式的实例。
+     * [该接口支持创建按需和包周期两种计费方式的实例。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -741,6 +806,71 @@ class KafkaClient extends Client
     }
 
     /**
+     * 创建消息积压诊断任务
+     *
+     * 创建消息积压诊断任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createMessageDiagnosisTask($request)
+    {
+        return $this->createMessageDiagnosisTaskWithHttpInfo($request);
+    }
+
+    public function createMessageDiagnosisTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/message-diagnosis-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateMessageDiagnosisTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\CreateMessageDiagnosisTaskRequest');
+    }
+
+    /**
      * 创建实例
      *
      * 创建按需计费类型的Kafka实例。
@@ -805,7 +935,7 @@ class KafkaClient extends Client
     /**
      * Kafka实例开始分区重平衡任务
      *
-     * 该接口用于向Kafka实例提交分区重平衡任务，若成功则返回重平衡任务的job id。
+     * 该接口用于向Kafka实例提交分区重平衡任务或计算重平衡预估时间。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1480,6 +1610,74 @@ class KafkaClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ListInstancesResponse',
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ListInstancesRequest');
+    }
+
+    /**
+     * 查询消息积压诊断报告列表
+     *
+     * 查询消息积压诊断报告列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMessageDiagnosisReports($request)
+    {
+        return $this->listMessageDiagnosisReportsWithHttpInfo($request);
+    }
+
+    public function listMessageDiagnosisReportsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/message-diagnosis-tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ListMessageDiagnosisReportsResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ListMessageDiagnosisReportsRequest');
     }
 
     /**
@@ -2610,6 +2808,74 @@ class KafkaClient extends Client
     }
 
     /**
+     * 消息积压诊断预检查
+     *
+     * 消息积压诊断预检查
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDiagnosisPreCheck($request)
+    {
+        return $this->showDiagnosisPreCheckWithHttpInfo($request);
+    }
+
+    public function showDiagnosisPreCheckWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/diagnosis-check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['group'] !== null) {
+            $queryParams['group'] = $localVarParams['group'];
+        }
+        if ($localVarParams['topic'] !== null) {
+            $queryParams['topic'] = $localVarParams['topic'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowDiagnosisPreCheckResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowDiagnosisPreCheckRequest');
+    }
+
+    /**
      * 查询实例的扩容规格列表
      *
      * 查询实例的扩容规格列表。
@@ -3473,6 +3739,71 @@ class KafkaClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowMaintainWindowsResponse',
             $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowMaintainWindowsRequest');
+    }
+
+    /**
+     * 查询诊断报告详情
+     *
+     * 查询诊断报告详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showMessageDiagnosisReport($request)
+    {
+        return $this->showMessageDiagnosisReportWithHttpInfo($request);
+    }
+
+    public function showMessageDiagnosisReportWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/kafka/instances/{instance_id}/message-diagnosis/{report_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['reportId'] !== null) {
+            $pathParams['report_id'] = $localVarParams['reportId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowMessageDiagnosisReportResponse',
+            $requestType='\HuaweiCloud\SDK\Kafka\V2\Model\ShowMessageDiagnosisReportRequest');
     }
 
     /**
@@ -4597,9 +4928,6 @@ class KafkaClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -4607,7 +4935,7 @@ class KafkaClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json']
+                []
             );
         }
         $headers = array_merge(

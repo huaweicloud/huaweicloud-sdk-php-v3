@@ -62,7 +62,7 @@ class ShowSqlJobDetailResponse implements ModelInterface, ArrayAccess
             'dateFormat' => 'string',
             'timestampFormat' => 'string',
             'compress' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]'
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]'
     ];
 
     /**
@@ -807,7 +807,7 @@ class ShowSqlJobDetailResponse implements ModelInterface, ArrayAccess
     * Gets tags
     *  作业标签
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null
     */
     public function getTags()
     {
@@ -817,7 +817,7 @@ class ShowSqlJobDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]|null $tags 作业标签
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null $tags 作业标签
     *
     * @return $this
     */

@@ -32,7 +32,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'jobCount' => 'int',
-            'jobs' => '\HuaweiCloud\SDK\Dli\V1\Model\ListJobsJobs[]'
+            'jobs' => '\HuaweiCloud\SDK\Dli\V1\Model\SqlJob[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
     * Gets jobs
     *  作业信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ListJobsJobs[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SqlJob[]|null
     */
     public function getJobs()
     {
@@ -292,7 +292,7 @@ class ListSqlJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ListJobsJobs[]|null $jobs 作业信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SqlJob[]|null $jobs 作业信息。
     *
     * @return $this
     */

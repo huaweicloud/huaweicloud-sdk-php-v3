@@ -69,6 +69,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -127,6 +128,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'usedVehicleMarketAddress' => 'string',
             'usedVehicleMarketBankAccount' => 'string',
             'usedVehicleMarketPhone' => 'string',
+            'reverseIssue' => 'bool',
             'remark' => 'string',
             'drawerName' => 'string',
             'type' => 'string',
@@ -185,6 +187,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -243,6 +246,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
         'usedVehicleMarketAddress' => null,
         'usedVehicleMarketBankAccount' => null,
         'usedVehicleMarketPhone' => null,
+        'reverseIssue' => null,
         'remark' => null,
         'drawerName' => null,
         'type' => null,
@@ -322,6 +326,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -380,6 +385,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'usedVehicleMarketAddress' => 'used_vehicle_market_address',
             'usedVehicleMarketBankAccount' => 'used_vehicle_market_bank_account',
             'usedVehicleMarketPhone' => 'used_vehicle_market_phone',
+            'reverseIssue' => 'reverse_issue',
             'remark' => 'remark',
             'drawerName' => 'drawer_name',
             'type' => 'type',
@@ -438,6 +444,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -496,6 +503,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'usedVehicleMarketAddress' => 'setUsedVehicleMarketAddress',
             'usedVehicleMarketBankAccount' => 'setUsedVehicleMarketBankAccount',
             'usedVehicleMarketPhone' => 'setUsedVehicleMarketPhone',
+            'reverseIssue' => 'setReverseIssue',
             'remark' => 'setRemark',
             'drawerName' => 'setDrawerName',
             'type' => 'setType',
@@ -554,6 +562,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     * usedVehicleMarketAddress  二手车市场地址。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketBankAccount  二手车市场银行和账号。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * usedVehicleMarketPhone  二手车市场电话。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    * reverseIssue  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
     * remark  备注
     * drawerName  开票人
     * type  枚举值，机动车销售统一发票或者二手车销售统一发票。 当入参中包含type时返回。
@@ -612,6 +621,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
             'usedVehicleMarketAddress' => 'getUsedVehicleMarketAddress',
             'usedVehicleMarketBankAccount' => 'getUsedVehicleMarketBankAccount',
             'usedVehicleMarketPhone' => 'getUsedVehicleMarketPhone',
+            'reverseIssue' => 'getReverseIssue',
             'remark' => 'getRemark',
             'drawerName' => 'getDrawerName',
             'type' => 'getType',
@@ -726,6 +736,7 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
         $this->container['usedVehicleMarketAddress'] = isset($data['usedVehicleMarketAddress']) ? $data['usedVehicleMarketAddress'] : null;
         $this->container['usedVehicleMarketBankAccount'] = isset($data['usedVehicleMarketBankAccount']) ? $data['usedVehicleMarketBankAccount'] : null;
         $this->container['usedVehicleMarketPhone'] = isset($data['usedVehicleMarketPhone']) ? $data['usedVehicleMarketPhone'] : null;
+        $this->container['reverseIssue'] = isset($data['reverseIssue']) ? $data['reverseIssue'] : null;
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['drawerName'] = isset($data['drawerName']) ? $data['drawerName'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -1928,6 +1939,30 @@ class MvsInvoiceResult implements ModelInterface, ArrayAccess
     public function setUsedVehicleMarketPhone($usedVehicleMarketPhone)
     {
         $this->container['usedVehicleMarketPhone'] = $usedVehicleMarketPhone;
+        return $this;
+    }
+
+    /**
+    * Gets reverseIssue
+    *  二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    *
+    * @return bool|null
+    */
+    public function getReverseIssue()
+    {
+        return $this->container['reverseIssue'];
+    }
+
+    /**
+    * Sets reverseIssue
+    *
+    * @param bool|null $reverseIssue 二手车反向开具标识，True表示是反向开具发票，False表示不是反向开具发票。 当请求参数\"type\"设置为\"auto\"或\"used\"时才返回。
+    *
+    * @return $this
+    */
+    public function setReverseIssue($reverseIssue)
+    {
+        $this->container['reverseIssue'] = $reverseIssue;
         return $this;
     }
 

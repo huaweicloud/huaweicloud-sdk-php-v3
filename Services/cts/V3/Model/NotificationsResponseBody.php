@@ -22,6 +22,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * status  标识关键操作通知状态，包括正常(enabled)，停止(disabled)两种状态。
@@ -37,6 +38,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'notificationName' => 'string',
             'operationType' => 'string',
+            'agencyName' => 'string',
             'operations' => '\HuaweiCloud\SDK\Cts\V3\Model\Operations[]',
             'notifyUserList' => '\HuaweiCloud\SDK\Cts\V3\Model\NotificationUsers[]',
             'status' => 'string',
@@ -52,6 +54,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * status  标识关键操作通知状态，包括正常(enabled)，停止(disabled)两种状态。
@@ -67,6 +70,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'notificationName' => null,
         'operationType' => null,
+        'agencyName' => null,
         'operations' => null,
         'notifyUserList' => null,
         'status' => null,
@@ -103,6 +107,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * status  标识关键操作通知状态，包括正常(enabled)，停止(disabled)两种状态。
@@ -118,6 +123,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'notificationName' => 'notification_name',
             'operationType' => 'operation_type',
+            'agencyName' => 'agency_name',
             'operations' => 'operations',
             'notifyUserList' => 'notify_user_list',
             'status' => 'status',
@@ -133,6 +139,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * status  标识关键操作通知状态，包括正常(enabled)，停止(disabled)两种状态。
@@ -148,6 +155,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'notificationName' => 'setNotificationName',
             'operationType' => 'setOperationType',
+            'agencyName' => 'setAgencyName',
             'operations' => 'setOperations',
             'notifyUserList' => 'setNotifyUserList',
             'status' => 'setStatus',
@@ -163,6 +171,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * status  标识关键操作通知状态，包括正常(enabled)，停止(disabled)两种状态。
@@ -178,6 +187,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'notificationName' => 'getNotificationName',
             'operationType' => 'getOperationType',
+            'agencyName' => 'getAgencyName',
             'operations' => 'getOperations',
             'notifyUserList' => 'getNotifyUserList',
             'status' => 'getStatus',
@@ -231,6 +241,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     }
     const OPERATION_TYPE_CUSTOMIZED = 'customized';
     const OPERATION_TYPE_COMPLETE = 'complete';
+    const AGENCY_NAME_CTS_ADMIN_TRUST = 'cts_admin_trust';
     const STATUS_ENABLED = 'enabled';
     const STATUS_DISABLED = 'disabled';
     const NOTIFICATION_TYPE_SMN = 'smn';
@@ -247,6 +258,18 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
         return [
             self::OPERATION_TYPE_CUSTOMIZED,
             self::OPERATION_TYPE_COMPLETE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAgencyNameAllowableValues()
+    {
+        return [
+            self::AGENCY_NAME_CTS_ADMIN_TRUST,
         ];
     }
 
@@ -294,6 +317,7 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     {
         $this->container['notificationName'] = isset($data['notificationName']) ? $data['notificationName'] : null;
         $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['operations'] = isset($data['operations']) ? $data['operations'] : null;
         $this->container['notifyUserList'] = isset($data['notifyUserList']) ? $data['notifyUserList'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -327,6 +351,20 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getAgencyNameAllowableValues();
+                if (!is_null($this->container['agencyName']) && !in_array($this->container['agencyName'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'agencyName', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -426,6 +464,30 @@ class NotificationsResponseBody implements ModelInterface, ArrayAccess
     public function setOperationType($operationType)
     {
         $this->container['operationType'] = $operationType;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  云服务委托名称。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 云服务委托名称。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

@@ -31,7 +31,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'from' => 'int',
             'total' => 'int',
-            'sessions' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchJobDetailResp[]',
+            'sessions' => '\HuaweiCloud\SDK\Dli\V1\Model\SparkJobSession[]',
             'createTime' => 'int'
     ];
 
@@ -258,7 +258,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     * Gets sessions
     *  批处理作业信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowBatchJobDetailResp[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SparkJobSession[]|null
     */
     public function getSessions()
     {
@@ -268,7 +268,7 @@ class ListSparkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sessions
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowBatchJobDetailResp[]|null $sessions 批处理作业信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SparkJobSession[]|null $sessions 批处理作业信息。
     *
     * @return $this
     */

@@ -22,24 +22,32 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  资源ID标识符。
     * description  实例描述。不支持 <>。
+    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'nameEn' => 'string',
+            'nameCn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  资源ID标识符。
     * description  实例描述。不支持 <>。
+    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'description' => null
+        'description' => null,
+        'nameEn' => null,
+        'nameCn' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  资源ID标识符。
     * description  实例描述。不支持 <>。
+    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'description' => 'description'
+            'description' => 'description',
+            'nameEn' => 'name_en',
+            'nameCn' => 'name_cn'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  资源ID标识符。
     * description  实例描述。不支持 <>。
+    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'nameEn' => 'setNameEn',
+            'nameCn' => 'setNameCn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  资源ID标识符。
     * description  实例描述。不支持 <>。
+    * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'nameEn' => 'getNameEn',
+            'nameCn' => 'getNameCn'
     ];
 
     /**
@@ -159,6 +179,8 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
+        $this->container['nameCn'] = isset($data['nameCn']) ? $data['nameCn'] : null;
     }
 
     /**
@@ -189,6 +211,18 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
                 $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
+            }
+            if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) > 255)) {
+                $invalidProperties[] = "invalid value for 'nameEn', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nameEn', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nameCn']) && (mb_strlen($this->container['nameCn']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nameCn', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nameCn']) && (mb_strlen($this->container['nameCn']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nameCn', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -249,6 +283,54 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets nameEn
+    *  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    *
+    * @return string|null
+    */
+    public function getNameEn()
+    {
+        return $this->container['nameEn'];
+    }
+
+    /**
+    * Sets nameEn
+    *
+    * @param string|null $nameEn 功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
+    *
+    * @return $this
+    */
+    public function setNameEn($nameEn)
+    {
+        $this->container['nameEn'] = $nameEn;
+        return $this;
+    }
+
+    /**
+    * Gets nameCn
+    *  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    *
+    * @return string|null
+    */
+    public function getNameCn()
+    {
+        return $this->container['nameCn'];
+    }
+
+    /**
+    * Sets nameCn
+    *
+    * @param string|null $nameCn 功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
+    *
+    * @return $this
+    */
+    public function setNameCn($nameCn)
+    {
+        $this->container['nameCn'] = $nameCn;
         return $this;
     }
 

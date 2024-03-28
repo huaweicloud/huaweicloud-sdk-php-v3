@@ -21,22 +21,26 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID。
+    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'reassignmentTime' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID。
+    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'jobId' => null
+        'jobId' => null,
+        'reassignmentTime' => null
     ];
 
     /**
@@ -62,32 +66,38 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID。
+    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'reassignmentTime' => 'reassignment_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID。
+    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
     */
     protected static $setters = [
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'reassignmentTime' => 'setReassignmentTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID。
+    * jobId  任务ID（当执行重平衡任务时仅返回job_id）。
+    * reassignmentTime  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
     *
     * @var string[]
     */
     protected static $getters = [
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'reassignmentTime' => 'getReassignmentTime'
     ];
 
     /**
@@ -149,6 +159,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['reassignmentTime'] = isset($data['reassignmentTime']) ? $data['reassignmentTime'] : null;
     }
 
     /**
@@ -175,7 +186,7 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID。
+    *  任务ID（当执行重平衡任务时仅返回job_id）。
     *
     * @return string|null
     */
@@ -187,13 +198,37 @@ class CreateReassignmentTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 任务ID。
+    * @param string|null $jobId 任务ID（当执行重平衡任务时仅返回job_id）。
     *
     * @return $this
     */
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets reassignmentTime
+    *  预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
+    *
+    * @return int|null
+    */
+    public function getReassignmentTime()
+    {
+        return $this->container['reassignmentTime'];
+    }
+
+    /**
+    * Sets reassignmentTime
+    *
+    * @param int|null $reassignmentTime 预估时间，单位为秒（当执行预估时间任务时仅返回reassignment_time）。
+    *
+    * @return $this
+    */
+    public function setReassignmentTime($reassignmentTime)
+    {
+        $this->container['reassignmentTime'] = $reassignmentTime;
         return $this;
     }
 

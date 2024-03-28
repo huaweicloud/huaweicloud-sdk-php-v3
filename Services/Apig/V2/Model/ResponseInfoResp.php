@@ -22,6 +22,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     * default  是否为默认响应
     *
     * @var string[]
@@ -29,6 +30,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'status' => 'int',
             'body' => 'string',
+            'headers' => '\HuaweiCloud\SDK\Apig\V2\Model\ResponseInfoHeader[]',
             'default' => 'bool'
     ];
 
@@ -36,6 +38,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     * default  是否为默认响应
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'status' => 'int32',
         'body' => null,
+        'headers' => null,
         'default' => null
     ];
 
@@ -71,6 +75,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     * and the value is the original name
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     * default  是否为默认响应
     *
     * @var string[]
@@ -78,6 +83,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'status' => 'status',
             'body' => 'body',
+            'headers' => 'headers',
             'default' => 'default'
     ];
 
@@ -85,6 +91,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     * default  是否为默认响应
     *
     * @var string[]
@@ -92,6 +99,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     protected static $setters = [
             'status' => 'setStatus',
             'body' => 'setBody',
+            'headers' => 'setHeaders',
             'default' => 'setDefault'
     ];
 
@@ -99,6 +107,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     * default  是否为默认响应
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     protected static $getters = [
             'status' => 'getStatus',
             'body' => 'getBody',
+            'headers' => 'getHeaders',
             'default' => 'getDefault'
     ];
 
@@ -169,6 +179,7 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['headers'] = isset($data['headers']) ? $data['headers'] : null;
         $this->container['default'] = isset($data['default']) ? $data['default'] : null;
     }
 
@@ -239,6 +250,30 @@ class ResponseInfoResp implements ModelInterface, ArrayAccess
     public function setBody($body)
     {
         $this->container['body'] = $body;
+        return $this;
+    }
+
+    /**
+    * Gets headers
+    *  自定义的响应头
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\ResponseInfoHeader[]|null
+    */
+    public function getHeaders()
+    {
+        return $this->container['headers'];
+    }
+
+    /**
+    * Sets headers
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\ResponseInfoHeader[]|null $headers 自定义的响应头
+    *
+    * @return $this
+    */
+    public function setHeaders($headers)
+    {
+        $this->container['headers'] = $headers;
         return $this;
     }
 

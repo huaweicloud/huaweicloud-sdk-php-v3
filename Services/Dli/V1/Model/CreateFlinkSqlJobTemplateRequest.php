@@ -25,7 +25,7 @@ class CreateFlinkSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkTemplateRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobTemplateRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateFlinkSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkTemplateRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobTemplateRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateFlinkSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkTemplateRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobTemplateRequestBody|null $body body
     *
     * @return $this
     */

@@ -700,6 +700,71 @@ class CbrAsyncClient extends Client
     }
 
     /**
+     * 创建组织策略
+     *
+     * 创建组织策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOrganizationPolicyAsync($request)
+    {
+        return $this->createOrganizationPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function createOrganizationPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/organization-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\CreateOrganizationPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\CreateOrganizationPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建策略
      *
      * 创建策略，策略分为备份策略和复制策略。
@@ -1093,6 +1158,71 @@ class CbrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\DeleteMemberResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\DeleteMemberRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除组织策略
+     *
+     * 删除组织策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteOrganizationPolicyAsync($request)
+    {
+        return $this->deleteOrganizationPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteOrganizationPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/organization-policies/{organization_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationPolicyId'] !== null) {
+            $pathParams['organization_policy_id'] = $localVarParams['organizationPolicyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\DeleteOrganizationPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\DeleteOrganizationPolicyRequest',
             $asyncRequest = true);
     }
 
@@ -1943,6 +2073,136 @@ class CbrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListOpLogsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListOpLogsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询组织策略列表
+     *
+     * 查询组织策略列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOrganizationPoliciesAsync($request)
+    {
+        return $this->listOrganizationPoliciesAsyncWithHttpInfo($request);
+    }
+    
+    public function listOrganizationPoliciesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/organization-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['operationType'] !== null) {
+            $queryParams['operation_type'] = $localVarParams['operationType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListOrganizationPoliciesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListOrganizationPoliciesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询组织策略部署状态列表
+     *
+     * 查询组织策略每个账号下策略部署状态列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOrganizationPolicyDetailAsync($request)
+    {
+        return $this->listOrganizationPolicyDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function listOrganizationPolicyDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/organization-policies/{organization_policy_id}/policy-detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationPolicyId'] !== null) {
+            $pathParams['organization_policy_id'] = $localVarParams['organizationPolicyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ListOrganizationPolicyDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ListOrganizationPolicyDetailRequest',
             $asyncRequest = true);
     }
 
@@ -3340,6 +3600,71 @@ class CbrAsyncClient extends Client
     }
 
     /**
+     * 查询指定组织策略
+     *
+     * 查询指定组织策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showOrganizationPolicyAsync($request)
+    {
+        return $this->showOrganizationPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function showOrganizationPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/organization-policies/{organization_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationPolicyId'] !== null) {
+            $pathParams['organization_policy_id'] = $localVarParams['organizationPolicyId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowOrganizationPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\ShowOrganizationPolicyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询单个策略
      *
      * 查询单个策略
@@ -4267,6 +4592,74 @@ class CbrAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateOrderResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateOrderRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新组织策略
+     *
+     * 更新组织策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOrganizationPolicyAsync($request)
+    {
+        return $this->updateOrganizationPolicyAsyncWithHttpInfo($request);
+    }
+    
+    public function updateOrganizationPolicyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/organization-policies/{organization_policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationPolicyId'] !== null) {
+            $pathParams['organization_policy_id'] = $localVarParams['organizationPolicyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateOrganizationPolicyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cbr\V1\Model\UpdateOrganizationPolicyRequest',
             $asyncRequest = true);
     }
 

@@ -25,7 +25,7 @@ class CreateSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlTemplatesRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateSqlTemplatesRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateSqlTemplatesRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateSqlJobTemplateRequestBody|null $body body
     *
     * @return $this
     */

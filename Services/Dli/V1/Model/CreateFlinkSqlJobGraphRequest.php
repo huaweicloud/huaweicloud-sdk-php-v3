@@ -27,7 +27,7 @@ class CreateFlinkSqlJobGraphRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\GenStreamGraphReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobGraphRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class CreateFlinkSqlJobGraphRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\GenStreamGraphReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobGraphRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class CreateFlinkSqlJobGraphRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\GenStreamGraphReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkSqlJobGraphRequestBody|null $body body
     *
     * @return $this
     */

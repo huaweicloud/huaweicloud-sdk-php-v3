@@ -36,7 +36,7 @@ class ShowSparkJobTemplateResponse implements ModelInterface, ArrayAccess
             'type' => 'string',
             'id' => 'string',
             'name' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\BatchJobInfo',
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\SparkJobTemplateDetail',
             'group' => 'string',
             'description' => 'string',
             'language' => 'string',
@@ -326,7 +326,7 @@ class ShowSparkJobTemplateResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\BatchJobInfo|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SparkJobTemplateDetail|null
     */
     public function getBody()
     {
@@ -336,7 +336,7 @@ class ShowSparkJobTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\BatchJobInfo|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SparkJobTemplateDetail|null $body body
     *
     * @return $this
     */

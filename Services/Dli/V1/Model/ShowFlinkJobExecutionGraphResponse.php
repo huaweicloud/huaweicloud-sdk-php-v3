@@ -30,7 +30,7 @@ class ShowFlinkJobExecutionGraphResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'executeGraph' => '\HuaweiCloud\SDK\Dli\V1\Model\StreamGraphInfo'
+            'executeGraph' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobExecutionGraph'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ShowFlinkJobExecutionGraphResponse implements ModelInterface, ArrayAccess
     * Gets executeGraph
     *  executeGraph
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\StreamGraphInfo|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobExecutionGraph|null
     */
     public function getExecuteGraph()
     {
@@ -257,7 +257,7 @@ class ShowFlinkJobExecutionGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executeGraph
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\StreamGraphInfo|null $executeGraph executeGraph
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobExecutionGraph|null $executeGraph executeGraph
     *
     * @return $this
     */

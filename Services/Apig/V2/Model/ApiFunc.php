@@ -28,6 +28,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * authorizerId  后端自定义认证ID
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
     * registerTime  注册时间
     * status  后端状态   - 1： 有效
@@ -44,6 +45,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
             'aliasUrn' => 'string',
             'timeout' => 'int',
             'authorizerId' => 'string',
+            'reqProtocol' => 'string',
             'id' => 'string',
             'registerTime' => '\DateTime',
             'status' => 'int',
@@ -60,6 +62,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * authorizerId  后端自定义认证ID
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
     * registerTime  注册时间
     * status  后端状态   - 1： 有效
@@ -76,6 +79,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
         'aliasUrn' => null,
         'timeout' => 'int32',
         'authorizerId' => null,
+        'reqProtocol' => null,
         'id' => null,
         'registerTime' => 'date-time',
         'status' => 'int32',
@@ -113,6 +117,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * authorizerId  后端自定义认证ID
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
     * registerTime  注册时间
     * status  后端状态   - 1： 有效
@@ -129,6 +134,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
             'aliasUrn' => 'alias_urn',
             'timeout' => 'timeout',
             'authorizerId' => 'authorizer_id',
+            'reqProtocol' => 'req_protocol',
             'id' => 'id',
             'registerTime' => 'register_time',
             'status' => 'status',
@@ -145,6 +151,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * authorizerId  后端自定义认证ID
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
     * registerTime  注册时间
     * status  后端状态   - 1： 有效
@@ -161,6 +168,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
             'aliasUrn' => 'setAliasUrn',
             'timeout' => 'setTimeout',
             'authorizerId' => 'setAuthorizerId',
+            'reqProtocol' => 'setReqProtocol',
             'id' => 'setId',
             'registerTime' => 'setRegisterTime',
             'status' => 'setStatus',
@@ -177,6 +185,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
     * authorizerId  后端自定义认证ID
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     * id  编号
     * registerTime  注册时间
     * status  后端状态   - 1： 有效
@@ -193,6 +202,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
             'aliasUrn' => 'getAliasUrn',
             'timeout' => 'getTimeout',
             'authorizerId' => 'getAuthorizerId',
+            'reqProtocol' => 'getReqProtocol',
             'id' => 'getId',
             'registerTime' => 'getRegisterTime',
             'status' => 'getStatus',
@@ -243,6 +253,8 @@ class ApiFunc implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_SYNC = 'sync';
     const NETWORK_TYPE_V1 = 'V1';
     const NETWORK_TYPE_V2 = 'V2';
+    const REQ_PROTOCOL_HTTPS = 'HTTPS';
+    const REQ_PROTOCOL_GRPCS = 'GRPCS';
     
 
     /**
@@ -271,6 +283,19 @@ class ApiFunc implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getReqProtocolAllowableValues()
+    {
+        return [
+            self::REQ_PROTOCOL_HTTPS,
+            self::REQ_PROTOCOL_GRPCS,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -295,6 +320,7 @@ class ApiFunc implements ModelInterface, ArrayAccess
         $this->container['aliasUrn'] = isset($data['aliasUrn']) ? $data['aliasUrn'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
         $this->container['authorizerId'] = isset($data['authorizerId']) ? $data['authorizerId'] : null;
+        $this->container['reqProtocol'] = isset($data['reqProtocol']) ? $data['reqProtocol'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['registerTime'] = isset($data['registerTime']) ? $data['registerTime'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -346,6 +372,14 @@ class ApiFunc implements ModelInterface, ArrayAccess
             if (!is_null($this->container['authorizerId']) && !preg_match("/^[a-zA-Z0-9-_]{0,64}$/", $this->container['authorizerId'])) {
                 $invalidProperties[] = "invalid value for 'authorizerId', must be conform to the pattern /^[a-zA-Z0-9-_]{0,64}$/.";
             }
+            $allowedValues = $this->getReqProtocolAllowableValues();
+                if (!is_null($this->container['reqProtocol']) && !in_array($this->container['reqProtocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'reqProtocol', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -549,6 +583,30 @@ class ApiFunc implements ModelInterface, ArrayAccess
     public function setAuthorizerId($authorizerId)
     {
         $this->container['authorizerId'] = $authorizerId;
+        return $this;
+    }
+
+    /**
+    * Gets reqProtocol
+    *  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
+    *
+    * @return string|null
+    */
+    public function getReqProtocol()
+    {
+        return $this->container['reqProtocol'];
+    }
+
+    /**
+    * Sets reqProtocol
+    *
+    * @param string|null $reqProtocol 函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
+    *
+    * @return $this
+    */
+    public function setReqProtocol($reqProtocol)
+    {
+        $this->container['reqProtocol'] = $reqProtocol;
         return $this;
     }
 

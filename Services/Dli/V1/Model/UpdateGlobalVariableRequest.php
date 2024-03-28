@@ -27,7 +27,7 @@ class UpdateGlobalVariableRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'varName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalValueReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UpdateGlobalVariableRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalValueReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdateGlobalVariableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalValueReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableRequestBody|null $body body
     *
     * @return $this
     */

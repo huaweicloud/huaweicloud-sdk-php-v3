@@ -22,32 +22,32 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     * resourceType  功能说明：实例类型。
-    * regionId  功能说明：实例所在region，不填默认\"global\"。
     * projectId  功能说明：实例所在region对应的projectId。
+    * regionId  功能说明：实例所在region，不填默认\"global\"。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
             'resourceType' => 'string',
-            'regionId' => 'string',
-            'projectId' => 'string'
+            'projectId' => 'string',
+            'regionId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     * resourceType  功能说明：实例类型。
-    * regionId  功能说明：实例所在region，不填默认\"global\"。
     * projectId  功能说明：实例所在region对应的projectId。
+    * regionId  功能说明：实例所在region，不填默认\"global\"。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceId' => null,
         'resourceType' => null,
-        'regionId' => null,
-        'projectId' => null
+        'projectId' => null,
+        'regionId' => null
     ];
 
     /**
@@ -75,48 +75,48 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     * and the value is the original name
     * resourceId  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     * resourceType  功能说明：实例类型。
-    * regionId  功能说明：实例所在region，不填默认\"global\"。
     * projectId  功能说明：实例所在region对应的projectId。
+    * regionId  功能说明：实例所在region，不填默认\"global\"。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceId' => 'resource_id',
             'resourceType' => 'resource_type',
-            'regionId' => 'region_id',
-            'projectId' => 'project_id'
+            'projectId' => 'project_id',
+            'regionId' => 'region_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     * resourceType  功能说明：实例类型。
-    * regionId  功能说明：实例所在region，不填默认\"global\"。
     * projectId  功能说明：实例所在region对应的projectId。
+    * regionId  功能说明：实例所在region，不填默认\"global\"。
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceId' => 'setResourceId',
             'resourceType' => 'setResourceType',
-            'regionId' => 'setRegionId',
-            'projectId' => 'setProjectId'
+            'projectId' => 'setProjectId',
+            'regionId' => 'setRegionId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     * resourceType  功能说明：实例类型。
-    * regionId  功能说明：实例所在region，不填默认\"global\"。
     * projectId  功能说明：实例所在region对应的projectId。
+    * regionId  功能说明：实例所在region，不填默认\"global\"。
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceId' => 'getResourceId',
             'resourceType' => 'getResourceType',
-            'regionId' => 'getRegionId',
-            'projectId' => 'getProjectId'
+            'projectId' => 'getProjectId',
+            'regionId' => 'getRegionId'
     ];
 
     /**
@@ -179,8 +179,8 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
     }
 
     /**
@@ -191,23 +191,41 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 36)) {
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
+        }
+            if ((mb_strlen($this->container['resourceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 1)) {
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['resourceId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['resourceId'])) {
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
-            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) > 36)) {
+        if ($this->container['resourceType'] === null) {
+            $invalidProperties[] = "'resourceType' can't be null";
+        }
+            if ((mb_strlen($this->container['resourceType']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) < 1)) {
+            if ((mb_strlen($this->container['resourceType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['resourceType']) && !preg_match("/^[a-zA-Z]+$/", $this->container['resourceType'])) {
+            if (!preg_match("/^[a-zA-Z]+$/", $this->container['resourceType'])) {
                 $invalidProperties[] = "invalid value for 'resourceType', must be conform to the pattern /^[a-zA-Z]+$/.";
+            }
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[a-fA-F0-9]{10,32}$/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[a-fA-F0-9]{10,32}$/.";
             }
             if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 36.";
@@ -217,15 +235,6 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
             }
             if (!is_null($this->container['regionId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['regionId'])) {
                 $invalidProperties[] = "invalid value for 'regionId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['projectId']) && !preg_match("/^[a-fA-F0-9]{10,32}$/", $this->container['projectId'])) {
-                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[a-fA-F0-9]{10,32}$/.";
             }
         return $invalidProperties;
     }
@@ -245,7 +254,7 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     * Gets resourceId
     *  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     *
-    * @return string|null
+    * @return string
     */
     public function getResourceId()
     {
@@ -255,7 +264,7 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
+    * @param string $resourceId 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     *
     * @return $this
     */
@@ -269,7 +278,7 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     * Gets resourceType
     *  功能说明：实例类型。
     *
-    * @return string|null
+    * @return string
     */
     public function getResourceType()
     {
@@ -279,13 +288,37 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 功能说明：实例类型。
+    * @param string $resourceType 功能说明：实例类型。
     *
     * @return $this
     */
     public function setResourceType($resourceType)
     {
         $this->container['resourceType'] = $resourceType;
+        return $this;
+    }
+
+    /**
+    * Gets projectId
+    *  功能说明：实例所在region对应的projectId。
+    *
+    * @return string
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string $projectId 功能说明：实例所在region对应的projectId。
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
         return $this;
     }
 
@@ -310,30 +343,6 @@ class AssociateGlobalConnectionBandwidthInstanceRequestInfo implements ModelInte
     public function setRegionId($regionId)
     {
         $this->container['regionId'] = $regionId;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  功能说明：实例所在region对应的projectId。
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 功能说明：实例所在region对应的projectId。
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
         return $this;
     }
 

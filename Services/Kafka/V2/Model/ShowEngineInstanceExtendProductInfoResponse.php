@@ -21,7 +21,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎类型。
+    * engine  消息引擎类型:kafka。
     * versions  消息引擎支持的版本。
     * products  规格变更的产品信息。
     *
@@ -35,7 +35,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎类型。
+    * engine  消息引擎类型:kafka。
     * versions  消息引擎支持的版本。
     * products  规格变更的产品信息。
     *
@@ -70,7 +70,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎类型。
+    * engine  消息引擎类型:kafka。
     * versions  消息引擎支持的版本。
     * products  规格变更的产品信息。
     *
@@ -84,7 +84,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎类型。
+    * engine  消息引擎类型:kafka。
     * versions  消息引擎支持的版本。
     * products  规格变更的产品信息。
     *
@@ -98,7 +98,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎类型。
+    * engine  消息引擎类型:kafka。
     * versions  消息引擎支持的版本。
     * products  规格变更的产品信息。
     *
@@ -197,7 +197,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
 
     /**
     * Gets engine
-    *  消息引擎类型。
+    *  消息引擎类型:kafka。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ShowEngineInstanceExtendProductInfoResponse implements ModelInterface, Arr
     /**
     * Sets engine
     *
-    * @param string|null $engine 消息引擎类型。
+    * @param string|null $engine 消息引擎类型:kafka。
     *
     * @return $this
     */

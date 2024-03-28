@@ -416,6 +416,68 @@ class RdsClient extends Client
     }
 
     /**
+     * 批量停止实例
+     *
+     * 批量停止实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchStopInstance($request)
+    {
+        return $this->batchStopInstanceWithHttpInfo($request);
+    }
+
+    public function batchStopInstanceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/batch/action/shutdown';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\BatchStopInstanceResponse',
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\BatchStopInstanceRequest');
+    }
+
+    /**
      * 批量添加标签
      *
      * 批量添加标签。

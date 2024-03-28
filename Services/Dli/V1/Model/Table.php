@@ -45,7 +45,7 @@ class Table implements ModelInterface, ArrayAccess
             'tableName' => 'string',
             'tableSize' => 'int',
             'tableType' => 'string',
-            'partitionColumns' => 'string',
+            'partitionColumns' => 'string[]',
             'pageSize' => 'int',
             'currentPage' => 'int'
     ];
@@ -543,7 +543,7 @@ class Table implements ModelInterface, ArrayAccess
     * Gets partitionColumns
     *  分区字段。只有OBS分区表有该参数，其他表没有该参数。
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getPartitionColumns()
     {
@@ -553,7 +553,7 @@ class Table implements ModelInterface, ArrayAccess
     /**
     * Sets partitionColumns
     *
-    * @param string|null $partitionColumns 分区字段。只有OBS分区表有该参数，其他表没有该参数。
+    * @param string[]|null $partitionColumns 分区字段。只有OBS分区表有该参数，其他表没有该参数。
     *
     * @return $this
     */

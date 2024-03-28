@@ -31,7 +31,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  功能说明：线路规格编码UUID。
+    * specCodeId  UUID of a line specification code.
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  功能说明：线路规格编码UUID。
+    * specCodeId  UUID of a line specification code.
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  功能说明：线路规格编码UUID。
+    * specCodeId  UUID of a line specification code.
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  功能说明：线路规格编码UUID。
+    * specCodeId  UUID of a line specification code.
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  功能说明：线路规格编码UUID。
+    * specCodeId  UUID of a line specification code.
     *
     * @var string[]
     */
@@ -330,13 +330,16 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
+            if (!preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
@@ -348,6 +351,12 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && !preg_match("/^[^<>]*$/", $this->container['description'])) {
                 $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[^<>]*$/.";
             }
+        if ($this->container['bordercross'] === null) {
+            $invalidProperties[] = "'bordercross' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -365,6 +374,9 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
+        if ($this->container['chargeMode'] === null) {
+            $invalidProperties[] = "'chargeMode' can't be null";
+        }
             $allowedValues = $this->getChargeModeAllowableValues();
                 if (!is_null($this->container['chargeMode']) && !in_array($this->container['chargeMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -373,10 +385,13 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['size']) && ($this->container['size'] > 300)) {
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+            if (($this->container['size'] > 300)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 300.";
             }
-            if (!is_null($this->container['size']) && ($this->container['size'] < 2)) {
+            if (($this->container['size'] < 2)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 2.";
             }
             $allowedValues = $this->getSlaLevelAllowableValues();
@@ -429,7 +444,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets name
     *  实例名字。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -439,7 +454,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名字。
+    * @param string $name 实例名字。
     *
     * @return $this
     */
@@ -477,7 +492,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets bordercross
     *  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     *
-    * @return bool|null
+    * @return bool
     */
     public function getBordercross()
     {
@@ -487,7 +502,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets bordercross
     *
-    * @param bool|null $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * @param bool $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     *
     * @return $this
     */
@@ -501,7 +516,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets type
     *  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -511,7 +526,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
+    * @param string $type 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     *
     * @return $this
     */
@@ -573,7 +588,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets chargeMode
     *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     *
-    * @return string|null
+    * @return string
     */
     public function getChargeMode()
     {
@@ -583,7 +598,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * @param string $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     *
     * @return $this
     */
@@ -597,7 +612,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets size
     *  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -607,7 +622,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
+    * @param int $size 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     *
     * @return $this
     */
@@ -691,7 +706,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCodeId
-    *  功能说明：线路规格编码UUID。
+    *  UUID of a line specification code.
     *
     * @return string|null
     */
@@ -703,7 +718,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets specCodeId
     *
-    * @param string|null $specCodeId 功能说明：线路规格编码UUID。
+    * @param string|null $specCodeId UUID of a line specification code.
     *
     * @return $this
     */

@@ -23,13 +23,15 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
     * plateNumber  车牌内容。
     * plateLocation  车牌的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。注：置信度由算法给出，不直接等价于对应字段的准确率。
+    * province  车牌所属府
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'plateNumber' => 'string',
             'plateLocation' => 'int[][]',
-            'confidence' => 'float'
+            'confidence' => 'float',
+            'province' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
     * plateNumber  车牌内容。
     * plateLocation  车牌的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。注：置信度由算法给出，不直接等价于对应字段的准确率。
+    * province  车牌所属府
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'plateNumber' => null,
         'plateLocation' => 'int32',
-        'confidence' => 'float'
+        'confidence' => 'float',
+        'province' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
     * plateNumber  车牌内容。
     * plateLocation  车牌的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。注：置信度由算法给出，不直接等价于对应字段的准确率。
+    * province  车牌所属府
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'plateNumber' => 'plate_number',
             'plateLocation' => 'plate_location',
-            'confidence' => 'confidence'
+            'confidence' => 'confidence',
+            'province' => 'province'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
     * plateNumber  车牌内容。
     * plateLocation  车牌的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。注：置信度由算法给出，不直接等价于对应字段的准确率。
+    * province  车牌所属府
     *
     * @var string[]
     */
     protected static $setters = [
             'plateNumber' => 'setPlateNumber',
             'plateLocation' => 'setPlateLocation',
-            'confidence' => 'setConfidence'
+            'confidence' => 'setConfidence',
+            'province' => 'setProvince'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
     * plateNumber  车牌内容。
     * plateLocation  车牌的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。注：置信度由算法给出，不直接等价于对应字段的准确率。
+    * province  车牌所属府
     *
     * @var string[]
     */
     protected static $getters = [
             'plateNumber' => 'getPlateNumber',
             'plateLocation' => 'getPlateLocation',
-            'confidence' => 'getConfidence'
+            'confidence' => 'getConfidence',
+            'province' => 'getProvince'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
         $this->container['plateNumber'] = isset($data['plateNumber']) ? $data['plateNumber'] : null;
         $this->container['plateLocation'] = isset($data['plateLocation']) ? $data['plateLocation'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
+        $this->container['province'] = isset($data['province']) ? $data['province'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class ThailandLicensePlateItem implements ModelInterface, ArrayAccess
     public function setConfidence($confidence)
     {
         $this->container['confidence'] = $confidence;
+        return $this;
+    }
+
+    /**
+    * Gets province
+    *  车牌所属府
+    *
+    * @return string|null
+    */
+    public function getProvince()
+    {
+        return $this->container['province'];
+    }
+
+    /**
+    * Sets province
+    *
+    * @param string|null $province 车牌所属府
+    *
+    * @return $this
+    */
+    public function setProvince($province)
+    {
+        $this->container['province'] = $province;
         return $this;
     }
 

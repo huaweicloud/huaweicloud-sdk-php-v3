@@ -39,7 +39,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
             'name' => 'string',
             'groupDesc' => 'string',
             'retryMaxTime' => 'int',
-            'createdAt' => 'string',
+            'createdAt' => 'int',
             'permissions' => 'string[]',
             'consumeOrderly' => 'bool'
     ];
@@ -65,7 +65,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
         'name' => null,
         'groupDesc' => null,
         'retryMaxTime' => null,
-        'createdAt' => null,
+        'createdAt' => 'int64',
         'permissions' => null,
         'consumeOrderly' => null
     ];
@@ -414,7 +414,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * Gets createdAt
     *  创建时间戳。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getCreatedAt()
     {
@@ -424,7 +424,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间戳。
+    * @param int|null $createdAt 创建时间戳。
     *
     * @return $this
     */

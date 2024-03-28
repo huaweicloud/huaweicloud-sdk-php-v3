@@ -25,7 +25,7 @@ class CreateFlinkJarJobRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarJobRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateFlinkJarJobRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarJobRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateFlinkJarJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateFlinkJarJobRequestBody|null $body body
     *
     * @return $this
     */

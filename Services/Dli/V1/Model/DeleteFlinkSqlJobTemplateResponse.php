@@ -30,7 +30,7 @@ class DeleteFlinkSqlJobTemplateResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'template' => '\HuaweiCloud\SDK\Dli\V1\Model\DeleteTemplateRespTemplate'
+            'template' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkSqlJobTemplateId'
     ];
 
     /**
@@ -247,7 +247,7 @@ class DeleteFlinkSqlJobTemplateResponse implements ModelInterface, ArrayAccess
     * Gets template
     *  template
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\DeleteTemplateRespTemplate|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkSqlJobTemplateId|null
     */
     public function getTemplate()
     {
@@ -257,7 +257,7 @@ class DeleteFlinkSqlJobTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets template
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\DeleteTemplateRespTemplate|null $template template
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkSqlJobTemplateId|null $template template
     *
     * @return $this
     */

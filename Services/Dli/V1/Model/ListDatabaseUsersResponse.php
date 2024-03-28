@@ -32,7 +32,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'databaseName' => 'string',
-            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowDatabaseUsersPrivilege[]'
+            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\DatabaseUserPrivilege[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
     * Gets privileges
     *  权限信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowDatabaseUsersPrivilege[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\DatabaseUserPrivilege[]|null
     */
     public function getPrivileges()
     {
@@ -292,7 +292,7 @@ class ListDatabaseUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privileges
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowDatabaseUsersPrivilege[]|null $privileges 权限信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\DatabaseUserPrivilege[]|null $privileges 权限信息。
     *
     * @return $this
     */

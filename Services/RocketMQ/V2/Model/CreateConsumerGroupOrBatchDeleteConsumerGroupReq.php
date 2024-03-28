@@ -21,57 +21,49 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groups  待删除的消费组列表。
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * brokers  关联的代理列表。
+    * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
+    * enabled  是否可以消费。
     * consumeOrderly  是否按序消费。
+    * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'groups' => 'string[]',
-            'enabled' => 'bool',
-            'broadcast' => 'bool',
-            'brokers' => 'string[]',
             'name' => 'string',
-            'groupDesc' => 'string',
+            'brokers' => 'string[]',
+            'broadcast' => 'bool',
             'retryMaxTime' => 'int',
-            'createdAt' => 'string',
-            'permissions' => 'string[]',
-            'consumeOrderly' => 'bool'
+            'enabled' => 'bool',
+            'consumeOrderly' => 'bool',
+            'groupDesc' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groups  待删除的消费组列表。
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * brokers  关联的代理列表。
+    * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
+    * enabled  是否可以消费。
     * consumeOrderly  是否按序消费。
+    * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'groups' => null,
-        'enabled' => null,
-        'broadcast' => null,
-        'brokers' => null,
         'name' => null,
-        'groupDesc' => null,
+        'brokers' => null,
+        'broadcast' => null,
         'retryMaxTime' => null,
-        'createdAt' => null,
-        'permissions' => null,
-        'consumeOrderly' => null
+        'enabled' => null,
+        'consumeOrderly' => null,
+        'groupDesc' => null
     ];
 
     /**
@@ -98,85 +90,73 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groups  待删除的消费组列表。
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * brokers  关联的代理列表。
+    * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
+    * enabled  是否可以消费。
     * consumeOrderly  是否按序消费。
+    * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'groups' => 'groups',
-            'enabled' => 'enabled',
-            'broadcast' => 'broadcast',
-            'brokers' => 'brokers',
             'name' => 'name',
-            'groupDesc' => 'group_desc',
+            'brokers' => 'brokers',
+            'broadcast' => 'broadcast',
             'retryMaxTime' => 'retry_max_time',
-            'createdAt' => 'createdAt',
-            'permissions' => 'permissions',
-            'consumeOrderly' => 'consume_orderly'
+            'enabled' => 'enabled',
+            'consumeOrderly' => 'consume_orderly',
+            'groupDesc' => 'group_desc'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groups  待删除的消费组列表。
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * brokers  关联的代理列表。
+    * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
+    * enabled  是否可以消费。
     * consumeOrderly  是否按序消费。
+    * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
     */
     protected static $setters = [
             'groups' => 'setGroups',
-            'enabled' => 'setEnabled',
-            'broadcast' => 'setBroadcast',
-            'brokers' => 'setBrokers',
             'name' => 'setName',
-            'groupDesc' => 'setGroupDesc',
+            'brokers' => 'setBrokers',
+            'broadcast' => 'setBroadcast',
             'retryMaxTime' => 'setRetryMaxTime',
-            'createdAt' => 'setCreatedAt',
-            'permissions' => 'setPermissions',
-            'consumeOrderly' => 'setConsumeOrderly'
+            'enabled' => 'setEnabled',
+            'consumeOrderly' => 'setConsumeOrderly',
+            'groupDesc' => 'setGroupDesc'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groups  待删除的消费组列表。
-    * enabled  是否可以消费。
-    * broadcast  是否广播。
-    * brokers  关联的代理列表。
     * name  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * groupDesc  消费组描述，长度0~200个字符。
+    * brokers  关联的代理列表。
+    * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * createdAt  创建时间戳。
-    * permissions  权限集。
+    * enabled  是否可以消费。
     * consumeOrderly  是否按序消费。
+    * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
     */
     protected static $getters = [
             'groups' => 'getGroups',
-            'enabled' => 'getEnabled',
-            'broadcast' => 'getBroadcast',
-            'brokers' => 'getBrokers',
             'name' => 'getName',
-            'groupDesc' => 'getGroupDesc',
+            'brokers' => 'getBrokers',
+            'broadcast' => 'getBroadcast',
             'retryMaxTime' => 'getRetryMaxTime',
-            'createdAt' => 'getCreatedAt',
-            'permissions' => 'getPermissions',
-            'consumeOrderly' => 'getConsumeOrderly'
+            'enabled' => 'getEnabled',
+            'consumeOrderly' => 'getConsumeOrderly',
+            'groupDesc' => 'getGroupDesc'
     ];
 
     /**
@@ -238,15 +218,13 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     public function __construct(array $data = null)
     {
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
-        $this->container['broadcast'] = isset($data['broadcast']) ? $data['broadcast'] : null;
-        $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
+        $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
+        $this->container['broadcast'] = isset($data['broadcast']) ? $data['broadcast'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
-        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
-        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
         $this->container['consumeOrderly'] = isset($data['consumeOrderly']) ? $data['consumeOrderly'] : null;
+        $this->container['groupDesc'] = isset($data['groupDesc']) ? $data['groupDesc'] : null;
     }
 
     /**
@@ -302,50 +280,26 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     }
 
     /**
-    * Gets enabled
-    *  是否可以消费。
+    * Gets name
+    *  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     *
-    * @return bool|null
+    * @return string|null
     */
-    public function getEnabled()
+    public function getName()
     {
-        return $this->container['enabled'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets enabled
+    * Sets name
     *
-    * @param bool|null $enabled 是否可以消费。
+    * @param string|null $name 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
     *
     * @return $this
     */
-    public function setEnabled($enabled)
+    public function setName($name)
     {
-        $this->container['enabled'] = $enabled;
-        return $this;
-    }
-
-    /**
-    * Gets broadcast
-    *  是否广播。
-    *
-    * @return bool|null
-    */
-    public function getBroadcast()
-    {
-        return $this->container['broadcast'];
-    }
-
-    /**
-    * Sets broadcast
-    *
-    * @param bool|null $broadcast 是否广播。
-    *
-    * @return $this
-    */
-    public function setBroadcast($broadcast)
-    {
-        $this->container['broadcast'] = $broadcast;
+        $this->container['name'] = $name;
         return $this;
     }
 
@@ -374,50 +328,26 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     }
 
     /**
-    * Gets name
-    *  消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * Gets broadcast
+    *  是否广播。
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getName()
+    public function getBroadcast()
     {
-        return $this->container['name'];
+        return $this->container['broadcast'];
     }
 
     /**
-    * Sets name
+    * Sets broadcast
     *
-    * @param string|null $name 消费组名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
+    * @param bool|null $broadcast 是否广播。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setBroadcast($broadcast)
     {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets groupDesc
-    *  消费组描述，长度0~200个字符。
-    *
-    * @return string|null
-    */
-    public function getGroupDesc()
-    {
-        return $this->container['groupDesc'];
-    }
-
-    /**
-    * Sets groupDesc
-    *
-    * @param string|null $groupDesc 消费组描述，长度0~200个字符。
-    *
-    * @return $this
-    */
-    public function setGroupDesc($groupDesc)
-    {
-        $this->container['groupDesc'] = $groupDesc;
+        $this->container['broadcast'] = $broadcast;
         return $this;
     }
 
@@ -446,50 +376,26 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     }
 
     /**
-    * Gets createdAt
-    *  创建时间戳。
+    * Gets enabled
+    *  是否可以消费。
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getCreatedAt()
+    public function getEnabled()
     {
-        return $this->container['createdAt'];
+        return $this->container['enabled'];
     }
 
     /**
-    * Sets createdAt
+    * Sets enabled
     *
-    * @param string|null $createdAt 创建时间戳。
+    * @param bool|null $enabled 是否可以消费。
     *
     * @return $this
     */
-    public function setCreatedAt($createdAt)
+    public function setEnabled($enabled)
     {
-        $this->container['createdAt'] = $createdAt;
-        return $this;
-    }
-
-    /**
-    * Gets permissions
-    *  权限集。
-    *
-    * @return string[]|null
-    */
-    public function getPermissions()
-    {
-        return $this->container['permissions'];
-    }
-
-    /**
-    * Sets permissions
-    *
-    * @param string[]|null $permissions 权限集。
-    *
-    * @return $this
-    */
-    public function setPermissions($permissions)
-    {
-        $this->container['permissions'] = $permissions;
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 
@@ -514,6 +420,30 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     public function setConsumeOrderly($consumeOrderly)
     {
         $this->container['consumeOrderly'] = $consumeOrderly;
+        return $this;
+    }
+
+    /**
+    * Gets groupDesc
+    *  消费组描述，长度0~200个字符。
+    *
+    * @return string|null
+    */
+    public function getGroupDesc()
+    {
+        return $this->container['groupDesc'];
+    }
+
+    /**
+    * Sets groupDesc
+    *
+    * @param string|null $groupDesc 消费组描述，长度0~200个字符。
+    *
+    * @return $this
+    */
+    public function setGroupDesc($groupDesc)
+    {
+        $this->container['groupDesc'] = $groupDesc;
         return $this;
     }
 

@@ -150,7 +150,7 @@ class HttpDetectRequestBody implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const PROTOCOL_HTTP = 'http';
-    const PROTOCOL_HTTPS = 'https;';
+    const PROTOCOL_HTTPS = 'https';
     
 
     /**

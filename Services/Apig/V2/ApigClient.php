@@ -3451,6 +3451,144 @@ class ApigClient extends Client
     }
 
     /**
+     * 异步导出API
+     *
+     * 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportApiDefinitionsAsync($request)
+    {
+        return $this->exportApiDefinitionsAsyncWithHttpInfo($request);
+    }
+
+    public function exportApiDefinitionsAsyncWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/openapi/async-export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['oasVersion'] !== null) {
+            $queryParams['oas_version'] = $localVarParams['oasVersion'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/octet-stream', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/octet-stream', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ExportApiDefinitionsAsyncResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ExportApiDefinitionsAsyncRequest');
+    }
+
+    /**
+     * 异步导入API
+     *
+     * 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importApiDefinitionsAsync($request)
+    {
+        return $this->importApiDefinitionsAsyncWithHttpInfo($request);
+    }
+
+    public function importApiDefinitionsAsyncWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/openapi/async-import';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ImportApiDefinitionsAsyncResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ImportApiDefinitionsAsyncRequest');
+    }
+
+    /**
      * 导入微服务
      *
      * 导入微服务。
@@ -5059,6 +5197,74 @@ class ApigClient extends Client
     }
 
     /**
+     * 查询实例支持的特性列表
+     *
+     * 查询实例支持的特性列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstanceFeatures($request)
+    {
+        return $this->listInstanceFeaturesWithHttpInfo($request);
+    }
+
+    public function listInstanceFeaturesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/instance-features';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListInstanceFeaturesResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListInstanceFeaturesRequest');
+    }
+
+    /**
      * 查询单个实例标签
      *
      * 查询单个实例的标签。
@@ -6573,6 +6779,71 @@ class ApigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ShowAppQuotaResponse',
             $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ShowAppQuotaRequest');
+    }
+
+    /**
+     * 获取异步任务结果
+     *
+     * 获取异步任务结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAsyncTaskResult($request)
+    {
+        return $this->showAsyncTaskResultWithHttpInfo($request);
+    }
+
+    public function showAsyncTaskResultWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/async-tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1', 'application/json-2', 'application/json-3', 'application/json-4']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1', 'application/json-2', 'application/json-3', 'application/json-4'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ShowAsyncTaskResultResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ShowAsyncTaskResultRequest');
     }
 
     /**
@@ -8452,6 +8723,74 @@ class ApigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Apig\V2\Model\UpdateSignatureKeyV2Response',
             $requestType='\HuaweiCloud\SDK\Apig\V2\Model\UpdateSignatureKeyV2Request');
+    }
+
+    /**
+     * 设置调试域名是否可以访问
+     *
+     * 禁用或启用API分组绑定的调试域名
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSlDomainSettingV2($request)
+    {
+        return $this->updateSlDomainSettingV2WithHttpInfo($request);
+    }
+
+    public function updateSlDomainSettingV2WithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/sl-domain-access-settings';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\UpdateSlDomainSettingV2Response',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\UpdateSlDomainSettingV2Request');
     }
 
     /**

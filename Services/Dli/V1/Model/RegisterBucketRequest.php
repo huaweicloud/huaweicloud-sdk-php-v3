@@ -25,7 +25,7 @@ class RegisterBucketRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ObsBuckets'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\RegisterBucketRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class RegisterBucketRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ObsBuckets|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\RegisterBucketRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class RegisterBucketRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ObsBuckets|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\RegisterBucketRequestBody|null $body body
     *
     * @return $this
     */

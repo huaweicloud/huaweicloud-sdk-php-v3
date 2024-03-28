@@ -30,7 +30,7 @@ class ImportFlinkJobsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'jobMapping' => '\HuaweiCloud\SDK\Dli\V1\Model\JobMapInfo[]'
+            'jobMapping' => '\HuaweiCloud\SDK\Dli\V1\Model\JobMap[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ImportFlinkJobsResponse implements ModelInterface, ArrayAccess
     * Gets jobMapping
     *  作业导入结果。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\JobMapInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\JobMap[]|null
     */
     public function getJobMapping()
     {
@@ -257,7 +257,7 @@ class ImportFlinkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobMapping
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\JobMapInfo[]|null $jobMapping 作业导入结果。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\JobMap[]|null $jobMapping 作业导入结果。
     *
     * @return $this
     */

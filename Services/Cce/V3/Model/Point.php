@@ -20,20 +20,22 @@ class Point implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * taskType  taskType
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'taskType' => '\HuaweiCloud\SDK\Cce\V3\Model\TaskType'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * taskType  taskType
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'taskType' => null
     ];
 
     /**
@@ -59,29 +61,32 @@ class Point implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * taskType  taskType
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'taskType' => 'taskType'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * taskType  taskType
     *
     * @var string[]
     */
     protected static $setters = [
+            'taskType' => 'setTaskType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * taskType  taskType
     *
     * @var string[]
     */
     protected static $getters = [
+            'taskType' => 'getTaskType'
     ];
 
     /**
@@ -142,6 +147,7 @@ class Point implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
     }
 
     /**
@@ -164,6 +170,30 @@ class Point implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets taskType
+    *  taskType
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\TaskType|null
+    */
+    public function getTaskType()
+    {
+        return $this->container['taskType'];
+    }
+
+    /**
+    * Sets taskType
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\TaskType|null $taskType taskType
+    *
+    * @return $this
+    */
+    public function setTaskType($taskType)
+    {
+        $this->container['taskType'] = $taskType;
+        return $this;
     }
 
     /**

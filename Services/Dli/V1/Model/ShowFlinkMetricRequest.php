@@ -25,7 +25,7 @@ class ShowFlinkMetricRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowJobMonitorInfoReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkMetricRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class ShowFlinkMetricRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowJobMonitorInfoReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkMetricRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class ShowFlinkMetricRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowJobMonitorInfoReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkMetricRequestBody|null $body body
     *
     * @return $this
     */

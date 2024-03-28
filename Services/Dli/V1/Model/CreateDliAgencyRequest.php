@@ -25,7 +25,7 @@ class CreateDliAgencyRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateAgencyRequest'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateDliAgencyRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateDliAgencyRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateAgencyRequest|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateDliAgencyRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateDliAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateAgencyRequest|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateDliAgencyRequestBody|null $body body
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class CreateEnhancedConnectionRoutesRequest implements ModelInterface, ArrayAcce
     */
     protected static $openAPITypes = [
             'connectionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateRouteRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionRoutesRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class CreateEnhancedConnectionRoutesRequest implements ModelInterface, ArrayAcce
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateRouteRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionRoutesRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class CreateEnhancedConnectionRoutesRequest implements ModelInterface, ArrayAcce
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateRouteRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionRoutesRequestBody|null $body body
     *
     * @return $this
     */

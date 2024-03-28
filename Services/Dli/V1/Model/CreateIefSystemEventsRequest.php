@@ -25,7 +25,7 @@ class CreateIefSystemEventsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\IefSystemEventsReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateIefSystemEventsRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateIefSystemEventsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\IefSystemEventsReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateIefSystemEventsRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateIefSystemEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\IefSystemEventsReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateIefSystemEventsRequestBody|null $body body
     *
     * @return $this
     */

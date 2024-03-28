@@ -31,7 +31,7 @@ class ListElasticResourcePoolQueuesResponse implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'queues' => '\HuaweiCloud\SDK\Dli\V1\Model\QueueInfo[]',
+            'queues' => '\HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolQueue[]',
             'count' => 'int'
     ];
 
@@ -258,7 +258,7 @@ class ListElasticResourcePoolQueuesResponse implements ModelInterface, ArrayAcce
     * Gets queues
     *  该弹性资源池下所有queue信息及队列扩缩容策略信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueueInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolQueue[]|null
     */
     public function getQueues()
     {
@@ -268,7 +268,7 @@ class ListElasticResourcePoolQueuesResponse implements ModelInterface, ArrayAcce
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueueInfo[]|null $queues 该弹性资源池下所有queue信息及队列扩缩容策略信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolQueue[]|null $queues 该弹性资源池下所有queue信息及队列扩缩容策略信息。
     *
     * @return $this
     */

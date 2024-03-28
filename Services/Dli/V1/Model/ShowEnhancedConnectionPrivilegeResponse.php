@@ -32,7 +32,7 @@ class ShowEnhancedConnectionPrivilegeResponse implements ModelInterface, ArrayAc
             'isSuccess' => 'bool',
             'message' => 'string',
             'connectionId' => 'string',
-            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\ProjectPrivilege[]'
+            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionPrivilege[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ShowEnhancedConnectionPrivilegeResponse implements ModelInterface, ArrayAc
     * Gets privileges
     *  跨源连接各个授权项目的信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ProjectPrivilege[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionPrivilege[]|null
     */
     public function getPrivileges()
     {
@@ -292,7 +292,7 @@ class ShowEnhancedConnectionPrivilegeResponse implements ModelInterface, ArrayAc
     /**
     * Sets privileges
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ProjectPrivilege[]|null $privileges 跨源连接各个授权项目的信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionPrivilege[]|null $privileges 跨源连接各个授权项目的信息。
     *
     * @return $this
     */

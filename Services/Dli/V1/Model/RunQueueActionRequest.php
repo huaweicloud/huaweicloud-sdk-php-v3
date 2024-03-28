@@ -27,7 +27,7 @@ class RunQueueActionRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'queueName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class RunQueueActionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class RunQueueActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\RunQueueActionRequestBody|null $body body
     *
     * @return $this
     */

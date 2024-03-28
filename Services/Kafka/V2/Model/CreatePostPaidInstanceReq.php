@@ -21,7 +21,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
@@ -46,7 +46,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
-    * ipv6Enable  是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
@@ -84,7 +83,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'string',
             'saslEnabledMechanisms' => 'string[]',
             'retentionPolicy' => 'string',
-            'ipv6Enable' => 'bool',
             'diskEncryptedEnable' => 'bool',
             'diskEncryptedKey' => 'string',
             'connectorEnable' => 'bool',
@@ -97,7 +95,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
@@ -122,7 +120,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
-    * ipv6Enable  是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
@@ -160,7 +157,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
         'kafkaSecurityProtocol' => null,
         'saslEnabledMechanisms' => null,
         'retentionPolicy' => null,
-        'ipv6Enable' => null,
         'diskEncryptedEnable' => null,
         'diskEncryptedKey' => null,
         'connectorEnable' => null,
@@ -194,7 +190,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
@@ -219,7 +215,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
-    * ipv6Enable  是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
@@ -257,7 +252,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'kafka_security_protocol',
             'saslEnabledMechanisms' => 'sasl_enabled_mechanisms',
             'retentionPolicy' => 'retention_policy',
-            'ipv6Enable' => 'ipv6_enable',
             'diskEncryptedEnable' => 'disk_encrypted_enable',
             'diskEncryptedKey' => 'disk_encrypted_key',
             'connectorEnable' => 'connector_enable',
@@ -270,7 +264,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
@@ -295,7 +289,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
-    * ipv6Enable  是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
@@ -333,7 +326,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'setKafkaSecurityProtocol',
             'saslEnabledMechanisms' => 'setSaslEnabledMechanisms',
             'retentionPolicy' => 'setRetentionPolicy',
-            'ipv6Enable' => 'setIpv6Enable',
             'diskEncryptedEnable' => 'setDiskEncryptedEnable',
             'diskEncryptedKey' => 'setDiskEncryptedKey',
             'connectorEnable' => 'setConnectorEnable',
@@ -346,7 +338,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
-    * description  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
@@ -371,7 +363,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * kafkaSecurityProtocol  开启SASL后使用的安全协议，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启SASL_SSL认证机制。  实例创建后将不支持动态开启和关闭。  - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制，如果开启了SASL认证功能（即ssl_enable=true），该字段为必选。  若该字段值为空，默认开启PLAIN认证机制。  选择其一进行SASL认证即可，支持同时开启两种认证机制。 取值如下： - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * retentionPolicy  磁盘的容量到达容量阈值后，对于消息的处理策略。  取值如下： - produce_reject：表示拒绝消息写入。 - time_base：表示自动删除最老消息。
-    * ipv6Enable  是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
     * diskEncryptedEnable  是否开启磁盘加密。
     * diskEncryptedKey  磁盘加密key，未开启磁盘加密时为空
     * connectorEnable  是否开启消息转储功能。  默认不开启消息转储。
@@ -409,7 +400,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
             'kafkaSecurityProtocol' => 'getKafkaSecurityProtocol',
             'saslEnabledMechanisms' => 'getSaslEnabledMechanisms',
             'retentionPolicy' => 'getRetentionPolicy',
-            'ipv6Enable' => 'getIpv6Enable',
             'diskEncryptedEnable' => 'getDiskEncryptedEnable',
             'diskEncryptedKey' => 'getDiskEncryptedKey',
             'connectorEnable' => 'getConnectorEnable',
@@ -623,7 +613,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
         $this->container['kafkaSecurityProtocol'] = isset($data['kafkaSecurityProtocol']) ? $data['kafkaSecurityProtocol'] : null;
         $this->container['saslEnabledMechanisms'] = isset($data['saslEnabledMechanisms']) ? $data['saslEnabledMechanisms'] : null;
         $this->container['retentionPolicy'] = isset($data['retentionPolicy']) ? $data['retentionPolicy'] : null;
-        $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['diskEncryptedEnable'] = isset($data['diskEncryptedEnable']) ? $data['diskEncryptedEnable'] : null;
         $this->container['diskEncryptedKey'] = isset($data['diskEncryptedKey']) ? $data['diskEncryptedKey'] : null;
         $this->container['connectorEnable'] = isset($data['connectorEnable']) ? $data['connectorEnable'] : null;
@@ -751,7 +740,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    *  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     *
     * @return string|null
     */
@@ -763,7 +752,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 实例的描述信息。  长度不超过1024的字符串。  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
+    * @param string|null $description 实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     *
     * @return $this
     */
@@ -1346,30 +1335,6 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     public function setRetentionPolicy($retentionPolicy)
     {
         $this->container['retentionPolicy'] = $retentionPolicy;
-        return $this;
-    }
-
-    /**
-    * Gets ipv6Enable
-    *  是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
-    *
-    * @return bool|null
-    */
-    public function getIpv6Enable()
-    {
-        return $this->container['ipv6Enable'];
-    }
-
-    /**
-    * Sets ipv6Enable
-    *
-    * @param bool|null $ipv6Enable 是否开启ipv6。仅在虚拟私有云支持ipv6时生效。
-    *
-    * @return $this
-    */
-    public function setIpv6Enable($ipv6Enable)
-    {
-        $this->container['ipv6Enable'] = $ipv6Enable;
         return $this;
     }
 

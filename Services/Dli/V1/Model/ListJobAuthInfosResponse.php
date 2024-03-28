@@ -32,7 +32,7 @@ class ListJobAuthInfosResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'count' => 'int',
-            'authInfos' => '\HuaweiCloud\SDK\Dli\V1\Model\AuthInfos[]'
+            'authInfos' => '\HuaweiCloud\SDK\Dli\V1\Model\AuthInfo[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListJobAuthInfosResponse implements ModelInterface, ArrayAccess
     * Gets authInfos
     *  认证信息列表
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\AuthInfos[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\AuthInfo[]|null
     */
     public function getAuthInfos()
     {
@@ -292,7 +292,7 @@ class ListJobAuthInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets authInfos
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\AuthInfos[]|null $authInfos 认证信息列表
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\AuthInfo[]|null $authInfos 认证信息列表
     *
     * @return $this
     */

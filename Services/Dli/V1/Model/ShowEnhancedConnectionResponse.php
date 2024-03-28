@@ -41,12 +41,12 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'status' => 'string',
-            'availableQueueInfo' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResourceInfo[]',
-            'elasticResourcePools' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResourceInfo[]',
+            'availableQueueInfo' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResource[]',
+            'elasticResourcePools' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResource[]',
             'destVpcId' => 'string',
             'destNetworkId' => 'string',
             'createTime' => 'int',
-            'hosts' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionsHost[]'
+            'hosts' => '\HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionHost[]'
     ];
 
     /**
@@ -407,7 +407,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * Gets availableQueueInfo
     *  各个队列创建对等连接的信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResourceInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResource[]|null
     */
     public function getAvailableQueueInfo()
     {
@@ -417,7 +417,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availableQueueInfo
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResourceInfo[]|null $availableQueueInfo 各个队列创建对等连接的信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResource[]|null $availableQueueInfo 各个队列创建对等连接的信息。
     *
     * @return $this
     */
@@ -431,7 +431,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * Gets elasticResourcePools
     *  各个弹性资源池创建对等连接的信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResourceInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResource[]|null
     */
     public function getElasticResourcePools()
     {
@@ -441,7 +441,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets elasticResourcePools
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResourceInfo[]|null $elasticResourcePools 各个弹性资源池创建对等连接的信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionResource[]|null $elasticResourcePools 各个弹性资源池创建对等连接的信息。
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     * Gets hosts
     *  用户自定义主机信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionsHost[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionHost[]|null
     */
     public function getHosts()
     {
@@ -537,7 +537,7 @@ class ShowEnhancedConnectionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hosts
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionsHost[]|null $hosts 用户自定义主机信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\EnhancedConnectionHost[]|null $hosts 用户自定义主机信息。
     *
     * @return $this
     */

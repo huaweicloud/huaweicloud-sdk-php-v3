@@ -27,7 +27,7 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'projectId' => 'string',
-            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaPropertiesBody[]'
+            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     * Gets resources
     *  resources
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaPropertiesBody[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]|null
     */
     public function getResources()
     {
@@ -221,7 +221,7 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaPropertiesBody[]|null $resources resources
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]|null $resources resources
     *
     * @return $this
     */

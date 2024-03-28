@@ -132,11 +132,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -200,11 +200,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -225,144 +225,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 数据赋权（用户）
-     *
-     * 该API用于将数据库或数据表的数据权限赋给指定的其他用户。
-     * 说明：
-     * 被赋权用户所在用户组的所属区域需具有Tenant Guest权限。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function changeAuthorizationAsync($request)
-    {
-        return $this->changeAuthorizationAsyncWithHttpInfo($request);
-    }
-    
-    public function changeAuthorizationAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/user-authorization';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ChangeAuthorizationResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ChangeAuthorizationRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改队列定时扩缩容计划
-     *
-     * 该API用于修改指定ID的队列定时扩缩容计划。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function changeQueuePlanAsync($request)
-    {
-        return $this->changeQueuePlanAsyncWithHttpInfo($request);
-    }
-    
-    public function changeQueuePlanAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/queues/{queue_name}/plans/{plan_id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['planId'] !== null) {
-            $pathParams['plan_id'] = $localVarParams['planId'];
-        }
-        if ($localVarParams['queueName'] !== null) {
-            $pathParams['queue_name'] = $localVarParams['queueName'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ChangeQueuePlanResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ChangeQueuePlanRequest',
             $asyncRequest = true);
     }
 
@@ -471,11 +333,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -539,11 +401,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -604,11 +466,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -734,11 +596,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -867,11 +729,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -997,11 +859,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -1065,11 +927,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -1333,11 +1195,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1463,11 +1325,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1596,11 +1458,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1690,6 +1552,74 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 删除组内资源包
+     *
+     * 该API用于删除某个project某个分组下的资源包
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteJobResourceAsync($request)
+    {
+        return $this->deleteJobResourceAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteJobResourceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/resources/{resource_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['group'] !== null) {
+            $queryParams['group'] = $localVarParams['group'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $pathParams['resource_name'] = $localVarParams['resourceName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteJobResourceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteJobResourceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除队列
      *
      * 该API用于删除指定队列。
@@ -1728,11 +1658,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -1796,11 +1726,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -1889,74 +1819,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteQueuePropertyResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteQueuePropertyRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 删除组内资源包
-     *
-     * 该API用于删除某个project某个分组下的资源包
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteResourceAsync($request)
-    {
-        return $this->deleteResourceAsyncWithHttpInfo($request);
-    }
-    
-    public function deleteResourceAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/resources/{resource_name}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['group'] !== null) {
-            $queryParams['group'] = $localVarParams['group'];
-        }
-        if ($localVarParams['resourceName'] !== null) {
-            $pathParams['resource_name'] = $localVarParams['resourceName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteResourceResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteResourceRequest',
             $asyncRequest = true);
     }
 
@@ -2068,11 +1930,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2204,11 +2066,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -2337,11 +2199,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2402,11 +2264,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2710,11 +2572,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2778,11 +2640,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -2878,6 +2740,74 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 查看分组资源列表
+     *
+     * 该API用于查看某个project下的所有资源，其中包含Group。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listJobResourcesAsync($request)
+    {
+        return $this->listJobResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function listJobResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['kind'] !== null) {
+            $queryParams['kind'] = $localVarParams['kind'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListJobResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListJobResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查看队列定时扩缩容计划
      *
      * 查看队列定时扩缩容计划接口，列出指定队列定时规格变更计划。
@@ -2914,11 +2844,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -3050,11 +2980,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3124,11 +3054,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3149,74 +3079,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListQueuesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查看分组资源列表
-     *
-     * 该API用于查看某个project下的所有资源，其中包含Group。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listResourcesAsync($request)
-    {
-        return $this->listResourcesAsyncWithHttpInfo($request);
-    }
-    
-    public function listResourcesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/resources';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['kind'] !== null) {
-            $queryParams['kind'] = $localVarParams['kind'];
-        }
-        if ($localVarParams['tags'] !== null) {
-            $queryParams['tags'] = $localVarParams['tags'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListResourcesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListResourcesRequest',
             $asyncRequest = true);
     }
 
@@ -3263,11 +3125,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3331,11 +3193,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3396,11 +3258,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3492,7 +3354,8 @@ class DliAsyncClient extends Client
     /**
      * 绑定/解绑catalog映射信息
      *
-     * 该API创建DLI绑定/解绑到lakeformation等服务的元数据目录（CATALOG）相关信息，包含DLI侧CATALOG名称、外部CATALOG名称和类型，类型为预留字段，当前只支持lakeformation
+     * 该API创建DLI绑定/解绑到lakeformation等服务的元数据目录（CATALOG）相关信息。
+     * 包含DLI侧CATALOG名称、外部CATALOG名称和类型，类型为预留字段，当前只支持lakeformation。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3555,6 +3418,73 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 数据赋权（用户）
+     *
+     * 该API用于将数据库或数据表的数据权限赋给指定的其他用户。
+     * 说明：
+     * 被赋权用户所在用户组的所属区域需具有Tenant Guest权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function runDataAuthorizationActionAsync($request)
+    {
+        return $this->runDataAuthorizationActionAsyncWithHttpInfo($request);
+    }
+    
+    public function runDataAuthorizationActionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/user-authorization';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\RunDataAuthorizationActionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\RunDataAuthorizationActionRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 重启/扩容/缩容队列
      *
      * 该功能用于重新启动队列、扩容队列、缩容队列。
@@ -3594,11 +3524,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json', 'application/json-1', 'application/json-2']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json', 'application/json-1', 'application/json-2'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -3727,11 +3657,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3792,11 +3722,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3854,11 +3784,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -3919,11 +3849,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -3984,11 +3914,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -4009,6 +3939,74 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowEnhancedConnectionPrivilegeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowEnhancedConnectionPrivilegeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看组内资源包
+     *
+     * 该API用于查看某个project某个分组下的具体资源信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showJobResourceAsync($request)
+    {
+        return $this->showJobResourceAsyncWithHttpInfo($request);
+    }
+    
+    public function showJobResourceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/resources/{resource_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['group'] !== null) {
+            $queryParams['group'] = $localVarParams['group'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $pathParams['resource_name'] = $localVarParams['resourceName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowJobResourceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowJobResourceRequest',
             $asyncRequest = true);
     }
 
@@ -4049,11 +4047,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -4136,74 +4134,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查看组内资源包
-     *
-     * 该API用于查看某个project某个分组下的具体资源信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showResourceInfoAsync($request)
-    {
-        return $this->showResourceInfoAsyncWithHttpInfo($request);
-    }
-    
-    public function showResourceInfoAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/resources/{resource_name}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['group'] !== null) {
-            $queryParams['group'] = $localVarParams['group'];
-        }
-        if ($localVarParams['resourceName'] !== null) {
-            $pathParams['resource_name'] = $localVarParams['resourceName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowResourceInfoResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowResourceInfoRequest',
             $asyncRequest = true);
     }
 
@@ -4451,11 +4381,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -4519,11 +4449,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -4544,71 +4474,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGlobalVariableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改组或者资源包拥有者
-     *
-     * 用于修改程序包的owner。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateGroupOrResourceOwnerAsync($request)
-    {
-        return $this->updateGroupOrResourceOwnerAsyncWithHttpInfo($request);
-    }
-    
-    public function updateGroupOrResourceOwnerAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/resources/owner';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGroupOrResourceOwnerResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateGroupOrResourceOwnerRequest',
             $asyncRequest = true);
     }
 
@@ -4678,6 +4543,71 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 修改组或者资源包拥有者
+     *
+     * 用于修改程序包的owner。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateJobResourceOwnerAsync($request)
+    {
+        return $this->updateJobResourceOwnerAsyncWithHttpInfo($request);
+    }
+    
+    public function updateJobResourceOwnerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/resources/owner';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobResourceOwnerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobResourceOwnerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改队列网段
      *
      * 该功能用于修改包年包月队列网段。
@@ -4719,11 +4649,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -4744,6 +4674,77 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueueCidrResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueueCidrRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改队列定时扩缩容计划
+     *
+     * 该API用于修改指定ID的队列定时扩缩容计划。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateQueuePlanAsync($request)
+    {
+        return $this->updateQueuePlanAsyncWithHttpInfo($request);
+    }
+    
+    public function updateQueuePlanAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/queues/{queue_name}/plans/{plan_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['planId'] !== null) {
+            $pathParams['plan_id'] = $localVarParams['planId'];
+        }
+        if ($localVarParams['queueName'] !== null) {
+            $pathParams['queue_name'] = $localVarParams['queueName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueuePlanResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateQueuePlanRequest',
             $asyncRequest = true);
     }
 
@@ -4826,12 +4827,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function uploadFilesAsync($request)
+    public function uploadFileJobResourcesAsync($request)
     {
-        return $this->uploadFilesAsyncWithHttpInfo($request);
+        return $this->uploadFileJobResourcesAsyncWithHttpInfo($request);
     }
     
-    public function uploadFilesAsyncWithHttpInfo($request){
+    public function uploadFileJobResourcesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/resources/files';
         $formParams = [];
@@ -4856,11 +4857,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -4878,9 +4879,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadFilesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadFileJobResourcesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadFilesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadFileJobResourcesRequest',
             $asyncRequest = true);
     }
 
@@ -4895,12 +4896,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function uploadJarsAsync($request)
+    public function uploadJarJobResourcesAsync($request)
     {
-        return $this->uploadJarsAsyncWithHttpInfo($request);
+        return $this->uploadJarJobResourcesAsyncWithHttpInfo($request);
     }
     
-    public function uploadJarsAsyncWithHttpInfo($request){
+    public function uploadJarJobResourcesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/resources/jars';
         $formParams = [];
@@ -4925,11 +4926,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -4947,78 +4948,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadJarsResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadJarJobResourcesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadJarsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 上传pyfile类型分组资源
-     *
-     * 该API用于在project下的上传pyfile类型模块。
-     * 说明： 上传同名pyfile类型模块时，新模块将会覆盖旧模块。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function uploadPythonFilesAsync($request)
-    {
-        return $this->uploadPythonFilesAsyncWithHttpInfo($request);
-    }
-    
-    public function uploadPythonFilesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/resources/pyfiles';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['userId'] !== null) {
-            $headerParams['user_id'] = $localVarParams['userId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadPythonFilesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadPythonFilesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadJarJobResourcesRequest',
             $asyncRequest = true);
     }
 
@@ -5032,12 +4964,12 @@ class DliAsyncClient extends Client
      * @param $request 请求对象
      * @return response
      */
-    public function uploadResourcesAsync($request)
+    public function uploadJobResourcesAsync($request)
     {
-        return $this->uploadResourcesAsyncWithHttpInfo($request);
+        return $this->uploadJobResourcesAsyncWithHttpInfo($request);
     }
     
-    public function uploadResourcesAsyncWithHttpInfo($request){
+    public function uploadJobResourcesAsyncWithHttpInfo($request){
         $collection_formats = [];
         $resourcePath = '/v2.0/{project_id}/resources';
         $formParams = [];
@@ -5062,11 +4994,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5084,9 +5016,78 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadResourcesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadJobResourcesResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadResourcesRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadJobResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 上传pyfile类型分组资源
+     *
+     * 该API用于在project下的上传pyfile类型模块。
+     * 说明： 上传同名pyfile类型模块时，新模块将会覆盖旧模块。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadPythonFileJobResourcesAsync($request)
+    {
+        return $this->uploadPythonFileJobResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function uploadPythonFileJobResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/resources/pyfiles';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['userId'] !== null) {
+            $headerParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UploadPythonFileJobResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UploadPythonFileJobResourcesRequest',
             $asyncRequest = true);
     }
 
@@ -5127,11 +5128,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5192,11 +5193,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5221,23 +5222,23 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 边缘Flink作业状态信息上报
+     * 批量停止Flink作业
      *
-     * 该API用于处理边缘Flink作业状态上报信息
+     * 批量停止正在运行的Flink作业。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function changeFlinkJobStatusReportAsync($request)
+    public function batchStopFlinkJobsAsync($request)
     {
-        return $this->changeFlinkJobStatusReportAsyncWithHttpInfo($request);
+        return $this->batchStopFlinkJobsAsyncWithHttpInfo($request);
     }
     
-    public function changeFlinkJobStatusReportAsyncWithHttpInfo($request){
+    public function batchStopFlinkJobsAsyncWithHttpInfo($request){
         $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/edgesrv/job-report';
+        $resourcePath = '/v1.0/{project_id}/streaming/jobs/stop';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5257,11 +5258,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5279,9 +5280,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ChangeFlinkJobStatusReportResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\BatchStopFlinkJobsResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ChangeFlinkJobStatusReportRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\BatchStopFlinkJobsRequest',
             $asyncRequest = true);
     }
 
@@ -5322,11 +5323,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5387,11 +5388,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5455,11 +5456,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5520,11 +5521,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5585,11 +5586,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5650,11 +5651,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5715,11 +5716,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -5780,11 +5781,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -5845,11 +5846,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -5910,11 +5911,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6008,11 +6009,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json', 'application/json-1']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json', 'application/json-1'],
+                ['application/json'],
                 []
             );
         }
@@ -6085,11 +6086,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -6150,11 +6151,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6215,11 +6216,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6280,11 +6281,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -6345,11 +6346,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -6410,11 +6411,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6435,71 +6436,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkMetricResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowFlinkMetricRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 批量停止Flink作业
-     *
-     * 批量停止正在运行的Flink作业。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function stopFlinkJobsAsync($request)
-    {
-        return $this->stopFlinkJobsAsyncWithHttpInfo($request);
-    }
-    
-    public function stopFlinkJobsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/streaming/jobs/stop';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\StopFlinkJobsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\StopFlinkJobsRequest',
             $asyncRequest = true);
     }
 
@@ -6543,11 +6479,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6568,6 +6504,71 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJarJobResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJarJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 边缘Flink作业状态信息上报
+     *
+     * 该API用于处理边缘Flink作业状态上报信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateFlinkJobStatusReportAsync($request)
+    {
+        return $this->updateFlinkJobStatusReportAsyncWithHttpInfo($request);
+    }
+    
+    public function updateFlinkJobStatusReportAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/edgesrv/job-report';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJobStatusReportResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkJobStatusReportRequest',
             $asyncRequest = true);
     }
 
@@ -6611,11 +6612,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6679,11 +6680,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -6744,11 +6745,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -6812,11 +6813,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -7043,11 +7044,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -7068,83 +7069,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSparkJobsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSparkJobsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询批处理作业日志
-     *
-     * 该API用于查询批处理作业的后台日志。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showBatchLogAsync($request)
-    {
-        return $this->showBatchLogAsyncWithHttpInfo($request);
-    }
-    
-    public function showBatchLogAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2.0/{project_id}/batches/{batch_id}/log';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['from'] !== null) {
-            $queryParams['from'] = $localVarParams['from'];
-        }
-        if ($localVarParams['index'] !== null) {
-            $queryParams['index'] = $localVarParams['index'];
-        }
-        if ($localVarParams['size'] !== null) {
-            $queryParams['size'] = $localVarParams['size'];
-        }
-        if ($localVarParams['type'] !== null) {
-            $queryParams['type'] = $localVarParams['type'];
-        }
-        if ($localVarParams['batchId'] !== null) {
-            $pathParams['batch_id'] = $localVarParams['batchId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchLogResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowBatchLogRequest',
             $asyncRequest = true);
     }
 
@@ -7185,11 +7109,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7210,6 +7134,83 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询批处理作业日志
+     *
+     * 该API用于查询批处理作业的后台日志。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSparkJobLogAsync($request)
+    {
+        return $this->showSparkJobLogAsyncWithHttpInfo($request);
+    }
+    
+    public function showSparkJobLogAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2.0/{project_id}/batches/{batch_id}/log';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['from'] !== null) {
+            $queryParams['from'] = $localVarParams['from'];
+        }
+        if ($localVarParams['index'] !== null) {
+            $queryParams['index'] = $localVarParams['index'];
+        }
+        if ($localVarParams['size'] !== null) {
+            $queryParams['size'] = $localVarParams['size'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['batchId'] !== null) {
+            $pathParams['batch_id'] = $localVarParams['batchId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobLogResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSparkJobLogRequest',
             $asyncRequest = true);
     }
 
@@ -7250,11 +7251,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7513,11 +7514,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -7578,11 +7579,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -7603,71 +7604,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CheckSqlResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CheckSqlRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 创建数据库
-     *
-     * 该API用于新增数据库。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createDatabaseAsync($request)
-    {
-        return $this->createDatabaseAsyncWithHttpInfo($request);
-    }
-    
-    public function createDatabaseAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateDatabaseResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateDatabaseRequest',
             $asyncRequest = true);
     }
 
@@ -7710,11 +7646,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -7804,216 +7740,6 @@ class DliAsyncClient extends Client
     }
 
     /**
-     * 创建表
-     *
-     * 该API用于创建新的表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createTableAsync($request)
-    {
-        return $this->createTableAsyncWithHttpInfo($request);
-    }
-    
-    public function createTableAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateTableResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateTableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 删除数据库
-     *
-     * 该API用于删除空数据库，若待删除的数据库中存在表，则需先删除其中的所有表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteDatabaseAsync($request)
-    {
-        return $this->deleteDatabaseAsyncWithHttpInfo($request);
-    }
-    
-    public function deleteDatabaseAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['async'] !== null) {
-            $queryParams['async'] = $localVarParams['async'];
-        }
-        if ($localVarParams['cascade'] !== null) {
-            $queryParams['cascade'] = $localVarParams['cascade'];
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteDatabaseResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteDatabaseRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 删除表
-     *
-     * 该API用于删除指定的表。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteTableAsync($request)
-    {
-        return $this->deleteTableAsyncWithHttpInfo($request);
-    }
-    
-    public function deleteTableAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['async'] !== null) {
-            $queryParams['async'] = $localVarParams['async'];
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-        if ($localVarParams['tableName'] !== null) {
-            $pathParams['table_name'] = $localVarParams['tableName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteTableResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteTableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 导出查询结果
      *
      * 该API用于将SQL语句的查询结果导出到OBS对象存储中，只支持导出“QUERY”类型作业的查询结果。
@@ -8053,11 +7779,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -8078,296 +7804,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 导出查询结果
-     *
-     * 该API用于将SQL语句的查询结果导出到OBS对象存储中，只支持导出“QUERY”类型作业的查询结果。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function exportTableAsync($request)
-    {
-        return $this->exportTableAsyncWithHttpInfo($request);
-    }
-    
-    public function exportTableAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/jobs/export-table';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ExportTableResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ExportTableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 导入数据
-     *
-     * 该API用于将数据从文件导入DLI或OBS表，目前仅支持将OBS上的数据导入DLI或OBS中。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function importTableAsync($request)
-    {
-        return $this->importTableAsyncWithHttpInfo($request);
-    }
-    
-    public function importTableAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/jobs/import-table';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ImportTableResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ImportTableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询所有表
-     *
-     * 该API用于查询指定数据库下符合过滤条件的或所有的表信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listAllTablesAsync($request)
-    {
-        return $this->listAllTablesAsyncWithHttpInfo($request);
-    }
-    
-    public function listAllTablesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['currentPage'] !== null) {
-            $queryParams['current_page'] = $localVarParams['currentPage'];
-        }
-        if ($localVarParams['keyword'] !== null) {
-            $queryParams['keyword'] = $localVarParams['keyword'];
-        }
-        if ($localVarParams['pageSize'] !== null) {
-            $queryParams['page_size'] = $localVarParams['pageSize'];
-        }
-        if ($localVarParams['tableType'] !== null) {
-            $queryParams['table_type'] = $localVarParams['tableType'];
-        }
-        if ($localVarParams['withDetail'] !== null) {
-            $queryParams['with_detail'] = $localVarParams['withDetail'];
-        }
-        if ($localVarParams['withPriv'] !== null) {
-            $queryParams['with_priv'] = $localVarParams['withPriv'];
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListAllTablesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListAllTablesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询所有数据库
-     *
-     * 该API用于查询出所有的数据库信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listDatabasesAsync($request)
-    {
-        return $this->listDatabasesAsyncWithHttpInfo($request);
-    }
-    
-    public function listDatabasesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['keyword'] !== null) {
-            $queryParams['keyword'] = $localVarParams['keyword'];
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['tags'] !== null) {
-            $queryParams['tags'] = $localVarParams['tags'];
-        }
-        if ($localVarParams['withPriv'] !== null) {
-            $queryParams['with_priv'] = $localVarParams['withPriv'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListDatabasesResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListDatabasesRequest',
             $asyncRequest = true);
     }
 
@@ -8512,11 +7948,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -8581,11 +8017,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 []
             );
         }
@@ -8606,147 +8042,6 @@ class DliAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewSqlJobResultResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewSqlJobResultRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 描述表信息
-     *
-     * 该API用于描述指定表的元数据信息。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showDescribeTableAsync($request)
-    {
-        return $this->showDescribeTableAsyncWithHttpInfo($request);
-    }
-    
-    public function showDescribeTableAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-        if ($localVarParams['tableName'] !== null) {
-            $pathParams['table_name'] = $localVarParams['tableName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowDescribeTableResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowDescribeTableRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 获取分区信息列表
-     *
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showPartitionsAsync($request)
-    {
-        return $this->showPartitionsAsyncWithHttpInfo($request);
-    }
-    
-    public function showPartitionsAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}/partitions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['limit'] !== null) {
-            $queryParams['limit'] = $localVarParams['limit'];
-        }
-        if ($localVarParams['offset'] !== null) {
-            $queryParams['offset'] = $localVarParams['offset'];
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-        if ($localVarParams['tableName'] !== null) {
-            $pathParams['table_name'] = $localVarParams['tableName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json', 'application/json-1']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json', 'application/json-1'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowPartitionsResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowPartitionsRequest',
             $asyncRequest = true);
     }
 
@@ -8787,11 +8082,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -8852,11 +8147,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
+                ['application/json'],
                 []
             );
         }
@@ -8917,68 +8212,6 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobStatusResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobStatusRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询所有SQL样例模板
-     *
-     * 该API用于查询所有SQL样例模板。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showSqlSampleTemplatesAsync($request)
-    {
-        return $this->showSqlSampleTemplatesAsyncWithHttpInfo($request);
-    }
-    
-    public function showSqlSampleTemplatesAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/sqls/sample';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
             );
         } else {
@@ -9001,148 +8234,9 @@ class DliAsyncClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlSampleTemplatesResponse',
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobStatusResponse',
             $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlSampleTemplatesRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 预览表内容
-     *
-     * 该API用于用于预览表中前10行的内容。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showTableContentAsync($request)
-    {
-        return $this->showTableContentAsyncWithHttpInfo($request);
-    }
-    
-    public function showTableContentAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}/preview';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['mode'] !== null) {
-            $queryParams['mode'] = $localVarParams['mode'];
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-        if ($localVarParams['tableName'] !== null) {
-            $pathParams['table_name'] = $localVarParams['tableName'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowTableContentResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowTableContentRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改数据库用户
-     *
-     * 用于修改数据库的owner。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateDatabaseOwnerAsync($request)
-    {
-        return $this->updateDatabaseOwnerAsyncWithHttpInfo($request);
-    }
-    
-    public function updateDatabaseOwnerAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/owner';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['databaseName'] !== null) {
-            $pathParams['database_name'] = $localVarParams['databaseName'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateDatabaseOwnerResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateDatabaseOwnerRequest',
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowSqlJobStatusRequest',
             $asyncRequest = true);
     }
 
@@ -9215,6 +8309,913 @@ class DliAsyncClient extends Client
     }
 
     /**
+     * 创建数据库
+     *
+     * 该API用于新增数据库。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDatabaseAsync($request)
+    {
+        return $this->createDatabaseAsyncWithHttpInfo($request);
+    }
+    
+    public function createDatabaseAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateDatabaseResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateDatabaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建表
+     *
+     * 该API用于创建新的表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createTableAsync($request)
+    {
+        return $this->createTableAsyncWithHttpInfo($request);
+    }
+    
+    public function createTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除数据库
+     *
+     * 该API用于删除空数据库，若待删除的数据库中存在表，则需先删除其中的所有表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDatabaseAsync($request)
+    {
+        return $this->deleteDatabaseAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDatabaseAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['async'] !== null) {
+            $queryParams['async'] = $localVarParams['async'];
+        }
+        if ($localVarParams['cascade'] !== null) {
+            $queryParams['cascade'] = $localVarParams['cascade'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteDatabaseResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteDatabaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除表
+     *
+     * 该API用于删除指定的表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTableAsync($request)
+    {
+        return $this->deleteTableAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['async'] !== null) {
+            $queryParams['async'] = $localVarParams['async'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $pathParams['table_name'] = $localVarParams['tableName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\DeleteTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 导出表数据
+     *
+     * 该API用于将SQL语句的查询结果导出到OBS对象存储中，只支持导出“QUERY”类型作业的查询结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportTableAsync($request)
+    {
+        return $this->exportTableAsyncWithHttpInfo($request);
+    }
+    
+    public function exportTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/jobs/export-table';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ExportTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ExportTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 导入数据
+     *
+     * 该API用于将数据从文件导入DLI或OBS表，目前仅支持将OBS上的数据导入DLI或OBS中。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importTableAsync($request)
+    {
+        return $this->importTableAsyncWithHttpInfo($request);
+    }
+    
+    public function importTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/jobs/import-table';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ImportTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ImportTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询所有数据库
+     *
+     * 该API用于查询出所有的数据库信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDatabasesAsync($request)
+    {
+        return $this->listDatabasesAsyncWithHttpInfo($request);
+    }
+    
+    public function listDatabasesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyword'] !== null) {
+            $queryParams['keyword'] = $localVarParams['keyword'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['withPriv'] !== null) {
+            $queryParams['with_priv'] = $localVarParams['withPriv'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListDatabasesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListDatabasesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取分区信息列表
+     *
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPartitionsAsync($request)
+    {
+        return $this->listPartitionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listPartitionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}/partitions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $pathParams['table_name'] = $localVarParams['tableName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListPartitionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListPartitionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询所有SQL样例模板
+     *
+     * 该API用于查询所有SQL样例模板。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSqlSampleTemplatesAsync($request)
+    {
+        return $this->listSqlSampleTemplatesAsyncWithHttpInfo($request);
+    }
+    
+    public function listSqlSampleTemplatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/sqls/sample';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlSampleTemplatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListSqlSampleTemplatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询所有表
+     *
+     * 该API用于查询指定数据库下符合过滤条件的或所有的表信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTablesAsync($request)
+    {
+        return $this->listTablesAsyncWithHttpInfo($request);
+    }
+    
+    public function listTablesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['currentPage'] !== null) {
+            $queryParams['current_page'] = $localVarParams['currentPage'];
+        }
+        if ($localVarParams['keyword'] !== null) {
+            $queryParams['keyword'] = $localVarParams['keyword'];
+        }
+        if ($localVarParams['pageSize'] !== null) {
+            $queryParams['page_size'] = $localVarParams['pageSize'];
+        }
+        if ($localVarParams['tableType'] !== null) {
+            $queryParams['table_type'] = $localVarParams['tableType'];
+        }
+        if ($localVarParams['withDetail'] !== null) {
+            $queryParams['with_detail'] = $localVarParams['withDetail'];
+        }
+        if ($localVarParams['withPriv'] !== null) {
+            $queryParams['with_priv'] = $localVarParams['withPriv'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ListTablesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ListTablesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 预览表内容
+     *
+     * 该API用于用于预览表中前10行的内容。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function previewTableAsync($request)
+    {
+        return $this->previewTableAsyncWithHttpInfo($request);
+    }
+    
+    public function previewTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}/preview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['mode'] !== null) {
+            $queryParams['mode'] = $localVarParams['mode'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $pathParams['table_name'] = $localVarParams['tableName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\PreviewTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 描述表信息
+     *
+     * 该API用于描述指定表的元数据信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showTableAsync($request)
+    {
+        return $this->showTableAsyncWithHttpInfo($request);
+    }
+    
+    public function showTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/tables/{table_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $pathParams['table_name'] = $localVarParams['tableName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\ShowTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\ShowTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改数据库用户
+     *
+     * 用于修改数据库的owner。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDatabaseOwnerAsync($request)
+    {
+        return $this->updateDatabaseOwnerAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDatabaseOwnerAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/databases/{database_name}/owner';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $pathParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateDatabaseOwnerResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\UpdateDatabaseOwnerRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改表用户
      *
      * 用于修改表的owner。
@@ -9257,11 +9258,11 @@ class DliAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['application/json'],
                 ['application/json']
             );
         }

@@ -25,7 +25,7 @@ class ImportFlinkJobsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobsRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class ImportFlinkJobsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobsRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class ImportFlinkJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ImportFlinkJobsRequestBody|null $body body
     *
     * @return $this
     */

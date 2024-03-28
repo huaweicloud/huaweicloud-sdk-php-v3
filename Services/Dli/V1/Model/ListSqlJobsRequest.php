@@ -259,6 +259,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const JOB_TYPE_ALL = 'ALL';
     const JOB_TYPE_DDL = 'DDL';
     const JOB_TYPE_DCL = 'DCL';
     const JOB_TYPE_IMPORT = 'IMPORT';
@@ -279,6 +280,7 @@ class ListSqlJobsRequest implements ModelInterface, ArrayAccess
     public function getJobTypeAllowableValues()
     {
         return [
+            self::JOB_TYPE_ALL,
             self::JOB_TYPE_DDL,
             self::JOB_TYPE_DCL,
             self::JOB_TYPE_IMPORT,

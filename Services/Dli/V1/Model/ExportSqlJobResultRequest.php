@@ -27,7 +27,7 @@ class ExportSqlJobResultRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ExportSqlResultRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class ExportSqlJobResultRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ExportSqlResultRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class ExportSqlJobResultRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ExportSqlResultRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ExportSqlJobResultRequestBody|null $body body
     *
     * @return $this
     */

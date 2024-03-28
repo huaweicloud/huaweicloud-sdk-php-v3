@@ -43,6 +43,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id,默认为‘0’。
     * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
     * children  子副本列表
+    * incremental  是否是增备
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'replicationRecords' => '\HuaweiCloud\SDK\Cbr\V1\Model\ReplicationRecordGet[]',
             'enterpriseProjectId' => 'string',
             'providerId' => 'string',
-            'children' => '\HuaweiCloud\SDK\Cbr\V1\Model\BackupResp[]'
+            'children' => '\HuaweiCloud\SDK\Cbr\V1\Model\BackupResp[]',
+            'incremental' => 'bool'
     ];
 
     /**
@@ -97,6 +99,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id,默认为‘0’。
     * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
     * children  子副本列表
+    * incremental  是否是增备
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class BackupResp implements ModelInterface, ArrayAccess
         'replicationRecords' => null,
         'enterpriseProjectId' => null,
         'providerId' => null,
-        'children' => null
+        'children' => null,
+        'incremental' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id,默认为‘0’。
     * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
     * children  子副本列表
+    * incremental  是否是增备
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'replicationRecords' => 'replication_records',
             'enterpriseProjectId' => 'enterprise_project_id',
             'providerId' => 'provider_id',
-            'children' => 'children'
+            'children' => 'children',
+            'incremental' => 'incremental'
     ];
 
     /**
@@ -226,6 +232,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id,默认为‘0’。
     * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
     * children  子副本列表
+    * incremental  是否是增备
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'replicationRecords' => 'setReplicationRecords',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'providerId' => 'setProviderId',
-            'children' => 'setChildren'
+            'children' => 'setChildren',
+            'incremental' => 'setIncremental'
     ];
 
     /**
@@ -280,6 +288,7 @@ class BackupResp implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id,默认为‘0’。
     * providerId  备份提供商ID，用于区分备份对象。当前取值包含  0daac4c5-6707-4851-97ba-169e36266b66，该值代表备份对象为云服务器。d1603440-187d-4516-af25-121250c7cc97，该值代表备份对象为云硬盘。3f3c3220-245c-4805-b811-758870015881， 该值代表备份对象为SFS Turbo。a13639de-00be-4e94-af30-26912d75e4a2，该值代表备份对象为混合云VMware备份。
     * children  子副本列表
+    * incremental  是否是增备
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class BackupResp implements ModelInterface, ArrayAccess
             'replicationRecords' => 'getReplicationRecords',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'providerId' => 'getProviderId',
-            'children' => 'getChildren'
+            'children' => 'getChildren',
+            'incremental' => 'getIncremental'
     ];
 
     /**
@@ -449,6 +459,7 @@ class BackupResp implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['providerId'] = isset($data['providerId']) ? $data['providerId'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
+        $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
     }
 
     /**
@@ -1106,6 +1117,30 @@ class BackupResp implements ModelInterface, ArrayAccess
     public function setChildren($children)
     {
         $this->container['children'] = $children;
+        return $this;
+    }
+
+    /**
+    * Gets incremental
+    *  是否是增备
+    *
+    * @return bool|null
+    */
+    public function getIncremental()
+    {
+        return $this->container['incremental'];
+    }
+
+    /**
+    * Sets incremental
+    *
+    * @param bool|null $incremental 是否是增备
+    *
+    * @return $this
+    */
+    public function setIncremental($incremental)
+    {
+        $this->container['incremental'] = $incremental;
         return $this;
     }
 

@@ -20,28 +20,28 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'chargeMode' => 'string',
+            'type' => 'string',
             'min' => 'int',
             'max' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'chargeMode' => null,
+        'type' => null,
         'min' => null,
         'max' => null
     ];
@@ -69,42 +69,42 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'chargeMode' => 'charge_mode',
+            'type' => 'type',
             'min' => 'min',
             'max' => 'max'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
     * @var string[]
     */
     protected static $setters = [
-            'chargeMode' => 'setChargeMode',
+            'type' => 'setType',
             'min' => 'setMin',
             'max' => 'setMax'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
     * @var string[]
     */
     protected static $getters = [
-            'chargeMode' => 'getChargeMode',
+            'type' => 'getType',
             'min' => 'getMin',
             'max' => 'getMax'
     ];
@@ -149,8 +149,8 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const CHARGE_MODE_BWD = 'bwd';
-    const CHARGE_MODE__95 = '95';
+    const TYPE_BWD = 'bwd';
+    const TYPE__95 = '95';
     
 
     /**
@@ -158,11 +158,11 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
-    public function getChargeModeAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::CHARGE_MODE_BWD,
-            self::CHARGE_MODE__95,
+            self::TYPE_BWD,
+            self::TYPE__95,
         ];
     }
 
@@ -182,7 +182,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['min'] = isset($data['min']) ? $data['min'] : null;
         $this->container['max'] = isset($data['max']) ? $data['max'] : null;
     }
@@ -195,19 +195,19 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getChargeModeAllowableValues();
-                if (!is_null($this->container['chargeMode']) && !in_array($this->container['chargeMode'], $allowedValues, true)) {
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
-                "invalid value for 'chargeMode', must be one of '%s'",
+                "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
 
-            if (!is_null($this->container['chargeMode']) && (mb_strlen($this->container['chargeMode']) > 64)) {
-                $invalidProperties[] = "invalid value for 'chargeMode', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 64)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['chargeMode']) && (mb_strlen($this->container['chargeMode']) < 0)) {
-                $invalidProperties[] = "invalid value for 'chargeMode', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['min']) && ($this->container['min'] > 2147483647)) {
                 $invalidProperties[] = "invalid value for 'min', must be smaller than or equal to 2147483647.";
@@ -236,26 +236,26 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets chargeMode
+    * Gets type
     *  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     *
     * @return string|null
     */
-    public function getChargeMode()
+    public function getType()
     {
-        return $this->container['chargeMode'];
+        return $this->container['type'];
     }
 
     /**
-    * Sets chargeMode
+    * Sets type
     *
-    * @param string|null $chargeMode 描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * @param string|null $type 描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     *
     * @return $this
     */
-    public function setChargeMode($chargeMode)
+    public function setType($type)
     {
-        $this->container['chargeMode'] = $chargeMode;
+        $this->container['type'] = $type;
         return $this;
     }
 

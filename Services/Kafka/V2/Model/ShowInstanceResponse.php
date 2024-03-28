@@ -33,7 +33,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs)
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -49,6 +49,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
+    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
     * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
@@ -64,6 +65,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
@@ -76,6 +78,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * kafkaManagerEnable  是否已开启kafka manager
     * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
+    * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
@@ -134,6 +137,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'enablePublicip' => 'bool',
             'managementConnectAddress' => 'string',
             'sslEnable' => 'bool',
+            'brokerSslEnable' => 'bool',
             'kafkaSecurityProtocol' => 'string',
             'saslEnabledMechanisms' => 'string[]',
             'sslTwoWayEnable' => 'bool',
@@ -149,6 +153,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'string',
             'subnetId' => 'string',
             'availableZones' => 'string[]',
+            'availableZoneNames' => 'string[]',
             'totalStorageSpace' => 'int',
             'publicConnectAddress' => 'string',
             'storageResourceId' => 'string',
@@ -161,6 +166,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'kafkaManagerEnable' => 'bool',
             'kafkaManagerUser' => 'string',
             'enableLogCollection' => 'bool',
+            'newAuthCert' => 'bool',
             'crossVpcInfo' => 'string',
             'ipv6Enable' => 'bool',
             'ipv6ConnectAddresses' => 'string[]',
@@ -203,7 +209,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs)
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -219,6 +225,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
+    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
     * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
@@ -234,6 +241,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
@@ -246,6 +254,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * kafkaManagerEnable  是否已开启kafka manager
     * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
+    * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
@@ -304,6 +313,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'enablePublicip' => null,
         'managementConnectAddress' => null,
         'sslEnable' => null,
+        'brokerSslEnable' => null,
         'kafkaSecurityProtocol' => null,
         'saslEnabledMechanisms' => null,
         'sslTwoWayEnable' => null,
@@ -319,6 +329,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'securityGroupName' => null,
         'subnetId' => null,
         'availableZones' => null,
+        'availableZoneNames' => null,
         'totalStorageSpace' => null,
         'publicConnectAddress' => null,
         'storageResourceId' => null,
@@ -331,6 +342,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'kafkaManagerEnable' => null,
         'kafkaManagerUser' => null,
         'enableLogCollection' => null,
+        'newAuthCert' => null,
         'crossVpcInfo' => null,
         'ipv6Enable' => null,
         'ipv6ConnectAddresses' => null,
@@ -394,7 +406,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs)
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -410,6 +422,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
+    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
     * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
@@ -425,6 +438,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
@@ -437,6 +451,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * kafkaManagerEnable  是否已开启kafka manager
     * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
+    * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
@@ -495,6 +510,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'enablePublicip' => 'enable_publicip',
             'managementConnectAddress' => 'management_connect_address',
             'sslEnable' => 'ssl_enable',
+            'brokerSslEnable' => 'broker_ssl_enable',
             'kafkaSecurityProtocol' => 'kafka_security_protocol',
             'saslEnabledMechanisms' => 'sasl_enabled_mechanisms',
             'sslTwoWayEnable' => 'ssl_two_way_enable',
@@ -510,6 +526,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'security_group_name',
             'subnetId' => 'subnet_id',
             'availableZones' => 'available_zones',
+            'availableZoneNames' => 'available_zone_names',
             'totalStorageSpace' => 'total_storage_space',
             'publicConnectAddress' => 'public_connect_address',
             'storageResourceId' => 'storage_resource_id',
@@ -522,6 +539,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'kafkaManagerEnable' => 'kafka_manager_enable',
             'kafkaManagerUser' => 'kafka_manager_user',
             'enableLogCollection' => 'enable_log_collection',
+            'newAuthCert' => 'new_auth_cert',
             'crossVpcInfo' => 'cross_vpc_info',
             'ipv6Enable' => 'ipv6_enable',
             'ipv6ConnectAddresses' => 'ipv6_connect_addresses',
@@ -564,7 +582,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs)
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -580,6 +598,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
+    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
     * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
@@ -595,6 +614,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
@@ -607,6 +627,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * kafkaManagerEnable  是否已开启kafka manager
     * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
+    * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
@@ -665,6 +686,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'enablePublicip' => 'setEnablePublicip',
             'managementConnectAddress' => 'setManagementConnectAddress',
             'sslEnable' => 'setSslEnable',
+            'brokerSslEnable' => 'setBrokerSslEnable',
             'kafkaSecurityProtocol' => 'setKafkaSecurityProtocol',
             'saslEnabledMechanisms' => 'setSaslEnabledMechanisms',
             'sslTwoWayEnable' => 'setSslTwoWayEnable',
@@ -680,6 +702,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'setSecurityGroupName',
             'subnetId' => 'setSubnetId',
             'availableZones' => 'setAvailableZones',
+            'availableZoneNames' => 'setAvailableZoneNames',
             'totalStorageSpace' => 'setTotalStorageSpace',
             'publicConnectAddress' => 'setPublicConnectAddress',
             'storageResourceId' => 'setStorageResourceId',
@@ -692,6 +715,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'kafkaManagerEnable' => 'setKafkaManagerEnable',
             'kafkaManagerUser' => 'setKafkaManagerUser',
             'enableLogCollection' => 'setEnableLogCollection',
+            'newAuthCert' => 'setNewAuthCert',
             'crossVpcInfo' => 'setCrossVpcInfo',
             'ipv6Enable' => 'setIpv6Enable',
             'ipv6ConnectAddresses' => 'setIpv6ConnectAddresses',
@@ -734,7 +758,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * port  实例连接端口。
     * status  实例的状态。详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。
     * instanceId  实例ID。
-    * resourceSpecCode  资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    * resourceSpecCode  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     * chargingMode  [付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[付费模式，暂未使用。](tag:hws_ocb,ocb) [付费模式，1表示按需计费。](tag:dt,g42,tm,hk_g42,hk_tm,hcs)
     * vpcId  VPC ID。
     * vpcName  VPC的名称。
@@ -750,6 +774,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * enablePublicip  实例是否开启公网访问功能。 - true：开启 - false：未开启
     * managementConnectAddress  Kafka实例的Kafka Manager连接地址。
     * sslEnable  是否开启安全认证。 - true：开启 - false：未开启
+    * brokerSslEnable  是否开启broker间副本加密传输。 - true：开启 - false：未开启
     * kafkaSecurityProtocol  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     * saslEnabledMechanisms  开启SASL后使用的认证机制。 - PLAIN: 简单的用户名密码校验。 - SCRAM-SHA-512: 用户凭证校验，安全性比PLAIN机制更高。
     * sslTwoWayEnable  是否开启双向认证。
@@ -765,6 +790,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * securityGroupName  租户安全组名称。
     * subnetId  子网ID。
     * availableZones  实例节点所在的可用区，返回“可用区ID”。
+    * availableZoneNames  实例节点所在的可用区名称，返回“可用区名称”。
     * totalStorageSpace  总共消息存储空间，单位：GB。
     * publicConnectAddress  实例公网连接IP地址。当实例开启了公网访问，实例才包含该参数。
     * storageResourceId  存储资源ID。
@@ -777,6 +803,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * kafkaManagerEnable  是否已开启kafka manager
     * kafkaManagerUser  登录Kafka Manager的用户名。
     * enableLogCollection  是否开启消息收集功能。
+    * newAuthCert  是否开启新证书。
     * crossVpcInfo  跨VPC访问信息。
     * ipv6Enable  是否开启ipv6。
     * ipv6ConnectAddresses  IPv6的连接地址。
@@ -835,6 +862,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'enablePublicip' => 'getEnablePublicip',
             'managementConnectAddress' => 'getManagementConnectAddress',
             'sslEnable' => 'getSslEnable',
+            'brokerSslEnable' => 'getBrokerSslEnable',
             'kafkaSecurityProtocol' => 'getKafkaSecurityProtocol',
             'saslEnabledMechanisms' => 'getSaslEnabledMechanisms',
             'sslTwoWayEnable' => 'getSslTwoWayEnable',
@@ -850,6 +878,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'securityGroupName' => 'getSecurityGroupName',
             'subnetId' => 'getSubnetId',
             'availableZones' => 'getAvailableZones',
+            'availableZoneNames' => 'getAvailableZoneNames',
             'totalStorageSpace' => 'getTotalStorageSpace',
             'publicConnectAddress' => 'getPublicConnectAddress',
             'storageResourceId' => 'getStorageResourceId',
@@ -862,6 +891,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'kafkaManagerEnable' => 'getKafkaManagerEnable',
             'kafkaManagerUser' => 'getKafkaManagerUser',
             'enableLogCollection' => 'getEnableLogCollection',
+            'newAuthCert' => 'getNewAuthCert',
             'crossVpcInfo' => 'getCrossVpcInfo',
             'ipv6Enable' => 'getIpv6Enable',
             'ipv6ConnectAddresses' => 'getIpv6ConnectAddresses',
@@ -1021,6 +1051,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : null;
         $this->container['managementConnectAddress'] = isset($data['managementConnectAddress']) ? $data['managementConnectAddress'] : null;
         $this->container['sslEnable'] = isset($data['sslEnable']) ? $data['sslEnable'] : null;
+        $this->container['brokerSslEnable'] = isset($data['brokerSslEnable']) ? $data['brokerSslEnable'] : null;
         $this->container['kafkaSecurityProtocol'] = isset($data['kafkaSecurityProtocol']) ? $data['kafkaSecurityProtocol'] : null;
         $this->container['saslEnabledMechanisms'] = isset($data['saslEnabledMechanisms']) ? $data['saslEnabledMechanisms'] : null;
         $this->container['sslTwoWayEnable'] = isset($data['sslTwoWayEnable']) ? $data['sslTwoWayEnable'] : null;
@@ -1036,6 +1067,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['securityGroupName'] = isset($data['securityGroupName']) ? $data['securityGroupName'] : null;
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
+        $this->container['availableZoneNames'] = isset($data['availableZoneNames']) ? $data['availableZoneNames'] : null;
         $this->container['totalStorageSpace'] = isset($data['totalStorageSpace']) ? $data['totalStorageSpace'] : null;
         $this->container['publicConnectAddress'] = isset($data['publicConnectAddress']) ? $data['publicConnectAddress'] : null;
         $this->container['storageResourceId'] = isset($data['storageResourceId']) ? $data['storageResourceId'] : null;
@@ -1048,6 +1080,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['kafkaManagerEnable'] = isset($data['kafkaManagerEnable']) ? $data['kafkaManagerEnable'] : null;
         $this->container['kafkaManagerUser'] = isset($data['kafkaManagerUser']) ? $data['kafkaManagerUser'] : null;
         $this->container['enableLogCollection'] = isset($data['enableLogCollection']) ? $data['enableLogCollection'] : null;
+        $this->container['newAuthCert'] = isset($data['newAuthCert']) ? $data['newAuthCert'] : null;
         $this->container['crossVpcInfo'] = isset($data['crossVpcInfo']) ? $data['crossVpcInfo'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['ipv6ConnectAddresses'] = isset($data['ipv6ConnectAddresses']) ? $data['ipv6ConnectAddresses'] : null;
@@ -1404,7 +1437,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSpecCode
-    *  资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    *  资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     *
     * @return string|null
     */
@@ -1416,7 +1449,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSpecCode
     *
-    * @param string|null $resourceSpecCode 资源规格标识。   - dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。
+    * @param string|null $resourceSpecCode 资源规格标识。   [- dms.instance.kafka.cluster.c3.mini：Kafka实例的基准带宽为100MByte/秒。   - dms.instance.kafka.cluster.c3.small.2：Kafka实例的基准带宽为300MByte/秒。   - dms.instance.kafka.cluster.c3.middle.2：Kafka实例的基准带宽为600MByte/秒。   - dms.instance.kafka.cluster.c3.high.2：Kafka实例的基准带宽为1200MByte/秒。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm,dt)
     *
     * @return $this
     */
@@ -1787,6 +1820,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets brokerSslEnable
+    *  是否开启broker间副本加密传输。 - true：开启 - false：未开启
+    *
+    * @return bool|null
+    */
+    public function getBrokerSslEnable()
+    {
+        return $this->container['brokerSslEnable'];
+    }
+
+    /**
+    * Sets brokerSslEnable
+    *
+    * @param bool|null $brokerSslEnable 是否开启broker间副本加密传输。 - true：开启 - false：未开启
+    *
+    * @return $this
+    */
+    public function setBrokerSslEnable($brokerSslEnable)
+    {
+        $this->container['brokerSslEnable'] = $brokerSslEnable;
+        return $this;
+    }
+
+    /**
     * Gets kafkaSecurityProtocol
     *  开启SASL后使用的安全协议。 - SASL_SSL: 采用SSL证书进行加密传输，支持账号密码认证，安全性更高。 - SASL_PLAINTEXT: 明文传输，支持账号密码认证，性能更好，建议使用SCRAM-SHA-512机制。
     *
@@ -2147,6 +2204,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets availableZoneNames
+    *  实例节点所在的可用区名称，返回“可用区名称”。
+    *
+    * @return string[]|null
+    */
+    public function getAvailableZoneNames()
+    {
+        return $this->container['availableZoneNames'];
+    }
+
+    /**
+    * Sets availableZoneNames
+    *
+    * @param string[]|null $availableZoneNames 实例节点所在的可用区名称，返回“可用区名称”。
+    *
+    * @return $this
+    */
+    public function setAvailableZoneNames($availableZoneNames)
+    {
+        $this->container['availableZoneNames'] = $availableZoneNames;
+        return $this;
+    }
+
+    /**
     * Gets totalStorageSpace
     *  总共消息存储空间，单位：GB。
     *
@@ -2431,6 +2512,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setEnableLogCollection($enableLogCollection)
     {
         $this->container['enableLogCollection'] = $enableLogCollection;
+        return $this;
+    }
+
+    /**
+    * Gets newAuthCert
+    *  是否开启新证书。
+    *
+    * @return bool|null
+    */
+    public function getNewAuthCert()
+    {
+        return $this->container['newAuthCert'];
+    }
+
+    /**
+    * Sets newAuthCert
+    *
+    * @param bool|null $newAuthCert 是否开启新证书。
+    *
+    * @return $this
+    */
+    public function setNewAuthCert($newAuthCert)
+    {
+        $this->container['newAuthCert'] = $newAuthCert;
         return $this;
     }
 

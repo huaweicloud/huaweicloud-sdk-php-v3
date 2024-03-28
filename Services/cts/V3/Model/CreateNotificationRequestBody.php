@@ -22,6 +22,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件，此时不用指定operations和notify_user_list字段。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * topicId  消息通知服务的topic_urn或者函数工作流的func_urn。 - 消息通知服务的topic_urn可以通过消息通知服务的查询主题列表API获取，示例：urn:smn:regionId:f96188c7ccaf4ffba0c9aa149ab2bd57:test_topic_v2。 - 函数工作流的func_urn可以通过函数工作流的获取函数列表API获取，示例：urn:fss:xxxxxxxxx:7aad83af3e8d42e99ac194e8419e2c9b:function:default:test。
@@ -32,6 +33,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'notificationName' => 'string',
             'operationType' => 'string',
+            'agencyName' => 'string',
             'operations' => '\HuaweiCloud\SDK\Cts\V3\Model\Operations[]',
             'notifyUserList' => '\HuaweiCloud\SDK\Cts\V3\Model\NotificationUsers[]',
             'topicId' => 'string',
@@ -42,6 +44,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件，此时不用指定operations和notify_user_list字段。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * topicId  消息通知服务的topic_urn或者函数工作流的func_urn。 - 消息通知服务的topic_urn可以通过消息通知服务的查询主题列表API获取，示例：urn:smn:regionId:f96188c7ccaf4ffba0c9aa149ab2bd57:test_topic_v2。 - 函数工作流的func_urn可以通过函数工作流的获取函数列表API获取，示例：urn:fss:xxxxxxxxx:7aad83af3e8d42e99ac194e8419e2c9b:function:default:test。
@@ -52,6 +55,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'notificationName' => null,
         'operationType' => null,
+        'agencyName' => null,
         'operations' => null,
         'notifyUserList' => null,
         'topicId' => null,
@@ -83,6 +87,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件，此时不用指定operations和notify_user_list字段。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * topicId  消息通知服务的topic_urn或者函数工作流的func_urn。 - 消息通知服务的topic_urn可以通过消息通知服务的查询主题列表API获取，示例：urn:smn:regionId:f96188c7ccaf4ffba0c9aa149ab2bd57:test_topic_v2。 - 函数工作流的func_urn可以通过函数工作流的获取函数列表API获取，示例：urn:fss:xxxxxxxxx:7aad83af3e8d42e99ac194e8419e2c9b:function:default:test。
@@ -93,6 +98,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'notificationName' => 'notification_name',
             'operationType' => 'operation_type',
+            'agencyName' => 'agency_name',
             'operations' => 'operations',
             'notifyUserList' => 'notify_user_list',
             'topicId' => 'topic_id',
@@ -103,6 +109,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件，此时不用指定operations和notify_user_list字段。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * topicId  消息通知服务的topic_urn或者函数工作流的func_urn。 - 消息通知服务的topic_urn可以通过消息通知服务的查询主题列表API获取，示例：urn:smn:regionId:f96188c7ccaf4ffba0c9aa149ab2bd57:test_topic_v2。 - 函数工作流的func_urn可以通过函数工作流的获取函数列表API获取，示例：urn:fss:xxxxxxxxx:7aad83af3e8d42e99ac194e8419e2c9b:function:default:test。
@@ -113,6 +120,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'notificationName' => 'setNotificationName',
             'operationType' => 'setOperationType',
+            'agencyName' => 'setAgencyName',
             'operations' => 'setOperations',
             'notifyUserList' => 'setNotifyUserList',
             'topicId' => 'setTopicId',
@@ -123,6 +131,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * notificationName  标识关键操作名称。
     * operationType  标识操作类型。 目前支持的操作类型有完整类型(complete)和自定义类型(customized)。 完整类型下，CTS发送通知的对象为已对接服务的所有事件，此时不用指定operations和notify_user_list字段。 自定义类型下，CTS发送通知的对象是在operations列表中指定的事件。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
     * topicId  消息通知服务的topic_urn或者函数工作流的func_urn。 - 消息通知服务的topic_urn可以通过消息通知服务的查询主题列表API获取，示例：urn:smn:regionId:f96188c7ccaf4ffba0c9aa149ab2bd57:test_topic_v2。 - 函数工作流的func_urn可以通过函数工作流的获取函数列表API获取，示例：urn:fss:xxxxxxxxx:7aad83af3e8d42e99ac194e8419e2c9b:function:default:test。
@@ -133,6 +142,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'notificationName' => 'getNotificationName',
             'operationType' => 'getOperationType',
+            'agencyName' => 'getAgencyName',
             'operations' => 'getOperations',
             'notifyUserList' => 'getNotifyUserList',
             'topicId' => 'getTopicId',
@@ -181,6 +191,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     }
     const OPERATION_TYPE_COMPLETE = 'complete';
     const OPERATION_TYPE_CUSTOMIZED = 'customized';
+    const AGENCY_NAME_CTS_ADMIN_TRUST = 'cts_admin_trust';
     
 
     /**
@@ -193,6 +204,18 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
         return [
             self::OPERATION_TYPE_COMPLETE,
             self::OPERATION_TYPE_CUSTOMIZED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAgencyNameAllowableValues()
+    {
+        return [
+            self::AGENCY_NAME_CTS_ADMIN_TRUST,
         ];
     }
 
@@ -214,6 +237,7 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['notificationName'] = isset($data['notificationName']) ? $data['notificationName'] : null;
         $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['operations'] = isset($data['operations']) ? $data['operations'] : null;
         $this->container['notifyUserList'] = isset($data['notifyUserList']) ? $data['notifyUserList'] : null;
         $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
@@ -248,6 +272,20 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getAgencyNameAllowableValues();
+                if (!is_null($this->container['agencyName']) && !in_array($this->container['agencyName'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'agencyName', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['topicId']) && (mb_strlen($this->container['topicId']) > 400)) {
                 $invalidProperties[] = "invalid value for 'topicId', the character length must be smaller than or equal to 400.";
             }
@@ -313,6 +351,30 @@ class CreateNotificationRequestBody implements ModelInterface, ArrayAccess
     public function setOperationType($operationType)
     {
         $this->container['operationType'] = $operationType;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 云服务委托名称。 参数值为\"cts_admin_trust\"时，创建关键操作通知时会自动创建一个云服务委托：cts_admin_trust。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

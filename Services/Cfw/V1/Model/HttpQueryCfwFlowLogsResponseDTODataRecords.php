@@ -37,7 +37,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * @var string[]
     */
     protected static $openAPITypes = [
-            'bytes' => 'int',
+            'bytes' => 'double',
             'direction' => 'string',
             'packets' => 'int',
             'startTime' => 'int',
@@ -71,7 +71,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'bytes' => null,
+        'bytes' => 'double',
         'direction' => null,
         'packets' => null,
         'startTime' => 'int64',
@@ -331,7 +331,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * Gets bytes
     *  字节
     *
-    * @return int|null
+    * @return double|null
     */
     public function getBytes()
     {
@@ -341,7 +341,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets bytes
     *
-    * @param int|null $bytes 字节
+    * @param double|null $bytes 字节
     *
     * @return $this
     */

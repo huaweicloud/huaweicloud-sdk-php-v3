@@ -27,7 +27,7 @@ class UpdateEnhancedConnectionRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'connectionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateHostMassageReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateEnhancedConnectionRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UpdateEnhancedConnectionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateHostMassageReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateEnhancedConnectionRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdateEnhancedConnectionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateHostMassageReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateEnhancedConnectionRequestBody|null $body body
     *
     * @return $this
     */

@@ -31,7 +31,7 @@ class ListDatasourceConnectionsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'connections' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowDatasourceConnectionResp[]',
+            'connections' => '\HuaweiCloud\SDK\Dli\V1\Model\DatasourceConnection[]',
             'count' => 'int'
     ];
 
@@ -258,7 +258,7 @@ class ListDatasourceConnectionsResponse implements ModelInterface, ArrayAccess
     * Gets connections
     *  跨源连接信息列表。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowDatasourceConnectionResp[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\DatasourceConnection[]|null
     */
     public function getConnections()
     {
@@ -268,7 +268,7 @@ class ListDatasourceConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets connections
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowDatasourceConnectionResp[]|null $connections 跨源连接信息列表。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\DatasourceConnection[]|null $connections 跨源连接信息列表。
     *
     * @return $this
     */

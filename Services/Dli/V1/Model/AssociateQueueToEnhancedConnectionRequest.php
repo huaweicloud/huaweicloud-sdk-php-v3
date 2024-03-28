@@ -27,7 +27,7 @@ class AssociateQueueToEnhancedConnectionRequest implements ModelInterface, Array
     */
     protected static $openAPITypes = [
             'connectionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\AssociateConnectionQueueReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\AssociateQueueToEnhancedConnectionRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class AssociateQueueToEnhancedConnectionRequest implements ModelInterface, Array
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\AssociateConnectionQueueReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\AssociateQueueToEnhancedConnectionRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class AssociateQueueToEnhancedConnectionRequest implements ModelInterface, Array
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\AssociateConnectionQueueReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\AssociateQueueToEnhancedConnectionRequestBody|null $body body
     *
     * @return $this
     */

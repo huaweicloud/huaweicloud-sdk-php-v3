@@ -21,7 +21,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
+    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
@@ -33,7 +33,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
+    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
@@ -66,7 +66,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
+    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
@@ -78,7 +78,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
+    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  请求执行是否成功。“true”表示请求执行成功。
+    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
     * message  系统提示信息，执行成功时，信息可能为空。
     *
     * @var string[]
@@ -186,7 +186,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSuccess
-    *  请求执行是否成功。“true”表示请求执行成功。
+    *  执行请求是否成功。“true”表示请求执行成功。
     *
     * @return bool|null
     */
@@ -198,7 +198,7 @@ class DeleteQueueResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 请求执行是否成功。“true”表示请求执行成功。
+    * @param bool|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
     *
     * @return $this
     */

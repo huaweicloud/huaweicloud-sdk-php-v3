@@ -30,7 +30,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'queues' => '\HuaweiCloud\SDK\Dli\V1\Model\QueueDetails[]'
+            'queues' => '\HuaweiCloud\SDK\Dli\V1\Model\Queue[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     * Gets queues
     *  队列信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueueDetails[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Queue[]|null
     */
     public function getQueues()
     {
@@ -257,7 +257,7 @@ class ListQueuesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueueDetails[]|null $queues 队列信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Queue[]|null $queues 队列信息。
     *
     * @return $this
     */

@@ -39,7 +39,7 @@ class PreviewSqlJobResultResponse implements ModelInterface, ArrayAccess
             'jobType' => 'string',
             'rowCount' => 'int',
             'inputSize' => 'int',
-            'schema' => 'object[]',
+            'schema' => 'map[string,string][]',
             'rows' => 'object[][]'
     ];
 
@@ -429,7 +429,7 @@ class PreviewSqlJobResultResponse implements ModelInterface, ArrayAccess
     * Gets schema
     *  作业结果列名称和类型。
     *
-    * @return object[]|null
+    * @return map[string,string][]|null
     */
     public function getSchema()
     {
@@ -439,7 +439,7 @@ class PreviewSqlJobResultResponse implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param object[]|null $schema 作业结果列名称和类型。
+    * @param map[string,string][]|null $schema 作业结果列名称和类型。
     *
     * @return $this
     */

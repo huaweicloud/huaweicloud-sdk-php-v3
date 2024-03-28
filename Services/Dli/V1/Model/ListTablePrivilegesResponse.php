@@ -32,7 +32,7 @@ class ListTablePrivilegesResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'userName' => 'string',
-            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\TableUserPermissionsRespPrivilege[]'
+            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\TablePrivilege[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListTablePrivilegesResponse implements ModelInterface, ArrayAccess
     * Gets privileges
     *  权限信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\TableUserPermissionsRespPrivilege[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\TablePrivilege[]|null
     */
     public function getPrivileges()
     {
@@ -292,7 +292,7 @@ class ListTablePrivilegesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privileges
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\TableUserPermissionsRespPrivilege[]|null $privileges 权限信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\TablePrivilege[]|null $privileges 权限信息。
     *
     * @return $this
     */

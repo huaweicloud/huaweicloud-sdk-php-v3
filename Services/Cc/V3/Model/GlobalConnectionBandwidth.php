@@ -31,8 +31,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
+    * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    * remoteArea  功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
     * localSiteCode  功能说明：本端接入点的编码。
     * remoteSiteCode  功能说明：远端接入点的编码。
+    * adminState  功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
     * frozen  功能说明: 全域互联带宽是否冻结。 取值范围：     true-冻结     false-非冻结
     * specCodeId  功能说明：线路规格编码UUID。
     * tags  实例标签。
@@ -55,8 +58,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'chargeMode' => 'string',
             'size' => 'int',
             'slaLevel' => 'string',
+            'localArea' => 'string',
+            'remoteArea' => 'string',
             'localSiteCode' => 'string',
             'remoteSiteCode' => 'string',
+            'adminState' => 'string',
             'frozen' => 'bool',
             'specCodeId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Cc\V3\Model\Tag[]',
@@ -79,8 +85,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
+    * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    * remoteArea  功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
     * localSiteCode  功能说明：本端接入点的编码。
     * remoteSiteCode  功能说明：远端接入点的编码。
+    * adminState  功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
     * frozen  功能说明: 全域互联带宽是否冻结。 取值范围：     true-冻结     false-非冻结
     * specCodeId  功能说明：线路规格编码UUID。
     * tags  实例标签。
@@ -103,8 +112,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         'chargeMode' => null,
         'size' => 'int32',
         'slaLevel' => null,
+        'localArea' => null,
+        'remoteArea' => null,
         'localSiteCode' => null,
         'remoteSiteCode' => null,
+        'adminState' => null,
         'frozen' => null,
         'specCodeId' => null,
         'tags' => null,
@@ -148,8 +160,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
+    * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    * remoteArea  功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
     * localSiteCode  功能说明：本端接入点的编码。
     * remoteSiteCode  功能说明：远端接入点的编码。
+    * adminState  功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
     * frozen  功能说明: 全域互联带宽是否冻结。 取值范围：     true-冻结     false-非冻结
     * specCodeId  功能说明：线路规格编码UUID。
     * tags  实例标签。
@@ -172,8 +187,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'chargeMode' => 'charge_mode',
             'size' => 'size',
             'slaLevel' => 'sla_level',
+            'localArea' => 'local_area',
+            'remoteArea' => 'remote_area',
             'localSiteCode' => 'local_site_code',
             'remoteSiteCode' => 'remote_site_code',
+            'adminState' => 'admin_state',
             'frozen' => 'frozen',
             'specCodeId' => 'spec_code_id',
             'tags' => 'tags',
@@ -196,8 +214,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
+    * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    * remoteArea  功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
     * localSiteCode  功能说明：本端接入点的编码。
     * remoteSiteCode  功能说明：远端接入点的编码。
+    * adminState  功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
     * frozen  功能说明: 全域互联带宽是否冻结。 取值范围：     true-冻结     false-非冻结
     * specCodeId  功能说明：线路规格编码UUID。
     * tags  实例标签。
@@ -220,8 +241,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'chargeMode' => 'setChargeMode',
             'size' => 'setSize',
             'slaLevel' => 'setSlaLevel',
+            'localArea' => 'setLocalArea',
+            'remoteArea' => 'setRemoteArea',
             'localSiteCode' => 'setLocalSiteCode',
             'remoteSiteCode' => 'setRemoteSiteCode',
+            'adminState' => 'setAdminState',
             'frozen' => 'setFrozen',
             'specCodeId' => 'setSpecCodeId',
             'tags' => 'setTags',
@@ -244,8 +268,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
+    * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    * remoteArea  功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
     * localSiteCode  功能说明：本端接入点的编码。
     * remoteSiteCode  功能说明：远端接入点的编码。
+    * adminState  功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
     * frozen  功能说明: 全域互联带宽是否冻结。 取值范围：     true-冻结     false-非冻结
     * specCodeId  功能说明：线路规格编码UUID。
     * tags  实例标签。
@@ -268,8 +295,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             'chargeMode' => 'getChargeMode',
             'size' => 'getSize',
             'slaLevel' => 'getSlaLevel',
+            'localArea' => 'getLocalArea',
+            'remoteArea' => 'getRemoteArea',
             'localSiteCode' => 'getLocalSiteCode',
             'remoteSiteCode' => 'getRemoteSiteCode',
+            'adminState' => 'getAdminState',
             'frozen' => 'getFrozen',
             'specCodeId' => 'getSpecCodeId',
             'tags' => 'getTags',
@@ -333,6 +363,8 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     const SLA_LEVEL_PT = 'Pt';
     const SLA_LEVEL_AU = 'Au';
     const SLA_LEVEL_AG = 'Ag';
+    const ADMIN_STATE_NORMAL = 'NORMAL';
+    const ADMIN_STATE_FREEZED = 'FREEZED';
     
 
     /**
@@ -393,6 +425,19 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAdminStateAllowableValues()
+    {
+        return [
+            self::ADMIN_STATE_NORMAL,
+            self::ADMIN_STATE_FREEZED,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -420,8 +465,11 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['slaLevel'] = isset($data['slaLevel']) ? $data['slaLevel'] : null;
+        $this->container['localArea'] = isset($data['localArea']) ? $data['localArea'] : null;
+        $this->container['remoteArea'] = isset($data['remoteArea']) ? $data['remoteArea'] : null;
         $this->container['localSiteCode'] = isset($data['localSiteCode']) ? $data['localSiteCode'] : null;
         $this->container['remoteSiteCode'] = isset($data['remoteSiteCode']) ? $data['remoteSiteCode'] : null;
+        $this->container['adminState'] = isset($data['adminState']) ? $data['adminState'] : null;
         $this->container['frozen'] = isset($data['frozen']) ? $data['frozen'] : null;
         $this->container['specCodeId'] = isset($data['specCodeId']) ? $data['specCodeId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -534,6 +582,18 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if (!is_null($this->container['slaLevel']) && (mb_strlen($this->container['slaLevel']) < 1)) {
                 $invalidProperties[] = "invalid value for 'slaLevel', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['localArea']) && (mb_strlen($this->container['localArea']) > 36)) {
+                $invalidProperties[] = "invalid value for 'localArea', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['localArea']) && (mb_strlen($this->container['localArea']) < 1)) {
+                $invalidProperties[] = "invalid value for 'localArea', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['remoteArea']) && (mb_strlen($this->container['remoteArea']) > 36)) {
+                $invalidProperties[] = "invalid value for 'remoteArea', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['remoteArea']) && (mb_strlen($this->container['remoteArea']) < 1)) {
+                $invalidProperties[] = "invalid value for 'remoteArea', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['localSiteCode']) && (mb_strlen($this->container['localSiteCode']) > 36)) {
                 $invalidProperties[] = "invalid value for 'localSiteCode', the character length must be smaller than or equal to 36.";
             }
@@ -546,6 +606,14 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if (!is_null($this->container['remoteSiteCode']) && (mb_strlen($this->container['remoteSiteCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'remoteSiteCode', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getAdminStateAllowableValues();
+                if (!is_null($this->container['adminState']) && !in_array($this->container['adminState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'adminState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['specCodeId']) && (mb_strlen($this->container['specCodeId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'specCodeId', the character length must be smaller than or equal to 36.";
             }
@@ -837,6 +905,54 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets localArea
+    *  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    *
+    * @return string|null
+    */
+    public function getLocalArea()
+    {
+        return $this->container['localArea'];
+    }
+
+    /**
+    * Sets localArea
+    *
+    * @param string|null $localArea 功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    *
+    * @return $this
+    */
+    public function setLocalArea($localArea)
+    {
+        $this->container['localArea'] = $localArea;
+        return $this;
+    }
+
+    /**
+    * Gets remoteArea
+    *  功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    *
+    * @return string|null
+    */
+    public function getRemoteArea()
+    {
+        return $this->container['remoteArea'];
+    }
+
+    /**
+    * Sets remoteArea
+    *
+    * @param string|null $remoteArea 功能说明：远端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
+    *
+    * @return $this
+    */
+    public function setRemoteArea($remoteArea)
+    {
+        $this->container['remoteArea'] = $remoteArea;
+        return $this;
+    }
+
+    /**
     * Gets localSiteCode
     *  功能说明：本端接入点的编码。
     *
@@ -881,6 +997,30 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     public function setRemoteSiteCode($remoteSiteCode)
     {
         $this->container['remoteSiteCode'] = $remoteSiteCode;
+        return $this;
+    }
+
+    /**
+    * Gets adminState
+    *  功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
+    *
+    * @return string|null
+    */
+    public function getAdminState()
+    {
+        return $this->container['adminState'];
+    }
+
+    /**
+    * Sets adminState
+    *
+    * @param string|null $adminState 功能说明: 全域互联带宽状态。 取值范围：     NORMAL-正常     FREEZED-冻结状态
+    *
+    * @return $this
+    */
+    public function setAdminState($adminState)
+    {
+        $this->container['adminState'] = $adminState;
         return $this;
     }
 

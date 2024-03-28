@@ -16,7 +16,7 @@ class State implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'state';
+    protected static $openAPIModelName = 'State';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

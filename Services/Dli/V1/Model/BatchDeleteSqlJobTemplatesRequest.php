@@ -25,7 +25,7 @@ class BatchDeleteSqlJobTemplatesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlTemplatesRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteSqlJobTemplatesRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class BatchDeleteSqlJobTemplatesRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlTemplatesRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteSqlJobTemplatesRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class BatchDeleteSqlJobTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\DeleteSqlTemplatesRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteSqlJobTemplatesRequestBody|null $body body
     *
     * @return $this
     */

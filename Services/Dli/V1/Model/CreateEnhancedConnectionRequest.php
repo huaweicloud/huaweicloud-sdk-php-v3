@@ -25,7 +25,7 @@ class CreateEnhancedConnectionRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionsReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateEnhancedConnectionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionsReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateEnhancedConnectionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionsReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateEnhancedConnectionRequestBody|null $body body
     *
     * @return $this
     */

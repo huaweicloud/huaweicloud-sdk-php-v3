@@ -22,7 +22,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * autoTrigger  是否是自动生成的备份副本
     * bootable  是否系统盘备份
-    * incremental  是否是增备
     * snapshotId  卷备份副本的快照id
     * supportLld  是否支持lazyloading快速恢复
     * supportedRestoreMode  备份支持恢复的方式，当前取值包含na,snapshot和backup。如果该字段取值为snapshot，代表备份此时已经支持创建整机镜像；如果该字段取值为backup，备份支持通过云服务器上硬盘的备份进行恢复；如果该字段取值为na，备份不支持恢复。
@@ -37,7 +36,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'autoTrigger' => 'bool',
             'bootable' => 'bool',
-            'incremental' => 'bool',
             'snapshotId' => 'string',
             'supportLld' => 'bool',
             'supportedRestoreMode' => 'string',
@@ -52,7 +50,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * autoTrigger  是否是自动生成的备份副本
     * bootable  是否系统盘备份
-    * incremental  是否是增备
     * snapshotId  卷备份副本的快照id
     * supportLld  是否支持lazyloading快速恢复
     * supportedRestoreMode  备份支持恢复的方式，当前取值包含na,snapshot和backup。如果该字段取值为snapshot，代表备份此时已经支持创建整机镜像；如果该字段取值为backup，备份支持通过云服务器上硬盘的备份进行恢复；如果该字段取值为na，备份不支持恢复。
@@ -67,7 +64,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'autoTrigger' => null,
         'bootable' => null,
-        'incremental' => null,
         'snapshotId' => null,
         'supportLld' => null,
         'supportedRestoreMode' => null,
@@ -103,7 +99,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * autoTrigger  是否是自动生成的备份副本
     * bootable  是否系统盘备份
-    * incremental  是否是增备
     * snapshotId  卷备份副本的快照id
     * supportLld  是否支持lazyloading快速恢复
     * supportedRestoreMode  备份支持恢复的方式，当前取值包含na,snapshot和backup。如果该字段取值为snapshot，代表备份此时已经支持创建整机镜像；如果该字段取值为backup，备份支持通过云服务器上硬盘的备份进行恢复；如果该字段取值为na，备份不支持恢复。
@@ -118,7 +113,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'autoTrigger' => 'auto_trigger',
             'bootable' => 'bootable',
-            'incremental' => 'incremental',
             'snapshotId' => 'snapshot_id',
             'supportLld' => 'support_lld',
             'supportedRestoreMode' => 'supported_restore_mode',
@@ -133,7 +127,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * autoTrigger  是否是自动生成的备份副本
     * bootable  是否系统盘备份
-    * incremental  是否是增备
     * snapshotId  卷备份副本的快照id
     * supportLld  是否支持lazyloading快速恢复
     * supportedRestoreMode  备份支持恢复的方式，当前取值包含na,snapshot和backup。如果该字段取值为snapshot，代表备份此时已经支持创建整机镜像；如果该字段取值为backup，备份支持通过云服务器上硬盘的备份进行恢复；如果该字段取值为na，备份不支持恢复。
@@ -148,7 +141,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     protected static $setters = [
             'autoTrigger' => 'setAutoTrigger',
             'bootable' => 'setBootable',
-            'incremental' => 'setIncremental',
             'snapshotId' => 'setSnapshotId',
             'supportLld' => 'setSupportLld',
             'supportedRestoreMode' => 'setSupportedRestoreMode',
@@ -163,7 +155,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * autoTrigger  是否是自动生成的备份副本
     * bootable  是否系统盘备份
-    * incremental  是否是增备
     * snapshotId  卷备份副本的快照id
     * supportLld  是否支持lazyloading快速恢复
     * supportedRestoreMode  备份支持恢复的方式，当前取值包含na,snapshot和backup。如果该字段取值为snapshot，代表备份此时已经支持创建整机镜像；如果该字段取值为backup，备份支持通过云服务器上硬盘的备份进行恢复；如果该字段取值为na，备份不支持恢复。
@@ -178,7 +169,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     protected static $getters = [
             'autoTrigger' => 'getAutoTrigger',
             'bootable' => 'getBootable',
-            'incremental' => 'getIncremental',
             'snapshotId' => 'getSnapshotId',
             'supportLld' => 'getSupportLld',
             'supportedRestoreMode' => 'getSupportedRestoreMode',
@@ -266,7 +256,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     {
         $this->container['autoTrigger'] = isset($data['autoTrigger']) ? $data['autoTrigger'] : null;
         $this->container['bootable'] = isset($data['bootable']) ? $data['bootable'] : null;
-        $this->container['incremental'] = isset($data['incremental']) ? $data['incremental'] : null;
         $this->container['snapshotId'] = isset($data['snapshotId']) ? $data['snapshotId'] : null;
         $this->container['supportLld'] = isset($data['supportLld']) ? $data['supportLld'] : null;
         $this->container['supportedRestoreMode'] = isset($data['supportedRestoreMode']) ? $data['supportedRestoreMode'] : null;
@@ -352,30 +341,6 @@ class BackupExtendInfo implements ModelInterface, ArrayAccess
     public function setBootable($bootable)
     {
         $this->container['bootable'] = $bootable;
-        return $this;
-    }
-
-    /**
-    * Gets incremental
-    *  是否是增备
-    *
-    * @return bool|null
-    */
-    public function getIncremental()
-    {
-        return $this->container['incremental'];
-    }
-
-    /**
-    * Sets incremental
-    *
-    * @param bool|null $incremental 是否是增备
-    *
-    * @return $this
-    */
-    public function setIncremental($incremental)
-    {
-        $this->container['incremental'] = $incremental;
         return $this;
     }
 

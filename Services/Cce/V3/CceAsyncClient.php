@@ -1458,6 +1458,9 @@ class CceAsyncClient extends Client
         if ($localVarParams['deleteSfs30'] !== null) {
             $queryParams['delete_sfs30'] = $localVarParams['deleteSfs30'];
         }
+        if ($localVarParams['ltsReclaimPolicy'] !== null) {
+            $queryParams['lts_reclaim_policy'] = $localVarParams['ltsReclaimPolicy'];
+        }
         if ($localVarParams['tobedeleted'] !== null) {
             $queryParams['tobedeleted'] = $localVarParams['tobedeleted'];
         }

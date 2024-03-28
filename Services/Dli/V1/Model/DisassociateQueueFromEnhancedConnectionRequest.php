@@ -27,7 +27,7 @@ class DisassociateQueueFromEnhancedConnectionRequest implements ModelInterface, 
     */
     protected static $openAPITypes = [
             'connectionId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\DisassociateConnectionQueueReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\DisassociateQueueFromEnhancedConnectionRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class DisassociateQueueFromEnhancedConnectionRequest implements ModelInterface, 
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\DisassociateConnectionQueueReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\DisassociateQueueFromEnhancedConnectionRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class DisassociateQueueFromEnhancedConnectionRequest implements ModelInterface, 
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\DisassociateConnectionQueueReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\DisassociateQueueFromEnhancedConnectionRequestBody|null $body body
     *
     * @return $this
     */

@@ -30,7 +30,7 @@ class UpdateFlinkJarJobResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'job' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobRespJob'
+            'job' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobUpdateTime'
     ];
 
     /**
@@ -247,7 +247,7 @@ class UpdateFlinkJarJobResponse implements ModelInterface, ArrayAccess
     * Gets job
     *  job
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateJobRespJob|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobUpdateTime|null
     */
     public function getJob()
     {
@@ -257,7 +257,7 @@ class UpdateFlinkJarJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets job
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateJobRespJob|null $job job
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobUpdateTime|null $job job
     *
     * @return $this
     */

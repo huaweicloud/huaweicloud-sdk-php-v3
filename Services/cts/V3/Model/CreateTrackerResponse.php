@@ -32,6 +32,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
     * projectId  项目ID。
     * trackerName  标识追踪器名称，当前版本默认为“system”。
+    * agencyName  云服务委托名称。
     * status  标识追踪器状态，包括正常（enabled），停止（disabled）和异常（error）三种状态，状态为异常时需通过明细（detail）字段说明错误来源。
     * detail  该参数仅在追踪器状态异常时返回，用于标识追踪器异常的原因，包括桶策略异常（bucketPolicyError），桶不存在（noBucket）和欠费或冻结（arrears）三种原因。
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 该参数必须与kms_id参数同时使用。 当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
@@ -52,6 +53,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'domainId' => 'string',
             'projectId' => 'string',
             'trackerName' => 'string',
+            'agencyName' => 'string',
             'status' => 'string',
             'detail' => 'string',
             'isSupportTraceFilesEncryption' => 'bool',
@@ -72,6 +74,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
     * projectId  项目ID。
     * trackerName  标识追踪器名称，当前版本默认为“system”。
+    * agencyName  云服务委托名称。
     * status  标识追踪器状态，包括正常（enabled），停止（disabled）和异常（error）三种状态，状态为异常时需通过明细（detail）字段说明错误来源。
     * detail  该参数仅在追踪器状态异常时返回，用于标识追踪器异常的原因，包括桶策略异常（bucketPolicyError），桶不存在（noBucket）和欠费或冻结（arrears）三种原因。
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 该参数必须与kms_id参数同时使用。 当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
@@ -92,6 +95,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
         'domainId' => null,
         'projectId' => null,
         'trackerName' => null,
+        'agencyName' => null,
         'status' => null,
         'detail' => null,
         'isSupportTraceFilesEncryption' => null,
@@ -133,6 +137,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
     * projectId  项目ID。
     * trackerName  标识追踪器名称，当前版本默认为“system”。
+    * agencyName  云服务委托名称。
     * status  标识追踪器状态，包括正常（enabled），停止（disabled）和异常（error）三种状态，状态为异常时需通过明细（detail）字段说明错误来源。
     * detail  该参数仅在追踪器状态异常时返回，用于标识追踪器异常的原因，包括桶策略异常（bucketPolicyError），桶不存在（noBucket）和欠费或冻结（arrears）三种原因。
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 该参数必须与kms_id参数同时使用。 当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
@@ -153,6 +158,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'projectId' => 'project_id',
             'trackerName' => 'tracker_name',
+            'agencyName' => 'agency_name',
             'status' => 'status',
             'detail' => 'detail',
             'isSupportTraceFilesEncryption' => 'is_support_trace_files_encryption',
@@ -173,6 +179,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
     * projectId  项目ID。
     * trackerName  标识追踪器名称，当前版本默认为“system”。
+    * agencyName  云服务委托名称。
     * status  标识追踪器状态，包括正常（enabled），停止（disabled）和异常（error）三种状态，状态为异常时需通过明细（detail）字段说明错误来源。
     * detail  该参数仅在追踪器状态异常时返回，用于标识追踪器异常的原因，包括桶策略异常（bucketPolicyError），桶不存在（noBucket）和欠费或冻结（arrears）三种原因。
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 该参数必须与kms_id参数同时使用。 当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
@@ -193,6 +200,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'projectId' => 'setProjectId',
             'trackerName' => 'setTrackerName',
+            'agencyName' => 'setAgencyName',
             'status' => 'setStatus',
             'detail' => 'setDetail',
             'isSupportTraceFilesEncryption' => 'setIsSupportTraceFilesEncryption',
@@ -213,6 +221,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     * domainId  账号ID，参见《云审计服务API参考》“获取账号ID和项目ID”章节。
     * projectId  项目ID。
     * trackerName  标识追踪器名称，当前版本默认为“system”。
+    * agencyName  云服务委托名称。
     * status  标识追踪器状态，包括正常（enabled），停止（disabled）和异常（error）三种状态，状态为异常时需通过明细（detail）字段说明错误来源。
     * detail  该参数仅在追踪器状态异常时返回，用于标识追踪器异常的原因，包括桶策略异常（bucketPolicyError），桶不存在（noBucket）和欠费或冻结（arrears）三种原因。
     * isSupportTraceFilesEncryption  事件文件转储加密功能开关。 该参数必须与kms_id参数同时使用。 当前环境仅\"tracker_type\"参数值为\"system\"时支持该功能。
@@ -233,6 +242,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'projectId' => 'getProjectId',
             'trackerName' => 'getTrackerName',
+            'agencyName' => 'getAgencyName',
             'status' => 'getStatus',
             'detail' => 'getDetail',
             'isSupportTraceFilesEncryption' => 'getIsSupportTraceFilesEncryption',
@@ -282,6 +292,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     }
     const TRACKER_TYPE_SYSTEM = 'system';
     const TRACKER_TYPE_DATA = 'data';
+    const AGENCY_NAME_CTS_ADMIN_TRUST = 'cts_admin_trust';
     const STATUS_ENABLED = 'enabled';
     const STATUS_DISABLED = 'disabled';
     
@@ -296,6 +307,18 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
         return [
             self::TRACKER_TYPE_SYSTEM,
             self::TRACKER_TYPE_DATA,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAgencyNameAllowableValues()
+    {
+        return [
+            self::AGENCY_NAME_CTS_ADMIN_TRUST,
         ];
     }
 
@@ -339,6 +362,7 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['trackerName'] = isset($data['trackerName']) ? $data['trackerName'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
         $this->container['isSupportTraceFilesEncryption'] = isset($data['isSupportTraceFilesEncryption']) ? $data['isSupportTraceFilesEncryption'] : null;
@@ -397,6 +421,20 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'trackerName', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getAgencyNameAllowableValues();
+                if (!is_null($this->container['agencyName']) && !in_array($this->container['agencyName'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'agencyName', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -687,6 +725,30 @@ class CreateTrackerResponse implements ModelInterface, ArrayAccess
     public function setTrackerName($trackerName)
     {
         $this->container['trackerName'] = $trackerName;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  云服务委托名称。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 云服务委托名称。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

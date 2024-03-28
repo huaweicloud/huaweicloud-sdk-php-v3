@@ -27,7 +27,7 @@ class BatchDeleteQueuePlansRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'queueName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\QueuePlanIds'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansRequestBody'
     ];
 
     /**
@@ -220,7 +220,7 @@ class BatchDeleteQueuePlansRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueuePlanIds|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansRequestBody|null
     */
     public function getBody()
     {
@@ -230,7 +230,7 @@ class BatchDeleteQueuePlansRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueuePlanIds|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\BatchDeleteQueuePlansRequestBody|null $body body
     *
     * @return $this
     */

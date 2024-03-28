@@ -35,7 +35,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
     * bandwidthSize  出公网带宽  实例需要开启出公网功能时需要填写，绑定后使用者可以利用该出口访问公网上的互联网资源
     * bandwidthChargingMode  出公网带宽计费类型，实例需要开启出公网功能时需要填写： - bandwidth：按带宽计费 - traffic：按流量计费
     * ipv6Enable  公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
-    * loadbalancerProvider  实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    * loadbalancerProvider  实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     * tags  标签列表。  一个实例默认最多支持创建20个标签
     * vpcepServiceName  终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
     * ingressBandwidthSize  入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源
@@ -83,7 +83,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
     * bandwidthSize  出公网带宽  实例需要开启出公网功能时需要填写，绑定后使用者可以利用该出口访问公网上的互联网资源
     * bandwidthChargingMode  出公网带宽计费类型，实例需要开启出公网功能时需要填写： - bandwidth：按带宽计费 - traffic：按流量计费
     * ipv6Enable  公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
-    * loadbalancerProvider  实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    * loadbalancerProvider  实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     * tags  标签列表。  一个实例默认最多支持创建20个标签
     * vpcepServiceName  终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
     * ingressBandwidthSize  入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源
@@ -152,7 +152,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
     * bandwidthSize  出公网带宽  实例需要开启出公网功能时需要填写，绑定后使用者可以利用该出口访问公网上的互联网资源
     * bandwidthChargingMode  出公网带宽计费类型，实例需要开启出公网功能时需要填写： - bandwidth：按带宽计费 - traffic：按流量计费
     * ipv6Enable  公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
-    * loadbalancerProvider  实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    * loadbalancerProvider  实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     * tags  标签列表。  一个实例默认最多支持创建20个标签
     * vpcepServiceName  终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
     * ingressBandwidthSize  入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源
@@ -200,7 +200,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
     * bandwidthSize  出公网带宽  实例需要开启出公网功能时需要填写，绑定后使用者可以利用该出口访问公网上的互联网资源
     * bandwidthChargingMode  出公网带宽计费类型，实例需要开启出公网功能时需要填写： - bandwidth：按带宽计费 - traffic：按流量计费
     * ipv6Enable  公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
-    * loadbalancerProvider  实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    * loadbalancerProvider  实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     * tags  标签列表。  一个实例默认最多支持创建20个标签
     * vpcepServiceName  终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
     * ingressBandwidthSize  入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源
@@ -248,7 +248,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
     * bandwidthSize  出公网带宽  实例需要开启出公网功能时需要填写，绑定后使用者可以利用该出口访问公网上的互联网资源
     * bandwidthChargingMode  出公网带宽计费类型，实例需要开启出公网功能时需要填写： - bandwidth：按带宽计费 - traffic：按流量计费
     * ipv6Enable  公网访问是否支持IPv6。  当前仅部分region部分可用区支持IPv6
-    * loadbalancerProvider  实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    * loadbalancerProvider  实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     * tags  标签列表。  一个实例默认最多支持创建20个标签
     * vpcepServiceName  终端节点服务的名称。  支持英文、数字、中划线、下划线，0~16个字符。  如果您不填写该参数，系统生成的终端节点服务的名称为{region}.apig.{service_id}。 如果您填写该参数，系统生成的终端节点服务的名称为{region}.{vpcep_service_name}.{service_id}。 实例创建完成后，可以在实例管理->终端节点管理页面修改该名称。
     * ingressBandwidthSize  入公网带宽  实例需要开启入公网功能，且loadbalancer_provider为elb时需要填写，绑定后使用者可以通过该入口从公网访问APIG实例中的API等资源
@@ -888,7 +888,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerProvider
-    *  实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    *  实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     *
     * @return string|null
     */
@@ -900,7 +900,7 @@ class InstanceCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerProvider
     *
-    * @param string|null $loadbalancerProvider 实例使用的负载均衡器类型 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
+    * @param string|null $loadbalancerProvider 实例使用的负载均衡器类型 - 该字段废弃，由Region支持的负载均衡模式决定使用elb还是lvs，详情参考产品介绍下的约束与限制。 - lvs Linux虚拟服务器 - elb 弹性负载均衡，elb仅部分region支持
     *
     * @return $this
     */

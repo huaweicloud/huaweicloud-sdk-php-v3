@@ -30,7 +30,7 @@ class ListCatalogsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'totalCount' => 'int',
-            'catalogs' => '\HuaweiCloud\SDK\Dli\V1\Model\CatalogEntity[]'
+            'catalogs' => '\HuaweiCloud\SDK\Dli\V1\Model\Catalog[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListCatalogsResponse implements ModelInterface, ArrayAccess
     * Gets catalogs
     *  项目下所有catalog信息
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CatalogEntity[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Catalog[]|null
     */
     public function getCatalogs()
     {
@@ -257,7 +257,7 @@ class ListCatalogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets catalogs
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CatalogEntity[]|null $catalogs 项目下所有catalog信息
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Catalog[]|null $catalogs 项目下所有catalog信息
     *
     * @return $this
     */

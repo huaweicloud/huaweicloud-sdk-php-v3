@@ -30,7 +30,7 @@ class ListFlinkSqlJobTemplatesResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'templateList' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkTemplateList'
+            'templateList' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkSqlJobTemplateList'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListFlinkSqlJobTemplatesResponse implements ModelInterface, ArrayAccess
     * Gets templateList
     *  templateList
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkTemplateList|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkSqlJobTemplateList|null
     */
     public function getTemplateList()
     {
@@ -257,7 +257,7 @@ class ListFlinkSqlJobTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templateList
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkTemplateList|null $templateList templateList
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkSqlJobTemplateList|null $templateList templateList
     *
     * @return $this
     */

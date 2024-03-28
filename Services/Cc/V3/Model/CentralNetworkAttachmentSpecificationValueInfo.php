@@ -226,6 +226,9 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
             if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['reason']) && !preg_match("/^[^<>]*$/", $this->container['reason'])) {
+                $invalidProperties[] = "invalid value for 'reason', must be conform to the pattern /^[^<>]*$/.";
+            }
         return $invalidProperties;
     }
 

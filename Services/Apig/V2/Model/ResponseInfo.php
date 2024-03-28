@@ -22,24 +22,28 @@ class ResponseInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'status' => 'int',
-            'body' => 'string'
+            'body' => 'string',
+            'headers' => '\HuaweiCloud\SDK\Apig\V2\Model\ResponseInfoHeader[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'status' => 'int32',
-        'body' => null
+        'body' => null,
+        'headers' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ResponseInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'status' => 'status',
-            'body' => 'body'
+            'body' => 'body',
+            'headers' => 'headers'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     *
     * @var string[]
     */
     protected static $setters = [
             'status' => 'setStatus',
-            'body' => 'setBody'
+            'body' => 'setBody',
+            'headers' => 'setHeaders'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  响应的HTTP状态码。范围为200-599，但不允许为444。
     * body  响应的Body模板
+    * headers  自定义的响应头
     *
     * @var string[]
     */
     protected static $getters = [
             'status' => 'getStatus',
-            'body' => 'getBody'
+            'body' => 'getBody',
+            'headers' => 'getHeaders'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ResponseInfo implements ModelInterface, ArrayAccess
     {
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['headers'] = isset($data['headers']) ? $data['headers'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ResponseInfo implements ModelInterface, ArrayAccess
     public function setBody($body)
     {
         $this->container['body'] = $body;
+        return $this;
+    }
+
+    /**
+    * Gets headers
+    *  自定义的响应头
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\ResponseInfoHeader[]|null
+    */
+    public function getHeaders()
+    {
+        return $this->container['headers'];
+    }
+
+    /**
+    * Sets headers
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\ResponseInfoHeader[]|null $headers 自定义的响应头
+    *
+    * @return $this
+    */
+    public function setHeaders($headers)
+    {
+        $this->container['headers'] = $headers;
         return $this;
     }
 

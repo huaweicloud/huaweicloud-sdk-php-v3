@@ -25,6 +25,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * agencyName  云服务委托名称。
     * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
@@ -47,6 +48,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
             'kmsId' => 'string',
             'isSupportValidate' => 'bool',
             'isOrganizationTracker' => 'bool',
+            'agencyName' => 'string',
             'managementEventSelector' => '\HuaweiCloud\SDK\Cts\V3\Model\ManagementEventSelector',
             'lts' => '\HuaweiCloud\SDK\Cts\V3\Model\Lts',
             'trackerType' => 'string',
@@ -69,6 +71,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * agencyName  云服务委托名称。
     * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
@@ -91,6 +94,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
         'kmsId' => null,
         'isSupportValidate' => null,
         'isOrganizationTracker' => null,
+        'agencyName' => null,
         'managementEventSelector' => null,
         'lts' => null,
         'trackerType' => null,
@@ -134,6 +138,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * agencyName  云服务委托名称。
     * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
@@ -156,6 +161,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
             'kmsId' => 'kms_id',
             'isSupportValidate' => 'is_support_validate',
             'isOrganizationTracker' => 'is_organization_tracker',
+            'agencyName' => 'agency_name',
             'managementEventSelector' => 'management_event_selector',
             'lts' => 'lts',
             'trackerType' => 'tracker_type',
@@ -178,6 +184,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * agencyName  云服务委托名称。
     * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
@@ -200,6 +207,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
             'kmsId' => 'setKmsId',
             'isSupportValidate' => 'setIsSupportValidate',
             'isOrganizationTracker' => 'setIsOrganizationTracker',
+            'agencyName' => 'setAgencyName',
             'managementEventSelector' => 'setManagementEventSelector',
             'lts' => 'setLts',
             'trackerType' => 'setTrackerType',
@@ -222,6 +230,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     * kmsId  事件文件转储加密所采用的秘钥id（从KMS获取）。 当\"tracker_type\"参数值为\"system\"和\"is_support_trace_files_encryption\"参数值为“是”时，此参数为必选项。
     * isSupportValidate  是否打开事件文件校验。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
+    * agencyName  云服务委托名称。
     * managementEventSelector  managementEventSelector
     * lts  lts
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器（system）和数据类追踪器（data）。
@@ -244,6 +253,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
             'kmsId' => 'getKmsId',
             'isSupportValidate' => 'getIsSupportValidate',
             'isOrganizationTracker' => 'getIsOrganizationTracker',
+            'agencyName' => 'getAgencyName',
             'managementEventSelector' => 'getManagementEventSelector',
             'lts' => 'getLts',
             'trackerType' => 'getTrackerType',
@@ -299,11 +309,24 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const AGENCY_NAME_CTS_ADMIN_TRUST = 'cts_admin_trust';
     const TRACKER_TYPE_SYSTEM = 'system';
     const TRACKER_TYPE_DATA = 'data';
     const STATUS_ENABLED = 'enabled';
     const STATUS_DISABLED = 'disabled';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAgencyNameAllowableValues()
+    {
+        return [
+            self::AGENCY_NAME_CTS_ADMIN_TRUST,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -352,6 +375,7 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
         $this->container['kmsId'] = isset($data['kmsId']) ? $data['kmsId'] : null;
         $this->container['isSupportValidate'] = isset($data['isSupportValidate']) ? $data['isSupportValidate'] : null;
         $this->container['isOrganizationTracker'] = isset($data['isOrganizationTracker']) ? $data['isOrganizationTracker'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['managementEventSelector'] = isset($data['managementEventSelector']) ? $data['managementEventSelector'] : null;
         $this->container['lts'] = isset($data['lts']) ? $data['lts'] : null;
         $this->container['trackerType'] = isset($data['trackerType']) ? $data['trackerType'] : null;
@@ -392,6 +416,20 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['kmsId']) && (mb_strlen($this->container['kmsId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'kmsId', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getAgencyNameAllowableValues();
+                if (!is_null($this->container['agencyName']) && !in_array($this->container['agencyName'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'agencyName', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";
             }
             $allowedValues = $this->getTrackerTypeAllowableValues();
                 if (!is_null($this->container['trackerType']) && !in_array($this->container['trackerType'], $allowedValues, true)) {
@@ -576,6 +614,30 @@ class TrackerResponseBody implements ModelInterface, ArrayAccess
     public function setIsOrganizationTracker($isOrganizationTracker)
     {
         $this->container['isOrganizationTracker'] = $isOrganizationTracker;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  云服务委托名称。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 云服务委托名称。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

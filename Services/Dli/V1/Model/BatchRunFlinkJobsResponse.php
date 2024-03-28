@@ -26,7 +26,7 @@ class BatchRunFlinkJobsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CommonResp[]'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\SuccessResponse[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class BatchRunFlinkJobsResponse implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CommonResp[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SuccessResponse[]|null
     */
     public function getBody()
     {
@@ -187,7 +187,7 @@ class BatchRunFlinkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CommonResp[]|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SuccessResponse[]|null $body body
     *
     * @return $this
     */

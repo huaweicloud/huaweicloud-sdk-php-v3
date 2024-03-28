@@ -1796,6 +1796,77 @@ class CcAsyncClient extends Client
     }
 
     /**
+     * 通过标签过滤中心网络实例
+     *
+     * 通过标签过滤中心网络实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworksByTagsAsync($request)
+    {
+        return $this->listCentralNetworksByTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function listCentralNetworksByTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcn/central-networks/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworksByTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworksByTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询中心网络详情
      *
      * 查询中心网络详情。
@@ -2065,6 +2136,74 @@ class CcAsyncClient extends Client
     }
 
     /**
+     * 创建中心网络ER路由表附件
+     *
+     * 创建中心网络的路由表附件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCentralNetworkErRouteTableAttachmentAsync($request)
+    {
+        return $this->createCentralNetworkErRouteTableAttachmentAsyncWithHttpInfo($request);
+    }
+    
+    public function createCentralNetworkErRouteTableAttachmentAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/er-route-table-attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkErRouteTableAttachmentResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateCentralNetworkErRouteTableAttachmentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建中心网络GDGW附件
      *
      * 创建中心网络的GDGW附件。
@@ -2293,6 +2432,96 @@ class CcAsyncClient extends Client
     }
 
     /**
+     * 查询中心网络ER路由表附件列表
+     *
+     * 查询中心网络ER路由表附件列表。
+     * 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCentralNetworkErRouteTableAttachmentsAsync($request)
+    {
+        return $this->listCentralNetworkErRouteTableAttachmentsAsyncWithHttpInfo($request);
+    }
+    
+    public function listCentralNetworkErRouteTableAttachmentsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/er-route-table-attachments';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['attachmentInstanceId'] !== null) {
+            $queryParams['attachment_instance_id'] = $localVarParams['attachmentInstanceId'];
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkErRouteTableAttachmentsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListCentralNetworkErRouteTableAttachmentsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询中心网络GDGW附件列表
      *
      * 查询中心网络GDGW附件列表。
@@ -2383,6 +2612,74 @@ class CcAsyncClient extends Client
     }
 
     /**
+     * 查询中心网络ER路由表附件详情
+     *
+     * 查询中心网络ER路由表附件详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCentralNetworkErRouteTableAttachmentAsync($request)
+    {
+        return $this->showCentralNetworkErRouteTableAttachmentAsyncWithHttpInfo($request);
+    }
+    
+    public function showCentralNetworkErRouteTableAttachmentAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/er-route-table-attachments/{er_route_table_attachment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['erRouteTableAttachmentId'] !== null) {
+            $pathParams['er_route_table_attachment_id'] = $localVarParams['erRouteTableAttachmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkErRouteTableAttachmentResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkErRouteTableAttachmentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询中心网络GDGW附件详情
      *
      * 查询中心网络GDGW附件详情。
@@ -2447,6 +2744,77 @@ class CcAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkGdgwAttachmentResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowCentralNetworkGdgwAttachmentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新中心网络ER路由表附件
+     *
+     * 更新中心网络ER路由表附件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCentralNetworkErRouteTableAttachmentAsync($request)
+    {
+        return $this->updateCentralNetworkErRouteTableAttachmentAsyncWithHttpInfo($request);
+    }
+    
+    public function updateCentralNetworkErRouteTableAttachmentAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{domain_id}/gcn/central-network/{central_network_id}/er-route-table-attachments/{er_route_table_attachment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['centralNetworkId'] !== null) {
+            $pathParams['central_network_id'] = $localVarParams['centralNetworkId'];
+        }
+        if ($localVarParams['erRouteTableAttachmentId'] !== null) {
+            $pathParams['er_route_table_attachment_id'] = $localVarParams['erRouteTableAttachmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkErRouteTableAttachmentResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateCentralNetworkErRouteTableAttachmentRequest',
             $asyncRequest = true);
     }
 

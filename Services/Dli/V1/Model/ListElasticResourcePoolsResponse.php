@@ -32,7 +32,7 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'count' => 'int',
-            'elasticResourcePools' => '\HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolsResponse[]'
+            'elasticResourcePools' => '\HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePool[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     * Gets elasticResourcePools
     *  弹性资源池列表
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolsResponse[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePool[]|null
     */
     public function getElasticResourcePools()
     {
@@ -292,7 +292,7 @@ class ListElasticResourcePoolsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets elasticResourcePools
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePoolsResponse[]|null $elasticResourcePools 弹性资源池列表
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\ElasticResourcePool[]|null $elasticResourcePools 弹性资源池列表
     *
     * @return $this
     */

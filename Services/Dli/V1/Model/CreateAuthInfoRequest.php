@@ -25,7 +25,7 @@ class CreateAuthInfoRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateAuthInfoRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateAuthInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateAuthInfoRequestBody|null $body body
     *
     * @return $this
     */

@@ -31,7 +31,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'default' => 'string',
+            'default' => 'object',
             'validAt' => 'string',
             'empty' => 'bool',
             'schema' => 'string',
@@ -296,7 +296,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     * Gets default
     *  参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     *
-    * @return string
+    * @return object
     */
     public function getDefault()
     {
@@ -306,7 +306,7 @@ class PackageOptions implements ModelInterface, ArrayAccess
     /**
     * Sets default
     *
-    * @param string $default 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
+    * @param object $default 参数默认值，不指定时按默认值生效, 参数类型以实际返回为准，可能为integer,string或者boolean
     *
     * @return $this
     */

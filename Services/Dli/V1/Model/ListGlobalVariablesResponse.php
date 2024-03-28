@@ -31,7 +31,7 @@ class ListGlobalVariablesResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'globalVars' => '\HuaweiCloud\SDK\Dli\V1\Model\ListGlobalValue[]',
+            'globalVars' => '\HuaweiCloud\SDK\Dli\V1\Model\GlobalVariable[]',
             'count' => 'int'
     ];
 
@@ -258,7 +258,7 @@ class ListGlobalVariablesResponse implements ModelInterface, ArrayAccess
     * Gets globalVars
     *  全局变量
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ListGlobalValue[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\GlobalVariable[]|null
     */
     public function getGlobalVars()
     {
@@ -268,7 +268,7 @@ class ListGlobalVariablesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets globalVars
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ListGlobalValue[]|null $globalVars 全局变量
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\GlobalVariable[]|null $globalVars 全局变量
     *
     * @return $this
     */

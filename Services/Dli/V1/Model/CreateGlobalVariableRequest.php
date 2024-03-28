@@ -25,7 +25,7 @@ class CreateGlobalVariableRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalValueReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalVariableRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateGlobalVariableRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalValueReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalVariableRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateGlobalVariableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalValueReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateGlobalVariableRequestBody|null $body body
     *
     * @return $this
     */

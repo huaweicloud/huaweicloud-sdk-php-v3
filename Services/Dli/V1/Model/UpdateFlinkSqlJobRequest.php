@@ -27,7 +27,7 @@ class UpdateFlinkSqlJobRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'jobId' => 'int',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UpdateFlinkSqlJobRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdateFlinkSqlJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateFlinkSqlJobRequestBody|null $body body
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     * operationType  操作类型，完整和自定义。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
+    * agencyName  云服务委托名称。
     * status  通知状态，启用和停用。
     * topicId  消息通知服务(SMN)主题的唯一的资源标识，可通过查询主题列表获取该标识。
     * notificationId  通知的唯一标识ID。
@@ -40,6 +41,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
             'operationType' => 'string',
             'operations' => '\HuaweiCloud\SDK\Cts\V3\Model\Operations[]',
             'notifyUserList' => '\HuaweiCloud\SDK\Cts\V3\Model\NotificationUsers[]',
+            'agencyName' => 'string',
             'status' => 'string',
             'topicId' => 'string',
             'notificationId' => 'string',
@@ -55,6 +57,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     * operationType  操作类型，完整和自定义。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
+    * agencyName  云服务委托名称。
     * status  通知状态，启用和停用。
     * topicId  消息通知服务(SMN)主题的唯一的资源标识，可通过查询主题列表获取该标识。
     * notificationId  通知的唯一标识ID。
@@ -70,6 +73,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
         'operationType' => null,
         'operations' => null,
         'notifyUserList' => null,
+        'agencyName' => null,
         'status' => null,
         'topicId' => null,
         'notificationId' => null,
@@ -106,6 +110,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     * operationType  操作类型，完整和自定义。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
+    * agencyName  云服务委托名称。
     * status  通知状态，启用和停用。
     * topicId  消息通知服务(SMN)主题的唯一的资源标识，可通过查询主题列表获取该标识。
     * notificationId  通知的唯一标识ID。
@@ -121,6 +126,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
             'operationType' => 'operation_type',
             'operations' => 'operations',
             'notifyUserList' => 'notify_user_list',
+            'agencyName' => 'agency_name',
             'status' => 'status',
             'topicId' => 'topic_id',
             'notificationId' => 'notification_id',
@@ -136,6 +142,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     * operationType  操作类型，完整和自定义。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
+    * agencyName  云服务委托名称。
     * status  通知状态，启用和停用。
     * topicId  消息通知服务(SMN)主题的唯一的资源标识，可通过查询主题列表获取该标识。
     * notificationId  通知的唯一标识ID。
@@ -151,6 +158,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
             'operationType' => 'setOperationType',
             'operations' => 'setOperations',
             'notifyUserList' => 'setNotifyUserList',
+            'agencyName' => 'setAgencyName',
             'status' => 'setStatus',
             'topicId' => 'setTopicId',
             'notificationId' => 'setNotificationId',
@@ -166,6 +174,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     * operationType  操作类型，完整和自定义。
     * operations  操作事件列表。
     * notifyUserList  通知用户列表，目前最多支持对10个用户组和50个用户发起的操作进行配置。
+    * agencyName  云服务委托名称。
     * status  通知状态，启用和停用。
     * topicId  消息通知服务(SMN)主题的唯一的资源标识，可通过查询主题列表获取该标识。
     * notificationId  通知的唯一标识ID。
@@ -181,6 +190,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
             'operationType' => 'getOperationType',
             'operations' => 'getOperations',
             'notifyUserList' => 'getNotifyUserList',
+            'agencyName' => 'getAgencyName',
             'status' => 'getStatus',
             'topicId' => 'getTopicId',
             'notificationId' => 'getNotificationId',
@@ -232,6 +242,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     }
     const OPERATION_TYPE_CUSTOMIZED = 'customized';
     const OPERATION_TYPE_COMPLETE = 'complete';
+    const AGENCY_NAME_CTS_ADMIN_TRUST = 'cts_admin_trust';
     const STATUS_ENABLED = 'enabled';
     const STATUS_DISABLED = 'disabled';
     const NOTIFICATION_TYPE_SMN = 'smn';
@@ -248,6 +259,18 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
         return [
             self::OPERATION_TYPE_CUSTOMIZED,
             self::OPERATION_TYPE_COMPLETE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAgencyNameAllowableValues()
+    {
+        return [
+            self::AGENCY_NAME_CTS_ADMIN_TRUST,
         ];
     }
 
@@ -297,6 +320,7 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
         $this->container['operationType'] = isset($data['operationType']) ? $data['operationType'] : null;
         $this->container['operations'] = isset($data['operations']) ? $data['operations'] : null;
         $this->container['notifyUserList'] = isset($data['notifyUserList']) ? $data['notifyUserList'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['topicId'] = isset($data['topicId']) ? $data['topicId'] : null;
         $this->container['notificationId'] = isset($data['notificationId']) ? $data['notificationId'] : null;
@@ -328,6 +352,20 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getAgencyNameAllowableValues();
+                if (!is_null($this->container['agencyName']) && !in_array($this->container['agencyName'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'agencyName', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -475,6 +513,30 @@ class CreateNotificationResponse implements ModelInterface, ArrayAccess
     public function setNotifyUserList($notifyUserList)
     {
         $this->container['notifyUserList'] = $notifyUserList;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  云服务委托名称。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 云服务委托名称。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

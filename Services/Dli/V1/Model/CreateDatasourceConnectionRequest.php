@@ -25,7 +25,7 @@ class CreateDatasourceConnectionRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateDatasourceConnectionReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateDatasourceConnectionRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateDatasourceConnectionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateDatasourceConnectionReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateDatasourceConnectionRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateDatasourceConnectionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateDatasourceConnectionReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateDatasourceConnectionRequestBody|null $body body
     *
     * @return $this
     */

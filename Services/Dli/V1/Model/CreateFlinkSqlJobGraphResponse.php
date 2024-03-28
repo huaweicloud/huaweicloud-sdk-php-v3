@@ -21,9 +21,9 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  
-    * message  
-    * errorCode  
+    * isSuccess  isSuccess
+    * message  message
+    * errorCode  errorCode
     * streamGraph  静态流图的描述信息
     *
     * @var string[]
@@ -37,9 +37,9 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  
-    * message  
-    * errorCode  
+    * isSuccess  isSuccess
+    * message  message
+    * errorCode  errorCode
     * streamGraph  静态流图的描述信息
     *
     * @var string[]
@@ -74,9 +74,9 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  
-    * message  
-    * errorCode  
+    * isSuccess  isSuccess
+    * message  message
+    * errorCode  errorCode
     * streamGraph  静态流图的描述信息
     *
     * @var string[]
@@ -90,9 +90,9 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  
-    * message  
-    * errorCode  
+    * isSuccess  isSuccess
+    * message  message
+    * errorCode  errorCode
     * streamGraph  静态流图的描述信息
     *
     * @var string[]
@@ -106,9 +106,9 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  
-    * message  
-    * errorCode  
+    * isSuccess  isSuccess
+    * message  message
+    * errorCode  errorCode
     * streamGraph  静态流图的描述信息
     *
     * @var string[]
@@ -208,7 +208,7 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSuccess
-    *  
+    *  isSuccess
     *
     * @return bool|null
     */
@@ -220,7 +220,7 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 
+    * @param bool|null $isSuccess isSuccess
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  
+    *  message
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message 
+    * @param string|null $message message
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  
+    *  errorCode
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class CreateFlinkSqlJobGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string|null $errorCode 
+    * @param string|null $errorCode errorCode
     *
     * @return $this
     */

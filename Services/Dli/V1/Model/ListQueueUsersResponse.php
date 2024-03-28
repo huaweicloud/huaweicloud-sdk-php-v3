@@ -32,7 +32,7 @@ class ListQueueUsersResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'queueName' => 'string',
-            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\PrivilegesInfo[]'
+            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\QueueUserPrivilege[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListQueueUsersResponse implements ModelInterface, ArrayAccess
     * Gets privileges
     *  有权限使用该队列的用户及其对应的权限数组。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\PrivilegesInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueueUserPrivilege[]|null
     */
     public function getPrivileges()
     {
@@ -292,7 +292,7 @@ class ListQueueUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privileges
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\PrivilegesInfo[]|null $privileges 有权限使用该队列的用户及其对应的权限数组。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueueUserPrivilege[]|null $privileges 有权限使用该队列的用户及其对应的权限数组。
     *
     * @return $this
     */

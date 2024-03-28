@@ -34,6 +34,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关。 默认值为 true。
     * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'threshold' => 'int',
             'smnNotify' => 'bool',
             'backupNamePrefix' => 'string',
-            'demandBilling' => 'bool'
+            'demandBilling' => 'bool',
+            'sysLockSourceService' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关。 默认值为 true。
     * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
         'threshold' => 'int32',
         'smnNotify' => null,
         'backupNamePrefix' => null,
-        'demandBilling' => null
+        'demandBilling' => null,
+        'sysLockSourceService' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关。 默认值为 true。
     * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'threshold' => 'threshold',
             'smnNotify' => 'smn_notify',
             'backupNamePrefix' => 'backup_name_prefix',
-            'demandBilling' => 'demand_billing'
+            'demandBilling' => 'demand_billing',
+            'sysLockSourceService' => 'sys_lock_source_service'
     ];
 
     /**
@@ -163,6 +169,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关。 默认值为 true。
     * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'threshold' => 'setThreshold',
             'smnNotify' => 'setSmnNotify',
             'backupNamePrefix' => 'setBackupNamePrefix',
-            'demandBilling' => 'setDemandBilling'
+            'demandBilling' => 'setDemandBilling',
+            'sysLockSourceService' => 'setSysLockSourceService'
     ];
 
     /**
@@ -199,6 +207,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
     * smnNotify  存储库smn消息通知开关。 默认值为 true。
     * backupNamePrefix  备份名称前缀，设置后该存储库自动备份产生的备份副本都将携带该备份名称前缀
     * demandBilling  存储库使用是否允许超出容量，只有创建包周期存储库时才允许该值为 true
+    * sysLockSourceService  用于标识SMB服务，您可以设置为SMB或者空
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class VaultCreate implements ModelInterface, ArrayAccess
             'threshold' => 'getThreshold',
             'smnNotify' => 'getSmnNotify',
             'backupNamePrefix' => 'getBackupNamePrefix',
-            'demandBilling' => 'getDemandBilling'
+            'demandBilling' => 'getDemandBilling',
+            'sysLockSourceService' => 'getSysLockSourceService'
     ];
 
     /**
@@ -259,7 +269,22 @@ class VaultCreate implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SYS_LOCK_SOURCE_SERVICE_SMB = 'SMB';
+    const SYS_LOCK_SOURCE_SERVICE_EMPTY = '';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSysLockSourceServiceAllowableValues()
+    {
+        return [
+            self::SYS_LOCK_SOURCE_SERVICE_SMB,
+            self::SYS_LOCK_SOURCE_SERVICE_EMPTY,
+        ];
+    }
 
 
     /**
@@ -291,6 +316,7 @@ class VaultCreate implements ModelInterface, ArrayAccess
         $this->container['smnNotify'] = isset($data['smnNotify']) ? $data['smnNotify'] : null;
         $this->container['backupNamePrefix'] = isset($data['backupNamePrefix']) ? $data['backupNamePrefix'] : null;
         $this->container['demandBilling'] = isset($data['demandBilling']) ? $data['demandBilling'] : null;
+        $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
     }
 
     /**
@@ -340,6 +366,14 @@ class VaultCreate implements ModelInterface, ArrayAccess
             if (!is_null($this->container['backupNamePrefix']) && (mb_strlen($this->container['backupNamePrefix']) < 0)) {
                 $invalidProperties[] = "invalid value for 'backupNamePrefix', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getSysLockSourceServiceAllowableValues();
+                if (!is_null($this->container['sysLockSourceService']) && !in_array($this->container['sysLockSourceService'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'sysLockSourceService', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -687,6 +721,30 @@ class VaultCreate implements ModelInterface, ArrayAccess
     public function setDemandBilling($demandBilling)
     {
         $this->container['demandBilling'] = $demandBilling;
+        return $this;
+    }
+
+    /**
+    * Gets sysLockSourceService
+    *  用于标识SMB服务，您可以设置为SMB或者空
+    *
+    * @return string|null
+    */
+    public function getSysLockSourceService()
+    {
+        return $this->container['sysLockSourceService'];
+    }
+
+    /**
+    * Sets sysLockSourceService
+    *
+    * @param string|null $sysLockSourceService 用于标识SMB服务，您可以设置为SMB或者空
+    *
+    * @return $this
+    */
+    public function setSysLockSourceService($sysLockSourceService)
+    {
+        $this->container['sysLockSourceService'] = $sysLockSourceService;
         return $this;
     }
 

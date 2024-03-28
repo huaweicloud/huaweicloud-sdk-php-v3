@@ -30,7 +30,7 @@ class ShowFlinkMetricResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'metrics' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowJobMonitorInfoRespPayload'
+            'metrics' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkMetric'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ShowFlinkMetricResponse implements ModelInterface, ArrayAccess
     * Gets metrics
     *  metrics
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowJobMonitorInfoRespPayload|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkMetric|null
     */
     public function getMetrics()
     {
@@ -257,7 +257,7 @@ class ShowFlinkMetricResponse implements ModelInterface, ArrayAccess
     /**
     * Sets metrics
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowJobMonitorInfoRespPayload|null $metrics metrics
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkMetric|null $metrics metrics
     *
     * @return $this
     */

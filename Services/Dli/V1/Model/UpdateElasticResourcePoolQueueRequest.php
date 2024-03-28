@@ -29,7 +29,7 @@ class UpdateElasticResourcePoolQueueRequest implements ModelInterface, ArrayAcce
     protected static $openAPITypes = [
             'elasticResourcePoolName' => 'string',
             'queueName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueScalingPolicyInfo'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueRequestBody'
     ];
 
     /**
@@ -258,7 +258,7 @@ class UpdateElasticResourcePoolQueueRequest implements ModelInterface, ArrayAcce
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueScalingPolicyInfo|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueRequestBody|null
     */
     public function getBody()
     {
@@ -268,7 +268,7 @@ class UpdateElasticResourcePoolQueueRequest implements ModelInterface, ArrayAcce
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueScalingPolicyInfo|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateElasticResourcePoolQueueRequestBody|null $body body
     *
     * @return $this
     */

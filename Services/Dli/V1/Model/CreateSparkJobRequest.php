@@ -27,7 +27,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'userId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\BatchJobInfo'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobRequestBody'
     ];
 
     /**
@@ -211,7 +211,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\BatchJobInfo|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobRequestBody|null
     */
     public function getBody()
     {
@@ -221,7 +221,7 @@ class CreateSparkJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\BatchJobInfo|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateSparkJobRequestBody|null $body body
     *
     * @return $this
     */

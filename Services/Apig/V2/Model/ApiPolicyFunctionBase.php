@@ -26,6 +26,7 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
             'networkType' => 'string',
             'version' => 'string',
             'aliasUrn' => 'string',
-            'timeout' => 'int'
+            'timeout' => 'int',
+            'reqProtocol' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
         'networkType' => null,
         'version' => null,
         'aliasUrn' => null,
-        'timeout' => 'int32'
+        'timeout' => 'int32',
+        'reqProtocol' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
             'networkType' => 'network_type',
             'version' => 'version',
             'aliasUrn' => 'alias_urn',
-            'timeout' => 'timeout'
+            'timeout' => 'timeout',
+            'reqProtocol' => 'req_protocol'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
             'networkType' => 'setNetworkType',
             'version' => 'setVersion',
             'aliasUrn' => 'setAliasUrn',
-            'timeout' => 'setTimeout'
+            'timeout' => 'setTimeout',
+            'reqProtocol' => 'setReqProtocol'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     * version  函数版本  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * aliasUrn  函数别名URN  当函数别名URN和函数版本同时传入时，函数版本将被忽略，只会使用函数别名URN
     * timeout  API网关请求后端服务的超时时间。函数网络架构为V1时最大超时时间为60000，V2最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000。  单位：毫秒。
+    * reqProtocol  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
             'networkType' => 'getNetworkType',
             'version' => 'getVersion',
             'aliasUrn' => 'getAliasUrn',
-            'timeout' => 'getTimeout'
+            'timeout' => 'getTimeout',
+            'reqProtocol' => 'getReqProtocol'
     ];
 
     /**
@@ -183,6 +193,8 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     const INVOCATION_TYPE_SYNC = 'sync';
     const NETWORK_TYPE_V1 = 'V1';
     const NETWORK_TYPE_V2 = 'V2';
+    const REQ_PROTOCOL_HTTPS = 'HTTPS';
+    const REQ_PROTOCOL_GRPCS = 'GRPCS';
     
 
     /**
@@ -211,6 +223,19 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getReqProtocolAllowableValues()
+    {
+        return [
+            self::REQ_PROTOCOL_HTTPS,
+            self::REQ_PROTOCOL_GRPCS,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -233,6 +258,7 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['aliasUrn'] = isset($data['aliasUrn']) ? $data['aliasUrn'] : null;
         $this->container['timeout'] = isset($data['timeout']) ? $data['timeout'] : null;
+        $this->container['reqProtocol'] = isset($data['reqProtocol']) ? $data['reqProtocol'] : null;
     }
 
     /**
@@ -274,6 +300,14 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
             if (!is_null($this->container['timeout']) && ($this->container['timeout'] < 1)) {
                 $invalidProperties[] = "invalid value for 'timeout', must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getReqProtocolAllowableValues();
+                if (!is_null($this->container['reqProtocol']) && !in_array($this->container['reqProtocol'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'reqProtocol', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -429,6 +463,30 @@ class ApiPolicyFunctionBase implements ModelInterface, ArrayAccess
     public function setTimeout($timeout)
     {
         $this->container['timeout'] = $timeout;
+        return $this;
+    }
+
+    /**
+    * Gets reqProtocol
+    *  函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
+    *
+    * @return string|null
+    */
+    public function getReqProtocol()
+    {
+        return $this->container['reqProtocol'];
+    }
+
+    /**
+    * Sets reqProtocol
+    *
+    * @param string|null $reqProtocol 函数后端的请求协议：HTTPS、GRPCS，默认值为HTTPS，前端配置中的请求协议为GRPCS时可选GRPCS。
+    *
+    * @return $this
+    */
+    public function setReqProtocol($reqProtocol)
+    {
+        $this->container['reqProtocol'] = $reqProtocol;
         return $this;
     }
 

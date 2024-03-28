@@ -25,7 +25,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     * count  存储库个数
     * limit  每页显示的条目数量
     * offset  偏移量，表示从此偏移量开始查询
-    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -33,8 +32,7 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
             'vaults' => '\HuaweiCloud\SDK\Cbr\V1\Model\Vault[]',
             'count' => 'int',
             'limit' => 'int',
-            'offset' => 'int',
-            'sysLockSourceService' => 'string'
+            'offset' => 'int'
     ];
 
     /**
@@ -43,7 +41,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     * count  存储库个数
     * limit  每页显示的条目数量
     * offset  偏移量，表示从此偏移量开始查询
-    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -51,8 +48,7 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
         'vaults' => null,
         'count' => 'int32',
         'limit' => 'int32',
-        'offset' => 'int32',
-        'sysLockSourceService' => null
+        'offset' => 'int32'
     ];
 
     /**
@@ -82,7 +78,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     * count  存储库个数
     * limit  每页显示的条目数量
     * offset  偏移量，表示从此偏移量开始查询
-    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -90,8 +85,7 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
             'vaults' => 'vaults',
             'count' => 'count',
             'limit' => 'limit',
-            'offset' => 'offset',
-            'sysLockSourceService' => 'sys_lock_source_service'
+            'offset' => 'offset'
     ];
 
     /**
@@ -100,7 +94,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     * count  存储库个数
     * limit  每页显示的条目数量
     * offset  偏移量，表示从此偏移量开始查询
-    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -108,8 +101,7 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
             'vaults' => 'setVaults',
             'count' => 'setCount',
             'limit' => 'setLimit',
-            'offset' => 'setOffset',
-            'sysLockSourceService' => 'setSysLockSourceService'
+            'offset' => 'setOffset'
     ];
 
     /**
@@ -118,7 +110,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     * count  存储库个数
     * limit  每页显示的条目数量
     * offset  偏移量，表示从此偏移量开始查询
-    * sysLockSourceService  用于标识SMB服务
     *
     * @var string[]
     */
@@ -126,8 +117,7 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
             'vaults' => 'getVaults',
             'count' => 'getCount',
             'limit' => 'getLimit',
-            'offset' => 'getOffset',
-            'sysLockSourceService' => 'getSysLockSourceService'
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -192,7 +182,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['sysLockSourceService'] = isset($data['sysLockSourceService']) ? $data['sysLockSourceService'] : null;
     }
 
     /**
@@ -319,30 +308,6 @@ class ListVaultResponse implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets sysLockSourceService
-    *  用于标识SMB服务
-    *
-    * @return string|null
-    */
-    public function getSysLockSourceService()
-    {
-        return $this->container['sysLockSourceService'];
-    }
-
-    /**
-    * Sets sysLockSourceService
-    *
-    * @param string|null $sysLockSourceService 用于标识SMB服务
-    *
-    * @return $this
-    */
-    public function setSysLockSourceService($sysLockSourceService)
-    {
-        $this->container['sysLockSourceService'] = $sysLockSourceService;
         return $this;
     }
 

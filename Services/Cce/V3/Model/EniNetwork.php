@@ -186,9 +186,6 @@ class EniNetwork implements ModelInterface, ArrayAccess
             if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['eniSubnetId'])) {
                 $invalidProperties[] = "invalid value for 'eniSubnetId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
-        if ($this->container['eniSubnetCidr'] === null) {
-            $invalidProperties[] = "'eniSubnetCidr' can't be null";
-        }
         if ($this->container['subnets'] === null) {
             $invalidProperties[] = "'subnets' can't be null";
         }
@@ -234,7 +231,7 @@ class EniNetwork implements ModelInterface, ArrayAccess
     * Gets eniSubnetCidr
     *  ENI子网CIDR(废弃中)
     *
-    * @return string
+    * @return string|null
     */
     public function getEniSubnetCidr()
     {
@@ -244,7 +241,7 @@ class EniNetwork implements ModelInterface, ArrayAccess
     /**
     * Sets eniSubnetCidr
     *
-    * @param string $eniSubnetCidr ENI子网CIDR(废弃中)
+    * @param string|null $eniSubnetCidr ENI子网CIDR(废弃中)
     *
     * @return $this
     */

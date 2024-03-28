@@ -58,7 +58,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
             'keys' => 'string',
             'storeHost' => 'string',
             'clientHost' => 'string',
-            'retryTimes' => 'string',
+            'retryTimes' => 'int',
             'bodyLength' => 'float',
             'msgType' => 'string',
             'transactionState' => 'string',
@@ -798,7 +798,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * Gets retryTimes
     *  重试次数。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getRetryTimes()
     {
@@ -808,7 +808,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets retryTimes
     *
-    * @param string|null $retryTimes 重试次数。
+    * @param int|null $retryTimes 重试次数。
     *
     * @return $this
     */

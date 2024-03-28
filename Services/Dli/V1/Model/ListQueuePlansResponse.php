@@ -30,7 +30,7 @@ class ListQueuePlansResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'plans' => '\HuaweiCloud\SDK\Dli\V1\Model\QueuePlanEntity[]'
+            'plans' => '\HuaweiCloud\SDK\Dli\V1\Model\QueuePlan[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListQueuePlansResponse implements ModelInterface, ArrayAccess
     * Gets plans
     *  定时扩缩容信息
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueuePlanEntity[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueuePlan[]|null
     */
     public function getPlans()
     {
@@ -257,7 +257,7 @@ class ListQueuePlansResponse implements ModelInterface, ArrayAccess
     /**
     * Sets plans
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueuePlanEntity[]|null $plans 定时扩缩容信息
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueuePlan[]|null $plans 定时扩缩容信息
     *
     * @return $this
     */

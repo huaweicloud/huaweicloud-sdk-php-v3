@@ -23,24 +23,28 @@ class ListGcbResourceByTagResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * resources  资源列表。
     * totalCount  总记录数。
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resources' => '\HuaweiCloud\SDK\Cc\V2\Model\TmsResource[]',
-            'totalCount' => 'int'
+            'totalCount' => 'int',
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resources  资源列表。
     * totalCount  总记录数。
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resources' => null,
-        'totalCount' => 'int32'
+        'totalCount' => 'int32',
+        'requestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListGcbResourceByTagResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * resources  资源列表。
     * totalCount  总记录数。
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resources' => 'resources',
-            'totalCount' => 'total_count'
+            'totalCount' => 'total_count',
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resources  资源列表。
     * totalCount  总记录数。
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'resources' => 'setResources',
-            'totalCount' => 'setTotalCount'
+            'totalCount' => 'setTotalCount',
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resources  资源列表。
     * totalCount  总记录数。
+    * requestId  请求ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'resources' => 'getResources',
-            'totalCount' => 'getTotalCount'
+            'totalCount' => 'getTotalCount',
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListGcbResourceByTagResponse implements ModelInterface, ArrayAccess
     {
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
     }
 
     /**
@@ -175,6 +186,12 @@ class ListGcbResourceByTagResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['totalCount']) && ($this->container['totalCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'totalCount', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -235,6 +252,30 @@ class ListGcbResourceByTagResponse implements ModelInterface, ArrayAccess
     public function setTotalCount($totalCount)
     {
         $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets requestId
+    *  请求ID。
+    *
+    * @return string|null
+    */
+    public function getRequestId()
+    {
+        return $this->container['requestId'];
+    }
+
+    /**
+    * Sets requestId
+    *
+    * @param string|null $requestId 请求ID。
+    *
+    * @return $this
+    */
+    public function setRequestId($requestId)
+    {
+        $this->container['requestId'] = $requestId;
         return $this;
     }
 

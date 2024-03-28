@@ -32,7 +32,7 @@ class ListSqlJobTemplatesResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'sqlCount' => 'int',
-            'sqls' => '\HuaweiCloud\SDK\Dli\V1\Model\SqlsResp[]'
+            'sqls' => '\HuaweiCloud\SDK\Dli\V1\Model\SqlJobTemplate[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListSqlJobTemplatesResponse implements ModelInterface, ArrayAccess
     * Gets sqls
     *  sqls
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\SqlsResp[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SqlJobTemplate[]|null
     */
     public function getSqls()
     {
@@ -292,7 +292,7 @@ class ListSqlJobTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets sqls
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\SqlsResp[]|null $sqls sqls
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SqlJobTemplate[]|null $sqls sqls
     *
     * @return $this
     */

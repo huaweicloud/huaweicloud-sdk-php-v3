@@ -30,7 +30,7 @@ class ListTableUsersResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowTableUsersRespPrivilege[]'
+            'privileges' => '\HuaweiCloud\SDK\Dli\V1\Model\TableUserPrivilege[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListTableUsersResponse implements ModelInterface, ArrayAccess
     * Gets privileges
     *  权限信息。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowTableUsersRespPrivilege[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\TableUserPrivilege[]|null
     */
     public function getPrivileges()
     {
@@ -257,7 +257,7 @@ class ListTableUsersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privileges
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowTableUsersRespPrivilege[]|null $privileges 权限信息。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\TableUserPrivilege[]|null $privileges 权限信息。
     *
     * @return $this
     */

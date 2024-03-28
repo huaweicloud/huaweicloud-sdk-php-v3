@@ -28,6 +28,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
             'registerTime' => '\DateTime',
             'updateTime' => '\DateTime',
             'onSellStatus' => 'int',
-            'urlDomains' => '\HuaweiCloud\SDK\Apig\V2\Model\UrlDomain[]'
+            'urlDomains' => '\HuaweiCloud\SDK\Apig\V2\Model\UrlDomain[]',
+            'slDomainAccessEnabled' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
         'registerTime' => 'date-time',
         'updateTime' => 'date-time',
         'onSellStatus' => 'int32',
-        'urlDomains' => null
+        'urlDomains' => null,
+        'slDomainAccessEnabled' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
             'registerTime' => 'register_time',
             'updateTime' => 'update_time',
             'onSellStatus' => 'on_sell_status',
-            'urlDomains' => 'url_domains'
+            'urlDomains' => 'url_domains',
+            'slDomainAccessEnabled' => 'sl_domain_access_enabled'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
             'registerTime' => 'setRegisterTime',
             'updateTime' => 'setUpdateTime',
             'onSellStatus' => 'setOnSellStatus',
-            'urlDomains' => 'setUrlDomains'
+            'urlDomains' => 'setUrlDomains',
+            'slDomainAccessEnabled' => 'setSlDomainAccessEnabled'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
             'registerTime' => 'getRegisterTime',
             'updateTime' => 'getUpdateTime',
             'onSellStatus' => 'getOnSellStatus',
-            'urlDomains' => 'getUrlDomains'
+            'urlDomains' => 'getUrlDomains',
+            'slDomainAccessEnabled' => 'getSlDomainAccessEnabled'
     ];
 
     /**
@@ -238,6 +248,7 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['onSellStatus'] = isset($data['onSellStatus']) ? $data['onSellStatus'] : null;
         $this->container['urlDomains'] = isset($data['urlDomains']) ? $data['urlDomains'] : null;
+        $this->container['slDomainAccessEnabled'] = isset($data['slDomainAccessEnabled']) ? $data['slDomainAccessEnabled'] : null;
     }
 
     /**
@@ -480,6 +491,30 @@ class ApiGroupCommonInfo implements ModelInterface, ArrayAccess
     public function setUrlDomains($urlDomains)
     {
         $this->container['urlDomains'] = $urlDomains;
+        return $this;
+    }
+
+    /**
+    * Gets slDomainAccessEnabled
+    *  调试域名是否可以访问，true表示可以访问，false表示禁止访问
+    *
+    * @return bool|null
+    */
+    public function getSlDomainAccessEnabled()
+    {
+        return $this->container['slDomainAccessEnabled'];
+    }
+
+    /**
+    * Sets slDomainAccessEnabled
+    *
+    * @param bool|null $slDomainAccessEnabled 调试域名是否可以访问，true表示可以访问，false表示禁止访问
+    *
+    * @return $this
+    */
+    public function setSlDomainAccessEnabled($slDomainAccessEnabled)
+    {
+        $this->container['slDomainAccessEnabled'] = $slDomainAccessEnabled;
         return $this;
     }
 

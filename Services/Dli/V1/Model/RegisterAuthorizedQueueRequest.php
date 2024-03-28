@@ -25,7 +25,7 @@ class RegisterAuthorizedQueueRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\GrantQueuePermissionReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\RegisterAuthorizedQueueRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class RegisterAuthorizedQueueRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\GrantQueuePermissionReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\RegisterAuthorizedQueueRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class RegisterAuthorizedQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\GrantQueuePermissionReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\RegisterAuthorizedQueueRequestBody|null $body body
     *
     * @return $this
     */

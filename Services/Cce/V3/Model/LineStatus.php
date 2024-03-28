@@ -27,8 +27,8 @@ class LineStatus implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'startPoint' => '\HuaweiCloud\SDK\Cce\V3\Model\TaskType',
-            'endPoint' => '\HuaweiCloud\SDK\Cce\V3\Model\TaskType',
+            'startPoint' => '\HuaweiCloud\SDK\Cce\V3\Model\Point',
+            'endPoint' => '\HuaweiCloud\SDK\Cce\V3\Model\Point',
             'critical' => 'string'
     ];
 
@@ -198,7 +198,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Gets startPoint
     *  startPoint
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\TaskType|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\Point|null
     */
     public function getStartPoint()
     {
@@ -208,7 +208,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     /**
     * Sets startPoint
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\TaskType|null $startPoint startPoint
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Point|null $startPoint startPoint
     *
     * @return $this
     */
@@ -222,7 +222,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     * Gets endPoint
     *  endPoint
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\TaskType|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\Point|null
     */
     public function getEndPoint()
     {
@@ -232,7 +232,7 @@ class LineStatus implements ModelInterface, ArrayAccess
     /**
     * Sets endPoint
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\TaskType|null $endPoint endPoint
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\Point|null $endPoint endPoint
     *
     * @return $this
     */

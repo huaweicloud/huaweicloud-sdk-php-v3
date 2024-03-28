@@ -29,6 +29,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
     * remark  描述
     * callLimits  流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
@@ -50,6 +51,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
             'updateTime' => '\DateTime',
             'onSellStatus' => 'int',
             'urlDomains' => '\HuaweiCloud\SDK\Apig\V2\Model\UrlDomain[]',
+            'slDomainAccessEnabled' => 'bool',
             'slDomains' => 'string[]',
             'remark' => 'string',
             'callLimits' => 'int',
@@ -71,6 +73,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
     * remark  描述
     * callLimits  流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
@@ -92,6 +95,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
         'updateTime' => 'date-time',
         'onSellStatus' => 'int32',
         'urlDomains' => null,
+        'slDomainAccessEnabled' => null,
         'slDomains' => null,
         'remark' => null,
         'callLimits' => 'int32',
@@ -134,6 +138,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
     * remark  描述
     * callLimits  流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
@@ -155,6 +160,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'onSellStatus' => 'on_sell_status',
             'urlDomains' => 'url_domains',
+            'slDomainAccessEnabled' => 'sl_domain_access_enabled',
             'slDomains' => 'sl_domains',
             'remark' => 'remark',
             'callLimits' => 'call_limits',
@@ -176,6 +182,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
     * remark  描述
     * callLimits  流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
@@ -197,6 +204,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'onSellStatus' => 'setOnSellStatus',
             'urlDomains' => 'setUrlDomains',
+            'slDomainAccessEnabled' => 'setSlDomainAccessEnabled',
             'slDomains' => 'setSlDomains',
             'remark' => 'setRemark',
             'callLimits' => 'setCallLimits',
@@ -218,6 +226,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
     * updateTime  最近修改时间
     * onSellStatus  是否已上架云商店： - 1：已上架 - 2：未上架 - 3：审核中  [暂不支持](tag:cmcc,ctc,DT,g42,hk_g42,hk_sbc,hk_tm,hws_eu,hws_ocb,OCB,sbc,tm,hws_hk)
     * urlDomains  分组上绑定的独立域名列表
+    * slDomainAccessEnabled  调试域名是否可以访问，true表示可以访问，false表示禁止访问
     * slDomains  系统默认分配的子域名列表
     * remark  描述
     * callLimits  流控时长内分组下的API的总访问次数限制，默认不限，请根据服务的负载能力自行设置  暂不支持
@@ -239,6 +248,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'onSellStatus' => 'getOnSellStatus',
             'urlDomains' => 'getUrlDomains',
+            'slDomainAccessEnabled' => 'getSlDomainAccessEnabled',
             'slDomains' => 'getSlDomains',
             'remark' => 'getRemark',
             'callLimits' => 'getCallLimits',
@@ -329,6 +339,7 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['onSellStatus'] = isset($data['onSellStatus']) ? $data['onSellStatus'] : null;
         $this->container['urlDomains'] = isset($data['urlDomains']) ? $data['urlDomains'] : null;
+        $this->container['slDomainAccessEnabled'] = isset($data['slDomainAccessEnabled']) ? $data['slDomainAccessEnabled'] : null;
         $this->container['slDomains'] = isset($data['slDomains']) ? $data['slDomains'] : null;
         $this->container['remark'] = isset($data['remark']) ? $data['remark'] : null;
         $this->container['callLimits'] = isset($data['callLimits']) ? $data['callLimits'] : null;
@@ -580,6 +591,30 @@ class CreateApiGroupV2Response implements ModelInterface, ArrayAccess
     public function setUrlDomains($urlDomains)
     {
         $this->container['urlDomains'] = $urlDomains;
+        return $this;
+    }
+
+    /**
+    * Gets slDomainAccessEnabled
+    *  调试域名是否可以访问，true表示可以访问，false表示禁止访问
+    *
+    * @return bool|null
+    */
+    public function getSlDomainAccessEnabled()
+    {
+        return $this->container['slDomainAccessEnabled'];
+    }
+
+    /**
+    * Sets slDomainAccessEnabled
+    *
+    * @param bool|null $slDomainAccessEnabled 调试域名是否可以访问，true表示可以访问，false表示禁止访问
+    *
+    * @return $this
+    */
+    public function setSlDomainAccessEnabled($slDomainAccessEnabled)
+    {
+        $this->container['slDomainAccessEnabled'] = $slDomainAccessEnabled;
         return $this;
     }
 

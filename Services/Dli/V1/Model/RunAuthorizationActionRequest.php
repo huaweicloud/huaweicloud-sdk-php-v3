@@ -25,7 +25,7 @@ class RunAuthorizationActionRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\AuthorizeResourceRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\RunAuthorizationActionRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class RunAuthorizationActionRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\AuthorizeResourceRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\RunAuthorizationActionRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class RunAuthorizationActionRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\AuthorizeResourceRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\RunAuthorizationActionRequestBody|null $body body
     *
     * @return $this
     */

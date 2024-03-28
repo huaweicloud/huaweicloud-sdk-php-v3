@@ -20,6 +20,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * domainConnectivity  域名连通性
+    * destinationConnectivity  目的端连通性
     * networkDelay  网络时延
     * networkJitter  网络抖动
     * migrationSpeed  带宽
@@ -31,6 +33,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'domainConnectivity' => 'bool',
+            'destinationConnectivity' => 'bool',
             'networkDelay' => 'double',
             'networkJitter' => 'double',
             'migrationSpeed' => 'double',
@@ -42,6 +46,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * domainConnectivity  域名连通性
+    * destinationConnectivity  目的端连通性
     * networkDelay  网络时延
     * networkJitter  网络抖动
     * migrationSpeed  带宽
@@ -53,6 +59,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'domainConnectivity' => null,
+        'destinationConnectivity' => null,
         'networkDelay' => 'double',
         'networkJitter' => 'double',
         'migrationSpeed' => 'double',
@@ -85,6 +93,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * domainConnectivity  域名连通性
+    * destinationConnectivity  目的端连通性
     * networkDelay  网络时延
     * networkJitter  网络抖动
     * migrationSpeed  带宽
@@ -96,6 +106,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'domainConnectivity' => 'domain_connectivity',
+            'destinationConnectivity' => 'destination_connectivity',
             'networkDelay' => 'network_delay',
             'networkJitter' => 'network_jitter',
             'migrationSpeed' => 'migration_speed',
@@ -107,6 +119,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * domainConnectivity  域名连通性
+    * destinationConnectivity  目的端连通性
     * networkDelay  网络时延
     * networkJitter  网络抖动
     * migrationSpeed  带宽
@@ -118,6 +132,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'domainConnectivity' => 'setDomainConnectivity',
+            'destinationConnectivity' => 'setDestinationConnectivity',
             'networkDelay' => 'setNetworkDelay',
             'networkJitter' => 'setNetworkJitter',
             'migrationSpeed' => 'setMigrationSpeed',
@@ -129,6 +145,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * domainConnectivity  域名连通性
+    * destinationConnectivity  目的端连通性
     * networkDelay  网络时延
     * networkJitter  网络抖动
     * migrationSpeed  带宽
@@ -140,6 +158,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'domainConnectivity' => 'getDomainConnectivity',
+            'destinationConnectivity' => 'getDestinationConnectivity',
             'networkDelay' => 'getNetworkDelay',
             'networkJitter' => 'getNetworkJitter',
             'migrationSpeed' => 'getMigrationSpeed',
@@ -207,6 +227,8 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['domainConnectivity'] = isset($data['domainConnectivity']) ? $data['domainConnectivity'] : null;
+        $this->container['destinationConnectivity'] = isset($data['destinationConnectivity']) ? $data['destinationConnectivity'] : null;
         $this->container['networkDelay'] = isset($data['networkDelay']) ? $data['networkDelay'] : null;
         $this->container['networkJitter'] = isset($data['networkJitter']) ? $data['networkJitter'] : null;
         $this->container['migrationSpeed'] = isset($data['migrationSpeed']) ? $data['migrationSpeed'] : null;
@@ -299,6 +321,54 @@ class NetworkCheckInfoRequestBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets domainConnectivity
+    *  域名连通性
+    *
+    * @return bool|null
+    */
+    public function getDomainConnectivity()
+    {
+        return $this->container['domainConnectivity'];
+    }
+
+    /**
+    * Sets domainConnectivity
+    *
+    * @param bool|null $domainConnectivity 域名连通性
+    *
+    * @return $this
+    */
+    public function setDomainConnectivity($domainConnectivity)
+    {
+        $this->container['domainConnectivity'] = $domainConnectivity;
+        return $this;
+    }
+
+    /**
+    * Gets destinationConnectivity
+    *  目的端连通性
+    *
+    * @return bool|null
+    */
+    public function getDestinationConnectivity()
+    {
+        return $this->container['destinationConnectivity'];
+    }
+
+    /**
+    * Sets destinationConnectivity
+    *
+    * @param bool|null $destinationConnectivity 目的端连通性
+    *
+    * @return $this
+    */
+    public function setDestinationConnectivity($destinationConnectivity)
+    {
+        $this->container['destinationConnectivity'] = $destinationConnectivity;
+        return $this;
     }
 
     /**

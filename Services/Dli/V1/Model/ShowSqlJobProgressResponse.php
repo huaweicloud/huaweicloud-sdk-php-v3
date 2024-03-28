@@ -38,7 +38,7 @@ class ShowSqlJobProgressResponse implements ModelInterface, ArrayAccess
             'status' => 'string',
             'subJobId' => 'int',
             'progress' => 'double',
-            'subJobs' => '\HuaweiCloud\SDK\Dli\V1\Model\SubJobDatas[]'
+            'subJobs' => '\HuaweiCloud\SDK\Dli\V1\Model\SubJob[]'
     ];
 
     /**
@@ -387,7 +387,7 @@ class ShowSqlJobProgressResponse implements ModelInterface, ArrayAccess
     * Gets subJobs
     *  正在运行作业的子作业的详细信息，一个作业可能包含多个子作业。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\SubJobDatas[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SubJob[]|null
     */
     public function getSubJobs()
     {
@@ -397,7 +397,7 @@ class ShowSqlJobProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subJobs
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\SubJobDatas[]|null $subJobs 正在运行作业的子作业的详细信息，一个作业可能包含多个子作业。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SubJob[]|null $subJobs 正在运行作业的子作业的详细信息，一个作业可能包含多个子作业。
     *
     * @return $this
     */

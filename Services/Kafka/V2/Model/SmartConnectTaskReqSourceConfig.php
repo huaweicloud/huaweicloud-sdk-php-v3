@@ -40,7 +40,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时需要填写）
     * replicationFactor  在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     * taskNum  数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
-    * renameTopicEnable  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
+    * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
     * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
@@ -69,7 +69,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'bool',
             'replicationFactor' => 'int',
             'taskNum' => 'int',
-            'renameTopicEnable' => 'bool',
+            'renameTopicEnabled' => 'bool',
             'provenanceHeaderEnabled' => 'bool',
             'consumerStrategy' => 'string',
             'compressionType' => 'string',
@@ -98,7 +98,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时需要填写）
     * replicationFactor  在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     * taskNum  数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
-    * renameTopicEnable  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
+    * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
     * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
@@ -125,9 +125,9 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
         'securityProtocol' => null,
         'direction' => null,
         'syncConsumerOffsetsEnabled' => null,
-        'replicationFactor' => null,
-        'taskNum' => null,
-        'renameTopicEnable' => null,
+        'replicationFactor' => 'int32',
+        'taskNum' => 'int32',
+        'renameTopicEnabled' => null,
         'provenanceHeaderEnabled' => null,
         'consumerStrategy' => null,
         'compressionType' => null,
@@ -177,7 +177,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时需要填写）
     * replicationFactor  在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     * taskNum  数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
-    * renameTopicEnable  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
+    * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
     * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
@@ -206,7 +206,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'sync_consumer_offsets_enabled',
             'replicationFactor' => 'replication_factor',
             'taskNum' => 'task_num',
-            'renameTopicEnable' => 'rename_topic_enable',
+            'renameTopicEnabled' => 'rename_topic_enabled',
             'provenanceHeaderEnabled' => 'provenance_header_enabled',
             'consumerStrategy' => 'consumer_strategy',
             'compressionType' => 'compression_type',
@@ -235,7 +235,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时需要填写）
     * replicationFactor  在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     * taskNum  数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
-    * renameTopicEnable  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
+    * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
     * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
@@ -264,7 +264,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'setSyncConsumerOffsetsEnabled',
             'replicationFactor' => 'setReplicationFactor',
             'taskNum' => 'setTaskNum',
-            'renameTopicEnable' => 'setRenameTopicEnable',
+            'renameTopicEnabled' => 'setRenameTopicEnabled',
             'provenanceHeaderEnabled' => 'setProvenanceHeaderEnabled',
             'consumerStrategy' => 'setConsumerStrategy',
             'compressionType' => 'setCompressionType',
@@ -293,7 +293,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时需要填写）
     * replicationFactor  在对端实例中自动创建Topic时，指定Topic的副本数，此参数值不能超过对端实例的代理数。如果对端实例中设置了“default.replication.factor”，此参数的优先级高于“default.replication.factor”。（仅源端类型为Kafka时需要填写）
     * taskNum  数据复制的任务数。默认值为2，建议保持默认值。如果“同步方式”为“双向”，实际任务数=设置的任务数*2。（仅源端类型为Kafka时需要填写）
-    * renameTopicEnable  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
+    * renameTopicEnabled  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     * provenanceHeaderEnabled  目标Topic接收复制的消息，此消息header中包含消息来源。两端实例数据双向复制时，请开启“添加来源header”，防止循环复制。（仅源端类型为Kafka时需要填写）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时需要填写）
     * compressionType  复制消息所使用的压缩算法。（仅源端类型为Kafka时需要填写） - none - gzip - snappy - lz4 - zstd
@@ -322,7 +322,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'getSyncConsumerOffsetsEnabled',
             'replicationFactor' => 'getReplicationFactor',
             'taskNum' => 'getTaskNum',
-            'renameTopicEnable' => 'getRenameTopicEnable',
+            'renameTopicEnabled' => 'getRenameTopicEnabled',
             'provenanceHeaderEnabled' => 'getProvenanceHeaderEnabled',
             'consumerStrategy' => 'getConsumerStrategy',
             'compressionType' => 'getCompressionType',
@@ -407,7 +407,7 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
         $this->container['syncConsumerOffsetsEnabled'] = isset($data['syncConsumerOffsetsEnabled']) ? $data['syncConsumerOffsetsEnabled'] : null;
         $this->container['replicationFactor'] = isset($data['replicationFactor']) ? $data['replicationFactor'] : null;
         $this->container['taskNum'] = isset($data['taskNum']) ? $data['taskNum'] : null;
-        $this->container['renameTopicEnable'] = isset($data['renameTopicEnable']) ? $data['renameTopicEnable'] : null;
+        $this->container['renameTopicEnabled'] = isset($data['renameTopicEnabled']) ? $data['renameTopicEnabled'] : null;
         $this->container['provenanceHeaderEnabled'] = isset($data['provenanceHeaderEnabled']) ? $data['provenanceHeaderEnabled'] : null;
         $this->container['consumerStrategy'] = isset($data['consumerStrategy']) ? $data['consumerStrategy'] : null;
         $this->container['compressionType'] = isset($data['compressionType']) ? $data['compressionType'] : null;
@@ -917,26 +917,26 @@ class SmartConnectTaskReqSourceConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets renameTopicEnable
+    * Gets renameTopicEnabled
     *  是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     *
     * @return bool|null
     */
-    public function getRenameTopicEnable()
+    public function getRenameTopicEnabled()
     {
-        return $this->container['renameTopicEnable'];
+        return $this->container['renameTopicEnabled'];
     }
 
     /**
-    * Sets renameTopicEnable
+    * Sets renameTopicEnabled
     *
-    * @param bool|null $renameTopicEnable 是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
+    * @param bool|null $renameTopicEnabled 是否重命名Topic，在目标Topic名称前添加源端Kafka实例的别名，形成目标Topic新的名称。（仅源端类型为Kafka时需要填写）
     *
     * @return $this
     */
-    public function setRenameTopicEnable($renameTopicEnable)
+    public function setRenameTopicEnabled($renameTopicEnabled)
     {
-        $this->container['renameTopicEnable'] = $renameTopicEnable;
+        $this->container['renameTopicEnabled'] = $renameTopicEnabled;
         return $this;
     }
 

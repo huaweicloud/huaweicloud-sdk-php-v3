@@ -104,7 +104,7 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
         'redisAddress' => null,
         'redisType' => null,
         'dcsInstanceId' => null,
-        'targetDb' => null,
+        'targetDb' => 'int32',
         'consumerStrategy' => null,
         'destinationFileType' => null,
         'deliverTimeInterval' => null,

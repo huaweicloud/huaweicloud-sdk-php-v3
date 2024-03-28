@@ -39,7 +39,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'chargingMode' => 'int',
             'minCu' => 'int',
             'enterpriseProjectId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\TmsTag[]'
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]'
     ];
 
     /**
@@ -469,7 +469,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * Gets tags
     *  标签
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\TmsTag[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null
     */
     public function getTags()
     {
@@ -479,7 +479,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\TmsTag[]|null $tags 标签
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null $tags 标签
     *
     * @return $this
     */

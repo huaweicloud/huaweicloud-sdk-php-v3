@@ -24,6 +24,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * throttle  重平衡门限值。
     * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
+    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
             'reassignments' => '\HuaweiCloud\SDK\Kafka\V2\Model\PartitionReassignEntity[]',
             'throttle' => 'int',
             'isSchedule' => 'bool',
-            'executeAt' => 'int'
+            'executeAt' => 'int',
+            'timeEstimate' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * throttle  重平衡门限值。
     * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
+    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
         'reassignments' => null,
         'throttle' => 'int32',
         'isSchedule' => null,
-        'executeAt' => 'int64'
+        'executeAt' => 'int64',
+        'timeEstimate' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * throttle  重平衡门限值。
     * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
+    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
             'reassignments' => 'reassignments',
             'throttle' => 'throttle',
             'isSchedule' => 'is_schedule',
-            'executeAt' => 'execute_at'
+            'executeAt' => 'execute_at',
+            'timeEstimate' => 'time_estimate'
     ];
 
     /**
@@ -93,6 +99,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * throttle  重平衡门限值。
     * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
+    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
             'reassignments' => 'setReassignments',
             'throttle' => 'setThrottle',
             'isSchedule' => 'setIsSchedule',
-            'executeAt' => 'setExecuteAt'
+            'executeAt' => 'setExecuteAt',
+            'timeEstimate' => 'setTimeEstimate'
     ];
 
     /**
@@ -109,6 +117,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     * throttle  重平衡门限值。
     * isSchedule  是否作为定时任务执行。若非定时执行，则is_schedule 和execute_at字段可为空；若为定时执行，is_schedule为true，execute_at字段非空。
     * executeAt  定时时间，格式为Unix时间戳，单位为毫秒
+    * timeEstimate  设为true表示执行时间预估任务，false为执行重平衡任务。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
             'reassignments' => 'getReassignments',
             'throttle' => 'getThrottle',
             'isSchedule' => 'getIsSchedule',
-            'executeAt' => 'getExecuteAt'
+            'executeAt' => 'getExecuteAt',
+            'timeEstimate' => 'getTimeEstimate'
     ];
 
     /**
@@ -181,6 +191,7 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
         $this->container['throttle'] = isset($data['throttle']) ? $data['throttle'] : null;
         $this->container['isSchedule'] = isset($data['isSchedule']) ? $data['isSchedule'] : null;
         $this->container['executeAt'] = isset($data['executeAt']) ? $data['executeAt'] : null;
+        $this->container['timeEstimate'] = isset($data['timeEstimate']) ? $data['timeEstimate'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class PartitionReassignRequest implements ModelInterface, ArrayAccess
     public function setExecuteAt($executeAt)
     {
         $this->container['executeAt'] = $executeAt;
+        return $this;
+    }
+
+    /**
+    * Gets timeEstimate
+    *  设为true表示执行时间预估任务，false为执行重平衡任务。
+    *
+    * @return bool|null
+    */
+    public function getTimeEstimate()
+    {
+        return $this->container['timeEstimate'];
+    }
+
+    /**
+    * Sets timeEstimate
+    *
+    * @param bool|null $timeEstimate 设为true表示执行时间预估任务，false为执行重平衡任务。
+    *
+    * @return $this
+    */
+    public function setTimeEstimate($timeEstimate)
+    {
+        $this->container['timeEstimate'] = $timeEstimate;
         return $this;
     }
 

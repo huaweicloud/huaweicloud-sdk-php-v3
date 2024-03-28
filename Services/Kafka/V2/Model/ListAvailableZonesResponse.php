@@ -28,7 +28,7 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'regionId' => 'string',
-            'availableZones' => '\HuaweiCloud\SDK\Kafka\V2\Model\ListAvailableZonesRespAvailableZones[]'
+            'availableZones' => '\HuaweiCloud\SDK\Kafka\V2\Model\AvailableZonesResp[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
     * Gets availableZones
     *  可用区数组。
     *
-    * @return \HuaweiCloud\SDK\Kafka\V2\Model\ListAvailableZonesRespAvailableZones[]|null
+    * @return \HuaweiCloud\SDK\Kafka\V2\Model\AvailableZonesResp[]|null
     */
     public function getAvailableZones()
     {
@@ -222,7 +222,7 @@ class ListAvailableZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\ListAvailableZonesRespAvailableZones[]|null $availableZones 可用区数组。
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\AvailableZonesResp[]|null $availableZones 可用区数组。
     *
     * @return $this
     */

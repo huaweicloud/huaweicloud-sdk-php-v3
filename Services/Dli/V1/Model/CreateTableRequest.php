@@ -27,7 +27,7 @@ class CreateTableRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'databaseName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateTableReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateTableRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class CreateTableRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateTableReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateTableRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class CreateTableRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateTableReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateTableRequestBody|null $body body
     *
     * @return $this
     */

@@ -75,7 +75,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
             'managerCuNumber' => 'int',
             'tmCus' => 'int',
             'tmSlotNum' => 'int',
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]',
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
             'resumeCheckpoint' => 'bool',
             'resumeMaxNum' => 'int',
             'runtimeConfig' => 'string',
@@ -1046,7 +1046,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null
     */
     public function getTags()
     {
@@ -1056,7 +1056,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]|null $tags 标签
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null $tags 标签
     *
     * @return $this
     */

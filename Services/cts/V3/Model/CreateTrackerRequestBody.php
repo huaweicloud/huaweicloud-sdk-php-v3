@@ -22,6 +22,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
     * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
@@ -36,6 +37,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'trackerType' => 'string',
             'trackerName' => 'string',
+            'agencyName' => 'string',
             'isOrganizationTracker' => 'bool',
             'managementEventSelector' => '\HuaweiCloud\SDK\Cts\V3\Model\ManagementEventSelector',
             'isLtsEnabled' => 'bool',
@@ -50,6 +52,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
     * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
@@ -64,6 +67,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'trackerType' => null,
         'trackerName' => null,
+        'agencyName' => null,
         'isOrganizationTracker' => null,
         'managementEventSelector' => null,
         'isLtsEnabled' => null,
@@ -99,6 +103,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
     * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
@@ -113,6 +118,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'trackerType' => 'tracker_type',
             'trackerName' => 'tracker_name',
+            'agencyName' => 'agency_name',
             'isOrganizationTracker' => 'is_organization_tracker',
             'managementEventSelector' => 'management_event_selector',
             'isLtsEnabled' => 'is_lts_enabled',
@@ -127,6 +133,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
     * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
@@ -141,6 +148,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     protected static $setters = [
             'trackerType' => 'setTrackerType',
             'trackerName' => 'setTrackerName',
+            'agencyName' => 'setAgencyName',
             'isOrganizationTracker' => 'setIsOrganizationTracker',
             'managementEventSelector' => 'setManagementEventSelector',
             'isLtsEnabled' => 'setIsLtsEnabled',
@@ -155,6 +163,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * trackerType  标识追踪器类型。 目前支持系统追踪器类型有管理类追踪器(system)和数据类追踪器(data)。 数据类追踪器和管理类追踪器共同参数有：is_lts_enabled, obs_info; 管理类追踪器参数：is_support_trace_files_encryption, kms_id, is_support_validate, is_support_validate; 数据类追踪器参数：tracker_name, data_bucket。
     * trackerName  标识追踪器名称。 当\"tracker_type\"参数值为\"system\"时该参数为默认值\"system\"。 当\"tracker_type\"参数值为\"data\"时该参数需要指定追踪器名称\"。
+    * agencyName  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
     * isOrganizationTracker  是否应用到我的组织。 只针对管理类追踪器。设置为true时，ORG组织下所有成员当前区域的审计日志会转储到该追踪器配置的OBS桶或者LTS日志流，但是事件列表界面不支持查看其它组织成员的审计日志。
     * managementEventSelector  managementEventSelector
     * isLtsEnabled  是否打开事件分析。
@@ -169,6 +178,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     protected static $getters = [
             'trackerType' => 'getTrackerType',
             'trackerName' => 'getTrackerName',
+            'agencyName' => 'getAgencyName',
             'isOrganizationTracker' => 'getIsOrganizationTracker',
             'managementEventSelector' => 'getManagementEventSelector',
             'isLtsEnabled' => 'getIsLtsEnabled',
@@ -221,6 +231,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     }
     const TRACKER_TYPE_SYSTEM = 'system';
     const TRACKER_TYPE_DATA = 'data';
+    const AGENCY_NAME_CTS_ADMIN_TRUST = 'cts_admin_trust';
     
 
     /**
@@ -233,6 +244,18 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
         return [
             self::TRACKER_TYPE_SYSTEM,
             self::TRACKER_TYPE_DATA,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAgencyNameAllowableValues()
+    {
+        return [
+            self::AGENCY_NAME_CTS_ADMIN_TRUST,
         ];
     }
 
@@ -254,6 +277,7 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['trackerType'] = isset($data['trackerType']) ? $data['trackerType'] : null;
         $this->container['trackerName'] = isset($data['trackerName']) ? $data['trackerName'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['isOrganizationTracker'] = isset($data['isOrganizationTracker']) ? $data['isOrganizationTracker'] : null;
         $this->container['managementEventSelector'] = isset($data['managementEventSelector']) ? $data['managementEventSelector'] : null;
         $this->container['isLtsEnabled'] = isset($data['isLtsEnabled']) ? $data['isLtsEnabled'] : null;
@@ -291,6 +315,20 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['trackerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'trackerName', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getAgencyNameAllowableValues();
+                if (!is_null($this->container['agencyName']) && !in_array($this->container['agencyName'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'agencyName', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) > 32)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['agencyName']) && (mb_strlen($this->container['agencyName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agencyName', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['kmsId']) && (mb_strlen($this->container['kmsId']) > 200)) {
                 $invalidProperties[] = "invalid value for 'kmsId', the character length must be smaller than or equal to 200.";
@@ -357,6 +395,30 @@ class CreateTrackerRequestBody implements ModelInterface, ArrayAccess
     public function setTrackerName($trackerName)
     {
         $this->container['trackerName'] = $trackerName;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 云服务委托名称。 参数值为\"cts_admin_trust\"时，创建追踪器会自动创建一个云服务委托：cts_admin_trust。
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

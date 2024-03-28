@@ -27,7 +27,7 @@ class CreateConnectivityTaskRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'queueName' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\VerityConnectivityReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateConnectivityTaskRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class CreateConnectivityTaskRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\VerityConnectivityReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateConnectivityTaskRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class CreateConnectivityTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\VerityConnectivityReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateConnectivityTaskRequestBody|null $body body
     *
     * @return $this
     */

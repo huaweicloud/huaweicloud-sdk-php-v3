@@ -27,7 +27,7 @@ class UpdateSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'sqlId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlTemplatesRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobTemplateRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UpdateSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlTemplatesRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobTemplateRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdateSqlJobTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlTemplatesRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateSqlJobTemplateRequestBody|null $body body
     *
     * @return $this
     */

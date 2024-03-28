@@ -27,7 +27,7 @@ class UpdateSparkJobTemplateRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'templateId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateJobTemplatesRequestBody'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\UpdateSparkJobTemplateRequestBody'
     ];
 
     /**
@@ -214,7 +214,7 @@ class UpdateSparkJobTemplateRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateJobTemplatesRequestBody|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\UpdateSparkJobTemplateRequestBody|null
     */
     public function getBody()
     {
@@ -224,7 +224,7 @@ class UpdateSparkJobTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateJobTemplatesRequestBody|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\UpdateSparkJobTemplateRequestBody|null $body body
     *
     * @return $this
     */

@@ -25,7 +25,7 @@ class CreateQueueRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateQueueReq'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBody'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateQueueRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateQueueReq|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBody|null
     */
     public function getBody()
     {
@@ -186,7 +186,7 @@ class CreateQueueRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateQueueReq|null $body body
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateQueueRequestBody|null $body body
     *
     * @return $this
     */

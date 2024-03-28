@@ -150,6 +150,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
     const COPYSTATE_ERROR = 'ERROR';
     const COPYSTATE_CLONING = 'CLONING';
     const COPYSTATE_CUTOVERING = 'CUTOVERING';
+    const COPYSTATE_FINISHED = 'FINISHED';
     const MIGRATIONCYCLE_CUTOVERING = 'cutovering';
     const MIGRATIONCYCLE_CUTOVERED = 'cutovered';
     const MIGRATIONCYCLE_CHECKING = 'checking';
@@ -177,6 +178,7 @@ class PutCopyStateReq implements ModelInterface, ArrayAccess
             self::COPYSTATE_ERROR,
             self::COPYSTATE_CLONING,
             self::COPYSTATE_CUTOVERING,
+            self::COPYSTATE_FINISHED,
         ];
     }
 

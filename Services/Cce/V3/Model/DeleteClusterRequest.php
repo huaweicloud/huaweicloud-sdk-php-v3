@@ -28,6 +28,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
     * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
@@ -43,6 +44,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'string',
             'deleteSfs' => 'string',
             'deleteSfs30' => 'string',
+            'ltsReclaimPolicy' => 'string',
             'tobedeleted' => 'string',
             'ondemandNodePolicy' => 'string',
             'periodicNodePolicy' => 'string'
@@ -58,6 +60,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
     * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
@@ -73,6 +76,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
         'deleteObs' => null,
         'deleteSfs' => null,
         'deleteSfs30' => null,
+        'ltsReclaimPolicy' => null,
         'tobedeleted' => null,
         'ondemandNodePolicy' => null,
         'periodicNodePolicy' => null
@@ -109,6 +113,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
     * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
@@ -124,6 +129,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'delete_obs',
             'deleteSfs' => 'delete_sfs',
             'deleteSfs30' => 'delete_sfs30',
+            'ltsReclaimPolicy' => 'lts_reclaim_policy',
             'tobedeleted' => 'tobedeleted',
             'ondemandNodePolicy' => 'ondemand_node_policy',
             'periodicNodePolicy' => 'periodic_node_policy'
@@ -139,6 +145,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
     * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
@@ -154,6 +161,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'setDeleteObs',
             'deleteSfs' => 'setDeleteSfs',
             'deleteSfs30' => 'setDeleteSfs30',
+            'ltsReclaimPolicy' => 'setLtsReclaimPolicy',
             'tobedeleted' => 'setTobedeleted',
             'ondemandNodePolicy' => 'setOndemandNodePolicy',
             'periodicNodePolicy' => 'setPeriodicNodePolicy'
@@ -169,6 +177,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     * deleteObs  是否删除obs（对象存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs  是否删除sfs（文件存储卷）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * deleteSfs30  是否删除sfs3.0（文件存储卷3.0）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    * ltsReclaimPolicy  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
     * tobedeleted  是否使用包周期集群删除参数预置模式（仅对包周期集群生效）。  需要和其他删除选项参数一起使用，未指定的参数，则使用默认值。  使用该参数，集群不执行真正的删除，仅将本次请求的全部query参数都预置到集群数据库中，用于包周期集群退订时识别用户要删除的资源。  允许重复执行，覆盖预置的删除参数。  枚举取值： - true  (预置模式，仅预置query参数，不执行删除)
     * ondemandNodePolicy  集群下所有按需节点处理策略， 枚举取值： - delete (删除服务器) - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
     * periodicNodePolicy  集群下所有包周期节点处理策略， 枚举取值： - reset (保留服务器并重置服务器，数据不保留) - retain （保留服务器不重置服务器，数据保留）
@@ -184,6 +193,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
             'deleteObs' => 'getDeleteObs',
             'deleteSfs' => 'getDeleteSfs',
             'deleteSfs30' => 'getDeleteSfs30',
+            'ltsReclaimPolicy' => 'getLtsReclaimPolicy',
             'tobedeleted' => 'getTobedeleted',
             'ondemandNodePolicy' => 'getOndemandNodePolicy',
             'periodicNodePolicy' => 'getPeriodicNodePolicy'
@@ -264,6 +274,11 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     const DELETE_SFS30__TRY = 'try';
     const DELETE_SFS30_FALSE = 'false';
     const DELETE_SFS30_SKIP = 'skip';
+    const LTS_RECLAIM_POLICY_TRUE = 'true';
+    const LTS_RECLAIM_POLICY_BLOCK = 'block';
+    const LTS_RECLAIM_POLICY__TRY = 'try';
+    const LTS_RECLAIM_POLICY_FALSE = 'false';
+    const LTS_RECLAIM_POLICY_SKIP = 'skip';
     const TOBEDELETED_TRUE = 'true';
     const ONDEMAND_NODE_POLICY_DELETE = 'delete';
     const ONDEMAND_NODE_POLICY_RESET = 'reset';
@@ -389,6 +404,22 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     *
     * @return string[]
     */
+    public function getLtsReclaimPolicyAllowableValues()
+    {
+        return [
+            self::LTS_RECLAIM_POLICY_TRUE,
+            self::LTS_RECLAIM_POLICY_BLOCK,
+            self::LTS_RECLAIM_POLICY__TRY,
+            self::LTS_RECLAIM_POLICY_FALSE,
+            self::LTS_RECLAIM_POLICY_SKIP,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getTobedeletedAllowableValues()
     {
         return [
@@ -447,6 +478,7 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
         $this->container['deleteObs'] = isset($data['deleteObs']) ? $data['deleteObs'] : null;
         $this->container['deleteSfs'] = isset($data['deleteSfs']) ? $data['deleteSfs'] : null;
         $this->container['deleteSfs30'] = isset($data['deleteSfs30']) ? $data['deleteSfs30'] : null;
+        $this->container['ltsReclaimPolicy'] = isset($data['ltsReclaimPolicy']) ? $data['ltsReclaimPolicy'] : null;
         $this->container['tobedeleted'] = isset($data['tobedeleted']) ? $data['tobedeleted'] : null;
         $this->container['ondemandNodePolicy'] = isset($data['ondemandNodePolicy']) ? $data['ondemandNodePolicy'] : null;
         $this->container['periodicNodePolicy'] = isset($data['periodicNodePolicy']) ? $data['periodicNodePolicy'] : null;
@@ -518,6 +550,14 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['deleteSfs30']) && !in_array($this->container['deleteSfs30'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'deleteSfs30', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getLtsReclaimPolicyAllowableValues();
+                if (!is_null($this->container['ltsReclaimPolicy']) && !in_array($this->container['ltsReclaimPolicy'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ltsReclaimPolicy', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -749,6 +789,30 @@ class DeleteClusterRequest implements ModelInterface, ArrayAccess
     public function setDeleteSfs30($deleteSfs30)
     {
         $this->container['deleteSfs30'] = $deleteSfs30;
+        return $this;
+    }
+
+    /**
+    * Gets ltsReclaimPolicy
+    *  是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    *
+    * @return string|null
+    */
+    public function getLtsReclaimPolicy()
+    {
+        return $this->container['ltsReclaimPolicy'];
+    }
+
+    /**
+    * Sets ltsReclaimPolicy
+    *
+    * @param string|null $ltsReclaimPolicy 是否删除LTS LogStream（日志流）， 枚举取值： - true或block (执行删除流程，失败则阻塞后续流程) - try (执行删除流程，失败则忽略，并继续执行后续流程) - false或skip (跳过删除流程，默认选项)
+    *
+    * @return $this
+    */
+    public function setLtsReclaimPolicy($ltsReclaimPolicy)
+    {
+        $this->container['ltsReclaimPolicy'] = $ltsReclaimPolicy;
         return $this;
     }
 

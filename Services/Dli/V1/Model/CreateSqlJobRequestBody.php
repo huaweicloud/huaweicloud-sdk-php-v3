@@ -21,6 +21,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sql  待执行的SQL语句。
+    * engineType  待提交作业的队列引擎名称，名称只能包含英文字母。
     * currentdb  SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
     * queueName  待提交作业的队列名称，名称只能包含数字、英文字母和下划线，但不能是纯数字，且不能以下划线开头。
     * conf  用户以“key/value”的形式设置用于此作业的配置参数。目前支持的配置项请参考表3。
@@ -30,15 +31,17 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'sql' => 'string',
+            'engineType' => 'string',
             'currentdb' => 'string',
             'queueName' => 'string',
             'conf' => 'string[]',
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]'
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sql  待执行的SQL语句。
+    * engineType  待提交作业的队列引擎名称，名称只能包含英文字母。
     * currentdb  SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
     * queueName  待提交作业的队列名称，名称只能包含数字、英文字母和下划线，但不能是纯数字，且不能以下划线开头。
     * conf  用户以“key/value”的形式设置用于此作业的配置参数。目前支持的配置项请参考表3。
@@ -48,6 +51,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'sql' => null,
+        'engineType' => null,
         'currentdb' => null,
         'queueName' => null,
         'conf' => null,
@@ -78,6 +82,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sql  待执行的SQL语句。
+    * engineType  待提交作业的队列引擎名称，名称只能包含英文字母。
     * currentdb  SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
     * queueName  待提交作业的队列名称，名称只能包含数字、英文字母和下划线，但不能是纯数字，且不能以下划线开头。
     * conf  用户以“key/value”的形式设置用于此作业的配置参数。目前支持的配置项请参考表3。
@@ -87,6 +92,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'sql' => 'sql',
+            'engineType' => 'engine_type',
             'currentdb' => 'currentdb',
             'queueName' => 'queue_name',
             'conf' => 'conf',
@@ -96,6 +102,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sql  待执行的SQL语句。
+    * engineType  待提交作业的队列引擎名称，名称只能包含英文字母。
     * currentdb  SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
     * queueName  待提交作业的队列名称，名称只能包含数字、英文字母和下划线，但不能是纯数字，且不能以下划线开头。
     * conf  用户以“key/value”的形式设置用于此作业的配置参数。目前支持的配置项请参考表3。
@@ -105,6 +112,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'sql' => 'setSql',
+            'engineType' => 'setEngineType',
             'currentdb' => 'setCurrentdb',
             'queueName' => 'setQueueName',
             'conf' => 'setConf',
@@ -114,6 +122,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sql  待执行的SQL语句。
+    * engineType  待提交作业的队列引擎名称，名称只能包含英文字母。
     * currentdb  SQL语句执行所在的数据库。当创建新数据库时，不需要提供此参数。
     * queueName  待提交作业的队列名称，名称只能包含数字、英文字母和下划线，但不能是纯数字，且不能以下划线开头。
     * conf  用户以“key/value”的形式设置用于此作业的配置参数。目前支持的配置项请参考表3。
@@ -123,6 +132,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'sql' => 'getSql',
+            'engineType' => 'getEngineType',
             'currentdb' => 'getCurrentdb',
             'queueName' => 'getQueueName',
             'conf' => 'getConf',
@@ -188,6 +198,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
+        $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['currentdb'] = isset($data['currentdb']) ? $data['currentdb'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['conf'] = isset($data['conf']) ? $data['conf'] : null;
@@ -240,6 +251,30 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     public function setSql($sql)
     {
         $this->container['sql'] = $sql;
+        return $this;
+    }
+
+    /**
+    * Gets engineType
+    *  待提交作业的队列引擎名称，名称只能包含英文字母。
+    *
+    * @return string|null
+    */
+    public function getEngineType()
+    {
+        return $this->container['engineType'];
+    }
+
+    /**
+    * Sets engineType
+    *
+    * @param string|null $engineType 待提交作业的队列引擎名称，名称只能包含英文字母。
+    *
+    * @return $this
+    */
+    public function setEngineType($engineType)
+    {
+        $this->container['engineType'] = $engineType;
         return $this;
     }
 
@@ -319,7 +354,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  作业标签
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null
     */
     public function getTags()
     {
@@ -329,7 +364,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\TmsTagEntity[]|null $tags 作业标签
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Tag[]|null $tags 作业标签
     *
     * @return $this
     */

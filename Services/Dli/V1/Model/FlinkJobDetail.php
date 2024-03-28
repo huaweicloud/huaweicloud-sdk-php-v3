@@ -56,7 +56,7 @@ class FlinkJobDetail implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'sqlBody' => 'string',
             'runMode' => 'string',
-            'jobConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobConfig',
+            'jobConfig' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobConfigDetail',
             'mainClass' => 'string',
             'entrypointArgs' => 'string',
             'executionGraph' => 'string',
@@ -710,7 +710,7 @@ class FlinkJobDetail implements ModelInterface, ArrayAccess
     * Gets jobConfig
     *  jobConfig
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobConfig|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobConfigDetail|null
     */
     public function getJobConfig()
     {
@@ -720,7 +720,7 @@ class FlinkJobDetail implements ModelInterface, ArrayAccess
     /**
     * Sets jobConfig
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobConfig|null $jobConfig jobConfig
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobConfigDetail|null $jobConfig jobConfig
     *
     * @return $this
     */

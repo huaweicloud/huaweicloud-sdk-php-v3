@@ -38,7 +38,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
     * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
     * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnable  是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
@@ -65,7 +65,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'bool',
             'replicationFactor' => 'int',
             'taskNum' => 'int',
-            'renameTopicEnable' => 'bool',
+            'renameTopicEnabled' => 'bool',
             'provenanceHeaderEnabled' => 'bool',
             'consumerStrategy' => 'string',
             'compressionType' => 'string',
@@ -92,7 +92,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
     * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
     * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnable  是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
@@ -117,9 +117,9 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
         'securityProtocol' => null,
         'direction' => null,
         'syncConsumerOffsetsEnabled' => null,
-        'replicationFactor' => null,
-        'taskNum' => null,
-        'renameTopicEnable' => null,
+        'replicationFactor' => 'int32',
+        'taskNum' => 'int32',
+        'renameTopicEnabled' => null,
         'provenanceHeaderEnabled' => null,
         'consumerStrategy' => null,
         'compressionType' => null,
@@ -167,7 +167,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
     * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
     * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnable  是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
@@ -194,7 +194,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'sync_consumer_offsets_enabled',
             'replicationFactor' => 'replication_factor',
             'taskNum' => 'task_num',
-            'renameTopicEnable' => 'rename_topic_enable',
+            'renameTopicEnabled' => 'rename_topic_enabled',
             'provenanceHeaderEnabled' => 'provenance_header_enabled',
             'consumerStrategy' => 'consumer_strategy',
             'compressionType' => 'compression_type',
@@ -221,7 +221,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
     * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
     * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnable  是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
@@ -248,7 +248,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'setSyncConsumerOffsetsEnabled',
             'replicationFactor' => 'setReplicationFactor',
             'taskNum' => 'setTaskNum',
-            'renameTopicEnable' => 'setRenameTopicEnable',
+            'renameTopicEnabled' => 'setRenameTopicEnabled',
             'provenanceHeaderEnabled' => 'setProvenanceHeaderEnabled',
             'consumerStrategy' => 'setConsumerStrategy',
             'compressionType' => 'setCompressionType',
@@ -275,7 +275,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     * syncConsumerOffsetsEnabled  是否同步消费进度。（仅源端类型为Kafka时会显示）
     * replicationFactor  副本数。（仅源端类型为Kafka时会显示）
     * taskNum  任务数。（仅源端类型为Kafka时会显示）
-    * renameTopicEnable  是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * renameTopicEnabled  是否重命名Topic。（仅源端类型为Kafka时会显示）
     * provenanceHeaderEnabled  是否添加来源header。（仅源端类型为Kafka时会显示）
     * consumerStrategy  启动偏移量，latest为获取最新的数据，earliest为获取最早的数据。（仅源端类型为Kafka时会显示）
     * compressionType  压缩算法。（仅源端类型为Kafka时会显示）
@@ -302,7 +302,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
             'syncConsumerOffsetsEnabled' => 'getSyncConsumerOffsetsEnabled',
             'replicationFactor' => 'getReplicationFactor',
             'taskNum' => 'getTaskNum',
-            'renameTopicEnable' => 'getRenameTopicEnable',
+            'renameTopicEnabled' => 'getRenameTopicEnabled',
             'provenanceHeaderEnabled' => 'getProvenanceHeaderEnabled',
             'consumerStrategy' => 'getConsumerStrategy',
             'compressionType' => 'getCompressionType',
@@ -385,7 +385,7 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
         $this->container['syncConsumerOffsetsEnabled'] = isset($data['syncConsumerOffsetsEnabled']) ? $data['syncConsumerOffsetsEnabled'] : null;
         $this->container['replicationFactor'] = isset($data['replicationFactor']) ? $data['replicationFactor'] : null;
         $this->container['taskNum'] = isset($data['taskNum']) ? $data['taskNum'] : null;
-        $this->container['renameTopicEnable'] = isset($data['renameTopicEnable']) ? $data['renameTopicEnable'] : null;
+        $this->container['renameTopicEnabled'] = isset($data['renameTopicEnabled']) ? $data['renameTopicEnabled'] : null;
         $this->container['provenanceHeaderEnabled'] = isset($data['provenanceHeaderEnabled']) ? $data['provenanceHeaderEnabled'] : null;
         $this->container['consumerStrategy'] = isset($data['consumerStrategy']) ? $data['consumerStrategy'] : null;
         $this->container['compressionType'] = isset($data['compressionType']) ? $data['compressionType'] : null;
@@ -847,26 +847,26 @@ class SmartConnectTaskRespSourceConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets renameTopicEnable
+    * Gets renameTopicEnabled
     *  是否重命名Topic。（仅源端类型为Kafka时会显示）
     *
     * @return bool|null
     */
-    public function getRenameTopicEnable()
+    public function getRenameTopicEnabled()
     {
-        return $this->container['renameTopicEnable'];
+        return $this->container['renameTopicEnabled'];
     }
 
     /**
-    * Sets renameTopicEnable
+    * Sets renameTopicEnabled
     *
-    * @param bool|null $renameTopicEnable 是否重命名Topic。（仅源端类型为Kafka时会显示）
+    * @param bool|null $renameTopicEnabled 是否重命名Topic。（仅源端类型为Kafka时会显示）
     *
     * @return $this
     */
-    public function setRenameTopicEnable($renameTopicEnable)
+    public function setRenameTopicEnabled($renameTopicEnabled)
     {
-        $this->container['renameTopicEnable'] = $renameTopicEnable;
+        $this->container['renameTopicEnabled'] = $renameTopicEnabled;
         return $this;
     }
 

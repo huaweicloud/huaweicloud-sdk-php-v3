@@ -32,7 +32,7 @@ class ListSparkJobTemplatesResponse implements ModelInterface, ArrayAccess
             'isSuccess' => 'bool',
             'message' => 'string',
             'count' => 'int',
-            'templates' => '\HuaweiCloud\SDK\Dli\V1\Model\JobTemplateInfo[]'
+            'templates' => '\HuaweiCloud\SDK\Dli\V1\Model\SparkJobTemplate[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListSparkJobTemplatesResponse implements ModelInterface, ArrayAccess
     * Gets templates
     *  模板信息列表。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\JobTemplateInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\SparkJobTemplate[]|null
     */
     public function getTemplates()
     {
@@ -292,7 +292,7 @@ class ListSparkJobTemplatesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets templates
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\JobTemplateInfo[]|null $templates 模板信息列表。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\SparkJobTemplate[]|null $templates 模板信息列表。
     *
     * @return $this
     */
