@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bms\V1\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ImageInfo implements ModelInterface, ArrayAccess
+class NovaListVersionsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,24 @@ class ImageInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ImageInfo';
+    protected static $openAPIModelName = 'NovaListVersionsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * 
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * 
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'uuid'
     ];
 
     /**
@@ -61,32 +59,29 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  镜像ID，格式为UUID。
+    * 
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  镜像ID，格式为UUID。
+    * 
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  镜像ID，格式为UUID。
+    * 
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
     ];
 
     /**
@@ -147,7 +142,6 @@ class ImageInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -170,30 +164,6 @@ class ImageInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets id
-    *  镜像ID，格式为UUID。
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id 镜像ID，格式为UUID。
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
     }
 
     /**

@@ -298,8 +298,8 @@ class CreateSecretRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['secretType']) && (mb_strlen($this->container['secretType']) > 20)) {
                 $invalidProperties[] = "invalid value for 'secretType', the character length must be smaller than or equal to 20.";
             }
-            if (!is_null($this->container['secretType']) && (mb_strlen($this->container['secretType']) < 6)) {
-                $invalidProperties[] = "invalid value for 'secretType', the character length must be bigger than or equal to 6.";
+            if (!is_null($this->container['secretType']) && (mb_strlen($this->container['secretType']) < 2)) {
+                $invalidProperties[] = "invalid value for 'secretType', the character length must be bigger than or equal to 2.";
             }
             if (!is_null($this->container['rotationPeriod']) && (mb_strlen($this->container['rotationPeriod']) > 50)) {
                 $invalidProperties[] = "invalid value for 'rotationPeriod', the character length must be smaller than or equal to 50.";

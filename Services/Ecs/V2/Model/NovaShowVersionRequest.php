@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bms\V1\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ImageInfo implements ModelInterface, ArrayAccess
+class NovaShowVersionRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class ImageInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ImageInfo';
+    protected static $openAPIModelName = 'NovaShowVersionRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * apiVersion  API版本号。例如: v2
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'apiVersion' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * apiVersion  API版本号。例如: v2
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'uuid'
+        'apiVersion' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  镜像ID，格式为UUID。
+    * apiVersion  API版本号。例如: v2
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'apiVersion' => 'api_version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  镜像ID，格式为UUID。
+    * apiVersion  API版本号。例如: v2
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'apiVersion' => 'setApiVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  镜像ID，格式为UUID。
+    * apiVersion  API版本号。例如: v2
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'apiVersion' => 'getApiVersion'
     ];
 
     /**
@@ -147,7 +147,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['apiVersion'] = isset($data['apiVersion']) ? $data['apiVersion'] : null;
     }
 
     /**
@@ -158,6 +158,9 @@ class ImageInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['apiVersion'] === null) {
+            $invalidProperties[] = "'apiVersion' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -173,26 +176,26 @@ class ImageInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  镜像ID，格式为UUID。
+    * Gets apiVersion
+    *  API版本号。例如: v2
     *
-    * @return string|null
+    * @return string
     */
-    public function getId()
+    public function getApiVersion()
     {
-        return $this->container['id'];
+        return $this->container['apiVersion'];
     }
 
     /**
-    * Sets id
+    * Sets apiVersion
     *
-    * @param string|null $id 镜像ID，格式为UUID。
+    * @param string $apiVersion API版本号。例如: v2
     *
     * @return $this
     */
-    public function setId($id)
+    public function setApiVersion($apiVersion)
     {
-        $this->container['id'] = $id;
+        $this->container['apiVersion'] = $apiVersion;
         return $this;
     }
 

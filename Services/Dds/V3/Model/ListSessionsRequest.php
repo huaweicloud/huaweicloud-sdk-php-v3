@@ -26,7 +26,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
     * planSummary  执行计划描述。取空值表示查询所有语句类型，也可指定执行计划，例如： COLLSCAN IXSCAN FETCH SORT LIMIT SKIP COUNT COUNT_SCAN TEXT PROJECTION 等
     * type  操作类型。取空值表示查询所有操作类型。也可指定操作类型，例如： none update insert query command getmore remove killcursors等
     * namespace  命名空间。取空值表示查询所有命名空间。也可根据当前业务进行指定。
-    * costTime  运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    * costTime  运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
     * planSummary  执行计划描述。取空值表示查询所有语句类型，也可指定执行计划，例如： COLLSCAN IXSCAN FETCH SORT LIMIT SKIP COUNT COUNT_SCAN TEXT PROJECTION 等
     * type  操作类型。取空值表示查询所有操作类型。也可指定操作类型，例如： none update insert query command getmore remove killcursors等
     * namespace  命名空间。取空值表示查询所有命名空间。也可根据当前业务进行指定。
-    * costTime  运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    * costTime  运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
     * planSummary  执行计划描述。取空值表示查询所有语句类型，也可指定执行计划，例如： COLLSCAN IXSCAN FETCH SORT LIMIT SKIP COUNT COUNT_SCAN TEXT PROJECTION 等
     * type  操作类型。取空值表示查询所有操作类型。也可指定操作类型，例如： none update insert query command getmore remove killcursors等
     * namespace  命名空间。取空值表示查询所有命名空间。也可根据当前业务进行指定。
-    * costTime  运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    * costTime  运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
     * planSummary  执行计划描述。取空值表示查询所有语句类型，也可指定执行计划，例如： COLLSCAN IXSCAN FETCH SORT LIMIT SKIP COUNT COUNT_SCAN TEXT PROJECTION 等
     * type  操作类型。取空值表示查询所有操作类型。也可指定操作类型，例如： none update insert query command getmore remove killcursors等
     * namespace  命名空间。取空值表示查询所有命名空间。也可根据当前业务进行指定。
-    * costTime  运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    * costTime  运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
     * planSummary  执行计划描述。取空值表示查询所有语句类型，也可指定执行计划，例如： COLLSCAN IXSCAN FETCH SORT LIMIT SKIP COUNT COUNT_SCAN TEXT PROJECTION 等
     * type  操作类型。取空值表示查询所有操作类型。也可指定操作类型，例如： none update insert query command getmore remove killcursors等
     * namespace  命名空间。取空值表示查询所有命名空间。也可根据当前业务进行指定。
-    * costTime  运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    * costTime  运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @var string[]
     */
@@ -387,7 +387,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets costTime
-    *  运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    *  运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @return int|null
     */
@@ -399,7 +399,7 @@ class ListSessionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets costTime
     *
-    * @param int|null $costTime 运行时间，单位为 ms。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
+    * @param int|null $costTime 运行时间，单位为 us。取空值表示查询所有的运行时间。也可根据当前业务需要进行配置，表示查询超出 cost_time 的会话。
     *
     * @return $this
     */

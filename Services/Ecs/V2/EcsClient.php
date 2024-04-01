@@ -4709,6 +4709,136 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询API版本信息列表
+     *
+     * 返回Nova当前所有可用的版本。
+     * 
+     * 为了支持功能不断扩展，Nova API支持版本号区分。Nova中有两种形式的版本号：
+     * 
+     * - \&quot;主版本号\&quot;: 具有独立的url。
+     * - \&quot;微版本号\&quot;: 通过Http请求头X-OpenStack-Nova-API-Version来使用，从2.27版本后更改为OpenStack-API-Version。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function novaListVersions($request)
+    {
+        return $this->novaListVersionsWithHttpInfo($request);
+    }
+
+    public function novaListVersionsWithHttpInfo($request)
+    {
+        $resourcePath = '/';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListVersionsResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaListVersionsRequest');
+    }
+
+    /**
+     * 查询指定API版本信息
+     *
+     * 返回指定版本的信息。
+     * 为了支持功能不断扩展，Nova API支持版本号区分。Nova中有两种形式的版本号：
+     * 
+     * - \&quot;主版本号\&quot;: 具有独立的url。
+     * - \&quot;微版本号\&quot;: 通过Http请求头X-OpenStack-Nova-API-Version来使用，从2.27版本后更改为OpenStack-API-Version。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function novaShowVersion($request)
+    {
+        return $this->novaShowVersionWithHttpInfo($request);
+    }
+
+    public function novaShowVersionWithHttpInfo($request)
+    {
+        $resourcePath = '/{api_version}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['apiVersion'] !== null) {
+            $pathParams['api_version'] = $localVarParams['apiVersion'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowVersionResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\NovaShowVersionRequest');
+    }
+
+    /**
      * 查询任务的执行状态
      *
      * 查询Job的执行状态。

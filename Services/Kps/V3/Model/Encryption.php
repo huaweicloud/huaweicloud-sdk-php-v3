@@ -21,25 +21,29 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
-    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    * kmsKeyId  kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'kmsKeyName' => 'string'
+            'kmsKeyName' => 'string',
+            'kmsKeyId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
-    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    * kmsKeyId  kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'kmsKeyName' => null
+        'kmsKeyName' => null,
+        'kmsKeyId' => null
     ];
 
     /**
@@ -66,37 +70,43 @@ class Encryption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
-    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    * kmsKeyId  kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'kmsKeyName' => 'kms_key_name'
+            'kmsKeyName' => 'kms_key_name',
+            'kmsKeyId' => 'kms_key_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
-    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    * kmsKeyId  kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'kmsKeyName' => 'setKmsKeyName'
+            'kmsKeyName' => 'setKmsKeyName',
+            'kmsKeyId' => 'setKmsKeyId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  取值范围：“kms”或“default”。 - “default”为默认加密方式，适用于没有kms服务的局点。 - “kms”为采用kms服务加密方式。 若局点没有kms服务，请填“default”。
-    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * kmsKeyName  kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    * kmsKeyId  kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'kmsKeyName' => 'getKmsKeyName'
+            'kmsKeyName' => 'getKmsKeyName',
+            'kmsKeyId' => 'getKmsKeyId'
     ];
 
     /**
@@ -174,6 +184,7 @@ class Encryption implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['kmsKeyName'] = isset($data['kmsKeyName']) ? $data['kmsKeyName'] : null;
+        $this->container['kmsKeyId'] = isset($data['kmsKeyId']) ? $data['kmsKeyId'] : null;
     }
 
     /**
@@ -195,14 +206,20 @@ class Encryption implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['kmsKeyName'] === null) {
-            $invalidProperties[] = "'kmsKeyName' can't be null";
-        }
-            if ((mb_strlen($this->container['kmsKeyName']) > 255)) {
+            if (!is_null($this->container['kmsKeyName']) && (mb_strlen($this->container['kmsKeyName']) > 255)) {
                 $invalidProperties[] = "invalid value for 'kmsKeyName', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['kmsKeyName']) < 0)) {
+            if (!is_null($this->container['kmsKeyName']) && (mb_strlen($this->container['kmsKeyName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'kmsKeyName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && (mb_strlen($this->container['kmsKeyId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['kmsKeyId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['kmsKeyId'])) {
+                $invalidProperties[] = "invalid value for 'kmsKeyId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         return $invalidProperties;
     }
@@ -244,9 +261,9 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Gets kmsKeyName
-    *  kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    *  kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
-    * @return string
+    * @return string|null
     */
     public function getKmsKeyName()
     {
@@ -256,13 +273,37 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Sets kmsKeyName
     *
-    * @param string $kmsKeyName kms密钥的名称。  - 若“type”为“kms”，则必须填入kms服务密钥名称。
+    * @param string|null $kmsKeyName kms密钥的名称。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
     *
     * @return $this
     */
     public function setKmsKeyName($kmsKeyName)
     {
         $this->container['kmsKeyName'] = $kmsKeyName;
+        return $this;
+    }
+
+    /**
+    * Gets kmsKeyId
+    *  kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    *
+    * @return string|null
+    */
+    public function getKmsKeyId()
+    {
+        return $this->container['kmsKeyId'];
+    }
+
+    /**
+    * Sets kmsKeyId
+    *
+    * @param string|null $kmsKeyId kms密钥的ID。  - 若“type”为“kms”，则必须填入\"kms_key_name\"或\"kms_key_id\"。
+    *
+    * @return $this
+    */
+    public function setKmsKeyId($kmsKeyId)
+    {
+        $this->container['kmsKeyId'] = $kmsKeyId;
         return $this;
     }
 

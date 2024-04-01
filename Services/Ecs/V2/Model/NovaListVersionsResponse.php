@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bms\V1\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ImageInfo implements ModelInterface, ArrayAccess
+class NovaListVersionsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,26 @@ class ImageInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ImageInfo';
+    protected static $openAPIModelName = 'NovaListVersionsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * versions  API版本信息列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'versions' => '\HuaweiCloud\SDK\Ecs\V2\Model\NovaVersion[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * versions  API版本信息列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'uuid'
+        'versions' => null
     ];
 
     /**
@@ -61,32 +62,32 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  镜像ID，格式为UUID。
+    * versions  API版本信息列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'versions' => 'versions'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  镜像ID，格式为UUID。
+    * versions  API版本信息列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'versions' => 'setVersions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  镜像ID，格式为UUID。
+    * versions  API版本信息列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'versions' => 'getVersions'
     ];
 
     /**
@@ -147,7 +148,7 @@ class ImageInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['versions'] = isset($data['versions']) ? $data['versions'] : null;
     }
 
     /**
@@ -173,26 +174,26 @@ class ImageInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  镜像ID，格式为UUID。
+    * Gets versions
+    *  API版本信息列表
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\NovaVersion[]|null
     */
-    public function getId()
+    public function getVersions()
     {
-        return $this->container['id'];
+        return $this->container['versions'];
     }
 
     /**
-    * Sets id
+    * Sets versions
     *
-    * @param string|null $id 镜像ID，格式为UUID。
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\NovaVersion[]|null $versions API版本信息列表
     *
     * @return $this
     */
-    public function setId($id)
+    public function setVersions($versions)
     {
-        $this->container['id'] = $id;
+        $this->container['versions'] = $versions;
         return $this;
     }
 

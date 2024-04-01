@@ -24,7 +24,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * active  当前会话是否活跃。 取值为“true”，表示活跃。 取值为“false”，表示不活跃。
     * operation  操作。
     * type  操作类型。
-    * costTime  运行时间，单位为 ms。
+    * costTime  运行时间，单位为 us。
     * planSummary  执行计划描述。
     * host  主机。
     * client  客户端地址。
@@ -52,7 +52,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * active  当前会话是否活跃。 取值为“true”，表示活跃。 取值为“false”，表示不活跃。
     * operation  操作。
     * type  操作类型。
-    * costTime  运行时间，单位为 ms。
+    * costTime  运行时间，单位为 us。
     * planSummary  执行计划描述。
     * host  主机。
     * client  客户端地址。
@@ -101,7 +101,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * active  当前会话是否活跃。 取值为“true”，表示活跃。 取值为“false”，表示不活跃。
     * operation  操作。
     * type  操作类型。
-    * costTime  运行时间，单位为 ms。
+    * costTime  运行时间，单位为 us。
     * planSummary  执行计划描述。
     * host  主机。
     * client  客户端地址。
@@ -129,7 +129,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * active  当前会话是否活跃。 取值为“true”，表示活跃。 取值为“false”，表示不活跃。
     * operation  操作。
     * type  操作类型。
-    * costTime  运行时间，单位为 ms。
+    * costTime  运行时间，单位为 us。
     * planSummary  执行计划描述。
     * host  主机。
     * client  客户端地址。
@@ -157,7 +157,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     * active  当前会话是否活跃。 取值为“true”，表示活跃。 取值为“false”，表示不活跃。
     * operation  操作。
     * type  操作类型。
-    * costTime  运行时间，单位为 ms。
+    * costTime  运行时间，单位为 us。
     * planSummary  执行计划描述。
     * host  主机。
     * client  客户端地址。
@@ -399,7 +399,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets costTime
-    *  运行时间，单位为 ms。
+    *  运行时间，单位为 us。
     *
     * @return string
     */
@@ -411,7 +411,7 @@ class QuerySessionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets costTime
     *
-    * @param string $costTime 运行时间，单位为 ms。
+    * @param string $costTime 运行时间，单位为 us。
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Bms\V1\Model;
+namespace HuaweiCloud\SDK\Ecs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ImageInfo implements ModelInterface, ArrayAccess
+class NovaVersionMediaType implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class ImageInfo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ImageInfo';
+    protected static $openAPIModelName = 'NovaVersionMediaType';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * base  基础类型。
+    * type  媒体类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'base' => 'string',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  镜像ID，格式为UUID。
+    * base  基础类型。
+    * type  媒体类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'uuid'
+        'base' => null,
+        'type' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ImageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  镜像ID，格式为UUID。
+    * base  基础类型。
+    * type  媒体类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'base' => 'base',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  镜像ID，格式为UUID。
+    * base  基础类型。
+    * type  媒体类型。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'base' => 'setBase',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  镜像ID，格式为UUID。
+    * base  基础类型。
+    * type  媒体类型。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'base' => 'getBase',
+            'type' => 'getType'
     ];
 
     /**
@@ -147,7 +157,8 @@ class ImageInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['base'] = isset($data['base']) ? $data['base'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -158,6 +169,12 @@ class ImageInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['base'] === null) {
+            $invalidProperties[] = "'base' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -173,26 +190,50 @@ class ImageInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  镜像ID，格式为UUID。
+    * Gets base
+    *  基础类型。
     *
-    * @return string|null
+    * @return string
     */
-    public function getId()
+    public function getBase()
     {
-        return $this->container['id'];
+        return $this->container['base'];
     }
 
     /**
-    * Sets id
+    * Sets base
     *
-    * @param string|null $id 镜像ID，格式为UUID。
+    * @param string $base 基础类型。
     *
     * @return $this
     */
-    public function setId($id)
+    public function setBase($base)
     {
-        $this->container['id'] = $id;
+        $this->container['base'] = $base;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  媒体类型。
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 媒体类型。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 
