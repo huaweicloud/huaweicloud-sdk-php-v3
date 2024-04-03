@@ -214,8 +214,8 @@ class ShowOrganizationPolicyAssignmentStatusesRequest implements ModelInterface,
             if (!is_null($this->container['organizationPolicyAssignmentId']) && (mb_strlen($this->container['organizationPolicyAssignmentId']) > 512)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', the character length must be smaller than or equal to 512.";
             }
-            if (!is_null($this->container['organizationPolicyAssignmentId']) && !preg_match("/[_.:\\w-]+/", $this->container['organizationPolicyAssignmentId'])) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', must be conform to the pattern /[_.:\\w-]+/.";
+            if (!is_null($this->container['organizationPolicyAssignmentId']) && !preg_match("/^[a-zA-Z\\d]+/", $this->container['organizationPolicyAssignmentId'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', must be conform to the pattern /^[a-zA-Z\\d]+/.";
             }
             if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";

@@ -22,24 +22,28 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
     * top  是否置顶，0代表非置顶，1代表置顶
+    * bottom  是否置底，0代表非置底，1代表置底
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'destRuleId' => 'string',
-            'top' => 'int'
+            'top' => 'int',
+            'bottom' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
     * top  是否置顶，0代表非置顶，1代表置顶
+    * bottom  是否置底，0代表非置底，1代表置底
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'destRuleId' => null,
-        'top' => null
+        'top' => null,
+        'bottom' => 'int32'
     ];
 
     /**
@@ -67,36 +71,42 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
     * top  是否置顶，0代表非置顶，1代表置顶
+    * bottom  是否置底，0代表非置底，1代表置底
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'destRuleId' => 'dest_rule_id',
-            'top' => 'top'
+            'top' => 'top',
+            'bottom' => 'bottom'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
     * top  是否置顶，0代表非置顶，1代表置顶
+    * bottom  是否置底，0代表非置底，1代表置底
     *
     * @var string[]
     */
     protected static $setters = [
             'destRuleId' => 'setDestRuleId',
-            'top' => 'setTop'
+            'top' => 'setTop',
+            'bottom' => 'setBottom'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
     * top  是否置顶，0代表非置顶，1代表置顶
+    * bottom  是否置底，0代表非置底，1代表置底
     *
     * @var string[]
     */
     protected static $getters = [
             'destRuleId' => 'getDestRuleId',
-            'top' => 'getTop'
+            'top' => 'getTop',
+            'bottom' => 'getBottom'
     ];
 
     /**
@@ -159,6 +169,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
     {
         $this->container['destRuleId'] = isset($data['destRuleId']) ? $data['destRuleId'] : null;
         $this->container['top'] = isset($data['top']) ? $data['top'] : null;
+        $this->container['bottom'] = isset($data['bottom']) ? $data['bottom'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
     public function setTop($top)
     {
         $this->container['top'] = $top;
+        return $this;
+    }
+
+    /**
+    * Gets bottom
+    *  是否置底，0代表非置底，1代表置底
+    *
+    * @return int|null
+    */
+    public function getBottom()
+    {
+        return $this->container['bottom'];
+    }
+
+    /**
+    * Sets bottom
+    *
+    * @param int|null $bottom 是否置底，0代表非置底，1代表置底
+    *
+    * @return $this
+    */
+    public function setBottom($bottom)
+    {
+        $this->container['bottom'] = $bottom;
         return $this;
     }
 

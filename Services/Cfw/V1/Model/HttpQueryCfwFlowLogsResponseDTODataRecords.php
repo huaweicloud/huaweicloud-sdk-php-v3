@@ -33,6 +33,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
+    * dstRegionId  目的地域id
+    * dstRegionName  目的地域名称
+    * srcRegionId  源地域id
+    * srcRegionName  源地域名称
     *
     * @var string[]
     */
@@ -49,7 +53,11 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'app' => 'string',
             'dstPort' => 'int',
             'protocol' => 'string',
-            'dstHost' => 'string'
+            'dstHost' => 'string',
+            'dstRegionId' => 'string',
+            'dstRegionName' => 'string',
+            'srcRegionId' => 'string',
+            'srcRegionName' => 'string'
     ];
 
     /**
@@ -67,6 +75,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
+    * dstRegionId  目的地域id
+    * dstRegionName  目的地域名称
+    * srcRegionId  源地域id
+    * srcRegionName  源地域名称
     *
     * @var string[]
     */
@@ -83,7 +95,11 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         'app' => null,
         'dstPort' => 'int32',
         'protocol' => null,
-        'dstHost' => null
+        'dstHost' => null,
+        'dstRegionId' => null,
+        'dstRegionName' => null,
+        'srcRegionId' => null,
+        'srcRegionName' => null
     ];
 
     /**
@@ -122,6 +138,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
+    * dstRegionId  目的地域id
+    * dstRegionName  目的地域名称
+    * srcRegionId  源地域id
+    * srcRegionName  源地域名称
     *
     * @var string[]
     */
@@ -138,7 +158,11 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'app' => 'app',
             'dstPort' => 'dst_port',
             'protocol' => 'protocol',
-            'dstHost' => 'dst_host'
+            'dstHost' => 'dst_host',
+            'dstRegionId' => 'dst_region_id',
+            'dstRegionName' => 'dst_region_name',
+            'srcRegionId' => 'src_region_id',
+            'srcRegionName' => 'src_region_name'
     ];
 
     /**
@@ -156,6 +180,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
+    * dstRegionId  目的地域id
+    * dstRegionName  目的地域名称
+    * srcRegionId  源地域id
+    * srcRegionName  源地域名称
     *
     * @var string[]
     */
@@ -172,7 +200,11 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'app' => 'setApp',
             'dstPort' => 'setDstPort',
             'protocol' => 'setProtocol',
-            'dstHost' => 'setDstHost'
+            'dstHost' => 'setDstHost',
+            'dstRegionId' => 'setDstRegionId',
+            'dstRegionName' => 'setDstRegionName',
+            'srcRegionId' => 'setSrcRegionId',
+            'srcRegionName' => 'setSrcRegionName'
     ];
 
     /**
@@ -190,6 +222,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
+    * dstRegionId  目的地域id
+    * dstRegionName  目的地域名称
+    * srcRegionId  源地域id
+    * srcRegionName  源地域名称
     *
     * @var string[]
     */
@@ -206,7 +242,11 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'app' => 'getApp',
             'dstPort' => 'getDstPort',
             'protocol' => 'getProtocol',
-            'dstHost' => 'getDstHost'
+            'dstHost' => 'getDstHost',
+            'dstRegionId' => 'getDstRegionId',
+            'dstRegionName' => 'getDstRegionName',
+            'srcRegionId' => 'getSrcRegionId',
+            'srcRegionName' => 'getSrcRegionName'
     ];
 
     /**
@@ -295,6 +335,10 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         $this->container['dstPort'] = isset($data['dstPort']) ? $data['dstPort'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
+        $this->container['dstRegionId'] = isset($data['dstRegionId']) ? $data['dstRegionId'] : null;
+        $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
+        $this->container['srcRegionId'] = isset($data['srcRegionId']) ? $data['srcRegionId'] : null;
+        $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
     }
 
     /**
@@ -636,6 +680,102 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     public function setDstHost($dstHost)
     {
         $this->container['dstHost'] = $dstHost;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionId
+    *  目的地域id
+    *
+    * @return string|null
+    */
+    public function getDstRegionId()
+    {
+        return $this->container['dstRegionId'];
+    }
+
+    /**
+    * Sets dstRegionId
+    *
+    * @param string|null $dstRegionId 目的地域id
+    *
+    * @return $this
+    */
+    public function setDstRegionId($dstRegionId)
+    {
+        $this->container['dstRegionId'] = $dstRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionName
+    *  目的地域名称
+    *
+    * @return string|null
+    */
+    public function getDstRegionName()
+    {
+        return $this->container['dstRegionName'];
+    }
+
+    /**
+    * Sets dstRegionName
+    *
+    * @param string|null $dstRegionName 目的地域名称
+    *
+    * @return $this
+    */
+    public function setDstRegionName($dstRegionName)
+    {
+        $this->container['dstRegionName'] = $dstRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionId
+    *  源地域id
+    *
+    * @return string|null
+    */
+    public function getSrcRegionId()
+    {
+        return $this->container['srcRegionId'];
+    }
+
+    /**
+    * Sets srcRegionId
+    *
+    * @param string|null $srcRegionId 源地域id
+    *
+    * @return $this
+    */
+    public function setSrcRegionId($srcRegionId)
+    {
+        $this->container['srcRegionId'] = $srcRegionId;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionName
+    *  源地域名称
+    *
+    * @return string|null
+    */
+    public function getSrcRegionName()
+    {
+        return $this->container['srcRegionName'];
+    }
+
+    /**
+    * Sets srcRegionName
+    *
+    * @param string|null $srcRegionName 源地域名称
+    *
+    * @return $this
+    */
+    public function setSrcRegionName($srcRegionName)
+    {
+        $this->container['srcRegionName'] = $srcRegionName;
         return $this;
     }
 

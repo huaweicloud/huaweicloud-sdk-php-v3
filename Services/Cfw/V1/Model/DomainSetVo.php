@@ -27,6 +27,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     * configStatus  配置状态
     * message  异常信息
+    * rules  使用规则id列表
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'int',
             'domainSetType' => 'int',
             'configStatus' => 'int',
-            'message' => 'string'
+            'message' => 'string',
+            'rules' => '\HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]'
     ];
 
     /**
@@ -49,6 +51,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     * configStatus  配置状态
     * message  异常信息
+    * rules  使用规则id列表
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class DomainSetVo implements ModelInterface, ArrayAccess
         'refCount' => 'int32',
         'domainSetType' => 'int32',
         'configStatus' => 'int32',
-        'message' => null
+        'message' => null,
+        'rules' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     * configStatus  配置状态
     * message  异常信息
+    * rules  使用规则id列表
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'ref_count',
             'domainSetType' => 'domain_set_type',
             'configStatus' => 'config_status',
-            'message' => 'message'
+            'message' => 'message',
+            'rules' => 'rules'
     ];
 
     /**
@@ -114,6 +120,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     * configStatus  配置状态
     * message  异常信息
+    * rules  使用规则id列表
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'setRefCount',
             'domainSetType' => 'setDomainSetType',
             'configStatus' => 'setConfigStatus',
-            'message' => 'setMessage'
+            'message' => 'setMessage',
+            'rules' => 'setRules'
     ];
 
     /**
@@ -136,6 +144,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     * configStatus  配置状态
     * message  异常信息
+    * rules  使用规则id列表
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'getRefCount',
             'domainSetType' => 'getDomainSetType',
             'configStatus' => 'getConfigStatus',
-            'message' => 'getMessage'
+            'message' => 'getMessage',
+            'rules' => 'getRules'
     ];
 
     /**
@@ -214,6 +224,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
         $this->container['domainSetType'] = isset($data['domainSetType']) ? $data['domainSetType'] : null;
         $this->container['configStatus'] = isset($data['configStatus']) ? $data['configStatus'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets rules
+    *  使用规则id列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]|null
+    */
+    public function getRules()
+    {
+        return $this->container['rules'];
+    }
+
+    /**
+    * Sets rules
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]|null $rules 使用规则id列表
+    *
+    * @return $this
+    */
+    public function setRules($rules)
+    {
+        $this->container['rules'] = $rules;
         return $this;
     }
 

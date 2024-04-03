@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dli\V1\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SparkJobResource implements ModelInterface, ArrayAccess
+class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class SparkJobResource implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SparkJobResource';
+    protected static $openAPIModelName = 'SwitchLogReplayRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  资源名称。
-    * type  资源类型。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
-            'type' => 'string'
+            'pauseLogReplay' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  资源名称。
-    * type  资源类型。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
-        'type' => null
+        'pauseLogReplay' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class SparkJobResource implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  资源名称。
-    * type  资源类型。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
-            'type' => 'type'
+            'pauseLogReplay' => 'pause_log_replay'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  资源名称。
-    * type  资源类型。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
-            'type' => 'setType'
+            'pauseLogReplay' => 'setPauseLogReplay'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  资源名称。
-    * type  资源类型。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
-            'type' => 'getType'
+            'pauseLogReplay' => 'getPauseLogReplay'
     ];
 
     /**
@@ -157,8 +147,7 @@ class SparkJobResource implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['pauseLogReplay'] = isset($data['pauseLogReplay']) ? $data['pauseLogReplay'] : null;
     }
 
     /**
@@ -169,6 +158,9 @@ class SparkJobResource implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['pauseLogReplay'] === null) {
+            $invalidProperties[] = "'pauseLogReplay' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +176,26 @@ class SparkJobResource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  资源名称。
+    * Gets pauseLogReplay
+    *  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
-    * @return string|null
+    * @return string
     */
-    public function getName()
+    public function getPauseLogReplay()
     {
-        return $this->container['name'];
+        return $this->container['pauseLogReplay'];
     }
 
     /**
-    * Sets name
+    * Sets pauseLogReplay
     *
-    * @param string|null $name 资源名称。
+    * @param string $pauseLogReplay “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @return $this
     */
-    public function setName($name)
+    public function setPauseLogReplay($pauseLogReplay)
     {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  资源类型。
-    *
-    * @return string|null
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string|null $type 资源类型。
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
+        $this->container['pauseLogReplay'] = $pauseLogReplay;
         return $this;
     }
 

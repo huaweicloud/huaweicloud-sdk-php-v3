@@ -22,6 +22,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     * Array of property to type mappings. Used for (de)serialization
     * organizationId  组织ID。
     * conformancePackName  合规规则包名称。
+    * organizationConformancePackId  组织合规规则包ID。
     * state  部署状态，区分大小写
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -31,6 +32,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     protected static $openAPITypes = [
             'organizationId' => 'string',
             'conformancePackName' => 'string',
+            'organizationConformancePackId' => 'string',
             'state' => 'string',
             'limit' => 'int',
             'marker' => 'string'
@@ -40,6 +42,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     * Array of property to format mappings. Used for (de)serialization
     * organizationId  组织ID。
     * conformancePackName  合规规则包名称。
+    * organizationConformancePackId  组织合规规则包ID。
     * state  部署状态，区分大小写
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -49,6 +52,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     protected static $openAPIFormats = [
         'organizationId' => null,
         'conformancePackName' => null,
+        'organizationConformancePackId' => null,
         'state' => null,
         'limit' => 'int32',
         'marker' => null
@@ -79,6 +83,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     * and the value is the original name
     * organizationId  组织ID。
     * conformancePackName  合规规则包名称。
+    * organizationConformancePackId  组织合规规则包ID。
     * state  部署状态，区分大小写
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -88,6 +93,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     protected static $attributeMap = [
             'organizationId' => 'organization_id',
             'conformancePackName' => 'conformance_pack_name',
+            'organizationConformancePackId' => 'organization_conformance_pack_id',
             'state' => 'state',
             'limit' => 'limit',
             'marker' => 'marker'
@@ -97,6 +103,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     * Array of attributes to setter functions (for deserialization of responses)
     * organizationId  组织ID。
     * conformancePackName  合规规则包名称。
+    * organizationConformancePackId  组织合规规则包ID。
     * state  部署状态，区分大小写
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -106,6 +113,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     protected static $setters = [
             'organizationId' => 'setOrganizationId',
             'conformancePackName' => 'setConformancePackName',
+            'organizationConformancePackId' => 'setOrganizationConformancePackId',
             'state' => 'setState',
             'limit' => 'setLimit',
             'marker' => 'setMarker'
@@ -115,6 +123,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     * Array of attributes to getter functions (for serialization of requests)
     * organizationId  组织ID。
     * conformancePackName  合规规则包名称。
+    * organizationConformancePackId  组织合规规则包ID。
     * state  部署状态，区分大小写
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -124,6 +133,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     protected static $getters = [
             'organizationId' => 'getOrganizationId',
             'conformancePackName' => 'getConformancePackName',
+            'organizationConformancePackId' => 'getOrganizationConformancePackId',
             'state' => 'getState',
             'limit' => 'getLimit',
             'marker' => 'getMarker'
@@ -210,6 +220,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     {
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['conformancePackName'] = isset($data['conformancePackName']) ? $data['conformancePackName'] : null;
+        $this->container['organizationConformancePackId'] = isset($data['organizationConformancePackId']) ? $data['organizationConformancePackId'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
@@ -243,6 +254,12 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
             }
             if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['conformancePackName'])) {
                 $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            }
+            if (!is_null($this->container['organizationConformancePackId']) && (mb_strlen($this->container['organizationConformancePackId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'organizationConformancePackId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['organizationConformancePackId']) && !preg_match("/[\\w-]+/", $this->container['organizationConformancePackId'])) {
+                $invalidProperties[] = "invalid value for 'organizationConformancePackId', must be conform to the pattern /[\\w-]+/.";
             }
             $allowedValues = $this->getStateAllowableValues();
                 if (!is_null($this->container['state']) && !in_array($this->container['state'], $allowedValues, true)) {
@@ -332,6 +349,30 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     public function setConformancePackName($conformancePackName)
     {
         $this->container['conformancePackName'] = $conformancePackName;
+        return $this;
+    }
+
+    /**
+    * Gets organizationConformancePackId
+    *  组织合规规则包ID。
+    *
+    * @return string|null
+    */
+    public function getOrganizationConformancePackId()
+    {
+        return $this->container['organizationConformancePackId'];
+    }
+
+    /**
+    * Sets organizationConformancePackId
+    *
+    * @param string|null $organizationConformancePackId 组织合规规则包ID。
+    *
+    * @return $this
+    */
+    public function setOrganizationConformancePackId($organizationConformancePackId)
+    {
+        $this->container['organizationConformancePackId'] = $organizationConformancePackId;
         return $this;
     }
 

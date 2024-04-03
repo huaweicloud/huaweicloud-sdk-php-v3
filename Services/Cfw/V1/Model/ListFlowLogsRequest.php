@@ -38,6 +38,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目的主机
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -59,7 +61,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'enterpriseProjectId' => 'string',
-            'dstHost' => 'string'
+            'dstHost' => 'string',
+            'srcRegionName' => 'string',
+            'dstRegionName' => 'string'
     ];
 
     /**
@@ -82,6 +86,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目的主机
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -103,7 +109,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
         'offset' => null,
         'limit' => null,
         'enterpriseProjectId' => null,
-        'dstHost' => null
+        'dstHost' => null,
+        'srcRegionName' => null,
+        'dstRegionName' => null
     ];
 
     /**
@@ -147,6 +155,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目的主机
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -168,7 +178,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'dstHost' => 'dst_host'
+            'dstHost' => 'dst_host',
+            'srcRegionName' => 'src_region_name',
+            'dstRegionName' => 'dst_region_name'
     ];
 
     /**
@@ -191,6 +203,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目的主机
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -212,7 +226,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'dstHost' => 'setDstHost'
+            'dstHost' => 'setDstHost',
+            'srcRegionName' => 'setSrcRegionName',
+            'dstRegionName' => 'setDstRegionName'
     ];
 
     /**
@@ -235,6 +251,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示个数，范围为1-1024
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目的主机
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -256,7 +274,9 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'dstHost' => 'getDstHost'
+            'dstHost' => 'getDstHost',
+            'srcRegionName' => 'getSrcRegionName',
+            'dstRegionName' => 'getDstRegionName'
     ];
 
     /**
@@ -371,6 +391,8 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
+        $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
+        $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
     }
 
     /**
@@ -876,6 +898,54 @@ class ListFlowLogsRequest implements ModelInterface, ArrayAccess
     public function setDstHost($dstHost)
     {
         $this->container['dstHost'] = $dstHost;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionName
+    *  源region名称
+    *
+    * @return string|null
+    */
+    public function getSrcRegionName()
+    {
+        return $this->container['srcRegionName'];
+    }
+
+    /**
+    * Sets srcRegionName
+    *
+    * @param string|null $srcRegionName 源region名称
+    *
+    * @return $this
+    */
+    public function setSrcRegionName($srcRegionName)
+    {
+        $this->container['srcRegionName'] = $srcRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionName
+    *  目的region名称
+    *
+    * @return string|null
+    */
+    public function getDstRegionName()
+    {
+        return $this->container['dstRegionName'];
+    }
+
+    /**
+    * Sets dstRegionName
+    *
+    * @param string|null $dstRegionName 目的region名称
+    *
+    * @return $this
+    */
+    public function setDstRegionName($dstRegionName)
+    {
+        $this->container['dstRegionName'] = $dstRegionName;
         return $this;
     }
 

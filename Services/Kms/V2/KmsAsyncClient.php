@@ -1745,6 +1745,71 @@ class KmsAsyncClient extends Client
     }
 
     /**
+     * 生成消息验证码
+     *
+     * 功能介绍：生成消息验证码
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function generateMacAsync($request)
+    {
+        return $this->generateMacAsyncWithHttpInfo($request);
+    }
+    
+    public function generateMacAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/kms/generate-mac';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\GenerateMacResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\GenerateMacRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 导入密钥材料
      *
      * - 功能介绍：导入密钥材料。
@@ -2979,6 +3044,71 @@ class KmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ValidateSignatureResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ValidateSignatureRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 校验消息验证码
+     *
+     * 功能介绍：校验消息验证码
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function verifyMacAsync($request)
+    {
+        return $this->verifyMacAsyncWithHttpInfo($request);
+    }
+    
+    public function verifyMacAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1.0/{project_id}/kms/verify-mac';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\VerifyMacResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\VerifyMacRequest',
             $asyncRequest = true);
     }
 

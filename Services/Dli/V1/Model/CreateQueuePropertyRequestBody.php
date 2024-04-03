@@ -25,7 +25,7 @@ class CreateQueuePropertyRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CreateQueuePropertyRequestBodyProperties'
+            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty'
     ];
 
     /**
@@ -176,7 +176,7 @@ class CreateQueuePropertyRequestBody implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\CreateQueuePropertyRequestBodyProperties|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty|null
     */
     public function getProperties()
     {
@@ -186,7 +186,7 @@ class CreateQueuePropertyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\CreateQueuePropertyRequestBodyProperties|null $properties properties
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\CommonQueueProperty|null $properties properties
     *
     * @return $this
     */

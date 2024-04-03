@@ -42,7 +42,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  log_type
+    * logType  日志类型
+    * attackRuleId  入侵事件id
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -69,7 +72,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'source' => 'string',
             'enterpriseProjectId' => 'string',
             'dstHost' => 'string',
-            'logType' => 'string'
+            'logType' => 'string',
+            'attackRuleId' => 'string',
+            'srcRegionName' => 'string',
+            'dstRegionName' => 'string'
     ];
 
     /**
@@ -96,7 +102,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  log_type
+    * logType  日志类型
+    * attackRuleId  入侵事件id
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -123,7 +132,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         'source' => null,
         'enterpriseProjectId' => null,
         'dstHost' => null,
-        'logType' => null
+        'logType' => null,
+        'attackRuleId' => null,
+        'srcRegionName' => null,
+        'dstRegionName' => null
     ];
 
     /**
@@ -171,7 +183,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  log_type
+    * logType  日志类型
+    * attackRuleId  入侵事件id
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -198,7 +213,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'source' => 'source',
             'enterpriseProjectId' => 'enterprise_project_id',
             'dstHost' => 'dst_host',
-            'logType' => 'log_type'
+            'logType' => 'log_type',
+            'attackRuleId' => 'attack_rule_id',
+            'srcRegionName' => 'src_region_name',
+            'dstRegionName' => 'dst_region_name'
     ];
 
     /**
@@ -225,7 +243,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  log_type
+    * logType  日志类型
+    * attackRuleId  入侵事件id
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -252,7 +273,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'source' => 'setSource',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'dstHost' => 'setDstHost',
-            'logType' => 'setLogType'
+            'logType' => 'setLogType',
+            'attackRuleId' => 'setAttackRuleId',
+            'srcRegionName' => 'setSrcRegionName',
+            'dstRegionName' => 'setDstRegionName'
     ];
 
     /**
@@ -279,7 +303,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * source  判断来源
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  log_type
+    * logType  日志类型
+    * attackRuleId  入侵事件id
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -306,7 +333,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'source' => 'getSource',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'dstHost' => 'getDstHost',
-            'logType' => 'getLogType'
+            'logType' => 'getLogType',
+            'attackRuleId' => 'getAttackRuleId',
+            'srcRegionName' => 'getSrcRegionName',
+            'dstRegionName' => 'getDstRegionName'
     ];
 
     /**
@@ -456,6 +486,9 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
         $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
+        $this->container['attackRuleId'] = isset($data['attackRuleId']) ? $data['attackRuleId'] : null;
+        $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
+        $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
     }
 
     /**
@@ -1069,7 +1102,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logType
-    *  log_type
+    *  日志类型
     *
     * @return string|null
     */
@@ -1081,13 +1114,85 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logType
     *
-    * @param string|null $logType log_type
+    * @param string|null $logType 日志类型
     *
     * @return $this
     */
     public function setLogType($logType)
     {
         $this->container['logType'] = $logType;
+        return $this;
+    }
+
+    /**
+    * Gets attackRuleId
+    *  入侵事件id
+    *
+    * @return string|null
+    */
+    public function getAttackRuleId()
+    {
+        return $this->container['attackRuleId'];
+    }
+
+    /**
+    * Sets attackRuleId
+    *
+    * @param string|null $attackRuleId 入侵事件id
+    *
+    * @return $this
+    */
+    public function setAttackRuleId($attackRuleId)
+    {
+        $this->container['attackRuleId'] = $attackRuleId;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionName
+    *  源region名称
+    *
+    * @return string|null
+    */
+    public function getSrcRegionName()
+    {
+        return $this->container['srcRegionName'];
+    }
+
+    /**
+    * Sets srcRegionName
+    *
+    * @param string|null $srcRegionName 源region名称
+    *
+    * @return $this
+    */
+    public function setSrcRegionName($srcRegionName)
+    {
+        $this->container['srcRegionName'] = $srcRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionName
+    *  目的region名称
+    *
+    * @return string|null
+    */
+    public function getDstRegionName()
+    {
+        return $this->container['dstRegionName'];
+    }
+
+    /**
+    * Sets dstRegionName
+    *
+    * @param string|null $dstRegionName 目的region名称
+    *
+    * @return $this
+    */
+    public function setDstRegionName($dstRegionName)
+    {
+        $this->container['dstRegionName'] = $dstRegionName;
         return $this;
     }
 

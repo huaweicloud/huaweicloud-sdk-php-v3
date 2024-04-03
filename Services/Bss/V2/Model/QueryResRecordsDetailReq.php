@@ -367,8 +367,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['resInstanceId']) && (mb_strlen($this->container['resInstanceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resInstanceId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['chargeMode']) && ($this->container['chargeMode'] > 10)) {
-                $invalidProperties[] = "invalid value for 'chargeMode', must be smaller than or equal to 10.";
+            if (!is_null($this->container['chargeMode']) && ($this->container['chargeMode'] > 11)) {
+                $invalidProperties[] = "invalid value for 'chargeMode', must be smaller than or equal to 11.";
             }
             if (!is_null($this->container['chargeMode']) && ($this->container['chargeMode'] < 1)) {
                 $invalidProperties[] = "invalid value for 'chargeMode', must be bigger than or equal to 1.";

@@ -1962,6 +1962,9 @@ class ConfigClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['organizationConformancePackId'] !== null) {
+            $queryParams['organization_conformance_pack_id'] = $localVarParams['organizationConformancePackId'];
+        }
         if ($localVarParams['conformancePackName'] !== null) {
             $queryParams['conformance_pack_name'] = $localVarParams['conformancePackName'];
         }
@@ -2032,6 +2035,9 @@ class ConfigClient extends Client
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['organizationConformancePackId'] !== null) {
+            $queryParams['organization_conformance_pack_id'] = $localVarParams['organizationConformancePackId'];
         }
         if ($localVarParams['conformancePackName'] !== null) {
             $queryParams['conformance_pack_name'] = $localVarParams['conformancePackName'];
@@ -2293,6 +2299,9 @@ class ConfigClient extends Client
         if ($localVarParams['conformancePackName'] !== null) {
             $queryParams['conformance_pack_name'] = $localVarParams['conformancePackName'];
         }
+        if ($localVarParams['organizationConformancePackId'] !== null) {
+            $queryParams['organization_conformance_pack_id'] = $localVarParams['organizationConformancePackId'];
+        }
         if ($localVarParams['state'] !== null) {
             $queryParams['state'] = $localVarParams['state'];
         }
@@ -2411,9 +2420,9 @@ class ConfigClient extends Client
     }
 
     /**
-     * 创建或更新组织合规规则
+     * 创建组织合规规则
      *
-     * 创建或更新组织合规规则，如果规则名称已存在，则为更新操作。
+     * 创建组织合规规则，如果规则名称已存在，则为更新操作。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2880,6 +2889,9 @@ class ConfigClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationPolicyAssignmentId'] !== null) {
+            $queryParams['organization_policy_assignment_id'] = $localVarParams['organizationPolicyAssignmentId'];
         }
         if ($localVarParams['organizationPolicyAssignmentName'] !== null) {
             $queryParams['organization_policy_assignment_name'] = $localVarParams['organizationPolicyAssignmentName'];
@@ -3499,6 +3511,9 @@ class ConfigClient extends Client
         if ($localVarParams['organizationPolicyAssignmentName'] !== null) {
             $queryParams['organization_policy_assignment_name'] = $localVarParams['organizationPolicyAssignmentName'];
         }
+        if ($localVarParams['organizationPolicyAssignmentId'] !== null) {
+            $queryParams['organization_policy_assignment_id'] = $localVarParams['organizationPolicyAssignmentId'];
+        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }
@@ -3673,6 +3688,74 @@ class ConfigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\ShowPolicyAssignmentResponse',
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\ShowPolicyAssignmentRequest');
+    }
+
+    /**
+     * 更新组织合规规则
+     *
+     * 更新组织合规规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOrganizationPolicyAssignment($request)
+    {
+        return $this->updateOrganizationPolicyAssignmentWithHttpInfo($request);
+    }
+
+    public function updateOrganizationPolicyAssignmentWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/resource-manager/organizations/{organization_id}/policy-assignments/{organization_policy_assignment_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationId'] !== null) {
+            $pathParams['organization_id'] = $localVarParams['organizationId'];
+        }
+        if ($localVarParams['organizationPolicyAssignmentId'] !== null) {
+            $pathParams['organization_policy_assignment_id'] = $localVarParams['organizationPolicyAssignmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\UpdateOrganizationPolicyAssignmentResponse',
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\UpdateOrganizationPolicyAssignmentRequest');
     }
 
     /**

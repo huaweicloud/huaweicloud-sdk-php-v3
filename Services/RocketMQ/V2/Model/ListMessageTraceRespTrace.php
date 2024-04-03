@@ -26,7 +26,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。
+    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -74,7 +74,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。
+    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -143,7 +143,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。
+    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -191,7 +191,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。
+    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -239,7 +239,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。
+    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -320,7 +320,8 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const TRACE_TYPE_PUB = 'Pub';
-    const TRACE_TYPE_SUB = 'Sub';
+    const TRACE_TYPE_SUB_BEFORE = 'SubBefore';
+    const TRACE_TYPE_SUB_AFTER = 'SubAfter';
     const TRACE_TYPE_END_TRANSACTION = 'EndTransaction';
     const MSG_TYPE_NORMAL_MSG = 'Normal_Msg';
     const MSG_TYPE_TRANS_MSG_HALF = 'Trans_Msg_Half';
@@ -340,7 +341,8 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     {
         return [
             self::TRACE_TYPE_PUB,
-            self::TRACE_TYPE_SUB,
+            self::TRACE_TYPE_SUB_BEFORE,
+            self::TRACE_TYPE_SUB_AFTER,
             self::TRACE_TYPE_END_TRANSACTION,
         ];
     }
@@ -604,7 +606,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeStatus
-    *  消费状态。
+    *  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     *
     * @return float|null
     */
@@ -616,7 +618,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets consumeStatus
     *
-    * @param float|null $consumeStatus 消费状态。
+    * @param float|null $consumeStatus 消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
     *
     * @return $this
     */

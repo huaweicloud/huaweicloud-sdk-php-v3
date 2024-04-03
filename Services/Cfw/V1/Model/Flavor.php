@@ -30,6 +30,10 @@ class Flavor implements ModelInterface, ArrayAccess
     * totalRuleCount  总计规则数
     * usedRuleCount  已使用规则数
     * vpcBandwith  vpc间带宽
+    * defaultBandwidth  默认防火墙带宽
+    * defaultEipCount  默认eip数
+    * defaultLogStorage  默认日志存储
+    * defaultVpcCount  默认vpc数
     *
     * @var string[]
     */
@@ -43,7 +47,11 @@ class Flavor implements ModelInterface, ArrayAccess
             'sessionCreate' => 'int',
             'totalRuleCount' => 'int',
             'usedRuleCount' => 'int',
-            'vpcBandwith' => 'int'
+            'vpcBandwith' => 'int',
+            'defaultBandwidth' => 'int',
+            'defaultEipCount' => 'int',
+            'defaultLogStorage' => 'int',
+            'defaultVpcCount' => 'int'
     ];
 
     /**
@@ -58,6 +66,10 @@ class Flavor implements ModelInterface, ArrayAccess
     * totalRuleCount  总计规则数
     * usedRuleCount  已使用规则数
     * vpcBandwith  vpc间带宽
+    * defaultBandwidth  默认防火墙带宽
+    * defaultEipCount  默认eip数
+    * defaultLogStorage  默认日志存储
+    * defaultVpcCount  默认vpc数
     *
     * @var string[]
     */
@@ -71,7 +83,11 @@ class Flavor implements ModelInterface, ArrayAccess
         'sessionCreate' => 'int32',
         'totalRuleCount' => null,
         'usedRuleCount' => null,
-        'vpcBandwith' => null
+        'vpcBandwith' => null,
+        'defaultBandwidth' => 'int32',
+        'defaultEipCount' => 'int32',
+        'defaultLogStorage' => 'int32',
+        'defaultVpcCount' => 'int32'
     ];
 
     /**
@@ -107,6 +123,10 @@ class Flavor implements ModelInterface, ArrayAccess
     * totalRuleCount  总计规则数
     * usedRuleCount  已使用规则数
     * vpcBandwith  vpc间带宽
+    * defaultBandwidth  默认防火墙带宽
+    * defaultEipCount  默认eip数
+    * defaultLogStorage  默认日志存储
+    * defaultVpcCount  默认vpc数
     *
     * @var string[]
     */
@@ -120,7 +140,11 @@ class Flavor implements ModelInterface, ArrayAccess
             'sessionCreate' => 'session_create',
             'totalRuleCount' => 'total_rule_count',
             'usedRuleCount' => 'used_rule_count',
-            'vpcBandwith' => 'vpc_bandwith'
+            'vpcBandwith' => 'vpc_bandwith',
+            'defaultBandwidth' => 'default_bandwidth',
+            'defaultEipCount' => 'default_eip_count',
+            'defaultLogStorage' => 'default_log_storage',
+            'defaultVpcCount' => 'default_vpc_count'
     ];
 
     /**
@@ -135,6 +159,10 @@ class Flavor implements ModelInterface, ArrayAccess
     * totalRuleCount  总计规则数
     * usedRuleCount  已使用规则数
     * vpcBandwith  vpc间带宽
+    * defaultBandwidth  默认防火墙带宽
+    * defaultEipCount  默认eip数
+    * defaultLogStorage  默认日志存储
+    * defaultVpcCount  默认vpc数
     *
     * @var string[]
     */
@@ -148,7 +176,11 @@ class Flavor implements ModelInterface, ArrayAccess
             'sessionCreate' => 'setSessionCreate',
             'totalRuleCount' => 'setTotalRuleCount',
             'usedRuleCount' => 'setUsedRuleCount',
-            'vpcBandwith' => 'setVpcBandwith'
+            'vpcBandwith' => 'setVpcBandwith',
+            'defaultBandwidth' => 'setDefaultBandwidth',
+            'defaultEipCount' => 'setDefaultEipCount',
+            'defaultLogStorage' => 'setDefaultLogStorage',
+            'defaultVpcCount' => 'setDefaultVpcCount'
     ];
 
     /**
@@ -163,6 +195,10 @@ class Flavor implements ModelInterface, ArrayAccess
     * totalRuleCount  总计规则数
     * usedRuleCount  已使用规则数
     * vpcBandwith  vpc间带宽
+    * defaultBandwidth  默认防火墙带宽
+    * defaultEipCount  默认eip数
+    * defaultLogStorage  默认日志存储
+    * defaultVpcCount  默认vpc数
     *
     * @var string[]
     */
@@ -176,7 +212,11 @@ class Flavor implements ModelInterface, ArrayAccess
             'sessionCreate' => 'getSessionCreate',
             'totalRuleCount' => 'getTotalRuleCount',
             'usedRuleCount' => 'getUsedRuleCount',
-            'vpcBandwith' => 'getVpcBandwith'
+            'vpcBandwith' => 'getVpcBandwith',
+            'defaultBandwidth' => 'getDefaultBandwidth',
+            'defaultEipCount' => 'getDefaultEipCount',
+            'defaultLogStorage' => 'getDefaultLogStorage',
+            'defaultVpcCount' => 'getDefaultVpcCount'
     ];
 
     /**
@@ -266,6 +306,10 @@ class Flavor implements ModelInterface, ArrayAccess
         $this->container['totalRuleCount'] = isset($data['totalRuleCount']) ? $data['totalRuleCount'] : null;
         $this->container['usedRuleCount'] = isset($data['usedRuleCount']) ? $data['usedRuleCount'] : null;
         $this->container['vpcBandwith'] = isset($data['vpcBandwith']) ? $data['vpcBandwith'] : null;
+        $this->container['defaultBandwidth'] = isset($data['defaultBandwidth']) ? $data['defaultBandwidth'] : null;
+        $this->container['defaultEipCount'] = isset($data['defaultEipCount']) ? $data['defaultEipCount'] : null;
+        $this->container['defaultLogStorage'] = isset($data['defaultLogStorage']) ? $data['defaultLogStorage'] : null;
+        $this->container['defaultVpcCount'] = isset($data['defaultVpcCount']) ? $data['defaultVpcCount'] : null;
     }
 
     /**
@@ -544,6 +588,102 @@ class Flavor implements ModelInterface, ArrayAccess
     public function setVpcBandwith($vpcBandwith)
     {
         $this->container['vpcBandwith'] = $vpcBandwith;
+        return $this;
+    }
+
+    /**
+    * Gets defaultBandwidth
+    *  默认防火墙带宽
+    *
+    * @return int|null
+    */
+    public function getDefaultBandwidth()
+    {
+        return $this->container['defaultBandwidth'];
+    }
+
+    /**
+    * Sets defaultBandwidth
+    *
+    * @param int|null $defaultBandwidth 默认防火墙带宽
+    *
+    * @return $this
+    */
+    public function setDefaultBandwidth($defaultBandwidth)
+    {
+        $this->container['defaultBandwidth'] = $defaultBandwidth;
+        return $this;
+    }
+
+    /**
+    * Gets defaultEipCount
+    *  默认eip数
+    *
+    * @return int|null
+    */
+    public function getDefaultEipCount()
+    {
+        return $this->container['defaultEipCount'];
+    }
+
+    /**
+    * Sets defaultEipCount
+    *
+    * @param int|null $defaultEipCount 默认eip数
+    *
+    * @return $this
+    */
+    public function setDefaultEipCount($defaultEipCount)
+    {
+        $this->container['defaultEipCount'] = $defaultEipCount;
+        return $this;
+    }
+
+    /**
+    * Gets defaultLogStorage
+    *  默认日志存储
+    *
+    * @return int|null
+    */
+    public function getDefaultLogStorage()
+    {
+        return $this->container['defaultLogStorage'];
+    }
+
+    /**
+    * Sets defaultLogStorage
+    *
+    * @param int|null $defaultLogStorage 默认日志存储
+    *
+    * @return $this
+    */
+    public function setDefaultLogStorage($defaultLogStorage)
+    {
+        $this->container['defaultLogStorage'] = $defaultLogStorage;
+        return $this;
+    }
+
+    /**
+    * Gets defaultVpcCount
+    *  默认vpc数
+    *
+    * @return int|null
+    */
+    public function getDefaultVpcCount()
+    {
+        return $this->container['defaultVpcCount'];
+    }
+
+    /**
+    * Sets defaultVpcCount
+    *
+    * @param int|null $defaultVpcCount 默认vpc数
+    *
+    * @return $this
+    */
+    public function setDefaultVpcCount($defaultVpcCount)
+    {
+        $this->container['defaultVpcCount'] = $defaultVpcCount;
         return $this;
     }
 

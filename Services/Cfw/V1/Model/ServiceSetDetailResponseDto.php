@@ -23,7 +23,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     * id  服务组id
     * name  服务组名称
     * description  服务组描述信息
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
@@ -294,7 +294,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceSetType
-    *  服务组类型，0表示自定义服务组，1表示预定义服务组
+    *  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @return int|null
     */
@@ -306,7 +306,7 @@ class ServiceSetDetailResponseDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceSetType
     *
-    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示预定义服务组
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @return $this
     */

@@ -25,6 +25,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6,2 domain
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化json字符串
     * longConnectTime  长连接时长
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
@@ -32,6 +34,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -45,6 +48,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'addressType' => 'int',
             'actionType' => 'int',
             'status' => 'int',
+            'applications' => 'string[]',
+            'applicationsJsonString' => 'string',
             'longConnectTime' => 'int',
             'longConnectTimeHour' => 'int',
             'longConnectTimeMinute' => 'int',
@@ -52,8 +57,9 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'int',
             'description' => 'string',
             'direction' => 'int',
-            'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
-            'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
+            'profile' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto',
+            'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest',
+            'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest',
             'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
             'tag' => '\HuaweiCloud\SDK\Cfw\V1\Model\TagsVO'
     ];
@@ -65,6 +71,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6,2 domain
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化json字符串
     * longConnectTime  长连接时长
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
@@ -72,6 +80,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -85,6 +94,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         'addressType' => 'int32',
         'actionType' => null,
         'status' => 'int32',
+        'applications' => null,
+        'applicationsJsonString' => null,
         'longConnectTime' => 'int64',
         'longConnectTimeHour' => 'int64',
         'longConnectTimeMinute' => 'int64',
@@ -92,6 +103,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         'longConnectEnable' => 'int32',
         'description' => null,
         'direction' => 'int32',
+        'profile' => null,
         'source' => null,
         'destination' => null,
         'service' => null,
@@ -126,6 +138,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6,2 domain
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化json字符串
     * longConnectTime  长连接时长
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
@@ -133,6 +147,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -146,6 +161,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'addressType' => 'address_type',
             'actionType' => 'action_type',
             'status' => 'status',
+            'applications' => 'applications',
+            'applicationsJsonString' => 'applicationsJsonString',
             'longConnectTime' => 'long_connect_time',
             'longConnectTimeHour' => 'long_connect_time_hour',
             'longConnectTimeMinute' => 'long_connect_time_minute',
@@ -153,6 +170,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'long_connect_enable',
             'description' => 'description',
             'direction' => 'direction',
+            'profile' => 'profile',
             'source' => 'source',
             'destination' => 'destination',
             'service' => 'service',
@@ -166,6 +184,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6,2 domain
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化json字符串
     * longConnectTime  长连接时长
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
@@ -173,6 +193,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -186,6 +207,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'addressType' => 'setAddressType',
             'actionType' => 'setActionType',
             'status' => 'setStatus',
+            'applications' => 'setApplications',
+            'applicationsJsonString' => 'setApplicationsJsonString',
             'longConnectTime' => 'setLongConnectTime',
             'longConnectTimeHour' => 'setLongConnectTimeHour',
             'longConnectTimeMinute' => 'setLongConnectTimeMinute',
@@ -193,6 +216,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'setLongConnectEnable',
             'description' => 'setDescription',
             'direction' => 'setDirection',
+            'profile' => 'setProfile',
             'source' => 'setSource',
             'destination' => 'setDestination',
             'service' => 'setService',
@@ -206,6 +230,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * addressType  地址类型，0 ipv4,1 ipv6,2 domain
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化json字符串
     * longConnectTime  长连接时长
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
@@ -213,6 +239,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -226,6 +253,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'addressType' => 'getAddressType',
             'actionType' => 'getActionType',
             'status' => 'getStatus',
+            'applications' => 'getApplications',
+            'applicationsJsonString' => 'getApplicationsJsonString',
             'longConnectTime' => 'getLongConnectTime',
             'longConnectTimeHour' => 'getLongConnectTimeHour',
             'longConnectTimeMinute' => 'getLongConnectTimeMinute',
@@ -233,6 +262,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'getLongConnectEnable',
             'description' => 'getDescription',
             'direction' => 'getDirection',
+            'profile' => 'getProfile',
             'source' => 'getSource',
             'destination' => 'getDestination',
             'service' => 'getService',
@@ -364,6 +394,8 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['applications'] = isset($data['applications']) ? $data['applications'] : null;
+        $this->container['applicationsJsonString'] = isset($data['applicationsJsonString']) ? $data['applicationsJsonString'] : null;
         $this->container['longConnectTime'] = isset($data['longConnectTime']) ? $data['longConnectTime'] : null;
         $this->container['longConnectTimeHour'] = isset($data['longConnectTimeHour']) ? $data['longConnectTimeHour'] : null;
         $this->container['longConnectTimeMinute'] = isset($data['longConnectTimeMinute']) ? $data['longConnectTimeMinute'] : null;
@@ -371,6 +403,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         $this->container['longConnectEnable'] = isset($data['longConnectEnable']) ? $data['longConnectEnable'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
+        $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
@@ -579,6 +612,54 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets applications
+    *  应用列表
+    *
+    * @return string[]|null
+    */
+    public function getApplications()
+    {
+        return $this->container['applications'];
+    }
+
+    /**
+    * Sets applications
+    *
+    * @param string[]|null $applications 应用列表
+    *
+    * @return $this
+    */
+    public function setApplications($applications)
+    {
+        $this->container['applications'] = $applications;
+        return $this;
+    }
+
+    /**
+    * Gets applicationsJsonString
+    *  应用列表转化json字符串
+    *
+    * @return string|null
+    */
+    public function getApplicationsJsonString()
+    {
+        return $this->container['applicationsJsonString'];
+    }
+
+    /**
+    * Sets applicationsJsonString
+    *
+    * @param string|null $applicationsJsonString 应用列表转化json字符串
+    *
+    * @return $this
+    */
+    public function setApplicationsJsonString($applicationsJsonString)
+    {
+        $this->container['applicationsJsonString'] = $applicationsJsonString;
+        return $this;
+    }
+
+    /**
     * Gets longConnectTime
     *  长连接时长
     *
@@ -747,10 +828,34 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets profile
+    *  profile
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null
+    */
+    public function getProfile()
+    {
+        return $this->container['profile'];
+    }
+
+    /**
+    * Sets profile
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null $profile profile
+    *
+    * @return $this
+    */
+    public function setProfile($profile)
+    {
+        $this->container['profile'] = $profile;
+        return $this;
+    }
+
+    /**
     * Gets source
     *  source
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest
     */
     public function getSource()
     {
@@ -760,7 +865,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto $source source
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest $source source
     *
     * @return $this
     */
@@ -774,7 +879,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * Gets destination
     *  destination
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest
     */
     public function getDestination()
     {
@@ -784,7 +889,7 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto $destination destination
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest $destination destination
     *
     * @return $this
     */

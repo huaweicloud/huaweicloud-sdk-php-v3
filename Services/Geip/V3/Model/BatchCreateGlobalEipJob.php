@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dli\V1\Model;
+namespace HuaweiCloud\SDK\Geip\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
+class BatchCreateGlobalEipJob implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowQuotaResponseBody_Quotas';
+    protected static $openAPIModelName = 'BatchCreateGlobalEipJob';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  projectId
-    * resources  resources
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * jobId  请求完成的job id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'projectId' => 'string',
-            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]'
+            'id' => 'string',
+            'name' => 'string',
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  projectId
-    * resources  resources
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * jobId  请求完成的job id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'projectId' => null,
-        'resources' => null
+        'id' => null,
+        'name' => null,
+        'jobId' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  projectId
-    * resources  resources
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * jobId  请求完成的job id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'projectId' => 'projectId',
-            'resources' => 'resources'
+            'id' => 'id',
+            'name' => 'name',
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  projectId
-    * resources  resources
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * jobId  请求完成的job id
     *
     * @var string[]
     */
     protected static $setters = [
-            'projectId' => 'setProjectId',
-            'resources' => 'setResources'
+            'id' => 'setId',
+            'name' => 'setName',
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  projectId
-    * resources  resources
+    * id  全域弹性公网IP的ID
+    * name  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * jobId  请求完成的job id
     *
     * @var string[]
     */
     protected static $getters = [
-            'projectId' => 'getProjectId',
-            'resources' => 'getResources'
+            'id' => 'getId',
+            'name' => 'getName',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -157,8 +167,9 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -169,6 +180,12 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -184,50 +201,74 @@ class ShowQuotaResponseBodyQuotas implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets projectId
-    *  projectId
+    * Gets id
+    *  全域弹性公网IP的ID
     *
     * @return string|null
     */
-    public function getProjectId()
+    public function getId()
     {
-        return $this->container['projectId'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets projectId
+    * Sets id
     *
-    * @param string|null $projectId projectId
+    * @param string|null $id 全域弹性公网IP的ID
     *
     * @return $this
     */
-    public function setProjectId($projectId)
+    public function setId($id)
     {
-        $this->container['projectId'] = $projectId;
+        $this->container['id'] = $id;
         return $this;
     }
 
     /**
-    * Gets resources
-    *  resources
+    * Gets name
+    *  - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]|null
+    * @return string|null
     */
-    public function getResources()
+    public function getName()
     {
-        return $this->container['resources'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets resources
+    * Sets name
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]|null $resources resources
+    * @param string|null $name - 功能说明：全域弹性公网IP名称 - 取值范围：1-64，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
-    public function setResources($resources)
+    public function setName($name)
     {
-        $this->container['resources'] = $resources;
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  请求完成的job id
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 请求完成的job id
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

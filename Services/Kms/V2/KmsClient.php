@@ -1668,6 +1668,68 @@ class KmsClient extends Client
     }
 
     /**
+     * 生成消息验证码
+     *
+     * 功能介绍：生成消息验证码
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function generateMac($request)
+    {
+        return $this->generateMacWithHttpInfo($request);
+    }
+
+    public function generateMacWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/generate-mac';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\GenerateMacResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\GenerateMacRequest');
+    }
+
+    /**
      * 导入密钥材料
      *
      * - 功能介绍：导入密钥材料。
@@ -2846,6 +2908,68 @@ class KmsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ValidateSignatureResponse',
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ValidateSignatureRequest');
+    }
+
+    /**
+     * 校验消息验证码
+     *
+     * 功能介绍：校验消息验证码
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function verifyMac($request)
+    {
+        return $this->verifyMacWithHttpInfo($request);
+    }
+
+    public function verifyMacWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/kms/verify-mac';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\VerifyMacResponse',
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\VerifyMacRequest');
     }
 
     /**

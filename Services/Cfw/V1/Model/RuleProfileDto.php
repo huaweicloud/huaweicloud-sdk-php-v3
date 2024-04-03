@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Cfw\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RegisterServerAutoRecoveryRequestBody implements ModelInterface, ArrayAccess
+class RuleProfileDto implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class RegisterServerAutoRecoveryRequestBody implements ModelInterface, ArrayAcce
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RegisterServerAutoRecoveryRequestBody';
+    protected static $openAPIModelName = 'RuleProfileDto';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * url  域名url
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'supportAutoRecovery' => 'string'
+            'url' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * url  域名url
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'supportAutoRecovery' => null
+        'url' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class RegisterServerAutoRecoveryRequestBody implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * url  域名url
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'supportAutoRecovery' => 'support_auto_recovery'
+            'url' => 'url'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * url  域名url
     *
     * @var string[]
     */
     protected static $setters = [
-            'supportAutoRecovery' => 'setSupportAutoRecovery'
+            'url' => 'setUrl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * url  域名url
     *
     * @var string[]
     */
     protected static $getters = [
-            'supportAutoRecovery' => 'getSupportAutoRecovery'
+            'url' => 'getUrl'
     ];
 
     /**
@@ -147,7 +147,7 @@ class RegisterServerAutoRecoveryRequestBody implements ModelInterface, ArrayAcce
     */
     public function __construct(array $data = null)
     {
-        $this->container['supportAutoRecovery'] = isset($data['supportAutoRecovery']) ? $data['supportAutoRecovery'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -158,9 +158,6 @@ class RegisterServerAutoRecoveryRequestBody implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['supportAutoRecovery'] === null) {
-            $invalidProperties[] = "'supportAutoRecovery' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +173,26 @@ class RegisterServerAutoRecoveryRequestBody implements ModelInterface, ArrayAcce
     }
 
     /**
-    * Gets supportAutoRecovery
-    *  云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * Gets url
+    *  域名url
     *
-    * @return string
+    * @return string|null
     */
-    public function getSupportAutoRecovery()
+    public function getUrl()
     {
-        return $this->container['supportAutoRecovery'];
+        return $this->container['url'];
     }
 
     /**
-    * Sets supportAutoRecovery
+    * Sets url
     *
-    * @param string $supportAutoRecovery 云服务器是否配置了自动恢复动作。  - true：表示配置自动恢复。 - false：表示删除自动恢复。
+    * @param string|null $url 域名url
     *
     * @return $this
     */
-    public function setSupportAutoRecovery($supportAutoRecovery)
+    public function setUrl($url)
     {
-        $this->container['supportAutoRecovery'] = $supportAutoRecovery;
+        $this->container['url'] = $url;
         return $this;
     }
 

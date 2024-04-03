@@ -22,28 +22,28 @@ class CountGlobalEipSegmentResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  本次请求的编号
-    * globalEipSegments  globalEipSegments
+    * globalEipSegment  globalEipSegment
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'globalEipSegments' => '\HuaweiCloud\SDK\Geip\V3\Model\CountGeipSegments',
+            'globalEipSegment' => '\HuaweiCloud\SDK\Geip\V3\Model\CountGeipSegments',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  本次请求的编号
-    * globalEipSegments  globalEipSegments
+    * globalEipSegment  globalEipSegment
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'globalEipSegments' => null,
+        'globalEipSegment' => null,
         'xRequestId' => null
     ];
 
@@ -71,42 +71,42 @@ class CountGlobalEipSegmentResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  本次请求的编号
-    * globalEipSegments  globalEipSegments
+    * globalEipSegment  globalEipSegment
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'globalEipSegments' => 'global_eip_segments',
+            'globalEipSegment' => 'global_eip_segment',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  本次请求的编号
-    * globalEipSegments  globalEipSegments
+    * globalEipSegment  globalEipSegment
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'globalEipSegments' => 'setGlobalEipSegments',
+            'globalEipSegment' => 'setGlobalEipSegment',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  本次请求的编号
-    * globalEipSegments  globalEipSegments
+    * globalEipSegment  globalEipSegment
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'globalEipSegments' => 'getGlobalEipSegments',
+            'globalEipSegment' => 'getGlobalEipSegment',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -169,7 +169,7 @@ class CountGlobalEipSegmentResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['globalEipSegments'] = isset($data['globalEipSegments']) ? $data['globalEipSegments'] : null;
+        $this->container['globalEipSegment'] = isset($data['globalEipSegment']) ? $data['globalEipSegment'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -220,26 +220,26 @@ class CountGlobalEipSegmentResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets globalEipSegments
-    *  globalEipSegments
+    * Gets globalEipSegment
+    *  globalEipSegment
     *
     * @return \HuaweiCloud\SDK\Geip\V3\Model\CountGeipSegments|null
     */
-    public function getGlobalEipSegments()
+    public function getGlobalEipSegment()
     {
-        return $this->container['globalEipSegments'];
+        return $this->container['globalEipSegment'];
     }
 
     /**
-    * Sets globalEipSegments
+    * Sets globalEipSegment
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\CountGeipSegments|null $globalEipSegments globalEipSegments
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\CountGeipSegments|null $globalEipSegment globalEipSegment
     *
     * @return $this
     */
-    public function setGlobalEipSegments($globalEipSegments)
+    public function setGlobalEipSegment($globalEipSegment)
     {
-        $this->container['globalEipSegments'] = $globalEipSegments;
+        $this->container['globalEipSegment'] = $globalEipSegment;
         return $this;
     }
 

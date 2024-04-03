@@ -22,6 +22,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     * Array of property to type mappings. Used for (de)serialization
     * organizationId  组织ID。
     * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * status  成员帐号规则部署状态，区分大小写。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -31,6 +32,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     protected static $openAPITypes = [
             'organizationId' => 'string',
             'organizationPolicyAssignmentName' => 'string',
+            'organizationPolicyAssignmentId' => 'string',
             'status' => 'string',
             'limit' => 'int',
             'marker' => 'string'
@@ -40,6 +42,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     * Array of property to format mappings. Used for (de)serialization
     * organizationId  组织ID。
     * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * status  成员帐号规则部署状态，区分大小写。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -49,6 +52,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     protected static $openAPIFormats = [
         'organizationId' => null,
         'organizationPolicyAssignmentName' => null,
+        'organizationPolicyAssignmentId' => null,
         'status' => null,
         'limit' => 'int32',
         'marker' => null
@@ -79,6 +83,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     * and the value is the original name
     * organizationId  组织ID。
     * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * status  成员帐号规则部署状态，区分大小写。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -88,6 +93,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     protected static $attributeMap = [
             'organizationId' => 'organization_id',
             'organizationPolicyAssignmentName' => 'organization_policy_assignment_name',
+            'organizationPolicyAssignmentId' => 'organization_policy_assignment_id',
             'status' => 'status',
             'limit' => 'limit',
             'marker' => 'marker'
@@ -97,6 +103,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     * Array of attributes to setter functions (for deserialization of responses)
     * organizationId  组织ID。
     * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * status  成员帐号规则部署状态，区分大小写。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -106,6 +113,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     protected static $setters = [
             'organizationId' => 'setOrganizationId',
             'organizationPolicyAssignmentName' => 'setOrganizationPolicyAssignmentName',
+            'organizationPolicyAssignmentId' => 'setOrganizationPolicyAssignmentId',
             'status' => 'setStatus',
             'limit' => 'setLimit',
             'marker' => 'setMarker'
@@ -115,6 +123,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     * Array of attributes to getter functions (for serialization of requests)
     * organizationId  组织ID。
     * organizationPolicyAssignmentName  组织合规规则名称。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * status  成员帐号规则部署状态，区分大小写。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -124,6 +133,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     protected static $getters = [
             'organizationId' => 'getOrganizationId',
             'organizationPolicyAssignmentName' => 'getOrganizationPolicyAssignmentName',
+            'organizationPolicyAssignmentId' => 'getOrganizationPolicyAssignmentId',
             'status' => 'getStatus',
             'limit' => 'getLimit',
             'marker' => 'getMarker'
@@ -218,6 +228,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     {
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['organizationPolicyAssignmentName'] = isset($data['organizationPolicyAssignmentName']) ? $data['organizationPolicyAssignmentName'] : null;
+        $this->container['organizationPolicyAssignmentId'] = isset($data['organizationPolicyAssignmentId']) ? $data['organizationPolicyAssignmentId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
@@ -248,6 +259,12 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
             }
             if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            }
+            if (!is_null($this->container['organizationPolicyAssignmentId']) && (mb_strlen($this->container['organizationPolicyAssignmentId']) > 512)) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['organizationPolicyAssignmentId']) && !preg_match("/^[a-zA-Z\\d]+/", $this->container['organizationPolicyAssignmentId'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', must be conform to the pattern /^[a-zA-Z\\d]+/.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -337,6 +354,30 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     public function setOrganizationPolicyAssignmentName($organizationPolicyAssignmentName)
     {
         $this->container['organizationPolicyAssignmentName'] = $organizationPolicyAssignmentName;
+        return $this;
+    }
+
+    /**
+    * Gets organizationPolicyAssignmentId
+    *  组织合规规则ID
+    *
+    * @return string|null
+    */
+    public function getOrganizationPolicyAssignmentId()
+    {
+        return $this->container['organizationPolicyAssignmentId'];
+    }
+
+    /**
+    * Sets organizationPolicyAssignmentId
+    *
+    * @param string|null $organizationPolicyAssignmentId 组织合规规则ID
+    *
+    * @return $this
+    */
+    public function setOrganizationPolicyAssignmentId($organizationPolicyAssignmentId)
+    {
+        $this->container['organizationPolicyAssignmentId'] = $organizationPolicyAssignmentId;
         return $this;
     }
 

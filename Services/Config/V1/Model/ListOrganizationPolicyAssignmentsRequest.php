@@ -21,6 +21,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     /**
     * Array of property to type mappings. Used for (de)serialization
     * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * organizationPolicyAssignmentName  组织合规规则名称。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -29,6 +30,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     */
     protected static $openAPITypes = [
             'organizationId' => 'string',
+            'organizationPolicyAssignmentId' => 'string',
             'organizationPolicyAssignmentName' => 'string',
             'limit' => 'int',
             'marker' => 'string'
@@ -37,6 +39,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     /**
     * Array of property to format mappings. Used for (de)serialization
     * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * organizationPolicyAssignmentName  组织合规规则名称。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -45,6 +48,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     */
     protected static $openAPIFormats = [
         'organizationId' => null,
+        'organizationPolicyAssignmentId' => null,
         'organizationPolicyAssignmentName' => null,
         'limit' => 'int32',
         'marker' => null
@@ -74,6 +78,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * organizationPolicyAssignmentName  组织合规规则名称。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -82,6 +87,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     */
     protected static $attributeMap = [
             'organizationId' => 'organization_id',
+            'organizationPolicyAssignmentId' => 'organization_policy_assignment_id',
             'organizationPolicyAssignmentName' => 'organization_policy_assignment_name',
             'limit' => 'limit',
             'marker' => 'marker'
@@ -90,6 +96,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * organizationPolicyAssignmentName  组织合规规则名称。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -98,6 +105,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     */
     protected static $setters = [
             'organizationId' => 'setOrganizationId',
+            'organizationPolicyAssignmentId' => 'setOrganizationPolicyAssignmentId',
             'organizationPolicyAssignmentName' => 'setOrganizationPolicyAssignmentName',
             'limit' => 'setLimit',
             'marker' => 'setMarker'
@@ -106,6 +114,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID
     * organizationPolicyAssignmentName  组织合规规则名称。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
@@ -114,6 +123,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     */
     protected static $getters = [
             'organizationId' => 'getOrganizationId',
+            'organizationPolicyAssignmentId' => 'getOrganizationPolicyAssignmentId',
             'organizationPolicyAssignmentName' => 'getOrganizationPolicyAssignmentName',
             'limit' => 'getLimit',
             'marker' => 'getMarker'
@@ -178,6 +188,7 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     public function __construct(array $data = null)
     {
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
+        $this->container['organizationPolicyAssignmentId'] = isset($data['organizationPolicyAssignmentId']) ? $data['organizationPolicyAssignmentId'] : null;
         $this->container['organizationPolicyAssignmentName'] = isset($data['organizationPolicyAssignmentName']) ? $data['organizationPolicyAssignmentName'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
@@ -199,6 +210,12 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
             }
             if (!preg_match("/^o-[0-9a-z]{10,32}$/", $this->container['organizationId'])) {
                 $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^o-[0-9a-z]{10,32}$/.";
+            }
+            if (!is_null($this->container['organizationPolicyAssignmentId']) && (mb_strlen($this->container['organizationPolicyAssignmentId']) > 512)) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['organizationPolicyAssignmentId']) && !preg_match("/^[a-zA-Z\\d]+/", $this->container['organizationPolicyAssignmentId'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', must be conform to the pattern /^[a-zA-Z\\d]+/.";
             }
             if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";
@@ -256,6 +273,30 @@ class ListOrganizationPolicyAssignmentsRequest implements ModelInterface, ArrayA
     public function setOrganizationId($organizationId)
     {
         $this->container['organizationId'] = $organizationId;
+        return $this;
+    }
+
+    /**
+    * Gets organizationPolicyAssignmentId
+    *  组织合规规则ID
+    *
+    * @return string|null
+    */
+    public function getOrganizationPolicyAssignmentId()
+    {
+        return $this->container['organizationPolicyAssignmentId'];
+    }
+
+    /**
+    * Sets organizationPolicyAssignmentId
+    *
+    * @param string|null $organizationPolicyAssignmentId 组织合规规则ID
+    *
+    * @return $this
+    */
+    public function setOrganizationPolicyAssignmentId($organizationPolicyAssignmentId)
+    {
+        $this->container['organizationPolicyAssignmentId'] = $organizationPolicyAssignmentId;
         return $this;
     }
 

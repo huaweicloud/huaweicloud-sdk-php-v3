@@ -59,8 +59,8 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
             'pyFiles' => 'string[]',
             'files' => 'string[]',
             'modules' => 'string[]',
-            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\SparkJobResource[]',
-            'groups' => '\HuaweiCloud\SDK\Dli\V1\Model\SparkJobGroup[]',
+            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\JobResource[]',
+            'groups' => '\HuaweiCloud\SDK\Dli\V1\Model\JobResourcesGroup[]',
             'conf' => 'map[string,object]',
             'name' => 'string',
             'driverMemory' => 'string',
@@ -698,7 +698,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * Gets resources
     *  JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\SparkJobResource[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\JobResource[]|null
     */
     public function getResources()
     {
@@ -708,7 +708,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\SparkJobResource[]|null $resources JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\JobResource[]|null $resources JSON对象列表，填写用户已上传到队列的类型为JSON的资源包名和类型。
     *
     * @return $this
     */
@@ -722,7 +722,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     * Gets groups
     *  JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\SparkJobGroup[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\JobResourcesGroup[]|null
     */
     public function getGroups()
     {
@@ -732,7 +732,7 @@ class CreateSparkJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\SparkJobGroup[]|null $groups JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\JobResourcesGroup[]|null $groups JSON对象列表，填写用户组类型资源，格式详见请求示例。resources中的name未进行type校验，只要此分组中存在这个名字的包即可。
     *
     * @return $this
     */

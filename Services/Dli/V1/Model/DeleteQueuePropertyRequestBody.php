@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Dli\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RegisterServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
+class DeleteQueuePropertyRequestBody implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,24 +16,26 @@ class RegisterServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RegisterServerAutoRecoveryResponse';
+    protected static $openAPIModelName = 'DeleteQueuePropertyRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'keys' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'keys' => null
     ];
 
     /**
@@ -60,29 +61,32 @@ class RegisterServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'keys' => 'keys'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
     *
     * @var string[]
     */
     protected static $setters = [
+            'keys' => 'setKeys'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
     *
     * @var string[]
     */
     protected static $getters = [
+            'keys' => 'getKeys'
     ];
 
     /**
@@ -143,6 +147,7 @@ class RegisterServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['keys'] = isset($data['keys']) ? $data['keys'] : null;
     }
 
     /**
@@ -153,6 +158,9 @@ class RegisterServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['keys'] === null) {
+            $invalidProperties[] = "'keys' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -165,6 +173,30 @@ class RegisterServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets keys
+    *  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    *
+    * @return string[]
+    */
+    public function getKeys()
+    {
+        return $this->container['keys'];
+    }
+
+    /**
+    * Sets keys
+    *
+    * @param string[] $keys 待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    *
+    * @return $this
+    */
+    public function setKeys($keys)
+    {
+        $this->container['keys'] = $keys;
+        return $this;
     }
 
     /**

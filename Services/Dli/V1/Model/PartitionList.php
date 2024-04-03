@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayAccess
+class PartitionList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class CreateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateQueuePropertyRequestBody_properties';
+    protected static $openAPIModelName = 'PartitionList';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * computeEngineMaxInstance  队列能启动的最大spark driver数量
-    * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
-    * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * totalCount  总个数
+    * partitionInfos  分区信息列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'computeEngineMaxInstance' => 'int',
-            'jobMaxConcurrent' => 'int',
-            'computeEngineMaxPrefetchInstance' => 'int'
+            'totalCount' => 'int',
+            'partitionInfos' => '\HuaweiCloud\SDK\Dli\V1\Model\Partition[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * computeEngineMaxInstance  队列能启动的最大spark driver数量
-    * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
-    * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * totalCount  总个数
+    * partitionInfos  分区信息列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'computeEngineMaxInstance' => 'int32',
-        'jobMaxConcurrent' => 'int32',
-        'computeEngineMaxPrefetchInstance' => 'int32'
+        'totalCount' => 'int64',
+        'partitionInfos' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class CreateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * computeEngineMaxInstance  队列能启动的最大spark driver数量
-    * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
-    * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * totalCount  总个数
+    * partitionInfos  分区信息列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'computeEngineMaxInstance' => 'computeEngine.maxInstance',
-            'jobMaxConcurrent' => 'job.maxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'computeEngine.maxPrefetchInstance'
+            'totalCount' => 'total_count',
+            'partitionInfos' => 'partition_infos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * computeEngineMaxInstance  队列能启动的最大spark driver数量
-    * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
-    * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * totalCount  总个数
+    * partitionInfos  分区信息列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'computeEngineMaxInstance' => 'setComputeEngineMaxInstance',
-            'jobMaxConcurrent' => 'setJobMaxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'setComputeEngineMaxPrefetchInstance'
+            'totalCount' => 'setTotalCount',
+            'partitionInfos' => 'setPartitionInfos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * computeEngineMaxInstance  队列能启动的最大spark driver数量
-    * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
-    * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
+    * totalCount  总个数
+    * partitionInfos  分区信息列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'computeEngineMaxInstance' => 'getComputeEngineMaxInstance',
-            'jobMaxConcurrent' => 'getJobMaxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'getComputeEngineMaxPrefetchInstance'
+            'totalCount' => 'getTotalCount',
+            'partitionInfos' => 'getPartitionInfos'
     ];
 
     /**
@@ -167,9 +157,8 @@ class CreateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     */
     public function __construct(array $data = null)
     {
-        $this->container['computeEngineMaxInstance'] = isset($data['computeEngineMaxInstance']) ? $data['computeEngineMaxInstance'] : null;
-        $this->container['jobMaxConcurrent'] = isset($data['jobMaxConcurrent']) ? $data['jobMaxConcurrent'] : null;
-        $this->container['computeEngineMaxPrefetchInstance'] = isset($data['computeEngineMaxPrefetchInstance']) ? $data['computeEngineMaxPrefetchInstance'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['partitionInfos'] = isset($data['partitionInfos']) ? $data['partitionInfos'] : null;
     }
 
     /**
@@ -180,12 +169,12 @@ class CreateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['jobMaxConcurrent']) && ($this->container['jobMaxConcurrent'] > 32)) {
-                $invalidProperties[] = "invalid value for 'jobMaxConcurrent', must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['jobMaxConcurrent']) && ($this->container['jobMaxConcurrent'] < 1)) {
-                $invalidProperties[] = "invalid value for 'jobMaxConcurrent', must be bigger than or equal to 1.";
-            }
+        if ($this->container['totalCount'] === null) {
+            $invalidProperties[] = "'totalCount' can't be null";
+        }
+        if ($this->container['partitionInfos'] === null) {
+            $invalidProperties[] = "'partitionInfos' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -201,74 +190,50 @@ class CreateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     }
 
     /**
-    * Gets computeEngineMaxInstance
-    *  队列能启动的最大spark driver数量
+    * Gets totalCount
+    *  总个数
     *
-    * @return int|null
+    * @return int
     */
-    public function getComputeEngineMaxInstance()
+    public function getTotalCount()
     {
-        return $this->container['computeEngineMaxInstance'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets computeEngineMaxInstance
+    * Sets totalCount
     *
-    * @param int|null $computeEngineMaxInstance 队列能启动的最大spark driver数量
+    * @param int $totalCount 总个数
     *
     * @return $this
     */
-    public function setComputeEngineMaxInstance($computeEngineMaxInstance)
+    public function setTotalCount($totalCount)
     {
-        $this->container['computeEngineMaxInstance'] = $computeEngineMaxInstance;
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 
     /**
-    * Gets jobMaxConcurrent
-    *  单个spark driver能同时运行的最大任务数量
+    * Gets partitionInfos
+    *  分区信息列表
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\Partition[]
     */
-    public function getJobMaxConcurrent()
+    public function getPartitionInfos()
     {
-        return $this->container['jobMaxConcurrent'];
+        return $this->container['partitionInfos'];
     }
 
     /**
-    * Sets jobMaxConcurrent
+    * Sets partitionInfos
     *
-    * @param int|null $jobMaxConcurrent 单个spark driver能同时运行的最大任务数量
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\Partition[] $partitionInfos 分区信息列表
     *
     * @return $this
     */
-    public function setJobMaxConcurrent($jobMaxConcurrent)
+    public function setPartitionInfos($partitionInfos)
     {
-        $this->container['jobMaxConcurrent'] = $jobMaxConcurrent;
-        return $this;
-    }
-
-    /**
-    * Gets computeEngineMaxPrefetchInstance
-    *  队列预先启动的最大spark driver数量
-    *
-    * @return int|null
-    */
-    public function getComputeEngineMaxPrefetchInstance()
-    {
-        return $this->container['computeEngineMaxPrefetchInstance'];
-    }
-
-    /**
-    * Sets computeEngineMaxPrefetchInstance
-    *
-    * @param int|null $computeEngineMaxPrefetchInstance 队列预先启动的最大spark driver数量
-    *
-    * @return $this
-    */
-    public function setComputeEngineMaxPrefetchInstance($computeEngineMaxPrefetchInstance)
-    {
-        $this->container['computeEngineMaxPrefetchInstance'] = $computeEngineMaxPrefetchInstance;
+        $this->container['partitionInfos'] = $partitionInfos;
         return $this;
     }
 

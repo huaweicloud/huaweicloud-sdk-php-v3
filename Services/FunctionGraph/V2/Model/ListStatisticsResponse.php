@@ -23,6 +23,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * count  月度调用次数
     * gbs  月度资源用量
+    * gpuGbs  月度gpu资源用量
     * statistics  statistics
     *
     * @var string[]
@@ -30,6 +31,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'count' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\MonthUsed[]',
             'gbs' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\MonthUsed[]',
+            'gpuGbs' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\MonthUsed[]',
             'statistics' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\ListFunctionStatisticsResponseBody'
     ];
 
@@ -37,6 +39,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * count  月度调用次数
     * gbs  月度资源用量
+    * gpuGbs  月度gpu资源用量
     * statistics  statistics
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'count' => null,
         'gbs' => null,
+        'gpuGbs' => null,
         'statistics' => null
     ];
 
@@ -72,6 +76,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * count  月度调用次数
     * gbs  月度资源用量
+    * gpuGbs  月度gpu资源用量
     * statistics  statistics
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'count' => 'count',
             'gbs' => 'gbs',
+            'gpuGbs' => 'gpu_gbs',
             'statistics' => 'statistics'
     ];
 
@@ -86,6 +92,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * count  月度调用次数
     * gbs  月度资源用量
+    * gpuGbs  月度gpu资源用量
     * statistics  statistics
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'count' => 'setCount',
             'gbs' => 'setGbs',
+            'gpuGbs' => 'setGpuGbs',
             'statistics' => 'setStatistics'
     ];
 
@@ -100,6 +108,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * count  月度调用次数
     * gbs  月度资源用量
+    * gpuGbs  月度gpu资源用量
     * statistics  statistics
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'count' => 'getCount',
             'gbs' => 'getGbs',
+            'gpuGbs' => 'getGpuGbs',
             'statistics' => 'getStatistics'
     ];
 
@@ -170,6 +180,7 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['gbs'] = isset($data['gbs']) ? $data['gbs'] : null;
+        $this->container['gpuGbs'] = isset($data['gpuGbs']) ? $data['gpuGbs'] : null;
         $this->container['statistics'] = isset($data['statistics']) ? $data['statistics'] : null;
     }
 
@@ -240,6 +251,30 @@ class ListStatisticsResponse implements ModelInterface, ArrayAccess
     public function setGbs($gbs)
     {
         $this->container['gbs'] = $gbs;
+        return $this;
+    }
+
+    /**
+    * Gets gpuGbs
+    *  月度gpu资源用量
+    *
+    * @return \HuaweiCloud\SDK\FunctionGraph\V2\Model\MonthUsed[]|null
+    */
+    public function getGpuGbs()
+    {
+        return $this->container['gpuGbs'];
+    }
+
+    /**
+    * Sets gpuGbs
+    *
+    * @param \HuaweiCloud\SDK\FunctionGraph\V2\Model\MonthUsed[]|null $gpuGbs 月度gpu资源用量
+    *
+    * @return $this
+    */
+    public function setGpuGbs($gpuGbs)
+    {
+        $this->container['gpuGbs'] = $gpuGbs;
         return $this;
     }
 

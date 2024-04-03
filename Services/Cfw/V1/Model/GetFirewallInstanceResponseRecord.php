@@ -39,6 +39,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * resourceId  资源id
     * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'fwInstanceName' => 'string',
             'enterpriseProjectId' => 'string',
             'resourceId' => 'string',
-            'supportUrlFiltering' => 'bool'
+            'supportUrlFiltering' => 'bool',
+            'tags' => 'string'
     ];
 
     /**
@@ -85,6 +87,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * resourceId  资源id
     * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         'fwInstanceName' => null,
         'enterpriseProjectId' => null,
         'resourceId' => null,
-        'supportUrlFiltering' => null
+        'supportUrlFiltering' => null,
+        'tags' => null
     ];
 
     /**
@@ -152,6 +156,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * resourceId  资源id
     * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'fwInstanceName' => 'fw_instance_name',
             'enterpriseProjectId' => 'enterprise_project_id',
             'resourceId' => 'resource_id',
-            'supportUrlFiltering' => 'support_url_filtering'
+            'supportUrlFiltering' => 'support_url_filtering',
+            'tags' => 'tags'
     ];
 
     /**
@@ -198,6 +204,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * resourceId  资源id
     * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'fwInstanceName' => 'setFwInstanceName',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'resourceId' => 'setResourceId',
-            'supportUrlFiltering' => 'setSupportUrlFiltering'
+            'supportUrlFiltering' => 'setSupportUrlFiltering',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -244,6 +252,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * resourceId  资源id
     * supportUrlFiltering  是否支持url过滤，true表示是，false表示不是
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
             'fwInstanceName' => 'getFwInstanceName',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'resourceId' => 'getResourceId',
-            'supportUrlFiltering' => 'getSupportUrlFiltering'
+            'supportUrlFiltering' => 'getSupportUrlFiltering',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -383,6 +393,7 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['supportUrlFiltering'] = isset($data['supportUrlFiltering']) ? $data['supportUrlFiltering'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -868,6 +879,30 @@ class GetFirewallInstanceResponseRecord implements ModelInterface, ArrayAccess
     public function setSupportUrlFiltering($supportUrlFiltering)
     {
         $this->container['supportUrlFiltering'] = $supportUrlFiltering;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

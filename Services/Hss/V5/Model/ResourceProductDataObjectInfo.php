@@ -27,7 +27,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'chargingMode' => 'object',
+            'chargingMode' => 'string',
             'isAutoRenew' => 'bool',
             'versionInfo' => 'map[string,\HuaweiCloud\SDK\Hss\V5\Model\ShowPeriodResponseInfo[]]'
     ];
@@ -180,6 +180,12 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['chargingMode']) && (mb_strlen($this->container['chargingMode']) > 32)) {
+                $invalidProperties[] = "invalid value for 'chargingMode', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['chargingMode']) && (mb_strlen($this->container['chargingMode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chargingMode', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -198,7 +204,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     * Gets chargingMode
     *  计费模式   - packet_cycle : 包周期   - on_demand : 按需
     *
-    * @return object|null
+    * @return string|null
     */
     public function getChargingMode()
     {
@@ -208,7 +214,7 @@ class ResourceProductDataObjectInfo implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param object|null $chargingMode 计费模式   - packet_cycle : 包周期   - on_demand : 按需
+    * @param string|null $chargingMode 计费模式   - packet_cycle : 包周期   - on_demand : 按需
     *
     * @return $this
     */

@@ -27,7 +27,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'totalCount' => 'int',
-            'jobs' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobInfo[]'
+            'jobs' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJob[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
     * Gets jobs
     *  作业信息
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobInfo[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkJob[]|null
     */
     public function getJobs()
     {
@@ -221,7 +221,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
     /**
     * Sets jobs
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkJobInfo[]|null $jobs 作业信息
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkJob[]|null $jobs 作业信息
     *
     * @return $this
     */

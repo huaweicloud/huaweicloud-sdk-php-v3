@@ -20,7 +20,7 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  源类型0手工输入,1关联IP地址组,2域名
+    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     * addressType  源类型0 ipv4,1 ipv6
     * address  源IP，手动类型不能为空，自动及domain类型为空
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
@@ -33,6 +33,8 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressGroup  地址组列表
     * addressGroupNames  地址组名称列表
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组列表
     *
     * @var string[]
     */
@@ -49,12 +51,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'domainSetName' => 'string',
             'ipAddress' => 'string[]',
             'addressGroup' => 'string[]',
-            'addressGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]'
+            'addressGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]',
+            'addressSetType' => 'int',
+            'predefinedGroup' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  源类型0手工输入,1关联IP地址组,2域名
+    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     * addressType  源类型0 ipv4,1 ipv6
     * address  源IP，手动类型不能为空，自动及domain类型为空
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
@@ -67,6 +71,8 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressGroup  地址组列表
     * addressGroupNames  地址组名称列表
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组列表
     *
     * @var string[]
     */
@@ -83,7 +89,9 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
         'domainSetName' => null,
         'ipAddress' => null,
         'addressGroup' => null,
-        'addressGroupNames' => null
+        'addressGroupNames' => null,
+        'addressSetType' => 'int32',
+        'predefinedGroup' => null
     ];
 
     /**
@@ -109,7 +117,7 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  源类型0手工输入,1关联IP地址组,2域名
+    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     * addressType  源类型0 ipv4,1 ipv6
     * address  源IP，手动类型不能为空，自动及domain类型为空
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
@@ -122,6 +130,8 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressGroup  地址组列表
     * addressGroupNames  地址组名称列表
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组列表
     *
     * @var string[]
     */
@@ -138,12 +148,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'domainSetName' => 'domain_set_name',
             'ipAddress' => 'ip_address',
             'addressGroup' => 'address_group',
-            'addressGroupNames' => 'address_group_names'
+            'addressGroupNames' => 'address_group_names',
+            'addressSetType' => 'address_set_type',
+            'predefinedGroup' => 'predefined_group'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  源类型0手工输入,1关联IP地址组,2域名
+    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     * addressType  源类型0 ipv4,1 ipv6
     * address  源IP，手动类型不能为空，自动及domain类型为空
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
@@ -156,6 +168,8 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressGroup  地址组列表
     * addressGroupNames  地址组名称列表
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组列表
     *
     * @var string[]
     */
@@ -172,12 +186,14 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'domainSetName' => 'setDomainSetName',
             'ipAddress' => 'setIpAddress',
             'addressGroup' => 'setAddressGroup',
-            'addressGroupNames' => 'setAddressGroupNames'
+            'addressGroupNames' => 'setAddressGroupNames',
+            'addressSetType' => 'setAddressSetType',
+            'predefinedGroup' => 'setPredefinedGroup'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  源类型0手工输入,1关联IP地址组,2域名
+    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     * addressType  源类型0 ipv4,1 ipv6
     * address  源IP，手动类型不能为空，自动及domain类型为空
     * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
@@ -190,6 +206,8 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressGroup  地址组列表
     * addressGroupNames  地址组名称列表
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组列表
     *
     * @var string[]
     */
@@ -206,7 +224,9 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
             'domainSetName' => 'getDomainSetName',
             'ipAddress' => 'getIpAddress',
             'addressGroup' => 'getAddressGroup',
-            'addressGroupNames' => 'getAddressGroupNames'
+            'addressGroupNames' => 'getAddressGroupNames',
+            'addressSetType' => 'getAddressSetType',
+            'predefinedGroup' => 'getPredefinedGroup'
     ];
 
     /**
@@ -280,6 +300,8 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['addressGroup'] = isset($data['addressGroup']) ? $data['addressGroup'] : null;
         $this->container['addressGroupNames'] = isset($data['addressGroupNames']) ? $data['addressGroupNames'] : null;
+        $this->container['addressSetType'] = isset($data['addressSetType']) ? $data['addressSetType'] : null;
+        $this->container['predefinedGroup'] = isset($data['predefinedGroup']) ? $data['predefinedGroup'] : null;
     }
 
     /**
@@ -309,7 +331,7 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  源类型0手工输入,1关联IP地址组,2域名
+    *  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     *
     * @return int
     */
@@ -321,7 +343,7 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type 源类型0手工输入,1关联IP地址组,2域名
+    * @param int $type 源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
     *
     * @return $this
     */
@@ -616,6 +638,54 @@ class RuleAddressDto implements ModelInterface, ArrayAccess
     public function setAddressGroupNames($addressGroupNames)
     {
         $this->container['addressGroupNames'] = $addressGroupNames;
+        return $this;
+    }
+
+    /**
+    * Gets addressSetType
+    *  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    *
+    * @return int|null
+    */
+    public function getAddressSetType()
+    {
+        return $this->container['addressSetType'];
+    }
+
+    /**
+    * Sets addressSetType
+    *
+    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    *
+    * @return $this
+    */
+    public function setAddressSetType($addressSetType)
+    {
+        $this->container['addressSetType'] = $addressSetType;
+        return $this;
+    }
+
+    /**
+    * Gets predefinedGroup
+    *  预定义地址组列表
+    *
+    * @return string[]|null
+    */
+    public function getPredefinedGroup()
+    {
+        return $this->container['predefinedGroup'];
+    }
+
+    /**
+    * Sets predefinedGroup
+    *
+    * @param string[]|null $predefinedGroup 预定义地址组列表
+    *
+    * @return $this
+    */
+    public function setPredefinedGroup($predefinedGroup)
+    {
+        $this->container['predefinedGroup'] = $predefinedGroup;
         return $this;
     }
 

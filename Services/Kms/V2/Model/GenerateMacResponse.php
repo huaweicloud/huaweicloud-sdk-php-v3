@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Kms\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RegisterServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
+class GenerateMacResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,34 @@ class RegisterServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RegisterServerAutoRecoveryRequest';
+    protected static $openAPIModelName = 'GenerateMacResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverId  云服务器ID。
-    * body  body
+    * keyId  密钥ID
+    * macAlgorithm  Mac算法
+    * mac  生成的消息验证码
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serverId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerAutoRecoveryRequestBody'
+            'keyId' => 'string',
+            'macAlgorithm' => 'string',
+            'mac' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverId  云服务器ID。
-    * body  body
+    * keyId  密钥ID
+    * macAlgorithm  Mac算法
+    * mac  生成的消息验证码
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serverId' => null,
-        'body' => null
+        'keyId' => null,
+        'macAlgorithm' => null,
+        'mac' => null
     ];
 
     /**
@@ -65,38 +70,44 @@ class RegisterServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverId  云服务器ID。
-    * body  body
+    * keyId  密钥ID
+    * macAlgorithm  Mac算法
+    * mac  生成的消息验证码
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serverId' => 'server_id',
-            'body' => 'body'
+            'keyId' => 'key_id',
+            'macAlgorithm' => 'mac_algorithm',
+            'mac' => 'mac'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverId  云服务器ID。
-    * body  body
+    * keyId  密钥ID
+    * macAlgorithm  Mac算法
+    * mac  生成的消息验证码
     *
     * @var string[]
     */
     protected static $setters = [
-            'serverId' => 'setServerId',
-            'body' => 'setBody'
+            'keyId' => 'setKeyId',
+            'macAlgorithm' => 'setMacAlgorithm',
+            'mac' => 'setMac'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverId  云服务器ID。
-    * body  body
+    * keyId  密钥ID
+    * macAlgorithm  Mac算法
+    * mac  生成的消息验证码
     *
     * @var string[]
     */
     protected static $getters = [
-            'serverId' => 'getServerId',
-            'body' => 'getBody'
+            'keyId' => 'getKeyId',
+            'macAlgorithm' => 'getMacAlgorithm',
+            'mac' => 'getMac'
     ];
 
     /**
@@ -157,8 +168,9 @@ class RegisterServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
+        $this->container['macAlgorithm'] = isset($data['macAlgorithm']) ? $data['macAlgorithm'] : null;
+        $this->container['mac'] = isset($data['mac']) ? $data['mac'] : null;
     }
 
     /**
@@ -169,9 +181,12 @@ class RegisterServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['serverId'] === null) {
-            $invalidProperties[] = "'serverId' can't be null";
-        }
+            if (!is_null($this->container['keyId']) && (mb_strlen($this->container['keyId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'keyId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['keyId']) && (mb_strlen($this->container['keyId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'keyId', the character length must be bigger than or equal to 36.";
+            }
         return $invalidProperties;
     }
 
@@ -187,50 +202,74 @@ class RegisterServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serverId
-    *  云服务器ID。
+    * Gets keyId
+    *  密钥ID
     *
-    * @return string
+    * @return string|null
     */
-    public function getServerId()
+    public function getKeyId()
     {
-        return $this->container['serverId'];
+        return $this->container['keyId'];
     }
 
     /**
-    * Sets serverId
+    * Sets keyId
     *
-    * @param string $serverId 云服务器ID。
+    * @param string|null $keyId 密钥ID
     *
     * @return $this
     */
-    public function setServerId($serverId)
+    public function setKeyId($keyId)
     {
-        $this->container['serverId'] = $serverId;
+        $this->container['keyId'] = $keyId;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets macAlgorithm
+    *  Mac算法
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerAutoRecoveryRequestBody|null
+    * @return string|null
     */
-    public function getBody()
+    public function getMacAlgorithm()
     {
-        return $this->container['body'];
+        return $this->container['macAlgorithm'];
     }
 
     /**
-    * Sets body
+    * Sets macAlgorithm
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\RegisterServerAutoRecoveryRequestBody|null $body body
+    * @param string|null $macAlgorithm Mac算法
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setMacAlgorithm($macAlgorithm)
     {
-        $this->container['body'] = $body;
+        $this->container['macAlgorithm'] = $macAlgorithm;
+        return $this;
+    }
+
+    /**
+    * Gets mac
+    *  生成的消息验证码
+    *
+    * @return string|null
+    */
+    public function getMac()
+    {
+        return $this->container['mac'];
+    }
+
+    /**
+    * Sets mac
+    *
+    * @param string|null $mac 生成的消息验证码
+    *
+    * @return $this
+    */
+    public function setMac($mac)
+    {
+        $this->container['mac'] = $mac;
         return $this;
     }
 

@@ -22,24 +22,28 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'flavorRef' => 'string',
-            'mode' => 'string'
+            'mode' => 'string',
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'flavorRef' => null,
-        'mode' => null
+        'mode' => null,
+        'cpuOptions' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'flavorRef' => 'flavorRef',
-            'mode' => 'mode'
+            'mode' => 'mode',
+            'cpuOptions' => 'cpu_options'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
     protected static $setters = [
             'flavorRef' => 'setFlavorRef',
-            'mode' => 'setMode'
+            'mode' => 'setMode',
+            'cpuOptions' => 'setCpuOptions'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * flavorRef  变更后的云服务器规格ID。  可通过[查询云服务器规格变更支持列表](https://support.huaweicloud.com/api-ecs/ecs_02_0402.html)接口查询允许变更的规格列表。
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
     protected static $getters = [
             'flavorRef' => 'getFlavorRef',
-            'mode' => 'getMode'
+            'mode' => 'getMode',
+            'cpuOptions' => 'getCpuOptions'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
     {
         $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class ResizePostPaidServerOption implements ModelInterface, ArrayAccess
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets cpuOptions
+    *  cpuOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null
+    */
+    public function getCpuOptions()
+    {
+        return $this->container['cpuOptions'];
+    }
+
+    /**
+    * Sets cpuOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null $cpuOptions cpuOptions
+    *
+    * @return $this
+    */
+    public function setCpuOptions($cpuOptions)
+    {
+        $this->container['cpuOptions'] = $cpuOptions;
         return $this;
     }
 

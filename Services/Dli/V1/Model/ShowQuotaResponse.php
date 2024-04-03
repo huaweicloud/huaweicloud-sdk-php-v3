@@ -21,21 +21,25 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * isSuccess  是否成功
     * quotas  quotas
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'quotas' => '\HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaResponseBodyQuotas'
+            'isSuccess' => 'bool',
+            'quotas' => '\HuaweiCloud\SDK\Dli\V1\Model\QuotaList'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * isSuccess  是否成功
     * quotas  quotas
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'isSuccess' => null,
         'quotas' => null
     ];
 
@@ -62,31 +66,37 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * isSuccess  是否成功
     * quotas  quotas
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'quotas' => 'Quotas'
+            'isSuccess' => 'is_success',
+            'quotas' => 'quotas'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * isSuccess  是否成功
     * quotas  quotas
     *
     * @var string[]
     */
     protected static $setters = [
+            'isSuccess' => 'setIsSuccess',
             'quotas' => 'setQuotas'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * isSuccess  是否成功
     * quotas  quotas
     *
     * @var string[]
     */
     protected static $getters = [
+            'isSuccess' => 'getIsSuccess',
             'quotas' => 'getQuotas'
     ];
 
@@ -148,6 +158,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
         $this->container['quotas'] = isset($data['quotas']) ? $data['quotas'] : null;
     }
 
@@ -174,10 +185,34 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isSuccess
+    *  是否成功
+    *
+    * @return bool|null
+    */
+    public function getIsSuccess()
+    {
+        return $this->container['isSuccess'];
+    }
+
+    /**
+    * Sets isSuccess
+    *
+    * @param bool|null $isSuccess 是否成功
+    *
+    * @return $this
+    */
+    public function setIsSuccess($isSuccess)
+    {
+        $this->container['isSuccess'] = $isSuccess;
+        return $this;
+    }
+
+    /**
     * Gets quotas
     *  quotas
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaResponseBodyQuotas|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\QuotaList|null
     */
     public function getQuotas()
     {
@@ -187,7 +222,7 @@ class ShowQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets quotas
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\ShowQuotaResponseBodyQuotas|null $quotas quotas
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QuotaList|null $quotas quotas
     *
     * @return $this
     */

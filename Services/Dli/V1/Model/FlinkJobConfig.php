@@ -41,6 +41,20 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executorNumber  作业使用计算节点个数
     * executorCuNumber  计算节点cu数
     * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
+    * runtimeConfig  Flink作业运行时自定义优化参数。
+    * graphEditorEnabled  流图编辑开关。默认为“false。
+    * graphEditorData  流图编辑数据。默认为null。
+    * resumeMaxNum  异常重试最大次数。-1代表无限。
+    * checkpointPath  检查点保存路径。
+    * configUrl  用户上传的config包OBS路径。
+    * tmCus  单TM所占CU数。
+    * tmSlotNum  单TM Slot数。
+    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
+    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
+    * realCuNumber  realCuNumber
     *
     * @var string[]
     */
@@ -65,7 +79,21 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'string[]',
             'executorNumber' => 'int',
             'executorCuNumber' => 'int',
-            'resumeCheckpoint' => 'bool'
+            'resumeCheckpoint' => 'bool',
+            'runtimeConfig' => 'string',
+            'graphEditorEnabled' => 'bool',
+            'graphEditorData' => 'string',
+            'resumeMaxNum' => 'int',
+            'checkpointPath' => 'string',
+            'configUrl' => 'string',
+            'tmCus' => 'int',
+            'tmSlotNum' => 'int',
+            'image' => 'string',
+            'feature' => 'string',
+            'flinkVersion' => 'string',
+            'operatorConfig' => 'string',
+            'staticEstimatorConfig' => 'string',
+            'realCuNumber' => 'int'
     ];
 
     /**
@@ -91,6 +119,20 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executorNumber  作业使用计算节点个数
     * executorCuNumber  计算节点cu数
     * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
+    * runtimeConfig  Flink作业运行时自定义优化参数。
+    * graphEditorEnabled  流图编辑开关。默认为“false。
+    * graphEditorData  流图编辑数据。默认为null。
+    * resumeMaxNum  异常重试最大次数。-1代表无限。
+    * checkpointPath  检查点保存路径。
+    * configUrl  用户上传的config包OBS路径。
+    * tmCus  单TM所占CU数。
+    * tmSlotNum  单TM Slot数。
+    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
+    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
+    * realCuNumber  realCuNumber
     *
     * @var string[]
     */
@@ -115,7 +157,21 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         'dependencyFiles' => null,
         'executorNumber' => 'int32',
         'executorCuNumber' => 'int32',
-        'resumeCheckpoint' => null
+        'resumeCheckpoint' => null,
+        'runtimeConfig' => null,
+        'graphEditorEnabled' => null,
+        'graphEditorData' => null,
+        'resumeMaxNum' => 'int64',
+        'checkpointPath' => null,
+        'configUrl' => null,
+        'tmCus' => 'int32',
+        'tmSlotNum' => 'int32',
+        'image' => null,
+        'feature' => null,
+        'flinkVersion' => null,
+        'operatorConfig' => null,
+        'staticEstimatorConfig' => null,
+        'realCuNumber' => 'int32'
     ];
 
     /**
@@ -162,6 +218,20 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executorNumber  作业使用计算节点个数
     * executorCuNumber  计算节点cu数
     * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
+    * runtimeConfig  Flink作业运行时自定义优化参数。
+    * graphEditorEnabled  流图编辑开关。默认为“false。
+    * graphEditorData  流图编辑数据。默认为null。
+    * resumeMaxNum  异常重试最大次数。-1代表无限。
+    * checkpointPath  检查点保存路径。
+    * configUrl  用户上传的config包OBS路径。
+    * tmCus  单TM所占CU数。
+    * tmSlotNum  单TM Slot数。
+    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
+    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
+    * realCuNumber  realCuNumber
     *
     * @var string[]
     */
@@ -186,7 +256,21 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'dependency_files',
             'executorNumber' => 'executor_number',
             'executorCuNumber' => 'executor_cu_number',
-            'resumeCheckpoint' => 'resume_checkpoint'
+            'resumeCheckpoint' => 'resume_checkpoint',
+            'runtimeConfig' => 'runtime_config',
+            'graphEditorEnabled' => 'graph_editor_enabled',
+            'graphEditorData' => 'graph_editor_data',
+            'resumeMaxNum' => 'resume_max_num',
+            'checkpointPath' => 'checkpoint_path',
+            'configUrl' => 'config_url',
+            'tmCus' => 'tm_cus',
+            'tmSlotNum' => 'tm_slot_num',
+            'image' => 'image',
+            'feature' => 'feature',
+            'flinkVersion' => 'flink_version',
+            'operatorConfig' => 'operator_config',
+            'staticEstimatorConfig' => 'static_estimator_config',
+            'realCuNumber' => 'real_cu_number'
     ];
 
     /**
@@ -212,6 +296,20 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executorNumber  作业使用计算节点个数
     * executorCuNumber  计算节点cu数
     * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
+    * runtimeConfig  Flink作业运行时自定义优化参数。
+    * graphEditorEnabled  流图编辑开关。默认为“false。
+    * graphEditorData  流图编辑数据。默认为null。
+    * resumeMaxNum  异常重试最大次数。-1代表无限。
+    * checkpointPath  检查点保存路径。
+    * configUrl  用户上传的config包OBS路径。
+    * tmCus  单TM所占CU数。
+    * tmSlotNum  单TM Slot数。
+    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
+    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
+    * realCuNumber  realCuNumber
     *
     * @var string[]
     */
@@ -236,7 +334,21 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'setDependencyFiles',
             'executorNumber' => 'setExecutorNumber',
             'executorCuNumber' => 'setExecutorCuNumber',
-            'resumeCheckpoint' => 'setResumeCheckpoint'
+            'resumeCheckpoint' => 'setResumeCheckpoint',
+            'runtimeConfig' => 'setRuntimeConfig',
+            'graphEditorEnabled' => 'setGraphEditorEnabled',
+            'graphEditorData' => 'setGraphEditorData',
+            'resumeMaxNum' => 'setResumeMaxNum',
+            'checkpointPath' => 'setCheckpointPath',
+            'configUrl' => 'setConfigUrl',
+            'tmCus' => 'setTmCus',
+            'tmSlotNum' => 'setTmSlotNum',
+            'image' => 'setImage',
+            'feature' => 'setFeature',
+            'flinkVersion' => 'setFlinkVersion',
+            'operatorConfig' => 'setOperatorConfig',
+            'staticEstimatorConfig' => 'setStaticEstimatorConfig',
+            'realCuNumber' => 'setRealCuNumber'
     ];
 
     /**
@@ -262,6 +374,20 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     * executorNumber  作业使用计算节点个数
     * executorCuNumber  计算节点cu数
     * resumeCheckpoint  异常自动重启时，是否从最新checkpoint恢复，默认false
+    * runtimeConfig  Flink作业运行时自定义优化参数。
+    * graphEditorEnabled  流图编辑开关。默认为“false。
+    * graphEditorData  流图编辑数据。默认为null。
+    * resumeMaxNum  异常重试最大次数。-1代表无限。
+    * checkpointPath  检查点保存路径。
+    * configUrl  用户上传的config包OBS路径。
+    * tmCus  单TM所占CU数。
+    * tmSlotNum  单TM Slot数。
+    * image  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    * feature  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    * flinkVersion  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    * operatorConfig  各算子并行度参数，以json的形式展示各算子id和并行度。
+    * staticEstimatorConfig  静态流图资源预估参数，以json的形式展示。
+    * realCuNumber  realCuNumber
     *
     * @var string[]
     */
@@ -286,7 +412,21 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
             'dependencyFiles' => 'getDependencyFiles',
             'executorNumber' => 'getExecutorNumber',
             'executorCuNumber' => 'getExecutorCuNumber',
-            'resumeCheckpoint' => 'getResumeCheckpoint'
+            'resumeCheckpoint' => 'getResumeCheckpoint',
+            'runtimeConfig' => 'getRuntimeConfig',
+            'graphEditorEnabled' => 'getGraphEditorEnabled',
+            'graphEditorData' => 'getGraphEditorData',
+            'resumeMaxNum' => 'getResumeMaxNum',
+            'checkpointPath' => 'getCheckpointPath',
+            'configUrl' => 'getConfigUrl',
+            'tmCus' => 'getTmCus',
+            'tmSlotNum' => 'getTmSlotNum',
+            'image' => 'getImage',
+            'feature' => 'getFeature',
+            'flinkVersion' => 'getFlinkVersion',
+            'operatorConfig' => 'getOperatorConfig',
+            'staticEstimatorConfig' => 'getStaticEstimatorConfig',
+            'realCuNumber' => 'getRealCuNumber'
     ];
 
     /**
@@ -368,6 +508,20 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         $this->container['executorNumber'] = isset($data['executorNumber']) ? $data['executorNumber'] : null;
         $this->container['executorCuNumber'] = isset($data['executorCuNumber']) ? $data['executorCuNumber'] : null;
         $this->container['resumeCheckpoint'] = isset($data['resumeCheckpoint']) ? $data['resumeCheckpoint'] : null;
+        $this->container['runtimeConfig'] = isset($data['runtimeConfig']) ? $data['runtimeConfig'] : null;
+        $this->container['graphEditorEnabled'] = isset($data['graphEditorEnabled']) ? $data['graphEditorEnabled'] : null;
+        $this->container['graphEditorData'] = isset($data['graphEditorData']) ? $data['graphEditorData'] : null;
+        $this->container['resumeMaxNum'] = isset($data['resumeMaxNum']) ? $data['resumeMaxNum'] : null;
+        $this->container['checkpointPath'] = isset($data['checkpointPath']) ? $data['checkpointPath'] : null;
+        $this->container['configUrl'] = isset($data['configUrl']) ? $data['configUrl'] : null;
+        $this->container['tmCus'] = isset($data['tmCus']) ? $data['tmCus'] : null;
+        $this->container['tmSlotNum'] = isset($data['tmSlotNum']) ? $data['tmSlotNum'] : null;
+        $this->container['image'] = isset($data['image']) ? $data['image'] : null;
+        $this->container['feature'] = isset($data['feature']) ? $data['feature'] : null;
+        $this->container['flinkVersion'] = isset($data['flinkVersion']) ? $data['flinkVersion'] : null;
+        $this->container['operatorConfig'] = isset($data['operatorConfig']) ? $data['operatorConfig'] : null;
+        $this->container['staticEstimatorConfig'] = isset($data['staticEstimatorConfig']) ? $data['staticEstimatorConfig'] : null;
+        $this->container['realCuNumber'] = isset($data['realCuNumber']) ? $data['realCuNumber'] : null;
     }
 
     /**
@@ -905,6 +1059,342 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
     public function setResumeCheckpoint($resumeCheckpoint)
     {
         $this->container['resumeCheckpoint'] = $resumeCheckpoint;
+        return $this;
+    }
+
+    /**
+    * Gets runtimeConfig
+    *  Flink作业运行时自定义优化参数。
+    *
+    * @return string|null
+    */
+    public function getRuntimeConfig()
+    {
+        return $this->container['runtimeConfig'];
+    }
+
+    /**
+    * Sets runtimeConfig
+    *
+    * @param string|null $runtimeConfig Flink作业运行时自定义优化参数。
+    *
+    * @return $this
+    */
+    public function setRuntimeConfig($runtimeConfig)
+    {
+        $this->container['runtimeConfig'] = $runtimeConfig;
+        return $this;
+    }
+
+    /**
+    * Gets graphEditorEnabled
+    *  流图编辑开关。默认为“false。
+    *
+    * @return bool|null
+    */
+    public function getGraphEditorEnabled()
+    {
+        return $this->container['graphEditorEnabled'];
+    }
+
+    /**
+    * Sets graphEditorEnabled
+    *
+    * @param bool|null $graphEditorEnabled 流图编辑开关。默认为“false。
+    *
+    * @return $this
+    */
+    public function setGraphEditorEnabled($graphEditorEnabled)
+    {
+        $this->container['graphEditorEnabled'] = $graphEditorEnabled;
+        return $this;
+    }
+
+    /**
+    * Gets graphEditorData
+    *  流图编辑数据。默认为null。
+    *
+    * @return string|null
+    */
+    public function getGraphEditorData()
+    {
+        return $this->container['graphEditorData'];
+    }
+
+    /**
+    * Sets graphEditorData
+    *
+    * @param string|null $graphEditorData 流图编辑数据。默认为null。
+    *
+    * @return $this
+    */
+    public function setGraphEditorData($graphEditorData)
+    {
+        $this->container['graphEditorData'] = $graphEditorData;
+        return $this;
+    }
+
+    /**
+    * Gets resumeMaxNum
+    *  异常重试最大次数。-1代表无限。
+    *
+    * @return int|null
+    */
+    public function getResumeMaxNum()
+    {
+        return $this->container['resumeMaxNum'];
+    }
+
+    /**
+    * Sets resumeMaxNum
+    *
+    * @param int|null $resumeMaxNum 异常重试最大次数。-1代表无限。
+    *
+    * @return $this
+    */
+    public function setResumeMaxNum($resumeMaxNum)
+    {
+        $this->container['resumeMaxNum'] = $resumeMaxNum;
+        return $this;
+    }
+
+    /**
+    * Gets checkpointPath
+    *  检查点保存路径。
+    *
+    * @return string|null
+    */
+    public function getCheckpointPath()
+    {
+        return $this->container['checkpointPath'];
+    }
+
+    /**
+    * Sets checkpointPath
+    *
+    * @param string|null $checkpointPath 检查点保存路径。
+    *
+    * @return $this
+    */
+    public function setCheckpointPath($checkpointPath)
+    {
+        $this->container['checkpointPath'] = $checkpointPath;
+        return $this;
+    }
+
+    /**
+    * Gets configUrl
+    *  用户上传的config包OBS路径。
+    *
+    * @return string|null
+    */
+    public function getConfigUrl()
+    {
+        return $this->container['configUrl'];
+    }
+
+    /**
+    * Sets configUrl
+    *
+    * @param string|null $configUrl 用户上传的config包OBS路径。
+    *
+    * @return $this
+    */
+    public function setConfigUrl($configUrl)
+    {
+        $this->container['configUrl'] = $configUrl;
+        return $this;
+    }
+
+    /**
+    * Gets tmCus
+    *  单TM所占CU数。
+    *
+    * @return int|null
+    */
+    public function getTmCus()
+    {
+        return $this->container['tmCus'];
+    }
+
+    /**
+    * Sets tmCus
+    *
+    * @param int|null $tmCus 单TM所占CU数。
+    *
+    * @return $this
+    */
+    public function setTmCus($tmCus)
+    {
+        $this->container['tmCus'] = $tmCus;
+        return $this;
+    }
+
+    /**
+    * Gets tmSlotNum
+    *  单TM Slot数。
+    *
+    * @return int|null
+    */
+    public function getTmSlotNum()
+    {
+        return $this->container['tmSlotNum'];
+    }
+
+    /**
+    * Sets tmSlotNum
+    *
+    * @param int|null $tmSlotNum 单TM Slot数。
+    *
+    * @return $this
+    */
+    public function setTmSlotNum($tmSlotNum)
+    {
+        $this->container['tmSlotNum'] = $tmSlotNum;
+        return $this;
+    }
+
+    /**
+    * Gets image
+    *  自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    *
+    * @return string|null
+    */
+    public function getImage()
+    {
+        return $this->container['image'];
+    }
+
+    /**
+    * Sets image
+    *
+    * @param string|null $image 自定义镜像。格式为：组织名/镜像名:镜像版本。当用户设置“feature”为“custom”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用自定义的Flink镜像。
+    *
+    * @return $this
+    */
+    public function setImage($image)
+    {
+        $this->container['image'] = $image;
+        return $this;
+    }
+
+    /**
+    * Gets feature
+    *  自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    *
+    * @return string|null
+    */
+    public function getFeature()
+    {
+        return $this->container['feature'];
+    }
+
+    /**
+    * Sets feature
+    *
+    * @param string|null $feature 自定义作业特性。表示用户作业使用的Flink镜像类型。basic：表示使用DLI提供的基础Flink镜像。custom：表示使用用户自定义的Flink镜像。
+    *
+    * @return $this
+    */
+    public function setFeature($feature)
+    {
+        $this->container['feature'] = $feature;
+        return $this;
+    }
+
+    /**
+    * Gets flinkVersion
+    *  Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    *
+    * @return string|null
+    */
+    public function getFlinkVersion()
+    {
+        return $this->container['flinkVersion'];
+    }
+
+    /**
+    * Sets flinkVersion
+    *
+    * @param string|null $flinkVersion Flink版本。当用户设置“feature”为“basic”时，该参数生效。用户可通过与“feature”参数配合使用，指定作业运行使用的DLI基础Flink镜像的版本。
+    *
+    * @return $this
+    */
+    public function setFlinkVersion($flinkVersion)
+    {
+        $this->container['flinkVersion'] = $flinkVersion;
+        return $this;
+    }
+
+    /**
+    * Gets operatorConfig
+    *  各算子并行度参数，以json的形式展示各算子id和并行度。
+    *
+    * @return string|null
+    */
+    public function getOperatorConfig()
+    {
+        return $this->container['operatorConfig'];
+    }
+
+    /**
+    * Sets operatorConfig
+    *
+    * @param string|null $operatorConfig 各算子并行度参数，以json的形式展示各算子id和并行度。
+    *
+    * @return $this
+    */
+    public function setOperatorConfig($operatorConfig)
+    {
+        $this->container['operatorConfig'] = $operatorConfig;
+        return $this;
+    }
+
+    /**
+    * Gets staticEstimatorConfig
+    *  静态流图资源预估参数，以json的形式展示。
+    *
+    * @return string|null
+    */
+    public function getStaticEstimatorConfig()
+    {
+        return $this->container['staticEstimatorConfig'];
+    }
+
+    /**
+    * Sets staticEstimatorConfig
+    *
+    * @param string|null $staticEstimatorConfig 静态流图资源预估参数，以json的形式展示。
+    *
+    * @return $this
+    */
+    public function setStaticEstimatorConfig($staticEstimatorConfig)
+    {
+        $this->container['staticEstimatorConfig'] = $staticEstimatorConfig;
+        return $this;
+    }
+
+    /**
+    * Gets realCuNumber
+    *  realCuNumber
+    *
+    * @return int|null
+    */
+    public function getRealCuNumber()
+    {
+        return $this->container['realCuNumber'];
+    }
+
+    /**
+    * Sets realCuNumber
+    *
+    * @param int|null $realCuNumber realCuNumber
+    *
+    * @return $this
+    */
+    public function setRealCuNumber($realCuNumber)
+    {
+        $this->container['realCuNumber'] = $realCuNumber;
         return $this;
     }
 

@@ -22,32 +22,28 @@ class CountGlobalEipsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  本次请求的编号
-    * globalEips  全域弹性公网IP列表
-    * pageInfo  pageInfo
+    * globalEip  globalEip
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'globalEips' => '\HuaweiCloud\SDK\Geip\V3\Model\CountGlobalEips[]',
-            'pageInfo' => '\HuaweiCloud\SDK\Geip\V3\Model\ListGlobalEipsResponseBodyPageInfo',
+            'globalEip' => '\HuaweiCloud\SDK\Geip\V3\Model\CountGlobalEips',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  本次请求的编号
-    * globalEips  全域弹性公网IP列表
-    * pageInfo  pageInfo
+    * globalEip  globalEip
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'globalEips' => null,
-        'pageInfo' => null,
+        'globalEip' => null,
         'xRequestId' => null
     ];
 
@@ -75,48 +71,42 @@ class CountGlobalEipsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  本次请求的编号
-    * globalEips  全域弹性公网IP列表
-    * pageInfo  pageInfo
+    * globalEip  globalEip
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'globalEips' => 'global_eips',
-            'pageInfo' => 'page_info',
+            'globalEip' => 'global_eip',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  本次请求的编号
-    * globalEips  全域弹性公网IP列表
-    * pageInfo  pageInfo
+    * globalEip  globalEip
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'globalEips' => 'setGlobalEips',
-            'pageInfo' => 'setPageInfo',
+            'globalEip' => 'setGlobalEip',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  本次请求的编号
-    * globalEips  全域弹性公网IP列表
-    * pageInfo  pageInfo
+    * globalEip  globalEip
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'globalEips' => 'getGlobalEips',
-            'pageInfo' => 'getPageInfo',
+            'globalEip' => 'getGlobalEip',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -179,8 +169,7 @@ class CountGlobalEipsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['globalEips'] = isset($data['globalEips']) ? $data['globalEips'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['globalEip'] = isset($data['globalEip']) ? $data['globalEip'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -231,50 +220,26 @@ class CountGlobalEipsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets globalEips
-    *  全域弹性公网IP列表
+    * Gets globalEip
+    *  globalEip
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\CountGlobalEips[]|null
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\CountGlobalEips|null
     */
-    public function getGlobalEips()
+    public function getGlobalEip()
     {
-        return $this->container['globalEips'];
+        return $this->container['globalEip'];
     }
 
     /**
-    * Sets globalEips
+    * Sets globalEip
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\CountGlobalEips[]|null $globalEips 全域弹性公网IP列表
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\CountGlobalEips|null $globalEip globalEip
     *
     * @return $this
     */
-    public function setGlobalEips($globalEips)
+    public function setGlobalEip($globalEip)
     {
-        $this->container['globalEips'] = $globalEips;
-        return $this;
-    }
-
-    /**
-    * Gets pageInfo
-    *  pageInfo
-    *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\ListGlobalEipsResponseBodyPageInfo|null
-    */
-    public function getPageInfo()
-    {
-        return $this->container['pageInfo'];
-    }
-
-    /**
-    * Sets pageInfo
-    *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\ListGlobalEipsResponseBodyPageInfo|null $pageInfo pageInfo
-    *
-    * @return $this
-    */
-    public function setPageInfo($pageInfo)
-    {
-        $this->container['pageInfo'] = $pageInfo;
+        $this->container['globalEip'] = $globalEip;
         return $this;
     }
 

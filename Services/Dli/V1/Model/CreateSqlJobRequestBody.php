@@ -179,7 +179,22 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_TYPE_TRINO = 'trino';
+    const ENGINE_TYPE_SPARK = 'spark';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineTypeAllowableValues()
+    {
+        return [
+            self::ENGINE_TYPE_TRINO,
+            self::ENGINE_TYPE_SPARK,
+        ];
+    }
 
 
     /**
@@ -216,6 +231,14 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['sql'] === null) {
             $invalidProperties[] = "'sql' can't be null";
         }
+            $allowedValues = $this->getEngineTypeAllowableValues();
+                if (!is_null($this->container['engineType']) && !in_array($this->container['engineType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engineType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 

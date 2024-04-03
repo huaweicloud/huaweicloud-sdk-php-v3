@@ -20,7 +20,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程
+    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程
+    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程
+    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程
+    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程
+    * hwcpuThreads  CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @var string[]
     */
@@ -129,7 +129,22 @@ class CpuOptions implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const HWCPU_THREADS_1 = 1;
+    const HWCPU_THREADS_2 = 2;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHwcpuThreadsAllowableValues()
+    {
+        return [
+            self::HWCPU_THREADS_1,
+            self::HWCPU_THREADS_2,
+        ];
+    }
 
 
     /**
@@ -158,6 +173,14 @@ class CpuOptions implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getHwcpuThreadsAllowableValues();
+                if (!is_null($this->container['hwcpuThreads']) && !in_array($this->container['hwcpuThreads'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hwcpuThreads', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -174,7 +197,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
 
     /**
     * Gets hwcpuThreads
-    *  CPU超线程数， 决定CPU是否开启超线程
+    *  CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @return int|null
     */
@@ -186,7 +209,7 @@ class CpuOptions implements ModelInterface, ArrayAccess
     /**
     * Sets hwcpuThreads
     *
-    * @param int|null $hwcpuThreads CPU超线程数， 决定CPU是否开启超线程
+    * @param int|null $hwcpuThreads CPU超线程数， 决定CPU是否开启超线程。取值范围：1，2。  - 1: 关闭超线程。 - 2: 打开超线程。  取值不能大于flavor中的   hw:cpu_threads，并且目标flavor配置需满足 \"hw:cpu_policy\": \"dedicated\",\"hw:cpu_threads\": \"2\"需要同时满足如下条件，才能设置为“关闭超线程”  - 只能在实例创建或者resize时指定。 - 只有目标flavor的extra_specs参数： - 存在“hw:cpu_policy”并取值为“dedicated”。 - 存在“hw:cpu_threads”并取值为“2”。
     *
     * @return $this
     */

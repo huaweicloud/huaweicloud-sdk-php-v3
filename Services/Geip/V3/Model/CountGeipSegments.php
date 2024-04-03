@@ -20,7 +20,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  Geip Segment Count
+    * count  全域弹性公网IP段个数
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  Geip Segment Count
+    * count  全域弹性公网IP段个数
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  Geip Segment Count
+    * count  全域弹性公网IP段个数
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  Geip Segment Count
+    * count  全域弹性公网IP段个数
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  Geip Segment Count
+    * count  全域弹性公网IP段个数
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  Geip Segment Count
+    *  全域弹性公网IP段个数
     *
     * @return int
     */
@@ -189,7 +189,7 @@ class CountGeipSegments implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int $count Geip Segment Count
+    * @param int $count 全域弹性公网IP段个数
     *
     * @return $this
     */

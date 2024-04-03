@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SparkJobGroup implements ModelInterface, ArrayAccess
+class QuotaList implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,29 +16,25 @@ class SparkJobGroup implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SparkJobGroup';
+    protected static $openAPIModelName = 'QuotaList';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  用户组名称。
-    * resources  用户组资源。
+    * resources  resources
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
-            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\SparkJobResource[]'
+            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  用户组名称。
-    * resources  用户组资源。
+    * resources  resources
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
         'resources' => null
     ];
 
@@ -65,37 +61,31 @@ class SparkJobGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  用户组名称。
-    * resources  用户组资源。
+    * resources  resources
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
             'resources' => 'resources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  用户组名称。
-    * resources  用户组资源。
+    * resources  resources
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
             'resources' => 'setResources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  用户组名称。
-    * resources  用户组资源。
+    * resources  resources
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
             'resources' => 'getResources'
     ];
 
@@ -157,7 +147,6 @@ class SparkJobGroup implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
@@ -184,34 +173,10 @@ class SparkJobGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  用户组名称。
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 用户组名称。
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
     * Gets resources
-    *  用户组资源。
+    *  resources
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\SparkJobResource[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]|null
     */
     public function getResources()
     {
@@ -221,7 +186,7 @@ class SparkJobGroup implements ModelInterface, ArrayAccess
     /**
     * Sets resources
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\SparkJobResource[]|null $resources 用户组资源。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QuotaInfo[]|null $resources resources
     *
     * @return $this
     */

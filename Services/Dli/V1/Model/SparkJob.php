@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SparkJobSession implements ModelInterface, ArrayAccess
+class SparkJob implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class SparkJobSession implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SparkJobSession';
+    protected static $openAPIModelName = 'SparkJob';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

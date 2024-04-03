@@ -23,7 +23,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
     * status  状态
     * projectId  项目id
@@ -47,7 +47,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
     * status  状态
     * projectId  项目id
@@ -92,7 +92,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
     * status  状态
     * projectId  项目id
@@ -116,7 +116,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
     * status  状态
     * projectId  项目id
@@ -140,7 +140,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * setId  服务组id
     * name  名称
     * description  描述
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
     * status  状态
     * projectId  项目id
@@ -323,7 +323,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceSetType
-    *  服务组类型，0表示自定义服务组，1表示预定义服务组
+    *  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @return int|null
     */
@@ -335,7 +335,7 @@ class ServiceSet implements ModelInterface, ArrayAccess
     /**
     * Sets serviceSetType
     *
-    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示预定义服务组
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @return $this
     */

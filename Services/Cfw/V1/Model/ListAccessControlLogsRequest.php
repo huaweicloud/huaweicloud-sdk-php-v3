@@ -40,6 +40,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * dstHost  目标主机
     * ruleName  规则名称
     * action  动作0：permit,1：deny
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -63,7 +65,9 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'dstHost' => 'string',
             'ruleName' => 'string',
-            'action' => 'string'
+            'action' => 'string',
+            'srcRegionName' => 'string',
+            'dstRegionName' => 'string'
     ];
 
     /**
@@ -88,6 +92,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * dstHost  目标主机
     * ruleName  规则名称
     * action  动作0：permit,1：deny
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -111,7 +117,9 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'dstHost' => null,
         'ruleName' => null,
-        'action' => null
+        'action' => null,
+        'srcRegionName' => null,
+        'dstRegionName' => null
     ];
 
     /**
@@ -157,6 +165,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * dstHost  目标主机
     * ruleName  规则名称
     * action  动作0：permit,1：deny
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -180,7 +190,9 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'dstHost' => 'dst_host',
             'ruleName' => 'rule_name',
-            'action' => 'action'
+            'action' => 'action',
+            'srcRegionName' => 'src_region_name',
+            'dstRegionName' => 'dst_region_name'
     ];
 
     /**
@@ -205,6 +217,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * dstHost  目标主机
     * ruleName  规则名称
     * action  动作0：permit,1：deny
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -228,7 +242,9 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'dstHost' => 'setDstHost',
             'ruleName' => 'setRuleName',
-            'action' => 'setAction'
+            'action' => 'setAction',
+            'srcRegionName' => 'setSrcRegionName',
+            'dstRegionName' => 'setDstRegionName'
     ];
 
     /**
@@ -253,6 +269,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * dstHost  目标主机
     * ruleName  规则名称
     * action  动作0：permit,1：deny
+    * srcRegionName  源region名称
+    * dstRegionName  目的region名称
     *
     * @var string[]
     */
@@ -276,7 +294,9 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'dstHost' => 'getDstHost',
             'ruleName' => 'getRuleName',
-            'action' => 'getAction'
+            'action' => 'getAction',
+            'srcRegionName' => 'getSrcRegionName',
+            'dstRegionName' => 'getDstRegionName'
     ];
 
     /**
@@ -374,6 +394,8 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
         $this->container['ruleName'] = isset($data['ruleName']) ? $data['ruleName'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
+        $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
     }
 
     /**
@@ -904,6 +926,54 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     public function setAction($action)
     {
         $this->container['action'] = $action;
+        return $this;
+    }
+
+    /**
+    * Gets srcRegionName
+    *  源region名称
+    *
+    * @return string|null
+    */
+    public function getSrcRegionName()
+    {
+        return $this->container['srcRegionName'];
+    }
+
+    /**
+    * Sets srcRegionName
+    *
+    * @param string|null $srcRegionName 源region名称
+    *
+    * @return $this
+    */
+    public function setSrcRegionName($srcRegionName)
+    {
+        $this->container['srcRegionName'] = $srcRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets dstRegionName
+    *  目的region名称
+    *
+    * @return string|null
+    */
+    public function getDstRegionName()
+    {
+        return $this->container['dstRegionName'];
+    }
+
+    /**
+    * Sets dstRegionName
+    *
+    * @param string|null $dstRegionName 目的region名称
+    *
+    * @return $this
+    */
+    public function setDstRegionName($dstRegionName)
+    {
+        $this->container['dstRegionName'] = $dstRegionName;
         return $this;
     }
 

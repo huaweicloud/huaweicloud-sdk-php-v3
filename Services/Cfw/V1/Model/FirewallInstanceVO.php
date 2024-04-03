@@ -31,6 +31,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     * engineType  引擎类型
     * flavor  flavor
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
             'serviceType' => 'int',
             'engineType' => 'int',
             'flavor' => '\HuaweiCloud\SDK\Cfw\V1\Model\Flavor',
-            'status' => 'int'
+            'status' => 'int',
+            'tags' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     * engineType  引擎类型
     * flavor  flavor
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
         'serviceType' => 'int32',
         'engineType' => 'int32',
         'flavor' => null,
-        'status' => 'int32'
+        'status' => 'int32',
+        'tags' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     * engineType  引擎类型
     * flavor  flavor
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
             'serviceType' => 'service_type',
             'engineType' => 'engine_type',
             'flavor' => 'flavor',
-            'status' => 'status'
+            'status' => 'status',
+            'tags' => 'tags'
     ];
 
     /**
@@ -142,6 +148,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     * engineType  引擎类型
     * flavor  flavor
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
             'serviceType' => 'setServiceType',
             'engineType' => 'setEngineType',
             'flavor' => 'setFlavor',
-            'status' => 'setStatus'
+            'status' => 'setStatus',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -172,6 +180,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     * engineType  引擎类型
     * flavor  flavor
     * status  防火墙状态列表，包括-1：等待支付，0：创建中，1，删除中，2：运行中，3：升级中，4：删除完成：5：冻结中，6：创建失败，7：删除失败，8：冻结失败，9：存储中，10：存储失败，11：升级失败
+    * tags  标签列表
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
             'serviceType' => 'getServiceType',
             'engineType' => 'getEngineType',
             'flavor' => 'getFlavor',
-            'status' => 'getStatus'
+            'status' => 'getStatus',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -258,6 +268,7 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
         $this->container['engineType'] = isset($data['engineType']) ? $data['engineType'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class FirewallInstanceVO implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签列表
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags 标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

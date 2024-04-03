@@ -23,7 +23,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
-    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -41,7 +41,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
-    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -80,7 +80,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
-    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -98,7 +98,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
-    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -116,7 +116,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * id  地址组id
     * name  地址组名称
     * description  地址组描述
-    * addressSetType  地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * addressType  地址类型0 ipv4,1 ipv6
     *
     * @var string[]
@@ -313,7 +313,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetType
-    *  地址组类型，0表示自定义地址组，1表示预定义地址组
+    *  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @return int|null
     */
@@ -325,7 +325,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetType
     *
-    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示预定义地址组
+    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @return $this
     */

@@ -26,6 +26,7 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * metadata  metadata
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
             'userid' => 'string',
             'imageid' => 'string',
             'metadata' => '\HuaweiCloud\SDK\Ecs\V2\Model\ChangeSeversOsMetadata',
-            'mode' => 'string'
+            'mode' => 'string',
+            'isAutoPay' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * metadata  metadata
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
         'userid' => null,
         'imageid' => null,
         'metadata' => null,
-        'mode' => null
+        'mode' => null,
+        'isAutoPay' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * metadata  metadata
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
             'userid' => 'userid',
             'imageid' => 'imageid',
             'metadata' => 'metadata',
-            'mode' => 'mode'
+            'mode' => 'mode',
+            'isAutoPay' => 'isAutoPay'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * metadata  metadata
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
             'userid' => 'setUserid',
             'imageid' => 'setImageid',
             'metadata' => 'setMetadata',
-            'mode' => 'setMode'
+            'mode' => 'setMode',
+            'isAutoPay' => 'setIsAutoPay'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
     * imageid  切换系统所使用的新镜像的ID，格式为UUID。  镜像的ID可以从控制台或者参考[《镜像服务API参考》](https://support.huaweicloud.com/api-ims/ims_03_0702.html)的“查询镜像列表”的章节获取。
     * metadata  metadata
     * mode  取值为withStopServer ，支持开机状态下切换弹性云服务器操作系统。 mode取值为withStopServer时，对开机状态的弹性云服务器执行切换操作系统操作，系统自动对云服务器先执行关机，再切换操作系统。
+    * isAutoPay  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
             'userid' => 'getUserid',
             'imageid' => 'getImageid',
             'metadata' => 'getMetadata',
-            'mode' => 'getMode'
+            'mode' => 'getMode',
+            'isAutoPay' => 'getIsAutoPay'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
         $this->container['imageid'] = isset($data['imageid']) ? $data['imageid'] : null;
         $this->container['metadata'] = isset($data['metadata']) ? $data['metadata'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
     }
 
     /**
@@ -371,6 +382,30 @@ class ChangeServerOsWithCloudInitOption implements ModelInterface, ArrayAccess
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets isAutoPay
+    *  下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
+    *
+    * @return string|null
+    */
+    public function getIsAutoPay()
+    {
+        return $this->container['isAutoPay'];
+    }
+
+    /**
+    * Sets isAutoPay
+    *
+    * @param string|null $isAutoPay 下单订购后，是否自动从客户的账户中支付，而不需要客户手动去进行支付。
+    *
+    * @return $this
+    */
+    public function setIsAutoPay($isAutoPay)
+    {
+        $this->container['isAutoPay'] = $isAutoPay;
         return $this;
     }
 

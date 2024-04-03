@@ -30,6 +30,7 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
             'addressType' => 'int',
             'enterpriseProjectId' => 'string',
             'fwInstanceId' => 'string',
-            'queryAddressSetType' => 'int'
+            'queryAddressSetType' => 'int',
+            'addressSetType' => 'int'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
         'addressType' => 'int32',
         'enterpriseProjectId' => null,
         'fwInstanceId' => null,
-        'queryAddressSetType' => 'int32'
+        'queryAddressSetType' => 'int32',
+        'addressSetType' => 'int32'
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
             'addressType' => 'address_type',
             'enterpriseProjectId' => 'enterprise_project_id',
             'fwInstanceId' => 'fw_instance_id',
-            'queryAddressSetType' => 'query_address_set_type'
+            'queryAddressSetType' => 'query_address_set_type',
+            'addressSetType' => 'address_set_type'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
             'addressType' => 'setAddressType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'fwInstanceId' => 'setFwInstanceId',
-            'queryAddressSetType' => 'setQueryAddressSetType'
+            'queryAddressSetType' => 'setQueryAddressSetType',
+            'addressSetType' => 'setAddressSetType'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * queryAddressSetType  查询地址组类型，0表示自定义地址组，1表示预定义地址组
+    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
             'addressType' => 'getAddressType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'fwInstanceId' => 'getFwInstanceId',
-            'queryAddressSetType' => 'getQueryAddressSetType'
+            'queryAddressSetType' => 'getQueryAddressSetType',
+            'addressSetType' => 'getAddressSetType'
     ];
 
     /**
@@ -262,6 +272,7 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['fwInstanceId'] = isset($data['fwInstanceId']) ? $data['fwInstanceId'] : null;
         $this->container['queryAddressSetType'] = isset($data['queryAddressSetType']) ? $data['queryAddressSetType'] : null;
+        $this->container['addressSetType'] = isset($data['addressSetType']) ? $data['addressSetType'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class ListAddressSetsRequest implements ModelInterface, ArrayAccess
     public function setQueryAddressSetType($queryAddressSetType)
     {
         $this->container['queryAddressSetType'] = $queryAddressSetType;
+        return $this;
+    }
+
+    /**
+    * Gets addressSetType
+    *  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    *
+    * @return int|null
+    */
+    public function getAddressSetType()
+    {
+        return $this->container['addressSetType'];
+    }
+
+    /**
+    * Sets addressSetType
+    *
+    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    *
+    * @return $this
+    */
+    public function setAddressSetType($addressSetType)
+    {
+        $this->container['addressSetType'] = $addressSetType;
         return $this;
     }
 

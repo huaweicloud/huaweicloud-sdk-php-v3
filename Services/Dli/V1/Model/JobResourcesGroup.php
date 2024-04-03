@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Dli\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
+class JobResourcesGroup implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,30 @@ class ShowServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowServerAutoRecoveryResponse';
+    protected static $openAPIModelName = 'JobResourcesGroup';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * name  用户组名称。
+    * resources  用户组资源。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'supportAutoRecovery' => 'string'
+            'name' => 'string',
+            'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\JobResource[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * name  用户组名称。
+    * resources  用户组资源。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'supportAutoRecovery' => null
+        'name' => null,
+        'resources' => null
     ];
 
     /**
@@ -62,32 +65,38 @@ class ShowServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * name  用户组名称。
+    * resources  用户组资源。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'supportAutoRecovery' => 'support_auto_recovery'
+            'name' => 'name',
+            'resources' => 'resources'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * name  用户组名称。
+    * resources  用户组资源。
     *
     * @var string[]
     */
     protected static $setters = [
-            'supportAutoRecovery' => 'setSupportAutoRecovery'
+            'name' => 'setName',
+            'resources' => 'setResources'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * supportAutoRecovery  云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * name  用户组名称。
+    * resources  用户组资源。
     *
     * @var string[]
     */
     protected static $getters = [
-            'supportAutoRecovery' => 'getSupportAutoRecovery'
+            'name' => 'getName',
+            'resources' => 'getResources'
     ];
 
     /**
@@ -148,7 +157,8 @@ class ShowServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['supportAutoRecovery'] = isset($data['supportAutoRecovery']) ? $data['supportAutoRecovery'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
     }
 
     /**
@@ -174,26 +184,50 @@ class ShowServerAutoRecoveryResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets supportAutoRecovery
-    *  云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * Gets name
+    *  用户组名称。
     *
     * @return string|null
     */
-    public function getSupportAutoRecovery()
+    public function getName()
     {
-        return $this->container['supportAutoRecovery'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets supportAutoRecovery
+    * Sets name
     *
-    * @param string|null $supportAutoRecovery 云服务器是否配置了自动恢复动作。  - true：表示配置了自动恢复。 - false：表示没有配置自动恢复。
+    * @param string|null $name 用户组名称。
     *
     * @return $this
     */
-    public function setSupportAutoRecovery($supportAutoRecovery)
+    public function setName($name)
     {
-        $this->container['supportAutoRecovery'] = $supportAutoRecovery;
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets resources
+    *  用户组资源。
+    *
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\JobResource[]|null
+    */
+    public function getResources()
+    {
+        return $this->container['resources'];
+    }
+
+    /**
+    * Sets resources
+    *
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\JobResource[]|null $resources 用户组资源。
+    *
+    * @return $this
+    */
+    public function setResources($resources)
+    {
+        $this->container['resources'] = $resources;
         return $this;
     }
 

@@ -22,52 +22,64 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
     * customService  自定义服务
+    * predefinedGroup  预定义服务组列表
     * serviceGroup  服务组列表
     * serviceGroupNames  服务组名称列表
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'int',
             'protocol' => 'int',
+            'protocols' => 'int[]',
             'sourcePort' => 'string',
             'destPort' => 'string',
             'serviceSetId' => 'string',
             'serviceSetName' => 'string',
             'customService' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceItem[]',
+            'predefinedGroup' => 'string[]',
             'serviceGroup' => 'string[]',
-            'serviceGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]'
+            'serviceGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]',
+            'serviceSetType' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
     * customService  自定义服务
+    * predefinedGroup  预定义服务组列表
     * serviceGroup  服务组列表
     * serviceGroupNames  服务组名称列表
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
         'protocol' => null,
+        'protocols' => 'int32',
         'sourcePort' => null,
         'destPort' => null,
         'serviceSetId' => null,
         'serviceSetName' => null,
         'customService' => null,
+        'predefinedGroup' => null,
         'serviceGroup' => null,
-        'serviceGroupNames' => null
+        'serviceGroupNames' => null,
+        'serviceSetType' => 'int32'
     ];
 
     /**
@@ -95,78 +107,96 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
     * customService  自定义服务
+    * predefinedGroup  预定义服务组列表
     * serviceGroup  服务组列表
     * serviceGroupNames  服务组名称列表
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
             'protocol' => 'protocol',
+            'protocols' => 'protocols',
             'sourcePort' => 'source_port',
             'destPort' => 'dest_port',
             'serviceSetId' => 'service_set_id',
             'serviceSetName' => 'service_set_name',
             'customService' => 'custom_service',
+            'predefinedGroup' => 'predefined_group',
             'serviceGroup' => 'service_group',
-            'serviceGroupNames' => 'service_group_names'
+            'serviceGroupNames' => 'service_group_names',
+            'serviceSetType' => 'service_set_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
     * customService  自定义服务
+    * predefinedGroup  预定义服务组列表
     * serviceGroup  服务组列表
     * serviceGroupNames  服务组名称列表
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
             'protocol' => 'setProtocol',
+            'protocols' => 'setProtocols',
             'sourcePort' => 'setSourcePort',
             'destPort' => 'setDestPort',
             'serviceSetId' => 'setServiceSetId',
             'serviceSetName' => 'setServiceSetName',
             'customService' => 'setCustomService',
+            'predefinedGroup' => 'setPredefinedGroup',
             'serviceGroup' => 'setServiceGroup',
-            'serviceGroupNames' => 'setServiceGroupNames'
+            'serviceGroupNames' => 'setServiceGroupNames',
+            'serviceSetType' => 'setServiceSetType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
     * serviceSetId  服务组id，手动类型为空，自动类型为非空
     * serviceSetName  服务组名称
     * customService  自定义服务
+    * predefinedGroup  预定义服务组列表
     * serviceGroup  服务组列表
     * serviceGroupNames  服务组名称列表
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
             'protocol' => 'getProtocol',
+            'protocols' => 'getProtocols',
             'sourcePort' => 'getSourcePort',
             'destPort' => 'getDestPort',
             'serviceSetId' => 'getServiceSetId',
             'serviceSetName' => 'getServiceSetName',
             'customService' => 'getCustomService',
+            'predefinedGroup' => 'getPredefinedGroup',
             'serviceGroup' => 'getServiceGroup',
-            'serviceGroupNames' => 'getServiceGroupNames'
+            'serviceGroupNames' => 'getServiceGroupNames',
+            'serviceSetType' => 'getServiceSetType'
     ];
 
     /**
@@ -229,13 +259,16 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
+        $this->container['protocols'] = isset($data['protocols']) ? $data['protocols'] : null;
         $this->container['sourcePort'] = isset($data['sourcePort']) ? $data['sourcePort'] : null;
         $this->container['destPort'] = isset($data['destPort']) ? $data['destPort'] : null;
         $this->container['serviceSetId'] = isset($data['serviceSetId']) ? $data['serviceSetId'] : null;
         $this->container['serviceSetName'] = isset($data['serviceSetName']) ? $data['serviceSetName'] : null;
         $this->container['customService'] = isset($data['customService']) ? $data['customService'] : null;
+        $this->container['predefinedGroup'] = isset($data['predefinedGroup']) ? $data['predefinedGroup'] : null;
         $this->container['serviceGroup'] = isset($data['serviceGroup']) ? $data['serviceGroup'] : null;
         $this->container['serviceGroupNames'] = isset($data['serviceGroupNames']) ? $data['serviceGroupNames'] : null;
+        $this->container['serviceSetType'] = isset($data['serviceSetType']) ? $data['serviceSetType'] : null;
     }
 
     /**
@@ -311,6 +344,30 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     public function setProtocol($protocol)
     {
         $this->container['protocol'] = $protocol;
+        return $this;
+    }
+
+    /**
+    * Gets protocols
+    *  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *
+    * @return int[]|null
+    */
+    public function getProtocols()
+    {
+        return $this->container['protocols'];
+    }
+
+    /**
+    * Sets protocols
+    *
+    * @param int[]|null $protocols 协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *
+    * @return $this
+    */
+    public function setProtocols($protocols)
+    {
+        $this->container['protocols'] = $protocols;
         return $this;
     }
 
@@ -435,6 +492,30 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets predefinedGroup
+    *  预定义服务组列表
+    *
+    * @return string[]|null
+    */
+    public function getPredefinedGroup()
+    {
+        return $this->container['predefinedGroup'];
+    }
+
+    /**
+    * Sets predefinedGroup
+    *
+    * @param string[]|null $predefinedGroup 预定义服务组列表
+    *
+    * @return $this
+    */
+    public function setPredefinedGroup($predefinedGroup)
+    {
+        $this->container['predefinedGroup'] = $predefinedGroup;
+        return $this;
+    }
+
+    /**
     * Gets serviceGroup
     *  服务组列表
     *
@@ -479,6 +560,30 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     public function setServiceGroupNames($serviceGroupNames)
     {
         $this->container['serviceGroupNames'] = $serviceGroupNames;
+        return $this;
+    }
+
+    /**
+    * Gets serviceSetType
+    *  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
+    *
+    * @return int|null
+    */
+    public function getServiceSetType()
+    {
+        return $this->container['serviceSetType'];
+    }
+
+    /**
+    * Sets serviceSetType
+    *
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
+    *
+    * @return $this
+    */
+    public function setServiceSetType($serviceSetType)
+    {
+        $this->container['serviceSetType'] = $serviceSetType;
         return $this;
     }
 

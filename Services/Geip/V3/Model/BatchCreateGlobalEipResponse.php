@@ -22,28 +22,28 @@ class BatchCreateGlobalEipResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * requestId  本次请求的编号
-    * globalEip  globalEip
+    * globalEips  响应对象
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'requestId' => 'string',
-            'globalEip' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchCreateGlobalEip',
+            'globalEips' => '\HuaweiCloud\SDK\Geip\V3\Model\BatchCreateGlobalEipJob[]',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * requestId  本次请求的编号
-    * globalEip  globalEip
+    * globalEips  响应对象
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'requestId' => null,
-        'globalEip' => null,
+        'globalEips' => null,
         'xRequestId' => null
     ];
 
@@ -71,42 +71,42 @@ class BatchCreateGlobalEipResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * requestId  本次请求的编号
-    * globalEip  globalEip
+    * globalEips  响应对象
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'requestId' => 'request_id',
-            'globalEip' => 'global_eip',
+            'globalEips' => 'global_eips',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * requestId  本次请求的编号
-    * globalEip  globalEip
+    * globalEips  响应对象
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'requestId' => 'setRequestId',
-            'globalEip' => 'setGlobalEip',
+            'globalEips' => 'setGlobalEips',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * requestId  本次请求的编号
-    * globalEip  globalEip
+    * globalEips  响应对象
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'requestId' => 'getRequestId',
-            'globalEip' => 'getGlobalEip',
+            'globalEips' => 'getGlobalEips',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -169,7 +169,7 @@ class BatchCreateGlobalEipResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['globalEip'] = isset($data['globalEip']) ? $data['globalEip'] : null;
+        $this->container['globalEips'] = isset($data['globalEips']) ? $data['globalEips'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -220,26 +220,26 @@ class BatchCreateGlobalEipResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets globalEip
-    *  globalEip
+    * Gets globalEips
+    *  响应对象
     *
-    * @return \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateGlobalEip|null
+    * @return \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateGlobalEipJob[]|null
     */
-    public function getGlobalEip()
+    public function getGlobalEips()
     {
-        return $this->container['globalEip'];
+        return $this->container['globalEips'];
     }
 
     /**
-    * Sets globalEip
+    * Sets globalEips
     *
-    * @param \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateGlobalEip|null $globalEip globalEip
+    * @param \HuaweiCloud\SDK\Geip\V3\Model\BatchCreateGlobalEipJob[]|null $globalEips 响应对象
     *
     * @return $this
     */
-    public function setGlobalEip($globalEip)
+    public function setGlobalEips($globalEips)
     {
-        $this->container['globalEip'] = $globalEip;
+        $this->container['globalEips'] = $globalEips;
         return $this;
     }
 

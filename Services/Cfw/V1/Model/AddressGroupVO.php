@@ -22,24 +22,32 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * setId  地址组id
     * name  地址组名称
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'setId' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'protocols' => 'int[]',
+            'serviceSetType' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * setId  地址组id
     * name  地址组名称
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'setId' => null,
-        'name' => null
+        'name' => null,
+        'protocols' => 'int32',
+        'serviceSetType' => 'int32'
     ];
 
     /**
@@ -67,36 +75,48 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * setId  地址组id
     * name  地址组名称
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'setId' => 'set_id',
-            'name' => 'name'
+            'name' => 'name',
+            'protocols' => 'protocols',
+            'serviceSetType' => 'service_set_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * setId  地址组id
     * name  地址组名称
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $setters = [
             'setId' => 'setSetId',
-            'name' => 'setName'
+            'name' => 'setName',
+            'protocols' => 'setProtocols',
+            'serviceSetType' => 'setServiceSetType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * setId  地址组id
     * name  地址组名称
+    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
     * @var string[]
     */
     protected static $getters = [
             'setId' => 'getSetId',
-            'name' => 'getName'
+            'name' => 'getName',
+            'protocols' => 'getProtocols',
+            'serviceSetType' => 'getServiceSetType'
     ];
 
     /**
@@ -159,6 +179,8 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     {
         $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['protocols'] = isset($data['protocols']) ? $data['protocols'] : null;
+        $this->container['serviceSetType'] = isset($data['serviceSetType']) ? $data['serviceSetType'] : null;
     }
 
     /**
@@ -228,6 +250,54 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets protocols
+    *  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *
+    * @return int[]|null
+    */
+    public function getProtocols()
+    {
+        return $this->container['protocols'];
+    }
+
+    /**
+    * Sets protocols
+    *
+    * @param int[]|null $protocols 协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *
+    * @return $this
+    */
+    public function setProtocols($protocols)
+    {
+        $this->container['protocols'] = $protocols;
+        return $this;
+    }
+
+    /**
+    * Gets serviceSetType
+    *  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
+    *
+    * @return int|null
+    */
+    public function getServiceSetType()
+    {
+        return $this->container['serviceSetType'];
+    }
+
+    /**
+    * Sets serviceSetType
+    *
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
+    *
+    * @return $this
+    */
+    public function setServiceSetType($serviceSetType)
+    {
+        $this->container['serviceSetType'] = $serviceSetType;
         return $this;
     }
 

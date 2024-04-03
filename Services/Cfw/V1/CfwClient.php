@@ -1601,6 +1601,12 @@ class CfwClient extends Client
         if ($localVarParams['action'] !== null) {
             $queryParams['action'] = $localVarParams['action'];
         }
+        if ($localVarParams['srcRegionName'] !== null) {
+            $queryParams['src_region_name'] = $localVarParams['srcRegionName'];
+        }
+        if ($localVarParams['dstRegionName'] !== null) {
+            $queryParams['dst_region_name'] = $localVarParams['dstRegionName'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1683,6 +1689,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['queryAddressSetType'] !== null) {
+            $queryParams['query_address_set_type'] = $localVarParams['queryAddressSetType'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -1847,6 +1856,9 @@ class CfwClient extends Client
         if ($localVarParams['queryAddressSetType'] !== null) {
             $queryParams['query_address_set_type'] = $localVarParams['queryAddressSetType'];
         }
+        if ($localVarParams['addressSetType'] !== null) {
+            $queryParams['address_set_type'] = $localVarParams['addressSetType'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -1974,6 +1986,15 @@ class CfwClient extends Client
         }
         if ($localVarParams['logType'] !== null) {
             $queryParams['log_type'] = $localVarParams['logType'];
+        }
+        if ($localVarParams['attackRuleId'] !== null) {
+            $queryParams['attack_rule_id'] = $localVarParams['attackRuleId'];
+        }
+        if ($localVarParams['srcRegionName'] !== null) {
+            $queryParams['src_region_name'] = $localVarParams['srcRegionName'];
+        }
+        if ($localVarParams['dstRegionName'] !== null) {
+            $queryParams['dst_region_name'] = $localVarParams['dstRegionName'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -2538,6 +2559,9 @@ class CfwClient extends Client
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
         }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -2718,6 +2742,12 @@ class CfwClient extends Client
         }
         if ($localVarParams['dstHost'] !== null) {
             $queryParams['dst_host'] = $localVarParams['dstHost'];
+        }
+        if ($localVarParams['srcRegionName'] !== null) {
+            $queryParams['src_region_name'] = $localVarParams['srcRegionName'];
+        }
+        if ($localVarParams['dstRegionName'] !== null) {
+            $queryParams['dst_region_name'] = $localVarParams['dstRegionName'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -3003,6 +3033,9 @@ class CfwClient extends Client
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
         }
+        if ($localVarParams['queryServiceSetType'] !== null) {
+            $queryParams['query_service_set_type'] = $localVarParams['queryServiceSetType'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -3070,6 +3103,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['queryServiceSetType'] !== null) {
+            $queryParams['query_service_set_type'] = $localVarParams['queryServiceSetType'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -3153,6 +3189,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
+        if ($localVarParams['queryServiceSetType'] !== null) {
+            $queryParams['query_service_set_type'] = $localVarParams['queryServiceSetType'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -4127,6 +4166,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['service'] !== null) {
             $queryParams['service'] = $localVarParams['service'];
+        }
+        if ($localVarParams['application'] !== null) {
+            $queryParams['application'] = $localVarParams['application'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];

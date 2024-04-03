@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dli\V1\Model;
+namespace HuaweiCloud\SDK\Config\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Property implements ModelInterface, ArrayAccess
+class UpdateOrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class Property implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Property';
+    protected static $openAPIModelName = 'UpdateOrganizationPolicyAssignmentRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
-    * value  value
+    * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'organizationId' => 'string',
+            'organizationPolicyAssignmentId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Config\V1\Model\OrganizationPolicyAssignmentRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
-    * value  value
+    * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'organizationId' => null,
+        'organizationPolicyAssignmentId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class Property implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
-    * value  value
+    * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'organizationId' => 'organization_id',
+            'organizationPolicyAssignmentId' => 'organization_policy_assignment_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
-    * value  value
+    * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'organizationId' => 'setOrganizationId',
+            'organizationPolicyAssignmentId' => 'setOrganizationPolicyAssignmentId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
-    * value  value
+    * organizationId  组织ID。
+    * organizationPolicyAssignmentId  组织合规规则ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'organizationId' => 'getOrganizationId',
+            'organizationPolicyAssignmentId' => 'getOrganizationPolicyAssignmentId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -139,26 +149,7 @@ class Property implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const KEY_COMPUTE_ENGINE_MAX_INSTANCES = 'computeEngine.maxInstances';
-    const KEY_COMPUTE_ENGINE_MAX_PREFETCH_INSTANCE = 'computeEngine.maxPrefetchInstance';
-    const KEY_JOB_MAX_CONCURRENT = 'job.maxConcurrent';
-    const KEY_MULTIPLE_SC_SUPPORT = 'multipleSc.support';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getKeyAllowableValues()
-    {
-        return [
-            self::KEY_COMPUTE_ENGINE_MAX_INSTANCES,
-            self::KEY_COMPUTE_ENGINE_MAX_PREFETCH_INSTANCE,
-            self::KEY_JOB_MAX_CONCURRENT,
-            self::KEY_MULTIPLE_SC_SUPPORT,
-        ];
-    }
 
 
     /**
@@ -176,8 +167,9 @@ class Property implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
+        $this->container['organizationPolicyAssignmentId'] = isset($data['organizationPolicyAssignmentId']) ? $data['organizationPolicyAssignmentId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -188,20 +180,24 @@ class Property implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
+        if ($this->container['organizationId'] === null) {
+            $invalidProperties[] = "'organizationId' can't be null";
         }
-            $allowedValues = $this->getKeyAllowableValues();
-                if (!is_null($this->container['key']) && !in_array($this->container['key'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'key', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if ((mb_strlen($this->container['organizationId']) > 34)) {
+                $invalidProperties[] = "invalid value for 'organizationId', the character length must be smaller than or equal to 34.";
             }
-
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
+            if (!preg_match("/^o-[0-9a-z]{10,32}$/", $this->container['organizationId'])) {
+                $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^o-[0-9a-z]{10,32}$/.";
+            }
+        if ($this->container['organizationPolicyAssignmentId'] === null) {
+            $invalidProperties[] = "'organizationPolicyAssignmentId' can't be null";
         }
+            if ((mb_strlen($this->container['organizationPolicyAssignmentId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', the character length must be smaller than or equal to 32.";
+            }
+            if (!preg_match("/^[a-zA-Z\\d]+/", $this->container['organizationPolicyAssignmentId'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', must be conform to the pattern /^[a-zA-Z\\d]+/.";
+            }
         return $invalidProperties;
     }
 
@@ -217,50 +213,74 @@ class Property implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * Gets organizationId
+    *  组织ID。
     *
     * @return string
     */
-    public function getKey()
+    public function getOrganizationId()
     {
-        return $this->container['key'];
+        return $this->container['organizationId'];
     }
 
     /**
-    * Sets key
+    * Sets organizationId
     *
-    * @param string $key 返回属性值对应的key值 computeEngine.maxInstances, 队列能启动的最大spark driver数量 computeEngine.maxPrefetchInstance, 队列预先启动的最大spark driver数量 job.maxConcurrent,单个spark driver能同时运行的最大任务数量 multipleSc.support,是否支持设置多个spark driver
+    * @param string $organizationId 组织ID。
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setOrganizationId($organizationId)
     {
-        $this->container['key'] = $key;
+        $this->container['organizationId'] = $organizationId;
         return $this;
     }
 
     /**
-    * Gets value
-    *  value
+    * Gets organizationPolicyAssignmentId
+    *  组织合规规则ID。
     *
     * @return string
     */
-    public function getValue()
+    public function getOrganizationPolicyAssignmentId()
     {
-        return $this->container['value'];
+        return $this->container['organizationPolicyAssignmentId'];
     }
 
     /**
-    * Sets value
+    * Sets organizationPolicyAssignmentId
     *
-    * @param string $value value
+    * @param string $organizationPolicyAssignmentId 组织合规规则ID。
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setOrganizationPolicyAssignmentId($organizationPolicyAssignmentId)
     {
-        $this->container['value'] = $value;
+        $this->container['organizationPolicyAssignmentId'] = $organizationPolicyAssignmentId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\OrganizationPolicyAssignmentRequest|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\OrganizationPolicyAssignmentRequest|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

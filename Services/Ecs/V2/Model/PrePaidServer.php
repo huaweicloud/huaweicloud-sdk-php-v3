@@ -43,6 +43,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * tags  弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'osschedulerHints' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerSchedulerHints',
             'tags' => 'string[]',
             'serverTags' => '\HuaweiCloud\SDK\Ecs\V2\Model\PrePaidServerTag[]',
-            'description' => 'string'
+            'description' => 'string',
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions'
     ];
 
     /**
@@ -97,6 +99,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * tags  弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         'osschedulerHints' => null,
         'tags' => null,
         'serverTags' => null,
-        'description' => null
+        'description' => null,
+        'cpuOptions' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * tags  弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'osschedulerHints' => 'os:scheduler_hints',
             'tags' => 'tags',
             'serverTags' => 'server_tags',
-            'description' => 'description'
+            'description' => 'description',
+            'cpuOptions' => 'cpu_options'
     ];
 
     /**
@@ -226,6 +232,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * tags  弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'osschedulerHints' => 'setOsschedulerHints',
             'tags' => 'setTags',
             'serverTags' => 'setServerTags',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'cpuOptions' => 'setCpuOptions'
     ];
 
     /**
@@ -280,6 +288,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     * tags  弹性云服务器的标签。  标签的格式为“key.value”。其中，key的长度不超过36个字符，value的长度不超过43个字符。  标签命名时，需满足如下要求：  - 标签的key值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）以及中文字符。 - 标签的value值只能包含大写字母（A~Z）、小写字母（a~z）、数字（0-9）、下划线（_）、中划线（-）、小数点（.）以及中文字符。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * serverTags  弹性云服务器的标签。  > 说明： >  > 创建弹性云服务器时，一台弹性云服务器最多可以添加10个标签。 > 公有云新增server_tags字段，该字段与tags字段功能相同，支持的key、value取值范围更广，建议使用server_tags字段。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class PrePaidServer implements ModelInterface, ArrayAccess
             'osschedulerHints' => 'getOsschedulerHints',
             'tags' => 'getTags',
             'serverTags' => 'getServerTags',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'cpuOptions' => 'getCpuOptions'
     ];
 
     /**
@@ -390,6 +400,7 @@ class PrePaidServer implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['serverTags'] = isset($data['serverTags']) ? $data['serverTags'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
     }
 
     /**
@@ -1011,6 +1022,30 @@ class PrePaidServer implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets cpuOptions
+    *  cpuOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null
+    */
+    public function getCpuOptions()
+    {
+        return $this->container['cpuOptions'];
+    }
+
+    /**
+    * Sets cpuOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null $cpuOptions cpuOptions
+    *
+    * @return $this
+    */
+    public function setCpuOptions($cpuOptions)
+    {
+        $this->container['cpuOptions'] = $cpuOptions;
         return $this;
     }
 

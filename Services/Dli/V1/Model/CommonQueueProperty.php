@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayAccess
+class CommonQueueProperty implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,22 +16,20 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     *
     * @var string
     */
-    protected static $openAPIModelName = 'UpdateQueuePropertyRequestBody_properties';
+    protected static $openAPIModelName = 'CommonQueueProperty';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
-    * networkCidrInVpc  设置队列网段
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'computeEngineMaxInstance' => 'int',
             'jobMaxConcurrent' => 'int',
-            'computeEngineMaxPrefetchInstance' => 'int',
-            'networkCidrInVpc' => 'string'
+            'computeEngineMaxPrefetchInstance' => 'int'
     ];
 
     /**
@@ -39,15 +37,13 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
-    * networkCidrInVpc  设置队列网段
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'computeEngineMaxInstance' => 'int32',
         'jobMaxConcurrent' => 'int32',
-        'computeEngineMaxPrefetchInstance' => 'int32',
-        'networkCidrInVpc' => null
+        'computeEngineMaxPrefetchInstance' => 'int32'
     ];
 
     /**
@@ -76,15 +72,13 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
-    * networkCidrInVpc  设置队列网段
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'computeEngineMaxInstance' => 'computeEngine.maxInstance',
             'jobMaxConcurrent' => 'job.maxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'computeEngine.maxPrefetchInstance',
-            'networkCidrInVpc' => 'network.cidrInVpc'
+            'computeEngineMaxPrefetchInstance' => 'computeEngine.maxPrefetchInstance'
     ];
 
     /**
@@ -92,15 +86,13 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
-    * networkCidrInVpc  设置队列网段
     *
     * @var string[]
     */
     protected static $setters = [
             'computeEngineMaxInstance' => 'setComputeEngineMaxInstance',
             'jobMaxConcurrent' => 'setJobMaxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'setComputeEngineMaxPrefetchInstance',
-            'networkCidrInVpc' => 'setNetworkCidrInVpc'
+            'computeEngineMaxPrefetchInstance' => 'setComputeEngineMaxPrefetchInstance'
     ];
 
     /**
@@ -108,15 +100,13 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     * computeEngineMaxInstance  队列能启动的最大spark driver数量
     * jobMaxConcurrent  单个spark driver能同时运行的最大任务数量
     * computeEngineMaxPrefetchInstance  队列预先启动的最大spark driver数量
-    * networkCidrInVpc  设置队列网段
     *
     * @var string[]
     */
     protected static $getters = [
             'computeEngineMaxInstance' => 'getComputeEngineMaxInstance',
             'jobMaxConcurrent' => 'getJobMaxConcurrent',
-            'computeEngineMaxPrefetchInstance' => 'getComputeEngineMaxPrefetchInstance',
-            'networkCidrInVpc' => 'getNetworkCidrInVpc'
+            'computeEngineMaxPrefetchInstance' => 'getComputeEngineMaxPrefetchInstance'
     ];
 
     /**
@@ -180,7 +170,6 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
         $this->container['computeEngineMaxInstance'] = isset($data['computeEngineMaxInstance']) ? $data['computeEngineMaxInstance'] : null;
         $this->container['jobMaxConcurrent'] = isset($data['jobMaxConcurrent']) ? $data['jobMaxConcurrent'] : null;
         $this->container['computeEngineMaxPrefetchInstance'] = isset($data['computeEngineMaxPrefetchInstance']) ? $data['computeEngineMaxPrefetchInstance'] : null;
-        $this->container['networkCidrInVpc'] = isset($data['networkCidrInVpc']) ? $data['networkCidrInVpc'] : null;
     }
 
     /**
@@ -191,6 +180,12 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['jobMaxConcurrent']) && ($this->container['jobMaxConcurrent'] > 32)) {
+                $invalidProperties[] = "invalid value for 'jobMaxConcurrent', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['jobMaxConcurrent']) && ($this->container['jobMaxConcurrent'] < 1)) {
+                $invalidProperties[] = "invalid value for 'jobMaxConcurrent', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -274,30 +269,6 @@ class UpdateQueuePropertyRequestBodyProperties implements ModelInterface, ArrayA
     public function setComputeEngineMaxPrefetchInstance($computeEngineMaxPrefetchInstance)
     {
         $this->container['computeEngineMaxPrefetchInstance'] = $computeEngineMaxPrefetchInstance;
-        return $this;
-    }
-
-    /**
-    * Gets networkCidrInVpc
-    *  设置队列网段
-    *
-    * @return string|null
-    */
-    public function getNetworkCidrInVpc()
-    {
-        return $this->container['networkCidrInVpc'];
-    }
-
-    /**
-    * Sets networkCidrInVpc
-    *
-    * @param string|null $networkCidrInVpc 设置队列网段
-    *
-    * @return $this
-    */
-    public function setNetworkCidrInVpc($networkCidrInVpc)
-    {
-        $this->container['networkCidrInVpc'] = $networkCidrInVpc;
         return $this;
     }
 

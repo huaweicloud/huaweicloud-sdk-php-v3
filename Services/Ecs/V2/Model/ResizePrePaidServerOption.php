@@ -24,6 +24,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
     * extendparam  extendparam
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
             'flavorRef' => 'string',
             'dedicatedHostId' => 'string',
             'extendparam' => '\HuaweiCloud\SDK\Ecs\V2\Model\ResizeServerExtendParam',
-            'mode' => 'string'
+            'mode' => 'string',
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
     * extendparam  extendparam
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
         'flavorRef' => null,
         'dedicatedHostId' => null,
         'extendparam' => null,
-        'mode' => null
+        'mode' => null,
+        'cpuOptions' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
     * extendparam  extendparam
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
             'flavorRef' => 'flavorRef',
             'dedicatedHostId' => 'dedicated_host_id',
             'extendparam' => 'extendparam',
-            'mode' => 'mode'
+            'mode' => 'mode',
+            'cpuOptions' => 'cpu_options'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
     * extendparam  extendparam
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
             'flavorRef' => 'setFlavorRef',
             'dedicatedHostId' => 'setDedicatedHostId',
             'extendparam' => 'setExtendparam',
-            'mode' => 'setMode'
+            'mode' => 'setMode',
+            'cpuOptions' => 'setCpuOptions'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     * dedicatedHostId  新专属主机ID（仅适用于专属主机上的弹性云服务器）。
     * extendparam  extendparam
     * mode  取值为withStopServer ，支持开机状态下变更规格。  mode取值为withStopServer时，对开机状态的云服务器执行变更规格操作，系统自动对云服务器先执行关机，再变更规格，变更成功后再执行开机。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
             'flavorRef' => 'getFlavorRef',
             'dedicatedHostId' => 'getDedicatedHostId',
             'extendparam' => 'getExtendparam',
-            'mode' => 'getMode'
+            'mode' => 'getMode',
+            'cpuOptions' => 'getCpuOptions'
     ];
 
     /**
@@ -181,6 +191,7 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
         $this->container['dedicatedHostId'] = isset($data['dedicatedHostId']) ? $data['dedicatedHostId'] : null;
         $this->container['extendparam'] = isset($data['extendparam']) ? $data['extendparam'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class ResizePrePaidServerOption implements ModelInterface, ArrayAccess
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets cpuOptions
+    *  cpuOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null
+    */
+    public function getCpuOptions()
+    {
+        return $this->container['cpuOptions'];
+    }
+
+    /**
+    * Sets cpuOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null $cpuOptions cpuOptions
+    *
+    * @return $this
+    */
+    public function setCpuOptions($cpuOptions)
+    {
+        $this->container['cpuOptions'] = $cpuOptions;
         return $this;
     }
 

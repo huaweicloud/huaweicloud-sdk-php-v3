@@ -38,6 +38,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     * source  源地址
     * destination  目的地址
     * service  服务端口
+    * application  应用
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'tagsId' => 'string',
             'source' => 'string',
             'destination' => 'string',
-            'service' => 'string'
+            'service' => 'string',
+            'application' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     * source  源地址
     * destination  目的地址
     * service  服务端口
+    * application  应用
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
         'tagsId' => null,
         'source' => null,
         'destination' => null,
-        'service' => null
+        'service' => null,
+        'application' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     * source  源地址
     * destination  目的地址
     * service  服务端口
+    * application  应用
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'tagsId' => 'tags_id',
             'source' => 'source',
             'destination' => 'destination',
-            'service' => 'service'
+            'service' => 'service',
+            'application' => 'application'
     ];
 
     /**
@@ -191,6 +197,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     * source  源地址
     * destination  目的地址
     * service  服务端口
+    * application  应用
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'tagsId' => 'setTagsId',
             'source' => 'setSource',
             'destination' => 'setDestination',
-            'service' => 'setService'
+            'service' => 'setService',
+            'application' => 'setApplication'
     ];
 
     /**
@@ -235,6 +243,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     * source  源地址
     * destination  目的地址
     * service  服务端口
+    * application  应用
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'tagsId' => 'getTagsId',
             'source' => 'getSource',
             'destination' => 'getDestination',
-            'service' => 'getService'
+            'service' => 'getService',
+            'application' => 'getApplication'
     ];
 
     /**
@@ -418,6 +428,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
+        $this->container['application'] = isset($data['application']) ? $data['application'] : null;
     }
 
     /**
@@ -926,6 +937,30 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     public function setService($service)
     {
         $this->container['service'] = $service;
+        return $this;
+    }
+
+    /**
+    * Gets application
+    *  应用
+    *
+    * @return string|null
+    */
+    public function getApplication()
+    {
+        return $this->container['application'];
+    }
+
+    /**
+    * Sets application
+    *
+    * @param string|null $application 应用
+    *
+    * @return $this
+    */
+    public function setApplication($application)
+    {
+        $this->container['application'] = $application;
         return $this;
     }
 

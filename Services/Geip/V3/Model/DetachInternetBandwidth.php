@@ -20,7 +20,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalEipSegmentId  全局IP段id
+    * globalEipSegmentId  全域弹性公网IP段ID
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalEipSegmentId  全局IP段id
+    * globalEipSegmentId  全域弹性公网IP段ID
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalEipSegmentId  全局IP段id
+    * globalEipSegmentId  全域弹性公网IP段ID
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalEipSegmentId  全局IP段id
+    * globalEipSegmentId  全域弹性公网IP段ID
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalEipSegmentId  全局IP段id
+    * globalEipSegmentId  全域弹性公网IP段ID
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipSegmentId
-    *  全局IP段id
+    *  全域弹性公网IP段ID
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class DetachInternetBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipSegmentId
     *
-    * @param string $globalEipSegmentId 全局IP段id
+    * @param string $globalEipSegmentId 全域弹性公网IP段ID
     *
     * @return $this
     */

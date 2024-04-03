@@ -30,7 +30,7 @@ class ListQueuePropertiesResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\Property[]'
+            'properties' => '\HuaweiCloud\SDK\Dli\V1\Model\QueueProperty[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListQueuePropertiesResponse implements ModelInterface, ArrayAccess
     * Gets properties
     *  properties
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\Property[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\QueueProperty[]|null
     */
     public function getProperties()
     {
@@ -257,7 +257,7 @@ class ListQueuePropertiesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets properties
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\Property[]|null $properties properties
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\QueueProperty[]|null $properties properties
     *
     * @return $this
     */

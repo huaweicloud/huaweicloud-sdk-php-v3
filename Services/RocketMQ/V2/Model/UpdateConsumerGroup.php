@@ -25,7 +25,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  待修改参数的消费组（消费组名称不支持修改）。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
     *
     * @var string[]
     */
@@ -34,8 +33,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'bool',
             'brokers' => 'string[]',
             'name' => 'string',
-            'retryMaxTime' => 'int',
-            'fromBeginning' => 'bool'
+            'retryMaxTime' => 'int'
     ];
 
     /**
@@ -45,7 +43,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  待修改参数的消费组（消费组名称不支持修改）。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
     *
     * @var string[]
     */
@@ -54,8 +51,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
         'broadcast' => null,
         'brokers' => null,
         'name' => null,
-        'retryMaxTime' => null,
-        'fromBeginning' => null
+        'retryMaxTime' => null
     ];
 
     /**
@@ -86,7 +82,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  待修改参数的消费组（消费组名称不支持修改）。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
     *
     * @var string[]
     */
@@ -95,8 +90,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'broadcast',
             'brokers' => 'brokers',
             'name' => 'name',
-            'retryMaxTime' => 'retry_max_time',
-            'fromBeginning' => 'from_beginning'
+            'retryMaxTime' => 'retry_max_time'
     ];
 
     /**
@@ -106,7 +100,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  待修改参数的消费组（消费组名称不支持修改）。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
     *
     * @var string[]
     */
@@ -115,8 +108,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'setBroadcast',
             'brokers' => 'setBrokers',
             'name' => 'setName',
-            'retryMaxTime' => 'setRetryMaxTime',
-            'fromBeginning' => 'setFromBeginning'
+            'retryMaxTime' => 'setRetryMaxTime'
     ];
 
     /**
@@ -126,7 +118,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     * brokers  关联的代理列表。
     * name  待修改参数的消费组（消费组名称不支持修改）。
     * retryMaxTime  最大重试次数，取值范围为1~16。
-    * fromBeginning  是否重头消费。
     *
     * @var string[]
     */
@@ -135,8 +126,7 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
             'broadcast' => 'getBroadcast',
             'brokers' => 'getBrokers',
             'name' => 'getName',
-            'retryMaxTime' => 'getRetryMaxTime',
-            'fromBeginning' => 'getFromBeginning'
+            'retryMaxTime' => 'getRetryMaxTime'
     ];
 
     /**
@@ -202,7 +192,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['retryMaxTime'] = isset($data['retryMaxTime']) ? $data['retryMaxTime'] : null;
-        $this->container['fromBeginning'] = isset($data['fromBeginning']) ? $data['fromBeginning'] : null;
     }
 
     /**
@@ -353,30 +342,6 @@ class UpdateConsumerGroup implements ModelInterface, ArrayAccess
     public function setRetryMaxTime($retryMaxTime)
     {
         $this->container['retryMaxTime'] = $retryMaxTime;
-        return $this;
-    }
-
-    /**
-    * Gets fromBeginning
-    *  是否重头消费。
-    *
-    * @return bool|null
-    */
-    public function getFromBeginning()
-    {
-        return $this->container['fromBeginning'];
-    }
-
-    /**
-    * Sets fromBeginning
-    *
-    * @param bool|null $fromBeginning 是否重头消费。
-    *
-    * @return $this
-    */
-    public function setFromBeginning($fromBeginning)
-    {
-        $this->container['fromBeginning'] = $fromBeginning;
         return $this;
     }
 

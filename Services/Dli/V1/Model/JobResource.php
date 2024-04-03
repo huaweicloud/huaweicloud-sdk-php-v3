@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class DeleteQueuePropertiesRequestBody implements ModelInterface, ArrayAccess
+class JobResource implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class DeleteQueuePropertiesRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'DeleteQueuePropertiesRequestBody';
+    protected static $openAPIModelName = 'JobResource';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * name  资源名称。
+    * type  资源类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'keys' => 'string[]'
+            'name' => 'string',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * name  资源名称。
+    * type  资源类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'keys' => null
+        'name' => null,
+        'type' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class DeleteQueuePropertiesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * name  资源名称。
+    * type  资源类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'keys' => 'keys'
+            'name' => 'name',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * name  资源名称。
+    * type  资源类型。
     *
     * @var string[]
     */
     protected static $setters = [
-            'keys' => 'setKeys'
+            'name' => 'setName',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keys  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * name  资源名称。
+    * type  资源类型。
     *
     * @var string[]
     */
     protected static $getters = [
-            'keys' => 'getKeys'
+            'name' => 'getName',
+            'type' => 'getType'
     ];
 
     /**
@@ -147,7 +157,8 @@ class DeleteQueuePropertiesRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['keys'] = isset($data['keys']) ? $data['keys'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class DeleteQueuePropertiesRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['keys'] === null) {
-            $invalidProperties[] = "'keys' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +184,50 @@ class DeleteQueuePropertiesRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets keys
-    *  待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * Gets name
+    *  资源名称。
     *
-    * @return string[]
+    * @return string|null
     */
-    public function getKeys()
+    public function getName()
     {
-        return $this->container['keys'];
+        return $this->container['name'];
     }
 
     /**
-    * Sets keys
+    * Sets name
     *
-    * @param string[] $keys 待删除队列属性key值。 范围如下： computeEngine.maxInstance computeEngine.maxPrefetchInstance job.maxConcurrent
+    * @param string|null $name 资源名称。
     *
     * @return $this
     */
-    public function setKeys($keys)
+    public function setName($name)
     {
-        $this->container['keys'] = $keys;
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  资源类型。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 资源类型。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

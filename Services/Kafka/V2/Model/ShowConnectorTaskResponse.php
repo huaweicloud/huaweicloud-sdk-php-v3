@@ -23,6 +23,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskName  SmartConnect任务名称。
     * topics  SmartConnect任务配置的Topic。
+    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
     * sourceType  SmartConnect任务的源端类型。
     * sourceTask  sourceTask
     * sinkType  SmartConnect任务的目标端类型。
@@ -36,6 +37,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'taskName' => 'string',
             'topics' => 'string',
+            'topicsRegex' => 'string',
             'sourceType' => 'string',
             'sourceTask' => '\HuaweiCloud\SDK\Kafka\V2\Model\SmartConnectTaskRespSourceConfig',
             'sinkType' => 'string',
@@ -49,6 +51,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * taskName  SmartConnect任务名称。
     * topics  SmartConnect任务配置的Topic。
+    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
     * sourceType  SmartConnect任务的源端类型。
     * sourceTask  sourceTask
     * sinkType  SmartConnect任务的目标端类型。
@@ -62,6 +65,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'taskName' => null,
         'topics' => null,
+        'topicsRegex' => null,
         'sourceType' => null,
         'sourceTask' => null,
         'sinkType' => null,
@@ -96,6 +100,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskName  SmartConnect任务名称。
     * topics  SmartConnect任务配置的Topic。
+    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
     * sourceType  SmartConnect任务的源端类型。
     * sourceTask  sourceTask
     * sinkType  SmartConnect任务的目标端类型。
@@ -109,6 +114,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'taskName' => 'task_name',
             'topics' => 'topics',
+            'topicsRegex' => 'topics_regex',
             'sourceType' => 'source_type',
             'sourceTask' => 'source_task',
             'sinkType' => 'sink_type',
@@ -122,6 +128,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * taskName  SmartConnect任务名称。
     * topics  SmartConnect任务配置的Topic。
+    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
     * sourceType  SmartConnect任务的源端类型。
     * sourceTask  sourceTask
     * sinkType  SmartConnect任务的目标端类型。
@@ -135,6 +142,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'taskName' => 'setTaskName',
             'topics' => 'setTopics',
+            'topicsRegex' => 'setTopicsRegex',
             'sourceType' => 'setSourceType',
             'sourceTask' => 'setSourceTask',
             'sinkType' => 'setSinkType',
@@ -148,6 +156,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * taskName  SmartConnect任务名称。
     * topics  SmartConnect任务配置的Topic。
+    * topicsRegex  SmartConnect任务配置的Topic正则表达式。
     * sourceType  SmartConnect任务的源端类型。
     * sourceTask  sourceTask
     * sinkType  SmartConnect任务的目标端类型。
@@ -161,6 +170,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'taskName' => 'getTaskName',
             'topics' => 'getTopics',
+            'topicsRegex' => 'getTopicsRegex',
             'sourceType' => 'getSourceType',
             'sourceTask' => 'getSourceTask',
             'sinkType' => 'getSinkType',
@@ -230,6 +240,7 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     {
         $this->container['taskName'] = isset($data['taskName']) ? $data['taskName'] : null;
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
+        $this->container['topicsRegex'] = isset($data['topicsRegex']) ? $data['topicsRegex'] : null;
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
         $this->container['sourceTask'] = isset($data['sourceTask']) ? $data['sourceTask'] : null;
         $this->container['sinkType'] = isset($data['sinkType']) ? $data['sinkType'] : null;
@@ -306,6 +317,30 @@ class ShowConnectorTaskResponse implements ModelInterface, ArrayAccess
     public function setTopics($topics)
     {
         $this->container['topics'] = $topics;
+        return $this;
+    }
+
+    /**
+    * Gets topicsRegex
+    *  SmartConnect任务配置的Topic正则表达式。
+    *
+    * @return string|null
+    */
+    public function getTopicsRegex()
+    {
+        return $this->container['topicsRegex'];
+    }
+
+    /**
+    * Sets topicsRegex
+    *
+    * @param string|null $topicsRegex SmartConnect任务配置的Topic正则表达式。
+    *
+    * @return $this
+    */
+    public function setTopicsRegex($topicsRegex)
+    {
+        $this->container['topicsRegex'] = $topicsRegex;
         return $this;
     }
 

@@ -26,12 +26,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化为字符串
     * description  描述
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -47,12 +50,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'direction' => 'int',
             'actionType' => 'int',
             'status' => 'int',
+            'applications' => 'string[]',
+            'applicationsJsonString' => 'string',
             'description' => 'string',
             'longConnectTimeHour' => 'int',
             'longConnectTimeMinute' => 'int',
             'longConnectTimeSecond' => 'int',
             'longConnectTime' => 'int',
             'longConnectEnable' => 'int',
+            'profile' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto',
             'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
@@ -68,12 +74,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化为字符串
     * description  描述
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -89,12 +98,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
         'direction' => 'int32',
         'actionType' => 'int32',
         'status' => null,
+        'applications' => null,
+        'applicationsJsonString' => null,
         'description' => null,
         'longConnectTimeHour' => 'int64',
         'longConnectTimeMinute' => 'int64',
         'longConnectTimeSecond' => 'int64',
         'longConnectTime' => 'int64',
         'longConnectEnable' => 'int32',
+        'profile' => null,
         'source' => null,
         'destination' => null,
         'service' => null,
@@ -131,12 +143,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化为字符串
     * description  描述
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -152,12 +167,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'direction' => 'direction',
             'actionType' => 'action_type',
             'status' => 'status',
+            'applications' => 'applications',
+            'applicationsJsonString' => 'applicationsJsonString',
             'description' => 'description',
             'longConnectTimeHour' => 'long_connect_time_hour',
             'longConnectTimeMinute' => 'long_connect_time_minute',
             'longConnectTimeSecond' => 'long_connect_time_second',
             'longConnectTime' => 'long_connect_time',
             'longConnectEnable' => 'long_connect_enable',
+            'profile' => 'profile',
             'source' => 'source',
             'destination' => 'destination',
             'service' => 'service',
@@ -173,12 +191,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化为字符串
     * description  描述
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -194,12 +215,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'direction' => 'setDirection',
             'actionType' => 'setActionType',
             'status' => 'setStatus',
+            'applications' => 'setApplications',
+            'applicationsJsonString' => 'setApplicationsJsonString',
             'description' => 'setDescription',
             'longConnectTimeHour' => 'setLongConnectTimeHour',
             'longConnectTimeMinute' => 'setLongConnectTimeMinute',
             'longConnectTimeSecond' => 'setLongConnectTimeSecond',
             'longConnectTime' => 'setLongConnectTime',
             'longConnectEnable' => 'setLongConnectEnable',
+            'profile' => 'setProfile',
             'source' => 'setSource',
             'destination' => 'setDestination',
             'service' => 'setService',
@@ -215,12 +239,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
+    * applications  应用列表
+    * applicationsJsonString  应用列表转化为字符串
     * description  描述
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
+    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -236,12 +263,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'direction' => 'getDirection',
             'actionType' => 'getActionType',
             'status' => 'getStatus',
+            'applications' => 'getApplications',
+            'applicationsJsonString' => 'getApplicationsJsonString',
             'description' => 'getDescription',
             'longConnectTimeHour' => 'getLongConnectTimeHour',
             'longConnectTimeMinute' => 'getLongConnectTimeMinute',
             'longConnectTimeSecond' => 'getLongConnectTimeSecond',
             'longConnectTime' => 'getLongConnectTime',
             'longConnectEnable' => 'getLongConnectEnable',
+            'profile' => 'getProfile',
             'source' => 'getSource',
             'destination' => 'getDestination',
             'service' => 'getService',
@@ -390,12 +420,15 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['applications'] = isset($data['applications']) ? $data['applications'] : null;
+        $this->container['applicationsJsonString'] = isset($data['applicationsJsonString']) ? $data['applicationsJsonString'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['longConnectTimeHour'] = isset($data['longConnectTimeHour']) ? $data['longConnectTimeHour'] : null;
         $this->container['longConnectTimeMinute'] = isset($data['longConnectTimeMinute']) ? $data['longConnectTimeMinute'] : null;
         $this->container['longConnectTimeSecond'] = isset($data['longConnectTimeSecond']) ? $data['longConnectTimeSecond'] : null;
         $this->container['longConnectTime'] = isset($data['longConnectTime']) ? $data['longConnectTime'] : null;
         $this->container['longConnectEnable'] = isset($data['longConnectEnable']) ? $data['longConnectEnable'] : null;
+        $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
@@ -610,6 +643,54 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets applications
+    *  应用列表
+    *
+    * @return string[]|null
+    */
+    public function getApplications()
+    {
+        return $this->container['applications'];
+    }
+
+    /**
+    * Sets applications
+    *
+    * @param string[]|null $applications 应用列表
+    *
+    * @return $this
+    */
+    public function setApplications($applications)
+    {
+        $this->container['applications'] = $applications;
+        return $this;
+    }
+
+    /**
+    * Gets applicationsJsonString
+    *  应用列表转化为字符串
+    *
+    * @return string|null
+    */
+    public function getApplicationsJsonString()
+    {
+        return $this->container['applicationsJsonString'];
+    }
+
+    /**
+    * Sets applicationsJsonString
+    *
+    * @param string|null $applicationsJsonString 应用列表转化为字符串
+    *
+    * @return $this
+    */
+    public function setApplicationsJsonString($applicationsJsonString)
+    {
+        $this->container['applicationsJsonString'] = $applicationsJsonString;
+        return $this;
+    }
+
+    /**
     * Gets description
     *  描述
     *
@@ -750,6 +831,30 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     public function setLongConnectEnable($longConnectEnable)
     {
         $this->container['longConnectEnable'] = $longConnectEnable;
+        return $this;
+    }
+
+    /**
+    * Gets profile
+    *  profile
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null
+    */
+    public function getProfile()
+    {
+        return $this->container['profile'];
+    }
+
+    /**
+    * Sets profile
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null $profile profile
+    *
+    * @return $this
+    */
+    public function setProfile($profile)
+    {
+        $this->container['profile'] = $profile;
         return $this;
     }
 

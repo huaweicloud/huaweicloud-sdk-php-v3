@@ -33,10 +33,10 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'total' => 'float',
             'groups' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\ConsumerGroup[]',
-            'max' => 'float',
-            'remaining' => 'float',
-            'nextOffset' => 'float',
-            'previousOffset' => 'float'
+            'max' => 'int',
+            'remaining' => 'int',
+            'nextOffset' => 'int',
+            'previousOffset' => 'int'
     ];
 
     /**
@@ -53,10 +53,10 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'total' => null,
         'groups' => null,
-        'max' => null,
-        'remaining' => null,
-        'nextOffset' => null,
-        'previousOffset' => null
+        'max' => 'int32',
+        'remaining' => 'int32',
+        'nextOffset' => 'int32',
+        'previousOffset' => 'int32'
     ];
 
     /**
@@ -280,7 +280,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     * Gets max
     *  最大可创建消费组数量。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getMax()
     {
@@ -290,7 +290,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets max
     *
-    * @param float|null $max 最大可创建消费组数量。
+    * @param int|null $max 最大可创建消费组数量。
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     * Gets remaining
     *  剩余可创建消费组数量。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getRemaining()
     {
@@ -314,7 +314,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remaining
     *
-    * @param float|null $remaining 剩余可创建消费组数量。
+    * @param int|null $remaining 剩余可创建消费组数量。
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     * Gets nextOffset
     *  下个分页的offset。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getNextOffset()
     {
@@ -338,7 +338,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextOffset
     *
-    * @param float|null $nextOffset 下个分页的offset。
+    * @param int|null $nextOffset 下个分页的offset。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     * Gets previousOffset
     *  上个分页的offset。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getPreviousOffset()
     {
@@ -362,7 +362,7 @@ class ListInstanceConsumerGroupsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets previousOffset
     *
-    * @param float|null $previousOffset 上个分页的offset。
+    * @param int|null $previousOffset 上个分页的offset。
     *
     * @return $this
     */

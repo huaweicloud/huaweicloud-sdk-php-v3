@@ -21,34 +21,34 @@ class ListJobResourcesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * total  资源包返回总数
     * resources  已上传的用户资源名列表。
     * modules  系统内置资源模块列表
     * groups  已上传的用户分组资源。
-    * total  资源包返回总数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'total' => 'int',
             'resources' => '\HuaweiCloud\SDK\Dli\V1\Model\PackageResource[]',
             'modules' => '\HuaweiCloud\SDK\Dli\V1\Model\PackageResourceMoudle[]',
-            'groups' => 'object[]',
-            'total' => 'int'
+            'groups' => '\HuaweiCloud\SDK\Dli\V1\Model\PackageResourceGroup[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * total  资源包返回总数
     * resources  已上传的用户资源名列表。
     * modules  系统内置资源模块列表
     * groups  已上传的用户分组资源。
-    * total  资源包返回总数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'total' => 'int32',
         'resources' => null,
         'modules' => null,
-        'groups' => null,
-        'total' => 'int32'
+        'groups' => null
     ];
 
     /**
@@ -74,50 +74,50 @@ class ListJobResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * total  资源包返回总数
     * resources  已上传的用户资源名列表。
     * modules  系统内置资源模块列表
     * groups  已上传的用户分组资源。
-    * total  资源包返回总数
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'total' => 'total',
             'resources' => 'resources',
             'modules' => 'modules',
-            'groups' => 'groups',
-            'total' => 'total'
+            'groups' => 'groups'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * total  资源包返回总数
     * resources  已上传的用户资源名列表。
     * modules  系统内置资源模块列表
     * groups  已上传的用户分组资源。
-    * total  资源包返回总数
     *
     * @var string[]
     */
     protected static $setters = [
+            'total' => 'setTotal',
             'resources' => 'setResources',
             'modules' => 'setModules',
-            'groups' => 'setGroups',
-            'total' => 'setTotal'
+            'groups' => 'setGroups'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * total  资源包返回总数
     * resources  已上传的用户资源名列表。
     * modules  系统内置资源模块列表
     * groups  已上传的用户分组资源。
-    * total  资源包返回总数
     *
     * @var string[]
     */
     protected static $getters = [
+            'total' => 'getTotal',
             'resources' => 'getResources',
             'modules' => 'getModules',
-            'groups' => 'getGroups',
-            'total' => 'getTotal'
+            'groups' => 'getGroups'
     ];
 
     /**
@@ -178,10 +178,10 @@ class ListJobResourcesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['modules'] = isset($data['modules']) ? $data['modules'] : null;
         $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
-        $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
 
     /**
@@ -204,6 +204,30 @@ class ListJobResourcesResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets total
+    *  资源包返回总数
+    *
+    * @return int|null
+    */
+    public function getTotal()
+    {
+        return $this->container['total'];
+    }
+
+    /**
+    * Sets total
+    *
+    * @param int|null $total 资源包返回总数
+    *
+    * @return $this
+    */
+    public function setTotal($total)
+    {
+        $this->container['total'] = $total;
+        return $this;
     }
 
     /**
@@ -258,7 +282,7 @@ class ListJobResourcesResponse implements ModelInterface, ArrayAccess
     * Gets groups
     *  已上传的用户分组资源。
     *
-    * @return object[]|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\PackageResourceGroup[]|null
     */
     public function getGroups()
     {
@@ -268,37 +292,13 @@ class ListJobResourcesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groups
     *
-    * @param object[]|null $groups 已上传的用户分组资源。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\PackageResourceGroup[]|null $groups 已上传的用户分组资源。
     *
     * @return $this
     */
     public function setGroups($groups)
     {
         $this->container['groups'] = $groups;
-        return $this;
-    }
-
-    /**
-    * Gets total
-    *  资源包返回总数
-    *
-    * @return int|null
-    */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-    * Sets total
-    *
-    * @param int|null $total 资源包返回总数
-    *
-    * @return $this
-    */
-    public function setTotal($total)
-    {
-        $this->container['total'] = $total;
         return $this;
     }
 

@@ -34,6 +34,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'securityGroups' => 'string[]',
             'tags' => 'string[]',
             'projectId' => 'string',
-            'createdAt' => '\DateTime'
+            'createdAt' => '\DateTime',
+            'securityEnabled' => 'bool'
     ];
 
     /**
@@ -70,6 +72,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         'securityGroups' => null,
         'tags' => null,
         'projectId' => null,
-        'createdAt' => 'date-time'
+        'createdAt' => 'date-time',
+        'securityEnabled' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'securityGroups' => 'security_groups',
             'tags' => 'tags',
             'projectId' => 'project_id',
-            'createdAt' => 'created_at'
+            'createdAt' => 'created_at',
+            'securityEnabled' => 'security_enabled'
     ];
 
     /**
@@ -163,6 +169,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'securityGroups' => 'setSecurityGroups',
             'tags' => 'setTags',
             'projectId' => 'setProjectId',
-            'createdAt' => 'setCreatedAt'
+            'createdAt' => 'setCreatedAt',
+            'securityEnabled' => 'setSecurityEnabled'
     ];
 
     /**
@@ -199,6 +207,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'securityGroups' => 'getSecurityGroups',
             'tags' => 'getTags',
             'projectId' => 'getProjectId',
-            'createdAt' => 'getCreatedAt'
+            'createdAt' => 'getCreatedAt',
+            'securityEnabled' => 'getSecurityEnabled'
     ];
 
     /**
@@ -291,6 +301,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['securityEnabled'] = isset($data['securityEnabled']) ? $data['securityEnabled'] : null;
     }
 
     /**
@@ -342,6 +353,9 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         }
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['securityEnabled'] === null) {
+            $invalidProperties[] = "'securityEnabled' can't be null";
         }
         return $invalidProperties;
     }
@@ -690,6 +704,30 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets securityEnabled
+    *  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    *
+    * @return bool
+    */
+    public function getSecurityEnabled()
+    {
+        return $this->container['securityEnabled'];
+    }
+
+    /**
+    * Sets securityEnabled
+    *
+    * @param bool $securityEnabled 功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
+    *
+    * @return $this
+    */
+    public function setSecurityEnabled($securityEnabled)
+    {
+        $this->container['securityEnabled'] = $securityEnabled;
         return $this;
     }
 

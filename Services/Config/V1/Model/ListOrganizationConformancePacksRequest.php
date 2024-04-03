@@ -23,6 +23,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
     * organizationId  组织ID。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * organizationConformancePackId  组织合规规则包ID。
     * conformancePackName  合规规则包名称。
     *
     * @var string[]
@@ -31,6 +32,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
             'organizationId' => 'string',
             'limit' => 'int',
             'marker' => 'string',
+            'organizationConformancePackId' => 'string',
             'conformancePackName' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
     * organizationId  组织ID。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * organizationConformancePackId  组织合规规则包ID。
     * conformancePackName  合规规则包名称。
     *
     * @var string[]
@@ -47,6 +50,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
         'organizationId' => null,
         'limit' => 'int32',
         'marker' => null,
+        'organizationConformancePackId' => null,
         'conformancePackName' => null
     ];
 
@@ -76,6 +80,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
     * organizationId  组织ID。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * organizationConformancePackId  组织合规规则包ID。
     * conformancePackName  合规规则包名称。
     *
     * @var string[]
@@ -84,6 +89,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
             'organizationId' => 'organization_id',
             'limit' => 'limit',
             'marker' => 'marker',
+            'organizationConformancePackId' => 'organization_conformance_pack_id',
             'conformancePackName' => 'conformance_pack_name'
     ];
 
@@ -92,6 +98,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
     * organizationId  组织ID。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * organizationConformancePackId  组织合规规则包ID。
     * conformancePackName  合规规则包名称。
     *
     * @var string[]
@@ -100,6 +107,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
             'organizationId' => 'setOrganizationId',
             'limit' => 'setLimit',
             'marker' => 'setMarker',
+            'organizationConformancePackId' => 'setOrganizationConformancePackId',
             'conformancePackName' => 'setConformancePackName'
     ];
 
@@ -108,6 +116,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
     * organizationId  组织ID。
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
+    * organizationConformancePackId  组织合规规则包ID。
     * conformancePackName  合规规则包名称。
     *
     * @var string[]
@@ -116,6 +125,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
             'organizationId' => 'getOrganizationId',
             'limit' => 'getLimit',
             'marker' => 'getMarker',
+            'organizationConformancePackId' => 'getOrganizationConformancePackId',
             'conformancePackName' => 'getConformancePackName'
     ];
 
@@ -180,6 +190,7 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
+        $this->container['organizationConformancePackId'] = isset($data['organizationConformancePackId']) ? $data['organizationConformancePackId'] : null;
         $this->container['conformancePackName'] = isset($data['conformancePackName']) ? $data['conformancePackName'] : null;
     }
 
@@ -214,6 +225,12 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
             }
             if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9+\/=%\\-_]+/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9+\/=%\\-_]+/.";
+            }
+            if (!is_null($this->container['organizationConformancePackId']) && (mb_strlen($this->container['organizationConformancePackId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'organizationConformancePackId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['organizationConformancePackId']) && !preg_match("/[\\w-]+/", $this->container['organizationConformancePackId'])) {
+                $invalidProperties[] = "invalid value for 'organizationConformancePackId', must be conform to the pattern /[\\w-]+/.";
             }
             if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be smaller than or equal to 64.";
@@ -307,6 +324,30 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
     public function setMarker($marker)
     {
         $this->container['marker'] = $marker;
+        return $this;
+    }
+
+    /**
+    * Gets organizationConformancePackId
+    *  组织合规规则包ID。
+    *
+    * @return string|null
+    */
+    public function getOrganizationConformancePackId()
+    {
+        return $this->container['organizationConformancePackId'];
+    }
+
+    /**
+    * Sets organizationConformancePackId
+    *
+    * @param string|null $organizationConformancePackId 组织合规规则包ID。
+    *
+    * @return $this
+    */
+    public function setOrganizationConformancePackId($organizationConformancePackId)
+    {
+        $this->container['organizationConformancePackId'] = $organizationConformancePackId;
         return $this;
     }
 

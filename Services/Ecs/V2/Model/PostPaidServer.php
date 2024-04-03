@@ -43,6 +43,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * userData  创建云服务器过程中待注入用户数据。支持注入文本、文本文件或gzip文件。  更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)”章节。  约束：  - 注入内容，需要进行base64格式编码。注入内容（编码之前的内容）最大长度32KB。 - 创建密码方式鉴权的Linux弹性云服务器时，该字段可为root用户注入自定义初始化密码，具体注入密码的使用方法请参见接口描述（设置登录鉴权方式）。 示例（base64编码前）：  - Linux弹性云服务器  ``` #! /bin/bash echo user_test >> /home/user.txt ```  - Windows弹性云服务器  ``` rem cmd echo 111 > c:\\\\aaa.tx ```
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'userData' => 'string',
             'vpcid' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'cpuOptions' => '\HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions'
     ];
 
     /**
@@ -97,6 +99,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * userData  创建云服务器过程中待注入用户数据。支持注入文本、文本文件或gzip文件。  更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)”章节。  约束：  - 注入内容，需要进行base64格式编码。注入内容（编码之前的内容）最大长度32KB。 - 创建密码方式鉴权的Linux弹性云服务器时，该字段可为root用户注入自定义初始化密码，具体注入密码的使用方法请参见接口描述（设置登录鉴权方式）。 示例（base64编码前）：  - Linux弹性云服务器  ``` #! /bin/bash echo user_test >> /home/user.txt ```  - Windows弹性云服务器  ``` rem cmd echo 111 > c:\\\\aaa.tx ```
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         'tags' => null,
         'userData' => null,
         'vpcid' => null,
-        'description' => null
+        'description' => null,
+        'cpuOptions' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * userData  创建云服务器过程中待注入用户数据。支持注入文本、文本文件或gzip文件。  更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)”章节。  约束：  - 注入内容，需要进行base64格式编码。注入内容（编码之前的内容）最大长度32KB。 - 创建密码方式鉴权的Linux弹性云服务器时，该字段可为root用户注入自定义初始化密码，具体注入密码的使用方法请参见接口描述（设置登录鉴权方式）。 示例（base64编码前）：  - Linux弹性云服务器  ``` #! /bin/bash echo user_test >> /home/user.txt ```  - Windows弹性云服务器  ``` rem cmd echo 111 > c:\\\\aaa.tx ```
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'userData' => 'user_data',
             'vpcid' => 'vpcid',
-            'description' => 'description'
+            'description' => 'description',
+            'cpuOptions' => 'cpu_options'
     ];
 
     /**
@@ -226,6 +232,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * userData  创建云服务器过程中待注入用户数据。支持注入文本、文本文件或gzip文件。  更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)”章节。  约束：  - 注入内容，需要进行base64格式编码。注入内容（编码之前的内容）最大长度32KB。 - 创建密码方式鉴权的Linux弹性云服务器时，该字段可为root用户注入自定义初始化密码，具体注入密码的使用方法请参见接口描述（设置登录鉴权方式）。 示例（base64编码前）：  - Linux弹性云服务器  ``` #! /bin/bash echo user_test >> /home/user.txt ```  - Windows弹性云服务器  ``` rem cmd echo 111 > c:\\\\aaa.tx ```
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'userData' => 'setUserData',
             'vpcid' => 'setVpcid',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'cpuOptions' => 'setCpuOptions'
     ];
 
     /**
@@ -280,6 +288,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     * userData  创建云服务器过程中待注入用户数据。支持注入文本、文本文件或gzip文件。  更多关于待注入用户数据的信息，请参见《弹性云服务器用户指南 》的“[用户数据注入](https://support.huaweicloud.com/usermanual-ecs/zh-cn_topic_0032380449.html)”章节。  约束：  - 注入内容，需要进行base64格式编码。注入内容（编码之前的内容）最大长度32KB。 - 创建密码方式鉴权的Linux弹性云服务器时，该字段可为root用户注入自定义初始化密码，具体注入密码的使用方法请参见接口描述（设置登录鉴权方式）。 示例（base64编码前）：  - Linux弹性云服务器  ``` #! /bin/bash echo user_test >> /home/user.txt ```  - Windows弹性云服务器  ``` rem cmd echo 111 > c:\\\\aaa.tx ```
     * vpcid  待创建云服务器所属虚拟私有云（简称VPC），需要指定已创建VPC的ID，UUID格式。  可通过 [查询VPC列表](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=VPC&api=ListVpcs) 接口查询。
     * description  云服务器描述信息，默认为空字符串。  - 长度最多允许85个字符。 - 不能包含“<” 和 “>”。
+    * cpuOptions  cpuOptions
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class PostPaidServer implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'userData' => 'getUserData',
             'vpcid' => 'getVpcid',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'cpuOptions' => 'getCpuOptions'
     ];
 
     /**
@@ -390,6 +400,7 @@ class PostPaidServer implements ModelInterface, ArrayAccess
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['vpcid'] = isset($data['vpcid']) ? $data['vpcid'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['cpuOptions'] = isset($data['cpuOptions']) ? $data['cpuOptions'] : null;
     }
 
     /**
@@ -1008,6 +1019,30 @@ class PostPaidServer implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets cpuOptions
+    *  cpuOptions
+    *
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null
+    */
+    public function getCpuOptions()
+    {
+        return $this->container['cpuOptions'];
+    }
+
+    /**
+    * Sets cpuOptions
+    *
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\CpuOptions|null $cpuOptions cpuOptions
+    *
+    * @return $this
+    */
+    public function setCpuOptions($cpuOptions)
+    {
+        $this->container['cpuOptions'] = $cpuOptions;
         return $this;
     }
 

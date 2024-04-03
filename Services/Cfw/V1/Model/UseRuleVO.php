@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Cfw\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
+class UseRuleVO implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class ShowServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowServerAutoRecoveryRequest';
+    protected static $openAPIModelName = 'UseRuleVO';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverId  云服务器ID。
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'serverId' => 'string'
+            'id' => 'string',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverId  云服务器ID。
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'serverId' => null
+        'id' => null,
+        'name' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ShowServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverId  云服务器ID。
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'serverId' => 'server_id'
+            'id' => 'id',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverId  云服务器ID。
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'serverId' => 'setServerId'
+            'id' => 'setId',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverId  云服务器ID。
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'serverId' => 'getServerId'
+            'id' => 'getId',
+            'name' => 'getName'
     ];
 
     /**
@@ -147,7 +157,8 @@ class ShowServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class ShowServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['serverId'] === null) {
-            $invalidProperties[] = "'serverId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +184,50 @@ class ShowServerAutoRecoveryRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets serverId
-    *  云服务器ID。
+    * Gets id
+    *  规则id
     *
-    * @return string
+    * @return string|null
     */
-    public function getServerId()
+    public function getId()
     {
-        return $this->container['serverId'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets serverId
+    * Sets id
     *
-    * @param string $serverId 云服务器ID。
+    * @param string|null $id 规则id
     *
     * @return $this
     */
-    public function setServerId($serverId)
+    public function setId($id)
     {
-        $this->container['serverId'] = $serverId;
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  规则名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 规则名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

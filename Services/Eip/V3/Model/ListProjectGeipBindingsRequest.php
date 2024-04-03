@@ -43,6 +43,8 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=geip_id&sort_dir=asc\"  支持字段：geip_id/version/public_border_group/ geip_ip_address/created_at/updated_at
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页起始点
+    * marker  分页起始点
     *
     * @var string[]
     */
@@ -69,7 +71,9 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
             'vnicInstanceId' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
-            'limit' => 'int'
+            'limit' => 'int',
+            'offset' => 'int',
+            'marker' => 'string'
     ];
 
     /**
@@ -97,6 +101,8 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=geip_id&sort_dir=asc\"  支持字段：geip_id/version/public_border_group/ geip_ip_address/created_at/updated_at
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页起始点
+    * marker  分页起始点
     *
     * @var string[]
     */
@@ -123,7 +129,9 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
         'vnicInstanceId' => null,
         'sortKey' => null,
         'sortDir' => null,
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'offset' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -172,6 +180,8 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=geip_id&sort_dir=asc\"  支持字段：geip_id/version/public_border_group/ geip_ip_address/created_at/updated_at
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页起始点
+    * marker  分页起始点
     *
     * @var string[]
     */
@@ -198,7 +208,9 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
             'vnicInstanceId' => 'vnic.instance_id',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'offset' => 'offset',
+            'marker' => 'marker'
     ];
 
     /**
@@ -226,6 +238,8 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=geip_id&sort_dir=asc\"  支持字段：geip_id/version/public_border_group/ geip_ip_address/created_at/updated_at
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页起始点
+    * marker  分页起始点
     *
     * @var string[]
     */
@@ -252,7 +266,9 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
             'vnicInstanceId' => 'setVnicInstanceId',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -280,6 +296,8 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * sortKey  排序，形式为\"sort_key=geip_id&sort_dir=asc\"  支持字段：geip_id/version/public_border_group/ geip_ip_address/created_at/updated_at
     * sortDir  排序方向  取值范围：asc、desc
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
+    * offset  分页起始点
+    * marker  分页起始点
     *
     * @var string[]
     */
@@ -306,7 +324,9 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
             'vnicInstanceId' => 'getVnicInstanceId',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -390,6 +410,8 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -537,6 +559,15 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 36)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 0)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && !preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -1101,6 +1132,54 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页起始点
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页起始点
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页起始点
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页起始点
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

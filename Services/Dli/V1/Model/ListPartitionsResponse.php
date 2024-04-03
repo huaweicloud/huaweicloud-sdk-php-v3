@@ -30,7 +30,7 @@ class ListPartitionsResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'partitions' => '\HuaweiCloud\SDK\Dli\V1\Model\Partition'
+            'partitions' => '\HuaweiCloud\SDK\Dli\V1\Model\PartitionList'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListPartitionsResponse implements ModelInterface, ArrayAccess
     * Gets partitions
     *  partitions
     *
-    * @return \HuaweiCloud\SDK\Dli\V1\Model\Partition|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\PartitionList|null
     */
     public function getPartitions()
     {
@@ -257,7 +257,7 @@ class ListPartitionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets partitions
     *
-    * @param \HuaweiCloud\SDK\Dli\V1\Model\Partition|null $partitions partitions
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\PartitionList|null $partitions partitions
     *
     * @return $this
     */

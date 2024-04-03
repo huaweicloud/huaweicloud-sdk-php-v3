@@ -25,10 +25,10 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     * publicBorderGroup  中心站点or边缘站点，默认展示
     * createdAt  创建时间
     * updatedAt  更新时间
-    * bindingInstanceType  绑定实例的类型
-    * bindingInstanceId  绑定实例的id
-    * gcbandwidth  骨干带宽对象
-    * vnic  实例port的信息
+    * instanceType  绑定实例的类型
+    * instanceId  绑定实例的id
+    * gcbandwidth  gcbandwidth
+    * vnic  vnic
     * vnList  GEIP实例的vn信息
     *
     * @var string[]
@@ -39,10 +39,10 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'string',
             'createdAt' => 'string',
             'updatedAt' => 'string',
-            'bindingInstanceType' => 'string',
-            'bindingInstanceId' => 'string',
-            'gcbandwidth' => 'object',
-            'vnic' => 'object',
+            'instanceType' => 'string',
+            'instanceId' => 'string',
+            'gcbandwidth' => '\HuaweiCloud\SDK\Eip\V3\Model\BackboneBandwidthResp',
+            'vnic' => '\HuaweiCloud\SDK\Eip\V3\Model\InstanceVnicResp',
             'vnList' => '\HuaweiCloud\SDK\Eip\V3\Model\InstancevirtualListResp[]'
     ];
 
@@ -53,10 +53,10 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     * publicBorderGroup  中心站点or边缘站点，默认展示
     * createdAt  创建时间
     * updatedAt  更新时间
-    * bindingInstanceType  绑定实例的类型
-    * bindingInstanceId  绑定实例的id
-    * gcbandwidth  骨干带宽对象
-    * vnic  实例port的信息
+    * instanceType  绑定实例的类型
+    * instanceId  绑定实例的id
+    * gcbandwidth  gcbandwidth
+    * vnic  vnic
     * vnList  GEIP实例的vn信息
     *
     * @var string[]
@@ -67,8 +67,8 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
         'publicBorderGroup' => null,
         'createdAt' => null,
         'updatedAt' => null,
-        'bindingInstanceType' => null,
-        'bindingInstanceId' => null,
+        'instanceType' => null,
+        'instanceId' => null,
         'gcbandwidth' => null,
         'vnic' => null,
         'vnList' => null
@@ -102,10 +102,10 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     * publicBorderGroup  中心站点or边缘站点，默认展示
     * createdAt  创建时间
     * updatedAt  更新时间
-    * bindingInstanceType  绑定实例的类型
-    * bindingInstanceId  绑定实例的id
-    * gcbandwidth  骨干带宽对象
-    * vnic  实例port的信息
+    * instanceType  绑定实例的类型
+    * instanceId  绑定实例的id
+    * gcbandwidth  gcbandwidth
+    * vnic  vnic
     * vnList  GEIP实例的vn信息
     *
     * @var string[]
@@ -116,8 +116,8 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'public_border_group',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'bindingInstanceType' => 'binding_instance_type',
-            'bindingInstanceId' => 'binding_instance_id',
+            'instanceType' => 'instance_type',
+            'instanceId' => 'instance_id',
             'gcbandwidth' => 'gcbandwidth',
             'vnic' => 'vnic',
             'vnList' => 'vn_list'
@@ -130,10 +130,10 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     * publicBorderGroup  中心站点or边缘站点，默认展示
     * createdAt  创建时间
     * updatedAt  更新时间
-    * bindingInstanceType  绑定实例的类型
-    * bindingInstanceId  绑定实例的id
-    * gcbandwidth  骨干带宽对象
-    * vnic  实例port的信息
+    * instanceType  绑定实例的类型
+    * instanceId  绑定实例的id
+    * gcbandwidth  gcbandwidth
+    * vnic  vnic
     * vnList  GEIP实例的vn信息
     *
     * @var string[]
@@ -144,8 +144,8 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'setPublicBorderGroup',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'bindingInstanceType' => 'setBindingInstanceType',
-            'bindingInstanceId' => 'setBindingInstanceId',
+            'instanceType' => 'setInstanceType',
+            'instanceId' => 'setInstanceId',
             'gcbandwidth' => 'setGcbandwidth',
             'vnic' => 'setVnic',
             'vnList' => 'setVnList'
@@ -158,10 +158,10 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     * publicBorderGroup  中心站点or边缘站点，默认展示
     * createdAt  创建时间
     * updatedAt  更新时间
-    * bindingInstanceType  绑定实例的类型
-    * bindingInstanceId  绑定实例的id
-    * gcbandwidth  骨干带宽对象
-    * vnic  实例port的信息
+    * instanceType  绑定实例的类型
+    * instanceId  绑定实例的id
+    * gcbandwidth  gcbandwidth
+    * vnic  vnic
     * vnList  GEIP实例的vn信息
     *
     * @var string[]
@@ -172,8 +172,8 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
             'publicBorderGroup' => 'getPublicBorderGroup',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'bindingInstanceType' => 'getBindingInstanceType',
-            'bindingInstanceId' => 'getBindingInstanceId',
+            'instanceType' => 'getInstanceType',
+            'instanceId' => 'getInstanceId',
             'gcbandwidth' => 'getGcbandwidth',
             'vnic' => 'getVnic',
             'vnList' => 'getVnList'
@@ -242,8 +242,8 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
-        $this->container['bindingInstanceType'] = isset($data['bindingInstanceType']) ? $data['bindingInstanceType'] : null;
-        $this->container['bindingInstanceId'] = isset($data['bindingInstanceId']) ? $data['bindingInstanceId'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['gcbandwidth'] = isset($data['gcbandwidth']) ? $data['gcbandwidth'] : null;
         $this->container['vnic'] = isset($data['vnic']) ? $data['vnic'] : null;
         $this->container['vnList'] = isset($data['vnList']) ? $data['vnList'] : null;
@@ -287,17 +287,17 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['updatedAt']) && (mb_strlen($this->container['updatedAt']) < 0)) {
                 $invalidProperties[] = "invalid value for 'updatedAt', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['bindingInstanceType']) && (mb_strlen($this->container['bindingInstanceType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'bindingInstanceType', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['instanceType']) && (mb_strlen($this->container['instanceType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'instanceType', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['bindingInstanceType']) && (mb_strlen($this->container['bindingInstanceType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'bindingInstanceType', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['instanceType']) && (mb_strlen($this->container['instanceType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceType', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['bindingInstanceId']) && (mb_strlen($this->container['bindingInstanceId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'bindingInstanceId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['bindingInstanceId']) && (mb_strlen($this->container['bindingInstanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'bindingInstanceId', the character length must be bigger than or equal to 0.";
+            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -434,58 +434,58 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets bindingInstanceType
+    * Gets instanceType
     *  绑定实例的类型
     *
     * @return string|null
     */
-    public function getBindingInstanceType()
+    public function getInstanceType()
     {
-        return $this->container['bindingInstanceType'];
+        return $this->container['instanceType'];
     }
 
     /**
-    * Sets bindingInstanceType
+    * Sets instanceType
     *
-    * @param string|null $bindingInstanceType 绑定实例的类型
+    * @param string|null $instanceType 绑定实例的类型
     *
     * @return $this
     */
-    public function setBindingInstanceType($bindingInstanceType)
+    public function setInstanceType($instanceType)
     {
-        $this->container['bindingInstanceType'] = $bindingInstanceType;
+        $this->container['instanceType'] = $instanceType;
         return $this;
     }
 
     /**
-    * Gets bindingInstanceId
+    * Gets instanceId
     *  绑定实例的id
     *
     * @return string|null
     */
-    public function getBindingInstanceId()
+    public function getInstanceId()
     {
-        return $this->container['bindingInstanceId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets bindingInstanceId
+    * Sets instanceId
     *
-    * @param string|null $bindingInstanceId 绑定实例的id
+    * @param string|null $instanceId 绑定实例的id
     *
     * @return $this
     */
-    public function setBindingInstanceId($bindingInstanceId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['bindingInstanceId'] = $bindingInstanceId;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 
     /**
     * Gets gcbandwidth
-    *  骨干带宽对象
+    *  gcbandwidth
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Eip\V3\Model\BackboneBandwidthResp|null
     */
     public function getGcbandwidth()
     {
@@ -495,7 +495,7 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     /**
     * Sets gcbandwidth
     *
-    * @param object|null $gcbandwidth 骨干带宽对象
+    * @param \HuaweiCloud\SDK\Eip\V3\Model\BackboneBandwidthResp|null $gcbandwidth gcbandwidth
     *
     * @return $this
     */
@@ -507,9 +507,9 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vnic
-    *  实例port的信息
+    *  vnic
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Eip\V3\Model\InstanceVnicResp|null
     */
     public function getVnic()
     {
@@ -519,7 +519,7 @@ class GeipBindingsInternalResp implements ModelInterface, ArrayAccess
     /**
     * Sets vnic
     *
-    * @param object|null $vnic 实例port的信息
+    * @param \HuaweiCloud\SDK\Eip\V3\Model\InstanceVnicResp|null $vnic vnic
     *
     * @return $this
     */
