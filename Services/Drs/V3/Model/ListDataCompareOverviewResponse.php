@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\Drs\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
+class ListDataCompareOverviewResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,30 @@ class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SwitchLogReplayRequestBody';
+    protected static $openAPIModelName = 'ListDataCompareOverviewResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * totalCount  对比信息数量
+    * dataCompareOverviewInfos  信息列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'pauseLogReplay' => 'string'
+            'totalCount' => 'int',
+            'dataCompareOverviewInfos' => '\HuaweiCloud\SDK\Drs\V3\Model\DataCompareOverviewInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * totalCount  对比信息数量
+    * dataCompareOverviewInfos  信息列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'pauseLogReplay' => null
+        'totalCount' => null,
+        'dataCompareOverviewInfos' => null
     ];
 
     /**
@@ -61,32 +66,38 @@ class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * totalCount  对比信息数量
+    * dataCompareOverviewInfos  信息列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'pauseLogReplay' => 'pause_log_replay'
+            'totalCount' => 'total_count',
+            'dataCompareOverviewInfos' => 'data_compare_overview_infos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * totalCount  对比信息数量
+    * dataCompareOverviewInfos  信息列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'pauseLogReplay' => 'setPauseLogReplay'
+            'totalCount' => 'setTotalCount',
+            'dataCompareOverviewInfos' => 'setDataCompareOverviewInfos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * totalCount  对比信息数量
+    * dataCompareOverviewInfos  信息列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'pauseLogReplay' => 'getPauseLogReplay'
+            'totalCount' => 'getTotalCount',
+            'dataCompareOverviewInfos' => 'getDataCompareOverviewInfos'
     ];
 
     /**
@@ -147,7 +158,8 @@ class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['pauseLogReplay'] = isset($data['pauseLogReplay']) ? $data['pauseLogReplay'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['dataCompareOverviewInfos'] = isset($data['dataCompareOverviewInfos']) ? $data['dataCompareOverviewInfos'] : null;
     }
 
     /**
@@ -158,9 +170,6 @@ class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['pauseLogReplay'] === null) {
-            $invalidProperties[] = "'pauseLogReplay' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -176,26 +185,50 @@ class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets pauseLogReplay
-    *  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * Gets totalCount
+    *  对比信息数量
     *
-    * @return string
+    * @return int|null
     */
-    public function getPauseLogReplay()
+    public function getTotalCount()
     {
-        return $this->container['pauseLogReplay'];
+        return $this->container['totalCount'];
     }
 
     /**
-    * Sets pauseLogReplay
+    * Sets totalCount
     *
-    * @param string $pauseLogReplay “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
+    * @param int|null $totalCount 对比信息数量
     *
     * @return $this
     */
-    public function setPauseLogReplay($pauseLogReplay)
+    public function setTotalCount($totalCount)
     {
-        $this->container['pauseLogReplay'] = $pauseLogReplay;
+        $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets dataCompareOverviewInfos
+    *  信息列表
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\DataCompareOverviewInfo[]|null
+    */
+    public function getDataCompareOverviewInfos()
+    {
+        return $this->container['dataCompareOverviewInfos'];
+    }
+
+    /**
+    * Sets dataCompareOverviewInfos
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\DataCompareOverviewInfo[]|null $dataCompareOverviewInfos 信息列表
+    *
+    * @return $this
+    */
+    public function setDataCompareOverviewInfos($dataCompareOverviewInfos)
+    {
+        $this->container['dataCompareOverviewInfos'] = $dataCompareOverviewInfos;
         return $this;
     }
 

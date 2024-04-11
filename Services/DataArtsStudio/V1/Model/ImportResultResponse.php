@@ -21,7 +21,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  返回的数据信息
+    * data  返回的数据信息。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  返回的数据信息
+    * data  返回的数据信息。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  返回的数据信息
+    * data  返回的数据信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  返回的数据信息
+    * data  返回的数据信息。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  返回的数据信息
+    * data  返回的数据信息。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  返回的数据信息
+    *  返回的数据信息。
     *
     * @return object|null
     */
@@ -187,7 +187,7 @@ class ImportResultResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data 返回的数据信息
+    * @param object|null $data 返回的数据信息。
     *
     * @return $this
     */

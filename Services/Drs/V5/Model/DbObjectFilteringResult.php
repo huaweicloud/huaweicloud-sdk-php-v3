@@ -25,6 +25,11 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     * tableName  数据库表名称。
     * isSuccess  数据过滤校验结果。
     * message  当数据过滤校验结果是false，返回校验失败的原因。
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * targetResult  校验目标库比对条件过滤的结果
+    * sourceResult  校验源库比对条件过滤的结果
+    * targetMessage  校验目标库比对条件过滤的失败原因
+    * sourceMessage  校验源库比对条件过滤的失败原因
     *
     * @var string[]
     */
@@ -33,7 +38,12 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
             'schemaName' => 'string',
             'tableName' => 'string',
             'isSuccess' => 'bool',
-            'message' => 'string'
+            'message' => 'string',
+            'source' => 'string',
+            'targetResult' => 'string',
+            'sourceResult' => 'string',
+            'targetMessage' => 'string',
+            'sourceMessage' => 'string'
     ];
 
     /**
@@ -43,6 +53,11 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     * tableName  数据库表名称。
     * isSuccess  数据过滤校验结果。
     * message  当数据过滤校验结果是false，返回校验失败的原因。
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * targetResult  校验目标库比对条件过滤的结果
+    * sourceResult  校验源库比对条件过滤的结果
+    * targetMessage  校验目标库比对条件过滤的失败原因
+    * sourceMessage  校验源库比对条件过滤的失败原因
     *
     * @var string[]
     */
@@ -51,7 +66,12 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
         'schemaName' => null,
         'tableName' => null,
         'isSuccess' => null,
-        'message' => null
+        'message' => null,
+        'source' => null,
+        'targetResult' => null,
+        'sourceResult' => null,
+        'targetMessage' => null,
+        'sourceMessage' => null
     ];
 
     /**
@@ -82,6 +102,11 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     * tableName  数据库表名称。
     * isSuccess  数据过滤校验结果。
     * message  当数据过滤校验结果是false，返回校验失败的原因。
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * targetResult  校验目标库比对条件过滤的结果
+    * sourceResult  校验源库比对条件过滤的结果
+    * targetMessage  校验目标库比对条件过滤的失败原因
+    * sourceMessage  校验源库比对条件过滤的失败原因
     *
     * @var string[]
     */
@@ -90,7 +115,12 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
             'schemaName' => 'schema_name',
             'tableName' => 'table_name',
             'isSuccess' => 'is_success',
-            'message' => 'message'
+            'message' => 'message',
+            'source' => 'source',
+            'targetResult' => 'target_result',
+            'sourceResult' => 'source_result',
+            'targetMessage' => 'target_message',
+            'sourceMessage' => 'source_message'
     ];
 
     /**
@@ -100,6 +130,11 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     * tableName  数据库表名称。
     * isSuccess  数据过滤校验结果。
     * message  当数据过滤校验结果是false，返回校验失败的原因。
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * targetResult  校验目标库比对条件过滤的结果
+    * sourceResult  校验源库比对条件过滤的结果
+    * targetMessage  校验目标库比对条件过滤的失败原因
+    * sourceMessage  校验源库比对条件过滤的失败原因
     *
     * @var string[]
     */
@@ -108,7 +143,12 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
             'schemaName' => 'setSchemaName',
             'tableName' => 'setTableName',
             'isSuccess' => 'setIsSuccess',
-            'message' => 'setMessage'
+            'message' => 'setMessage',
+            'source' => 'setSource',
+            'targetResult' => 'setTargetResult',
+            'sourceResult' => 'setSourceResult',
+            'targetMessage' => 'setTargetMessage',
+            'sourceMessage' => 'setSourceMessage'
     ];
 
     /**
@@ -118,6 +158,11 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     * tableName  数据库表名称。
     * isSuccess  数据过滤校验结果。
     * message  当数据过滤校验结果是false，返回校验失败的原因。
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    * targetResult  校验目标库比对条件过滤的结果
+    * sourceResult  校验源库比对条件过滤的结果
+    * targetMessage  校验目标库比对条件过滤的失败原因
+    * sourceMessage  校验源库比对条件过滤的失败原因
     *
     * @var string[]
     */
@@ -126,7 +171,12 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
             'schemaName' => 'getSchemaName',
             'tableName' => 'getTableName',
             'isSuccess' => 'getIsSuccess',
-            'message' => 'getMessage'
+            'message' => 'getMessage',
+            'source' => 'getSource',
+            'targetResult' => 'getTargetResult',
+            'sourceResult' => 'getSourceResult',
+            'targetMessage' => 'getTargetMessage',
+            'sourceMessage' => 'getSourceMessage'
     ];
 
     /**
@@ -169,7 +219,22 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SOURCE_JOB = 'job';
+    const SOURCE_COMPARE = 'compare';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSourceAllowableValues()
+    {
+        return [
+            self::SOURCE_JOB,
+            self::SOURCE_COMPARE,
+        ];
+    }
 
 
     /**
@@ -192,6 +257,11 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['targetResult'] = isset($data['targetResult']) ? $data['targetResult'] : null;
+        $this->container['sourceResult'] = isset($data['sourceResult']) ? $data['sourceResult'] : null;
+        $this->container['targetMessage'] = isset($data['targetMessage']) ? $data['targetMessage'] : null;
+        $this->container['sourceMessage'] = isset($data['sourceMessage']) ? $data['sourceMessage'] : null;
     }
 
     /**
@@ -202,6 +272,14 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getSourceAllowableValues();
+                if (!is_null($this->container['source']) && !in_array($this->container['source'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'source', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -333,6 +411,126 @@ class DbObjectFilteringResult implements ModelInterface, ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    *
+    * @return string|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string|null $source 对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
+        return $this;
+    }
+
+    /**
+    * Gets targetResult
+    *  校验目标库比对条件过滤的结果
+    *
+    * @return string|null
+    */
+    public function getTargetResult()
+    {
+        return $this->container['targetResult'];
+    }
+
+    /**
+    * Sets targetResult
+    *
+    * @param string|null $targetResult 校验目标库比对条件过滤的结果
+    *
+    * @return $this
+    */
+    public function setTargetResult($targetResult)
+    {
+        $this->container['targetResult'] = $targetResult;
+        return $this;
+    }
+
+    /**
+    * Gets sourceResult
+    *  校验源库比对条件过滤的结果
+    *
+    * @return string|null
+    */
+    public function getSourceResult()
+    {
+        return $this->container['sourceResult'];
+    }
+
+    /**
+    * Sets sourceResult
+    *
+    * @param string|null $sourceResult 校验源库比对条件过滤的结果
+    *
+    * @return $this
+    */
+    public function setSourceResult($sourceResult)
+    {
+        $this->container['sourceResult'] = $sourceResult;
+        return $this;
+    }
+
+    /**
+    * Gets targetMessage
+    *  校验目标库比对条件过滤的失败原因
+    *
+    * @return string|null
+    */
+    public function getTargetMessage()
+    {
+        return $this->container['targetMessage'];
+    }
+
+    /**
+    * Sets targetMessage
+    *
+    * @param string|null $targetMessage 校验目标库比对条件过滤的失败原因
+    *
+    * @return $this
+    */
+    public function setTargetMessage($targetMessage)
+    {
+        $this->container['targetMessage'] = $targetMessage;
+        return $this;
+    }
+
+    /**
+    * Gets sourceMessage
+    *  校验源库比对条件过滤的失败原因
+    *
+    * @return string|null
+    */
+    public function getSourceMessage()
+    {
+        return $this->container['sourceMessage'];
+    }
+
+    /**
+    * Sets sourceMessage
+    *
+    * @param string|null $sourceMessage 校验源库比对条件过滤的失败原因
+    *
+    * @return $this
+    */
+    public function setSourceMessage($sourceMessage)
+    {
+        $this->container['sourceMessage'] = $sourceMessage;
         return $this;
     }
 

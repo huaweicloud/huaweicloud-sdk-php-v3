@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RemoteAuthRuleVo implements ModelInterface, ArrayAccess
+class RemoteAuthRule implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class RemoteAuthRuleVo implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'remoteAuthRuleVo';
+    protected static $openAPIModelName = 'RemoteAuthRule';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

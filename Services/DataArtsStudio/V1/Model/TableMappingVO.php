@@ -20,21 +20,21 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * name  名称
-    * description  description
-    * targetTableId  目的表id
-    * srcModelId  来源表所属模型id
-    * srcModelName  来源模型名称
-    * viewText  采集的视图来源，dws视图逆向使用
-    * targetTableName  目的表名称
-    * details  详情
-    * sourceTables  映射的表信息
-    * sourceFields  映射的字段信息
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  名称。
+    * description  描述。
+    * targetTableId  目的表ID。
+    * srcModelId  来源表在关系建模中的模型ID。
+    * srcModelName  来源模型名称。
+    * viewText  采集的视图来源，dws视图逆向使用。
+    * targetTableName  目的表名称。
+    * details  详情。
+    * sourceTables  映射的表信息。
+    * sourceFields  映射的字段信息。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -58,21 +58,21 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * name  名称
-    * description  description
-    * targetTableId  目的表id
-    * srcModelId  来源表所属模型id
-    * srcModelName  来源模型名称
-    * viewText  采集的视图来源，dws视图逆向使用
-    * targetTableName  目的表名称
-    * details  详情
-    * sourceTables  映射的表信息
-    * sourceFields  映射的字段信息
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  名称。
+    * description  描述。
+    * targetTableId  目的表ID。
+    * srcModelId  来源表在关系建模中的模型ID。
+    * srcModelName  来源模型名称。
+    * viewText  采集的视图来源，dws视图逆向使用。
+    * targetTableName  目的表名称。
+    * details  详情。
+    * sourceTables  映射的表信息。
+    * sourceFields  映射的字段信息。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -117,21 +117,21 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * name  名称
-    * description  description
-    * targetTableId  目的表id
-    * srcModelId  来源表所属模型id
-    * srcModelName  来源模型名称
-    * viewText  采集的视图来源，dws视图逆向使用
-    * targetTableName  目的表名称
-    * details  详情
-    * sourceTables  映射的表信息
-    * sourceFields  映射的字段信息
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  名称。
+    * description  描述。
+    * targetTableId  目的表ID。
+    * srcModelId  来源表在关系建模中的模型ID。
+    * srcModelName  来源模型名称。
+    * viewText  采集的视图来源，dws视图逆向使用。
+    * targetTableName  目的表名称。
+    * details  详情。
+    * sourceTables  映射的表信息。
+    * sourceFields  映射的字段信息。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -155,21 +155,21 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * name  名称
-    * description  description
-    * targetTableId  目的表id
-    * srcModelId  来源表所属模型id
-    * srcModelName  来源模型名称
-    * viewText  采集的视图来源，dws视图逆向使用
-    * targetTableName  目的表名称
-    * details  详情
-    * sourceTables  映射的表信息
-    * sourceFields  映射的字段信息
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  名称。
+    * description  描述。
+    * targetTableId  目的表ID。
+    * srcModelId  来源表在关系建模中的模型ID。
+    * srcModelName  来源模型名称。
+    * viewText  采集的视图来源，dws视图逆向使用。
+    * targetTableName  目的表名称。
+    * details  详情。
+    * sourceTables  映射的表信息。
+    * sourceFields  映射的字段信息。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -193,21 +193,21 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * name  名称
-    * description  description
-    * targetTableId  目的表id
-    * srcModelId  来源表所属模型id
-    * srcModelName  来源模型名称
-    * viewText  采集的视图来源，dws视图逆向使用
-    * targetTableName  目的表名称
-    * details  详情
-    * sourceTables  映射的表信息
-    * sourceFields  映射的字段信息
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  名称。
+    * description  描述。
+    * targetTableId  目的表ID。
+    * srcModelId  来源表在关系建模中的模型ID。
+    * srcModelName  来源模型名称。
+    * viewText  采集的视图来源，dws视图逆向使用。
+    * targetTableName  目的表名称。
+    * details  详情。
+    * sourceTables  映射的表信息。
+    * sourceFields  映射的字段信息。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -337,7 +337,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -349,7 +349,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  名称。
     *
     * @return string
     */
@@ -373,7 +373,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string $name 名称。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  描述。
     *
     * @return string|null
     */
@@ -397,7 +397,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -409,7 +409,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetTableId
-    *  目的表id
+    *  目的表ID。
     *
     * @return int|null
     */
@@ -421,7 +421,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetTableId
     *
-    * @param int|null $targetTableId 目的表id
+    * @param int|null $targetTableId 目的表ID。
     *
     * @return $this
     */
@@ -433,7 +433,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcModelId
-    *  来源表所属模型id
+    *  来源表在关系建模中的模型ID。
     *
     * @return int|null
     */
@@ -445,7 +445,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcModelId
     *
-    * @param int|null $srcModelId 来源表所属模型id
+    * @param int|null $srcModelId 来源表在关系建模中的模型ID。
     *
     * @return $this
     */
@@ -457,7 +457,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcModelName
-    *  来源模型名称
+    *  来源模型名称。
     *
     * @return string|null
     */
@@ -469,7 +469,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcModelName
     *
-    * @param string|null $srcModelName 来源模型名称
+    * @param string|null $srcModelName 来源模型名称。
     *
     * @return $this
     */
@@ -481,7 +481,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewText
-    *  采集的视图来源，dws视图逆向使用
+    *  采集的视图来源，dws视图逆向使用。
     *
     * @return string|null
     */
@@ -493,7 +493,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets viewText
     *
-    * @param string|null $viewText 采集的视图来源，dws视图逆向使用
+    * @param string|null $viewText 采集的视图来源，dws视图逆向使用。
     *
     * @return $this
     */
@@ -505,7 +505,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetTableName
-    *  目的表名称
+    *  目的表名称。
     *
     * @return string|null
     */
@@ -517,7 +517,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetTableName
     *
-    * @param string|null $targetTableName 目的表名称
+    * @param string|null $targetTableName 目的表名称。
     *
     * @return $this
     */
@@ -529,7 +529,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets details
-    *  详情
+    *  详情。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableMappingDetailVO[]|null
     */
@@ -541,7 +541,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets details
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableMappingDetailVO[]|null $details 详情
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableMappingDetailVO[]|null $details 详情。
     *
     * @return $this
     */
@@ -553,7 +553,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceTables
-    *  映射的表信息
+    *  映射的表信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingSourceTableVO[]|null
     */
@@ -565,7 +565,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceTables
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingSourceTableVO[]|null $sourceTables 映射的表信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingSourceTableVO[]|null $sourceTables 映射的表信息。
     *
     * @return $this
     */
@@ -577,7 +577,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceFields
-    *  映射的字段信息
+    *  映射的字段信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingSourceFieldVO[]|null
     */
@@ -589,7 +589,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingSourceFieldVO[]|null $sourceFields 映射的字段信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingSourceFieldVO[]|null $sourceFields 映射的字段信息。
     *
     * @return $this
     */
@@ -601,7 +601,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -613,7 +613,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -625,7 +625,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -637,7 +637,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -649,7 +649,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -661,7 +661,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -673,7 +673,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -685,7 +685,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */

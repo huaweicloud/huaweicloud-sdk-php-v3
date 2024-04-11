@@ -20,8 +20,8 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * records  AtomicIndexVO数组
-    * total  总数
+    * records  AtomicIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * records  AtomicIndexVO数组
-    * total  总数
+    * records  AtomicIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * records  AtomicIndexVO数组
-    * total  总数
+    * records  AtomicIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * records  AtomicIndexVO数组
-    * total  总数
+    * records  AtomicIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * records  AtomicIndexVO数组
-    * total  总数
+    * records  AtomicIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  AtomicIndexVO数组
+    *  AtomicIndexVO数组。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\AtomicIndexVO[]|null
     */
@@ -197,7 +197,7 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\AtomicIndexVO[]|null $records AtomicIndexVO数组
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\AtomicIndexVO[]|null $records AtomicIndexVO数组。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  总数。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class AtomicIndexVOSearchResultDataValue implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 总数。
     *
     * @return $this
     */

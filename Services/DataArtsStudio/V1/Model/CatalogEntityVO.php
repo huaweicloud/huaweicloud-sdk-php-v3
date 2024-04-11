@@ -20,7 +20,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * typeName  类型名称,填写“BusinessCatalog”即可
+    * typeName  类型名称，填写“BusinessCatalog”即可。
     * attributes  attributes
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * typeName  类型名称,填写“BusinessCatalog”即可
+    * typeName  类型名称，填写“BusinessCatalog”即可。
     * attributes  attributes
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * typeName  类型名称,填写“BusinessCatalog”即可
+    * typeName  类型名称，填写“BusinessCatalog”即可。
     * attributes  attributes
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * typeName  类型名称,填写“BusinessCatalog”即可
+    * typeName  类型名称，填写“BusinessCatalog”即可。
     * attributes  attributes
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * typeName  类型名称,填写“BusinessCatalog”即可
+    * typeName  类型名称，填写“BusinessCatalog”即可。
     * attributes  attributes
     *
     * @var string[]
@@ -188,7 +188,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets typeName
-    *  类型名称,填写“BusinessCatalog”即可
+    *  类型名称，填写“BusinessCatalog”即可。
     *
     * @return string|null
     */
@@ -200,7 +200,7 @@ class CatalogEntityVO implements ModelInterface, ArrayAccess
     /**
     * Sets typeName
     *
-    * @param string|null $typeName 类型名称,填写“BusinessCatalog”即可
+    * @param string|null $typeName 类型名称，填写“BusinessCatalog”即可。
     *
     * @return $this
     */

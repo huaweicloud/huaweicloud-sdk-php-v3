@@ -20,37 +20,37 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * tenantId  tenant id
-    * nameCh  业务中文名
-    * nameEn  业务英文名
-    * bizId  业务ID
+    * id  审批单ID。
+    * tenantId  项目ID。
+    * nameCh  业务中文名。
+    * nameEn  业务英文名。
+    * bizId  业务ID。
     * bizType  bizType
-    * bizInfo  业务详情
-    * bizInfoObj  业务详情
-    * bizVersion  业务版本
+    * bizInfo  业务详情。
+    * bizInfoObj  业务详情。
+    * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
-    * submitTime  提交时间
-    * createBy  创建者
-    * l1  主题域分组
-    * l2  主题域
-    * l3  业务对象
-    * approvalTime  审核时间
-    * approver  审核人
-    * email  审核人邮箱
-    * msg  审核信息
-    * directoryPath  目录树
+    * submitTime  提交时间。
+    * createBy  创建者。
+    * l1  主题域分组。
+    * l2  主题域。
+    * l3  业务对象。
+    * approvalTime  审核时间。
+    * approver  审核人。
+    * email  审核人邮箱。
+    * msg  审核信息。
+    * directoryPath  目录树。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'tenantId' => 'string',
             'nameCh' => 'string',
             'nameEn' => 'string',
-            'bizId' => 'int',
+            'bizId' => 'string',
             'bizType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
             'bizInfo' => 'string',
             'bizInfoObj' => 'object',
@@ -72,28 +72,28 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * tenantId  tenant id
-    * nameCh  业务中文名
-    * nameEn  业务英文名
-    * bizId  业务ID
+    * id  审批单ID。
+    * tenantId  项目ID。
+    * nameCh  业务中文名。
+    * nameEn  业务英文名。
+    * bizId  业务ID。
     * bizType  bizType
-    * bizInfo  业务详情
-    * bizInfoObj  业务详情
-    * bizVersion  业务版本
+    * bizInfo  业务详情。
+    * bizInfoObj  业务详情。
+    * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
-    * submitTime  提交时间
-    * createBy  创建者
-    * l1  主题域分组
-    * l2  主题域
-    * l3  业务对象
-    * approvalTime  审核时间
-    * approver  审核人
-    * email  审核人邮箱
-    * msg  审核信息
-    * directoryPath  目录树
+    * submitTime  提交时间。
+    * createBy  创建者。
+    * l1  主题域分组。
+    * l2  主题域。
+    * l3  业务对象。
+    * approvalTime  审核时间。
+    * approver  审核人。
+    * email  审核人邮箱。
+    * msg  审核信息。
+    * directoryPath  目录树。
     *
     * @var string[]
     */
@@ -145,28 +145,28 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * tenantId  tenant id
-    * nameCh  业务中文名
-    * nameEn  业务英文名
-    * bizId  业务ID
+    * id  审批单ID。
+    * tenantId  项目ID。
+    * nameCh  业务中文名。
+    * nameEn  业务英文名。
+    * bizId  业务ID。
     * bizType  bizType
-    * bizInfo  业务详情
-    * bizInfoObj  业务详情
-    * bizVersion  业务版本
+    * bizInfo  业务详情。
+    * bizInfoObj  业务详情。
+    * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
-    * submitTime  提交时间
-    * createBy  创建者
-    * l1  主题域分组
-    * l2  主题域
-    * l3  业务对象
-    * approvalTime  审核时间
-    * approver  审核人
-    * email  审核人邮箱
-    * msg  审核信息
-    * directoryPath  目录树
+    * submitTime  提交时间。
+    * createBy  创建者。
+    * l1  主题域分组。
+    * l2  主题域。
+    * l3  业务对象。
+    * approvalTime  审核时间。
+    * approver  审核人。
+    * email  审核人邮箱。
+    * msg  审核信息。
+    * directoryPath  目录树。
     *
     * @var string[]
     */
@@ -197,28 +197,28 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * tenantId  tenant id
-    * nameCh  业务中文名
-    * nameEn  业务英文名
-    * bizId  业务ID
+    * id  审批单ID。
+    * tenantId  项目ID。
+    * nameCh  业务中文名。
+    * nameEn  业务英文名。
+    * bizId  业务ID。
     * bizType  bizType
-    * bizInfo  业务详情
-    * bizInfoObj  业务详情
-    * bizVersion  业务版本
+    * bizInfo  业务详情。
+    * bizInfoObj  业务详情。
+    * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
-    * submitTime  提交时间
-    * createBy  创建者
-    * l1  主题域分组
-    * l2  主题域
-    * l3  业务对象
-    * approvalTime  审核时间
-    * approver  审核人
-    * email  审核人邮箱
-    * msg  审核信息
-    * directoryPath  目录树
+    * submitTime  提交时间。
+    * createBy  创建者。
+    * l1  主题域分组。
+    * l2  主题域。
+    * l3  业务对象。
+    * approvalTime  审核时间。
+    * approver  审核人。
+    * email  审核人邮箱。
+    * msg  审核信息。
+    * directoryPath  目录树。
     *
     * @var string[]
     */
@@ -249,28 +249,28 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * tenantId  tenant id
-    * nameCh  业务中文名
-    * nameEn  业务英文名
-    * bizId  业务ID
+    * id  审批单ID。
+    * tenantId  项目ID。
+    * nameCh  业务中文名。
+    * nameEn  业务英文名。
+    * bizId  业务ID。
     * bizType  bizType
-    * bizInfo  业务详情
-    * bizInfoObj  业务详情
-    * bizVersion  业务版本
+    * bizInfo  业务详情。
+    * bizInfoObj  业务详情。
+    * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
-    * submitTime  提交时间
-    * createBy  创建者
-    * l1  主题域分组
-    * l2  主题域
-    * l3  业务对象
-    * approvalTime  审核时间
-    * approver  审核人
-    * email  审核人邮箱
-    * msg  审核信息
-    * directoryPath  目录树
+    * submitTime  提交时间。
+    * createBy  创建者。
+    * l1  主题域分组。
+    * l2  主题域。
+    * l3  业务对象。
+    * approvalTime  审核时间。
+    * approver  审核人。
+    * email  审核人邮箱。
+    * msg  审核信息。
+    * directoryPath  目录树。
     *
     * @var string[]
     */
@@ -405,9 +405,9 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  审批单ID。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -417,7 +417,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id ID
+    * @param string|null $id 审批单ID。
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  tenant id
+    *  项目ID。
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId tenant id
+    * @param string|null $tenantId 项目ID。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  业务中文名
+    *  业务中文名。
     *
     * @return string|null
     */
@@ -465,7 +465,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string|null $nameCh 业务中文名
+    * @param string|null $nameCh 业务中文名。
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  业务英文名
+    *  业务英文名。
     *
     * @return string|null
     */
@@ -489,7 +489,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 业务英文名
+    * @param string|null $nameEn 业务英文名。
     *
     * @return $this
     */
@@ -501,9 +501,9 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID
+    *  业务ID。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getBizId()
     {
@@ -513,7 +513,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int|null $bizId 业务ID
+    * @param string|null $bizId 业务ID。
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfo
-    *  业务详情
+    *  业务详情。
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfo
     *
-    * @param string|null $bizInfo 业务详情
+    * @param string|null $bizInfo 业务详情。
     *
     * @return $this
     */
@@ -573,7 +573,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfoObj
-    *  业务详情
+    *  业务详情。
     *
     * @return object|null
     */
@@ -585,7 +585,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfoObj
     *
-    * @param object|null $bizInfoObj 业务详情
+    * @param object|null $bizInfoObj 业务详情。
     *
     * @return $this
     */
@@ -597,7 +597,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizVersion
-    *  业务版本
+    *  业务版本。
     *
     * @return int|null
     */
@@ -609,7 +609,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizVersion
     *
-    * @param int|null $bizVersion 业务版本
+    * @param int|null $bizVersion 业务版本。
     *
     * @return $this
     */
@@ -693,7 +693,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets submitTime
-    *  提交时间
+    *  提交时间。
     *
     * @return \DateTime|null
     */
@@ -705,7 +705,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets submitTime
     *
-    * @param \DateTime|null $submitTime 提交时间
+    * @param \DateTime|null $submitTime 提交时间。
     *
     * @return $this
     */
@@ -717,7 +717,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建者
+    *  创建者。
     *
     * @return string|null
     */
@@ -729,7 +729,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建者
+    * @param string|null $createBy 创建者。
     *
     * @return $this
     */
@@ -741,7 +741,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组
+    *  主题域分组。
     *
     * @return string|null
     */
@@ -753,7 +753,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组
+    * @param string|null $l1 主题域分组。
     *
     * @return $this
     */
@@ -765,7 +765,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域
+    *  主题域。
     *
     * @return string|null
     */
@@ -777,7 +777,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域
+    * @param string|null $l2 主题域。
     *
     * @return $this
     */
@@ -789,7 +789,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象
+    *  业务对象。
     *
     * @return string|null
     */
@@ -801,7 +801,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象
+    * @param string|null $l3 业务对象。
     *
     * @return $this
     */
@@ -813,7 +813,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets approvalTime
-    *  审核时间
+    *  审核时间。
     *
     * @return \DateTime|null
     */
@@ -825,7 +825,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets approvalTime
     *
-    * @param \DateTime|null $approvalTime 审核时间
+    * @param \DateTime|null $approvalTime 审核时间。
     *
     * @return $this
     */
@@ -837,7 +837,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets approver
-    *  审核人
+    *  审核人。
     *
     * @return string|null
     */
@@ -849,7 +849,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets approver
     *
-    * @param string|null $approver 审核人
+    * @param string|null $approver 审核人。
     *
     * @return $this
     */
@@ -861,7 +861,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  审核人邮箱
+    *  审核人邮箱。
     *
     * @return string|null
     */
@@ -873,7 +873,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 审核人邮箱
+    * @param string|null $email 审核人邮箱。
     *
     * @return $this
     */
@@ -885,7 +885,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets msg
-    *  审核信息
+    *  审核信息。
     *
     * @return string|null
     */
@@ -897,7 +897,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets msg
     *
-    * @param string|null $msg 审核信息
+    * @param string|null $msg 审核信息。
     *
     * @return $this
     */
@@ -909,7 +909,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryPath
-    *  目录树
+    *  目录树。
     *
     * @return string|null
     */
@@ -921,7 +921,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets directoryPath
     *
-    * @param string|null $directoryPath 目录树
+    * @param string|null $directoryPath 目录树。
     *
     * @return $this
     */

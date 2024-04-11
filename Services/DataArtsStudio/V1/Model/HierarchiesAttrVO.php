@@ -20,17 +20,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * hierarchiesId  层级id
-    * attrId  属性id
-    * level  层次
-    * attrNameEn  引用属性编码
-    * attrNameCh  引用属性名称
-    * detailAttrIds  详情属性id
-    * detailAttrNameEns  详情属性英文
-    * detailAttrNameChs  详情属性中文
+    * id  编码。
+    * hierarchiesId  层级ID。
+    * attrId  属性ID。
+    * level  层次。
+    * attrNameEn  引用属性编码。
+    * attrNameCh  引用属性名称。
+    * detailAttrIds  详情属性ID。
+    * detailAttrNameEns  详情属性英文。
+    * detailAttrNameChs  详情属性中文。
     * attr  attr
-    * detailAttrs  详情字段
+    * detailAttrs  详情字段。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * hierarchiesId  层级id
-    * attrId  属性id
-    * level  层次
-    * attrNameEn  引用属性编码
-    * attrNameCh  引用属性名称
-    * detailAttrIds  详情属性id
-    * detailAttrNameEns  详情属性英文
-    * detailAttrNameChs  详情属性中文
+    * id  编码。
+    * hierarchiesId  层级ID。
+    * attrId  属性ID。
+    * level  层次。
+    * attrNameEn  引用属性编码。
+    * attrNameCh  引用属性名称。
+    * detailAttrIds  详情属性ID。
+    * detailAttrNameEns  详情属性英文。
+    * detailAttrNameChs  详情属性中文。
     * attr  attr
-    * detailAttrs  详情字段
+    * detailAttrs  详情字段。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * hierarchiesId  层级id
-    * attrId  属性id
-    * level  层次
-    * attrNameEn  引用属性编码
-    * attrNameCh  引用属性名称
-    * detailAttrIds  详情属性id
-    * detailAttrNameEns  详情属性英文
-    * detailAttrNameChs  详情属性中文
+    * id  编码。
+    * hierarchiesId  层级ID。
+    * attrId  属性ID。
+    * level  层次。
+    * attrNameEn  引用属性编码。
+    * attrNameCh  引用属性名称。
+    * detailAttrIds  详情属性ID。
+    * detailAttrNameEns  详情属性英文。
+    * detailAttrNameChs  详情属性中文。
     * attr  attr
-    * detailAttrs  详情字段
+    * detailAttrs  详情字段。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * hierarchiesId  层级id
-    * attrId  属性id
-    * level  层次
-    * attrNameEn  引用属性编码
-    * attrNameCh  引用属性名称
-    * detailAttrIds  详情属性id
-    * detailAttrNameEns  详情属性英文
-    * detailAttrNameChs  详情属性中文
+    * id  编码。
+    * hierarchiesId  层级ID。
+    * attrId  属性ID。
+    * level  层次。
+    * attrNameEn  引用属性编码。
+    * attrNameCh  引用属性名称。
+    * detailAttrIds  详情属性ID。
+    * detailAttrNameEns  详情属性英文。
+    * detailAttrNameChs  详情属性中文。
     * attr  attr
-    * detailAttrs  详情字段
+    * detailAttrs  详情字段。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * hierarchiesId  层级id
-    * attrId  属性id
-    * level  层次
-    * attrNameEn  引用属性编码
-    * attrNameCh  引用属性名称
-    * detailAttrIds  详情属性id
-    * detailAttrNameEns  详情属性英文
-    * detailAttrNameChs  详情属性中文
+    * id  编码。
+    * hierarchiesId  层级ID。
+    * attrId  属性ID。
+    * level  层次。
+    * attrNameEn  引用属性编码。
+    * attrNameCh  引用属性名称。
+    * detailAttrIds  详情属性ID。
+    * detailAttrNameEns  详情属性英文。
+    * detailAttrNameChs  详情属性中文。
     * attr  attr
-    * detailAttrs  详情字段
+    * detailAttrs  详情字段。
     *
     * @var string[]
     */
@@ -284,7 +284,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -296,7 +296,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -308,7 +308,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets hierarchiesId
-    *  层级id
+    *  层级ID。
     *
     * @return int|null
     */
@@ -320,7 +320,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets hierarchiesId
     *
-    * @param int|null $hierarchiesId 层级id
+    * @param int|null $hierarchiesId 层级ID。
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrId
-    *  属性id
+    *  属性ID。
     *
     * @return int|null
     */
@@ -344,7 +344,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrId
     *
-    * @param int|null $attrId 属性id
+    * @param int|null $attrId 属性ID。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  层次
+    *  层次。
     *
     * @return int|null
     */
@@ -368,7 +368,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param int|null $level 层次
+    * @param int|null $level 层次。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrNameEn
-    *  引用属性编码
+    *  引用属性编码。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrNameEn
     *
-    * @param string|null $attrNameEn 引用属性编码
+    * @param string|null $attrNameEn 引用属性编码。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrNameCh
-    *  引用属性名称
+    *  引用属性名称。
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrNameCh
     *
-    * @param string|null $attrNameCh 引用属性名称
+    * @param string|null $attrNameCh 引用属性名称。
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrIds
-    *  详情属性id
+    *  详情属性ID。
     *
     * @return int[]|null
     */
@@ -440,7 +440,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrIds
     *
-    * @param int[]|null $detailAttrIds 详情属性id
+    * @param int[]|null $detailAttrIds 详情属性ID。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrNameEns
-    *  详情属性英文
+    *  详情属性英文。
     *
     * @return string[]|null
     */
@@ -464,7 +464,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrNameEns
     *
-    * @param string[]|null $detailAttrNameEns 详情属性英文
+    * @param string[]|null $detailAttrNameEns 详情属性英文。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrNameChs
-    *  详情属性中文
+    *  详情属性中文。
     *
     * @return string[]|null
     */
@@ -488,7 +488,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrNameChs
     *
-    * @param string[]|null $detailAttrNameChs 详情属性中文
+    * @param string[]|null $detailAttrNameChs 详情属性中文。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrs
-    *  详情字段
+    *  详情字段。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO[]|null
     */
@@ -536,7 +536,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrs
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO[]|null $detailAttrs 详情字段
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO[]|null $detailAttrs 详情字段。
     *
     * @return $this
     */

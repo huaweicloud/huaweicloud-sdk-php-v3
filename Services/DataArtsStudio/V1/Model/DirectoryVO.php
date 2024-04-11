@@ -20,19 +20,19 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * description  描述
-    * type  目录类型
-    * id  ID
-    * parentId  父目录ID,根节点没有此ID
-    * prevId  上个节点ID,首节点没有
-    * rootId  根节点ID,根节点此ID为自身ID
-    * qualifiedName  所属目录
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * children  子目录
+    * name  名称。
+    * description  描述。
+    * type  目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
+    * id  ID，创建时可不传，更新时必填。
+    * parentId  父目录ID，首层传null。
+    * prevId  上个节点ID，首节点传null。
+    * rootId  根节点ID，根节点此ID为自身ID。
+    * qualifiedName  所属目录。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * children  子目录。
     *
     * @var string[]
     */
@@ -54,19 +54,19 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * description  描述
-    * type  目录类型
-    * id  ID
-    * parentId  父目录ID,根节点没有此ID
-    * prevId  上个节点ID,首节点没有
-    * rootId  根节点ID,根节点此ID为自身ID
-    * qualifiedName  所属目录
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * children  子目录
+    * name  名称。
+    * description  描述。
+    * type  目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
+    * id  ID，创建时可不传，更新时必填。
+    * parentId  父目录ID，首层传null。
+    * prevId  上个节点ID，首节点传null。
+    * rootId  根节点ID，根节点此ID为自身ID。
+    * qualifiedName  所属目录。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * children  子目录。
     *
     * @var string[]
     */
@@ -109,19 +109,19 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * description  描述
-    * type  目录类型
-    * id  ID
-    * parentId  父目录ID,根节点没有此ID
-    * prevId  上个节点ID,首节点没有
-    * rootId  根节点ID,根节点此ID为自身ID
-    * qualifiedName  所属目录
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * children  子目录
+    * name  名称。
+    * description  描述。
+    * type  目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
+    * id  ID，创建时可不传，更新时必填。
+    * parentId  父目录ID，首层传null。
+    * prevId  上个节点ID，首节点传null。
+    * rootId  根节点ID，根节点此ID为自身ID。
+    * qualifiedName  所属目录。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * children  子目录。
     *
     * @var string[]
     */
@@ -143,19 +143,19 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * description  描述
-    * type  目录类型
-    * id  ID
-    * parentId  父目录ID,根节点没有此ID
-    * prevId  上个节点ID,首节点没有
-    * rootId  根节点ID,根节点此ID为自身ID
-    * qualifiedName  所属目录
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * children  子目录
+    * name  名称。
+    * description  描述。
+    * type  目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
+    * id  ID，创建时可不传，更新时必填。
+    * parentId  父目录ID，首层传null。
+    * prevId  上个节点ID，首节点传null。
+    * rootId  根节点ID，根节点此ID为自身ID。
+    * qualifiedName  所属目录。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * children  子目录。
     *
     * @var string[]
     */
@@ -177,19 +177,19 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * description  描述
-    * type  目录类型
-    * id  ID
-    * parentId  父目录ID,根节点没有此ID
-    * prevId  上个节点ID,首节点没有
-    * rootId  根节点ID,根节点此ID为自身ID
-    * qualifiedName  所属目录
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * children  子目录
+    * name  名称。
+    * description  描述。
+    * type  目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
+    * id  ID，创建时可不传，更新时必填。
+    * parentId  父目录ID，首层传null。
+    * prevId  上个节点ID，首节点传null。
+    * rootId  根节点ID，根节点此ID为自身ID。
+    * qualifiedName  所属目录。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * children  子目录。
     *
     * @var string[]
     */
@@ -250,7 +250,6 @@ class DirectoryVO implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const TYPE_STANDARD_ELEMENT = 'STANDARD_ELEMENT';
-    const TYPE_TAG = 'TAG';
     const TYPE_CODE = 'CODE';
     
 
@@ -263,7 +262,6 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     {
         return [
             self::TYPE_STANDARD_ELEMENT,
-            self::TYPE_TAG,
             self::TYPE_CODE,
         ];
     }
@@ -310,6 +308,12 @@ class DirectoryVO implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+            if ((mb_strlen($this->container['name']) > 200)) {
+                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 200.";
+            }
+            if (!preg_match("/^[a-zA-Z0-9_\\u4e00-\\u9fa5]*$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_\\u4e00-\\u9fa5]*$/.";
+            }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -343,7 +347,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  名称。
     *
     * @return string
     */
@@ -355,7 +359,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string $name 名称。
     *
     * @return $this
     */
@@ -367,7 +371,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string|null
     */
@@ -379,7 +383,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -391,7 +395,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  目录类型
+    *  目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
     *
     * @return string
     */
@@ -403,7 +407,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 目录类型
+    * @param string $type 目录类型。STANDARD_ELEMENT(数据标准)、CODE(码表)。
     *
     * @return $this
     */
@@ -415,7 +419,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  ID，创建时可不传，更新时必填。
     *
     * @return int|null
     */
@@ -427,7 +431,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id ID
+    * @param int|null $id ID，创建时可不传，更新时必填。
     *
     * @return $this
     */
@@ -439,7 +443,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父目录ID,根节点没有此ID
+    *  父目录ID，首层传null。
     *
     * @return int
     */
@@ -451,7 +455,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param int $parentId 父目录ID,根节点没有此ID
+    * @param int $parentId 父目录ID，首层传null。
     *
     * @return $this
     */
@@ -463,7 +467,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prevId
-    *  上个节点ID,首节点没有
+    *  上个节点ID，首节点传null。
     *
     * @return int
     */
@@ -475,7 +479,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets prevId
     *
-    * @param int $prevId 上个节点ID,首节点没有
+    * @param int $prevId 上个节点ID，首节点传null。
     *
     * @return $this
     */
@@ -487,7 +491,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets rootId
-    *  根节点ID,根节点此ID为自身ID
+    *  根节点ID，根节点此ID为自身ID。
     *
     * @return int|null
     */
@@ -499,7 +503,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets rootId
     *
-    * @param int|null $rootId 根节点ID,根节点此ID为自身ID
+    * @param int|null $rootId 根节点ID，根节点此ID为自身ID。
     *
     * @return $this
     */
@@ -511,7 +515,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualifiedName
-    *  所属目录
+    *  所属目录。
     *
     * @return string|null
     */
@@ -523,7 +527,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualifiedName
     *
-    * @param string|null $qualifiedName 所属目录
+    * @param string|null $qualifiedName 所属目录。
     *
     * @return $this
     */
@@ -535,7 +539,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -547,7 +551,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -559,7 +563,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -571,7 +575,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -583,7 +587,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -595,7 +599,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -607,7 +611,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -619,7 +623,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -631,7 +635,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  子目录
+    *  子目录。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DirectoryVO[]|null
     */
@@ -643,7 +647,7 @@ class DirectoryVO implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DirectoryVO[]|null $children 子目录
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DirectoryVO[]|null $children 子目录。
     *
     * @return $this
     */

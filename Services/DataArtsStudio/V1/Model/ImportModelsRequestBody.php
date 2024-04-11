@@ -20,7 +20,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    * file  导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets file
-    *  导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    *  导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @return \SplFileObject
     */
@@ -189,7 +189,7 @@ class ImportModelsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets file
     *
-    * @param \SplFileObject $file 导入用的excel文件，大小必须小于4MB，且行数小于3000行
+    * @param \SplFileObject $file 导入用的excel文件，大小必须小于4MB，且行数小于3000行。
     *
     * @return $this
     */

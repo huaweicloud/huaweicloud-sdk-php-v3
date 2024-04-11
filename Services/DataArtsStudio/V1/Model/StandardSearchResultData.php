@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowReplayDelayStatusRequest implements ModelInterface, ArrayAccess
+class StandardSearchResultData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ShowReplayDelayStatusRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowReplayDelayStatusRequest';
+    protected static $openAPIModelName = 'StandardSearchResult_data';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例id
-    * xLanguage  语言
+    * value  value
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'xLanguage' => 'string'
+            'value' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandardSearchResultDataValue'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例id
-    * xLanguage  语言
+    * value  value
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'xLanguage' => null
+        'value' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ShowReplayDelayStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例id
-    * xLanguage  语言
+    * value  value
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
-            'xLanguage' => 'X-Language'
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例id
-    * xLanguage  语言
+    * value  value
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'xLanguage' => 'setXLanguage'
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例id
-    * xLanguage  语言
+    * value  value
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'xLanguage' => 'getXLanguage'
+            'value' => 'getValue'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ShowReplayDelayStatusRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -169,9 +158,6 @@ class ShowReplayDelayStatusRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +173,26 @@ class ShowReplayDelayStatusRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  实例id
+    * Gets value
+    *  value
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandardSearchResultDataValue|null
     */
-    public function getInstanceId()
+    public function getValue()
     {
-        return $this->container['instanceId'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets instanceId
+    * Sets value
     *
-    * @param string $instanceId 实例id
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandardSearchResultDataValue|null $value value
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setValue($value)
     {
-        $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets xLanguage
-    *  语言
-    *
-    * @return string|null
-    */
-    public function getXLanguage()
-    {
-        return $this->container['xLanguage'];
-    }
-
-    /**
-    * Sets xLanguage
-    *
-    * @param string|null $xLanguage 语言
-    *
-    * @return $this
-    */
-    public function setXLanguage($xLanguage)
-    {
-        $this->container['xLanguage'] = $xLanguage;
+        $this->container['value'] = $value;
         return $this;
     }
 

@@ -27,7 +27,7 @@ class ResponseInfoHeader implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'key' => 'string',
-            'value' => 'object'
+            'value' => 'string'
     ];
 
     /**
@@ -172,6 +172,12 @@ class ResponseInfoHeader implements ModelInterface, ArrayAccess
             if (!is_null($this->container['key']) && !preg_match("/^[A-Za-z0-9-]{1,128}$/", $this->container['key'])) {
                 $invalidProperties[] = "invalid value for 'key', must be conform to the pattern /^[A-Za-z0-9-]{1,128}$/.";
             }
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -214,7 +220,7 @@ class ResponseInfoHeader implements ModelInterface, ArrayAccess
     * Gets value
     *  分组自定义响应的响应头的value，为长度为1到1024位的字符串
     *
-    * @return object|null
+    * @return string|null
     */
     public function getValue()
     {
@@ -224,7 +230,7 @@ class ResponseInfoHeader implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param object|null $value 分组自定义响应的响应头的value，为长度为1到1024位的字符串
+    * @param string|null $value 分组自定义响应的响应头的value，为长度为1到1024位的字符串
     *
     * @return $this
     */

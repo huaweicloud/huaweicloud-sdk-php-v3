@@ -20,10 +20,10 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  属性id列表
-    * standRowId  关联的数据标准的id
-    * tableId  表id
-    * bizType  表类型:维度、事实表、汇总表、业务表(默认)
+    * ids  属性ID列表。
+    * standRowId  关联的数据标准的ID。
+    * tableId  表ID。
+    * bizType  表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  属性id列表
-    * standRowId  关联的数据标准的id
-    * tableId  表id
-    * bizType  表类型:维度、事实表、汇总表、业务表(默认)
+    * ids  属性ID列表。
+    * standRowId  关联的数据标准的ID。
+    * tableId  表ID。
+    * bizType  表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  属性id列表
-    * standRowId  关联的数据标准的id
-    * tableId  表id
-    * bizType  表类型:维度、事实表、汇总表、业务表(默认)
+    * ids  属性ID列表。
+    * standRowId  关联的数据标准的ID。
+    * tableId  表ID。
+    * bizType  表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  属性id列表
-    * standRowId  关联的数据标准的id
-    * tableId  表id
-    * bizType  表类型:维度、事实表、汇总表、业务表(默认)
+    * ids  属性ID列表。
+    * standRowId  关联的数据标准的ID。
+    * tableId  表ID。
+    * bizType  表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  属性id列表
-    * standRowId  关联的数据标准的id
-    * tableId  表id
-    * bizType  表类型:维度、事实表、汇总表、业务表(默认)
+    * ids  属性ID列表。
+    * standRowId  关联的数据标准的ID。
+    * tableId  表ID。
+    * bizType  表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @var string[]
     */
@@ -248,7 +248,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  属性id列表
+    *  属性ID列表。
     *
     * @return int[]
     */
@@ -260,7 +260,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param int[] $ids 属性id列表
+    * @param int[] $ids 属性ID列表。
     *
     * @return $this
     */
@@ -272,7 +272,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的id
+    *  关联的数据标准的ID。
     *
     * @return int
     */
@@ -284,7 +284,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param int $standRowId 关联的数据标准的id
+    * @param int $standRowId 关联的数据标准的ID。
     *
     * @return $this
     */
@@ -296,7 +296,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  表id
+    *  表ID。
     *
     * @return int
     */
@@ -308,7 +308,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param int $tableId 表id
+    * @param int $tableId 表ID。
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizType
-    *  表类型:维度、事实表、汇总表、业务表(默认)
+    *  表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class LinkAttributeAndElementVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizType
     *
-    * @param string $bizType 表类型:维度、事实表、汇总表、业务表(默认)
+    * @param string $bizType 表类型，默认是TABLE_MODEL。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION(维度)、DIMENSION_LOGIC_TABLE(维度表)。
     *
     * @return $this
     */

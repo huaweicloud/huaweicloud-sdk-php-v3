@@ -20,12 +20,12 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * approverName  审批人姓名
-    * userId  审批人user_id
-    * email  email
-    * phoneNumber  电话号码
-    * emailNotify  邮件通知
-    * smsNotify  短信通知
+    * approverName  审批人姓名。
+    * userId  审批人ID。
+    * email  邮箱地址。
+    * phoneNumber  电话号码。
+    * emailNotify  邮件通知。
+    * smsNotify  短信通知。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * approverName  审批人姓名
-    * userId  审批人user_id
-    * email  email
-    * phoneNumber  电话号码
-    * emailNotify  邮件通知
-    * smsNotify  短信通知
+    * approverName  审批人姓名。
+    * userId  审批人ID。
+    * email  邮箱地址。
+    * phoneNumber  电话号码。
+    * emailNotify  邮件通知。
+    * smsNotify  短信通知。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * approverName  审批人姓名
-    * userId  审批人user_id
-    * email  email
-    * phoneNumber  电话号码
-    * emailNotify  邮件通知
-    * smsNotify  短信通知
+    * approverName  审批人姓名。
+    * userId  审批人ID。
+    * email  邮箱地址。
+    * phoneNumber  电话号码。
+    * emailNotify  邮件通知。
+    * smsNotify  短信通知。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * approverName  审批人姓名
-    * userId  审批人user_id
-    * email  email
-    * phoneNumber  电话号码
-    * emailNotify  邮件通知
-    * smsNotify  短信通知
+    * approverName  审批人姓名。
+    * userId  审批人ID。
+    * email  邮箱地址。
+    * phoneNumber  电话号码。
+    * emailNotify  邮件通知。
+    * smsNotify  短信通知。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * approverName  审批人姓名
-    * userId  审批人user_id
-    * email  email
-    * phoneNumber  电话号码
-    * emailNotify  邮件通知
-    * smsNotify  短信通知
+    * approverName  审批人姓名。
+    * userId  审批人ID。
+    * email  邮箱地址。
+    * phoneNumber  电话号码。
+    * emailNotify  邮件通知。
+    * smsNotify  短信通知。
     *
     * @var string[]
     */
@@ -244,7 +244,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets approverName
-    *  审批人姓名
+    *  审批人姓名。
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Sets approverName
     *
-    * @param string $approverName 审批人姓名
+    * @param string $approverName 审批人姓名。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets userId
-    *  审批人user_id
+    *  审批人ID。
     *
     * @return string
     */
@@ -280,7 +280,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Sets userId
     *
-    * @param string $userId 审批人user_id
+    * @param string $userId 审批人ID。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  email
+    *  邮箱地址。
     *
     * @return string|null
     */
@@ -304,7 +304,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email email
+    * @param string|null $email 邮箱地址。
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets phoneNumber
-    *  电话号码
+    *  电话号码。
     *
     * @return string|null
     */
@@ -328,7 +328,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Sets phoneNumber
     *
-    * @param string|null $phoneNumber 电话号码
+    * @param string|null $phoneNumber 电话号码。
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets emailNotify
-    *  邮件通知
+    *  邮件通知。
     *
     * @return bool|null
     */
@@ -352,7 +352,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Sets emailNotify
     *
-    * @param bool|null $emailNotify 邮件通知
+    * @param bool|null $emailNotify 邮件通知。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets smsNotify
-    *  短信通知
+    *  短信通知。
     *
     * @return bool|null
     */
@@ -376,7 +376,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Sets smsNotify
     *
-    * @param bool|null $smsNotify 短信通知
+    * @param bool|null $smsNotify 短信通知。
     *
     * @return $this
     */

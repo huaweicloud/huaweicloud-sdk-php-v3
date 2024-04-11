@@ -20,31 +20,31 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  中文名
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  中文名。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
     * status  status
-    * atomicIndexId  原子指标id
-    * timeConditionId  时间限定id
-    * timeFieldId  时间限定关联字段id
-    * timeFieldName  时间限定关联字段名称
-    * commonConditions  通用限定信息
-    * dimensionGroups  维度组(颗粒度)
+    * atomicIndexId  原子指标ID。
+    * timeConditionId  时间限定ID。
+    * timeFieldId  时间限定关联字段ID。
+    * timeFieldName  时间限定关联字段名称。
+    * commonConditions  通用限定信息。
+    * dimensionGroups  维度组(颗粒度)。
     * monitor  monitor
     * atomicIndex  atomicIndex
-    * timeConditionName  时间限定名称
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * timeConditionName  时间限定名称。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -82,31 +82,31 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  中文名
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  中文名。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
     * status  status
-    * atomicIndexId  原子指标id
-    * timeConditionId  时间限定id
-    * timeFieldId  时间限定关联字段id
-    * timeFieldName  时间限定关联字段名称
-    * commonConditions  通用限定信息
-    * dimensionGroups  维度组(颗粒度)
+    * atomicIndexId  原子指标ID。
+    * timeConditionId  时间限定ID。
+    * timeFieldId  时间限定关联字段ID。
+    * timeFieldName  时间限定关联字段名称。
+    * commonConditions  通用限定信息。
+    * dimensionGroups  维度组(颗粒度)。
     * monitor  monitor
     * atomicIndex  atomicIndex
-    * timeConditionName  时间限定名称
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * timeConditionName  时间限定名称。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -165,31 +165,31 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * nameEn  字段名
-    * nameCh  中文名
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  中文名。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
     * status  status
-    * atomicIndexId  原子指标id
-    * timeConditionId  时间限定id
-    * timeFieldId  时间限定关联字段id
-    * timeFieldName  时间限定关联字段名称
-    * commonConditions  通用限定信息
-    * dimensionGroups  维度组(颗粒度)
+    * atomicIndexId  原子指标ID。
+    * timeConditionId  时间限定ID。
+    * timeFieldId  时间限定关联字段ID。
+    * timeFieldName  时间限定关联字段名称。
+    * commonConditions  通用限定信息。
+    * dimensionGroups  维度组(颗粒度)。
     * monitor  monitor
     * atomicIndex  atomicIndex
-    * timeConditionName  时间限定名称
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * timeConditionName  时间限定名称。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -227,31 +227,31 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  中文名
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  中文名。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
     * status  status
-    * atomicIndexId  原子指标id
-    * timeConditionId  时间限定id
-    * timeFieldId  时间限定关联字段id
-    * timeFieldName  时间限定关联字段名称
-    * commonConditions  通用限定信息
-    * dimensionGroups  维度组(颗粒度)
+    * atomicIndexId  原子指标ID。
+    * timeConditionId  时间限定ID。
+    * timeFieldId  时间限定关联字段ID。
+    * timeFieldName  时间限定关联字段名称。
+    * commonConditions  通用限定信息。
+    * dimensionGroups  维度组(颗粒度)。
     * monitor  monitor
     * atomicIndex  atomicIndex
-    * timeConditionName  时间限定名称
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * timeConditionName  时间限定名称。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -289,31 +289,31 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  中文名
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  中文名。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
     * status  status
-    * atomicIndexId  原子指标id
-    * timeConditionId  时间限定id
-    * timeFieldId  时间限定关联字段id
-    * timeFieldName  时间限定关联字段名称
-    * commonConditions  通用限定信息
-    * dimensionGroups  维度组(颗粒度)
+    * atomicIndexId  原子指标ID。
+    * timeConditionId  时间限定ID。
+    * timeFieldId  时间限定关联字段ID。
+    * timeFieldName  时间限定关联字段名称。
+    * commonConditions  通用限定信息。
+    * dimensionGroups  维度组(颗粒度)。
     * monitor  monitor
     * atomicIndex  atomicIndex
-    * timeConditionName  时间限定名称
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * timeConditionName  时间限定名称。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -487,7 +487,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -499,7 +499,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名
+    *  字段名。
     *
     * @return string
     */
@@ -523,7 +523,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名
+    * @param string $nameEn 字段名。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  中文名
+    *  中文名。
     *
     * @return string
     */
@@ -547,7 +547,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 中文名
+    * @param string $nameCh 中文名。
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  描述。
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -583,7 +583,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -595,7 +595,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  字段类型
+    *  字段类型。
     *
     * @return string|null
     */
@@ -619,7 +619,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string|null $dataType 字段类型
+    * @param string|null $dataType 字段类型。
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组id
+    *  主题域分组ID。
     *
     * @return int|null
     */
@@ -643,7 +643,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组id
+    * @param int|null $l1Id 主题域分组ID。
     *
     * @return $this
     */
@@ -655,7 +655,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2Id
-    *  l2Id
+    *  主题域ID，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -667,7 +667,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2Id
     *
-    * @param string|null $l2Id l2Id
+    * @param string|null $l2Id 主题域ID，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -679,7 +679,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象guid
+    *  业务对象guid。
     *
     * @return int
     */
@@ -691,7 +691,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int $l3Id 业务对象guid
+    * @param int $l3Id 业务对象guid。
     *
     * @return $this
     */
@@ -727,7 +727,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets atomicIndexId
-    *  原子指标id
+    *  原子指标ID。
     *
     * @return int
     */
@@ -739,7 +739,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets atomicIndexId
     *
-    * @param int $atomicIndexId 原子指标id
+    * @param int $atomicIndexId 原子指标ID。
     *
     * @return $this
     */
@@ -751,7 +751,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeConditionId
-    *  时间限定id
+    *  时间限定ID。
     *
     * @return int|null
     */
@@ -763,7 +763,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeConditionId
     *
-    * @param int|null $timeConditionId 时间限定id
+    * @param int|null $timeConditionId 时间限定ID。
     *
     * @return $this
     */
@@ -775,7 +775,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeFieldId
-    *  时间限定关联字段id
+    *  时间限定关联字段ID。
     *
     * @return int|null
     */
@@ -787,7 +787,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeFieldId
     *
-    * @param int|null $timeFieldId 时间限定关联字段id
+    * @param int|null $timeFieldId 时间限定关联字段ID。
     *
     * @return $this
     */
@@ -799,7 +799,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeFieldName
-    *  时间限定关联字段名称
+    *  时间限定关联字段名称。
     *
     * @return string|null
     */
@@ -811,7 +811,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeFieldName
     *
-    * @param string|null $timeFieldName 时间限定关联字段名称
+    * @param string|null $timeFieldName 时间限定关联字段名称。
     *
     * @return $this
     */
@@ -823,7 +823,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets commonConditions
-    *  通用限定信息
+    *  通用限定信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CommonConditionVO[]|null
     */
@@ -835,7 +835,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets commonConditions
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CommonConditionVO[]|null $commonConditions 通用限定信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CommonConditionVO[]|null $commonConditions 通用限定信息。
     *
     * @return $this
     */
@@ -847,7 +847,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionGroups
-    *  维度组(颗粒度)
+    *  维度组(颗粒度)。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DerivativeIndexDimensionVO[]|null
     */
@@ -859,7 +859,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionGroups
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DerivativeIndexDimensionVO[]|null $dimensionGroups 维度组(颗粒度)
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DerivativeIndexDimensionVO[]|null $dimensionGroups 维度组(颗粒度)。
     *
     * @return $this
     */
@@ -919,7 +919,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeConditionName
-    *  时间限定名称
+    *  时间限定名称。
     *
     * @return string|null
     */
@@ -931,7 +931,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeConditionName
     *
-    * @param string|null $timeConditionName 时间限定名称
+    * @param string|null $timeConditionName 时间限定名称。
     *
     * @return $this
     */
@@ -943,7 +943,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -955,7 +955,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -967,7 +967,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -979,7 +979,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -991,7 +991,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组中文名
+    *  主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1003,7 +1003,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组中文名
+    * @param string|null $l1 主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1015,7 +1015,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域中文名
+    *  主题域中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1027,7 +1027,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域中文名
+    * @param string|null $l2 主题域中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1039,7 +1039,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象中文名
+    *  业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1051,7 +1051,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象中文名
+    * @param string|null $l3 业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1063,7 +1063,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets summaryTableId
-    *  汇总表id
+    *  汇总表ID。
     *
     * @return int|null
     */
@@ -1075,7 +1075,7 @@ class DerivativeIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets summaryTableId
     *
-    * @param int|null $summaryTableId 汇总表id
+    * @param int|null $summaryTableId 汇总表ID。
     *
     * @return $this
     */

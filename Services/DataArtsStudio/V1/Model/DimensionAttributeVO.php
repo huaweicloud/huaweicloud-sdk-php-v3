@@ -20,29 +20,29 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * dimensionId  维度id
-    * codeTableFieldId  码表属性id
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
+    * id  编码。
+    * dimensionId  维度ID。
+    * codeTableFieldId  码表属性ID。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isBizPrimary  是否业务主键
-    * isPartitionKey  是否分区
-    * ordinal  序号
-    * notNull  是否不为空
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isBizPrimary  是否业务主键。
+    * isPartitionKey  是否分区。
+    * ordinal  序号。
+    * notNull  是否不为空。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
-    * selfDefinedFields  自定义项
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -74,29 +74,29 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * dimensionId  维度id
-    * codeTableFieldId  码表属性id
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
+    * id  编码。
+    * dimensionId  维度ID。
+    * codeTableFieldId  码表属性ID。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isBizPrimary  是否业务主键
-    * isPartitionKey  是否分区
-    * ordinal  序号
-    * notNull  是否不为空
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isBizPrimary  是否业务主键。
+    * isPartitionKey  是否分区。
+    * ordinal  序号。
+    * notNull  是否不为空。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
-    * selfDefinedFields  自定义项
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -149,29 +149,29 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * dimensionId  维度id
-    * codeTableFieldId  码表属性id
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
+    * id  编码。
+    * dimensionId  维度ID。
+    * codeTableFieldId  码表属性ID。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isBizPrimary  是否业务主键
-    * isPartitionKey  是否分区
-    * ordinal  序号
-    * notNull  是否不为空
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isBizPrimary  是否业务主键。
+    * isPartitionKey  是否分区。
+    * ordinal  序号。
+    * notNull  是否不为空。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
-    * selfDefinedFields  自定义项
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -203,29 +203,29 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * dimensionId  维度id
-    * codeTableFieldId  码表属性id
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
+    * id  编码。
+    * dimensionId  维度ID。
+    * codeTableFieldId  码表属性ID。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isBizPrimary  是否业务主键
-    * isPartitionKey  是否分区
-    * ordinal  序号
-    * notNull  是否不为空
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isBizPrimary  是否业务主键。
+    * isPartitionKey  是否分区。
+    * ordinal  序号。
+    * notNull  是否不为空。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
-    * selfDefinedFields  自定义项
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -257,29 +257,29 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * dimensionId  维度id
-    * codeTableFieldId  码表属性id
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * dataType  字段类型
+    * id  编码。
+    * dimensionId  维度ID。
+    * codeTableFieldId  码表属性ID。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isBizPrimary  是否业务主键
-    * isPartitionKey  是否分区
-    * ordinal  序号
-    * notNull  是否不为空
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isBizPrimary  是否业务主键。
+    * isPartitionKey  是否分区。
+    * ordinal  序号。
+    * notNull  是否不为空。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
-    * selfDefinedFields  自定义项
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -455,7 +455,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -467,7 +467,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  维度id
+    *  维度ID。
     *
     * @return int|null
     */
@@ -491,7 +491,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param int|null $dimensionId 维度id
+    * @param int|null $dimensionId 维度ID。
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableFieldId
-    *  码表属性id
+    *  码表属性ID。
     *
     * @return int|null
     */
@@ -515,7 +515,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableFieldId
     *
-    * @param int|null $codeTableFieldId 码表属性id
+    * @param int|null $codeTableFieldId 码表属性ID。
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名
+    *  字段名。
     *
     * @return string
     */
@@ -539,7 +539,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名
+    * @param string $nameEn 字段名。
     *
     * @return $this
     */
@@ -551,7 +551,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  业务属性
+    *  业务属性。
     *
     * @return string
     */
@@ -563,7 +563,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 业务属性
+    * @param string $nameCh 业务属性。
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  描述。
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -611,7 +611,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  字段类型
+    *  字段类型。
     *
     * @return string
     */
@@ -635,7 +635,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 字段类型
+    * @param string $dataType 字段类型。
     *
     * @return $this
     */
@@ -671,7 +671,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataTypeExtend
-    *  数据类型扩展字段
+    *  数据类型扩展字段。
     *
     * @return string|null
     */
@@ -683,7 +683,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataTypeExtend
     *
-    * @param string|null $dataTypeExtend 数据类型扩展字段
+    * @param string|null $dataTypeExtend 数据类型扩展字段。
     *
     * @return $this
     */
@@ -695,7 +695,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPrimaryKey
-    *  是否主键
+    *  是否主键。
     *
     * @return bool
     */
@@ -707,7 +707,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets isPrimaryKey
     *
-    * @param bool $isPrimaryKey 是否主键
+    * @param bool $isPrimaryKey 是否主键。
     *
     * @return $this
     */
@@ -719,7 +719,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isBizPrimary
-    *  是否业务主键
+    *  是否业务主键。
     *
     * @return bool|null
     */
@@ -731,7 +731,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets isBizPrimary
     *
-    * @param bool|null $isBizPrimary 是否业务主键
+    * @param bool|null $isBizPrimary 是否业务主键。
     *
     * @return $this
     */
@@ -743,7 +743,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPartitionKey
-    *  是否分区
+    *  是否分区。
     *
     * @return bool|null
     */
@@ -755,7 +755,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets isPartitionKey
     *
-    * @param bool|null $isPartitionKey 是否分区
+    * @param bool|null $isPartitionKey 是否分区。
     *
     * @return $this
     */
@@ -767,7 +767,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  序号
+    *  序号。
     *
     * @return int
     */
@@ -779,7 +779,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int $ordinal 序号
+    * @param int $ordinal 序号。
     *
     * @return $this
     */
@@ -791,7 +791,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets notNull
-    *  是否不为空
+    *  是否不为空。
     *
     * @return bool|null
     */
@@ -803,7 +803,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets notNull
     *
-    * @param bool|null $notNull 是否不为空
+    * @param bool|null $notNull 是否不为空。
     *
     * @return $this
     */
@@ -815,7 +815,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的id
+    *  关联的数据标准的ID。
     *
     * @return int|null
     */
@@ -827,7 +827,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param int|null $standRowId 关联的数据标准的id
+    * @param int|null $standRowId 关联的数据标准的ID。
     *
     * @return $this
     */
@@ -839,7 +839,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowName
-    *  standRowName
+    *  关联的数据标准名称。
     *
     * @return string|null
     */
@@ -851,7 +851,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowName
     *
-    * @param string|null $standRowName standRowName
+    * @param string|null $standRowName 关联的数据标准名称。
     *
     * @return $this
     */
@@ -863,7 +863,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityInfos
-    *  质量信息
+    *  质量信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null
     */
@@ -875,7 +875,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfos
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息。
     *
     * @return $this
     */
@@ -911,7 +911,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -923,7 +923,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -935,7 +935,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -947,7 +947,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -983,7 +983,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfDefinedFields
-    *  自定义项
+    *  自定义项。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
     */
@@ -995,7 +995,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets selfDefinedFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。
     *
     * @return $this
     */

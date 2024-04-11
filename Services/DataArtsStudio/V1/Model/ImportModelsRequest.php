@@ -20,17 +20,21 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作
-    * modelId  模型id，在导入模型（import_relation）时必填
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
-    * skipExist  是否需要覆盖更新已有的实体
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
+    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspace' => 'string',
+            'xProjectId' => 'string',
+            'contentType' => 'string',
             'actionId' => 'string',
             'modelId' => 'string',
             'directoryId' => 'string',
@@ -40,17 +44,21 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作
-    * modelId  模型id，在导入模型（import_relation）时必填
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
-    * skipExist  是否需要覆盖更新已有的实体
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
+    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspace' => null,
+        'xProjectId' => null,
+        'contentType' => null,
         'actionId' => null,
         'modelId' => null,
         'directoryId' => null,
@@ -81,17 +89,21 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  DataArts Studio工作空间ID
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作
-    * modelId  模型id，在导入模型（import_relation）时必填
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
-    * skipExist  是否需要覆盖更新已有的实体
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
+    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspace' => 'workspace',
+            'xProjectId' => 'X-Project-Id',
+            'contentType' => 'Content-Type',
             'actionId' => 'action-id',
             'modelId' => 'model_id',
             'directoryId' => 'directory_id',
@@ -101,17 +113,21 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  DataArts Studio工作空间ID
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作
-    * modelId  模型id，在导入模型（import_relation）时必填
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
-    * skipExist  是否需要覆盖更新已有的实体
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
+    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'workspace' => 'setWorkspace',
+            'xProjectId' => 'setXProjectId',
+            'contentType' => 'setContentType',
             'actionId' => 'setActionId',
             'modelId' => 'setModelId',
             'directoryId' => 'setDirectoryId',
@@ -121,17 +137,21 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  DataArts Studio工作空间ID
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作
-    * modelId  模型id，在导入模型（import_relation）时必填
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
-    * skipExist  是否需要覆盖更新已有的实体
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
+    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'workspace' => 'getWorkspace',
+            'xProjectId' => 'getXProjectId',
+            'contentType' => 'getContentType',
             'actionId' => 'getActionId',
             'modelId' => 'getModelId',
             'directoryId' => 'getDirectoryId',
@@ -229,6 +249,8 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['actionId'] = isset($data['actionId']) ? $data['actionId'] : null;
         $this->container['modelId'] = isset($data['modelId']) ? $data['modelId'] : null;
         $this->container['directoryId'] = isset($data['directoryId']) ? $data['directoryId'] : null;
@@ -247,6 +269,24 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
+            if ((mb_strlen($this->container['workspace']) > 64)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['workspace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) < 3)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
         if ($this->container['actionId'] === null) {
             $invalidProperties[] = "'actionId' can't be null";
         }
@@ -274,7 +314,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  DataArts Studio工作空间ID
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -286,7 +326,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace DataArts Studio工作空间ID
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */
@@ -297,8 +337,56 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xProjectId
+    *  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getXProjectId()
+    {
+        return $this->container['xProjectId'];
+    }
+
+    /**
+    * Sets xProjectId
+    *
+    * @param string|null $xProjectId 项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return $this
+    */
+    public function setXProjectId($xProjectId)
+    {
+        $this->container['xProjectId'] = $xProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
     * Gets actionId
-    *  需要执行的动作，根据导入的对象不同而选择不同的导入动作
+    *  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
     *
     * @return string
     */
@@ -310,7 +398,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets actionId
     *
-    * @param string $actionId 需要执行的动作，根据导入的对象不同而选择不同的导入动作
+    * @param string $actionId 需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
     *
     * @return $this
     */
@@ -322,7 +410,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelId
-    *  模型id，在导入模型（import_relation）时必填
+    *  关系建模的模型ID，在导入模型（import_relation）时必填。
     *
     * @return string|null
     */
@@ -334,7 +422,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param string|null $modelId 模型id，在导入模型（import_relation）时必填
+    * @param string|null $modelId 关系建模的模型ID，在导入模型（import_relation）时必填。
     *
     * @return $this
     */
@@ -346,7 +434,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
+    *  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
     *
     * @return string|null
     */
@@ -358,7 +446,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string|null $directoryId 导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填
+    * @param string|null $directoryId 导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
     *
     * @return $this
     */
@@ -370,7 +458,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets skipExist
-    *  是否需要覆盖更新已有的实体
+    *  是否需要覆盖更新已有的实体。
     *
     * @return bool|null
     */
@@ -382,7 +470,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets skipExist
     *
-    * @param bool|null $skipExist 是否需要覆盖更新已有的实体
+    * @param bool|null $skipExist 是否需要覆盖更新已有的实体。
     *
     * @return $this
     */

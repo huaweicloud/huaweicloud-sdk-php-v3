@@ -21,7 +21,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    * deploymentId  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deploymentId
-    *  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    *  继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ContinueRollbackStackResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deploymentId
     *
-    * @param string|null $deploymentId 继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID
+    * @param string|null $deploymentId 继续回滚触发部署生成的唯一的deployment_id，由资源编排服务生成，通常为UUID  接受请求，进行异步处理。可以调用GetStackMetadata来获取异步请求的部署状态  **注意：** * 资源编排服务最终会将异步部署请求排队，在服务端空闲的情况下逐个处理。用户最大等待时长为6小时
     *
     * @return $this
     */

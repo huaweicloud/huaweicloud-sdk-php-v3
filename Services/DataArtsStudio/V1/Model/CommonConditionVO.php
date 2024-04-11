@@ -20,12 +20,12 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  名称
-    * fieldIds  字段id信息， 格式：table_id.field_id
-    * fieldNames  字段名称信息， 格式：表名称.字段名称
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * name  名称。
+    * fieldIds  字段id信息，格式：table_id.field_id。
+    * fieldNames  字段名称信息，格式：表名称.字段名称。
+    * calExp  计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
+    * calFnIds  引用函数ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * id  id
     *
     * @var string[]
@@ -42,12 +42,12 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  名称
-    * fieldIds  字段id信息， 格式：table_id.field_id
-    * fieldNames  字段名称信息， 格式：表名称.字段名称
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * name  名称。
+    * fieldIds  字段id信息，格式：table_id.field_id。
+    * fieldNames  字段名称信息，格式：表名称.字段名称。
+    * calExp  计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
+    * calFnIds  引用函数ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * id  id
     *
     * @var string[]
@@ -85,12 +85,12 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  名称
-    * fieldIds  字段id信息， 格式：table_id.field_id
-    * fieldNames  字段名称信息， 格式：表名称.字段名称
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * name  名称。
+    * fieldIds  字段id信息，格式：table_id.field_id。
+    * fieldNames  字段名称信息，格式：表名称.字段名称。
+    * calExp  计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
+    * calFnIds  引用函数ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * id  id
     *
     * @var string[]
@@ -107,12 +107,12 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  名称
-    * fieldIds  字段id信息， 格式：table_id.field_id
-    * fieldNames  字段名称信息， 格式：表名称.字段名称
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * name  名称。
+    * fieldIds  字段id信息，格式：table_id.field_id。
+    * fieldNames  字段名称信息，格式：表名称.字段名称。
+    * calExp  计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
+    * calFnIds  引用函数ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * id  id
     *
     * @var string[]
@@ -129,12 +129,12 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  名称
-    * fieldIds  字段id信息， 格式：table_id.field_id
-    * fieldNames  字段名称信息， 格式：表名称.字段名称
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * name  名称。
+    * fieldIds  字段id信息，格式：table_id.field_id。
+    * fieldNames  字段名称信息，格式：表名称.字段名称。
+    * calExp  计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
+    * calFnIds  引用函数ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * id  id
     *
     * @var string[]
@@ -258,7 +258,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  名称。
     *
     * @return string
     */
@@ -270,7 +270,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string $name 名称。
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldIds
-    *  字段id信息， 格式：table_id.field_id
+    *  字段id信息，格式：table_id.field_id。
     *
     * @return string[]
     */
@@ -294,7 +294,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldIds
     *
-    * @param string[] $fieldIds 字段id信息， 格式：table_id.field_id
+    * @param string[] $fieldIds 字段id信息，格式：table_id.field_id。
     *
     * @return $this
     */
@@ -306,7 +306,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldNames
-    *  字段名称信息， 格式：表名称.字段名称
+    *  字段名称信息，格式：表名称.字段名称。
     *
     * @return string[]|null
     */
@@ -318,7 +318,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldNames
     *
-    * @param string[]|null $fieldNames 字段名称信息， 格式：表名称.字段名称
+    * @param string[]|null $fieldNames 字段名称信息，格式：表名称.字段名称。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calExp
-    *  计算表达式
+    *  计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
     *
     * @return string
     */
@@ -342,7 +342,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Sets calExp
     *
-    * @param string $calExp 计算表达式
+    * @param string $calExp 计算表达式，形如'${table_id.column_id} > 1'，其中table_id表示引用字段所属表ID，column_id表示引用字段ID。
     *
     * @return $this
     */
@@ -354,7 +354,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calFnIds
-    *  计算表达式id
+    *  引用函数ID。
     *
     * @return int[]
     */
@@ -366,7 +366,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param int[] $calFnIds 计算表达式id
+    * @param int[] $calFnIds 引用函数ID。
     *
     * @return $this
     */
@@ -378,7 +378,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets frontConfigs
-    *  前端表达式配置，用于前端数据恢复
+    *  前端表达式配置，用于前端数据恢复。
     *
     * @return string|null
     */
@@ -390,7 +390,7 @@ class CommonConditionVO implements ModelInterface, ArrayAccess
     /**
     * Sets frontConfigs
     *
-    * @param string|null $frontConfigs 前端表达式配置，用于前端数据恢复
+    * @param string|null $frontConfigs 前端表达式配置，用于前端数据恢复。
     *
     * @return $this
     */

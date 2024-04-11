@@ -20,7 +20,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  消息引擎。
+    * engine  消息引擎：rocketmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs)
@@ -46,7 +46,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  消息引擎。
+    * engine  消息引擎：rocketmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs)
@@ -93,7 +93,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  消息引擎。
+    * engine  消息引擎：rocketmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs)
@@ -119,7 +119,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  消息引擎。
+    * engine  消息引擎：rocketmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs)
@@ -145,7 +145,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  消息引擎。
+    * engine  消息引擎：rocketmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](hrm-api-0010.xml)。](tag:hws,hws_hk,ctc,hws_eu,ocb,g42,hk_g42,tm,cmcc,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)。](tag:hcs)
@@ -209,7 +209,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_RELIABILITY = 'reliability';
+    const ENGINE_ROCKETMQ = 'rocketmq';
     const STATUS_CREATING = 'CREATING';
     const STATUS_RUNNING = 'RUNNING';
     const STATUS_RESTARTING = 'RESTARTING';
@@ -239,7 +239,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function getEngineAllowableValues()
     {
         return [
-            self::ENGINE_RELIABILITY,
+            self::ENGINE_ROCKETMQ,
         ];
     }
 
@@ -330,6 +330,9 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['engine'] === null) {
+            $invalidProperties[] = "'engine' can't be null";
+        }
             $allowedValues = $this->getEngineAllowableValues();
                 if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -378,9 +381,9 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  消息引擎。
+    *  消息引擎：rocketmq。
     *
-    * @return string|null
+    * @return string
     */
     public function getEngine()
     {
@@ -390,7 +393,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine 消息引擎。
+    * @param string $engine 消息引擎：rocketmq。
     *
     * @return $this
     */

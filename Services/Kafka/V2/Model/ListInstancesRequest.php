@@ -330,6 +330,9 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['engine'] === null) {
+            $invalidProperties[] = "'engine' can't be null";
+        }
             $allowedValues = $this->getEngineAllowableValues();
                 if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -380,7 +383,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     * Gets engine
     *  消息引擎：kafka。
     *
-    * @return string|null
+    * @return string
     */
     public function getEngine()
     {
@@ -390,7 +393,7 @@ class ListInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine 消息引擎：kafka。
+    * @param string $engine 消息引擎：kafka。
     *
     * @return $this
     */

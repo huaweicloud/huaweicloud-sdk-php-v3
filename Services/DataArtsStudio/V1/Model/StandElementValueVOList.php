@@ -20,18 +20,19 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * values  属性信息
+    * values  属性信息。
     * id  ID
-    * directoryId  标准所属目录
-    * directoryPath  目录树
-    * rowId  标准行的id
+    * directoryId  标准所属目录。
+    * directoryPath  目录树。
+    * rowId  标准行的ID。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * fromPublic  是否来自公共层。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -44,6 +45,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
             'status' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizStatusEnum',
             'approvalInfo' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApprovalVO',
             'newBiz' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizVersionManageVO',
+            'fromPublic' => 'bool',
             'createBy' => 'string',
             'updateBy' => 'string',
             'createTime' => '\DateTime',
@@ -52,18 +54,19 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * values  属性信息
+    * values  属性信息。
     * id  ID
-    * directoryId  标准所属目录
-    * directoryPath  目录树
-    * rowId  标准行的id
+    * directoryId  标准所属目录。
+    * directoryPath  目录树。
+    * rowId  标准行的ID。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * fromPublic  是否来自公共层。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -76,6 +79,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
         'status' => null,
         'approvalInfo' => null,
         'newBiz' => null,
+        'fromPublic' => null,
         'createBy' => null,
         'updateBy' => null,
         'createTime' => 'date-time',
@@ -105,18 +109,19 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * values  属性信息
+    * values  属性信息。
     * id  ID
-    * directoryId  标准所属目录
-    * directoryPath  目录树
-    * rowId  标准行的id
+    * directoryId  标准所属目录。
+    * directoryPath  目录树。
+    * rowId  标准行的ID。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * fromPublic  是否来自公共层。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -129,6 +134,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
             'status' => 'status',
             'approvalInfo' => 'approval_info',
             'newBiz' => 'new_biz',
+            'fromPublic' => 'from_public',
             'createBy' => 'create_by',
             'updateBy' => 'update_by',
             'createTime' => 'create_time',
@@ -137,18 +143,19 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * values  属性信息
+    * values  属性信息。
     * id  ID
-    * directoryId  标准所属目录
-    * directoryPath  目录树
-    * rowId  标准行的id
+    * directoryId  标准所属目录。
+    * directoryPath  目录树。
+    * rowId  标准行的ID。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * fromPublic  是否来自公共层。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -161,6 +168,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'approvalInfo' => 'setApprovalInfo',
             'newBiz' => 'setNewBiz',
+            'fromPublic' => 'setFromPublic',
             'createBy' => 'setCreateBy',
             'updateBy' => 'setUpdateBy',
             'createTime' => 'setCreateTime',
@@ -169,18 +177,19 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * values  属性信息
+    * values  属性信息。
     * id  ID
-    * directoryId  标准所属目录
-    * directoryPath  目录树
-    * rowId  标准行的id
+    * directoryId  标准所属目录。
+    * directoryPath  目录树。
+    * rowId  标准行的ID。
     * status  status
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * fromPublic  是否来自公共层。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -193,6 +202,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'approvalInfo' => 'getApprovalInfo',
             'newBiz' => 'getNewBiz',
+            'fromPublic' => 'getFromPublic',
             'createBy' => 'getCreateBy',
             'updateBy' => 'getUpdateBy',
             'createTime' => 'getCreateTime',
@@ -265,6 +275,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['approvalInfo'] = isset($data['approvalInfo']) ? $data['approvalInfo'] : null;
         $this->container['newBiz'] = isset($data['newBiz']) ? $data['newBiz'] : null;
+        $this->container['fromPublic'] = isset($data['fromPublic']) ? $data['fromPublic'] : null;
         $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
         $this->container['updateBy'] = isset($data['updateBy']) ? $data['updateBy'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -301,7 +312,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  属性信息
+    *  属性信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandElementValueVO[]
     */
@@ -313,7 +324,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandElementValueVO[] $values 属性信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandElementValueVO[] $values 属性信息。
     *
     * @return $this
     */
@@ -349,7 +360,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  标准所属目录
+    *  标准所属目录。
     *
     * @return int
     */
@@ -361,7 +372,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param int $directoryId 标准所属目录
+    * @param int $directoryId 标准所属目录。
     *
     * @return $this
     */
@@ -373,7 +384,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryPath
-    *  目录树
+    *  目录树。
     *
     * @return string|null
     */
@@ -385,7 +396,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets directoryPath
     *
-    * @param string|null $directoryPath 目录树
+    * @param string|null $directoryPath 目录树。
     *
     * @return $this
     */
@@ -397,7 +408,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowId
-    *  标准行的id
+    *  标准行的ID。
     *
     * @return int|null
     */
@@ -409,7 +420,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets rowId
     *
-    * @param int|null $rowId 标准行的id
+    * @param int|null $rowId 标准行的ID。
     *
     * @return $this
     */
@@ -492,8 +503,32 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets fromPublic
+    *  是否来自公共层。
+    *
+    * @return bool|null
+    */
+    public function getFromPublic()
+    {
+        return $this->container['fromPublic'];
+    }
+
+    /**
+    * Sets fromPublic
+    *
+    * @param bool|null $fromPublic 是否来自公共层。
+    *
+    * @return $this
+    */
+    public function setFromPublic($fromPublic)
+    {
+        $this->container['fromPublic'] = $fromPublic;
+        return $this;
+    }
+
+    /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -505,7 +540,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -517,7 +552,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -529,7 +564,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -541,7 +576,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -553,7 +588,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -565,7 +600,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -577,7 +612,7 @@ class StandElementValueVOList implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

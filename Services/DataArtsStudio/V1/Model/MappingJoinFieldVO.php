@@ -20,10 +20,10 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * field1Id  属性id
-    * field2Id  属性id
-    * field1Name  名称
-    * field2Name  名称
+    * field1Id  属性1ID。
+    * field2Id  属性2ID。
+    * field1Name  属性1名称。
+    * field2Name  属性2名称。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * field1Id  属性id
-    * field2Id  属性id
-    * field1Name  名称
-    * field2Name  名称
+    * field1Id  属性1ID。
+    * field2Id  属性2ID。
+    * field1Name  属性1名称。
+    * field2Name  属性2名称。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * field1Id  属性id
-    * field2Id  属性id
-    * field1Name  名称
-    * field2Name  名称
+    * field1Id  属性1ID。
+    * field2Id  属性2ID。
+    * field1Name  属性1名称。
+    * field2Name  属性2名称。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * field1Id  属性id
-    * field2Id  属性id
-    * field1Name  名称
-    * field2Name  名称
+    * field1Id  属性1ID。
+    * field2Id  属性2ID。
+    * field1Name  属性1名称。
+    * field2Name  属性2名称。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * field1Id  属性id
-    * field2Id  属性id
-    * field1Name  名称
-    * field2Name  名称
+    * field1Id  属性1ID。
+    * field2Id  属性2ID。
+    * field1Name  属性1名称。
+    * field2Name  属性2名称。
     *
     * @var string[]
     */
@@ -219,7 +219,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field1Id
-    *  属性id
+    *  属性1ID。
     *
     * @return int
     */
@@ -231,7 +231,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field1Id
     *
-    * @param int $field1Id 属性id
+    * @param int $field1Id 属性1ID。
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field2Id
-    *  属性id
+    *  属性2ID。
     *
     * @return int
     */
@@ -255,7 +255,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field2Id
     *
-    * @param int $field2Id 属性id
+    * @param int $field2Id 属性2ID。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field1Name
-    *  名称
+    *  属性1名称。
     *
     * @return string
     */
@@ -279,7 +279,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field1Name
     *
-    * @param string $field1Name 名称
+    * @param string $field1Name 属性1名称。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field2Name
-    *  名称
+    *  属性2名称。
     *
     * @return string
     */
@@ -303,7 +303,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field2Name
     *
-    * @param string $field2Name 名称
+    * @param string $field2Name 属性2名称。
     *
     * @return $this
     */

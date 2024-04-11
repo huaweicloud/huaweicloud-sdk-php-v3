@@ -27,7 +27,7 @@ class CommonRemoteAuth implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'remoteAuthentication' => 'string',
-            'remoteAuthRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\RemoteAuthRuleVo'
+            'remoteAuthRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\RemoteAuthRule'
     ];
 
     /**
@@ -217,7 +217,7 @@ class CommonRemoteAuth implements ModelInterface, ArrayAccess
     * Gets remoteAuthRules
     *  remoteAuthRules
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\RemoteAuthRuleVo
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\RemoteAuthRule
     */
     public function getRemoteAuthRules()
     {
@@ -227,7 +227,7 @@ class CommonRemoteAuth implements ModelInterface, ArrayAccess
     /**
     * Sets remoteAuthRules
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RemoteAuthRuleVo $remoteAuthRules remoteAuthRules
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RemoteAuthRule $remoteAuthRules remoteAuthRules
     *
     * @return $this
     */

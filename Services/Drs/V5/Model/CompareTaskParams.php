@@ -25,6 +25,7 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
     * startTime  定时启动时间，时间戳格式。
     * option  对比策略。
     * dbObject  对比选择对象。
+    * dataProcessInfo  更新数据加工规则请求体
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
             'type' => 'string',
             'startTime' => 'string',
             'option' => 'map[string,string]',
-            'dbObject' => 'map[string,\HuaweiCloud\SDK\Drs\V5\Model\DatabaseObject]'
+            'dbObject' => 'map[string,\HuaweiCloud\SDK\Drs\V5\Model\DatabaseObject]',
+            'dataProcessInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
     * startTime  定时启动时间，时间戳格式。
     * option  对比策略。
     * dbObject  对比选择对象。
+    * dataProcessInfo  更新数据加工规则请求体
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
         'type' => null,
         'startTime' => null,
         'option' => null,
-        'dbObject' => null
+        'dbObject' => null,
+        'dataProcessInfo' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
     * startTime  定时启动时间，时间戳格式。
     * option  对比策略。
     * dbObject  对比选择对象。
+    * dataProcessInfo  更新数据加工规则请求体
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
             'type' => 'type',
             'startTime' => 'start_time',
             'option' => 'option',
-            'dbObject' => 'db_object'
+            'dbObject' => 'db_object',
+            'dataProcessInfo' => 'data_process_info'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
     * startTime  定时启动时间，时间戳格式。
     * option  对比策略。
     * dbObject  对比选择对象。
+    * dataProcessInfo  更新数据加工规则请求体
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'startTime' => 'setStartTime',
             'option' => 'setOption',
-            'dbObject' => 'setDbObject'
+            'dbObject' => 'setDbObject',
+            'dataProcessInfo' => 'setDataProcessInfo'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
     * startTime  定时启动时间，时间戳格式。
     * option  对比策略。
     * dbObject  对比选择对象。
+    * dataProcessInfo  更新数据加工规则请求体
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'startTime' => 'getStartTime',
             'option' => 'getOption',
-            'dbObject' => 'getDbObject'
+            'dbObject' => 'getDbObject',
+            'dataProcessInfo' => 'getDataProcessInfo'
     ];
 
     /**
@@ -209,6 +219,7 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['option'] = isset($data['option']) ? $data['option'] : null;
         $this->container['dbObject'] = isset($data['dbObject']) ? $data['dbObject'] : null;
+        $this->container['dataProcessInfo'] = isset($data['dataProcessInfo']) ? $data['dataProcessInfo'] : null;
     }
 
     /**
@@ -358,6 +369,30 @@ class CompareTaskParams implements ModelInterface, ArrayAccess
     public function setDbObject($dbObject)
     {
         $this->container['dbObject'] = $dbObject;
+        return $this;
+    }
+
+    /**
+    * Gets dataProcessInfo
+    *  更新数据加工规则请求体
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[]|null
+    */
+    public function getDataProcessInfo()
+    {
+        return $this->container['dataProcessInfo'];
+    }
+
+    /**
+    * Sets dataProcessInfo
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\DataProcessInfo[]|null $dataProcessInfo 更新数据加工规则请求体
+    *
+    * @return $this
+    */
+    public function setDataProcessInfo($dataProcessInfo)
+    {
+        $this->container['dataProcessInfo'] = $dataProcessInfo;
         return $this;
     }
 

@@ -26,7 +26,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页加速域名的数量，取值范围1-10000，默认值为30。
     * pageNumber  查询的页码，即：从哪一页开始查询，取值范围1-65535，默认值为1。
-    * showTags  展示标签标识 true：不展示 false：展示。
+    * showTags  展示标签标识 true：展示 false：不展示。
     * exactMatch  精准匹配 true：开启 false：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
@@ -52,7 +52,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页加速域名的数量，取值范围1-10000，默认值为30。
     * pageNumber  查询的页码，即：从哪一页开始查询，取值范围1-65535，默认值为1。
-    * showTags  展示标签标识 true：不展示 false：展示。
+    * showTags  展示标签标识 true：展示 false：不展示。
     * exactMatch  精准匹配 true：开启 false：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
@@ -99,7 +99,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页加速域名的数量，取值范围1-10000，默认值为30。
     * pageNumber  查询的页码，即：从哪一页开始查询，取值范围1-65535，默认值为1。
-    * showTags  展示标签标识 true：不展示 false：展示。
+    * showTags  展示标签标识 true：展示 false：不展示。
     * exactMatch  精准匹配 true：开启 false：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
@@ -125,7 +125,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页加速域名的数量，取值范围1-10000，默认值为30。
     * pageNumber  查询的页码，即：从哪一页开始查询，取值范围1-65535，默认值为1。
-    * showTags  展示标签标识 true：不展示 false：展示。
+    * showTags  展示标签标识 true：展示 false：不展示。
     * exactMatch  精准匹配 true：开启 false：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
@@ -151,7 +151,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * serviceArea  华为云CDN提供的加速服务范围，包含： - mainland_china 中国大陆 - outside_mainland_china 中国大陆境外 - global 全球。
     * pageSize  每页加速域名的数量，取值范围1-10000，默认值为30。
     * pageNumber  查询的页码，即：从哪一页开始查询，取值范围1-65535，默认值为1。
-    * showTags  展示标签标识 true：不展示 false：展示。
+    * showTags  展示标签标识 true：展示 false：不展示。
     * exactMatch  精准匹配 true：开启 false：关闭。
     * enterpriseProjectId  当用户开启企业项目功能时，该参数生效，表示查询资源所属项目，\"all\"表示所有项目。注意：当使用子帐号调用接口时，该参数必传。  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id。
     *
@@ -406,7 +406,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets showTags
-    *  展示标签标识 true：不展示 false：展示。
+    *  展示标签标识 true：展示 false：不展示。
     *
     * @return bool|null
     */
@@ -418,7 +418,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets showTags
     *
-    * @param bool|null $showTags 展示标签标识 true：不展示 false：展示。
+    * @param bool|null $showTags 展示标签标识 true：展示 false：不展示。
     *
     * @return $this
     */

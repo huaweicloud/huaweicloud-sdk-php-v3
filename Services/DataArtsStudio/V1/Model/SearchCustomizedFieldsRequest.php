@@ -20,15 +20,19 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * type  type
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspace' => 'string',
+            'xProjectId' => 'string',
+            'contentType' => 'string',
             'limit' => 'int',
             'offset' => 'int',
             'type' => 'string'
@@ -36,15 +40,19 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * type  type
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspace' => null,
+        'xProjectId' => null,
+        'contentType' => null,
         'limit' => 'int32',
         'offset' => 'int32',
         'type' => null
@@ -73,15 +81,19 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  DataArts Studio工作空间ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * type  type
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspace' => 'workspace',
+            'xProjectId' => 'X-Project-Id',
+            'contentType' => 'Content-Type',
             'limit' => 'limit',
             'offset' => 'offset',
             'type' => 'type'
@@ -89,15 +101,19 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  DataArts Studio工作空间ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * type  type
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @var string[]
     */
     protected static $setters = [
             'workspace' => 'setWorkspace',
+            'xProjectId' => 'setXProjectId',
+            'contentType' => 'setContentType',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'type' => 'setType'
@@ -105,15 +121,19 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  DataArts Studio工作空间ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * type  type
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @var string[]
     */
     protected static $getters = [
             'workspace' => 'getWorkspace',
+            'xProjectId' => 'getXProjectId',
+            'contentType' => 'getContentType',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'type' => 'getType'
@@ -162,6 +182,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     const TYPE_TABLE = 'TABLE';
     const TYPE_ATTRIBUTE = 'ATTRIBUTE';
     const TYPE_SUBJECT = 'SUBJECT';
+    const TYPE_METRIC = 'METRIC';
     
 
     /**
@@ -175,6 +196,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
             self::TYPE_TABLE,
             self::TYPE_ATTRIBUTE,
             self::TYPE_SUBJECT,
+            self::TYPE_METRIC,
         ];
     }
 
@@ -195,6 +217,8 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -211,6 +235,24 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
+            if ((mb_strlen($this->container['workspace']) > 64)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['workspace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) < 3)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
             }
@@ -241,7 +283,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  DataArts Studio工作空间ID
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -253,7 +295,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace DataArts Studio工作空间ID
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */
@@ -264,8 +306,56 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xProjectId
+    *  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getXProjectId()
+    {
+        return $this->container['xProjectId'];
+    }
+
+    /**
+    * Sets xProjectId
+    *
+    * @param string|null $xProjectId 项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return $this
+    */
+    public function setXProjectId($xProjectId)
+    {
+        $this->container['xProjectId'] = $xProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -277,7 +367,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */
@@ -289,7 +379,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @return int|null
     */
@@ -301,7 +391,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @return $this
     */
@@ -313,7 +403,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  type
+    *  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @return string
     */
@@ -325,7 +415,7 @@ class SearchCustomizedFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type type
+    * @param string $type 自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @return $this
     */

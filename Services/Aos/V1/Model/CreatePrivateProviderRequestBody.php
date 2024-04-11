@@ -211,8 +211,8 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['providerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'providerName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[0-9a-z][0-9a-z-]*[0-9a-z]*$/", $this->container['providerName'])) {
-                $invalidProperties[] = "invalid value for 'providerName', must be conform to the pattern /^[0-9a-z][0-9a-z-]*[0-9a-z]*$/.";
+            if (!preg_match("/^[0-9a-z]([0-9a-z-]*[0-9a-z])*$/", $this->container['providerName'])) {
+                $invalidProperties[] = "invalid value for 'providerName', must be conform to the pattern /^[0-9a-z]([0-9a-z-]*[0-9a-z])*$/.";
             }
             if (!is_null($this->container['providerDescription']) && (mb_strlen($this->container['providerDescription']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'providerDescription', the character length must be smaller than or equal to 1024.";

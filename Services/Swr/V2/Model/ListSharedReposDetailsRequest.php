@@ -235,6 +235,9 @@ class ListSharedReposDetailsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['center'] === null) {
+            $invalidProperties[] = "'center' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -301,7 +304,7 @@ class ListSharedReposDetailsRequest implements ModelInterface, ArrayAccess
     * Gets center
     *  self: 我共享的镜像。thirdparty: 他人共享给我的镜像
     *
-    * @return string|null
+    * @return string
     */
     public function getCenter()
     {
@@ -311,7 +314,7 @@ class ListSharedReposDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets center
     *
-    * @param string|null $center self: 我共享的镜像。thirdparty: 他人共享给我的镜像
+    * @param string $center self: 我共享的镜像。thirdparty: 他人共享给我的镜像
     *
     * @return $this
     */

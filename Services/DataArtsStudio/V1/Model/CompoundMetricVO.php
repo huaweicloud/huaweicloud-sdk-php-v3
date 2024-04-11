@@ -20,33 +20,33 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * dimensionGroup  颗粒度id
-    * groupName  颗粒度名称
-    * groupCode  颗粒度编码
-    * metricIds  指标信息
-    * metricNames  指标名称信息
-    * calFnIds  引用函数id
-    * calExp  计算表达式, ${index_id} + ${index_id}
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
-    * dataType  字段类型
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述
+    * dimensionGroup  颗粒度ID。
+    * groupName  颗粒度名称。
+    * groupCode  颗粒度编码。
+    * metricIds  指标信息。
+    * metricNames  指标名称信息。
+    * calFnIds  引用函数ID。
+    * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
+    * dataType  字段类型。
+    * createBy  创建人。
+    * updateBy  更新人。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     *
     * @var string[]
     */
@@ -82,33 +82,33 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * dimensionGroup  颗粒度id
-    * groupName  颗粒度名称
-    * groupCode  颗粒度编码
-    * metricIds  指标信息
-    * metricNames  指标名称信息
-    * calFnIds  引用函数id
-    * calExp  计算表达式, ${index_id} + ${index_id}
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
-    * dataType  字段类型
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述
+    * dimensionGroup  颗粒度ID。
+    * groupName  颗粒度名称。
+    * groupCode  颗粒度编码。
+    * metricIds  指标信息。
+    * metricNames  指标名称信息。
+    * calFnIds  引用函数ID。
+    * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
+    * dataType  字段类型。
+    * createBy  创建人。
+    * updateBy  更新人。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     *
     * @var string[]
     */
@@ -165,33 +165,33 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * dimensionGroup  颗粒度id
-    * groupName  颗粒度名称
-    * groupCode  颗粒度编码
-    * metricIds  指标信息
-    * metricNames  指标名称信息
-    * calFnIds  引用函数id
-    * calExp  计算表达式, ${index_id} + ${index_id}
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
-    * dataType  字段类型
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述
+    * dimensionGroup  颗粒度ID。
+    * groupName  颗粒度名称。
+    * groupCode  颗粒度编码。
+    * metricIds  指标信息。
+    * metricNames  指标名称信息。
+    * calFnIds  引用函数ID。
+    * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
+    * dataType  字段类型。
+    * createBy  创建人。
+    * updateBy  更新人。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     *
     * @var string[]
     */
@@ -227,33 +227,33 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * dimensionGroup  颗粒度id
-    * groupName  颗粒度名称
-    * groupCode  颗粒度编码
-    * metricIds  指标信息
-    * metricNames  指标名称信息
-    * calFnIds  引用函数id
-    * calExp  计算表达式, ${index_id} + ${index_id}
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
-    * dataType  字段类型
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述
+    * dimensionGroup  颗粒度ID。
+    * groupName  颗粒度名称。
+    * groupCode  颗粒度编码。
+    * metricIds  指标信息。
+    * metricNames  指标名称信息。
+    * calFnIds  引用函数ID。
+    * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
+    * dataType  字段类型。
+    * createBy  创建人。
+    * updateBy  更新人。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     *
     * @var string[]
     */
@@ -289,33 +289,33 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * dimensionGroup  颗粒度id
-    * groupName  颗粒度名称
-    * groupCode  颗粒度编码
-    * metricIds  指标信息
-    * metricNames  指标名称信息
-    * calFnIds  引用函数id
-    * calExp  计算表达式, ${index_id} + ${index_id}
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
-    * dataType  字段类型
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述
+    * dimensionGroup  颗粒度ID。
+    * groupName  颗粒度名称。
+    * groupCode  颗粒度编码。
+    * metricIds  指标信息。
+    * metricNames  指标名称信息。
+    * calFnIds  引用函数ID。
+    * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
+    * dataType  字段类型。
+    * createBy  创建人。
+    * updateBy  更新人。
     * status  status
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * summaryTableId  汇总表id
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * summaryTableId  汇总表ID。
     *
     * @var string[]
     */
@@ -490,7 +490,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -502,7 +502,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名
+    *  字段名。
     *
     * @return string
     */
@@ -526,7 +526,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名
+    * @param string $nameEn 字段名。
     *
     * @return $this
     */
@@ -538,7 +538,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  业务属性
+    *  业务属性。
     *
     * @return string
     */
@@ -550,7 +550,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 业务属性
+    * @param string $nameCh 业务属性。
     *
     * @return $this
     */
@@ -562,7 +562,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  描述
     *
     * @return string|null
     */
@@ -574,7 +574,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 描述
     *
     * @return $this
     */
@@ -586,7 +586,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionGroup
-    *  颗粒度id
+    *  颗粒度ID。
     *
     * @return string
     */
@@ -598,7 +598,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionGroup
     *
-    * @param string $dimensionGroup 颗粒度id
+    * @param string $dimensionGroup 颗粒度ID。
     *
     * @return $this
     */
@@ -610,7 +610,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  颗粒度名称
+    *  颗粒度名称。
     *
     * @return string|null
     */
@@ -622,7 +622,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 颗粒度名称
+    * @param string|null $groupName 颗粒度名称。
     *
     * @return $this
     */
@@ -634,7 +634,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupCode
-    *  颗粒度编码
+    *  颗粒度编码。
     *
     * @return string|null
     */
@@ -646,7 +646,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupCode
     *
-    * @param string|null $groupCode 颗粒度编码
+    * @param string|null $groupCode 颗粒度编码。
     *
     * @return $this
     */
@@ -658,7 +658,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricIds
-    *  指标信息
+    *  指标信息。
     *
     * @return int[]
     */
@@ -670,7 +670,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricIds
     *
-    * @param int[] $metricIds 指标信息
+    * @param int[] $metricIds 指标信息。
     *
     * @return $this
     */
@@ -682,7 +682,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricNames
-    *  指标名称信息
+    *  指标名称信息。
     *
     * @return string[]|null
     */
@@ -694,7 +694,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricNames
     *
-    * @param string[]|null $metricNames 指标名称信息
+    * @param string[]|null $metricNames 指标名称信息。
     *
     * @return $this
     */
@@ -706,7 +706,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calFnIds
-    *  引用函数id
+    *  引用函数ID。
     *
     * @return int[]|null
     */
@@ -718,7 +718,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param int[]|null $calFnIds 引用函数id
+    * @param int[]|null $calFnIds 引用函数ID。
     *
     * @return $this
     */
@@ -730,7 +730,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calExp
-    *  计算表达式, ${index_id} + ${index_id}
+    *  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
     *
     * @return string
     */
@@ -742,7 +742,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets calExp
     *
-    * @param string $calExp 计算表达式, ${index_id} + ${index_id}
+    * @param string $calExp 计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
     *
     * @return $this
     */
@@ -754,7 +754,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组id
+    *  主题域分组ID。
     *
     * @return int|null
     */
@@ -766,7 +766,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组id
+    * @param int|null $l1Id 主题域分组ID。
     *
     * @return $this
     */
@@ -778,7 +778,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2Id
-    *  l2Id
+    *  主题域ID，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -790,7 +790,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2Id
     *
-    * @param string|null $l2Id l2Id
+    * @param string|null $l2Id 主题域ID，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -802,7 +802,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象id
+    *  业务对象ID。
     *
     * @return int|null
     */
@@ -814,7 +814,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int|null $l3Id 业务对象id
+    * @param int|null $l3Id 业务对象ID。
     *
     * @return $this
     */
@@ -826,7 +826,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  字段类型
+    *  字段类型。
     *
     * @return string|null
     */
@@ -838,7 +838,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string|null $dataType 字段类型
+    * @param string|null $dataType 字段类型。
     *
     * @return $this
     */
@@ -850,7 +850,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -862,7 +862,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -874,7 +874,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -886,7 +886,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -922,7 +922,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -934,7 +934,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -946,7 +946,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -958,7 +958,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1042,7 +1042,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组中文名
+    *  主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1054,7 +1054,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组中文名
+    * @param string|null $l1 主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1066,7 +1066,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域中文名
+    *  主题域中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1078,7 +1078,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域中文名
+    * @param string|null $l2 主题域中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1090,7 +1090,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象中文名
+    *  业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1102,7 +1102,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象中文名
+    * @param string|null $l3 业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1114,7 +1114,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets summaryTableId
-    *  汇总表id
+    *  汇总表ID。
     *
     * @return int|null
     */
@@ -1126,7 +1126,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets summaryTableId
     *
-    * @param int|null $summaryTableId 汇总表id
+    * @param int|null $summaryTableId 汇总表ID。
     *
     * @return $this
     */

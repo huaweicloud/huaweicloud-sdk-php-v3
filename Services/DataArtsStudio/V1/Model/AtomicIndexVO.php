@@ -20,35 +20,35 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
-    * tableId  表id
-    * tbName  表名称
-    * dwType  数据连接类型
-    * fieldIds  字段id信息
-    * fieldNames  字段名称信息
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
+    * calFnIds  引用函数ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
+    * tableId  表ID。
+    * tbName  表名称。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * fieldIds  字段ID信息。
+    * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'nameEn' => 'string',
             'nameCh' => 'string',
             'description' => 'string',
@@ -57,8 +57,8 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
             'calFnIds' => 'int[]',
             'l1Id' => 'int',
             'l2Id' => 'string',
-            'l3Id' => 'int',
-            'tableId' => 'int',
+            'l3Id' => 'string',
+            'tableId' => 'string',
             'tbName' => 'string',
             'dwType' => 'string',
             'fieldIds' => 'int[]',
@@ -76,28 +76,28 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
-    * tableId  表id
-    * tbName  表名称
-    * dwType  数据连接类型
-    * fieldIds  字段id信息
-    * fieldNames  字段名称信息
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
+    * calFnIds  引用函数ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
+    * tableId  表ID。
+    * tbName  表名称。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * fieldIds  字段ID信息。
+    * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -153,28 +153,28 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
-    * tableId  表id
-    * tbName  表名称
-    * dwType  数据连接类型
-    * fieldIds  字段id信息
-    * fieldNames  字段名称信息
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
+    * calFnIds  引用函数ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
+    * tableId  表ID。
+    * tbName  表名称。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * fieldIds  字段ID信息。
+    * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -209,28 +209,28 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
-    * tableId  表id
-    * tbName  表名称
-    * dwType  数据连接类型
-    * fieldIds  字段id信息
-    * fieldNames  字段名称信息
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
+    * calFnIds  引用函数ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
+    * tableId  表ID。
+    * tbName  表名称。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * fieldIds  字段ID信息。
+    * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -265,28 +265,28 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * createBy  创建人
-    * calExp  计算表达式
-    * calFnIds  计算表达式id
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象guid
-    * tableId  表id
-    * tbName  表名称
-    * dwType  数据连接类型
-    * fieldIds  字段id信息
-    * fieldNames  字段名称信息
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * createBy  创建人。
+    * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
+    * calFnIds  引用函数ID。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象guid。
+    * tableId  表ID。
+    * tbName  表名称。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * fieldIds  字段ID信息。
+    * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     *
@@ -463,9 +463,9 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -475,7 +475,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param string|null $id 编码。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名
+    *  字段名。
     *
     * @return string
     */
@@ -499,7 +499,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名
+    * @param string $nameEn 字段名。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  业务属性
+    *  业务属性。
     *
     * @return string
     */
@@ -523,7 +523,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 业务属性
+    * @param string $nameCh 业务属性。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  描述。
     *
     * @return string|null
     */
@@ -547,7 +547,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -559,7 +559,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -571,7 +571,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -583,7 +583,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calExp
-    *  计算表达式
+    *  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
     *
     * @return string
     */
@@ -595,7 +595,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets calExp
     *
-    * @param string $calExp 计算表达式
+    * @param string $calExp 计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
     *
     * @return $this
     */
@@ -607,7 +607,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calFnIds
-    *  计算表达式id
+    *  引用函数ID。
     *
     * @return int[]|null
     */
@@ -619,7 +619,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param int[]|null $calFnIds 计算表达式id
+    * @param int[]|null $calFnIds 引用函数ID。
     *
     * @return $this
     */
@@ -631,7 +631,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组id
+    *  主题域分组ID。
     *
     * @return int|null
     */
@@ -643,7 +643,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组id
+    * @param int|null $l1Id 主题域分组ID。
     *
     * @return $this
     */
@@ -655,7 +655,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2Id
-    *  l2Id
+    *  主题域ID，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -667,7 +667,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2Id
     *
-    * @param string|null $l2Id l2Id
+    * @param string|null $l2Id 主题域ID，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -679,9 +679,9 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象guid
+    *  业务对象guid。
     *
-    * @return int
+    * @return string
     */
     public function getL3Id()
     {
@@ -691,7 +691,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int $l3Id 业务对象guid
+    * @param string $l3Id 业务对象guid。
     *
     * @return $this
     */
@@ -703,9 +703,9 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  表id
+    *  表ID。
     *
-    * @return int
+    * @return string
     */
     public function getTableId()
     {
@@ -715,7 +715,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param int $tableId 表id
+    * @param string $tableId 表ID。
     *
     * @return $this
     */
@@ -727,7 +727,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbName
-    *  表名称
+    *  表名称。
     *
     * @return string|null
     */
@@ -739,7 +739,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbName
     *
-    * @param string|null $tbName 表名称
+    * @param string|null $tbName 表名称。
     *
     * @return $this
     */
@@ -751,7 +751,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dwType
-    *  数据连接类型
+    *  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     *
     * @return string|null
     */
@@ -763,7 +763,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets dwType
     *
-    * @param string|null $dwType 数据连接类型
+    * @param string|null $dwType 数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     *
     * @return $this
     */
@@ -775,7 +775,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldIds
-    *  字段id信息
+    *  字段ID信息。
     *
     * @return int[]
     */
@@ -787,7 +787,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldIds
     *
-    * @param int[] $fieldIds 字段id信息
+    * @param int[] $fieldIds 字段ID信息。
     *
     * @return $this
     */
@@ -799,7 +799,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldNames
-    *  字段名称信息
+    *  字段名称信息。
     *
     * @return string[]|null
     */
@@ -811,7 +811,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldNames
     *
-    * @param string[]|null $fieldNames 字段名称信息
+    * @param string[]|null $fieldNames 字段名称信息。
     *
     * @return $this
     */
@@ -871,7 +871,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -883,7 +883,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -895,7 +895,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -907,7 +907,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -919,7 +919,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组中文名
+    *  主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -931,7 +931,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组中文名
+    * @param string|null $l1 主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -943,7 +943,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域中文名
+    *  主题域中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -955,7 +955,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域中文名
+    * @param string|null $l2 主题域中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -967,7 +967,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象中文名
+    *  业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -979,7 +979,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象中文名
+    * @param string|null $l3 业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */

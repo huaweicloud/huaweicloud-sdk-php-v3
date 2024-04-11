@@ -20,7 +20,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * limit  分页参数：每页限定数量
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
@@ -40,7 +40,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * limit  分页参数：每页限定数量
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
@@ -81,7 +81,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  DataArts Studio工作空间ID
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * limit  分页参数：每页限定数量
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
@@ -101,7 +101,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  DataArts Studio工作空间ID
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * limit  分页参数：每页限定数量
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
@@ -121,7 +121,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  DataArts Studio工作空间ID
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * limit  分页参数：每页限定数量
     * offset  分页参数：页数
     * jobType  作业类型:  - REAL_TIME: 实时处理  - BATCH: 批处理
@@ -231,6 +231,12 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
+            if ((mb_strlen($this->container['workspace']) > 64)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['workspace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 3.";
+            }
             $allowedValues = $this->getJobTypeAllowableValues();
                 if (!is_null($this->container['jobType']) && !in_array($this->container['jobType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -255,7 +261,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  DataArts Studio工作空间ID
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -267,7 +273,7 @@ class ListFactoryJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace DataArts Studio工作空间ID
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */

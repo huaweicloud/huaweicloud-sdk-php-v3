@@ -20,24 +20,24 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * mappingId  名称
-    * targetAttrId  目的字段id
-    * targetAttrName  目的字段排序
-    * srcTableIds  源表id, 通过,join
-    * srcTableNames  源表名称数组
-    * srcTableDbNames  源表db名称数组
-    * srcTableModelIds  源表模型id数组
-    * srcTableIdList  源表id数组
-    * srcAttrIds  源表字段id, 通过,join
-    * srcAttrNames  源表字段名称数组
-    * srcAttrIdList  源表字段id数组
-    * remark  备注
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * targetAttr  目标属性
+    * id  编码。
+    * mappingId  名称。
+    * targetAttrId  目的字段ID。
+    * targetAttrName  目的字段排序。
+    * srcTableIds  源表ID。
+    * srcTableNames  源表名称数组。
+    * srcTableDbNames  源表db名称数组。
+    * srcTableModelIds  源表在关系建模中的模型ID数组。
+    * srcTableIdList  源表ID数组。
+    * srcAttrIds  源表字段ID。
+    * srcAttrNames  源表字段名称数组。
+    * srcAttrIdList  源表字段ID数组。
+    * remark  备注。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * targetAttr  目标属性。
     *
     * @var string[]
     */
@@ -64,24 +64,24 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * mappingId  名称
-    * targetAttrId  目的字段id
-    * targetAttrName  目的字段排序
-    * srcTableIds  源表id, 通过,join
-    * srcTableNames  源表名称数组
-    * srcTableDbNames  源表db名称数组
-    * srcTableModelIds  源表模型id数组
-    * srcTableIdList  源表id数组
-    * srcAttrIds  源表字段id, 通过,join
-    * srcAttrNames  源表字段名称数组
-    * srcAttrIdList  源表字段id数组
-    * remark  备注
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * targetAttr  目标属性
+    * id  编码。
+    * mappingId  名称。
+    * targetAttrId  目的字段ID。
+    * targetAttrName  目的字段排序。
+    * srcTableIds  源表ID。
+    * srcTableNames  源表名称数组。
+    * srcTableDbNames  源表db名称数组。
+    * srcTableModelIds  源表在关系建模中的模型ID数组。
+    * srcTableIdList  源表ID数组。
+    * srcAttrIds  源表字段ID。
+    * srcAttrNames  源表字段名称数组。
+    * srcAttrIdList  源表字段ID数组。
+    * remark  备注。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * targetAttr  目标属性。
     *
     * @var string[]
     */
@@ -129,24 +129,24 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * mappingId  名称
-    * targetAttrId  目的字段id
-    * targetAttrName  目的字段排序
-    * srcTableIds  源表id, 通过,join
-    * srcTableNames  源表名称数组
-    * srcTableDbNames  源表db名称数组
-    * srcTableModelIds  源表模型id数组
-    * srcTableIdList  源表id数组
-    * srcAttrIds  源表字段id, 通过,join
-    * srcAttrNames  源表字段名称数组
-    * srcAttrIdList  源表字段id数组
-    * remark  备注
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * targetAttr  目标属性
+    * id  编码。
+    * mappingId  名称。
+    * targetAttrId  目的字段ID。
+    * targetAttrName  目的字段排序。
+    * srcTableIds  源表ID。
+    * srcTableNames  源表名称数组。
+    * srcTableDbNames  源表db名称数组。
+    * srcTableModelIds  源表在关系建模中的模型ID数组。
+    * srcTableIdList  源表ID数组。
+    * srcAttrIds  源表字段ID。
+    * srcAttrNames  源表字段名称数组。
+    * srcAttrIdList  源表字段ID数组。
+    * remark  备注。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * targetAttr  目标属性。
     *
     * @var string[]
     */
@@ -173,24 +173,24 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * mappingId  名称
-    * targetAttrId  目的字段id
-    * targetAttrName  目的字段排序
-    * srcTableIds  源表id, 通过,join
-    * srcTableNames  源表名称数组
-    * srcTableDbNames  源表db名称数组
-    * srcTableModelIds  源表模型id数组
-    * srcTableIdList  源表id数组
-    * srcAttrIds  源表字段id, 通过,join
-    * srcAttrNames  源表字段名称数组
-    * srcAttrIdList  源表字段id数组
-    * remark  备注
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * targetAttr  目标属性
+    * id  编码。
+    * mappingId  名称。
+    * targetAttrId  目的字段ID。
+    * targetAttrName  目的字段排序。
+    * srcTableIds  源表ID。
+    * srcTableNames  源表名称数组。
+    * srcTableDbNames  源表db名称数组。
+    * srcTableModelIds  源表在关系建模中的模型ID数组。
+    * srcTableIdList  源表ID数组。
+    * srcAttrIds  源表字段ID。
+    * srcAttrNames  源表字段名称数组。
+    * srcAttrIdList  源表字段ID数组。
+    * remark  备注。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * targetAttr  目标属性。
     *
     * @var string[]
     */
@@ -217,24 +217,24 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * mappingId  名称
-    * targetAttrId  目的字段id
-    * targetAttrName  目的字段排序
-    * srcTableIds  源表id, 通过,join
-    * srcTableNames  源表名称数组
-    * srcTableDbNames  源表db名称数组
-    * srcTableModelIds  源表模型id数组
-    * srcTableIdList  源表id数组
-    * srcAttrIds  源表字段id, 通过,join
-    * srcAttrNames  源表字段名称数组
-    * srcAttrIdList  源表字段id数组
-    * remark  备注
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
-    * targetAttr  目标属性
+    * id  编码。
+    * mappingId  名称。
+    * targetAttrId  目的字段ID。
+    * targetAttrName  目的字段排序。
+    * srcTableIds  源表ID。
+    * srcTableNames  源表名称数组。
+    * srcTableDbNames  源表db名称数组。
+    * srcTableModelIds  源表在关系建模中的模型ID数组。
+    * srcTableIdList  源表ID数组。
+    * srcAttrIds  源表字段ID。
+    * srcAttrNames  源表字段名称数组。
+    * srcAttrIdList  源表字段ID数组。
+    * remark  备注。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * targetAttr  目标属性。
     *
     * @var string[]
     */
@@ -364,7 +364,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -376,7 +376,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets mappingId
-    *  名称
+    *  名称。
     *
     * @return string|null
     */
@@ -400,7 +400,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets mappingId
     *
-    * @param string|null $mappingId 名称
+    * @param string|null $mappingId 名称。
     *
     * @return $this
     */
@@ -412,7 +412,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetAttrId
-    *  目的字段id
+    *  目的字段ID。
     *
     * @return int|null
     */
@@ -424,7 +424,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetAttrId
     *
-    * @param int|null $targetAttrId 目的字段id
+    * @param int|null $targetAttrId 目的字段ID。
     *
     * @return $this
     */
@@ -436,7 +436,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetAttrName
-    *  目的字段排序
+    *  目的字段排序。
     *
     * @return string
     */
@@ -448,7 +448,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetAttrName
     *
-    * @param string $targetAttrName 目的字段排序
+    * @param string $targetAttrName 目的字段排序。
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableIds
-    *  源表id, 通过,join
+    *  源表ID。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableIds
     *
-    * @param string|null $srcTableIds 源表id, 通过,join
+    * @param string|null $srcTableIds 源表ID。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableNames
-    *  源表名称数组
+    *  源表名称数组。
     *
     * @return string[]|null
     */
@@ -496,7 +496,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableNames
     *
-    * @param string[]|null $srcTableNames 源表名称数组
+    * @param string[]|null $srcTableNames 源表名称数组。
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableDbNames
-    *  源表db名称数组
+    *  源表db名称数组。
     *
     * @return string[]|null
     */
@@ -520,7 +520,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableDbNames
     *
-    * @param string[]|null $srcTableDbNames 源表db名称数组
+    * @param string[]|null $srcTableDbNames 源表db名称数组。
     *
     * @return $this
     */
@@ -532,7 +532,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableModelIds
-    *  源表模型id数组
+    *  源表在关系建模中的模型ID数组。
     *
     * @return int[]|null
     */
@@ -544,7 +544,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableModelIds
     *
-    * @param int[]|null $srcTableModelIds 源表模型id数组
+    * @param int[]|null $srcTableModelIds 源表在关系建模中的模型ID数组。
     *
     * @return $this
     */
@@ -556,7 +556,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableIdList
-    *  源表id数组
+    *  源表ID数组。
     *
     * @return int[]|null
     */
@@ -568,7 +568,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableIdList
     *
-    * @param int[]|null $srcTableIdList 源表id数组
+    * @param int[]|null $srcTableIdList 源表ID数组。
     *
     * @return $this
     */
@@ -580,7 +580,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcAttrIds
-    *  源表字段id, 通过,join
+    *  源表字段ID。
     *
     * @return string|null
     */
@@ -592,7 +592,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcAttrIds
     *
-    * @param string|null $srcAttrIds 源表字段id, 通过,join
+    * @param string|null $srcAttrIds 源表字段ID。
     *
     * @return $this
     */
@@ -604,7 +604,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcAttrNames
-    *  源表字段名称数组
+    *  源表字段名称数组。
     *
     * @return string[]|null
     */
@@ -616,7 +616,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcAttrNames
     *
-    * @param string[]|null $srcAttrNames 源表字段名称数组
+    * @param string[]|null $srcAttrNames 源表字段名称数组。
     *
     * @return $this
     */
@@ -628,7 +628,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcAttrIdList
-    *  源表字段id数组
+    *  源表字段ID数组。
     *
     * @return int[]|null
     */
@@ -640,7 +640,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcAttrIdList
     *
-    * @param int[]|null $srcAttrIdList 源表字段id数组
+    * @param int[]|null $srcAttrIdList 源表字段ID数组。
     *
     * @return $this
     */
@@ -652,7 +652,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets remark
-    *  备注
+    *  备注。
     *
     * @return string|null
     */
@@ -664,7 +664,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 备注
+    * @param string|null $remark 备注。
     *
     * @return $this
     */
@@ -676,7 +676,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -688,7 +688,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -700,7 +700,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -712,7 +712,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -724,7 +724,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -736,7 +736,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -748,7 +748,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -760,7 +760,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -772,7 +772,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetAttr
-    *  目标属性
+    *  目标属性。
     *
     * @return object|null
     */
@@ -784,7 +784,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetAttr
     *
-    * @param object|null $targetAttr 目标属性
+    * @param object|null $targetAttr 目标属性。
     *
     * @return $this
     */

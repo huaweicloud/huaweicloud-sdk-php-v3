@@ -20,10 +20,10 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编号
-    * level  层级
-    * nameCh  中文名称
-    * nameEn  英文名称
+    * id  编号。
+    * level  层级。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编号
-    * level  层级
-    * nameCh  中文名称
-    * nameEn  英文名称
+    * id  编号。
+    * level  层级。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编号
-    * level  层级
-    * nameCh  中文名称
-    * nameEn  英文名称
+    * id  编号。
+    * level  层级。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编号
-    * level  层级
-    * nameCh  中文名称
-    * nameEn  英文名称
+    * id  编号。
+    * level  层级。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编号
-    * level  层级
-    * nameCh  中文名称
-    * nameEn  英文名称
+    * id  编号。
+    * level  层级。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编号
+    *  编号。
     *
     * @return int|null
     */
@@ -219,7 +219,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编号
+    * @param int|null $id 编号。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  层级
+    *  层级。
     *
     * @return int|null
     */
@@ -243,7 +243,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param int|null $level 层级
+    * @param int|null $level 层级。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  中文名称
+    *  中文名称。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string|null $nameCh 中文名称
+    * @param string|null $nameCh 中文名称。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  英文名称
+    *  英文名称。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class CatalogLevelVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string|null $nameEn 英文名称
+    * @param string|null $nameEn 英文名称。
     *
     * @return $this
     */

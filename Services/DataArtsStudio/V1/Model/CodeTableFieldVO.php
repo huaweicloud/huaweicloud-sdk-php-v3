@@ -20,18 +20,18 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID
-    * codeTableId  所属码表id
-    * ordinal  序号
-    * nameEn  字段名，英文
-    * nameCh  字段名，中文
-    * description  描述
-    * dataType  字段类型
+    * id  码表字段ID。
+    * codeTableId  所属码表ID。
+    * ordinal  序号。
+    * nameEn  字段名，英文。
+    * nameCh  字段名，中文。
+    * description  描述。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isUniqueKey  是否唯一
-    * codeTableFieldValues  码表属性值
-    * countFieldValues  码表属性值总数
+    * dataTypeExtend  数据类型扩展字段。
+    * isUniqueKey  是否唯一。
+    * codeTableFieldValues  码表属性值。
+    * countFieldValues  码表属性值总数。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID
-    * codeTableId  所属码表id
-    * ordinal  序号
-    * nameEn  字段名，英文
-    * nameCh  字段名，中文
-    * description  描述
-    * dataType  字段类型
+    * id  码表字段ID。
+    * codeTableId  所属码表ID。
+    * ordinal  序号。
+    * nameEn  字段名，英文。
+    * nameCh  字段名，中文。
+    * description  描述。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isUniqueKey  是否唯一
-    * codeTableFieldValues  码表属性值
-    * countFieldValues  码表属性值总数
+    * dataTypeExtend  数据类型扩展字段。
+    * isUniqueKey  是否唯一。
+    * codeTableFieldValues  码表属性值。
+    * countFieldValues  码表属性值总数。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID
-    * codeTableId  所属码表id
-    * ordinal  序号
-    * nameEn  字段名，英文
-    * nameCh  字段名，中文
-    * description  描述
-    * dataType  字段类型
+    * id  码表字段ID。
+    * codeTableId  所属码表ID。
+    * ordinal  序号。
+    * nameEn  字段名，英文。
+    * nameCh  字段名，中文。
+    * description  描述。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isUniqueKey  是否唯一
-    * codeTableFieldValues  码表属性值
-    * countFieldValues  码表属性值总数
+    * dataTypeExtend  数据类型扩展字段。
+    * isUniqueKey  是否唯一。
+    * codeTableFieldValues  码表属性值。
+    * countFieldValues  码表属性值总数。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID
-    * codeTableId  所属码表id
-    * ordinal  序号
-    * nameEn  字段名，英文
-    * nameCh  字段名，中文
-    * description  描述
-    * dataType  字段类型
+    * id  码表字段ID。
+    * codeTableId  所属码表ID。
+    * ordinal  序号。
+    * nameEn  字段名，英文。
+    * nameCh  字段名，中文。
+    * description  描述。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isUniqueKey  是否唯一
-    * codeTableFieldValues  码表属性值
-    * countFieldValues  码表属性值总数
+    * dataTypeExtend  数据类型扩展字段。
+    * isUniqueKey  是否唯一。
+    * codeTableFieldValues  码表属性值。
+    * countFieldValues  码表属性值总数。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID
-    * codeTableId  所属码表id
-    * ordinal  序号
-    * nameEn  字段名，英文
-    * nameCh  字段名，中文
-    * description  描述
-    * dataType  字段类型
+    * id  码表字段ID。
+    * codeTableId  所属码表ID。
+    * ordinal  序号。
+    * nameEn  字段名，英文。
+    * nameCh  字段名，中文。
+    * description  描述。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isUniqueKey  是否唯一
-    * codeTableFieldValues  码表属性值
-    * countFieldValues  码表属性值总数
+    * dataTypeExtend  数据类型扩展字段。
+    * isUniqueKey  是否唯一。
+    * codeTableFieldValues  码表属性值。
+    * countFieldValues  码表属性值总数。
     *
     * @var string[]
     */
@@ -325,7 +325,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  码表字段ID。
     *
     * @return int|null
     */
@@ -337,7 +337,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id ID
+    * @param int|null $id 码表字段ID。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableId
-    *  所属码表id
+    *  所属码表ID。
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableId
     *
-    * @param int|null $codeTableId 所属码表id
+    * @param int|null $codeTableId 所属码表ID。
     *
     * @return $this
     */
@@ -373,7 +373,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  序号
+    *  序号。
     *
     * @return int
     */
@@ -385,7 +385,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int $ordinal 序号
+    * @param int $ordinal 序号。
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名，英文
+    *  字段名，英文。
     *
     * @return string
     */
@@ -409,7 +409,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名，英文
+    * @param string $nameEn 字段名，英文。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  字段名，中文
+    *  字段名，中文。
     *
     * @return string
     */
@@ -433,7 +433,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 字段名，中文
+    * @param string $nameCh 字段名，中文。
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string|null
     */
@@ -457,7 +457,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  字段类型
+    *  字段类型。
     *
     * @return string
     */
@@ -481,7 +481,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 字段类型
+    * @param string $dataType 字段类型。
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataTypeExtend
-    *  数据类型扩展字段
+    *  数据类型扩展字段。
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataTypeExtend
     *
-    * @param string|null $dataTypeExtend 数据类型扩展字段
+    * @param string|null $dataTypeExtend 数据类型扩展字段。
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isUniqueKey
-    *  是否唯一
+    *  是否唯一。
     *
     * @return bool|null
     */
@@ -553,7 +553,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets isUniqueKey
     *
-    * @param bool|null $isUniqueKey 是否唯一
+    * @param bool|null $isUniqueKey 是否唯一。
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableFieldValues
-    *  码表属性值
+    *  码表属性值。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldValueVO[]|null
     */
@@ -577,7 +577,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableFieldValues
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldValueVO[]|null $codeTableFieldValues 码表属性值
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldValueVO[]|null $codeTableFieldValues 码表属性值。
     *
     * @return $this
     */
@@ -589,7 +589,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets countFieldValues
-    *  码表属性值总数
+    *  码表属性值总数。
     *
     * @return int|null
     */
@@ -601,7 +601,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets countFieldValues
     *
-    * @param int|null $countFieldValues 码表属性值总数
+    * @param int|null $countFieldValues 码表属性值总数。
     *
     * @return $this
     */

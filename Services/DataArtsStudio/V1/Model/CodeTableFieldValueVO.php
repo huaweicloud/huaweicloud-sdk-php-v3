@@ -21,10 +21,10 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  ID
-    * fdId  所属码表属性id
-    * fdValue  码表属性值
-    * ordinal  序号
-    * description  描述
+    * fdId  所属码表属性ID。
+    * fdValue  码表属性值。
+    * ordinal  序号。
+    * description  描述。
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  ID
-    * fdId  所属码表属性id
-    * fdValue  码表属性值
-    * ordinal  序号
-    * description  描述
+    * fdId  所属码表属性ID。
+    * fdValue  码表属性值。
+    * ordinal  序号。
+    * description  描述。
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  ID
-    * fdId  所属码表属性id
-    * fdValue  码表属性值
-    * ordinal  序号
-    * description  描述
+    * fdId  所属码表属性ID。
+    * fdValue  码表属性值。
+    * ordinal  序号。
+    * description  描述。
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  ID
-    * fdId  所属码表属性id
-    * fdValue  码表属性值
-    * ordinal  序号
-    * description  描述
+    * fdId  所属码表属性ID。
+    * fdValue  码表属性值。
+    * ordinal  序号。
+    * description  描述。
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  ID
-    * fdId  所属码表属性id
-    * fdValue  码表属性值
-    * ordinal  序号
-    * description  描述
+    * fdId  所属码表属性ID。
+    * fdValue  码表属性值。
+    * ordinal  序号。
+    * description  描述。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdId
-    *  所属码表属性id
+    *  所属码表属性ID。
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdId
     *
-    * @param int|null $fdId 所属码表属性id
+    * @param int|null $fdId 所属码表属性ID。
     *
     * @return $this
     */
@@ -269,7 +269,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdValue
-    *  码表属性值
+    *  码表属性值。
     *
     * @return string|null
     */
@@ -281,7 +281,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdValue
     *
-    * @param string|null $fdValue 码表属性值
+    * @param string|null $fdValue 码表属性值。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  序号
+    *  序号。
     *
     * @return int|null
     */
@@ -305,7 +305,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 序号
+    * @param int|null $ordinal 序号。
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class CodeTableFieldValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 描述。
     *
     * @return $this
     */

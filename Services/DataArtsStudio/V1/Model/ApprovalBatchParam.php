@@ -20,12 +20,12 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bizInfos  业务信息列表.
-    * approverUserId  审批人user id
-    * approverUserName  审批人user name
-    * email  审批人邮箱
-    * fastApproval  快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
-    * scheduleTime  作业调度时间
+    * bizInfos  业务信息列表。
+    * approverUserId  审批人ID。
+    * approverUserName  审批人姓名。
+    * email  审批人邮箱。
+    * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
+    * scheduleTime  作业调度时间。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bizInfos  业务信息列表.
-    * approverUserId  审批人user id
-    * approverUserName  审批人user name
-    * email  审批人邮箱
-    * fastApproval  快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
-    * scheduleTime  作业调度时间
+    * bizInfos  业务信息列表。
+    * approverUserId  审批人ID。
+    * approverUserName  审批人姓名。
+    * email  审批人邮箱。
+    * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
+    * scheduleTime  作业调度时间。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bizInfos  业务信息列表.
-    * approverUserId  审批人user id
-    * approverUserName  审批人user name
-    * email  审批人邮箱
-    * fastApproval  快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
-    * scheduleTime  作业调度时间
+    * bizInfos  业务信息列表。
+    * approverUserId  审批人ID。
+    * approverUserName  审批人姓名。
+    * email  审批人邮箱。
+    * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
+    * scheduleTime  作业调度时间。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bizInfos  业务信息列表.
-    * approverUserId  审批人user id
-    * approverUserName  审批人user name
-    * email  审批人邮箱
-    * fastApproval  快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
-    * scheduleTime  作业调度时间
+    * bizInfos  业务信息列表。
+    * approverUserId  审批人ID。
+    * approverUserName  审批人姓名。
+    * email  审批人邮箱。
+    * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
+    * scheduleTime  作业调度时间。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bizInfos  业务信息列表.
-    * approverUserId  审批人user id
-    * approverUserName  审批人user name
-    * email  审批人邮箱
-    * fastApproval  快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
-    * scheduleTime  作业调度时间
+    * bizInfos  业务信息列表。
+    * approverUserId  审批人ID。
+    * approverUserName  审批人姓名。
+    * email  审批人邮箱。
+    * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
+    * scheduleTime  作业调度时间。
     *
     * @var string[]
     */
@@ -238,7 +238,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfos
-    *  业务信息列表.
+    *  业务信息列表。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizInfoVO[]
     */
@@ -250,7 +250,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfos
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizInfoVO[] $bizInfos 业务信息列表.
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizInfoVO[] $bizInfos 业务信息列表。
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets approverUserId
-    *  审批人user id
+    *  审批人ID。
     *
     * @return string
     */
@@ -274,7 +274,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets approverUserId
     *
-    * @param string $approverUserId 审批人user id
+    * @param string $approverUserId 审批人ID。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets approverUserName
-    *  审批人user name
+    *  审批人姓名。
     *
     * @return string
     */
@@ -298,7 +298,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets approverUserName
     *
-    * @param string $approverUserName 审批人user name
+    * @param string $approverUserName 审批人姓名。
     *
     * @return $this
     */
@@ -310,7 +310,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  审批人邮箱
+    *  审批人邮箱。
     *
     * @return string|null
     */
@@ -322,7 +322,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 审批人邮箱
+    * @param string|null $email 审批人邮箱。
     *
     * @return $this
     */
@@ -334,7 +334,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets fastApproval
-    *  快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
+    *  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
     *
     * @return bool|null
     */
@@ -346,7 +346,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets fastApproval
     *
-    * @param bool|null $fastApproval 快速审批, 非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供
+    * @param bool|null $fastApproval 快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets scheduleTime
-    *  作业调度时间
+    *  作业调度时间。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleTime
     *
-    * @param string|null $scheduleTime 作业调度时间
+    * @param string|null $scheduleTime 作业调度时间。
     *
     * @return $this
     */

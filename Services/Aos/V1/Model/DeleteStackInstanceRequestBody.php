@@ -22,24 +22,28 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'stackSetId' => 'string',
-            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets'
+            'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets',
+            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'stackSetId' => null,
-        'deploymentTargets' => null
+        'deploymentTargets' => null,
+        'operationPreferences' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'stackSetId' => 'stack_set_id',
-            'deploymentTargets' => 'deployment_targets'
+            'deploymentTargets' => 'deployment_targets',
+            'operationPreferences' => 'operation_preferences'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
     protected static $setters = [
             'stackSetId' => 'setStackSetId',
-            'deploymentTargets' => 'setDeploymentTargets'
+            'deploymentTargets' => 'setDeploymentTargets',
+            'operationPreferences' => 'setOperationPreferences'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
     protected static $getters = [
             'stackSetId' => 'getStackSetId',
-            'deploymentTargets' => 'getDeploymentTargets'
+            'deploymentTargets' => 'getDeploymentTargets',
+            'operationPreferences' => 'getOperationPreferences'
     ];
 
     /**
@@ -159,6 +169,7 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     {
         $this->container['stackSetId'] = isset($data['stackSetId']) ? $data['stackSetId'] : null;
         $this->container['deploymentTargets'] = isset($data['deploymentTargets']) ? $data['deploymentTargets'] : null;
+        $this->container['operationPreferences'] = isset($data['operationPreferences']) ? $data['operationPreferences'] : null;
     }
 
     /**
@@ -240,6 +251,30 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setDeploymentTargets($deploymentTargets)
     {
         $this->container['deploymentTargets'] = $deploymentTargets;
+        return $this;
+    }
+
+    /**
+    * Gets operationPreferences
+    *  operationPreferences
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences|null
+    */
+    public function getOperationPreferences()
+    {
+        return $this->container['operationPreferences'];
+    }
+
+    /**
+    * Sets operationPreferences
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences|null $operationPreferences operationPreferences
+    *
+    * @return $this
+    */
+    public function setOperationPreferences($operationPreferences)
+    {
+        $this->container['operationPreferences'] = $operationPreferences;
         return $this;
     }
 

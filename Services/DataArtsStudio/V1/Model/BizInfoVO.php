@@ -20,7 +20,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bizId  业务ID
+    * bizId  业务ID。
     * bizType  bizType
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bizId  业务ID
+    * bizId  业务ID。
     * bizType  bizType
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bizId  业务ID
+    * bizId  业务ID。
     * bizType  bizType
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bizId  业务ID
+    * bizId  业务ID。
     * bizType  bizType
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bizId  业务ID
+    * bizId  业务ID。
     * bizType  bizType
     *
     * @var string[]
@@ -191,7 +191,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID
+    *  业务ID。
     *
     * @return int
     */
@@ -203,7 +203,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int $bizId 业务ID
+    * @param int $bizId 业务ID。
     *
     * @return $this
     */

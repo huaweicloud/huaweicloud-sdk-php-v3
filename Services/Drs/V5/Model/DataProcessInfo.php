@@ -29,6 +29,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbOrTableRenameRule  dbOrTableRenameRule
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbObjectColumnInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\DbObjectColumnInfo',
             'dbOrTableRenameRule' => '\HuaweiCloud\SDK\Drs\V5\Model\DbOrTableRenameRule',
             'dbObject' => '\HuaweiCloud\SDK\Drs\V5\Model\DbObject',
-            'isSynchronized' => 'bool'
+            'isSynchronized' => 'bool',
+            'source' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbOrTableRenameRule  dbOrTableRenameRule
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
         'dbObjectColumnInfo' => null,
         'dbOrTableRenameRule' => null,
         'dbObject' => null,
-        'isSynchronized' => null
+        'isSynchronized' => null,
+        'source' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbOrTableRenameRule  dbOrTableRenameRule
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbObjectColumnInfo' => 'db_object_column_info',
             'dbOrTableRenameRule' => 'db_or_table_rename_rule',
             'dbObject' => 'db_object',
-            'isSynchronized' => 'is_synchronized'
+            'isSynchronized' => 'is_synchronized',
+            'source' => 'source'
     ];
 
     /**
@@ -128,6 +134,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbOrTableRenameRule  dbOrTableRenameRule
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbObjectColumnInfo' => 'setDbObjectColumnInfo',
             'dbOrTableRenameRule' => 'setDbOrTableRenameRule',
             'dbObject' => 'setDbObject',
-            'isSynchronized' => 'setIsSynchronized'
+            'isSynchronized' => 'setIsSynchronized',
+            'source' => 'setSource'
     ];
 
     /**
@@ -154,6 +162,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     * dbOrTableRenameRule  dbOrTableRenameRule
     * dbObject  dbObject
     * isSynchronized  表示该规则是否已同步至目标库
+    * source  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
             'dbObjectColumnInfo' => 'getDbObjectColumnInfo',
             'dbOrTableRenameRule' => 'getDbOrTableRenameRule',
             'dbObject' => 'getDbObject',
-            'isSynchronized' => 'getIsSynchronized'
+            'isSynchronized' => 'getIsSynchronized',
+            'source' => 'getSource'
     ];
 
     /**
@@ -209,7 +219,22 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SOURCE_JOB = 'job';
+    const SOURCE_COMPARE = 'compare';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSourceAllowableValues()
+    {
+        return [
+            self::SOURCE_JOB,
+            self::SOURCE_COMPARE,
+        ];
+    }
 
 
     /**
@@ -236,6 +261,7 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
         $this->container['dbOrTableRenameRule'] = isset($data['dbOrTableRenameRule']) ? $data['dbOrTableRenameRule'] : null;
         $this->container['dbObject'] = isset($data['dbObject']) ? $data['dbObject'] : null;
         $this->container['isSynchronized'] = isset($data['isSynchronized']) ? $data['isSynchronized'] : null;
+        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
     }
 
     /**
@@ -246,6 +272,14 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getSourceAllowableValues();
+                if (!is_null($this->container['source']) && !in_array($this->container['source'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'source', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -473,6 +507,30 @@ class DataProcessInfo implements ModelInterface, ArrayAccess
     public function setIsSynchronized($isSynchronized)
     {
         $this->container['isSynchronized'] = $isSynchronized;
+        return $this;
+    }
+
+    /**
+    * Gets source
+    *  对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    *
+    * @return string|null
+    */
+    public function getSource()
+    {
+        return $this->container['source'];
+    }
+
+    /**
+    * Sets source
+    *
+    * @param string|null $source 对比的来源 - job 表示数据同步时的过滤 - compare 表示数据对比的过滤
+    *
+    * @return $this
+    */
+    public function setSource($source)
+    {
+        $this->container['source'] = $source;
         return $this;
     }
 

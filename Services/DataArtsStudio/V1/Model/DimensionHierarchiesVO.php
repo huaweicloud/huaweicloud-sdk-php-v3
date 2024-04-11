@@ -20,13 +20,13 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * name  层级名称
-    * attrs  attrs
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  层级名称。
+    * attrs  层级包含的属性。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * name  层级名称
-    * attrs  attrs
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  层级名称。
+    * attrs  层级包含的属性。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * name  层级名称
-    * attrs  attrs
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  层级名称。
+    * attrs  层级包含的属性。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * name  层级名称
-    * attrs  attrs
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  层级名称。
+    * attrs  层级包含的属性。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * name  层级名称
-    * attrs  attrs
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * id  编码。
+    * name  层级名称。
+    * attrs  层级包含的属性。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -246,7 +246,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -258,7 +258,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -270,7 +270,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  层级名称
+    *  层级名称。
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 层级名称
+    * @param string|null $name 层级名称。
     *
     * @return $this
     */
@@ -294,7 +294,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrs
-    *  attrs
+    *  层级包含的属性。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\HierarchiesAttrVO[]|null
     */
@@ -306,7 +306,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrs
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\HierarchiesAttrVO[]|null $attrs attrs
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\HierarchiesAttrVO[]|null $attrs 层级包含的属性。
     *
     * @return $this
     */
@@ -318,7 +318,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -330,7 +330,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -342,7 +342,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -354,7 +354,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class DimensionHierarchiesVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */

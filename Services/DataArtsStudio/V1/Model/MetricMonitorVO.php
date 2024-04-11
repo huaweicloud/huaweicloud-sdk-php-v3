@@ -20,12 +20,12 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * otherMetricIds  其他指标id
-    * otherMetricNames  其他指标名称
-    * expression  告警表达式
-    * metricId  挂载指标id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * id  编码。
+    * otherMetricIds  其他指标ID。
+    * otherMetricNames  其他指标名称。
+    * expression  告警表达式。
+    * metricId  挂载指ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
@@ -42,12 +42,12 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * otherMetricIds  其他指标id
-    * otherMetricNames  其他指标名称
-    * expression  告警表达式
-    * metricId  挂载指标id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * id  编码。
+    * otherMetricIds  其他指标ID。
+    * otherMetricNames  其他指标名称。
+    * expression  告警表达式。
+    * metricId  挂载指ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
@@ -85,12 +85,12 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * otherMetricIds  其他指标id
-    * otherMetricNames  其他指标名称
-    * expression  告警表达式
-    * metricId  挂载指标id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * id  编码。
+    * otherMetricIds  其他指标ID。
+    * otherMetricNames  其他指标名称。
+    * expression  告警表达式。
+    * metricId  挂载指ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
@@ -107,12 +107,12 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * otherMetricIds  其他指标id
-    * otherMetricNames  其他指标名称
-    * expression  告警表达式
-    * metricId  挂载指标id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * id  编码。
+    * otherMetricIds  其他指标ID。
+    * otherMetricNames  其他指标名称。
+    * expression  告警表达式。
+    * metricId  挂载指ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
@@ -129,12 +129,12 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * otherMetricIds  其他指标id
-    * otherMetricNames  其他指标名称
-    * expression  告警表达式
-    * metricId  挂载指标id
-    * frontConfigs  前端表达式配置，用于前端数据恢复
+    * id  编码。
+    * otherMetricIds  其他指标ID。
+    * otherMetricNames  其他指标名称。
+    * expression  告警表达式。
+    * metricId  挂载指ID。
+    * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
@@ -243,7 +243,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -255,7 +255,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherMetricIds
-    *  其他指标id
+    *  其他指标ID。
     *
     * @return int[]|null
     */
@@ -279,7 +279,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets otherMetricIds
     *
-    * @param int[]|null $otherMetricIds 其他指标id
+    * @param int[]|null $otherMetricIds 其他指标ID。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherMetricNames
-    *  其他指标名称
+    *  其他指标名称。
     *
     * @return string[]|null
     */
@@ -303,7 +303,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets otherMetricNames
     *
-    * @param string[]|null $otherMetricNames 其他指标名称
+    * @param string[]|null $otherMetricNames 其他指标名称。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets expression
-    *  告警表达式
+    *  告警表达式。
     *
     * @return string|null
     */
@@ -327,7 +327,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets expression
     *
-    * @param string|null $expression 告警表达式
+    * @param string|null $expression 告警表达式。
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricId
-    *  挂载指标id
+    *  挂载指ID。
     *
     * @return int|null
     */
@@ -351,7 +351,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricId
     *
-    * @param int|null $metricId 挂载指标id
+    * @param int|null $metricId 挂载指ID。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets frontConfigs
-    *  前端表达式配置，用于前端数据恢复
+    *  前端表达式配置，用于前端数据恢复。
     *
     * @return string|null
     */
@@ -375,7 +375,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets frontConfigs
     *
-    * @param string|null $frontConfigs 前端表达式配置，用于前端数据恢复
+    * @param string|null $frontConfigs 前端表达式配置，用于前端数据恢复。
     *
     * @return $this
     */

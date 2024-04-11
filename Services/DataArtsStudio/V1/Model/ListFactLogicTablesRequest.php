@@ -20,25 +20,29 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * approver  按审核人查询
-    * owner  按负责人查询
-    * status  业务状态
-    * syncStatus  syncStatus
-    * syncKey  syncKey
-    * l3Id  业务对象l3 id
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * bizCatalogId  所属的业务分层的id
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * approver  按审核人查询。
+    * owner  按负责人查询。
+    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * syncStatus  同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
+    * syncKey  同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
+    * l3Id  业务对象l3的ID。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * bizCatalogId  所属的业务分层的ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspace' => 'string',
+            'xProjectId' => 'string',
+            'contentType' => 'string',
             'name' => 'string',
             'createBy' => 'string',
             'approver' => 'string',
@@ -56,25 +60,29 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * approver  按审核人查询
-    * owner  按负责人查询
-    * status  业务状态
-    * syncStatus  syncStatus
-    * syncKey  syncKey
-    * l3Id  业务对象l3 id
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * bizCatalogId  所属的业务分层的id
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * approver  按审核人查询。
+    * owner  按负责人查询。
+    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * syncStatus  同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
+    * syncKey  同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
+    * l3Id  业务对象l3的ID。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * bizCatalogId  所属的业务分层的ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspace' => null,
+        'xProjectId' => null,
+        'contentType' => null,
         'name' => null,
         'createBy' => null,
         'approver' => null,
@@ -113,25 +121,29 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * approver  按审核人查询
-    * owner  按负责人查询
-    * status  业务状态
-    * syncStatus  syncStatus
-    * syncKey  syncKey
-    * l3Id  业务对象l3 id
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * bizCatalogId  所属的业务分层的id
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * approver  按审核人查询。
+    * owner  按负责人查询。
+    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * syncStatus  同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
+    * syncKey  同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
+    * l3Id  业务对象l3的ID。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * bizCatalogId  所属的业务分层的ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspace' => 'workspace',
+            'xProjectId' => 'X-Project-Id',
+            'contentType' => 'Content-Type',
             'name' => 'name',
             'createBy' => 'create_by',
             'approver' => 'approver',
@@ -149,25 +161,29 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * approver  按审核人查询
-    * owner  按负责人查询
-    * status  业务状态
-    * syncStatus  syncStatus
-    * syncKey  syncKey
-    * l3Id  业务对象l3 id
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * bizCatalogId  所属的业务分层的id
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * approver  按审核人查询。
+    * owner  按负责人查询。
+    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * syncStatus  同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
+    * syncKey  同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
+    * l3Id  业务对象l3的ID。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * bizCatalogId  所属的业务分层的ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'workspace' => 'setWorkspace',
+            'xProjectId' => 'setXProjectId',
+            'contentType' => 'setContentType',
             'name' => 'setName',
             'createBy' => 'setCreateBy',
             'approver' => 'setApprover',
@@ -185,25 +201,29 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * approver  按审核人查询
-    * owner  按负责人查询
-    * status  业务状态
-    * syncStatus  syncStatus
-    * syncKey  syncKey
-    * l3Id  业务对象l3 id
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
-    * bizCatalogId  所属的业务分层的id
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * approver  按审核人查询。
+    * owner  按负责人查询。
+    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * syncStatus  同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
+    * syncKey  同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
+    * l3Id  业务对象l3的ID。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * bizCatalogId  所属的业务分层的ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'workspace' => 'getWorkspace',
+            'xProjectId' => 'getXProjectId',
+            'contentType' => 'getContentType',
             'name' => 'getName',
             'createBy' => 'getCreateBy',
             'approver' => 'getApprover',
@@ -274,8 +294,11 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     const SYNC_KEY_TECHNICAL_ASSET = 'TECHNICAL_ASSET';
     const SYNC_KEY_META_DATA_LINK = 'META_DATA_LINK';
     const SYNC_KEY_PHYSICAL_TABLE = 'PHYSICAL_TABLE';
+    const SYNC_KEY_DEV_PHYSICAL_TABLE = 'DEV_PHYSICAL_TABLE';
     const SYNC_KEY_DLF_TASK = 'DLF_TASK';
     const SYNC_KEY_MATERIALIZATION = 'MATERIALIZATION';
+    const SYNC_KEY_PUBLISH_TO_DLM = 'PUBLISH_TO_DLM';
+    const SYNC_KEY_SUMMARY_STATUS = 'SUMMARY_STATUS';
     
 
     /**
@@ -323,8 +346,11 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
             self::SYNC_KEY_TECHNICAL_ASSET,
             self::SYNC_KEY_META_DATA_LINK,
             self::SYNC_KEY_PHYSICAL_TABLE,
+            self::SYNC_KEY_DEV_PHYSICAL_TABLE,
             self::SYNC_KEY_DLF_TASK,
             self::SYNC_KEY_MATERIALIZATION,
+            self::SYNC_KEY_PUBLISH_TO_DLM,
+            self::SYNC_KEY_SUMMARY_STATUS,
         ];
     }
 
@@ -345,6 +371,8 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
         $this->container['approver'] = isset($data['approver']) ? $data['approver'] : null;
@@ -371,6 +399,24 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
+            if ((mb_strlen($this->container['workspace']) > 64)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['workspace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) < 3)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -387,6 +433,18 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['beginTime']) && (mb_strlen($this->container['beginTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'beginTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['beginTime']) && (mb_strlen($this->container['beginTime']) < 3)) {
+                $invalidProperties[] = "invalid value for 'beginTime', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 3)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 3.";
+            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
             }
@@ -406,7 +464,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  DataArts Studio工作空间ID
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -418,7 +476,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace DataArts Studio工作空间ID
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */
@@ -429,8 +487,56 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xProjectId
+    *  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getXProjectId()
+    {
+        return $this->container['xProjectId'];
+    }
+
+    /**
+    * Sets xProjectId
+    *
+    * @param string|null $xProjectId 项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return $this
+    */
+    public function setXProjectId($xProjectId)
+    {
+        $this->container['xProjectId'] = $xProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
     * Gets name
-    *  按名称或编码模糊查询
+    *  按名称或编码模糊查询。
     *
     * @return string|null
     */
@@ -442,7 +548,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 按名称或编码模糊查询
+    * @param string|null $name 按名称或编码模糊查询。
     *
     * @return $this
     */
@@ -454,7 +560,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  按创建者查询
+    *  按创建者查询。
     *
     * @return string|null
     */
@@ -466,7 +572,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 按创建者查询
+    * @param string|null $createBy 按创建者查询。
     *
     * @return $this
     */
@@ -478,7 +584,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets approver
-    *  按审核人查询
+    *  按审核人查询。
     *
     * @return string|null
     */
@@ -490,7 +596,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets approver
     *
-    * @param string|null $approver 按审核人查询
+    * @param string|null $approver 按审核人查询。
     *
     * @return $this
     */
@@ -502,7 +608,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  按负责人查询
+    *  按负责人查询。
     *
     * @return string|null
     */
@@ -514,7 +620,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 按负责人查询
+    * @param string|null $owner 按负责人查询。
     *
     * @return $this
     */
@@ -526,7 +632,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  业务状态
+    *  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
     *
     * @return string|null
     */
@@ -538,7 +644,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 业务状态
+    * @param string|null $status 业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
     *
     * @return $this
     */
@@ -550,7 +656,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncStatus
-    *  syncStatus
+    *  同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
     *
     * @return string|null
     */
@@ -562,7 +668,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets syncStatus
     *
-    * @param string|null $syncStatus syncStatus
+    * @param string|null $syncStatus 同步状态枚举。RUNNING(同步中)、NO_NEED(未同步)、SUMMARY_SUCCESS(整体成功)、SUMMARY_FAILED(整体失败)。
     *
     * @return $this
     */
@@ -574,7 +680,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets syncKey
-    *  syncKey
+    *  同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
     *
     * @return string[]|null
     */
@@ -586,7 +692,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets syncKey
     *
-    * @param string[]|null $syncKey syncKey
+    * @param string[]|null $syncKey 同步任务类型枚举。BUSINESS_ASSET(同步业务资产)、DATA_QUALITY(创建质量作业)、TECHNICAL_ASSET(同步技术资产)、META_DATA_LINK(资产关联)、PHYSICAL_TABLE(创建表（生产环境）)、DEV_PHYSICAL_TABLE(创建表（开发环境）)、DLF_TASK(创建数据开发作业)、MATERIALIZATION(数值落库（码表）)、PUBLISH_TO_DLM(发布数据服务API)、SUMMARY_STATUS(整体状态)。
     *
     * @return $this
     */
@@ -598,7 +704,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象l3 id
+    *  业务对象l3的ID。
     *
     * @return int|null
     */
@@ -610,7 +716,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int|null $l3Id 业务对象l3 id
+    * @param int|null $l3Id 业务对象l3的ID。
     *
     * @return $this
     */
@@ -622,7 +728,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
+    *  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return string|null
     */
@@ -634,7 +740,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
+    * @param string|null $beginTime 时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -646,7 +752,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
+    *  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return string|null
     */
@@ -658,7 +764,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
+    * @param string|null $endTime 时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -670,7 +776,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -682,7 +788,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */
@@ -694,7 +800,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @return int|null
     */
@@ -706,7 +812,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @return $this
     */
@@ -718,7 +824,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  所属的业务分层的id
+    *  所属的业务分层的ID。
     *
     * @return string|null
     */
@@ -730,7 +836,7 @@ class ListFactLogicTablesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param string|null $bizCatalogId 所属的业务分层的id
+    * @param string|null $bizCatalogId 所属的业务分层的ID。
     *
     * @return $this
     */

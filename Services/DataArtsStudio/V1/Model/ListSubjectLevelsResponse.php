@@ -21,7 +21,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * levels  主题层级信息
+    * levels  主题层级信息。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * levels  主题层级信息
+    * levels  主题层级信息。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * levels  主题层级信息
+    * levels  主题层级信息。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * levels  主题层级信息
+    * levels  主题层级信息。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * levels  主题层级信息
+    * levels  主题层级信息。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets levels
-    *  主题层级信息
+    *  主题层级信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogLevelVO[]|null
     */
@@ -187,7 +187,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets levels
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogLevelVO[]|null $levels 主题层级信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogLevelVO[]|null $levels 主题层级信息。
     *
     * @return $this
     */

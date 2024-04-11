@@ -155,11 +155,11 @@ class AosClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                ['application/json', 'x-response-examples-1']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                ['application/json', 'x-response-examples-1'],
                 ['application/json']
             );
         }

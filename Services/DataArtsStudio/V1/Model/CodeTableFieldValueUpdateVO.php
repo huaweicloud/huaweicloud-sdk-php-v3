@@ -20,9 +20,9 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * toAdd  新增码表属性、属性值列表
-    * toModify  编辑码表属性值列表
-    * toRemove  删除码表属性id列表
+    * toAdd  新增码表属性、属性值列表。
+    * toModify  编辑码表属性值列表。
+    * toRemove  删除码表属性ID列表。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * toAdd  新增码表属性、属性值列表
-    * toModify  编辑码表属性值列表
-    * toRemove  删除码表属性id列表
+    * toAdd  新增码表属性、属性值列表。
+    * toModify  编辑码表属性值列表。
+    * toRemove  删除码表属性ID列表。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * toAdd  新增码表属性、属性值列表
-    * toModify  编辑码表属性值列表
-    * toRemove  删除码表属性id列表
+    * toAdd  新增码表属性、属性值列表。
+    * toModify  编辑码表属性值列表。
+    * toRemove  删除码表属性ID列表。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * toAdd  新增码表属性、属性值列表
-    * toModify  编辑码表属性值列表
-    * toRemove  删除码表属性id列表
+    * toAdd  新增码表属性、属性值列表。
+    * toModify  编辑码表属性值列表。
+    * toRemove  删除码表属性ID列表。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * toAdd  新增码表属性、属性值列表
-    * toModify  编辑码表属性值列表
-    * toRemove  删除码表属性id列表
+    * toAdd  新增码表属性、属性值列表。
+    * toModify  编辑码表属性值列表。
+    * toRemove  删除码表属性ID列表。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets toAdd
-    *  新增码表属性、属性值列表
+    *  新增码表属性、属性值列表。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null
     */
@@ -208,7 +208,7 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets toAdd
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null $toAdd 新增码表属性、属性值列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null $toAdd 新增码表属性、属性值列表。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets toModify
-    *  编辑码表属性值列表
+    *  编辑码表属性值列表。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null
     */
@@ -232,7 +232,7 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets toModify
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null $toModify 编辑码表属性值列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null $toModify 编辑码表属性值列表。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets toRemove
-    *  删除码表属性id列表
+    *  删除码表属性ID列表。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null
     */
@@ -256,7 +256,7 @@ class CodeTableFieldValueUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets toRemove
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null $toRemove 删除码表属性id列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CodeTableFieldVO[]|null $toRemove 删除码表属性ID列表。
     *
     * @return $this
     */

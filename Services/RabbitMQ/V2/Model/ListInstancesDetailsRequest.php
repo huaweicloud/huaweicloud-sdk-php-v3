@@ -20,7 +20,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * engine  引擎类型：rabbitmq，参数缺失查询所有实例。
+    * engine  引擎类型：rabbitmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
@@ -46,7 +46,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * engine  引擎类型：rabbitmq，参数缺失查询所有实例。
+    * engine  引擎类型：rabbitmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
@@ -93,7 +93,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * engine  引擎类型：rabbitmq，参数缺失查询所有实例。
+    * engine  引擎类型：rabbitmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
@@ -119,7 +119,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * engine  引擎类型：rabbitmq，参数缺失查询所有实例。
+    * engine  引擎类型：rabbitmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
@@ -145,7 +145,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * engine  引擎类型：rabbitmq，参数缺失查询所有实例。
+    * engine  引擎类型：rabbitmq。
     * name  实例名称。
     * instanceId  实例ID。
     * status  实例状态，[详细状态说明请参考[实例状态说明](rabbitmq-api-180514012.xml)](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,sbc,hk_sbc,g42,hk_g42,tm,hk_tm)[详细状态说明请参考[实例状态说明](kafka-api-180514012.xml)](tag:hcs)。
@@ -209,6 +209,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ENGINE_RABBITMQ = 'rabbitmq';
     const STATUS_CREATING = 'CREATING';
     const STATUS_RUNNING = 'RUNNING';
     const STATUS_RESTARTING = 'RESTARTING';
@@ -229,6 +230,18 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
     const EXACT_MATCH_NAME_TRUE = 'true';
     const EXACT_MATCH_NAME_FALSE = 'false';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getEngineAllowableValues()
+    {
+        return [
+            self::ENGINE_RABBITMQ,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -317,6 +330,17 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['engine'] === null) {
+            $invalidProperties[] = "'engine' can't be null";
+        }
+            $allowedValues = $this->getEngineAllowableValues();
+                if (!is_null($this->container['engine']) && !in_array($this->container['engine'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'engine', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -357,9 +381,9 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engine
-    *  引擎类型：rabbitmq，参数缺失查询所有实例。
+    *  引擎类型：rabbitmq。
     *
-    * @return string|null
+    * @return string
     */
     public function getEngine()
     {
@@ -369,7 +393,7 @@ class ListInstancesDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engine
     *
-    * @param string|null $engine 引擎类型：rabbitmq，参数缺失查询所有实例。
+    * @param string $engine 引擎类型：rabbitmq。
     *
     * @return $this
     */

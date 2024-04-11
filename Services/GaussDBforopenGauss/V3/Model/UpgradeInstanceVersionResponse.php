@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SwitchLogReplayRequest implements ModelInterface, ArrayAccess
+class UpgradeInstanceVersionResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,30 @@ class SwitchLogReplayRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SwitchLogReplayRequest';
+    protected static $openAPIModelName = 'UpgradeInstanceVersionResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例id
-    * xLanguage  语言
-    * body  body
+    * jobId  任务id。按需实例时仅返回任务id。
+    * orderId  订单id。包周期实例时仅返回订单id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'instanceId' => 'string',
-            'xLanguage' => 'string',
-            'body' => '\HuaweiCloud\SDK\Rds\V3\Model\SwitchLogReplayRequestBody'
+            'jobId' => 'string',
+            'orderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例id
-    * xLanguage  语言
-    * body  body
+    * jobId  任务id。按需实例时仅返回任务id。
+    * orderId  订单id。包周期实例时仅返回订单id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'instanceId' => null,
-        'xLanguage' => null,
-        'body' => null
+        'jobId' => null,
+        'orderId' => null
     ];
 
     /**
@@ -69,44 +66,38 @@ class SwitchLogReplayRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例id
-    * xLanguage  语言
-    * body  body
+    * jobId  任务id。按需实例时仅返回任务id。
+    * orderId  订单id。包周期实例时仅返回订单id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'instanceId' => 'instance_id',
-            'xLanguage' => 'X-Language',
-            'body' => 'body'
+            'jobId' => 'job_id',
+            'orderId' => 'order_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例id
-    * xLanguage  语言
-    * body  body
+    * jobId  任务id。按需实例时仅返回任务id。
+    * orderId  订单id。包周期实例时仅返回订单id。
     *
     * @var string[]
     */
     protected static $setters = [
-            'instanceId' => 'setInstanceId',
-            'xLanguage' => 'setXLanguage',
-            'body' => 'setBody'
+            'jobId' => 'setJobId',
+            'orderId' => 'setOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例id
-    * xLanguage  语言
-    * body  body
+    * jobId  任务id。按需实例时仅返回任务id。
+    * orderId  订单id。包周期实例时仅返回订单id。
     *
     * @var string[]
     */
     protected static $getters = [
-            'instanceId' => 'getInstanceId',
-            'xLanguage' => 'getXLanguage',
-            'body' => 'getBody'
+            'jobId' => 'getJobId',
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -167,9 +158,8 @@ class SwitchLogReplayRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -180,12 +170,6 @@ class SwitchLogReplayRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['instanceId'] === null) {
-            $invalidProperties[] = "'instanceId' can't be null";
-        }
-        if ($this->container['xLanguage'] === null) {
-            $invalidProperties[] = "'xLanguage' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -201,74 +185,50 @@ class SwitchLogReplayRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets instanceId
-    *  实例id
+    * Gets jobId
+    *  任务id。按需实例时仅返回任务id。
     *
-    * @return string
+    * @return string|null
     */
-    public function getInstanceId()
+    public function getJobId()
     {
-        return $this->container['instanceId'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets instanceId
+    * Sets jobId
     *
-    * @param string $instanceId 实例id
+    * @param string|null $jobId 任务id。按需实例时仅返回任务id。
     *
     * @return $this
     */
-    public function setInstanceId($instanceId)
+    public function setJobId($jobId)
     {
-        $this->container['instanceId'] = $instanceId;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 
     /**
-    * Gets xLanguage
-    *  语言
+    * Gets orderId
+    *  订单id。包周期实例时仅返回订单id。
     *
-    * @return string
+    * @return string|null
     */
-    public function getXLanguage()
+    public function getOrderId()
     {
-        return $this->container['xLanguage'];
+        return $this->container['orderId'];
     }
 
     /**
-    * Sets xLanguage
+    * Sets orderId
     *
-    * @param string $xLanguage 语言
+    * @param string|null $orderId 订单id。包周期实例时仅返回订单id。
     *
     * @return $this
     */
-    public function setXLanguage($xLanguage)
+    public function setOrderId($orderId)
     {
-        $this->container['xLanguage'] = $xLanguage;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Rds\V3\Model\SwitchLogReplayRequestBody|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Rds\V3\Model\SwitchLogReplayRequestBody|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
+        $this->container['orderId'] = $orderId;
         return $this;
     }
 

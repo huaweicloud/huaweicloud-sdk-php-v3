@@ -21,6 +21,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  DSC告警主题ID（非消息通知服务主题ID）
     * defaultTopicUrn  默认消息通知主题的唯一资源标识符
     * topicCount  已确认的消息通知主题数量
     * topics  已确认的消息通知主题列表
@@ -28,6 +29,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'defaultTopicUrn' => 'string',
             'topicCount' => 'int',
             'topics' => '\HuaweiCloud\SDK\Dsc\V1\Model\TopicBean[]'
@@ -35,6 +37,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  DSC告警主题ID（非消息通知服务主题ID）
     * defaultTopicUrn  默认消息通知主题的唯一资源标识符
     * topicCount  已确认的消息通知主题数量
     * topics  已确认的消息通知主题列表
@@ -42,6 +45,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'defaultTopicUrn' => null,
         'topicCount' => 'int32',
         'topics' => null
@@ -70,6 +74,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  DSC告警主题ID（非消息通知服务主题ID）
     * defaultTopicUrn  默认消息通知主题的唯一资源标识符
     * topicCount  已确认的消息通知主题数量
     * topics  已确认的消息通知主题列表
@@ -77,6 +82,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'defaultTopicUrn' => 'default_topic_urn',
             'topicCount' => 'topic_count',
             'topics' => 'topics'
@@ -84,6 +90,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  DSC告警主题ID（非消息通知服务主题ID）
     * defaultTopicUrn  默认消息通知主题的唯一资源标识符
     * topicCount  已确认的消息通知主题数量
     * topics  已确认的消息通知主题列表
@@ -91,6 +98,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'defaultTopicUrn' => 'setDefaultTopicUrn',
             'topicCount' => 'setTopicCount',
             'topics' => 'setTopics'
@@ -98,6 +106,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  DSC告警主题ID（非消息通知服务主题ID）
     * defaultTopicUrn  默认消息通知主题的唯一资源标识符
     * topicCount  已确认的消息通知主题数量
     * topics  已确认的消息通知主题列表
@@ -105,6 +114,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'defaultTopicUrn' => 'getDefaultTopicUrn',
             'topicCount' => 'getTopicCount',
             'topics' => 'getTopics'
@@ -168,6 +178,7 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['defaultTopicUrn'] = isset($data['defaultTopicUrn']) ? $data['defaultTopicUrn'] : null;
         $this->container['topicCount'] = isset($data['topicCount']) ? $data['topicCount'] : null;
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
@@ -193,6 +204,30 @@ class ShowTopicsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  DSC告警主题ID（非消息通知服务主题ID）
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id DSC告警主题ID（非消息通知服务主题ID）
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**

@@ -20,18 +20,18 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * nameCh  中文名称
-    * nameEn  英文名称
-    * notNull  是否必填
-    * optionalValues  可选值。分号分隔
-    * type  自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * ordinal  顺序
-    * description  描述
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * id  编码。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
+    * notNull  是否必填。
+    * optionalValues  可选值。分号分隔。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * ordinal  顺序。
+    * description  描述。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * nameCh  中文名称
-    * nameEn  英文名称
-    * notNull  是否必填
-    * optionalValues  可选值。分号分隔
-    * type  自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * ordinal  顺序
-    * description  描述
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * id  编码。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
+    * notNull  是否必填。
+    * optionalValues  可选值。分号分隔。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * ordinal  顺序。
+    * description  描述。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * nameCh  中文名称
-    * nameEn  英文名称
-    * notNull  是否必填
-    * optionalValues  可选值。分号分隔
-    * type  自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * ordinal  顺序
-    * description  描述
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * id  编码。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
+    * notNull  是否必填。
+    * optionalValues  可选值。分号分隔。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * ordinal  顺序。
+    * description  描述。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * nameCh  中文名称
-    * nameEn  英文名称
-    * notNull  是否必填
-    * optionalValues  可选值。分号分隔
-    * type  自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * ordinal  顺序
-    * description  描述
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * id  编码。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
+    * notNull  是否必填。
+    * optionalValues  可选值。分号分隔。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * ordinal  顺序。
+    * description  描述。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * nameCh  中文名称
-    * nameEn  英文名称
-    * notNull  是否必填
-    * optionalValues  可选值。分号分隔
-    * type  自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * ordinal  顺序
-    * description  描述
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * id  编码。
+    * nameCh  中文名称。
+    * nameEn  英文名称。
+    * notNull  是否必填。
+    * optionalValues  可选值。分号分隔。
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * ordinal  顺序。
+    * description  描述。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -346,7 +346,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int|null
     */
@@ -358,7 +358,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  中文名称
+    *  中文名称。
     *
     * @return string
     */
@@ -382,7 +382,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 中文名称
+    * @param string $nameCh 中文名称。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  英文名称
+    *  英文名称。
     *
     * @return string
     */
@@ -406,7 +406,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 英文名称
+    * @param string $nameEn 英文名称。
     *
     * @return $this
     */
@@ -418,7 +418,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets notNull
-    *  是否必填
+    *  是否必填。
     *
     * @return bool
     */
@@ -430,7 +430,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets notNull
     *
-    * @param bool $notNull 是否必填
+    * @param bool $notNull 是否必填。
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets optionalValues
-    *  可选值。分号分隔
+    *  可选值。分号分隔。
     *
     * @return string|null
     */
@@ -454,7 +454,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets optionalValues
     *
-    * @param string|null $optionalValues 可选值。分号分隔
+    * @param string|null $optionalValues 可选值。分号分隔。
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
+    *  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @return string
     */
@@ -478,7 +478,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 自定义项类型：TABLE, ATTRIBUTE, SUBJECT, METRIC
+    * @param string $type 自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  顺序
+    *  顺序。
     *
     * @return int|null
     */
@@ -502,7 +502,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 顺序
+    * @param int|null $ordinal 顺序。
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string|null
     */
@@ -526,7 +526,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -538,7 +538,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -550,7 +550,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -562,7 +562,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -574,7 +574,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -586,7 +586,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -598,7 +598,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -610,7 +610,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -622,7 +622,7 @@ class CustomizedFieldsVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

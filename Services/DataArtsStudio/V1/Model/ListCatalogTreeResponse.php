@@ -21,22 +21,22 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  流程名称
-    * description  描述
-    * guid  对应资产中id
-    * owner  责任人
-    * parentId  父目录id，没有则为根目录
-    * prevId  上个节点ID,没有则为首节点
-    * nextId  下个节点ID,没有则为尾节点
-    * id  创建时传空，更新时必填
-    * qualifiedId  认证ID，自动生成
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * bizmetricNum  拥有业务指标数量，前端不传
-    * childrenNum  拥有子流程的数量，不包括子流程的子流程
-    * children  下层子目录
+    * name  流程名称。
+    * description  描述。
+    * guid  对应资产中ID。
+    * owner  责任人。
+    * parentId  父目录ID，没有则为根目录。
+    * prevId  上个节点ID，没有则为首节点。
+    * nextId  下个节点ID，没有则为尾节点。
+    * id  创建时传空，更新时必填。
+    * qualifiedId  认证ID，自动生成。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * bizmetricNum  拥有业务指标数量，前端不传。
+    * childrenNum  拥有子流程的数量，不包括子流程的子流程。
+    * children  下层子目录。
     *
     * @var string[]
     */
@@ -61,22 +61,22 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  流程名称
-    * description  描述
-    * guid  对应资产中id
-    * owner  责任人
-    * parentId  父目录id，没有则为根目录
-    * prevId  上个节点ID,没有则为首节点
-    * nextId  下个节点ID,没有则为尾节点
-    * id  创建时传空，更新时必填
-    * qualifiedId  认证ID，自动生成
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * bizmetricNum  拥有业务指标数量，前端不传
-    * childrenNum  拥有子流程的数量，不包括子流程的子流程
-    * children  下层子目录
+    * name  流程名称。
+    * description  描述。
+    * guid  对应资产中ID。
+    * owner  责任人。
+    * parentId  父目录ID，没有则为根目录。
+    * prevId  上个节点ID，没有则为首节点。
+    * nextId  下个节点ID，没有则为尾节点。
+    * id  创建时传空，更新时必填。
+    * qualifiedId  认证ID，自动生成。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * bizmetricNum  拥有业务指标数量，前端不传。
+    * childrenNum  拥有子流程的数量，不包括子流程的子流程。
+    * children  下层子目录。
     *
     * @var string[]
     */
@@ -122,22 +122,22 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  流程名称
-    * description  描述
-    * guid  对应资产中id
-    * owner  责任人
-    * parentId  父目录id，没有则为根目录
-    * prevId  上个节点ID,没有则为首节点
-    * nextId  下个节点ID,没有则为尾节点
-    * id  创建时传空，更新时必填
-    * qualifiedId  认证ID，自动生成
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * bizmetricNum  拥有业务指标数量，前端不传
-    * childrenNum  拥有子流程的数量，不包括子流程的子流程
-    * children  下层子目录
+    * name  流程名称。
+    * description  描述。
+    * guid  对应资产中ID。
+    * owner  责任人。
+    * parentId  父目录ID，没有则为根目录。
+    * prevId  上个节点ID，没有则为首节点。
+    * nextId  下个节点ID，没有则为尾节点。
+    * id  创建时传空，更新时必填。
+    * qualifiedId  认证ID，自动生成。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * bizmetricNum  拥有业务指标数量，前端不传。
+    * childrenNum  拥有子流程的数量，不包括子流程的子流程。
+    * children  下层子目录。
     *
     * @var string[]
     */
@@ -162,22 +162,22 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  流程名称
-    * description  描述
-    * guid  对应资产中id
-    * owner  责任人
-    * parentId  父目录id，没有则为根目录
-    * prevId  上个节点ID,没有则为首节点
-    * nextId  下个节点ID,没有则为尾节点
-    * id  创建时传空，更新时必填
-    * qualifiedId  认证ID，自动生成
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * bizmetricNum  拥有业务指标数量，前端不传
-    * childrenNum  拥有子流程的数量，不包括子流程的子流程
-    * children  下层子目录
+    * name  流程名称。
+    * description  描述。
+    * guid  对应资产中ID。
+    * owner  责任人。
+    * parentId  父目录ID，没有则为根目录。
+    * prevId  上个节点ID，没有则为首节点。
+    * nextId  下个节点ID，没有则为尾节点。
+    * id  创建时传空，更新时必填。
+    * qualifiedId  认证ID，自动生成。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * bizmetricNum  拥有业务指标数量，前端不传。
+    * childrenNum  拥有子流程的数量，不包括子流程的子流程。
+    * children  下层子目录。
     *
     * @var string[]
     */
@@ -202,22 +202,22 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  流程名称
-    * description  描述
-    * guid  对应资产中id
-    * owner  责任人
-    * parentId  父目录id，没有则为根目录
-    * prevId  上个节点ID,没有则为首节点
-    * nextId  下个节点ID,没有则为尾节点
-    * id  创建时传空，更新时必填
-    * qualifiedId  认证ID，自动生成
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * bizmetricNum  拥有业务指标数量，前端不传
-    * childrenNum  拥有子流程的数量，不包括子流程的子流程
-    * children  下层子目录
+    * name  流程名称。
+    * description  描述。
+    * guid  对应资产中ID。
+    * owner  责任人。
+    * parentId  父目录ID，没有则为根目录。
+    * prevId  上个节点ID，没有则为首节点。
+    * nextId  下个节点ID，没有则为尾节点。
+    * id  创建时传空，更新时必填。
+    * qualifiedId  认证ID，自动生成。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * bizmetricNum  拥有业务指标数量，前端不传。
+    * childrenNum  拥有子流程的数量，不包括子流程的子流程。
+    * children  下层子目录。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  流程名称
+    *  流程名称。
     *
     * @return string|null
     */
@@ -361,7 +361,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流程名称
+    * @param string|null $name 流程名称。
     *
     * @return $this
     */
@@ -373,7 +373,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string|null
     */
@@ -385,7 +385,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets guid
-    *  对应资产中id
+    *  对应资产中ID。
     *
     * @return string|null
     */
@@ -409,7 +409,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets guid
     *
-    * @param string|null $guid 对应资产中id
+    * @param string|null $guid 对应资产中ID。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  责任人
+    *  责任人。
     *
     * @return string|null
     */
@@ -433,7 +433,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 责任人
+    * @param string|null $owner 责任人。
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父目录id，没有则为根目录
+    *  父目录ID，没有则为根目录。
     *
     * @return int|null
     */
@@ -457,7 +457,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param int|null $parentId 父目录id，没有则为根目录
+    * @param int|null $parentId 父目录ID，没有则为根目录。
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets prevId
-    *  上个节点ID,没有则为首节点
+    *  上个节点ID，没有则为首节点。
     *
     * @return int|null
     */
@@ -481,7 +481,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets prevId
     *
-    * @param int|null $prevId 上个节点ID,没有则为首节点
+    * @param int|null $prevId 上个节点ID，没有则为首节点。
     *
     * @return $this
     */
@@ -493,7 +493,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextId
-    *  下个节点ID,没有则为尾节点
+    *  下个节点ID，没有则为尾节点。
     *
     * @return int|null
     */
@@ -505,7 +505,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextId
     *
-    * @param int|null $nextId 下个节点ID,没有则为尾节点
+    * @param int|null $nextId 下个节点ID，没有则为尾节点。
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  创建时传空，更新时必填
+    *  创建时传空，更新时必填。
     *
     * @return int|null
     */
@@ -529,7 +529,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 创建时传空，更新时必填
+    * @param int|null $id 创建时传空，更新时必填。
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualifiedId
-    *  认证ID，自动生成
+    *  认证ID，自动生成。
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets qualifiedId
     *
-    * @param string|null $qualifiedId 认证ID，自动生成
+    * @param string|null $qualifiedId 认证ID，自动生成。
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -577,7 +577,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -589,7 +589,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -601,7 +601,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -613,7 +613,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -625,7 +625,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -637,7 +637,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -649,7 +649,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -661,7 +661,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizmetricNum
-    *  拥有业务指标数量，前端不传
+    *  拥有业务指标数量，前端不传。
     *
     * @return int|null
     */
@@ -673,7 +673,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets bizmetricNum
     *
-    * @param int|null $bizmetricNum 拥有业务指标数量，前端不传
+    * @param int|null $bizmetricNum 拥有业务指标数量，前端不传。
     *
     * @return $this
     */
@@ -685,7 +685,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets childrenNum
-    *  拥有子流程的数量，不包括子流程的子流程
+    *  拥有子流程的数量，不包括子流程的子流程。
     *
     * @return int|null
     */
@@ -697,7 +697,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets childrenNum
     *
-    * @param int|null $childrenNum 拥有子流程的数量，不包括子流程的子流程
+    * @param int|null $childrenNum 拥有子流程的数量，不包括子流程的子流程。
     *
     * @return $this
     */
@@ -709,7 +709,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  下层子目录
+    *  下层子目录。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizCatalogVO[]|null
     */
@@ -721,7 +721,7 @@ class ListCatalogTreeResponse implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizCatalogVO[]|null $children 下层子目录
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizCatalogVO[]|null $children 下层子目录。
     *
     * @return $this
     */

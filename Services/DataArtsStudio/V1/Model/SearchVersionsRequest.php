@@ -20,20 +20,24 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * bizId  业务定义id
-    * bizType  按业务类型查询
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * bizId  业务定义ID。
+    * bizType  按业务类型查询。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspace' => 'string',
+            'xProjectId' => 'string',
+            'contentType' => 'string',
             'name' => 'string',
             'createBy' => 'string',
             'bizId' => 'int',
@@ -46,20 +50,24 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * bizId  业务定义id
-    * bizType  按业务类型查询
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * bizId  业务定义ID。
+    * bizType  按业务类型查询。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspace' => null,
+        'xProjectId' => null,
+        'contentType' => null,
         'name' => null,
         'createBy' => null,
         'bizId' => 'int64',
@@ -93,20 +101,24 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * bizId  业务定义id
-    * bizType  按业务类型查询
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * bizId  业务定义ID。
+    * bizType  按业务类型查询。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspace' => 'workspace',
+            'xProjectId' => 'X-Project-Id',
+            'contentType' => 'Content-Type',
             'name' => 'name',
             'createBy' => 'create_by',
             'bizId' => 'biz_id',
@@ -119,20 +131,24 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * bizId  业务定义id
-    * bizType  按业务类型查询
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * bizId  业务定义ID。
+    * bizType  按业务类型查询。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
     */
     protected static $setters = [
             'workspace' => 'setWorkspace',
+            'xProjectId' => 'setXProjectId',
+            'contentType' => 'setContentType',
             'name' => 'setName',
             'createBy' => 'setCreateBy',
             'bizId' => 'setBizId',
@@ -145,20 +161,24 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  DataArts Studio工作空间ID
-    * name  按名称或编码模糊查询
-    * createBy  按创建者查询
-    * bizId  业务定义id
-    * bizType  按业务类型查询
-    * beginTime  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
-    * endTime  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
-    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    * name  按名称或编码模糊查询。
+    * createBy  按创建者查询。
+    * bizId  业务定义ID。
+    * bizType  按业务类型查询。
+    * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
     */
     protected static $getters = [
             'workspace' => 'getWorkspace',
+            'xProjectId' => 'getXProjectId',
+            'contentType' => 'getContentType',
             'name' => 'getName',
             'createBy' => 'getCreateBy',
             'bizId' => 'getBizId',
@@ -228,6 +248,8 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
         $this->container['bizId'] = isset($data['bizId']) ? $data['bizId'] : null;
@@ -249,6 +271,36 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
+            if ((mb_strlen($this->container['workspace']) > 64)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['workspace']) < 3)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xProjectId']) && (mb_strlen($this->container['xProjectId']) < 3)) {
+                $invalidProperties[] = "invalid value for 'xProjectId', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['beginTime']) && (mb_strlen($this->container['beginTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'beginTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['beginTime']) && (mb_strlen($this->container['beginTime']) < 3)) {
+                $invalidProperties[] = "invalid value for 'beginTime', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) > 64)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['endTime']) && (mb_strlen($this->container['endTime']) < 3)) {
+                $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 3.";
+            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
             }
@@ -268,7 +320,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  DataArts Studio工作空间ID
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -280,7 +332,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace DataArts Studio工作空间ID
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */
@@ -291,8 +343,56 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xProjectId
+    *  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return string|null
+    */
+    public function getXProjectId()
+    {
+        return $this->container['xProjectId'];
+    }
+
+    /**
+    * Sets xProjectId
+    *
+    * @param string|null $xProjectId 项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
+    *
+    * @return $this
+    */
+    public function setXProjectId($xProjectId)
+    {
+        $this->container['xProjectId'] = $xProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets contentType
+    *  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return string|null
+    */
+    public function getContentType()
+    {
+        return $this->container['contentType'];
+    }
+
+    /**
+    * Sets contentType
+    *
+    * @param string|null $contentType 默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
+    *
+    * @return $this
+    */
+    public function setContentType($contentType)
+    {
+        $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
     * Gets name
-    *  按名称或编码模糊查询
+    *  按名称或编码模糊查询。
     *
     * @return string|null
     */
@@ -304,7 +404,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 按名称或编码模糊查询
+    * @param string|null $name 按名称或编码模糊查询。
     *
     * @return $this
     */
@@ -316,7 +416,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  按创建者查询
+    *  按创建者查询。
     *
     * @return string|null
     */
@@ -328,7 +428,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 按创建者查询
+    * @param string|null $createBy 按创建者查询。
     *
     * @return $this
     */
@@ -340,7 +440,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务定义id
+    *  业务定义ID。
     *
     * @return int|null
     */
@@ -352,7 +452,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int|null $bizId 业务定义id
+    * @param int|null $bizId 业务定义ID。
     *
     * @return $this
     */
@@ -364,7 +464,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizType
-    *  按业务类型查询
+    *  按业务类型查询。
     *
     * @return string|null
     */
@@ -376,7 +476,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets bizType
     *
-    * @param string|null $bizType 按业务类型查询
+    * @param string|null $bizType 按业务类型查询。
     *
     * @return $this
     */
@@ -388,7 +488,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets beginTime
-    *  时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
+    *  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return string|null
     */
@@ -400,7 +500,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets beginTime
     *
-    * @param string|null $beginTime 时间过滤左边界,与end_time一起使用,只支持时间范围过滤,单边过滤无效
+    * @param string|null $beginTime 时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -412,7 +512,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
+    *  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return string|null
     */
@@ -424,7 +524,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 时间过滤右边界,与begin_time一起使用只支持时间范围过滤,单边过滤无效
+    * @param string|null $endTime 时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -436,7 +536,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -448,7 +548,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]
+    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */
@@ -460,7 +560,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @return int|null
     */
@@ -472,7 +572,7 @@ class SearchVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整。默认值0
+    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @return $this
     */

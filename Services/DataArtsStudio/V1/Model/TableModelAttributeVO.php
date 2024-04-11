@@ -20,36 +20,36 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * obsLocation  obs路径，子路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataType  字段类型
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * obsLocation  obs路径，子路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isPartitionKey  是否分区键
-    * isForeignKey  是否外键
-    * extendField  是否继承的属性
-    * notNull  是否不为空
-    * ordinal  序号
-    * tableModelId  所属表模型id
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isPartitionKey  是否分区键。
+    * isForeignKey  是否外键。
+    * extendField  是否继承的属性。
+    * notNull  是否不为空。
+    * ordinal  序号。
+    * tableModelId  所属关系建模的模型ID。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'nameEn' => 'string',
             'nameCh' => 'string',
             'description' => 'string',
@@ -78,31 +78,31 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * obsLocation  obs路径，子路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataType  字段类型
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * obsLocation  obs路径，子路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isPartitionKey  是否分区键
-    * isForeignKey  是否外键
-    * extendField  是否继承的属性
-    * notNull  是否不为空
-    * ordinal  序号
-    * tableModelId  所属表模型id
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isPartitionKey  是否分区键。
+    * isForeignKey  是否外键。
+    * extendField  是否继承的属性。
+    * notNull  是否不为空。
+    * ordinal  序号。
+    * tableModelId  所属关系建模的模型ID。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -157,31 +157,31 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * obsLocation  obs路径，子路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataType  字段类型
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * obsLocation  obs路径，子路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isPartitionKey  是否分区键
-    * isForeignKey  是否外键
-    * extendField  是否继承的属性
-    * notNull  是否不为空
-    * ordinal  序号
-    * tableModelId  所属表模型id
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isPartitionKey  是否分区键。
+    * isForeignKey  是否外键。
+    * extendField  是否继承的属性。
+    * notNull  是否不为空。
+    * ordinal  序号。
+    * tableModelId  所属关系建模的模型ID。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -215,31 +215,31 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * obsLocation  obs路径，子路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataType  字段类型
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * obsLocation  obs路径，子路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isPartitionKey  是否分区键
-    * isForeignKey  是否外键
-    * extendField  是否继承的属性
-    * notNull  是否不为空
-    * ordinal  序号
-    * tableModelId  所属表模型id
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isPartitionKey  是否分区键。
+    * isForeignKey  是否外键。
+    * extendField  是否继承的属性。
+    * notNull  是否不为空。
+    * ordinal  序号。
+    * tableModelId  所属关系建模的模型ID。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -273,31 +273,31 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * nameEn  字段名
-    * nameCh  业务属性
-    * description  description
-    * obsLocation  obs路径，子路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataType  字段类型
+    * id  编码。
+    * nameEn  字段名。
+    * nameCh  业务属性。
+    * description  描述。
+    * obsLocation  obs路径，子路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataType  字段类型。
     * domainType  domainType
-    * dataTypeExtend  数据类型扩展字段
-    * isPrimaryKey  是否主键
-    * isPartitionKey  是否分区键
-    * isForeignKey  是否外键
-    * extendField  是否继承的属性
-    * notNull  是否不为空
-    * ordinal  序号
-    * tableModelId  所属表模型id
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
-    * standRowId  关联的数据标准的id
-    * standRowName  standRowName
-    * qualityInfos  质量信息
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * dataTypeExtend  数据类型扩展字段。
+    * isPrimaryKey  是否主键。
+    * isPartitionKey  是否分区键。
+    * isForeignKey  是否外键。
+    * extendField  是否继承的属性。
+    * notNull  是否不为空。
+    * ordinal  序号。
+    * tableModelId  所属关系建模的模型ID。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
+    * standRowId  关联的数据标准的ID。
+    * standRowName  关联的数据标准名称。
+    * qualityInfos  质量信息。
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -474,9 +474,9 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -486,7 +486,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param string|null $id 编码。
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名
+    *  字段名。
     *
     * @return string
     */
@@ -510,7 +510,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名
+    * @param string $nameEn 字段名。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  业务属性
+    *  业务属性。
     *
     * @return string
     */
@@ -534,7 +534,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 业务属性
+    * @param string $nameCh 业务属性。
     *
     * @return $this
     */
@@ -546,7 +546,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  description
+    *  描述。
     *
     * @return string|null
     */
@@ -558,7 +558,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description description
+    * @param string|null $description 描述。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsLocation
-    *  obs路径，子路径
+    *  obs路径，子路径。
     *
     * @return string|null
     */
@@ -582,7 +582,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets obsLocation
     *
-    * @param string|null $obsLocation obs路径，子路径
+    * @param string|null $obsLocation obs路径，子路径。
     *
     * @return $this
     */
@@ -594,7 +594,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -606,7 +606,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -618,7 +618,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -630,7 +630,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -642,7 +642,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  字段类型
+    *  字段类型。
     *
     * @return string
     */
@@ -654,7 +654,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 字段类型
+    * @param string $dataType 字段类型。
     *
     * @return $this
     */
@@ -690,7 +690,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataTypeExtend
-    *  数据类型扩展字段
+    *  数据类型扩展字段。
     *
     * @return string|null
     */
@@ -702,7 +702,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataTypeExtend
     *
-    * @param string|null $dataTypeExtend 数据类型扩展字段
+    * @param string|null $dataTypeExtend 数据类型扩展字段。
     *
     * @return $this
     */
@@ -714,7 +714,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPrimaryKey
-    *  是否主键
+    *  是否主键。
     *
     * @return bool
     */
@@ -726,7 +726,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets isPrimaryKey
     *
-    * @param bool $isPrimaryKey 是否主键
+    * @param bool $isPrimaryKey 是否主键。
     *
     * @return $this
     */
@@ -738,7 +738,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPartitionKey
-    *  是否分区键
+    *  是否分区键。
     *
     * @return bool|null
     */
@@ -750,7 +750,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets isPartitionKey
     *
-    * @param bool|null $isPartitionKey 是否分区键
+    * @param bool|null $isPartitionKey 是否分区键。
     *
     * @return $this
     */
@@ -762,7 +762,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isForeignKey
-    *  是否外键
+    *  是否外键。
     *
     * @return bool|null
     */
@@ -774,7 +774,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets isForeignKey
     *
-    * @param bool|null $isForeignKey 是否外键
+    * @param bool|null $isForeignKey 是否外键。
     *
     * @return $this
     */
@@ -786,7 +786,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendField
-    *  是否继承的属性
+    *  是否继承的属性。
     *
     * @return bool|null
     */
@@ -798,7 +798,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets extendField
     *
-    * @param bool|null $extendField 是否继承的属性
+    * @param bool|null $extendField 是否继承的属性。
     *
     * @return $this
     */
@@ -810,7 +810,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets notNull
-    *  是否不为空
+    *  是否不为空。
     *
     * @return bool|null
     */
@@ -822,7 +822,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets notNull
     *
-    * @param bool|null $notNull 是否不为空
+    * @param bool|null $notNull 是否不为空。
     *
     * @return $this
     */
@@ -834,7 +834,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  序号
+    *  序号。
     *
     * @return int|null
     */
@@ -846,7 +846,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 序号
+    * @param int|null $ordinal 序号。
     *
     * @return $this
     */
@@ -858,7 +858,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableModelId
-    *  所属表模型id
+    *  所属关系建模的模型ID。
     *
     * @return int|null
     */
@@ -870,7 +870,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableModelId
     *
-    * @param int|null $tableModelId 所属表模型id
+    * @param int|null $tableModelId 所属关系建模的模型ID。
     *
     * @return $this
     */
@@ -882,7 +882,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -894,7 +894,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -906,7 +906,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -918,7 +918,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -930,7 +930,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  表标签
+    *  表标签。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null
     */
@@ -942,7 +942,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null $tags 表标签
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null $tags 表标签。
     *
     * @return $this
     */
@@ -954,7 +954,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的id
+    *  关联的数据标准的ID。
     *
     * @return int|null
     */
@@ -966,7 +966,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param int|null $standRowId 关联的数据标准的id
+    * @param int|null $standRowId 关联的数据标准的ID。
     *
     * @return $this
     */
@@ -978,7 +978,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowName
-    *  standRowName
+    *  关联的数据标准名称。
     *
     * @return string|null
     */
@@ -990,7 +990,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowName
     *
-    * @param string|null $standRowName standRowName
+    * @param string|null $standRowName 关联的数据标准名称。
     *
     * @return $this
     */
@@ -1002,7 +1002,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityInfos
-    *  质量信息
+    *  质量信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null
     */
@@ -1014,7 +1014,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfos
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息。
     *
     * @return $this
     */
@@ -1026,7 +1026,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  别名
+    *  别名。
     *
     * @return string|null
     */
@@ -1038,7 +1038,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 别名
+    * @param string|null $alias 别名。
     *
     * @return $this
     */
@@ -1050,7 +1050,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfDefinedFields
-    *  自定义项
+    *  自定义项。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
     */
@@ -1062,7 +1062,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets selfDefinedFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。
     *
     * @return $this
     */

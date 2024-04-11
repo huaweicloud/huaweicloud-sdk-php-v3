@@ -20,28 +20,28 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  路径
-    * qualifiedName  名称
-    * level  主题所属层级
-    * name  名称
-    * nameEng  英文名称
-    * alias  别名
-    * description  描述
-    * dataOwner  数据主体
-    * owner  责任人
-    * dataOwnerList  数据主体列表
-    * createTime  创建时间，时间戳
-    * createBy  创建人
-    * updateTime  更新时间，时间戳
-    * updateBy  更新人
+    * path  路径。
+    * qualifiedName  名称。
+    * level  主题所属层级。
+    * name  名称。
+    * nameEng  英文名称。
+    * alias  别名。
+    * description  描述。
+    * dataOwner  数据主体。
+    * owner  责任人。
+    * dataOwnerList  数据主体列表。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateBy  更新人。
     * parent  parent
-    * parentId  父节点ID
-    * l1  是否为L1层
-    * l2  是否为L2层
-    * l3  是否为L3层
-    * ordinal  顺序编号
-    * tenantId  租户ID
-    * selfDefinedFields  自定义项
+    * parentId  父节点ID。
+    * l1  是否为L1层。
+    * l2  是否为L2层。
+    * l3  是否为L3层。
+    * ordinal  顺序编号。
+    * tenantId  租户ID。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -72,28 +72,28 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  路径
-    * qualifiedName  名称
-    * level  主题所属层级
-    * name  名称
-    * nameEng  英文名称
-    * alias  别名
-    * description  描述
-    * dataOwner  数据主体
-    * owner  责任人
-    * dataOwnerList  数据主体列表
-    * createTime  创建时间，时间戳
-    * createBy  创建人
-    * updateTime  更新时间，时间戳
-    * updateBy  更新人
+    * path  路径。
+    * qualifiedName  名称。
+    * level  主题所属层级。
+    * name  名称。
+    * nameEng  英文名称。
+    * alias  别名。
+    * description  描述。
+    * dataOwner  数据主体。
+    * owner  责任人。
+    * dataOwnerList  数据主体列表。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateBy  更新人。
     * parent  parent
-    * parentId  父节点ID
-    * l1  是否为L1层
-    * l2  是否为L2层
-    * l3  是否为L3层
-    * ordinal  顺序编号
-    * tenantId  租户ID
-    * selfDefinedFields  自定义项
+    * parentId  父节点ID。
+    * l1  是否为L1层。
+    * l2  是否为L2层。
+    * l3  是否为L3层。
+    * ordinal  顺序编号。
+    * tenantId  租户ID。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -145,28 +145,28 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  路径
-    * qualifiedName  名称
-    * level  主题所属层级
-    * name  名称
-    * nameEng  英文名称
-    * alias  别名
-    * description  描述
-    * dataOwner  数据主体
-    * owner  责任人
-    * dataOwnerList  数据主体列表
-    * createTime  创建时间，时间戳
-    * createBy  创建人
-    * updateTime  更新时间，时间戳
-    * updateBy  更新人
+    * path  路径。
+    * qualifiedName  名称。
+    * level  主题所属层级。
+    * name  名称。
+    * nameEng  英文名称。
+    * alias  别名。
+    * description  描述。
+    * dataOwner  数据主体。
+    * owner  责任人。
+    * dataOwnerList  数据主体列表。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateBy  更新人。
     * parent  parent
-    * parentId  父节点ID
-    * l1  是否为L1层
-    * l2  是否为L2层
-    * l3  是否为L3层
-    * ordinal  顺序编号
-    * tenantId  租户ID
-    * selfDefinedFields  自定义项
+    * parentId  父节点ID。
+    * l1  是否为L1层。
+    * l2  是否为L2层。
+    * l3  是否为L3层。
+    * ordinal  顺序编号。
+    * tenantId  租户ID。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -197,28 +197,28 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  路径
-    * qualifiedName  名称
-    * level  主题所属层级
-    * name  名称
-    * nameEng  英文名称
-    * alias  别名
-    * description  描述
-    * dataOwner  数据主体
-    * owner  责任人
-    * dataOwnerList  数据主体列表
-    * createTime  创建时间，时间戳
-    * createBy  创建人
-    * updateTime  更新时间，时间戳
-    * updateBy  更新人
+    * path  路径。
+    * qualifiedName  名称。
+    * level  主题所属层级。
+    * name  名称。
+    * nameEng  英文名称。
+    * alias  别名。
+    * description  描述。
+    * dataOwner  数据主体。
+    * owner  责任人。
+    * dataOwnerList  数据主体列表。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateBy  更新人。
     * parent  parent
-    * parentId  父节点ID
-    * l1  是否为L1层
-    * l2  是否为L2层
-    * l3  是否为L3层
-    * ordinal  顺序编号
-    * tenantId  租户ID
-    * selfDefinedFields  自定义项
+    * parentId  父节点ID。
+    * l1  是否为L1层。
+    * l2  是否为L2层。
+    * l3  是否为L3层。
+    * ordinal  顺序编号。
+    * tenantId  租户ID。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -249,28 +249,28 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  路径
-    * qualifiedName  名称
-    * level  主题所属层级
-    * name  名称
-    * nameEng  英文名称
-    * alias  别名
-    * description  描述
-    * dataOwner  数据主体
-    * owner  责任人
-    * dataOwnerList  数据主体列表
-    * createTime  创建时间，时间戳
-    * createBy  创建人
-    * updateTime  更新时间，时间戳
-    * updateBy  更新人
+    * path  路径。
+    * qualifiedName  名称。
+    * level  主题所属层级。
+    * name  名称。
+    * nameEng  英文名称。
+    * alias  别名。
+    * description  描述。
+    * dataOwner  数据主体。
+    * owner  责任人。
+    * dataOwnerList  数据主体列表。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateBy  更新人。
     * parent  parent
-    * parentId  父节点ID
-    * l1  是否为L1层
-    * l2  是否为L2层
-    * l3  是否为L3层
-    * ordinal  顺序编号
-    * tenantId  租户ID
-    * selfDefinedFields  自定义项
+    * parentId  父节点ID。
+    * l1  是否为L1层。
+    * l2  是否为L2层。
+    * l3  是否为L3层。
+    * ordinal  顺序编号。
+    * tenantId  租户ID。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -429,7 +429,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  路径
+    *  路径。
     *
     * @return string
     */
@@ -441,7 +441,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string $path 路径
+    * @param string $path 路径。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualifiedName
-    *  名称
+    *  名称。
     *
     * @return string
     */
@@ -465,7 +465,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualifiedName
     *
-    * @param string $qualifiedName 名称
+    * @param string $qualifiedName 名称。
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  主题所属层级
+    *  主题所属层级。
     *
     * @return string
     */
@@ -489,7 +489,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string $level 主题所属层级
+    * @param string $level 主题所属层级。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  名称。
     *
     * @return string
     */
@@ -513,7 +513,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string $name 名称。
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEng
-    *  英文名称
+    *  英文名称。
     *
     * @return string
     */
@@ -537,7 +537,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEng
     *
-    * @param string $nameEng 英文名称
+    * @param string $nameEng 英文名称。
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  别名
+    *  别名。
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 别名
+    * @param string|null $alias 别名。
     *
     * @return $this
     */
@@ -573,7 +573,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string
     */
@@ -585,7 +585,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 描述
+    * @param string $description 描述。
     *
     * @return $this
     */
@@ -597,7 +597,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataOwner
-    *  数据主体
+    *  数据主体。
     *
     * @return string
     */
@@ -609,7 +609,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataOwner
     *
-    * @param string $dataOwner 数据主体
+    * @param string $dataOwner 数据主体。
     *
     * @return $this
     */
@@ -621,7 +621,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  责任人
+    *  责任人。
     *
     * @return string|null
     */
@@ -633,7 +633,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner 责任人
+    * @param string|null $owner 责任人。
     *
     * @return $this
     */
@@ -645,7 +645,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataOwnerList
-    *  数据主体列表
+    *  数据主体列表。
     *
     * @return string[]
     */
@@ -657,7 +657,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataOwnerList
     *
-    * @param string[] $dataOwnerList 数据主体列表
+    * @param string[] $dataOwnerList 数据主体列表。
     *
     * @return $this
     */
@@ -669,7 +669,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，时间戳
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return string|null
     */
@@ -681,7 +681,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间，时间戳
+    * @param string|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -693,7 +693,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -705,7 +705,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -717,7 +717,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，时间戳
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return string|null
     */
@@ -729,7 +729,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间，时间戳
+    * @param string|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -741,7 +741,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -753,7 +753,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -789,7 +789,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父节点ID
+    *  父节点ID。
     *
     * @return string|null
     */
@@ -801,7 +801,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param string|null $parentId 父节点ID
+    * @param string|null $parentId 父节点ID。
     *
     * @return $this
     */
@@ -813,7 +813,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  是否为L1层
+    *  是否为L1层。
     *
     * @return bool|null
     */
@@ -825,7 +825,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param bool|null $l1 是否为L1层
+    * @param bool|null $l1 是否为L1层。
     *
     * @return $this
     */
@@ -837,7 +837,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  是否为L2层
+    *  是否为L2层。
     *
     * @return bool|null
     */
@@ -849,7 +849,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param bool|null $l2 是否为L2层
+    * @param bool|null $l2 是否为L2层。
     *
     * @return $this
     */
@@ -861,7 +861,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  是否为L3层
+    *  是否为L3层。
     *
     * @return bool|null
     */
@@ -873,7 +873,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param bool|null $l3 是否为L3层
+    * @param bool|null $l3 是否为L3层。
     *
     * @return $this
     */
@@ -885,7 +885,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  顺序编号
+    *  顺序编号。
     *
     * @return int|null
     */
@@ -897,7 +897,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 顺序编号
+    * @param int|null $ordinal 顺序编号。
     *
     * @return $this
     */
@@ -909,7 +909,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  租户ID
+    *  租户ID。
     *
     * @return string|null
     */
@@ -921,7 +921,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 租户ID
+    * @param string|null $tenantId 租户ID。
     *
     * @return $this
     */
@@ -933,7 +933,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfDefinedFields
-    *  自定义项
+    *  自定义项。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
     */
@@ -945,7 +945,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets selfDefinedFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。
     *
     * @return $this
     */

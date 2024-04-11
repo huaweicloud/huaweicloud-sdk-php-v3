@@ -20,18 +20,18 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fdName  属性名称
-    * description  属性描述
-    * id  ID
-    * actived  是否显示，系统默认项必然显示不允许修改
-    * required  是否必填
-    * searchable  是否可搜索
-    * displayedName  前端展示名
-    * displayedNameEn  前端展示名英文
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * fdName  属性名称。
+    * description  属性描述。
+    * id  数据标准ID。
+    * actived  是否显示，系统默认项必然显示不允许修改。
+    * required  是否必填。
+    * searchable  是否可搜索。
+    * displayedName  前端展示名。
+    * displayedNameEn  前端展示名英文。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -52,18 +52,18 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fdName  属性名称
-    * description  属性描述
-    * id  ID
-    * actived  是否显示，系统默认项必然显示不允许修改
-    * required  是否必填
-    * searchable  是否可搜索
-    * displayedName  前端展示名
-    * displayedNameEn  前端展示名英文
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * fdName  属性名称。
+    * description  属性描述。
+    * id  数据标准ID。
+    * actived  是否显示，系统默认项必然显示不允许修改。
+    * required  是否必填。
+    * searchable  是否可搜索。
+    * displayedName  前端展示名。
+    * displayedNameEn  前端展示名英文。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -105,18 +105,18 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fdName  属性名称
-    * description  属性描述
-    * id  ID
-    * actived  是否显示，系统默认项必然显示不允许修改
-    * required  是否必填
-    * searchable  是否可搜索
-    * displayedName  前端展示名
-    * displayedNameEn  前端展示名英文
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * fdName  属性名称。
+    * description  属性描述。
+    * id  数据标准ID。
+    * actived  是否显示，系统默认项必然显示不允许修改。
+    * required  是否必填。
+    * searchable  是否可搜索。
+    * displayedName  前端展示名。
+    * displayedNameEn  前端展示名英文。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -137,18 +137,18 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fdName  属性名称
-    * description  属性描述
-    * id  ID
-    * actived  是否显示，系统默认项必然显示不允许修改
-    * required  是否必填
-    * searchable  是否可搜索
-    * displayedName  前端展示名
-    * displayedNameEn  前端展示名英文
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * fdName  属性名称。
+    * description  属性描述。
+    * id  数据标准ID。
+    * actived  是否显示，系统默认项必然显示不允许修改。
+    * required  是否必填。
+    * searchable  是否可搜索。
+    * displayedName  前端展示名。
+    * displayedNameEn  前端展示名英文。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -169,18 +169,18 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fdName  属性名称
-    * description  属性描述
-    * id  ID
-    * actived  是否显示，系统默认项必然显示不允许修改
-    * required  是否必填
-    * searchable  是否可搜索
-    * displayedName  前端展示名
-    * displayedNameEn  前端展示名英文
-    * createTime  创建时间
-    * updateTime  更新时间
-    * createBy  创建人
-    * updateBy  更新人
+    * fdName  属性名称。
+    * description  属性描述。
+    * id  数据标准ID。
+    * actived  是否显示，系统默认项必然显示不允许修改。
+    * required  是否必填。
+    * searchable  是否可搜索。
+    * displayedName  前端展示名。
+    * displayedNameEn  前端展示名英文。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人。
+    * updateBy  更新人。
     *
     * @var string[]
     */
@@ -301,7 +301,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdName
-    *  属性名称
+    *  属性名称。
     *
     * @return string
     */
@@ -313,7 +313,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdName
     *
-    * @param string $fdName 属性名称
+    * @param string $fdName 属性名称。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  属性描述
+    *  属性描述。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 属性描述
+    * @param string|null $description 属性描述。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  数据标准ID。
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id ID
+    * @param int|null $id 数据标准ID。
     *
     * @return $this
     */
@@ -373,7 +373,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets actived
-    *  是否显示，系统默认项必然显示不允许修改
+    *  是否显示，系统默认项必然显示不允许修改。
     *
     * @return bool
     */
@@ -385,7 +385,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets actived
     *
-    * @param bool $actived 是否显示，系统默认项必然显示不允许修改
+    * @param bool $actived 是否显示，系统默认项必然显示不允许修改。
     *
     * @return $this
     */
@@ -397,7 +397,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets required
-    *  是否必填
+    *  是否必填。
     *
     * @return bool|null
     */
@@ -409,7 +409,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets required
     *
-    * @param bool|null $required 是否必填
+    * @param bool|null $required 是否必填。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchable
-    *  是否可搜索
+    *  是否可搜索。
     *
     * @return bool|null
     */
@@ -433,7 +433,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets searchable
     *
-    * @param bool|null $searchable 是否可搜索
+    * @param bool|null $searchable 是否可搜索。
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayedName
-    *  前端展示名
+    *  前端展示名。
     *
     * @return string|null
     */
@@ -457,7 +457,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets displayedName
     *
-    * @param string|null $displayedName 前端展示名
+    * @param string|null $displayedName 前端展示名。
     *
     * @return $this
     */
@@ -469,7 +469,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayedNameEn
-    *  前端展示名英文
+    *  前端展示名英文。
     *
     * @return string|null
     */
@@ -481,7 +481,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets displayedNameEn
     *
-    * @param string|null $displayedNameEn 前端展示名英文
+    * @param string|null $displayedNameEn 前端展示名英文。
     *
     * @return $this
     */
@@ -493,7 +493,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -505,7 +505,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -529,7 +529,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -541,7 +541,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -553,7 +553,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -565,7 +565,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -577,7 +577,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */

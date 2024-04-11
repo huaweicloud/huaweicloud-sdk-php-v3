@@ -23,7 +23,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID
     * position  位点信息
-    * status  查询状态。
+    * status  查询状态
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID
     * position  位点信息
-    * status  查询状态。
+    * status  查询状态
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID
     * position  位点信息
-    * status  查询状态。
+    * status  查询状态
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID
     * position  位点信息
-    * status  查询状态。
+    * status  查询状态
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID
     * position  位点信息
-    * status  查询状态。
+    * status  查询状态
     *
     * @var string[]
     */
@@ -270,7 +270,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  查询状态。
+    *  查询状态
     *
     * @return string|null
     */
@@ -282,7 +282,7 @@ class ShowPositionResultResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 查询状态。
+    * @param string|null $status 查询状态
     *
     * @return $this
     */

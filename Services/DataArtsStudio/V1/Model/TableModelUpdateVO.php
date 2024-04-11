@@ -20,72 +20,72 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * modelId  模型id
-    * parentTableId  父表id
-    * parentTableName  父表名称
-    * parentTableCode  父表编码
+    * id  编码。
+    * modelId  所属关系建模的模型ID。
+    * parentTableId  父表ID。
+    * parentTableName  父表名称。
+    * parentTableCode  父表编码。
     * model  model
-    * dataFormat  数据格式
-    * obsBucket  obs桶
-    * obsLocation  obs路径
-    * configs  其他配置
-    * tableType  表类型
-    * owner  owner
-    * tbName  表名
-    * dwId  数据连接id
-    * dbName  数据库名
-    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
-    * schema  DWS类型需要
-    * extendInfo  扩展信息
-    * tbGuid  表物化后的guid
-    * tbId  数据表id
-    * logicTbName  逻辑实体名
-    * logicTbGuid  逻辑实体的guid
-    * description  描述
+    * dataFormat  数据格式。
+    * obsBucket  obs桶。
+    * obsLocation  obs路径。
+    * configs  其他配置。
+    * tableType  表类型。
+    * owner  责任人。
+    * tbName  表名。
+    * dwId  数据连接ID。
+    * dbName  数据库名。
+    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
+    * schema  DWS类型需要。
+    * extendInfo  扩展信息。
+    * tbGuid  表物化后的guid。
+    * tbId  数据表ID。
+    * logicTbName  逻辑实体名。
+    * logicTbGuid  逻辑实体的guid。
+    * description  描述。
     * status  status
-    * logicTbId  逻辑实体的id
-    * bizCatalogId  归属的业务分类的id
-    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
+    * logicTbId  逻辑实体的ID。
+    * bizCatalogId  归属的业务分类的ID。
+    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * attributes  表属性信息
-    * mappings  表映射信息
-    * relations  关系
-    * dwType  数据连接类型
-    * dwName  数据连接名称
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
+    * attributes  表属性信息。
+    * mappings  表映射信息。
+    * relations  关系。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * dwName  数据连接名称，只读，创建和更新时无需填写。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
     * partitionConf  分区表达式
-    * dlfTaskId  DLF 作业 ID
-    * useRecentlyPartition  是否使用最新分区
-    * reversed  是否是逆向的
-    * dirtyOutSwitch  异常数据输出开关
-    * dirtyOutDatabase  异常数据输出库
-    * dirtyOutPrefix  异常表前缀
-    * dirtyOutSuffix  异常表后缀
-    * qualityOwner  质量责任人
-    * qualityId  质量id
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]
-    * distributeColumn  DISTRIBUTE BY HASH column
-    * isPartition  是否分区表
+    * dlfTaskId  DLF作业ID。
+    * useRecentlyPartition  是否使用最新分区。
+    * reversed  是否是逆向的。
+    * dirtyOutSwitch  异常数据输出开关。
+    * dirtyOutDatabase  异常数据输出库。
+    * dirtyOutPrefix  异常表前缀。
+    * dirtyOutSuffix  异常表后缀。
+    * qualityOwner  质量责任人。
+    * qualityId  质量ID。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distributeColumn  DISTRIBUTE BY HASH column.
+    * isPartition  是否分区表。
     * physicalTable  physicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -160,72 +160,72 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * modelId  模型id
-    * parentTableId  父表id
-    * parentTableName  父表名称
-    * parentTableCode  父表编码
+    * id  编码。
+    * modelId  所属关系建模的模型ID。
+    * parentTableId  父表ID。
+    * parentTableName  父表名称。
+    * parentTableCode  父表编码。
     * model  model
-    * dataFormat  数据格式
-    * obsBucket  obs桶
-    * obsLocation  obs路径
-    * configs  其他配置
-    * tableType  表类型
-    * owner  owner
-    * tbName  表名
-    * dwId  数据连接id
-    * dbName  数据库名
-    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
-    * schema  DWS类型需要
-    * extendInfo  扩展信息
-    * tbGuid  表物化后的guid
-    * tbId  数据表id
-    * logicTbName  逻辑实体名
-    * logicTbGuid  逻辑实体的guid
-    * description  描述
+    * dataFormat  数据格式。
+    * obsBucket  obs桶。
+    * obsLocation  obs路径。
+    * configs  其他配置。
+    * tableType  表类型。
+    * owner  责任人。
+    * tbName  表名。
+    * dwId  数据连接ID。
+    * dbName  数据库名。
+    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
+    * schema  DWS类型需要。
+    * extendInfo  扩展信息。
+    * tbGuid  表物化后的guid。
+    * tbId  数据表ID。
+    * logicTbName  逻辑实体名。
+    * logicTbGuid  逻辑实体的guid。
+    * description  描述。
     * status  status
-    * logicTbId  逻辑实体的id
-    * bizCatalogId  归属的业务分类的id
-    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
+    * logicTbId  逻辑实体的ID。
+    * bizCatalogId  归属的业务分类的ID。
+    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * attributes  表属性信息
-    * mappings  表映射信息
-    * relations  关系
-    * dwType  数据连接类型
-    * dwName  数据连接名称
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
+    * attributes  表属性信息。
+    * mappings  表映射信息。
+    * relations  关系。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * dwName  数据连接名称，只读，创建和更新时无需填写。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
     * partitionConf  分区表达式
-    * dlfTaskId  DLF 作业 ID
-    * useRecentlyPartition  是否使用最新分区
-    * reversed  是否是逆向的
-    * dirtyOutSwitch  异常数据输出开关
-    * dirtyOutDatabase  异常数据输出库
-    * dirtyOutPrefix  异常表前缀
-    * dirtyOutSuffix  异常表后缀
-    * qualityOwner  质量责任人
-    * qualityId  质量id
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]
-    * distributeColumn  DISTRIBUTE BY HASH column
-    * isPartition  是否分区表
+    * dlfTaskId  DLF作业ID。
+    * useRecentlyPartition  是否使用最新分区。
+    * reversed  是否是逆向的。
+    * dirtyOutSwitch  异常数据输出开关。
+    * dirtyOutDatabase  异常数据输出库。
+    * dirtyOutPrefix  异常表前缀。
+    * dirtyOutSuffix  异常表后缀。
+    * qualityOwner  质量责任人。
+    * qualityId  质量ID。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distributeColumn  DISTRIBUTE BY HASH column.
+    * isPartition  是否分区表。
     * physicalTable  physicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -321,72 +321,72 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * modelId  模型id
-    * parentTableId  父表id
-    * parentTableName  父表名称
-    * parentTableCode  父表编码
+    * id  编码。
+    * modelId  所属关系建模的模型ID。
+    * parentTableId  父表ID。
+    * parentTableName  父表名称。
+    * parentTableCode  父表编码。
     * model  model
-    * dataFormat  数据格式
-    * obsBucket  obs桶
-    * obsLocation  obs路径
-    * configs  其他配置
-    * tableType  表类型
-    * owner  owner
-    * tbName  表名
-    * dwId  数据连接id
-    * dbName  数据库名
-    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
-    * schema  DWS类型需要
-    * extendInfo  扩展信息
-    * tbGuid  表物化后的guid
-    * tbId  数据表id
-    * logicTbName  逻辑实体名
-    * logicTbGuid  逻辑实体的guid
-    * description  描述
+    * dataFormat  数据格式。
+    * obsBucket  obs桶。
+    * obsLocation  obs路径。
+    * configs  其他配置。
+    * tableType  表类型。
+    * owner  责任人。
+    * tbName  表名。
+    * dwId  数据连接ID。
+    * dbName  数据库名。
+    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
+    * schema  DWS类型需要。
+    * extendInfo  扩展信息。
+    * tbGuid  表物化后的guid。
+    * tbId  数据表ID。
+    * logicTbName  逻辑实体名。
+    * logicTbGuid  逻辑实体的guid。
+    * description  描述。
     * status  status
-    * logicTbId  逻辑实体的id
-    * bizCatalogId  归属的业务分类的id
-    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
+    * logicTbId  逻辑实体的ID。
+    * bizCatalogId  归属的业务分类的ID。
+    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * attributes  表属性信息
-    * mappings  表映射信息
-    * relations  关系
-    * dwType  数据连接类型
-    * dwName  数据连接名称
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
+    * attributes  表属性信息。
+    * mappings  表映射信息。
+    * relations  关系。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * dwName  数据连接名称，只读，创建和更新时无需填写。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
     * partitionConf  分区表达式
-    * dlfTaskId  DLF 作业 ID
-    * useRecentlyPartition  是否使用最新分区
-    * reversed  是否是逆向的
-    * dirtyOutSwitch  异常数据输出开关
-    * dirtyOutDatabase  异常数据输出库
-    * dirtyOutPrefix  异常表前缀
-    * dirtyOutSuffix  异常表后缀
-    * qualityOwner  质量责任人
-    * qualityId  质量id
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]
-    * distributeColumn  DISTRIBUTE BY HASH column
-    * isPartition  是否分区表
+    * dlfTaskId  DLF作业ID。
+    * useRecentlyPartition  是否使用最新分区。
+    * reversed  是否是逆向的。
+    * dirtyOutSwitch  异常数据输出开关。
+    * dirtyOutDatabase  异常数据输出库。
+    * dirtyOutPrefix  异常表前缀。
+    * dirtyOutSuffix  异常表后缀。
+    * qualityOwner  质量责任人。
+    * qualityId  质量ID。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distributeColumn  DISTRIBUTE BY HASH column.
+    * isPartition  是否分区表。
     * physicalTable  physicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -461,72 +461,72 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * modelId  模型id
-    * parentTableId  父表id
-    * parentTableName  父表名称
-    * parentTableCode  父表编码
+    * id  编码。
+    * modelId  所属关系建模的模型ID。
+    * parentTableId  父表ID。
+    * parentTableName  父表名称。
+    * parentTableCode  父表编码。
     * model  model
-    * dataFormat  数据格式
-    * obsBucket  obs桶
-    * obsLocation  obs路径
-    * configs  其他配置
-    * tableType  表类型
-    * owner  owner
-    * tbName  表名
-    * dwId  数据连接id
-    * dbName  数据库名
-    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
-    * schema  DWS类型需要
-    * extendInfo  扩展信息
-    * tbGuid  表物化后的guid
-    * tbId  数据表id
-    * logicTbName  逻辑实体名
-    * logicTbGuid  逻辑实体的guid
-    * description  描述
+    * dataFormat  数据格式。
+    * obsBucket  obs桶。
+    * obsLocation  obs路径。
+    * configs  其他配置。
+    * tableType  表类型。
+    * owner  责任人。
+    * tbName  表名。
+    * dwId  数据连接ID。
+    * dbName  数据库名。
+    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
+    * schema  DWS类型需要。
+    * extendInfo  扩展信息。
+    * tbGuid  表物化后的guid。
+    * tbId  数据表ID。
+    * logicTbName  逻辑实体名。
+    * logicTbGuid  逻辑实体的guid。
+    * description  描述。
     * status  status
-    * logicTbId  逻辑实体的id
-    * bizCatalogId  归属的业务分类的id
-    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
+    * logicTbId  逻辑实体的ID。
+    * bizCatalogId  归属的业务分类的ID。
+    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * attributes  表属性信息
-    * mappings  表映射信息
-    * relations  关系
-    * dwType  数据连接类型
-    * dwName  数据连接名称
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
+    * attributes  表属性信息。
+    * mappings  表映射信息。
+    * relations  关系。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * dwName  数据连接名称，只读，创建和更新时无需填写。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
     * partitionConf  分区表达式
-    * dlfTaskId  DLF 作业 ID
-    * useRecentlyPartition  是否使用最新分区
-    * reversed  是否是逆向的
-    * dirtyOutSwitch  异常数据输出开关
-    * dirtyOutDatabase  异常数据输出库
-    * dirtyOutPrefix  异常表前缀
-    * dirtyOutSuffix  异常表后缀
-    * qualityOwner  质量责任人
-    * qualityId  质量id
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]
-    * distributeColumn  DISTRIBUTE BY HASH column
-    * isPartition  是否分区表
+    * dlfTaskId  DLF作业ID。
+    * useRecentlyPartition  是否使用最新分区。
+    * reversed  是否是逆向的。
+    * dirtyOutSwitch  异常数据输出开关。
+    * dirtyOutDatabase  异常数据输出库。
+    * dirtyOutPrefix  异常表前缀。
+    * dirtyOutSuffix  异常表后缀。
+    * qualityOwner  质量责任人。
+    * qualityId  质量ID。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distributeColumn  DISTRIBUTE BY HASH column.
+    * isPartition  是否分区表。
     * physicalTable  physicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -601,72 +601,72 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * modelId  模型id
-    * parentTableId  父表id
-    * parentTableName  父表名称
-    * parentTableCode  父表编码
+    * id  编码。
+    * modelId  所属关系建模的模型ID。
+    * parentTableId  父表ID。
+    * parentTableName  父表名称。
+    * parentTableCode  父表编码。
     * model  model
-    * dataFormat  数据格式
-    * obsBucket  obs桶
-    * obsLocation  obs路径
-    * configs  其他配置
-    * tableType  表类型
-    * owner  owner
-    * tbName  表名
-    * dwId  数据连接id
-    * dbName  数据库名
-    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
-    * schema  DWS类型需要
-    * extendInfo  扩展信息
-    * tbGuid  表物化后的guid
-    * tbId  数据表id
-    * logicTbName  逻辑实体名
-    * logicTbGuid  逻辑实体的guid
-    * description  描述
+    * dataFormat  数据格式。
+    * obsBucket  obs桶。
+    * obsLocation  obs路径。
+    * configs  其他配置。
+    * tableType  表类型。
+    * owner  责任人。
+    * tbName  表名。
+    * dwId  数据连接ID。
+    * dbName  数据库名。
+    * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
+    * schema  DWS类型需要。
+    * extendInfo  扩展信息。
+    * tbGuid  表物化后的guid。
+    * tbId  数据表ID。
+    * logicTbName  逻辑实体名。
+    * logicTbGuid  逻辑实体的guid。
+    * description  描述。
     * status  status
-    * logicTbId  逻辑实体的id
-    * bizCatalogId  归属的业务分类的id
-    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
-    * tags  表标签
+    * logicTbId  逻辑实体的ID。
+    * bizCatalogId  归属的业务分类的ID。
+    * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * attributes  表属性信息
-    * mappings  表映射信息
-    * relations  关系
-    * dwType  数据连接类型
-    * dwName  数据连接名称
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
-    * l1Id  主题域分组id
-    * l2Id  l2Id
-    * l3Id  业务对象id
+    * attributes  表属性信息。
+    * mappings  表映射信息。
+    * relations  关系。
+    * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
+    * dwName  数据连接名称，只读，创建和更新时无需填写。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID。
+    * l2Id  主题域ID，只读，创建和更新时无需填写。
+    * l3Id  业务对象ID。
     * partitionConf  分区表达式
-    * dlfTaskId  DLF 作业 ID
-    * useRecentlyPartition  是否使用最新分区
-    * reversed  是否是逆向的
-    * dirtyOutSwitch  异常数据输出开关
-    * dirtyOutDatabase  异常数据输出库
-    * dirtyOutPrefix  异常表前缀
-    * dirtyOutSuffix  异常表后缀
-    * qualityOwner  质量责任人
-    * qualityId  质量id
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]
-    * distributeColumn  DISTRIBUTE BY HASH column
-    * isPartition  是否分区表
+    * dlfTaskId  DLF作业ID。
+    * useRecentlyPartition  是否使用最新分区。
+    * reversed  是否是逆向的。
+    * dirtyOutSwitch  异常数据输出开关。
+    * dirtyOutDatabase  异常数据输出库。
+    * dirtyOutPrefix  异常表前缀。
+    * dirtyOutSuffix  异常表后缀。
+    * qualityOwner  质量责任人。
+    * qualityId  质量ID。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distributeColumn  DISTRIBUTE BY HASH column.
+    * isPartition  是否分区表。
     * physicalTable  physicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
-    * alias  别名
-    * selfDefinedFields  自定义项
+    * alias  别名。
+    * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
@@ -957,7 +957,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码。
     *
     * @return int
     */
@@ -969,7 +969,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int $id 编码
+    * @param int $id 编码。
     *
     * @return $this
     */
@@ -981,7 +981,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelId
-    *  模型id
+    *  所属关系建模的模型ID。
     *
     * @return int
     */
@@ -993,7 +993,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param int $modelId 模型id
+    * @param int $modelId 所属关系建模的模型ID。
     *
     * @return $this
     */
@@ -1005,7 +1005,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableId
-    *  父表id
+    *  父表ID。
     *
     * @return int|null
     */
@@ -1017,7 +1017,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableId
     *
-    * @param int|null $parentTableId 父表id
+    * @param int|null $parentTableId 父表ID。
     *
     * @return $this
     */
@@ -1029,7 +1029,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableName
-    *  父表名称
+    *  父表名称。
     *
     * @return string|null
     */
@@ -1041,7 +1041,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableName
     *
-    * @param string|null $parentTableName 父表名称
+    * @param string|null $parentTableName 父表名称。
     *
     * @return $this
     */
@@ -1053,7 +1053,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableCode
-    *  父表编码
+    *  父表编码。
     *
     * @return string|null
     */
@@ -1065,7 +1065,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableCode
     *
-    * @param string|null $parentTableCode 父表编码
+    * @param string|null $parentTableCode 父表编码。
     *
     * @return $this
     */
@@ -1101,7 +1101,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataFormat
-    *  数据格式
+    *  数据格式。
     *
     * @return string|null
     */
@@ -1113,7 +1113,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataFormat
     *
-    * @param string|null $dataFormat 数据格式
+    * @param string|null $dataFormat 数据格式。
     *
     * @return $this
     */
@@ -1125,7 +1125,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucket
-    *  obs桶
+    *  obs桶。
     *
     * @return string|null
     */
@@ -1137,7 +1137,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucket
     *
-    * @param string|null $obsBucket obs桶
+    * @param string|null $obsBucket obs桶。
     *
     * @return $this
     */
@@ -1149,7 +1149,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsLocation
-    *  obs路径
+    *  obs路径。
     *
     * @return string|null
     */
@@ -1161,7 +1161,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets obsLocation
     *
-    * @param string|null $obsLocation obs路径
+    * @param string|null $obsLocation obs路径。
     *
     * @return $this
     */
@@ -1173,7 +1173,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets configs
-    *  其他配置
+    *  其他配置。
     *
     * @return string|null
     */
@@ -1185,7 +1185,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets configs
     *
-    * @param string|null $configs 其他配置
+    * @param string|null $configs 其他配置。
     *
     * @return $this
     */
@@ -1197,7 +1197,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableType
-    *  表类型
+    *  表类型。
     *
     * @return string|null
     */
@@ -1209,7 +1209,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableType
     *
-    * @param string|null $tableType 表类型
+    * @param string|null $tableType 表类型。
     *
     * @return $this
     */
@@ -1221,7 +1221,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  owner
+    *  责任人。
     *
     * @return string|null
     */
@@ -1233,7 +1233,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner owner
+    * @param string|null $owner 责任人。
     *
     * @return $this
     */
@@ -1245,7 +1245,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbName
-    *  表名
+    *  表名。
     *
     * @return string
     */
@@ -1257,7 +1257,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbName
     *
-    * @param string $tbName 表名
+    * @param string $tbName 表名。
     *
     * @return $this
     */
@@ -1269,7 +1269,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dwId
-    *  数据连接id
+    *  数据连接ID。
     *
     * @return string|null
     */
@@ -1281,7 +1281,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dwId
     *
-    * @param string|null $dwId 数据连接id
+    * @param string|null $dwId 数据连接ID。
     *
     * @return $this
     */
@@ -1293,7 +1293,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbName
-    *  数据库名
+    *  数据库名。
     *
     * @return string|null
     */
@@ -1305,7 +1305,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dbName
     *
-    * @param string|null $dbName 数据库名
+    * @param string|null $dbName 数据库名。
     *
     * @return $this
     */
@@ -1317,7 +1317,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets queueName
-    *  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
+    *  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     *
     * @return string|null
     */
@@ -1329,7 +1329,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets queueName
     *
-    * @param string|null $queueName dli数据连接执行sql所需的队列，数据连接类型为DLI时必须
+    * @param string|null $queueName dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     *
     * @return $this
     */
@@ -1341,7 +1341,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets schema
-    *  DWS类型需要
+    *  DWS类型需要。
     *
     * @return string|null
     */
@@ -1353,7 +1353,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets schema
     *
-    * @param string|null $schema DWS类型需要
+    * @param string|null $schema DWS类型需要。
     *
     * @return $this
     */
@@ -1365,7 +1365,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendInfo
-    *  扩展信息
+    *  扩展信息。
     *
     * @return string|null
     */
@@ -1377,7 +1377,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets extendInfo
     *
-    * @param string|null $extendInfo 扩展信息
+    * @param string|null $extendInfo 扩展信息。
     *
     * @return $this
     */
@@ -1389,7 +1389,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbGuid
-    *  表物化后的guid
+    *  表物化后的guid。
     *
     * @return string|null
     */
@@ -1401,7 +1401,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbGuid
     *
-    * @param string|null $tbGuid 表物化后的guid
+    * @param string|null $tbGuid 表物化后的guid。
     *
     * @return $this
     */
@@ -1413,7 +1413,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbId
-    *  数据表id
+    *  数据表ID。
     *
     * @return string|null
     */
@@ -1425,7 +1425,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbId
     *
-    * @param string|null $tbId 数据表id
+    * @param string|null $tbId 数据表ID。
     *
     * @return $this
     */
@@ -1437,7 +1437,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicTbName
-    *  逻辑实体名
+    *  逻辑实体名。
     *
     * @return string
     */
@@ -1449,7 +1449,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets logicTbName
     *
-    * @param string $logicTbName 逻辑实体名
+    * @param string $logicTbName 逻辑实体名。
     *
     * @return $this
     */
@@ -1461,7 +1461,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicTbGuid
-    *  逻辑实体的guid
+    *  逻辑实体的guid。
     *
     * @return string|null
     */
@@ -1473,7 +1473,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets logicTbGuid
     *
-    * @param string|null $logicTbGuid 逻辑实体的guid
+    * @param string|null $logicTbGuid 逻辑实体的guid。
     *
     * @return $this
     */
@@ -1485,7 +1485,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  描述。
     *
     * @return string
     */
@@ -1497,7 +1497,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string $description 描述
+    * @param string $description 描述。
     *
     * @return $this
     */
@@ -1533,7 +1533,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicTbId
-    *  逻辑实体的id
+    *  逻辑实体的ID。
     *
     * @return int|null
     */
@@ -1545,7 +1545,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets logicTbId
     *
-    * @param int|null $logicTbId 逻辑实体的id
+    * @param int|null $logicTbId 逻辑实体的ID。
     *
     * @return $this
     */
@@ -1557,7 +1557,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  归属的业务分类的id
+    *  归属的业务分类的ID。
     *
     * @return int|null
     */
@@ -1569,7 +1569,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param int|null $bizCatalogId 归属的业务分类的id
+    * @param int|null $bizCatalogId 归属的业务分类的ID。
     *
     * @return $this
     */
@@ -1581,7 +1581,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets catalogPath
-    *  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
+    *  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
     *
     * @return string|null
     */
@@ -1593,7 +1593,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets catalogPath
     *
-    * @param string|null $catalogPath 归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}
+    * @param string|null $catalogPath 归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
     *
     * @return $this
     */
@@ -1605,7 +1605,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -1617,7 +1617,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -1629,7 +1629,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -1641,7 +1641,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -1653,7 +1653,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1665,7 +1665,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1677,7 +1677,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1689,7 +1689,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1701,7 +1701,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  表标签
+    *  表标签。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null
     */
@@ -1713,7 +1713,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null $tags 表标签
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null $tags 表标签。
     *
     * @return $this
     */
@@ -1773,7 +1773,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attributes
-    *  表属性信息
+    *  表属性信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableModelAttributeVO[]
     */
@@ -1785,7 +1785,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets attributes
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableModelAttributeVO[] $attributes 表属性信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableModelAttributeVO[] $attributes 表属性信息。
     *
     * @return $this
     */
@@ -1797,7 +1797,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets mappings
-    *  表映射信息
+    *  表映射信息。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableMappingVO[]|null
     */
@@ -1809,7 +1809,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets mappings
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableMappingVO[]|null $mappings 表映射信息
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TableMappingVO[]|null $mappings 表映射信息。
     *
     * @return $this
     */
@@ -1821,7 +1821,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets relations
-    *  关系
+    *  关系。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RelationVO[]|null
     */
@@ -1833,7 +1833,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets relations
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RelationVO[]|null $relations 关系
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\RelationVO[]|null $relations 关系。
     *
     * @return $this
     */
@@ -1845,7 +1845,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dwType
-    *  数据连接类型
+    *  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     *
     * @return string
     */
@@ -1857,7 +1857,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dwType
     *
-    * @param string $dwType 数据连接类型
+    * @param string $dwType 数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
     *
     * @return $this
     */
@@ -1869,7 +1869,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dwName
-    *  数据连接名称
+    *  数据连接名称，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1881,7 +1881,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dwName
     *
-    * @param string|null $dwName 数据连接名称
+    * @param string|null $dwName 数据连接名称，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1893,7 +1893,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组中文名
+    *  主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1905,7 +1905,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组中文名
+    * @param string|null $l1 主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1917,7 +1917,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域中文名
+    *  主题域中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1929,7 +1929,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域中文名
+    * @param string|null $l2 主题域中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1941,7 +1941,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象中文名
+    *  业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1953,7 +1953,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象中文名
+    * @param string|null $l3 业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1965,7 +1965,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组id
+    *  主题域分组ID。
     *
     * @return int|null
     */
@@ -1977,7 +1977,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组id
+    * @param int|null $l1Id 主题域分组ID。
     *
     * @return $this
     */
@@ -1989,7 +1989,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2Id
-    *  l2Id
+    *  主题域ID，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -2001,7 +2001,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2Id
     *
-    * @param string|null $l2Id l2Id
+    * @param string|null $l2Id 主题域ID，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -2013,7 +2013,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象id
+    *  业务对象ID。
     *
     * @return int|null
     */
@@ -2025,7 +2025,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int|null $l3Id 业务对象id
+    * @param int|null $l3Id 业务对象ID。
     *
     * @return $this
     */
@@ -2061,7 +2061,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dlfTaskId
-    *  DLF 作业 ID
+    *  DLF作业ID。
     *
     * @return string|null
     */
@@ -2073,7 +2073,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dlfTaskId
     *
-    * @param string|null $dlfTaskId DLF 作业 ID
+    * @param string|null $dlfTaskId DLF作业ID。
     *
     * @return $this
     */
@@ -2085,7 +2085,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets useRecentlyPartition
-    *  是否使用最新分区
+    *  是否使用最新分区。
     *
     * @return bool|null
     */
@@ -2097,7 +2097,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets useRecentlyPartition
     *
-    * @param bool|null $useRecentlyPartition 是否使用最新分区
+    * @param bool|null $useRecentlyPartition 是否使用最新分区。
     *
     * @return $this
     */
@@ -2109,7 +2109,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets reversed
-    *  是否是逆向的
+    *  是否是逆向的。
     *
     * @return bool|null
     */
@@ -2121,7 +2121,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets reversed
     *
-    * @param bool|null $reversed 是否是逆向的
+    * @param bool|null $reversed 是否是逆向的。
     *
     * @return $this
     */
@@ -2133,7 +2133,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirtyOutSwitch
-    *  异常数据输出开关
+    *  异常数据输出开关。
     *
     * @return bool|null
     */
@@ -2145,7 +2145,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dirtyOutSwitch
     *
-    * @param bool|null $dirtyOutSwitch 异常数据输出开关
+    * @param bool|null $dirtyOutSwitch 异常数据输出开关。
     *
     * @return $this
     */
@@ -2157,7 +2157,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirtyOutDatabase
-    *  异常数据输出库
+    *  异常数据输出库。
     *
     * @return string|null
     */
@@ -2169,7 +2169,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dirtyOutDatabase
     *
-    * @param string|null $dirtyOutDatabase 异常数据输出库
+    * @param string|null $dirtyOutDatabase 异常数据输出库。
     *
     * @return $this
     */
@@ -2181,7 +2181,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirtyOutPrefix
-    *  异常表前缀
+    *  异常表前缀。
     *
     * @return string|null
     */
@@ -2193,7 +2193,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dirtyOutPrefix
     *
-    * @param string|null $dirtyOutPrefix 异常表前缀
+    * @param string|null $dirtyOutPrefix 异常表前缀。
     *
     * @return $this
     */
@@ -2205,7 +2205,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dirtyOutSuffix
-    *  异常表后缀
+    *  异常表后缀。
     *
     * @return string|null
     */
@@ -2217,7 +2217,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets dirtyOutSuffix
     *
-    * @param string|null $dirtyOutSuffix 异常表后缀
+    * @param string|null $dirtyOutSuffix 异常表后缀。
     *
     * @return $this
     */
@@ -2229,7 +2229,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityOwner
-    *  质量责任人
+    *  质量责任人。
     *
     * @return string|null
     */
@@ -2241,7 +2241,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityOwner
     *
-    * @param string|null $qualityOwner 质量责任人
+    * @param string|null $qualityOwner 质量责任人。
     *
     * @return $this
     */
@@ -2253,7 +2253,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量id
+    *  质量ID。
     *
     * @return int|null
     */
@@ -2265,7 +2265,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param int|null $qualityId 质量id
+    * @param int|null $qualityId 质量ID。
     *
     * @return $this
     */
@@ -2277,7 +2277,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets distribute
-    *  DISTRIBUTE BY [HASH(column)|REPLICATION]
+    *  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
     *
     * @return string|null
     */
@@ -2289,7 +2289,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets distribute
     *
-    * @param string|null $distribute DISTRIBUTE BY [HASH(column)|REPLICATION]
+    * @param string|null $distribute DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
     *
     * @return $this
     */
@@ -2301,7 +2301,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets distributeColumn
-    *  DISTRIBUTE BY HASH column
+    *  DISTRIBUTE BY HASH column.
     *
     * @return string|null
     */
@@ -2313,7 +2313,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets distributeColumn
     *
-    * @param string|null $distributeColumn DISTRIBUTE BY HASH column
+    * @param string|null $distributeColumn DISTRIBUTE BY HASH column.
     *
     * @return $this
     */
@@ -2325,7 +2325,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPartition
-    *  是否分区表
+    *  是否分区表。
     *
     * @return bool|null
     */
@@ -2337,7 +2337,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets isPartition
     *
-    * @param bool|null $isPartition 是否分区表
+    * @param bool|null $isPartition 是否分区表。
     *
     * @return $this
     */
@@ -2493,7 +2493,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  别名
+    *  别名。
     *
     * @return string|null
     */
@@ -2505,7 +2505,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string|null $alias 别名
+    * @param string|null $alias 别名。
     *
     * @return $this
     */
@@ -2517,7 +2517,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfDefinedFields
-    *  自定义项
+    *  自定义项。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
     */
@@ -2529,7 +2529,7 @@ class TableModelUpdateVO implements ModelInterface, ArrayAccess
     /**
     * Sets selfDefinedFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。
     *
     * @return $this
     */

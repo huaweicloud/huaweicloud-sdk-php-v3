@@ -22,24 +22,28 @@ class ResizeFlavorObject implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * specCode  资源规格编码。例如：rds.mysql.m1.xlarge。其中，rds代表RDS产品，mysql代表数据库引擎，m1.xlarge代表性能规格，为高内存类型。带\"rr\"的表示只读实例规格，反之表示单实例和HA实例规格。
     * isAutoPay  变更包周期实例的规格时可指定，表示是否自动从客户的账户中支付。 - true，为自动支付。 - false，为手动支付，默认该方式。
+    * isDelay  是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'specCode' => 'string',
-            'isAutoPay' => 'bool'
+            'isAutoPay' => 'bool',
+            'isDelay' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * specCode  资源规格编码。例如：rds.mysql.m1.xlarge。其中，rds代表RDS产品，mysql代表数据库引擎，m1.xlarge代表性能规格，为高内存类型。带\"rr\"的表示只读实例规格，反之表示单实例和HA实例规格。
     * isAutoPay  变更包周期实例的规格时可指定，表示是否自动从客户的账户中支付。 - true，为自动支付。 - false，为手动支付，默认该方式。
+    * isDelay  是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'specCode' => null,
-        'isAutoPay' => null
+        'isAutoPay' => null,
+        'isDelay' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ResizeFlavorObject implements ModelInterface, ArrayAccess
     * and the value is the original name
     * specCode  资源规格编码。例如：rds.mysql.m1.xlarge。其中，rds代表RDS产品，mysql代表数据库引擎，m1.xlarge代表性能规格，为高内存类型。带\"rr\"的表示只读实例规格，反之表示单实例和HA实例规格。
     * isAutoPay  变更包周期实例的规格时可指定，表示是否自动从客户的账户中支付。 - true，为自动支付。 - false，为手动支付，默认该方式。
+    * isDelay  是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'specCode' => 'spec_code',
-            'isAutoPay' => 'is_auto_pay'
+            'isAutoPay' => 'is_auto_pay',
+            'isDelay' => 'is_delay'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * specCode  资源规格编码。例如：rds.mysql.m1.xlarge。其中，rds代表RDS产品，mysql代表数据库引擎，m1.xlarge代表性能规格，为高内存类型。带\"rr\"的表示只读实例规格，反之表示单实例和HA实例规格。
     * isAutoPay  变更包周期实例的规格时可指定，表示是否自动从客户的账户中支付。 - true，为自动支付。 - false，为手动支付，默认该方式。
+    * isDelay  是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
     *
     * @var string[]
     */
     protected static $setters = [
             'specCode' => 'setSpecCode',
-            'isAutoPay' => 'setIsAutoPay'
+            'isAutoPay' => 'setIsAutoPay',
+            'isDelay' => 'setIsDelay'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * specCode  资源规格编码。例如：rds.mysql.m1.xlarge。其中，rds代表RDS产品，mysql代表数据库引擎，m1.xlarge代表性能规格，为高内存类型。带\"rr\"的表示只读实例规格，反之表示单实例和HA实例规格。
     * isAutoPay  变更包周期实例的规格时可指定，表示是否自动从客户的账户中支付。 - true，为自动支付。 - false，为手动支付，默认该方式。
+    * isDelay  是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
     *
     * @var string[]
     */
     protected static $getters = [
             'specCode' => 'getSpecCode',
-            'isAutoPay' => 'getIsAutoPay'
+            'isAutoPay' => 'getIsAutoPay',
+            'isDelay' => 'getIsDelay'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ResizeFlavorObject implements ModelInterface, ArrayAccess
     {
         $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
         $this->container['isAutoPay'] = isset($data['isAutoPay']) ? $data['isAutoPay'] : null;
+        $this->container['isDelay'] = isset($data['isDelay']) ? $data['isDelay'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class ResizeFlavorObject implements ModelInterface, ArrayAccess
     public function setIsAutoPay($isAutoPay)
     {
         $this->container['isAutoPay'] = $isAutoPay;
+        return $this;
+    }
+
+    /**
+    * Gets isDelay
+    *  是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
+    *
+    * @return bool|null
+    */
+    public function getIsDelay()
+    {
+        return $this->container['isDelay'];
+    }
+
+    /**
+    * Sets isDelay
+    *
+    * @param bool|null $isDelay 是否定时变更。 - true，为定时在运维时间窗做变更。 - false，为立即变更，默认该方式。
+    *
+    * @return $this
+    */
+    public function setIsDelay($isDelay)
+    {
+        $this->container['isDelay'] = $isDelay;
         return $this;
     }
 

@@ -20,12 +20,12 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetFieldId  目标字段ID,当前表的某个字段
-    * targetFieldName  目标字段编码
-    * fieldIds  来源字段id,多个id以逗号分隔
-    * transformExpression  转换表达式
-    * fieldNames  来源字段名称列表
-    * changed  字段是否发生变化
+    * targetFieldId  目标字段ID，当前表的某个字段。
+    * targetFieldName  目标字段编码。
+    * fieldIds  来源字段ID，多个ID以逗号分隔。
+    * transformExpression  转换表达式。
+    * fieldNames  来源字段名称列表。
+    * changed  字段是否发生变化。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetFieldId  目标字段ID,当前表的某个字段
-    * targetFieldName  目标字段编码
-    * fieldIds  来源字段id,多个id以逗号分隔
-    * transformExpression  转换表达式
-    * fieldNames  来源字段名称列表
-    * changed  字段是否发生变化
+    * targetFieldId  目标字段ID，当前表的某个字段。
+    * targetFieldName  目标字段编码。
+    * fieldIds  来源字段ID，多个ID以逗号分隔。
+    * transformExpression  转换表达式。
+    * fieldNames  来源字段名称列表。
+    * changed  字段是否发生变化。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetFieldId  目标字段ID,当前表的某个字段
-    * targetFieldName  目标字段编码
-    * fieldIds  来源字段id,多个id以逗号分隔
-    * transformExpression  转换表达式
-    * fieldNames  来源字段名称列表
-    * changed  字段是否发生变化
+    * targetFieldId  目标字段ID，当前表的某个字段。
+    * targetFieldName  目标字段编码。
+    * fieldIds  来源字段ID，多个ID以逗号分隔。
+    * transformExpression  转换表达式。
+    * fieldNames  来源字段名称列表。
+    * changed  字段是否发生变化。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetFieldId  目标字段ID,当前表的某个字段
-    * targetFieldName  目标字段编码
-    * fieldIds  来源字段id,多个id以逗号分隔
-    * transformExpression  转换表达式
-    * fieldNames  来源字段名称列表
-    * changed  字段是否发生变化
+    * targetFieldId  目标字段ID，当前表的某个字段。
+    * targetFieldName  目标字段编码。
+    * fieldIds  来源字段ID，多个ID以逗号分隔。
+    * transformExpression  转换表达式。
+    * fieldNames  来源字段名称列表。
+    * changed  字段是否发生变化。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetFieldId  目标字段ID,当前表的某个字段
-    * targetFieldName  目标字段编码
-    * fieldIds  来源字段id,多个id以逗号分隔
-    * transformExpression  转换表达式
-    * fieldNames  来源字段名称列表
-    * changed  字段是否发生变化
+    * targetFieldId  目标字段ID，当前表的某个字段。
+    * targetFieldName  目标字段编码。
+    * fieldIds  来源字段ID，多个ID以逗号分隔。
+    * transformExpression  转换表达式。
+    * fieldNames  来源字段名称列表。
+    * changed  字段是否发生变化。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetFieldId
-    *  目标字段ID,当前表的某个字段
+    *  目标字段ID，当前表的某个字段。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetFieldId
     *
-    * @param int|null $targetFieldId 目标字段ID,当前表的某个字段
+    * @param int|null $targetFieldId 目标字段ID，当前表的某个字段。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetFieldName
-    *  目标字段编码
+    *  目标字段编码。
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetFieldName
     *
-    * @param string $targetFieldName 目标字段编码
+    * @param string $targetFieldName 目标字段编码。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldIds
-    *  来源字段id,多个id以逗号分隔
+    *  来源字段ID，多个ID以逗号分隔。
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldIds
     *
-    * @param string|null $fieldIds 来源字段id,多个id以逗号分隔
+    * @param string|null $fieldIds 来源字段ID，多个ID以逗号分隔。
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets transformExpression
-    *  转换表达式
+    *  转换表达式。
     *
     * @return string|null
     */
@@ -316,7 +316,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets transformExpression
     *
-    * @param string|null $transformExpression 转换表达式
+    * @param string|null $transformExpression 转换表达式。
     *
     * @return $this
     */
@@ -328,7 +328,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldNames
-    *  来源字段名称列表
+    *  来源字段名称列表。
     *
     * @return string[]|null
     */
@@ -340,7 +340,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldNames
     *
-    * @param string[]|null $fieldNames 来源字段名称列表
+    * @param string[]|null $fieldNames 来源字段名称列表。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets changed
-    *  字段是否发生变化
+    *  字段是否发生变化。
     *
     * @return bool|null
     */
@@ -364,7 +364,7 @@ class MappingSourceFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets changed
     *
-    * @param bool|null $changed 字段是否发生变化
+    * @param bool|null $changed 字段是否发生变化。
     *
     * @return $this
     */

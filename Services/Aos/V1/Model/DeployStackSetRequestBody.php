@@ -27,6 +27,7 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
     * varOverrides  varOverrides
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'string',
             'varsUri' => 'string',
             'varsBody' => 'string',
-            'varOverrides' => '\HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides'
+            'varOverrides' => '\HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides',
+            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences'
     ];
 
     /**
@@ -49,6 +51,7 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
     * varOverrides  varOverrides
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
         'templateUri' => null,
         'varsUri' => null,
         'varsBody' => null,
-        'varOverrides' => null
+        'varOverrides' => null,
+        'operationPreferences' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
     * varOverrides  varOverrides
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'template_uri',
             'varsUri' => 'vars_uri',
             'varsBody' => 'vars_body',
-            'varOverrides' => 'var_overrides'
+            'varOverrides' => 'var_overrides',
+            'operationPreferences' => 'operation_preferences'
     ];
 
     /**
@@ -114,6 +120,7 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
     * varOverrides  varOverrides
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'setTemplateUri',
             'varsUri' => 'setVarsUri',
             'varsBody' => 'setVarsBody',
-            'varOverrides' => 'setVarOverrides'
+            'varOverrides' => 'setVarOverrides',
+            'operationPreferences' => 'setOperationPreferences'
     ];
 
     /**
@@ -136,6 +144,7 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果他们中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
     * varOverrides  varOverrides
+    * operationPreferences  operationPreferences
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'getTemplateUri',
             'varsUri' => 'getVarsUri',
             'varsBody' => 'getVarsBody',
-            'varOverrides' => 'getVarOverrides'
+            'varOverrides' => 'getVarOverrides',
+            'operationPreferences' => 'getOperationPreferences'
     ];
 
     /**
@@ -214,6 +224,7 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
         $this->container['varsUri'] = isset($data['varsUri']) ? $data['varsUri'] : null;
         $this->container['varsBody'] = isset($data['varsBody']) ? $data['varsBody'] : null;
         $this->container['varOverrides'] = isset($data['varOverrides']) ? $data['varOverrides'] : null;
+        $this->container['operationPreferences'] = isset($data['operationPreferences']) ? $data['operationPreferences'] : null;
     }
 
     /**
@@ -445,6 +456,30 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     public function setVarOverrides($varOverrides)
     {
         $this->container['varOverrides'] = $varOverrides;
+        return $this;
+    }
+
+    /**
+    * Gets operationPreferences
+    *  operationPreferences
+    *
+    * @return \HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences|null
+    */
+    public function getOperationPreferences()
+    {
+        return $this->container['operationPreferences'];
+    }
+
+    /**
+    * Sets operationPreferences
+    *
+    * @param \HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences|null $operationPreferences operationPreferences
+    *
+    * @return $this
+    */
+    public function setOperationPreferences($operationPreferences)
+    {
+        $this->container['operationPreferences'] = $operationPreferences;
         return $this;
     }
 

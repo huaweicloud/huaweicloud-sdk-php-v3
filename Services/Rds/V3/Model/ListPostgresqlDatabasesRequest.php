@@ -22,6 +22,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言
     * instanceId  实例ID。
+    * db  数据库名称；忽略大小写模糊查询。
     * page  分页页码，从1开始。
     * limit  每页数据条数。取值范围[1, 100]。
     *
@@ -30,6 +31,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'xLanguage' => 'string',
             'instanceId' => 'string',
+            'db' => 'string',
             'page' => 'int',
             'limit' => 'int'
     ];
@@ -38,6 +40,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言
     * instanceId  实例ID。
+    * db  数据库名称；忽略大小写模糊查询。
     * page  分页页码，从1开始。
     * limit  每页数据条数。取值范围[1, 100]。
     *
@@ -46,6 +49,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'xLanguage' => null,
         'instanceId' => null,
+        'db' => null,
         'page' => null,
         'limit' => null
     ];
@@ -75,6 +79,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言
     * instanceId  实例ID。
+    * db  数据库名称；忽略大小写模糊查询。
     * page  分页页码，从1开始。
     * limit  每页数据条数。取值范围[1, 100]。
     *
@@ -83,6 +88,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'xLanguage' => 'X-Language',
             'instanceId' => 'instance_id',
+            'db' => 'db',
             'page' => 'page',
             'limit' => 'limit'
     ];
@@ -91,6 +97,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言
     * instanceId  实例ID。
+    * db  数据库名称；忽略大小写模糊查询。
     * page  分页页码，从1开始。
     * limit  每页数据条数。取值范围[1, 100]。
     *
@@ -99,6 +106,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'xLanguage' => 'setXLanguage',
             'instanceId' => 'setInstanceId',
+            'db' => 'setDb',
             'page' => 'setPage',
             'limit' => 'setLimit'
     ];
@@ -107,6 +115,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言
     * instanceId  实例ID。
+    * db  数据库名称；忽略大小写模糊查询。
     * page  分页页码，从1开始。
     * limit  每页数据条数。取值范围[1, 100]。
     *
@@ -115,6 +124,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'xLanguage' => 'getXLanguage',
             'instanceId' => 'getInstanceId',
+            'db' => 'getDb',
             'page' => 'getPage',
             'limit' => 'getLimit'
     ];
@@ -179,6 +189,7 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['db'] = isset($data['db']) ? $data['db'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -259,6 +270,30 @@ class ListPostgresqlDatabasesRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets db
+    *  数据库名称；忽略大小写模糊查询。
+    *
+    * @return string|null
+    */
+    public function getDb()
+    {
+        return $this->container['db'];
+    }
+
+    /**
+    * Sets db
+    *
+    * @param string|null $db 数据库名称；忽略大小写模糊查询。
+    *
+    * @return $this
+    */
+    public function setDb($db)
+    {
+        $this->container['db'] = $db;
         return $this;
     }
 

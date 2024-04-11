@@ -34,7 +34,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
     * jobId  作业id
     * cancel  是否取消
     * autoStop  是否自动停止
-    * obsconfig  obs配置，概要采集不涉及
+    * obsconfig  obsconfig
     *
     * @var string[]
     */
@@ -53,7 +53,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'cancel' => 'bool',
             'autoStop' => 'bool',
-            'obsconfig' => 'object'
+            'obsconfig' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\OBSCommonConfig'
     ];
 
     /**
@@ -72,7 +72,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
     * jobId  作业id
     * cancel  是否取消
     * autoStop  是否自动停止
-    * obsconfig  obs配置，概要采集不涉及
+    * obsconfig  obsconfig
     *
     * @var string[]
     */
@@ -131,7 +131,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
     * jobId  作业id
     * cancel  是否取消
     * autoStop  是否自动停止
-    * obsconfig  obs配置，概要采集不涉及
+    * obsconfig  obsconfig
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
     * jobId  作业id
     * cancel  是否取消
     * autoStop  是否自动停止
-    * obsconfig  obs配置，概要采集不涉及
+    * obsconfig  obsconfig
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
     * jobId  作业id
     * cancel  是否取消
     * autoStop  是否自动停止
-    * obsconfig  obs配置，概要采集不涉及
+    * obsconfig  obsconfig
     *
     * @var string[]
     */
@@ -708,9 +708,9 @@ class DataProfileRO implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsconfig
-    *  obs配置，概要采集不涉及
+    *  obsconfig
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\OBSCommonConfig|null
     */
     public function getObsconfig()
     {
@@ -720,7 +720,7 @@ class DataProfileRO implements ModelInterface, ArrayAccess
     /**
     * Sets obsconfig
     *
-    * @param object|null $obsconfig obs配置，概要采集不涉及
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\OBSCommonConfig|null $obsconfig obsconfig
     *
     * @return $this
     */

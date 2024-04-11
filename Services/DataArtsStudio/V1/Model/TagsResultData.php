@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Rds\V3\Model;
+namespace HuaweiCloud\SDK\DataArtsStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SwitchLogReplayResponse implements ModelInterface, ArrayAccess
+class TagsResultData implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,26 @@ class SwitchLogReplayResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SwitchLogReplayResponse';
+    protected static $openAPIModelName = 'TagsResult_data';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * message  提示信息
+    * value  给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'message' => 'string'
+            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * message  提示信息
+    * value  给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'message' => null
+        'value' => null
     ];
 
     /**
@@ -62,32 +61,32 @@ class SwitchLogReplayResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * message  提示信息
+    * value  给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'message' => 'message'
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * message  提示信息
+    * value  给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @var string[]
     */
     protected static $setters = [
-            'message' => 'setMessage'
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * message  提示信息
+    * value  给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @var string[]
     */
     protected static $getters = [
-            'message' => 'getMessage'
+            'value' => 'getValue'
     ];
 
     /**
@@ -148,7 +147,7 @@ class SwitchLogReplayResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -174,26 +173,26 @@ class SwitchLogReplayResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets message
-    *  提示信息
+    * Gets value
+    *  给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @return string|null
     */
-    public function getMessage()
+    public function getValue()
     {
-        return $this->container['message'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets message
+    * Sets value
     *
-    * @param string|null $message 提示信息
+    * @param string|null $value 给表/属性打标签/删除标签的接口返回，返回的vale是null则表示成功。
     *
     * @return $this
     */
-    public function setMessage($message)
+    public function setValue($value)
     {
-        $this->container['message'] = $message;
+        $this->container['value'] = $value;
         return $this;
     }
 

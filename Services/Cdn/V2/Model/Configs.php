@@ -52,6 +52,9 @@ class Configs implements ModelInterface, ArrayAccess
     * hsts  hsts
     * quic  quic
     * errorCodeRedirectRules  自定义错误页面。
+    * sni  sni
+    * requestUrlRewrite  访问URL重写。
+    * browserCacheRules  浏览器缓存过期时间。
     *
     * @var string[]
     */
@@ -87,7 +90,10 @@ class Configs implements ModelInterface, ArrayAccess
             'ipFrequencyLimit' => '\HuaweiCloud\SDK\Cdn\V2\Model\IpFrequencyLimit',
             'hsts' => '\HuaweiCloud\SDK\Cdn\V2\Model\Hsts',
             'quic' => '\HuaweiCloud\SDK\Cdn\V2\Model\Quic',
-            'errorCodeRedirectRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeRedirectRules[]'
+            'errorCodeRedirectRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeRedirectRules[]',
+            'sni' => '\HuaweiCloud\SDK\Cdn\V2\Model\Sni',
+            'requestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewrite[]',
+            'browserCacheRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]'
     ];
 
     /**
@@ -124,6 +130,9 @@ class Configs implements ModelInterface, ArrayAccess
     * hsts  hsts
     * quic  quic
     * errorCodeRedirectRules  自定义错误页面。
+    * sni  sni
+    * requestUrlRewrite  访问URL重写。
+    * browserCacheRules  浏览器缓存过期时间。
     *
     * @var string[]
     */
@@ -159,7 +168,10 @@ class Configs implements ModelInterface, ArrayAccess
         'ipFrequencyLimit' => null,
         'hsts' => null,
         'quic' => null,
-        'errorCodeRedirectRules' => null
+        'errorCodeRedirectRules' => null,
+        'sni' => null,
+        'requestUrlRewrite' => null,
+        'browserCacheRules' => null
     ];
 
     /**
@@ -217,6 +229,9 @@ class Configs implements ModelInterface, ArrayAccess
     * hsts  hsts
     * quic  quic
     * errorCodeRedirectRules  自定义错误页面。
+    * sni  sni
+    * requestUrlRewrite  访问URL重写。
+    * browserCacheRules  浏览器缓存过期时间。
     *
     * @var string[]
     */
@@ -252,7 +267,10 @@ class Configs implements ModelInterface, ArrayAccess
             'ipFrequencyLimit' => 'ip_frequency_limit',
             'hsts' => 'hsts',
             'quic' => 'quic',
-            'errorCodeRedirectRules' => 'error_code_redirect_rules'
+            'errorCodeRedirectRules' => 'error_code_redirect_rules',
+            'sni' => 'sni',
+            'requestUrlRewrite' => 'request_url_rewrite',
+            'browserCacheRules' => 'browser_cache_rules'
     ];
 
     /**
@@ -289,6 +307,9 @@ class Configs implements ModelInterface, ArrayAccess
     * hsts  hsts
     * quic  quic
     * errorCodeRedirectRules  自定义错误页面。
+    * sni  sni
+    * requestUrlRewrite  访问URL重写。
+    * browserCacheRules  浏览器缓存过期时间。
     *
     * @var string[]
     */
@@ -324,7 +345,10 @@ class Configs implements ModelInterface, ArrayAccess
             'ipFrequencyLimit' => 'setIpFrequencyLimit',
             'hsts' => 'setHsts',
             'quic' => 'setQuic',
-            'errorCodeRedirectRules' => 'setErrorCodeRedirectRules'
+            'errorCodeRedirectRules' => 'setErrorCodeRedirectRules',
+            'sni' => 'setSni',
+            'requestUrlRewrite' => 'setRequestUrlRewrite',
+            'browserCacheRules' => 'setBrowserCacheRules'
     ];
 
     /**
@@ -361,6 +385,9 @@ class Configs implements ModelInterface, ArrayAccess
     * hsts  hsts
     * quic  quic
     * errorCodeRedirectRules  自定义错误页面。
+    * sni  sni
+    * requestUrlRewrite  访问URL重写。
+    * browserCacheRules  浏览器缓存过期时间。
     *
     * @var string[]
     */
@@ -396,7 +423,10 @@ class Configs implements ModelInterface, ArrayAccess
             'ipFrequencyLimit' => 'getIpFrequencyLimit',
             'hsts' => 'getHsts',
             'quic' => 'getQuic',
-            'errorCodeRedirectRules' => 'getErrorCodeRedirectRules'
+            'errorCodeRedirectRules' => 'getErrorCodeRedirectRules',
+            'sni' => 'getSni',
+            'requestUrlRewrite' => 'getRequestUrlRewrite',
+            'browserCacheRules' => 'getBrowserCacheRules'
     ];
 
     /**
@@ -489,6 +519,9 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['hsts'] = isset($data['hsts']) ? $data['hsts'] : null;
         $this->container['quic'] = isset($data['quic']) ? $data['quic'] : null;
         $this->container['errorCodeRedirectRules'] = isset($data['errorCodeRedirectRules']) ? $data['errorCodeRedirectRules'] : null;
+        $this->container['sni'] = isset($data['sni']) ? $data['sni'] : null;
+        $this->container['requestUrlRewrite'] = isset($data['requestUrlRewrite']) ? $data['requestUrlRewrite'] : null;
+        $this->container['browserCacheRules'] = isset($data['browserCacheRules']) ? $data['browserCacheRules'] : null;
     }
 
     /**
@@ -1278,6 +1311,78 @@ class Configs implements ModelInterface, ArrayAccess
     public function setErrorCodeRedirectRules($errorCodeRedirectRules)
     {
         $this->container['errorCodeRedirectRules'] = $errorCodeRedirectRules;
+        return $this;
+    }
+
+    /**
+    * Gets sni
+    *  sni
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\Sni|null
+    */
+    public function getSni()
+    {
+        return $this->container['sni'];
+    }
+
+    /**
+    * Sets sni
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Sni|null $sni sni
+    *
+    * @return $this
+    */
+    public function setSni($sni)
+    {
+        $this->container['sni'] = $sni;
+        return $this;
+    }
+
+    /**
+    * Gets requestUrlRewrite
+    *  访问URL重写。
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewrite[]|null
+    */
+    public function getRequestUrlRewrite()
+    {
+        return $this->container['requestUrlRewrite'];
+    }
+
+    /**
+    * Sets requestUrlRewrite
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewrite[]|null $requestUrlRewrite 访问URL重写。
+    *
+    * @return $this
+    */
+    public function setRequestUrlRewrite($requestUrlRewrite)
+    {
+        $this->container['requestUrlRewrite'] = $requestUrlRewrite;
+        return $this;
+    }
+
+    /**
+    * Gets browserCacheRules
+    *  浏览器缓存过期时间。
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]|null
+    */
+    public function getBrowserCacheRules()
+    {
+        return $this->container['browserCacheRules'];
+    }
+
+    /**
+    * Sets browserCacheRules
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]|null $browserCacheRules 浏览器缓存过期时间。
+    *
+    * @return $this
+    */
+    public function setBrowserCacheRules($browserCacheRules)
+    {
+        $this->container['browserCacheRules'] = $browserCacheRules;
         return $this;
     }
 

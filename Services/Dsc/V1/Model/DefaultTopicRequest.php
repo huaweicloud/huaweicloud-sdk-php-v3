@@ -191,6 +191,12 @@ class DefaultTopicRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['topicUrn'] === null) {
+            $invalidProperties[] = "'topicUrn' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -209,7 +215,7 @@ class DefaultTopicRequest implements ModelInterface, ArrayAccess
     * Gets id
     *  DSC告警主题ID（非消息通知服务主题ID）
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -219,7 +225,7 @@ class DefaultTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id DSC告警主题ID（非消息通知服务主题ID）
+    * @param string $id DSC告警主题ID（非消息通知服务主题ID）
     *
     * @return $this
     */
@@ -281,7 +287,7 @@ class DefaultTopicRequest implements ModelInterface, ArrayAccess
     * Gets topicUrn
     *  消息通知主题的唯一资源标识符
     *
-    * @return string|null
+    * @return string
     */
     public function getTopicUrn()
     {
@@ -291,7 +297,7 @@ class DefaultTopicRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topicUrn
     *
-    * @param string|null $topicUrn 消息通知主题的唯一资源标识符
+    * @param string $topicUrn 消息通知主题的唯一资源标识符
     *
     * @return $this
     */

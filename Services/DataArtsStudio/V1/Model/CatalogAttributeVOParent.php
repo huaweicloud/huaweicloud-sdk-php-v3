@@ -20,7 +20,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  父节点ID
+    * id  父节点ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  父节点ID
+    * id  父节点ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  父节点ID
+    * id  父节点ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  父节点ID
+    * id  父节点ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  父节点ID
+    * id  父节点ID。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  父节点ID
+    *  父节点ID。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class CatalogAttributeVOParent implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 父节点ID
+    * @param string|null $id 父节点ID。
     *
     * @return $this
     */

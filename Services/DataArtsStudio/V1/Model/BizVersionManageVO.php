@@ -20,14 +20,14 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ID信息
+    * id  ID信息。
     * bizType  bizType
-    * bizId  业务id
-    * bizInfo  业务对象信息
+    * bizId  业务ID。
+    * bizInfo  业务对象信息。
     * status  status
-    * bizVersion  业务版本
-    * createTime  创建时间
-    * updateTime  更新时间
+    * bizVersion  业务版本。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ID信息
+    * id  ID信息。
     * bizType  bizType
-    * bizId  业务id
-    * bizInfo  业务对象信息
+    * bizId  业务ID。
+    * bizInfo  业务对象信息。
     * status  status
-    * bizVersion  业务版本
-    * createTime  创建时间
-    * updateTime  更新时间
+    * bizVersion  业务版本。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ID信息
+    * id  ID信息。
     * bizType  bizType
-    * bizId  业务id
-    * bizInfo  业务对象信息
+    * bizId  业务ID。
+    * bizInfo  业务对象信息。
     * status  status
-    * bizVersion  业务版本
-    * createTime  创建时间
-    * updateTime  更新时间
+    * bizVersion  业务版本。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ID信息
+    * id  ID信息。
     * bizType  bizType
-    * bizId  业务id
-    * bizInfo  业务对象信息
+    * bizId  业务ID。
+    * bizInfo  业务对象信息。
     * status  status
-    * bizVersion  业务版本
-    * createTime  创建时间
-    * updateTime  更新时间
+    * bizVersion  业务版本。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ID信息
+    * id  ID信息。
     * bizType  bizType
-    * bizId  业务id
-    * bizInfo  业务对象信息
+    * bizId  业务ID。
+    * bizInfo  业务对象信息。
     * status  status
-    * bizVersion  业务版本
-    * createTime  创建时间
-    * updateTime  更新时间
+    * bizVersion  业务版本。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID信息
+    *  ID信息。
     *
     * @return int|null
     */
@@ -263,7 +263,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id ID信息
+    * @param int|null $id ID信息。
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务id
+    *  业务ID。
     *
     * @return int|null
     */
@@ -311,7 +311,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int|null $bizId 业务id
+    * @param int|null $bizId 业务ID。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfo
-    *  业务对象信息
+    *  业务对象信息。
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfo
     *
-    * @param string|null $bizInfo 业务对象信息
+    * @param string|null $bizInfo 业务对象信息。
     *
     * @return $this
     */
@@ -371,7 +371,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizVersion
-    *  业务版本
+    *  业务版本。
     *
     * @return int|null
     */
@@ -383,7 +383,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizVersion
     *
-    * @param int|null $bizVersion 业务版本
+    * @param int|null $bizVersion 业务版本。
     *
     * @return $this
     */
@@ -395,7 +395,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -407,7 +407,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -431,7 +431,7 @@ class BizVersionManageVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * fields  自定义项列表
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * fields  自定义项列表。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * fields  自定义项列表
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * fields  自定义项列表。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * fields  自定义项列表
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * fields  自定义项列表。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * fields  自定义项列表
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * fields  自定义项列表。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
-    * fields  自定义项列表
+    * type  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
+    * fields  自定义项列表。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
+    *  自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 自定义项类型:TABLE, ATTRIBUTE, SUBJECT, METRIC
+    * @param string $type 自定义项类型。TABLE(表自定义项)、ATTRIBUTE(属性自定义项)、SUBJECT(主题自定义项)、METRIC(业务指标自定义项)。
     *
     * @return $this
     */
@@ -239,7 +239,7 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  自定义项列表
+    *  自定义项列表。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CustomizedFieldsVO[]|null
     */
@@ -251,7 +251,7 @@ class CustomizedFieldsVOList implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CustomizedFieldsVO[]|null $fields 自定义项列表
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CustomizedFieldsVO[]|null $fields 自定义项列表。
     *
     * @return $this
     */

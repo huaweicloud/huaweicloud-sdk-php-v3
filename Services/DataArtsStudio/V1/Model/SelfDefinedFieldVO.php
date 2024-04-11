@@ -20,10 +20,10 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fdNameCh  自定义项中文名
-    * fdNameEn  自定义项英文名
-    * notNull  是否必填
-    * fdValue  属性值
+    * fdNameCh  自定义项中文名。
+    * fdNameEn  自定义项英文名。
+    * notNull  是否必填。
+    * fdValue  属性值。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fdNameCh  自定义项中文名
-    * fdNameEn  自定义项英文名
-    * notNull  是否必填
-    * fdValue  属性值
+    * fdNameCh  自定义项中文名。
+    * fdNameEn  自定义项英文名。
+    * notNull  是否必填。
+    * fdValue  属性值。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fdNameCh  自定义项中文名
-    * fdNameEn  自定义项英文名
-    * notNull  是否必填
-    * fdValue  属性值
+    * fdNameCh  自定义项中文名。
+    * fdNameEn  自定义项英文名。
+    * notNull  是否必填。
+    * fdValue  属性值。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fdNameCh  自定义项中文名
-    * fdNameEn  自定义项英文名
-    * notNull  是否必填
-    * fdValue  属性值
+    * fdNameCh  自定义项中文名。
+    * fdNameEn  自定义项英文名。
+    * notNull  是否必填。
+    * fdValue  属性值。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fdNameCh  自定义项中文名
-    * fdNameEn  自定义项英文名
-    * notNull  是否必填
-    * fdValue  属性值
+    * fdNameCh  自定义项中文名。
+    * fdNameEn  自定义项英文名。
+    * notNull  是否必填。
+    * fdValue  属性值。
     *
     * @var string[]
     */
@@ -213,7 +213,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdNameCh
-    *  自定义项中文名
+    *  自定义项中文名。
     *
     * @return string|null
     */
@@ -225,7 +225,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdNameCh
     *
-    * @param string|null $fdNameCh 自定义项中文名
+    * @param string|null $fdNameCh 自定义项中文名。
     *
     * @return $this
     */
@@ -237,7 +237,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdNameEn
-    *  自定义项英文名
+    *  自定义项英文名。
     *
     * @return string|null
     */
@@ -249,7 +249,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdNameEn
     *
-    * @param string|null $fdNameEn 自定义项英文名
+    * @param string|null $fdNameEn 自定义项英文名。
     *
     * @return $this
     */
@@ -261,7 +261,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets notNull
-    *  是否必填
+    *  是否必填。
     *
     * @return bool|null
     */
@@ -273,7 +273,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets notNull
     *
-    * @param bool|null $notNull 是否必填
+    * @param bool|null $notNull 是否必填。
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdValue
-    *  属性值
+    *  属性值。
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class SelfDefinedFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdValue
     *
-    * @param string|null $fdValue 属性值
+    * @param string|null $fdValue 属性值。
     *
     * @return $this
     */

@@ -20,41 +20,41 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * name  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
-    * code  指标编码
-    * nameAlias  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * id  编码，更新时必填，创建是为空。
+    * name  指标名称。
+    * code  指标编码。
+    * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的id
-    * bizCatalogPath  归属的流程架构路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataOrigin  数据来源
-    * unit  计量单位
-    * timeFilters  统计周期(时间限定)
-    * dimensions  统计维度
-    * generalFilters  统计口径/修饰词（通用限定）
-    * intervalType  刷新频率
-    * applyScenario  应用场景
-    * technicalMetric  关联技术指标
-    * technicalMetricName  关联技术指标名称
+    * bizCatalogId  归属的流程架构的ID。
+    * bizCatalogPath  归属的流程架构路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataOrigin  数据来源。
+    * unit  计量单位。
+    * timeFilters  统计周期(时间限定)。
+    * dimensions  统计维度。
+    * generalFilters  统计口径和修饰词。
+    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * applyScenario  应用场景。
+    * technicalMetric  关联技术指标。
+    * technicalMetricName  关联技术指标名称。
     * technicalMetricType  technicalMetricType
-    * measure  度量对象
-    * owner  负责人，指标解释人
-    * ownerDepartment  指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
-    * destination  设置目的
-    * guid  资产同步后的guid
-    * definition  指标定义
-    * expression  计算公式
-    * remark  备注
+    * measure  度量对象。
+    * owner  指标责任人。
+    * ownerDepartment  指标管理部门。
+    * destination  设置目的。
+    * guid  资产同步后的guid。
+    * definition  指标定义。
+    * expression  计算公式。
+    * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
     *
@@ -102,41 +102,41 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * name  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
-    * code  指标编码
-    * nameAlias  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * id  编码，更新时必填，创建是为空。
+    * name  指标名称。
+    * code  指标编码。
+    * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的id
-    * bizCatalogPath  归属的流程架构路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataOrigin  数据来源
-    * unit  计量单位
-    * timeFilters  统计周期(时间限定)
-    * dimensions  统计维度
-    * generalFilters  统计口径/修饰词（通用限定）
-    * intervalType  刷新频率
-    * applyScenario  应用场景
-    * technicalMetric  关联技术指标
-    * technicalMetricName  关联技术指标名称
+    * bizCatalogId  归属的流程架构的ID。
+    * bizCatalogPath  归属的流程架构路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataOrigin  数据来源。
+    * unit  计量单位。
+    * timeFilters  统计周期(时间限定)。
+    * dimensions  统计维度。
+    * generalFilters  统计口径和修饰词。
+    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * applyScenario  应用场景。
+    * technicalMetric  关联技术指标。
+    * technicalMetricName  关联技术指标名称。
     * technicalMetricType  technicalMetricType
-    * measure  度量对象
-    * owner  负责人，指标解释人
-    * ownerDepartment  指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
-    * destination  设置目的
-    * guid  资产同步后的guid
-    * definition  指标定义
-    * expression  计算公式
-    * remark  备注
+    * measure  度量对象。
+    * owner  指标责任人。
+    * ownerDepartment  指标管理部门。
+    * destination  设置目的。
+    * guid  资产同步后的guid。
+    * definition  指标定义。
+    * expression  计算公式。
+    * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
     *
@@ -205,41 +205,41 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * name  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
-    * code  指标编码
-    * nameAlias  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * id  编码，更新时必填，创建是为空。
+    * name  指标名称。
+    * code  指标编码。
+    * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的id
-    * bizCatalogPath  归属的流程架构路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataOrigin  数据来源
-    * unit  计量单位
-    * timeFilters  统计周期(时间限定)
-    * dimensions  统计维度
-    * generalFilters  统计口径/修饰词（通用限定）
-    * intervalType  刷新频率
-    * applyScenario  应用场景
-    * technicalMetric  关联技术指标
-    * technicalMetricName  关联技术指标名称
+    * bizCatalogId  归属的流程架构的ID。
+    * bizCatalogPath  归属的流程架构路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataOrigin  数据来源。
+    * unit  计量单位。
+    * timeFilters  统计周期(时间限定)。
+    * dimensions  统计维度。
+    * generalFilters  统计口径和修饰词。
+    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * applyScenario  应用场景。
+    * technicalMetric  关联技术指标。
+    * technicalMetricName  关联技术指标名称。
     * technicalMetricType  technicalMetricType
-    * measure  度量对象
-    * owner  负责人，指标解释人
-    * ownerDepartment  指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
-    * destination  设置目的
-    * guid  资产同步后的guid
-    * definition  指标定义
-    * expression  计算公式
-    * remark  备注
+    * measure  度量对象。
+    * owner  指标责任人。
+    * ownerDepartment  指标管理部门。
+    * destination  设置目的。
+    * guid  资产同步后的guid。
+    * definition  指标定义。
+    * expression  计算公式。
+    * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
     *
@@ -287,41 +287,41 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * name  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
-    * code  指标编码
-    * nameAlias  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * id  编码，更新时必填，创建是为空。
+    * name  指标名称。
+    * code  指标编码。
+    * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的id
-    * bizCatalogPath  归属的流程架构路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataOrigin  数据来源
-    * unit  计量单位
-    * timeFilters  统计周期(时间限定)
-    * dimensions  统计维度
-    * generalFilters  统计口径/修饰词（通用限定）
-    * intervalType  刷新频率
-    * applyScenario  应用场景
-    * technicalMetric  关联技术指标
-    * technicalMetricName  关联技术指标名称
+    * bizCatalogId  归属的流程架构的ID。
+    * bizCatalogPath  归属的流程架构路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataOrigin  数据来源。
+    * unit  计量单位。
+    * timeFilters  统计周期(时间限定)。
+    * dimensions  统计维度。
+    * generalFilters  统计口径和修饰词。
+    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * applyScenario  应用场景。
+    * technicalMetric  关联技术指标。
+    * technicalMetricName  关联技术指标名称。
     * technicalMetricType  technicalMetricType
-    * measure  度量对象
-    * owner  负责人，指标解释人
-    * ownerDepartment  指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
-    * destination  设置目的
-    * guid  资产同步后的guid
-    * definition  指标定义
-    * expression  计算公式
-    * remark  备注
+    * measure  度量对象。
+    * owner  指标责任人。
+    * ownerDepartment  指标管理部门。
+    * destination  设置目的。
+    * guid  资产同步后的guid。
+    * definition  指标定义。
+    * expression  计算公式。
+    * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
     *
@@ -369,41 +369,41 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * name  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
-    * code  指标编码
-    * nameAlias  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * id  编码，更新时必填，创建是为空。
+    * name  指标名称。
+    * code  指标编码。
+    * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的id
-    * bizCatalogPath  归属的流程架构路径
-    * createBy  创建人
-    * updateBy  更新人
-    * dataOrigin  数据来源
-    * unit  计量单位
-    * timeFilters  统计周期(时间限定)
-    * dimensions  统计维度
-    * generalFilters  统计口径/修饰词（通用限定）
-    * intervalType  刷新频率
-    * applyScenario  应用场景
-    * technicalMetric  关联技术指标
-    * technicalMetricName  关联技术指标名称
+    * bizCatalogId  归属的流程架构的ID。
+    * bizCatalogPath  归属的流程架构路径。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * dataOrigin  数据来源。
+    * unit  计量单位。
+    * timeFilters  统计周期(时间限定)。
+    * dimensions  统计维度。
+    * generalFilters  统计口径和修饰词。
+    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * applyScenario  应用场景。
+    * technicalMetric  关联技术指标。
+    * technicalMetricName  关联技术指标名称。
     * technicalMetricType  technicalMetricType
-    * measure  度量对象
-    * owner  负责人，指标解释人
-    * ownerDepartment  指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
-    * destination  设置目的
-    * guid  资产同步后的guid
-    * definition  指标定义
-    * expression  计算公式
-    * remark  备注
+    * measure  度量对象。
+    * owner  指标责任人。
+    * ownerDepartment  指标管理部门。
+    * destination  设置目的。
+    * guid  资产同步后的guid。
+    * definition  指标定义。
+    * expression  计算公式。
+    * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间
-    * updateTime  更新时间
-    * l1  主题域分组中文名
-    * l2  主题域中文名
-    * l3  业务对象中文名
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
     *
@@ -601,14 +601,17 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             if (!is_null($this->container['nameAlias']) && (mb_strlen($this->container['nameAlias']) > 500)) {
                 $invalidProperties[] = "invalid value for 'nameAlias', the character length must be smaller than or equal to 500.";
             }
-            if (!is_null($this->container['nameAlias']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z\\d_\\(\\)\\-\/（）]*$/", $this->container['nameAlias'])) {
-                $invalidProperties[] = "invalid value for 'nameAlias', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z\\d_\\(\\)\\-\/（）]*$/.";
+            if (!is_null($this->container['nameAlias']) && !preg_match("/^[^\\\\<>]*$/", $this->container['nameAlias'])) {
+                $invalidProperties[] = "invalid value for 'nameAlias', must be conform to the pattern /^[^\\\\<>]*$/.";
             }
         if ($this->container['bizCatalogId'] === null) {
             $invalidProperties[] = "'bizCatalogId' can't be null";
         }
             if (!is_null($this->container['dataOrigin']) && (mb_strlen($this->container['dataOrigin']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'dataOrigin', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['dataOrigin']) && !preg_match("/^[^\\\\\\\\]*$/", $this->container['dataOrigin'])) {
+                $invalidProperties[] = "invalid value for 'dataOrigin', must be conform to the pattern /^[^\\\\\\\\]*$/.";
             }
             if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 50)) {
                 $invalidProperties[] = "invalid value for 'unit', the character length must be smaller than or equal to 50.";
@@ -621,6 +624,12 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['dimensions']) && (mb_strlen($this->container['dimensions']) > 1000)) {
                 $invalidProperties[] = "invalid value for 'dimensions', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['dimensions']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z\\d_\\(\\)\\-\/（）\\,]*$/", $this->container['dimensions'])) {
+                $invalidProperties[] = "invalid value for 'dimensions', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z\\d_\\(\\)\\-\/（）\\,]*$/.";
+            }
+            if (!is_null($this->container['generalFilters']) && (mb_strlen($this->container['generalFilters']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'generalFilters', the character length must be smaller than or equal to 1000.";
             }
         if ($this->container['intervalType'] === null) {
             $invalidProperties[] = "'intervalType' can't be null";
@@ -645,24 +654,42 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['owner']) > 100)) {
                 $invalidProperties[] = "invalid value for 'owner', the character length must be smaller than or equal to 100.";
             }
+            if (!preg_match("/^[a-zA-Z\\u4e00-\\u9fa5][a-zA-Z0-9_\\u4e00-\\u9fa5\\-\\(\\)\\.\\s]*$/", $this->container['owner'])) {
+                $invalidProperties[] = "invalid value for 'owner', must be conform to the pattern /^[a-zA-Z\\u4e00-\\u9fa5][a-zA-Z0-9_\\u4e00-\\u9fa5\\-\\(\\)\\.\\s]*$/.";
+            }
         if ($this->container['ownerDepartment'] === null) {
             $invalidProperties[] = "'ownerDepartment' can't be null";
         }
             if ((mb_strlen($this->container['ownerDepartment']) > 600)) {
                 $invalidProperties[] = "invalid value for 'ownerDepartment', the character length must be smaller than or equal to 600.";
             }
-            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z\\d_\\(\\)\\-\/（）\\s]*$/", $this->container['ownerDepartment'])) {
-                $invalidProperties[] = "invalid value for 'ownerDepartment', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z\\d_\\(\\)\\-\/（）\\s]*$/.";
+            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z\\d_\\-\\s]*$/", $this->container['ownerDepartment'])) {
+                $invalidProperties[] = "invalid value for 'ownerDepartment', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z\\d_\\-\\s]*$/.";
             }
         if ($this->container['destination'] === null) {
             $invalidProperties[] = "'destination' can't be null";
         }
+            if ((mb_strlen($this->container['destination']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'destination', the character length must be smaller than or equal to 1000.";
+            }
         if ($this->container['definition'] === null) {
             $invalidProperties[] = "'definition' can't be null";
         }
+            if ((mb_strlen($this->container['definition']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'definition', the character length must be smaller than or equal to 1000.";
+            }
         if ($this->container['expression'] === null) {
             $invalidProperties[] = "'expression' can't be null";
         }
+            if ((mb_strlen($this->container['expression']) > 1000)) {
+                $invalidProperties[] = "invalid value for 'expression', the character length must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['remark']) && (mb_strlen($this->container['remark']) > 600)) {
+                $invalidProperties[] = "invalid value for 'remark', the character length must be smaller than or equal to 600.";
+            }
+            if (!is_null($this->container['remark']) && !preg_match("/^[^\\\\\\\\]*$/", $this->container['remark'])) {
+                $invalidProperties[] = "invalid value for 'remark', must be conform to the pattern /^[^\\\\\\\\]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -679,7 +706,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码，更新时必填，创建是为空。
     *
     * @return int|null
     */
@@ -691,7 +718,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码，更新时必填，创建是为空。
     *
     * @return $this
     */
@@ -703,7 +730,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    *  指标名称。
     *
     * @return string
     */
@@ -715,7 +742,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * @param string $name 指标名称。
     *
     * @return $this
     */
@@ -727,7 +754,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  指标编码
+    *  指标编码。
     *
     * @return string|null
     */
@@ -739,7 +766,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code 指标编码
+    * @param string|null $code 指标编码。
     *
     * @return $this
     */
@@ -751,7 +778,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameAlias
-    *  指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    *  指标别名。
     *
     * @return string|null
     */
@@ -763,7 +790,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameAlias
     *
-    * @param string|null $nameAlias 指标名称, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/
+    * @param string|null $nameAlias 指标别名。
     *
     * @return $this
     */
@@ -823,7 +850,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  归属的流程架构的id
+    *  归属的流程架构的ID。
     *
     * @return int
     */
@@ -835,7 +862,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param int $bizCatalogId 归属的流程架构的id
+    * @param int $bizCatalogId 归属的流程架构的ID。
     *
     * @return $this
     */
@@ -847,7 +874,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogPath
-    *  归属的流程架构路径
+    *  归属的流程架构路径。
     *
     * @return string|null
     */
@@ -859,7 +886,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogPath
     *
-    * @param string|null $bizCatalogPath 归属的流程架构路径
+    * @param string|null $bizCatalogPath 归属的流程架构路径。
     *
     * @return $this
     */
@@ -871,7 +898,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -883,7 +910,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -895,7 +922,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -907,7 +934,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -919,7 +946,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataOrigin
-    *  数据来源
+    *  数据来源。
     *
     * @return string|null
     */
@@ -931,7 +958,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataOrigin
     *
-    * @param string|null $dataOrigin 数据来源
+    * @param string|null $dataOrigin 数据来源。
     *
     * @return $this
     */
@@ -943,7 +970,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  计量单位
+    *  计量单位。
     *
     * @return string|null
     */
@@ -955,7 +982,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 计量单位
+    * @param string|null $unit 计量单位。
     *
     * @return $this
     */
@@ -967,7 +994,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeFilters
-    *  统计周期(时间限定)
+    *  统计周期(时间限定)。
     *
     * @return string
     */
@@ -979,7 +1006,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets timeFilters
     *
-    * @param string $timeFilters 统计周期(时间限定)
+    * @param string $timeFilters 统计周期(时间限定)。
     *
     * @return $this
     */
@@ -991,7 +1018,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  统计维度
+    *  统计维度。
     *
     * @return string|null
     */
@@ -1003,7 +1030,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param string|null $dimensions 统计维度
+    * @param string|null $dimensions 统计维度。
     *
     * @return $this
     */
@@ -1015,7 +1042,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets generalFilters
-    *  统计口径/修饰词（通用限定）
+    *  统计口径和修饰词。
     *
     * @return string|null
     */
@@ -1027,7 +1054,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets generalFilters
     *
-    * @param string|null $generalFilters 统计口径/修饰词（通用限定）
+    * @param string|null $generalFilters 统计口径和修饰词。
     *
     * @return $this
     */
@@ -1039,7 +1066,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets intervalType
-    *  刷新频率
+    *  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
     *
     * @return string
     */
@@ -1051,7 +1078,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets intervalType
     *
-    * @param string $intervalType 刷新频率
+    * @param string $intervalType 刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
     *
     * @return $this
     */
@@ -1063,7 +1090,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets applyScenario
-    *  应用场景
+    *  应用场景。
     *
     * @return string|null
     */
@@ -1075,7 +1102,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets applyScenario
     *
-    * @param string|null $applyScenario 应用场景
+    * @param string|null $applyScenario 应用场景。
     *
     * @return $this
     */
@@ -1087,7 +1114,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets technicalMetric
-    *  关联技术指标
+    *  关联技术指标。
     *
     * @return int|null
     */
@@ -1099,7 +1126,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets technicalMetric
     *
-    * @param int|null $technicalMetric 关联技术指标
+    * @param int|null $technicalMetric 关联技术指标。
     *
     * @return $this
     */
@@ -1111,7 +1138,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets technicalMetricName
-    *  关联技术指标名称
+    *  关联技术指标名称。
     *
     * @return string|null
     */
@@ -1123,7 +1150,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets technicalMetricName
     *
-    * @param string|null $technicalMetricName 关联技术指标名称
+    * @param string|null $technicalMetricName 关联技术指标名称。
     *
     * @return $this
     */
@@ -1159,7 +1186,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets measure
-    *  度量对象
+    *  度量对象。
     *
     * @return string|null
     */
@@ -1171,7 +1198,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets measure
     *
-    * @param string|null $measure 度量对象
+    * @param string|null $measure 度量对象。
     *
     * @return $this
     */
@@ -1183,7 +1210,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  负责人，指标解释人
+    *  指标责任人。
     *
     * @return string
     */
@@ -1195,7 +1222,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string $owner 负责人，指标解释人
+    * @param string $owner 指标责任人。
     *
     * @return $this
     */
@@ -1207,7 +1234,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ownerDepartment
-    *  指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
+    *  指标管理部门。
     *
     * @return string
     */
@@ -1219,7 +1246,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets ownerDepartment
     *
-    * @param string $ownerDepartment 指标管理部门, 支持中英文, 数字, 下划线, 中划线, 中英文括号()（）/, 空格
+    * @param string $ownerDepartment 指标管理部门。
     *
     * @return $this
     */
@@ -1231,7 +1258,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets destination
-    *  设置目的
+    *  设置目的。
     *
     * @return string
     */
@@ -1243,7 +1270,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param string $destination 设置目的
+    * @param string $destination 设置目的。
     *
     * @return $this
     */
@@ -1255,7 +1282,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets guid
-    *  资产同步后的guid
+    *  资产同步后的guid。
     *
     * @return string|null
     */
@@ -1267,7 +1294,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets guid
     *
-    * @param string|null $guid 资产同步后的guid
+    * @param string|null $guid 资产同步后的guid。
     *
     * @return $this
     */
@@ -1279,7 +1306,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets definition
-    *  指标定义
+    *  指标定义。
     *
     * @return string
     */
@@ -1291,7 +1318,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets definition
     *
-    * @param string $definition 指标定义
+    * @param string $definition 指标定义。
     *
     * @return $this
     */
@@ -1303,7 +1330,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets expression
-    *  计算公式
+    *  计算公式。
     *
     * @return string
     */
@@ -1315,7 +1342,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets expression
     *
-    * @param string $expression 计算公式
+    * @param string $expression 计算公式。
     *
     * @return $this
     */
@@ -1327,7 +1354,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets remark
-    *  备注
+    *  备注。
     *
     * @return string|null
     */
@@ -1339,7 +1366,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets remark
     *
-    * @param string|null $remark 备注
+    * @param string|null $remark 备注。
     *
     * @return $this
     */
@@ -1399,7 +1426,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1411,7 +1438,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1423,7 +1450,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1435,7 +1462,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1447,7 +1474,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组中文名
+    *  主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1459,7 +1486,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组中文名
+    * @param string|null $l1 主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1471,7 +1498,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域中文名
+    *  主题域中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1483,7 +1510,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域中文名
+    * @param string|null $l2 主题域中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -1495,7 +1522,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象中文名
+    *  业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -1507,7 +1534,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象中文名
+    * @param string|null $l3 业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * records  DerivativeIndexVO数组
-    * total  总数
+    * records  DerivativeIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * records  DerivativeIndexVO数组
-    * total  总数
+    * records  DerivativeIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * records  DerivativeIndexVO数组
-    * total  总数
+    * records  DerivativeIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * records  DerivativeIndexVO数组
-    * total  总数
+    * records  DerivativeIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * records  DerivativeIndexVO数组
-    * total  总数
+    * records  DerivativeIndexVO数组。
+    * total  总数。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
 
     /**
     * Gets records
-    *  DerivativeIndexVO数组
+    *  DerivativeIndexVO数组。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DerivativeIndexVO[]|null
     */
@@ -197,7 +197,7 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DerivativeIndexVO[]|null $records DerivativeIndexVO数组
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DerivativeIndexVO[]|null $records DerivativeIndexVO数组。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
 
     /**
     * Gets total
-    *  总数
+    *  总数。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class DerivativeIndexVOSearchResultDataValue implements ModelInterface, ArrayAcc
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 总数。
     *
     * @return $this
     */

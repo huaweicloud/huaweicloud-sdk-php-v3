@@ -25,6 +25,86 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 添加标签
+     *
+     * 根据资产（表或属性）的ID给资产打上标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addDesignEntityTagsAsync($request)
+    {
+        return $this->addDesignEntityTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function addDesignEntityTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/{entity_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['attrId'] !== null) {
+            $queryParams['attr_id'] = $localVarParams['attrId'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['entityId'] !== null) {
+            $pathParams['entity_id'] = $localVarParams['entityId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AddDesignEntityTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\AddDesignEntityTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 标签关联到资产
      *
      * 标签关联到资产
@@ -864,7 +944,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 批量下线
      *
-     * 批量下线
+     * 批量下线。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -895,17 +975,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -932,7 +1018,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 批量发布
      *
-     * 批量发布
+     * 批量发布。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -963,17 +1049,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1136,7 +1228,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改流程架构
      *
-     * 修改流程架构
+     * 修改流程架构。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1167,17 +1259,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1269,7 +1367,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改或删除主题层级
      *
-     * 修改或删除主题层级
+     * 修改或删除主题层级。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1300,17 +1398,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1337,7 +1441,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看逆向维度表任务
      *
-     * 查看逆向维度表任务
+     * 查看逆向维度表任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1368,14 +1472,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 []
             );
         }
@@ -1402,7 +1512,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看逆向事实表任务
      *
-     * 查看逆向事实表任务
+     * 查看逆向事实表任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1433,14 +1543,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 []
             );
         }
@@ -1467,7 +1583,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 审批单处理
      *
-     * 审批驳回/通过，单个或多个 action-id&#x3D;reject/resolve
+     * 审批驳回/通过，单个或多个action-id&#x3D;reject/resolve。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1501,17 +1617,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1612,7 +1734,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 关系建模统计信息
      *
-     * 关系建模统计信息
+     * 关系建模统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1643,14 +1765,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -1677,7 +1805,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 总览统计信息
      *
-     * 总览统计信息
+     * 总览统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1708,14 +1836,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -1742,7 +1876,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 标准覆盖率统计信息
      *
-     * 标准覆盖率统计信息
+     * 标准覆盖率统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1776,17 +1910,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -1813,7 +1953,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 模型统计信息
      *
-     * 模型统计信息
+     * 模型统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1847,14 +1987,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -1955,7 +2101,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建审批人
      *
-     * 创建审批人
+     * 创建审批人。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1986,17 +2132,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 ['application/json']
             );
         }
@@ -2023,7 +2175,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建业务指标
      *
-     * 创建业务指标
+     * 创建业务指标。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2054,17 +2206,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2091,7 +2249,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建流程架构
      *
-     * 创建流程架构
+     * 创建流程架构。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2122,17 +2280,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2159,7 +2323,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建码表
      *
-     * 创建码表
+     * 创建码表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2190,17 +2354,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2293,9 +2463,157 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 新建汇总表
+     *
+     * 新建汇总表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDesignAggregationLogicTableAsync($request)
+    {
+        return $this->createDesignAggregationLogicTableAsyncWithHttpInfo($request);
+    }
+    
+    public function createDesignAggregationLogicTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/aggregation-logic-tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDesignAggregationLogicTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDesignAggregationLogicTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 新建原子指标
+     *
+     * 新建单个原子指标。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createDesignAtomicIndexAsync($request)
+    {
+        return $this->createDesignAtomicIndexAsyncWithHttpInfo($request);
+    }
+    
+    public function createDesignAtomicIndexAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/atomic-indexs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDesignAtomicIndexResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateDesignAtomicIndexRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建目录
      *
-     * 创建目录
+     * 创建目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2326,17 +2644,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3197,7 +3521,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建数据标准
      *
-     * 创建数据标准
+     * 创建数据标准。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3228,17 +3552,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3265,7 +3595,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建数据标准模板
      *
-     * 创建数据标准模板
+     * 创建数据标准模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3296,17 +3626,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3333,7 +3669,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建主题
      *
-     * 创建主题
+     * 创建主题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3364,17 +3700,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3401,7 +3743,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建主题(新)
      *
-     * 创建主题(新)
+     * 创建主题(新)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3432,17 +3774,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3467,9 +3815,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 创建模型实体
+     * 创建表模型
      *
-     * 创建一个模型实体，包括逻辑实体或物理数据表。
+     * 在关系建模中创建一个表模型，包括逻辑实体和物理表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3500,17 +3848,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3673,7 +4027,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 新建模型工作区
      *
-     * 新建模型工作区
+     * 新建模型工作区。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3704,17 +4058,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3883,7 +4243,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除审批人
      *
-     * 删除审批人
+     * 删除审批人。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3916,6 +4276,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
 
         if ($multipart) {
@@ -4019,7 +4385,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除业务指标
      *
-     * 删除业务指标
+     * 删除业务指标。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4049,6 +4415,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4087,7 +4459,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除流程架构
      *
-     * 删除流程架构
+     * 删除流程架构。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4117,6 +4489,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4226,7 +4604,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除码表
      *
-     * 删除码表
+     * 删除码表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4256,6 +4634,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4360,9 +4744,234 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 删除汇总表
+     *
+     * 批量删除汇总表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDesignAggregationLogicTableAsync($request)
+    {
+        return $this->deleteDesignAggregationLogicTableAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDesignAggregationLogicTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/aggregation-logic-tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDesignAggregationLogicTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDesignAggregationLogicTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除原子指标
+     *
+     * 批量删除原子指标。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDesignAtomicIndexAsync($request)
+    {
+        return $this->deleteDesignAtomicIndexAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDesignAtomicIndexAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/atomic-indexs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDesignAtomicIndexResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDesignAtomicIndexRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除实体下展
+     *
+     * 当已发布的实体被编辑时，其会生成下展，该接口用于删除实体的下展信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDesignLatestApprovalAsync($request)
+    {
+        return $this->deleteDesignLatestApprovalAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDesignLatestApprovalAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/approvals/business/{biz_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['bizType'] !== null) {
+            $queryParams['biz_type'] = $localVarParams['bizType'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['bizId'] !== null) {
+            $pathParams['biz_id'] = $localVarParams['bizId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDesignLatestApprovalResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DeleteDesignLatestApprovalRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除目录
      *
-     * 删除目录
+     * 删除目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4395,6 +5004,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
 
         if ($multipart) {
@@ -4776,7 +5391,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除数据标准
      *
-     * 删除数据标准
+     * 删除数据标准。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4806,6 +5421,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4844,7 +5465,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除数据标准模板
      *
-     * 删除数据标准模板
+     * 删除数据标准模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4877,6 +5498,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
 
         if ($multipart) {
@@ -4912,7 +5539,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除主题
      *
-     * 删除主题
+     * 删除主题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4942,6 +5569,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -4980,7 +5613,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除主题(新)
      *
-     * 删除主题(新)
+     * 删除主题(新)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5010,6 +5643,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -5046,9 +5685,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 删除模型实体
+     * 删除表模型
      *
-     * 删除一个模型实体，包括逻辑实体或物理数据表。
+     * 在关系建模中删除一个表模型及其属性，包括逻辑实体和物理表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5078,6 +5717,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -5184,7 +5829,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除模型工作区
      *
-     * 删除模型工作区
+     * 删除模型工作区。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5217,6 +5862,12 @@ class DataArtsStudioAsyncClient extends Client
         }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
         }
 
         if ($multipart) {
@@ -5460,9 +6111,237 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 导出模型中表的DDL语句
+     *
+     * 根据模型ID导出指定表的DDL语句。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportDesignModelTableDdlAsync($request)
+    {
+        return $this->exportDesignModelTableDdlAsyncWithHttpInfo($request);
+    }
+    
+    public function exportDesignModelTableDdlAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/workspaces/{model_id}/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tbNames'] !== null) {
+            $queryParams['tb_names'] = $localVarParams['tbNames'];
+        }
+        if ($localVarParams['withDb'] !== null) {
+            $queryParams['with_db'] = $localVarParams['withDb'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['modelId'] !== null) {
+            $pathParams['model_id'] = $localVarParams['modelId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ExportDesignModelTableDdlResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ExportDesignModelTableDdlRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 导出业务数据
+     *
+     * 根据请求参数，导出业务数据，可以导出：码表、数据标准、原子指标、衍生指标、复合指标、汇总表、业务指标、主题、流程、逻辑模型、物理模型、维度、事实表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportDesignModelsAsync($request)
+    {
+        return $this->exportDesignModelsAsyncWithHttpInfo($request);
+    }
+    
+    public function exportDesignModelsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/export-model';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ExportDesignModelsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ExportDesignModelsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取excel导出结果
+     *
+     * 根据请求导出接口（/export-model）时返回的uuid，获取excel导出结果。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportDesignResultAsync($request)
+    {
+        return $this->exportDesignResultAsyncWithHttpInfo($request);
+    }
+    
+    public function exportDesignResultAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/export-result';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['uuid'] !== null) {
+            $queryParams['uuid'] = $localVarParams['uuid'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ExportDesignResultResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ExportDesignResultRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 导入主题
      *
-     * 用于导入主题
+     * 用于导入主题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5499,6 +6378,12 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5510,11 +6395,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 ['multipart/form-data']
             );
         }
@@ -5609,7 +6494,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
      *
-     * 导入模型，关系建模，维度建模，码表，业务指标以及流程架构
+     * 导入模型，关系建模，维度建模，码表，业务指标以及流程架构。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5652,6 +6537,12 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5663,11 +6554,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 ['multipart/form-data']
             );
         }
@@ -5694,7 +6585,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询导入结果
      *
-     * 查询导入excel的处理结果
+     * 查询导入excel的处理结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5728,14 +6619,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 []
             );
         }
@@ -5762,7 +6659,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 初始化数据标准模板
      *
-     * 初始化模板
+     * 初始化数据标准模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5796,17 +6693,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -5833,7 +6736,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找汇总表
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5906,14 +6809,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6018,9 +6927,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 获取数据标准
+     * 获取数据标准集合
      *
-     * 获取数据标准
+     * 根据查询条件分页获取数据标准集合，按修改时间降序排序。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6066,14 +6975,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -6100,7 +7015,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询多种类型的表信息
      *
-     * 从信息架构中查询多种类型的表信息，包括逻辑实体、物理表、维度表、事实表、汇总表
+     * 从信息架构中查询多种类型的表信息，包括逻辑实体、物理表、维度表、事实表、汇总表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6167,14 +7082,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -6708,7 +7629,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询审批人列表
      *
-     * 查询审批人列表
+     * 查询审批人列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6748,14 +7669,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 []
             );
         }
@@ -6951,7 +7878,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看指标维度信息
      *
-     * 查看指标维度信息
+     * 查看指标维度信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6988,14 +7915,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7022,7 +7955,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看指标指标责任人信息
      *
-     * 查看指标指标责任人信息
+     * 查看指标指标责任人信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7059,14 +7992,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7093,7 +8032,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询业务指标信息
      *
-     * 通过名称、创建者、修改时间分页查找业务指标信息
+     * 通过名称、创建者、修改时间分页查找业务指标信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7157,14 +8096,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7191,7 +8136,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取主题树信息
      *
-     * 获取数据资产主题树信息l1，l2，l3
+     * 获取数据资产主题树信息l1，l2，l3。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7228,14 +8173,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7342,7 +8293,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取所有流程架构目录树
      *
-     * 获取所有目录树
+     * 获取所有目录树。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7373,14 +8324,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7558,7 +8515,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找复合指标
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找复合指标信息
+     * 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找复合指标信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7622,14 +8579,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -7656,7 +8619,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找业务限定
      *
-     * 通过中英文名称、描述、创建者、审核人、限定分组id、修改时间状态分页查找限定信息
+     * 通过中英文名称、描述、创建者、审核人、限定分组id、修改时间状态分页查找限定信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7711,14 +8674,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8133,7 +9102,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找衍生指标
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找衍生指标信息
+     * 通过中英文名称、创建者、审核人、状态、修改时间、l3Id分页查找衍生指标信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8206,14 +9175,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8240,7 +9215,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看维度颗粒度
      *
-     * 查询维度颗粒度, 依据tableId查询涉及所有维度，不传tableId查询所有维度组颗粒度
+     * 查询维度颗粒度，依据tableId查询涉及所有维度，不传tableId查询所有维度组颗粒度。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8283,14 +9258,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8317,7 +9298,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找维度表
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找维度表信息
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找维度表信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8393,14 +9374,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8427,7 +9414,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找维度
      *
-     * 通过中英文名称、描述、创建者、审核人、状态、l3Id、派生指标idList、修改时间分页查找维度信息
+     * 通过中英文名称、描述、创建者、审核人、状态、l3Id、衍生指标idList、修改时间分页查找维度信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8497,14 +9484,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8531,7 +9524,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取所有目录
      *
-     * 获取所有目录
+     * 获取所有目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8571,14 +9564,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -8605,7 +9604,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找事实表
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找事实表信息
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找事实表信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8675,14 +9674,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9411,7 +10416,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取指标关联信息
      *
-     * 获取当前指标图谱
+     * 获取当前指标图谱。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9445,17 +10450,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -9754,7 +10765,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 关系
      *
-     * 通过名称、等分页查找关系信息
+     * 通过名称、等分页查找关系信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9803,14 +10814,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -10759,7 +11776,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取主题层级
      *
-     * 获取主题层级
+     * 获取主题层级。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10796,14 +11813,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -10830,7 +11853,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询模型下所有关系
      *
-     * 查询模型下所有关系
+     * 查询模型下所有关系。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10873,17 +11896,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['modelId'] !== null) {
             $pathParams['model_id'] = $localVarParams['modelId'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -10908,9 +11937,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 查找模型实体列表
+     * 查找表模型列表
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找模型实体信息，包含逻辑实体、表或属性。
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找关系建模中的表模型信息，包括逻辑实体、物理表和其属性。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -10977,14 +12006,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -11079,7 +12114,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取模型
      *
-     * 获取模型
+     * 获取模型。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11122,14 +12157,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -11378,7 +12419,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改自定义项
      *
-     * 修改自定义项
+     * 修改自定义项。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11409,17 +12450,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -11577,6 +12624,163 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 删除标签
+     *
+     * 根据资产（表或属性）的ID删除资产标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function removeDesignEntityTagsAsync($request)
+    {
+        return $this->removeDesignEntityTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function removeDesignEntityTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/{entity_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['attrId'] !== null) {
+            $queryParams['attr_id'] = $localVarParams['attrId'];
+        }
+        if ($localVarParams['tag'] !== null) {
+            $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['entityId'] !== null) {
+            $pathParams['entity_id'] = $localVarParams['entityId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RemoveDesignEntityTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RemoveDesignEntityTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 清空质量规则
+     *
+     * 清空表的质量规则。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function removeDesignQualityInfosAsync($request)
+    {
+        return $this->removeDesignQualityInfosAsyncWithHttpInfo($request);
+    }
+    
+    public function removeDesignQualityInfosAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/{table_id}/qualities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tableType'] !== null) {
+            $queryParams['table_type'] = $localVarParams['tableType'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['tableId'] !== null) {
+            $pathParams['table_id'] = $localVarParams['tableId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RemoveDesignQualityInfosResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\RemoveDesignQualityInfosRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 指定字段采集概要
      *
      * 指定字段采集概要信息接口
@@ -11647,7 +12851,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 关联属性与数据标准
      *
-     * 关联属性与数据标准
+     * 关联属性与数据标准。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11678,17 +12882,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -11715,7 +12925,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 撤回审批单
      *
-     * 撤回审批单
+     * 撤回审批单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11749,14 +12959,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -11783,7 +12999,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取审批单
      *
-     * 获取审批单
+     * 获取审批单。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11850,14 +13066,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -11884,7 +13106,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找原子指标
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11945,14 +13167,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12139,7 +13367,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询流程架构列表
      *
-     * 查询流程架构列表
+     * 查询流程架构列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12191,14 +13419,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12225,7 +13459,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看码表字段值
      *
-     * 查看码表字段值
+     * 查看码表字段值。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12262,17 +13496,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12299,7 +13539,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询码表列表
      *
-     * 查询码表列表
+     * 查询码表列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12357,14 +13597,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12391,7 +13637,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询自定义项
      *
-     * 查询自定义项
+     * 查询自定义项。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12431,14 +13677,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'response']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'response'],
+                ['application/json'],
                 []
             );
         }
@@ -12463,9 +13715,86 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 获取下展信息与已发布实体的差异
+     *
+     * 当已发布的实体被编辑时，其会生成下展，该接口用于获取下展信息与已发布实体的差异。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchDesignLatestApprovalDiffAsync($request)
+    {
+        return $this->searchDesignLatestApprovalDiffAsyncWithHttpInfo($request);
+    }
+    
+    public function searchDesignLatestApprovalDiffAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/approvals/business/{biz_id}/diff';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['bizType'] !== null) {
+            $queryParams['biz_type'] = $localVarParams['bizType'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['bizId'] !== null) {
+            $pathParams['biz_id'] = $localVarParams['bizId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchDesignLatestApprovalDiffResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchDesignLatestApprovalDiffRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取数据连接信息
      *
-     * 获取指定类型下的数据连接信息
+     * 获取指定类型下的数据连接信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12508,14 +13837,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12536,6 +13871,80 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchDwByTypeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchDwByTypeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询目的表和字段(待下线)
+     *
+     * 查询目的表和字段(待下线)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchFieldsForRelationAsync($request)
+    {
+        return $this->searchFieldsForRelationAsyncWithHttpInfo($request);
+    }
+    
+    public function searchFieldsForRelationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/{model_id}/table-model/relation/fields';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['modelId'] !== null) {
+            $pathParams['model_id'] = $localVarParams['modelId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchFieldsForRelationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchFieldsForRelationRequest',
             $asyncRequest = true);
     }
 
@@ -12622,7 +14031,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找主题列表
      *
-     * 通过名称、创建者、责任人、状态、修改时间分页查找主题
+     * 通过名称、创建者、责任人、状态、修改时间分页查找主题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12680,14 +14089,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12714,7 +14129,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找主题列表(新)
      *
-     * 查找主题(新)
+     * 查找主题(新)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12772,14 +14187,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12806,7 +14227,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找版本信息
      *
-     * 通过名称、创建者、修改时间查找版本信息
+     * 通过名称、创建者、修改时间查找版本信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12861,14 +14282,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -12974,7 +14401,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看汇总表详情
      *
-     * 通过id查看汇总表的详情信息
+     * 通过ID查看汇总表的详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13008,17 +14435,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -13783,7 +15216,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看原子指标详情
      *
-     * 通过id获取指标详情信息
+     * 通过ID获取指标详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13817,17 +15250,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -13854,7 +15293,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找流程架构详情
      *
-     * 查找流程架构详情
+     * 查找流程架构详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13885,17 +15324,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -13922,7 +15367,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看指标详情
      *
-     * 通过id查看指标的详情信息
+     * 通过ID查看指标的详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13956,17 +15401,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -14274,7 +15725,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看码表详情
      *
-     * 通过id查看码表的详情信息
+     * 通过ID查看码表的详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14305,17 +15756,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -14342,7 +15799,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看复合指标详情
      *
-     * 通过id获取复合指标详情信息
+     * 通过ID获取复合指标详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14376,17 +15833,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -14413,7 +15876,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看限定详情
      *
-     * 通过id查看限定详情信息
+     * 通过ID查看限定详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14447,17 +15910,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -14922,7 +16391,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看衍生指标详情
      *
-     * 通过id获取衍生详情信息
+     * 通过ID获取衍生详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14956,17 +16425,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -14993,7 +16468,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看维度详情
      *
-     * 通过id查看维度详情信息
+     * 通过ID查看维度详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15027,17 +16502,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -15064,7 +16545,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看维度表详情
      *
-     * 通过id查看维度表的详情信息
+     * 通过ID查看维度表的详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15098,17 +16579,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -15271,7 +16758,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看事实表详情
      *
-     * 通过id查看事实表的详情信息
+     * 通过ID查看事实表的详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15305,17 +16792,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -16535,7 +18028,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看关系详情
      *
-     * 通过id获取关系详情信息
+     * 通过ID获取关系详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16569,17 +18062,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -16878,7 +18377,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看数据标准详情
      *
-     * 通过id获取数据标准详情信息
+     * 通过ID获取数据标准详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16909,17 +18408,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -16946,7 +18451,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询数据标准模板
      *
-     * 查询数据标准模板
+     * 查询数据标准模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -16983,14 +18488,20 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -17017,7 +18528,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看表模型详情
      *
-     * 通过id获取模型表详情信息
+     * 通过ID获取模型表详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17051,17 +18562,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -17570,7 +19087,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询模型详情
      *
-     * 查询物理模型或逻辑模型的工作区空间详情
+     * 查询物理模型或逻辑模型的工作区空间详情。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17601,17 +19118,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['modelId'] !== null) {
             $pathParams['model_id'] = $localVarParams['modelId'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 []
             );
         }
@@ -17783,7 +19306,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 更新业务指标
      *
-     * 更新业务指标
+     * 更新业务指标。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17814,17 +19337,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -17928,7 +19457,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改码表
      *
-     * 修改码表
+     * 修改码表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -17959,6 +19488,12 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -17968,11 +19503,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -17999,7 +19534,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 编辑码表字段值
      *
-     * 编辑码表字段值
+     * 编辑码表字段值。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18030,6 +19565,12 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -18039,11 +19580,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -18139,9 +19680,234 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 更新汇总表
+     *
+     * 更新汇总表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDesignAggregationLogicTableAsync($request)
+    {
+        return $this->updateDesignAggregationLogicTableAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDesignAggregationLogicTableAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/aggregation-logic-tables';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignAggregationLogicTableResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignAggregationLogicTableRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新原子指标
+     *
+     * 更新单个原子指标。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDesignAtomicIndexAsync($request)
+    {
+        return $this->updateDesignAtomicIndexAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDesignAtomicIndexAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/atomic-indexs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignAtomicIndexResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignAtomicIndexRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新表的异常数据输出配置
+     *
+     * 更新表的异常数据输出配置，包括是否生成异常数据、设置异常数据数据库或Schema、设置异常表表前缀/表后缀。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateDesignTableQualityAsync($request)
+    {
+        return $this->updateDesignTableQualityAsyncWithHttpInfo($request);
+    }
+    
+    public function updateDesignTableQualityAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/design/{table_id}/qualities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['tableId'] !== null) {
+            $pathParams['table_id'] = $localVarParams['tableId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'data']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignTableQualityResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateDesignTableQualityRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 修改目录
      *
-     * 修改目录
+     * 修改目录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18172,17 +19938,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -18647,7 +20419,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改数据标准
      *
-     * 修改数据标准
+     * 修改数据标准。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18678,6 +20450,12 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['id'] !== null) {
             $pathParams['id'] = $localVarParams['id'];
         }
@@ -18687,11 +20465,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -18718,7 +20496,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改数据标准模板
      *
-     * 修改数据标准模板
+     * 修改数据标准模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18749,17 +20527,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -18786,7 +20570,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改主题
      *
-     * 修改主题
+     * 修改主题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18817,17 +20601,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -18854,7 +20644,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改主题(新)
      *
-     * 修改主题(新)
+     * 修改主题(新)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18885,17 +20675,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -18920,9 +20716,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 更新模型实体
+     * 更新表模型
      *
-     * 更新一个模型实体，包括逻辑实体或物理数据表。
+     * 在关系建模中更新一个表模型及其属性，包括逻辑实体和物理表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -18953,17 +20749,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -19203,7 +21005,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 更新模型工作区
      *
-     * 更新模型工作区
+     * 更新模型工作区。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19234,17 +21036,23 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'response']
+                ['application/json;charset=UTF-8', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'response'],
+                ['application/json;charset=UTF-8', 'application/json'],
                 ['application/json;charset=UTF-8']
             );
         }

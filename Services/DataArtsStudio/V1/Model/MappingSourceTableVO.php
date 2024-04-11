@@ -20,12 +20,12 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * table1Id  表id
-    * table2Id  表id
-    * table1Name  表1名称
-    * table2Name  表2名称
-    * joinType  关联类型，左外连接，右外连接，内连接，全连接
-    * joinFields  on条件
+    * table1Id  表1ID。
+    * table2Id  表2ID。
+    * table1Name  表1名称。
+    * table2Name  表2名称。
+    * joinType  关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
+    * joinFields  on条件。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * table1Id  表id
-    * table2Id  表id
-    * table1Name  表1名称
-    * table2Name  表2名称
-    * joinType  关联类型，左外连接，右外连接，内连接，全连接
-    * joinFields  on条件
+    * table1Id  表1ID。
+    * table2Id  表2ID。
+    * table1Name  表1名称。
+    * table2Name  表2名称。
+    * joinType  关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
+    * joinFields  on条件。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * table1Id  表id
-    * table2Id  表id
-    * table1Name  表1名称
-    * table2Name  表2名称
-    * joinType  关联类型，左外连接，右外连接，内连接，全连接
-    * joinFields  on条件
+    * table1Id  表1ID。
+    * table2Id  表2ID。
+    * table1Name  表1名称。
+    * table2Name  表2名称。
+    * joinType  关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
+    * joinFields  on条件。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * table1Id  表id
-    * table2Id  表id
-    * table1Name  表1名称
-    * table2Name  表2名称
-    * joinType  关联类型，左外连接，右外连接，内连接，全连接
-    * joinFields  on条件
+    * table1Id  表1ID。
+    * table2Id  表2ID。
+    * table1Name  表1名称。
+    * table2Name  表2名称。
+    * joinType  关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
+    * joinFields  on条件。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * table1Id  表id
-    * table2Id  表id
-    * table1Name  表1名称
-    * table2Name  表2名称
-    * joinType  关联类型，左外连接，右外连接，内连接，全连接
-    * joinFields  on条件
+    * table1Id  表1ID。
+    * table2Id  表2ID。
+    * table1Name  表1名称。
+    * table2Name  表2名称。
+    * joinType  关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
+    * joinFields  on条件。
     *
     * @var string[]
     */
@@ -268,7 +268,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets table1Id
-    *  表id
+    *  表1ID。
     *
     * @return int
     */
@@ -280,7 +280,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets table1Id
     *
-    * @param int $table1Id 表id
+    * @param int $table1Id 表1ID。
     *
     * @return $this
     */
@@ -292,7 +292,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets table2Id
-    *  表id
+    *  表2ID。
     *
     * @return int|null
     */
@@ -304,7 +304,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets table2Id
     *
-    * @param int|null $table2Id 表id
+    * @param int|null $table2Id 表2ID。
     *
     * @return $this
     */
@@ -316,7 +316,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets table1Name
-    *  表1名称
+    *  表1名称。
     *
     * @return string
     */
@@ -328,7 +328,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets table1Name
     *
-    * @param string $table1Name 表1名称
+    * @param string $table1Name 表1名称。
     *
     * @return $this
     */
@@ -340,7 +340,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets table2Name
-    *  表2名称
+    *  表2名称。
     *
     * @return string|null
     */
@@ -352,7 +352,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets table2Name
     *
-    * @param string|null $table2Name 表2名称
+    * @param string|null $table2Name 表2名称。
     *
     * @return $this
     */
@@ -364,7 +364,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets joinType
-    *  关联类型，左外连接，右外连接，内连接，全连接
+    *  关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
     *
     * @return string
     */
@@ -376,7 +376,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets joinType
     *
-    * @param string $joinType 关联类型，左外连接，右外连接，内连接，全连接
+    * @param string $joinType 关联类型。LEFT(左外连接)、RIGHT(右外连接)、INNER(内连接)、FULL(全连接)。
     *
     * @return $this
     */
@@ -388,7 +388,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets joinFields
-    *  on条件
+    *  on条件。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingJoinFieldVO[]
     */
@@ -400,7 +400,7 @@ class MappingSourceTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets joinFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingJoinFieldVO[] $joinFields on条件
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\MappingJoinFieldVO[] $joinFields on条件。
     *
     * @return $this
     */

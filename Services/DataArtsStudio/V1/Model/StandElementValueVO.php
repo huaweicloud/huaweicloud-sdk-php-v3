@@ -20,17 +20,17 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fdName  属性名称
-    * fdValue  属性值
-    * fdId  属性定义的id
-    * directoryId  标准所属目录
-    * rowId  标准所属行
-    * id  ID
+    * fdName  属性名称。
+    * fdValue  属性值。
+    * fdId  属性定义的ID。
+    * directoryId  标准所属目录。
+    * rowId  标准所属行。
+    * id  数据标准的ID。
     * status  status
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -50,17 +50,17 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fdName  属性名称
-    * fdValue  属性值
-    * fdId  属性定义的id
-    * directoryId  标准所属目录
-    * rowId  标准所属行
-    * id  ID
+    * fdName  属性名称。
+    * fdValue  属性值。
+    * fdId  属性定义的ID。
+    * directoryId  标准所属目录。
+    * rowId  标准所属行。
+    * id  数据标准的ID。
     * status  status
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -101,17 +101,17 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fdName  属性名称
-    * fdValue  属性值
-    * fdId  属性定义的id
-    * directoryId  标准所属目录
-    * rowId  标准所属行
-    * id  ID
+    * fdName  属性名称。
+    * fdValue  属性值。
+    * fdId  属性定义的ID。
+    * directoryId  标准所属目录。
+    * rowId  标准所属行。
+    * id  数据标准的ID。
     * status  status
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fdName  属性名称
-    * fdValue  属性值
-    * fdId  属性定义的id
-    * directoryId  标准所属目录
-    * rowId  标准所属行
-    * id  ID
+    * fdName  属性名称。
+    * fdValue  属性值。
+    * fdId  属性定义的ID。
+    * directoryId  标准所属目录。
+    * rowId  标准所属行。
+    * id  数据标准的ID。
     * status  status
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fdName  属性名称
-    * fdValue  属性值
-    * fdId  属性定义的id
-    * directoryId  标准所属目录
-    * rowId  标准所属行
-    * id  ID
+    * fdName  属性名称。
+    * fdValue  属性值。
+    * fdId  属性定义的ID。
+    * directoryId  标准所属目录。
+    * rowId  标准所属行。
+    * id  数据标准的ID。
     * status  status
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -287,7 +287,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdName
-    *  属性名称
+    *  属性名称。
     *
     * @return string
     */
@@ -299,7 +299,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdName
     *
-    * @param string $fdName 属性名称
+    * @param string $fdName 属性名称。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdValue
-    *  属性值
+    *  属性值。
     *
     * @return string|null
     */
@@ -323,7 +323,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdValue
     *
-    * @param string|null $fdValue 属性值
+    * @param string|null $fdValue 属性值。
     *
     * @return $this
     */
@@ -335,7 +335,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fdId
-    *  属性定义的id
+    *  属性定义的ID。
     *
     * @return int|null
     */
@@ -347,7 +347,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets fdId
     *
-    * @param int|null $fdId 属性定义的id
+    * @param int|null $fdId 属性定义的ID。
     *
     * @return $this
     */
@@ -359,7 +359,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  标准所属目录
+    *  标准所属目录。
     *
     * @return int|null
     */
@@ -371,7 +371,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param int|null $directoryId 标准所属目录
+    * @param int|null $directoryId 标准所属目录。
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowId
-    *  标准所属行
+    *  标准所属行。
     *
     * @return int|null
     */
@@ -395,7 +395,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets rowId
     *
-    * @param int|null $rowId 标准所属行
+    * @param int|null $rowId 标准所属行。
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  数据标准的ID。
     *
     * @return int|null
     */
@@ -419,7 +419,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id ID
+    * @param int|null $id 数据标准的ID。
     *
     * @return $this
     */
@@ -455,7 +455,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -467,7 +467,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -479,7 +479,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -491,7 +491,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -503,7 +503,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -515,7 +515,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -527,7 +527,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -539,7 +539,7 @@ class StandElementValueVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

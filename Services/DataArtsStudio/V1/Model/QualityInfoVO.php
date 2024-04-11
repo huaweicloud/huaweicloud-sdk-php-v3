@@ -20,22 +20,22 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码
-    * tableId  表id
-    * attrId  属性id
+    * id  编码ID。
+    * tableId  表ID。
+    * attrId  属性ID。
     * bizType  bizType
-    * dataQualityId  质量id
-    * showControl  是否要显示  正则表达式
-    * dataQualityName  质量名称
-    * alertConf  告警配置
-    * expression  正则相关校验规则中正则配置
-    * extendInfo  扩展信息
-    * fromStandard  是否来源于数据标准质量配置
-    * resultDescription  结果说明
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * dataQualityId  质量ID。
+    * showControl  是否要显示正则表达式。
+    * dataQualityName  质量名称。
+    * alertConf  告警配置。
+    * expression  正则相关校验规则中正则配置。
+    * extendInfo  扩展信息。
+    * fromStandard  是否来源于数据标准质量配置。
+    * resultDescription  结果说明。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -60,22 +60,22 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码
-    * tableId  表id
-    * attrId  属性id
+    * id  编码ID。
+    * tableId  表ID。
+    * attrId  属性ID。
     * bizType  bizType
-    * dataQualityId  质量id
-    * showControl  是否要显示  正则表达式
-    * dataQualityName  质量名称
-    * alertConf  告警配置
-    * expression  正则相关校验规则中正则配置
-    * extendInfo  扩展信息
-    * fromStandard  是否来源于数据标准质量配置
-    * resultDescription  结果说明
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * dataQualityId  质量ID。
+    * showControl  是否要显示正则表达式。
+    * dataQualityName  质量名称。
+    * alertConf  告警配置。
+    * expression  正则相关校验规则中正则配置。
+    * extendInfo  扩展信息。
+    * fromStandard  是否来源于数据标准质量配置。
+    * resultDescription  结果说明。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -121,22 +121,22 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码
-    * tableId  表id
-    * attrId  属性id
+    * id  编码ID。
+    * tableId  表ID。
+    * attrId  属性ID。
     * bizType  bizType
-    * dataQualityId  质量id
-    * showControl  是否要显示  正则表达式
-    * dataQualityName  质量名称
-    * alertConf  告警配置
-    * expression  正则相关校验规则中正则配置
-    * extendInfo  扩展信息
-    * fromStandard  是否来源于数据标准质量配置
-    * resultDescription  结果说明
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * dataQualityId  质量ID。
+    * showControl  是否要显示正则表达式。
+    * dataQualityName  质量名称。
+    * alertConf  告警配置。
+    * expression  正则相关校验规则中正则配置。
+    * extendInfo  扩展信息。
+    * fromStandard  是否来源于数据标准质量配置。
+    * resultDescription  结果说明。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -161,22 +161,22 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码
-    * tableId  表id
-    * attrId  属性id
+    * id  编码ID。
+    * tableId  表ID。
+    * attrId  属性ID。
     * bizType  bizType
-    * dataQualityId  质量id
-    * showControl  是否要显示  正则表达式
-    * dataQualityName  质量名称
-    * alertConf  告警配置
-    * expression  正则相关校验规则中正则配置
-    * extendInfo  扩展信息
-    * fromStandard  是否来源于数据标准质量配置
-    * resultDescription  结果说明
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * dataQualityId  质量ID。
+    * showControl  是否要显示正则表达式。
+    * dataQualityName  质量名称。
+    * alertConf  告警配置。
+    * expression  正则相关校验规则中正则配置。
+    * extendInfo  扩展信息。
+    * fromStandard  是否来源于数据标准质量配置。
+    * resultDescription  结果说明。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -201,22 +201,22 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码
-    * tableId  表id
-    * attrId  属性id
+    * id  编码ID。
+    * tableId  表ID。
+    * attrId  属性ID。
     * bizType  bizType
-    * dataQualityId  质量id
-    * showControl  是否要显示  正则表达式
-    * dataQualityName  质量名称
-    * alertConf  告警配置
-    * expression  正则相关校验规则中正则配置
-    * extendInfo  扩展信息
-    * fromStandard  是否来源于数据标准质量配置
-    * resultDescription  结果说明
-    * createBy  创建人
-    * updateBy  更新人
-    * createTime  创建时间
-    * updateTime  更新时间
+    * dataQualityId  质量ID。
+    * showControl  是否要显示正则表达式。
+    * dataQualityName  质量名称。
+    * alertConf  告警配置。
+    * expression  正则相关校验规则中正则配置。
+    * extendInfo  扩展信息。
+    * fromStandard  是否来源于数据标准质量配置。
+    * resultDescription  结果说明。
+    * createBy  创建人。
+    * updateBy  更新人。
+    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -342,7 +342,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码
+    *  编码ID。
     *
     * @return int|null
     */
@@ -354,7 +354,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码
+    * @param int|null $id 编码ID。
     *
     * @return $this
     */
@@ -366,7 +366,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  表id
+    *  表ID。
     *
     * @return int|null
     */
@@ -378,7 +378,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param int|null $tableId 表id
+    * @param int|null $tableId 表ID。
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrId
-    *  属性id
+    *  属性ID。
     *
     * @return int|null
     */
@@ -402,7 +402,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrId
     *
-    * @param int|null $attrId 属性id
+    * @param int|null $attrId 属性ID。
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataQualityId
-    *  质量id
+    *  质量ID。
     *
     * @return int
     */
@@ -450,7 +450,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataQualityId
     *
-    * @param int $dataQualityId 质量id
+    * @param int $dataQualityId 质量ID。
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets showControl
-    *  是否要显示  正则表达式
+    *  是否要显示正则表达式。
     *
     * @return int|null
     */
@@ -474,7 +474,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets showControl
     *
-    * @param int|null $showControl 是否要显示  正则表达式
+    * @param int|null $showControl 是否要显示正则表达式。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataQualityName
-    *  质量名称
+    *  质量名称。
     *
     * @return string|null
     */
@@ -498,7 +498,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataQualityName
     *
-    * @param string|null $dataQualityName 质量名称
+    * @param string|null $dataQualityName 质量名称。
     *
     * @return $this
     */
@@ -510,7 +510,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets alertConf
-    *  告警配置
+    *  告警配置。
     *
     * @return string|null
     */
@@ -522,7 +522,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets alertConf
     *
-    * @param string|null $alertConf 告警配置
+    * @param string|null $alertConf 告警配置。
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets expression
-    *  正则相关校验规则中正则配置
+    *  正则相关校验规则中正则配置。
     *
     * @return string|null
     */
@@ -546,7 +546,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets expression
     *
-    * @param string|null $expression 正则相关校验规则中正则配置
+    * @param string|null $expression 正则相关校验规则中正则配置。
     *
     * @return $this
     */
@@ -558,7 +558,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendInfo
-    *  扩展信息
+    *  扩展信息。
     *
     * @return string|null
     */
@@ -570,7 +570,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets extendInfo
     *
-    * @param string|null $extendInfo 扩展信息
+    * @param string|null $extendInfo 扩展信息。
     *
     * @return $this
     */
@@ -582,7 +582,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fromStandard
-    *  是否来源于数据标准质量配置
+    *  是否来源于数据标准质量配置。
     *
     * @return bool|null
     */
@@ -594,7 +594,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets fromStandard
     *
-    * @param bool|null $fromStandard 是否来源于数据标准质量配置
+    * @param bool|null $fromStandard 是否来源于数据标准质量配置。
     *
     * @return $this
     */
@@ -606,7 +606,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets resultDescription
-    *  结果说明
+    *  结果说明。
     *
     * @return string|null
     */
@@ -618,7 +618,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets resultDescription
     *
-    * @param string|null $resultDescription 结果说明
+    * @param string|null $resultDescription 结果说明。
     *
     * @return $this
     */
@@ -630,7 +630,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人
+    *  创建人。
     *
     * @return string|null
     */
@@ -642,7 +642,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人
+    * @param string|null $createBy 创建人。
     *
     * @return $this
     */
@@ -654,7 +654,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人
+    *  更新人。
     *
     * @return string|null
     */
@@ -666,7 +666,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人
+    * @param string|null $updateBy 更新人。
     *
     * @return $this
     */
@@ -678,7 +678,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间
+    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -690,7 +690,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间
+    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -702,7 +702,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -714,7 +714,7 @@ class QualityInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间
+    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
