@@ -21,21 +21,25 @@ class DeleteTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * key  键。 最大长度36个字符。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    * value  值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string'
+            'key' => 'string',
+            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  键。 最大长度36个字符。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    * value  值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null
+        'key' => null,
+        'value' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class DeleteTagRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * key  键。 最大长度36个字符。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    * value  值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key'
+            'key' => 'key',
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  键。 最大长度36个字符。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    * value  值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey'
+            'key' => 'setKey',
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  键。 最大长度36个字符。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    * value  值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey'
+            'key' => 'getKey',
+            'value' => 'getValue'
     ];
 
     /**
@@ -148,6 +158,7 @@ class DeleteTagRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class DeleteTagRequest implements ModelInterface, ArrayAccess
     public function setKey($key)
     {
         $this->container['key'] = $key;
+        return $this;
+    }
+
+    /**
+    * Gets value
+    *  值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    *
+    * @return string|null
+    */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+    * Sets value
+    *
+    * @param string|null $value 值。 最大长度43个字符，可以为空字符串。 字符集：A-Z，a-z ， 0-9，‘-’，‘_’，UNICODE字符（\\u4E00-\\u9FFF）。
+    *
+    * @return $this
+    */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
         return $this;
     }
 

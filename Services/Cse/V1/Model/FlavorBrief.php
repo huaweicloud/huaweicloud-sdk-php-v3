@@ -22,24 +22,28 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * flavor  微服务引擎专享版规格
     * description  微服务引擎专享版规格描述
+    * spec  spec
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'flavor' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'spec' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineSpec'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * flavor  微服务引擎专享版规格
     * description  微服务引擎专享版规格描述
+    * spec  spec
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'flavor' => null,
-        'description' => null
+        'description' => null,
+        'spec' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     * and the value is the original name
     * flavor  微服务引擎专享版规格
     * description  微服务引擎专享版规格描述
+    * spec  spec
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'flavor' => 'flavor',
-            'description' => 'description'
+            'description' => 'description',
+            'spec' => 'spec'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * flavor  微服务引擎专享版规格
     * description  微服务引擎专享版规格描述
+    * spec  spec
     *
     * @var string[]
     */
     protected static $setters = [
             'flavor' => 'setFlavor',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'spec' => 'setSpec'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * flavor  微服务引擎专享版规格
     * description  微服务引擎专享版规格描述
+    * spec  spec
     *
     * @var string[]
     */
     protected static $getters = [
             'flavor' => 'getFlavor',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'spec' => 'getSpec'
     ];
 
     /**
@@ -159,6 +169,7 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     {
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['spec'] = isset($data['spec']) ? $data['spec'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets spec
+    *  spec
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineSpec|null
+    */
+    public function getSpec()
+    {
+        return $this->container['spec'];
+    }
+
+    /**
+    * Sets spec
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineSpec|null $spec spec
+    *
+    * @return $this
+    */
+    public function setSpec($spec)
+    {
+        $this->container['spec'] = $spec;
         return $this;
     }
 

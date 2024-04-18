@@ -21,7 +21,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * transactionSplit  开启/关闭事务拆分，取值范围是[ON/OFF]
-    * proxyIdList  实例的proxy列表
+    * proxyIdList  实例的数据库代理列表，仅支持单proxy使用。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * transactionSplit  开启/关闭事务拆分，取值范围是[ON/OFF]
-    * proxyIdList  实例的proxy列表
+    * proxyIdList  实例的数据库代理列表，仅支持单proxy使用。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * transactionSplit  开启/关闭事务拆分，取值范围是[ON/OFF]
-    * proxyIdList  实例的proxy列表
+    * proxyIdList  实例的数据库代理列表，仅支持单proxy使用。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * transactionSplit  开启/关闭事务拆分，取值范围是[ON/OFF]
-    * proxyIdList  实例的proxy列表
+    * proxyIdList  实例的数据库代理列表，仅支持单proxy使用。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * transactionSplit  开启/关闭事务拆分，取值范围是[ON/OFF]
-    * proxyIdList  实例的proxy列表
+    * proxyIdList  实例的数据库代理列表，仅支持单proxy使用。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyIdList
-    *  实例的proxy列表
+    *  实例的数据库代理列表，仅支持单proxy使用。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class ProxyTransactionSplitRequest implements ModelInterface, ArrayAccess
     /**
     * Sets proxyIdList
     *
-    * @param string[] $proxyIdList 实例的proxy列表
+    * @param string[] $proxyIdList 实例的数据库代理列表，仅支持单proxy使用。
     *
     * @return $this
     */

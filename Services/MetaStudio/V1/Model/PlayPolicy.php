@@ -24,6 +24,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    * needIndependentCaptureClient  是否需要独立采集端
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'repeatCount' => 'int',
             'autoPlayScript' => 'bool',
             'playMode' => 'string',
-            'randomPlayMode' => 'string'
+            'randomPlayMode' => 'string',
+            'needIndependentCaptureClient' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    * needIndependentCaptureClient  是否需要独立采集端
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
         'repeatCount' => 'int32',
         'autoPlayScript' => null,
         'playMode' => null,
-        'randomPlayMode' => null
+        'randomPlayMode' => null,
+        'needIndependentCaptureClient' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    * needIndependentCaptureClient  是否需要独立采集端
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'repeatCount' => 'repeat_count',
             'autoPlayScript' => 'auto_play_script',
             'playMode' => 'play_mode',
-            'randomPlayMode' => 'random_play_mode'
+            'randomPlayMode' => 'random_play_mode',
+            'needIndependentCaptureClient' => 'need_independent_capture_client'
     ];
 
     /**
@@ -93,6 +99,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    * needIndependentCaptureClient  是否需要独立采集端
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'repeatCount' => 'setRepeatCount',
             'autoPlayScript' => 'setAutoPlayScript',
             'playMode' => 'setPlayMode',
-            'randomPlayMode' => 'setRandomPlayMode'
+            'randomPlayMode' => 'setRandomPlayMode',
+            'needIndependentCaptureClient' => 'setNeedIndependentCaptureClient'
     ];
 
     /**
@@ -109,6 +117,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
+    * needIndependentCaptureClient  是否需要独立采集端
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class PlayPolicy implements ModelInterface, ArrayAccess
             'repeatCount' => 'getRepeatCount',
             'autoPlayScript' => 'getAutoPlayScript',
             'playMode' => 'getPlayMode',
-            'randomPlayMode' => 'getRandomPlayMode'
+            'randomPlayMode' => 'getRandomPlayMode',
+            'needIndependentCaptureClient' => 'getNeedIndependentCaptureClient'
     ];
 
     /**
@@ -217,6 +227,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
         $this->container['autoPlayScript'] = isset($data['autoPlayScript']) ? $data['autoPlayScript'] : null;
         $this->container['playMode'] = isset($data['playMode']) ? $data['playMode'] : null;
         $this->container['randomPlayMode'] = isset($data['randomPlayMode']) ? $data['randomPlayMode'] : null;
+        $this->container['needIndependentCaptureClient'] = isset($data['needIndependentCaptureClient']) ? $data['needIndependentCaptureClient'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     public function setRandomPlayMode($randomPlayMode)
     {
         $this->container['randomPlayMode'] = $randomPlayMode;
+        return $this;
+    }
+
+    /**
+    * Gets needIndependentCaptureClient
+    *  是否需要独立采集端
+    *
+    * @return bool|null
+    */
+    public function getNeedIndependentCaptureClient()
+    {
+        return $this->container['needIndependentCaptureClient'];
+    }
+
+    /**
+    * Sets needIndependentCaptureClient
+    *
+    * @param bool|null $needIndependentCaptureClient 是否需要独立采集端
+    *
+    * @return $this
+    */
+    public function setNeedIndependentCaptureClient($needIndependentCaptureClient)
+    {
+        $this->container['needIndependentCaptureClient'] = $needIndependentCaptureClient;
         return $this;
     }
 

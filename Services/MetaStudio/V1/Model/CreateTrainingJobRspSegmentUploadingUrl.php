@@ -20,8 +20,8 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * audioUploadingUrl  音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
-    * txtUploadingUrl  文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    * audioUploadingUrl  音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
+    * txtUploadingUrl  文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * audioUploadingUrl  音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
-    * txtUploadingUrl  文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    * audioUploadingUrl  音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
+    * txtUploadingUrl  文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * audioUploadingUrl  音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
-    * txtUploadingUrl  文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    * audioUploadingUrl  音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
+    * txtUploadingUrl  文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * audioUploadingUrl  音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
-    * txtUploadingUrl  文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    * audioUploadingUrl  音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
+    * txtUploadingUrl  文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * audioUploadingUrl  音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
-    * txtUploadingUrl  文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    * audioUploadingUrl  音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
+    * txtUploadingUrl  文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
 
     /**
     * Gets audioUploadingUrl
-    *  音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
+    *  音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
     *
     * @return string[]|null
     */
@@ -197,7 +197,7 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
     /**
     * Sets audioUploadingUrl
     *
-    * @param string[]|null $audioUploadingUrl 音频上传的地址。 > * 通过该obs地址上传时需设置content-type为audio/wav
+    * @param string[]|null $audioUploadingUrl 音频上传的地址。  通过该obs地址上传时，需设置content-type为audio/wav
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
 
     /**
     * Gets txtUploadingUrl
-    *  文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    *  文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class CreateTrainingJobRspSegmentUploadingUrl implements ModelInterface, ArrayAc
     /**
     * Sets txtUploadingUrl
     *
-    * @param string[]|null $txtUploadingUrl 文本上传的地址。 > * 通过该obs地址上传时需设置content-type为text/plain
+    * @param string[]|null $txtUploadingUrl 文本上传的地址。  通过该obs地址上传时需设置content-type为text/plain
     *
     * @return $this
     */

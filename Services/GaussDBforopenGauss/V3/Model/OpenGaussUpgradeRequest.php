@@ -21,41 +21,37 @@ class OpenGaussUpgradeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * upgradeType  实例升级类型，包括就地升级，灰度升级，热补丁升级三种，三种升级方式的异同，详见接口描述。  inplace 就地升级  grey 灰度升级  hotfix 热补丁升级。
-    * upgrdeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
+    * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     * targetVersion  实例升级目标版本，非必填。如果未传值则默认升级到当前实例的优选版本。仅热补丁升级方式下支持传入多个值，升级操作为升级自动提交，则实例版本从小到大批量升级，升级操作为升级回退，则实例版本从大到小批量回退。
     * upgradeShardNum  分布式实例灰度升级，滚动升级分片数。分布式实例灰度升级，升级待观察必填。该值不能大于实例未升级分片总数。
     * upgradeAz  主备版实例灰度升级，滚动升级az值，可以支持多az一起升级，az之间以’,’分割。集中式实例灰度升级，升级待观察必填。该值不能填入不属于该实例的az值。
-    * isParallelUpgrade  支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'upgradeType' => 'string',
-            'upgrdeAction' => 'string',
+            'upgradeAction' => 'string',
             'targetVersion' => 'string',
             'upgradeShardNum' => 'int',
-            'upgradeAz' => 'string',
-            'isParallelUpgrade' => 'bool'
+            'upgradeAz' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * upgradeType  实例升级类型，包括就地升级，灰度升级，热补丁升级三种，三种升级方式的异同，详见接口描述。  inplace 就地升级  grey 灰度升级  hotfix 热补丁升级。
-    * upgrdeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
+    * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     * targetVersion  实例升级目标版本，非必填。如果未传值则默认升级到当前实例的优选版本。仅热补丁升级方式下支持传入多个值，升级操作为升级自动提交，则实例版本从小到大批量升级，升级操作为升级回退，则实例版本从大到小批量回退。
     * upgradeShardNum  分布式实例灰度升级，滚动升级分片数。分布式实例灰度升级，升级待观察必填。该值不能大于实例未升级分片总数。
     * upgradeAz  主备版实例灰度升级，滚动升级az值，可以支持多az一起升级，az之间以’,’分割。集中式实例灰度升级，升级待观察必填。该值不能填入不属于该实例的az值。
-    * isParallelUpgrade  支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'upgradeType' => null,
-        'upgrdeAction' => null,
+        'upgradeAction' => null,
         'targetVersion' => null,
         'upgradeShardNum' => 'int32',
-        'upgradeAz' => null,
-        'isParallelUpgrade' => null
+        'upgradeAz' => null
     ];
 
     /**
@@ -82,61 +78,55 @@ class OpenGaussUpgradeRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * upgradeType  实例升级类型，包括就地升级，灰度升级，热补丁升级三种，三种升级方式的异同，详见接口描述。  inplace 就地升级  grey 灰度升级  hotfix 热补丁升级。
-    * upgrdeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
+    * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     * targetVersion  实例升级目标版本，非必填。如果未传值则默认升级到当前实例的优选版本。仅热补丁升级方式下支持传入多个值，升级操作为升级自动提交，则实例版本从小到大批量升级，升级操作为升级回退，则实例版本从大到小批量回退。
     * upgradeShardNum  分布式实例灰度升级，滚动升级分片数。分布式实例灰度升级，升级待观察必填。该值不能大于实例未升级分片总数。
     * upgradeAz  主备版实例灰度升级，滚动升级az值，可以支持多az一起升级，az之间以’,’分割。集中式实例灰度升级，升级待观察必填。该值不能填入不属于该实例的az值。
-    * isParallelUpgrade  支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'upgradeType' => 'upgrade_type',
-            'upgrdeAction' => 'upgrde_action',
+            'upgradeAction' => 'upgrade_action',
             'targetVersion' => 'target_version',
             'upgradeShardNum' => 'upgrade_shard_num',
-            'upgradeAz' => 'upgrade_az',
-            'isParallelUpgrade' => 'is_parallel_upgrade'
+            'upgradeAz' => 'upgrade_az'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * upgradeType  实例升级类型，包括就地升级，灰度升级，热补丁升级三种，三种升级方式的异同，详见接口描述。  inplace 就地升级  grey 灰度升级  hotfix 热补丁升级。
-    * upgrdeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
+    * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     * targetVersion  实例升级目标版本，非必填。如果未传值则默认升级到当前实例的优选版本。仅热补丁升级方式下支持传入多个值，升级操作为升级自动提交，则实例版本从小到大批量升级，升级操作为升级回退，则实例版本从大到小批量回退。
     * upgradeShardNum  分布式实例灰度升级，滚动升级分片数。分布式实例灰度升级，升级待观察必填。该值不能大于实例未升级分片总数。
     * upgradeAz  主备版实例灰度升级，滚动升级az值，可以支持多az一起升级，az之间以’,’分割。集中式实例灰度升级，升级待观察必填。该值不能填入不属于该实例的az值。
-    * isParallelUpgrade  支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
     *
     * @var string[]
     */
     protected static $setters = [
             'upgradeType' => 'setUpgradeType',
-            'upgrdeAction' => 'setUpgrdeAction',
+            'upgradeAction' => 'setUpgradeAction',
             'targetVersion' => 'setTargetVersion',
             'upgradeShardNum' => 'setUpgradeShardNum',
-            'upgradeAz' => 'setUpgradeAz',
-            'isParallelUpgrade' => 'setIsParallelUpgrade'
+            'upgradeAz' => 'setUpgradeAz'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * upgradeType  实例升级类型，包括就地升级，灰度升级，热补丁升级三种，三种升级方式的异同，详见接口描述。  inplace 就地升级  grey 灰度升级  hotfix 热补丁升级。
-    * upgrdeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
+    * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     * targetVersion  实例升级目标版本，非必填。如果未传值则默认升级到当前实例的优选版本。仅热补丁升级方式下支持传入多个值，升级操作为升级自动提交，则实例版本从小到大批量升级，升级操作为升级回退，则实例版本从大到小批量回退。
     * upgradeShardNum  分布式实例灰度升级，滚动升级分片数。分布式实例灰度升级，升级待观察必填。该值不能大于实例未升级分片总数。
     * upgradeAz  主备版实例灰度升级，滚动升级az值，可以支持多az一起升级，az之间以’,’分割。集中式实例灰度升级，升级待观察必填。该值不能填入不属于该实例的az值。
-    * isParallelUpgrade  支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
     *
     * @var string[]
     */
     protected static $getters = [
             'upgradeType' => 'getUpgradeType',
-            'upgrdeAction' => 'getUpgrdeAction',
+            'upgradeAction' => 'getUpgradeAction',
             'targetVersion' => 'getTargetVersion',
             'upgradeShardNum' => 'getUpgradeShardNum',
-            'upgradeAz' => 'getUpgradeAz',
-            'isParallelUpgrade' => 'getIsParallelUpgrade'
+            'upgradeAz' => 'getUpgradeAz'
     ];
 
     /**
@@ -198,11 +188,10 @@ class OpenGaussUpgradeRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['upgradeType'] = isset($data['upgradeType']) ? $data['upgradeType'] : null;
-        $this->container['upgrdeAction'] = isset($data['upgrdeAction']) ? $data['upgrdeAction'] : null;
+        $this->container['upgradeAction'] = isset($data['upgradeAction']) ? $data['upgradeAction'] : null;
         $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
         $this->container['upgradeShardNum'] = isset($data['upgradeShardNum']) ? $data['upgradeShardNum'] : null;
         $this->container['upgradeAz'] = isset($data['upgradeAz']) ? $data['upgradeAz'] : null;
-        $this->container['isParallelUpgrade'] = isset($data['isParallelUpgrade']) ? $data['isParallelUpgrade'] : null;
     }
 
     /**
@@ -255,26 +244,26 @@ class OpenGaussUpgradeRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets upgrdeAction
+    * Gets upgradeAction
     *  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     *
     * @return string|null
     */
-    public function getUpgrdeAction()
+    public function getUpgradeAction()
     {
-        return $this->container['upgrdeAction'];
+        return $this->container['upgradeAction'];
     }
 
     /**
-    * Sets upgrdeAction
+    * Sets upgradeAction
     *
-    * @param string|null $upgrdeAction 实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
+    * @param string|null $upgradeAction 实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。热补丁升级包括升级自动提交，升级回退两种。详见接口描述。  upgradeAutoCommit 升级自动提交  upgrade 升级待观察  commit 提交升级  rollback 升级回退。
     *
     * @return $this
     */
-    public function setUpgrdeAction($upgrdeAction)
+    public function setUpgradeAction($upgradeAction)
     {
-        $this->container['upgrdeAction'] = $upgrdeAction;
+        $this->container['upgradeAction'] = $upgradeAction;
         return $this;
     }
 
@@ -347,30 +336,6 @@ class OpenGaussUpgradeRequest implements ModelInterface, ArrayAccess
     public function setUpgradeAz($upgradeAz)
     {
         $this->container['upgradeAz'] = $upgradeAz;
-        return $this;
-    }
-
-    /**
-    * Gets isParallelUpgrade
-    *  支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
-    *
-    * @return bool|null
-    */
-    public function getIsParallelUpgrade()
-    {
-        return $this->container['isParallelUpgrade'];
-    }
-
-    /**
-    * Sets isParallelUpgrade
-    *
-    * @param bool|null $isParallelUpgrade 支持AZ内并行升级，升级时先升级所有备DN，再并行升级各分片主DN，最后并行升级CN。仅在灰度升级下有效且需要数据库版本大于等于3.200。
-    *
-    * @return $this
-    */
-    public function setIsParallelUpgrade($isParallelUpgrade)
-    {
-        $this->container['isParallelUpgrade'] = $isParallelUpgrade;
         return $this;
     }
 

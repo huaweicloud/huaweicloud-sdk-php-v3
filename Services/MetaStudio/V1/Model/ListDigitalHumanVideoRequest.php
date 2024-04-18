@@ -23,7 +23,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -59,7 +59,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -116,7 +116,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -152,7 +152,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -188,7 +188,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
@@ -473,7 +473,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -485,7 +485,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */

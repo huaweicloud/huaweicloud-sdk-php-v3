@@ -23,9 +23,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * robotId  应用ID。
     * name  应用名称。
+    * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -41,9 +41,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'robotId' => 'string',
             'name' => 'string',
+            'roomId' => 'string',
             'appId' => 'string',
             'appType' => 'int',
-            'concurrency' => 'int',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -59,9 +59,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * robotId  应用ID。
     * name  应用名称。
+    * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -77,9 +77,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'robotId' => null,
         'name' => null,
+        'roomId' => null,
         'appId' => null,
         'appType' => null,
-        'concurrency' => null,
         'language' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -116,9 +116,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * robotId  应用ID。
     * name  应用名称。
+    * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -134,9 +134,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'robotId' => 'robot_id',
             'name' => 'name',
+            'roomId' => 'room_id',
             'appId' => 'app_id',
             'appType' => 'app_type',
-            'concurrency' => 'concurrency',
             'language' => 'language',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -152,9 +152,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * robotId  应用ID。
     * name  应用名称。
+    * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -170,9 +170,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'robotId' => 'setRobotId',
             'name' => 'setName',
+            'roomId' => 'setRoomId',
             'appId' => 'setAppId',
             'appType' => 'setAppType',
-            'concurrency' => 'setConcurrency',
             'language' => 'setLanguage',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -188,9 +188,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * robotId  应用ID。
     * name  应用名称。
+    * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -206,9 +206,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'robotId' => 'getRobotId',
             'name' => 'getName',
+            'roomId' => 'getRoomId',
             'appId' => 'getAppId',
             'appType' => 'getAppType',
-            'concurrency' => 'getConcurrency',
             'language' => 'getLanguage',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -280,9 +280,9 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     {
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
-        $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -314,6 +314,12 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['appId']) && (mb_strlen($this->container['appId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'appId', the character length must be smaller than or equal to 64.";
             }
@@ -325,12 +331,6 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['appType']) && ($this->container['appType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'appType', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] > 512)) {
-                $invalidProperties[] = "invalid value for 'concurrency', must be smaller than or equal to 512.";
-            }
-            if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 1)) {
-                $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
@@ -431,6 +431,30 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets roomId
+    *  智能交互对话房间ID。
+    *
+    * @return string|null
+    */
+    public function getRoomId()
+    {
+        return $this->container['roomId'];
+    }
+
+    /**
+    * Sets roomId
+    *
+    * @param string|null $roomId 智能交互对话房间ID。
+    *
+    * @return $this
+    */
+    public function setRoomId($roomId)
+    {
+        $this->container['roomId'] = $roomId;
+        return $this;
+    }
+
+    /**
     * Gets appId
     *  第三方应用ID。
     *
@@ -475,30 +499,6 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     public function setAppType($appType)
     {
         $this->container['appType'] = $appType;
-        return $this;
-    }
-
-    /**
-    * Gets concurrency
-    *  对话的并发数
-    *
-    * @return int|null
-    */
-    public function getConcurrency()
-    {
-        return $this->container['concurrency'];
-    }
-
-    /**
-    * Sets concurrency
-    *
-    * @param int|null $concurrency 对话的并发数
-    *
-    * @return $this
-    */
-    public function setConcurrency($concurrency)
-    {
-        $this->container['concurrency'] = $concurrency;
         return $this;
     }
 

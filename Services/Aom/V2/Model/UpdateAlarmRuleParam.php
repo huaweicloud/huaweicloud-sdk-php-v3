@@ -310,7 +310,7 @@ class UpdateAlarmRuleParam implements ModelInterface, ArrayAccess
     const PERIOD_60000 = 60000;
     const PERIOD_300000 = 300000;
     const PERIOD_900000 = 900000;
-    const PERIOD_36000000 = 36000000;
+    const PERIOD_3600000 = 3600000;
     const STATISTIC_MAXIMUM = 'maximum';
     const STATISTIC_MINIMUM = 'minimum';
     const STATISTIC_AVERAGE = 'average';
@@ -359,7 +359,7 @@ class UpdateAlarmRuleParam implements ModelInterface, ArrayAccess
             self::PERIOD_60000,
             self::PERIOD_300000,
             self::PERIOD_900000,
-            self::PERIOD_36000000,
+            self::PERIOD_3600000,
         ];
     }
 

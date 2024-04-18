@@ -23,9 +23,10 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * roomId  智能交互对话房间ID。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'roomId' => 'string'
     ];
 
     /**
@@ -43,9 +45,10 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * roomId  智能交互对话房间ID。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
         'xProjectId' => null,
         'xAppUserId' => null,
         'offset' => 'uint32',
-        'limit' => 'uint32'
+        'limit' => 'uint32',
+        'roomId' => null
     ];
 
     /**
@@ -84,9 +88,10 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * roomId  智能交互对话房间ID。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'roomId' => 'room_id'
     ];
 
     /**
@@ -104,9 +110,10 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * roomId  智能交互对话房间ID。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'roomId' => 'setRoomId'
     ];
 
     /**
@@ -124,9 +132,10 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
+    * roomId  智能交互对话房间ID。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'roomId' => 'getRoomId'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
     }
 
     /**
@@ -248,6 +259,12 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -337,7 +354,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -349,7 +366,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */
@@ -404,6 +421,30 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets roomId
+    *  智能交互对话房间ID。
+    *
+    * @return string|null
+    */
+    public function getRoomId()
+    {
+        return $this->container['roomId'];
+    }
+
+    /**
+    * Sets roomId
+    *
+    * @param string|null $roomId 智能交互对话房间ID。
+    *
+    * @return $this
+    */
+    public function setRoomId($roomId)
+    {
+        $this->container['roomId'] = $roomId;
         return $this;
     }
 

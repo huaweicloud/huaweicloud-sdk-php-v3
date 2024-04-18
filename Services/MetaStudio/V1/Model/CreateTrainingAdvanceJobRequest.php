@@ -20,7 +20,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -191,7 +191,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -203,7 +203,7 @@ class CreateTrainingAdvanceJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */

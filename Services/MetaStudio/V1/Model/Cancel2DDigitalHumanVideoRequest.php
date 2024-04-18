@@ -24,7 +24,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -347,7 +347,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class Cancel2DDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */

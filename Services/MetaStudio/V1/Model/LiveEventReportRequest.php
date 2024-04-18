@@ -25,7 +25,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
     * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
@@ -53,7 +53,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
     * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
@@ -102,7 +102,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
     * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
@@ -130,7 +130,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
     * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
@@ -158,7 +158,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
     * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
@@ -447,7 +447,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -459,7 +459,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */

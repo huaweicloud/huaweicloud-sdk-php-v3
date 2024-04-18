@@ -21,7 +21,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  
+    * body  商品数据列表
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  
+    * body  商品数据列表
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  
+    * body  商品数据列表
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  
+    * body  商品数据列表
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  
+    * body  商品数据列表
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets body
-    *  
+    *  商品数据列表
     *
     * @return \HuaweiCloud\SDK\Hss\V5\Model\ResourceProductDataObjectInfo[]|null
     */
@@ -187,7 +187,7 @@ class ShowProductdataOfferingInfosResponse implements ModelInterface, ArrayAcces
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceProductDataObjectInfo[]|null $body 
+    * @param \HuaweiCloud\SDK\Hss\V5\Model\ResourceProductDataObjectInfo[]|null $body 商品数据列表
     *
     * @return $this
     */

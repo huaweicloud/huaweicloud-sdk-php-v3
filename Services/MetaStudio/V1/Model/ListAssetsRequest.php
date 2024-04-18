@@ -20,10 +20,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
@@ -41,14 +40,13 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
-    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
-    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xRealIp' => 'string',
             'authorization' => 'string',
             'xSdkDate' => 'string',
             'xAppUserId' => 'string',
@@ -76,10 +74,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
@@ -97,14 +94,13 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
-    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
-    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xRealIp' => null,
         'authorization' => null,
         'xSdkDate' => null,
         'xAppUserId' => null,
@@ -153,10 +149,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
@@ -174,14 +169,13 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
-    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
-    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xRealIp' => 'X-REAL-IP',
             'authorization' => 'Authorization',
             'xSdkDate' => 'X-Sdk-Date',
             'xAppUserId' => 'X-App-UserId',
@@ -209,10 +203,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
@@ -230,14 +223,13 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
-    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
-    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
     protected static $setters = [
-            'xRealIp' => 'setXRealIp',
             'authorization' => 'setAuthorization',
             'xSdkDate' => 'setXSdkDate',
             'xAppUserId' => 'setXAppUserId',
@@ -265,10 +257,9 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xRealIp  客户端IP
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
     * name  按名称模糊查询。
@@ -286,14 +277,13 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
     * actionEditable  动作是否可编辑。仅在分身数字人模型查询时有效。
-    * isMovable  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
-    * voiceProvider  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
+    * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
     *
     * @var string[]
     */
     protected static $getters = [
-            'xRealIp' => 'getXRealIp',
             'authorization' => 'getAuthorization',
             'xSdkDate' => 'getXSdkDate',
             'xAppUserId' => 'getXAppUserId',
@@ -409,7 +399,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xRealIp'] = isset($data['xRealIp']) ? $data['xRealIp'] : null;
         $this->container['authorization'] = isset($data['authorization']) ? $data['authorization'] : null;
         $this->container['xSdkDate'] = isset($data['xSdkDate']) ? $data['xSdkDate'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
@@ -443,12 +432,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['xRealIp']) && (mb_strlen($this->container['xRealIp']) > 16384)) {
-                $invalidProperties[] = "invalid value for 'xRealIp', the character length must be smaller than or equal to 16384.";
-            }
-            if (!is_null($this->container['xRealIp']) && (mb_strlen($this->container['xRealIp']) < 1)) {
-                $invalidProperties[] = "invalid value for 'xRealIp', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['authorization']) && (mb_strlen($this->container['authorization']) > 256)) {
                 $invalidProperties[] = "invalid value for 'authorization', the character length must be smaller than or equal to 256.";
             }
@@ -594,30 +577,6 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets xRealIp
-    *  客户端IP
-    *
-    * @return string|null
-    */
-    public function getXRealIp()
-    {
-        return $this->container['xRealIp'];
-    }
-
-    /**
-    * Sets xRealIp
-    *
-    * @param string|null $xRealIp 客户端IP
-    *
-    * @return $this
-    */
-    public function setXRealIp($xRealIp)
-    {
-        $this->container['xRealIp'] = $xRealIp;
-        return $this;
-    }
-
-    /**
     * Gets authorization
     *  使用AK/SK方式认证时必选，携带的鉴权信息。
     *
@@ -667,7 +626,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -679,7 +638,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */
@@ -1099,7 +1058,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isMovable
-    *  分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    *  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     *
     * @return bool|null
     */
@@ -1111,7 +1070,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isMovable
     *
-    * @param bool|null $isMovable 分身数字人是否资产走动。仅在分身数字人模型查询时有效。
+    * @param bool|null $isMovable 分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     *
     * @return $this
     */
@@ -1123,7 +1082,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets voiceProvider
-    *  可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    *  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     *
     * @return string|null
     */
@@ -1135,7 +1094,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets voiceProvider
     *
-    * @param string|null $voiceProvider 可取值HUAWEI_METASTUDIO, MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
+    * @param string|null $voiceProvider 取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  语言检测状态
+    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  语言检测状态
+    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  语言检测状态
+    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  语言检测状态
+    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  语言检测状态
+    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @var string[]
     */
@@ -198,7 +198,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  语言检测状态
+    *  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @return string|null
     */
@@ -210,7 +210,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 语言检测状态
+    * @param string|null $result 语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
     *
     * @return $this
     */

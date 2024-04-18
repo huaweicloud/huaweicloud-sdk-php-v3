@@ -172,6 +172,12 @@ class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
         if ($this->container['targetLanguage'] === null) {
             $invalidProperties[] = "'targetLanguage' can't be null";
         }
+            if ((mb_strlen($this->container['targetLanguage']) > 64)) {
+                $invalidProperties[] = "invalid value for 'targetLanguage', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['targetLanguage']) < 0)) {
+                $invalidProperties[] = "invalid value for 'targetLanguage', the character length must be bigger than or equal to 0.";
+            }
         if ($this->container['shootScript'] === null) {
             $invalidProperties[] = "'shootScript' can't be null";
         }

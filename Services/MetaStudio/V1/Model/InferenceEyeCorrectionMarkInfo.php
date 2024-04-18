@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class InstancesStatisticsResponseBodyInstancesStatistics implements ModelInterface, ArrayAccess
+class InferenceEyeCorrectionMarkInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class InstancesStatisticsResponseBodyInstancesStatistics implements ModelInterfa
     *
     * @var string
     */
-    protected static $openAPIModelName = 'InstancesStatisticsResponseBody_instances_statistics';
+    protected static $openAPIModelName = 'InferenceEyeCorrectionMarkInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  实例状态
-    * count  实例数量
+    * eyeCorrectionStartTime  选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
+    * eyeCorrectionEndTime  选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string',
-            'count' => 'int'
+            'eyeCorrectionStartTime' => 'string',
+            'eyeCorrectionEndTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  实例状态
-    * count  实例数量
+    * eyeCorrectionStartTime  选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
+    * eyeCorrectionEndTime  选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'status' => null,
-        'count' => null
+        'eyeCorrectionStartTime' => null,
+        'eyeCorrectionEndTime' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class InstancesStatisticsResponseBodyInstancesStatistics implements ModelInterfa
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  实例状态
-    * count  实例数量
+    * eyeCorrectionStartTime  选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
+    * eyeCorrectionEndTime  选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'status' => 'status',
-            'count' => 'count'
+            'eyeCorrectionStartTime' => 'eye_correction_start_time',
+            'eyeCorrectionEndTime' => 'eye_correction_end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  实例状态
-    * count  实例数量
+    * eyeCorrectionStartTime  选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
+    * eyeCorrectionEndTime  选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $setters = [
-            'status' => 'setStatus',
-            'count' => 'setCount'
+            'eyeCorrectionStartTime' => 'setEyeCorrectionStartTime',
+            'eyeCorrectionEndTime' => 'setEyeCorrectionEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  实例状态
-    * count  实例数量
+    * eyeCorrectionStartTime  选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
+    * eyeCorrectionEndTime  选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $getters = [
-            'status' => 'getStatus',
-            'count' => 'getCount'
+            'eyeCorrectionStartTime' => 'getEyeCorrectionStartTime',
+            'eyeCorrectionEndTime' => 'getEyeCorrectionEndTime'
     ];
 
     /**
@@ -157,8 +157,8 @@ class InstancesStatisticsResponseBodyInstancesStatistics implements ModelInterfa
     */
     public function __construct(array $data = null)
     {
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['eyeCorrectionStartTime'] = isset($data['eyeCorrectionStartTime']) ? $data['eyeCorrectionStartTime'] : null;
+        $this->container['eyeCorrectionEndTime'] = isset($data['eyeCorrectionEndTime']) ? $data['eyeCorrectionEndTime'] : null;
     }
 
     /**
@@ -169,12 +169,18 @@ class InstancesStatisticsResponseBodyInstancesStatistics implements ModelInterfa
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        if ($this->container['count'] === null) {
-            $invalidProperties[] = "'count' can't be null";
-        }
+            if (!is_null($this->container['eyeCorrectionStartTime']) && (mb_strlen($this->container['eyeCorrectionStartTime']) > 12)) {
+                $invalidProperties[] = "invalid value for 'eyeCorrectionStartTime', the character length must be smaller than or equal to 12.";
+            }
+            if (!is_null($this->container['eyeCorrectionStartTime']) && (mb_strlen($this->container['eyeCorrectionStartTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'eyeCorrectionStartTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['eyeCorrectionEndTime']) && (mb_strlen($this->container['eyeCorrectionEndTime']) > 12)) {
+                $invalidProperties[] = "invalid value for 'eyeCorrectionEndTime', the character length must be smaller than or equal to 12.";
+            }
+            if (!is_null($this->container['eyeCorrectionEndTime']) && (mb_strlen($this->container['eyeCorrectionEndTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'eyeCorrectionEndTime', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -190,50 +196,50 @@ class InstancesStatisticsResponseBodyInstancesStatistics implements ModelInterfa
     }
 
     /**
-    * Gets status
-    *  实例状态
+    * Gets eyeCorrectionStartTime
+    *  选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
     *
-    * @return string
+    * @return string|null
     */
-    public function getStatus()
+    public function getEyeCorrectionStartTime()
     {
-        return $this->container['status'];
+        return $this->container['eyeCorrectionStartTime'];
     }
 
     /**
-    * Sets status
+    * Sets eyeCorrectionStartTime
     *
-    * @param string $status 实例状态
+    * @param string|null $eyeCorrectionStartTime 选取推理数据预处理眼神矫正起始时间。格式：“HH:MM:SS.mmm”。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setEyeCorrectionStartTime($eyeCorrectionStartTime)
     {
-        $this->container['status'] = $status;
+        $this->container['eyeCorrectionStartTime'] = $eyeCorrectionStartTime;
         return $this;
     }
 
     /**
-    * Gets count
-    *  实例数量
+    * Gets eyeCorrectionEndTime
+    *  选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
-    * @return int
+    * @return string|null
     */
-    public function getCount()
+    public function getEyeCorrectionEndTime()
     {
-        return $this->container['count'];
+        return $this->container['eyeCorrectionEndTime'];
     }
 
     /**
-    * Sets count
+    * Sets eyeCorrectionEndTime
     *
-    * @param int $count 实例数量
+    * @param string|null $eyeCorrectionEndTime 选取推理数据预处理眼神矫正结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @return $this
     */
-    public function setCount($count)
+    public function setEyeCorrectionEndTime($eyeCorrectionEndTime)
     {
-        $this->container['count'] = $count;
+        $this->container['eyeCorrectionEndTime'] = $eyeCorrectionEndTime;
         return $this;
     }
 

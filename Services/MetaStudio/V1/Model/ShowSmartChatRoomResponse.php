@@ -345,13 +345,10 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['robotId'] === null) {
-            $invalidProperties[] = "'robotId' can't be null";
-        }
-            if ((mb_strlen($this->container['robotId']) > 64)) {
+            if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['robotId']) < 1)) {
+            if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] > 1024)) {
@@ -522,7 +519,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * Gets robotId
     *  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
-    * @return string
+    * @return string|null
     */
     public function getRobotId()
     {
@@ -532,7 +529,7 @@ class ShowSmartChatRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets robotId
     *
-    * @param string $robotId 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
+    * @param string|null $robotId 机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
     *
     * @return $this
     */

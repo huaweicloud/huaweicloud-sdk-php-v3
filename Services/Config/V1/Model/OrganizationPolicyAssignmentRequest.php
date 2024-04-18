@@ -186,8 +186,8 @@ class OrganizationPolicyAssignmentRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
         return $invalidProperties;
     }

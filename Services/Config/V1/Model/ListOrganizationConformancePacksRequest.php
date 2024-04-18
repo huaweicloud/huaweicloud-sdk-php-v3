@@ -238,8 +238,8 @@ class ListOrganizationConformancePacksRequest implements ModelInterface, ArrayAc
             if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['conformancePackName']) && !preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['conformancePackName'])) {
-                $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['conformancePackName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['conformancePackName'])) {
+                $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
         return $invalidProperties;
     }

@@ -34,6 +34,15 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
     * targetInstance  targetInstance
     * createdAt  迁移任务创建时间。
     * updatedAt  迁移任务完成时间。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
+    * tenantVpcId  租户VPC ID。
+    * tenantSubnetId  租户子网ID。
+    * tenantSecurityGroupId  租户安全组ID。
+    * bandwidthLimitMb  带宽限制速度。
+    * taskStatus  任务状态。
     *
     * @var string[]
     */
@@ -50,7 +59,16 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
             'sourceInstance' => '\HuaweiCloud\SDK\Dcs\V2\Model\SourceInstanceBody',
             'targetInstance' => '\HuaweiCloud\SDK\Dcs\V2\Model\TargetInstanceBody',
             'createdAt' => 'string',
-            'updatedAt' => 'string'
+            'updatedAt' => 'string',
+            'releasedAt' => 'string',
+            'version' => 'string',
+            'resumeMode' => 'string',
+            'supportedFeatures' => 'string[]',
+            'tenantVpcId' => 'string',
+            'tenantSubnetId' => 'string',
+            'tenantSecurityGroupId' => 'string',
+            'bandwidthLimitMb' => 'string',
+            'taskStatus' => 'string'
     ];
 
     /**
@@ -68,6 +86,15 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
     * targetInstance  targetInstance
     * createdAt  迁移任务创建时间。
     * updatedAt  迁移任务完成时间。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
+    * tenantVpcId  租户VPC ID。
+    * tenantSubnetId  租户子网ID。
+    * tenantSecurityGroupId  租户安全组ID。
+    * bandwidthLimitMb  带宽限制速度。
+    * taskStatus  任务状态。
     *
     * @var string[]
     */
@@ -84,7 +111,16 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
         'sourceInstance' => null,
         'targetInstance' => null,
         'createdAt' => null,
-        'updatedAt' => null
+        'updatedAt' => null,
+        'releasedAt' => null,
+        'version' => null,
+        'resumeMode' => null,
+        'supportedFeatures' => null,
+        'tenantVpcId' => null,
+        'tenantSubnetId' => null,
+        'tenantSecurityGroupId' => null,
+        'bandwidthLimitMb' => null,
+        'taskStatus' => null
     ];
 
     /**
@@ -123,6 +159,15 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
     * targetInstance  targetInstance
     * createdAt  迁移任务创建时间。
     * updatedAt  迁移任务完成时间。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
+    * tenantVpcId  租户VPC ID。
+    * tenantSubnetId  租户子网ID。
+    * tenantSecurityGroupId  租户安全组ID。
+    * bandwidthLimitMb  带宽限制速度。
+    * taskStatus  任务状态。
     *
     * @var string[]
     */
@@ -139,7 +184,16 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
             'sourceInstance' => 'source_instance',
             'targetInstance' => 'target_instance',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'releasedAt' => 'released_at',
+            'version' => 'version',
+            'resumeMode' => 'resume_mode',
+            'supportedFeatures' => 'supported_features',
+            'tenantVpcId' => 'tenant_vpc_id',
+            'tenantSubnetId' => 'tenant_subnet_id',
+            'tenantSecurityGroupId' => 'tenant_security_group_id',
+            'bandwidthLimitMb' => 'bandwidth_limit_mb',
+            'taskStatus' => 'task_status'
     ];
 
     /**
@@ -157,6 +211,15 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
     * targetInstance  targetInstance
     * createdAt  迁移任务创建时间。
     * updatedAt  迁移任务完成时间。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
+    * tenantVpcId  租户VPC ID。
+    * tenantSubnetId  租户子网ID。
+    * tenantSecurityGroupId  租户安全组ID。
+    * bandwidthLimitMb  带宽限制速度。
+    * taskStatus  任务状态。
     *
     * @var string[]
     */
@@ -173,7 +236,16 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
             'sourceInstance' => 'setSourceInstance',
             'targetInstance' => 'setTargetInstance',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'releasedAt' => 'setReleasedAt',
+            'version' => 'setVersion',
+            'resumeMode' => 'setResumeMode',
+            'supportedFeatures' => 'setSupportedFeatures',
+            'tenantVpcId' => 'setTenantVpcId',
+            'tenantSubnetId' => 'setTenantSubnetId',
+            'tenantSecurityGroupId' => 'setTenantSecurityGroupId',
+            'bandwidthLimitMb' => 'setBandwidthLimitMb',
+            'taskStatus' => 'setTaskStatus'
     ];
 
     /**
@@ -191,6 +263,15 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
     * targetInstance  targetInstance
     * createdAt  迁移任务创建时间。
     * updatedAt  迁移任务完成时间。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
+    * tenantVpcId  租户VPC ID。
+    * tenantSubnetId  租户子网ID。
+    * tenantSecurityGroupId  租户安全组ID。
+    * bandwidthLimitMb  带宽限制速度。
+    * taskStatus  任务状态。
     *
     * @var string[]
     */
@@ -207,7 +288,16 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
             'sourceInstance' => 'getSourceInstance',
             'targetInstance' => 'getTargetInstance',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'releasedAt' => 'getReleasedAt',
+            'version' => 'getVersion',
+            'resumeMode' => 'getResumeMode',
+            'supportedFeatures' => 'getSupportedFeatures',
+            'tenantVpcId' => 'getTenantVpcId',
+            'tenantSubnetId' => 'getTenantSubnetId',
+            'tenantSecurityGroupId' => 'getTenantSecurityGroupId',
+            'bandwidthLimitMb' => 'getBandwidthLimitMb',
+            'taskStatus' => 'getTaskStatus'
     ];
 
     /**
@@ -345,6 +435,15 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
         $this->container['targetInstance'] = isset($data['targetInstance']) ? $data['targetInstance'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['releasedAt'] = isset($data['releasedAt']) ? $data['releasedAt'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['resumeMode'] = isset($data['resumeMode']) ? $data['resumeMode'] : null;
+        $this->container['supportedFeatures'] = isset($data['supportedFeatures']) ? $data['supportedFeatures'] : null;
+        $this->container['tenantVpcId'] = isset($data['tenantVpcId']) ? $data['tenantVpcId'] : null;
+        $this->container['tenantSubnetId'] = isset($data['tenantSubnetId']) ? $data['tenantSubnetId'] : null;
+        $this->container['tenantSecurityGroupId'] = isset($data['tenantSecurityGroupId']) ? $data['tenantSecurityGroupId'] : null;
+        $this->container['bandwidthLimitMb'] = isset($data['bandwidthLimitMb']) ? $data['bandwidthLimitMb'] : null;
+        $this->container['taskStatus'] = isset($data['taskStatus']) ? $data['taskStatus'] : null;
     }
 
     /**
@@ -710,6 +809,222 @@ class StopMigrationTaskResponse implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets releasedAt
+    *  迁移机释放时间。
+    *
+    * @return string|null
+    */
+    public function getReleasedAt()
+    {
+        return $this->container['releasedAt'];
+    }
+
+    /**
+    * Sets releasedAt
+    *
+    * @param string|null $releasedAt 迁移机释放时间。
+    *
+    * @return $this
+    */
+    public function setReleasedAt($releasedAt)
+    {
+        $this->container['releasedAt'] = $releasedAt;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  版本。
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 版本。
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets resumeMode
+    *  操作模式，分为auto和manual。
+    *
+    * @return string|null
+    */
+    public function getResumeMode()
+    {
+        return $this->container['resumeMode'];
+    }
+
+    /**
+    * Sets resumeMode
+    *
+    * @param string|null $resumeMode 操作模式，分为auto和manual。
+    *
+    * @return $this
+    */
+    public function setResumeMode($resumeMode)
+    {
+        $this->container['resumeMode'] = $resumeMode;
+        return $this;
+    }
+
+    /**
+    * Gets supportedFeatures
+    *  支持的特性。
+    *
+    * @return string[]|null
+    */
+    public function getSupportedFeatures()
+    {
+        return $this->container['supportedFeatures'];
+    }
+
+    /**
+    * Sets supportedFeatures
+    *
+    * @param string[]|null $supportedFeatures 支持的特性。
+    *
+    * @return $this
+    */
+    public function setSupportedFeatures($supportedFeatures)
+    {
+        $this->container['supportedFeatures'] = $supportedFeatures;
+        return $this;
+    }
+
+    /**
+    * Gets tenantVpcId
+    *  租户VPC ID。
+    *
+    * @return string|null
+    */
+    public function getTenantVpcId()
+    {
+        return $this->container['tenantVpcId'];
+    }
+
+    /**
+    * Sets tenantVpcId
+    *
+    * @param string|null $tenantVpcId 租户VPC ID。
+    *
+    * @return $this
+    */
+    public function setTenantVpcId($tenantVpcId)
+    {
+        $this->container['tenantVpcId'] = $tenantVpcId;
+        return $this;
+    }
+
+    /**
+    * Gets tenantSubnetId
+    *  租户子网ID。
+    *
+    * @return string|null
+    */
+    public function getTenantSubnetId()
+    {
+        return $this->container['tenantSubnetId'];
+    }
+
+    /**
+    * Sets tenantSubnetId
+    *
+    * @param string|null $tenantSubnetId 租户子网ID。
+    *
+    * @return $this
+    */
+    public function setTenantSubnetId($tenantSubnetId)
+    {
+        $this->container['tenantSubnetId'] = $tenantSubnetId;
+        return $this;
+    }
+
+    /**
+    * Gets tenantSecurityGroupId
+    *  租户安全组ID。
+    *
+    * @return string|null
+    */
+    public function getTenantSecurityGroupId()
+    {
+        return $this->container['tenantSecurityGroupId'];
+    }
+
+    /**
+    * Sets tenantSecurityGroupId
+    *
+    * @param string|null $tenantSecurityGroupId 租户安全组ID。
+    *
+    * @return $this
+    */
+    public function setTenantSecurityGroupId($tenantSecurityGroupId)
+    {
+        $this->container['tenantSecurityGroupId'] = $tenantSecurityGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets bandwidthLimitMb
+    *  带宽限制速度。
+    *
+    * @return string|null
+    */
+    public function getBandwidthLimitMb()
+    {
+        return $this->container['bandwidthLimitMb'];
+    }
+
+    /**
+    * Sets bandwidthLimitMb
+    *
+    * @param string|null $bandwidthLimitMb 带宽限制速度。
+    *
+    * @return $this
+    */
+    public function setBandwidthLimitMb($bandwidthLimitMb)
+    {
+        $this->container['bandwidthLimitMb'] = $bandwidthLimitMb;
+        return $this;
+    }
+
+    /**
+    * Gets taskStatus
+    *  任务状态。
+    *
+    * @return string|null
+    */
+    public function getTaskStatus()
+    {
+        return $this->container['taskStatus'];
+    }
+
+    /**
+    * Sets taskStatus
+    *
+    * @param string|null $taskStatus 任务状态。
+    *
+    * @return $this
+    */
+    public function setTaskStatus($taskStatus)
+    {
+        $this->container['taskStatus'] = $taskStatus;
         return $this;
     }
 

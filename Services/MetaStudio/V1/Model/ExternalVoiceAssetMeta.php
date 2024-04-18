@@ -20,7 +20,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     * mobvoiVoiceMeta  mobvoiVoiceMeta
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     * mobvoiVoiceMeta  mobvoiVoiceMeta
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     * mobvoiVoiceMeta  mobvoiVoiceMeta
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     * mobvoiVoiceMeta  mobvoiVoiceMeta
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     * mobvoiVoiceMeta  mobvoiVoiceMeta
     *
     * @var string[]
@@ -219,7 +219,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    *  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     *
     * @return string
     */
@@ -231,7 +231,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string $provider 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: EI TTS * MOBVOI: 出门问问 TTSS
+    * @param string $provider 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
     *
     * @return $this
     */

@@ -27,6 +27,9 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
     * sceneMeta  sceneMeta
     * materialMeta  materialMeta
     * humanModel2dMeta  humanModel2dMeta
+    * imageMeta  imageMeta
+    * videoMeta  videoMeta
+    * audioMeta  audioMeta
     *
     * @var string[]
     */
@@ -37,7 +40,10 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
             'animationMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AnimationAssetMeta',
             'sceneMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SceneAssetMeta',
             'materialMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\MaterialAssetMeta',
-            'humanModel2dMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HumanModel2DAssetMeta'
+            'humanModel2dMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HumanModel2DAssetMeta',
+            'imageMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ImageAssetMeta',
+            'videoMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoAssetMeta',
+            'audioMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AudioAssetMeta'
     ];
 
     /**
@@ -49,6 +55,9 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
     * sceneMeta  sceneMeta
     * materialMeta  materialMeta
     * humanModel2dMeta  humanModel2dMeta
+    * imageMeta  imageMeta
+    * videoMeta  videoMeta
+    * audioMeta  audioMeta
     *
     * @var string[]
     */
@@ -59,7 +68,10 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
         'animationMeta' => null,
         'sceneMeta' => null,
         'materialMeta' => null,
-        'humanModel2dMeta' => null
+        'humanModel2dMeta' => null,
+        'imageMeta' => null,
+        'videoMeta' => null,
+        'audioMeta' => null
     ];
 
     /**
@@ -92,6 +104,9 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
     * sceneMeta  sceneMeta
     * materialMeta  materialMeta
     * humanModel2dMeta  humanModel2dMeta
+    * imageMeta  imageMeta
+    * videoMeta  videoMeta
+    * audioMeta  audioMeta
     *
     * @var string[]
     */
@@ -102,7 +117,10 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
             'animationMeta' => 'animation_meta',
             'sceneMeta' => 'scene_meta',
             'materialMeta' => 'material_meta',
-            'humanModel2dMeta' => 'human_model_2d_meta'
+            'humanModel2dMeta' => 'human_model_2d_meta',
+            'imageMeta' => 'image_meta',
+            'videoMeta' => 'video_meta',
+            'audioMeta' => 'audio_meta'
     ];
 
     /**
@@ -114,6 +132,9 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
     * sceneMeta  sceneMeta
     * materialMeta  materialMeta
     * humanModel2dMeta  humanModel2dMeta
+    * imageMeta  imageMeta
+    * videoMeta  videoMeta
+    * audioMeta  audioMeta
     *
     * @var string[]
     */
@@ -124,7 +145,10 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
             'animationMeta' => 'setAnimationMeta',
             'sceneMeta' => 'setSceneMeta',
             'materialMeta' => 'setMaterialMeta',
-            'humanModel2dMeta' => 'setHumanModel2dMeta'
+            'humanModel2dMeta' => 'setHumanModel2dMeta',
+            'imageMeta' => 'setImageMeta',
+            'videoMeta' => 'setVideoMeta',
+            'audioMeta' => 'setAudioMeta'
     ];
 
     /**
@@ -136,6 +160,9 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
     * sceneMeta  sceneMeta
     * materialMeta  materialMeta
     * humanModel2dMeta  humanModel2dMeta
+    * imageMeta  imageMeta
+    * videoMeta  videoMeta
+    * audioMeta  audioMeta
     *
     * @var string[]
     */
@@ -146,7 +173,10 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
             'animationMeta' => 'getAnimationMeta',
             'sceneMeta' => 'getSceneMeta',
             'materialMeta' => 'getMaterialMeta',
-            'humanModel2dMeta' => 'getHumanModel2dMeta'
+            'humanModel2dMeta' => 'getHumanModel2dMeta',
+            'imageMeta' => 'getImageMeta',
+            'videoMeta' => 'getVideoMeta',
+            'audioMeta' => 'getAudioMeta'
     ];
 
     /**
@@ -214,6 +244,9 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
         $this->container['sceneMeta'] = isset($data['sceneMeta']) ? $data['sceneMeta'] : null;
         $this->container['materialMeta'] = isset($data['materialMeta']) ? $data['materialMeta'] : null;
         $this->container['humanModel2dMeta'] = isset($data['humanModel2dMeta']) ? $data['humanModel2dMeta'] : null;
+        $this->container['imageMeta'] = isset($data['imageMeta']) ? $data['imageMeta'] : null;
+        $this->container['videoMeta'] = isset($data['videoMeta']) ? $data['videoMeta'] : null;
+        $this->container['audioMeta'] = isset($data['audioMeta']) ? $data['audioMeta'] : null;
     }
 
     /**
@@ -403,6 +436,78 @@ class AssetExtraMeta implements ModelInterface, ArrayAccess
     public function setHumanModel2dMeta($humanModel2dMeta)
     {
         $this->container['humanModel2dMeta'] = $humanModel2dMeta;
+        return $this;
+    }
+
+    /**
+    * Gets imageMeta
+    *  imageMeta
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ImageAssetMeta|null
+    */
+    public function getImageMeta()
+    {
+        return $this->container['imageMeta'];
+    }
+
+    /**
+    * Sets imageMeta
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ImageAssetMeta|null $imageMeta imageMeta
+    *
+    * @return $this
+    */
+    public function setImageMeta($imageMeta)
+    {
+        $this->container['imageMeta'] = $imageMeta;
+        return $this;
+    }
+
+    /**
+    * Gets videoMeta
+    *  videoMeta
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\VideoAssetMeta|null
+    */
+    public function getVideoMeta()
+    {
+        return $this->container['videoMeta'];
+    }
+
+    /**
+    * Sets videoMeta
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VideoAssetMeta|null $videoMeta videoMeta
+    *
+    * @return $this
+    */
+    public function setVideoMeta($videoMeta)
+    {
+        $this->container['videoMeta'] = $videoMeta;
+        return $this;
+    }
+
+    /**
+    * Gets audioMeta
+    *  audioMeta
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioAssetMeta|null
+    */
+    public function getAudioMeta()
+    {
+        return $this->container['audioMeta'];
+    }
+
+    /**
+    * Sets audioMeta
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioAssetMeta|null $audioMeta audioMeta
+    *
+    * @return $this
+    */
+    public function setAudioMeta($audioMeta)
+    {
+        $this->container['audioMeta'] = $audioMeta;
         return $this;
     }
 

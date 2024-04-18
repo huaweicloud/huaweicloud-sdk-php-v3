@@ -36,7 +36,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
-    * coverUrl  直播间封面图UR
+    * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * xRequestId  xRequestId
@@ -82,7 +82,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
-    * coverUrl  直播间封面图UR
+    * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * xRequestId  xRequestId
@@ -149,7 +149,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
-    * coverUrl  直播间封面图UR
+    * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * xRequestId  xRequestId
@@ -195,7 +195,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
-    * coverUrl  直播间封面图UR
+    * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * xRequestId  xRequestId
@@ -241,7 +241,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * liveEventCallbackConfig  liveEventCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
-    * coverUrl  直播间封面图UR
+    * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
     * xRequestId  xRequestId
@@ -840,7 +840,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets coverUrl
-    *  直播间封面图UR
+    *  直播间封面图URL
     *
     * @return string|null
     */
@@ -852,7 +852,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets coverUrl
     *
-    * @param string|null $coverUrl 直播间封面图UR
+    * @param string|null $coverUrl 直播间封面图URL
     *
     * @return $this
     */

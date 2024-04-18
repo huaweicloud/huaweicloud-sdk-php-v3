@@ -28,6 +28,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     * deploymentId  部署ID。
     * createdAt  合规规则包创建时间。
     * updatedAt  合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
+    * agencyName  委托名称
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
@@ -43,6 +46,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
             'deploymentId' => 'string',
             'createdAt' => 'string',
             'updatedAt' => 'string',
+            'templateKey' => 'string',
+            'templateUri' => 'string',
+            'agencyName' => 'string',
             'status' => 'string',
             'errorMessage' => 'string',
             'varsStructure' => '\HuaweiCloud\SDK\Config\V1\Model\VarsStructure[]',
@@ -58,6 +64,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     * deploymentId  部署ID。
     * createdAt  合规规则包创建时间。
     * updatedAt  合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
+    * agencyName  委托名称
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
@@ -73,6 +82,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
         'deploymentId' => null,
         'createdAt' => null,
         'updatedAt' => null,
+        'templateKey' => null,
+        'templateUri' => null,
+        'agencyName' => null,
         'status' => null,
         'errorMessage' => null,
         'varsStructure' => null,
@@ -109,6 +121,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     * deploymentId  部署ID。
     * createdAt  合规规则包创建时间。
     * updatedAt  合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
+    * agencyName  委托名称
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
@@ -124,6 +139,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
             'deploymentId' => 'deployment_id',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
+            'templateKey' => 'template_key',
+            'templateUri' => 'template_uri',
+            'agencyName' => 'agency_name',
             'status' => 'status',
             'errorMessage' => 'error_message',
             'varsStructure' => 'vars_structure',
@@ -139,6 +157,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     * deploymentId  部署ID。
     * createdAt  合规规则包创建时间。
     * updatedAt  合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
+    * agencyName  委托名称
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
@@ -154,6 +175,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
             'deploymentId' => 'setDeploymentId',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
+            'templateKey' => 'setTemplateKey',
+            'templateUri' => 'setTemplateUri',
+            'agencyName' => 'setAgencyName',
             'status' => 'setStatus',
             'errorMessage' => 'setErrorMessage',
             'varsStructure' => 'setVarsStructure',
@@ -169,6 +193,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     * deploymentId  部署ID。
     * createdAt  合规规则包创建时间。
     * updatedAt  合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
+    * agencyName  委托名称
     * status  合规规则包部署状态。
     * errorMessage  部署或删除合规规则包错误时的错误信息
     * varsStructure  合规规则包参数。
@@ -184,6 +211,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
             'deploymentId' => 'getDeploymentId',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
+            'templateKey' => 'getTemplateKey',
+            'templateUri' => 'getTemplateUri',
+            'agencyName' => 'getAgencyName',
             'status' => 'getStatus',
             'errorMessage' => 'getErrorMessage',
             'varsStructure' => 'getVarsStructure',
@@ -238,6 +268,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     const STATUS_ROLLBACK_SUCCESSFUL = 'ROLLBACK_SUCCESSFUL';
     const STATUS_ROLLBACK_IN_PROGRESS = 'ROLLBACK_IN_PROGRESS';
     const STATUS_ROLLBACK_FAILED = 'ROLLBACK_FAILED';
+    const STATUS_UPDATE_SUCCESSFUL = 'UPDATE_SUCCESSFUL';
+    const STATUS_UPDATE_IN_PROGRESS = 'UPDATE_IN_PROGRESS';
+    const STATUS_UPDATE_FAILED = 'UPDATE_FAILED';
     
 
     /**
@@ -256,6 +289,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
             self::STATUS_ROLLBACK_SUCCESSFUL,
             self::STATUS_ROLLBACK_IN_PROGRESS,
             self::STATUS_ROLLBACK_FAILED,
+            self::STATUS_UPDATE_SUCCESSFUL,
+            self::STATUS_UPDATE_IN_PROGRESS,
+            self::STATUS_UPDATE_FAILED,
         ];
     }
 
@@ -282,6 +318,9 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
         $this->container['deploymentId'] = isset($data['deploymentId']) ? $data['deploymentId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['templateKey'] = isset($data['templateKey']) ? $data['templateKey'] : null;
+        $this->container['templateUri'] = isset($data['templateUri']) ? $data['templateUri'] : null;
+        $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
         $this->container['varsStructure'] = isset($data['varsStructure']) ? $data['varsStructure'] : null;
@@ -308,8 +347,8 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['stackName']) && (mb_strlen($this->container['stackName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'stackName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['stackName']) && !preg_match("/^[a-zA-Z0-9_.\\-]+/", $this->container['stackName'])) {
-                $invalidProperties[] = "invalid value for 'stackName', must be conform to the pattern /^[a-zA-Z0-9_.\\-]+/.";
+            if (!is_null($this->container['stackName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_.\\-]+/", $this->container['stackName'])) {
+                $invalidProperties[] = "invalid value for 'stackName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_.\\-]+/.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -498,6 +537,78 @@ class CreateConformancePackResponse implements ModelInterface, ArrayAccess
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets templateKey
+    *  预定义合规规则包模板名称。
+    *
+    * @return string|null
+    */
+    public function getTemplateKey()
+    {
+        return $this->container['templateKey'];
+    }
+
+    /**
+    * Sets templateKey
+    *
+    * @param string|null $templateKey 预定义合规规则包模板名称。
+    *
+    * @return $this
+    */
+    public function setTemplateKey($templateKey)
+    {
+        $this->container['templateKey'] = $templateKey;
+        return $this;
+    }
+
+    /**
+    * Gets templateUri
+    *  合规规则包模板OBS地址
+    *
+    * @return string|null
+    */
+    public function getTemplateUri()
+    {
+        return $this->container['templateUri'];
+    }
+
+    /**
+    * Sets templateUri
+    *
+    * @param string|null $templateUri 合规规则包模板OBS地址
+    *
+    * @return $this
+    */
+    public function setTemplateUri($templateUri)
+    {
+        $this->container['templateUri'] = $templateUri;
+        return $this;
+    }
+
+    /**
+    * Gets agencyName
+    *  委托名称
+    *
+    * @return string|null
+    */
+    public function getAgencyName()
+    {
+        return $this->container['agencyName'];
+    }
+
+    /**
+    * Sets agencyName
+    *
+    * @param string|null $agencyName 委托名称
+    *
+    * @return $this
+    */
+    public function setAgencyName($agencyName)
+    {
+        $this->container['agencyName'] = $agencyName;
         return $this;
     }
 

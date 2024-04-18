@@ -24,7 +24,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
-            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\Create2dModelTrainingJobReq'
+            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\Update2dModelTrainingJobReq'
     ];
 
     /**
@@ -44,7 +44,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -85,7 +85,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -105,7 +105,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -125,7 +125,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -358,7 +358,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\Create2dModelTrainingJobReq|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\Update2dModelTrainingJobReq|null
     */
     public function getBody()
     {
@@ -394,7 +394,7 @@ class Update2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\Create2dModelTrainingJobReq|null $body body
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\Update2dModelTrainingJobReq|null $body body
     *
     * @return $this
     */

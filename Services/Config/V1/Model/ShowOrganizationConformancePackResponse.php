@@ -30,6 +30,8 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
     * varsStructure  合规规则包参数。
     * createdAt  组织合规规则包创建时间。
     * updatedAt  组织合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
     *
     * @var string[]
     */
@@ -42,7 +44,9 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
             'excludedAccounts' => 'string[]',
             'varsStructure' => '\HuaweiCloud\SDK\Config\V1\Model\VarsStructure[]',
             'createdAt' => 'string',
-            'updatedAt' => 'string'
+            'updatedAt' => 'string',
+            'templateKey' => 'string',
+            'templateUri' => 'string'
     ];
 
     /**
@@ -56,6 +60,8 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
     * varsStructure  合规规则包参数。
     * createdAt  组织合规规则包创建时间。
     * updatedAt  组织合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
     *
     * @var string[]
     */
@@ -68,7 +74,9 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
         'excludedAccounts' => null,
         'varsStructure' => null,
         'createdAt' => null,
-        'updatedAt' => null
+        'updatedAt' => null,
+        'templateKey' => null,
+        'templateUri' => null
     ];
 
     /**
@@ -103,6 +111,8 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
     * varsStructure  合规规则包参数。
     * createdAt  组织合规规则包创建时间。
     * updatedAt  组织合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
     *
     * @var string[]
     */
@@ -115,7 +125,9 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
             'excludedAccounts' => 'excluded_accounts',
             'varsStructure' => 'vars_structure',
             'createdAt' => 'created_at',
-            'updatedAt' => 'updated_at'
+            'updatedAt' => 'updated_at',
+            'templateKey' => 'template_key',
+            'templateUri' => 'template_uri'
     ];
 
     /**
@@ -129,6 +141,8 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
     * varsStructure  合规规则包参数。
     * createdAt  组织合规规则包创建时间。
     * updatedAt  组织合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
     *
     * @var string[]
     */
@@ -141,7 +155,9 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
             'excludedAccounts' => 'setExcludedAccounts',
             'varsStructure' => 'setVarsStructure',
             'createdAt' => 'setCreatedAt',
-            'updatedAt' => 'setUpdatedAt'
+            'updatedAt' => 'setUpdatedAt',
+            'templateKey' => 'setTemplateKey',
+            'templateUri' => 'setTemplateUri'
     ];
 
     /**
@@ -155,6 +171,8 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
     * varsStructure  合规规则包参数。
     * createdAt  组织合规规则包创建时间。
     * updatedAt  组织合规规则包更新时间。
+    * templateKey  预定义合规规则包模板名称。
+    * templateUri  合规规则包模板OBS地址
     *
     * @var string[]
     */
@@ -167,7 +185,9 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
             'excludedAccounts' => 'getExcludedAccounts',
             'varsStructure' => 'getVarsStructure',
             'createdAt' => 'getCreatedAt',
-            'updatedAt' => 'getUpdatedAt'
+            'updatedAt' => 'getUpdatedAt',
+            'templateKey' => 'getTemplateKey',
+            'templateUri' => 'getTemplateUri'
     ];
 
     /**
@@ -237,6 +257,8 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
         $this->container['varsStructure'] = isset($data['varsStructure']) ? $data['varsStructure'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
+        $this->container['templateKey'] = isset($data['templateKey']) ? $data['templateKey'] : null;
+        $this->container['templateUri'] = isset($data['templateUri']) ? $data['templateUri'] : null;
     }
 
     /**
@@ -474,6 +496,54 @@ class ShowOrganizationConformancePackResponse implements ModelInterface, ArrayAc
     public function setUpdatedAt($updatedAt)
     {
         $this->container['updatedAt'] = $updatedAt;
+        return $this;
+    }
+
+    /**
+    * Gets templateKey
+    *  预定义合规规则包模板名称。
+    *
+    * @return string|null
+    */
+    public function getTemplateKey()
+    {
+        return $this->container['templateKey'];
+    }
+
+    /**
+    * Sets templateKey
+    *
+    * @param string|null $templateKey 预定义合规规则包模板名称。
+    *
+    * @return $this
+    */
+    public function setTemplateKey($templateKey)
+    {
+        $this->container['templateKey'] = $templateKey;
+        return $this;
+    }
+
+    /**
+    * Gets templateUri
+    *  合规规则包模板OBS地址
+    *
+    * @return string|null
+    */
+    public function getTemplateUri()
+    {
+        return $this->container['templateUri'];
+    }
+
+    /**
+    * Sets templateUri
+    *
+    * @param string|null $templateUri 合规规则包模板OBS地址
+    *
+    * @return $this
+    */
+    public function setTemplateUri($templateUri)
+    {
+        $this->container['templateUri'] = $templateUri;
         return $this;
     }
 

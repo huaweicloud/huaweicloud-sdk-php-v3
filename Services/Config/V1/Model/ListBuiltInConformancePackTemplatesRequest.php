@@ -227,8 +227,8 @@ class ListBuiltInConformancePackTemplatesRequest implements ModelInterface, Arra
             if (!is_null($this->container['templateKey']) && (mb_strlen($this->container['templateKey']) < 1)) {
                 $invalidProperties[] = "invalid value for 'templateKey', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['templateKey']) && !preg_match("/^[a-zA-Z0-9_.\\-]+/", $this->container['templateKey'])) {
-                $invalidProperties[] = "invalid value for 'templateKey', must be conform to the pattern /^[a-zA-Z0-9_.\\-]+/.";
+            if (!is_null($this->container['templateKey']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_.\\-]+/", $this->container['templateKey'])) {
+                $invalidProperties[] = "invalid value for 'templateKey', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_.\\-]+/.";
             }
             $allowedValues = $this->getXLanguageAllowableValues();
                 if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {

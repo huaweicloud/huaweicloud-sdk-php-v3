@@ -59,6 +59,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * escapeMode  逃逸方式
     * escapeCmd  逃逸后后执行的命令
     * processHash  进程启动文件hash
+    * processFileHash  进程文件hash
+    * parentProcessFileHash  父进程文件hash
+    * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
     */
@@ -101,7 +104,10 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'virtProcessName' => 'string',
             'escapeMode' => 'string',
             'escapeCmd' => 'string',
-            'processHash' => 'string'
+            'processHash' => 'string',
+            'processFileHash' => 'string',
+            'parentProcessFileHash' => 'string',
+            'block' => 'int'
     ];
 
     /**
@@ -145,6 +151,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * escapeMode  逃逸方式
     * escapeCmd  逃逸后后执行的命令
     * processHash  进程启动文件hash
+    * processFileHash  进程文件hash
+    * parentProcessFileHash  父进程文件hash
+    * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
     */
@@ -187,7 +196,10 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
         'virtProcessName' => null,
         'escapeMode' => null,
         'escapeCmd' => null,
-        'processHash' => null
+        'processHash' => null,
+        'processFileHash' => null,
+        'parentProcessFileHash' => null,
+        'block' => 'int32'
     ];
 
     /**
@@ -252,6 +264,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * escapeMode  逃逸方式
     * escapeCmd  逃逸后后执行的命令
     * processHash  进程启动文件hash
+    * processFileHash  进程文件hash
+    * parentProcessFileHash  父进程文件hash
+    * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
     */
@@ -294,7 +309,10 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'virtProcessName' => 'virt_process_name',
             'escapeMode' => 'escape_mode',
             'escapeCmd' => 'escape_cmd',
-            'processHash' => 'process_hash'
+            'processHash' => 'process_hash',
+            'processFileHash' => 'process_file_hash',
+            'parentProcessFileHash' => 'parent_process_file_hash',
+            'block' => 'block'
     ];
 
     /**
@@ -338,6 +356,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * escapeMode  逃逸方式
     * escapeCmd  逃逸后后执行的命令
     * processHash  进程启动文件hash
+    * processFileHash  进程文件hash
+    * parentProcessFileHash  父进程文件hash
+    * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
     */
@@ -380,7 +401,10 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'virtProcessName' => 'setVirtProcessName',
             'escapeMode' => 'setEscapeMode',
             'escapeCmd' => 'setEscapeCmd',
-            'processHash' => 'setProcessHash'
+            'processHash' => 'setProcessHash',
+            'processFileHash' => 'setProcessFileHash',
+            'parentProcessFileHash' => 'setParentProcessFileHash',
+            'block' => 'setBlock'
     ];
 
     /**
@@ -424,6 +448,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     * escapeMode  逃逸方式
     * escapeCmd  逃逸后后执行的命令
     * processHash  进程启动文件hash
+    * processFileHash  进程文件hash
+    * parentProcessFileHash  父进程文件hash
+    * block  是否阻断成功，1阻断成功 0阻断失败
     *
     * @var string[]
     */
@@ -466,7 +493,10 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             'virtProcessName' => 'getVirtProcessName',
             'escapeMode' => 'getEscapeMode',
             'escapeCmd' => 'getEscapeCmd',
-            'processHash' => 'getProcessHash'
+            'processHash' => 'getProcessHash',
+            'processFileHash' => 'getProcessFileHash',
+            'parentProcessFileHash' => 'getParentProcessFileHash',
+            'block' => 'getBlock'
     ];
 
     /**
@@ -566,6 +596,9 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
         $this->container['escapeMode'] = isset($data['escapeMode']) ? $data['escapeMode'] : null;
         $this->container['escapeCmd'] = isset($data['escapeCmd']) ? $data['escapeCmd'] : null;
         $this->container['processHash'] = isset($data['processHash']) ? $data['processHash'] : null;
+        $this->container['processFileHash'] = isset($data['processFileHash']) ? $data['processFileHash'] : null;
+        $this->container['parentProcessFileHash'] = isset($data['parentProcessFileHash']) ? $data['parentProcessFileHash'] : null;
+        $this->container['block'] = isset($data['block']) ? $data['block'] : null;
     }
 
     /**
@@ -749,6 +782,18 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['processHash']) && !preg_match("/^.*$/", $this->container['processHash'])) {
                 $invalidProperties[] = "invalid value for 'processHash', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['processFileHash']) && !preg_match("/^.*$/", $this->container['processFileHash'])) {
+                $invalidProperties[] = "invalid value for 'processFileHash', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['parentProcessFileHash']) && !preg_match("/^.*$/", $this->container['parentProcessFileHash'])) {
+                $invalidProperties[] = "invalid value for 'parentProcessFileHash', must be conform to the pattern /^.*$/.";
+            }
+            if (!is_null($this->container['block']) && ($this->container['block'] > 1)) {
+                $invalidProperties[] = "invalid value for 'block', must be smaller than or equal to 1.";
+            }
+            if (!is_null($this->container['block']) && ($this->container['block'] < 0)) {
+                $invalidProperties[] = "invalid value for 'block', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1697,6 +1742,78 @@ class EventProcessResponseInfo implements ModelInterface, ArrayAccess
     public function setProcessHash($processHash)
     {
         $this->container['processHash'] = $processHash;
+        return $this;
+    }
+
+    /**
+    * Gets processFileHash
+    *  进程文件hash
+    *
+    * @return string|null
+    */
+    public function getProcessFileHash()
+    {
+        return $this->container['processFileHash'];
+    }
+
+    /**
+    * Sets processFileHash
+    *
+    * @param string|null $processFileHash 进程文件hash
+    *
+    * @return $this
+    */
+    public function setProcessFileHash($processFileHash)
+    {
+        $this->container['processFileHash'] = $processFileHash;
+        return $this;
+    }
+
+    /**
+    * Gets parentProcessFileHash
+    *  父进程文件hash
+    *
+    * @return string|null
+    */
+    public function getParentProcessFileHash()
+    {
+        return $this->container['parentProcessFileHash'];
+    }
+
+    /**
+    * Sets parentProcessFileHash
+    *
+    * @param string|null $parentProcessFileHash 父进程文件hash
+    *
+    * @return $this
+    */
+    public function setParentProcessFileHash($parentProcessFileHash)
+    {
+        $this->container['parentProcessFileHash'] = $parentProcessFileHash;
+        return $this;
+    }
+
+    /**
+    * Gets block
+    *  是否阻断成功，1阻断成功 0阻断失败
+    *
+    * @return int|null
+    */
+    public function getBlock()
+    {
+        return $this->container['block'];
+    }
+
+    /**
+    * Sets block
+    *
+    * @param int|null $block 是否阻断成功，1阻断成功 0阻断失败
+    *
+    * @return $this
+    */
+    public function setBlock($block)
+    {
+        $this->container['block'] = $block;
         return $this;
     }
 

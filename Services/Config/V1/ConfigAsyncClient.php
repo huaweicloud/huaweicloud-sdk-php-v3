@@ -2447,6 +2447,145 @@ class ConfigAsyncClient extends Client
     }
 
     /**
+     * 更新合规规则包
+     *
+     * 更新用户的合规规则包。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateConformancePackAsync($request)
+    {
+        return $this->updateConformancePackAsyncWithHttpInfo($request);
+    }
+    
+    public function updateConformancePackAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/conformance-packs/{conformance_pack_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conformancePackId'] !== null) {
+            $pathParams['conformance_pack_id'] = $localVarParams['conformancePackId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\UpdateConformancePackResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\UpdateConformancePackRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新组织合规规则包
+     *
+     * 更新用户的组织合规规则包。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOrganizationConformancePackAsync($request)
+    {
+        return $this->updateOrganizationConformancePackAsyncWithHttpInfo($request);
+    }
+    
+    public function updateOrganizationConformancePackAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/organizations/{organization_id}/conformance-packs/{conformance_pack_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['organizationId'] !== null) {
+            $pathParams['organization_id'] = $localVarParams['organizationId'];
+        }
+        if ($localVarParams['conformancePackId'] !== null) {
+            $pathParams['conformance_pack_id'] = $localVarParams['conformancePackId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\UpdateOrganizationConformancePackResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\UpdateOrganizationConformancePackRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询资源历史
      *
      * 查询资源与资源关系的变更历史

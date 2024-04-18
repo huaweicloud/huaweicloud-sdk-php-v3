@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
+class ShowErrorLogSwitchStatusResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,26 +17,26 @@ class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowInstancesStatisticsRequest';
+    protected static $openAPIModelName = 'ShowErrorLogSwitchStatusResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * status  采集状态
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xLanguage' => 'string'
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言。
+    * status  采集状态
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xLanguage' => null
+        'status' => null
     ];
 
     /**
@@ -61,32 +62,32 @@ class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言。
+    * status  采集状态
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xLanguage' => 'X-Language'
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言。
+    * status  采集状态
     *
     * @var string[]
     */
     protected static $setters = [
-            'xLanguage' => 'setXLanguage'
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言。
+    * status  采集状态
     *
     * @var string[]
     */
     protected static $getters = [
-            'xLanguage' => 'getXLanguage'
+            'status' => 'getStatus'
     ];
 
     /**
@@ -129,22 +130,7 @@ class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const X_LANGUAGE_ZH_CN = 'zh-cn';
-    const X_LANGUAGE_EN_US = 'en-us';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getXLanguageAllowableValues()
-    {
-        return [
-            self::X_LANGUAGE_ZH_CN,
-            self::X_LANGUAGE_EN_US,
-        ];
-    }
 
 
     /**
@@ -162,7 +148,7 @@ class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -173,14 +159,6 @@ class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getXLanguageAllowableValues();
-                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'xLanguage', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -196,26 +174,26 @@ class ShowInstancesStatisticsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets xLanguage
-    *  语言。
+    * Gets status
+    *  采集状态
     *
     * @return string|null
     */
-    public function getXLanguage()
+    public function getStatus()
     {
-        return $this->container['xLanguage'];
+        return $this->container['status'];
     }
 
     /**
-    * Sets xLanguage
+    * Sets status
     *
-    * @param string|null $xLanguage 语言。
+    * @param string|null $status 采集状态
     *
     * @return $this
     */
-    public function setXLanguage($xLanguage)
+    public function setStatus($status)
     {
-        $this->container['xLanguage'] = $xLanguage;
+        $this->container['status'] = $status;
         return $this;
     }
 

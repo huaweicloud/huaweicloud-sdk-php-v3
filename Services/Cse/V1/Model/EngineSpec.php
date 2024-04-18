@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
+namespace HuaweiCloud\SDK\Cse\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowInstancesStatisticsResponse implements ModelInterface, ArrayAccess
+class EngineSpec implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,34 @@ class ShowInstancesStatisticsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowInstancesStatisticsResponse';
+    protected static $openAPIModelName = 'EngineSpec';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  实例总数
-    * instancesStatistics  实例统计信息
+    * availableCpuMemory  CPU及内存规格。
+    * linear  是否为线性规格。
+    * availablePrefix  可用节点规格类型前缀。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'int',
-            'instancesStatistics' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\InstancesStatisticsResponseBodyInstancesStatistics[]'
+            'availableCpuMemory' => 'string',
+            'linear' => 'string',
+            'availablePrefix' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  实例总数
-    * instancesStatistics  实例统计信息
+    * availableCpuMemory  CPU及内存规格。
+    * linear  是否为线性规格。
+    * availablePrefix  可用节点规格类型前缀。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => null,
-        'instancesStatistics' => null
+        'availableCpuMemory' => null,
+        'linear' => null,
+        'availablePrefix' => null
     ];
 
     /**
@@ -66,38 +69,44 @@ class ShowInstancesStatisticsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  实例总数
-    * instancesStatistics  实例统计信息
+    * availableCpuMemory  CPU及内存规格。
+    * linear  是否为线性规格。
+    * availablePrefix  可用节点规格类型前缀。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalCount' => 'total_count',
-            'instancesStatistics' => 'instances_statistics'
+            'availableCpuMemory' => 'availableCpuMemory',
+            'linear' => 'linear',
+            'availablePrefix' => 'availablePrefix'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  实例总数
-    * instancesStatistics  实例统计信息
+    * availableCpuMemory  CPU及内存规格。
+    * linear  是否为线性规格。
+    * availablePrefix  可用节点规格类型前缀。
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalCount' => 'setTotalCount',
-            'instancesStatistics' => 'setInstancesStatistics'
+            'availableCpuMemory' => 'setAvailableCpuMemory',
+            'linear' => 'setLinear',
+            'availablePrefix' => 'setAvailablePrefix'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  实例总数
-    * instancesStatistics  实例统计信息
+    * availableCpuMemory  CPU及内存规格。
+    * linear  是否为线性规格。
+    * availablePrefix  可用节点规格类型前缀。
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalCount' => 'getTotalCount',
-            'instancesStatistics' => 'getInstancesStatistics'
+            'availableCpuMemory' => 'getAvailableCpuMemory',
+            'linear' => 'getLinear',
+            'availablePrefix' => 'getAvailablePrefix'
     ];
 
     /**
@@ -158,8 +167,9 @@ class ShowInstancesStatisticsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
-        $this->container['instancesStatistics'] = isset($data['instancesStatistics']) ? $data['instancesStatistics'] : null;
+        $this->container['availableCpuMemory'] = isset($data['availableCpuMemory']) ? $data['availableCpuMemory'] : null;
+        $this->container['linear'] = isset($data['linear']) ? $data['linear'] : null;
+        $this->container['availablePrefix'] = isset($data['availablePrefix']) ? $data['availablePrefix'] : null;
     }
 
     /**
@@ -185,50 +195,74 @@ class ShowInstancesStatisticsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets totalCount
-    *  实例总数
+    * Gets availableCpuMemory
+    *  CPU及内存规格。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getTotalCount()
+    public function getAvailableCpuMemory()
     {
-        return $this->container['totalCount'];
+        return $this->container['availableCpuMemory'];
     }
 
     /**
-    * Sets totalCount
+    * Sets availableCpuMemory
     *
-    * @param int|null $totalCount 实例总数
+    * @param string|null $availableCpuMemory CPU及内存规格。
     *
     * @return $this
     */
-    public function setTotalCount($totalCount)
+    public function setAvailableCpuMemory($availableCpuMemory)
     {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['availableCpuMemory'] = $availableCpuMemory;
         return $this;
     }
 
     /**
-    * Gets instancesStatistics
-    *  实例统计信息
+    * Gets linear
+    *  是否为线性规格。
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\InstancesStatisticsResponseBodyInstancesStatistics[]|null
+    * @return string|null
     */
-    public function getInstancesStatistics()
+    public function getLinear()
     {
-        return $this->container['instancesStatistics'];
+        return $this->container['linear'];
     }
 
     /**
-    * Sets instancesStatistics
+    * Sets linear
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\InstancesStatisticsResponseBodyInstancesStatistics[]|null $instancesStatistics 实例统计信息
+    * @param string|null $linear 是否为线性规格。
     *
     * @return $this
     */
-    public function setInstancesStatistics($instancesStatistics)
+    public function setLinear($linear)
     {
-        $this->container['instancesStatistics'] = $instancesStatistics;
+        $this->container['linear'] = $linear;
+        return $this;
+    }
+
+    /**
+    * Gets availablePrefix
+    *  可用节点规格类型前缀。
+    *
+    * @return string|null
+    */
+    public function getAvailablePrefix()
+    {
+        return $this->container['availablePrefix'];
+    }
+
+    /**
+    * Sets availablePrefix
+    *
+    * @param string|null $availablePrefix 可用节点规格类型前缀。
+    *
+    * @return $this
+    */
+    public function setAvailablePrefix($availablePrefix)
+    {
+        $this->container['availablePrefix'] = $availablePrefix;
         return $this;
     }
 

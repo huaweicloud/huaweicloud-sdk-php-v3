@@ -36,7 +36,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @var string[]
     */
@@ -225,7 +225,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @var string[]
     */
@@ -910,7 +910,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastJobStatus
-    *  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    *  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @return string|null
     */
@@ -922,7 +922,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets lastJobStatus
     *
-    * @param string|null $lastJobStatus 当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消
+    * @param string|null $lastJobStatus 当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
+    * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
@@ -34,7 +34,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'name' => 'string',
             'appType' => 'int',
-            'concurrency' => 'int',
+            'roomId' => 'string',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'huaweiEiCbs' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HuaweiEiCbs',
             'iflytekAiuiConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekAiuiConfig',
@@ -46,7 +46,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
+    * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
@@ -58,7 +58,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'name' => null,
         'appType' => null,
-        'concurrency' => null,
+        'roomId' => null,
         'language' => null,
         'huaweiEiCbs' => null,
         'iflytekAiuiConfig' => null,
@@ -91,7 +91,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
+    * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
@@ -103,7 +103,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'name' => 'name',
             'appType' => 'app_type',
-            'concurrency' => 'concurrency',
+            'roomId' => 'room_id',
             'language' => 'language',
             'huaweiEiCbs' => 'huawei_ei_cbs',
             'iflytekAiuiConfig' => 'iflytek_aiui_config',
@@ -115,7 +115,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
+    * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
@@ -127,7 +127,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     protected static $setters = [
             'name' => 'setName',
             'appType' => 'setAppType',
-            'concurrency' => 'setConcurrency',
+            'roomId' => 'setRoomId',
             'language' => 'setLanguage',
             'huaweiEiCbs' => 'setHuaweiEiCbs',
             'iflytekAiuiConfig' => 'setIflytekAiuiConfig',
@@ -139,7 +139,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
-    * concurrency  对话的并发数
+    * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
@@ -151,7 +151,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     protected static $getters = [
             'name' => 'getName',
             'appType' => 'getAppType',
-            'concurrency' => 'getConcurrency',
+            'roomId' => 'getRoomId',
             'language' => 'getLanguage',
             'huaweiEiCbs' => 'getHuaweiEiCbs',
             'iflytekAiuiConfig' => 'getIflytekAiuiConfig',
@@ -219,7 +219,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
-        $this->container['concurrency'] = isset($data['concurrency']) ? $data['concurrency'] : null;
+        $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['huaweiEiCbs'] = isset($data['huaweiEiCbs']) ? $data['huaweiEiCbs'] : null;
         $this->container['iflytekAiuiConfig'] = isset($data['iflytekAiuiConfig']) ? $data['iflytekAiuiConfig'] : null;
@@ -247,11 +247,11 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appType']) && ($this->container['appType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'appType', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] > 512)) {
-                $invalidProperties[] = "invalid value for 'concurrency', must be smaller than or equal to 512.";
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 1)) {
-                $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 1.";
+            if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -316,26 +316,26 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets concurrency
-    *  对话的并发数
+    * Gets roomId
+    *  智能交互对话房间ID。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getConcurrency()
+    public function getRoomId()
     {
-        return $this->container['concurrency'];
+        return $this->container['roomId'];
     }
 
     /**
-    * Sets concurrency
+    * Sets roomId
     *
-    * @param int|null $concurrency 对话的并发数
+    * @param string|null $roomId 智能交互对话房间ID。
     *
     * @return $this
     */
-    public function setConcurrency($concurrency)
+    public function setRoomId($roomId)
     {
-        $this->container['concurrency'] = $concurrency;
+        $this->container['roomId'] = $roomId;
         return $this;
     }
 

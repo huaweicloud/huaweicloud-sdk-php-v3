@@ -24,6 +24,7 @@ class OutputInfo implements ModelInterface, ArrayAccess
     * bodyAddr  身体动作输入地址。
     * audioAddr  音频输入地址。
     * sessionId  会话ID。
+    * outputDataVersion  输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class OutputInfo implements ModelInterface, ArrayAccess
             'faceAddr' => 'string',
             'bodyAddr' => 'string',
             'audioAddr' => 'string',
-            'sessionId' => 'int'
+            'sessionId' => 'int',
+            'outputDataVersion' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class OutputInfo implements ModelInterface, ArrayAccess
     * bodyAddr  身体动作输入地址。
     * audioAddr  音频输入地址。
     * sessionId  会话ID。
+    * outputDataVersion  输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class OutputInfo implements ModelInterface, ArrayAccess
         'faceAddr' => null,
         'bodyAddr' => null,
         'audioAddr' => null,
-        'sessionId' => null
+        'sessionId' => null,
+        'outputDataVersion' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class OutputInfo implements ModelInterface, ArrayAccess
     * bodyAddr  身体动作输入地址。
     * audioAddr  音频输入地址。
     * sessionId  会话ID。
+    * outputDataVersion  输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class OutputInfo implements ModelInterface, ArrayAccess
             'faceAddr' => 'face_addr',
             'bodyAddr' => 'body_addr',
             'audioAddr' => 'audio_addr',
-            'sessionId' => 'session_id'
+            'sessionId' => 'session_id',
+            'outputDataVersion' => 'output_data_version'
     ];
 
     /**
@@ -93,6 +99,7 @@ class OutputInfo implements ModelInterface, ArrayAccess
     * bodyAddr  身体动作输入地址。
     * audioAddr  音频输入地址。
     * sessionId  会话ID。
+    * outputDataVersion  输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class OutputInfo implements ModelInterface, ArrayAccess
             'faceAddr' => 'setFaceAddr',
             'bodyAddr' => 'setBodyAddr',
             'audioAddr' => 'setAudioAddr',
-            'sessionId' => 'setSessionId'
+            'sessionId' => 'setSessionId',
+            'outputDataVersion' => 'setOutputDataVersion'
     ];
 
     /**
@@ -109,6 +117,7 @@ class OutputInfo implements ModelInterface, ArrayAccess
     * bodyAddr  身体动作输入地址。
     * audioAddr  音频输入地址。
     * sessionId  会话ID。
+    * outputDataVersion  输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class OutputInfo implements ModelInterface, ArrayAccess
             'faceAddr' => 'getFaceAddr',
             'bodyAddr' => 'getBodyAddr',
             'audioAddr' => 'getAudioAddr',
-            'sessionId' => 'getSessionId'
+            'sessionId' => 'getSessionId',
+            'outputDataVersion' => 'getOutputDataVersion'
     ];
 
     /**
@@ -181,6 +191,7 @@ class OutputInfo implements ModelInterface, ArrayAccess
         $this->container['bodyAddr'] = isset($data['bodyAddr']) ? $data['bodyAddr'] : null;
         $this->container['audioAddr'] = isset($data['audioAddr']) ? $data['audioAddr'] : null;
         $this->container['sessionId'] = isset($data['sessionId']) ? $data['sessionId'] : null;
+        $this->container['outputDataVersion'] = isset($data['outputDataVersion']) ? $data['outputDataVersion'] : null;
     }
 
     /**
@@ -214,6 +225,12 @@ class OutputInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['sessionId']) && ($this->container['sessionId'] < 0)) {
                 $invalidProperties[] = "invalid value for 'sessionId', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['outputDataVersion']) && (mb_strlen($this->container['outputDataVersion']) > 8)) {
+                $invalidProperties[] = "invalid value for 'outputDataVersion', the character length must be smaller than or equal to 8.";
+            }
+            if (!is_null($this->container['outputDataVersion']) && (mb_strlen($this->container['outputDataVersion']) < 1)) {
+                $invalidProperties[] = "invalid value for 'outputDataVersion', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -322,6 +339,30 @@ class OutputInfo implements ModelInterface, ArrayAccess
     public function setSessionId($sessionId)
     {
         $this->container['sessionId'] = $sessionId;
+        return $this;
+    }
+
+    /**
+    * Gets outputDataVersion
+    *  输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
+    *
+    * @return string|null
+    */
+    public function getOutputDataVersion()
+    {
+        return $this->container['outputDataVersion'];
+    }
+
+    /**
+    * Sets outputDataVersion
+    *
+    * @param string|null $outputDataVersion 输出数据的格式版本，如请求中无此参数，则输出数据格式为1.0，可选值有： 1.0: 对应的输出为：         动作数据：75个骨骼旋转值         表情数据：52ARkit表情及参数 2.0: 对应的输出为：         动作数据：55个骨骼旋转值+骨骼3D坐标         表情数据：178个控制器的数据
+    *
+    * @return $this
+    */
+    public function setOutputDataVersion($outputDataVersion)
+    {
+        $this->container['outputDataVersion'] = $outputDataVersion;
         return $this;
     }
 

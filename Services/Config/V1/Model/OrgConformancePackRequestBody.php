@@ -222,8 +222,8 @@ class OrgConformancePackRequestBody implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
             if (!is_null($this->container['templateKey']) && (mb_strlen($this->container['templateKey']) > 128)) {
                 $invalidProperties[] = "invalid value for 'templateKey', the character length must be smaller than or equal to 128.";

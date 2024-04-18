@@ -23,18 +23,20 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    * queryProjectId  查询租户id。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
+    * modelResolution  模型分辨率
     *
     * @var string[]
     */
@@ -45,15 +47,17 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'state' => 'string',
             'sortKey' => 'string',
             'sortDir' => 'string',
             'createUntil' => 'string',
             'createSince' => 'string',
+            'state' => 'string',
+            'queryProjectId' => 'string',
             'batchName' => 'string',
             'tag' => 'string',
             'jobId' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'modelResolution' => 'string'
     ];
 
     /**
@@ -61,18 +65,20 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    * queryProjectId  查询租户id。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
+    * modelResolution  模型分辨率
     *
     * @var string[]
     */
@@ -83,15 +89,17 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
         'xAppUserId' => null,
         'offset' => 'uint32',
         'limit' => 'uint32',
-        'state' => null,
         'sortKey' => null,
         'sortDir' => null,
         'createUntil' => null,
         'createSince' => null,
+        'state' => null,
+        'queryProjectId' => null,
         'batchName' => null,
         'tag' => null,
         'jobId' => null,
-        'name' => null
+        'name' => null,
+        'modelResolution' => null
     ];
 
     /**
@@ -120,18 +128,20 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    * queryProjectId  查询租户id。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
+    * modelResolution  模型分辨率
     *
     * @var string[]
     */
@@ -142,15 +152,17 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
             'limit' => 'limit',
-            'state' => 'state',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
             'createUntil' => 'create_until',
             'createSince' => 'create_since',
+            'state' => 'state',
+            'queryProjectId' => 'query_project_id',
             'batchName' => 'batch_name',
             'tag' => 'tag',
             'jobId' => 'job_id',
-            'name' => 'name'
+            'name' => 'name',
+            'modelResolution' => 'model_resolution'
     ];
 
     /**
@@ -158,18 +170,20 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    * queryProjectId  查询租户id。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
+    * modelResolution  模型分辨率
     *
     * @var string[]
     */
@@ -180,15 +194,17 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'state' => 'setState',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
             'createUntil' => 'setCreateUntil',
             'createSince' => 'setCreateSince',
+            'state' => 'setState',
+            'queryProjectId' => 'setQueryProjectId',
             'batchName' => 'setBatchName',
             'tag' => 'setTag',
             'jobId' => 'setJobId',
-            'name' => 'setName'
+            'name' => 'setName',
+            'modelResolution' => 'setModelResolution'
     ];
 
     /**
@@ -196,18 +212,20 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
     * sortKey  排序字段，目前只支持create_time。
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    * queryProjectId  查询租户id。
     * batchName  任务批次名称。
     * tag  任务标签。
     * jobId  任务ID。
     * name  分身数字人模型名称
+    * modelResolution  模型分辨率
     *
     * @var string[]
     */
@@ -218,15 +236,17 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'state' => 'getState',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
             'createUntil' => 'getCreateUntil',
             'createSince' => 'getCreateSince',
+            'state' => 'getState',
+            'queryProjectId' => 'getQueryProjectId',
             'batchName' => 'getBatchName',
             'tag' => 'getTag',
             'jobId' => 'getJobId',
-            'name' => 'getName'
+            'name' => 'getName',
+            'modelResolution' => 'getModelResolution'
     ];
 
     /**
@@ -293,15 +313,17 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['createUntil'] = isset($data['createUntil']) ? $data['createUntil'] : null;
         $this->container['createSince'] = isset($data['createSince']) ? $data['createSince'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['queryProjectId'] = isset($data['queryProjectId']) ? $data['queryProjectId'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
     }
 
     /**
@@ -348,12 +370,6 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 128)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
-                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 128)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 128.";
             }
@@ -378,6 +394,18 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['createSince']) && (mb_strlen($this->container['createSince']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createSince', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) > 128)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['state']) && (mb_strlen($this->container['state']) < 0)) {
+                $invalidProperties[] = "invalid value for 'state', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['queryProjectId']) && (mb_strlen($this->container['queryProjectId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'queryProjectId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['queryProjectId']) && (mb_strlen($this->container['queryProjectId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'queryProjectId', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be smaller than or equal to 256.";
             }
@@ -401,6 +429,12 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) > 256)) {
+                $invalidProperties[] = "invalid value for 'modelResolution', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) < 0)) {
+                $invalidProperties[] = "invalid value for 'modelResolution', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -490,7 +524,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -502,7 +536,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */
@@ -557,30 +591,6 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
-        return $this;
-    }
-
-    /**
-    * Gets state
-    *  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    *
-    * @return string|null
-    */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-    * Sets state
-    *
-    * @param string|null $state 任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    *
-    * @return $this
-    */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
         return $this;
     }
 
@@ -681,6 +691,54 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets state
+    *  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    *
+    * @return string|null
+    */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+    * Sets state
+    *
+    * @param string|null $state 任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
+    *
+    * @return $this
+    */
+    public function setState($state)
+    {
+        $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets queryProjectId
+    *  查询租户id。
+    *
+    * @return string|null
+    */
+    public function getQueryProjectId()
+    {
+        return $this->container['queryProjectId'];
+    }
+
+    /**
+    * Sets queryProjectId
+    *
+    * @param string|null $queryProjectId 查询租户id。
+    *
+    * @return $this
+    */
+    public function setQueryProjectId($queryProjectId)
+    {
+        $this->container['queryProjectId'] = $queryProjectId;
+        return $this;
+    }
+
+    /**
     * Gets batchName
     *  任务批次名称。
     *
@@ -773,6 +831,30 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets modelResolution
+    *  模型分辨率
+    *
+    * @return string|null
+    */
+    public function getModelResolution()
+    {
+        return $this->container['modelResolution'];
+    }
+
+    /**
+    * Sets modelResolution
+    *
+    * @param string|null $modelResolution 模型分辨率
+    *
+    * @return $this
+    */
+    public function setModelResolution($modelResolution)
+    {
+        $this->container['modelResolution'] = $modelResolution;
         return $this;
     }
 

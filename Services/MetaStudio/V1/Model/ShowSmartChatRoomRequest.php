@@ -20,11 +20,11 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomId  剧本ID。
+    * roomId  智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomId  剧本ID。
+    * roomId  智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomId  剧本ID。
+    * roomId  智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomId  剧本ID。
+    * roomId  智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomId  剧本ID。
+    * roomId  智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。  格式为(YYYYMMDD'T'HHMMSS'Z')。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  第三方用户ID。 > * 不允许输入中文。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     *
     * @var string[]
     */
@@ -251,7 +251,7 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomId
-    *  剧本ID。
+    *  智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     *
     * @return string
     */
@@ -263,7 +263,7 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
     /**
     * Sets roomId
     *
-    * @param string $roomId 剧本ID。
+    * @param string $roomId 智能交互对话ID。获取方法请参考[创建智能交互对话](CreateSmartChatRoom.xml)。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  第三方用户ID。 > * 不允许输入中文。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class ShowSmartChatRoomRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 第三方用户ID。 > * 不允许输入中文。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */

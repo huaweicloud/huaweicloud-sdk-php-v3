@@ -22,7 +22,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务id。
-    * trainingDataUploadingUrl  上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    * trainingDataUploadingUrl  上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     * segmentUploadingUrl  segmentUploadingUrl
     * authorizationLetterUploadingUrl  授权书的上传地址。
     *
@@ -38,7 +38,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务id。
-    * trainingDataUploadingUrl  上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    * trainingDataUploadingUrl  上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     * segmentUploadingUrl  segmentUploadingUrl
     * authorizationLetterUploadingUrl  授权书的上传地址。
     *
@@ -75,7 +75,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务id。
-    * trainingDataUploadingUrl  上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    * trainingDataUploadingUrl  上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     * segmentUploadingUrl  segmentUploadingUrl
     * authorizationLetterUploadingUrl  授权书的上传地址。
     *
@@ -91,7 +91,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务id。
-    * trainingDataUploadingUrl  上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    * trainingDataUploadingUrl  上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     * segmentUploadingUrl  segmentUploadingUrl
     * authorizationLetterUploadingUrl  授权书的上传地址。
     *
@@ -107,7 +107,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务id。
-    * trainingDataUploadingUrl  上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    * trainingDataUploadingUrl  上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     * segmentUploadingUrl  segmentUploadingUrl
     * authorizationLetterUploadingUrl  授权书的上传地址。
     *
@@ -250,7 +250,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets trainingDataUploadingUrl
-    *  上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    *  上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     *
     * @return string|null
     */
@@ -262,7 +262,7 @@ class CreateTrainingAdvanceJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets trainingDataUploadingUrl
     *
-    * @param string|null $trainingDataUploadingUrl 上传的训练数据地址,用户需要将训练数据打成zip包后上传到该url,create_type为pakcage时设置。 > * 通过该obs地址上传时需设置content-type为application/zip
+    * @param string|null $trainingDataUploadingUrl 上传训练数据的地址。训练数据需打包成zip文件后，上传至该url。  create_type取值为package时设置。 > 通过该obs地址上传时，需设置content-type为application/zip。
     *
     * @return $this
     */

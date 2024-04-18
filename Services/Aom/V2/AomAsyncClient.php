@@ -1166,6 +1166,9 @@ class AomAsyncClient extends Client
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }

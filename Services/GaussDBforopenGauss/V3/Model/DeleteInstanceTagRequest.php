@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class HumanSize2D implements ModelInterface, ArrayAccess
+class DeleteInstanceTagRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class HumanSize2D implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'HumanSize2D';
+    protected static $openAPIModelName = 'DeleteInstanceTagRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * width  分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * height  分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * xLanguage  语言
+    * instanceId  实例ID，严格匹配UUID规则。
+    * key  标签键
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'width' => 'int',
-            'height' => 'int'
+            'xLanguage' => 'string',
+            'instanceId' => 'string',
+            'key' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * width  分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * height  分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * xLanguage  语言
+    * instanceId  实例ID，严格匹配UUID规则。
+    * key  标签键
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'width' => 'int32',
-        'height' => 'int32'
+        'xLanguage' => null,
+        'instanceId' => null,
+        'key' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class HumanSize2D implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * width  分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * height  分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * xLanguage  语言
+    * instanceId  实例ID，严格匹配UUID规则。
+    * key  标签键
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'width' => 'width',
-            'height' => 'height'
+            'xLanguage' => 'X-Language',
+            'instanceId' => 'instance_id',
+            'key' => 'key'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * width  分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * height  分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * xLanguage  语言
+    * instanceId  实例ID，严格匹配UUID规则。
+    * key  标签键
     *
     * @var string[]
     */
     protected static $setters = [
-            'width' => 'setWidth',
-            'height' => 'setHeight'
+            'xLanguage' => 'setXLanguage',
+            'instanceId' => 'setInstanceId',
+            'key' => 'setKey'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * width  分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
-    * height  分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * xLanguage  语言
+    * instanceId  实例ID，严格匹配UUID规则。
+    * key  标签键
     *
     * @var string[]
     */
     protected static $getters = [
-            'width' => 'getWidth',
-            'height' => 'getHeight'
+            'xLanguage' => 'getXLanguage',
+            'instanceId' => 'getInstanceId',
+            'key' => 'getKey'
     ];
 
     /**
@@ -157,8 +167,9 @@ class HumanSize2D implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
     }
 
     /**
@@ -169,18 +180,12 @@ class HumanSize2D implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['width']) && ($this->container['width'] > 7680)) {
-                $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 7680.";
-            }
-            if (!is_null($this->container['width']) && ($this->container['width'] < 1)) {
-                $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['height']) && ($this->container['height'] > 7680)) {
-                $invalidProperties[] = "invalid value for 'height', must be smaller than or equal to 7680.";
-            }
-            if (!is_null($this->container['height']) && ($this->container['height'] < 1)) {
-                $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 1.";
-            }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,50 +201,74 @@ class HumanSize2D implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets width
-    *  分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * Gets xLanguage
+    *  语言
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getWidth()
+    public function getXLanguage()
     {
-        return $this->container['width'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets width
+    * Sets xLanguage
     *
-    * @param int|null $width 分身数字人宽度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * @param string|null $xLanguage 语言
     *
     * @return $this
     */
-    public function setWidth($width)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['width'] = $width;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets height
-    *  分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * Gets instanceId
+    *  实例ID，严格匹配UUID规则。
     *
-    * @return int|null
+    * @return string
     */
-    public function getHeight()
+    public function getInstanceId()
     {
-        return $this->container['height'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets height
+    * Sets instanceId
     *
-    * @param int|null $height 分身数字人高度像素值。 > 横屏（16:9）背景图片像素为1920x1080；竖屏（9:16）背景图片像素为1080x1920。
+    * @param string $instanceId 实例ID，严格匹配UUID规则。
     *
     * @return $this
     */
-    public function setHeight($height)
+    public function setInstanceId($instanceId)
     {
-        $this->container['height'] = $height;
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets key
+    *  标签键
+    *
+    * @return string
+    */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+    * Sets key
+    *
+    * @param string $key 标签键
+    *
+    * @return $this
+    */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
         return $this;
     }
 

@@ -189,8 +189,8 @@ class ConfigurationAggregatorRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['aggregatorName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'aggregatorName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/[\\w-]+/", $this->container['aggregatorName'])) {
-                $invalidProperties[] = "invalid value for 'aggregatorName', must be conform to the pattern /[\\w-]+/.";
+            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['aggregatorName'])) {
+                $invalidProperties[] = "invalid value for 'aggregatorName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
         if ($this->container['aggregatorType'] === null) {
             $invalidProperties[] = "'aggregatorType' can't be null";

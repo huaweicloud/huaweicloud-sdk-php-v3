@@ -23,6 +23,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * channel  channel
     * selector  selector
+    * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
     *
     * @var string[]
@@ -30,6 +31,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'channel' => '\HuaweiCloud\SDK\Config\V1\Model\ChannelConfigBody',
             'selector' => '\HuaweiCloud\SDK\Config\V1\Model\SelectorConfigBody',
+            'retentionPeriodInDays' => 'int',
             'agencyName' => 'string'
     ];
 
@@ -37,6 +39,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * channel  channel
     * selector  selector
+    * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
     *
     * @var string[]
@@ -44,6 +47,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'channel' => null,
         'selector' => null,
+        'retentionPeriodInDays' => null,
         'agencyName' => null
     ];
 
@@ -72,6 +76,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * channel  channel
     * selector  selector
+    * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
     *
     * @var string[]
@@ -79,6 +84,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'channel' => 'channel',
             'selector' => 'selector',
+            'retentionPeriodInDays' => 'retention_period_in_days',
             'agencyName' => 'agency_name'
     ];
 
@@ -86,6 +92,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * channel  channel
     * selector  selector
+    * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
     *
     * @var string[]
@@ -93,6 +100,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'channel' => 'setChannel',
             'selector' => 'setSelector',
+            'retentionPeriodInDays' => 'setRetentionPeriodInDays',
             'agencyName' => 'setAgencyName'
     ];
 
@@ -100,6 +108,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * channel  channel
     * selector  selector
+    * retentionPeriodInDays  存储历史信息的天数
     * agencyName  IAM委托名称
     *
     * @var string[]
@@ -107,6 +116,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'channel' => 'getChannel',
             'selector' => 'getSelector',
+            'retentionPeriodInDays' => 'getRetentionPeriodInDays',
             'agencyName' => 'getAgencyName'
     ];
 
@@ -170,6 +180,7 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     {
         $this->container['channel'] = isset($data['channel']) ? $data['channel'] : null;
         $this->container['selector'] = isset($data['selector']) ? $data['selector'] : null;
+        $this->container['retentionPeriodInDays'] = isset($data['retentionPeriodInDays']) ? $data['retentionPeriodInDays'] : null;
         $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
     }
 
@@ -240,6 +251,30 @@ class ShowTrackerConfigResponse implements ModelInterface, ArrayAccess
     public function setSelector($selector)
     {
         $this->container['selector'] = $selector;
+        return $this;
+    }
+
+    /**
+    * Gets retentionPeriodInDays
+    *  存储历史信息的天数
+    *
+    * @return int|null
+    */
+    public function getRetentionPeriodInDays()
+    {
+        return $this->container['retentionPeriodInDays'];
+    }
+
+    /**
+    * Sets retentionPeriodInDays
+    *
+    * @param int|null $retentionPeriodInDays 存储历史信息的天数
+    *
+    * @return $this
+    */
+    public function setRetentionPeriodInDays($retentionPeriodInDays)
+    {
+        $this->container['retentionPeriodInDays'] = $retentionPeriodInDays;
         return $this;
     }
 

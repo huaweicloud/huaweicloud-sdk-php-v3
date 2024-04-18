@@ -251,14 +251,11 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
             if (!preg_match("/^o-[0-9a-z]{10,32}$/", $this->container['organizationId'])) {
                 $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^o-[0-9a-z]{10,32}$/.";
             }
-        if ($this->container['organizationPolicyAssignmentName'] === null) {
-            $invalidProperties[] = "'organizationPolicyAssignmentName' can't be null";
-        }
-            if ((mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
+            if (!is_null($this->container['organizationPolicyAssignmentName']) && (mb_strlen($this->container['organizationPolicyAssignmentName']) > 60)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', the character length must be smaller than or equal to 60.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['organizationPolicyAssignmentName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['organizationPolicyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
             if (!is_null($this->container['organizationPolicyAssignmentId']) && (mb_strlen($this->container['organizationPolicyAssignmentId']) > 512)) {
                 $invalidProperties[] = "invalid value for 'organizationPolicyAssignmentId', the character length must be smaller than or equal to 512.";
@@ -337,7 +334,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     * Gets organizationPolicyAssignmentName
     *  组织合规规则名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getOrganizationPolicyAssignmentName()
     {
@@ -347,7 +344,7 @@ class ShowOrganizationPolicyAssignmentDetailedStatusRequest implements ModelInte
     /**
     * Sets organizationPolicyAssignmentName
     *
-    * @param string $organizationPolicyAssignmentName 组织合规规则名称。
+    * @param string|null $organizationPolicyAssignmentName 组织合规规则名称。
     *
     * @return $this
     */

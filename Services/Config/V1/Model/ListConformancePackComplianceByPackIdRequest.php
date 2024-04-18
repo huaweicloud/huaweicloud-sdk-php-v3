@@ -221,8 +221,8 @@ class ListConformancePackComplianceByPackIdRequest implements ModelInterface, Ar
             if (!is_null($this->container['policyAssignmentName']) && (mb_strlen($this->container['policyAssignmentName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'policyAssignmentName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['policyAssignmentName']) && !preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['policyAssignmentName'])) {
-                $invalidProperties[] = "invalid value for 'policyAssignmentName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['policyAssignmentName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['policyAssignmentName'])) {
+                $invalidProperties[] = "invalid value for 'policyAssignmentName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
         return $invalidProperties;
     }

@@ -23,7 +23,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * state  任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    * state  任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     * assetId  模型资产ID。
     * projectId  模型资产所属项目ID。
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
@@ -32,8 +32,10 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     * mattingType  抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
+    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * appUserId  自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
     * trainingVideoDownloadUrl  分身数字人训练视频下载URL。24小时内有效。
     * idCardImage1DownloadUrl  身份证正面照片下载URL。24小时内有效。
     * idCardImage2DownloadUrl  身份证反面照片下载URL。24小时内有效。
@@ -46,8 +48,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * markableVideoDownloadUrl  标注视频url下载链接。24小时内有效。
     * inferenceDataProcessVideoMarkInfo  inferenceDataProcessVideoMarkInfo
     * inferenceDataProcessActionMarkInfo  inferenceDataProcessActionMarkInfo
+    * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * workerType  转编译任务机型
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -66,6 +69,8 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'modelVersion' => 'string',
             'mattingType' => 'string',
+            'modelResolution' => 'string',
+            'appUserId' => 'string',
             'trainingVideoDownloadUrl' => 'string',
             'idCardImage1DownloadUrl' => 'string',
             'idCardImage2DownloadUrl' => 'string',
@@ -78,8 +83,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'markableVideoDownloadUrl' => 'string',
             'inferenceDataProcessVideoMarkInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\InferenceVideoMarkInfo',
             'inferenceDataProcessActionMarkInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\InferenceActionMarkInfo',
+            'inferenceDataProcessEyeCorrectionMarkInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\InferenceEyeCorrectionMarkInfo',
             'isBackgroundReplacement' => 'bool',
-            'modelResolution' => 'string',
+            'workerType' => 'string[]',
             'xRequestId' => 'string'
     ];
 
@@ -87,7 +93,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * state  任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    * state  任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     * assetId  模型资产ID。
     * projectId  模型资产所属项目ID。
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
@@ -96,8 +102,10 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     * mattingType  抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
+    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * appUserId  自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
     * trainingVideoDownloadUrl  分身数字人训练视频下载URL。24小时内有效。
     * idCardImage1DownloadUrl  身份证正面照片下载URL。24小时内有效。
     * idCardImage2DownloadUrl  身份证反面照片下载URL。24小时内有效。
@@ -110,8 +118,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * markableVideoDownloadUrl  标注视频url下载链接。24小时内有效。
     * inferenceDataProcessVideoMarkInfo  inferenceDataProcessVideoMarkInfo
     * inferenceDataProcessActionMarkInfo  inferenceDataProcessActionMarkInfo
+    * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * workerType  转编译任务机型
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -130,6 +139,8 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         'tags' => null,
         'modelVersion' => null,
         'mattingType' => null,
+        'modelResolution' => null,
+        'appUserId' => null,
         'trainingVideoDownloadUrl' => null,
         'idCardImage1DownloadUrl' => null,
         'idCardImage2DownloadUrl' => null,
@@ -142,8 +153,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         'markableVideoDownloadUrl' => null,
         'inferenceDataProcessVideoMarkInfo' => null,
         'inferenceDataProcessActionMarkInfo' => null,
+        'inferenceDataProcessEyeCorrectionMarkInfo' => null,
         'isBackgroundReplacement' => null,
-        'modelResolution' => null,
+        'workerType' => null,
         'xRequestId' => null
     ];
 
@@ -172,7 +184,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * state  任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    * state  任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     * assetId  模型资产ID。
     * projectId  模型资产所属项目ID。
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
@@ -181,8 +193,10 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     * mattingType  抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
+    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * appUserId  自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
     * trainingVideoDownloadUrl  分身数字人训练视频下载URL。24小时内有效。
     * idCardImage1DownloadUrl  身份证正面照片下载URL。24小时内有效。
     * idCardImage2DownloadUrl  身份证反面照片下载URL。24小时内有效。
@@ -195,8 +209,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * markableVideoDownloadUrl  标注视频url下载链接。24小时内有效。
     * inferenceDataProcessVideoMarkInfo  inferenceDataProcessVideoMarkInfo
     * inferenceDataProcessActionMarkInfo  inferenceDataProcessActionMarkInfo
+    * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * workerType  转编译任务机型
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -215,6 +230,8 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'modelVersion' => 'model_version',
             'mattingType' => 'matting_type',
+            'modelResolution' => 'model_resolution',
+            'appUserId' => 'app_user_id',
             'trainingVideoDownloadUrl' => 'training_video_download_url',
             'idCardImage1DownloadUrl' => 'id_card_image1_download_url',
             'idCardImage2DownloadUrl' => 'id_card_image2_download_url',
@@ -227,8 +244,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'markableVideoDownloadUrl' => 'markable_video_download_url',
             'inferenceDataProcessVideoMarkInfo' => 'inference_data_process_video_mark_info',
             'inferenceDataProcessActionMarkInfo' => 'inference_data_process_action_mark_info',
+            'inferenceDataProcessEyeCorrectionMarkInfo' => 'inference_data_process_eye_correction_mark_info',
             'isBackgroundReplacement' => 'is_background_replacement',
-            'modelResolution' => 'model_resolution',
+            'workerType' => 'worker_type',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -236,7 +254,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * state  任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    * state  任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     * assetId  模型资产ID。
     * projectId  模型资产所属项目ID。
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
@@ -245,8 +263,10 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     * mattingType  抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
+    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * appUserId  自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
     * trainingVideoDownloadUrl  分身数字人训练视频下载URL。24小时内有效。
     * idCardImage1DownloadUrl  身份证正面照片下载URL。24小时内有效。
     * idCardImage2DownloadUrl  身份证反面照片下载URL。24小时内有效。
@@ -259,8 +279,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * markableVideoDownloadUrl  标注视频url下载链接。24小时内有效。
     * inferenceDataProcessVideoMarkInfo  inferenceDataProcessVideoMarkInfo
     * inferenceDataProcessActionMarkInfo  inferenceDataProcessActionMarkInfo
+    * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * workerType  转编译任务机型
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -279,6 +300,8 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'modelVersion' => 'setModelVersion',
             'mattingType' => 'setMattingType',
+            'modelResolution' => 'setModelResolution',
+            'appUserId' => 'setAppUserId',
             'trainingVideoDownloadUrl' => 'setTrainingVideoDownloadUrl',
             'idCardImage1DownloadUrl' => 'setIdCardImage1DownloadUrl',
             'idCardImage2DownloadUrl' => 'setIdCardImage2DownloadUrl',
@@ -291,8 +314,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'markableVideoDownloadUrl' => 'setMarkableVideoDownloadUrl',
             'inferenceDataProcessVideoMarkInfo' => 'setInferenceDataProcessVideoMarkInfo',
             'inferenceDataProcessActionMarkInfo' => 'setInferenceDataProcessActionMarkInfo',
+            'inferenceDataProcessEyeCorrectionMarkInfo' => 'setInferenceDataProcessEyeCorrectionMarkInfo',
             'isBackgroundReplacement' => 'setIsBackgroundReplacement',
-            'modelResolution' => 'setModelResolution',
+            'workerType' => 'setWorkerType',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -300,7 +324,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * name  分身数字人模型名称。该名称会作为资产库中分身数字人模型资产名称。
-    * state  任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    * state  任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     * assetId  模型资产ID。
     * projectId  模型资产所属项目ID。
     * coverDownloadUrl  分身数字人模型封面下载URL。URL有效期24小时。
@@ -309,8 +333,10 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * contact  分身数字人训练任务创建者联系方式，如手机或邮箱等。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     * mattingType  抠图类型。默认是AI。 * AI：AI抠图 * MANUAL：人工抠图
+    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * appUserId  自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
     * trainingVideoDownloadUrl  分身数字人训练视频下载URL。24小时内有效。
     * idCardImage1DownloadUrl  身份证正面照片下载URL。24小时内有效。
     * idCardImage2DownloadUrl  身份证反面照片下载URL。24小时内有效。
@@ -323,8 +349,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * markableVideoDownloadUrl  标注视频url下载链接。24小时内有效。
     * inferenceDataProcessVideoMarkInfo  inferenceDataProcessVideoMarkInfo
     * inferenceDataProcessActionMarkInfo  inferenceDataProcessActionMarkInfo
+    * inferenceDataProcessEyeCorrectionMarkInfo  inferenceDataProcessEyeCorrectionMarkInfo
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * workerType  转编译任务机型
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -343,6 +370,8 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'modelVersion' => 'getModelVersion',
             'mattingType' => 'getMattingType',
+            'modelResolution' => 'getModelResolution',
+            'appUserId' => 'getAppUserId',
             'trainingVideoDownloadUrl' => 'getTrainingVideoDownloadUrl',
             'idCardImage1DownloadUrl' => 'getIdCardImage1DownloadUrl',
             'idCardImage2DownloadUrl' => 'getIdCardImage2DownloadUrl',
@@ -355,8 +384,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'markableVideoDownloadUrl' => 'getMarkableVideoDownloadUrl',
             'inferenceDataProcessVideoMarkInfo' => 'getInferenceDataProcessVideoMarkInfo',
             'inferenceDataProcessActionMarkInfo' => 'getInferenceDataProcessActionMarkInfo',
+            'inferenceDataProcessEyeCorrectionMarkInfo' => 'getInferenceDataProcessEyeCorrectionMarkInfo',
             'isBackgroundReplacement' => 'getIsBackgroundReplacement',
-            'modelResolution' => 'getModelResolution',
+            'workerType' => 'getWorkerType',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -423,6 +453,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     const STATE_JOB_FINISH = 'JOB_FINISH';
     const MODEL_VERSION_V2 = 'V2';
     const MODEL_VERSION_V3 = 'V3';
+    const MODEL_VERSION_V3_2 = 'V3.2';
     const MATTING_TYPE_AI = 'AI';
     const MATTING_TYPE_MANUAL = 'MANUAL';
     
@@ -469,6 +500,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         return [
             self::MODEL_VERSION_V2,
             self::MODEL_VERSION_V3,
+            self::MODEL_VERSION_V3_2,
         ];
     }
 
@@ -514,6 +546,8 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
         $this->container['mattingType'] = isset($data['mattingType']) ? $data['mattingType'] : null;
+        $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
+        $this->container['appUserId'] = isset($data['appUserId']) ? $data['appUserId'] : null;
         $this->container['trainingVideoDownloadUrl'] = isset($data['trainingVideoDownloadUrl']) ? $data['trainingVideoDownloadUrl'] : null;
         $this->container['idCardImage1DownloadUrl'] = isset($data['idCardImage1DownloadUrl']) ? $data['idCardImage1DownloadUrl'] : null;
         $this->container['idCardImage2DownloadUrl'] = isset($data['idCardImage2DownloadUrl']) ? $data['idCardImage2DownloadUrl'] : null;
@@ -526,8 +560,9 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['markableVideoDownloadUrl'] = isset($data['markableVideoDownloadUrl']) ? $data['markableVideoDownloadUrl'] : null;
         $this->container['inferenceDataProcessVideoMarkInfo'] = isset($data['inferenceDataProcessVideoMarkInfo']) ? $data['inferenceDataProcessVideoMarkInfo'] : null;
         $this->container['inferenceDataProcessActionMarkInfo'] = isset($data['inferenceDataProcessActionMarkInfo']) ? $data['inferenceDataProcessActionMarkInfo'] : null;
+        $this->container['inferenceDataProcessEyeCorrectionMarkInfo'] = isset($data['inferenceDataProcessEyeCorrectionMarkInfo']) ? $data['inferenceDataProcessEyeCorrectionMarkInfo'] : null;
         $this->container['isBackgroundReplacement'] = isset($data['isBackgroundReplacement']) ? $data['isBackgroundReplacement'] : null;
-        $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
+        $this->container['workerType'] = isset($data['workerType']) ? $data['workerType'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -632,6 +667,18 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) > 128)) {
+                $invalidProperties[] = "invalid value for 'modelResolution', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) < 0)) {
+                $invalidProperties[] = "invalid value for 'modelResolution', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['trainingVideoDownloadUrl']) && (mb_strlen($this->container['trainingVideoDownloadUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'trainingVideoDownloadUrl', the character length must be smaller than or equal to 2048.";
             }
@@ -673,12 +720,6 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['markableVideoDownloadUrl']) && (mb_strlen($this->container['markableVideoDownloadUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'markableVideoDownloadUrl', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) > 128)) {
-                $invalidProperties[] = "invalid value for 'modelResolution', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) < 0)) {
-                $invalidProperties[] = "invalid value for 'modelResolution', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -744,7 +785,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets state
-    *  任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    *  任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     *
     * @return string
     */
@@ -756,7 +797,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets state
     *
-    * @param string $state 任务的状态。 * WAIT_FILE_UPLOAD: 待上传文件 * AUTO_VERIFYING: 自动审核中 * AUTO_VERIFY_FAILED: 自动审核失败 * MANUAL_VERIFYING: 人工审核中 * MANUAL_VERIFY_FAILED: 人工审核失败 * MANUAL_VERIFY_SUCCESS: 审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED: 训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS: 训练数据预处理完成，等待训练资源中 * TRAINING: 训练中 * TRAIN_FAILED: 训练失败 * TRAIN_SUCCESS: 训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING: 推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED: 推理数据预处理失败 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS: 完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回 * JOB_PENDING：挂起 * JOB_FINISH：结束，最终状态，不可再做改变
+    * @param string $state 任务的状态。 * WAIT_FILE_UPLOAD：待上传文件 * AUTO_VERIFYING：自动审核中 * AUTO_VERIFY_FAILED：自动审核失败 * MANUAL_VERIFYING：人工审核中 * MANUAL_VERIFY_FAILED：人工审核失败 * MANUAL_VERIFY_SUCCESS：审核通过，等待预处理资源 * TRAINING_DATA_PREPROCESSING：训练数据预处理中 * TRAINING_DATA_PREPROCESS_FAILED：训练数据预处理失败 * TRAINING_DATA_PREPROCESS_SUCCESS：训练数据预处理完成，等待训练资源中 * TRAINING：训练中 * TRAIN_FAILED：训练失败 * TRAIN_SUCCESS：训练完成，等待预处理资源 * INFERENCE_DATA_PREPROCESSING：推理数据预处理中 * INFERENCE_DATA_PREPROCESS_FAILED：推理数据预处理失败 * WAIT_MASK_UPLOAD：等待遮罩上传 * WAIT_MAIN_FILE_UPLOAD：等待主文件上传 * JOB_SUCCESS：训练任务完成 * WAIT_USER_CONFIRM：等待用户确认训练效果 * JOB_REJECT：驳回任务 * JOB_PENDING：挂起任务 * JOB_FINISH：任务结束，是最终状态，不支持修改此状态。
     *
     * @return $this
     */
@@ -960,7 +1001,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelVersion
-    *  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    *  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     *
     * @return string|null
     */
@@ -972,7 +1013,7 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets modelVersion
     *
-    * @param string|null $modelVersion 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型
+    * @param string|null $modelVersion 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型
     *
     * @return $this
     */
@@ -1003,6 +1044,54 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     public function setMattingType($mattingType)
     {
         $this->container['mattingType'] = $mattingType;
+        return $this;
+    }
+
+    /**
+    * Gets modelResolution
+    *  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    *
+    * @return string|null
+    */
+    public function getModelResolution()
+    {
+        return $this->container['modelResolution'];
+    }
+
+    /**
+    * Sets modelResolution
+    *
+    * @param string|null $modelResolution 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    *
+    * @return $this
+    */
+    public function setModelResolution($modelResolution)
+    {
+        $this->container['modelResolution'] = $modelResolution;
+        return $this;
+    }
+
+    /**
+    * Gets appUserId
+    *  自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
+    *
+    * @return string|null
+    */
+    public function getAppUserId()
+    {
+        return $this->container['appUserId'];
+    }
+
+    /**
+    * Sets appUserId
+    *
+    * @param string|null $appUserId 自定义用户id（如创建任务时设置了X-App-UserId则会携带）。
+    *
+    * @return $this
+    */
+    public function setAppUserId($appUserId)
+    {
+        $this->container['appUserId'] = $appUserId;
         return $this;
     }
 
@@ -1295,6 +1384,30 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets inferenceDataProcessEyeCorrectionMarkInfo
+    *  inferenceDataProcessEyeCorrectionMarkInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\InferenceEyeCorrectionMarkInfo|null
+    */
+    public function getInferenceDataProcessEyeCorrectionMarkInfo()
+    {
+        return $this->container['inferenceDataProcessEyeCorrectionMarkInfo'];
+    }
+
+    /**
+    * Sets inferenceDataProcessEyeCorrectionMarkInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\InferenceEyeCorrectionMarkInfo|null $inferenceDataProcessEyeCorrectionMarkInfo inferenceDataProcessEyeCorrectionMarkInfo
+    *
+    * @return $this
+    */
+    public function setInferenceDataProcessEyeCorrectionMarkInfo($inferenceDataProcessEyeCorrectionMarkInfo)
+    {
+        $this->container['inferenceDataProcessEyeCorrectionMarkInfo'] = $inferenceDataProcessEyeCorrectionMarkInfo;
+        return $this;
+    }
+
+    /**
     * Gets isBackgroundReplacement
     *  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     *
@@ -1319,26 +1432,26 @@ class Show2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets modelResolution
-    *  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * Gets workerType
+    *  转编译任务机型
     *
-    * @return string|null
+    * @return string[]|null
     */
-    public function getModelResolution()
+    public function getWorkerType()
     {
-        return $this->container['modelResolution'];
+        return $this->container['workerType'];
     }
 
     /**
-    * Sets modelResolution
+    * Sets workerType
     *
-    * @param string|null $modelResolution 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * @param string[]|null $workerType 转编译任务机型
     *
     * @return $this
     */
-    public function setModelResolution($modelResolution)
+    public function setWorkerType($workerType)
     {
-        $this->container['modelResolution'] = $modelResolution;
+        $this->container['workerType'] = $workerType;
         return $this;
     }
 

@@ -29,6 +29,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * isNeedGenerateCover  是否需要生成封面。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
-            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig'
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
+            'isNeedGenerateCover' => 'bool'
     ];
 
     /**
@@ -55,6 +57,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * isNeedGenerateCover  是否需要生成封面。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'tags' => null,
         'assetExtraMeta' => null,
         'systemProperties' => null,
-        'sharedConfig' => null
+        'sharedConfig' => null,
+        'isNeedGenerateCover' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * isNeedGenerateCover  是否需要生成封面。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
-            'sharedConfig' => 'shared_config'
+            'sharedConfig' => 'shared_config',
+            'isNeedGenerateCover' => 'is_need_generate_cover'
     ];
 
     /**
@@ -128,6 +134,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * isNeedGenerateCover  是否需要生成封面。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
-            'sharedConfig' => 'setSharedConfig'
+            'sharedConfig' => 'setSharedConfig',
+            'isNeedGenerateCover' => 'setIsNeedGenerateCover'
     ];
 
     /**
@@ -154,6 +162,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * isNeedGenerateCover  是否需要生成封面。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
-            'sharedConfig' => 'getSharedConfig'
+            'sharedConfig' => 'getSharedConfig',
+            'isNeedGenerateCover' => 'getIsNeedGenerateCover'
     ];
 
     /**
@@ -275,6 +285,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
+        $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
     }
 
     /**
@@ -544,6 +555,30 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     public function setSharedConfig($sharedConfig)
     {
         $this->container['sharedConfig'] = $sharedConfig;
+        return $this;
+    }
+
+    /**
+    * Gets isNeedGenerateCover
+    *  是否需要生成封面。
+    *
+    * @return bool|null
+    */
+    public function getIsNeedGenerateCover()
+    {
+        return $this->container['isNeedGenerateCover'];
+    }
+
+    /**
+    * Sets isNeedGenerateCover
+    *
+    * @param bool|null $isNeedGenerateCover 是否需要生成封面。
+    *
+    * @return $this
+    */
+    public function setIsNeedGenerateCover($isNeedGenerateCover)
+    {
+        $this->container['isNeedGenerateCover'] = $isNeedGenerateCover;
         return $this;
     }
 

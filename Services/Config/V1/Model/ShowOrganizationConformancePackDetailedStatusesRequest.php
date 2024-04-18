@@ -184,6 +184,9 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     const STATE_CREATE_FAILED = 'CREATE_FAILED';
     const STATE_DELETE_IN_PROGRESS = 'DELETE_IN_PROGRESS';
     const STATE_DELETE_FAILED = 'DELETE_FAILED';
+    const STATE_UPDATE_SUCCESSFUL = 'UPDATE_SUCCESSFUL';
+    const STATE_UPDATE_IN_PROGRESS = 'UPDATE_IN_PROGRESS';
+    const STATE_UPDATE_FAILED = 'UPDATE_FAILED';
     
 
     /**
@@ -199,6 +202,9 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
             self::STATE_CREATE_FAILED,
             self::STATE_DELETE_IN_PROGRESS,
             self::STATE_DELETE_FAILED,
+            self::STATE_UPDATE_SUCCESSFUL,
+            self::STATE_UPDATE_IN_PROGRESS,
+            self::STATE_UPDATE_FAILED,
         ];
     }
 
@@ -243,17 +249,14 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
             if (!preg_match("/^o-[0-9a-z]{10,32}$/", $this->container['organizationId'])) {
                 $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^o-[0-9a-z]{10,32}$/.";
             }
-        if ($this->container['conformancePackName'] === null) {
-            $invalidProperties[] = "'conformancePackName' can't be null";
-        }
-            if ((mb_strlen($this->container['conformancePackName']) > 64)) {
+            if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be smaller than or equal to 64.";
             }
-            if ((mb_strlen($this->container['conformancePackName']) < 1)) {
+            if (!is_null($this->container['conformancePackName']) && (mb_strlen($this->container['conformancePackName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'conformancePackName', the character length must be bigger than or equal to 1.";
             }
-            if (!preg_match("/^[a-zA-Z0-9_\\-]+/", $this->container['conformancePackName'])) {
-                $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^[a-zA-Z0-9_\\-]+/.";
+            if (!is_null($this->container['conformancePackName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['conformancePackName'])) {
+                $invalidProperties[] = "invalid value for 'conformancePackName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
             if (!is_null($this->container['organizationConformancePackId']) && (mb_strlen($this->container['organizationConformancePackId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'organizationConformancePackId', the character length must be smaller than or equal to 36.";
@@ -332,7 +335,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     * Gets conformancePackName
     *  合规规则包名称。
     *
-    * @return string
+    * @return string|null
     */
     public function getConformancePackName()
     {
@@ -342,7 +345,7 @@ class ShowOrganizationConformancePackDetailedStatusesRequest implements ModelInt
     /**
     * Sets conformancePackName
     *
-    * @param string $conformancePackName 合规规则包名称。
+    * @param string|null $conformancePackName 合规规则包名称。
     *
     * @return $this
     */

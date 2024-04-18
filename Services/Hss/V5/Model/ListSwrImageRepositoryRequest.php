@@ -29,7 +29,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
     * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
@@ -77,7 +77,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
     * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
@@ -146,7 +146,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
     * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
@@ -194,7 +194,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
     * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
@@ -242,7 +242,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
     * imageSize  镜像大小
     * startLatestUpdateTime  创建时间开始日期，时间单位 毫秒（ms）
@@ -716,7 +716,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets scanStatus
-    *  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    *  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     *
     * @return string|null
     */
@@ -728,7 +728,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets scanStatus
     *
-    * @param string|null $scanStatus 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - download_failed : 下载失败   - image_oversized : 镜像超大
+    * @param string|null $scanStatus 扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * fileId  文件ID。
-    * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * uploadUrl  文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -36,7 +36,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fileId  文件ID。
-    * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * uploadUrl  文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -71,7 +71,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * fileId  文件ID。
-    * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * uploadUrl  文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,7 +85,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fileId  文件ID。
-    * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * uploadUrl  文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -99,7 +99,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fileId  文件ID。
-    * uploadUrl  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * uploadUrl  文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -233,7 +233,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets uploadUrl
-    *  文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    *  文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     *
     * @return string|null
     */
@@ -245,7 +245,7 @@ class CreateFileResponse implements ModelInterface, ArrayAccess
     /**
     * Sets uploadUrl
     *
-    * @param string|null $uploadUrl 文件上传地址，有效期为24小时。 > * 调用OBS的[\"PUT上传\"](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。 > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
+    * @param string|null $uploadUrl 文件上传地址，有效期为24小时。 > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/api-obs/obs_04_0080.html)接口上传文件。](tag:hc) > * [调用OBS的[“PUT上传”](https://support.huaweicloud.com/intl/zh-cn/api-obs/obs_04_0080.html)接口上传文件。](tag:hk) > * [调用OBS的“PUT上传”接口上传文件。](tag:cmcc) > * 调用上述接口时，Content-MD5头必须填写，填写的值跟file_md5中的值相同。
     *
     * @return $this
     */

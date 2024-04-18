@@ -20,45 +20,33 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
-    * humanPosition2d  humanPosition2d
-    * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
+    * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
+    * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'backgroundType' => 'string',
-            'backgroundTitle' => 'string',
-            'humanPosition2d' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HumanPosition2D',
-            'humanSize2d' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HumanSize2D',
-            'backgroundCoverUrl' => 'string',
             'backgroundConfig' => 'string',
+            'backgroundColorConfig' => 'string',
             'backgroundAssetId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
-    * humanPosition2d  humanPosition2d
-    * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
+    * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
+    * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'backgroundType' => null,
-        'backgroundTitle' => null,
-        'humanPosition2d' => null,
-        'humanSize2d' => null,
-        'backgroundCoverUrl' => null,
         'backgroundConfig' => null,
+        'backgroundColorConfig' => null,
         'backgroundAssetId' => null
     ];
 
@@ -85,67 +73,49 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
-    * humanPosition2d  humanPosition2d
-    * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
+    * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
+    * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'backgroundType' => 'background_type',
-            'backgroundTitle' => 'background_title',
-            'humanPosition2d' => 'human_position_2d',
-            'humanSize2d' => 'human_size_2d',
-            'backgroundCoverUrl' => 'background_cover_url',
             'backgroundConfig' => 'background_config',
+            'backgroundColorConfig' => 'background_color_config',
             'backgroundAssetId' => 'background_asset_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
-    * humanPosition2d  humanPosition2d
-    * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
+    * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
+    * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
     */
     protected static $setters = [
             'backgroundType' => 'setBackgroundType',
-            'backgroundTitle' => 'setBackgroundTitle',
-            'humanPosition2d' => 'setHumanPosition2d',
-            'humanSize2d' => 'setHumanSize2d',
-            'backgroundCoverUrl' => 'setBackgroundCoverUrl',
             'backgroundConfig' => 'setBackgroundConfig',
+            'backgroundColorConfig' => 'setBackgroundColorConfig',
             'backgroundAssetId' => 'setBackgroundAssetId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * backgroundType  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
-    * backgroundTitle  背景标题。 > * 分身数字人视频制作此参数不生效。
-    * humanPosition2d  humanPosition2d
-    * humanSize2d  humanSize2d
-    * backgroundCoverUrl  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    * backgroundConfig  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
+    * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
+    * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
     * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
     *
     * @var string[]
     */
     protected static $getters = [
             'backgroundType' => 'getBackgroundType',
-            'backgroundTitle' => 'getBackgroundTitle',
-            'humanPosition2d' => 'getHumanPosition2d',
-            'humanSize2d' => 'getHumanSize2d',
-            'backgroundCoverUrl' => 'getBackgroundCoverUrl',
             'backgroundConfig' => 'getBackgroundConfig',
+            'backgroundColorConfig' => 'getBackgroundColorConfig',
             'backgroundAssetId' => 'getBackgroundAssetId'
     ];
 
@@ -190,6 +160,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const BACKGROUND_TYPE_IMAGE = 'IMAGE';
+    const BACKGROUND_TYPE_COLOR = 'COLOR';
     const BACKGROUND_TYPE_IMAGE_2_D = 'IMAGE_2D';
     const BACKGROUND_TYPE_VIDEO = 'VIDEO';
     const BACKGROUND_TYPE_AUDIO = 'AUDIO';
@@ -204,6 +175,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     {
         return [
             self::BACKGROUND_TYPE_IMAGE,
+            self::BACKGROUND_TYPE_COLOR,
             self::BACKGROUND_TYPE_IMAGE_2_D,
             self::BACKGROUND_TYPE_VIDEO,
             self::BACKGROUND_TYPE_AUDIO,
@@ -227,11 +199,8 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['backgroundType'] = isset($data['backgroundType']) ? $data['backgroundType'] : null;
-        $this->container['backgroundTitle'] = isset($data['backgroundTitle']) ? $data['backgroundTitle'] : null;
-        $this->container['humanPosition2d'] = isset($data['humanPosition2d']) ? $data['humanPosition2d'] : null;
-        $this->container['humanSize2d'] = isset($data['humanSize2d']) ? $data['humanSize2d'] : null;
-        $this->container['backgroundCoverUrl'] = isset($data['backgroundCoverUrl']) ? $data['backgroundCoverUrl'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
+        $this->container['backgroundColorConfig'] = isset($data['backgroundColorConfig']) ? $data['backgroundColorConfig'] : null;
         $this->container['backgroundAssetId'] = isset($data['backgroundAssetId']) ? $data['backgroundAssetId'] : null;
     }
 
@@ -260,26 +229,20 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['backgroundType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'backgroundType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['backgroundTitle']) && (mb_strlen($this->container['backgroundTitle']) > 256)) {
-                $invalidProperties[] = "invalid value for 'backgroundTitle', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['backgroundTitle']) && (mb_strlen($this->container['backgroundTitle']) < 0)) {
-                $invalidProperties[] = "invalid value for 'backgroundTitle', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['backgroundCoverUrl']) && (mb_strlen($this->container['backgroundCoverUrl']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'backgroundCoverUrl', the character length must be smaller than or equal to 2048.";
-            }
-            if (!is_null($this->container['backgroundCoverUrl']) && (mb_strlen($this->container['backgroundCoverUrl']) < 0)) {
-                $invalidProperties[] = "invalid value for 'backgroundCoverUrl', the character length must be bigger than or equal to 0.";
-            }
-        if ($this->container['backgroundConfig'] === null) {
-            $invalidProperties[] = "'backgroundConfig' can't be null";
-        }
-            if ((mb_strlen($this->container['backgroundConfig']) > 2048)) {
+            if (!is_null($this->container['backgroundConfig']) && (mb_strlen($this->container['backgroundConfig']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'backgroundConfig', the character length must be smaller than or equal to 2048.";
             }
-            if ((mb_strlen($this->container['backgroundConfig']) < 1)) {
+            if (!is_null($this->container['backgroundConfig']) && (mb_strlen($this->container['backgroundConfig']) < 1)) {
                 $invalidProperties[] = "invalid value for 'backgroundConfig', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['backgroundColorConfig']) && (mb_strlen($this->container['backgroundColorConfig']) > 16)) {
+                $invalidProperties[] = "invalid value for 'backgroundColorConfig', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['backgroundColorConfig']) && (mb_strlen($this->container['backgroundColorConfig']) < 0)) {
+                $invalidProperties[] = "invalid value for 'backgroundColorConfig', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['backgroundColorConfig']) && !preg_match("/^#[0-9A-Fa-f]{6}$/", $this->container['backgroundColorConfig'])) {
+                $invalidProperties[] = "invalid value for 'backgroundColorConfig', must be conform to the pattern /^#[0-9A-Fa-f]{6}$/.";
             }
             if (!is_null($this->container['backgroundAssetId']) && (mb_strlen($this->container['backgroundAssetId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'backgroundAssetId', the character length must be smaller than or equal to 64.";
@@ -303,7 +266,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backgroundType
-    *  背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
+    *  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     *
     * @return string
     */
@@ -315,7 +278,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backgroundType
     *
-    * @param string $backgroundType 背景类型。 - IMAGE：图片，用于3D数字人演示素材讲解模式的图片或分身数字背景图片 - IMAGE_2D：图片，用于3D数字人主播播报模式的2D场景背景图片 - VIDEO：视频 - AUDIO：音频 > * 分身数字人视频制作仅支持IMAGE
+    * @param string $backgroundType 背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     *
     * @return $this
     */
@@ -326,106 +289,10 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets backgroundTitle
-    *  背景标题。 > * 分身数字人视频制作此参数不生效。
-    *
-    * @return string|null
-    */
-    public function getBackgroundTitle()
-    {
-        return $this->container['backgroundTitle'];
-    }
-
-    /**
-    * Sets backgroundTitle
-    *
-    * @param string|null $backgroundTitle 背景标题。 > * 分身数字人视频制作此参数不生效。
-    *
-    * @return $this
-    */
-    public function setBackgroundTitle($backgroundTitle)
-    {
-        $this->container['backgroundTitle'] = $backgroundTitle;
-        return $this;
-    }
-
-    /**
-    * Gets humanPosition2d
-    *  humanPosition2d
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\HumanPosition2D|null
-    */
-    public function getHumanPosition2d()
-    {
-        return $this->container['humanPosition2d'];
-    }
-
-    /**
-    * Sets humanPosition2d
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\HumanPosition2D|null $humanPosition2d humanPosition2d
-    *
-    * @return $this
-    */
-    public function setHumanPosition2d($humanPosition2d)
-    {
-        $this->container['humanPosition2d'] = $humanPosition2d;
-        return $this;
-    }
-
-    /**
-    * Gets humanSize2d
-    *  humanSize2d
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\HumanSize2D|null
-    */
-    public function getHumanSize2d()
-    {
-        return $this->container['humanSize2d'];
-    }
-
-    /**
-    * Sets humanSize2d
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\HumanSize2D|null $humanSize2d humanSize2d
-    *
-    * @return $this
-    */
-    public function setHumanSize2d($humanSize2d)
-    {
-        $this->container['humanSize2d'] = $humanSize2d;
-        return $this;
-    }
-
-    /**
-    * Gets backgroundCoverUrl
-    *  视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    *
-    * @return string|null
-    */
-    public function getBackgroundCoverUrl()
-    {
-        return $this->container['backgroundCoverUrl'];
-    }
-
-    /**
-    * Sets backgroundCoverUrl
-    *
-    * @param string|null $backgroundCoverUrl 视频文件封面图片的下载URL。  演示素材为视频时有效。 > * 分身数字人视频制作此参数不生效。
-    *
-    * @return $this
-    */
-    public function setBackgroundCoverUrl($backgroundCoverUrl)
-    {
-        $this->container['backgroundCoverUrl'] = $backgroundCoverUrl;
-        return $this;
-    }
-
-    /**
     * Gets backgroundConfig
-    *  背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    *  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
     *
-    * @return string
+    * @return string|null
     */
     public function getBackgroundConfig()
     {
@@ -435,13 +302,37 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backgroundConfig
     *
-    * @param string $backgroundConfig 背景文件的URL。 > * 通过资产库查询获取，不支持外部URL。
+    * @param string|null $backgroundConfig 背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=COLOR时需要填写。
     *
     * @return $this
     */
     public function setBackgroundConfig($backgroundConfig)
     {
         $this->container['backgroundConfig'] = $backgroundConfig;
+        return $this;
+    }
+
+    /**
+    * Gets backgroundColorConfig
+    *  纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
+    *
+    * @return string|null
+    */
+    public function getBackgroundColorConfig()
+    {
+        return $this->container['backgroundColorConfig'];
+    }
+
+    /**
+    * Sets backgroundColorConfig
+    *
+    * @param string|null $backgroundColorConfig 纯色背景的RGB颜色值。 > * background_type=IMAGE时需要填写。
+    *
+    * @return $this
+    */
+    public function setBackgroundColorConfig($backgroundColorConfig)
+    {
+        $this->container['backgroundColorConfig'] = $backgroundColorConfig;
         return $this;
     }
 

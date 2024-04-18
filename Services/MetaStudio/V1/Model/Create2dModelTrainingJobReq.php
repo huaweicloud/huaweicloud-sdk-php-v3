@@ -27,6 +27,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'videoMultipartCount' => 'int',
             'isBackgroundReplacement' => 'bool',
             'batchName' => 'string',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'modelVersion' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         'videoMultipartCount' => 'int32',
         'isBackgroundReplacement' => null,
         'batchName' => null,
-        'tags' => null
+        'tags' => null,
+        'modelVersion' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'videoMultipartCount' => 'video_multipart_count',
             'isBackgroundReplacement' => 'is_background_replacement',
             'batchName' => 'batch_name',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'modelVersion' => 'model_version'
     ];
 
     /**
@@ -114,6 +120,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'videoMultipartCount' => 'setVideoMultipartCount',
             'isBackgroundReplacement' => 'setIsBackgroundReplacement',
             'batchName' => 'setBatchName',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'modelVersion' => 'setModelVersion'
     ];
 
     /**
@@ -136,6 +144,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
+    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'videoMultipartCount' => 'getVideoMultipartCount',
             'isBackgroundReplacement' => 'getIsBackgroundReplacement',
             'batchName' => 'getBatchName',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'modelVersion' => 'getModelVersion'
     ];
 
     /**
@@ -191,6 +201,9 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     }
     const COMMAND_MESSAGE_UPDATE_VIDEO = 'UPDATE_VIDEO';
     const COMMAND_MESSAGE_UPLOAD_VIDEO = 'UPLOAD_VIDEO';
+    const MODEL_VERSION_V2 = 'V2';
+    const MODEL_VERSION_V3 = 'V3';
+    const MODEL_VERSION_V3_2 = 'V3.2';
     
 
     /**
@@ -203,6 +216,20 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         return [
             self::COMMAND_MESSAGE_UPDATE_VIDEO,
             self::COMMAND_MESSAGE_UPLOAD_VIDEO,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getModelVersionAllowableValues()
+    {
+        return [
+            self::MODEL_VERSION_V2,
+            self::MODEL_VERSION_V3,
+            self::MODEL_VERSION_V3_2,
         ];
     }
 
@@ -229,6 +256,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['isBackgroundReplacement'] = isset($data['isBackgroundReplacement']) ? $data['isBackgroundReplacement'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
     }
 
     /**
@@ -274,6 +302,14 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getModelVersionAllowableValues();
+                if (!is_null($this->container['modelVersion']) && !in_array($this->container['modelVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'modelVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -453,6 +489,30 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets modelVersion
+    *  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    *
+    * @return string|null
+    */
+    public function getModelVersion()
+    {
+        return $this->container['modelVersion'];
+    }
+
+    /**
+    * Sets modelVersion
+    *
+    * @param string|null $modelVersion 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    *
+    * @return $this
+    */
+    public function setModelVersion($modelVersion)
+    {
+        $this->container['modelVersion'] = $modelVersion;
         return $this;
     }
 

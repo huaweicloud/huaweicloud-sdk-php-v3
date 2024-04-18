@@ -38,7 +38,7 @@ class ShowBackupPolicy implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'period' => 'string',
             'differentialPriod' => 'string',
-            'differentialPeriod' => 'string',
+            'differentialPeriod' => 'int',
             'rateLimit' => 'int',
             'prefetchBlock' => 'int',
             'filesplitSize' => 'int',
@@ -401,7 +401,7 @@ class ShowBackupPolicy implements ModelInterface, ArrayAccess
     * Gets differentialPeriod
     *  差量备份周期配置。自动差量备份将每隔周期分钟执行。
     *
-    * @return string
+    * @return int
     */
     public function getDifferentialPeriod()
     {
@@ -411,7 +411,7 @@ class ShowBackupPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets differentialPeriod
     *
-    * @param string $differentialPeriod 差量备份周期配置。自动差量备份将每隔周期分钟执行。
+    * @param int $differentialPeriod 差量备份周期配置。自动差量备份将每隔周期分钟执行。
     *
     * @return $this
     */

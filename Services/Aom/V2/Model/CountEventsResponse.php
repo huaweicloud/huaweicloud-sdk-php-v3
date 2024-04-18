@@ -24,13 +24,15 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
     * step  统计步长。毫秒数，例如一分钟则填写为60000。
     * timestamps  统计结果对应的时间序列。
     * series  事件或者告警不同级别相同时间序列对应的统计结果。
+    * summary  各类告警信息的数量汇总
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'step' => 'int',
             'timestamps' => 'int[]',
-            'series' => '\HuaweiCloud\SDK\Aom\V2\Model\EventSeries[]'
+            'series' => '\HuaweiCloud\SDK\Aom\V2\Model\EventSeries[]',
+            'summary' => 'map[string,int]'
     ];
 
     /**
@@ -38,13 +40,15 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
     * step  统计步长。毫秒数，例如一分钟则填写为60000。
     * timestamps  统计结果对应的时间序列。
     * series  事件或者告警不同级别相同时间序列对应的统计结果。
+    * summary  各类告警信息的数量汇总
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'step' => 'int64',
         'timestamps' => 'int64',
-        'series' => null
+        'series' => null,
+        'summary' => 'int64'
     ];
 
     /**
@@ -73,13 +77,15 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
     * step  统计步长。毫秒数，例如一分钟则填写为60000。
     * timestamps  统计结果对应的时间序列。
     * series  事件或者告警不同级别相同时间序列对应的统计结果。
+    * summary  各类告警信息的数量汇总
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'step' => 'step',
             'timestamps' => 'timestamps',
-            'series' => 'series'
+            'series' => 'series',
+            'summary' => 'summary'
     ];
 
     /**
@@ -87,13 +93,15 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
     * step  统计步长。毫秒数，例如一分钟则填写为60000。
     * timestamps  统计结果对应的时间序列。
     * series  事件或者告警不同级别相同时间序列对应的统计结果。
+    * summary  各类告警信息的数量汇总
     *
     * @var string[]
     */
     protected static $setters = [
             'step' => 'setStep',
             'timestamps' => 'setTimestamps',
-            'series' => 'setSeries'
+            'series' => 'setSeries',
+            'summary' => 'setSummary'
     ];
 
     /**
@@ -101,13 +109,15 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
     * step  统计步长。毫秒数，例如一分钟则填写为60000。
     * timestamps  统计结果对应的时间序列。
     * series  事件或者告警不同级别相同时间序列对应的统计结果。
+    * summary  各类告警信息的数量汇总
     *
     * @var string[]
     */
     protected static $getters = [
             'step' => 'getStep',
             'timestamps' => 'getTimestamps',
-            'series' => 'getSeries'
+            'series' => 'getSeries',
+            'summary' => 'getSummary'
     ];
 
     /**
@@ -171,6 +181,7 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
         $this->container['step'] = isset($data['step']) ? $data['step'] : null;
         $this->container['timestamps'] = isset($data['timestamps']) ? $data['timestamps'] : null;
         $this->container['series'] = isset($data['series']) ? $data['series'] : null;
+        $this->container['summary'] = isset($data['summary']) ? $data['summary'] : null;
     }
 
     /**
@@ -264,6 +275,30 @@ class CountEventsResponse implements ModelInterface, ArrayAccess
     public function setSeries($series)
     {
         $this->container['series'] = $series;
+        return $this;
+    }
+
+    /**
+    * Gets summary
+    *  各类告警信息的数量汇总
+    *
+    * @return map[string,int]|null
+    */
+    public function getSummary()
+    {
+        return $this->container['summary'];
+    }
+
+    /**
+    * Sets summary
+    *
+    * @param map[string,int]|null $summary 各类告警信息的数量汇总
+    *
+    * @return $this
+    */
+    public function setSummary($summary)
+    {
+        $this->container['summary'] = $summary;
         return $this;
     }
 

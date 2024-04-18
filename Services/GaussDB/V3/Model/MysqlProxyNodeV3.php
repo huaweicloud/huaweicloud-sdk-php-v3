@@ -25,7 +25,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
     * status  节点状态。
     * name  节点名称。
     * weight  节点读写分离读权重。
-    * availabilityZone  可用区信息。
+    * availabilityZone  主实例所有节点的可用区信息。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
     * status  节点状态。
     * name  节点名称。
     * weight  节点读写分离读权重。
-    * availabilityZone  可用区信息。
+    * availabilityZone  主实例所有节点的可用区信息。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
     * status  节点状态。
     * name  节点名称。
     * weight  节点读写分离读权重。
-    * availabilityZone  可用区信息。
+    * availabilityZone  主实例所有节点的可用区信息。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
     * status  节点状态。
     * name  节点名称。
     * weight  节点读写分离读权重。
-    * availabilityZone  可用区信息。
+    * availabilityZone  主实例所有节点的可用区信息。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
     * status  节点状态。
     * name  节点名称。
     * weight  节点读写分离读权重。
-    * availabilityZone  可用区信息。
+    * availabilityZone  主实例所有节点的可用区信息。
     *
     * @var string[]
     */
@@ -349,7 +349,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  可用区信息。
+    *  主实例所有节点的可用区信息。
     *
     * @return \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyAvailable[]|null
     */
@@ -361,7 +361,7 @@ class MysqlProxyNodeV3 implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyAvailable[]|null $availabilityZone 可用区信息。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\MysqlProxyAvailable[]|null $availabilityZone 主实例所有节点的可用区信息。
     *
     * @return $this
     */

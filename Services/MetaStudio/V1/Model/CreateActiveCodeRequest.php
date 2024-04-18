@@ -23,7 +23,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -41,7 +41,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -80,7 +80,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -116,7 +116,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
     * authorization  使用AK/SK方式认证时必选，携带的鉴权信息。
     * xSdkDate  使用AK/SK方式认证时必选，请求的发生时间。
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
-    * xAppUserId  开发者应用作为资产权属的可选字段。
+    * xAppUserId  第三方用户ID。不允许输入中文。
     * body  body
     *
     * @var string[]
@@ -314,7 +314,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xAppUserId
-    *  开发者应用作为资产权属的可选字段。
+    *  第三方用户ID。不允许输入中文。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class CreateActiveCodeRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xAppUserId
     *
-    * @param string|null $xAppUserId 开发者应用作为资产权属的可选字段。
+    * @param string|null $xAppUserId 第三方用户ID。不允许输入中文。
     *
     * @return $this
     */

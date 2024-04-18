@@ -22,17 +22,29 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskId  迁移任务ID。
     * taskName  迁移任务名称。
-    * status  迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-    * migrationType  迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    * status  迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
+    * migrationType  迁移任务类型，包括备份文件导入和在线迁移两种类型。
     * migrationMethod  迁移方式，包括全量迁移和增量迁移两种类型。
-    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-    * dataSource  数据源，格式为ip:port或者桶名。
+    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
+    * dataSource  源redis地址，格式为ip:port或者桶名。
     * sourceInstanceName  源实例名称，若自建redis则为空。
     * sourceInstanceId  源实例ID，若自建redis则为空。
     * targetInstanceAddrs  目标redis地址，格式为ip:port。
     * targetInstanceName  目标实例名称。
     * targetInstanceId  目标实例ID。
-    * createdAt  迁移任务创建时间
+    * createdAt  迁移任务创建时间。
+    * description  迁移任务描述。
+    * sourceInstanceStatus  源实例状态，若自建redis则为空。
+    * targetInstanceStatus  目标实例状态。
+    * sourceInstanceSubnetId  源实例子网ID，若自建redis则为空。
+    * targetInstanceSubnetId  目标实例子网ID。
+    * sourceInstanceSpecCode  源实例规格编码，若自建redis则为空。
+    * targetInstanceSpecCode  目标实例规格编码。
+    * errorMessage  错误信息。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
     *
     * @var string[]
     */
@@ -49,24 +61,48 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
             'targetInstanceAddrs' => 'string',
             'targetInstanceName' => 'string',
             'targetInstanceId' => 'string',
-            'createdAt' => 'string'
+            'createdAt' => 'string',
+            'description' => 'string',
+            'sourceInstanceStatus' => 'string',
+            'targetInstanceStatus' => 'string',
+            'sourceInstanceSubnetId' => 'string',
+            'targetInstanceSubnetId' => 'string',
+            'sourceInstanceSpecCode' => 'string',
+            'targetInstanceSpecCode' => 'string',
+            'errorMessage' => 'string',
+            'releasedAt' => 'string',
+            'version' => 'string',
+            'resumeMode' => 'string',
+            'supportedFeatures' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * taskId  迁移任务ID。
     * taskName  迁移任务名称。
-    * status  迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-    * migrationType  迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    * status  迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
+    * migrationType  迁移任务类型，包括备份文件导入和在线迁移两种类型。
     * migrationMethod  迁移方式，包括全量迁移和增量迁移两种类型。
-    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-    * dataSource  数据源，格式为ip:port或者桶名。
+    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
+    * dataSource  源redis地址，格式为ip:port或者桶名。
     * sourceInstanceName  源实例名称，若自建redis则为空。
     * sourceInstanceId  源实例ID，若自建redis则为空。
     * targetInstanceAddrs  目标redis地址，格式为ip:port。
     * targetInstanceName  目标实例名称。
     * targetInstanceId  目标实例ID。
-    * createdAt  迁移任务创建时间
+    * createdAt  迁移任务创建时间。
+    * description  迁移任务描述。
+    * sourceInstanceStatus  源实例状态，若自建redis则为空。
+    * targetInstanceStatus  目标实例状态。
+    * sourceInstanceSubnetId  源实例子网ID，若自建redis则为空。
+    * targetInstanceSubnetId  目标实例子网ID。
+    * sourceInstanceSpecCode  源实例规格编码，若自建redis则为空。
+    * targetInstanceSpecCode  目标实例规格编码。
+    * errorMessage  错误信息。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
     *
     * @var string[]
     */
@@ -83,7 +119,19 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
         'targetInstanceAddrs' => null,
         'targetInstanceName' => null,
         'targetInstanceId' => null,
-        'createdAt' => null
+        'createdAt' => null,
+        'description' => null,
+        'sourceInstanceStatus' => null,
+        'targetInstanceStatus' => null,
+        'sourceInstanceSubnetId' => null,
+        'targetInstanceSubnetId' => null,
+        'sourceInstanceSpecCode' => null,
+        'targetInstanceSpecCode' => null,
+        'errorMessage' => null,
+        'releasedAt' => null,
+        'version' => null,
+        'resumeMode' => null,
+        'supportedFeatures' => null
     ];
 
     /**
@@ -111,17 +159,29 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskId  迁移任务ID。
     * taskName  迁移任务名称。
-    * status  迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-    * migrationType  迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    * status  迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
+    * migrationType  迁移任务类型，包括备份文件导入和在线迁移两种类型。
     * migrationMethod  迁移方式，包括全量迁移和增量迁移两种类型。
-    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-    * dataSource  数据源，格式为ip:port或者桶名。
+    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
+    * dataSource  源redis地址，格式为ip:port或者桶名。
     * sourceInstanceName  源实例名称，若自建redis则为空。
     * sourceInstanceId  源实例ID，若自建redis则为空。
     * targetInstanceAddrs  目标redis地址，格式为ip:port。
     * targetInstanceName  目标实例名称。
     * targetInstanceId  目标实例ID。
-    * createdAt  迁移任务创建时间
+    * createdAt  迁移任务创建时间。
+    * description  迁移任务描述。
+    * sourceInstanceStatus  源实例状态，若自建redis则为空。
+    * targetInstanceStatus  目标实例状态。
+    * sourceInstanceSubnetId  源实例子网ID，若自建redis则为空。
+    * targetInstanceSubnetId  目标实例子网ID。
+    * sourceInstanceSpecCode  源实例规格编码，若自建redis则为空。
+    * targetInstanceSpecCode  目标实例规格编码。
+    * errorMessage  错误信息。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
     *
     * @var string[]
     */
@@ -138,24 +198,48 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
             'targetInstanceAddrs' => 'target_instance_addrs',
             'targetInstanceName' => 'target_instance_name',
             'targetInstanceId' => 'target_instance_id',
-            'createdAt' => 'created_at'
+            'createdAt' => 'created_at',
+            'description' => 'description',
+            'sourceInstanceStatus' => 'source_instance_status',
+            'targetInstanceStatus' => 'target_instance_status',
+            'sourceInstanceSubnetId' => 'source_instance_subnet_id',
+            'targetInstanceSubnetId' => 'target_instance_subnet_id',
+            'sourceInstanceSpecCode' => 'source_instance_spec_code',
+            'targetInstanceSpecCode' => 'target_instance_spec_code',
+            'errorMessage' => 'error_message',
+            'releasedAt' => 'released_at',
+            'version' => 'version',
+            'resumeMode' => 'resume_mode',
+            'supportedFeatures' => 'supported_features'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  迁移任务ID。
     * taskName  迁移任务名称。
-    * status  迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-    * migrationType  迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    * status  迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
+    * migrationType  迁移任务类型，包括备份文件导入和在线迁移两种类型。
     * migrationMethod  迁移方式，包括全量迁移和增量迁移两种类型。
-    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-    * dataSource  数据源，格式为ip:port或者桶名。
+    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
+    * dataSource  源redis地址，格式为ip:port或者桶名。
     * sourceInstanceName  源实例名称，若自建redis则为空。
     * sourceInstanceId  源实例ID，若自建redis则为空。
     * targetInstanceAddrs  目标redis地址，格式为ip:port。
     * targetInstanceName  目标实例名称。
     * targetInstanceId  目标实例ID。
-    * createdAt  迁移任务创建时间
+    * createdAt  迁移任务创建时间。
+    * description  迁移任务描述。
+    * sourceInstanceStatus  源实例状态，若自建redis则为空。
+    * targetInstanceStatus  目标实例状态。
+    * sourceInstanceSubnetId  源实例子网ID，若自建redis则为空。
+    * targetInstanceSubnetId  目标实例子网ID。
+    * sourceInstanceSpecCode  源实例规格编码，若自建redis则为空。
+    * targetInstanceSpecCode  目标实例规格编码。
+    * errorMessage  错误信息。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
     *
     * @var string[]
     */
@@ -172,24 +256,48 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
             'targetInstanceAddrs' => 'setTargetInstanceAddrs',
             'targetInstanceName' => 'setTargetInstanceName',
             'targetInstanceId' => 'setTargetInstanceId',
-            'createdAt' => 'setCreatedAt'
+            'createdAt' => 'setCreatedAt',
+            'description' => 'setDescription',
+            'sourceInstanceStatus' => 'setSourceInstanceStatus',
+            'targetInstanceStatus' => 'setTargetInstanceStatus',
+            'sourceInstanceSubnetId' => 'setSourceInstanceSubnetId',
+            'targetInstanceSubnetId' => 'setTargetInstanceSubnetId',
+            'sourceInstanceSpecCode' => 'setSourceInstanceSpecCode',
+            'targetInstanceSpecCode' => 'setTargetInstanceSpecCode',
+            'errorMessage' => 'setErrorMessage',
+            'releasedAt' => 'setReleasedAt',
+            'version' => 'setVersion',
+            'resumeMode' => 'setResumeMode',
+            'supportedFeatures' => 'setSupportedFeatures'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  迁移任务ID。
     * taskName  迁移任务名称。
-    * status  迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
-    * migrationType  迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    * status  迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
+    * migrationType  迁移任务类型，包括备份文件导入和在线迁移两种类型。
     * migrationMethod  迁移方式，包括全量迁移和增量迁移两种类型。
-    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
-    * dataSource  数据源，格式为ip:port或者桶名。
+    * ecsTenantPrivateIp  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
+    * dataSource  源redis地址，格式为ip:port或者桶名。
     * sourceInstanceName  源实例名称，若自建redis则为空。
     * sourceInstanceId  源实例ID，若自建redis则为空。
     * targetInstanceAddrs  目标redis地址，格式为ip:port。
     * targetInstanceName  目标实例名称。
     * targetInstanceId  目标实例ID。
-    * createdAt  迁移任务创建时间
+    * createdAt  迁移任务创建时间。
+    * description  迁移任务描述。
+    * sourceInstanceStatus  源实例状态，若自建redis则为空。
+    * targetInstanceStatus  目标实例状态。
+    * sourceInstanceSubnetId  源实例子网ID，若自建redis则为空。
+    * targetInstanceSubnetId  目标实例子网ID。
+    * sourceInstanceSpecCode  源实例规格编码，若自建redis则为空。
+    * targetInstanceSpecCode  目标实例规格编码。
+    * errorMessage  错误信息。
+    * releasedAt  迁移机释放时间。
+    * version  版本。
+    * resumeMode  操作模式，分为auto和manual。
+    * supportedFeatures  支持的特性。
     *
     * @var string[]
     */
@@ -206,7 +314,19 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
             'targetInstanceAddrs' => 'getTargetInstanceAddrs',
             'targetInstanceName' => 'getTargetInstanceName',
             'targetInstanceId' => 'getTargetInstanceId',
-            'createdAt' => 'getCreatedAt'
+            'createdAt' => 'getCreatedAt',
+            'description' => 'getDescription',
+            'sourceInstanceStatus' => 'getSourceInstanceStatus',
+            'targetInstanceStatus' => 'getTargetInstanceStatus',
+            'sourceInstanceSubnetId' => 'getSourceInstanceSubnetId',
+            'targetInstanceSubnetId' => 'getTargetInstanceSubnetId',
+            'sourceInstanceSpecCode' => 'getSourceInstanceSpecCode',
+            'targetInstanceSpecCode' => 'getTargetInstanceSpecCode',
+            'errorMessage' => 'getErrorMessage',
+            'releasedAt' => 'getReleasedAt',
+            'version' => 'getVersion',
+            'resumeMode' => 'getResumeMode',
+            'supportedFeatures' => 'getSupportedFeatures'
     ];
 
     /**
@@ -329,6 +449,18 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
         $this->container['targetInstanceName'] = isset($data['targetInstanceName']) ? $data['targetInstanceName'] : null;
         $this->container['targetInstanceId'] = isset($data['targetInstanceId']) ? $data['targetInstanceId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['sourceInstanceStatus'] = isset($data['sourceInstanceStatus']) ? $data['sourceInstanceStatus'] : null;
+        $this->container['targetInstanceStatus'] = isset($data['targetInstanceStatus']) ? $data['targetInstanceStatus'] : null;
+        $this->container['sourceInstanceSubnetId'] = isset($data['sourceInstanceSubnetId']) ? $data['sourceInstanceSubnetId'] : null;
+        $this->container['targetInstanceSubnetId'] = isset($data['targetInstanceSubnetId']) ? $data['targetInstanceSubnetId'] : null;
+        $this->container['sourceInstanceSpecCode'] = isset($data['sourceInstanceSpecCode']) ? $data['sourceInstanceSpecCode'] : null;
+        $this->container['targetInstanceSpecCode'] = isset($data['targetInstanceSpecCode']) ? $data['targetInstanceSpecCode'] : null;
+        $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
+        $this->container['releasedAt'] = isset($data['releasedAt']) ? $data['releasedAt'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['resumeMode'] = isset($data['resumeMode']) ? $data['resumeMode'] : null;
+        $this->container['supportedFeatures'] = isset($data['supportedFeatures']) ? $data['supportedFeatures'] : null;
     }
 
     /**
@@ -427,7 +559,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
+    *  迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
     *
     * @return string|null
     */
@@ -439,7 +571,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 迁移任务状态，这个字段的值包括：SUCCESS, FAILED, MIGRATING，TERMINATED
+    * @param string|null $status 迁移任务状态，这个字段的值包括：SUCCESS（成功）, FAILED（失败）, MIGRATING（迁移中），TERMINATED（已结束）。
     *
     * @return $this
     */
@@ -451,7 +583,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
 
     /**
     * Gets migrationType
-    *  迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    *  迁移任务类型，包括备份文件导入和在线迁移两种类型。
     *
     * @return string|null
     */
@@ -463,7 +595,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     /**
     * Sets migrationType
     *
-    * @param string|null $migrationType 迁移任务类型,包括备份文件导入和在线迁移两种类型。
+    * @param string|null $migrationType 迁移任务类型，包括备份文件导入和在线迁移两种类型。
     *
     * @return $this
     */
@@ -499,7 +631,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
 
     /**
     * Gets ecsTenantPrivateIp
-    *  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
+    *  迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
     *
     * @return string|null
     */
@@ -511,7 +643,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     /**
     * Sets ecsTenantPrivateIp
     *
-    * @param string|null $ecsTenantPrivateIp 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单
+    * @param string|null $ecsTenantPrivateIp 迁移机租户侧私有IP，与目的/源redis私有IP处于同VPC，可将此IP加入白名单。
     *
     * @return $this
     */
@@ -523,7 +655,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataSource
-    *  数据源，格式为ip:port或者桶名。
+    *  源redis地址，格式为ip:port或者桶名。
     *
     * @return string|null
     */
@@ -535,7 +667,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     /**
     * Sets dataSource
     *
-    * @param string|null $dataSource 数据源，格式为ip:port或者桶名。
+    * @param string|null $dataSource 源redis地址，格式为ip:port或者桶名。
     *
     * @return $this
     */
@@ -667,7 +799,7 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  迁移任务创建时间
+    *  迁移任务创建时间。
     *
     * @return string|null
     */
@@ -679,13 +811,301 @@ class MigrationTaskList implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 迁移任务创建时间
+    * @param string|null $createdAt 迁移任务创建时间。
     *
     * @return $this
     */
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  迁移任务描述。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 迁移任务描述。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets sourceInstanceStatus
+    *  源实例状态，若自建redis则为空。
+    *
+    * @return string|null
+    */
+    public function getSourceInstanceStatus()
+    {
+        return $this->container['sourceInstanceStatus'];
+    }
+
+    /**
+    * Sets sourceInstanceStatus
+    *
+    * @param string|null $sourceInstanceStatus 源实例状态，若自建redis则为空。
+    *
+    * @return $this
+    */
+    public function setSourceInstanceStatus($sourceInstanceStatus)
+    {
+        $this->container['sourceInstanceStatus'] = $sourceInstanceStatus;
+        return $this;
+    }
+
+    /**
+    * Gets targetInstanceStatus
+    *  目标实例状态。
+    *
+    * @return string|null
+    */
+    public function getTargetInstanceStatus()
+    {
+        return $this->container['targetInstanceStatus'];
+    }
+
+    /**
+    * Sets targetInstanceStatus
+    *
+    * @param string|null $targetInstanceStatus 目标实例状态。
+    *
+    * @return $this
+    */
+    public function setTargetInstanceStatus($targetInstanceStatus)
+    {
+        $this->container['targetInstanceStatus'] = $targetInstanceStatus;
+        return $this;
+    }
+
+    /**
+    * Gets sourceInstanceSubnetId
+    *  源实例子网ID，若自建redis则为空。
+    *
+    * @return string|null
+    */
+    public function getSourceInstanceSubnetId()
+    {
+        return $this->container['sourceInstanceSubnetId'];
+    }
+
+    /**
+    * Sets sourceInstanceSubnetId
+    *
+    * @param string|null $sourceInstanceSubnetId 源实例子网ID，若自建redis则为空。
+    *
+    * @return $this
+    */
+    public function setSourceInstanceSubnetId($sourceInstanceSubnetId)
+    {
+        $this->container['sourceInstanceSubnetId'] = $sourceInstanceSubnetId;
+        return $this;
+    }
+
+    /**
+    * Gets targetInstanceSubnetId
+    *  目标实例子网ID。
+    *
+    * @return string|null
+    */
+    public function getTargetInstanceSubnetId()
+    {
+        return $this->container['targetInstanceSubnetId'];
+    }
+
+    /**
+    * Sets targetInstanceSubnetId
+    *
+    * @param string|null $targetInstanceSubnetId 目标实例子网ID。
+    *
+    * @return $this
+    */
+    public function setTargetInstanceSubnetId($targetInstanceSubnetId)
+    {
+        $this->container['targetInstanceSubnetId'] = $targetInstanceSubnetId;
+        return $this;
+    }
+
+    /**
+    * Gets sourceInstanceSpecCode
+    *  源实例规格编码，若自建redis则为空。
+    *
+    * @return string|null
+    */
+    public function getSourceInstanceSpecCode()
+    {
+        return $this->container['sourceInstanceSpecCode'];
+    }
+
+    /**
+    * Sets sourceInstanceSpecCode
+    *
+    * @param string|null $sourceInstanceSpecCode 源实例规格编码，若自建redis则为空。
+    *
+    * @return $this
+    */
+    public function setSourceInstanceSpecCode($sourceInstanceSpecCode)
+    {
+        $this->container['sourceInstanceSpecCode'] = $sourceInstanceSpecCode;
+        return $this;
+    }
+
+    /**
+    * Gets targetInstanceSpecCode
+    *  目标实例规格编码。
+    *
+    * @return string|null
+    */
+    public function getTargetInstanceSpecCode()
+    {
+        return $this->container['targetInstanceSpecCode'];
+    }
+
+    /**
+    * Sets targetInstanceSpecCode
+    *
+    * @param string|null $targetInstanceSpecCode 目标实例规格编码。
+    *
+    * @return $this
+    */
+    public function setTargetInstanceSpecCode($targetInstanceSpecCode)
+    {
+        $this->container['targetInstanceSpecCode'] = $targetInstanceSpecCode;
+        return $this;
+    }
+
+    /**
+    * Gets errorMessage
+    *  错误信息。
+    *
+    * @return string|null
+    */
+    public function getErrorMessage()
+    {
+        return $this->container['errorMessage'];
+    }
+
+    /**
+    * Sets errorMessage
+    *
+    * @param string|null $errorMessage 错误信息。
+    *
+    * @return $this
+    */
+    public function setErrorMessage($errorMessage)
+    {
+        $this->container['errorMessage'] = $errorMessage;
+        return $this;
+    }
+
+    /**
+    * Gets releasedAt
+    *  迁移机释放时间。
+    *
+    * @return string|null
+    */
+    public function getReleasedAt()
+    {
+        return $this->container['releasedAt'];
+    }
+
+    /**
+    * Sets releasedAt
+    *
+    * @param string|null $releasedAt 迁移机释放时间。
+    *
+    * @return $this
+    */
+    public function setReleasedAt($releasedAt)
+    {
+        $this->container['releasedAt'] = $releasedAt;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  版本。
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 版本。
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets resumeMode
+    *  操作模式，分为auto和manual。
+    *
+    * @return string|null
+    */
+    public function getResumeMode()
+    {
+        return $this->container['resumeMode'];
+    }
+
+    /**
+    * Sets resumeMode
+    *
+    * @param string|null $resumeMode 操作模式，分为auto和manual。
+    *
+    * @return $this
+    */
+    public function setResumeMode($resumeMode)
+    {
+        $this->container['resumeMode'] = $resumeMode;
+        return $this;
+    }
+
+    /**
+    * Gets supportedFeatures
+    *  支持的特性。
+    *
+    * @return string[]|null
+    */
+    public function getSupportedFeatures()
+    {
+        return $this->container['supportedFeatures'];
+    }
+
+    /**
+    * Sets supportedFeatures
+    *
+    * @param string[]|null $supportedFeatures 支持的特性。
+    *
+    * @return $this
+    */
+    public function setSupportedFeatures($supportedFeatures)
+    {
+        $this->container['supportedFeatures'] = $supportedFeatures;
         return $this;
     }
 
