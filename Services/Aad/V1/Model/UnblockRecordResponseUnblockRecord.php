@@ -34,7 +34,7 @@ class UnblockRecordResponseUnblockRecord implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'ip' => 'string',
             'executor' => 'string',
-            'blockId' => 'string',
+            'blockId' => 'int',
             'blockingTime' => 'int',
             'unblockingTime' => 'int',
             'unblockType' => 'string',
@@ -58,7 +58,7 @@ class UnblockRecordResponseUnblockRecord implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'ip' => null,
         'executor' => null,
-        'blockId' => null,
+        'blockId' => 'int64',
         'blockingTime' => 'int64',
         'unblockingTime' => 'int64',
         'unblockType' => null,
@@ -279,11 +279,11 @@ class UnblockRecordResponseUnblockRecord implements ModelInterface, ArrayAccess
             if (!is_null($this->container['executor']) && (mb_strlen($this->container['executor']) < 7)) {
                 $invalidProperties[] = "invalid value for 'executor', the character length must be bigger than or equal to 7.";
             }
-            if (!is_null($this->container['blockId']) && (mb_strlen($this->container['blockId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'blockId', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['blockId']) && ($this->container['blockId'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'blockId', must be smaller than or equal to 9223372036854775807.";
             }
-            if (!is_null($this->container['blockId']) && (mb_strlen($this->container['blockId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'blockId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['blockId']) && ($this->container['blockId'] < 0)) {
+                $invalidProperties[] = "invalid value for 'blockId', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['blockingTime']) && ($this->container['blockingTime'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'blockingTime', must be smaller than or equal to 9223372036854775807.";
@@ -385,7 +385,7 @@ class UnblockRecordResponseUnblockRecord implements ModelInterface, ArrayAccess
     * Gets blockId
     *  封堵id
     *
-    * @return string|null
+    * @return int|null
     */
     public function getBlockId()
     {
@@ -395,7 +395,7 @@ class UnblockRecordResponseUnblockRecord implements ModelInterface, ArrayAccess
     /**
     * Sets blockId
     *
-    * @param string|null $blockId 封堵id
+    * @param int|null $blockId 封堵id
     *
     * @return $this
     */

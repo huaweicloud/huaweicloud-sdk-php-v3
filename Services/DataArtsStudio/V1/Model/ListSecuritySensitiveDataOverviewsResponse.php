@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class OpenApiParaForPublish implements ModelInterface, ArrayAccess
+class ListSecuritySensitiveDataOverviewsResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,34 +17,30 @@ class OpenApiParaForPublish implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'OpenApiParaForPublish';
+    protected static $openAPIModelName = 'ListSecuritySensitiveDataOverviewsResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * apiId  api编号
-    * action  操作类型, 包括发布/下线/停用/恢复
-    * time  截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
+    * secrecyLevelStatistics  基于密级的概览统计
+    * categoryStatistics  基于分类的概览统计
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'apiId' => 'string',
-            'action' => 'string',
-            'time' => 'string'
+            'secrecyLevelStatistics' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SensitiveDataSecrecyLevelOverviewQueryDTO[]',
+            'categoryStatistics' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SensitiveDataCategoryOverviewQueryDTO[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * apiId  api编号
-    * action  操作类型, 包括发布/下线/停用/恢复
-    * time  截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
+    * secrecyLevelStatistics  基于密级的概览统计
+    * categoryStatistics  基于分类的概览统计
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'apiId' => null,
-        'action' => null,
-        'time' => null
+        'secrecyLevelStatistics' => null,
+        'categoryStatistics' => null
     ];
 
     /**
@@ -69,44 +66,38 @@ class OpenApiParaForPublish implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * apiId  api编号
-    * action  操作类型, 包括发布/下线/停用/恢复
-    * time  截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
+    * secrecyLevelStatistics  基于密级的概览统计
+    * categoryStatistics  基于分类的概览统计
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'apiId' => 'api_id',
-            'action' => 'action',
-            'time' => 'time'
+            'secrecyLevelStatistics' => 'secrecy_level_statistics',
+            'categoryStatistics' => 'category_statistics'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * apiId  api编号
-    * action  操作类型, 包括发布/下线/停用/恢复
-    * time  截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
+    * secrecyLevelStatistics  基于密级的概览统计
+    * categoryStatistics  基于分类的概览统计
     *
     * @var string[]
     */
     protected static $setters = [
-            'apiId' => 'setApiId',
-            'action' => 'setAction',
-            'time' => 'setTime'
+            'secrecyLevelStatistics' => 'setSecrecyLevelStatistics',
+            'categoryStatistics' => 'setCategoryStatistics'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * apiId  api编号
-    * action  操作类型, 包括发布/下线/停用/恢复
-    * time  截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
+    * secrecyLevelStatistics  基于密级的概览统计
+    * categoryStatistics  基于分类的概览统计
     *
     * @var string[]
     */
     protected static $getters = [
-            'apiId' => 'getApiId',
-            'action' => 'getAction',
-            'time' => 'getTime'
+            'secrecyLevelStatistics' => 'getSecrecyLevelStatistics',
+            'categoryStatistics' => 'getCategoryStatistics'
     ];
 
     /**
@@ -149,26 +140,7 @@ class OpenApiParaForPublish implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_PUBLISH = 'PUBLISH';
-    const ACTION_UNPUBLISH = 'UNPUBLISH';
-    const ACTION_STOP = 'STOP';
-    const ACTION_RECOVER = 'RECOVER';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_PUBLISH,
-            self::ACTION_UNPUBLISH,
-            self::ACTION_STOP,
-            self::ACTION_RECOVER,
-        ];
-    }
 
 
     /**
@@ -186,9 +158,8 @@ class OpenApiParaForPublish implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['apiId'] = isset($data['apiId']) ? $data['apiId'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
-        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['secrecyLevelStatistics'] = isset($data['secrecyLevelStatistics']) ? $data['secrecyLevelStatistics'] : null;
+        $this->container['categoryStatistics'] = isset($data['categoryStatistics']) ? $data['categoryStatistics'] : null;
     }
 
     /**
@@ -199,14 +170,6 @@ class OpenApiParaForPublish implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -222,74 +185,50 @@ class OpenApiParaForPublish implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets apiId
-    *  api编号
+    * Gets secrecyLevelStatistics
+    *  基于密级的概览统计
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SensitiveDataSecrecyLevelOverviewQueryDTO[]|null
     */
-    public function getApiId()
+    public function getSecrecyLevelStatistics()
     {
-        return $this->container['apiId'];
+        return $this->container['secrecyLevelStatistics'];
     }
 
     /**
-    * Sets apiId
+    * Sets secrecyLevelStatistics
     *
-    * @param string|null $apiId api编号
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SensitiveDataSecrecyLevelOverviewQueryDTO[]|null $secrecyLevelStatistics 基于密级的概览统计
     *
     * @return $this
     */
-    public function setApiId($apiId)
+    public function setSecrecyLevelStatistics($secrecyLevelStatistics)
     {
-        $this->container['apiId'] = $apiId;
+        $this->container['secrecyLevelStatistics'] = $secrecyLevelStatistics;
         return $this;
     }
 
     /**
-    * Gets action
-    *  操作类型, 包括发布/下线/停用/恢复
+    * Gets categoryStatistics
+    *  基于分类的概览统计
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SensitiveDataCategoryOverviewQueryDTO[]|null
     */
-    public function getAction()
+    public function getCategoryStatistics()
     {
-        return $this->container['action'];
+        return $this->container['categoryStatistics'];
     }
 
     /**
-    * Sets action
+    * Sets categoryStatistics
     *
-    * @param string|null $action 操作类型, 包括发布/下线/停用/恢复
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SensitiveDataCategoryOverviewQueryDTO[]|null $categoryStatistics 基于分类的概览统计
     *
     * @return $this
     */
-    public function setAction($action)
+    public function setCategoryStatistics($categoryStatistics)
     {
-        $this->container['action'] = $action;
-        return $this;
-    }
-
-    /**
-    * Gets time
-    *  截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
-    *
-    * @return string|null
-    */
-    public function getTime()
-    {
-        return $this->container['time'];
-    }
-
-    /**
-    * Sets time
-    *
-    * @param string|null $time 截止时间。仅定期执行需要此参数，默认服务器当前时间三天后。
-    *
-    * @return $this
-    */
-    public function setTime($time)
-    {
-        $this->container['time'] = $time;
+        $this->container['categoryStatistics'] = $categoryStatistics;
         return $this;
     }
 

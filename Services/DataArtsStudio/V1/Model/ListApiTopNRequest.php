@@ -20,16 +20,16 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * apiId  api编号
-    * instanceId  集群编号
-    * startTime  开始时间（13位时间戳）
-    * endTime  结束时间（13位时间戳）
-    * timeUnit  时间单位
-    * topNum  前几名
-    * orderBy  排序条件
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
+    * apiId  api编号。
+    * instanceId  集群编号。
+    * startTime  开始时间（13位时间戳）。
+    * endTime  结束时间（13位时间戳）。
+    * timeUnit  时间单位。
+    * topNum  前几名。
+    * orderBy  排序条件。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * apiId  api编号
-    * instanceId  集群编号
-    * startTime  开始时间（13位时间戳）
-    * endTime  结束时间（13位时间戳）
-    * timeUnit  时间单位
-    * topNum  前几名
-    * orderBy  排序条件
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
+    * apiId  api编号。
+    * instanceId  集群编号。
+    * startTime  开始时间（13位时间戳）。
+    * endTime  结束时间（13位时间戳）。
+    * timeUnit  时间单位。
+    * topNum  前几名。
+    * orderBy  排序条件。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * apiId  api编号
-    * instanceId  集群编号
-    * startTime  开始时间（13位时间戳）
-    * endTime  结束时间（13位时间戳）
-    * timeUnit  时间单位
-    * topNum  前几名
-    * orderBy  排序条件
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
+    * apiId  api编号。
+    * instanceId  集群编号。
+    * startTime  开始时间（13位时间戳）。
+    * endTime  结束时间（13位时间戳）。
+    * timeUnit  时间单位。
+    * topNum  前几名。
+    * orderBy  排序条件。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * apiId  api编号
-    * instanceId  集群编号
-    * startTime  开始时间（13位时间戳）
-    * endTime  结束时间（13位时间戳）
-    * timeUnit  时间单位
-    * topNum  前几名
-    * orderBy  排序条件
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
+    * apiId  api编号。
+    * instanceId  集群编号。
+    * startTime  开始时间（13位时间戳）。
+    * endTime  结束时间（13位时间戳）。
+    * timeUnit  时间单位。
+    * topNum  前几名。
+    * orderBy  排序条件。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * apiId  api编号
-    * instanceId  集群编号
-    * startTime  开始时间（13位时间戳）
-    * endTime  结束时间（13位时间戳）
-    * timeUnit  时间单位
-    * topNum  前几名
-    * orderBy  排序条件
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
+    * apiId  api编号。
+    * instanceId  集群编号。
+    * startTime  开始时间（13位时间戳）。
+    * endTime  结束时间（13位时间戳）。
+    * timeUnit  时间单位。
+    * topNum  前几名。
+    * orderBy  排序条件。
     *
     * @var string[]
     */
@@ -386,7 +386,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  工作空间id
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return string
     */
@@ -398,7 +398,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace 工作空间id
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */
@@ -410,7 +410,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dlmType
-    *  dlm版本类型
+    *  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     *
     * @return string|null
     */
@@ -422,7 +422,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dlmType
     *
-    * @param string|null $dlmType dlm版本类型
+    * @param string|null $dlmType 数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     *
     * @return $this
     */
@@ -434,7 +434,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  资源类型
+    *  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     *
     * @return string
     */
@@ -446,7 +446,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 资源类型
+    * @param string $contentType 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     *
     * @return $this
     */
@@ -458,7 +458,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets apiId
-    *  api编号
+    *  api编号。
     *
     * @return string
     */
@@ -470,7 +470,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets apiId
     *
-    * @param string $apiId api编号
+    * @param string $apiId api编号。
     *
     * @return $this
     */
@@ -482,7 +482,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  集群编号
+    *  集群编号。
     *
     * @return string|null
     */
@@ -494,7 +494,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string|null $instanceId 集群编号
+    * @param string|null $instanceId 集群编号。
     *
     * @return $this
     */
@@ -506,7 +506,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间（13位时间戳）
+    *  开始时间（13位时间戳）。
     *
     * @return int
     */
@@ -518,7 +518,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int $startTime 开始时间（13位时间戳）
+    * @param int $startTime 开始时间（13位时间戳）。
     *
     * @return $this
     */
@@ -530,7 +530,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间（13位时间戳）
+    *  结束时间（13位时间戳）。
     *
     * @return int
     */
@@ -542,7 +542,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int $endTime 结束时间（13位时间戳）
+    * @param int $endTime 结束时间（13位时间戳）。
     *
     * @return $this
     */
@@ -554,7 +554,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeUnit
-    *  时间单位
+    *  时间单位。
     *
     * @return string
     */
@@ -566,7 +566,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets timeUnit
     *
-    * @param string $timeUnit 时间单位
+    * @param string $timeUnit 时间单位。
     *
     * @return $this
     */
@@ -578,7 +578,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topNum
-    *  前几名
+    *  前几名。
     *
     * @return int
     */
@@ -590,7 +590,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topNum
     *
-    * @param int $topNum 前几名
+    * @param int $topNum 前几名。
     *
     * @return $this
     */
@@ -602,7 +602,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  排序条件
+    *  排序条件。
     *
     * @return string
     */
@@ -614,7 +614,7 @@ class ListApiTopNRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string $orderBy 排序条件
+    * @param string $orderBy 排序条件。
     *
     * @return $this
     */

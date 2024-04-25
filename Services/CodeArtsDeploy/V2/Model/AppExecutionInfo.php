@@ -23,6 +23,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * id  应用id
     * name  应用名称
     * duration  部署时间
+    * isDisable  当前应用是否被禁用
     * projectId  项目ID
     * projectName  项目名称
     * isCare  当前用户是否已收藏
@@ -33,6 +34,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createUserId  应用创建者用户ID
     * createTenantId  应用创建者租户ID
@@ -52,6 +54,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'duration' => 'string',
+            'isDisable' => 'bool',
             'projectId' => 'string',
             'projectName' => 'string',
             'isCare' => 'bool',
@@ -62,6 +65,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'bool',
             'canManage' => 'bool',
             'canCreateEnv' => 'bool',
+            'canDisable' => 'bool',
             'deploySystem' => 'string',
             'createUserId' => 'string',
             'createTenantId' => 'string',
@@ -81,6 +85,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * id  应用id
     * name  应用名称
     * duration  部署时间
+    * isDisable  当前应用是否被禁用
     * projectId  项目ID
     * projectName  项目名称
     * isCare  当前用户是否已收藏
@@ -91,6 +96,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createUserId  应用创建者用户ID
     * createTenantId  应用创建者租户ID
@@ -110,6 +116,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'duration' => null,
+        'isDisable' => null,
         'projectId' => null,
         'projectName' => null,
         'isCare' => null,
@@ -120,6 +127,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
         'canCopy' => null,
         'canManage' => null,
         'canCreateEnv' => null,
+        'canDisable' => null,
         'deploySystem' => null,
         'createUserId' => null,
         'createTenantId' => null,
@@ -160,6 +168,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * id  应用id
     * name  应用名称
     * duration  部署时间
+    * isDisable  当前应用是否被禁用
     * projectId  项目ID
     * projectName  项目名称
     * isCare  当前用户是否已收藏
@@ -170,6 +179,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createUserId  应用创建者用户ID
     * createTenantId  应用创建者租户ID
@@ -189,6 +199,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'duration' => 'duration',
+            'isDisable' => 'is_disable',
             'projectId' => 'project_id',
             'projectName' => 'project_name',
             'isCare' => 'is_care',
@@ -199,6 +210,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'can_copy',
             'canManage' => 'can_manage',
             'canCreateEnv' => 'can_create_env',
+            'canDisable' => 'can_disable',
             'deploySystem' => 'deploy_system',
             'createUserId' => 'create_user_id',
             'createTenantId' => 'create_tenant_id',
@@ -218,6 +230,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * id  应用id
     * name  应用名称
     * duration  部署时间
+    * isDisable  当前应用是否被禁用
     * projectId  项目ID
     * projectName  项目名称
     * isCare  当前用户是否已收藏
@@ -228,6 +241,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createUserId  应用创建者用户ID
     * createTenantId  应用创建者租户ID
@@ -247,6 +261,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'duration' => 'setDuration',
+            'isDisable' => 'setIsDisable',
             'projectId' => 'setProjectId',
             'projectName' => 'setProjectName',
             'isCare' => 'setIsCare',
@@ -257,6 +272,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'setCanCopy',
             'canManage' => 'setCanManage',
             'canCreateEnv' => 'setCanCreateEnv',
+            'canDisable' => 'setCanDisable',
             'deploySystem' => 'setDeploySystem',
             'createUserId' => 'setCreateUserId',
             'createTenantId' => 'setCreateTenantId',
@@ -276,6 +292,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * id  应用id
     * name  应用名称
     * duration  部署时间
+    * isDisable  当前应用是否被禁用
     * projectId  项目ID
     * projectName  项目名称
     * isCare  当前用户是否已收藏
@@ -286,6 +303,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createUserId  应用创建者用户ID
     * createTenantId  应用创建者租户ID
@@ -305,6 +323,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'duration' => 'getDuration',
+            'isDisable' => 'getIsDisable',
             'projectId' => 'getProjectId',
             'projectName' => 'getProjectName',
             'isCare' => 'getIsCare',
@@ -315,6 +334,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'getCanCopy',
             'canManage' => 'getCanManage',
             'canCreateEnv' => 'getCanCreateEnv',
+            'canDisable' => 'getCanDisable',
             'deploySystem' => 'getDeploySystem',
             'createUserId' => 'getCreateUserId',
             'createTenantId' => 'getCreateTenantId',
@@ -390,6 +410,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
+        $this->container['isDisable'] = isset($data['isDisable']) ? $data['isDisable'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['isCare'] = isset($data['isCare']) ? $data['isCare'] : null;
@@ -400,6 +421,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
         $this->container['canCopy'] = isset($data['canCopy']) ? $data['canCopy'] : null;
         $this->container['canManage'] = isset($data['canManage']) ? $data['canManage'] : null;
         $this->container['canCreateEnv'] = isset($data['canCreateEnv']) ? $data['canCreateEnv'] : null;
+        $this->container['canDisable'] = isset($data['canDisable']) ? $data['canDisable'] : null;
         $this->container['deploySystem'] = isset($data['deploySystem']) ? $data['deploySystem'] : null;
         $this->container['createUserId'] = isset($data['createUserId']) ? $data['createUserId'] : null;
         $this->container['createTenantId'] = isset($data['createTenantId']) ? $data['createTenantId'] : null;
@@ -553,6 +575,30 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     public function setDuration($duration)
     {
         $this->container['duration'] = $duration;
+        return $this;
+    }
+
+    /**
+    * Gets isDisable
+    *  当前应用是否被禁用
+    *
+    * @return bool|null
+    */
+    public function getIsDisable()
+    {
+        return $this->container['isDisable'];
+    }
+
+    /**
+    * Sets isDisable
+    *
+    * @param bool|null $isDisable 当前应用是否被禁用
+    *
+    * @return $this
+    */
+    public function setIsDisable($isDisable)
+    {
+        $this->container['isDisable'] = $isDisable;
         return $this;
     }
 
@@ -793,6 +839,30 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     public function setCanCreateEnv($canCreateEnv)
     {
         $this->container['canCreateEnv'] = $canCreateEnv;
+        return $this;
+    }
+
+    /**
+    * Gets canDisable
+    *  是否有禁用应用的权限
+    *
+    * @return bool|null
+    */
+    public function getCanDisable()
+    {
+        return $this->container['canDisable'];
+    }
+
+    /**
+    * Sets canDisable
+    *
+    * @param bool|null $canDisable 是否有禁用应用的权限
+    *
+    * @return $this
+    */
+    public function setCanDisable($canDisable)
+    {
+        $this->container['canDisable'] = $canDisable;
         return $this;
     }
 

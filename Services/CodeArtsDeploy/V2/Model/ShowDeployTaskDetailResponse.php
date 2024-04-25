@@ -46,10 +46,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
     * executorId  部署者id
@@ -84,10 +86,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'canExecute' => 'bool',
             'canCopy' => 'bool',
             'canManage' => 'bool',
+            'canDisable' => 'bool',
             'appComponentList' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\AppComponentDao[]',
             'roleId' => 'int',
             'id' => 'string',
             'releaseId' => 'int',
+            'isDisable' => 'bool',
             'duration' => 'string',
             'executionState' => 'string',
             'executorId' => 'string',
@@ -122,10 +126,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
     * executorId  部署者id
@@ -160,10 +166,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
         'canExecute' => null,
         'canCopy' => null,
         'canManage' => null,
+        'canDisable' => null,
         'appComponentList' => null,
         'roleId' => 'int32',
         'id' => null,
         'releaseId' => 'int32',
+        'isDisable' => null,
         'duration' => null,
         'executionState' => null,
         'executorId' => null,
@@ -219,10 +227,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
     * executorId  部署者id
@@ -257,10 +267,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'canExecute' => 'can_execute',
             'canCopy' => 'can_copy',
             'canManage' => 'can_manage',
+            'canDisable' => 'can_disable',
             'appComponentList' => 'app_component_list',
             'roleId' => 'role_id',
             'id' => 'id',
             'releaseId' => 'release_id',
+            'isDisable' => 'is_disable',
             'duration' => 'duration',
             'executionState' => 'execution_state',
             'executorId' => 'executor_id',
@@ -295,10 +307,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
     * executorId  部署者id
@@ -333,10 +347,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'canExecute' => 'setCanExecute',
             'canCopy' => 'setCanCopy',
             'canManage' => 'setCanManage',
+            'canDisable' => 'setCanDisable',
             'appComponentList' => 'setAppComponentList',
             'roleId' => 'setRoleId',
             'id' => 'setId',
             'releaseId' => 'setReleaseId',
+            'isDisable' => 'setIsDisable',
             'duration' => 'setDuration',
             'executionState' => 'setExecutionState',
             'executorId' => 'setExecutorId',
@@ -371,10 +387,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canExecute  是否有部署权限
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
     * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
+    * isDisable  当前应用是否被禁用
     * duration  部署时间
     * executionState  部署状态
     * executorId  部署者id
@@ -409,10 +427,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
             'canExecute' => 'getCanExecute',
             'canCopy' => 'getCanCopy',
             'canManage' => 'getCanManage',
+            'canDisable' => 'getCanDisable',
             'appComponentList' => 'getAppComponentList',
             'roleId' => 'getRoleId',
             'id' => 'getId',
             'releaseId' => 'getReleaseId',
+            'isDisable' => 'getIsDisable',
             'duration' => 'getDuration',
             'executionState' => 'getExecutionState',
             'executorId' => 'getExecutorId',
@@ -518,10 +538,12 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
         $this->container['canExecute'] = isset($data['canExecute']) ? $data['canExecute'] : null;
         $this->container['canCopy'] = isset($data['canCopy']) ? $data['canCopy'] : null;
         $this->container['canManage'] = isset($data['canManage']) ? $data['canManage'] : null;
+        $this->container['canDisable'] = isset($data['canDisable']) ? $data['canDisable'] : null;
         $this->container['appComponentList'] = isset($data['appComponentList']) ? $data['appComponentList'] : null;
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['releaseId'] = isset($data['releaseId']) ? $data['releaseId'] : null;
+        $this->container['isDisable'] = isset($data['isDisable']) ? $data['isDisable'] : null;
         $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['executionState'] = isset($data['executionState']) ? $data['executionState'] : null;
         $this->container['executorId'] = isset($data['executorId']) ? $data['executorId'] : null;
@@ -1238,6 +1260,30 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets canDisable
+    *  是否有禁用应用的权限
+    *
+    * @return bool|null
+    */
+    public function getCanDisable()
+    {
+        return $this->container['canDisable'];
+    }
+
+    /**
+    * Sets canDisable
+    *
+    * @param bool|null $canDisable 是否有禁用应用的权限
+    *
+    * @return $this
+    */
+    public function setCanDisable($canDisable)
+    {
+        $this->container['canDisable'] = $canDisable;
+        return $this;
+    }
+
+    /**
     * Gets appComponentList
     *  应用和AOM应用组件对应关系
     *
@@ -1330,6 +1376,30 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     public function setReleaseId($releaseId)
     {
         $this->container['releaseId'] = $releaseId;
+        return $this;
+    }
+
+    /**
+    * Gets isDisable
+    *  当前应用是否被禁用
+    *
+    * @return bool|null
+    */
+    public function getIsDisable()
+    {
+        return $this->container['isDisable'];
+    }
+
+    /**
+    * Sets isDisable
+    *
+    * @param bool|null $isDisable 当前应用是否被禁用
+    *
+    * @return $this
+    */
+    public function setIsDisable($isDisable)
+    {
+        $this->container['isDisable'] = $isDisable;
         return $this;
     }
 

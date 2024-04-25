@@ -25,6 +25,7 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频流中画面需要检测的风险类型，列表不能为空。 porn：鉴黄内容的检测 terrorism：涉政暴恐内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频流中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 porn：涉黄检测 politics: 涉政检测 abuse: 辱骂检测 ad: 广告检测 moan: 娇喘检测
     * callback  回调http接口，回调内容如下： ```{     \"job_id\":\"xxxxxx\",     \"status\":\"running\", //running - 审核中，succeeded - 审核完成，failed - 审核失败     \"request_id\":\"2419446b1fe14203f64e4018d12db3dd\",     \"craete_time\":\"2022-07-30T08:57:11.011Z\",     \"update_time\":\"2022-07-30T08:57:14.014Z\",     \"result\":{         \"suggestion\":\"block\",         \"audio_detail\":[             {                 \"suggestion\":\"block\",                 \"label\":\"politics\",                 \"audio_text\":\"xxxx\",                 \"detail\":[                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"segments\":[                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             }                         ]                     }                 ]             }         ],         \"image_detail\":[             {                 \"suggestion\":\"block\",                 \"category\":\"xxx\",                 \"time\":\"xxx\", // 视频流截帧图片发生的绝对时间                 \"detail\":[                     {                         \"face_location\":{                             \"bottom_right_x\":247,                             \"bottom_right_y\":191,                             \"top_left_y\":79,                             \"top_left_x\":160                         },                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"xxx\",                         \"category\":\"xxx\"                     },                     {                         \"qr_content\":\"xxx\",                         \"confidence\":\"xxx\",                         \"suggestion\":\"xxx\",                         \"label\":\"xxx\",                         \"category\":\"xxx\",                         \"qr_location\":{                             \"bottom_right_x\":554,                             \"bottom_right_y\":842,                             \"top_left_y\":426,                             \"top_left_x\":140                         }                     },                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"category\":\"image_text\",                         \"segments\":[                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xx\"                             },                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxxx\"                             }                         ]                     }                 ]             }         ]     },     \"request_params\":{         \"data\":{             \"url\":\"rtmp://xxxx\",             \"frame_interval\":3         },         \"event_type\":\"default\",         \"image_categories\":[             \"politics\",             \"porn\",             \"image_text\",             \"terrorism\"         ],         \"audio_categories\":[             \"porn\",             \"ad\",             \"politics\",             \"moan\",             \"abuse\"         ],         \"callback\":\"http://xxx/callback\"     } }
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'string',
             'imageCategories' => 'string[]',
             'audioCategories' => 'string[]',
-            'callback' => 'string'
+            'callback' => 'string',
+            'seed' => 'string'
     ];
 
     /**
@@ -43,6 +45,7 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频流中画面需要检测的风险类型，列表不能为空。 porn：鉴黄内容的检测 terrorism：涉政暴恐内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频流中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 porn：涉黄检测 politics: 涉政检测 abuse: 辱骂检测 ad: 广告检测 moan: 娇喘检测
     * callback  回调http接口，回调内容如下： ```{     \"job_id\":\"xxxxxx\",     \"status\":\"running\", //running - 审核中，succeeded - 审核完成，failed - 审核失败     \"request_id\":\"2419446b1fe14203f64e4018d12db3dd\",     \"craete_time\":\"2022-07-30T08:57:11.011Z\",     \"update_time\":\"2022-07-30T08:57:14.014Z\",     \"result\":{         \"suggestion\":\"block\",         \"audio_detail\":[             {                 \"suggestion\":\"block\",                 \"label\":\"politics\",                 \"audio_text\":\"xxxx\",                 \"detail\":[                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"segments\":[                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             }                         ]                     }                 ]             }         ],         \"image_detail\":[             {                 \"suggestion\":\"block\",                 \"category\":\"xxx\",                 \"time\":\"xxx\", // 视频流截帧图片发生的绝对时间                 \"detail\":[                     {                         \"face_location\":{                             \"bottom_right_x\":247,                             \"bottom_right_y\":191,                             \"top_left_y\":79,                             \"top_left_x\":160                         },                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"xxx\",                         \"category\":\"xxx\"                     },                     {                         \"qr_content\":\"xxx\",                         \"confidence\":\"xxx\",                         \"suggestion\":\"xxx\",                         \"label\":\"xxx\",                         \"category\":\"xxx\",                         \"qr_location\":{                             \"bottom_right_x\":554,                             \"bottom_right_y\":842,                             \"top_left_y\":426,                             \"top_left_x\":140                         }                     },                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"category\":\"image_text\",                         \"segments\":[                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xx\"                             },                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxxx\"                             }                         ]                     }                 ]             }         ]     },     \"request_params\":{         \"data\":{             \"url\":\"rtmp://xxxx\",             \"frame_interval\":3         },         \"event_type\":\"default\",         \"image_categories\":[             \"politics\",             \"porn\",             \"image_text\",             \"terrorism\"         ],         \"audio_categories\":[             \"porn\",             \"ad\",             \"politics\",             \"moan\",             \"abuse\"         ],         \"callback\":\"http://xxx/callback\"     } }
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
         'eventType' => null,
         'imageCategories' => null,
         'audioCategories' => null,
-        'callback' => null
+        'callback' => null,
+        'seed' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频流中画面需要检测的风险类型，列表不能为空。 porn：鉴黄内容的检测 terrorism：涉政暴恐内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频流中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 porn：涉黄检测 politics: 涉政检测 abuse: 辱骂检测 ad: 广告检测 moan: 娇喘检测
     * callback  回调http接口，回调内容如下： ```{     \"job_id\":\"xxxxxx\",     \"status\":\"running\", //running - 审核中，succeeded - 审核完成，failed - 审核失败     \"request_id\":\"2419446b1fe14203f64e4018d12db3dd\",     \"craete_time\":\"2022-07-30T08:57:11.011Z\",     \"update_time\":\"2022-07-30T08:57:14.014Z\",     \"result\":{         \"suggestion\":\"block\",         \"audio_detail\":[             {                 \"suggestion\":\"block\",                 \"label\":\"politics\",                 \"audio_text\":\"xxxx\",                 \"detail\":[                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"segments\":[                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             }                         ]                     }                 ]             }         ],         \"image_detail\":[             {                 \"suggestion\":\"block\",                 \"category\":\"xxx\",                 \"time\":\"xxx\", // 视频流截帧图片发生的绝对时间                 \"detail\":[                     {                         \"face_location\":{                             \"bottom_right_x\":247,                             \"bottom_right_y\":191,                             \"top_left_y\":79,                             \"top_left_x\":160                         },                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"xxx\",                         \"category\":\"xxx\"                     },                     {                         \"qr_content\":\"xxx\",                         \"confidence\":\"xxx\",                         \"suggestion\":\"xxx\",                         \"label\":\"xxx\",                         \"category\":\"xxx\",                         \"qr_location\":{                             \"bottom_right_x\":554,                             \"bottom_right_y\":842,                             \"top_left_y\":426,                             \"top_left_x\":140                         }                     },                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"category\":\"image_text\",                         \"segments\":[                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xx\"                             },                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxxx\"                             }                         ]                     }                 ]             }         ]     },     \"request_params\":{         \"data\":{             \"url\":\"rtmp://xxxx\",             \"frame_interval\":3         },         \"event_type\":\"default\",         \"image_categories\":[             \"politics\",             \"porn\",             \"image_text\",             \"terrorism\"         ],         \"audio_categories\":[             \"porn\",             \"ad\",             \"politics\",             \"moan\",             \"abuse\"         ],         \"callback\":\"http://xxx/callback\"     } }
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'event_type',
             'imageCategories' => 'image_categories',
             'audioCategories' => 'audio_categories',
-            'callback' => 'callback'
+            'callback' => 'callback',
+            'seed' => 'seed'
     ];
 
     /**
@@ -100,6 +106,7 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频流中画面需要检测的风险类型，列表不能为空。 porn：鉴黄内容的检测 terrorism：涉政暴恐内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频流中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 porn：涉黄检测 politics: 涉政检测 abuse: 辱骂检测 ad: 广告检测 moan: 娇喘检测
     * callback  回调http接口，回调内容如下： ```{     \"job_id\":\"xxxxxx\",     \"status\":\"running\", //running - 审核中，succeeded - 审核完成，failed - 审核失败     \"request_id\":\"2419446b1fe14203f64e4018d12db3dd\",     \"craete_time\":\"2022-07-30T08:57:11.011Z\",     \"update_time\":\"2022-07-30T08:57:14.014Z\",     \"result\":{         \"suggestion\":\"block\",         \"audio_detail\":[             {                 \"suggestion\":\"block\",                 \"label\":\"politics\",                 \"audio_text\":\"xxxx\",                 \"detail\":[                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"segments\":[                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             }                         ]                     }                 ]             }         ],         \"image_detail\":[             {                 \"suggestion\":\"block\",                 \"category\":\"xxx\",                 \"time\":\"xxx\", // 视频流截帧图片发生的绝对时间                 \"detail\":[                     {                         \"face_location\":{                             \"bottom_right_x\":247,                             \"bottom_right_y\":191,                             \"top_left_y\":79,                             \"top_left_x\":160                         },                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"xxx\",                         \"category\":\"xxx\"                     },                     {                         \"qr_content\":\"xxx\",                         \"confidence\":\"xxx\",                         \"suggestion\":\"xxx\",                         \"label\":\"xxx\",                         \"category\":\"xxx\",                         \"qr_location\":{                             \"bottom_right_x\":554,                             \"bottom_right_y\":842,                             \"top_left_y\":426,                             \"top_left_x\":140                         }                     },                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"category\":\"image_text\",                         \"segments\":[                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xx\"                             },                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxxx\"                             }                         ]                     }                 ]             }         ]     },     \"request_params\":{         \"data\":{             \"url\":\"rtmp://xxxx\",             \"frame_interval\":3         },         \"event_type\":\"default\",         \"image_categories\":[             \"politics\",             \"porn\",             \"image_text\",             \"terrorism\"         ],         \"audio_categories\":[             \"porn\",             \"ad\",             \"politics\",             \"moan\",             \"abuse\"         ],         \"callback\":\"http://xxx/callback\"     } }
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'setEventType',
             'imageCategories' => 'setImageCategories',
             'audioCategories' => 'setAudioCategories',
-            'callback' => 'setCallback'
+            'callback' => 'setCallback',
+            'seed' => 'setSeed'
     ];
 
     /**
@@ -118,6 +126,7 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频流中画面需要检测的风险类型，列表不能为空。 porn：鉴黄内容的检测 terrorism：涉政暴恐内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频流中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 porn：涉黄检测 politics: 涉政检测 abuse: 辱骂检测 ad: 广告检测 moan: 娇喘检测
     * callback  回调http接口，回调内容如下： ```{     \"job_id\":\"xxxxxx\",     \"status\":\"running\", //running - 审核中，succeeded - 审核完成，failed - 审核失败     \"request_id\":\"2419446b1fe14203f64e4018d12db3dd\",     \"craete_time\":\"2022-07-30T08:57:11.011Z\",     \"update_time\":\"2022-07-30T08:57:14.014Z\",     \"result\":{         \"suggestion\":\"block\",         \"audio_detail\":[             {                 \"suggestion\":\"block\",                 \"label\":\"politics\",                 \"audio_text\":\"xxxx\",                 \"detail\":[                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"segments\":[                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xxx\"                             }                         ]                     }                 ]             }         ],         \"image_detail\":[             {                 \"suggestion\":\"block\",                 \"category\":\"xxx\",                 \"time\":\"xxx\", // 视频流截帧图片发生的绝对时间                 \"detail\":[                     {                         \"face_location\":{                             \"bottom_right_x\":247,                             \"bottom_right_y\":191,                             \"top_left_y\":79,                             \"top_left_x\":160                         },                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"xxx\",                         \"category\":\"xxx\"                     },                     {                         \"qr_content\":\"xxx\",                         \"confidence\":\"xxx\",                         \"suggestion\":\"xxx\",                         \"label\":\"xxx\",                         \"category\":\"xxx\",                         \"qr_location\":{                             \"bottom_right_x\":554,                             \"bottom_right_y\":842,                             \"top_left_y\":426,                             \"top_left_x\":140                         }                     },                     {                         \"confidence\":1,                         \"suggestion\":\"block\",                         \"label\":\"politics\",                         \"category\":\"image_text\",                         \"segments\":[                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxx\"                             },                             {                                 \"segment\":\"xx\"                             },                             {                                 \"segment\":\"x\"                             },                             {                                 \"segment\":\"xxxx\"                             }                         ]                     }                 ]             }         ]     },     \"request_params\":{         \"data\":{             \"url\":\"rtmp://xxxx\",             \"frame_interval\":3         },         \"event_type\":\"default\",         \"image_categories\":[             \"politics\",             \"porn\",             \"image_text\",             \"terrorism\"         ],         \"audio_categories\":[             \"porn\",             \"ad\",             \"politics\",             \"moan\",             \"abuse\"         ],         \"callback\":\"http://xxx/callback\"     } }
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'getEventType',
             'imageCategories' => 'getImageCategories',
             'audioCategories' => 'getAudioCategories',
-            'callback' => 'getCallback'
+            'callback' => 'getCallback',
+            'seed' => 'getSeed'
     ];
 
     /**
@@ -245,6 +255,7 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
         $this->container['imageCategories'] = isset($data['imageCategories']) ? $data['imageCategories'] : null;
         $this->container['audioCategories'] = isset($data['audioCategories']) ? $data['audioCategories'] : null;
         $this->container['callback'] = isset($data['callback']) ? $data['callback'] : null;
+        $this->container['seed'] = isset($data['seed']) ? $data['seed'] : null;
     }
 
     /**
@@ -406,6 +417,30 @@ class VideoStreamCreateRequest implements ModelInterface, ArrayAccess
     public function setCallback($callback)
     {
         $this->container['callback'] = $callback;
+        return $this;
+    }
+
+    /**
+    * Gets seed
+    *  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+    *
+    * @return string|null
+    */
+    public function getSeed()
+    {
+        return $this->container['seed'];
+    }
+
+    /**
+    * Sets seed
+    *
+    * @param string|null $seed 用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+    *
+    * @return $this
+    */
+    public function setSeed($seed)
+    {
+        $this->container['seed'] = $seed;
         return $this;
     }
 

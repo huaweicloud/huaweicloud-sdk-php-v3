@@ -31,6 +31,7 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
     * destinationPort  功能说明：ACL规则的目的端口 取值范围：支持端口号，一段端口范围，多个以逗号分隔 约束：支持的端口组的数量默认为20
     * sourceAddressGroupId  功能说明：ACL规则的源地址组ID 约束：source_ip_address和source_address_group_id不能同时设置
     * destinationAddressGroupId  功能说明：ACL规则的目的地址组ID 约束：destination_ip_address和destination_address_group_id不能同时设置
+    * enabled  功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
             'sourcePort' => 'string',
             'destinationPort' => 'string',
             'sourceAddressGroupId' => 'string',
-            'destinationAddressGroupId' => 'string'
+            'destinationAddressGroupId' => 'string',
+            'enabled' => 'bool'
     ];
 
     /**
@@ -61,6 +63,7 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
     * destinationPort  功能说明：ACL规则的目的端口 取值范围：支持端口号，一段端口范围，多个以逗号分隔 约束：支持的端口组的数量默认为20
     * sourceAddressGroupId  功能说明：ACL规则的源地址组ID 约束：source_ip_address和source_address_group_id不能同时设置
     * destinationAddressGroupId  功能说明：ACL规则的目的地址组ID 约束：destination_ip_address和destination_address_group_id不能同时设置
+    * enabled  功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
         'sourcePort' => null,
         'destinationPort' => null,
         'sourceAddressGroupId' => null,
-        'destinationAddressGroupId' => null
+        'destinationAddressGroupId' => null,
+        'enabled' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
     * destinationPort  功能说明：ACL规则的目的端口 取值范围：支持端口号，一段端口范围，多个以逗号分隔 约束：支持的端口组的数量默认为20
     * sourceAddressGroupId  功能说明：ACL规则的源地址组ID 约束：source_ip_address和source_address_group_id不能同时设置
     * destinationAddressGroupId  功能说明：ACL规则的目的地址组ID 约束：destination_ip_address和destination_address_group_id不能同时设置
+    * enabled  功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
             'sourcePort' => 'source_port',
             'destinationPort' => 'destination_port',
             'sourceAddressGroupId' => 'source_address_group_id',
-            'destinationAddressGroupId' => 'destination_address_group_id'
+            'destinationAddressGroupId' => 'destination_address_group_id',
+            'enabled' => 'enabled'
     ];
 
     /**
@@ -142,6 +148,7 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
     * destinationPort  功能说明：ACL规则的目的端口 取值范围：支持端口号，一段端口范围，多个以逗号分隔 约束：支持的端口组的数量默认为20
     * sourceAddressGroupId  功能说明：ACL规则的源地址组ID 约束：source_ip_address和source_address_group_id不能同时设置
     * destinationAddressGroupId  功能说明：ACL规则的目的地址组ID 约束：destination_ip_address和destination_address_group_id不能同时设置
+    * enabled  功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
             'sourcePort' => 'setSourcePort',
             'destinationPort' => 'setDestinationPort',
             'sourceAddressGroupId' => 'setSourceAddressGroupId',
-            'destinationAddressGroupId' => 'setDestinationAddressGroupId'
+            'destinationAddressGroupId' => 'setDestinationAddressGroupId',
+            'enabled' => 'setEnabled'
     ];
 
     /**
@@ -172,6 +180,7 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
     * destinationPort  功能说明：ACL规则的目的端口 取值范围：支持端口号，一段端口范围，多个以逗号分隔 约束：支持的端口组的数量默认为20
     * sourceAddressGroupId  功能说明：ACL规则的源地址组ID 约束：source_ip_address和source_address_group_id不能同时设置
     * destinationAddressGroupId  功能说明：ACL规则的目的地址组ID 约束：destination_ip_address和destination_address_group_id不能同时设置
+    * enabled  功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
             'sourcePort' => 'getSourcePort',
             'destinationPort' => 'getDestinationPort',
             'sourceAddressGroupId' => 'getSourceAddressGroupId',
-            'destinationAddressGroupId' => 'getDestinationAddressGroupId'
+            'destinationAddressGroupId' => 'getDestinationAddressGroupId',
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -258,6 +268,7 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
         $this->container['destinationPort'] = isset($data['destinationPort']) ? $data['destinationPort'] : null;
         $this->container['sourceAddressGroupId'] = isset($data['sourceAddressGroupId']) ? $data['sourceAddressGroupId'] : null;
         $this->container['destinationAddressGroupId'] = isset($data['destinationAddressGroupId']) ? $data['destinationAddressGroupId'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**
@@ -552,6 +563,30 @@ class FirewallInsertRuleItemOption implements ModelInterface, ArrayAccess
     public function setDestinationAddressGroupId($destinationAddressGroupId)
     {
         $this->container['destinationAddressGroupId'] = $destinationAddressGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets enabled
+    *  功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
+    *
+    * @return bool|null
+    */
+    public function getEnabled()
+    {
+        return $this->container['enabled'];
+    }
+
+    /**
+    * Sets enabled
+    *
+    * @param bool|null $enabled 功能说明：是否启用ACL规则。 取值范围：true，表示启用；false，表示停用。 默认值：true。
+    *
+    * @return $this
+    */
+    public function setEnabled($enabled)
+    {
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 

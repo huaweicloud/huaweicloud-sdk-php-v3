@@ -47,9 +47,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用组件列表
     * releaseId  部署记录序列号
     * appId  部署任务所属应用id
+    * isDisable  当前应用是否被禁用
     *
     * @var string[]
     */
@@ -81,9 +83,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
             'canCopy' => 'bool',
             'canManage' => 'bool',
             'canCreateEnv' => 'bool',
+            'canDisable' => 'bool',
             'appComponentList' => '\HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\AppComponentDao[]',
             'releaseId' => 'int',
-            'appId' => 'string'
+            'appId' => 'string',
+            'isDisable' => 'bool'
     ];
 
     /**
@@ -115,9 +119,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用组件列表
     * releaseId  部署记录序列号
     * appId  部署任务所属应用id
+    * isDisable  当前应用是否被禁用
     *
     * @var string[]
     */
@@ -149,9 +155,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
         'canCopy' => null,
         'canManage' => null,
         'canCreateEnv' => null,
+        'canDisable' => null,
         'appComponentList' => null,
         'releaseId' => 'int32',
-        'appId' => null
+        'appId' => null,
+        'isDisable' => null
     ];
 
     /**
@@ -204,9 +212,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用组件列表
     * releaseId  部署记录序列号
     * appId  部署任务所属应用id
+    * isDisable  当前应用是否被禁用
     *
     * @var string[]
     */
@@ -238,9 +248,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
             'canCopy' => 'can_copy',
             'canManage' => 'can_manage',
             'canCreateEnv' => 'can_create_env',
+            'canDisable' => 'can_disable',
             'appComponentList' => 'app_component_list',
             'releaseId' => 'release_id',
-            'appId' => 'app_id'
+            'appId' => 'app_id',
+            'isDisable' => 'is_disable'
     ];
 
     /**
@@ -272,9 +284,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用组件列表
     * releaseId  部署记录序列号
     * appId  部署任务所属应用id
+    * isDisable  当前应用是否被禁用
     *
     * @var string[]
     */
@@ -306,9 +320,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
             'canCopy' => 'setCanCopy',
             'canManage' => 'setCanManage',
             'canCreateEnv' => 'setCanCreateEnv',
+            'canDisable' => 'setCanDisable',
             'appComponentList' => 'setAppComponentList',
             'releaseId' => 'setReleaseId',
-            'appId' => 'setAppId'
+            'appId' => 'setAppId',
+            'isDisable' => 'setIsDisable'
     ];
 
     /**
@@ -340,9 +356,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * appComponentList  应用组件列表
     * releaseId  部署记录序列号
     * appId  部署任务所属应用id
+    * isDisable  当前应用是否被禁用
     *
     * @var string[]
     */
@@ -374,9 +392,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
             'canCopy' => 'getCanCopy',
             'canManage' => 'getCanManage',
             'canCreateEnv' => 'getCanCreateEnv',
+            'canDisable' => 'getCanDisable',
             'appComponentList' => 'getAppComponentList',
             'releaseId' => 'getReleaseId',
-            'appId' => 'getAppId'
+            'appId' => 'getAppId',
+            'isDisable' => 'getIsDisable'
     ];
 
     /**
@@ -464,9 +484,11 @@ class TaskV2Info implements ModelInterface, ArrayAccess
         $this->container['canCopy'] = isset($data['canCopy']) ? $data['canCopy'] : null;
         $this->container['canManage'] = isset($data['canManage']) ? $data['canManage'] : null;
         $this->container['canCreateEnv'] = isset($data['canCreateEnv']) ? $data['canCreateEnv'] : null;
+        $this->container['canDisable'] = isset($data['canDisable']) ? $data['canDisable'] : null;
         $this->container['appComponentList'] = isset($data['appComponentList']) ? $data['appComponentList'] : null;
         $this->container['releaseId'] = isset($data['releaseId']) ? $data['releaseId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
+        $this->container['isDisable'] = isset($data['isDisable']) ? $data['isDisable'] : null;
     }
 
     /**
@@ -1191,6 +1213,30 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets canDisable
+    *  是否有禁用应用的权限
+    *
+    * @return bool|null
+    */
+    public function getCanDisable()
+    {
+        return $this->container['canDisable'];
+    }
+
+    /**
+    * Sets canDisable
+    *
+    * @param bool|null $canDisable 是否有禁用应用的权限
+    *
+    * @return $this
+    */
+    public function setCanDisable($canDisable)
+    {
+        $this->container['canDisable'] = $canDisable;
+        return $this;
+    }
+
+    /**
     * Gets appComponentList
     *  应用组件列表
     *
@@ -1259,6 +1305,30 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     public function setAppId($appId)
     {
         $this->container['appId'] = $appId;
+        return $this;
+    }
+
+    /**
+    * Gets isDisable
+    *  当前应用是否被禁用
+    *
+    * @return bool|null
+    */
+    public function getIsDisable()
+    {
+        return $this->container['isDisable'];
+    }
+
+    /**
+    * Sets isDisable
+    *
+    * @param bool|null $isDisable 当前应用是否被禁用
+    *
+    * @return $this
+    */
+    public function setIsDisable($isDisable)
+    {
+        $this->container['isDisable'] = $isDisable;
         return $this;
     }
 

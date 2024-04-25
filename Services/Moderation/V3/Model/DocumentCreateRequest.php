@@ -27,6 +27,7 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
     * videoImageCategories  网页视频中图片需要检测的风险类型，不传或为空时表示不审核网页视频内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 terrorism: 暴恐检测 bad_scene: 不良场景检测 image_text: 图文检测
     * audioCategories  网页视频中音频需要检测的风险类型，不传或为空时表示不审核网页视频中音频的内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 ad：广告检测 abuse：辱骂检测 moan：娇喘检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
             'textCategories' => 'string[]',
             'videoImageCategories' => 'string[]',
             'audioCategories' => 'string[]',
-            'callback' => 'string'
+            'callback' => 'string',
+            'seed' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
     * videoImageCategories  网页视频中图片需要检测的风险类型，不传或为空时表示不审核网页视频内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 terrorism: 暴恐检测 bad_scene: 不良场景检测 image_text: 图文检测
     * audioCategories  网页视频中音频需要检测的风险类型，不传或为空时表示不审核网页视频中音频的内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 ad：广告检测 abuse：辱骂检测 moan：娇喘检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
         'textCategories' => null,
         'videoImageCategories' => null,
         'audioCategories' => null,
-        'callback' => null
+        'callback' => null,
+        'seed' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
     * videoImageCategories  网页视频中图片需要检测的风险类型，不传或为空时表示不审核网页视频内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 terrorism: 暴恐检测 bad_scene: 不良场景检测 image_text: 图文检测
     * audioCategories  网页视频中音频需要检测的风险类型，不传或为空时表示不审核网页视频中音频的内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 ad：广告检测 abuse：辱骂检测 moan：娇喘检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
             'textCategories' => 'text_categories',
             'videoImageCategories' => 'video_image_categories',
             'audioCategories' => 'audio_categories',
-            'callback' => 'callback'
+            'callback' => 'callback',
+            'seed' => 'seed'
     ];
 
     /**
@@ -114,6 +120,7 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
     * videoImageCategories  网页视频中图片需要检测的风险类型，不传或为空时表示不审核网页视频内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 terrorism: 暴恐检测 bad_scene: 不良场景检测 image_text: 图文检测
     * audioCategories  网页视频中音频需要检测的风险类型，不传或为空时表示不审核网页视频中音频的内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 ad：广告检测 abuse：辱骂检测 moan：娇喘检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
             'textCategories' => 'setTextCategories',
             'videoImageCategories' => 'setVideoImageCategories',
             'audioCategories' => 'setAudioCategories',
-            'callback' => 'setCallback'
+            'callback' => 'setCallback',
+            'seed' => 'setSeed'
     ];
 
     /**
@@ -136,6 +144,7 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
     * videoImageCategories  网页视频中图片需要检测的风险类型，不传或为空时表示不审核网页视频内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 terrorism: 暴恐检测 bad_scene: 不良场景检测 image_text: 图文检测
     * audioCategories  网页视频中音频需要检测的风险类型，不传或为空时表示不审核网页视频中音频的内容， 可取值如下： politics: 涉政检测 porn：涉黄检测 ad：广告检测 abuse：辱骂检测 moan：娇喘检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
             'textCategories' => 'getTextCategories',
             'videoImageCategories' => 'getVideoImageCategories',
             'audioCategories' => 'getAudioCategories',
-            'callback' => 'getCallback'
+            'callback' => 'getCallback',
+            'seed' => 'getSeed'
     ];
 
     /**
@@ -214,6 +224,7 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
         $this->container['videoImageCategories'] = isset($data['videoImageCategories']) ? $data['videoImageCategories'] : null;
         $this->container['audioCategories'] = isset($data['audioCategories']) ? $data['audioCategories'] : null;
         $this->container['callback'] = isset($data['callback']) ? $data['callback'] : null;
+        $this->container['seed'] = isset($data['seed']) ? $data['seed'] : null;
     }
 
     /**
@@ -409,6 +420,30 @@ class DocumentCreateRequest implements ModelInterface, ArrayAccess
     public function setCallback($callback)
     {
         $this->container['callback'] = $callback;
+        return $this;
+    }
+
+    /**
+    * Gets seed
+    *  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+    *
+    * @return string|null
+    */
+    public function getSeed()
+    {
+        return $this->container['seed'];
+    }
+
+    /**
+    * Sets seed
+    *
+    * @param string|null $seed 用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+    *
+    * @return $this
+    */
+    public function setSeed($seed)
+    {
+        $this->container['seed'] = $seed;
         return $this;
     }
 

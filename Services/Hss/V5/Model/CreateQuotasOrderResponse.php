@@ -21,20 +21,22 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * orderId  订单ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'orderId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * orderId  订单ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'orderId' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * orderId  订单ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'orderId' => 'order_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * orderId  订单ID
     *
     * @var string[]
     */
     protected static $setters = [
+            'orderId' => 'setOrderId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * orderId  订单ID
     *
     * @var string[]
     */
     protected static $getters = [
+            'orderId' => 'getOrderId'
     ];
 
     /**
@@ -143,6 +148,7 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
     }
 
     /**
@@ -153,6 +159,12 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 256)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -165,6 +177,30 @@ class CreateQuotasOrderResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets orderId
+    *  订单ID
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId 订单ID
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
     }
 
     /**

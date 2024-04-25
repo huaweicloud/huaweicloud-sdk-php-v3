@@ -24,6 +24,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * region  应用所属区域
     * description  描述
+    * isDisable  当前应用是否被禁用
     * createType  创建方式
     * projectId  项目ID
     * projectName  项目名称
@@ -36,6 +37,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * ownerTenantId  应用所属人租户ID
     * createUserId  应用创建者用户名
     * createTenantId  应用创建人租户ID
@@ -51,6 +53,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'name' => 'string',
             'region' => 'string',
             'description' => 'string',
+            'isDisable' => 'bool',
             'createType' => 'string',
             'projectId' => 'string',
             'projectName' => 'string',
@@ -63,6 +66,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'bool',
             'canManage' => 'bool',
             'canCreateEnv' => 'bool',
+            'canDisable' => 'bool',
             'ownerTenantId' => 'string',
             'createUserId' => 'string',
             'createTenantId' => 'string',
@@ -78,6 +82,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * region  应用所属区域
     * description  描述
+    * isDisable  当前应用是否被禁用
     * createType  创建方式
     * projectId  项目ID
     * projectName  项目名称
@@ -90,6 +95,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * ownerTenantId  应用所属人租户ID
     * createUserId  应用创建者用户名
     * createTenantId  应用创建人租户ID
@@ -105,6 +111,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
         'name' => null,
         'region' => null,
         'description' => null,
+        'isDisable' => null,
         'createType' => null,
         'projectId' => null,
         'projectName' => null,
@@ -117,6 +124,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
         'canCopy' => null,
         'canManage' => null,
         'canCreateEnv' => null,
+        'canDisable' => null,
         'ownerTenantId' => null,
         'createUserId' => null,
         'createTenantId' => null,
@@ -153,6 +161,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * region  应用所属区域
     * description  描述
+    * isDisable  当前应用是否被禁用
     * createType  创建方式
     * projectId  项目ID
     * projectName  项目名称
@@ -165,6 +174,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * ownerTenantId  应用所属人租户ID
     * createUserId  应用创建者用户名
     * createTenantId  应用创建人租户ID
@@ -180,6 +190,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'name' => 'name',
             'region' => 'region',
             'description' => 'description',
+            'isDisable' => 'is_disable',
             'createType' => 'create_type',
             'projectId' => 'project_id',
             'projectName' => 'project_name',
@@ -192,6 +203,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'can_copy',
             'canManage' => 'can_manage',
             'canCreateEnv' => 'can_create_env',
+            'canDisable' => 'can_disable',
             'ownerTenantId' => 'owner_tenant_id',
             'createUserId' => 'create_user_id',
             'createTenantId' => 'create_tenant_id',
@@ -207,6 +219,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * region  应用所属区域
     * description  描述
+    * isDisable  当前应用是否被禁用
     * createType  创建方式
     * projectId  项目ID
     * projectName  项目名称
@@ -219,6 +232,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * ownerTenantId  应用所属人租户ID
     * createUserId  应用创建者用户名
     * createTenantId  应用创建人租户ID
@@ -234,6 +248,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'region' => 'setRegion',
             'description' => 'setDescription',
+            'isDisable' => 'setIsDisable',
             'createType' => 'setCreateType',
             'projectId' => 'setProjectId',
             'projectName' => 'setProjectName',
@@ -246,6 +261,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'setCanCopy',
             'canManage' => 'setCanManage',
             'canCreateEnv' => 'setCanCreateEnv',
+            'canDisable' => 'setCanDisable',
             'ownerTenantId' => 'setOwnerTenantId',
             'createUserId' => 'setCreateUserId',
             'createTenantId' => 'setCreateTenantId',
@@ -261,6 +277,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * region  应用所属区域
     * description  描述
+    * isDisable  当前应用是否被禁用
     * createType  创建方式
     * projectId  项目ID
     * projectName  项目名称
@@ -273,6 +290,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canCopy  是否有复制权限
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
+    * canDisable  是否有禁用应用的权限
     * ownerTenantId  应用所属人租户ID
     * createUserId  应用创建者用户名
     * createTenantId  应用创建人租户ID
@@ -288,6 +306,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'region' => 'getRegion',
             'description' => 'getDescription',
+            'isDisable' => 'getIsDisable',
             'createType' => 'getCreateType',
             'projectId' => 'getProjectId',
             'projectName' => 'getProjectName',
@@ -300,6 +319,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
             'canCopy' => 'getCanCopy',
             'canManage' => 'getCanManage',
             'canCreateEnv' => 'getCanCreateEnv',
+            'canDisable' => 'getCanDisable',
             'ownerTenantId' => 'getOwnerTenantId',
             'createUserId' => 'getCreateUserId',
             'createTenantId' => 'getCreateTenantId',
@@ -371,6 +391,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['isDisable'] = isset($data['isDisable']) ? $data['isDisable'] : null;
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
@@ -383,6 +404,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
         $this->container['canCopy'] = isset($data['canCopy']) ? $data['canCopy'] : null;
         $this->container['canManage'] = isset($data['canManage']) ? $data['canManage'] : null;
         $this->container['canCreateEnv'] = isset($data['canCreateEnv']) ? $data['canCreateEnv'] : null;
+        $this->container['canDisable'] = isset($data['canDisable']) ? $data['canDisable'] : null;
         $this->container['ownerTenantId'] = isset($data['ownerTenantId']) ? $data['ownerTenantId'] : null;
         $this->container['createUserId'] = isset($data['createUserId']) ? $data['createUserId'] : null;
         $this->container['createTenantId'] = isset($data['createTenantId']) ? $data['createTenantId'] : null;
@@ -546,6 +568,30 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets isDisable
+    *  当前应用是否被禁用
+    *
+    * @return bool|null
+    */
+    public function getIsDisable()
+    {
+        return $this->container['isDisable'];
+    }
+
+    /**
+    * Sets isDisable
+    *
+    * @param bool|null $isDisable 当前应用是否被禁用
+    *
+    * @return $this
+    */
+    public function setIsDisable($isDisable)
+    {
+        $this->container['isDisable'] = $isDisable;
         return $this;
     }
 
@@ -834,6 +880,30 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     public function setCanCreateEnv($canCreateEnv)
     {
         $this->container['canCreateEnv'] = $canCreateEnv;
+        return $this;
+    }
+
+    /**
+    * Gets canDisable
+    *  是否有禁用应用的权限
+    *
+    * @return bool|null
+    */
+    public function getCanDisable()
+    {
+        return $this->container['canDisable'];
+    }
+
+    /**
+    * Sets canDisable
+    *
+    * @param bool|null $canDisable 是否有禁用应用的权限
+    *
+    * @return $this
+    */
+    public function setCanDisable($canDisable)
+    {
+        $this->container['canDisable'] = $canDisable;
         return $this;
     }
 

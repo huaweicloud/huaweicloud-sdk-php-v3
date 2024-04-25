@@ -21,7 +21,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * type  文档区域类别，包含text、table、figure等类别。
+    * type  文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
     * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
@@ -41,7 +41,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * type  文档区域类别，包含text、table、figure等类别。
+    * type  文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
     * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
@@ -82,7 +82,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * type  文档区域类别，包含text、table、figure等类别。
+    * type  文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
     * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
@@ -102,7 +102,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * type  文档区域类别，包含text、table、figure等类别。
+    * type  文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
     * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
@@ -122,7 +122,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * location  文字块的区域位置信息，列表形式，包含文字区域四个顶点的二维坐标（x,y）;坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * type  文档区域类别，包含text、table、figure等类别。
+    * type  文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     * text  文档区域文字内容。对于表格与图像，不返回其中的文字内容。
     * wordsIds  文字识别结果索引列表，表示ocr_result的words_block_list中哪些文本框位于该文档区域内。
     * tableId  仅当type为\"table\"且入参table为True时返回该字段，表示当前逻辑表格区域对应table_result中哪一项识别结果。
@@ -253,7 +253,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  文档区域类别，包含text、table、figure等类别。
+    *  文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class SmartDocumentRecognizerLayoutBlock implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 文档区域类别，包含text、table、figure等类别。
+    * @param string|null $type 文档区域类别，包含text、title、sub_title、image、image_caption、form、table、table_caption、header、footer、page_number、reference、formula、stamp、directory共15个类别。
     *
     * @return $this
     */

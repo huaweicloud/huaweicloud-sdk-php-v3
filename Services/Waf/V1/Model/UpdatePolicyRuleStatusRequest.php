@@ -185,6 +185,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
     const RULETYPE_ANTITAMPER = 'antitamper';
     const RULETYPE_CUSTOM = 'custom';
     const RULETYPE_IGNORE = 'ignore';
+    const RULETYPE_CC = 'cc';
     
 
     /**
@@ -201,6 +202,7 @@ class UpdatePolicyRuleStatusRequest implements ModelInterface, ArrayAccess
             self::RULETYPE_ANTITAMPER,
             self::RULETYPE_CUSTOM,
             self::RULETYPE_IGNORE,
+            self::RULETYPE_CC,
         ];
     }
 

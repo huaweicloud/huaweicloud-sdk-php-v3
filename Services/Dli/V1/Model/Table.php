@@ -68,14 +68,14 @@ class Table implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'createTime' => 'int32',
+        'createTime' => 'int64',
         'dataType' => null,
         'dataLocation' => null,
-        'lastAccessTime' => 'int32',
+        'lastAccessTime' => 'int64',
         'location' => null,
         'owner' => null,
         'tableName' => null,
-        'tableSize' => 'int32',
+        'tableSize' => 'int64',
         'tableType' => null,
         'partitionColumns' => null,
         'pageSize' => 'int32',

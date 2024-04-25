@@ -44,6 +44,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * actions  实例正在执行的动作。
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  实例可用区。
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'timeZone' => 'string',
             'actions' => 'string[]',
             'lbIpAddress' => 'string',
-            'lbPort' => 'string'
+            'lbPort' => 'string',
+            'availabilityZone' => 'string'
     ];
 
     /**
@@ -100,6 +102,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * actions  实例正在执行的动作。
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  实例可用区。
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         'timeZone' => null,
         'actions' => null,
         'lbIpAddress' => null,
-        'lbPort' => null
+        'lbPort' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -177,6 +181,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * actions  实例正在执行的动作。
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  实例可用区。
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'timeZone' => 'time_zone',
             'actions' => 'actions',
             'lbIpAddress' => 'lb_ip_address',
-            'lbPort' => 'lb_port'
+            'lbPort' => 'lb_port',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
@@ -233,6 +239,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * actions  实例正在执行的动作。
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  实例可用区。
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'timeZone' => 'setTimeZone',
             'actions' => 'setActions',
             'lbIpAddress' => 'setLbIpAddress',
-            'lbPort' => 'setLbPort'
+            'lbPort' => 'setLbPort',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
@@ -289,6 +297,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     * actions  实例正在执行的动作。
     * lbIpAddress  负载均衡ip，只有存在负载均衡ip，才会返回该参数。
     * lbPort  负载均衡端口，只有存在负载均衡ip，才会返回该参数。
+    * availabilityZone  实例可用区。
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
             'timeZone' => 'getTimeZone',
             'actions' => 'getActions',
             'lbIpAddress' => 'getLbIpAddress',
-            'lbPort' => 'getLbPort'
+            'lbPort' => 'getLbPort',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -401,6 +411,7 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
         $this->container['actions'] = isset($data['actions']) ? $data['actions'] : null;
         $this->container['lbIpAddress'] = isset($data['lbIpAddress']) ? $data['lbIpAddress'] : null;
         $this->container['lbPort'] = isset($data['lbPort']) ? $data['lbPort'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -1061,6 +1072,30 @@ class ListInstancesResult implements ModelInterface, ArrayAccess
     public function setLbPort($lbPort)
     {
         $this->container['lbPort'] = $lbPort;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  实例可用区。
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 实例可用区。
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

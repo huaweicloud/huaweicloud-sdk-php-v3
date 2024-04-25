@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class PublishApiRequest implements ModelInterface, ArrayAccess
+class DebugSecurityDlfDataWareHousesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,30 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'PublishApiRequest';
+    protected static $openAPIModelName = 'DebugSecurityDlfDataWareHousesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * body  body
+    * workspace  DataArts Studio工作空间ID
+    * dwId  数据连接id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'workspace' => 'string',
-            'dlmType' => 'string',
-            'contentType' => 'string',
-            'body' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\OpenApiParaForPublish'
+            'dwId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * body  body
+    * workspace  DataArts Studio工作空间ID
+    * dwId  数据连接id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'workspace' => null,
-        'dlmType' => null,
-        'contentType' => null,
-        'body' => null
+        'dwId' => null
     ];
 
     /**
@@ -73,50 +65,38 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * body  body
+    * workspace  DataArts Studio工作空间ID
+    * dwId  数据连接id
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'workspace' => 'workspace',
-            'dlmType' => 'Dlm-Type',
-            'contentType' => 'Content-Type',
-            'body' => 'body'
+            'dwId' => 'dw_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * body  body
+    * workspace  DataArts Studio工作空间ID
+    * dwId  数据连接id
     *
     * @var string[]
     */
     protected static $setters = [
             'workspace' => 'setWorkspace',
-            'dlmType' => 'setDlmType',
-            'contentType' => 'setContentType',
-            'body' => 'setBody'
+            'dwId' => 'setDwId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
-    * body  body
+    * workspace  DataArts Studio工作空间ID
+    * dwId  数据连接id
     *
     * @var string[]
     */
     protected static $getters = [
             'workspace' => 'getWorkspace',
-            'dlmType' => 'getDlmType',
-            'contentType' => 'getContentType',
-            'body' => 'getBody'
+            'dwId' => 'getDwId'
     ];
 
     /**
@@ -159,22 +139,7 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const DLM_TYPE_SHARED = 'SHARED';
-    const DLM_TYPE_EXCLUSIVE = 'EXCLUSIVE';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getDlmTypeAllowableValues()
-    {
-        return [
-            self::DLM_TYPE_SHARED,
-            self::DLM_TYPE_EXCLUSIVE,
-        ];
-    }
 
 
     /**
@@ -193,9 +158,7 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
-        $this->container['dlmType'] = isset($data['dlmType']) ? $data['dlmType'] : null;
-        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['dwId'] = isset($data['dwId']) ? $data['dwId'] : null;
     }
 
     /**
@@ -209,17 +172,21 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
         if ($this->container['workspace'] === null) {
             $invalidProperties[] = "'workspace' can't be null";
         }
-            $allowedValues = $this->getDlmTypeAllowableValues();
-                if (!is_null($this->container['dlmType']) && !in_array($this->container['dlmType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'dlmType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
+            if ((mb_strlen($this->container['workspace']) > 128)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be smaller than or equal to 128.";
             }
-
-        if ($this->container['contentType'] === null) {
-            $invalidProperties[] = "'contentType' can't be null";
+            if ((mb_strlen($this->container['workspace']) < 1)) {
+                $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['dwId'] === null) {
+            $invalidProperties[] = "'dwId' can't be null";
         }
+            if ((mb_strlen($this->container['dwId']) > 100)) {
+                $invalidProperties[] = "invalid value for 'dwId', the character length must be smaller than or equal to 100.";
+            }
+            if ((mb_strlen($this->container['dwId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dwId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -236,7 +203,7 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  工作空间id
+    *  DataArts Studio工作空间ID
     *
     * @return string
     */
@@ -248,7 +215,7 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string $workspace 工作空间id
+    * @param string $workspace DataArts Studio工作空间ID
     *
     * @return $this
     */
@@ -259,74 +226,26 @@ class PublishApiRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets dlmType
-    *  dlm版本类型
-    *
-    * @return string|null
-    */
-    public function getDlmType()
-    {
-        return $this->container['dlmType'];
-    }
-
-    /**
-    * Sets dlmType
-    *
-    * @param string|null $dlmType dlm版本类型
-    *
-    * @return $this
-    */
-    public function setDlmType($dlmType)
-    {
-        $this->container['dlmType'] = $dlmType;
-        return $this;
-    }
-
-    /**
-    * Gets contentType
-    *  资源类型
+    * Gets dwId
+    *  数据连接id
     *
     * @return string
     */
-    public function getContentType()
+    public function getDwId()
     {
-        return $this->container['contentType'];
+        return $this->container['dwId'];
     }
 
     /**
-    * Sets contentType
+    * Sets dwId
     *
-    * @param string $contentType 资源类型
+    * @param string $dwId 数据连接id
     *
     * @return $this
     */
-    public function setContentType($contentType)
+    public function setDwId($dwId)
     {
-        $this->container['contentType'] = $contentType;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\OpenApiParaForPublish|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\OpenApiParaForPublish|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
+        $this->container['dwId'] = $dwId;
         return $this;
     }
 

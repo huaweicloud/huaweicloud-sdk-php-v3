@@ -20,9 +20,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * body  API删除ID列表
     *
     * @var string[]
@@ -36,9 +36,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * body  API删除ID列表
     *
     * @var string[]
@@ -73,9 +73,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * body  API删除ID列表
     *
     * @var string[]
@@ -89,9 +89,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * body  API删除ID列表
     *
     * @var string[]
@@ -105,9 +105,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * workspace  工作空间id
-    * dlmType  dlm版本类型
-    * contentType  资源类型
+    * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
+    * dlmType  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
+    * contentType  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     * body  API删除ID列表
     *
     * @var string[]
@@ -206,6 +206,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['workspace'] === null) {
+            $invalidProperties[] = "'workspace' can't be null";
+        }
             $allowedValues = $this->getDlmTypeAllowableValues();
                 if (!is_null($this->container['dlmType']) && !in_array($this->container['dlmType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -233,9 +236,9 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets workspace
-    *  工作空间id
+    *  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
-    * @return string|null
+    * @return string
     */
     public function getWorkspace()
     {
@@ -245,7 +248,7 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
     /**
     * Sets workspace
     *
-    * @param string|null $workspace 工作空间id
+    * @param string $workspace 工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     *
     * @return $this
     */
@@ -257,7 +260,7 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets dlmType
-    *  dlm版本类型
+    *  数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     *
     * @return string|null
     */
@@ -269,7 +272,7 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
     /**
     * Sets dlmType
     *
-    * @param string|null $dlmType dlm版本类型
+    * @param string|null $dlmType 数据服务的版本类型，指定SHARED共享版或EXCLUSIVE专享版。
     *
     * @return $this
     */
@@ -281,7 +284,7 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  资源类型
+    *  消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     *
     * @return string
     */
@@ -293,7 +296,7 @@ class DeleteApiRequest implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string $contentType 资源类型
+    * @param string $contentType 消息体的类型（格式），有Body体的情况下必选，没有Body体无需填写。如果请求消息体中含有中文字符，则需要通过charset=utf8指定中文字符集，例如取值为：application/json;charset=utf8。
     *
     * @return $this
     */

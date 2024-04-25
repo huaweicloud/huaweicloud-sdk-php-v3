@@ -26,6 +26,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'string',
             'imageCategories' => 'string[]',
             'audioCategories' => 'string[]',
-            'callback' => 'string'
+            'callback' => 'string',
+            'seed' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
         'eventType' => null,
         'imageCategories' => null,
         'audioCategories' => null,
-        'callback' => null
+        'callback' => null,
+        'seed' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'event_type',
             'imageCategories' => 'image_categories',
             'audioCategories' => 'audio_categories',
-            'callback' => 'callback'
+            'callback' => 'callback',
+            'seed' => 'seed'
     ];
 
     /**
@@ -107,6 +113,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'setEventType',
             'imageCategories' => 'setImageCategories',
             'audioCategories' => 'setAudioCategories',
-            'callback' => 'setCallback'
+            'callback' => 'setCallback',
+            'seed' => 'setSeed'
     ];
 
     /**
@@ -127,6 +135,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     * imageCategories  视频中画面需要检测的风险类型，列表不能为空。 terrorism：涉政暴恐内容的检测 porn：鉴黄内容的检测 politics：政治敏感人物内容的检测 image_text：图文违规内容的检测（检测图片中出现的广告、色情、暴恐、涉政的文字违规内容以及二维码内容）
     * audioCategories  视频中音频需要检测的风险类型，不传或为空时表示不审核音频维度。 politics: 涉政检测 porn：涉黄检测 ad: 广告检测 moan: 娇喘检测 abuse: 辱骂检测
     * callback  回调http接口：当该字段非空时，服务将根据该字段回调通知用户审核结果。
+    * seed  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
             'eventType' => 'getEventType',
             'imageCategories' => 'getImageCategories',
             'audioCategories' => 'getAudioCategories',
-            'callback' => 'getCallback'
+            'callback' => 'getCallback',
+            'seed' => 'getSeed'
     ];
 
     /**
@@ -256,6 +266,7 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
         $this->container['imageCategories'] = isset($data['imageCategories']) ? $data['imageCategories'] : null;
         $this->container['audioCategories'] = isset($data['audioCategories']) ? $data['audioCategories'] : null;
         $this->container['callback'] = isset($data['callback']) ? $data['callback'] : null;
+        $this->container['seed'] = isset($data['seed']) ? $data['seed'] : null;
     }
 
     /**
@@ -432,6 +443,30 @@ class VideoCreateRequest implements ModelInterface, ArrayAccess
     public function setCallback($callback)
     {
         $this->container['callback'] = $callback;
+        return $this;
+    }
+
+    /**
+    * Gets seed
+    *  用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+    *
+    * @return string|null
+    */
+    public function getSeed()
+    {
+        return $this->container['seed'];
+    }
+
+    /**
+    * Sets seed
+    *
+    * @param string|null $seed 用于回调通知时校验请求由华为云内容安全服务发起，由您自定义。随机字符串，由英文字母、数字、下划线组成，不超过64个字符。 说明：当seed非空时，headers中将包含X-Auth-Signature字段，字段的值使用HmacSHA256算法生成，待加密字符串由create_time、job_id、request_id、seed按照顺序拼接而成，密钥为seed。
+    *
+    * @return $this
+    */
+    public function setSeed($seed)
+    {
+        $this->container['seed'] = $seed;
         return $this;
     }
 

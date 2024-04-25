@@ -27,6 +27,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
@@ -39,6 +40,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'layout' => 'bool',
             'returnExcel' => 'bool',
             'form' => 'bool',
+            'formula' => 'bool',
             'kvMap' => 'string'
     ];
 
@@ -51,6 +53,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
@@ -63,6 +66,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
         'layout' => null,
         'returnExcel' => null,
         'form' => null,
+        'formula' => null,
         'kvMap' => null
     ];
 
@@ -96,6 +100,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
@@ -108,6 +113,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'layout' => 'layout',
             'returnExcel' => 'return_excel',
             'form' => 'form',
+            'formula' => 'formula',
             'kvMap' => 'kv_map'
     ];
 
@@ -120,6 +126,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
@@ -132,6 +139,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'layout' => 'setLayout',
             'returnExcel' => 'setReturnExcel',
             'form' => 'setForm',
+            'formula' => 'setFormula',
             'kvMap' => 'setKvMap'
     ];
 
@@ -144,6 +152,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     * layout  是否进行版面分析。若是，结果会以“layout_result”这一关键字返回。
     * returnExcel  仅当table为True时有效。是否返回表格转换Microsoft Excel的Base64编码字段。
     * form  是否进行有线表单识别。有线表单指关键信息以有线单元格形式进行呈现，例如户口本、机动车发票等。若是，结果会以\"form_result\"这一关键字返回。
+    * formula  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
     * kvMap  需要传入字典的json序列化后字符串，用于对kv_result中的特定key值进行归一化映射。例如，kv_result中包含{\"名称\"：\"小明\"}的键值对，若传入{\"名称\"：\"姓名\"}的kv_map，则返回结果为{“姓名”：“小明”}。  > 参数传入示例： - \"kv_map\":\"{\\\"名称\\\":\\\"姓名\\\"}\"
     *
     * @var string[]
@@ -156,6 +165,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
             'layout' => 'getLayout',
             'returnExcel' => 'getReturnExcel',
             'form' => 'getForm',
+            'formula' => 'getFormula',
             'kvMap' => 'getKvMap'
     ];
 
@@ -224,6 +234,7 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
         $this->container['layout'] = isset($data['layout']) ? $data['layout'] : null;
         $this->container['returnExcel'] = isset($data['returnExcel']) ? $data['returnExcel'] : null;
         $this->container['form'] = isset($data['form']) ? $data['form'] : null;
+        $this->container['formula'] = isset($data['formula']) ? $data['formula'] : null;
         $this->container['kvMap'] = isset($data['kvMap']) ? $data['kvMap'] : null;
     }
 
@@ -414,6 +425,30 @@ class SmartDocumentRecognizerRequestBody implements ModelInterface, ArrayAccess
     public function setForm($form)
     {
         $this->container['form'] = $form;
+        return $this;
+    }
+
+    /**
+    * Gets formula
+    *  是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
+    *
+    * @return bool|null
+    */
+    public function getFormula()
+    {
+        return $this->container['formula'];
+    }
+
+    /**
+    * Sets formula
+    *
+    * @param bool|null $formula 是否进行公式识别，识别结果为latex序列。若是，结果会以“formula_result”这一关键字返回。 当前仅支持文档（例如论文）中的公式识别，不支持公式切片图像。
+    *
+    * @return $this
+    */
+    public function setFormula($formula)
+    {
+        $this->container['formula'] = $formula;
         return $this;
     }
 

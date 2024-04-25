@@ -31,7 +31,7 @@ class ListMetricsDataResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'code' => 'int',
             'msg' => 'string',
-            'data' => 'map[string,string][]',
+            'data' => 'map[string,object][]',
             'count' => 'int'
     ];
 
@@ -258,7 +258,7 @@ class ListMetricsDataResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  指标采集数据列表。
     *
-    * @return map[string,string][]|null
+    * @return map[string,object][]|null
     */
     public function getData()
     {
@@ -268,7 +268,7 @@ class ListMetricsDataResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param map[string,string][]|null $data 指标采集数据列表。
+    * @param map[string,object][]|null $data 指标采集数据列表。
     *
     * @return $this
     */

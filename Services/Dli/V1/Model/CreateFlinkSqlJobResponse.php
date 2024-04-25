@@ -28,7 +28,7 @@ class CreateFlinkSqlJobResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isSuccess' => 'bool',
+            'isSuccess' => 'string',
             'message' => 'string',
             'job' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobStatus'
     ];
@@ -199,7 +199,7 @@ class CreateFlinkSqlJobResponse implements ModelInterface, ArrayAccess
     * Gets isSuccess
     *  执行请求是否成功。“true”表示请求执行成功。
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getIsSuccess()
     {
@@ -209,7 +209,7 @@ class CreateFlinkSqlJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
+    * @param string|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
     *
     * @return $this
     */

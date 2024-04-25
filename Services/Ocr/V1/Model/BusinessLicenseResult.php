@@ -20,13 +20,14 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * registrationNumber  - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    * registrationNumber  - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     * name  企业名称。
-    * type  公司/企业类型/主体类型。
-    * address  住所/营业场所/企业住所。
-    * legalRepresentative  法定代表人/负责人。
-    * registeredCapital  注册资本。
-    * foundDate  成立日期。
+    * type  公司/企业类型/主体类型/类型。
+    * address  住所/营业场所/企业住所/主要经营场所/经营场所。
+    * legalRepresentative  法定代表人/负责人/执行事务合伙人/投资人/经营者。
+    * registeredCapital  注册资本/出资额。
+    * organizationForm  组成形式。
+    * foundDate  成立日期/注册日期。
     * businessTerm  营业期限。
     * businessScope  经营范围。
     * issueDate  发照日期。
@@ -41,6 +42,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
             'address' => 'string',
             'legalRepresentative' => 'string',
             'registeredCapital' => 'string',
+            'organizationForm' => 'string',
             'foundDate' => 'string',
             'businessTerm' => 'string',
             'businessScope' => 'string',
@@ -50,13 +52,14 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * registrationNumber  - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    * registrationNumber  - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     * name  企业名称。
-    * type  公司/企业类型/主体类型。
-    * address  住所/营业场所/企业住所。
-    * legalRepresentative  法定代表人/负责人。
-    * registeredCapital  注册资本。
-    * foundDate  成立日期。
+    * type  公司/企业类型/主体类型/类型。
+    * address  住所/营业场所/企业住所/主要经营场所/经营场所。
+    * legalRepresentative  法定代表人/负责人/执行事务合伙人/投资人/经营者。
+    * registeredCapital  注册资本/出资额。
+    * organizationForm  组成形式。
+    * foundDate  成立日期/注册日期。
     * businessTerm  营业期限。
     * businessScope  经营范围。
     * issueDate  发照日期。
@@ -71,6 +74,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
         'address' => null,
         'legalRepresentative' => null,
         'registeredCapital' => null,
+        'organizationForm' => null,
         'foundDate' => null,
         'businessTerm' => null,
         'businessScope' => null,
@@ -101,13 +105,14 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * registrationNumber  - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    * registrationNumber  - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     * name  企业名称。
-    * type  公司/企业类型/主体类型。
-    * address  住所/营业场所/企业住所。
-    * legalRepresentative  法定代表人/负责人。
-    * registeredCapital  注册资本。
-    * foundDate  成立日期。
+    * type  公司/企业类型/主体类型/类型。
+    * address  住所/营业场所/企业住所/主要经营场所/经营场所。
+    * legalRepresentative  法定代表人/负责人/执行事务合伙人/投资人/经营者。
+    * registeredCapital  注册资本/出资额。
+    * organizationForm  组成形式。
+    * foundDate  成立日期/注册日期。
     * businessTerm  营业期限。
     * businessScope  经营范围。
     * issueDate  发照日期。
@@ -122,6 +127,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
             'address' => 'address',
             'legalRepresentative' => 'legal_representative',
             'registeredCapital' => 'registered_capital',
+            'organizationForm' => 'organization_form',
             'foundDate' => 'found_date',
             'businessTerm' => 'business_term',
             'businessScope' => 'business_scope',
@@ -131,13 +137,14 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * registrationNumber  - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    * registrationNumber  - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     * name  企业名称。
-    * type  公司/企业类型/主体类型。
-    * address  住所/营业场所/企业住所。
-    * legalRepresentative  法定代表人/负责人。
-    * registeredCapital  注册资本。
-    * foundDate  成立日期。
+    * type  公司/企业类型/主体类型/类型。
+    * address  住所/营业场所/企业住所/主要经营场所/经营场所。
+    * legalRepresentative  法定代表人/负责人/执行事务合伙人/投资人/经营者。
+    * registeredCapital  注册资本/出资额。
+    * organizationForm  组成形式。
+    * foundDate  成立日期/注册日期。
     * businessTerm  营业期限。
     * businessScope  经营范围。
     * issueDate  发照日期。
@@ -152,6 +159,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'legalRepresentative' => 'setLegalRepresentative',
             'registeredCapital' => 'setRegisteredCapital',
+            'organizationForm' => 'setOrganizationForm',
             'foundDate' => 'setFoundDate',
             'businessTerm' => 'setBusinessTerm',
             'businessScope' => 'setBusinessScope',
@@ -161,13 +169,14 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * registrationNumber  - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    * registrationNumber  - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     * name  企业名称。
-    * type  公司/企业类型/主体类型。
-    * address  住所/营业场所/企业住所。
-    * legalRepresentative  法定代表人/负责人。
-    * registeredCapital  注册资本。
-    * foundDate  成立日期。
+    * type  公司/企业类型/主体类型/类型。
+    * address  住所/营业场所/企业住所/主要经营场所/经营场所。
+    * legalRepresentative  法定代表人/负责人/执行事务合伙人/投资人/经营者。
+    * registeredCapital  注册资本/出资额。
+    * organizationForm  组成形式。
+    * foundDate  成立日期/注册日期。
     * businessTerm  营业期限。
     * businessScope  经营范围。
     * issueDate  发照日期。
@@ -182,6 +191,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'legalRepresentative' => 'getLegalRepresentative',
             'registeredCapital' => 'getRegisteredCapital',
+            'organizationForm' => 'getOrganizationForm',
             'foundDate' => 'getFoundDate',
             'businessTerm' => 'getBusinessTerm',
             'businessScope' => 'getBusinessScope',
@@ -253,6 +263,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['legalRepresentative'] = isset($data['legalRepresentative']) ? $data['legalRepresentative'] : null;
         $this->container['registeredCapital'] = isset($data['registeredCapital']) ? $data['registeredCapital'] : null;
+        $this->container['organizationForm'] = isset($data['organizationForm']) ? $data['organizationForm'] : null;
         $this->container['foundDate'] = isset($data['foundDate']) ? $data['foundDate'] : null;
         $this->container['businessTerm'] = isset($data['businessTerm']) ? $data['businessTerm'] : null;
         $this->container['businessScope'] = isset($data['businessScope']) ? $data['businessScope'] : null;
@@ -284,7 +295,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets registrationNumber
-    *  - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    *  - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     *
     * @return string|null
     */
@@ -296,7 +307,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets registrationNumber
     *
-    * @param string|null $registrationNumber - 老版本营业执照对应注册号。  - 新三证合一版本营业执照对应社会保障号。
+    * @param string|null $registrationNumber - 老版本营业执照对应注册号。 - 新三证合一版本营业执照对应社会保障号。
     *
     * @return $this
     */
@@ -332,7 +343,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  公司/企业类型/主体类型。
+    *  公司/企业类型/主体类型/类型。
     *
     * @return string|null
     */
@@ -344,7 +355,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 公司/企业类型/主体类型。
+    * @param string|null $type 公司/企业类型/主体类型/类型。
     *
     * @return $this
     */
@@ -356,7 +367,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  住所/营业场所/企业住所。
+    *  住所/营业场所/企业住所/主要经营场所/经营场所。
     *
     * @return string|null
     */
@@ -368,7 +379,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 住所/营业场所/企业住所。
+    * @param string|null $address 住所/营业场所/企业住所/主要经营场所/经营场所。
     *
     * @return $this
     */
@@ -380,7 +391,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets legalRepresentative
-    *  法定代表人/负责人。
+    *  法定代表人/负责人/执行事务合伙人/投资人/经营者。
     *
     * @return string|null
     */
@@ -392,7 +403,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets legalRepresentative
     *
-    * @param string|null $legalRepresentative 法定代表人/负责人。
+    * @param string|null $legalRepresentative 法定代表人/负责人/执行事务合伙人/投资人/经营者。
     *
     * @return $this
     */
@@ -404,7 +415,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets registeredCapital
-    *  注册资本。
+    *  注册资本/出资额。
     *
     * @return string|null
     */
@@ -416,7 +427,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets registeredCapital
     *
-    * @param string|null $registeredCapital 注册资本。
+    * @param string|null $registeredCapital 注册资本/出资额。
     *
     * @return $this
     */
@@ -427,8 +438,32 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets organizationForm
+    *  组成形式。
+    *
+    * @return string|null
+    */
+    public function getOrganizationForm()
+    {
+        return $this->container['organizationForm'];
+    }
+
+    /**
+    * Sets organizationForm
+    *
+    * @param string|null $organizationForm 组成形式。
+    *
+    * @return $this
+    */
+    public function setOrganizationForm($organizationForm)
+    {
+        $this->container['organizationForm'] = $organizationForm;
+        return $this;
+    }
+
+    /**
     * Gets foundDate
-    *  成立日期。
+    *  成立日期/注册日期。
     *
     * @return string|null
     */
@@ -440,7 +475,7 @@ class BusinessLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets foundDate
     *
-    * @param string|null $foundDate 成立日期。
+    * @param string|null $foundDate 成立日期/注册日期。
     *
     * @return $this
     */
