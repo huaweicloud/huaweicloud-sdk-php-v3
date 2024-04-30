@@ -21,10 +21,11 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理。
+    * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * queueNum  队列数，范围1~50。
-    * permission  权限。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
+    * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'brokers' => 'string[]',
             'queueNum' => 'float',
+            'queues' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\CreateTopicReqQueues[]',
             'permission' => 'string',
             'messageType' => 'string',
             'topics' => 'string[]'
@@ -41,10 +43,11 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理。
+    * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * queueNum  队列数，范围1~50。
-    * permission  权限。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
+    * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -53,6 +56,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
         'name' => null,
         'brokers' => null,
         'queueNum' => null,
+        'queues' => null,
         'permission' => null,
         'messageType' => null,
         'topics' => null
@@ -82,10 +86,11 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理。
+    * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * queueNum  队列数，范围1~50。
-    * permission  权限。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
+    * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -94,6 +99,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'brokers' => 'brokers',
             'queueNum' => 'queue_num',
+            'queues' => 'queues',
             'permission' => 'permission',
             'messageType' => 'message_type',
             'topics' => 'topics'
@@ -102,10 +108,11 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理。
+    * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * queueNum  队列数，范围1~50。
-    * permission  权限。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
+    * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -114,6 +121,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'brokers' => 'setBrokers',
             'queueNum' => 'setQueueNum',
+            'queues' => 'setQueues',
             'permission' => 'setPermission',
             'messageType' => 'setMessageType',
             'topics' => 'setTopics'
@@ -122,10 +130,11 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  主题名称，只能由英文字母、数字、百分号、竖线、中划线、下划线组成，长度3~64个字符。
-    * brokers  关联的代理。
+    * brokers  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     * queueNum  队列数，范围1~50。
-    * permission  权限。
-    * messageType  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * queues  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    * permission  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
+    * messageType  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     * topics  主题列表，当批量删除主题时使用。
     *
     * @var string[]
@@ -134,6 +143,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'brokers' => 'getBrokers',
             'queueNum' => 'getQueueNum',
+            'queues' => 'getQueues',
             'permission' => 'getPermission',
             'messageType' => 'getMessageType',
             'topics' => 'getTopics'
@@ -236,6 +246,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['brokers'] = isset($data['brokers']) ? $data['brokers'] : null;
         $this->container['queueNum'] = isset($data['queueNum']) ? $data['queueNum'] : null;
+        $this->container['queues'] = isset($data['queues']) ? $data['queues'] : null;
         $this->container['permission'] = isset($data['permission']) ? $data['permission'] : null;
         $this->container['messageType'] = isset($data['messageType']) ? $data['messageType'] : null;
         $this->container['topics'] = isset($data['topics']) ? $data['topics'] : null;
@@ -305,7 +316,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokers
-    *  关联的代理。
+    *  关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     *
     * @return string[]|null
     */
@@ -317,7 +328,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets brokers
     *
-    * @param string[]|null $brokers 关联的代理。
+    * @param string[]|null $brokers 关联的代理（仅RocketMQ实例4.8.0版本需要填写此参数）。
     *
     * @return $this
     */
@@ -352,8 +363,32 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets queues
+    *  队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    *
+    * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\CreateTopicReqQueues[]|null
+    */
+    public function getQueues()
+    {
+        return $this->container['queues'];
+    }
+
+    /**
+    * Sets queues
+    *
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\CreateTopicReqQueues[]|null $queues 队列（仅RocketMQ实例4.8.0版本需要填写此参数）。
+    *
+    * @return $this
+    */
+    public function setQueues($queues)
+    {
+        $this->container['queues'] = $queues;
+        return $this;
+    }
+
+    /**
     * Gets permission
-    *  权限。
+    *  权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     *
     * @return string|null
     */
@@ -365,7 +400,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets permission
     *
-    * @param string|null $permission 权限。
+    * @param string|null $permission 权限（仅RocketMQ实例4.8.0版本需要填写此参数）。 取值范围：   - pub（发布）   - sub（订阅）   - all（发布+订阅）
     *
     * @return $this
     */
@@ -377,7 +412,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageType
-    *  消息类型（RocketMQ实例5.x版本才包含此参数）。
+    *  消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     *
     * @return string|null
     */
@@ -389,7 +424,7 @@ class CreateTopicOrBatchDeleteTopicReq implements ModelInterface, ArrayAccess
     /**
     * Sets messageType
     *
-    * @param string|null $messageType 消息类型（RocketMQ实例5.x版本才包含此参数）。
+    * @param string|null $messageType 消息类型（仅RocketMQ实例5.x版本需要填写此参数）。 取值范围：   - NORMAL（普通消息）   - FIFO（顺序消息）   - DELAY（定时消息）   - TRANSACTION（事务消息）
     *
     * @return $this
     */

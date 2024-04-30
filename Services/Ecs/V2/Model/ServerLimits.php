@@ -126,7 +126,7 @@ class ServerLimits implements ModelInterface, ArrayAccess
         'totalCoresUsed' => 'int32',
         'totalFloatingIpsUsed' => 'int32',
         'totalInstancesUsed' => 'int32',
-        'totalRamUsed' => 'int32',
+        'totalRamUsed' => 'int64',
         'totalSecurityGroupsUsed' => 'int32',
         'totalServerGroupsUsed' => 'int32',
         'maxTotalSpotInstances' => 'int32',

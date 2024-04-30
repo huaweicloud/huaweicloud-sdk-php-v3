@@ -33,7 +33,7 @@ class ObsFolder implements ModelInterface, ArrayAccess
             'folderGuid' => 'string',
             'folderQualifiedName' => 'string',
             'objectCount' => 'int',
-            'dataSize' => 'int'
+            'dataSize' => 'double'
     ];
 
     /**
@@ -51,7 +51,7 @@ class ObsFolder implements ModelInterface, ArrayAccess
         'folderGuid' => null,
         'folderQualifiedName' => null,
         'objectCount' => null,
-        'dataSize' => null
+        'dataSize' => 'double'
     ];
 
     /**
@@ -316,7 +316,7 @@ class ObsFolder implements ModelInterface, ArrayAccess
     * Gets dataSize
     *  数据量
     *
-    * @return int|null
+    * @return double|null
     */
     public function getDataSize()
     {
@@ -326,7 +326,7 @@ class ObsFolder implements ModelInterface, ArrayAccess
     /**
     * Sets dataSize
     *
-    * @param int|null $dataSize 数据量
+    * @param double|null $dataSize 数据量
     *
     * @return $this
     */

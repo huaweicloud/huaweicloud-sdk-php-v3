@@ -20,8 +20,8 @@ class KmsStructure implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
-    * cipherText  数据加密秘钥所对应的密文
+    * id  解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
+    * cipherText  数据加密密钥所对应的密文
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class KmsStructure implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
-    * cipherText  数据加密秘钥所对应的密文
+    * id  解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
+    * cipherText  数据加密密钥所对应的密文
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class KmsStructure implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
-    * cipherText  数据加密秘钥所对应的密文
+    * id  解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
+    * cipherText  数据加密密钥所对应的密文
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class KmsStructure implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
-    * cipherText  数据加密秘钥所对应的密文
+    * id  解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
+    * cipherText  数据加密密钥所对应的密文
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class KmsStructure implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
-    * cipherText  数据加密秘钥所对应的密文
+    * id  解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
+    * cipherText  数据加密密钥所对应的密文
     *
     * @var string[]
     */
@@ -206,7 +206,7 @@ class KmsStructure implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
+    *  解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
     *
     * @return string
     */
@@ -218,7 +218,7 @@ class KmsStructure implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 解密时，资源编排服务应该使用的KMS秘钥的ID，通常是加密时所使用的秘钥ID
+    * @param string $id 解密时，资源编排服务应该使用的KMS密钥的ID，通常是加密时所使用的密钥ID
     *
     * @return $this
     */
@@ -230,7 +230,7 @@ class KmsStructure implements ModelInterface, ArrayAccess
 
     /**
     * Gets cipherText
-    *  数据加密秘钥所对应的密文
+    *  数据加密密钥所对应的密文
     *
     * @return string
     */
@@ -242,7 +242,7 @@ class KmsStructure implements ModelInterface, ArrayAccess
     /**
     * Sets cipherText
     *
-    * @param string $cipherText 数据加密秘钥所对应的密文
+    * @param string $cipherText 数据加密密钥所对应的密文
     *
     * @return $this
     */

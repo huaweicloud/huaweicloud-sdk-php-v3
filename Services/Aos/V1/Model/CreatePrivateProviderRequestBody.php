@@ -24,7 +24,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerDescription  私有provider（private-provider）的描述。可用于客户识别被管理的私有provider。
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
-    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerDescription  私有provider（private-provider）的描述。可用于客户识别被管理的私有provider。
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
-    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerDescription  私有provider（private-provider）的描述。可用于客户识别被管理的私有provider。
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
-    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerDescription  私有provider（private-provider）的描述。可用于客户识别被管理的私有provider。
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
-    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     * providerDescription  私有provider（private-provider）的描述。可用于客户识别被管理的私有provider。
     * providerVersion  provider的版本号。版本号必须遵循语义化版本号（Semantic Version），为用户自定义
     * versionDescription  私有provider版本（provider version）的描述。可用于客户识别并管理私有provider的版本。注意：provider版本为不可更新（immutable），所以该字段不可更新，如果需要更新，请删除后重建
-    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * functionGraphUrn  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @var string[]
     */
@@ -353,7 +353,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets functionGraphUrn
-    *  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    *  FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @return string|null
     */
@@ -365,7 +365,7 @@ class CreatePrivateProviderRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets functionGraphUrn
     *
-    * @param string|null $functionGraphUrn FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给与了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
+    * @param string|null $functionGraphUrn FunctionGraph方法的统一资源标识，用于唯一标识的FunctionGraph方法。当前只支持和RFS同region的function_graph_urn，如果给予了关于其他region的，会报错400。  关于该参数的详细解释，请参考官方文档：https://support.huaweicloud.com/api-functiongraph/functiongraph_06_0102.html
     *
     * @return $this
     */

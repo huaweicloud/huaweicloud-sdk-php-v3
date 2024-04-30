@@ -29,7 +29,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -39,7 +39,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * subnetName  子网名称。
     * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
-    * availableZones  IO未售罄的可用区列表。
+    * availableZones  可用区ID列表。
+    * availableZoneNames  可用区名称列表。
     * userId  用户ID。
     * userName  用户名。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
@@ -71,6 +72,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicBrokerAddress  公网业务数据地址。
     * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * enterpriseProjectId  企业项目ID。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -97,6 +99,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'string',
             'subnetCidr' => 'string',
             'availableZones' => 'string[]',
+            'availableZoneNames' => 'string[]',
             'userId' => 'string',
             'userName' => 'string',
             'maintainBegin' => 'string',
@@ -128,6 +131,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicBrokerAddress' => 'string',
             'grpcAddress' => 'string',
             'publicGrpcAddress' => 'string',
+            'enterpriseProjectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\RocketMQ\V2\Model\TagEntity[]',
             'totalStorageSpace' => 'int',
             'resourceSpecCode' => 'string'
@@ -143,7 +147,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -153,7 +157,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * subnetName  子网名称。
     * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
-    * availableZones  IO未售罄的可用区列表。
+    * availableZones  可用区ID列表。
+    * availableZoneNames  可用区名称列表。
     * userId  用户ID。
     * userName  用户名。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
@@ -185,6 +190,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicBrokerAddress  公网业务数据地址。
     * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * enterpriseProjectId  企业项目ID。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -211,6 +217,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'subnetName' => null,
         'subnetCidr' => null,
         'availableZones' => null,
+        'availableZoneNames' => null,
         'userId' => null,
         'userName' => null,
         'maintainBegin' => null,
@@ -242,6 +249,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         'publicBrokerAddress' => null,
         'grpcAddress' => null,
         'publicGrpcAddress' => null,
+        'enterpriseProjectId' => null,
         'tags' => null,
         'totalStorageSpace' => 'int32',
         'resourceSpecCode' => null
@@ -278,7 +286,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -288,7 +296,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * subnetName  子网名称。
     * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
-    * availableZones  IO未售罄的可用区列表。
+    * availableZones  可用区ID列表。
+    * availableZoneNames  可用区名称列表。
     * userId  用户ID。
     * userName  用户名。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
@@ -320,6 +329,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicBrokerAddress  公网业务数据地址。
     * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * enterpriseProjectId  企业项目ID。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -346,6 +356,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'subnet_name',
             'subnetCidr' => 'subnet_cidr',
             'availableZones' => 'available_zones',
+            'availableZoneNames' => 'available_zone_names',
             'userId' => 'user_id',
             'userName' => 'user_name',
             'maintainBegin' => 'maintain_begin',
@@ -377,6 +388,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicBrokerAddress' => 'public_broker_address',
             'grpcAddress' => 'grpc_address',
             'publicGrpcAddress' => 'public_grpc_address',
+            'enterpriseProjectId' => 'enterprise_project_id',
             'tags' => 'tags',
             'totalStorageSpace' => 'total_storage_space',
             'resourceSpecCode' => 'resource_spec_code'
@@ -392,7 +404,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -402,7 +414,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * subnetName  子网名称。
     * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
-    * availableZones  IO未售罄的可用区列表。
+    * availableZones  可用区ID列表。
+    * availableZoneNames  可用区名称列表。
     * userId  用户ID。
     * userName  用户名。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
@@ -434,6 +447,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicBrokerAddress  公网业务数据地址。
     * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * enterpriseProjectId  企业项目ID。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -460,6 +474,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'setSubnetName',
             'subnetCidr' => 'setSubnetCidr',
             'availableZones' => 'setAvailableZones',
+            'availableZoneNames' => 'setAvailableZoneNames',
             'userId' => 'setUserId',
             'userName' => 'setUserName',
             'maintainBegin' => 'setMaintainBegin',
@@ -491,6 +506,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicBrokerAddress' => 'setPublicBrokerAddress',
             'grpcAddress' => 'setGrpcAddress',
             'publicGrpcAddress' => 'setPublicGrpcAddress',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'tags' => 'setTags',
             'totalStorageSpace' => 'setTotalStorageSpace',
             'resourceSpecCode' => 'setResourceSpecCode'
@@ -506,7 +522,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * specification  实例规格。
     * engineVersion  版本。
     * instanceId  实例ID。
-    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    * chargingMode  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     * vpcId  私有云ID。
     * vpcName  私有云名称。
     * createdAt  完成创建时间。  格式为时间戳，指从格林威治时间1970年01月01日00时00分00秒起至指定时间的偏差总毫秒数。
@@ -516,7 +532,8 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * subnetId  子网ID。
     * subnetName  子网名称。
     * subnetCidr  子网路由（仅RocketMQ 5.x版本会显示此字段）。
-    * availableZones  IO未售罄的可用区列表。
+    * availableZones  可用区ID列表。
+    * availableZoneNames  可用区名称列表。
     * userId  用户ID。
     * userName  用户名。
     * maintainBegin  维护时间窗开始时间，格式为HH:mm:ss。
@@ -548,6 +565,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     * publicBrokerAddress  公网业务数据地址。
     * grpcAddress  grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
     * publicGrpcAddress  公网grpc连接地址（仅RocketMQ 5.x版本会显示此字段）。
+    * enterpriseProjectId  企业项目ID。
     * tags  标签列表。
     * totalStorageSpace  总存储空间。
     * resourceSpecCode  资源规格。
@@ -574,6 +592,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'subnetName' => 'getSubnetName',
             'subnetCidr' => 'getSubnetCidr',
             'availableZones' => 'getAvailableZones',
+            'availableZoneNames' => 'getAvailableZoneNames',
             'userId' => 'getUserId',
             'userName' => 'getUserName',
             'maintainBegin' => 'getMaintainBegin',
@@ -605,6 +624,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
             'publicBrokerAddress' => 'getPublicBrokerAddress',
             'grpcAddress' => 'getGrpcAddress',
             'publicGrpcAddress' => 'getPublicGrpcAddress',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'tags' => 'getTags',
             'totalStorageSpace' => 'getTotalStorageSpace',
             'resourceSpecCode' => 'getResourceSpecCode'
@@ -702,6 +722,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['subnetName'] = isset($data['subnetName']) ? $data['subnetName'] : null;
         $this->container['subnetCidr'] = isset($data['subnetCidr']) ? $data['subnetCidr'] : null;
         $this->container['availableZones'] = isset($data['availableZones']) ? $data['availableZones'] : null;
+        $this->container['availableZoneNames'] = isset($data['availableZoneNames']) ? $data['availableZoneNames'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
         $this->container['maintainBegin'] = isset($data['maintainBegin']) ? $data['maintainBegin'] : null;
@@ -733,6 +754,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
         $this->container['publicBrokerAddress'] = isset($data['publicBrokerAddress']) ? $data['publicBrokerAddress'] : null;
         $this->container['grpcAddress'] = isset($data['grpcAddress']) ? $data['grpcAddress'] : null;
         $this->container['publicGrpcAddress'] = isset($data['publicGrpcAddress']) ? $data['publicGrpcAddress'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['totalStorageSpace'] = isset($data['totalStorageSpace']) ? $data['totalStorageSpace'] : null;
         $this->container['resourceSpecCode'] = isset($data['resourceSpecCode']) ? $data['resourceSpecCode'] : null;
@@ -962,7 +984,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    *  [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     *
     * @return int|null
     */
@@ -974,7 +996,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
+    * @param int|null $chargingMode [付费模式，1表示按需计费。](tag:hws_eu,g42,hk_g42,tm,sbc,hk_sbc,hk_tm)[付费模式，1表示按需计费，0表示包年/包月计费。](tag:hws,hws_eu,hws_hk,ctc) [计费模式，参数暂未使用。](tag:ocb,hws_ocb,hcs)
     *
     * @return $this
     */
@@ -1202,7 +1224,7 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  IO未售罄的可用区列表。
+    *  可用区ID列表。
     *
     * @return string[]|null
     */
@@ -1214,13 +1236,37 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones IO未售罄的可用区列表。
+    * @param string[]|null $availableZones 可用区ID列表。
     *
     * @return $this
     */
     public function setAvailableZones($availableZones)
     {
         $this->container['availableZones'] = $availableZones;
+        return $this;
+    }
+
+    /**
+    * Gets availableZoneNames
+    *  可用区名称列表。
+    *
+    * @return string[]|null
+    */
+    public function getAvailableZoneNames()
+    {
+        return $this->container['availableZoneNames'];
+    }
+
+    /**
+    * Sets availableZoneNames
+    *
+    * @param string[]|null $availableZoneNames 可用区名称列表。
+    *
+    * @return $this
+    */
+    public function setAvailableZoneNames($availableZoneNames)
+    {
+        $this->container['availableZoneNames'] = $availableZoneNames;
         return $this;
     }
 
@@ -1965,6 +2011,30 @@ class ShowInstanceResponse implements ModelInterface, ArrayAccess
     public function setPublicGrpcAddress($publicGrpcAddress)
     {
         $this->container['publicGrpcAddress'] = $publicGrpcAddress;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

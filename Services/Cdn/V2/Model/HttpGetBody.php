@@ -24,7 +24,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
+    * certificateSource  证书来源,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
@@ -50,7 +50,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
+    * certificateSource  证书来源,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
@@ -97,7 +97,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
+    * certificateSource  证书来源,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
@@ -123,7 +123,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
+    * certificateSource  证书来源,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
@@ -149,7 +149,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书。
+    * certificateSource  证书来源,0：自有证书。
     * certificateType  证书类型。server：国际证书；server_sm：国密证书。
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
@@ -358,7 +358,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateSource
-    *  证书来源,1：华为云托管证书,0：自有证书。
+    *  证书来源,0：自有证书。
     *
     * @return int|null
     */
@@ -370,7 +370,7 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateSource
     *
-    * @param int|null $certificateSource 证书来源,1：华为云托管证书,0：自有证书。
+    * @param int|null $certificateSource 证书来源,0：自有证书。
     *
     * @return $this
     */

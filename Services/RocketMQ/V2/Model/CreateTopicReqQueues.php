@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Aos\V1\Model;
+namespace HuaweiCloud\SDK\RocketMQ\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
+class CreateTopicReqQueues implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,30 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'EstimateExecutionPlanPriceResponse';
+    protected static $openAPIModelName = 'CreateTopicReq_queues';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * currency  币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
-    * items  执行计划中所有资源的询价结果
+    * broker  关联的代理。
+    * queueNum  队列数，范围1~50。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'currency' => 'string',
-            'items' => '\HuaweiCloud\SDK\Aos\V1\Model\ItemsResponse[]'
+            'broker' => 'string',
+            'queueNum' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * currency  币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
-    * items  执行计划中所有资源的询价结果
+    * broker  关联的代理。
+    * queueNum  队列数，范围1~50。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'currency' => null,
-        'items' => null
+        'broker' => null,
+        'queueNum' => null
     ];
 
     /**
@@ -66,38 +65,38 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * currency  币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
-    * items  执行计划中所有资源的询价结果
+    * broker  关联的代理。
+    * queueNum  队列数，范围1~50。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'currency' => 'currency',
-            'items' => 'items'
+            'broker' => 'broker',
+            'queueNum' => 'queue_num'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * currency  币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
-    * items  执行计划中所有资源的询价结果
+    * broker  关联的代理。
+    * queueNum  队列数，范围1~50。
     *
     * @var string[]
     */
     protected static $setters = [
-            'currency' => 'setCurrency',
-            'items' => 'setItems'
+            'broker' => 'setBroker',
+            'queueNum' => 'setQueueNum'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * currency  币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
-    * items  执行计划中所有资源的询价结果
+    * broker  关联的代理。
+    * queueNum  队列数，范围1~50。
     *
     * @var string[]
     */
     protected static $getters = [
-            'currency' => 'getCurrency',
-            'items' => 'getItems'
+            'broker' => 'getBroker',
+            'queueNum' => 'getQueueNum'
     ];
 
     /**
@@ -158,8 +157,8 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['broker'] = isset($data['broker']) ? $data['broker'] : null;
+        $this->container['queueNum'] = isset($data['queueNum']) ? $data['queueNum'] : null;
     }
 
     /**
@@ -185,50 +184,50 @@ class EstimateExecutionPlanPriceResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets currency
-    *  币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
+    * Gets broker
+    *  关联的代理。
     *
     * @return string|null
     */
-    public function getCurrency()
+    public function getBroker()
     {
-        return $this->container['currency'];
+        return $this->container['broker'];
     }
 
     /**
-    * Sets currency
+    * Sets broker
     *
-    * @param string|null $currency 币种，枚举值   * [`CNY` - 元，中国站返回的币种](tag:hws)[`USD` - 美元，国际站返回的币种](tag:hws_hk)[`USD` - 美元，欧洲站返回的币种](tag:hws_eu)
+    * @param string|null $broker 关联的代理。
     *
     * @return $this
     */
-    public function setCurrency($currency)
+    public function setBroker($broker)
     {
-        $this->container['currency'] = $currency;
+        $this->container['broker'] = $broker;
         return $this;
     }
 
     /**
-    * Gets items
-    *  执行计划中所有资源的询价结果
+    * Gets queueNum
+    *  队列数，范围1~50。
     *
-    * @return \HuaweiCloud\SDK\Aos\V1\Model\ItemsResponse[]|null
+    * @return float|null
     */
-    public function getItems()
+    public function getQueueNum()
     {
-        return $this->container['items'];
+        return $this->container['queueNum'];
     }
 
     /**
-    * Sets items
+    * Sets queueNum
     *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\ItemsResponse[]|null $items 执行计划中所有资源的询价结果
+    * @param float|null $queueNum 队列数，范围1~50。
     *
     * @return $this
     */
-    public function setItems($items)
+    public function setQueueNum($queueNum)
     {
-        $this->container['items'] = $items;
+        $this->container['queueNum'] = $queueNum;
         return $this;
     }
 

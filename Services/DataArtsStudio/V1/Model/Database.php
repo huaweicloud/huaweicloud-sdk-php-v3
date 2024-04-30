@@ -33,7 +33,7 @@ class Database implements ModelInterface, ArrayAccess
             'databaseGuid' => 'string',
             'databaseQualifiedName' => 'string',
             'tableCount' => 'int',
-            'dataSize' => 'int'
+            'dataSize' => 'double'
     ];
 
     /**
@@ -51,7 +51,7 @@ class Database implements ModelInterface, ArrayAccess
         'databaseGuid' => null,
         'databaseQualifiedName' => null,
         'tableCount' => null,
-        'dataSize' => null
+        'dataSize' => 'double'
     ];
 
     /**
@@ -316,7 +316,7 @@ class Database implements ModelInterface, ArrayAccess
     * Gets dataSize
     *  数据量大小
     *
-    * @return int|null
+    * @return double|null
     */
     public function getDataSize()
     {
@@ -326,7 +326,7 @@ class Database implements ModelInterface, ArrayAccess
     /**
     * Sets dataSize
     *
-    * @param int|null $dataSize 数据量大小
+    * @param double|null $dataSize 数据量大小
     *
     * @return $this
     */

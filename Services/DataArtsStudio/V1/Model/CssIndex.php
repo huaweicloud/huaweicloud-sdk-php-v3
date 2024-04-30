@@ -33,7 +33,7 @@ class CssIndex implements ModelInterface, ArrayAccess
             'indexGuid' => 'string',
             'indexQualifiedName' => 'string',
             'indexDocCount' => 'int',
-            'indexDataSize' => 'int'
+            'indexDataSize' => 'double'
     ];
 
     /**
@@ -51,7 +51,7 @@ class CssIndex implements ModelInterface, ArrayAccess
         'indexGuid' => null,
         'indexQualifiedName' => null,
         'indexDocCount' => null,
-        'indexDataSize' => null
+        'indexDataSize' => 'double'
     ];
 
     /**
@@ -316,7 +316,7 @@ class CssIndex implements ModelInterface, ArrayAccess
     * Gets indexDataSize
     *  索引数据量大小
     *
-    * @return int|null
+    * @return double|null
     */
     public function getIndexDataSize()
     {
@@ -326,7 +326,7 @@ class CssIndex implements ModelInterface, ArrayAccess
     /**
     * Sets indexDataSize
     *
-    * @param int|null $indexDataSize 索引数据量大小
+    * @param double|null $indexDataSize 索引数据量大小
     *
     * @return $this
     */

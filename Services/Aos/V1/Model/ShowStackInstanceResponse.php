@@ -32,7 +32,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
     * region  资源栈实例所关联的资源栈所在的区域
     * createTime  资源栈实例的创建时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
     * updateTime  资源栈实例的更新时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
-    * varOverrides  该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    * varOverrides  该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @var string[]
     */
@@ -64,7 +64,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
     * region  资源栈实例所关联的资源栈所在的区域
     * createTime  资源栈实例的创建时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
     * updateTime  资源栈实例的更新时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
-    * varOverrides  该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    * varOverrides  该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
     * region  资源栈实例所关联的资源栈所在的区域
     * createTime  资源栈实例的创建时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
     * updateTime  资源栈实例的更新时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
-    * varOverrides  该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    * varOverrides  该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @var string[]
     */
@@ -149,7 +149,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
     * region  资源栈实例所关联的资源栈所在的区域
     * createTime  资源栈实例的创建时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
     * updateTime  资源栈实例的更新时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
-    * varOverrides  该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    * varOverrides  该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @var string[]
     */
@@ -181,7 +181,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
     * region  资源栈实例所关联的资源栈所在的区域
     * createTime  资源栈实例的创建时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
     * updateTime  资源栈实例的更新时间，格式为YYYY-MM-DDTHH:mm:ss.SSSZ，精确到毫秒，UTC时区，即，如1970-01-01T00:00:00.000Z
-    * varOverrides  该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    * varOverrides  该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @var string[]
     */
@@ -621,7 +621,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets varOverrides
-    *  该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    *  该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @return object|null
     */
@@ -633,7 +633,7 @@ class ShowStackInstanceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets varOverrides
     *
-    * @param object|null $varOverrides 该资源栈实例的参数覆盖内容  若用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  若该字段未返回，用户使用资源栈集中记录的参数部署该实例
+    * @param object|null $varOverrides 该资源栈实例的参数覆盖内容  如果用户通过CreateStackInstances或UpdateStackInstances API 对该资源栈实例设置了参数覆盖，该字段会返回资源栈实例记录的最新参数覆盖内容  如果该字段未返回，用户使用资源栈集中记录的参数部署该实例
     *
     * @return $this
     */

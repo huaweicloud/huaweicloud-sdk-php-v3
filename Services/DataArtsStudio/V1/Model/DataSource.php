@@ -58,7 +58,7 @@ class DataSource implements ModelInterface, ArrayAccess
             'databaseCount' => 'int',
             'streamCount' => 'int',
             'tableCount' => 'int',
-            'dataSize' => 'int',
+            'dataSize' => 'double',
             'databases' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\Database[]',
             'folders' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ObsFolder[]',
             'cssIndices' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CssIndex[]',
@@ -106,7 +106,7 @@ class DataSource implements ModelInterface, ArrayAccess
         'databaseCount' => null,
         'streamCount' => null,
         'tableCount' => null,
-        'dataSize' => null,
+        'dataSize' => 'double',
         'databases' => null,
         'folders' => null,
         'cssIndices' => null,
@@ -721,7 +721,7 @@ class DataSource implements ModelInterface, ArrayAccess
     * Gets dataSize
     *  数据大小
     *
-    * @return int|null
+    * @return double|null
     */
     public function getDataSize()
     {
@@ -731,7 +731,7 @@ class DataSource implements ModelInterface, ArrayAccess
     /**
     * Sets dataSize
     *
-    * @param int|null $dataSize 数据大小
+    * @param double|null $dataSize 数据大小
     *
     * @return $this
     */

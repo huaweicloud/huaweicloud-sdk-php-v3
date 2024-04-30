@@ -24,7 +24,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
-    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
-    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
-    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
-    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     * description  资源栈输出的描述，由用户在模板中定义
     * type  资源栈输出的类型
     * value  资源栈输出的值
-    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    * sensitive  标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class StackOutput implements ModelInterface, ArrayAccess
 
     /**
     * Gets sensitive
-    *  标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    *  标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @return bool|null
     */
@@ -326,7 +326,7 @@ class StackOutput implements ModelInterface, ArrayAccess
     /**
     * Sets sensitive
     *
-    * @param bool|null $sensitive 标识该资源栈输出是否为敏感信息，由用户在模板中定义  若用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
+    * @param bool|null $sensitive 标识该资源栈输出是否为敏感信息，由用户在模板中定义  如果用户在模板中将该输出定义为sensitive，则返回体中该输出的value和type不会返回真实值，而是返回`<sensitive>`
     *
     * @return $this
     */
