@@ -21,32 +21,26 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  状态
-    * securityGrpStatus  安全组
-    * firewallStatus  防火墙状态
-    * publicEipStatus  公共EIP状态
-    * nics  防火墙状态(兼容)
-    * publicEipStatu  公共EIP状态(兼容)
+    * status  云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
+    * securityGrpStatus  云堡垒机实例安全组状态。 - true  正常 - false 失败
+    * firewallStatus  云堡垒机实例防火墙状态。 - true  正常 - false 失败
+    * publicEipStatus  云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'status' => 'string',
-            'securityGrpStatus' => 'string',
+            'status' => 'bool',
+            'securityGrpStatus' => 'bool',
             'firewallStatus' => 'bool',
-            'publicEipStatus' => 'bool',
-            'nics' => 'bool',
-            'publicEipStatu' => 'bool'
+            'publicEipStatus' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  状态
-    * securityGrpStatus  安全组
-    * firewallStatus  防火墙状态
-    * publicEipStatus  公共EIP状态
-    * nics  防火墙状态(兼容)
-    * publicEipStatu  公共EIP状态(兼容)
+    * status  云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
+    * securityGrpStatus  云堡垒机实例安全组状态。 - true  正常 - false 失败
+    * firewallStatus  云堡垒机实例防火墙状态。 - true  正常 - false 失败
+    * publicEipStatus  云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @var string[]
     */
@@ -54,9 +48,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'securityGrpStatus' => null,
         'firewallStatus' => null,
-        'publicEipStatus' => null,
-        'nics' => null,
-        'publicEipStatu' => null
+        'publicEipStatus' => null
     ];
 
     /**
@@ -82,12 +74,10 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  状态
-    * securityGrpStatus  安全组
-    * firewallStatus  防火墙状态
-    * publicEipStatus  公共EIP状态
-    * nics  防火墙状态(兼容)
-    * publicEipStatu  公共EIP状态(兼容)
+    * status  云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
+    * securityGrpStatus  云堡垒机实例安全组状态。 - true  正常 - false 失败
+    * firewallStatus  云堡垒机实例防火墙状态。 - true  正常 - false 失败
+    * publicEipStatus  云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @var string[]
     */
@@ -95,19 +85,15 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'securityGrpStatus' => 'security_grp_status',
             'firewallStatus' => 'firewall_status',
-            'publicEipStatus' => 'public_eip_status',
-            'nics' => 'nics',
-            'publicEipStatu' => 'public_eip_statu'
+            'publicEipStatus' => 'public_eip_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  状态
-    * securityGrpStatus  安全组
-    * firewallStatus  防火墙状态
-    * publicEipStatus  公共EIP状态
-    * nics  防火墙状态(兼容)
-    * publicEipStatu  公共EIP状态(兼容)
+    * status  云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
+    * securityGrpStatus  云堡垒机实例安全组状态。 - true  正常 - false 失败
+    * firewallStatus  云堡垒机实例防火墙状态。 - true  正常 - false 失败
+    * publicEipStatus  云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @var string[]
     */
@@ -115,19 +101,15 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'securityGrpStatus' => 'setSecurityGrpStatus',
             'firewallStatus' => 'setFirewallStatus',
-            'publicEipStatus' => 'setPublicEipStatus',
-            'nics' => 'setNics',
-            'publicEipStatu' => 'setPublicEipStatu'
+            'publicEipStatus' => 'setPublicEipStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  状态
-    * securityGrpStatus  安全组
-    * firewallStatus  防火墙状态
-    * publicEipStatus  公共EIP状态
-    * nics  防火墙状态(兼容)
-    * publicEipStatu  公共EIP状态(兼容)
+    * status  云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
+    * securityGrpStatus  云堡垒机实例安全组状态。 - true  正常 - false 失败
+    * firewallStatus  云堡垒机实例防火墙状态。 - true  正常 - false 失败
+    * publicEipStatus  云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @var string[]
     */
@@ -135,9 +117,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'securityGrpStatus' => 'getSecurityGrpStatus',
             'firewallStatus' => 'getFirewallStatus',
-            'publicEipStatus' => 'getPublicEipStatus',
-            'nics' => 'getNics',
-            'publicEipStatu' => 'getPublicEipStatu'
+            'publicEipStatus' => 'getPublicEipStatus'
     ];
 
     /**
@@ -202,8 +182,6 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
         $this->container['securityGrpStatus'] = isset($data['securityGrpStatus']) ? $data['securityGrpStatus'] : null;
         $this->container['firewallStatus'] = isset($data['firewallStatus']) ? $data['firewallStatus'] : null;
         $this->container['publicEipStatus'] = isset($data['publicEipStatus']) ? $data['publicEipStatus'] : null;
-        $this->container['nics'] = isset($data['nics']) ? $data['nics'] : null;
-        $this->container['publicEipStatu'] = isset($data['publicEipStatu']) ? $data['publicEipStatu'] : null;
     }
 
     /**
@@ -214,18 +192,6 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['securityGrpStatus']) && (mb_strlen($this->container['securityGrpStatus']) > 64)) {
-                $invalidProperties[] = "invalid value for 'securityGrpStatus', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['securityGrpStatus']) && (mb_strlen($this->container['securityGrpStatus']) < 0)) {
-                $invalidProperties[] = "invalid value for 'securityGrpStatus', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -242,9 +208,9 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getStatus()
     {
@@ -254,7 +220,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 状态
+    * @param bool|null $status 云堡垒机实例网络状态。下面3个正常则正常，有一个不正常，网络状态为失败。
     *
     * @return $this
     */
@@ -266,9 +232,9 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGrpStatus
-    *  安全组
+    *  云堡垒机实例安全组状态。 - true  正常 - false 失败
     *
-    * @return string|null
+    * @return bool|null
     */
     public function getSecurityGrpStatus()
     {
@@ -278,7 +244,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
     /**
     * Sets securityGrpStatus
     *
-    * @param string|null $securityGrpStatus 安全组
+    * @param bool|null $securityGrpStatus 云堡垒机实例安全组状态。 - true  正常 - false 失败
     *
     * @return $this
     */
@@ -290,7 +256,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets firewallStatus
-    *  防火墙状态
+    *  云堡垒机实例防火墙状态。 - true  正常 - false 失败
     *
     * @return bool|null
     */
@@ -302,7 +268,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
     /**
     * Sets firewallStatus
     *
-    * @param bool|null $firewallStatus 防火墙状态
+    * @param bool|null $firewallStatus 云堡垒机实例防火墙状态。 - true  正常 - false 失败
     *
     * @return $this
     */
@@ -314,7 +280,7 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicEipStatus
-    *  公共EIP状态
+    *  云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @return bool|null
     */
@@ -326,61 +292,13 @@ class ChangeInstanceNetworkResponse implements ModelInterface, ArrayAccess
     /**
     * Sets publicEipStatus
     *
-    * @param bool|null $publicEipStatus 公共EIP状态
+    * @param bool|null $publicEipStatus 云堡垒机实例公网IP状态。 - true  正常 - false 失败
     *
     * @return $this
     */
     public function setPublicEipStatus($publicEipStatus)
     {
         $this->container['publicEipStatus'] = $publicEipStatus;
-        return $this;
-    }
-
-    /**
-    * Gets nics
-    *  防火墙状态(兼容)
-    *
-    * @return bool|null
-    */
-    public function getNics()
-    {
-        return $this->container['nics'];
-    }
-
-    /**
-    * Sets nics
-    *
-    * @param bool|null $nics 防火墙状态(兼容)
-    *
-    * @return $this
-    */
-    public function setNics($nics)
-    {
-        $this->container['nics'] = $nics;
-        return $this;
-    }
-
-    /**
-    * Gets publicEipStatu
-    *  公共EIP状态(兼容)
-    *
-    * @return bool|null
-    */
-    public function getPublicEipStatu()
-    {
-        return $this->container['publicEipStatu'];
-    }
-
-    /**
-    * Sets publicEipStatu
-    *
-    * @param bool|null $publicEipStatu 公共EIP状态(兼容)
-    *
-    * @return $this
-    */
-    public function setPublicEipStatu($publicEipStatu)
-    {
-        $this->container['publicEipStatu'] = $publicEipStatu;
         return $this;
     }
 

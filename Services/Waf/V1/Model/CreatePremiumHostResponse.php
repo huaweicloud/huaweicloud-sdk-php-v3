@@ -34,7 +34,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
@@ -82,7 +82,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
@@ -151,7 +151,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
@@ -199,7 +199,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
@@ -247,7 +247,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * flag  flag
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protectStatus  域名防护状态：  - 0：暂停防护，WAF只转发该域名的请求，不做攻击检测  - 1：开启防护，WAF根据您配置的策略进行攻击检测
@@ -775,7 +775,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainid
-    *  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    *  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     *
     * @return string|null
     */
@@ -787,7 +787,7 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainid
     *
-    * @param string|null $domainid 帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * @param string|null $domainid 账号ID,对应华为云控制台用户名->我的凭证->账号ID
     *
     * @return $this
     */

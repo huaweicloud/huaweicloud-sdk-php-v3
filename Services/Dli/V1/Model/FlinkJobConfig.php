@@ -144,7 +144,7 @@ class FlinkJobConfig implements ModelInterface, ArrayAccess
         'obsBucket' => null,
         'smnTopic' => null,
         'edgeGroupIds' => null,
-        'rootId' => 'int32',
+        'rootId' => 'int64',
         'managerCuNumber' => 'int32',
         'cuNumber' => 'int32',
         'parallelNumber' => 'int32',

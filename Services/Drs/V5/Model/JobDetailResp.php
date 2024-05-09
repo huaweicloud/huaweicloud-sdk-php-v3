@@ -50,6 +50,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * publicIpList  指定公网IP的信息
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     *
     * @var string[]
     */
@@ -83,7 +84,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'connectionManagement' => '\HuaweiCloud\SDK\Drs\V5\Model\ConnectionManagement',
             'publicIpList' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig[]',
             'bindPublicIpState' => 'string',
-            'children' => '\HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]'
+            'children' => '\HuaweiCloud\SDK\Drs\V5\Model\FailedToBindEipChildInfo[]',
+            'isWritable' => 'string'
     ];
 
     /**
@@ -118,6 +120,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * publicIpList  指定公网IP的信息
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     *
     * @var string[]
     */
@@ -151,7 +154,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         'connectionManagement' => null,
         'publicIpList' => null,
         'bindPublicIpState' => null,
-        'children' => null
+        'children' => null,
+        'isWritable' => null
     ];
 
     /**
@@ -207,6 +211,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * publicIpList  指定公网IP的信息
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     *
     * @var string[]
     */
@@ -240,7 +245,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'connectionManagement' => 'connection_management',
             'publicIpList' => 'public_ip_list',
             'bindPublicIpState' => 'bind_public_ip_state',
-            'children' => 'children'
+            'children' => 'children',
+            'isWritable' => 'is_writable'
     ];
 
     /**
@@ -275,6 +281,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * publicIpList  指定公网IP的信息
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     *
     * @var string[]
     */
@@ -308,7 +315,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'connectionManagement' => 'setConnectionManagement',
             'publicIpList' => 'setPublicIpList',
             'bindPublicIpState' => 'setBindPublicIpState',
-            'children' => 'setChildren'
+            'children' => 'setChildren',
+            'isWritable' => 'setIsWritable'
     ];
 
     /**
@@ -343,6 +351,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     * publicIpList  指定公网IP的信息
     * bindPublicIpState  是否成功绑定公网IP
     * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * isWritable  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
     *
     * @var string[]
     */
@@ -376,7 +385,8 @@ class JobDetailResp implements ModelInterface, ArrayAccess
             'connectionManagement' => 'getConnectionManagement',
             'publicIpList' => 'getPublicIpList',
             'bindPublicIpState' => 'getBindPublicIpState',
-            'children' => 'getChildren'
+            'children' => 'getChildren',
+            'isWritable' => 'getIsWritable'
     ];
 
     /**
@@ -419,7 +429,22 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const IS_WRITABLE_PENDING = 'pending';
+    const IS_WRITABLE_SUCCESS = 'success';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIsWritableAllowableValues()
+    {
+        return [
+            self::IS_WRITABLE_PENDING,
+            self::IS_WRITABLE_SUCCESS,
+        ];
+    }
 
 
     /**
@@ -467,6 +492,7 @@ class JobDetailResp implements ModelInterface, ArrayAccess
         $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
         $this->container['bindPublicIpState'] = isset($data['bindPublicIpState']) ? $data['bindPublicIpState'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
+        $this->container['isWritable'] = isset($data['isWritable']) ? $data['isWritable'] : null;
     }
 
     /**
@@ -477,6 +503,14 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getIsWritableAllowableValues();
+                if (!is_null($this->container['isWritable']) && !in_array($this->container['isWritable'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'isWritable', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -1208,6 +1242,30 @@ class JobDetailResp implements ModelInterface, ArrayAccess
     public function setChildren($children)
     {
         $this->container['children'] = $children;
+        return $this;
+    }
+
+    /**
+    * Gets isWritable
+    *  解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    *
+    * @return string|null
+    */
+    public function getIsWritable()
+    {
+        return $this->container['isWritable'];
+    }
+
+    /**
+    * Sets isWritable
+    *
+    * @param string|null $isWritable 解除目标库只读操作后，目标库解除只读是否成功。 - pending：目标库解除操作进行中。 - success：目标库解除只读操作成功。
+    *
+    * @return $this
+    */
+    public function setIsWritable($isWritable)
+    {
+        $this->container['isWritable'] = $isWritable;
         return $this;
     }
 

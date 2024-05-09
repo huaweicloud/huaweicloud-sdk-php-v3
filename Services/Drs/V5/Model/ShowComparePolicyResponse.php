@@ -25,7 +25,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * status  对比策略状态。 - OPEN：开启 - CLOSED：关闭 - NO_SUPPORT：不支持
     * beginTime  对比开始时间。
     * endTime  对比结束时间。
-    * compareType  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * compareType  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
@@ -49,7 +49,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * status  对比策略状态。 - OPEN：开启 - CLOSED：关闭 - NO_SUPPORT：不支持
     * beginTime  对比开始时间。
     * endTime  对比结束时间。
-    * compareType  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * compareType  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
@@ -94,7 +94,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * status  对比策略状态。 - OPEN：开启 - CLOSED：关闭 - NO_SUPPORT：不支持
     * beginTime  对比开始时间。
     * endTime  对比结束时间。
-    * compareType  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * compareType  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
@@ -118,7 +118,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * status  对比策略状态。 - OPEN：开启 - CLOSED：关闭 - NO_SUPPORT：不支持
     * beginTime  对比开始时间。
     * endTime  对比结束时间。
-    * compareType  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * compareType  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
@@ -142,7 +142,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     * status  对比策略状态。 - OPEN：开启 - CLOSED：关闭 - NO_SUPPORT：不支持
     * beginTime  对比开始时间。
     * endTime  对比结束时间。
-    * compareType  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * compareType  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * nextCompareTime  下次对比时间，UTC时间，例如：2023-06-12T08:00:00Z
     * comparePolicy  对比策略。 - normal：普通对比 - manyToOne：多对一对比
     * intervalHour  间隔时间。
@@ -373,7 +373,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets compareType
-    *  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    *  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     *
     * @return string[]|null
     */
@@ -385,7 +385,7 @@ class ShowComparePolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets compareType
     *
-    * @param string[]|null $compareType 对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * @param string[]|null $compareType 对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     *
     * @return $this
     */

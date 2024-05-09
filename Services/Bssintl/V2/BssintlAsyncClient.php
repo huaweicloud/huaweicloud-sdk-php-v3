@@ -415,6 +415,68 @@ class BssintlAsyncClient extends Client
     }
 
     /**
+     * 开通客户企业项目权限
+     *
+     * 客户在自建平台开通客户企业项目权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createEnterpriseProjectAuthAsync($request)
+    {
+        return $this->createEnterpriseProjectAuthAsyncWithHttpInfo($request);
+    }
+    
+    public function createEnterpriseProjectAuthAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/enterprises/enterprise-projects/authority';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreateEnterpriseProjectAuthResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\CreateEnterpriseProjectAuthRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 申请企业实名认证
      *
      * 功能描述：企业客户可以进行企业实名认证申请。
@@ -2256,6 +2318,71 @@ class BssintlAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListServiceTypesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListServiceTypesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量查询客户预算
+     *
+     * 功能描述：批量查询客户预算
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSubCustomerBudgetAsync($request)
+    {
+        return $this->listSubCustomerBudgetAsyncWithHttpInfo($request);
+    }
+    
+    public function listSubCustomerBudgetAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/partners/sub-customers/budget/query';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomerBudgetResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ListSubCustomerBudgetRequest',
             $asyncRequest = true);
     }
 

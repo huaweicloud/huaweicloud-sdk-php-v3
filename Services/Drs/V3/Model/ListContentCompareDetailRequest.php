@@ -26,7 +26,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
     * targetDbName  目标库名称。
     * dbName  源库名称。
     * type  类型。 compare：对比 unCompare：无法对比
-    * limit  每页显示的条目数量。
+    * limit  每页显示的条目数量，最大值1000。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
     * @var string[]
@@ -50,7 +50,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
     * targetDbName  目标库名称。
     * dbName  源库名称。
     * type  类型。 compare：对比 unCompare：无法对比
-    * limit  每页显示的条目数量。
+    * limit  每页显示的条目数量，最大值1000。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
     * @var string[]
@@ -95,7 +95,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
     * targetDbName  目标库名称。
     * dbName  源库名称。
     * type  类型。 compare：对比 unCompare：无法对比
-    * limit  每页显示的条目数量。
+    * limit  每页显示的条目数量，最大值1000。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
     * targetDbName  目标库名称。
     * dbName  源库名称。
     * type  类型。 compare：对比 unCompare：无法对比
-    * limit  每页显示的条目数量。
+    * limit  每页显示的条目数量，最大值1000。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
     * targetDbName  目标库名称。
     * dbName  源库名称。
     * type  类型。 compare：对比 unCompare：无法对比
-    * limit  每页显示的条目数量。
+    * limit  每页显示的条目数量，最大值1000。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
     * @var string[]
@@ -264,6 +264,12 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
         if ($this->container['compareJobId'] === null) {
             $invalidProperties[] = "'compareJobId' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -424,7 +430,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示的条目数量。
+    *  每页显示的条目数量，最大值1000。
     *
     * @return int|null
     */
@@ -436,7 +442,7 @@ class ListContentCompareDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示的条目数量。
+    * @param int|null $limit 每页显示的条目数量，最大值1000。
     *
     * @return $this
     */

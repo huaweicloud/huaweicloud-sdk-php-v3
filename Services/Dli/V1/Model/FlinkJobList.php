@@ -38,7 +38,7 @@ class FlinkJobList implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => 'int32',
+        'totalCount' => 'int64',
         'jobs' => null
     ];
 

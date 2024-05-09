@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Dli\V1\Model;
+namespace HuaweiCloud\SDK\Drs\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SuccessResponse implements ModelInterface, ArrayAccess
+class CreateCompareResultFileRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,38 @@ class SuccessResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SuccessResponse';
+    protected static $openAPIModelName = 'CreateCompareResultFileRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * xLanguage  请求语言类型。
+    * region  区域ID，例如：cn-north-4。
+    * jobId  任务ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isSuccess' => 'bool',
-            'message' => 'string'
+            'xLanguage' => 'string',
+            'region' => 'string',
+            'jobId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Drs\V3\Model\ExportCompareResultReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * xLanguage  请求语言类型。
+    * region  区域ID，例如：cn-north-4。
+    * jobId  任务ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isSuccess' => null,
-        'message' => null
+        'xLanguage' => null,
+        'region' => null,
+        'jobId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +73,50 @@ class SuccessResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * xLanguage  请求语言类型。
+    * region  区域ID，例如：cn-north-4。
+    * jobId  任务ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'isSuccess' => 'is_success',
-            'message' => 'message'
+            'xLanguage' => 'X-Language',
+            'region' => 'Region',
+            'jobId' => 'job_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * xLanguage  请求语言类型。
+    * region  区域ID，例如：cn-north-4。
+    * jobId  任务ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'isSuccess' => 'setIsSuccess',
-            'message' => 'setMessage'
+            'xLanguage' => 'setXLanguage',
+            'region' => 'setRegion',
+            'jobId' => 'setJobId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * xLanguage  请求语言类型。
+    * region  区域ID，例如：cn-north-4。
+    * jobId  任务ID。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'isSuccess' => 'getIsSuccess',
-            'message' => 'getMessage'
+            'xLanguage' => 'getXLanguage',
+            'region' => 'getRegion',
+            'jobId' => 'getJobId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -139,7 +159,22 @@ class SuccessResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_EN_US = 'en-us';
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_EN_US,
+            self::X_LANGUAGE_ZH_CN,
+        ];
+    }
 
 
     /**
@@ -157,8 +192,10 @@ class SuccessResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,6 +206,20 @@ class SuccessResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['region'] === null) {
+            $invalidProperties[] = "'region' can't be null";
+        }
+        if ($this->container['jobId'] === null) {
+            $invalidProperties[] = "'jobId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -184,50 +235,98 @@ class SuccessResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets isSuccess
-    *  执行请求是否成功。“true”表示请求执行成功。
+    * Gets xLanguage
+    *  请求语言类型。
     *
-    * @return bool|null
+    * @return string|null
     */
-    public function getIsSuccess()
+    public function getXLanguage()
     {
-        return $this->container['isSuccess'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets isSuccess
+    * Sets xLanguage
     *
-    * @param bool|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
+    * @param string|null $xLanguage 请求语言类型。
     *
     * @return $this
     */
-    public function setIsSuccess($isSuccess)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['isSuccess'] = $isSuccess;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets message
-    *  系统提示信息，执行成功时，信息可能为空。
+    * Gets region
+    *  区域ID，例如：cn-north-4。
     *
-    * @return string|null
+    * @return string
     */
-    public function getMessage()
+    public function getRegion()
     {
-        return $this->container['message'];
+        return $this->container['region'];
     }
 
     /**
-    * Sets message
+    * Sets region
     *
-    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
+    * @param string $region 区域ID，例如：cn-north-4。
     *
     * @return $this
     */
-    public function setMessage($message)
+    public function setRegion($region)
     {
-        $this->container['message'] = $message;
+        $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  任务ID。
+    *
+    * @return string
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string $jobId 任务ID。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\ExportCompareResultReq|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\ExportCompareResultReq|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

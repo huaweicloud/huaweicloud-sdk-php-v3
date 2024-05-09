@@ -23,6 +23,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     * layerConfig  layerConfig
+    * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
@@ -34,6 +35,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'timeWindow' => 'int',
             'replyMode' => 'string',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig',
+            'extraLayerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig',
             'replyTexts' => 'string[]',
             'replyAudios' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]',
             'replyOrder' => 'string',
@@ -45,6 +47,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     * layerConfig  layerConfig
+    * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
@@ -56,6 +59,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         'timeWindow' => null,
         'replyMode' => null,
         'layerConfig' => null,
+        'extraLayerConfig' => null,
         'replyTexts' => null,
         'replyAudios' => null,
         'replyOrder' => null,
@@ -88,6 +92,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     * layerConfig  layerConfig
+    * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
@@ -99,6 +104,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'timeWindow' => 'time_window',
             'replyMode' => 'reply_mode',
             'layerConfig' => 'layer_config',
+            'extraLayerConfig' => 'extra_layer_config',
             'replyTexts' => 'reply_texts',
             'replyAudios' => 'reply_audios',
             'replyOrder' => 'reply_order',
@@ -110,6 +116,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     * layerConfig  layerConfig
+    * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
@@ -121,6 +128,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'timeWindow' => 'setTimeWindow',
             'replyMode' => 'setReplyMode',
             'layerConfig' => 'setLayerConfig',
+            'extraLayerConfig' => 'setExtraLayerConfig',
             'replyTexts' => 'setReplyTexts',
             'replyAudios' => 'setReplyAudios',
             'replyOrder' => 'setReplyOrder',
@@ -132,6 +140,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
     * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
     * layerConfig  layerConfig
+    * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
@@ -143,6 +152,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'timeWindow' => 'getTimeWindow',
             'replyMode' => 'getReplyMode',
             'layerConfig' => 'getLayerConfig',
+            'extraLayerConfig' => 'getExtraLayerConfig',
             'replyTexts' => 'getReplyTexts',
             'replyAudios' => 'getReplyAudios',
             'replyOrder' => 'getReplyOrder',
@@ -257,6 +267,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         $this->container['timeWindow'] = isset($data['timeWindow']) ? $data['timeWindow'] : null;
         $this->container['replyMode'] = isset($data['replyMode']) ? $data['replyMode'] : null;
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
+        $this->container['extraLayerConfig'] = isset($data['extraLayerConfig']) ? $data['extraLayerConfig'] : null;
         $this->container['replyTexts'] = isset($data['replyTexts']) ? $data['replyTexts'] : null;
         $this->container['replyAudios'] = isset($data['replyAudios']) ? $data['replyAudios'] : null;
         $this->container['replyOrder'] = isset($data['replyOrder']) ? $data['replyOrder'] : null;
@@ -402,6 +413,30 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     public function setLayerConfig($layerConfig)
     {
         $this->container['layerConfig'] = $layerConfig;
+        return $this;
+    }
+
+    /**
+    * Gets extraLayerConfig
+    *  extraLayerConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig|null
+    */
+    public function getExtraLayerConfig()
+    {
+        return $this->container['extraLayerConfig'];
+    }
+
+    /**
+    * Sets extraLayerConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartLayerConfig|null $extraLayerConfig extraLayerConfig
+    *
+    * @return $this
+    */
+    public function setExtraLayerConfig($extraLayerConfig)
+    {
+        $this->container['extraLayerConfig'] = $extraLayerConfig;
         return $this;
     }
 

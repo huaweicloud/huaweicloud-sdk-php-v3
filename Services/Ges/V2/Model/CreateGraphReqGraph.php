@@ -41,6 +41,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * isDynamicGraph  是否为动态图
     *
     * @var string[]
     */
@@ -65,7 +66,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'productType' => 'string',
             'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\CreateGraphReqGraphVertexIdType',
             'enableMultiLabel' => 'bool',
-            'capacityRatio' => 'int'
+            'capacityRatio' => 'int',
+            'isDynamicGraph' => 'bool'
     ];
 
     /**
@@ -91,6 +93,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * isDynamicGraph  是否为动态图
     *
     * @var string[]
     */
@@ -115,7 +118,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         'productType' => null,
         'vertexIdType' => null,
         'enableMultiLabel' => null,
-        'capacityRatio' => 'int32'
+        'capacityRatio' => 'int32',
+        'isDynamicGraph' => null
     ];
 
     /**
@@ -162,6 +166,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * isDynamicGraph  是否为动态图
     *
     * @var string[]
     */
@@ -186,7 +191,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'productType' => 'product_type',
             'vertexIdType' => 'vertex_id_type',
             'enableMultiLabel' => 'enable_multi_label',
-            'capacityRatio' => 'capacity_ratio'
+            'capacityRatio' => 'capacity_ratio',
+            'isDynamicGraph' => 'is_dynamic_graph'
     ];
 
     /**
@@ -212,6 +218,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * isDynamicGraph  是否为动态图
     *
     * @var string[]
     */
@@ -236,7 +243,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'productType' => 'setProductType',
             'vertexIdType' => 'setVertexIdType',
             'enableMultiLabel' => 'setEnableMultiLabel',
-            'capacityRatio' => 'setCapacityRatio'
+            'capacityRatio' => 'setCapacityRatio',
+            'isDynamicGraph' => 'setIsDynamicGraph'
     ];
 
     /**
@@ -262,6 +270,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * vertexIdType  vertexIdType
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * isDynamicGraph  是否为动态图
     *
     * @var string[]
     */
@@ -286,7 +295,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'productType' => 'getProductType',
             'vertexIdType' => 'getVertexIdType',
             'enableMultiLabel' => 'getEnableMultiLabel',
-            'capacityRatio' => 'getCapacityRatio'
+            'capacityRatio' => 'getCapacityRatio',
+            'isDynamicGraph' => 'getIsDynamicGraph'
     ];
 
     /**
@@ -368,6 +378,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         $this->container['vertexIdType'] = isset($data['vertexIdType']) ? $data['vertexIdType'] : null;
         $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
         $this->container['capacityRatio'] = isset($data['capacityRatio']) ? $data['capacityRatio'] : null;
+        $this->container['isDynamicGraph'] = isset($data['isDynamicGraph']) ? $data['isDynamicGraph'] : null;
     }
 
     /**
@@ -914,6 +925,30 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     public function setCapacityRatio($capacityRatio)
     {
         $this->container['capacityRatio'] = $capacityRatio;
+        return $this;
+    }
+
+    /**
+    * Gets isDynamicGraph
+    *  是否为动态图
+    *
+    * @return bool|null
+    */
+    public function getIsDynamicGraph()
+    {
+        return $this->container['isDynamicGraph'];
+    }
+
+    /**
+    * Sets isDynamicGraph
+    *
+    * @param bool|null $isDynamicGraph 是否为动态图
+    *
+    * @return $this
+    */
+    public function setIsDynamicGraph($isDynamicGraph)
+    {
+        $this->container['isDynamicGraph'] = $isDynamicGraph;
         return $this;
     }
 

@@ -25,6 +25,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -34,6 +35,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVideoConfigRsp',
+            'chatVideoType' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -43,6 +45,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -52,6 +55,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
         'rtcRoomInfo' => null,
         'chatSubtitleConfig' => null,
         'videoConfig' => null,
+        'chatVideoType' => null,
         'xRequestId' => null
     ];
 
@@ -82,6 +86,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -91,6 +96,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'rtc_room_info',
             'chatSubtitleConfig' => 'chat_subtitle_config',
             'videoConfig' => 'video_config',
+            'chatVideoType' => 'chat_video_type',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -100,6 +106,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -109,6 +116,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'setRtcRoomInfo',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
             'videoConfig' => 'setVideoConfig',
+            'chatVideoType' => 'setChatVideoType',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -118,6 +126,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -127,6 +136,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'getRtcRoomInfo',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
             'videoConfig' => 'getVideoConfig',
+            'chatVideoType' => 'getChatVideoType',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -170,7 +180,24 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
+    const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
+    const CHAT_VIDEO_TYPE_HUB = 'HUB';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChatVideoTypeAllowableValues()
+    {
+        return [
+            self::CHAT_VIDEO_TYPE_COMPUTER,
+            self::CHAT_VIDEO_TYPE_MOBILE,
+            self::CHAT_VIDEO_TYPE_HUB,
+        ];
+    }
 
 
     /**
@@ -192,6 +219,7 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
+        $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -208,6 +236,20 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 1.";
+            }
+            $allowedValues = $this->getChatVideoTypeAllowableValues();
+                if (!is_null($this->container['chatVideoType']) && !in_array($this->container['chatVideoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chatVideoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -316,6 +358,30 @@ class StartSmartChatJobResponse implements ModelInterface, ArrayAccess
     public function setVideoConfig($videoConfig)
     {
         $this->container['videoConfig'] = $videoConfig;
+        return $this;
+    }
+
+    /**
+    * Gets chatVideoType
+    *  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    *
+    * @return string|null
+    */
+    public function getChatVideoType()
+    {
+        return $this->container['chatVideoType'];
+    }
+
+    /**
+    * Sets chatVideoType
+    *
+    * @param string|null $chatVideoType 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    *
+    * @return $this
+    */
+    public function setChatVideoType($chatVideoType)
+    {
+        $this->container['chatVideoType'] = $chatVideoType;
         return $this;
     }
 

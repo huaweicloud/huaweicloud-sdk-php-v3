@@ -43,6 +43,7 @@ class Endpoint implements ModelInterface, ArrayAccess
     * sslLink  是否SSL安全连接。
     * topic  kafka topic名称
     * clusterMode  MongDB集群4.0及以上版本，当集群实例无法获取到分片节点的IP时，source_endpoint中需要填写，值为：Sharding4.0+。
+    * kafkaSecurityConfig  kafkaSecurityConfig
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class Endpoint implements ModelInterface, ArrayAccess
             'sslCertName' => 'string',
             'sslLink' => 'bool',
             'topic' => 'string',
-            'clusterMode' => 'string'
+            'clusterMode' => 'string',
+            'kafkaSecurityConfig' => '\HuaweiCloud\SDK\Drs\V3\Model\KafkaSecurity'
     ];
 
     /**
@@ -97,6 +99,7 @@ class Endpoint implements ModelInterface, ArrayAccess
     * sslLink  是否SSL安全连接。
     * topic  kafka topic名称
     * clusterMode  MongDB集群4.0及以上版本，当集群实例无法获取到分片节点的IP时，source_endpoint中需要填写，值为：Sharding4.0+。
+    * kafkaSecurityConfig  kafkaSecurityConfig
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class Endpoint implements ModelInterface, ArrayAccess
         'sslCertName' => null,
         'sslLink' => null,
         'topic' => null,
-        'clusterMode' => null
+        'clusterMode' => null,
+        'kafkaSecurityConfig' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class Endpoint implements ModelInterface, ArrayAccess
     * sslLink  是否SSL安全连接。
     * topic  kafka topic名称
     * clusterMode  MongDB集群4.0及以上版本，当集群实例无法获取到分片节点的IP时，source_endpoint中需要填写，值为：Sharding4.0+。
+    * kafkaSecurityConfig  kafkaSecurityConfig
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class Endpoint implements ModelInterface, ArrayAccess
             'sslCertName' => 'ssl_cert_name',
             'sslLink' => 'ssl_link',
             'topic' => 'topic',
-            'clusterMode' => 'cluster_mode'
+            'clusterMode' => 'cluster_mode',
+            'kafkaSecurityConfig' => 'kafka_security_config'
     ];
 
     /**
@@ -226,6 +232,7 @@ class Endpoint implements ModelInterface, ArrayAccess
     * sslLink  是否SSL安全连接。
     * topic  kafka topic名称
     * clusterMode  MongDB集群4.0及以上版本，当集群实例无法获取到分片节点的IP时，source_endpoint中需要填写，值为：Sharding4.0+。
+    * kafkaSecurityConfig  kafkaSecurityConfig
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class Endpoint implements ModelInterface, ArrayAccess
             'sslCertName' => 'setSslCertName',
             'sslLink' => 'setSslLink',
             'topic' => 'setTopic',
-            'clusterMode' => 'setClusterMode'
+            'clusterMode' => 'setClusterMode',
+            'kafkaSecurityConfig' => 'setKafkaSecurityConfig'
     ];
 
     /**
@@ -280,6 +288,7 @@ class Endpoint implements ModelInterface, ArrayAccess
     * sslLink  是否SSL安全连接。
     * topic  kafka topic名称
     * clusterMode  MongDB集群4.0及以上版本，当集群实例无法获取到分片节点的IP时，source_endpoint中需要填写，值为：Sharding4.0+。
+    * kafkaSecurityConfig  kafkaSecurityConfig
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class Endpoint implements ModelInterface, ArrayAccess
             'sslCertName' => 'getSslCertName',
             'sslLink' => 'getSslLink',
             'topic' => 'getTopic',
-            'clusterMode' => 'getClusterMode'
+            'clusterMode' => 'getClusterMode',
+            'kafkaSecurityConfig' => 'getKafkaSecurityConfig'
     ];
 
     /**
@@ -428,6 +438,7 @@ class Endpoint implements ModelInterface, ArrayAccess
         $this->container['sslLink'] = isset($data['sslLink']) ? $data['sslLink'] : null;
         $this->container['topic'] = isset($data['topic']) ? $data['topic'] : null;
         $this->container['clusterMode'] = isset($data['clusterMode']) ? $data['clusterMode'] : null;
+        $this->container['kafkaSecurityConfig'] = isset($data['kafkaSecurityConfig']) ? $data['kafkaSecurityConfig'] : null;
     }
 
     /**
@@ -1017,6 +1028,30 @@ class Endpoint implements ModelInterface, ArrayAccess
     public function setClusterMode($clusterMode)
     {
         $this->container['clusterMode'] = $clusterMode;
+        return $this;
+    }
+
+    /**
+    * Gets kafkaSecurityConfig
+    *  kafkaSecurityConfig
+    *
+    * @return \HuaweiCloud\SDK\Drs\V3\Model\KafkaSecurity|null
+    */
+    public function getKafkaSecurityConfig()
+    {
+        return $this->container['kafkaSecurityConfig'];
+    }
+
+    /**
+    * Sets kafkaSecurityConfig
+    *
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\KafkaSecurity|null $kafkaSecurityConfig kafkaSecurityConfig
+    *
+    * @return $this
+    */
+    public function setKafkaSecurityConfig($kafkaSecurityConfig)
+    {
+        $this->container['kafkaSecurityConfig'] = $kafkaSecurityConfig;
         return $this;
     }
 

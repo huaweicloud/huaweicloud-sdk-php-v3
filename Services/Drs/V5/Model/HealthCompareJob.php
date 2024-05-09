@@ -21,10 +21,10 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  对比任务ID。
-    * type  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * type  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * status  状态。 - WAITING_FOR_RUNNING：等待启动中 - RUNNING：运行中 - SUCCESSFUL：完成 - FAILED：失败 - CANCELLED：已取消 - TIMEOUT_INTERRUPT：超时中断 - FULL_DOING：全量校验中 - INCRE_DOING：增量校验中
-    * startTime  对比开始时间。
-    * endTime  对比结束时间。
+    * startTime  对比开始时间，UTC时间。
+    * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
     *
     * @var string[]
@@ -41,10 +41,10 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  对比任务ID。
-    * type  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * type  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * status  状态。 - WAITING_FOR_RUNNING：等待启动中 - RUNNING：运行中 - SUCCESSFUL：完成 - FAILED：失败 - CANCELLED：已取消 - TIMEOUT_INTERRUPT：超时中断 - FULL_DOING：全量校验中 - INCRE_DOING：增量校验中
-    * startTime  对比开始时间。
-    * endTime  对比结束时间。
+    * startTime  对比开始时间，UTC时间。
+    * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
     *
     * @var string[]
@@ -82,10 +82,10 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  对比任务ID。
-    * type  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * type  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * status  状态。 - WAITING_FOR_RUNNING：等待启动中 - RUNNING：运行中 - SUCCESSFUL：完成 - FAILED：失败 - CANCELLED：已取消 - TIMEOUT_INTERRUPT：超时中断 - FULL_DOING：全量校验中 - INCRE_DOING：增量校验中
-    * startTime  对比开始时间。
-    * endTime  对比结束时间。
+    * startTime  对比开始时间，UTC时间。
+    * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
     *
     * @var string[]
@@ -102,10 +102,10 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  对比任务ID。
-    * type  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * type  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * status  状态。 - WAITING_FOR_RUNNING：等待启动中 - RUNNING：运行中 - SUCCESSFUL：完成 - FAILED：失败 - CANCELLED：已取消 - TIMEOUT_INTERRUPT：超时中断 - FULL_DOING：全量校验中 - INCRE_DOING：增量校验中
-    * startTime  对比开始时间。
-    * endTime  对比结束时间。
+    * startTime  对比开始时间，UTC时间。
+    * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
     *
     * @var string[]
@@ -122,10 +122,10 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  对比任务ID。
-    * type  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * type  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     * status  状态。 - WAITING_FOR_RUNNING：等待启动中 - RUNNING：运行中 - SUCCESSFUL：完成 - FAILED：失败 - CANCELLED：已取消 - TIMEOUT_INTERRUPT：超时中断 - FULL_DOING：全量校验中 - INCRE_DOING：增量校验中
-    * startTime  对比开始时间。
-    * endTime  对比结束时间。
+    * startTime  对比开始时间，UTC时间。
+    * endTime  对比结束时间，UTC时间。
     * computeType  对比计算资源。
     *
     * @var string[]
@@ -253,7 +253,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    *  对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     *
     * @return string|null
     */
@@ -265,7 +265,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 对比类型。 - object：对象对比 - lines：行对比 - contents：内容对比 - account：用户对比
+    * @param string|null $type 对比类型： - object_comparison：对象对比。 - lines：行对比。 - account：用户对比。
     *
     * @return $this
     */
@@ -301,7 +301,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  对比开始时间。
+    *  对比开始时间，UTC时间。
     *
     * @return string|null
     */
@@ -313,7 +313,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 对比开始时间。
+    * @param string|null $startTime 对比开始时间，UTC时间。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  对比结束时间。
+    *  对比结束时间，UTC时间。
     *
     * @return string|null
     */
@@ -337,7 +337,7 @@ class HealthCompareJob implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 对比结束时间。
+    * @param string|null $endTime 对比结束时间，UTC时间。
     *
     * @return $this
     */

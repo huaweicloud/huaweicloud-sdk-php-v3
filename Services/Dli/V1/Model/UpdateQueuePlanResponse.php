@@ -30,7 +30,7 @@ class UpdateQueuePlanResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'queueName' => 'string',
-            'planId' => 'string',
+            'planId' => 'int',
             'isSuccess' => 'bool',
             'message' => 'string'
     ];
@@ -46,7 +46,7 @@ class UpdateQueuePlanResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'queueName' => null,
-        'planId' => null,
+        'planId' => 'int64',
         'isSuccess' => null,
         'message' => null
     ];
@@ -234,7 +234,7 @@ class UpdateQueuePlanResponse implements ModelInterface, ArrayAccess
     * Gets planId
     *  扩缩容计划的ID编号
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPlanId()
     {
@@ -244,7 +244,7 @@ class UpdateQueuePlanResponse implements ModelInterface, ArrayAccess
     /**
     * Sets planId
     *
-    * @param string|null $planId 扩缩容计划的ID编号
+    * @param int|null $planId 扩缩容计划的ID编号
     *
     * @return $this
     */

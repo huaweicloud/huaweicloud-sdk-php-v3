@@ -42,7 +42,7 @@ class ListElasticResourcePoolScaleRecordsResponse implements ModelInterface, Arr
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'count' => 'int32',
+        'count' => 'int64',
         'items' => null,
         'xAuthToken' => null
     ];

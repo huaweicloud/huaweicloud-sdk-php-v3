@@ -21,26 +21,22 @@ class BatchDeleteFlinkJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isSuccess' => 'bool',
-            'message' => 'string'
+            'body' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkSuccessResponse[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'isSuccess' => null,
-        'message' => null
+        'body' => null
     ];
 
     /**
@@ -66,38 +62,32 @@ class BatchDeleteFlinkJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'isSuccess' => 'is_success',
-            'message' => 'message'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'isSuccess' => 'setIsSuccess',
-            'message' => 'setMessage'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSuccess  执行请求是否成功。“true”表示请求执行成功。
-    * message  系统提示信息，执行成功时，信息可能为空。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'isSuccess' => 'getIsSuccess',
-            'message' => 'getMessage'
+            'body' => 'getBody'
     ];
 
     /**
@@ -158,8 +148,7 @@ class BatchDeleteFlinkJobsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['isSuccess'] = isset($data['isSuccess']) ? $data['isSuccess'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -185,50 +174,26 @@ class BatchDeleteFlinkJobsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets isSuccess
-    *  执行请求是否成功。“true”表示请求执行成功。
+    * Gets body
+    *  body
     *
-    * @return bool|null
+    * @return \HuaweiCloud\SDK\Dli\V1\Model\FlinkSuccessResponse[]|null
     */
-    public function getIsSuccess()
+    public function getBody()
     {
-        return $this->container['isSuccess'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets isSuccess
+    * Sets body
     *
-    * @param bool|null $isSuccess 执行请求是否成功。“true”表示请求执行成功。
+    * @param \HuaweiCloud\SDK\Dli\V1\Model\FlinkSuccessResponse[]|null $body body
     *
     * @return $this
     */
-    public function setIsSuccess($isSuccess)
+    public function setBody($body)
     {
-        $this->container['isSuccess'] = $isSuccess;
-        return $this;
-    }
-
-    /**
-    * Gets message
-    *  系统提示信息，执行成功时，信息可能为空。
-    *
-    * @return string|null
-    */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-    * Sets message
-    *
-    * @param string|null $message 系统提示信息，执行成功时，信息可能为空。
-    *
-    * @return $this
-    */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
+        $this->container['body'] = $body;
         return $this;
     }
 

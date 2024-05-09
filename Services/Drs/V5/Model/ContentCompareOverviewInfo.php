@@ -22,7 +22,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sourceDb  源库库名。
     * targetDb  目标库库名。
-    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     * compareResult  对比结果。
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * sourceDb  源库库名。
     * targetDb  目标库库名。
-    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     * compareResult  对比结果。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sourceDb  源库库名。
     * targetDb  目标库库名。
-    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     * compareResult  对比结果。
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * sourceDb  源库库名。
     * targetDb  目标库库名。
-    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     * compareResult  对比结果。
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * sourceDb  源库库名。
     * targetDb  目标库库名。
-    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    * status  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     * compareResult  对比结果。
     *
     * @var string[]
@@ -166,6 +166,8 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     const STATUS_FAILED_TO_COMPARE = 'FAILED_TO_COMPARE';
     const STATUS_TARGET_DB_NOT_EXIST = 'TARGET_DB_NOT_EXIST';
     const STATUS_CAN_NOT_COMPARE = 'CAN_NOT_COMPARE';
+    const STATUS_WAIT_FOR_COMPARE = 'WAIT_FOR_COMPARE';
+    const STATUS_CANCELED = 'CANCELED';
     
 
     /**
@@ -183,6 +185,8 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
             self::STATUS_FAILED_TO_COMPARE,
             self::STATUS_TARGET_DB_NOT_EXIST,
             self::STATUS_CAN_NOT_COMPARE,
+            self::STATUS_WAIT_FOR_COMPARE,
+            self::STATUS_CANCELED,
         ];
     }
 
@@ -288,7 +292,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    *  对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     *
     * @return string|null
     */
@@ -300,7 +304,7 @@ class ContentCompareOverviewInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。
+    * @param string|null $status 对比结果。取值： - CONSISTENT：一致。 - INCONSISTENT：不一致。 - COMPARING：正在对比。 - WAITING_FOR_COMPARISON：等待对比。 - FAILED_TO_COMPARE：对比失败。 - TARGET_DB_NOT_EXIST：目标库不存在。 - CAN_NOT_COMPARE：无法对比。 - WAIT_FOR_COMPARE：命令已下发，等待对比结果 - CANCELED：已取消
     *
     * @return $this
     */

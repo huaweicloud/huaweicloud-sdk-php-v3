@@ -34,6 +34,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -74,7 +75,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * apigRouteEnable  是否配置下沉apig路由规则。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
@@ -95,6 +95,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'handler' => 'string',
             'memorySize' => 'int',
             'gpuMemory' => 'int',
+            'gpuType' => 'string',
             'cpu' => 'int',
             'codeType' => 'string',
             'codeUrl' => 'string',
@@ -135,7 +136,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'apigRouteEnable' => 'bool',
             'heartbeatHandler' => 'string',
             'enableClassIsolation' => 'bool',
-            'gpuType' => 'string',
             'allowEphemeralStorage' => 'bool',
             'networkController' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\NetworkControlConfig',
             'isReturnStream' => 'bool'
@@ -156,6 +156,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -196,7 +197,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * apigRouteEnable  是否配置下沉apig路由规则。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
@@ -217,6 +217,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'handler' => null,
         'memorySize' => 'int32',
         'gpuMemory' => 'int32',
+        'gpuType' => null,
         'cpu' => 'int32',
         'codeType' => null,
         'codeUrl' => null,
@@ -257,7 +258,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         'apigRouteEnable' => null,
         'heartbeatHandler' => null,
         'enableClassIsolation' => null,
-        'gpuType' => null,
         'allowEphemeralStorage' => null,
         'networkController' => null,
         'isReturnStream' => null
@@ -299,6 +299,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -339,7 +340,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * apigRouteEnable  是否配置下沉apig路由规则。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
@@ -360,6 +360,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'handler' => 'handler',
             'memorySize' => 'memory_size',
             'gpuMemory' => 'gpu_memory',
+            'gpuType' => 'gpu_type',
             'cpu' => 'cpu',
             'codeType' => 'code_type',
             'codeUrl' => 'code_url',
@@ -400,7 +401,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'apigRouteEnable' => 'apig_route_enable',
             'heartbeatHandler' => 'heartbeat_handler',
             'enableClassIsolation' => 'enable_class_isolation',
-            'gpuType' => 'gpu_type',
             'allowEphemeralStorage' => 'allow_ephemeral_storage',
             'networkController' => 'network_controller',
             'isReturnStream' => 'is_return_stream'
@@ -421,6 +421,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -461,7 +462,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * apigRouteEnable  是否配置下沉apig路由规则。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
@@ -482,6 +482,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'handler' => 'setHandler',
             'memorySize' => 'setMemorySize',
             'gpuMemory' => 'setGpuMemory',
+            'gpuType' => 'setGpuType',
             'cpu' => 'setCpu',
             'codeType' => 'setCodeType',
             'codeUrl' => 'setCodeUrl',
@@ -522,7 +523,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'apigRouteEnable' => 'setApigRouteEnable',
             'heartbeatHandler' => 'setHeartbeatHandler',
             'enableClassIsolation' => 'setEnableClassIsolation',
-            'gpuType' => 'setGpuType',
             'allowEphemeralStorage' => 'setAllowEphemeralStorage',
             'networkController' => 'setNetworkController',
             'isReturnStream' => 'setIsReturnStream'
@@ -543,6 +543,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * cpu  函数占用的cpu资源。 单位为millicore（1 core=1000 millicores）。 取值与MemorySize成比例，默认是128M内存占0.1个核（100 millicores）。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
@@ -583,7 +584,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     * apigRouteEnable  是否配置下沉apig路由规则。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     * allowEphemeralStorage  是否支持配置临时存储。
     * networkController  networkController
     * isReturnStream  是否返回流式数据（已废弃）
@@ -604,6 +604,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'handler' => 'getHandler',
             'memorySize' => 'getMemorySize',
             'gpuMemory' => 'getGpuMemory',
+            'gpuType' => 'getGpuType',
             'cpu' => 'getCpu',
             'codeType' => 'getCodeType',
             'codeUrl' => 'getCodeUrl',
@@ -644,7 +645,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
             'apigRouteEnable' => 'getApigRouteEnable',
             'heartbeatHandler' => 'getHeartbeatHandler',
             'enableClassIsolation' => 'getEnableClassIsolation',
-            'gpuType' => 'getGpuType',
             'allowEphemeralStorage' => 'getAllowEphemeralStorage',
             'networkController' => 'getNetworkController',
             'isReturnStream' => 'getIsReturnStream'
@@ -818,6 +818,7 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['handler'] = isset($data['handler']) ? $data['handler'] : null;
         $this->container['memorySize'] = isset($data['memorySize']) ? $data['memorySize'] : null;
         $this->container['gpuMemory'] = isset($data['gpuMemory']) ? $data['gpuMemory'] : null;
+        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
         $this->container['cpu'] = isset($data['cpu']) ? $data['cpu'] : null;
         $this->container['codeType'] = isset($data['codeType']) ? $data['codeType'] : null;
         $this->container['codeUrl'] = isset($data['codeUrl']) ? $data['codeUrl'] : null;
@@ -858,7 +859,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
         $this->container['apigRouteEnable'] = isset($data['apigRouteEnable']) ? $data['apigRouteEnable'] : null;
         $this->container['heartbeatHandler'] = isset($data['heartbeatHandler']) ? $data['heartbeatHandler'] : null;
         $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
-        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
         $this->container['allowEphemeralStorage'] = isset($data['allowEphemeralStorage']) ? $data['allowEphemeralStorage'] : null;
         $this->container['networkController'] = isset($data['networkController']) ? $data['networkController'] : null;
         $this->container['isReturnStream'] = isset($data['isReturnStream']) ? $data['isReturnStream'] : null;
@@ -1219,6 +1219,30 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setGpuMemory($gpuMemory)
     {
         $this->container['gpuMemory'] = $gpuMemory;
+        return $this;
+    }
+
+    /**
+    * Gets gpuType
+    *  显卡类型。
+    *
+    * @return string|null
+    */
+    public function getGpuType()
+    {
+        return $this->container['gpuType'];
+    }
+
+    /**
+    * Sets gpuType
+    *
+    * @param string|null $gpuType 显卡类型。
+    *
+    * @return $this
+    */
+    public function setGpuType($gpuType)
+    {
+        $this->container['gpuType'] = $gpuType;
         return $this;
     }
 
@@ -2179,30 +2203,6 @@ class ShowFunctionConfigResponse implements ModelInterface, ArrayAccess
     public function setEnableClassIsolation($enableClassIsolation)
     {
         $this->container['enableClassIsolation'] = $enableClassIsolation;
-        return $this;
-    }
-
-    /**
-    * Gets gpuType
-    *  显卡类型。
-    *
-    * @return string|null
-    */
-    public function getGpuType()
-    {
-        return $this->container['gpuType'];
-    }
-
-    /**
-    * Sets gpuType
-    *
-    * @param string|null $gpuType 显卡类型。
-    *
-    * @return $this
-    */
-    public function setGpuType($gpuType)
-    {
-        $this->container['gpuType'] = $gpuType;
         return $this;
     }
 

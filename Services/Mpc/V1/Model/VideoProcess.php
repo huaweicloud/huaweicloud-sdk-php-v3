@@ -26,6 +26,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
+    * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'string',
             'rotate' => 'int',
             'adaptation' => 'string',
-            'upsample' => 'int'
+            'upsample' => 'int',
+            'hlsSegmentType' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
+    * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class VideoProcess implements ModelInterface, ArrayAccess
         'hlsStorageType' => null,
         'rotate' => 'int32',
         'adaptation' => null,
-        'upsample' => 'int32'
+        'upsample' => 'int32',
+        'hlsSegmentType' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
+    * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'hls_storage_type',
             'rotate' => 'rotate',
             'adaptation' => 'adaptation',
-            'upsample' => 'upsample'
+            'upsample' => 'upsample',
+            'hlsSegmentType' => 'hls_segment_type'
     ];
 
     /**
@@ -107,6 +113,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
+    * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'setHlsStorageType',
             'rotate' => 'setRotate',
             'adaptation' => 'setAdaptation',
-            'upsample' => 'setUpsample'
+            'upsample' => 'setUpsample',
+            'hlsSegmentType' => 'setHlsSegmentType'
     ];
 
     /**
@@ -127,6 +135,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
     * rotate  视频顺时针旋转角度。  - 0：表示不旋转 - 1：表示顺时针旋转90度 - 2：表示顺时针旋转180度 - 3：表示顺时针旋转270度
     * adaptation  长短边自适应控制字段： - SHORT：表示短边自适应 - LONG：表示长边自适应 - NONE：表示不自适应
     * upsample  是否开启上采样，如支持从480P的片源转为720P，可取值为:  - 0：表示上采样关闭， - 1：表示上采样开启.
+    * hlsSegmentType  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class VideoProcess implements ModelInterface, ArrayAccess
             'hlsStorageType' => 'getHlsStorageType',
             'rotate' => 'getRotate',
             'adaptation' => 'getAdaptation',
-            'upsample' => 'getUpsample'
+            'upsample' => 'getUpsample',
+            'hlsSegmentType' => 'getHlsSegmentType'
     ];
 
     /**
@@ -184,6 +194,8 @@ class VideoProcess implements ModelInterface, ArrayAccess
     const ADAPTATION_SHORT = 'SHORT';
     const ADAPTATION_LONG = 'LONG';
     const ADAPTATION_NONE = 'NONE';
+    const HLS_SEGMENT_TYPE_MPEGTS = 'mpegts';
+    const HLS_SEGMENT_TYPE_FMP4 = 'fmp4';
     
 
     /**
@@ -213,6 +225,19 @@ class VideoProcess implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHlsSegmentTypeAllowableValues()
+    {
+        return [
+            self::HLS_SEGMENT_TYPE_MPEGTS,
+            self::HLS_SEGMENT_TYPE_FMP4,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -235,6 +260,7 @@ class VideoProcess implements ModelInterface, ArrayAccess
         $this->container['rotate'] = isset($data['rotate']) ? $data['rotate'] : null;
         $this->container['adaptation'] = isset($data['adaptation']) ? $data['adaptation'] : null;
         $this->container['upsample'] = isset($data['upsample']) ? $data['upsample'] : null;
+        $this->container['hlsSegmentType'] = isset($data['hlsSegmentType']) ? $data['hlsSegmentType'] : null;
     }
 
     /**
@@ -296,6 +322,20 @@ class VideoProcess implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['upsample']) && ($this->container['upsample'] < 0)) {
                 $invalidProperties[] = "invalid value for 'upsample', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getHlsSegmentTypeAllowableValues();
+                if (!is_null($this->container['hlsSegmentType']) && !in_array($this->container['hlsSegmentType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'hlsSegmentType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['hlsSegmentType']) && (mb_strlen($this->container['hlsSegmentType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'hlsSegmentType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['hlsSegmentType']) && (mb_strlen($this->container['hlsSegmentType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hlsSegmentType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -452,6 +492,30 @@ class VideoProcess implements ModelInterface, ArrayAccess
     public function setUpsample($upsample)
     {
         $this->container['upsample'] = $upsample;
+        return $this;
+    }
+
+    /**
+    * Gets hlsSegmentType
+    *  HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
+    *
+    * @return string|null
+    */
+    public function getHlsSegmentType()
+    {
+        return $this->container['hlsSegmentType'];
+    }
+
+    /**
+    * Sets hlsSegmentType
+    *
+    * @param string|null $hlsSegmentType HLS切片类型。  取值如下所示： - mpegts：ts切片 - fmp4：fmp4切片  不设置默认为ts切片。
+    *
+    * @return $this
+    */
+    public function setHlsSegmentType($hlsSegmentType)
+    {
+        $this->container['hlsSegmentType'] = $hlsSegmentType;
         return $this;
     }
 

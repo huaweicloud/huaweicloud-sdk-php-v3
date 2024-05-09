@@ -29,6 +29,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcVpc  funcVpc
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
@@ -63,6 +64,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcVpc' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncVpc',
             'memorySize' => 'int',
             'gpuMemory' => 'int',
+            'gpuType' => 'string',
             'codeType' => 'string',
             'codeUrl' => 'string',
             'codeFilename' => 'string',
@@ -97,6 +99,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcVpc  funcVpc
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
@@ -131,6 +134,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         'funcVpc' => null,
         'memorySize' => 'int32',
         'gpuMemory' => 'int32',
+        'gpuType' => null,
         'codeType' => null,
         'codeUrl' => null,
         'codeFilename' => null,
@@ -186,6 +190,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcVpc  funcVpc
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
@@ -220,6 +225,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcVpc' => 'func_vpc',
             'memorySize' => 'memory_size',
             'gpuMemory' => 'gpu_memory',
+            'gpuType' => 'gpu_type',
             'codeType' => 'code_type',
             'codeUrl' => 'code_url',
             'codeFilename' => 'code_filename',
@@ -254,6 +260,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcVpc  funcVpc
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
@@ -288,6 +295,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcVpc' => 'setFuncVpc',
             'memorySize' => 'setMemorySize',
             'gpuMemory' => 'setGpuMemory',
+            'gpuType' => 'setGpuType',
             'codeType' => 'setCodeType',
             'codeUrl' => 'setCodeUrl',
             'codeFilename' => 'setCodeFilename',
@@ -322,6 +330,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     * funcVpc  funcVpc
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * codeType  函数代码类型，取值有5种。 inline: UI在线编辑代码。 zip: 函数代码为zip包。 obs: 函数代码来源于obs存储。 jar: 函数代码为jar包，主要针对Java函数。 Custom-Image-Swr: 函数代码来源与SWR自定义镜像。
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，CodeType为其他值时不需要提供。
@@ -356,6 +365,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
             'funcVpc' => 'getFuncVpc',
             'memorySize' => 'getMemorySize',
             'gpuMemory' => 'getGpuMemory',
+            'gpuType' => 'getGpuType',
             'codeType' => 'getCodeType',
             'codeUrl' => 'getCodeUrl',
             'codeFilename' => 'getCodeFilename',
@@ -543,6 +553,7 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
         $this->container['funcVpc'] = isset($data['funcVpc']) ? $data['funcVpc'] : null;
         $this->container['memorySize'] = isset($data['memorySize']) ? $data['memorySize'] : null;
         $this->container['gpuMemory'] = isset($data['gpuMemory']) ? $data['gpuMemory'] : null;
+        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
         $this->container['codeType'] = isset($data['codeType']) ? $data['codeType'] : null;
         $this->container['codeUrl'] = isset($data['codeUrl']) ? $data['codeUrl'] : null;
         $this->container['codeFilename'] = isset($data['codeFilename']) ? $data['codeFilename'] : null;
@@ -846,6 +857,30 @@ class CreateFunctionRequestBody implements ModelInterface, ArrayAccess
     public function setGpuMemory($gpuMemory)
     {
         $this->container['gpuMemory'] = $gpuMemory;
+        return $this;
+    }
+
+    /**
+    * Gets gpuType
+    *  显卡类型。
+    *
+    * @return string|null
+    */
+    public function getGpuType()
+    {
+        return $this->container['gpuType'];
+    }
+
+    /**
+    * Sets gpuType
+    *
+    * @param string|null $gpuType 显卡类型。
+    *
+    * @return $this
+    */
+    public function setGpuType($gpuType)
+    {
+        $this->container['gpuType'] = $gpuType;
         return $this;
     }
 

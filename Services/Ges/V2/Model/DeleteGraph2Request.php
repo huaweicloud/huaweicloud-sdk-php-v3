@@ -22,24 +22,28 @@ class DeleteGraph2Request implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * graphId  图ID。
     * keepBackup  删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
+    * deleteEip  是否同时删除EIP。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'graphId' => 'string',
-            'keepBackup' => 'bool'
+            'keepBackup' => 'bool',
+            'deleteEip' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * graphId  图ID。
     * keepBackup  删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
+    * deleteEip  是否同时删除EIP。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'graphId' => null,
-        'keepBackup' => null
+        'keepBackup' => null,
+        'deleteEip' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class DeleteGraph2Request implements ModelInterface, ArrayAccess
     * and the value is the original name
     * graphId  图ID。
     * keepBackup  删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
+    * deleteEip  是否同时删除EIP。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'graphId' => 'graph_id',
-            'keepBackup' => 'keep_backup'
+            'keepBackup' => 'keep_backup',
+            'deleteEip' => 'delete_eip'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * graphId  图ID。
     * keepBackup  删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
+    * deleteEip  是否同时删除EIP。
     *
     * @var string[]
     */
     protected static $setters = [
             'graphId' => 'setGraphId',
-            'keepBackup' => 'setKeepBackup'
+            'keepBackup' => 'setKeepBackup',
+            'deleteEip' => 'setDeleteEip'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * graphId  图ID。
     * keepBackup  删除图后是否保留备份，默认保留1个自动备份和2个手动备份。该查询参数为空时，表示不保留。
+    * deleteEip  是否同时删除EIP。
     *
     * @var string[]
     */
     protected static $getters = [
             'graphId' => 'getGraphId',
-            'keepBackup' => 'getKeepBackup'
+            'keepBackup' => 'getKeepBackup',
+            'deleteEip' => 'getDeleteEip'
     ];
 
     /**
@@ -159,6 +169,7 @@ class DeleteGraph2Request implements ModelInterface, ArrayAccess
     {
         $this->container['graphId'] = isset($data['graphId']) ? $data['graphId'] : null;
         $this->container['keepBackup'] = isset($data['keepBackup']) ? $data['keepBackup'] : null;
+        $this->container['deleteEip'] = isset($data['deleteEip']) ? $data['deleteEip'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class DeleteGraph2Request implements ModelInterface, ArrayAccess
     public function setKeepBackup($keepBackup)
     {
         $this->container['keepBackup'] = $keepBackup;
+        return $this;
+    }
+
+    /**
+    * Gets deleteEip
+    *  是否同时删除EIP。
+    *
+    * @return bool|null
+    */
+    public function getDeleteEip()
+    {
+        return $this->container['deleteEip'];
+    }
+
+    /**
+    * Sets deleteEip
+    *
+    * @param bool|null $deleteEip 是否同时删除EIP。
+    *
+    * @return $this
+    */
+    public function setDeleteEip($deleteEip)
+    {
+        $this->container['deleteEip'] = $deleteEip;
         return $this;
     }
 

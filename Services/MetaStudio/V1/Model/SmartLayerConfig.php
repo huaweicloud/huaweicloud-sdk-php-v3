@@ -20,12 +20,13 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
     * videoConfig  videoConfig
+    * textConfig  textConfig
     *
     * @var string[]
     */
@@ -35,17 +36,19 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
             'position' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig',
             'size' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerSizeConfig',
             'imageConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartImageLayerConfig',
-            'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartVideoLayerConfig'
+            'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartVideoLayerConfig',
+            'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartTextLayerConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
     * videoConfig  videoConfig
+    * textConfig  textConfig
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
         'position' => null,
         'size' => null,
         'imageConfig' => null,
-        'videoConfig' => null
+        'videoConfig' => null,
+        'textConfig' => null
     ];
 
     /**
@@ -81,12 +85,13 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
     * videoConfig  videoConfig
+    * textConfig  textConfig
     *
     * @var string[]
     */
@@ -96,17 +101,19 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
             'position' => 'position',
             'size' => 'size',
             'imageConfig' => 'image_config',
-            'videoConfig' => 'video_config'
+            'videoConfig' => 'video_config',
+            'textConfig' => 'text_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
     * videoConfig  videoConfig
+    * textConfig  textConfig
     *
     * @var string[]
     */
@@ -116,17 +123,19 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
             'position' => 'setPosition',
             'size' => 'setSize',
             'imageConfig' => 'setImageConfig',
-            'videoConfig' => 'setVideoConfig'
+            'videoConfig' => 'setVideoConfig',
+            'textConfig' => 'setTextConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * layerType  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     * assetId  图层所需资产的资产id，外部资产信息无需填写
     * position  position
     * size  size
     * imageConfig  imageConfig
     * videoConfig  videoConfig
+    * textConfig  textConfig
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
             'position' => 'getPosition',
             'size' => 'getSize',
             'imageConfig' => 'getImageConfig',
-            'videoConfig' => 'getVideoConfig'
+            'videoConfig' => 'getVideoConfig',
+            'textConfig' => 'getTextConfig'
     ];
 
     /**
@@ -181,6 +191,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     }
     const LAYER_TYPE_IMAGE = 'IMAGE';
     const LAYER_TYPE_VIDEO = 'VIDEO';
+    const LAYER_TYPE_TEXT = 'TEXT';
     
 
     /**
@@ -193,6 +204,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
         return [
             self::LAYER_TYPE_IMAGE,
             self::LAYER_TYPE_VIDEO,
+            self::LAYER_TYPE_TEXT,
         ];
     }
 
@@ -218,6 +230,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['imageConfig'] = isset($data['imageConfig']) ? $data['imageConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
+        $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
     }
 
     /**
@@ -264,7 +277,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets layerType
-    *  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    *  图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     *
     * @return string
     */
@@ -276,7 +289,7 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets layerType
     *
-    * @param string $layerType 图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层
+    * @param string $layerType 图层类型。 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 文本图层
     *
     * @return $this
     */
@@ -403,6 +416,30 @@ class SmartLayerConfig implements ModelInterface, ArrayAccess
     public function setVideoConfig($videoConfig)
     {
         $this->container['videoConfig'] = $videoConfig;
+        return $this;
+    }
+
+    /**
+    * Gets textConfig
+    *  textConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartTextLayerConfig|null
+    */
+    public function getTextConfig()
+    {
+        return $this->container['textConfig'];
+    }
+
+    /**
+    * Sets textConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartTextLayerConfig|null $textConfig textConfig
+    *
+    * @return $this
+    */
+    public function setTextConfig($textConfig)
+    {
+        $this->container['textConfig'] = $textConfig;
         return $this;
     }
 

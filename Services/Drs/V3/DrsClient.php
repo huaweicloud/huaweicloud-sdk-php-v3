@@ -1726,6 +1726,77 @@ class DrsClient extends Client
     }
 
     /**
+     * 导出对比任务结果文件
+     *
+     * 导出对比任务结果文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createCompareResultFile($request)
+    {
+        return $this->createCompareResultFileWithHttpInfo($request);
+    }
+
+    public function createCompareResultFileWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/jobs/{job_id}/compare/result/file';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams[$arr['region']] = $localVarParams['region'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\CreateCompareResultFileResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\CreateCompareResultFileRequest');
+    }
+
+    /**
      * 创建对比任务
      *
      * 创建对比任务。
@@ -1859,6 +1930,74 @@ class DrsClient extends Client
     }
 
     /**
+     * 创建对象级对比任务
+     *
+     * 创建对象级对比任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createObjectLevelCompareJob($request)
+    {
+        return $this->createObjectLevelCompareJobWithHttpInfo($request);
+    }
+
+    public function createObjectLevelCompareJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/jobs/{job_id}/object/compare';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\CreateObjectLevelCompareJobResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\CreateObjectLevelCompareJobRequest');
+    }
+
+    /**
      * 取消对比任务
      *
      * 取消对比任务。
@@ -1924,6 +2063,83 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V3\Model\DeleteCompareJobResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V3\Model\DeleteCompareJobRequest');
+    }
+
+    /**
+     * 下载对比任务结果文件
+     *
+     * 下载对比任务结果文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadCompareResultFile($request)
+    {
+        return $this->downloadCompareResultFileWithHttpInfo($request);
+    }
+
+    public function downloadCompareResultFileWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/jobs/{job_id}/compare/result/file';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['compareType'] !== null) {
+            $queryParams['compare_type'] = $localVarParams['compareType'];
+        }
+        if ($localVarParams['compareJobId'] !== null) {
+            $queryParams['compare_job_id'] = $localVarParams['compareJobId'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['region'] !== null) {
+            $headerParams[$arr['region']] = $localVarParams['region'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/x-download;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/x-download;charset=UTF-8'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\DownloadCompareResultFileResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\DownloadCompareResultFileRequest');
     }
 
     /**
@@ -2214,6 +2430,86 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V3\Model\ListContentCompareDetailResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V3\Model\ListContentCompareDetailRequest');
+    }
+
+    /**
+     * 查询内容对比差异
+     *
+     * 查询内容对比差异。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listContentCompareDifference($request)
+    {
+        return $this->listContentCompareDifferenceWithHttpInfo($request);
+    }
+
+    public function listContentCompareDifferenceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/jobs/{job_id}/compare/{compare_job_id}/content-difference';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['dbName'] !== null) {
+            $queryParams['db_name'] = $localVarParams['dbName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['compareJobId'] !== null) {
+            $pathParams['compare_job_id'] = $localVarParams['compareJobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\ListContentCompareDifferenceResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\ListContentCompareDifferenceRequest');
     }
 
     /**
@@ -2525,6 +2821,148 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V3\Model\ListDataLevelTableCompareJobsResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V3\Model\ListDataLevelTableCompareJobsRequest');
+    }
+
+    /**
+     * 查询对象对比任务详情
+     *
+     * 查询对象对比任务详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listObejectLevelCompareDetail($request)
+    {
+        return $this->listObejectLevelCompareDetailWithHttpInfo($request);
+    }
+
+    public function listObejectLevelCompareDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/jobs/{job_id}/object/compare/{compare_type}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['compareJobId'] !== null) {
+            $queryParams['compare_job_id'] = $localVarParams['compareJobId'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['compareType'] !== null) {
+            $pathParams['compare_type'] = $localVarParams['compareType'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\ListObejectLevelCompareDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\ListObejectLevelCompareDetailRequest');
+    }
+
+    /**
+     * 查询对象对比任务概览
+     *
+     * 查询对象对比任务概览。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listObejectLevelCompareOverview($request)
+    {
+        return $this->listObejectLevelCompareOverviewWithHttpInfo($request);
+    }
+
+    public function listObejectLevelCompareOverviewWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/jobs/{job_id}/object/compare';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V3\Model\ListObejectLevelCompareOverviewResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V3\Model\ListObejectLevelCompareOverviewRequest');
     }
 
     /**

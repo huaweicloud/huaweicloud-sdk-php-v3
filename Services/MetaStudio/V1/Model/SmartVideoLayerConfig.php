@@ -22,7 +22,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
-    * displayDuration  视频显示时长。单位s * 0：表示一直显示。
+    * displayDuration  视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
-    * displayDuration  视频显示时长。单位s * 0：表示一直显示。
+    * displayDuration  视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
     * and the value is the original name
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
-    * displayDuration  视频显示时长。单位s * 0：表示一直显示。
+    * displayDuration  视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
-    * displayDuration  视频显示时长。单位s * 0：表示一直显示。
+    * displayDuration  视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * videoUrl  视频文件的URL。
     * videoCoverUrl  视频封面文件的URL。
-    * displayDuration  视频显示时长。单位s * 0：表示一直显示。
+    * displayDuration  视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @var string[]
     */
@@ -265,7 +265,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayDuration
-    *  视频显示时长。单位s * 0：表示一直显示。
+    *  视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @return int|null
     */
@@ -277,7 +277,7 @@ class SmartVideoLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets displayDuration
     *
-    * @param int|null $displayDuration 视频显示时长。单位s * 0：表示一直显示。
+    * @param int|null $displayDuration 视频显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
     *
     * @return $this
     */

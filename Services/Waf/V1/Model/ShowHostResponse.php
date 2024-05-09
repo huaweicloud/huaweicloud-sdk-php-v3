@@ -24,7 +24,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * id  域名id
     * hostname  创建的云模式防护域名
     * policyid  防护域名的防护策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
@@ -94,7 +94,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * id  域名id
     * hostname  创建的云模式防护域名
     * policyid  防护域名的防护策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
@@ -185,7 +185,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * id  域名id
     * hostname  创建的云模式防护域名
     * policyid  防护域名的防护策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
@@ -255,7 +255,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * id  域名id
     * hostname  创建的云模式防护域名
     * policyid  防护域名的防护策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
@@ -325,7 +325,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     * id  域名id
     * hostname  创建的云模式防护域名
     * policyid  防护域名的防护策略id
-    * domainid  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     * projectid  项目ID，对应华为云控制台用户名->我的凭证->项目列表->项目ID
     * enterpriseProjectId  企业项目ID，对应华为云控制台用户名->企业->项目管理->点击项目名称->ID
     * protocol  后端包含的协议类型：HTTPS、HTTP、HTTP&HTTPS
@@ -656,7 +656,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainid
-    *  帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    *  账号ID,对应华为云控制台用户名->我的凭证->账号ID
     *
     * @return string|null
     */
@@ -668,7 +668,7 @@ class ShowHostResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainid
     *
-    * @param string|null $domainid 帐号ID,对应华为云控制台用户名->我的凭证->帐号ID
+    * @param string|null $domainid 账号ID,对应华为云控制台用户名->我的凭证->账号ID
     *
     * @return $this
     */

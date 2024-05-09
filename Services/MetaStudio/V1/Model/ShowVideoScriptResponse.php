@@ -23,6 +23,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
+    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
@@ -44,6 +45,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'scriptName' => 'string',
             'scriptDescription' => 'string',
+            'viewMode' => 'string',
             'modelAssetId' => 'string',
             'modelAssetType' => 'string',
             'voiceConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceConfig',
@@ -65,6 +67,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
+    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
@@ -86,6 +89,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'scriptName' => null,
         'scriptDescription' => null,
+        'viewMode' => null,
         'modelAssetId' => null,
         'modelAssetType' => null,
         'voiceConfig' => null,
@@ -128,6 +132,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
+    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
@@ -149,6 +154,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'scriptName' => 'script_name',
             'scriptDescription' => 'script_description',
+            'viewMode' => 'view_mode',
             'modelAssetId' => 'model_asset_id',
             'modelAssetType' => 'model_asset_type',
             'voiceConfig' => 'voice_config',
@@ -170,6 +176,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
+    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
@@ -191,6 +198,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'scriptName' => 'setScriptName',
             'scriptDescription' => 'setScriptDescription',
+            'viewMode' => 'setViewMode',
             'modelAssetId' => 'setModelAssetId',
             'modelAssetType' => 'setModelAssetType',
             'voiceConfig' => 'setVoiceConfig',
@@ -212,6 +220,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
+    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * modelAssetId  数字人模型资产ID。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
@@ -233,6 +242,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'scriptName' => 'getScriptName',
             'scriptDescription' => 'getScriptDescription',
+            'viewMode' => 'getViewMode',
             'modelAssetId' => 'getModelAssetId',
             'modelAssetType' => 'getModelAssetType',
             'voiceConfig' => 'getVoiceConfig',
@@ -290,9 +300,24 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const VIEW_MODE_LANDSCAPE = 'LANDSCAPE';
+    const VIEW_MODE_VERTICAL = 'VERTICAL';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_2_D = 'HUMAN_MODEL_2D';
     const MODEL_ASSET_TYPE_HUMAN_MODEL_3_D = 'HUMAN_MODEL_3D';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getViewModeAllowableValues()
+    {
+        return [
+            self::VIEW_MODE_LANDSCAPE,
+            self::VIEW_MODE_VERTICAL,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -325,6 +350,7 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     {
         $this->container['scriptName'] = isset($data['scriptName']) ? $data['scriptName'] : null;
         $this->container['scriptDescription'] = isset($data['scriptDescription']) ? $data['scriptDescription'] : null;
+        $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['modelAssetId'] = isset($data['modelAssetId']) ? $data['modelAssetId'] : null;
         $this->container['modelAssetType'] = isset($data['modelAssetType']) ? $data['modelAssetType'] : null;
         $this->container['voiceConfig'] = isset($data['voiceConfig']) ? $data['voiceConfig'] : null;
@@ -362,6 +388,14 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['scriptDescription']) && (mb_strlen($this->container['scriptDescription']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scriptDescription', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getViewModeAllowableValues();
+                if (!is_null($this->container['viewMode']) && !in_array($this->container['viewMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'viewMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['modelAssetId']) && (mb_strlen($this->container['modelAssetId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'modelAssetId', the character length must be smaller than or equal to 64.";
             }
@@ -471,6 +505,30 @@ class ShowVideoScriptResponse implements ModelInterface, ArrayAccess
     public function setScriptDescription($scriptDescription)
     {
         $this->container['scriptDescription'] = $scriptDescription;
+        return $this;
+    }
+
+    /**
+    * Gets viewMode
+    *  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return string|null
+    */
+    public function getViewMode()
+    {
+        return $this->container['viewMode'];
+    }
+
+    /**
+    * Sets viewMode
+    *
+    * @param string|null $viewMode 横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *
+    * @return $this
+    */
+    public function setViewMode($viewMode)
+    {
+        $this->container['viewMode'] = $viewMode;
         return $this;
     }
 

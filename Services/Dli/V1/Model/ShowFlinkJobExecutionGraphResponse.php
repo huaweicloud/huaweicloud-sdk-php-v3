@@ -28,7 +28,7 @@ class ShowFlinkJobExecutionGraphResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'isSuccess' => 'bool',
+            'isSuccess' => 'string',
             'message' => 'string',
             'executeGraph' => '\HuaweiCloud\SDK\Dli\V1\Model\FlinkJobExecutionGraph'
     ];
@@ -199,7 +199,7 @@ class ShowFlinkJobExecutionGraphResponse implements ModelInterface, ArrayAccess
     * Gets isSuccess
     *  请求是否成功
     *
-    * @return bool|null
+    * @return string|null
     */
     public function getIsSuccess()
     {
@@ -209,7 +209,7 @@ class ShowFlinkJobExecutionGraphResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSuccess
     *
-    * @param bool|null $isSuccess 请求是否成功
+    * @param string|null $isSuccess 请求是否成功
     *
     * @return $this
     */

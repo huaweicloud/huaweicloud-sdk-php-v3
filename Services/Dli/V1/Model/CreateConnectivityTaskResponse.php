@@ -30,7 +30,7 @@ class CreateConnectivityTaskResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'isSuccess' => 'bool',
             'message' => 'string',
-            'taskId' => 'string'
+            'taskId' => 'int'
     ];
 
     /**
@@ -44,7 +44,7 @@ class CreateConnectivityTaskResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'isSuccess' => null,
         'message' => null,
-        'taskId' => null
+        'taskId' => 'int64'
     ];
 
     /**
@@ -247,7 +247,7 @@ class CreateConnectivityTaskResponse implements ModelInterface, ArrayAccess
     * Gets taskId
     *  请求id
     *
-    * @return string|null
+    * @return int|null
     */
     public function getTaskId()
     {
@@ -257,7 +257,7 @@ class CreateConnectivityTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 请求id
+    * @param int|null $taskId 请求id
     *
     * @return $this
     */

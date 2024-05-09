@@ -27,6 +27,7 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
     * lineCompareDetailInfos  行数对比任务表级详情。
     * contentCompareOverviewInfos  内容对比概览信息体。
     * contentCompareDetailInfos  内容对比详情信息体。
+    * contentDiffDetailInfo  contentDiffDetailInfo
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
             'lineCompareOverviewInfos' => '\HuaweiCloud\SDK\Drs\V5\Model\LineCompareOverviewInfo[]',
             'lineCompareDetailInfos' => '\HuaweiCloud\SDK\Drs\V5\Model\TableLineCompareDetailInfo[]',
             'contentCompareOverviewInfos' => '\HuaweiCloud\SDK\Drs\V5\Model\ContentCompareOverviewInfo[]',
-            'contentCompareDetailInfos' => '\HuaweiCloud\SDK\Drs\V5\Model\ContentCompareDetailInfo[]'
+            'contentCompareDetailInfos' => '\HuaweiCloud\SDK\Drs\V5\Model\ContentCompareDetailInfo[]',
+            'contentDiffDetailInfo' => '\HuaweiCloud\SDK\Drs\V5\Model\ContentDiffDetailInfo'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
     * lineCompareDetailInfos  行数对比任务表级详情。
     * contentCompareOverviewInfos  内容对比概览信息体。
     * contentCompareDetailInfos  内容对比详情信息体。
+    * contentDiffDetailInfo  contentDiffDetailInfo
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
         'lineCompareOverviewInfos' => null,
         'lineCompareDetailInfos' => null,
         'contentCompareOverviewInfos' => null,
-        'contentCompareDetailInfos' => null
+        'contentCompareDetailInfos' => null,
+        'contentDiffDetailInfo' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
     * lineCompareDetailInfos  行数对比任务表级详情。
     * contentCompareOverviewInfos  内容对比概览信息体。
     * contentCompareDetailInfos  内容对比详情信息体。
+    * contentDiffDetailInfo  contentDiffDetailInfo
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
             'lineCompareOverviewInfos' => 'line_compare_overview_infos',
             'lineCompareDetailInfos' => 'line_compare_detail_infos',
             'contentCompareOverviewInfos' => 'content_compare_overview_infos',
-            'contentCompareDetailInfos' => 'content_compare_detail_infos'
+            'contentCompareDetailInfos' => 'content_compare_detail_infos',
+            'contentDiffDetailInfo' => 'content_diff_detail_info'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
     * lineCompareDetailInfos  行数对比任务表级详情。
     * contentCompareOverviewInfos  内容对比概览信息体。
     * contentCompareDetailInfos  内容对比详情信息体。
+    * contentDiffDetailInfo  contentDiffDetailInfo
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
             'lineCompareOverviewInfos' => 'setLineCompareOverviewInfos',
             'lineCompareDetailInfos' => 'setLineCompareDetailInfos',
             'contentCompareOverviewInfos' => 'setContentCompareOverviewInfos',
-            'contentCompareDetailInfos' => 'setContentCompareDetailInfos'
+            'contentCompareDetailInfos' => 'setContentCompareDetailInfos',
+            'contentDiffDetailInfo' => 'setContentDiffDetailInfo'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
     * lineCompareDetailInfos  行数对比任务表级详情。
     * contentCompareOverviewInfos  内容对比概览信息体。
     * contentCompareDetailInfos  内容对比详情信息体。
+    * contentDiffDetailInfo  contentDiffDetailInfo
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
             'lineCompareOverviewInfos' => 'getLineCompareOverviewInfos',
             'lineCompareDetailInfos' => 'getLineCompareDetailInfos',
             'contentCompareOverviewInfos' => 'getContentCompareOverviewInfos',
-            'contentCompareDetailInfos' => 'getContentCompareDetailInfos'
+            'contentCompareDetailInfos' => 'getContentCompareDetailInfos',
+            'contentDiffDetailInfo' => 'getContentDiffDetailInfo'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
         $this->container['lineCompareDetailInfos'] = isset($data['lineCompareDetailInfos']) ? $data['lineCompareDetailInfos'] : null;
         $this->container['contentCompareOverviewInfos'] = isset($data['contentCompareOverviewInfos']) ? $data['contentCompareOverviewInfos'] : null;
         $this->container['contentCompareDetailInfos'] = isset($data['contentCompareDetailInfos']) ? $data['contentCompareDetailInfos'] : null;
+        $this->container['contentDiffDetailInfo'] = isset($data['contentDiffDetailInfo']) ? $data['contentDiffDetailInfo'] : null;
     }
 
     /**
@@ -403,6 +414,30 @@ class CompareResultInfo implements ModelInterface, ArrayAccess
     public function setContentCompareDetailInfos($contentCompareDetailInfos)
     {
         $this->container['contentCompareDetailInfos'] = $contentCompareDetailInfos;
+        return $this;
+    }
+
+    /**
+    * Gets contentDiffDetailInfo
+    *  contentDiffDetailInfo
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\ContentDiffDetailInfo|null
+    */
+    public function getContentDiffDetailInfo()
+    {
+        return $this->container['contentDiffDetailInfo'];
+    }
+
+    /**
+    * Sets contentDiffDetailInfo
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\ContentDiffDetailInfo|null $contentDiffDetailInfo contentDiffDetailInfo
+    *
+    * @return $this
+    */
+    public function setContentDiffDetailInfo($contentDiffDetailInfo)
+    {
+        $this->container['contentDiffDetailInfo'] = $contentDiffDetailInfo;
         return $this;
     }
 

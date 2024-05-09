@@ -158,10 +158,13 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && ($this->container['instanceId'] > 9223372036854775807)) {
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+            if (($this->container['instanceId'] > 9223372036854775807)) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be smaller than or equal to 9223372036854775807.";
             }
-            if (!is_null($this->container['instanceId']) && ($this->container['instanceId'] < 0)) {
+            if (($this->container['instanceId'] < 0)) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -182,7 +185,7 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     * Gets instanceId
     *  删除故障云堡垒机实例id。
     *
-    * @return float|null
+    * @return float
     */
     public function getInstanceId()
     {
@@ -192,7 +195,7 @@ class DeleteInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param float|null $instanceId 删除故障云堡垒机实例id。
+    * @param float $instanceId 删除故障云堡垒机实例id。
     *
     * @return $this
     */

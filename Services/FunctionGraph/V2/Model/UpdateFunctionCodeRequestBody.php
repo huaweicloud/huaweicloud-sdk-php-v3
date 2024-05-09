@@ -24,7 +24,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
-    * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     *
     * @var string[]
@@ -34,7 +33,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'string',
             'codeFilename' => 'string',
             'funcCode' => '\HuaweiCloud\SDK\FunctionGraph\V2\Model\FuncCode',
-            'dependList' => 'string[]',
             'dependVersionList' => 'string[]'
     ];
 
@@ -44,7 +42,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
-    * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     *
     * @var string[]
@@ -54,7 +51,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
         'codeUrl' => null,
         'codeFilename' => null,
         'funcCode' => null,
-        'dependList' => null,
         'dependVersionList' => null
     ];
 
@@ -85,7 +81,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
-    * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     *
     * @var string[]
@@ -95,7 +90,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'code_url',
             'codeFilename' => 'code_filename',
             'funcCode' => 'func_code',
-            'dependList' => 'depend_list',
             'dependVersionList' => 'depend_version_list'
     ];
 
@@ -105,7 +99,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
-    * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     *
     * @var string[]
@@ -115,7 +108,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'setCodeUrl',
             'codeFilename' => 'setCodeFilename',
             'funcCode' => 'setFuncCode',
-            'dependList' => 'setDependList',
             'dependVersionList' => 'setDependVersionList'
     ];
 
@@ -125,7 +117,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     * codeUrl  当CodeType为obs时，该值为函数代码包在OBS上的地址，CodeType为其他值时，该字段为空。
     * codeFilename  函数的文件名，当CodeType为jar/zip时必须提供该字段，inline和obs不需要提供。
     * funcCode  funcCode
-    * dependList  依赖id列表
     * dependVersionList  依赖版本id列表
     *
     * @var string[]
@@ -135,7 +126,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
             'codeUrl' => 'getCodeUrl',
             'codeFilename' => 'getCodeFilename',
             'funcCode' => 'getFuncCode',
-            'dependList' => 'getDependList',
             'dependVersionList' => 'getDependVersionList'
     ];
 
@@ -222,7 +212,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
         $this->container['codeUrl'] = isset($data['codeUrl']) ? $data['codeUrl'] : null;
         $this->container['codeFilename'] = isset($data['codeFilename']) ? $data['codeFilename'] : null;
         $this->container['funcCode'] = isset($data['funcCode']) ? $data['funcCode'] : null;
-        $this->container['dependList'] = isset($data['dependList']) ? $data['dependList'] : null;
         $this->container['dependVersionList'] = isset($data['dependVersionList']) ? $data['dependVersionList'] : null;
     }
 
@@ -355,30 +344,6 @@ class UpdateFunctionCodeRequestBody implements ModelInterface, ArrayAccess
     public function setFuncCode($funcCode)
     {
         $this->container['funcCode'] = $funcCode;
-        return $this;
-    }
-
-    /**
-    * Gets dependList
-    *  依赖id列表
-    *
-    * @return string[]|null
-    */
-    public function getDependList()
-    {
-        return $this->container['dependList'];
-    }
-
-    /**
-    * Sets dependList
-    *
-    * @param string[]|null $dependList 依赖id列表
-    *
-    * @return $this
-    */
-    public function setDependList($dependList)
-    {
-        $this->container['dependList'] = $dependList;
         return $this;
     }
 

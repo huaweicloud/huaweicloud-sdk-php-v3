@@ -26,6 +26,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
@@ -52,7 +53,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -63,6 +63,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'handler' => 'string',
             'memorySize' => 'int',
             'gpuMemory' => 'int',
+            'gpuType' => 'string',
             'userData' => 'string',
             'encryptedUserData' => 'string',
             'xrole' => 'string',
@@ -88,8 +89,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'string',
             'restoreHookTimeout' => 'int',
             'heartbeatHandler' => 'string',
-            'enableClassIsolation' => 'bool',
-            'gpuType' => 'string'
+            'enableClassIsolation' => 'bool'
     ];
 
     /**
@@ -100,6 +100,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
@@ -126,7 +127,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -137,6 +137,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'handler' => null,
         'memorySize' => 'int32',
         'gpuMemory' => 'int32',
+        'gpuType' => null,
         'userData' => null,
         'encryptedUserData' => null,
         'xrole' => null,
@@ -162,8 +163,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         'restoreHookHandler' => null,
         'restoreHookTimeout' => 'int32',
         'heartbeatHandler' => null,
-        'enableClassIsolation' => null,
-        'gpuType' => null
+        'enableClassIsolation' => null
     ];
 
     /**
@@ -195,6 +195,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
@@ -221,7 +222,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -232,6 +232,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'handler' => 'handler',
             'memorySize' => 'memory_size',
             'gpuMemory' => 'gpu_memory',
+            'gpuType' => 'gpu_type',
             'userData' => 'user_data',
             'encryptedUserData' => 'encrypted_user_data',
             'xrole' => 'xrole',
@@ -257,8 +258,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'restore_hook_handler',
             'restoreHookTimeout' => 'restore_hook_timeout',
             'heartbeatHandler' => 'heartbeat_handler',
-            'enableClassIsolation' => 'enable_class_isolation',
-            'gpuType' => 'gpu_type'
+            'enableClassIsolation' => 'enable_class_isolation'
     ];
 
     /**
@@ -269,6 +269,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
@@ -295,7 +296,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -306,6 +306,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'handler' => 'setHandler',
             'memorySize' => 'setMemorySize',
             'gpuMemory' => 'setGpuMemory',
+            'gpuType' => 'setGpuType',
             'userData' => 'setUserData',
             'encryptedUserData' => 'setEncryptedUserData',
             'xrole' => 'setXrole',
@@ -331,8 +332,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'setRestoreHookHandler',
             'restoreHookTimeout' => 'setRestoreHookTimeout',
             'heartbeatHandler' => 'setHeartbeatHandler',
-            'enableClassIsolation' => 'setEnableClassIsolation',
-            'gpuType' => 'setGpuType'
+            'enableClassIsolation' => 'setEnableClassIsolation'
     ];
 
     /**
@@ -343,6 +343,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * handler  函数执行入口 规则：xx.xx，必须包含“. ” 举例：对于node.js函数：myfunction.handler，则表示函数的文件名为myfunction.js，执行的入口函数名为handler。
     * memorySize  函数消耗的内存。 单位M。 取值范围为：128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096。 最小值为128，最大值为4096。
     * gpuMemory  函数消耗的显存，只支持自定义运行时与自定义镜像函数配置GPU。 单位MB。 取值范围为：1024、2048、3072、4096、5120、6144、7168、8192、9216、10240、11264、12288、13312、14336、15360、16384。 最小值为1024，最大值为16384。
+    * gpuType  显卡类型。
     * userData  用户自定义的name/value信息。 在函数中使用的参数。 举例：如函数要访问某个主机，可以设置自定义参数：Host={host_ip}，最多定义20个，总长度不超过4KB。
     * encryptedUserData  用户自定义的name/value信息，用于需要加密的配置。
     * xrole  函数配置委托。需要IAM支持，并在IAM界面创建委托，当函数需要访问其他服务时，必须提供该字段。配置后用户可以通过函数执行入口方法中的context参数获取具有委托中权限的token、ak、sk，用于访问其他云服务。如果用户函数不访问任何云服务，则不用提供委托名称。
@@ -369,7 +370,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     * restoreHookTimeout  快照冷启动Restore Hook的超时时间，超时函数将被强行停止，范围1～300秒。
     * heartbeatHandler  心跳函数函数的入口，规则：xx.xx，必须包含“. ”，只支持JAVA运行时配置。 心跳函数入口需要与函数执行入口在同一文件下。在开启心跳函数配置时，此参数必填。
     * enableClassIsolation  类隔离开关，只支持JAVA运行时配置。开启类隔离后可以支持Kafka转储并提升类加载效率，但也可能会导致某些兼容性问题，请谨慎开启。
-    * gpuType  显卡类型。
     *
     * @var string[]
     */
@@ -380,6 +380,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'handler' => 'getHandler',
             'memorySize' => 'getMemorySize',
             'gpuMemory' => 'getGpuMemory',
+            'gpuType' => 'getGpuType',
             'userData' => 'getUserData',
             'encryptedUserData' => 'getEncryptedUserData',
             'xrole' => 'getXrole',
@@ -405,8 +406,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
             'restoreHookHandler' => 'getRestoreHookHandler',
             'restoreHookTimeout' => 'getRestoreHookTimeout',
             'heartbeatHandler' => 'getHeartbeatHandler',
-            'enableClassIsolation' => 'getEnableClassIsolation',
-            'gpuType' => 'getGpuType'
+            'enableClassIsolation' => 'getEnableClassIsolation'
     ];
 
     /**
@@ -534,6 +534,7 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['handler'] = isset($data['handler']) ? $data['handler'] : null;
         $this->container['memorySize'] = isset($data['memorySize']) ? $data['memorySize'] : null;
         $this->container['gpuMemory'] = isset($data['gpuMemory']) ? $data['gpuMemory'] : null;
+        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['encryptedUserData'] = isset($data['encryptedUserData']) ? $data['encryptedUserData'] : null;
         $this->container['xrole'] = isset($data['xrole']) ? $data['xrole'] : null;
@@ -560,7 +561,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
         $this->container['restoreHookTimeout'] = isset($data['restoreHookTimeout']) ? $data['restoreHookTimeout'] : null;
         $this->container['heartbeatHandler'] = isset($data['heartbeatHandler']) ? $data['heartbeatHandler'] : null;
         $this->container['enableClassIsolation'] = isset($data['enableClassIsolation']) ? $data['enableClassIsolation'] : null;
-        $this->container['gpuType'] = isset($data['gpuType']) ? $data['gpuType'] : null;
     }
 
     /**
@@ -749,6 +749,30 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setGpuMemory($gpuMemory)
     {
         $this->container['gpuMemory'] = $gpuMemory;
+        return $this;
+    }
+
+    /**
+    * Gets gpuType
+    *  显卡类型。
+    *
+    * @return string|null
+    */
+    public function getGpuType()
+    {
+        return $this->container['gpuType'];
+    }
+
+    /**
+    * Sets gpuType
+    *
+    * @param string|null $gpuType 显卡类型。
+    *
+    * @return $this
+    */
+    public function setGpuType($gpuType)
+    {
+        $this->container['gpuType'] = $gpuType;
         return $this;
     }
 
@@ -1373,30 +1397,6 @@ class UpdateFunctionConfigRequestBody implements ModelInterface, ArrayAccess
     public function setEnableClassIsolation($enableClassIsolation)
     {
         $this->container['enableClassIsolation'] = $enableClassIsolation;
-        return $this;
-    }
-
-    /**
-    * Gets gpuType
-    *  显卡类型。
-    *
-    * @return string|null
-    */
-    public function getGpuType()
-    {
-        return $this->container['gpuType'];
-    }
-
-    /**
-    * Sets gpuType
-    *
-    * @param string|null $gpuType 显卡类型。
-    *
-    * @return $this
-    */
-    public function setGpuType($gpuType)
-    {
-        $this->container['gpuType'] = $gpuType;
         return $this;
     }
 

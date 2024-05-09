@@ -32,6 +32,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -52,6 +53,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
+            'chatVideoType' => 'string',
             'roomId' => 'string',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -72,6 +74,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -92,6 +95,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
         'layerConfig' => null,
         'reviewConfig' => null,
         'chatSubtitleConfig' => null,
+        'chatVideoType' => null,
         'roomId' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -133,6 +137,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -153,6 +158,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'layerConfig' => 'layer_config',
             'reviewConfig' => 'review_config',
             'chatSubtitleConfig' => 'chat_subtitle_config',
+            'chatVideoType' => 'chat_video_type',
             'roomId' => 'room_id',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -173,6 +179,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -193,6 +200,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'layerConfig' => 'setLayerConfig',
             'reviewConfig' => 'setReviewConfig',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
+            'chatVideoType' => 'setChatVideoType',
             'roomId' => 'setRoomId',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -213,6 +221,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     * roomId  对话ID。
     * createTime  智能交互对话创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  智能交互对话更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -233,6 +242,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
             'layerConfig' => 'getLayerConfig',
             'reviewConfig' => 'getReviewConfig',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
+            'chatVideoType' => 'getChatVideoType',
             'roomId' => 'getRoomId',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -280,7 +290,24 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
+    const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
+    const CHAT_VIDEO_TYPE_HUB = 'HUB';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChatVideoTypeAllowableValues()
+    {
+        return [
+            self::CHAT_VIDEO_TYPE_COMPUTER,
+            self::CHAT_VIDEO_TYPE_MOBILE,
+            self::CHAT_VIDEO_TYPE_HUB,
+        ];
+    }
 
 
     /**
@@ -309,6 +336,7 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
+        $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -356,6 +384,20 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getChatVideoTypeAllowableValues();
+                if (!is_null($this->container['chatVideoType']) && !in_array($this->container['chatVideoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chatVideoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'roomId', the character length must be smaller than or equal to 64.";
@@ -656,6 +698,30 @@ class UpdateSmartChatRoomResponse implements ModelInterface, ArrayAccess
     public function setChatSubtitleConfig($chatSubtitleConfig)
     {
         $this->container['chatSubtitleConfig'] = $chatSubtitleConfig;
+        return $this;
+    }
+
+    /**
+    * Gets chatVideoType
+    *  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    *
+    * @return string|null
+    */
+    public function getChatVideoType()
+    {
+        return $this->container['chatVideoType'];
+    }
+
+    /**
+    * Sets chatVideoType
+    *
+    * @param string|null $chatVideoType 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    *
+    * @return $this
+    */
+    public function setChatVideoType($chatVideoType)
+    {
+        $this->container['chatVideoType'] = $chatVideoType;
         return $this;
     }
 

@@ -457,6 +457,9 @@ class GesAsyncClient extends Client
         if ($localVarParams['keepBackup'] !== null) {
             $queryParams['keep_backup'] = $localVarParams['keepBackup'];
         }
+        if ($localVarParams['deleteEip'] !== null) {
+            $queryParams['delete_eip'] = $localVarParams['deleteEip'];
+        }
         if ($localVarParams['graphId'] !== null) {
             $pathParams['graph_id'] = $localVarParams['graphId'];
         }

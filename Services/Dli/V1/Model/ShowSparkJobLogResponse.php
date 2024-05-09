@@ -30,7 +30,7 @@ class ShowSparkJobLogResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'from' => 'string',
+            'from' => 'int',
             'total' => 'int',
             'log' => 'string[]'
     ];
@@ -46,7 +46,7 @@ class ShowSparkJobLogResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'from' => null,
+        'from' => 'int32',
         'total' => 'int64',
         'log' => null
     ];
@@ -234,7 +234,7 @@ class ShowSparkJobLogResponse implements ModelInterface, ArrayAccess
     * Gets from
     *  日志起始索引。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getFrom()
     {
@@ -244,7 +244,7 @@ class ShowSparkJobLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets from
     *
-    * @param string|null $from 日志起始索引。
+    * @param int|null $from 日志起始索引。
     *
     * @return $this
     */

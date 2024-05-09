@@ -31,6 +31,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
-            'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig'
+            'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
+            'chatVideoType' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         'backgroundConfig' => null,
         'layerConfig' => null,
         'reviewConfig' => null,
-        'chatSubtitleConfig' => null
+        'chatSubtitleConfig' => null,
+        'chatVideoType' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'backgroundConfig' => 'background_config',
             'layerConfig' => 'layer_config',
             'reviewConfig' => 'review_config',
-            'chatSubtitleConfig' => 'chat_subtitle_config'
+            'chatSubtitleConfig' => 'chat_subtitle_config',
+            'chatVideoType' => 'chat_video_type'
     ];
 
     /**
@@ -142,6 +148,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'backgroundConfig' => 'setBackgroundConfig',
             'layerConfig' => 'setLayerConfig',
             'reviewConfig' => 'setReviewConfig',
-            'chatSubtitleConfig' => 'setChatSubtitleConfig'
+            'chatSubtitleConfig' => 'setChatSubtitleConfig',
+            'chatVideoType' => 'setChatVideoType'
     ];
 
     /**
@@ -172,6 +180,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
     * chatSubtitleConfig  chatSubtitleConfig
+    * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             'backgroundConfig' => 'getBackgroundConfig',
             'layerConfig' => 'getLayerConfig',
             'reviewConfig' => 'getReviewConfig',
-            'chatSubtitleConfig' => 'getChatSubtitleConfig'
+            'chatSubtitleConfig' => 'getChatSubtitleConfig',
+            'chatVideoType' => 'getChatVideoType'
     ];
 
     /**
@@ -229,7 +239,24 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CHAT_VIDEO_TYPE_COMPUTER = 'COMPUTER';
+    const CHAT_VIDEO_TYPE_MOBILE = 'MOBILE';
+    const CHAT_VIDEO_TYPE_HUB = 'HUB';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChatVideoTypeAllowableValues()
+    {
+        return [
+            self::CHAT_VIDEO_TYPE_COMPUTER,
+            self::CHAT_VIDEO_TYPE_MOBILE,
+            self::CHAT_VIDEO_TYPE_HUB,
+        ];
+    }
 
 
     /**
@@ -258,6 +285,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
+        $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
     }
 
     /**
@@ -300,6 +328,20 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['concurrency']) && ($this->container['concurrency'] < 0)) {
                 $invalidProperties[] = "invalid value for 'concurrency', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getChatVideoTypeAllowableValues();
+                if (!is_null($this->container['chatVideoType']) && !in_array($this->container['chatVideoType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chatVideoType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) > 64)) {
+                $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -576,6 +618,30 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     public function setChatSubtitleConfig($chatSubtitleConfig)
     {
         $this->container['chatSubtitleConfig'] = $chatSubtitleConfig;
+        return $this;
+    }
+
+    /**
+    * Gets chatVideoType
+    *  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    *
+    * @return string|null
+    */
+    public function getChatVideoType()
+    {
+        return $this->container['chatVideoType'];
+    }
+
+    /**
+    * Sets chatVideoType
+    *
+    * @param string|null $chatVideoType 智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    *
+    * @return $this
+    */
+    public function setChatVideoType($chatVideoType)
+    {
+        $this->container['chatVideoType'] = $chatVideoType;
         return $this;
     }
 

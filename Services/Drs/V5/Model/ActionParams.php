@@ -29,6 +29,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
+    * replayConfig  replayConfig
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'compareTaskParam' => '\HuaweiCloud\SDK\Drs\V5\Model\CompareTaskParams',
             'isSyncReEdit' => 'bool',
             'forceDelete' => 'bool',
-            'publicIpConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig'
+            'publicIpConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig',
+            'replayConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayConfigInfo'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
+    * replayConfig  replayConfig
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ActionParams implements ModelInterface, ArrayAccess
         'compareTaskParam' => null,
         'isSyncReEdit' => null,
         'forceDelete' => null,
-        'publicIpConfig' => null
+        'publicIpConfig' => null,
+        'replayConfig' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
+    * replayConfig  replayConfig
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'compareTaskParam' => 'compare_task_param',
             'isSyncReEdit' => 'is_sync_re_edit',
             'forceDelete' => 'force_delete',
-            'publicIpConfig' => 'public_ip_config'
+            'publicIpConfig' => 'public_ip_config',
+            'replayConfig' => 'replay_config'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
+    * replayConfig  replayConfig
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'compareTaskParam' => 'setCompareTaskParam',
             'isSyncReEdit' => 'setIsSyncReEdit',
             'forceDelete' => 'setForceDelete',
-            'publicIpConfig' => 'setPublicIpConfig'
+            'publicIpConfig' => 'setPublicIpConfig',
+            'replayConfig' => 'setReplayConfig'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * isSyncReEdit  再编辑任务启动时取值true。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
+    * replayConfig  replayConfig
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ActionParams implements ModelInterface, ArrayAccess
             'compareTaskParam' => 'getCompareTaskParam',
             'isSyncReEdit' => 'getIsSyncReEdit',
             'forceDelete' => 'getForceDelete',
-            'publicIpConfig' => 'getPublicIpConfig'
+            'publicIpConfig' => 'getPublicIpConfig',
+            'replayConfig' => 'getReplayConfig'
     ];
 
     /**
@@ -236,6 +246,7 @@ class ActionParams implements ModelInterface, ArrayAccess
         $this->container['isSyncReEdit'] = isset($data['isSyncReEdit']) ? $data['isSyncReEdit'] : null;
         $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
         $this->container['publicIpConfig'] = isset($data['publicIpConfig']) ? $data['publicIpConfig'] : null;
+        $this->container['replayConfig'] = isset($data['replayConfig']) ? $data['replayConfig'] : null;
     }
 
     /**
@@ -473,6 +484,30 @@ class ActionParams implements ModelInterface, ArrayAccess
     public function setPublicIpConfig($publicIpConfig)
     {
         $this->container['publicIpConfig'] = $publicIpConfig;
+        return $this;
+    }
+
+    /**
+    * Gets replayConfig
+    *  replayConfig
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\ReplayConfigInfo|null
+    */
+    public function getReplayConfig()
+    {
+        return $this->container['replayConfig'];
+    }
+
+    /**
+    * Sets replayConfig
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\ReplayConfigInfo|null $replayConfig replayConfig
+    *
+    * @return $this
+    */
+    public function setReplayConfig($replayConfig)
+    {
+        $this->container['replayConfig'] = $replayConfig;
         return $this;
     }
 
