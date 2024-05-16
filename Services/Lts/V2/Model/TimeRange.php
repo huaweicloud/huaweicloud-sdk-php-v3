@@ -21,8 +21,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sqlTimeZone  时区信息，默认为“UTC”。
-    * startTime  搜索起始时间（UTC时间，毫秒级）。
-    * endTime  搜索起始时间（UTC时间，毫秒级）。
+    * startTime  搜索起始时间（UTC时间，毫秒级）
+    * endTime  搜索结束时间（UTC时间，毫秒级）。
     * startTimeGt  搜索是否包含起始时间点，默认为false。
     * endTimeLt  搜索是否包含结束时间点，默认为false。
     *
@@ -30,8 +30,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'sqlTimeZone' => 'string',
-            'startTime' => 'string',
-            'endTime' => 'string',
+            'startTime' => 'int',
+            'endTime' => 'int',
             'startTimeGt' => 'bool',
             'endTimeLt' => 'bool'
     ];
@@ -39,8 +39,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sqlTimeZone  时区信息，默认为“UTC”。
-    * startTime  搜索起始时间（UTC时间，毫秒级）。
-    * endTime  搜索起始时间（UTC时间，毫秒级）。
+    * startTime  搜索起始时间（UTC时间，毫秒级）
+    * endTime  搜索结束时间（UTC时间，毫秒级）。
     * startTimeGt  搜索是否包含起始时间点，默认为false。
     * endTimeLt  搜索是否包含结束时间点，默认为false。
     *
@@ -48,8 +48,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'sqlTimeZone' => null,
-        'startTime' => null,
-        'endTime' => null,
+        'startTime' => 'int64',
+        'endTime' => 'int64',
         'startTimeGt' => null,
         'endTimeLt' => null
     ];
@@ -78,8 +78,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sqlTimeZone  时区信息，默认为“UTC”。
-    * startTime  搜索起始时间（UTC时间，毫秒级）。
-    * endTime  搜索起始时间（UTC时间，毫秒级）。
+    * startTime  搜索起始时间（UTC时间，毫秒级）
+    * endTime  搜索结束时间（UTC时间，毫秒级）。
     * startTimeGt  搜索是否包含起始时间点，默认为false。
     * endTimeLt  搜索是否包含结束时间点，默认为false。
     *
@@ -96,8 +96,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sqlTimeZone  时区信息，默认为“UTC”。
-    * startTime  搜索起始时间（UTC时间，毫秒级）。
-    * endTime  搜索起始时间（UTC时间，毫秒级）。
+    * startTime  搜索起始时间（UTC时间，毫秒级）
+    * endTime  搜索结束时间（UTC时间，毫秒级）。
     * startTimeGt  搜索是否包含起始时间点，默认为false。
     * endTimeLt  搜索是否包含结束时间点，默认为false。
     *
@@ -114,8 +114,8 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sqlTimeZone  时区信息，默认为“UTC”。
-    * startTime  搜索起始时间（UTC时间，毫秒级）。
-    * endTime  搜索起始时间（UTC时间，毫秒级）。
+    * startTime  搜索起始时间（UTC时间，毫秒级）
+    * endTime  搜索结束时间（UTC时间，毫秒级）。
     * startTimeGt  搜索是否包含起始时间点，默认为false。
     * endTimeLt  搜索是否包含结束时间点，默认为false。
     *
@@ -211,21 +211,9 @@ class TimeRange implements ModelInterface, ArrayAccess
         if ($this->container['startTime'] === null) {
             $invalidProperties[] = "'startTime' can't be null";
         }
-            if ((mb_strlen($this->container['startTime']) > 13)) {
-                $invalidProperties[] = "invalid value for 'startTime', the character length must be smaller than or equal to 13.";
-            }
-            if ((mb_strlen($this->container['startTime']) < 13)) {
-                $invalidProperties[] = "invalid value for 'startTime', the character length must be bigger than or equal to 13.";
-            }
         if ($this->container['endTime'] === null) {
             $invalidProperties[] = "'endTime' can't be null";
         }
-            if ((mb_strlen($this->container['endTime']) > 13)) {
-                $invalidProperties[] = "invalid value for 'endTime', the character length must be smaller than or equal to 13.";
-            }
-            if ((mb_strlen($this->container['endTime']) < 13)) {
-                $invalidProperties[] = "invalid value for 'endTime', the character length must be bigger than or equal to 13.";
-            }
         return $invalidProperties;
     }
 
@@ -266,9 +254,9 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  搜索起始时间（UTC时间，毫秒级）。
+    *  搜索起始时间（UTC时间，毫秒级）
     *
-    * @return string
+    * @return int
     */
     public function getStartTime()
     {
@@ -278,7 +266,7 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string $startTime 搜索起始时间（UTC时间，毫秒级）。
+    * @param int $startTime 搜索起始时间（UTC时间，毫秒级）
     *
     * @return $this
     */
@@ -290,9 +278,9 @@ class TimeRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  搜索起始时间（UTC时间，毫秒级）。
+    *  搜索结束时间（UTC时间，毫秒级）。
     *
-    * @return string
+    * @return int
     */
     public function getEndTime()
     {
@@ -302,7 +290,7 @@ class TimeRange implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string $endTime 搜索起始时间（UTC时间，毫秒级）。
+    * @param int $endTime 搜索结束时间（UTC时间，毫秒级）。
     *
     * @return $this
     */

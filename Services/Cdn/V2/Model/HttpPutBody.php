@@ -21,11 +21,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
-    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * encCertificateValue  加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * encPrivateKey  加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。  > 默认关闭，https_status=off时，该值不生效。
     * tlsVersion  传输层安全性协议， 目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议，CDN默认开启TLS1.1/1.2/1.3，不可全部关闭。  > 1.需开启连续或单个版本号，例：不可仅开启TLS1.0/1.2而关闭TLS1.1。  > 2.多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -34,11 +37,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'httpsStatus' => 'string',
+            'certificateType' => 'string',
+            'certificateSource' => 'int',
             'certificateName' => 'string',
             'certificateValue' => 'string',
             'privateKey' => 'string',
-            'certificateSource' => 'int',
-            'certificateType' => 'string',
+            'encCertificateValue' => 'string',
+            'encPrivateKey' => 'string',
+            'certificates' => '\HuaweiCloud\SDK\Cdn\V2\Model\CertificatesPutBody[]',
             'http2Status' => 'string',
             'tlsVersion' => 'string',
             'ocspStaplingStatus' => 'string'
@@ -47,11 +53,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
-    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * encCertificateValue  加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * encPrivateKey  加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。  > 默认关闭，https_status=off时，该值不生效。
     * tlsVersion  传输层安全性协议， 目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议，CDN默认开启TLS1.1/1.2/1.3，不可全部关闭。  > 1.需开启连续或单个版本号，例：不可仅开启TLS1.0/1.2而关闭TLS1.1。  > 2.多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -60,11 +69,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'httpsStatus' => null,
+        'certificateType' => null,
+        'certificateSource' => 'int32',
         'certificateName' => null,
         'certificateValue' => null,
         'privateKey' => null,
-        'certificateSource' => 'int32',
-        'certificateType' => null,
+        'encCertificateValue' => null,
+        'encPrivateKey' => null,
+        'certificates' => null,
         'http2Status' => null,
         'tlsVersion' => null,
         'ocspStaplingStatus' => null
@@ -94,11 +106,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
-    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * encCertificateValue  加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * encPrivateKey  加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。  > 默认关闭，https_status=off时，该值不生效。
     * tlsVersion  传输层安全性协议， 目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议，CDN默认开启TLS1.1/1.2/1.3，不可全部关闭。  > 1.需开启连续或单个版本号，例：不可仅开启TLS1.0/1.2而关闭TLS1.1。  > 2.多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -107,11 +122,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'httpsStatus' => 'https_status',
+            'certificateType' => 'certificate_type',
+            'certificateSource' => 'certificate_source',
             'certificateName' => 'certificate_name',
             'certificateValue' => 'certificate_value',
             'privateKey' => 'private_key',
-            'certificateSource' => 'certificate_source',
-            'certificateType' => 'certificate_type',
+            'encCertificateValue' => 'enc_certificate_value',
+            'encPrivateKey' => 'enc_private_key',
+            'certificates' => 'certificates',
             'http2Status' => 'http2_status',
             'tlsVersion' => 'tls_version',
             'ocspStaplingStatus' => 'ocsp_stapling_status'
@@ -120,11 +138,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
-    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * encCertificateValue  加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * encPrivateKey  加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。  > 默认关闭，https_status=off时，该值不生效。
     * tlsVersion  传输层安全性协议， 目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议，CDN默认开启TLS1.1/1.2/1.3，不可全部关闭。  > 1.需开启连续或单个版本号，例：不可仅开启TLS1.0/1.2而关闭TLS1.1。  > 2.多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -133,11 +154,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'httpsStatus' => 'setHttpsStatus',
+            'certificateType' => 'setCertificateType',
+            'certificateSource' => 'setCertificateSource',
             'certificateName' => 'setCertificateName',
             'certificateValue' => 'setCertificateValue',
             'privateKey' => 'setPrivateKey',
-            'certificateSource' => 'setCertificateSource',
-            'certificateType' => 'setCertificateType',
+            'encCertificateValue' => 'setEncCertificateValue',
+            'encPrivateKey' => 'setEncPrivateKey',
+            'certificates' => 'setCertificates',
             'http2Status' => 'setHttp2Status',
             'tlsVersion' => 'setTlsVersion',
             'ocspStaplingStatus' => 'setOcspStaplingStatus'
@@ -146,11 +170,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
-    * certificateSource  证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
-    * certificateType  证书类型，server：国际证书；server_sm：国密证书。
+    * encCertificateValue  加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * encPrivateKey  加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。  > 默认关闭，https_status=off时，该值不生效。
     * tlsVersion  传输层安全性协议， 目前支持TLSv1.0/1.1/1.2/1.3四个版本的协议，CDN默认开启TLS1.1/1.2/1.3，不可全部关闭。  > 1.需开启连续或单个版本号，例：不可仅开启TLS1.0/1.2而关闭TLS1.1。  > 2.多版本开启时，使用逗号拼接传输，例：TLSv1.1,TLSv1.2。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -159,11 +186,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'httpsStatus' => 'getHttpsStatus',
+            'certificateType' => 'getCertificateType',
+            'certificateSource' => 'getCertificateSource',
             'certificateName' => 'getCertificateName',
             'certificateValue' => 'getCertificateValue',
             'privateKey' => 'getPrivateKey',
-            'certificateSource' => 'getCertificateSource',
-            'certificateType' => 'getCertificateType',
+            'encCertificateValue' => 'getEncCertificateValue',
+            'encPrivateKey' => 'getEncPrivateKey',
+            'certificates' => 'getCertificates',
             'http2Status' => 'getHttp2Status',
             'tlsVersion' => 'getTlsVersion',
             'ocspStaplingStatus' => 'getOcspStaplingStatus'
@@ -228,11 +258,14 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['httpsStatus'] = isset($data['httpsStatus']) ? $data['httpsStatus'] : null;
+        $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
+        $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
         $this->container['certificateName'] = isset($data['certificateName']) ? $data['certificateName'] : null;
         $this->container['certificateValue'] = isset($data['certificateValue']) ? $data['certificateValue'] : null;
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
-        $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
-        $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
+        $this->container['encCertificateValue'] = isset($data['encCertificateValue']) ? $data['encCertificateValue'] : null;
+        $this->container['encPrivateKey'] = isset($data['encPrivateKey']) ? $data['encPrivateKey'] : null;
+        $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
         $this->container['http2Status'] = isset($data['http2Status']) ? $data['http2Status'] : null;
         $this->container['tlsVersion'] = isset($data['tlsVersion']) ? $data['tlsVersion'] : null;
         $this->container['ocspStaplingStatus'] = isset($data['ocspStaplingStatus']) ? $data['ocspStaplingStatus'] : null;
@@ -281,6 +314,54 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     public function setHttpsStatus($httpsStatus)
     {
         $this->container['httpsStatus'] = $httpsStatus;
+        return $this;
+    }
+
+    /**
+    * Gets certificateType
+    *  证书类型，server：国际证书；server_sm：国密证书。
+    *
+    * @return string|null
+    */
+    public function getCertificateType()
+    {
+        return $this->container['certificateType'];
+    }
+
+    /**
+    * Sets certificateType
+    *
+    * @param string|null $certificateType 证书类型，server：国际证书；server_sm：国密证书。
+    *
+    * @return $this
+    */
+    public function setCertificateType($certificateType)
+    {
+        $this->container['certificateType'] = $certificateType;
+        return $this;
+    }
+
+    /**
+    * Gets certificateSource
+    *  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    *
+    * @return int|null
+    */
+    public function getCertificateSource()
+    {
+        return $this->container['certificateSource'];
+    }
+
+    /**
+    * Sets certificateSource
+    *
+    * @param int|null $certificateSource 证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    *
+    * @return $this
+    */
+    public function setCertificateSource($certificateSource)
+    {
+        $this->container['certificateSource'] = $certificateSource;
         return $this;
     }
 
@@ -357,50 +438,74 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets certificateSource
-    *  证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
+    * Gets encCertificateValue
+    *  加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getCertificateSource()
+    public function getEncCertificateValue()
     {
-        return $this->container['certificateSource'];
+        return $this->container['encCertificateValue'];
     }
 
     /**
-    * Sets certificateSource
+    * Sets encCertificateValue
     *
-    * @param int|null $certificateSource 证书来源,1：华为云托管证书,0：自有证书, 默认值0。  > 证书开启时必传
+    * @param string|null $encCertificateValue 加密证书内容，证书类型为国密证书时必传。  > PEM编码格式。
     *
     * @return $this
     */
-    public function setCertificateSource($certificateSource)
+    public function setEncCertificateValue($encCertificateValue)
     {
-        $this->container['certificateSource'] = $certificateSource;
+        $this->container['encCertificateValue'] = $encCertificateValue;
         return $this;
     }
 
     /**
-    * Gets certificateType
-    *  证书类型，server：国际证书；server_sm：国密证书。
+    * Gets encPrivateKey
+    *  加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
     *
     * @return string|null
     */
-    public function getCertificateType()
+    public function getEncPrivateKey()
     {
-        return $this->container['certificateType'];
+        return $this->container['encPrivateKey'];
     }
 
     /**
-    * Sets certificateType
+    * Sets encPrivateKey
     *
-    * @param string|null $certificateType 证书类型，server：国际证书；server_sm：国密证书。
+    * @param string|null $encPrivateKey 加密私钥内容，证书类型为国密证书时必传。  > PEM编码格式。
     *
     * @return $this
     */
-    public function setCertificateType($certificateType)
+    public function setEncPrivateKey($encPrivateKey)
     {
-        $this->container['certificateType'] = $certificateType;
+        $this->container['encPrivateKey'] = $encPrivateKey;
+        return $this;
+    }
+
+    /**
+    * Gets certificates
+    *  certificates
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CertificatesPutBody[]|null
+    */
+    public function getCertificates()
+    {
+        return $this->container['certificates'];
+    }
+
+    /**
+    * Sets certificates
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CertificatesPutBody[]|null $certificates certificates
+    *
+    * @return $this
+    */
+    public function setCertificates($certificates)
+    {
+        $this->container['certificates'] = $certificates;
         return $this;
     }
 

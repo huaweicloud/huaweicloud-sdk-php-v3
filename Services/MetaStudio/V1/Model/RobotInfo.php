@@ -24,7 +24,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appKey  应用的AccessKey或帐号。
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -33,6 +34,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * roleId  奇妙问角色ID。
     *
     * @var string[]
     */
@@ -42,6 +44,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'roomId' => 'string',
             'appId' => 'string',
             'appType' => 'int',
+            'appKey' => 'string',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -49,7 +52,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'cbsProjectId' => 'string',
             'llmUrl' => 'string',
             'isStream' => 'bool',
-            'chatRounds' => 'int'
+            'chatRounds' => 'int',
+            'roleId' => 'string'
     ];
 
     /**
@@ -58,7 +62,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appKey  应用的AccessKey或帐号。
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -67,6 +72,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * roleId  奇妙问角色ID。
     *
     * @var string[]
     */
@@ -76,6 +82,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
         'roomId' => null,
         'appId' => null,
         'appType' => null,
+        'appKey' => null,
         'language' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -83,7 +90,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
         'cbsProjectId' => null,
         'llmUrl' => null,
         'isStream' => null,
-        'chatRounds' => null
+        'chatRounds' => null,
+        'roleId' => null
     ];
 
     /**
@@ -113,7 +121,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appKey  应用的AccessKey或帐号。
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -122,6 +131,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * roleId  奇妙问角色ID。
     *
     * @var string[]
     */
@@ -131,6 +141,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'roomId' => 'room_id',
             'appId' => 'app_id',
             'appType' => 'app_type',
+            'appKey' => 'app_key',
             'language' => 'language',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -138,7 +149,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'cbsProjectId' => 'cbs_project_id',
             'llmUrl' => 'llm_url',
             'isStream' => 'is_stream',
-            'chatRounds' => 'chat_rounds'
+            'chatRounds' => 'chat_rounds',
+            'roleId' => 'role_id'
     ];
 
     /**
@@ -147,7 +159,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appKey  应用的AccessKey或帐号。
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -156,6 +169,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * roleId  奇妙问角色ID。
     *
     * @var string[]
     */
@@ -165,6 +179,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'roomId' => 'setRoomId',
             'appId' => 'setAppId',
             'appType' => 'setAppType',
+            'appKey' => 'setAppKey',
             'language' => 'setLanguage',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -172,7 +187,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'cbsProjectId' => 'setCbsProjectId',
             'llmUrl' => 'setLlmUrl',
             'isStream' => 'setIsStream',
-            'chatRounds' => 'setChatRounds'
+            'chatRounds' => 'setChatRounds',
+            'roleId' => 'setRoleId'
     ];
 
     /**
@@ -181,7 +197,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * name  应用名称。
     * roomId  智能交互对话房间ID。
     * appId  第三方应用ID。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
+    * appKey  应用的AccessKey或帐号。
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -190,6 +207,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * roleId  奇妙问角色ID。
     *
     * @var string[]
     */
@@ -199,6 +217,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'roomId' => 'getRoomId',
             'appId' => 'getAppId',
             'appType' => 'getAppType',
+            'appKey' => 'getAppKey',
             'language' => 'getLanguage',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -206,7 +225,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'cbsProjectId' => 'getCbsProjectId',
             'llmUrl' => 'getLlmUrl',
             'isStream' => 'getIsStream',
-            'chatRounds' => 'getChatRounds'
+            'chatRounds' => 'getChatRounds',
+            'roleId' => 'getRoleId'
     ];
 
     /**
@@ -272,6 +292,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
+        $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -280,6 +301,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
         $this->container['llmUrl'] = isset($data['llmUrl']) ? $data['llmUrl'] : null;
         $this->container['isStream'] = isset($data['isStream']) ? $data['isStream'] : null;
         $this->container['chatRounds'] = isset($data['chatRounds']) ? $data['chatRounds'] : null;
+        $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
     }
 
     /**
@@ -320,6 +342,12 @@ class RobotInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appType']) && ($this->container['appType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'appType', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['appKey']) && (mb_strlen($this->container['appKey']) > 64)) {
+                $invalidProperties[] = "invalid value for 'appKey', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['appKey']) && (mb_strlen($this->container['appKey']) < 1)) {
+                $invalidProperties[] = "invalid value for 'appKey', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 20)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 20.";
             }
@@ -355,6 +383,12 @@ class RobotInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['chatRounds']) && ($this->container['chatRounds'] < 1)) {
                 $invalidProperties[] = "invalid value for 'chatRounds', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'roleId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'roleId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -468,7 +502,7 @@ class RobotInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     *
     * @return int|null
     */
@@ -480,13 +514,37 @@ class RobotInfo implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     *
     * @return $this
     */
     public function setAppType($appType)
     {
         $this->container['appType'] = $appType;
+        return $this;
+    }
+
+    /**
+    * Gets appKey
+    *  应用的AccessKey或帐号。
+    *
+    * @return string|null
+    */
+    public function getAppKey()
+    {
+        return $this->container['appKey'];
+    }
+
+    /**
+    * Sets appKey
+    *
+    * @param string|null $appKey 应用的AccessKey或帐号。
+    *
+    * @return $this
+    */
+    public function setAppKey($appKey)
+    {
+        $this->container['appKey'] = $appKey;
         return $this;
     }
 
@@ -679,6 +737,30 @@ class RobotInfo implements ModelInterface, ArrayAccess
     public function setChatRounds($chatRounds)
     {
         $this->container['chatRounds'] = $chatRounds;
+        return $this;
+    }
+
+    /**
+    * Gets roleId
+    *  奇妙问角色ID。
+    *
+    * @return string|null
+    */
+    public function getRoleId()
+    {
+        return $this->container['roleId'];
+    }
+
+    /**
+    * Sets roleId
+    *
+    * @param string|null $roleId 奇妙问角色ID。
+    *
+    * @return $this
+    */
+    public function setRoleId($roleId)
+    {
+        $this->container['roleId'] = $roleId;
         return $this;
     }
 

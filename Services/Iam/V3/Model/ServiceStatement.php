@@ -31,7 +31,7 @@ class ServiceStatement implements ModelInterface, ArrayAccess
             'action' => 'string[]',
             'effect' => 'string',
             'condition' => 'map[string,map[string,string[]]]',
-            'resource' => 'string[]'
+            'resource' => 'object'
     ];
 
     /**
@@ -310,7 +310,7 @@ class ServiceStatement implements ModelInterface, ArrayAccess
     * Gets resource
     *  资源。规则如下： > - 可填 * 的五段式：<service-name>:<region>:<account-id>:<resource-type>:<resource-path>，例：\"obs:*:*:bucket:*\"。 > - region字段为*或用户可访问的region。service必须存在且resource属于对应service。
     *
-    * @return string[]|null
+    * @return object|null
     */
     public function getResource()
     {
@@ -320,7 +320,7 @@ class ServiceStatement implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string[]|null $resource 资源。规则如下： > - 可填 * 的五段式：<service-name>:<region>:<account-id>:<resource-type>:<resource-path>，例：\"obs:*:*:bucket:*\"。 > - region字段为*或用户可访问的region。service必须存在且resource属于对应service。
+    * @param object|null $resource 资源。规则如下： > - 可填 * 的五段式：<service-name>:<region>:<account-id>:<resource-type>:<resource-path>，例：\"obs:*:*:bucket:*\"。 > - region字段为*或用户可访问的region。service必须存在且resource属于对应service。
     *
     * @return $this
     */

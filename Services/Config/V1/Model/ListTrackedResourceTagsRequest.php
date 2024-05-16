@@ -23,13 +23,15 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
     * key  标签键名
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * limit  最大的返回数量。
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'key' => 'string',
             'marker' => 'string',
-            'limit' => 'int'
+            'limit' => 'int',
+            'resourceDeleted' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
     * key  标签键名
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * limit  最大的返回数量。
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'key' => null,
         'marker' => null,
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'resourceDeleted' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
     * key  标签键名
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * limit  最大的返回数量。
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'key' => 'key',
             'marker' => 'marker',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'resourceDeleted' => 'resource_deleted'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
     * key  标签键名
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * limit  最大的返回数量。
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
     protected static $setters = [
             'key' => 'setKey',
             'marker' => 'setMarker',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'resourceDeleted' => 'setResourceDeleted'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
     * key  标签键名
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * limit  最大的返回数量。
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
     protected static $getters = [
             'key' => 'getKey',
             'marker' => 'getMarker',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'resourceDeleted' => 'getResourceDeleted'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['resourceDeleted'] = isset($data['resourceDeleted']) ? $data['resourceDeleted'] : null;
     }
 
     /**
@@ -284,6 +295,30 @@ class ListTrackedResourceTagsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets resourceDeleted
+    *  是否查询已删除的资源。默认为false，不查询已删除的资源
+    *
+    * @return bool|null
+    */
+    public function getResourceDeleted()
+    {
+        return $this->container['resourceDeleted'];
+    }
+
+    /**
+    * Sets resourceDeleted
+    *
+    * @param bool|null $resourceDeleted 是否查询已删除的资源。默认为false，不查询已删除的资源
+    *
+    * @return $this
+    */
+    public function setResourceDeleted($resourceDeleted)
+    {
+        $this->container['resourceDeleted'] = $resourceDeleted;
         return $this;
     }
 

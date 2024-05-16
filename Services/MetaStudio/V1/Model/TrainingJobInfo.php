@@ -36,6 +36,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * voiceAuthorizationUrl  用户授权书连接。
     * createType  createType
     * tag  tag
+    * phone  手机号
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'int',
             'voiceAuthorizationUrl' => 'string',
             'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType',
-            'tag' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobTag'
+            'tag' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobTag',
+            'phone' => 'string'
     ];
 
     /**
@@ -76,6 +78,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * voiceAuthorizationUrl  用户授权书连接。
     * createType  createType
     * tag  tag
+    * phone  手机号
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         'lastupdateTime' => 'int64',
         'voiceAuthorizationUrl' => null,
         'createType' => null,
-        'tag' => null
+        'tag' => null,
+        'phone' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * voiceAuthorizationUrl  用户授权书连接。
     * createType  createType
     * tag  tag
+    * phone  手机号
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'lastupdate_time',
             'voiceAuthorizationUrl' => 'voice_authorization_url',
             'createType' => 'create_type',
-            'tag' => 'tag'
+            'tag' => 'tag',
+            'phone' => 'phone'
     ];
 
     /**
@@ -177,6 +183,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * voiceAuthorizationUrl  用户授权书连接。
     * createType  createType
     * tag  tag
+    * phone  手机号
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'setLastupdateTime',
             'voiceAuthorizationUrl' => 'setVoiceAuthorizationUrl',
             'createType' => 'setCreateType',
-            'tag' => 'setTag'
+            'tag' => 'setTag',
+            'phone' => 'setPhone'
     ];
 
     /**
@@ -217,6 +225,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * voiceAuthorizationUrl  用户授权书连接。
     * createType  createType
     * tag  tag
+    * phone  手机号
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'lastupdateTime' => 'getLastupdateTime',
             'voiceAuthorizationUrl' => 'getVoiceAuthorizationUrl',
             'createType' => 'getCreateType',
-            'tag' => 'getTag'
+            'tag' => 'getTag',
+            'phone' => 'getPhone'
     ];
 
     /**
@@ -313,6 +323,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         $this->container['voiceAuthorizationUrl'] = isset($data['voiceAuthorizationUrl']) ? $data['voiceAuthorizationUrl'] : null;
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
     }
 
     /**
@@ -332,8 +343,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'appUserId', the character length must be smaller than or equal to 256.";
             }
-            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['appUserId']) && (mb_strlen($this->container['appUserId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'appUserId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['voiceName']) && (mb_strlen($this->container['voiceName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'voiceName', the character length must be smaller than or equal to 256.";
@@ -394,6 +405,12 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['voiceAuthorizationUrl']) && (mb_strlen($this->container['voiceAuthorizationUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'voiceAuthorizationUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) > 16)) {
+                $invalidProperties[] = "invalid value for 'phone', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'phone', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -790,6 +807,30 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     public function setTag($tag)
     {
         $this->container['tag'] = $tag;
+        return $this;
+    }
+
+    /**
+    * Gets phone
+    *  手机号
+    *
+    * @return string|null
+    */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+    * Sets phone
+    *
+    * @param string|null $phone 手机号
+    *
+    * @return $this
+    */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
         return $this;
     }
 

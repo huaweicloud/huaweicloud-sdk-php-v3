@@ -21,11 +21,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，1：华为云托管证书，0：自有证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,0：自有证书。
-    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * encCertificateValue  国密证书加密证书内容，PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -34,11 +36,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'httpsStatus' => 'string',
+            'certificateType' => 'string',
+            'certificateSource' => 'int',
             'certificateName' => 'string',
             'certificateValue' => 'string',
             'expireTime' => 'int',
-            'certificateSource' => 'int',
-            'certificateType' => 'string',
+            'encCertificateValue' => 'string',
+            'certificates' => '\HuaweiCloud\SDK\Cdn\V2\Model\CertificatesGetBody[]',
             'http2Status' => 'string',
             'tlsVersion' => 'string',
             'ocspStaplingStatus' => 'string'
@@ -47,11 +51,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，1：华为云托管证书，0：自有证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,0：自有证书。
-    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * encCertificateValue  国密证书加密证书内容，PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -60,11 +66,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'httpsStatus' => null,
+        'certificateType' => null,
+        'certificateSource' => null,
         'certificateName' => null,
         'certificateValue' => null,
         'expireTime' => 'int64',
-        'certificateSource' => null,
-        'certificateType' => null,
+        'encCertificateValue' => null,
+        'certificates' => null,
         'http2Status' => null,
         'tlsVersion' => null,
         'ocspStaplingStatus' => null
@@ -94,11 +102,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，1：华为云托管证书，0：自有证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,0：自有证书。
-    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * encCertificateValue  国密证书加密证书内容，PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -107,11 +117,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'httpsStatus' => 'https_status',
+            'certificateType' => 'certificate_type',
+            'certificateSource' => 'certificate_source',
             'certificateName' => 'certificate_name',
             'certificateValue' => 'certificate_value',
             'expireTime' => 'expire_time',
-            'certificateSource' => 'certificate_source',
-            'certificateType' => 'certificate_type',
+            'encCertificateValue' => 'enc_certificate_value',
+            'certificates' => 'certificates',
             'http2Status' => 'http2_status',
             'tlsVersion' => 'tls_version',
             'ocspStaplingStatus' => 'ocsp_stapling_status'
@@ -120,11 +132,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，1：华为云托管证书，0：自有证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,0：自有证书。
-    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * encCertificateValue  国密证书加密证书内容，PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -133,11 +147,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'httpsStatus' => 'setHttpsStatus',
+            'certificateType' => 'setCertificateType',
+            'certificateSource' => 'setCertificateSource',
             'certificateName' => 'setCertificateName',
             'certificateValue' => 'setCertificateValue',
             'expireTime' => 'setExpireTime',
-            'certificateSource' => 'setCertificateSource',
-            'certificateType' => 'setCertificateType',
+            'encCertificateValue' => 'setEncCertificateValue',
+            'certificates' => 'setCertificates',
             'http2Status' => 'setHttp2Status',
             'tlsVersion' => 'setTlsVersion',
             'ocspStaplingStatus' => 'setOcspStaplingStatus'
@@ -146,11 +162,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
+    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * certificateSource  证书来源，1：华为云托管证书，0：自有证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
     * expireTime  证书过期时间。  > UTC时间。
-    * certificateSource  证书来源,0：自有证书。
-    * certificateType  证书类型。server：国际证书；server_sm：国密证书。
+    * encCertificateValue  国密证书加密证书内容，PEM编码格式。
+    * certificates  certificates
     * http2Status  是否使用HTTP2.0，on：是，off：否。
     * tlsVersion  传输层安全性协议。
     * ocspStaplingStatus  是否开启ocsp stapling,on：是，off：否。
@@ -159,11 +177,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'httpsStatus' => 'getHttpsStatus',
+            'certificateType' => 'getCertificateType',
+            'certificateSource' => 'getCertificateSource',
             'certificateName' => 'getCertificateName',
             'certificateValue' => 'getCertificateValue',
             'expireTime' => 'getExpireTime',
-            'certificateSource' => 'getCertificateSource',
-            'certificateType' => 'getCertificateType',
+            'encCertificateValue' => 'getEncCertificateValue',
+            'certificates' => 'getCertificates',
             'http2Status' => 'getHttp2Status',
             'tlsVersion' => 'getTlsVersion',
             'ocspStaplingStatus' => 'getOcspStaplingStatus'
@@ -228,11 +248,13 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['httpsStatus'] = isset($data['httpsStatus']) ? $data['httpsStatus'] : null;
+        $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
+        $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
         $this->container['certificateName'] = isset($data['certificateName']) ? $data['certificateName'] : null;
         $this->container['certificateValue'] = isset($data['certificateValue']) ? $data['certificateValue'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
-        $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
-        $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
+        $this->container['encCertificateValue'] = isset($data['encCertificateValue']) ? $data['encCertificateValue'] : null;
+        $this->container['certificates'] = isset($data['certificates']) ? $data['certificates'] : null;
         $this->container['http2Status'] = isset($data['http2Status']) ? $data['http2Status'] : null;
         $this->container['tlsVersion'] = isset($data['tlsVersion']) ? $data['tlsVersion'] : null;
         $this->container['ocspStaplingStatus'] = isset($data['ocspStaplingStatus']) ? $data['ocspStaplingStatus'] : null;
@@ -281,6 +303,54 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     public function setHttpsStatus($httpsStatus)
     {
         $this->container['httpsStatus'] = $httpsStatus;
+        return $this;
+    }
+
+    /**
+    * Gets certificateType
+    *  证书类型。server：国际证书；server_sm：国密证书。
+    *
+    * @return string|null
+    */
+    public function getCertificateType()
+    {
+        return $this->container['certificateType'];
+    }
+
+    /**
+    * Sets certificateType
+    *
+    * @param string|null $certificateType 证书类型。server：国际证书；server_sm：国密证书。
+    *
+    * @return $this
+    */
+    public function setCertificateType($certificateType)
+    {
+        $this->container['certificateType'] = $certificateType;
+        return $this;
+    }
+
+    /**
+    * Gets certificateSource
+    *  证书来源，1：华为云托管证书，0：自有证书。
+    *
+    * @return int|null
+    */
+    public function getCertificateSource()
+    {
+        return $this->container['certificateSource'];
+    }
+
+    /**
+    * Sets certificateSource
+    *
+    * @param int|null $certificateSource 证书来源，1：华为云托管证书，0：自有证书。
+    *
+    * @return $this
+    */
+    public function setCertificateSource($certificateSource)
+    {
+        $this->container['certificateSource'] = $certificateSource;
         return $this;
     }
 
@@ -357,50 +427,50 @@ class HttpGetBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets certificateSource
-    *  证书来源,0：自有证书。
+    * Gets encCertificateValue
+    *  国密证书加密证书内容，PEM编码格式。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getCertificateSource()
+    public function getEncCertificateValue()
     {
-        return $this->container['certificateSource'];
+        return $this->container['encCertificateValue'];
     }
 
     /**
-    * Sets certificateSource
+    * Sets encCertificateValue
     *
-    * @param int|null $certificateSource 证书来源,0：自有证书。
+    * @param string|null $encCertificateValue 国密证书加密证书内容，PEM编码格式。
     *
     * @return $this
     */
-    public function setCertificateSource($certificateSource)
+    public function setEncCertificateValue($encCertificateValue)
     {
-        $this->container['certificateSource'] = $certificateSource;
+        $this->container['encCertificateValue'] = $encCertificateValue;
         return $this;
     }
 
     /**
-    * Gets certificateType
-    *  证书类型。server：国际证书；server_sm：国密证书。
+    * Gets certificates
+    *  certificates
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\CertificatesGetBody[]|null
     */
-    public function getCertificateType()
+    public function getCertificates()
     {
-        return $this->container['certificateType'];
+        return $this->container['certificates'];
     }
 
     /**
-    * Sets certificateType
+    * Sets certificates
     *
-    * @param string|null $certificateType 证书类型。server：国际证书；server_sm：国密证书。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\CertificatesGetBody[]|null $certificates certificates
     *
     * @return $this
     */
-    public function setCertificateType($certificateType)
+    public function setCertificates($certificates)
     {
-        $this->container['certificateType'] = $certificateType;
+        $this->container['certificates'] = $certificates;
         return $this;
     }
 

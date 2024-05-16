@@ -21,7 +21,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  扩容图任务ID。请求失败时字段为空。
+    * jobId  变更图规格任务ID。请求失败时字段为空。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  扩容图任务ID。请求失败时字段为空。
+    * jobId  变更图规格任务ID。请求失败时字段为空。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  扩容图任务ID。请求失败时字段为空。
+    * jobId  变更图规格任务ID。请求失败时字段为空。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  扩容图任务ID。请求失败时字段为空。
+    * jobId  变更图规格任务ID。请求失败时字段为空。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  扩容图任务ID。请求失败时字段为空。
+    * jobId  变更图规格任务ID。请求失败时字段为空。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  扩容图任务ID。请求失败时字段为空。
+    *  变更图规格任务ID。请求失败时字段为空。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class ResizeGraph2Response implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 扩容图任务ID。请求失败时字段为空。
+    * @param string|null $jobId 变更图规格任务ID。请求失败时字段为空。
     *
     * @return $this
     */

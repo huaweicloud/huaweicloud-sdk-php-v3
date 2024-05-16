@@ -26,6 +26,7 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * voiceName  音色名称。该名称会作为资产库中音色模型资产名称。
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * createType  createType
+    * phone  手机号
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'sex' => 'string',
             'voiceName' => 'string',
             'language' => 'string',
-            'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType'
+            'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType',
+            'phone' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * voiceName  音色名称。该名称会作为资产库中音色模型资产名称。
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * createType  createType
+    * phone  手机号
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
         'sex' => null,
         'voiceName' => null,
         'language' => null,
-        'createType' => null
+        'createType' => null,
+        'phone' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * voiceName  音色名称。该名称会作为资产库中音色模型资产名称。
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * createType  createType
+    * phone  手机号
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'sex' => 'sex',
             'voiceName' => 'voice_name',
             'language' => 'language',
-            'createType' => 'create_type'
+            'createType' => 'create_type',
+            'phone' => 'phone'
     ];
 
     /**
@@ -107,6 +113,7 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * voiceName  音色名称。该名称会作为资产库中音色模型资产名称。
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * createType  createType
+    * phone  手机号
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'sex' => 'setSex',
             'voiceName' => 'setVoiceName',
             'language' => 'setLanguage',
-            'createType' => 'setCreateType'
+            'createType' => 'setCreateType',
+            'phone' => 'setPhone'
     ];
 
     /**
@@ -127,6 +135,7 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     * voiceName  音色名称。该名称会作为资产库中音色模型资产名称。
     * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
     * createType  createType
+    * phone  手机号
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             'sex' => 'getSex',
             'voiceName' => 'getVoiceName',
             'language' => 'getLanguage',
-            'createType' => 'getCreateType'
+            'createType' => 'getCreateType',
+            'phone' => 'getPhone'
     ];
 
     /**
@@ -233,6 +243,7 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['voiceName'] = isset($data['voiceName']) ? $data['voiceName'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
+        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
     }
 
     /**
@@ -279,6 +290,12 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) < 1)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) > 16)) {
+                $invalidProperties[] = "invalid value for 'phone', the character length must be smaller than or equal to 16.";
+            }
+            if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'phone', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -435,6 +452,30 @@ class CreateTrainingJobReq implements ModelInterface, ArrayAccess
     public function setCreateType($createType)
     {
         $this->container['createType'] = $createType;
+        return $this;
+    }
+
+    /**
+    * Gets phone
+    *  手机号
+    *
+    * @return string|null
+    */
+    public function getPhone()
+    {
+        return $this->container['phone'];
+    }
+
+    /**
+    * Sets phone
+    *
+    * @param string|null $phone 手机号
+    *
+    * @return $this
+    */
+    public function setPhone($phone)
+    {
+        $this->container['phone'] = $phone;
         return $this;
     }
 

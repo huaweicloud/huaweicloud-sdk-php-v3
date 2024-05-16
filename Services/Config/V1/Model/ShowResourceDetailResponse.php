@@ -34,6 +34,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
     *
@@ -53,6 +54,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
             'created' => 'string',
             'updated' => 'string',
             'provisioningState' => 'string',
+            'state' => 'string',
             'tags' => 'map[string,string]',
             'properties' => 'map[string,object]'
     ];
@@ -72,6 +74,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
     *
@@ -91,6 +94,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
         'created' => null,
         'updated' => null,
         'provisioningState' => null,
+        'state' => null,
         'tags' => null,
         'properties' => null
     ];
@@ -131,6 +135,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
     *
@@ -150,6 +155,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
             'created' => 'created',
             'updated' => 'updated',
             'provisioningState' => 'provisioning_state',
+            'state' => 'state',
             'tags' => 'tags',
             'properties' => 'properties'
     ];
@@ -169,6 +175,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
     *
@@ -188,6 +195,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
             'created' => 'setCreated',
             'updated' => 'setUpdated',
             'provisioningState' => 'setProvisioningState',
+            'state' => 'setState',
             'tags' => 'setTags',
             'properties' => 'setProperties'
     ];
@@ -207,6 +215,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
     * created  资源创建时间
     * updated  资源更新时间
     * provisioningState  资源操作状态
+    * state  资源状态，保有中（Normal）/已删除(Deleted)
     * tags  资源Tag
     * properties  资源详细属性
     *
@@ -226,6 +235,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
             'created' => 'getCreated',
             'updated' => 'getUpdated',
             'provisioningState' => 'getProvisioningState',
+            'state' => 'getState',
             'tags' => 'getTags',
             'properties' => 'getProperties'
     ];
@@ -301,6 +311,7 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['provisioningState'] = isset($data['provisioningState']) ? $data['provisioningState'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['properties'] = isset($data['properties']) ? $data['properties'] : null;
     }
@@ -636,6 +647,30 @@ class ShowResourceDetailResponse implements ModelInterface, ArrayAccess
     public function setProvisioningState($provisioningState)
     {
         $this->container['provisioningState'] = $provisioningState;
+        return $this;
+    }
+
+    /**
+    * Gets state
+    *  资源状态，保有中（Normal）/已删除(Deleted)
+    *
+    * @return string|null
+    */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+    * Sets state
+    *
+    * @param string|null $state 资源状态，保有中（Normal）/已删除(Deleted)
+    *
+    * @return $this
+    */
+    public function setState($state)
+    {
+        $this->container['state'] = $state;
         return $this;
     }
 

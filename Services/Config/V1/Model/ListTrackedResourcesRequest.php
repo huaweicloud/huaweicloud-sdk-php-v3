@@ -28,6 +28,7 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * id  资源ID
     * name  资源名称
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'marker' => 'string',
             'id' => 'string',
             'name' => 'string',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'resourceDeleted' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * id  资源ID
     * name  资源名称
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
         'marker' => null,
         'id' => null,
         'name' => null,
-        'tags' => null
+        'tags' => null,
+        'resourceDeleted' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * id  资源ID
     * name  资源名称
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'marker' => 'marker',
             'id' => 'id',
             'name' => 'name',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'resourceDeleted' => 'resource_deleted'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * id  资源ID
     * name  资源名称
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'marker' => 'setMarker',
             'id' => 'setId',
             'name' => 'setName',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'resourceDeleted' => 'setResourceDeleted'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * id  资源ID
     * name  资源名称
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'marker' => 'getMarker',
             'id' => 'getId',
             'name' => 'getName',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'resourceDeleted' => 'getResourceDeleted'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['resourceDeleted'] = isset($data['resourceDeleted']) ? $data['resourceDeleted'] : null;
     }
 
     /**
@@ -483,6 +494,30 @@ class ListTrackedResourcesRequest implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets resourceDeleted
+    *  是否查询已删除的资源。默认为false，不查询已删除的资源
+    *
+    * @return bool|null
+    */
+    public function getResourceDeleted()
+    {
+        return $this->container['resourceDeleted'];
+    }
+
+    /**
+    * Sets resourceDeleted
+    *
+    * @param bool|null $resourceDeleted 是否查询已删除的资源。默认为false，不查询已删除的资源
+    *
+    * @return $this
+    */
+    public function setResourceDeleted($resourceDeleted)
+    {
+        $this->container['resourceDeleted'] = $resourceDeleted;
         return $this;
     }
 

@@ -4529,7 +4529,7 @@ class ConfigClient extends Client
     /**
      * 列举资源关系
      *
-     * 指定资源ID，查询该资源与其他资源的关联关系，可以指定关系方向为\&quot;in\&quot; 或者\&quot;out\&quot;
+     * 指定资源ID，查询该资源与其他资源的关联关系，可以指定关系方向为\&quot;in\&quot; 或者\&quot;out\&quot;。资源关系依赖开启资源记录器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4600,7 +4600,7 @@ class ConfigClient extends Client
     /**
      * 列举资源关系详情
      *
-     * 指定资源ID，查询该资源与其他资源的关联关系，可以指定关系方向为“in”或者“out”，需要当帐号有rms:resources:getRelation权限。
+     * 指定资源ID，查询该资源与其他资源的关联关系，可以指定关系方向为“in”或者“out”，需要当帐号有rms:resources:getRelation权限。资源关系依赖开启资源记录器。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4794,6 +4794,9 @@ class ConfigClient extends Client
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
         }
+        if ($localVarParams['resourceDeleted'] !== null) {
+            $queryParams['resource_deleted'] = $localVarParams['resourceDeleted'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -4953,6 +4956,9 @@ class ConfigClient extends Client
         }
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['resourceDeleted'] !== null) {
+            $queryParams['resource_deleted'] = $localVarParams['resourceDeleted'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -5324,6 +5330,9 @@ class ConfigClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['resourceDeleted'] !== null) {
+            $queryParams['resource_deleted'] = $localVarParams['resourceDeleted'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -5406,6 +5415,9 @@ class ConfigClient extends Client
         }
         if ($localVarParams['tags'] !== null) {
             $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['resourceDeleted'] !== null) {
+            $queryParams['resource_deleted'] = $localVarParams['resourceDeleted'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

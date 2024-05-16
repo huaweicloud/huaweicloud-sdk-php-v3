@@ -26,6 +26,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isCount  日志条数统计。默认为false(不统计)，true为统计日志条数。
     * keywords  支持关键词精确搜索。关键词指相邻两个分词符之间的单词,例：error
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
+    * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
@@ -41,6 +42,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'isCount' => 'bool',
             'keywords' => 'string',
             'lineNum' => 'string',
+            'time' => 'string',
             'isDesc' => 'bool',
             'searchType' => 'string',
             'limit' => 'int',
@@ -56,6 +58,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isCount  日志条数统计。默认为false(不统计)，true为统计日志条数。
     * keywords  支持关键词精确搜索。关键词指相邻两个分词符之间的单词,例：error
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
+    * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
@@ -71,6 +74,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         'isCount' => null,
         'keywords' => null,
         'lineNum' => null,
+        'time' => null,
         'isDesc' => null,
         'searchType' => null,
         'limit' => 'int32',
@@ -107,6 +111,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isCount  日志条数统计。默认为false(不统计)，true为统计日志条数。
     * keywords  支持关键词精确搜索。关键词指相邻两个分词符之间的单词,例：error
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
+    * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
@@ -122,6 +127,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'isCount' => 'is_count',
             'keywords' => 'keywords',
             'lineNum' => 'line_num',
+            'time' => '__time__',
             'isDesc' => 'is_desc',
             'searchType' => 'search_type',
             'limit' => 'limit',
@@ -137,6 +143,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isCount  日志条数统计。默认为false(不统计)，true为统计日志条数。
     * keywords  支持关键词精确搜索。关键词指相邻两个分词符之间的单词,例：error
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
+    * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
@@ -152,6 +159,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'isCount' => 'setIsCount',
             'keywords' => 'setKeywords',
             'lineNum' => 'setLineNum',
+            'time' => 'setTime',
             'isDesc' => 'setIsDesc',
             'searchType' => 'setSearchType',
             'limit' => 'setLimit',
@@ -167,6 +175,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * isCount  日志条数统计。默认为false(不统计)，true为统计日志条数。
     * keywords  支持关键词精确搜索。关键词指相邻两个分词符之间的单词,例：error
     * lineNum  日志单行序列号，第一次查询时不需要此参数，后续分页查询时需要使用，可从上次查询的返回信息中获取。line_num应在start_time 和 end_time 之间。
+    * time  若已开启自定义时间功能，需要使用该字段进行分页查询。
     * isDesc  顺序或者倒序查询, 默认为false(顺序查询)
     * searchType  首次查询为 “init”, 分页查询时为 “forwards”或者“backwards”, 默认为首次查询“init”, 与 is_desc 参数配合进行分页查询。
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
@@ -182,6 +191,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'isCount' => 'getIsCount',
             'keywords' => 'getKeywords',
             'lineNum' => 'getLineNum',
+            'time' => 'getTime',
             'isDesc' => 'getIsDesc',
             'searchType' => 'getSearchType',
             'limit' => 'getLimit',
@@ -268,6 +278,7 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         $this->container['isCount'] = isset($data['isCount']) ? $data['isCount'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
         $this->container['lineNum'] = isset($data['lineNum']) ? $data['lineNum'] : null;
+        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['isDesc'] = isset($data['isDesc']) ? $data['isDesc'] : null;
         $this->container['searchType'] = isset($data['searchType']) ? $data['searchType'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
@@ -476,6 +487,30 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     public function setLineNum($lineNum)
     {
         $this->container['lineNum'] = $lineNum;
+        return $this;
+    }
+
+    /**
+    * Gets time
+    *  若已开启自定义时间功能，需要使用该字段进行分页查询。
+    *
+    * @return string|null
+    */
+    public function getTime()
+    {
+        return $this->container['time'];
+    }
+
+    /**
+    * Sets time
+    *
+    * @param string|null $time 若已开启自定义时间功能，需要使用该字段进行分页查询。
+    *
+    * @return $this
+    */
+    public function setTime($time)
+    {
+        $this->container['time'] = $time;
         return $this;
     }
 

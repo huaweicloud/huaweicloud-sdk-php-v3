@@ -27,6 +27,7 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'string[]',
             'epId' => 'string[]',
             'projectId' => 'string[]',
-            'tags' => 'string[]'
+            'tags' => 'string[]',
+            'resourceDeleted' => 'bool'
     ];
 
     /**
@@ -49,6 +51,7 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
         'regionId' => null,
         'epId' => null,
         'projectId' => null,
-        'tags' => null
+        'tags' => null,
+        'resourceDeleted' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'epId' => 'ep_id',
             'projectId' => 'project_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'resourceDeleted' => 'resource_deleted'
     ];
 
     /**
@@ -114,6 +120,7 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'epId' => 'setEpId',
             'projectId' => 'setProjectId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'resourceDeleted' => 'setResourceDeleted'
     ];
 
     /**
@@ -136,6 +144,7 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
     * epId  企业项目ID列表
     * projectId  项目ID
     * tags  标签列表
+    * resourceDeleted  是否查询已删除的资源。默认为false，不查询已删除的资源
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'epId' => 'getEpId',
             'projectId' => 'getProjectId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'resourceDeleted' => 'getResourceDeleted'
     ];
 
     /**
@@ -214,6 +224,7 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['epId'] = isset($data['epId']) ? $data['epId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['resourceDeleted'] = isset($data['resourceDeleted']) ? $data['resourceDeleted'] : null;
     }
 
     /**
@@ -415,6 +426,30 @@ class CountTrackedResourcesRequest implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets resourceDeleted
+    *  是否查询已删除的资源。默认为false，不查询已删除的资源
+    *
+    * @return bool|null
+    */
+    public function getResourceDeleted()
+    {
+        return $this->container['resourceDeleted'];
+    }
+
+    /**
+    * Sets resourceDeleted
+    *
+    * @param bool|null $resourceDeleted 是否查询已删除的资源。默认为false，不查询已删除的资源
+    *
+    * @return $this
+    */
+    public function setResourceDeleted($resourceDeleted)
+    {
+        $this->container['resourceDeleted'] = $resourceDeleted;
         return $this;
     }
 

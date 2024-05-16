@@ -277,9 +277,6 @@ class LayerConfig implements ModelInterface, ArrayAccess
             if (!is_null($this->container['groupId']) && (mb_strlen($this->container['groupId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'groupId', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['position'] === null) {
-            $invalidProperties[] = "'position' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -370,7 +367,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * Gets position
     *  position
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig|null
     */
     public function getPosition()
     {
@@ -380,7 +377,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets position
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig $position position
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LayerPositionConfig|null $position position
     *
     * @return $this
     */

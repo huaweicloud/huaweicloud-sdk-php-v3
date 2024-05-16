@@ -23,24 +23,28 @@ class RecognizeCustomTemplateResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * result  调用成功时表示调用结果。 调用失败时无此字段。
     * templateId  调用成功时返回调用模板id。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'result' => 'object',
-            'templateId' => 'string'
+            'templateId' => 'string',
+            'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  调用成功时表示调用结果。 调用失败时无此字段。
     * templateId  调用成功时返回调用模板id。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'result' => null,
-        'templateId' => null
+        'templateId' => null,
+        'xRequestId' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class RecognizeCustomTemplateResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * result  调用成功时表示调用结果。 调用失败时无此字段。
     * templateId  调用成功时返回调用模板id。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'result' => 'result',
-            'templateId' => 'template_id'
+            'templateId' => 'template_id',
+            'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  调用成功时表示调用结果。 调用失败时无此字段。
     * templateId  调用成功时返回调用模板id。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
             'result' => 'setResult',
-            'templateId' => 'setTemplateId'
+            'templateId' => 'setTemplateId',
+            'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  调用成功时表示调用结果。 调用失败时无此字段。
     * templateId  调用成功时返回调用模板id。 调用失败时无此字段。
+    * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
             'result' => 'getResult',
-            'templateId' => 'getTemplateId'
+            'templateId' => 'getTemplateId',
+            'xRequestId' => 'getXRequestId'
     ];
 
     /**
@@ -160,6 +170,7 @@ class RecognizeCustomTemplateResponse implements ModelInterface, ArrayAccess
     {
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class RecognizeCustomTemplateResponse implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets xRequestId
+    *  xRequestId
+    *
+    * @return string|null
+    */
+    public function getXRequestId()
+    {
+        return $this->container['xRequestId'];
+    }
+
+    /**
+    * Sets xRequestId
+    *
+    * @param string|null $xRequestId xRequestId
+    *
+    * @return $this
+    */
+    public function setXRequestId($xRequestId)
+    {
+        $this->container['xRequestId'] = $xRequestId;
         return $this;
     }
 

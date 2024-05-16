@@ -51,7 +51,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
             'name' => 'string',
             'cmd' => 'string',
             'age' => 'int',
-            'idle' => 'string',
+            'idle' => 'int',
             'db' => 'string',
             'flags' => 'string',
             'sub' => 'int',
@@ -101,7 +101,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
         'name' => null,
         'cmd' => null,
         'age' => 'int32',
-        'idle' => null,
+        'idle' => 'int32',
         'db' => null,
         'flags' => null,
         'sub' => 'int32',
@@ -563,7 +563,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
     * Gets idle
     *  空闲时长（单位：秒）
     *
-    * @return string|null
+    * @return int|null
     */
     public function getIdle()
     {
@@ -573,7 +573,7 @@ class ClientInfo implements ModelInterface, ArrayAccess
     /**
     * Sets idle
     *
-    * @param string|null $idle 空闲时长（单位：秒）
+    * @param int|null $idle 空闲时长（单位：秒）
     *
     * @return $this
     */

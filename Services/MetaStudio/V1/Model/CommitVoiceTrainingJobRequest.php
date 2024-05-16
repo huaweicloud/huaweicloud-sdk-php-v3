@@ -25,6 +25,7 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * jobId  任务id。
+    * body  body
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
-            'jobId' => 'string'
+            'jobId' => 'string',
+            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CommitJobReq'
     ];
 
     /**
@@ -43,6 +45,7 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * jobId  任务id。
+    * body  body
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         'xSdkDate' => null,
         'xProjectId' => null,
         'xAppUserId' => null,
-        'jobId' => null
+        'jobId' => null,
+        'body' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * jobId  任务id。
+    * body  body
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
-            'jobId' => 'job_id'
+            'jobId' => 'job_id',
+            'body' => 'body'
     ];
 
     /**
@@ -100,6 +106,7 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * jobId  任务id。
+    * body  body
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
-            'jobId' => 'setJobId'
+            'jobId' => 'setJobId',
+            'body' => 'setBody'
     ];
 
     /**
@@ -118,6 +126,7 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * jobId  任务id。
+    * body  body
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
-            'jobId' => 'getJobId'
+            'jobId' => 'getJobId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -192,6 +202,7 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -366,6 +377,30 @@ class CommitVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setJobId($jobId)
     {
         $this->container['jobId'] = $jobId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CommitJobReq|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CommitJobReq|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

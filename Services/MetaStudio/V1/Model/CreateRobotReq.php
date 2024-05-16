@@ -21,13 +21,14 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
     * thirdPartyModelConfig  thirdPartyModelConfig
+    * mobvoiConfig  mobvoiConfig
     *
     * @var string[]
     */
@@ -39,19 +40,21 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'huaweiEiCbs' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HuaweiEiCbs',
             'iflytekAiuiConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekAiuiConfig',
             'iflytekSpark' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekSpark',
-            'thirdPartyModelConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ThirdPartyModelConfig'
+            'thirdPartyModelConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ThirdPartyModelConfig',
+            'mobvoiConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\MobvoiConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
     * thirdPartyModelConfig  thirdPartyModelConfig
+    * mobvoiConfig  mobvoiConfig
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
         'huaweiEiCbs' => null,
         'iflytekAiuiConfig' => null,
         'iflytekSpark' => null,
-        'thirdPartyModelConfig' => null
+        'thirdPartyModelConfig' => null,
+        'mobvoiConfig' => null
     ];
 
     /**
@@ -90,13 +94,14 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
     * thirdPartyModelConfig  thirdPartyModelConfig
+    * mobvoiConfig  mobvoiConfig
     *
     * @var string[]
     */
@@ -108,19 +113,21 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'huaweiEiCbs' => 'huawei_ei_cbs',
             'iflytekAiuiConfig' => 'iflytek_aiui_config',
             'iflytekSpark' => 'iflytek_spark',
-            'thirdPartyModelConfig' => 'third_party_model_config'
+            'thirdPartyModelConfig' => 'third_party_model_config',
+            'mobvoiConfig' => 'mobvoi_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
     * thirdPartyModelConfig  thirdPartyModelConfig
+    * mobvoiConfig  mobvoiConfig
     *
     * @var string[]
     */
@@ -132,19 +139,21 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'huaweiEiCbs' => 'setHuaweiEiCbs',
             'iflytekAiuiConfig' => 'setIflytekAiuiConfig',
             'iflytekSpark' => 'setIflytekSpark',
-            'thirdPartyModelConfig' => 'setThirdPartyModelConfig'
+            'thirdPartyModelConfig' => 'setThirdPartyModelConfig',
+            'mobvoiConfig' => 'setMobvoiConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  应用名称。
-    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
     * thirdPartyModelConfig  thirdPartyModelConfig
+    * mobvoiConfig  mobvoiConfig
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'huaweiEiCbs' => 'getHuaweiEiCbs',
             'iflytekAiuiConfig' => 'getIflytekAiuiConfig',
             'iflytekSpark' => 'getIflytekSpark',
-            'thirdPartyModelConfig' => 'getThirdPartyModelConfig'
+            'thirdPartyModelConfig' => 'getThirdPartyModelConfig',
+            'mobvoiConfig' => 'getMobvoiConfig'
     ];
 
     /**
@@ -225,6 +235,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
         $this->container['iflytekAiuiConfig'] = isset($data['iflytekAiuiConfig']) ? $data['iflytekAiuiConfig'] : null;
         $this->container['iflytekSpark'] = isset($data['iflytekSpark']) ? $data['iflytekSpark'] : null;
         $this->container['thirdPartyModelConfig'] = isset($data['thirdPartyModelConfig']) ? $data['thirdPartyModelConfig'] : null;
+        $this->container['mobvoiConfig'] = isset($data['mobvoiConfig']) ? $data['mobvoiConfig'] : null;
     }
 
     /**
@@ -299,7 +310,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets appType
-    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     *
     * @return int
     */
@@ -311,7 +322,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param int $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型
+    * @param int $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     *
     * @return $this
     */
@@ -462,6 +473,30 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     public function setThirdPartyModelConfig($thirdPartyModelConfig)
     {
         $this->container['thirdPartyModelConfig'] = $thirdPartyModelConfig;
+        return $this;
+    }
+
+    /**
+    * Gets mobvoiConfig
+    *  mobvoiConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\MobvoiConfig|null
+    */
+    public function getMobvoiConfig()
+    {
+        return $this->container['mobvoiConfig'];
+    }
+
+    /**
+    * Sets mobvoiConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\MobvoiConfig|null $mobvoiConfig mobvoiConfig
+    *
+    * @return $this
+    */
+    public function setMobvoiConfig($mobvoiConfig)
+    {
+        $this->container['mobvoiConfig'] = $mobvoiConfig;
         return $this;
     }
 

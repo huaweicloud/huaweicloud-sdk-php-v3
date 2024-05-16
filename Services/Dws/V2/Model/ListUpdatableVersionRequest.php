@@ -23,13 +23,15 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     * clusterId  集群ID
     * offset  偏移量
     * limit  条目数
+    * type  升级类型 cluster:集群升级 hotpatch:热补丁升级
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'type' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     * clusterId  集群ID
     * offset  偏移量
     * limit  条目数
+    * type  升级类型 cluster:集群升级 hotpatch:热补丁升级
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'type' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     * clusterId  集群ID
     * offset  偏移量
     * limit  条目数
+    * type  升级类型 cluster:集群升级 hotpatch:热补丁升级
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'type' => 'type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     * clusterId  集群ID
     * offset  偏移量
     * limit  条目数
+    * type  升级类型 cluster:集群升级 hotpatch:热补丁升级
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'type' => 'setType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     * clusterId  集群ID
     * offset  偏移量
     * limit  条目数
+    * type  升级类型 cluster:集群升级 hotpatch:热补丁升级
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'type' => 'getType'
     ];
 
     /**
@@ -149,7 +159,22 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_CLUSTER = 'cluster';
+    const TYPE_HOTPATCH = 'hotpatch';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_CLUSTER,
+            self::TYPE_HOTPATCH,
+        ];
+    }
 
 
     /**
@@ -170,6 +195,7 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -183,6 +209,14 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
         if ($this->container['clusterId'] === null) {
             $invalidProperties[] = "'clusterId' can't be null";
         }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -266,6 +300,30 @@ class ListUpdatableVersionRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  升级类型 cluster:集群升级 hotpatch:热补丁升级
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 升级类型 cluster:集群升级 hotpatch:热补丁升级
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 
