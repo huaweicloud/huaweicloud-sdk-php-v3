@@ -34,6 +34,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    * jobId  任务ID。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createSince' => 'string',
             'scriptId' => 'string',
             'assetName' => 'string',
-            'jobType' => 'string'
+            'jobType' => 'string',
+            'jobId' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    * jobId  任务ID。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         'createSince' => null,
         'scriptId' => null,
         'assetName' => null,
-        'jobType' => null
+        'jobType' => null,
+        'jobId' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    * jobId  任务ID。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createSince' => 'create_since',
             'scriptId' => 'script_id',
             'assetName' => 'asset_name',
-            'jobType' => 'job_type'
+            'jobType' => 'job_type',
+            'jobId' => 'job_id'
     ];
 
     /**
@@ -163,6 +169,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    * jobId  任务ID。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createSince' => 'setCreateSince',
             'scriptId' => 'setScriptId',
             'assetName' => 'setAssetName',
-            'jobType' => 'setJobType'
+            'jobType' => 'setJobType',
+            'jobId' => 'setJobId'
     ];
 
     /**
@@ -199,6 +207,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
+    * jobId  任务ID。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'createSince' => 'getCreateSince',
             'scriptId' => 'getScriptId',
             'assetName' => 'getAssetName',
-            'jobType' => 'getJobType'
+            'jobType' => 'getJobType',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -291,6 +301,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -384,6 +395,12 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'jobId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -732,6 +749,30 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     public function setJobType($jobType)
     {
         $this->container['jobType'] = $jobType;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  任务ID。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 任务ID。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

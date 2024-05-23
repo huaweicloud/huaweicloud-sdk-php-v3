@@ -43,7 +43,7 @@ class LayerPositionConfig implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'dx' => 'int32',
         'dy' => 'int32',
-        'layerIndex' => null
+        'layerIndex' => 'int32'
     ];
 
     /**

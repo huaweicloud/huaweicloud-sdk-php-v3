@@ -24,6 +24,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -37,6 +38,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'appType' => 'int',
             'roomId' => 'string',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
+            'tailSilenceTime' => 'int',
             'huaweiEiCbs' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HuaweiEiCbs',
             'iflytekAiuiConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekAiuiConfig',
             'iflytekSpark' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekSpark',
@@ -50,6 +52,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -63,6 +66,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
         'appType' => null,
         'roomId' => null,
         'language' => null,
+        'tailSilenceTime' => null,
         'huaweiEiCbs' => null,
         'iflytekAiuiConfig' => null,
         'iflytekSpark' => null,
@@ -97,6 +101,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -110,6 +115,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'appType' => 'app_type',
             'roomId' => 'room_id',
             'language' => 'language',
+            'tailSilenceTime' => 'tail_silence_time',
             'huaweiEiCbs' => 'huawei_ei_cbs',
             'iflytekAiuiConfig' => 'iflytek_aiui_config',
             'iflytekSpark' => 'iflytek_spark',
@@ -123,6 +129,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -136,6 +143,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'appType' => 'setAppType',
             'roomId' => 'setRoomId',
             'language' => 'setLanguage',
+            'tailSilenceTime' => 'setTailSilenceTime',
             'huaweiEiCbs' => 'setHuaweiEiCbs',
             'iflytekAiuiConfig' => 'setIflytekAiuiConfig',
             'iflytekSpark' => 'setIflytekSpark',
@@ -149,6 +157,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
     * language  language
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -162,6 +171,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             'appType' => 'getAppType',
             'roomId' => 'getRoomId',
             'language' => 'getLanguage',
+            'tailSilenceTime' => 'getTailSilenceTime',
             'huaweiEiCbs' => 'getHuaweiEiCbs',
             'iflytekAiuiConfig' => 'getIflytekAiuiConfig',
             'iflytekSpark' => 'getIflytekSpark',
@@ -231,6 +241,7 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['tailSilenceTime'] = isset($data['tailSilenceTime']) ? $data['tailSilenceTime'] : null;
         $this->container['huaweiEiCbs'] = isset($data['huaweiEiCbs']) ? $data['huaweiEiCbs'] : null;
         $this->container['iflytekAiuiConfig'] = isset($data['iflytekAiuiConfig']) ? $data['iflytekAiuiConfig'] : null;
         $this->container['iflytekSpark'] = isset($data['iflytekSpark']) ? $data['iflytekSpark'] : null;
@@ -263,6 +274,12 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['tailSilenceTime']) && ($this->container['tailSilenceTime'] > 3000)) {
+                $invalidProperties[] = "invalid value for 'tailSilenceTime', must be smaller than or equal to 3000.";
+            }
+            if (!is_null($this->container['tailSilenceTime']) && ($this->container['tailSilenceTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'tailSilenceTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -371,6 +388,30 @@ class UpdateRobotReq implements ModelInterface, ArrayAccess
     public function setLanguage($language)
     {
         $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets tailSilenceTime
+    *  语音识别后端点静音时长默认500ms
+    *
+    * @return int|null
+    */
+    public function getTailSilenceTime()
+    {
+        return $this->container['tailSilenceTime'];
+    }
+
+    /**
+    * Sets tailSilenceTime
+    *
+    * @param int|null $tailSilenceTime 语音识别后端点静音时长默认500ms
+    *
+    * @return $this
+    */
+    public function setTailSilenceTime($tailSilenceTime)
+    {
+        $this->container['tailSilenceTime'] = $tailSilenceTime;
         return $this;
     }
 

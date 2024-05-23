@@ -52,6 +52,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息
+    * tags  添加到伸缩组的标签。
     *
     * @var string[]
     */
@@ -87,7 +88,8 @@ class ScalingGroups implements ModelInterface, ArrayAccess
             'activityType' => 'string',
             'multiAzPriorityPolicy' => 'string',
             'iamAgencyName' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'tags' => '\HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]'
     ];
 
     /**
@@ -124,6 +126,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息
+    * tags  添加到伸缩组的标签。
     *
     * @var string[]
     */
@@ -159,7 +162,8 @@ class ScalingGroups implements ModelInterface, ArrayAccess
         'activityType' => null,
         'multiAzPriorityPolicy' => null,
         'iamAgencyName' => null,
-        'description' => null
+        'description' => null,
+        'tags' => null
     ];
 
     /**
@@ -217,6 +221,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息
+    * tags  添加到伸缩组的标签。
     *
     * @var string[]
     */
@@ -252,7 +257,8 @@ class ScalingGroups implements ModelInterface, ArrayAccess
             'activityType' => 'activity_type',
             'multiAzPriorityPolicy' => 'multi_az_priority_policy',
             'iamAgencyName' => 'iam_agency_name',
-            'description' => 'description'
+            'description' => 'description',
+            'tags' => 'tags'
     ];
 
     /**
@@ -289,6 +295,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息
+    * tags  添加到伸缩组的标签。
     *
     * @var string[]
     */
@@ -324,7 +331,8 @@ class ScalingGroups implements ModelInterface, ArrayAccess
             'activityType' => 'setActivityType',
             'multiAzPriorityPolicy' => 'setMultiAzPriorityPolicy',
             'iamAgencyName' => 'setIamAgencyName',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -361,6 +369,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息
+    * tags  添加到伸缩组的标签。
     *
     * @var string[]
     */
@@ -396,7 +405,8 @@ class ScalingGroups implements ModelInterface, ArrayAccess
             'activityType' => 'getActivityType',
             'multiAzPriorityPolicy' => 'getMultiAzPriorityPolicy',
             'iamAgencyName' => 'getIamAgencyName',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -544,6 +554,7 @@ class ScalingGroups implements ModelInterface, ArrayAccess
         $this->container['multiAzPriorityPolicy'] = isset($data['multiAzPriorityPolicy']) ? $data['multiAzPriorityPolicy'] : null;
         $this->container['iamAgencyName'] = isset($data['iamAgencyName']) ? $data['iamAgencyName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -1387,6 +1398,30 @@ class ScalingGroups implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  添加到伸缩组的标签。
+    *
+    * @return \HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]|null $tags 添加到伸缩组的标签。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -28,10 +28,11 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * datasourceType  数据源类型, HIVE
     * databaseName  数据库名称
     * schemaName  模式名称
-    * namespace  命名空间
+    * namespace  命名空间。无效参数，待下线。
     * tableName  表名称
     * columnName  列名称
-    * rowLevelSecurity  行级策略
+    * rowLevelSecurity  行级策略。无效参数，待下线。
+    * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'namespace' => 'string',
             'tableName' => 'string',
             'columnName' => 'string',
-            'rowLevelSecurity' => 'string'
+            'rowLevelSecurity' => 'string',
+            'url' => 'string'
     ];
 
     /**
@@ -60,10 +62,11 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * datasourceType  数据源类型, HIVE
     * databaseName  数据库名称
     * schemaName  模式名称
-    * namespace  命名空间
+    * namespace  命名空间。无效参数，待下线。
     * tableName  表名称
     * columnName  列名称
-    * rowLevelSecurity  行级策略
+    * rowLevelSecurity  行级策略。无效参数，待下线。
+    * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
         'namespace' => null,
         'tableName' => null,
         'columnName' => null,
-        'rowLevelSecurity' => null
+        'rowLevelSecurity' => null,
+        'url' => null
     ];
 
     /**
@@ -113,10 +117,11 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * datasourceType  数据源类型, HIVE
     * databaseName  数据库名称
     * schemaName  模式名称
-    * namespace  命名空间
+    * namespace  命名空间。无效参数，待下线。
     * tableName  表名称
     * columnName  列名称
-    * rowLevelSecurity  行级策略
+    * rowLevelSecurity  行级策略。无效参数，待下线。
+    * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'namespace' => 'namespace',
             'tableName' => 'table_name',
             'columnName' => 'column_name',
-            'rowLevelSecurity' => 'row_level_security'
+            'rowLevelSecurity' => 'row_level_security',
+            'url' => 'url'
     ];
 
     /**
@@ -145,10 +151,11 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * datasourceType  数据源类型, HIVE
     * databaseName  数据库名称
     * schemaName  模式名称
-    * namespace  命名空间
+    * namespace  命名空间。无效参数，待下线。
     * tableName  表名称
     * columnName  列名称
-    * rowLevelSecurity  行级策略
+    * rowLevelSecurity  行级策略。无效参数，待下线。
+    * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'namespace' => 'setNamespace',
             'tableName' => 'setTableName',
             'columnName' => 'setColumnName',
-            'rowLevelSecurity' => 'setRowLevelSecurity'
+            'rowLevelSecurity' => 'setRowLevelSecurity',
+            'url' => 'setUrl'
     ];
 
     /**
@@ -177,10 +185,11 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     * datasourceType  数据源类型, HIVE
     * databaseName  数据库名称
     * schemaName  模式名称
-    * namespace  命名空间
+    * namespace  命名空间。无效参数，待下线。
     * tableName  表名称
     * columnName  列名称
-    * rowLevelSecurity  行级策略
+    * rowLevelSecurity  行级策略。无效参数，待下线。
+    * url  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             'namespace' => 'getNamespace',
             'tableName' => 'getTableName',
             'columnName' => 'getColumnName',
-            'rowLevelSecurity' => 'getRowLevelSecurity'
+            'rowLevelSecurity' => 'getRowLevelSecurity',
+            'url' => 'getUrl'
     ];
 
     /**
@@ -328,6 +338,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
         $this->container['tableName'] = isset($data['tableName']) ? $data['tableName'] : null;
         $this->container['columnName'] = isset($data['columnName']) ? $data['columnName'] : null;
         $this->container['rowLevelSecurity'] = isset($data['rowLevelSecurity']) ? $data['rowLevelSecurity'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -407,6 +418,12 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['rowLevelSecurity']) && (mb_strlen($this->container['rowLevelSecurity']) < 1)) {
                 $invalidProperties[] = "invalid value for 'rowLevelSecurity', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 200)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) < 1)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -616,7 +633,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  命名空间
+    *  命名空间。无效参数，待下线。
     *
     * @return string|null
     */
@@ -628,7 +645,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string|null $namespace 命名空间
+    * @param string|null $namespace 命名空间。无效参数，待下线。
     *
     * @return $this
     */
@@ -688,7 +705,7 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets rowLevelSecurity
-    *  行级策略
+    *  行级策略。无效参数，待下线。
     *
     * @return string|null
     */
@@ -700,13 +717,37 @@ class PermissionSetPermissionCreateDTO implements ModelInterface, ArrayAccess
     /**
     * Sets rowLevelSecurity
     *
-    * @param string|null $rowLevelSecurity 行级策略
+    * @param string|null $rowLevelSecurity 行级策略。无效参数，待下线。
     *
     * @return $this
     */
     public function setRowLevelSecurity($rowLevelSecurity)
     {
         $this->container['rowLevelSecurity'] = $rowLevelSecurity;
+        return $this;
+    }
+
+    /**
+    * Gets url
+    *  url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    *
+    * @return string|null
+    */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+    * Sets url
+    *
+    * @param string|null $url url路径名称, MRS存算分离或者HIVE指定location场景下使用。
+    *
+    * @return $this
+    */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
         return $this;
     }
 

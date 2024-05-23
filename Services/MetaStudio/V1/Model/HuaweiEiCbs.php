@@ -23,13 +23,17 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
     * appId  CBS应用ID。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'appId' => 'string',
             'region' => 'int',
-            'cbsProjectId' => 'string'
+            'cbsProjectId' => 'string',
+            'sisRegion' => 'int',
+            'sisProjectId' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
     * appId  CBS应用ID。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'appId' => null,
         'region' => null,
-        'cbsProjectId' => null
+        'cbsProjectId' => null,
+        'sisRegion' => null,
+        'sisProjectId' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
     * appId  CBS应用ID。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'appId' => 'app_id',
             'region' => 'region',
-            'cbsProjectId' => 'cbs_project_id'
+            'cbsProjectId' => 'cbs_project_id',
+            'sisRegion' => 'sis_region',
+            'sisProjectId' => 'sis_project_id'
     ];
 
     /**
@@ -86,13 +98,17 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
     * appId  CBS应用ID。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $setters = [
             'appId' => 'setAppId',
             'region' => 'setRegion',
-            'cbsProjectId' => 'setCbsProjectId'
+            'cbsProjectId' => 'setCbsProjectId',
+            'sisRegion' => 'setSisRegion',
+            'sisProjectId' => 'setSisProjectId'
     ];
 
     /**
@@ -100,13 +116,17 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
     * appId  CBS应用ID。
     * region  CBS所在区域
     * cbsProjectId  CBS所在区域的projectId
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $getters = [
             'appId' => 'getAppId',
             'region' => 'getRegion',
-            'cbsProjectId' => 'getCbsProjectId'
+            'cbsProjectId' => 'getCbsProjectId',
+            'sisRegion' => 'getSisRegion',
+            'sisProjectId' => 'getSisProjectId'
     ];
 
     /**
@@ -170,6 +190,8 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['cbsProjectId'] = isset($data['cbsProjectId']) ? $data['cbsProjectId'] : null;
+        $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
+        $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
     }
 
     /**
@@ -197,6 +219,18 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['cbsProjectId']) && (mb_strlen($this->container['cbsProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'cbsProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] > 32)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -281,6 +315,54 @@ class HuaweiEiCbs implements ModelInterface, ArrayAccess
     public function setCbsProjectId($cbsProjectId)
     {
         $this->container['cbsProjectId'] = $cbsProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets sisRegion
+    *  SIS所在区域
+    *
+    * @return int|null
+    */
+    public function getSisRegion()
+    {
+        return $this->container['sisRegion'];
+    }
+
+    /**
+    * Sets sisRegion
+    *
+    * @param int|null $sisRegion SIS所在区域
+    *
+    * @return $this
+    */
+    public function setSisRegion($sisRegion)
+    {
+        $this->container['sisRegion'] = $sisRegion;
+        return $this;
+    }
+
+    /**
+    * Gets sisProjectId
+    *  SIS所在区域的projectId
+    *
+    * @return string|null
+    */
+    public function getSisProjectId()
+    {
+        return $this->container['sisProjectId'];
+    }
+
+    /**
+    * Sets sisProjectId
+    *
+    * @param string|null $sisProjectId SIS所在区域的projectId
+    *
+    * @return $this
+    */
+    public function setSisProjectId($sisProjectId)
+    {
+        $this->container['sisProjectId'] = $sisProjectId;
         return $this;
     }
 

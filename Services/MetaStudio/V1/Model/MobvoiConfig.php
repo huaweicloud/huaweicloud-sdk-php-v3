@@ -23,13 +23,17 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * appKey  奇妙问应用帐号。
     * appSecret  奇妙问应用Secret。
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'appKey' => 'string',
             'appSecret' => 'string',
-            'roleId' => 'string'
+            'roleId' => 'string',
+            'sisRegion' => 'int',
+            'sisProjectId' => 'string'
     ];
 
     /**
@@ -37,13 +41,17 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * appKey  奇妙问应用帐号。
     * appSecret  奇妙问应用Secret。
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'appKey' => null,
         'appSecret' => null,
-        'roleId' => null
+        'roleId' => null,
+        'sisRegion' => null,
+        'sisProjectId' => null
     ];
 
     /**
@@ -72,13 +80,17 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * appKey  奇妙问应用帐号。
     * appSecret  奇妙问应用Secret。
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'appKey' => 'app_key',
             'appSecret' => 'app_secret',
-            'roleId' => 'role_id'
+            'roleId' => 'role_id',
+            'sisRegion' => 'sis_region',
+            'sisProjectId' => 'sis_project_id'
     ];
 
     /**
@@ -86,13 +98,17 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * appKey  奇妙问应用帐号。
     * appSecret  奇妙问应用Secret。
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $setters = [
             'appKey' => 'setAppKey',
             'appSecret' => 'setAppSecret',
-            'roleId' => 'setRoleId'
+            'roleId' => 'setRoleId',
+            'sisRegion' => 'setSisRegion',
+            'sisProjectId' => 'setSisProjectId'
     ];
 
     /**
@@ -100,13 +116,17 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     * appKey  奇妙问应用帐号。
     * appSecret  奇妙问应用Secret。
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
     protected static $getters = [
             'appKey' => 'getAppKey',
             'appSecret' => 'getAppSecret',
-            'roleId' => 'getRoleId'
+            'roleId' => 'getRoleId',
+            'sisRegion' => 'getSisRegion',
+            'sisProjectId' => 'getSisProjectId'
     ];
 
     /**
@@ -170,6 +190,8 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
         $this->container['appSecret'] = isset($data['appSecret']) ? $data['appSecret'] : null;
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
+        $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
+        $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
     }
 
     /**
@@ -197,6 +219,18 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'roleId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] > 32)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -281,6 +315,54 @@ class MobvoiConfig implements ModelInterface, ArrayAccess
     public function setRoleId($roleId)
     {
         $this->container['roleId'] = $roleId;
+        return $this;
+    }
+
+    /**
+    * Gets sisRegion
+    *  SIS所在区域
+    *
+    * @return int|null
+    */
+    public function getSisRegion()
+    {
+        return $this->container['sisRegion'];
+    }
+
+    /**
+    * Sets sisRegion
+    *
+    * @param int|null $sisRegion SIS所在区域
+    *
+    * @return $this
+    */
+    public function setSisRegion($sisRegion)
+    {
+        $this->container['sisRegion'] = $sisRegion;
+        return $this;
+    }
+
+    /**
+    * Gets sisProjectId
+    *  SIS所在区域的projectId
+    *
+    * @return string|null
+    */
+    public function getSisProjectId()
+    {
+        return $this->container['sisProjectId'];
+    }
+
+    /**
+    * Sets sisProjectId
+    *
+    * @param string|null $sisProjectId SIS所在区域的projectId
+    *
+    * @return $this
+    */
+    public function setSisProjectId($sisProjectId)
+    {
+        $this->container['sisProjectId'] = $sisProjectId;
         return $this;
     }
 

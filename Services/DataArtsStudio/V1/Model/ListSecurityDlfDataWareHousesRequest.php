@@ -21,21 +21,29 @@ class ListSecurityDlfDataWareHousesRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * workspace  DataArts Studio工作空间ID
+    * offset  offset
+    * limit  limit
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'workspace' => 'string'
+            'workspace' => 'string',
+            'offset' => 'int',
+            'limit' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * workspace  DataArts Studio工作空间ID
+    * offset  offset
+    * limit  limit
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'workspace' => null
+        'workspace' => null,
+        'offset' => null,
+        'limit' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListSecurityDlfDataWareHousesRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * workspace  DataArts Studio工作空间ID
+    * offset  offset
+    * limit  limit
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'workspace' => 'workspace'
+            'workspace' => 'workspace',
+            'offset' => 'offset',
+            'limit' => 'limit'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * workspace  DataArts Studio工作空间ID
+    * offset  offset
+    * limit  limit
     *
     * @var string[]
     */
     protected static $setters = [
-            'workspace' => 'setWorkspace'
+            'workspace' => 'setWorkspace',
+            'offset' => 'setOffset',
+            'limit' => 'setLimit'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * workspace  DataArts Studio工作空间ID
+    * offset  offset
+    * limit  limit
     *
     * @var string[]
     */
     protected static $getters = [
-            'workspace' => 'getWorkspace'
+            'workspace' => 'getWorkspace',
+            'offset' => 'getOffset',
+            'limit' => 'getLimit'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListSecurityDlfDataWareHousesRequest implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
 
     /**
@@ -166,6 +188,18 @@ class ListSecurityDlfDataWareHousesRequest implements ModelInterface, ArrayAcces
             }
             if ((mb_strlen($this->container['workspace']) < 1)) {
                 $invalidProperties[] = "invalid value for 'workspace', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 99999)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 99999.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -202,6 +236,54 @@ class ListSecurityDlfDataWareHousesRequest implements ModelInterface, ArrayAcces
     public function setWorkspace($workspace)
     {
         $this->container['workspace'] = $workspace;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  offset
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset offset
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  limit
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit limit
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
         return $this;
     }
 

@@ -43,6 +43,7 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略：EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，云服务器扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息(0-256个字符)
+    * tags  创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
     *
     * @var string[]
     */
@@ -69,7 +70,8 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'multiAzPriorityPolicy' => 'string',
             'iamAgencyName' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'tags' => '\HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]'
     ];
 
     /**
@@ -97,6 +99,7 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略：EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，云服务器扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息(0-256个字符)
+    * tags  创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
     *
     * @var string[]
     */
@@ -123,7 +126,8 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'multiAzPriorityPolicy' => null,
         'iamAgencyName' => null,
-        'description' => null
+        'description' => null,
+        'tags' => null
     ];
 
     /**
@@ -172,6 +176,7 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略：EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，云服务器扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息(0-256个字符)
+    * tags  创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
     *
     * @var string[]
     */
@@ -198,7 +203,8 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'multiAzPriorityPolicy' => 'multi_az_priority_policy',
             'iamAgencyName' => 'iam_agency_name',
-            'description' => 'description'
+            'description' => 'description',
+            'tags' => 'tags'
     ];
 
     /**
@@ -226,6 +232,7 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略：EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，云服务器扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息(0-256个字符)
+    * tags  创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
     *
     * @var string[]
     */
@@ -252,7 +259,8 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'multiAzPriorityPolicy' => 'setMultiAzPriorityPolicy',
             'iamAgencyName' => 'setIamAgencyName',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -280,6 +288,7 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
     * multiAzPriorityPolicy  伸缩组扩缩容时目标AZ选择的优先级策略：EQUILIBRIUM_DISTRIBUTE（默认）：均衡分布，云服务器扩缩容时优先保证available_zones列表中各AZ下虚拟机数量均衡，当无法在目标AZ下完成虚拟机扩容时，按照PICK_FIRST原则选择其他可用AZ。PICK_FIRST：选择优先，虚拟机扩缩容时目标AZ的选择按照available_zones列表的顺序进行优先级排序。
     * iamAgencyName  委托的名称委托是由租户管理员在统一身份认证服务（Identity and Access Management，IAM）上创建的，可以为弹性云服务器提供访问云服务的临时凭证。
     * description  伸缩组描述信息(0-256个字符)
+    * tags  创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
     *
     * @var string[]
     */
@@ -306,7 +315,8 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'multiAzPriorityPolicy' => 'getMultiAzPriorityPolicy',
             'iamAgencyName' => 'getIamAgencyName',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -439,6 +449,7 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
         $this->container['multiAzPriorityPolicy'] = isset($data['multiAzPriorityPolicy']) ? $data['multiAzPriorityPolicy'] : null;
         $this->container['iamAgencyName'] = isset($data['iamAgencyName']) ? $data['iamAgencyName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -1069,6 +1080,30 @@ class CreateScalingGroupOption implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
+    *
+    * @return \HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\_As\V1\Model\TagsSingleValue[]|null $tags 创建特定标签并将其添加到伸缩组。每个伸缩组最多添加10个标签。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

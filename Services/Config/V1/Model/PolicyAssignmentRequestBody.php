@@ -28,6 +28,7 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
     * customPolicy  customPolicy
     * policyDefinitionId  策略定义ID
     * parameters  规则参数
+    * tags  tags
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
             'policyFilter' => '\HuaweiCloud\SDK\Config\V1\Model\PolicyFilterDefinition',
             'customPolicy' => '\HuaweiCloud\SDK\Config\V1\Model\CustomPolicy',
             'policyDefinitionId' => 'string',
-            'parameters' => 'map[string,\HuaweiCloud\SDK\Config\V1\Model\PolicyParameterValue]'
+            'parameters' => 'map[string,\HuaweiCloud\SDK\Config\V1\Model\PolicyParameterValue]',
+            'tags' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]'
     ];
 
     /**
@@ -52,6 +54,7 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
     * customPolicy  customPolicy
     * policyDefinitionId  策略定义ID
     * parameters  规则参数
+    * tags  tags
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
         'policyFilter' => null,
         'customPolicy' => null,
         'policyDefinitionId' => null,
-        'parameters' => null
+        'parameters' => null,
+        'tags' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
     * customPolicy  customPolicy
     * policyDefinitionId  策略定义ID
     * parameters  规则参数
+    * tags  tags
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
             'policyFilter' => 'policy_filter',
             'customPolicy' => 'custom_policy',
             'policyDefinitionId' => 'policy_definition_id',
-            'parameters' => 'parameters'
+            'parameters' => 'parameters',
+            'tags' => 'tags'
     ];
 
     /**
@@ -121,6 +127,7 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
     * customPolicy  customPolicy
     * policyDefinitionId  策略定义ID
     * parameters  规则参数
+    * tags  tags
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
             'policyFilter' => 'setPolicyFilter',
             'customPolicy' => 'setCustomPolicy',
             'policyDefinitionId' => 'setPolicyDefinitionId',
-            'parameters' => 'setParameters'
+            'parameters' => 'setParameters',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -145,6 +153,7 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
     * customPolicy  customPolicy
     * policyDefinitionId  策略定义ID
     * parameters  规则参数
+    * tags  tags
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
             'policyFilter' => 'getPolicyFilter',
             'customPolicy' => 'getCustomPolicy',
             'policyDefinitionId' => 'getPolicyDefinitionId',
-            'parameters' => 'getParameters'
+            'parameters' => 'getParameters',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -261,6 +271,7 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
         $this->container['customPolicy'] = isset($data['customPolicy']) ? $data['customPolicy'] : null;
         $this->container['policyDefinitionId'] = isset($data['policyDefinitionId']) ? $data['policyDefinitionId'] : null;
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class PolicyAssignmentRequestBody implements ModelInterface, ArrayAccess
     public function setParameters($parameters)
     {
         $this->container['parameters'] = $parameters;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  tags
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]|null $tags tags
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

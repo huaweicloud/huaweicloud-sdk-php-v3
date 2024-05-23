@@ -23,13 +23,15 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
     * appId  AIUI应用ID。
     * appKey  AIUI应用密钥。
     * apiSecret  AIUI API密钥。
+    * isProduction  是否为正式环境
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'appId' => 'string',
             'appKey' => 'string',
-            'apiSecret' => 'string'
+            'apiSecret' => 'string',
+            'isProduction' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
     * appId  AIUI应用ID。
     * appKey  AIUI应用密钥。
     * apiSecret  AIUI API密钥。
+    * isProduction  是否为正式环境
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'appId' => null,
         'appKey' => null,
-        'apiSecret' => null
+        'apiSecret' => null,
+        'isProduction' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
     * appId  AIUI应用ID。
     * appKey  AIUI应用密钥。
     * apiSecret  AIUI API密钥。
+    * isProduction  是否为正式环境
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'appId' => 'app_id',
             'appKey' => 'app_key',
-            'apiSecret' => 'api_secret'
+            'apiSecret' => 'api_secret',
+            'isProduction' => 'is_production'
     ];
 
     /**
@@ -86,13 +92,15 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
     * appId  AIUI应用ID。
     * appKey  AIUI应用密钥。
     * apiSecret  AIUI API密钥。
+    * isProduction  是否为正式环境
     *
     * @var string[]
     */
     protected static $setters = [
             'appId' => 'setAppId',
             'appKey' => 'setAppKey',
-            'apiSecret' => 'setApiSecret'
+            'apiSecret' => 'setApiSecret',
+            'isProduction' => 'setIsProduction'
     ];
 
     /**
@@ -100,13 +108,15 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
     * appId  AIUI应用ID。
     * appKey  AIUI应用密钥。
     * apiSecret  AIUI API密钥。
+    * isProduction  是否为正式环境
     *
     * @var string[]
     */
     protected static $getters = [
             'appId' => 'getAppId',
             'appKey' => 'getAppKey',
-            'apiSecret' => 'getApiSecret'
+            'apiSecret' => 'getApiSecret',
+            'isProduction' => 'getIsProduction'
     ];
 
     /**
@@ -170,6 +180,7 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
         $this->container['apiSecret'] = isset($data['apiSecret']) ? $data['apiSecret'] : null;
+        $this->container['isProduction'] = isset($data['isProduction']) ? $data['isProduction'] : null;
     }
 
     /**
@@ -281,6 +292,30 @@ class IflytekAiuiConfig implements ModelInterface, ArrayAccess
     public function setApiSecret($apiSecret)
     {
         $this->container['apiSecret'] = $apiSecret;
+        return $this;
+    }
+
+    /**
+    * Gets isProduction
+    *  是否为正式环境
+    *
+    * @return bool|null
+    */
+    public function getIsProduction()
+    {
+        return $this->container['isProduction'];
+    }
+
+    /**
+    * Sets isProduction
+    *
+    * @param bool|null $isProduction 是否为正式环境
+    *
+    * @return $this
+    */
+    public function setIsProduction($isProduction)
+    {
+        $this->container['isProduction'] = $isProduction;
         return $this;
     }
 

@@ -25,6 +25,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'appKey' => 'string',
             'llmUrl' => 'string',
             'isStream' => 'bool',
-            'chatRounds' => 'int'
+            'chatRounds' => 'int',
+            'sisRegion' => 'int',
+            'sisProjectId' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
         'appKey' => null,
         'llmUrl' => null,
         'isStream' => null,
-        'chatRounds' => null
+        'chatRounds' => null,
+        'sisRegion' => null,
+        'sisProjectId' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'appKey' => 'app_key',
             'llmUrl' => 'llm_url',
             'isStream' => 'is_stream',
-            'chatRounds' => 'chat_rounds'
+            'chatRounds' => 'chat_rounds',
+            'sisRegion' => 'sis_region',
+            'sisProjectId' => 'sis_project_id'
     ];
 
     /**
@@ -100,6 +112,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'appKey' => 'setAppKey',
             'llmUrl' => 'setLlmUrl',
             'isStream' => 'setIsStream',
-            'chatRounds' => 'setChatRounds'
+            'chatRounds' => 'setChatRounds',
+            'sisRegion' => 'setSisRegion',
+            'sisProjectId' => 'setSisProjectId'
     ];
 
     /**
@@ -118,6 +134,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             'appKey' => 'getAppKey',
             'llmUrl' => 'getLlmUrl',
             'isStream' => 'getIsStream',
-            'chatRounds' => 'getChatRounds'
+            'chatRounds' => 'getChatRounds',
+            'sisRegion' => 'getSisRegion',
+            'sisProjectId' => 'getSisProjectId'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
         $this->container['llmUrl'] = isset($data['llmUrl']) ? $data['llmUrl'] : null;
         $this->container['isStream'] = isset($data['isStream']) ? $data['isStream'] : null;
         $this->container['chatRounds'] = isset($data['chatRounds']) ? $data['chatRounds'] : null;
+        $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
+        $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
     }
 
     /**
@@ -225,6 +247,18 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['chatRounds']) && ($this->container['chatRounds'] < 1)) {
                 $invalidProperties[] = "invalid value for 'chatRounds', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] > 32)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -357,6 +391,54 @@ class ThirdPartyModelConfig implements ModelInterface, ArrayAccess
     public function setChatRounds($chatRounds)
     {
         $this->container['chatRounds'] = $chatRounds;
+        return $this;
+    }
+
+    /**
+    * Gets sisRegion
+    *  SIS所在区域
+    *
+    * @return int|null
+    */
+    public function getSisRegion()
+    {
+        return $this->container['sisRegion'];
+    }
+
+    /**
+    * Sets sisRegion
+    *
+    * @param int|null $sisRegion SIS所在区域
+    *
+    * @return $this
+    */
+    public function setSisRegion($sisRegion)
+    {
+        $this->container['sisRegion'] = $sisRegion;
+        return $this;
+    }
+
+    /**
+    * Gets sisProjectId
+    *  SIS所在区域的projectId
+    *
+    * @return string|null
+    */
+    public function getSisProjectId()
+    {
+        return $this->container['sisProjectId'];
+    }
+
+    /**
+    * Sets sisProjectId
+    *
+    * @param string|null $sisProjectId SIS所在区域的projectId
+    *
+    * @return $this
+    */
+    public function setSisProjectId($sisProjectId)
+    {
+        $this->container['sisProjectId'] = $sisProjectId;
         return $this;
     }
 

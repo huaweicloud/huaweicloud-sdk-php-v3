@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Organizations\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
+class DisableTrustedServiceRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,26 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CheckTextLanguageResponse';
+    protected static $openAPIModelName = 'DisableTrustedServiceRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'result' => 'string'
+            'body' => '\HuaweiCloud\SDK\Organizations\V1\Model\TrustedServiceReqBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'result' => null
+        'body' => null
     ];
 
     /**
@@ -62,32 +61,32 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'result' => 'result'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'result' => 'setResult'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * result  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'result' => 'getResult'
+            'body' => 'getBody'
     ];
 
     /**
@@ -130,22 +129,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const RESULT_MATCHED = 'MATCHED';
-    const RESULT_UNMATCHED = 'UNMATCHED';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getResultAllowableValues()
-    {
-        return [
-            self::RESULT_MATCHED,
-            self::RESULT_UNMATCHED,
-        ];
-    }
 
 
     /**
@@ -163,7 +147,7 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -174,14 +158,6 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getResultAllowableValues();
-                if (!is_null($this->container['result']) && !in_array($this->container['result'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'result', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -197,26 +173,26 @@ class CheckTextLanguageResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets result
-    *  语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Organizations\V1\Model\TrustedServiceReqBody|null
     */
-    public function getResult()
+    public function getBody()
     {
-        return $this->container['result'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets result
+    * Sets body
     *
-    * @param string|null $result 语言检测状态。 * MATCHED: 匹配 * UNMATCHED: 不匹配
+    * @param \HuaweiCloud\SDK\Organizations\V1\Model\TrustedServiceReqBody|null $body body
     *
     * @return $this
     */
-    public function setResult($result)
+    public function setBody($body)
     {
-        $this->container['result'] = $result;
+        $this->container['body'] = $body;
         return $this;
     }
 

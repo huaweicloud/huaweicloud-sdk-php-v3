@@ -35,7 +35,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * isIflyProduction  是否为正式环境
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -55,7 +59,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'llmUrl' => 'string',
             'isStream' => 'bool',
             'chatRounds' => 'int',
+            'isIflyProduction' => 'bool',
+            'tailSilenceTime' => 'int',
             'roleId' => 'string',
+            'sisRegion' => 'int',
+            'sisProjectId' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -75,7 +83,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * isIflyProduction  是否为正式环境
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -95,7 +107,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         'llmUrl' => null,
         'isStream' => null,
         'chatRounds' => null,
+        'isIflyProduction' => null,
+        'tailSilenceTime' => null,
         'roleId' => null,
+        'sisRegion' => null,
+        'sisProjectId' => null,
         'xRequestId' => null
     ];
 
@@ -136,7 +152,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * isIflyProduction  是否为正式环境
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -156,7 +176,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'llmUrl' => 'llm_url',
             'isStream' => 'is_stream',
             'chatRounds' => 'chat_rounds',
+            'isIflyProduction' => 'is_ifly_production',
+            'tailSilenceTime' => 'tail_silence_time',
             'roleId' => 'role_id',
+            'sisRegion' => 'sis_region',
+            'sisProjectId' => 'sis_project_id',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -176,7 +200,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * isIflyProduction  是否为正式环境
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -196,7 +224,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'llmUrl' => 'setLlmUrl',
             'isStream' => 'setIsStream',
             'chatRounds' => 'setChatRounds',
+            'isIflyProduction' => 'setIsIflyProduction',
+            'tailSilenceTime' => 'setTailSilenceTime',
             'roleId' => 'setRoleId',
+            'sisRegion' => 'setSisRegion',
+            'sisProjectId' => 'setSisProjectId',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -216,7 +248,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * llmUrl  第三方语言模型地址。
     * isStream  是否采用流式响应。
     * chatRounds  支持的多轮对话数量，取值大于1时，请求第三方语言模型时将携带历史对话信息。
+    * isIflyProduction  是否为正式环境
+    * tailSilenceTime  语音识别后端点静音时长默认500ms
     * roleId  奇妙问角色ID。
+    * sisRegion  SIS所在区域
+    * sisProjectId  SIS所在区域的projectId
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -236,7 +272,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'llmUrl' => 'getLlmUrl',
             'isStream' => 'getIsStream',
             'chatRounds' => 'getChatRounds',
+            'isIflyProduction' => 'getIsIflyProduction',
+            'tailSilenceTime' => 'getTailSilenceTime',
             'roleId' => 'getRoleId',
+            'sisRegion' => 'getSisRegion',
+            'sisProjectId' => 'getSisProjectId',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -312,7 +352,11 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         $this->container['llmUrl'] = isset($data['llmUrl']) ? $data['llmUrl'] : null;
         $this->container['isStream'] = isset($data['isStream']) ? $data['isStream'] : null;
         $this->container['chatRounds'] = isset($data['chatRounds']) ? $data['chatRounds'] : null;
+        $this->container['isIflyProduction'] = isset($data['isIflyProduction']) ? $data['isIflyProduction'] : null;
+        $this->container['tailSilenceTime'] = isset($data['tailSilenceTime']) ? $data['tailSilenceTime'] : null;
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
+        $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
+        $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -396,11 +440,29 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['chatRounds']) && ($this->container['chatRounds'] < 1)) {
                 $invalidProperties[] = "invalid value for 'chatRounds', must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['tailSilenceTime']) && ($this->container['tailSilenceTime'] > 3000)) {
+                $invalidProperties[] = "invalid value for 'tailSilenceTime', must be smaller than or equal to 3000.";
+            }
+            if (!is_null($this->container['tailSilenceTime']) && ($this->container['tailSilenceTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'tailSilenceTime', must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'roleId', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['roleId']) && (mb_strlen($this->container['roleId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'roleId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] > 32)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['sisRegion']) && ($this->container['sisRegion'] < 0)) {
+                $invalidProperties[] = "invalid value for 'sisRegion', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['sisProjectId']) && (mb_strlen($this->container['sisProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'sisProjectId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -753,6 +815,54 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets isIflyProduction
+    *  是否为正式环境
+    *
+    * @return bool|null
+    */
+    public function getIsIflyProduction()
+    {
+        return $this->container['isIflyProduction'];
+    }
+
+    /**
+    * Sets isIflyProduction
+    *
+    * @param bool|null $isIflyProduction 是否为正式环境
+    *
+    * @return $this
+    */
+    public function setIsIflyProduction($isIflyProduction)
+    {
+        $this->container['isIflyProduction'] = $isIflyProduction;
+        return $this;
+    }
+
+    /**
+    * Gets tailSilenceTime
+    *  语音识别后端点静音时长默认500ms
+    *
+    * @return int|null
+    */
+    public function getTailSilenceTime()
+    {
+        return $this->container['tailSilenceTime'];
+    }
+
+    /**
+    * Sets tailSilenceTime
+    *
+    * @param int|null $tailSilenceTime 语音识别后端点静音时长默认500ms
+    *
+    * @return $this
+    */
+    public function setTailSilenceTime($tailSilenceTime)
+    {
+        $this->container['tailSilenceTime'] = $tailSilenceTime;
+        return $this;
+    }
+
+    /**
     * Gets roleId
     *  奇妙问角色ID。
     *
@@ -773,6 +883,54 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     public function setRoleId($roleId)
     {
         $this->container['roleId'] = $roleId;
+        return $this;
+    }
+
+    /**
+    * Gets sisRegion
+    *  SIS所在区域
+    *
+    * @return int|null
+    */
+    public function getSisRegion()
+    {
+        return $this->container['sisRegion'];
+    }
+
+    /**
+    * Sets sisRegion
+    *
+    * @param int|null $sisRegion SIS所在区域
+    *
+    * @return $this
+    */
+    public function setSisRegion($sisRegion)
+    {
+        $this->container['sisRegion'] = $sisRegion;
+        return $this;
+    }
+
+    /**
+    * Gets sisProjectId
+    *  SIS所在区域的projectId
+    *
+    * @return string|null
+    */
+    public function getSisProjectId()
+    {
+        return $this->container['sisProjectId'];
+    }
+
+    /**
+    * Sets sisProjectId
+    *
+    * @param string|null $sisProjectId SIS所在区域的projectId
+    *
+    * @return $this
+    */
+    public function setSisProjectId($sisProjectId)
+    {
+        $this->container['sisProjectId'] = $sisProjectId;
         return $this;
     }
 

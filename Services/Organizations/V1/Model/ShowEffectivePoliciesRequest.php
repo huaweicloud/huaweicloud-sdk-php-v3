@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Organizations\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
+class ShowEffectivePoliciesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CheckTextLanguageRequest';
+    protected static $openAPIModelName = 'ShowEffectivePoliciesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * entityId  账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
+    * policyType  策略类型的名称，tag_policy标签策略。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageCheckInfoReq'
+            'entityId' => 'string',
+            'policyType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * entityId  账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
+    * policyType  策略类型的名称，tag_policy标签策略。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'entityId' => null,
+        'policyType' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * entityId  账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
+    * policyType  策略类型的名称，tag_policy标签策略。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'entityId' => 'entity_id',
+            'policyType' => 'policy_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * entityId  账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
+    * policyType  策略类型的名称，tag_policy标签策略。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'entityId' => 'setEntityId',
+            'policyType' => 'setPolicyType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * entityId  账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
+    * policyType  策略类型的名称，tag_policy标签策略。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'entityId' => 'getEntityId',
+            'policyType' => 'getPolicyType'
     ];
 
     /**
@@ -129,7 +139,20 @@ class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const POLICY_TYPE_TAG_POLICY = 'tag_policy';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPolicyTypeAllowableValues()
+    {
+        return [
+            self::POLICY_TYPE_TAG_POLICY,
+        ];
+    }
 
 
     /**
@@ -147,7 +170,8 @@ class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['entityId'] = isset($data['entityId']) ? $data['entityId'] : null;
+        $this->container['policyType'] = isset($data['policyType']) ? $data['policyType'] : null;
     }
 
     /**
@@ -158,6 +182,26 @@ class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['entityId'] === null) {
+            $invalidProperties[] = "'entityId' can't be null";
+        }
+            if ((mb_strlen($this->container['entityId']) > 100)) {
+                $invalidProperties[] = "invalid value for 'entityId', the character length must be smaller than or equal to 100.";
+            }
+            if (!preg_match("/^(?:r-[0-9a-z]{4,32}|[\\w-]+|ou-[0-9a-z]{8,32})$/", $this->container['entityId'])) {
+                $invalidProperties[] = "invalid value for 'entityId', must be conform to the pattern /^(?:r-[0-9a-z]{4,32}|[\\w-]+|ou-[0-9a-z]{8,32})$/.";
+            }
+        if ($this->container['policyType'] === null) {
+            $invalidProperties[] = "'policyType' can't be null";
+        }
+            $allowedValues = $this->getPolicyTypeAllowableValues();
+                if (!is_null($this->container['policyType']) && !in_array($this->container['policyType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'policyType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -173,26 +217,50 @@ class CheckTextLanguageRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets entityId
+    *  账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageCheckInfoReq|null
+    * @return string
     */
-    public function getBody()
+    public function getEntityId()
     {
-        return $this->container['body'];
+        return $this->container['entityId'];
     }
 
     /**
-    * Sets body
+    * Sets entityId
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageCheckInfoReq|null $body body
+    * @param string $entityId 账号的唯一标识符（ID）。当前还不支持指定根、组织单元。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setEntityId($entityId)
     {
-        $this->container['body'] = $body;
+        $this->container['entityId'] = $entityId;
+        return $this;
+    }
+
+    /**
+    * Gets policyType
+    *  策略类型的名称，tag_policy标签策略。
+    *
+    * @return string
+    */
+    public function getPolicyType()
+    {
+        return $this->container['policyType'];
+    }
+
+    /**
+    * Sets policyType
+    *
+    * @param string $policyType 策略类型的名称，tag_policy标签策略。
+    *
+    * @return $this
+    */
+    public function setPolicyType($policyType)
+    {
+        $this->container['policyType'] = $policyType;
         return $this;
     }
 

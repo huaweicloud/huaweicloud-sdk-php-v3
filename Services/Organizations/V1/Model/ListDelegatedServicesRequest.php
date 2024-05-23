@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Organizations\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
+class ListDelegatedServicesRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'LanguageCheckInfoReq';
+    protected static $openAPIModelName = 'ListDelegatedServicesRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * targetLanguage  目标语言
-    * shootScript  用户传来的剧本文本信息
+    * accountId  账号的唯一标识符（ID）。
+    * limit  页面中最大结果数量。
+    * marker  分页标记。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'targetLanguage' => 'string',
-            'shootScript' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[]'
+            'accountId' => 'string',
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * targetLanguage  目标语言
-    * shootScript  用户传来的剧本文本信息
+    * accountId  账号的唯一标识符（ID）。
+    * limit  页面中最大结果数量。
+    * marker  分页标记。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'targetLanguage' => null,
-        'shootScript' => null
+        'accountId' => null,
+        'limit' => 'int32',
+        'marker' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * targetLanguage  目标语言
-    * shootScript  用户传来的剧本文本信息
+    * accountId  账号的唯一标识符（ID）。
+    * limit  页面中最大结果数量。
+    * marker  分页标记。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'targetLanguage' => 'target_language',
-            'shootScript' => 'shoot_script'
+            'accountId' => 'account_id',
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * targetLanguage  目标语言
-    * shootScript  用户传来的剧本文本信息
+    * accountId  账号的唯一标识符（ID）。
+    * limit  页面中最大结果数量。
+    * marker  分页标记。
     *
     * @var string[]
     */
     protected static $setters = [
-            'targetLanguage' => 'setTargetLanguage',
-            'shootScript' => 'setShootScript'
+            'accountId' => 'setAccountId',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * targetLanguage  目标语言
-    * shootScript  用户传来的剧本文本信息
+    * accountId  账号的唯一标识符（ID）。
+    * limit  页面中最大结果数量。
+    * marker  分页标记。
     *
     * @var string[]
     */
     protected static $getters = [
-            'targetLanguage' => 'getTargetLanguage',
-            'shootScript' => 'getShootScript'
+            'accountId' => 'getAccountId',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -157,8 +167,9 @@ class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['targetLanguage'] = isset($data['targetLanguage']) ? $data['targetLanguage'] : null;
-        $this->container['shootScript'] = isset($data['shootScript']) ? $data['shootScript'] : null;
+        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -169,18 +180,30 @@ class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['targetLanguage'] === null) {
-            $invalidProperties[] = "'targetLanguage' can't be null";
+        if ($this->container['accountId'] === null) {
+            $invalidProperties[] = "'accountId' can't be null";
         }
-            if ((mb_strlen($this->container['targetLanguage']) > 64)) {
-                $invalidProperties[] = "invalid value for 'targetLanguage', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['accountId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['targetLanguage']) < 0)) {
-                $invalidProperties[] = "invalid value for 'targetLanguage', the character length must be bigger than or equal to 0.";
+            if (!preg_match("/^[\\w-]+$/", $this->container['accountId'])) {
+                $invalidProperties[] = "invalid value for 'accountId', must be conform to the pattern /^[\\w-]+$/.";
             }
-        if ($this->container['shootScript'] === null) {
-            $invalidProperties[] = "'shootScript' can't be null";
-        }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) > 400)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be smaller than or equal to 400.";
+            }
+            if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 4)) {
+                $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 4.";
+            }
+            if (!is_null($this->container['marker']) && !preg_match("/^[A-Za-z0-9+\/=\\-_.]+$/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[A-Za-z0-9+\/=\\-_.]+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -196,50 +219,74 @@ class LanguageCheckInfoReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets targetLanguage
-    *  目标语言
+    * Gets accountId
+    *  账号的唯一标识符（ID）。
     *
     * @return string
     */
-    public function getTargetLanguage()
+    public function getAccountId()
     {
-        return $this->container['targetLanguage'];
+        return $this->container['accountId'];
     }
 
     /**
-    * Sets targetLanguage
+    * Sets accountId
     *
-    * @param string $targetLanguage 目标语言
+    * @param string $accountId 账号的唯一标识符（ID）。
     *
     * @return $this
     */
-    public function setTargetLanguage($targetLanguage)
+    public function setAccountId($accountId)
     {
-        $this->container['targetLanguage'] = $targetLanguage;
+        $this->container['accountId'] = $accountId;
         return $this;
     }
 
     /**
-    * Gets shootScript
-    *  用户传来的剧本文本信息
+    * Gets limit
+    *  页面中最大结果数量。
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[]
+    * @return int|null
     */
-    public function getShootScript()
+    public function getLimit()
     {
-        return $this->container['shootScript'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets shootScript
+    * Sets limit
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveShootScriptItem[] $shootScript 用户传来的剧本文本信息
+    * @param int|null $limit 页面中最大结果数量。
     *
     * @return $this
     */
-    public function setShootScript($shootScript)
+    public function setLimit($limit)
     {
-        $this->container['shootScript'] = $shootScript;
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

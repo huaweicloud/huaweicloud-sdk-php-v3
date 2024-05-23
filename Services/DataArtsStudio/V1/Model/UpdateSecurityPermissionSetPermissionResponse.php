@@ -40,6 +40,7 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
     * rowLevelSecurity  行级策略
     * syncStatus  同步状态,UNKNOWN,NOT_SYNC,SYNCING,SYNC_SUCCESS,SYNC_FAIL
     * syncMsg  同步信息
+    * url  url路径名称。
     *
     * @var string[]
     */
@@ -62,7 +63,8 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
             'columnName' => 'string',
             'rowLevelSecurity' => 'string',
             'syncStatus' => 'string',
-            'syncMsg' => 'string'
+            'syncMsg' => 'string',
+            'url' => 'string'
     ];
 
     /**
@@ -86,6 +88,7 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
     * rowLevelSecurity  行级策略
     * syncStatus  同步状态,UNKNOWN,NOT_SYNC,SYNCING,SYNC_SUCCESS,SYNC_FAIL
     * syncMsg  同步信息
+    * url  url路径名称。
     *
     * @var string[]
     */
@@ -108,7 +111,8 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
         'columnName' => null,
         'rowLevelSecurity' => null,
         'syncStatus' => null,
-        'syncMsg' => null
+        'syncMsg' => null,
+        'url' => null
     ];
 
     /**
@@ -153,6 +157,7 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
     * rowLevelSecurity  行级策略
     * syncStatus  同步状态,UNKNOWN,NOT_SYNC,SYNCING,SYNC_SUCCESS,SYNC_FAIL
     * syncMsg  同步信息
+    * url  url路径名称。
     *
     * @var string[]
     */
@@ -175,7 +180,8 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
             'columnName' => 'column_name',
             'rowLevelSecurity' => 'row_level_security',
             'syncStatus' => 'sync_status',
-            'syncMsg' => 'sync_msg'
+            'syncMsg' => 'sync_msg',
+            'url' => 'url'
     ];
 
     /**
@@ -199,6 +205,7 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
     * rowLevelSecurity  行级策略
     * syncStatus  同步状态,UNKNOWN,NOT_SYNC,SYNCING,SYNC_SUCCESS,SYNC_FAIL
     * syncMsg  同步信息
+    * url  url路径名称。
     *
     * @var string[]
     */
@@ -221,7 +228,8 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
             'columnName' => 'setColumnName',
             'rowLevelSecurity' => 'setRowLevelSecurity',
             'syncStatus' => 'setSyncStatus',
-            'syncMsg' => 'setSyncMsg'
+            'syncMsg' => 'setSyncMsg',
+            'url' => 'setUrl'
     ];
 
     /**
@@ -245,6 +253,7 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
     * rowLevelSecurity  行级策略
     * syncStatus  同步状态,UNKNOWN,NOT_SYNC,SYNCING,SYNC_SUCCESS,SYNC_FAIL
     * syncMsg  同步信息
+    * url  url路径名称。
     *
     * @var string[]
     */
@@ -267,7 +276,8 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
             'columnName' => 'getColumnName',
             'rowLevelSecurity' => 'getRowLevelSecurity',
             'syncStatus' => 'getSyncStatus',
-            'syncMsg' => 'getSyncMsg'
+            'syncMsg' => 'getSyncMsg',
+            'url' => 'getUrl'
     ];
 
     /**
@@ -427,6 +437,7 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
         $this->container['rowLevelSecurity'] = isset($data['rowLevelSecurity']) ? $data['rowLevelSecurity'] : null;
         $this->container['syncStatus'] = isset($data['syncStatus']) ? $data['syncStatus'] : null;
         $this->container['syncMsg'] = isset($data['syncMsg']) ? $data['syncMsg'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -550,6 +561,12 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
             }
             if (!is_null($this->container['syncMsg']) && (mb_strlen($this->container['syncMsg']) < 1)) {
                 $invalidProperties[] = "invalid value for 'syncMsg', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) > 200)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 200.";
+            }
+            if (!is_null($this->container['url']) && (mb_strlen($this->container['url']) < 1)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1018,6 +1035,30 @@ class UpdateSecurityPermissionSetPermissionResponse implements ModelInterface, A
     public function setSyncMsg($syncMsg)
     {
         $this->container['syncMsg'] = $syncMsg;
+        return $this;
+    }
+
+    /**
+    * Gets url
+    *  url路径名称。
+    *
+    * @return string|null
+    */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+    * Sets url
+    *
+    * @param string|null $url url路径名称。
+    *
+    * @return $this
+    */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
         return $this;
     }
 
