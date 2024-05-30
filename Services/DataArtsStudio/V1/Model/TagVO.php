@@ -20,13 +20,13 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  标签名。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * newBiz  newBiz
     *
     * @var string[]
@@ -44,19 +44,19 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  标签名。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * newBiz  newBiz
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'name' => null,
         'description' => null,
         'createBy' => null,
@@ -89,13 +89,13 @@ class TagVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  标签名。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * newBiz  newBiz
     *
     * @var string[]
@@ -113,13 +113,13 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  标签名。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * newBiz  newBiz
     *
     * @var string[]
@@ -137,13 +137,13 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  标签名。
     * description  描述。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * newBiz  newBiz
     *
     * @var string[]
@@ -263,7 +263,7 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -275,7 +275,7 @@ class TagVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -383,7 +383,7 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -395,7 +395,7 @@ class TagVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -407,7 +407,7 @@ class TagVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -419,7 +419,7 @@ class TagVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

@@ -22,24 +22,28 @@ class ListEnginesRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  偏移量。
     * limit  每页显示的条目数量。
+    * type  查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'offset' => 'int',
-            'limit' => 'string'
+            'limit' => 'string',
+            'type' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * offset  偏移量。
     * limit  每页显示的条目数量。
+    * type  查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'offset' => null,
-        'limit' => null
+        'limit' => null,
+        'type' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ListEnginesRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  偏移量。
     * limit  每页显示的条目数量。
+    * type  查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'type' => 'type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  偏移量。
     * limit  每页显示的条目数量。
+    * type  查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
     protected static $setters = [
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'type' => 'setType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * offset  偏移量。
     * limit  每页显示的条目数量。
+    * type  查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
     protected static $getters = [
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'type' => 'getType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ListEnginesRequest implements ModelInterface, ArrayAccess
     {
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ListEnginesRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 查询所有微服务引擎需要将该值设置为ALL，查询ServiceComb引擎专享版需要将该值设置为CSE，查询注册配置中心需要将该值设置为Nacos，查询网关需要将该值设置为MicroGateway。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

@@ -20,26 +20,30 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
+    * envType  envType
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'bizId' => 'int',
-            'bizType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum'
+            'bizId' => 'string',
+            'bizType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
+            'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
+    * envType  envType
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'bizId' => 'int64',
-        'bizType' => null
+        'bizId' => null,
+        'bizType' => null,
+        'envType' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
+    * envType  envType
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bizId' => 'biz_id',
-            'bizType' => 'biz_type'
+            'bizType' => 'biz_type',
+            'envType' => 'env_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
+    * envType  envType
     *
     * @var string[]
     */
     protected static $setters = [
             'bizId' => 'setBizId',
-            'bizType' => 'setBizType'
+            'bizType' => 'setBizType',
+            'envType' => 'setEnvType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
+    * envType  envType
     *
     * @var string[]
     */
     protected static $getters = [
             'bizId' => 'getBizId',
-            'bizType' => 'getBizType'
+            'bizType' => 'getBizType',
+            'envType' => 'getEnvType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     {
         $this->container['bizId'] = isset($data['bizId']) ? $data['bizId'] : null;
         $this->container['bizType'] = isset($data['bizType']) ? $data['bizType'] : null;
+        $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
     }
 
     /**
@@ -191,9 +202,9 @@ class BizInfoVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID。
+    *  业务ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getBizId()
     {
@@ -203,7 +214,7 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int $bizId 业务ID。
+    * @param string $bizId 业务ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -234,6 +245,30 @@ class BizInfoVO implements ModelInterface, ArrayAccess
     public function setBizType($bizType)
     {
         $this->container['bizType'] = $bizType;
+        return $this;
+    }
+
+    /**
+    * Gets envType
+    *  envType
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null
+    */
+    public function getEnvType()
+    {
+        return $this->container['envType'];
+    }
+
+    /**
+    * Sets envType
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null $envType envType
+    *
+    * @return $this
+    */
+    public function setEnvType($envType)
+    {
+        $this->container['envType'] = $envType;
         return $this;
     }
 

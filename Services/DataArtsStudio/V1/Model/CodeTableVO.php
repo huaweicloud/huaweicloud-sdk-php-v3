@@ -20,17 +20,17 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  码表ID。
+    * id  码表ID，填写String类型替代Long类型。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID。
+    * directoryId  目录ID，填写String类型替代Long类型。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * codeTableFields  码表属性信息。
@@ -38,11 +38,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'nameEn' => 'string',
             'nameCh' => 'string',
             'tbVersion' => 'int',
-            'directoryId' => 'int',
+            'directoryId' => 'string',
             'directoryPath' => 'string',
             'description' => 'string',
             'createBy' => 'string',
@@ -56,17 +56,17 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  码表ID。
+    * id  码表ID，填写String类型替代Long类型。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID。
+    * directoryId  目录ID，填写String类型替代Long类型。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * codeTableFields  码表属性信息。
@@ -74,11 +74,11 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'nameEn' => null,
         'nameCh' => null,
         'tbVersion' => 'int32',
-        'directoryId' => 'int64',
+        'directoryId' => null,
         'directoryPath' => null,
         'description' => null,
         'createBy' => null,
@@ -113,17 +113,17 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  码表ID。
+    * id  码表ID，填写String类型替代Long类型。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID。
+    * directoryId  目录ID，填写String类型替代Long类型。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * codeTableFields  码表属性信息。
@@ -149,17 +149,17 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  码表ID。
+    * id  码表ID，填写String类型替代Long类型。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID。
+    * directoryId  目录ID，填写String类型替代Long类型。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * codeTableFields  码表属性信息。
@@ -185,17 +185,17 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  码表ID。
+    * id  码表ID，填写String类型替代Long类型。
     * nameEn  表名称，英文名。
     * nameCh  表名称，中文名。
     * tbVersion  表版本。
-    * directoryId  目录ID。
+    * directoryId  目录ID，填写String类型替代Long类型。
     * directoryPath  目录树。
     * description  描述。
     * createBy  创建人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * codeTableFields  码表属性信息。
@@ -347,9 +347,9 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  码表ID。
+    *  码表ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -359,7 +359,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 码表ID。
+    * @param string|null $id 码表ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -443,9 +443,9 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  目录ID。
+    *  目录ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getDirectoryId()
     {
@@ -455,7 +455,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param int $directoryId 目录ID。
+    * @param string $directoryId 目录ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -563,7 +563,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -575,7 +575,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -587,7 +587,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -599,7 +599,7 @@ class CodeTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

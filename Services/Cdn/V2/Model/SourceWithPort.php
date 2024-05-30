@@ -23,6 +23,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开OBS托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
@@ -34,6 +35,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
             'domainId' => 'string',
             'ipOrDomain' => 'string',
             'originType' => 'string',
+            'obsBucketType' => 'string',
             'activeStandby' => 'int',
             'enableObsWebHosting' => 'int',
             'httpPort' => 'int',
@@ -45,6 +47,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开OBS托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
@@ -56,6 +59,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
         'domainId' => null,
         'ipOrDomain' => null,
         'originType' => null,
+        'obsBucketType' => null,
         'activeStandby' => 'int32',
         'enableObsWebHosting' => 'int32',
         'httpPort' => 'int32',
@@ -88,6 +92,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开OBS托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
@@ -99,6 +104,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
             'domainId' => 'domain_id',
             'ipOrDomain' => 'ip_or_domain',
             'originType' => 'origin_type',
+            'obsBucketType' => 'obs_bucket_type',
             'activeStandby' => 'active_standby',
             'enableObsWebHosting' => 'enable_obs_web_hosting',
             'httpPort' => 'http_port',
@@ -110,6 +116,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开OBS托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
@@ -121,6 +128,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
             'domainId' => 'setDomainId',
             'ipOrDomain' => 'setIpOrDomain',
             'originType' => 'setOriginType',
+            'obsBucketType' => 'setObsBucketType',
             'activeStandby' => 'setActiveStandby',
             'enableObsWebHosting' => 'setEnableObsWebHosting',
             'httpPort' => 'setHttpPort',
@@ -132,6 +140,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     * domainId  加速域名id。
     * ipOrDomain  源站IP（非内网IP）或者域名。
     * originType  源站类型，ipaddr：源站IP、 domain：源站域名、obs_bucket：OBS桶域名。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态（1代表主源站；0代表备源站）。
     * enableObsWebHosting  是否开OBS托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
     * httpPort  HTTP端口，默认80
@@ -143,6 +152,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
             'domainId' => 'getDomainId',
             'ipOrDomain' => 'getIpOrDomain',
             'originType' => 'getOriginType',
+            'obsBucketType' => 'getObsBucketType',
             'activeStandby' => 'getActiveStandby',
             'enableObsWebHosting' => 'getEnableObsWebHosting',
             'httpPort' => 'getHttpPort',
@@ -227,6 +237,7 @@ class SourceWithPort implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['ipOrDomain'] = isset($data['ipOrDomain']) ? $data['ipOrDomain'] : null;
         $this->container['originType'] = isset($data['originType']) ? $data['originType'] : null;
+        $this->container['obsBucketType'] = isset($data['obsBucketType']) ? $data['obsBucketType'] : null;
         $this->container['activeStandby'] = isset($data['activeStandby']) ? $data['activeStandby'] : null;
         $this->container['enableObsWebHosting'] = isset($data['enableObsWebHosting']) ? $data['enableObsWebHosting'] : null;
         $this->container['httpPort'] = isset($data['httpPort']) ? $data['httpPort'] : null;
@@ -341,6 +352,30 @@ class SourceWithPort implements ModelInterface, ArrayAccess
     public function setOriginType($originType)
     {
         $this->container['originType'] = $originType;
+        return $this;
+    }
+
+    /**
+    * Gets obsBucketType
+    *  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
+    *
+    * @return string|null
+    */
+    public function getObsBucketType()
+    {
+        return $this->container['obsBucketType'];
+    }
+
+    /**
+    * Sets obsBucketType
+    *
+    * @param string|null $obsBucketType OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
+    *
+    * @return $this
+    */
+    public function setObsBucketType($obsBucketType)
+    {
+        $this->container['obsBucketType'] = $obsBucketType;
         return $this;
     }
 

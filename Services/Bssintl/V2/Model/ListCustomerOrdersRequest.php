@@ -33,6 +33,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    * method  |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'string',
             'paymentTimeBegin' => 'string',
             'paymentTimeEnd' => 'string',
-            'indirectPartnerId' => 'string'
+            'indirectPartnerId' => 'string',
+            'method' => 'string'
     ];
 
     /**
@@ -67,6 +69,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    * method  |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         'orderBy' => null,
         'paymentTimeBegin' => null,
         'paymentTimeEnd' => null,
-        'indirectPartnerId' => null
+        'indirectPartnerId' => null,
+        'method' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    * method  |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'order_by',
             'paymentTimeBegin' => 'payment_time_begin',
             'paymentTimeEnd' => 'payment_time_end',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'indirectPartnerId' => 'indirect_partner_id',
+            'method' => 'method'
     ];
 
     /**
@@ -156,6 +162,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    * method  |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'setOrderBy',
             'paymentTimeBegin' => 'setPaymentTimeBegin',
             'paymentTimeEnd' => 'setPaymentTimeEnd',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'indirectPartnerId' => 'setIndirectPartnerId',
+            'method' => 'setMethod'
     ];
 
     /**
@@ -190,6 +198,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * indirectPartnerId  云经销商ID。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单列表。
+    * method  |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'getOrderBy',
             'paymentTimeBegin' => 'getPaymentTimeBegin',
             'paymentTimeEnd' => 'getPaymentTimeEnd',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'indirectPartnerId' => 'getIndirectPartnerId',
+            'method' => 'getMethod'
     ];
 
     /**
@@ -249,7 +259,22 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const METHOD_ONESELF = 'oneself';
+    const METHOD_SUB_CUSTOMER = 'sub_customer';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMethodAllowableValues()
+    {
+        return [
+            self::METHOD_ONESELF,
+            self::METHOD_SUB_CUSTOMER,
+        ];
+    }
 
 
     /**
@@ -280,6 +305,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         $this->container['paymentTimeBegin'] = isset($data['paymentTimeBegin']) ? $data['paymentTimeBegin'] : null;
         $this->container['paymentTimeEnd'] = isset($data['paymentTimeEnd']) ? $data['paymentTimeEnd'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
+        $this->container['method'] = isset($data['method']) ? $data['method'] : null;
     }
 
     /**
@@ -308,6 +334,14 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getMethodAllowableValues();
+                if (!is_null($this->container['method']) && !in_array($this->container['method'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'method', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -631,6 +665,30 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     public function setIndirectPartnerId($indirectPartnerId)
     {
         $this->container['indirectPartnerId'] = $indirectPartnerId;
+        return $this;
+    }
+
+    /**
+    * Gets method
+    *  |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
+    *
+    * @return string|null
+    */
+    public function getMethod()
+    {
+        return $this->container['method'];
+    }
+
+    /**
+    * Sets method
+    *
+    * @param string|null $method |参数名称：查询方式，oneself：客户自己订单sub_customer：客户给企业子代付订单。| |参数的约束及描述：默认为oneself。仅customer_id有值时生效。此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。|
+    *
+    * @return $this
+    */
+    public function setMethod($method)
+    {
+        $this->container['method'] = $method;
         return $this;
     }
 

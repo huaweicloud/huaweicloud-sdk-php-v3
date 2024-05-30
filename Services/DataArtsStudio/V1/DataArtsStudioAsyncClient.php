@@ -76,11 +76,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -987,11 +987,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1061,11 +1061,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1339,11 +1339,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1478,11 +1478,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1697,11 +1697,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -1802,7 +1802,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 关系建模统计信息
      *
-     * 关系建模统计信息。
+     * 关系建模页面，外层的统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1842,11 +1842,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -1913,11 +1913,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -1944,7 +1944,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 标准覆盖率统计信息
      *
-     * 标准覆盖率统计信息。
+     * 查看某个数据标准在所有模型字段中的覆盖率，即使用该标准的字段占总字段的百分比。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1990,11 +1990,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -2021,7 +2021,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 模型统计信息
      *
-     * 模型统计信息。
+     * 单个模型中的统计信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2064,11 +2064,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -2287,11 +2287,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2361,11 +2361,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2435,11 +2435,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2534,7 +2534,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 新建汇总表
      *
-     * 新建汇总表。
+     * 根据入参，手动创建汇总表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2577,11 +2577,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2651,11 +2651,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2682,7 +2682,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建目录
      *
-     * 创建目录。
+     * 创建目录（数据标准、码表）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2725,11 +2725,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3701,11 +3701,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3732,7 +3732,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 创建数据标准模板
      *
-     * 创建数据标准模板。
+     * 创建当前工作空间下的数据标准模板自定义项。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3775,11 +3775,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3849,11 +3849,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3923,11 +3923,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -3997,11 +3997,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -4207,11 +4207,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -4951,7 +4951,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除汇总表
      *
-     * 批量删除汇总表。
+     * 批量删除汇总表，只能删除状态为草稿、已线下、已驳回的表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5176,7 +5176,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 删除目录
      *
-     * 删除目录。
+     * 删除目录（数据标准、码表）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6436,11 +6436,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -6510,11 +6510,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -6541,7 +6541,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取excel导出结果
      *
-     * 根据请求导出接口（/export-model）时返回的uuid，获取excel导出结果。
+     * 根据请求导出业务数据（/export-model）时返回的uuid，获取excel导出结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6584,11 +6584,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -6817,6 +6817,9 @@ class DataArtsStudioAsyncClient extends Client
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -6859,7 +6862,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询导入结果
      *
-     * 查询导入excel的处理结果。
+     * 查询导入excel的处理结果（其中参数uuid获取为：/design/models/action或/design/catalogs/action接口返回结果）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6979,11 +6982,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -7010,7 +7013,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找汇总表
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息。
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找汇总表信息，中英文名称支持模糊查询。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -7092,11 +7095,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -7365,11 +7368,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8198,11 +8201,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8227,9 +8230,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 查看指标指标责任人信息
+     * 查看指标责任人信息
      *
-     * 查看指标指标责任人信息。
+     * 查看指标责任人信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8275,11 +8278,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8379,11 +8382,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8456,11 +8459,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8607,11 +8610,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8862,11 +8865,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -8957,11 +8960,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -9139,6 +9142,246 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataArtsStudioInstancesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataArtsStudioInstancesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群详情信息列表
+     *
+     * 查询集群详情信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDataServiceInstancesDetailAsync($request)
+    {
+        return $this->listDataServiceInstancesDetailAsyncWithHttpInfo($request);
+    }
+    
+    public function listDataServiceInstancesDetailAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/service/instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['createUser'] !== null) {
+            $queryParams['create_user'] = $localVarParams['createUser'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams['dlm_type'] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceInstancesDetailResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceInstancesDetailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群概览信息列表
+     *
+     * 查询集群概览信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDataServiceInstancesOverviewAsync($request)
+    {
+        return $this->listDataServiceInstancesOverviewAsyncWithHttpInfo($request);
+    }
+    
+    public function listDataServiceInstancesOverviewAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/service/instances/overview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['createUser'] !== null) {
+            $queryParams['create_user'] = $localVarParams['createUser'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams['dlm_type'] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceInstancesOverviewResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceInstancesOverviewRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询服务目录API列表
+     *
+     * 查询服务目录API列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDataServiceMarketApisAsync($request)
+    {
+        return $this->listDataServiceMarketApisAsyncWithHttpInfo($request);
+    }
+    
+    public function listDataServiceMarketApisAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/service/market';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams['dlm_type'] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceMarketApisResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListDataServiceMarketApisRequest',
             $asyncRequest = true);
     }
 
@@ -9458,11 +9701,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -9541,11 +9784,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -9657,11 +9900,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -9767,11 +10010,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -9798,7 +10041,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取所有目录
      *
-     * 获取所有目录。
+     * 获取所有目录(数据标准、码表)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -9847,11 +10090,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -9957,11 +10200,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -10736,11 +10979,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -11037,9 +11280,9 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
-     * 关系
+     * 查询关系
      *
-     * 通过名称、等分页查找关系信息。
+     * 通过关系名称(支持模糊查询)、创建人、开始时间、结束时间等分页查找关系信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -11097,11 +11340,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -12413,11 +12656,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -12499,11 +12742,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -12606,11 +12849,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -12705,7 +12948,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 获取模型
      *
-     * 获取模型。
+     * 获取当前空间下的全部模型信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12757,11 +13000,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -13011,7 +13254,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改自定义项
      *
-     * 修改自定义项。
+     * 修改自定义项（包括表自定义项、属性自定义项、主题自定义项、业务指标自定义项）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13267,11 +13510,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -13344,11 +13587,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -13486,11 +13729,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -13560,11 +13803,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -13667,11 +13910,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -13698,7 +13941,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找原子指标
      *
-     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息。
+     * 通过中英文名称、创建者、审核人、状态、修改时间分页查找原子指标信息看，中英文名称支持模糊查询。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13768,11 +14011,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14020,11 +14263,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14100,11 +14343,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14198,11 +14441,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14229,7 +14472,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询自定义项
      *
-     * 查询自定义项。
+     * 查询自定义项（包括表自定义项、属性自定义项、主题自定义项、业务指标自定义项）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14355,11 +14598,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14438,11 +14681,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14497,6 +14740,12 @@ class DataArtsStudioAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['workspace'] !== null) {
             $headerParams['workspace'] = $localVarParams['workspace'];
         }
@@ -14512,11 +14761,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14623,7 +14872,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查找主题列表
      *
-     * 通过名称、创建者、责任人、状态、修改时间分页查找主题。
+     * 通过名称（支持模糊查询）、创建者、责任人、状态、修改时间分页查找主题。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14690,11 +14939,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14788,11 +15037,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -14883,11 +15132,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -15039,11 +15288,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -15809,7 +16058,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查看原子指标详情
      *
-     * 通过ID获取指标详情信息。
+     * 通过ID获取原子指标详情信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -15855,11 +16104,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -15929,11 +16178,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -16006,11 +16255,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -16361,11 +16610,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -16438,11 +16687,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -16515,11 +16764,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -16756,6 +17005,80 @@ class DataArtsStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataProfileResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataProfileRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群详情信息
+     *
+     * 查询集群详情信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDataServiceInstanceAsync($request)
+    {
+        return $this->showDataServiceInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function showDataServiceInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/service/instances/{instance_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams['workspace'] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['dlmType'] !== null) {
+            $headerParams['dlm_type'] = $localVarParams['dlmType'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataServiceInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowDataServiceInstanceRequest',
             $asyncRequest = true);
     }
 
@@ -17030,11 +17353,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -17107,11 +17430,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -17184,11 +17507,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -17397,11 +17720,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -18668,11 +18991,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -19082,11 +19405,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -19113,7 +19436,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 查询数据标准模板
      *
-     * 查询数据标准模板。
+     * 查询当前工作空间下的数据标准模板。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -19159,11 +19482,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -19236,11 +19559,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -19792,11 +20115,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 []
             );
         }
@@ -20011,11 +20334,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -20165,11 +20488,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -20242,11 +20565,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -20387,11 +20710,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -20461,11 +20784,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -20538,11 +20861,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'data']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'data'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -20569,7 +20892,7 @@ class DataArtsStudioAsyncClient extends Client
     /**
      * 修改目录
      *
-     * 修改目录。
+     * 修改目录（数据标准、码表）。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -20612,11 +20935,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -21198,11 +21521,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -21272,11 +21595,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -21346,11 +21669,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -21420,11 +21743,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -21494,11 +21817,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -21781,11 +22104,11 @@ class DataArtsStudioAsyncClient extends Client
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }

@@ -20,25 +20,25 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * nameEn  字段名。
-    * nameCh  业务属性。
+    * id  编码，填写String类型替代Long类型。
+    * nameEn  原子指标英文名。
+    * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID。
-    * l1Id  主题域分组ID。
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid。
-    * tableId  表ID。
-    * tbName  表名称。
+    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * tableId  事实表ID，填写String类型替代Long类型。
+    * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息。
+    * fieldIds  字段ID信息，填写String类型替代Long类型。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
@@ -54,14 +54,14 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
             'description' => 'string',
             'createBy' => 'string',
             'calExp' => 'string',
-            'calFnIds' => 'int[]',
-            'l1Id' => 'int',
+            'calFnIds' => 'string[]',
+            'l1Id' => 'string',
             'l2Id' => 'string',
             'l3Id' => 'string',
             'tableId' => 'string',
             'tbName' => 'string',
             'dwType' => 'string',
-            'fieldIds' => 'int[]',
+            'fieldIds' => 'string[]',
             'fieldNames' => 'string[]',
             'status' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizStatusEnum',
             'bizType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
@@ -76,25 +76,25 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * nameEn  字段名。
-    * nameCh  业务属性。
+    * id  编码，填写String类型替代Long类型。
+    * nameEn  原子指标英文名。
+    * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID。
-    * l1Id  主题域分组ID。
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid。
-    * tableId  表ID。
-    * tbName  表名称。
+    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * tableId  事实表ID，填写String类型替代Long类型。
+    * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息。
+    * fieldIds  字段ID信息，填写String类型替代Long类型。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
@@ -104,20 +104,20 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'nameEn' => null,
         'nameCh' => null,
         'description' => null,
         'createBy' => null,
         'calExp' => null,
-        'calFnIds' => 'int64',
-        'l1Id' => 'int64',
+        'calFnIds' => null,
+        'l1Id' => null,
         'l2Id' => null,
-        'l3Id' => 'int64',
-        'tableId' => 'int64',
+        'l3Id' => null,
+        'tableId' => null,
         'tbName' => null,
         'dwType' => null,
-        'fieldIds' => 'int64',
+        'fieldIds' => null,
         'fieldNames' => null,
         'status' => null,
         'bizType' => null,
@@ -153,25 +153,25 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * nameEn  字段名。
-    * nameCh  业务属性。
+    * id  编码，填写String类型替代Long类型。
+    * nameEn  原子指标英文名。
+    * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID。
-    * l1Id  主题域分组ID。
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid。
-    * tableId  表ID。
-    * tbName  表名称。
+    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * tableId  事实表ID，填写String类型替代Long类型。
+    * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息。
+    * fieldIds  字段ID信息，填写String类型替代Long类型。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
@@ -209,25 +209,25 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * nameEn  字段名。
-    * nameCh  业务属性。
+    * id  编码，填写String类型替代Long类型。
+    * nameEn  原子指标英文名。
+    * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID。
-    * l1Id  主题域分组ID。
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid。
-    * tableId  表ID。
-    * tbName  表名称。
+    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * tableId  事实表ID，填写String类型替代Long类型。
+    * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息。
+    * fieldIds  字段ID信息，填写String类型替代Long类型。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
@@ -265,25 +265,25 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * nameEn  字段名。
-    * nameCh  业务属性。
+    * id  编码，填写String类型替代Long类型。
+    * nameEn  原子指标英文名。
+    * nameCh  原子指标英文名。
     * description  描述。
     * createBy  创建人。
     * calExp  计算表达式，形如'sum(${fact_column_id})'，其中fact_column_id表示引用事实表中的字段ID
-    * calFnIds  引用函数ID。
-    * l1Id  主题域分组ID。
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象guid。
-    * tableId  表ID。
-    * tbName  表名称。
+    * l3Id  业务对象guid，填写String类型替代Long类型。
+    * tableId  事实表ID，填写String类型替代Long类型。
+    * tbName  事实表名称。
     * dwType  数据连接类型，对应表所在的数仓类型，取值可以为DLI、DWS、MRS_HIVE、POSTGRESQL、MRS_SPARK、CLICKHOUSE、MYSQL、ORACLE和DORIS等。
-    * fieldIds  字段ID信息。
+    * fieldIds  字段ID信息，填写String类型替代Long类型。
     * fieldNames  字段名称信息。
     * status  status
     * bizType  bizType
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
@@ -463,7 +463,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -475,7 +475,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameEn
-    *  字段名。
+    *  原子指标英文名。
     *
     * @return string
     */
@@ -499,7 +499,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameEn
     *
-    * @param string $nameEn 字段名。
+    * @param string $nameEn 原子指标英文名。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nameCh
-    *  业务属性。
+    *  原子指标英文名。
     *
     * @return string
     */
@@ -523,7 +523,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets nameCh
     *
-    * @param string $nameCh 业务属性。
+    * @param string $nameCh 原子指标英文名。
     *
     * @return $this
     */
@@ -607,9 +607,9 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets calFnIds
-    *  引用函数ID。
+    *  引用函数ID，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getCalFnIds()
     {
@@ -619,7 +619,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param int[]|null $calFnIds 引用函数ID。
+    * @param string[]|null $calFnIds 引用函数ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -631,9 +631,9 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID。
+    *  主题域分组ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getL1Id()
     {
@@ -643,7 +643,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组ID。
+    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -679,7 +679,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象guid。
+    *  业务对象guid，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -691,7 +691,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 业务对象guid。
+    * @param string $l3Id 业务对象guid，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -703,7 +703,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  表ID。
+    *  事实表ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -715,7 +715,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param string $tableId 表ID。
+    * @param string $tableId 事实表ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -727,7 +727,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbName
-    *  表名称。
+    *  事实表名称。
     *
     * @return string|null
     */
@@ -739,7 +739,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbName
     *
-    * @param string|null $tbName 表名称。
+    * @param string|null $tbName 事实表名称。
     *
     * @return $this
     */
@@ -775,9 +775,9 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fieldIds
-    *  字段ID信息。
+    *  字段ID信息，填写String类型替代Long类型。
     *
-    * @return int[]
+    * @return string[]
     */
     public function getFieldIds()
     {
@@ -787,7 +787,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets fieldIds
     *
-    * @param int[] $fieldIds 字段ID信息。
+    * @param string[] $fieldIds 字段ID信息，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -871,7 +871,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -883,7 +883,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -895,7 +895,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -907,7 +907,7 @@ class AtomicIndexVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

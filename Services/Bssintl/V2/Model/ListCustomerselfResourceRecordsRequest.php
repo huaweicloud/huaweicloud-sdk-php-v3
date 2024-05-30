@@ -24,8 +24,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
@@ -36,6 +36,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
             'subCustomerId' => 'string',
             'tradeId' => 'string',
             'billDateBegin' => 'string',
-            'billDateEnd' => 'string'
+            'billDateEnd' => 'string',
+            'statisticType' => 'int'
     ];
 
     /**
@@ -64,8 +66,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
@@ -76,6 +78,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
         'subCustomerId' => null,
         'tradeId' => null,
         'billDateBegin' => null,
-        'billDateEnd' => null
+        'billDateEnd' => null,
+        'statisticType' => 'int32'
     ];
 
     /**
@@ -125,8 +129,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
@@ -137,6 +141,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
             'subCustomerId' => 'sub_customer_id',
             'tradeId' => 'trade_id',
             'billDateBegin' => 'bill_date_begin',
-            'billDateEnd' => 'bill_date_end'
+            'billDateEnd' => 'bill_date_end',
+            'statisticType' => 'statistic_type'
     ];
 
     /**
@@ -165,8 +171,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
@@ -177,6 +183,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
             'subCustomerId' => 'setSubCustomerId',
             'tradeId' => 'setTradeId',
             'billDateBegin' => 'setBillDateBegin',
-            'billDateEnd' => 'setBillDateEnd'
+            'billDateEnd' => 'setBillDateEnd',
+            'statisticType' => 'setStatisticType'
     ];
 
     /**
@@ -205,8 +213,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * cycle  查询的资源消费记录所在账期，格式：YYYY-MM。
     * cloudServiceType  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
-    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    * chargeMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
@@ -217,6 +225,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     * tradeId  订单ID或交易ID。账单类型为1、2、3、4和8时此处为订单ID。账单类型为其它场景时此处为交易ID，为扣费维度的唯一标识。例如非月末扣费时为应收ID；月末扣费时为账单ID。此参数不携带时，不作为筛选条件；携带值为空或携带值为空串时，作为筛选条件。
     * billDateBegin  查询的资源消费记录的开始日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
     * billDateEnd  查询的资源消费记录的结束日期，格式为YYYY-MM-DD。 说明： 必须和cycle（即资源的消费账期）在同一个月。bill_date_begin和bill_date_end两个参数必须同时出现，否则仅按照cycle（即资源的消费账期）进行查询。
+    * statisticType  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
             'subCustomerId' => 'getSubCustomerId',
             'tradeId' => 'getTradeId',
             'billDateBegin' => 'getBillDateBegin',
-            'billDateEnd' => 'getBillDateEnd'
+            'billDateEnd' => 'getBillDateEnd',
+            'statisticType' => 'getStatisticType'
     ];
 
     /**
@@ -313,6 +323,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
         $this->container['billDateBegin'] = isset($data['billDateBegin']) ? $data['billDateBegin'] : null;
         $this->container['billDateEnd'] = isset($data['billDateEnd']) ? $data['billDateEnd'] : null;
+        $this->container['statisticType'] = isset($data['statisticType']) ? $data['statisticType'] : null;
     }
 
     /**
@@ -349,6 +360,12 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['statisticType']) && ($this->container['statisticType'] > 3)) {
+                $invalidProperties[] = "invalid value for 'statisticType', must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['statisticType']) && ($this->container['statisticType'] < 1)) {
+                $invalidProperties[] = "invalid value for 'statisticType', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -462,7 +479,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets chargeMode
-    *  计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
+    *  计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -474,7 +491,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 计费模式。1：包年/包月3：按需10：预留实例。此参数不携带时，不作为筛选条件。
+    * @param string|null $chargeMode 计费模式。1：包年/包月3：按需10：预留实例11：节省计划。此参数不携带时，不作为筛选条件。
     *
     * @return $this
     */
@@ -486,7 +503,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
 
     /**
     * Gets billType
-    *  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    *  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -498,7 +515,7 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param int|null $billType 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿 12：消费-按时计费 14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。20：退款-变更100：退款-退订税金23：消费-节省计划抵扣 24：退款-包年/包月转按需101：调账-补偿税金102：调账-扣费税金。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -745,6 +762,30 @@ class ListCustomerselfResourceRecordsRequest implements ModelInterface, ArrayAcc
     public function setBillDateEnd($billDateEnd)
     {
         $this->container['billDateEnd'] = $billDateEnd;
+        return $this;
+    }
+
+    /**
+    * Gets statisticType
+    *  |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    *
+    * @return int|null
+    */
+    public function getStatisticType()
+    {
+        return $this->container['statisticType'];
+    }
+
+    /**
+    * Sets statisticType
+    *
+    * @param int|null $statisticType |参数名称：统计类型。| |参数的约束及描述：统计类型。非必填，默认值为3。1：按账期 3：按明细|
+    *
+    * @return $this
+    */
+    public function setStatisticType($statisticType)
+    {
+        $this->container['statisticType'] = $statisticType;
         return $this;
     }
 

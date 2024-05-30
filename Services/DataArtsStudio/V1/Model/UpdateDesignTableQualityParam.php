@@ -20,7 +20,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bizType  表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    * bizType  表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
     * dirtyOutPrefix  异常表前缀。
@@ -38,7 +38,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bizType  表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    * bizType  表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
     * dirtyOutPrefix  异常表前缀。
@@ -77,7 +77,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bizType  表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    * bizType  表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
     * dirtyOutPrefix  异常表前缀。
@@ -95,7 +95,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bizType  表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    * bizType  表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
     * dirtyOutPrefix  异常表前缀。
@@ -113,7 +113,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bizType  表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    * bizType  表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
     * dirtyOutPrefix  异常表前缀。
@@ -247,7 +247,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizType
-    *  表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    *  表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @return string|null
     */
@@ -259,7 +259,7 @@ class UpdateDesignTableQualityParam implements ModelInterface, ArrayAccess
     /**
     * Sets bizType
     *
-    * @param string|null $bizType 表类型。TABLE_MODEL(关系模型（逻辑模型/物理模型）)、AGGREGATION_LOGIC_TABLE(汇总表)、FACT_LOGIC_TABLE(事实表)、DIMENSION_LOGIC_TABLE(维度表)。
+    * @param string|null $bizType 表类型。 枚举值：   - TABLE_MODEL: 关系模型（逻辑模型/物理模型）   - AGGREGATION_LOGIC_TABLE: 汇总表   - FACT_LOGIC_TABLE: 事实表   - DIMENSION: 维度   - DIMENSION_LOGIC_TABLE: 维度表
     *
     * @return $this
     */

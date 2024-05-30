@@ -20,23 +20,23 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * tagId  标签ID。
+    * id  编码，填写String类型替代Long类型。
+    * tagId  标签ID，填写String类型替代Long类型。
     * tagName  标签名称。
-    * bizId  实体ID。
+    * bizId  实体ID，填写String类型替代Long类型。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
-            'tagId' => 'int',
+            'id' => 'string',
+            'tagId' => 'string',
             'tagName' => 'string',
-            'bizId' => 'int',
+            'bizId' => 'string',
             'bizType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
             'createBy' => 'string',
             'updateBy' => 'string',
@@ -46,23 +46,23 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * tagId  标签ID。
+    * id  编码，填写String类型替代Long类型。
+    * tagId  标签ID，填写String类型替代Long类型。
     * tagName  标签名称。
-    * bizId  实体ID。
+    * bizId  实体ID，填写String类型替代Long类型。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'tagId' => 'int64',
+        'id' => null,
+        'tagId' => null,
         'tagName' => null,
-        'bizId' => 'int64',
+        'bizId' => null,
         'bizType' => null,
         'createBy' => null,
         'updateBy' => null,
@@ -93,15 +93,15 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * tagId  标签ID。
+    * id  编码，填写String类型替代Long类型。
+    * tagId  标签ID，填写String类型替代Long类型。
     * tagName  标签名称。
-    * bizId  实体ID。
+    * bizId  实体ID，填写String类型替代Long类型。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * tagId  标签ID。
+    * id  编码，填写String类型替代Long类型。
+    * tagId  标签ID，填写String类型替代Long类型。
     * tagName  标签名称。
-    * bizId  实体ID。
+    * bizId  实体ID，填写String类型替代Long类型。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * tagId  标签ID。
+    * id  编码，填写String类型替代Long类型。
+    * tagId  标签ID，填写String类型替代Long类型。
     * tagName  标签名称。
-    * bizId  实体ID。
+    * bizId  实体ID，填写String类型替代Long类型。
     * bizType  bizType
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -271,9 +271,9 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -283,7 +283,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -295,9 +295,9 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tagId
-    *  标签ID。
+    *  标签ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getTagId()
     {
@@ -307,7 +307,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets tagId
     *
-    * @param int $tagId 标签ID。
+    * @param string $tagId 标签ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -343,9 +343,9 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  实体ID。
+    *  实体ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getBizId()
     {
@@ -355,7 +355,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int $bizId 实体ID。
+    * @param string $bizId 实体ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -451,7 +451,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -463,7 +463,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -475,7 +475,7 @@ class TagRecordVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

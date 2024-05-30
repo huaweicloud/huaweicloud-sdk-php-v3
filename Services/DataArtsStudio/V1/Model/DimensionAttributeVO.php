@@ -20,9 +20,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * dimensionId  维度ID。
-    * codeTableFieldId  码表属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * dimensionId  维度ID，只读，填写String类型替代Long类型。
+    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -35,21 +35,22 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
+    * secrecyLevels  密级
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
     * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
-            'dimensionId' => 'int',
-            'codeTableFieldId' => 'int',
+            'id' => 'string',
+            'dimensionId' => 'string',
+            'codeTableFieldId' => 'string',
             'nameEn' => 'string',
             'nameCh' => 'string',
             'description' => 'string',
@@ -62,9 +63,10 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
             'isPartitionKey' => 'bool',
             'ordinal' => 'int',
             'notNull' => 'bool',
-            'standRowId' => 'int',
+            'standRowId' => 'string',
             'standRowName' => 'string',
             'qualityInfos' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]',
+            'secrecyLevels' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]',
             'status' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizStatusEnum',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime',
@@ -74,9 +76,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * dimensionId  维度ID。
-    * codeTableFieldId  码表属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * dimensionId  维度ID，只读，填写String类型替代Long类型。
+    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -89,21 +91,22 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
+    * secrecyLevels  密级
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
     * selfDefinedFields  自定义项。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'dimensionId' => 'int64',
-        'codeTableFieldId' => 'int64',
+        'id' => null,
+        'dimensionId' => null,
+        'codeTableFieldId' => null,
         'nameEn' => null,
         'nameCh' => null,
         'description' => null,
@@ -116,9 +119,10 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
         'isPartitionKey' => null,
         'ordinal' => null,
         'notNull' => null,
-        'standRowId' => 'int64',
+        'standRowId' => null,
         'standRowName' => null,
         'qualityInfos' => null,
+        'secrecyLevels' => null,
         'status' => null,
         'createTime' => 'date-time',
         'updateTime' => 'date-time',
@@ -149,9 +153,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * dimensionId  维度ID。
-    * codeTableFieldId  码表属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * dimensionId  维度ID，只读，填写String类型替代Long类型。
+    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -164,12 +168,13 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
+    * secrecyLevels  密级
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
     * selfDefinedFields  自定义项。
     *
@@ -194,6 +199,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
             'standRowId' => 'stand_row_id',
             'standRowName' => 'stand_row_name',
             'qualityInfos' => 'quality_infos',
+            'secrecyLevels' => 'secrecy_levels',
             'status' => 'status',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -203,9 +209,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * dimensionId  维度ID。
-    * codeTableFieldId  码表属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * dimensionId  维度ID，只读，填写String类型替代Long类型。
+    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -218,12 +224,13 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
+    * secrecyLevels  密级
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
     * selfDefinedFields  自定义项。
     *
@@ -248,6 +255,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
             'standRowId' => 'setStandRowId',
             'standRowName' => 'setStandRowName',
             'qualityInfos' => 'setQualityInfos',
+            'secrecyLevels' => 'setSecrecyLevels',
             'status' => 'setStatus',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -257,9 +265,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * dimensionId  维度ID。
-    * codeTableFieldId  码表属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * dimensionId  维度ID，只读，填写String类型替代Long类型。
+    * codeTableFieldId  码表属性ID，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -272,12 +280,13 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     * isPartitionKey  是否分区。
     * ordinal  序号。
     * notNull  是否不为空。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
+    * secrecyLevels  密级
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * alias  别名
     * selfDefinedFields  自定义项。
     *
@@ -302,6 +311,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
             'standRowId' => 'getStandRowId',
             'standRowName' => 'getStandRowName',
             'qualityInfos' => 'getQualityInfos',
+            'secrecyLevels' => 'getSecrecyLevels',
             'status' => 'getStatus',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -385,6 +395,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
         $this->container['standRowId'] = isset($data['standRowId']) ? $data['standRowId'] : null;
         $this->container['standRowName'] = isset($data['standRowName']) ? $data['standRowName'] : null;
         $this->container['qualityInfos'] = isset($data['qualityInfos']) ? $data['qualityInfos'] : null;
+        $this->container['secrecyLevels'] = isset($data['secrecyLevels']) ? $data['secrecyLevels'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -455,9 +466,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -467,7 +478,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -479,9 +490,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  维度ID。
+    *  维度ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getDimensionId()
     {
@@ -491,7 +502,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param int|null $dimensionId 维度ID。
+    * @param string|null $dimensionId 维度ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -503,9 +514,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableFieldId
-    *  码表属性ID。
+    *  码表属性ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getCodeTableFieldId()
     {
@@ -515,7 +526,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableFieldId
     *
-    * @param int|null $codeTableFieldId 码表属性ID。
+    * @param string|null $codeTableFieldId 码表属性ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -815,9 +826,9 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowId
-    *  关联的数据标准的ID。
+    *  关联的数据标准的ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getStandRowId()
     {
@@ -827,7 +838,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param int|null $standRowId 关联的数据标准的ID。
+    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -839,7 +850,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowName
-    *  关联的数据标准名称。
+    *  关联的数据标准名称，只读。
     *
     * @return string|null
     */
@@ -851,7 +862,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowName
     *
-    * @param string|null $standRowName 关联的数据标准名称。
+    * @param string|null $standRowName 关联的数据标准名称，只读。
     *
     * @return $this
     */
@@ -863,7 +874,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityInfos
-    *  质量信息。
+    *  质量信息，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null
     */
@@ -875,13 +886,37 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfos
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息，只读。
     *
     * @return $this
     */
     public function setQualityInfos($qualityInfos)
     {
         $this->container['qualityInfos'] = $qualityInfos;
+        return $this;
+    }
+
+    /**
+    * Gets secrecyLevels
+    *  密级
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]|null
+    */
+    public function getSecrecyLevels()
+    {
+        return $this->container['secrecyLevels'];
+    }
+
+    /**
+    * Sets secrecyLevels
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]|null $secrecyLevels 密级
+    *
+    * @return $this
+    */
+    public function setSecrecyLevels($secrecyLevels)
+    {
+        $this->container['secrecyLevels'] = $secrecyLevels;
         return $this;
     }
 
@@ -911,7 +946,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -923,7 +958,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -935,7 +970,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -947,7 +982,7 @@ class DimensionAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

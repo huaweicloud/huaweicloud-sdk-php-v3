@@ -20,7 +20,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * name  参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     * description  参数模板描述，默认为空。 取值范围：长度不超过256，不能包含回车<>!&等特殊字符。
     * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义参数值。
     * datastore  datastore
@@ -36,7 +36,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * name  参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     * description  参数模板描述，默认为空。 取值范围：长度不超过256，不能包含回车<>!&等特殊字符。
     * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义参数值。
     * datastore  datastore
@@ -73,7 +73,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * name  参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     * description  参数模板描述，默认为空。 取值范围：长度不超过256，不能包含回车<>!&等特殊字符。
     * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义参数值。
     * datastore  datastore
@@ -89,7 +89,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * name  参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     * description  参数模板描述，默认为空。 取值范围：长度不超过256，不能包含回车<>!&等特殊字符。
     * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义参数值。
     * datastore  datastore
@@ -105,7 +105,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * name  参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     * description  参数模板描述，默认为空。 取值范围：长度不超过256，不能包含回车<>!&等特殊字符。
     * parameterValues  参数名和参数值映射关系。用户可以基于默认参数模板的参数，自定义参数值。
     * datastore  datastore
@@ -213,7 +213,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
 
     /**
     * Gets name
-    *  参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    *  参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     *
     * @return string
     */
@@ -225,7 +225,7 @@ class CreateConfigurationTemplateRequestBody implements ModelInterface, ArrayAcc
     /**
     * Sets name
     *
-    * @param string $name 参数模板名称。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
+    * @param string $name 参数模板名称，不可与已有参数模板名称重复。 取值范围：长度1到64位之间，区分大小写字母，可包含字母、数字、中划线、下划线或句点，不能包含其他特殊字符。
     *
     * @return $this
     */

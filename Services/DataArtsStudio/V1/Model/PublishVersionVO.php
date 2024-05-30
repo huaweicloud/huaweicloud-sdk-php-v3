@@ -20,18 +20,19 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  版本ID。
+    * id  版本ID，填写String类型替代Long类型。
     * versionName  版本名称。
-    * versionTag  版本标记。
+    * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID。
+    * bizId  业务对象ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
+    * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
-    * effectObjs  影响信息。
-    * changeProps  变化信息。
-    * sqlDdl  SQL脚本。
+    * effectObjs  影响信息，只读。
+    * changeProps  变化信息，只读。
+    * sqlDdl  SQL脚本，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
@@ -41,9 +42,9 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     * publishToDlm  publishToDlm
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
-    * isCurrentVersion  是否为当前版本。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * createBy  创建人。
+    * isCurrentVersion  是否为当前版本，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人，只读。
     *
     * @var string[]
     */
@@ -60,6 +61,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
             'changeProps' => 'string',
             'sqlDdl' => 'string',
             'physicalTable' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
+            'devPhysicalTable' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'technicalAsset' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'businessAsset' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'metaDataLink' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
@@ -76,18 +78,19 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  版本ID。
+    * id  版本ID，填写String类型替代Long类型。
     * versionName  版本名称。
-    * versionTag  版本标记。
+    * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID。
+    * bizId  业务对象ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
+    * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
-    * effectObjs  影响信息。
-    * changeProps  变化信息。
-    * sqlDdl  SQL脚本。
+    * effectObjs  影响信息，只读。
+    * changeProps  变化信息，只读。
+    * sqlDdl  SQL脚本，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
@@ -97,18 +100,18 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     * publishToDlm  publishToDlm
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
-    * isCurrentVersion  是否为当前版本。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * createBy  创建人。
+    * isCurrentVersion  是否为当前版本，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人，只读。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'versionName' => null,
         'versionTag' => null,
         'description' => null,
-        'bizId' => 'int64',
+        'bizId' => null,
         'bizType' => null,
         'bizInfo' => null,
         'bizInfoVo' => null,
@@ -116,6 +119,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
         'changeProps' => null,
         'sqlDdl' => null,
         'physicalTable' => null,
+        'devPhysicalTable' => null,
         'technicalAsset' => null,
         'businessAsset' => null,
         'metaDataLink' => null,
@@ -153,18 +157,19 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  版本ID。
+    * id  版本ID，填写String类型替代Long类型。
     * versionName  版本名称。
-    * versionTag  版本标记。
+    * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID。
+    * bizId  业务对象ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
+    * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
-    * effectObjs  影响信息。
-    * changeProps  变化信息。
-    * sqlDdl  SQL脚本。
+    * effectObjs  影响信息，只读。
+    * changeProps  变化信息，只读。
+    * sqlDdl  SQL脚本，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
@@ -174,9 +179,9 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     * publishToDlm  publishToDlm
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
-    * isCurrentVersion  是否为当前版本。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * createBy  创建人。
+    * isCurrentVersion  是否为当前版本，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人，只读。
     *
     * @var string[]
     */
@@ -193,6 +198,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
             'changeProps' => 'change_props',
             'sqlDdl' => 'sql_ddl',
             'physicalTable' => 'physical_table',
+            'devPhysicalTable' => 'dev_physical_table',
             'technicalAsset' => 'technical_asset',
             'businessAsset' => 'business_asset',
             'metaDataLink' => 'meta_data_link',
@@ -209,18 +215,19 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  版本ID。
+    * id  版本ID，填写String类型替代Long类型。
     * versionName  版本名称。
-    * versionTag  版本标记。
+    * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID。
+    * bizId  业务对象ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
+    * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
-    * effectObjs  影响信息。
-    * changeProps  变化信息。
-    * sqlDdl  SQL脚本。
+    * effectObjs  影响信息，只读。
+    * changeProps  变化信息，只读。
+    * sqlDdl  SQL脚本，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
@@ -230,9 +237,9 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     * publishToDlm  publishToDlm
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
-    * isCurrentVersion  是否为当前版本。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * createBy  创建人。
+    * isCurrentVersion  是否为当前版本，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人，只读。
     *
     * @var string[]
     */
@@ -249,6 +256,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
             'changeProps' => 'setChangeProps',
             'sqlDdl' => 'setSqlDdl',
             'physicalTable' => 'setPhysicalTable',
+            'devPhysicalTable' => 'setDevPhysicalTable',
             'technicalAsset' => 'setTechnicalAsset',
             'businessAsset' => 'setBusinessAsset',
             'metaDataLink' => 'setMetaDataLink',
@@ -265,18 +273,19 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  版本ID。
+    * id  版本ID，填写String类型替代Long类型。
     * versionName  版本名称。
-    * versionTag  版本标记。
+    * versionTag  版本标记，只读。
     * description  版本描述。
-    * bizId  业务对象ID。
+    * bizId  业务对象ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
+    * bizInfo  业务详情，只读。
     * bizInfoVo  业务对象。
-    * effectObjs  影响信息。
-    * changeProps  变化信息。
-    * sqlDdl  SQL脚本。
+    * effectObjs  影响信息，只读。
+    * changeProps  变化信息，只读。
+    * sqlDdl  SQL脚本，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
@@ -286,9 +295,9 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     * publishToDlm  publishToDlm
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
-    * isCurrentVersion  是否为当前版本。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * createBy  创建人。
+    * isCurrentVersion  是否为当前版本，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createBy  创建人，只读。
     *
     * @var string[]
     */
@@ -305,6 +314,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
             'changeProps' => 'getChangeProps',
             'sqlDdl' => 'getSqlDdl',
             'physicalTable' => 'getPhysicalTable',
+            'devPhysicalTable' => 'getDevPhysicalTable',
             'technicalAsset' => 'getTechnicalAsset',
             'businessAsset' => 'getBusinessAsset',
             'metaDataLink' => 'getMetaDataLink',
@@ -389,6 +399,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
         $this->container['changeProps'] = isset($data['changeProps']) ? $data['changeProps'] : null;
         $this->container['sqlDdl'] = isset($data['sqlDdl']) ? $data['sqlDdl'] : null;
         $this->container['physicalTable'] = isset($data['physicalTable']) ? $data['physicalTable'] : null;
+        $this->container['devPhysicalTable'] = isset($data['devPhysicalTable']) ? $data['devPhysicalTable'] : null;
         $this->container['technicalAsset'] = isset($data['technicalAsset']) ? $data['technicalAsset'] : null;
         $this->container['businessAsset'] = isset($data['businessAsset']) ? $data['businessAsset'] : null;
         $this->container['metaDataLink'] = isset($data['metaDataLink']) ? $data['metaDataLink'] : null;
@@ -433,7 +444,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  版本ID。
+    *  版本ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -445,7 +456,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 版本ID。
+    * @param string|null $id 版本ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -481,7 +492,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionTag
-    *  版本标记。
+    *  版本标记，只读。
     *
     * @return string|null
     */
@@ -493,7 +504,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets versionTag
     *
-    * @param string|null $versionTag 版本标记。
+    * @param string|null $versionTag 版本标记，只读。
     *
     * @return $this
     */
@@ -529,7 +540,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务对象ID。
+    *  业务对象ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -541,7 +552,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务对象ID。
+    * @param string|null $bizId 业务对象ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -577,7 +588,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfo
-    *  业务详情。
+    *  业务详情，只读。
     *
     * @return string|null
     */
@@ -589,7 +600,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfo
     *
-    * @param string|null $bizInfo 业务详情。
+    * @param string|null $bizInfo 业务详情，只读。
     *
     * @return $this
     */
@@ -625,7 +636,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets effectObjs
-    *  影响信息。
+    *  影响信息，只读。
     *
     * @return string|null
     */
@@ -637,7 +648,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets effectObjs
     *
-    * @param string|null $effectObjs 影响信息。
+    * @param string|null $effectObjs 影响信息，只读。
     *
     * @return $this
     */
@@ -649,7 +660,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets changeProps
-    *  变化信息。
+    *  变化信息，只读。
     *
     * @return string|null
     */
@@ -661,7 +672,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets changeProps
     *
-    * @param string|null $changeProps 变化信息。
+    * @param string|null $changeProps 变化信息，只读。
     *
     * @return $this
     */
@@ -673,7 +684,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sqlDdl
-    *  SQL脚本。
+    *  SQL脚本，只读。
     *
     * @return string|null
     */
@@ -685,7 +696,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets sqlDdl
     *
-    * @param string|null $sqlDdl SQL脚本。
+    * @param string|null $sqlDdl SQL脚本，只读。
     *
     * @return $this
     */
@@ -716,6 +727,30 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     public function setPhysicalTable($physicalTable)
     {
         $this->container['physicalTable'] = $physicalTable;
+        return $this;
+    }
+
+    /**
+    * Gets devPhysicalTable
+    *  devPhysicalTable
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum|null
+    */
+    public function getDevPhysicalTable()
+    {
+        return $this->container['devPhysicalTable'];
+    }
+
+    /**
+    * Sets devPhysicalTable
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum|null $devPhysicalTable devPhysicalTable
+    *
+    * @return $this
+    */
+    public function setDevPhysicalTable($devPhysicalTable)
+    {
+        $this->container['devPhysicalTable'] = $devPhysicalTable;
         return $this;
     }
 
@@ -937,7 +972,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCurrentVersion
-    *  是否为当前版本。
+    *  是否为当前版本，只读。
     *
     * @return bool|null
     */
@@ -949,7 +984,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets isCurrentVersion
     *
-    * @param bool|null $isCurrentVersion 是否为当前版本。
+    * @param bool|null $isCurrentVersion 是否为当前版本，只读。
     *
     * @return $this
     */
@@ -961,7 +996,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -973,7 +1008,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -985,7 +1020,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人。
+    *  创建人，只读。
     *
     * @return string|null
     */
@@ -997,7 +1032,7 @@ class PublishVersionVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人。
+    * @param string|null $createBy 创建人，只读。
     *
     * @return $this
     */

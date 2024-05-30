@@ -55,6 +55,7 @@ class Configs implements ModelInterface, ArrayAccess
     * sni  sni
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
+    * accessAreaFilter  accessAreaFilter
     *
     * @var string[]
     */
@@ -93,7 +94,8 @@ class Configs implements ModelInterface, ArrayAccess
             'errorCodeRedirectRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\ErrorCodeRedirectRules[]',
             'sni' => '\HuaweiCloud\SDK\Cdn\V2\Model\Sni',
             'requestUrlRewrite' => '\HuaweiCloud\SDK\Cdn\V2\Model\RequestUrlRewrite[]',
-            'browserCacheRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]'
+            'browserCacheRules' => '\HuaweiCloud\SDK\Cdn\V2\Model\BrowserCacheRules[]',
+            'accessAreaFilter' => '\HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]'
     ];
 
     /**
@@ -133,6 +135,7 @@ class Configs implements ModelInterface, ArrayAccess
     * sni  sni
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
+    * accessAreaFilter  accessAreaFilter
     *
     * @var string[]
     */
@@ -171,7 +174,8 @@ class Configs implements ModelInterface, ArrayAccess
         'errorCodeRedirectRules' => null,
         'sni' => null,
         'requestUrlRewrite' => null,
-        'browserCacheRules' => null
+        'browserCacheRules' => null,
+        'accessAreaFilter' => null
     ];
 
     /**
@@ -232,6 +236,7 @@ class Configs implements ModelInterface, ArrayAccess
     * sni  sni
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
+    * accessAreaFilter  accessAreaFilter
     *
     * @var string[]
     */
@@ -270,7 +275,8 @@ class Configs implements ModelInterface, ArrayAccess
             'errorCodeRedirectRules' => 'error_code_redirect_rules',
             'sni' => 'sni',
             'requestUrlRewrite' => 'request_url_rewrite',
-            'browserCacheRules' => 'browser_cache_rules'
+            'browserCacheRules' => 'browser_cache_rules',
+            'accessAreaFilter' => 'access_area_filter'
     ];
 
     /**
@@ -310,6 +316,7 @@ class Configs implements ModelInterface, ArrayAccess
     * sni  sni
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
+    * accessAreaFilter  accessAreaFilter
     *
     * @var string[]
     */
@@ -348,7 +355,8 @@ class Configs implements ModelInterface, ArrayAccess
             'errorCodeRedirectRules' => 'setErrorCodeRedirectRules',
             'sni' => 'setSni',
             'requestUrlRewrite' => 'setRequestUrlRewrite',
-            'browserCacheRules' => 'setBrowserCacheRules'
+            'browserCacheRules' => 'setBrowserCacheRules',
+            'accessAreaFilter' => 'setAccessAreaFilter'
     ];
 
     /**
@@ -388,6 +396,7 @@ class Configs implements ModelInterface, ArrayAccess
     * sni  sni
     * requestUrlRewrite  访问URL重写。
     * browserCacheRules  浏览器缓存过期时间。
+    * accessAreaFilter  accessAreaFilter
     *
     * @var string[]
     */
@@ -426,7 +435,8 @@ class Configs implements ModelInterface, ArrayAccess
             'errorCodeRedirectRules' => 'getErrorCodeRedirectRules',
             'sni' => 'getSni',
             'requestUrlRewrite' => 'getRequestUrlRewrite',
-            'browserCacheRules' => 'getBrowserCacheRules'
+            'browserCacheRules' => 'getBrowserCacheRules',
+            'accessAreaFilter' => 'getAccessAreaFilter'
     ];
 
     /**
@@ -522,6 +532,7 @@ class Configs implements ModelInterface, ArrayAccess
         $this->container['sni'] = isset($data['sni']) ? $data['sni'] : null;
         $this->container['requestUrlRewrite'] = isset($data['requestUrlRewrite']) ? $data['requestUrlRewrite'] : null;
         $this->container['browserCacheRules'] = isset($data['browserCacheRules']) ? $data['browserCacheRules'] : null;
+        $this->container['accessAreaFilter'] = isset($data['accessAreaFilter']) ? $data['accessAreaFilter'] : null;
     }
 
     /**
@@ -1383,6 +1394,30 @@ class Configs implements ModelInterface, ArrayAccess
     public function setBrowserCacheRules($browserCacheRules)
     {
         $this->container['browserCacheRules'] = $browserCacheRules;
+        return $this;
+    }
+
+    /**
+    * Gets accessAreaFilter
+    *  accessAreaFilter
+    *
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]|null
+    */
+    public function getAccessAreaFilter()
+    {
+        return $this->container['accessAreaFilter'];
+    }
+
+    /**
+    * Sets accessAreaFilter
+    *
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\AccessAreaFilter[]|null $accessAreaFilter accessAreaFilter
+    *
+    * @return $this
+    */
+    public function setAccessAreaFilter($accessAreaFilter)
+    {
+        $this->container['accessAreaFilter'] = $accessAreaFilter;
         return $this;
     }
 

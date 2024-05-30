@@ -20,8 +20,8 @@ class FlavorBrief implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * flavor  微服务引擎专享版规格
-    * description  微服务引擎专享版规格描述
+    * flavor  微服务引擎规格
+    * description  微服务引擎规格描述
     * spec  spec
     *
     * @var string[]
@@ -34,8 +34,8 @@ class FlavorBrief implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * flavor  微服务引擎专享版规格
-    * description  微服务引擎专享版规格描述
+    * flavor  微服务引擎规格
+    * description  微服务引擎规格描述
     * spec  spec
     *
     * @var string[]
@@ -69,8 +69,8 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * flavor  微服务引擎专享版规格
-    * description  微服务引擎专享版规格描述
+    * flavor  微服务引擎规格
+    * description  微服务引擎规格描述
     * spec  spec
     *
     * @var string[]
@@ -83,8 +83,8 @@ class FlavorBrief implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * flavor  微服务引擎专享版规格
-    * description  微服务引擎专享版规格描述
+    * flavor  微服务引擎规格
+    * description  微服务引擎规格描述
     * spec  spec
     *
     * @var string[]
@@ -97,8 +97,8 @@ class FlavorBrief implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * flavor  微服务引擎专享版规格
-    * description  微服务引擎专享版规格描述
+    * flavor  微服务引擎规格
+    * description  微服务引擎规格描述
     * spec  spec
     *
     * @var string[]
@@ -196,7 +196,7 @@ class FlavorBrief implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  微服务引擎专享版规格
+    *  微服务引擎规格
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor 微服务引擎专享版规格
+    * @param string|null $flavor 微服务引擎规格
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class FlavorBrief implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  微服务引擎专享版规格描述
+    *  微服务引擎规格描述
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class FlavorBrief implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 微服务引擎专享版规格描述
+    * @param string|null $description 微服务引擎规格描述
     *
     * @return $this
     */

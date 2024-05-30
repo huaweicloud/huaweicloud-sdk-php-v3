@@ -23,7 +23,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * type  刷新的类型，其值可以为file：文件，或directory：目录，默认为file。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     * zhUrlEncode  是否对url中的中文字符进行编码后刷新，false代表不开启，true代表开启，开启后仅刷新转码后的URL。
-    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * type  刷新的类型，其值可以为file：文件，或directory：目录，默认为file。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     * zhUrlEncode  是否对url中的中文字符进行编码后刷新，false代表不开启，true代表开启，开启后仅刷新转码后的URL。
-    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * type  刷新的类型，其值可以为file：文件，或directory：目录，默认为file。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     * zhUrlEncode  是否对url中的中文字符进行编码后刷新，false代表不开启，true代表开启，开启后仅刷新转码后的URL。
-    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * type  刷新的类型，其值可以为file：文件，或directory：目录，默认为file。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     * zhUrlEncode  是否对url中的中文字符进行编码后刷新，false代表不开启，true代表开启，开启后仅刷新转码后的URL。
-    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     * type  刷新的类型，其值可以为file：文件，或directory：目录，默认为file。
     * mode  目录刷新方式，all：刷新目录下全部资源；detect_modify_refresh：刷新目录下已变更的资源，默认值为all。
     * zhUrlEncode  是否对url中的中文字符进行编码后刷新，false代表不开启，true代表开启，开启后仅刷新转码后的URL。
-    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    * urls  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @var string[]
     */
@@ -328,7 +328,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets urls
-    *  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    *  需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @return string[]
     */
@@ -340,7 +340,7 @@ class RefreshTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets urls
     *
-    * @param string[] $urls 需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔，单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。  >   如果您需要刷新的URL中有中文，请同时刷新中文URL和转码后的URL。
+    * @param string[] $urls 需要刷新的URL必须带有“http://”或“https://”，多个URL用逗号分隔（\"url1\", \"url2\"），单个url的长度限制为4096字符，单次最多输入1000个url，如果输入的是目录，支持100个目录刷新。   > - 如果您需要刷新的URL中有中文，请同时刷新中文URL（输入中文URL且不开启zh_url_encode）和转码后的URL（输入中文URL且开启zh_url_encode）。   > - 如果您的URL中带有空格，请自行转码后输入，且不要开启URL Encode。
     *
     * @return $this
     */

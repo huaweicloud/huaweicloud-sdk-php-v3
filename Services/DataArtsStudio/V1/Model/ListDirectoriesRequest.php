@@ -23,9 +23,9 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @var string[]
     */
@@ -43,9 +43,9 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @var string[]
     */
@@ -104,9 +104,9 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @var string[]
     */
@@ -124,9 +124,9 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
-    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    * type  获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @var string[]
     */
@@ -351,7 +351,7 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    *  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -363,7 +363,7 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * @param int|null $limit 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */
@@ -399,7 +399,7 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    *  获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @return string
     */
@@ -411,7 +411,7 @@ class ListDirectoriesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 获取该目录下的数据，如果有子目录，获取所有子目录的数据。CODE(码表目录)、STANDARD_ELEMENT(数据标准目录)。
+    * @param string $type 获取该目录下的数据，如果有子目录，获取所有子目录的数据。 枚举值：   - CODE: 码表目录   - STANDARD_ELEMENT: 数据标准目录
     *
     * @return $this
     */

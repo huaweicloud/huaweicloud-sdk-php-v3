@@ -20,11 +20,11 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  微服务引擎专享版CCE节点ID
-    * az  微服务引擎专享版CCE节点所属可用区
-    * ip  微服务引擎专享版CCE节点IP
-    * label  微服务引擎专享版CCE节点标签
-    * status  微服务引擎专享版CCE节点状态
+    * id  微服务引擎CCE节点ID
+    * az  微服务引擎CCE节点所属可用区
+    * ip  微服务引擎CCE节点IP
+    * label  微服务引擎CCE节点标签
+    * status  微服务引擎CCE节点状态
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  微服务引擎专享版CCE节点ID
-    * az  微服务引擎专享版CCE节点所属可用区
-    * ip  微服务引擎专享版CCE节点IP
-    * label  微服务引擎专享版CCE节点标签
-    * status  微服务引擎专享版CCE节点状态
+    * id  微服务引擎CCE节点ID
+    * az  微服务引擎CCE节点所属可用区
+    * ip  微服务引擎CCE节点IP
+    * label  微服务引擎CCE节点标签
+    * status  微服务引擎CCE节点状态
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class ClusterNode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  微服务引擎专享版CCE节点ID
-    * az  微服务引擎专享版CCE节点所属可用区
-    * ip  微服务引擎专享版CCE节点IP
-    * label  微服务引擎专享版CCE节点标签
-    * status  微服务引擎专享版CCE节点状态
+    * id  微服务引擎CCE节点ID
+    * az  微服务引擎CCE节点所属可用区
+    * ip  微服务引擎CCE节点IP
+    * label  微服务引擎CCE节点标签
+    * status  微服务引擎CCE节点状态
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  微服务引擎专享版CCE节点ID
-    * az  微服务引擎专享版CCE节点所属可用区
-    * ip  微服务引擎专享版CCE节点IP
-    * label  微服务引擎专享版CCE节点标签
-    * status  微服务引擎专享版CCE节点状态
+    * id  微服务引擎CCE节点ID
+    * az  微服务引擎CCE节点所属可用区
+    * ip  微服务引擎CCE节点IP
+    * label  微服务引擎CCE节点标签
+    * status  微服务引擎CCE节点状态
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  微服务引擎专享版CCE节点ID
-    * az  微服务引擎专享版CCE节点所属可用区
-    * ip  微服务引擎专享版CCE节点IP
-    * label  微服务引擎专享版CCE节点标签
-    * status  微服务引擎专享版CCE节点状态
+    * id  微服务引擎CCE节点ID
+    * az  微服务引擎CCE节点所属可用区
+    * ip  微服务引擎CCE节点IP
+    * label  微服务引擎CCE节点标签
+    * status  微服务引擎CCE节点状态
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  微服务引擎专享版CCE节点ID
+    *  微服务引擎CCE节点ID
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 微服务引擎专享版CCE节点ID
+    * @param string|null $id 微服务引擎CCE节点ID
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets az
-    *  微服务引擎专享版CCE节点所属可用区
+    *  微服务引擎CCE节点所属可用区
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
     /**
     * Sets az
     *
-    * @param string|null $az 微服务引擎专享版CCE节点所属可用区
+    * @param string|null $az 微服务引擎CCE节点所属可用区
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  微服务引擎专享版CCE节点IP
+    *  微服务引擎CCE节点IP
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string|null $ip 微服务引擎专享版CCE节点IP
+    * @param string|null $ip 微服务引擎CCE节点IP
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  微服务引擎专享版CCE节点标签
+    *  微服务引擎CCE节点标签
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param string|null $label 微服务引擎专享版CCE节点标签
+    * @param string|null $label 微服务引擎CCE节点标签
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  微服务引擎专享版CCE节点状态
+    *  微服务引擎CCE节点状态
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class ClusterNode implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 微服务引擎专享版CCE节点状态
+    * @param string|null $status 微服务引擎CCE节点状态
     *
     * @return $this
     */

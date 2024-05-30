@@ -22,8 +22,8 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * measureId  度量单位ID。 例如：10表示GB。
     * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
-    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
-    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * measureId  度量单位ID。 例如：10表示GB。
     * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
-    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
-    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * measureId  度量单位ID。 例如：10表示GB。
     * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
-    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
-    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * measureId  度量单位ID。 例如：10表示GB。
     * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
-    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
-    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * measureId  度量单位ID。 例如：10表示GB。
     * measureName  度量单位的名称，根据查询的语言类型返回结果。 例如：GB。
-    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
-    * measureType  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    * abbreviation  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
+    * measureType  度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @var string[]
     */
@@ -255,7 +255,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Gets abbreviation
-    *  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    *  度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Sets abbreviation
     *
-    * @param string|null $abbreviation 度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“GB”。
+    * @param string|null $abbreviation 度量单位名称的英文缩写。 例如：度量单位名称“GB”的英文缩写为“G”。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
 
     /**
     * Gets measureType
-    *  度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    *  度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class MeasureUnitRest implements ModelInterface, ArrayAccess
     /**
     * Sets measureType
     *
-    * @param int|null $measureType 度量类型。 1：货币2：时长3：流量4：数量7：容量9：行数10：周期11：频率12：个数16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens
+    * @param int|null $measureType 度量类型。 1：货币2：时长3：流量4：数量6：长度7：容量9：行数10：周期11：频率12：个数15：容量*时长16：带宽速率17：容量时长18：查询速率19：带宽速率（1000进制）20：性能测试用量21：面积22：视频23：吞吐量24：分辨率26：通用资源包抵扣单位27：核数*时长28：内存*时长29：IOPS*时长30：吞吐量*时长31：个/时长40：流量（1000进制）41：1K Tokens82：帧98：缓存带宽x时长
     *
     * @return $this
     */

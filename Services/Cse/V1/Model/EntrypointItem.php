@@ -20,11 +20,11 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * masterEntrypoint  微服务引擎专享版组件的ipv4主接入地址
-    * masterEntrypointIpv6  微服务引擎专享版组件的ipv6主接入地址
-    * slaveEntrypoint  微服务引擎专享版组件的ipv4备接入地址
-    * slaveEntrypointIpv6  微服务引擎专享版组件的ipv6备接入地址
-    * type  微服务引擎专享版组件类型
+    * masterEntrypoint  微服务引擎组件的ipv4主接入地址
+    * masterEntrypointIpv6  微服务引擎组件的ipv6主接入地址
+    * slaveEntrypoint  微服务引擎组件的ipv4备接入地址
+    * slaveEntrypointIpv6  微服务引擎组件的ipv6备接入地址
+    * type  微服务引擎组件类型
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * masterEntrypoint  微服务引擎专享版组件的ipv4主接入地址
-    * masterEntrypointIpv6  微服务引擎专享版组件的ipv6主接入地址
-    * slaveEntrypoint  微服务引擎专享版组件的ipv4备接入地址
-    * slaveEntrypointIpv6  微服务引擎专享版组件的ipv6备接入地址
-    * type  微服务引擎专享版组件类型
+    * masterEntrypoint  微服务引擎组件的ipv4主接入地址
+    * masterEntrypointIpv6  微服务引擎组件的ipv6主接入地址
+    * slaveEntrypoint  微服务引擎组件的ipv4备接入地址
+    * slaveEntrypointIpv6  微服务引擎组件的ipv6备接入地址
+    * type  微服务引擎组件类型
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * masterEntrypoint  微服务引擎专享版组件的ipv4主接入地址
-    * masterEntrypointIpv6  微服务引擎专享版组件的ipv6主接入地址
-    * slaveEntrypoint  微服务引擎专享版组件的ipv4备接入地址
-    * slaveEntrypointIpv6  微服务引擎专享版组件的ipv6备接入地址
-    * type  微服务引擎专享版组件类型
+    * masterEntrypoint  微服务引擎组件的ipv4主接入地址
+    * masterEntrypointIpv6  微服务引擎组件的ipv6主接入地址
+    * slaveEntrypoint  微服务引擎组件的ipv4备接入地址
+    * slaveEntrypointIpv6  微服务引擎组件的ipv6备接入地址
+    * type  微服务引擎组件类型
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * masterEntrypoint  微服务引擎专享版组件的ipv4主接入地址
-    * masterEntrypointIpv6  微服务引擎专享版组件的ipv6主接入地址
-    * slaveEntrypoint  微服务引擎专享版组件的ipv4备接入地址
-    * slaveEntrypointIpv6  微服务引擎专享版组件的ipv6备接入地址
-    * type  微服务引擎专享版组件类型
+    * masterEntrypoint  微服务引擎组件的ipv4主接入地址
+    * masterEntrypointIpv6  微服务引擎组件的ipv6主接入地址
+    * slaveEntrypoint  微服务引擎组件的ipv4备接入地址
+    * slaveEntrypointIpv6  微服务引擎组件的ipv6备接入地址
+    * type  微服务引擎组件类型
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * masterEntrypoint  微服务引擎专享版组件的ipv4主接入地址
-    * masterEntrypointIpv6  微服务引擎专享版组件的ipv6主接入地址
-    * slaveEntrypoint  微服务引擎专享版组件的ipv4备接入地址
-    * slaveEntrypointIpv6  微服务引擎专享版组件的ipv6备接入地址
-    * type  微服务引擎专享版组件类型
+    * masterEntrypoint  微服务引擎组件的ipv4主接入地址
+    * masterEntrypointIpv6  微服务引擎组件的ipv6主接入地址
+    * slaveEntrypoint  微服务引擎组件的ipv4备接入地址
+    * slaveEntrypointIpv6  微服务引擎组件的ipv6备接入地址
+    * type  微服务引擎组件类型
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets masterEntrypoint
-    *  微服务引擎专享版组件的ipv4主接入地址
+    *  微服务引擎组件的ipv4主接入地址
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     /**
     * Sets masterEntrypoint
     *
-    * @param string|null $masterEntrypoint 微服务引擎专享版组件的ipv4主接入地址
+    * @param string|null $masterEntrypoint 微服务引擎组件的ipv4主接入地址
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets masterEntrypointIpv6
-    *  微服务引擎专享版组件的ipv6主接入地址
+    *  微服务引擎组件的ipv6主接入地址
     *
     * @return string|null
     */
@@ -277,7 +277,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     /**
     * Sets masterEntrypointIpv6
     *
-    * @param string|null $masterEntrypointIpv6 微服务引擎专享版组件的ipv6主接入地址
+    * @param string|null $masterEntrypointIpv6 微服务引擎组件的ipv6主接入地址
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets slaveEntrypoint
-    *  微服务引擎专享版组件的ipv4备接入地址
+    *  微服务引擎组件的ipv4备接入地址
     *
     * @return string|null
     */
@@ -301,7 +301,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     /**
     * Sets slaveEntrypoint
     *
-    * @param string|null $slaveEntrypoint 微服务引擎专享版组件的ipv4备接入地址
+    * @param string|null $slaveEntrypoint 微服务引擎组件的ipv4备接入地址
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets slaveEntrypointIpv6
-    *  微服务引擎专享版组件的ipv6备接入地址
+    *  微服务引擎组件的ipv6备接入地址
     *
     * @return string|null
     */
@@ -325,7 +325,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     /**
     * Sets slaveEntrypointIpv6
     *
-    * @param string|null $slaveEntrypointIpv6 微服务引擎专享版组件的ipv6备接入地址
+    * @param string|null $slaveEntrypointIpv6 微服务引擎组件的ipv6备接入地址
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  微服务引擎专享版组件类型
+    *  微服务引擎组件类型
     *
     * @return string|null
     */
@@ -349,7 +349,7 @@ class EntrypointItem implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 微服务引擎专享版组件类型
+    * @param string|null $type 微服务引擎组件类型
     *
     * @return $this
     */

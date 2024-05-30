@@ -21,7 +21,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * label  按label过滤项导出，格式为：{标签key}:{标签value}
     * match  对label过滤项的匹配选项，如果值为exact：表示严格匹配，包括label个数和内容相等；不填表示包含匹配
     * body  body
@@ -39,7 +39,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * label  按label过滤项导出，格式为：{标签key}:{标签value}
     * match  对label过滤项的匹配选项，如果值为exact：表示严格匹配，包括label个数和内容相等；不填表示包含匹配
     * body  body
@@ -78,7 +78,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * label  按label过滤项导出，格式为：{标签key}:{标签value}
     * match  对label过滤项的匹配选项，如果值为exact：表示严格匹配，包括label个数和内容相等；不填表示包含匹配
     * body  body
@@ -96,7 +96,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * label  按label过滤项导出，格式为：{标签key}:{标签value}
     * match  对label过滤项的匹配选项，如果值为exact：表示严格匹配，包括label个数和内容相等；不填表示包含匹配
     * body  body
@@ -114,7 +114,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * label  按label过滤项导出，格式为：{标签key}:{标签value}
     * match  对label过滤项的匹配选项，如果值为exact：表示严格匹配，包括label个数和内容相等；不填表示包含匹配
     * body  body
@@ -266,7 +266,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xEngineId
-    *  微服务引擎专享版ID。
+    *  微服务引擎ID。
     *
     * @return string
     */
@@ -278,7 +278,7 @@ class DownloadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xEngineId
     *
-    * @param string $xEngineId 微服务引擎专享版ID。
+    * @param string $xEngineId 微服务引擎ID。
     *
     * @return $this
     */

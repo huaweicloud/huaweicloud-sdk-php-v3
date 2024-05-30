@@ -23,8 +23,8 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * entityId  表的ID。
-    * attrId  属性的ID。
+    * entityId  表的ID，填写String类型替代Long类型。
+    * attrId  属性的ID，填写String类型替代Long类型。
     * tag  标签名。
     *
     * @var string[]
@@ -43,8 +43,8 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * entityId  表的ID。
-    * attrId  属性的ID。
+    * entityId  表的ID，填写String类型替代Long类型。
+    * attrId  属性的ID，填写String类型替代Long类型。
     * tag  标签名。
     *
     * @var string[]
@@ -53,8 +53,8 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
         'workspace' => null,
         'xProjectId' => null,
         'contentType' => null,
-        'entityId' => 'int64',
-        'attrId' => 'int64',
+        'entityId' => null,
+        'attrId' => null,
         'tag' => null
     ];
 
@@ -84,8 +84,8 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * entityId  表的ID。
-    * attrId  属性的ID。
+    * entityId  表的ID，填写String类型替代Long类型。
+    * attrId  属性的ID，填写String类型替代Long类型。
     * tag  标签名。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * entityId  表的ID。
-    * attrId  属性的ID。
+    * entityId  表的ID，填写String类型替代Long类型。
+    * attrId  属性的ID，填写String类型替代Long类型。
     * tag  标签名。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * entityId  表的ID。
-    * attrId  属性的ID。
+    * entityId  表的ID，填写String类型替代Long类型。
+    * attrId  属性的ID，填写String类型替代Long类型。
     * tag  标签名。
     *
     * @var string[]
@@ -328,7 +328,7 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets entityId
-    *  表的ID。
+    *  表的ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -340,7 +340,7 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets entityId
     *
-    * @param string $entityId 表的ID。
+    * @param string $entityId 表的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrId
-    *  属性的ID。
+    *  属性的ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -364,7 +364,7 @@ class RemoveDesignEntityTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets attrId
     *
-    * @param string|null $attrId 属性的ID。
+    * @param string|null $attrId 属性的ID，填写String类型替代Long类型。
     *
     * @return $this
     */

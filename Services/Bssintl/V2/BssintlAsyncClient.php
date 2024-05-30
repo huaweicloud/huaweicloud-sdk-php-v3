@@ -1010,6 +1010,9 @@ class BssintlAsyncClient extends Client
         if ($localVarParams['indirectPartnerId'] !== null) {
             $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
+        if ($localVarParams['method'] !== null) {
+            $queryParams['method'] = $localVarParams['method'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1071,6 +1074,9 @@ class BssintlAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -1181,6 +1187,9 @@ class BssintlAsyncClient extends Client
         }
         if ($localVarParams['billDateEnd'] !== null) {
             $queryParams['bill_date_end'] = $localVarParams['billDateEnd'];
+        }
+        if ($localVarParams['statisticType'] !== null) {
+            $queryParams['statistic_type'] = $localVarParams['statisticType'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams['x_language'] = $localVarParams['xLanguage'];

@@ -23,8 +23,8 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  待比较下展的实体ID。
-    * bizType  待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    * bizId  待比较下展的实体ID，填写String类型替代Long类型。
+    * bizType  待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  待比较下展的实体ID。
-    * bizType  待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    * bizId  待比较下展的实体ID，填写String类型替代Long类型。
+    * bizType  待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @var string[]
     */
@@ -50,7 +50,7 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
         'workspace' => null,
         'xProjectId' => null,
         'contentType' => null,
-        'bizId' => 'int64',
+        'bizId' => null,
         'bizType' => null
     ];
 
@@ -80,8 +80,8 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  待比较下展的实体ID。
-    * bizType  待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    * bizId  待比较下展的实体ID，填写String类型替代Long类型。
+    * bizType  待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  待比较下展的实体ID。
-    * bizType  待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    * bizId  待比较下展的实体ID，填写String类型替代Long类型。
+    * bizType  待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * bizId  待比较下展的实体ID。
-    * bizType  待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    * bizId  待比较下展的实体ID，填写String类型替代Long类型。
+    * bizType  待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @var string[]
     */
@@ -356,7 +356,7 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets bizId
-    *  待比较下展的实体ID。
+    *  待比较下展的实体ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -368,7 +368,7 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     /**
     * Sets bizId
     *
-    * @param string $bizId 待比较下展的实体ID。
+    * @param string $bizId 待比较下展的实体ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets bizType
-    *  待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    *  待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @return string
     */
@@ -392,7 +392,7 @@ class SearchDesignLatestApprovalDiffRequest implements ModelInterface, ArrayAcce
     /**
     * Sets bizType
     *
-    * @param string $bizType 待比较下展的实体类型。ATOMIC_INDEX(原子指标)、DERIVATIVE_INDEX(衍生指标)、DIMENSION(维度)、FACT_LOGIC_TABLE(事实表)、TABLE_MODEL(业务表：逻辑实体/物理表)、STANDARD_ELEMENT(数据标准)、AGGREGATION_LOGIC_TABLE(汇总表)、CODE_TABLE(码表)、BIZ_METRIC(业务指标)、COMPOUND_METRIC(复合指标)。
+    * @param string $bizType 待删除下展的实体类型。 枚举值：   - ATOMIC_INDEX: 原子指标   - DERIVATIVE_INDEX: 衍生指标   - DIMENSION: 维度   - FACT_LOGIC_TABLE: 事实表   - TABLE_MODEL:关系建模：逻辑实体/物理表   - STANDARD_ELEMENT: 数据标准   - AGGREGATION_LOGIC_TABLE: 汇总表   - CODE_TABLE: 码表   - BIZ_METRIC: 业务指标   - COMPOUND_METRIC: 复合指标
     *
     * @return $this
     */

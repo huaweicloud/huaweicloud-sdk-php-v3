@@ -25,8 +25,8 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带或携带值为空时，不作为筛选条件。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带或携带值为空时，不作为筛选条件。
@@ -61,8 +61,8 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带或携带值为空时，不作为筛选条件。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带或携带值为空时，不作为筛选条件。
@@ -118,8 +118,8 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带或携带值为空时，不作为筛选条件。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带或携带值为空时，不作为筛选条件。
@@ -154,8 +154,8 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带或携带值为空时，不作为筛选条件。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带或携带值为空时，不作为筛选条件。
@@ -190,8 +190,8 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用[查询云服务类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256679455.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * resourceTypeCode  资源类型编码，例如ECS的VM为“hws.resource.type.vm”。您可以调用[查询资源类型列表](https://support.huaweicloud.com/api-oce/zh-cn_topic_0000001256519451.html)接口获取。此参数不携带或携带值为空时，不作为筛选条件；携带值为空串时，作为筛选条件。
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见[地区和终端节点](https://developer.huaweicloud.com/endpoint)对应云服务的“区域”列的值。此参数不携带或携带值为空时，不作为筛选条件。
-    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
-    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    * chargingMode  计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
+    * billType  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的数量限制。默认值为10。
     * resourceId  资源ID。此参数不携带或携带值为空时，不作为筛选条件。
@@ -304,8 +304,8 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
         if ($this->container['sharedMonth'] === null) {
             $invalidProperties[] = "'sharedMonth' can't be null";
         }
-            if (!is_null($this->container['chargingMode']) && ($this->container['chargingMode'] > 10)) {
-                $invalidProperties[] = "invalid value for 'chargingMode', must be smaller than or equal to 10.";
+            if (!is_null($this->container['chargingMode']) && ($this->container['chargingMode'] > 11)) {
+                $invalidProperties[] = "invalid value for 'chargingMode', must be smaller than or equal to 11.";
             }
             if (!is_null($this->container['chargingMode']) && ($this->container['chargingMode'] < 0)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be bigger than or equal to 0.";
@@ -464,7 +464,7 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
 
     /**
     * Gets chargingMode
-    *  计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
+    *  计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -476,7 +476,7 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode 计费模式。1：包年/包月3：按需10：预留实例此参数不携带或携带值为空时，不作为筛选条件。
+    * @param int|null $chargingMode 计费模式。1：包年/包月3：按需10：预留实例11：节省计划此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
 
     /**
     * Gets billType
-    *  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    *  账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return int|null
     */
@@ -500,7 +500,7 @@ class ListCustomerBillsMonthlyBreakDownRequest implements ModelInterface, ArrayA
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更 此参数不携带或携带值为空时，不作为筛选条件。
+    * @param int|null $billType 账单类型。1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */

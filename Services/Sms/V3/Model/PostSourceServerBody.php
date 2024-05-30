@@ -50,6 +50,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
+    * ioReadWait  磁盘IO读时延，单位为ms
     *
     * @var string[]
     */
@@ -83,7 +84,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'string',
             'state' => 'string',
             'oemSystem' => 'bool',
-            'startType' => 'string'
+            'startType' => 'string',
+            'ioReadWait' => 'double'
     ];
 
     /**
@@ -118,6 +120,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
+    * ioReadWait  磁盘IO读时延，单位为ms
     *
     * @var string[]
     */
@@ -151,7 +154,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         'migrationCycle' => null,
         'state' => null,
         'oemSystem' => null,
-        'startType' => null
+        'startType' => null,
+        'ioReadWait' => 'double'
     ];
 
     /**
@@ -207,6 +211,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
+    * ioReadWait  磁盘IO读时延，单位为ms
     *
     * @var string[]
     */
@@ -240,7 +245,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'migration_cycle',
             'state' => 'state',
             'oemSystem' => 'oem_system',
-            'startType' => 'start_type'
+            'startType' => 'start_type',
+            'ioReadWait' => 'io_read_wait'
     ];
 
     /**
@@ -275,6 +281,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
+    * ioReadWait  磁盘IO读时延，单位为ms
     *
     * @var string[]
     */
@@ -308,7 +315,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'setMigrationCycle',
             'state' => 'setState',
             'oemSystem' => 'setOemSystem',
-            'startType' => 'setStartType'
+            'startType' => 'setStartType',
+            'ioReadWait' => 'setIoReadWait'
     ];
 
     /**
@@ -343,6 +351,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * state  源端服务器状态 unavailable：环境校验不通过 waiting：等待 initialize：初始化 replicate：复制 syncing：持续同步 stopping：暂停中 stopped：已暂停 deleting：删除中 error：错误 cloning：等待克隆完成 cutovering：启动目的端中 finished：启动目的端完成
     * oemSystem  是否是OEM操作系统(Windows)
     * startType  启动方式，可以取值MANUAL、MGC或者空。
+    * ioReadWait  磁盘IO读时延，单位为ms
     *
     * @var string[]
     */
@@ -376,7 +385,8 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             'migrationCycle' => 'getMigrationCycle',
             'state' => 'getState',
             'oemSystem' => 'getOemSystem',
-            'startType' => 'getStartType'
+            'startType' => 'getStartType',
+            'ioReadWait' => 'getIoReadWait'
     ];
 
     /**
@@ -587,6 +597,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['oemSystem'] = isset($data['oemSystem']) ? $data['oemSystem'] : null;
         $this->container['startType'] = isset($data['startType']) ? $data['startType'] : null;
+        $this->container['ioReadWait'] = isset($data['ioReadWait']) ? $data['ioReadWait'] : null;
     }
 
     /**
@@ -759,6 +770,12 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['ioReadWait']) && ($this->container['ioReadWait'] > 1E+4)) {
+                $invalidProperties[] = "invalid value for 'ioReadWait', must be smaller than or equal to 1E+4.";
+            }
+            if (!is_null($this->container['ioReadWait']) && ($this->container['ioReadWait'] < 0)) {
+                $invalidProperties[] = "invalid value for 'ioReadWait', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -1490,6 +1507,30 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     public function setStartType($startType)
     {
         $this->container['startType'] = $startType;
+        return $this;
+    }
+
+    /**
+    * Gets ioReadWait
+    *  磁盘IO读时延，单位为ms
+    *
+    * @return double|null
+    */
+    public function getIoReadWait()
+    {
+        return $this->container['ioReadWait'];
+    }
+
+    /**
+    * Sets ioReadWait
+    *
+    * @param double|null $ioReadWait 磁盘IO读时延，单位为ms
+    *
+    * @return $this
+    */
+    public function setIoReadWait($ioReadWait)
+    {
+        $this->container['ioReadWait'] = $ioReadWait;
         return $this;
     }
 

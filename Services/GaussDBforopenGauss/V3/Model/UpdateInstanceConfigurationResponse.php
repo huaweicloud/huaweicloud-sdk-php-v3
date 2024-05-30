@@ -22,21 +22,25 @@ class UpdateInstanceConfigurationResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * restartRequired  实例是否需要重启。  - “true”需要重启。 - “false”不需要重启。
+    * jobId  修改指定实例参数的任务ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'restartRequired' => 'bool'
+            'restartRequired' => 'bool',
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * restartRequired  实例是否需要重启。  - “true”需要重启。 - “false”不需要重启。
+    * jobId  修改指定实例参数的任务ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'restartRequired' => null
+        'restartRequired' => null,
+        'jobId' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class UpdateInstanceConfigurationResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * restartRequired  实例是否需要重启。  - “true”需要重启。 - “false”不需要重启。
+    * jobId  修改指定实例参数的任务ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'restartRequired' => 'restart_required'
+            'restartRequired' => 'restart_required',
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * restartRequired  实例是否需要重启。  - “true”需要重启。 - “false”不需要重启。
+    * jobId  修改指定实例参数的任务ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'restartRequired' => 'setRestartRequired'
+            'restartRequired' => 'setRestartRequired',
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * restartRequired  实例是否需要重启。  - “true”需要重启。 - “false”不需要重启。
+    * jobId  修改指定实例参数的任务ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'restartRequired' => 'getRestartRequired'
+            'restartRequired' => 'getRestartRequired',
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -149,6 +159,7 @@ class UpdateInstanceConfigurationResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['restartRequired'] = isset($data['restartRequired']) ? $data['restartRequired'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class UpdateInstanceConfigurationResponse implements ModelInterface, ArrayAccess
     public function setRestartRequired($restartRequired)
     {
         $this->container['restartRequired'] = $restartRequired;
+        return $this;
+    }
+
+    /**
+    * Gets jobId
+    *  修改指定实例参数的任务ID。
+    *
+    * @return string|null
+    */
+    public function getJobId()
+    {
+        return $this->container['jobId'];
+    }
+
+    /**
+    * Sets jobId
+    *
+    * @param string|null $jobId 修改指定实例参数的任务ID。
+    *
+    * @return $this
+    */
+    public function setJobId($jobId)
+    {
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

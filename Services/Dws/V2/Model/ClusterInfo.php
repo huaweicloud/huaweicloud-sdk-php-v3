@@ -22,7 +22,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  集群ID。
     * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  数据仓库版本
     * updated  集群上次修改时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * created  集群创建时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ。
@@ -80,7 +80,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  集群ID。
     * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  数据仓库版本
     * updated  集群上次修改时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * created  集群创建时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ。
@@ -159,7 +159,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  集群ID。
     * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  数据仓库版本
     * updated  集群上次修改时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * created  集群创建时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ。
@@ -217,7 +217,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  集群ID。
     * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  数据仓库版本
     * updated  集群上次修改时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * created  集群创建时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ。
@@ -275,7 +275,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  集群ID。
     * name  集群名称
-    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    * status  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     * version  数据仓库版本
     * updated  集群上次修改时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ
     * created  集群创建时间，格式为 ISO8601：YYYY-MM-DDThh:mm:ssZ。
@@ -558,7 +558,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    *  集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     *
     * @return string
     */
@@ -570,7 +570,7 @@ class ClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：已冻结
+    * @param string $status 集群状态，有效值包括： - CREATING：创建中 - ACTIVE：可用 - FAILED：不可用 - CREATE_FAILED：创建失败 - DELETING：删除中 - DELETE_FAILED：删除失败 - DELETED：已删除 - FROZEN：普通冻结 - POLICE_FROZEN：公安冻结
     *
     * @return $this
     */

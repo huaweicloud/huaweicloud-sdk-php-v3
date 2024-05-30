@@ -28,6 +28,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
+    * serviceTypeCodeList  云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'status' => 'int',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'serviceTypeCodeList' => 'string[]'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
+    * serviceTypeCodeList  云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'status' => 'int32',
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'serviceTypeCodeList' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
+    * serviceTypeCodeList  云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'status' => 'status',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'serviceTypeCodeList' => 'service_type_code_list'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
+    * serviceTypeCodeList  云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'status' => 'setStatus',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'serviceTypeCodeList' => 'setServiceTypeCodeList'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     * status  状态： 0：未生效1：生效中2：已用完3：已失效4：已退订 此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * offset  偏移量，从0开始，默认为0。  说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。 例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * limit  每次查询的记录数，默认为10。
+    * serviceTypeCodeList  云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'status' => 'getStatus',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'serviceTypeCodeList' => 'getServiceTypeCodeList'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['serviceTypeCodeList'] = isset($data['serviceTypeCodeList']) ? $data['serviceTypeCodeList'] : null;
     }
 
     /**
@@ -486,6 +497,30 @@ class ListFreeResourceInfosReq implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeCodeList
+    *  云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
+    *
+    * @return string[]|null
+    */
+    public function getServiceTypeCodeList()
+    {
+        return $this->container['serviceTypeCodeList'];
+    }
+
+    /**
+    * Sets serviceTypeCodeList
+    *
+    * @param string[]|null $serviceTypeCodeList 云服务类型编码列表，大小写不敏感。 例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带或携带值为空列表或携带值为null时，不作为筛选条件，返回其他条件匹配的记录。
+    *
+    * @return $this
+    */
+    public function setServiceTypeCodeList($serviceTypeCodeList)
+    {
+        $this->container['serviceTypeCodeList'] = $serviceTypeCodeList;
         return $this;
     }
 

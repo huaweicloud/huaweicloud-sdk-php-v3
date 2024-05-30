@@ -20,7 +20,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     * value  维度值。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     * value  维度值。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     * value  维度值。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     * value  维度值。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    * key  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     * value  维度值。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    *  分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class DimensionGroup implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT
+    * @param string|null $key 分组条件。 产品类型：CLOUD_SERVICE_TYPE企业项目：ENTERPRISE_PROJECT_ID使用量类型：USAGE_TYPE产品：RESOURCE_TYPE可用区：AZ_CODE账单类型：BILL_TYPE关联账号：ASSOCIATED_ACCOUNT规格编码：RES_SPEC_CODE运营实体：BE_ID区域：REGION_CODE计费模式：CHARGING_MODE交易账号：PAYER_ACCOUNT_ID资源tag：RESOURCE_TAG资源id：RESOURCE_ID成本单元：COST_UNIT分拆项：SPLIT_ITEM_NAME
     *
     * @return $this
     */

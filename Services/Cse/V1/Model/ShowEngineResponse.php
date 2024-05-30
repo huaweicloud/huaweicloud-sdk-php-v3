@@ -21,28 +21,28 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  微服务引擎专享版ID
-    * name  微服务引擎专享版名称
-    * description  微服务引擎专享版描述
-    * authType  微服务引擎专享版认证类型
-    * flavor  微服务引擎专享版规格
-    * payment  微服务引擎专享版计费方式
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * status  微服务引擎专享版状态
+    * id  微服务引擎ID
+    * name  微服务引擎名称
+    * description  微服务引擎描述
+    * authType  微服务引擎认证类型
+    * flavor  微服务引擎规格
+    * payment  微服务引擎计费方式
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * status  微服务引擎状态
     * beDefault  engine 是否是默认引擎
-    * createUser  微服务引擎专享版创建者
-    * createTime  微服务引擎专享版创建时间
+    * createUser  微服务引擎创建者
+    * createTime  微服务引擎创建时间
     * cceSpec  cceSpec
     * externalEntrypoint  externalEntrypoint
     * reference  reference
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
-    * type  微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
-    * projectId  微服务引擎专享版所属项目ID
+    * latestJobId  微服务引擎最近的任务ID
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
+    * type  微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
+    * projectId  微服务引擎所属项目ID
     * vmIds  当前引擎在资源租户侧使用的虚拟机 id 列表
     *
     * @var string[]
@@ -75,28 +75,28 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  微服务引擎专享版ID
-    * name  微服务引擎专享版名称
-    * description  微服务引擎专享版描述
-    * authType  微服务引擎专享版认证类型
-    * flavor  微服务引擎专享版规格
-    * payment  微服务引擎专享版计费方式
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * status  微服务引擎专享版状态
+    * id  微服务引擎ID
+    * name  微服务引擎名称
+    * description  微服务引擎描述
+    * authType  微服务引擎认证类型
+    * flavor  微服务引擎规格
+    * payment  微服务引擎计费方式
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * status  微服务引擎状态
     * beDefault  engine 是否是默认引擎
-    * createUser  微服务引擎专享版创建者
-    * createTime  微服务引擎专享版创建时间
+    * createUser  微服务引擎创建者
+    * createTime  微服务引擎创建时间
     * cceSpec  cceSpec
     * externalEntrypoint  externalEntrypoint
     * reference  reference
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
-    * type  微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
-    * projectId  微服务引擎专享版所属项目ID
+    * latestJobId  微服务引擎最近的任务ID
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
+    * type  微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
+    * projectId  微服务引擎所属项目ID
     * vmIds  当前引擎在资源租户侧使用的虚拟机 id 列表
     *
     * @var string[]
@@ -150,28 +150,28 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  微服务引擎专享版ID
-    * name  微服务引擎专享版名称
-    * description  微服务引擎专享版描述
-    * authType  微服务引擎专享版认证类型
-    * flavor  微服务引擎专享版规格
-    * payment  微服务引擎专享版计费方式
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * status  微服务引擎专享版状态
+    * id  微服务引擎ID
+    * name  微服务引擎名称
+    * description  微服务引擎描述
+    * authType  微服务引擎认证类型
+    * flavor  微服务引擎规格
+    * payment  微服务引擎计费方式
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * status  微服务引擎状态
     * beDefault  engine 是否是默认引擎
-    * createUser  微服务引擎专享版创建者
-    * createTime  微服务引擎专享版创建时间
+    * createUser  微服务引擎创建者
+    * createTime  微服务引擎创建时间
     * cceSpec  cceSpec
     * externalEntrypoint  externalEntrypoint
     * reference  reference
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
-    * type  微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
-    * projectId  微服务引擎专享版所属项目ID
+    * latestJobId  微服务引擎最近的任务ID
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
+    * type  微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
+    * projectId  微服务引擎所属项目ID
     * vmIds  当前引擎在资源租户侧使用的虚拟机 id 列表
     *
     * @var string[]
@@ -204,28 +204,28 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  微服务引擎专享版ID
-    * name  微服务引擎专享版名称
-    * description  微服务引擎专享版描述
-    * authType  微服务引擎专享版认证类型
-    * flavor  微服务引擎专享版规格
-    * payment  微服务引擎专享版计费方式
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * status  微服务引擎专享版状态
+    * id  微服务引擎ID
+    * name  微服务引擎名称
+    * description  微服务引擎描述
+    * authType  微服务引擎认证类型
+    * flavor  微服务引擎规格
+    * payment  微服务引擎计费方式
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * status  微服务引擎状态
     * beDefault  engine 是否是默认引擎
-    * createUser  微服务引擎专享版创建者
-    * createTime  微服务引擎专享版创建时间
+    * createUser  微服务引擎创建者
+    * createTime  微服务引擎创建时间
     * cceSpec  cceSpec
     * externalEntrypoint  externalEntrypoint
     * reference  reference
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
-    * type  微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
-    * projectId  微服务引擎专享版所属项目ID
+    * latestJobId  微服务引擎最近的任务ID
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
+    * type  微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
+    * projectId  微服务引擎所属项目ID
     * vmIds  当前引擎在资源租户侧使用的虚拟机 id 列表
     *
     * @var string[]
@@ -258,28 +258,28 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  微服务引擎专享版ID
-    * name  微服务引擎专享版名称
-    * description  微服务引擎专享版描述
-    * authType  微服务引擎专享版认证类型
-    * flavor  微服务引擎专享版规格
-    * payment  微服务引擎专享版计费方式
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * status  微服务引擎专享版状态
+    * id  微服务引擎ID
+    * name  微服务引擎名称
+    * description  微服务引擎描述
+    * authType  微服务引擎认证类型
+    * flavor  微服务引擎规格
+    * payment  微服务引擎计费方式
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * status  微服务引擎状态
     * beDefault  engine 是否是默认引擎
-    * createUser  微服务引擎专享版创建者
-    * createTime  微服务引擎专享版创建时间
+    * createUser  微服务引擎创建者
+    * createTime  微服务引擎创建时间
     * cceSpec  cceSpec
     * externalEntrypoint  externalEntrypoint
     * reference  reference
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
-    * type  微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
-    * projectId  微服务引擎专享版所属项目ID
+    * latestJobId  微服务引擎最近的任务ID
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
+    * type  微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
+    * projectId  微服务引擎所属项目ID
     * vmIds  当前引擎在资源租户侧使用的虚拟机 id 列表
     *
     * @var string[]
@@ -368,11 +368,12 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     const ENGINE_ADDITIONAL_ACTIONS_FORCE_DELETE = 'ForceDelete';
     const ENGINE_ADDITIONAL_ACTIONS_ROLLBACK = 'Rollback';
     const ENGINE_ADDITIONAL_ACTIONS_RETRY = 'Retry';
-    const SPEC_TYPE_CCE = 'CCE';
-    const SPEC_TYPE_CSE = 'CSE';
-    const SPEC_TYPE_SPRING_CLOUD = 'SpringCloud';
+    const SPEC_TYPE_CSE2 = 'CSE2';
+    const SPEC_TYPE_NACOS2 = 'Nacos2';
+    const SPEC_TYPE_MICRO_GATEWAY = 'MicroGateway';
     const TYPE_CSE = 'CSE';
-    const TYPE_CSE_SHARE = 'CSE_Share';
+    const TYPE_NACOS = 'NACOS';
+    const TYPE_MICROGATEWAY = 'MICROGATEWAY';
     
 
     /**
@@ -434,9 +435,9 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     public function getSpecTypeAllowableValues()
     {
         return [
-            self::SPEC_TYPE_CCE,
-            self::SPEC_TYPE_CSE,
-            self::SPEC_TYPE_SPRING_CLOUD,
+            self::SPEC_TYPE_CSE2,
+            self::SPEC_TYPE_NACOS2,
+            self::SPEC_TYPE_MICRO_GATEWAY,
         ];
     }
 
@@ -449,7 +450,8 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     {
         return [
             self::TYPE_CSE,
-            self::TYPE_CSE_SHARE,
+            self::TYPE_NACOS,
+            self::TYPE_MICROGATEWAY,
         ];
     }
 
@@ -550,7 +552,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  微服务引擎专享版ID
+    *  微服务引擎ID
     *
     * @return string|null
     */
@@ -562,7 +564,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 微服务引擎专享版ID
+    * @param string|null $id 微服务引擎ID
     *
     * @return $this
     */
@@ -574,7 +576,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  微服务引擎专享版名称
+    *  微服务引擎名称
     *
     * @return string|null
     */
@@ -586,7 +588,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 微服务引擎专享版名称
+    * @param string|null $name 微服务引擎名称
     *
     * @return $this
     */
@@ -598,7 +600,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  微服务引擎专享版描述
+    *  微服务引擎描述
     *
     * @return string|null
     */
@@ -610,7 +612,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 微服务引擎专享版描述
+    * @param string|null $description 微服务引擎描述
     *
     * @return $this
     */
@@ -622,7 +624,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  微服务引擎专享版认证类型
+    *  微服务引擎认证类型
     *
     * @return string|null
     */
@@ -634,7 +636,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType 微服务引擎专享版认证类型
+    * @param string|null $authType 微服务引擎认证类型
     *
     * @return $this
     */
@@ -646,7 +648,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  微服务引擎专享版规格
+    *  微服务引擎规格
     *
     * @return string|null
     */
@@ -658,7 +660,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor 微服务引擎专享版规格
+    * @param string|null $flavor 微服务引擎规格
     *
     * @return $this
     */
@@ -670,7 +672,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets payment
-    *  微服务引擎专享版计费方式
+    *  微服务引擎计费方式
     *
     * @return string|null
     */
@@ -682,7 +684,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets payment
     *
-    * @param string|null $payment 微服务引擎专享版计费方式
+    * @param string|null $payment 微服务引擎计费方式
     *
     * @return $this
     */
@@ -694,7 +696,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  微服务引擎专享版当前版本
+    *  微服务引擎当前版本
     *
     * @return string|null
     */
@@ -706,7 +708,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 微服务引擎专享版当前版本
+    * @param string|null $version 微服务引擎当前版本
     *
     * @return $this
     */
@@ -718,7 +720,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestVersion
-    *  微服务引擎专享版最新版本
+    *  微服务引擎最新版本
     *
     * @return string|null
     */
@@ -730,7 +732,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets latestVersion
     *
-    * @param string|null $latestVersion 微服务引擎专享版最新版本
+    * @param string|null $latestVersion 微服务引擎最新版本
     *
     * @return $this
     */
@@ -742,7 +744,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  微服务引擎专享版状态
+    *  微服务引擎状态
     *
     * @return string|null
     */
@@ -754,7 +756,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 微服务引擎专享版状态
+    * @param string|null $status 微服务引擎状态
     *
     * @return $this
     */
@@ -790,7 +792,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createUser
-    *  微服务引擎专享版创建者
+    *  微服务引擎创建者
     *
     * @return string|null
     */
@@ -802,7 +804,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createUser
     *
-    * @param string|null $createUser 微服务引擎专享版创建者
+    * @param string|null $createUser 微服务引擎创建者
     *
     * @return $this
     */
@@ -814,7 +816,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  微服务引擎专享版创建时间
+    *  微服务引擎创建时间
     *
     * @return int|null
     */
@@ -826,7 +828,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 微服务引擎专享版创建时间
+    * @param int|null $createTime 微服务引擎创建时间
     *
     * @return $this
     */
@@ -910,7 +912,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestJobId
-    *  微服务引擎专享版最近的任务ID
+    *  微服务引擎最近的任务ID
     *
     * @return int|null
     */
@@ -922,7 +924,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets latestJobId
     *
-    * @param int|null $latestJobId 微服务引擎专享版最近的任务ID
+    * @param int|null $latestJobId 微服务引擎最近的任务ID
     *
     * @return $this
     */
@@ -934,7 +936,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  微服务引擎专享版所属企业项目ID
+    *  微服务引擎所属企业项目ID
     *
     * @return string|null
     */
@@ -946,7 +948,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 微服务引擎专享版所属企业项目ID
+    * @param string|null $enterpriseProjectId 微服务引擎所属企业项目ID
     *
     * @return $this
     */
@@ -958,7 +960,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  微服务引擎专享版所属企业项目名称
+    *  微服务引擎所属企业项目名称
     *
     * @return string|null
     */
@@ -970,7 +972,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName 微服务引擎专享版所属企业项目名称
+    * @param string|null $enterpriseProjectName 微服务引擎所属企业项目名称
     *
     * @return $this
     */
@@ -982,7 +984,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineAdditionalActions
-    *  微服务引擎专享版允许的附加操作
+    *  微服务引擎允许的附加操作
     *
     * @return string[]|null
     */
@@ -994,7 +996,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets engineAdditionalActions
     *
-    * @param string[]|null $engineAdditionalActions 微服务引擎专享版允许的附加操作
+    * @param string[]|null $engineAdditionalActions 微服务引擎允许的附加操作
     *
     * @return $this
     */
@@ -1006,7 +1008,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets specType
-    *  微服务引擎专享版应用部署类型
+    *  微服务引擎应用部署类型
     *
     * @return string|null
     */
@@ -1018,7 +1020,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets specType
     *
-    * @param string|null $specType 微服务引擎专享版应用部署类型
+    * @param string|null $specType 微服务引擎应用部署类型
     *
     * @return $this
     */
@@ -1030,7 +1032,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
+    *  微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
     *
     * @return string|null
     */
@@ -1042,7 +1044,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 微服务引擎类型，CSE表示专享版，CSE_Share表示专业版
+    * @param string|null $type 微服务引擎类型，CSE表示专享版，NACOS表示注册配置中心，MICROGATEWAY表示网关
     *
     * @return $this
     */
@@ -1054,7 +1056,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  微服务引擎专享版所属项目ID
+    *  微服务引擎所属项目ID
     *
     * @return string|null
     */
@@ -1066,7 +1068,7 @@ class ShowEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 微服务引擎专享版所属项目ID
+    * @param string|null $projectId 微服务引擎所属项目ID
     *
     * @return $this
     */

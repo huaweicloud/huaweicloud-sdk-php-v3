@@ -34,7 +34,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
     * scheduleStartDate  调度开始日期
     * scheduleEndDate  调度结束日期
     * schedulePeriod  调度周期，MINUTE:按分钟调度，HOUR:按小时调度，DAY:按天调度，WEEK:按周调度
-    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     * scheduleStartTime  调度开始时间
     * scheduleEndTime  调度结束时间
     * createTime  最近运行时间,13位时间戳(精确到毫秒)
@@ -82,7 +82,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
     * scheduleStartDate  调度开始日期
     * scheduleEndDate  调度结束日期
     * schedulePeriod  调度周期，MINUTE:按分钟调度，HOUR:按小时调度，DAY:按天调度，WEEK:按周调度
-    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     * scheduleStartTime  调度开始时间
     * scheduleEndTime  调度结束时间
     * createTime  最近运行时间,13位时间戳(精确到毫秒)
@@ -151,7 +151,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
     * scheduleStartDate  调度开始日期
     * scheduleEndDate  调度结束日期
     * schedulePeriod  调度周期，MINUTE:按分钟调度，HOUR:按小时调度，DAY:按天调度，WEEK:按周调度
-    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     * scheduleStartTime  调度开始时间
     * scheduleEndTime  调度结束时间
     * createTime  最近运行时间,13位时间戳(精确到毫秒)
@@ -199,7 +199,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
     * scheduleStartDate  调度开始日期
     * scheduleEndDate  调度结束日期
     * schedulePeriod  调度周期，MINUTE:按分钟调度，HOUR:按小时调度，DAY:按天调度，WEEK:按周调度
-    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     * scheduleStartTime  调度开始时间
     * scheduleEndTime  调度结束时间
     * createTime  最近运行时间,13位时间戳(精确到毫秒)
@@ -247,7 +247,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
     * scheduleStartDate  调度开始日期
     * scheduleEndDate  调度结束日期
     * schedulePeriod  调度周期，MINUTE:按分钟调度，HOUR:按小时调度，DAY:按天调度，WEEK:按周调度
-    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    * scheduleInterval  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     * scheduleStartTime  调度开始时间
     * scheduleEndTime  调度结束时间
     * createTime  最近运行时间,13位时间戳(精确到毫秒)
@@ -696,7 +696,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets scheduleInterval
-    *  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    *  调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     *
     * @return string|null
     */
@@ -708,7 +708,7 @@ class ShowQualityTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleInterval
     *
-    * @param string|null $scheduleInterval 调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为\"MONDAY,TUESDAY\"
+    * @param string|null $scheduleInterval 调度间隔，注意：当调度周期为分钟、小时、天时，间隔时间为数字；而当调度周期为周时，调度间隔为星期的英文，如：每周一、周二调度时，schedule_interval为MONDAY,TUESDAY
     *
     * @return $this
     */

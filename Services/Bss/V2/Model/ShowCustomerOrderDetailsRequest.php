@@ -22,8 +22,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     * orderId  订单ID。
-    * limit  每页大小。默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单详情时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单详情。
     *
     * @var string[]
@@ -40,8 +40,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     * orderId  订单ID。
-    * limit  每页大小。默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单详情时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单详情。
     *
     * @var string[]
@@ -79,8 +79,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     * orderId  订单ID。
-    * limit  每页大小。默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单详情时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单详情。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     * orderId  订单ID。
-    * limit  每页大小。默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单详情时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单详情。
     *
     * @var string[]
@@ -115,8 +115,8 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * xLanguage  语言：中文：zh_CN 英文：en_US 缺省为zh_CN
     * orderId  订单ID。
-    * limit  每页大小。默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * limit  每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单详情时，需要携带该参数；除此之外，此参数不做处理。否则只能查询自己客户的订单详情。
     *
     * @var string[]
@@ -287,7 +287,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页大小。默认值为10。
+    *  每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
     *
     * @return int|null
     */
@@ -299,7 +299,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页大小。默认值为10。
+    * @param int|null $limit 每页大小。默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
     *
     * @return $this
     */
@@ -311,7 +311,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    *  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -323,7 +323,7 @@ class ShowCustomerOrderDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * @param int|null $offset 偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */

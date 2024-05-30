@@ -20,28 +20,28 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * hierarchiesId  层级ID。
-    * attrId  属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * hierarchiesId  层级ID，填写String类型替代Long类型。
+    * attrId  属性ID，填写String类型替代Long类型。
     * level  层次。
     * attrNameEn  引用属性编码。
-    * attrNameCh  引用属性名称。
-    * detailAttrIds  详情属性ID。
+    * attrNameCh  引用属性名称，只读。
+    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
     * detailAttrNameEns  详情属性英文。
-    * detailAttrNameChs  详情属性中文。
+    * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
-    * detailAttrs  详情字段。
+    * detailAttrs  详情字段，只读。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
-            'hierarchiesId' => 'int',
-            'attrId' => 'int',
+            'id' => 'string',
+            'hierarchiesId' => 'string',
+            'attrId' => 'string',
             'level' => 'int',
             'attrNameEn' => 'string',
             'attrNameCh' => 'string',
-            'detailAttrIds' => 'int[]',
+            'detailAttrIds' => 'string[]',
             'detailAttrNameEns' => 'string[]',
             'detailAttrNameChs' => 'string[]',
             'attr' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO',
@@ -50,28 +50,28 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * hierarchiesId  层级ID。
-    * attrId  属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * hierarchiesId  层级ID，填写String类型替代Long类型。
+    * attrId  属性ID，填写String类型替代Long类型。
     * level  层次。
     * attrNameEn  引用属性编码。
-    * attrNameCh  引用属性名称。
-    * detailAttrIds  详情属性ID。
+    * attrNameCh  引用属性名称，只读。
+    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
     * detailAttrNameEns  详情属性英文。
-    * detailAttrNameChs  详情属性中文。
+    * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
-    * detailAttrs  详情字段。
+    * detailAttrs  详情字段，只读。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'hierarchiesId' => 'int64',
-        'attrId' => 'int64',
+        'id' => null,
+        'hierarchiesId' => null,
+        'attrId' => null,
         'level' => null,
         'attrNameEn' => null,
         'attrNameCh' => null,
-        'detailAttrIds' => 'int64',
+        'detailAttrIds' => null,
         'detailAttrNameEns' => null,
         'detailAttrNameChs' => null,
         'attr' => null,
@@ -101,17 +101,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * hierarchiesId  层级ID。
-    * attrId  属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * hierarchiesId  层级ID，填写String类型替代Long类型。
+    * attrId  属性ID，填写String类型替代Long类型。
     * level  层次。
     * attrNameEn  引用属性编码。
-    * attrNameCh  引用属性名称。
-    * detailAttrIds  详情属性ID。
+    * attrNameCh  引用属性名称，只读。
+    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
     * detailAttrNameEns  详情属性英文。
-    * detailAttrNameChs  详情属性中文。
+    * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
-    * detailAttrs  详情字段。
+    * detailAttrs  详情字段，只读。
     *
     * @var string[]
     */
@@ -131,17 +131,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * hierarchiesId  层级ID。
-    * attrId  属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * hierarchiesId  层级ID，填写String类型替代Long类型。
+    * attrId  属性ID，填写String类型替代Long类型。
     * level  层次。
     * attrNameEn  引用属性编码。
-    * attrNameCh  引用属性名称。
-    * detailAttrIds  详情属性ID。
+    * attrNameCh  引用属性名称，只读。
+    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
     * detailAttrNameEns  详情属性英文。
-    * detailAttrNameChs  详情属性中文。
+    * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
-    * detailAttrs  详情字段。
+    * detailAttrs  详情字段，只读。
     *
     * @var string[]
     */
@@ -161,17 +161,17 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * hierarchiesId  层级ID。
-    * attrId  属性ID。
+    * id  编码，填写String类型替代Long类型。
+    * hierarchiesId  层级ID，填写String类型替代Long类型。
+    * attrId  属性ID，填写String类型替代Long类型。
     * level  层次。
     * attrNameEn  引用属性编码。
-    * attrNameCh  引用属性名称。
-    * detailAttrIds  详情属性ID。
+    * attrNameCh  引用属性名称，只读。
+    * detailAttrIds  详情属性ID，填写String类型替代Long类型。
     * detailAttrNameEns  详情属性英文。
-    * detailAttrNameChs  详情属性中文。
+    * detailAttrNameChs  详情属性中文，只读。
     * attr  attr
-    * detailAttrs  详情字段。
+    * detailAttrs  详情字段，只读。
     *
     * @var string[]
     */
@@ -284,9 +284,9 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -296,7 +296,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -308,9 +308,9 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets hierarchiesId
-    *  层级ID。
+    *  层级ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getHierarchiesId()
     {
@@ -320,7 +320,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets hierarchiesId
     *
-    * @param int|null $hierarchiesId 层级ID。
+    * @param string|null $hierarchiesId 层级ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -332,9 +332,9 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrId
-    *  属性ID。
+    *  属性ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getAttrId()
     {
@@ -344,7 +344,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrId
     *
-    * @param int|null $attrId 属性ID。
+    * @param string|null $attrId 属性ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets attrNameCh
-    *  引用属性名称。
+    *  引用属性名称，只读。
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets attrNameCh
     *
-    * @param string|null $attrNameCh 引用属性名称。
+    * @param string|null $attrNameCh 引用属性名称，只读。
     *
     * @return $this
     */
@@ -428,9 +428,9 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrIds
-    *  详情属性ID。
+    *  详情属性ID，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getDetailAttrIds()
     {
@@ -440,7 +440,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrIds
     *
-    * @param int[]|null $detailAttrIds 详情属性ID。
+    * @param string[]|null $detailAttrIds 详情属性ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -476,7 +476,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrNameChs
-    *  详情属性中文。
+    *  详情属性中文，只读。
     *
     * @return string[]|null
     */
@@ -488,7 +488,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrNameChs
     *
-    * @param string[]|null $detailAttrNameChs 详情属性中文。
+    * @param string[]|null $detailAttrNameChs 详情属性中文，只读。
     *
     * @return $this
     */
@@ -524,7 +524,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets detailAttrs
-    *  详情字段。
+    *  详情字段，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO[]|null
     */
@@ -536,7 +536,7 @@ class HierarchiesAttrVO implements ModelInterface, ArrayAccess
     /**
     * Sets detailAttrs
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO[]|null $detailAttrs 详情字段。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionAttributeVO[]|null $detailAttrs 详情字段，只读。
     *
     * @return $this
     */

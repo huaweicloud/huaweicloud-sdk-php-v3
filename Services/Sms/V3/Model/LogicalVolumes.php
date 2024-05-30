@@ -24,6 +24,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
@@ -38,6 +39,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             'blockSize' => 'int',
             'fileSystem' => 'string',
             'inodeSize' => 'int',
+            'inodeNums' => 'int',
             'deviceUse' => 'string',
             'mountPoint' => 'string',
             'name' => 'string',
@@ -52,6 +54,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
@@ -66,6 +69,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
         'blockSize' => 'int64',
         'fileSystem' => null,
         'inodeSize' => 'int32',
+        'inodeNums' => 'int64',
         'deviceUse' => null,
         'mountPoint' => null,
         'name' => null,
@@ -101,6 +105,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
@@ -115,6 +120,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             'blockSize' => 'block_size',
             'fileSystem' => 'file_system',
             'inodeSize' => 'inode_size',
+            'inodeNums' => 'inode_nums',
             'deviceUse' => 'device_use',
             'mountPoint' => 'mount_point',
             'name' => 'name',
@@ -129,6 +135,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
@@ -143,6 +150,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             'blockSize' => 'setBlockSize',
             'fileSystem' => 'setFileSystem',
             'inodeSize' => 'setInodeSize',
+            'inodeNums' => 'setInodeNums',
             'deviceUse' => 'setDeviceUse',
             'mountPoint' => 'setMountPoint',
             'name' => 'setName',
@@ -157,6 +165,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     * blockSize  块大小
     * fileSystem  文件系统
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * deviceUse  分区类型，普通分区，启动分区，系统分区
     * mountPoint  挂载点
     * name  名称
@@ -171,6 +180,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             'blockSize' => 'getBlockSize',
             'fileSystem' => 'getFileSystem',
             'inodeSize' => 'getInodeSize',
+            'inodeNums' => 'getInodeNums',
             'deviceUse' => 'getDeviceUse',
             'mountPoint' => 'getMountPoint',
             'name' => 'getName',
@@ -241,6 +251,7 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
         $this->container['blockSize'] = isset($data['blockSize']) ? $data['blockSize'] : null;
         $this->container['fileSystem'] = isset($data['fileSystem']) ? $data['fileSystem'] : null;
         $this->container['inodeSize'] = isset($data['inodeSize']) ? $data['inodeSize'] : null;
+        $this->container['inodeNums'] = isset($data['inodeNums']) ? $data['inodeNums'] : null;
         $this->container['deviceUse'] = isset($data['deviceUse']) ? $data['deviceUse'] : null;
         $this->container['mountPoint'] = isset($data['mountPoint']) ? $data['mountPoint'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -286,6 +297,12 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
             }
             if (($this->container['inodeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['inodeNums']) && ($this->container['inodeNums'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'inodeNums', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['inodeNums']) && ($this->container['inodeNums'] < 0)) {
+                $invalidProperties[] = "invalid value for 'inodeNums', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['deviceUse']) && (mb_strlen($this->container['deviceUse']) > 255)) {
                 $invalidProperties[] = "invalid value for 'deviceUse', the character length must be smaller than or equal to 255.";
@@ -445,6 +462,30 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     public function setInodeSize($inodeSize)
     {
         $this->container['inodeSize'] = $inodeSize;
+        return $this;
+    }
+
+    /**
+    * Gets inodeNums
+    *  inode节点数量
+    *
+    * @return int|null
+    */
+    public function getInodeNums()
+    {
+        return $this->container['inodeNums'];
+    }
+
+    /**
+    * Sets inodeNums
+    *
+    * @param int|null $inodeNums inode节点数量
+    *
+    * @return $this
+    */
+    public function setInodeNums($inodeNums)
+    {
+        $this->container['inodeNums'] = $inodeNums;
         return $this;
     }
 

@@ -20,46 +20,46 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  导出对象ID的列表，如：某几个逻辑模型的ID。
+    * ids  导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     * asyn  是否是异步操作导出，true:异步，false:同步。
     * type  导出的业务类型：ER(关系建模)，Directory_CodeTable(码表目录)，Directory_Standard(标准目录)，DIM(维度建模)，codeTable(码表);dataStandard 数据标准;directory_id导出指定目录下的码表/数据标准;model_id，biz_catalog_id导出指定模型，目录下的业务表，import_bizcatalog导出流程架构，import_bizmetric导出业务指标。
-    * directoryId  所属目录ID。
-    * bizCatalogId  所属业务分层的ID。
+    * directoryId  所属目录ID，填写String类型替代Long类型。
+    * bizCatalogId  所属业务分层的ID，填写String类型替代Long类型。
     * bizCatalogIdList  所属的业务分层的ID列表。
-    * modelId  所属关系建模的模型ID，导出关系模型需要此参数。
+    * modelId  所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ids' => 'int[]',
+            'ids' => 'string[]',
             'asyn' => 'bool',
             'type' => 'string',
-            'directoryId' => 'int',
-            'bizCatalogId' => 'int',
-            'bizCatalogIdList' => 'int[]',
-            'modelId' => 'int'
+            'directoryId' => 'string',
+            'bizCatalogId' => 'string',
+            'bizCatalogIdList' => 'string[]',
+            'modelId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  导出对象ID的列表，如：某几个逻辑模型的ID。
+    * ids  导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     * asyn  是否是异步操作导出，true:异步，false:同步。
     * type  导出的业务类型：ER(关系建模)，Directory_CodeTable(码表目录)，Directory_Standard(标准目录)，DIM(维度建模)，codeTable(码表);dataStandard 数据标准;directory_id导出指定目录下的码表/数据标准;model_id，biz_catalog_id导出指定模型，目录下的业务表，import_bizcatalog导出流程架构，import_bizmetric导出业务指标。
-    * directoryId  所属目录ID。
-    * bizCatalogId  所属业务分层的ID。
+    * directoryId  所属目录ID，填写String类型替代Long类型。
+    * bizCatalogId  所属业务分层的ID，填写String类型替代Long类型。
     * bizCatalogIdList  所属的业务分层的ID列表。
-    * modelId  所属关系建模的模型ID，导出关系模型需要此参数。
+    * modelId  所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ids' => 'int64',
+        'ids' => null,
         'asyn' => null,
         'type' => null,
-        'directoryId' => 'int64',
-        'bizCatalogId' => 'int64',
-        'bizCatalogIdList' => 'int64',
-        'modelId' => 'int64'
+        'directoryId' => null,
+        'bizCatalogId' => null,
+        'bizCatalogIdList' => null,
+        'modelId' => null
     ];
 
     /**
@@ -85,13 +85,13 @@ class ExportParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  导出对象ID的列表，如：某几个逻辑模型的ID。
+    * ids  导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     * asyn  是否是异步操作导出，true:异步，false:同步。
     * type  导出的业务类型：ER(关系建模)，Directory_CodeTable(码表目录)，Directory_Standard(标准目录)，DIM(维度建模)，codeTable(码表);dataStandard 数据标准;directory_id导出指定目录下的码表/数据标准;model_id，biz_catalog_id导出指定模型，目录下的业务表，import_bizcatalog导出流程架构，import_bizmetric导出业务指标。
-    * directoryId  所属目录ID。
-    * bizCatalogId  所属业务分层的ID。
+    * directoryId  所属目录ID，填写String类型替代Long类型。
+    * bizCatalogId  所属业务分层的ID，填写String类型替代Long类型。
     * bizCatalogIdList  所属的业务分层的ID列表。
-    * modelId  所属关系建模的模型ID，导出关系模型需要此参数。
+    * modelId  所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  导出对象ID的列表，如：某几个逻辑模型的ID。
+    * ids  导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     * asyn  是否是异步操作导出，true:异步，false:同步。
     * type  导出的业务类型：ER(关系建模)，Directory_CodeTable(码表目录)，Directory_Standard(标准目录)，DIM(维度建模)，codeTable(码表);dataStandard 数据标准;directory_id导出指定目录下的码表/数据标准;model_id，biz_catalog_id导出指定模型，目录下的业务表，import_bizcatalog导出流程架构，import_bizmetric导出业务指标。
-    * directoryId  所属目录ID。
-    * bizCatalogId  所属业务分层的ID。
+    * directoryId  所属目录ID，填写String类型替代Long类型。
+    * bizCatalogId  所属业务分层的ID，填写String类型替代Long类型。
     * bizCatalogIdList  所属的业务分层的ID列表。
-    * modelId  所属关系建模的模型ID，导出关系模型需要此参数。
+    * modelId  所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  导出对象ID的列表，如：某几个逻辑模型的ID。
+    * ids  导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     * asyn  是否是异步操作导出，true:异步，false:同步。
     * type  导出的业务类型：ER(关系建模)，Directory_CodeTable(码表目录)，Directory_Standard(标准目录)，DIM(维度建模)，codeTable(码表);dataStandard 数据标准;directory_id导出指定目录下的码表/数据标准;model_id，biz_catalog_id导出指定模型，目录下的业务表，import_bizcatalog导出流程架构，import_bizmetric导出业务指标。
-    * directoryId  所属目录ID。
-    * bizCatalogId  所属业务分层的ID。
+    * directoryId  所属目录ID，填写String类型替代Long类型。
+    * bizCatalogId  所属业务分层的ID，填写String类型替代Long类型。
     * bizCatalogIdList  所属的业务分层的ID列表。
-    * modelId  所属关系建模的模型ID，导出关系模型需要此参数。
+    * modelId  所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -240,9 +240,9 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  导出对象ID的列表，如：某几个逻辑模型的ID。
+    *  导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getIds()
     {
@@ -252,7 +252,7 @@ class ExportParam implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param int[]|null $ids 导出对象ID的列表，如：某几个逻辑模型的ID。
+    * @param string[]|null $ids 导出对象ID的列表，如：某几个逻辑模型的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -312,9 +312,9 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  所属目录ID。
+    *  所属目录ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getDirectoryId()
     {
@@ -324,7 +324,7 @@ class ExportParam implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param int|null $directoryId 所属目录ID。
+    * @param string|null $directoryId 所属目录ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -336,9 +336,9 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  所属业务分层的ID。
+    *  所属业务分层的ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getBizCatalogId()
     {
@@ -348,7 +348,7 @@ class ExportParam implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param int|null $bizCatalogId 所属业务分层的ID。
+    * @param string|null $bizCatalogId 所属业务分层的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -362,7 +362,7 @@ class ExportParam implements ModelInterface, ArrayAccess
     * Gets bizCatalogIdList
     *  所属的业务分层的ID列表。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getBizCatalogIdList()
     {
@@ -372,7 +372,7 @@ class ExportParam implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogIdList
     *
-    * @param int[]|null $bizCatalogIdList 所属的业务分层的ID列表。
+    * @param string[]|null $bizCatalogIdList 所属的业务分层的ID列表。
     *
     * @return $this
     */
@@ -384,9 +384,9 @@ class ExportParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelId
-    *  所属关系建模的模型ID，导出关系模型需要此参数。
+    *  所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getModelId()
     {
@@ -396,7 +396,7 @@ class ExportParam implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param int|null $modelId 所属关系建模的模型ID，导出关系模型需要此参数。
+    * @param string|null $modelId 所属关系建模的模型ID，导出关系模型需要此参数，填写String类型替代Long类型。
     *
     * @return $this
     */

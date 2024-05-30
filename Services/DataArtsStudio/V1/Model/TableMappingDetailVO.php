@@ -20,21 +20,21 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * mappingId  名称。
-    * targetAttrId  目的字段ID。
+    * targetAttrId  目的字段ID，填写String类型替代Long类型。
     * targetAttrName  目的字段排序。
     * srcTableIds  源表ID。
-    * srcTableNames  源表名称数组。
-    * srcTableDbNames  源表db名称数组。
-    * srcTableModelIds  源表在关系建模中的模型ID数组。
-    * srcTableIdList  源表ID数组。
+    * srcTableNames  源表名称数组，只读。
+    * srcTableDbNames  源表db名称数组，只读。
+    * srcTableModelIds  源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
+    * srcTableIdList  源表ID数组，只读，填写String类型替代Long类型。
     * srcAttrIds  源表字段ID。
-    * srcAttrNames  源表字段名称数组。
-    * srcAttrIdList  源表字段ID数组。
+    * srcAttrNames  源表字段名称数组，只读。
+    * srcAttrIdList  源表字段ID数组，只读，填写String类型替代Long类型。
     * remark  备注。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     * targetAttr  目标属性。
@@ -42,18 +42,18 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'mappingId' => 'string',
-            'targetAttrId' => 'int',
+            'targetAttrId' => 'string',
             'targetAttrName' => 'string',
             'srcTableIds' => 'string',
             'srcTableNames' => 'string[]',
             'srcTableDbNames' => 'string[]',
-            'srcTableModelIds' => 'int[]',
-            'srcTableIdList' => 'int[]',
+            'srcTableModelIds' => 'string[]',
+            'srcTableIdList' => 'string[]',
             'srcAttrIds' => 'string',
             'srcAttrNames' => 'string[]',
-            'srcAttrIdList' => 'int[]',
+            'srcAttrIdList' => 'string[]',
             'remark' => 'string',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime',
@@ -64,21 +64,21 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * mappingId  名称。
-    * targetAttrId  目的字段ID。
+    * targetAttrId  目的字段ID，填写String类型替代Long类型。
     * targetAttrName  目的字段排序。
     * srcTableIds  源表ID。
-    * srcTableNames  源表名称数组。
-    * srcTableDbNames  源表db名称数组。
-    * srcTableModelIds  源表在关系建模中的模型ID数组。
-    * srcTableIdList  源表ID数组。
+    * srcTableNames  源表名称数组，只读。
+    * srcTableDbNames  源表db名称数组，只读。
+    * srcTableModelIds  源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
+    * srcTableIdList  源表ID数组，只读，填写String类型替代Long类型。
     * srcAttrIds  源表字段ID。
-    * srcAttrNames  源表字段名称数组。
-    * srcAttrIdList  源表字段ID数组。
+    * srcAttrNames  源表字段名称数组，只读。
+    * srcAttrIdList  源表字段ID数组，只读，填写String类型替代Long类型。
     * remark  备注。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     * targetAttr  目标属性。
@@ -86,18 +86,18 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'mappingId' => null,
-        'targetAttrId' => 'int64',
+        'targetAttrId' => null,
         'targetAttrName' => null,
         'srcTableIds' => null,
         'srcTableNames' => null,
         'srcTableDbNames' => null,
-        'srcTableModelIds' => 'int64',
-        'srcTableIdList' => 'int64',
+        'srcTableModelIds' => null,
+        'srcTableIdList' => null,
         'srcAttrIds' => null,
         'srcAttrNames' => null,
-        'srcAttrIdList' => 'int64',
+        'srcAttrIdList' => null,
         'remark' => null,
         'createTime' => 'date-time',
         'updateTime' => 'date-time',
@@ -129,21 +129,21 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * mappingId  名称。
-    * targetAttrId  目的字段ID。
+    * targetAttrId  目的字段ID，填写String类型替代Long类型。
     * targetAttrName  目的字段排序。
     * srcTableIds  源表ID。
-    * srcTableNames  源表名称数组。
-    * srcTableDbNames  源表db名称数组。
-    * srcTableModelIds  源表在关系建模中的模型ID数组。
-    * srcTableIdList  源表ID数组。
+    * srcTableNames  源表名称数组，只读。
+    * srcTableDbNames  源表db名称数组，只读。
+    * srcTableModelIds  源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
+    * srcTableIdList  源表ID数组，只读，填写String类型替代Long类型。
     * srcAttrIds  源表字段ID。
-    * srcAttrNames  源表字段名称数组。
-    * srcAttrIdList  源表字段ID数组。
+    * srcAttrNames  源表字段名称数组，只读。
+    * srcAttrIdList  源表字段ID数组，只读，填写String类型替代Long类型。
     * remark  备注。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     * targetAttr  目标属性。
@@ -173,21 +173,21 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * mappingId  名称。
-    * targetAttrId  目的字段ID。
+    * targetAttrId  目的字段ID，填写String类型替代Long类型。
     * targetAttrName  目的字段排序。
     * srcTableIds  源表ID。
-    * srcTableNames  源表名称数组。
-    * srcTableDbNames  源表db名称数组。
-    * srcTableModelIds  源表在关系建模中的模型ID数组。
-    * srcTableIdList  源表ID数组。
+    * srcTableNames  源表名称数组，只读。
+    * srcTableDbNames  源表db名称数组，只读。
+    * srcTableModelIds  源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
+    * srcTableIdList  源表ID数组，只读，填写String类型替代Long类型。
     * srcAttrIds  源表字段ID。
-    * srcAttrNames  源表字段名称数组。
-    * srcAttrIdList  源表字段ID数组。
+    * srcAttrNames  源表字段名称数组，只读。
+    * srcAttrIdList  源表字段ID数组，只读，填写String类型替代Long类型。
     * remark  备注。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     * targetAttr  目标属性。
@@ -217,21 +217,21 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * mappingId  名称。
-    * targetAttrId  目的字段ID。
+    * targetAttrId  目的字段ID，填写String类型替代Long类型。
     * targetAttrName  目的字段排序。
     * srcTableIds  源表ID。
-    * srcTableNames  源表名称数组。
-    * srcTableDbNames  源表db名称数组。
-    * srcTableModelIds  源表在关系建模中的模型ID数组。
-    * srcTableIdList  源表ID数组。
+    * srcTableNames  源表名称数组，只读。
+    * srcTableDbNames  源表db名称数组，只读。
+    * srcTableModelIds  源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
+    * srcTableIdList  源表ID数组，只读，填写String类型替代Long类型。
     * srcAttrIds  源表字段ID。
-    * srcAttrNames  源表字段名称数组。
-    * srcAttrIdList  源表字段ID数组。
+    * srcAttrNames  源表字段名称数组，只读。
+    * srcAttrIdList  源表字段ID数组，只读，填写String类型替代Long类型。
     * remark  备注。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     * targetAttr  目标属性。
@@ -364,9 +364,9 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -376,7 +376,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -412,9 +412,9 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetAttrId
-    *  目的字段ID。
+    *  目的字段ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTargetAttrId()
     {
@@ -424,7 +424,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetAttrId
     *
-    * @param int|null $targetAttrId 目的字段ID。
+    * @param string|null $targetAttrId 目的字段ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableNames
-    *  源表名称数组。
+    *  源表名称数组，只读。
     *
     * @return string[]|null
     */
@@ -496,7 +496,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableNames
     *
-    * @param string[]|null $srcTableNames 源表名称数组。
+    * @param string[]|null $srcTableNames 源表名称数组，只读。
     *
     * @return $this
     */
@@ -508,7 +508,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableDbNames
-    *  源表db名称数组。
+    *  源表db名称数组，只读。
     *
     * @return string[]|null
     */
@@ -520,7 +520,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableDbNames
     *
-    * @param string[]|null $srcTableDbNames 源表db名称数组。
+    * @param string[]|null $srcTableDbNames 源表db名称数组，只读。
     *
     * @return $this
     */
@@ -532,9 +532,9 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableModelIds
-    *  源表在关系建模中的模型ID数组。
+    *  源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getSrcTableModelIds()
     {
@@ -544,7 +544,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableModelIds
     *
-    * @param int[]|null $srcTableModelIds 源表在关系建模中的模型ID数组。
+    * @param string[]|null $srcTableModelIds 源表在关系建模中的模型ID数组，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -556,9 +556,9 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcTableIdList
-    *  源表ID数组。
+    *  源表ID数组，只读，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getSrcTableIdList()
     {
@@ -568,7 +568,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcTableIdList
     *
-    * @param int[]|null $srcTableIdList 源表ID数组。
+    * @param string[]|null $srcTableIdList 源表ID数组，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -604,7 +604,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcAttrNames
-    *  源表字段名称数组。
+    *  源表字段名称数组，只读。
     *
     * @return string[]|null
     */
@@ -616,7 +616,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcAttrNames
     *
-    * @param string[]|null $srcAttrNames 源表字段名称数组。
+    * @param string[]|null $srcAttrNames 源表字段名称数组，只读。
     *
     * @return $this
     */
@@ -628,9 +628,9 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcAttrIdList
-    *  源表字段ID数组。
+    *  源表字段ID数组，只读，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getSrcAttrIdList()
     {
@@ -640,7 +640,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcAttrIdList
     *
-    * @param int[]|null $srcAttrIdList 源表字段ID数组。
+    * @param string[]|null $srcAttrIdList 源表字段ID数组，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -676,7 +676,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -688,7 +688,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -700,7 +700,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -712,7 +712,7 @@ class TableMappingDetailVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

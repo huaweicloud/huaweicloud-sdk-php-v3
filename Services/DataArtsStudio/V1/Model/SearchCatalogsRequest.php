@@ -28,7 +28,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
     * owner  按负责人查询。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -56,7 +56,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
     * owner  按负责人查询。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
     * owner  按负责人查询。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -133,7 +133,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
     * owner  按负责人查询。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -161,7 +161,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
     * owner  按负责人查询。
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -501,7 +501,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    *  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -513,7 +513,7 @@ class SearchCatalogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * @param int|null $limit 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */

@@ -20,14 +20,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填。
+    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
+    * secretType  secretType
+    * applyBg  applyBg
     * createBy  汇总表的创建人，只读，创建和更新时无需填写。
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须填写。
     * dwId  汇总表所在的数据连接ID，为32位十六进制数字。
@@ -47,8 +49,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
     * timePeriod  timePeriod
     * tableAttributes  汇总表属性信息，依据attribute_type判断类型。
     * physicalTable  physicalTable
@@ -60,16 +62,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * dlfTask  dlfTask
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     * obsLocation  外表路径。
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID。
-    * reversed  是否是逆向的。
-    * tableVersion  为2时，表示汇总表是汇总生成的。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * reversed  是否是逆向的，只读。
+    * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
@@ -80,6 +82,11 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称
+    * prodVersionName  生产环境版本名称
+    * envType  envType
     *
     * @var string[]
     */
@@ -92,6 +99,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'l3Id' => 'string',
             'description' => 'string',
             'owner' => 'string',
+            'secretType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecretTypeEnum',
+            'applyBg' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApplyBgEnum',
             'createBy' => 'string',
             'queueName' => 'string',
             'dwId' => 'string',
@@ -143,19 +152,26 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'configs' => 'string',
             'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]',
             'apiId' => 'string',
-            'sql' => 'string'
+            'sql' => 'string',
+            'devVersion' => 'string',
+            'prodVersion' => 'string',
+            'devVersionName' => 'string',
+            'prodVersionName' => 'string',
+            'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填。
+    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
+    * secretType  secretType
+    * applyBg  applyBg
     * createBy  汇总表的创建人，只读，创建和更新时无需填写。
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须填写。
     * dwId  汇总表所在的数据连接ID，为32位十六进制数字。
@@ -175,8 +191,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
     * timePeriod  timePeriod
     * tableAttributes  汇总表属性信息，依据attribute_type判断类型。
     * physicalTable  physicalTable
@@ -188,16 +204,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * dlfTask  dlfTask
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     * obsLocation  外表路径。
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID。
-    * reversed  是否是逆向的。
-    * tableVersion  为2时，表示汇总表是汇总生成的。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * reversed  是否是逆向的，只读。
+    * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
@@ -208,18 +224,25 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称
+    * prodVersionName  生产环境版本名称
+    * envType  envType
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'tbName' => null,
         'tbLogicName' => null,
-        'l1Id' => 'int64',
+        'l1Id' => null,
         'l2Id' => null,
-        'l3Id' => 'int64',
+        'l3Id' => null,
         'description' => null,
         'owner' => null,
+        'secretType' => null,
+        'applyBg' => null,
         'createBy' => null,
         'queueName' => null,
         'dwId' => null,
@@ -259,7 +282,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
         'preCombineField' => null,
         'tableType' => null,
         'dlfTaskId' => null,
-        'qualityId' => 'int64',
+        'qualityId' => null,
         'reversed' => null,
         'tableVersion' => null,
         'partitionConf' => null,
@@ -271,7 +294,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
         'configs' => null,
         'selfDefinedFields' => null,
         'apiId' => null,
-        'sql' => null
+        'sql' => null,
+        'devVersion' => null,
+        'prodVersion' => null,
+        'devVersionName' => null,
+        'prodVersionName' => null,
+        'envType' => null
     ];
 
     /**
@@ -297,14 +325,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填。
+    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
+    * secretType  secretType
+    * applyBg  applyBg
     * createBy  汇总表的创建人，只读，创建和更新时无需填写。
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须填写。
     * dwId  汇总表所在的数据连接ID，为32位十六进制数字。
@@ -324,8 +354,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
     * timePeriod  timePeriod
     * tableAttributes  汇总表属性信息，依据attribute_type判断类型。
     * physicalTable  physicalTable
@@ -337,16 +367,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * dlfTask  dlfTask
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     * obsLocation  外表路径。
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID。
-    * reversed  是否是逆向的。
-    * tableVersion  为2时，表示汇总表是汇总生成的。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * reversed  是否是逆向的，只读。
+    * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
@@ -357,6 +387,11 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称
+    * prodVersionName  生产环境版本名称
+    * envType  envType
     *
     * @var string[]
     */
@@ -369,6 +404,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'l3Id' => 'l3_id',
             'description' => 'description',
             'owner' => 'owner',
+            'secretType' => 'secret_type',
+            'applyBg' => 'apply_bg',
             'createBy' => 'create_by',
             'queueName' => 'queue_name',
             'dwId' => 'dw_id',
@@ -420,19 +457,26 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'configs' => 'configs',
             'selfDefinedFields' => 'self_defined_fields',
             'apiId' => 'api_id',
-            'sql' => 'sql'
+            'sql' => 'sql',
+            'devVersion' => 'dev_version',
+            'prodVersion' => 'prod_version',
+            'devVersionName' => 'dev_version_name',
+            'prodVersionName' => 'prod_version_name',
+            'envType' => 'env_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填。
+    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
+    * secretType  secretType
+    * applyBg  applyBg
     * createBy  汇总表的创建人，只读，创建和更新时无需填写。
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须填写。
     * dwId  汇总表所在的数据连接ID，为32位十六进制数字。
@@ -452,8 +496,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
     * timePeriod  timePeriod
     * tableAttributes  汇总表属性信息，依据attribute_type判断类型。
     * physicalTable  physicalTable
@@ -465,16 +509,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * dlfTask  dlfTask
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     * obsLocation  外表路径。
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID。
-    * reversed  是否是逆向的。
-    * tableVersion  为2时，表示汇总表是汇总生成的。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * reversed  是否是逆向的，只读。
+    * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
@@ -485,6 +529,11 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称
+    * prodVersionName  生产环境版本名称
+    * envType  envType
     *
     * @var string[]
     */
@@ -497,6 +546,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'l3Id' => 'setL3Id',
             'description' => 'setDescription',
             'owner' => 'setOwner',
+            'secretType' => 'setSecretType',
+            'applyBg' => 'setApplyBg',
             'createBy' => 'setCreateBy',
             'queueName' => 'setQueueName',
             'dwId' => 'setDwId',
@@ -548,19 +599,26 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'configs' => 'setConfigs',
             'selfDefinedFields' => 'setSelfDefinedFields',
             'apiId' => 'setApiId',
-            'sql' => 'setSql'
+            'sql' => 'setSql',
+            'devVersion' => 'setDevVersion',
+            'prodVersion' => 'setProdVersion',
+            'devVersionName' => 'setDevVersionName',
+            'prodVersionName' => 'setProdVersionName',
+            'envType' => 'setEnvType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    * id  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     * tbName  汇总表英文名称，对应实际的物理表名。
     * tbLogicName  汇总表的中文名，用于展示使用。
-    * l1Id  主题域分组ID，只读，创建和更新时无需填写。
+    * l1Id  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  汇总表所属主题的ID，必填。
+    * l3Id  汇总表所属主题的ID，必填，填写String类型替代Long类型。
     * description  汇总表描述信息。
     * owner  汇总表的资产责任人。
+    * secretType  secretType
+    * applyBg  applyBg
     * createBy  汇总表的创建人，只读，创建和更新时无需填写。
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须填写。
     * dwId  汇总表所在的数据连接ID，为32位十六进制数字。
@@ -580,8 +638,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
     * timePeriod  timePeriod
     * tableAttributes  汇总表属性信息，依据attribute_type判断类型。
     * physicalTable  physicalTable
@@ -593,16 +651,16 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * dlfTask  dlfTask
     * publishToDlm  publishToDlm
     * summaryStatus  summaryStatus
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    * compression  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     * obsLocation  外表路径。
     * preCombineField  版本字段。
     * tableType  表类型。
     * dlfTaskId  DLF作业ID。
-    * qualityId  质量ID。
-    * reversed  是否是逆向的。
-    * tableVersion  为2时，表示汇总表是汇总生成的。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * reversed  是否是逆向的，只读。
+    * tableVersion  为2时，表示汇总表是汇总生成的，只读。
     * partitionConf  分区表达式。
     * dirtyOutSwitch  异常数据输出开关。
     * dirtyOutDatabase  异常数据输出库。
@@ -613,6 +671,11 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     * selfDefinedFields  自定义项。
     * apiId  API ID。
     * sql  汇总表绑定的SQL。
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称
+    * prodVersionName  生产环境版本名称
+    * envType  envType
     *
     * @var string[]
     */
@@ -625,6 +688,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'l3Id' => 'getL3Id',
             'description' => 'getDescription',
             'owner' => 'getOwner',
+            'secretType' => 'getSecretType',
+            'applyBg' => 'getApplyBg',
             'createBy' => 'getCreateBy',
             'queueName' => 'getQueueName',
             'dwId' => 'getDwId',
@@ -676,7 +741,12 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
             'configs' => 'getConfigs',
             'selfDefinedFields' => 'getSelfDefinedFields',
             'apiId' => 'getApiId',
-            'sql' => 'getSql'
+            'sql' => 'getSql',
+            'devVersion' => 'getDevVersion',
+            'prodVersion' => 'getProdVersion',
+            'devVersionName' => 'getDevVersionName',
+            'prodVersionName' => 'getProdVersionName',
+            'envType' => 'getEnvType'
     ];
 
     /**
@@ -781,6 +851,8 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
         $this->container['l3Id'] = isset($data['l3Id']) ? $data['l3Id'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
+        $this->container['secretType'] = isset($data['secretType']) ? $data['secretType'] : null;
+        $this->container['applyBg'] = isset($data['applyBg']) ? $data['applyBg'] : null;
         $this->container['createBy'] = isset($data['createBy']) ? $data['createBy'] : null;
         $this->container['queueName'] = isset($data['queueName']) ? $data['queueName'] : null;
         $this->container['dwId'] = isset($data['dwId']) ? $data['dwId'] : null;
@@ -833,6 +905,11 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
         $this->container['selfDefinedFields'] = isset($data['selfDefinedFields']) ? $data['selfDefinedFields'] : null;
         $this->container['apiId'] = isset($data['apiId']) ? $data['apiId'] : null;
         $this->container['sql'] = isset($data['sql']) ? $data['sql'] : null;
+        $this->container['devVersion'] = isset($data['devVersion']) ? $data['devVersion'] : null;
+        $this->container['prodVersion'] = isset($data['prodVersion']) ? $data['prodVersion'] : null;
+        $this->container['devVersionName'] = isset($data['devVersionName']) ? $data['devVersionName'] : null;
+        $this->container['prodVersionName'] = isset($data['prodVersionName']) ? $data['prodVersionName'] : null;
+        $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
     }
 
     /**
@@ -926,7 +1003,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    *  汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -938,7 +1015,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 汇总表的唯一系统ID，更新时必填，创建时不须填写。
+    * @param string|null $id 汇总表的唯一系统ID，更新时必填，创建时不须填写，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -998,7 +1075,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID，只读，创建和更新时无需填写。
+    *  主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -1010,7 +1087,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID，只读，创建和更新时无需填写。
+    * @param string|null $l1Id 主题域分组ID，只读，创建和更新时无需填写，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1046,7 +1123,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  汇总表所属主题的ID，必填。
+    *  汇总表所属主题的ID，必填，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -1058,7 +1135,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string $l3Id 汇总表所属主题的ID，必填。
+    * @param string $l3Id 汇总表所属主题的ID，必填，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1113,6 +1190,54 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     public function setOwner($owner)
     {
         $this->container['owner'] = $owner;
+        return $this;
+    }
+
+    /**
+    * Gets secretType
+    *  secretType
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecretTypeEnum|null
+    */
+    public function getSecretType()
+    {
+        return $this->container['secretType'];
+    }
+
+    /**
+    * Sets secretType
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecretTypeEnum|null $secretType secretType
+    *
+    * @return $this
+    */
+    public function setSecretType($secretType)
+    {
+        $this->container['secretType'] = $secretType;
+        return $this;
+    }
+
+    /**
+    * Gets applyBg
+    *  applyBg
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApplyBgEnum|null
+    */
+    public function getApplyBg()
+    {
+        return $this->container['applyBg'];
+    }
+
+    /**
+    * Sets applyBg
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ApplyBgEnum|null $applyBg applyBg
+    *
+    * @return $this
+    */
+    public function setApplyBg($applyBg)
+    {
+        $this->container['applyBg'] = $applyBg;
         return $this;
     }
 
@@ -1574,7 +1699,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  颗粒度名称。
+    *  颗粒度名称，只读。
     *
     * @return string|null
     */
@@ -1586,7 +1711,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 颗粒度名称。
+    * @param string|null $groupName 颗粒度名称，只读。
     *
     * @return $this
     */
@@ -1598,7 +1723,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupCode
-    *  颗粒度编码。
+    *  颗粒度编码，只读。
     *
     * @return string|null
     */
@@ -1610,7 +1735,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupCode
     *
-    * @param string|null $groupCode 颗粒度编码。
+    * @param string|null $groupCode 颗粒度编码，只读。
     *
     * @return $this
     */
@@ -1886,7 +2011,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets distribute
-    *  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    *  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     *
     * @return string|null
     */
@@ -1898,7 +2023,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets distribute
     *
-    * @param string|null $distribute DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * @param string|null $distribute DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     *
     * @return $this
     */
@@ -1934,7 +2059,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets compression
-    *  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    *  DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     *
     * @return string|null
     */
@@ -1946,7 +2071,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets compression
     *
-    * @param string|null $compression DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。
+    * @param string|null $compression DWS数据压缩等级，列压缩等级为no/low/middle/high，行压缩等级为no/yes。 枚举值：   - \"NO\": 不压缩   - \"YES\": 压缩   - \"LOW\": 低等级压缩   - \"MIDDLE\": 中等级压缩   - \"HIGH\": 高等级压缩
     *
     * @return $this
     */
@@ -2054,7 +2179,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量ID。
+    *  质量ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -2066,7 +2191,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param string|null $qualityId 质量ID。
+    * @param string|null $qualityId 质量ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -2078,7 +2203,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets reversed
-    *  是否是逆向的。
+    *  是否是逆向的，只读。
     *
     * @return bool|null
     */
@@ -2090,7 +2215,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets reversed
     *
-    * @param bool|null $reversed 是否是逆向的。
+    * @param bool|null $reversed 是否是逆向的，只读。
     *
     * @return $this
     */
@@ -2102,7 +2227,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableVersion
-    *  为2时，表示汇总表是汇总生成的。
+    *  为2时，表示汇总表是汇总生成的，只读。
     *
     * @return int|null
     */
@@ -2114,7 +2239,7 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableVersion
     *
-    * @param int|null $tableVersion 为2时，表示汇总表是汇总生成的。
+    * @param int|null $tableVersion 为2时，表示汇总表是汇总生成的，只读。
     *
     * @return $this
     */
@@ -2361,6 +2486,126 @@ class AggregationLogicTableVO implements ModelInterface, ArrayAccess
     public function setSql($sql)
     {
         $this->container['sql'] = $sql;
+        return $this;
+    }
+
+    /**
+    * Gets devVersion
+    *  开发环境版本，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getDevVersion()
+    {
+        return $this->container['devVersion'];
+    }
+
+    /**
+    * Sets devVersion
+    *
+    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setDevVersion($devVersion)
+    {
+        $this->container['devVersion'] = $devVersion;
+        return $this;
+    }
+
+    /**
+    * Gets prodVersion
+    *  生产环境版本，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getProdVersion()
+    {
+        return $this->container['prodVersion'];
+    }
+
+    /**
+    * Sets prodVersion
+    *
+    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setProdVersion($prodVersion)
+    {
+        $this->container['prodVersion'] = $prodVersion;
+        return $this;
+    }
+
+    /**
+    * Gets devVersionName
+    *  开发环境版本名称
+    *
+    * @return string|null
+    */
+    public function getDevVersionName()
+    {
+        return $this->container['devVersionName'];
+    }
+
+    /**
+    * Sets devVersionName
+    *
+    * @param string|null $devVersionName 开发环境版本名称
+    *
+    * @return $this
+    */
+    public function setDevVersionName($devVersionName)
+    {
+        $this->container['devVersionName'] = $devVersionName;
+        return $this;
+    }
+
+    /**
+    * Gets prodVersionName
+    *  生产环境版本名称
+    *
+    * @return string|null
+    */
+    public function getProdVersionName()
+    {
+        return $this->container['prodVersionName'];
+    }
+
+    /**
+    * Sets prodVersionName
+    *
+    * @param string|null $prodVersionName 生产环境版本名称
+    *
+    * @return $this
+    */
+    public function setProdVersionName($prodVersionName)
+    {
+        $this->container['prodVersionName'] = $prodVersionName;
+        return $this;
+    }
+
+    /**
+    * Gets envType
+    *  envType
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null
+    */
+    public function getEnvType()
+    {
+        return $this->container['envType'];
+    }
+
+    /**
+    * Sets envType
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null $envType envType
+    *
+    * @return $this
+    */
+    public function setEnvType($envType)
+    {
+        $this->container['envType'] = $envType;
         return $this;
     }
 

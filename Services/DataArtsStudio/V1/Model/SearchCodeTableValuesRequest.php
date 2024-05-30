@@ -23,8 +23,8 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * id  实体ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -43,8 +43,8 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * id  实体ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -53,7 +53,7 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
         'workspace' => null,
         'xProjectId' => null,
         'contentType' => null,
-        'id' => 'int64',
+        'id' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -84,8 +84,8 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * id  实体ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -104,8 +104,8 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * id  实体ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * id  实体ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -328,7 +328,7 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实体ID
+    *  实体ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -340,7 +340,7 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 实体ID
+    * @param string $id 实体ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -352,7 +352,7 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    *  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -364,7 +364,7 @@ class SearchCodeTableValuesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * @param int|null $limit 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */

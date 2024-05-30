@@ -28,6 +28,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * limit  每次查询的条数。默认值为10。
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'offset' => 'int',
             'limit' => 'int',
             'expireTimeBegin' => 'string',
-            'expireTimeEnd' => 'string'
+            'expireTimeEnd' => 'string',
+            'serviceTypeCode' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * limit  每次查询的条数。默认值为10。
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
         'offset' => 'int32',
         'limit' => 'int32',
         'expireTimeBegin' => null,
-        'expireTimeEnd' => null
+        'expireTimeEnd' => null,
+        'serviceTypeCode' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * limit  每次查询的条数。默认值为10。
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'offset' => 'offset',
             'limit' => 'limit',
             'expireTimeBegin' => 'expire_time_begin',
-            'expireTimeEnd' => 'expire_time_end'
+            'expireTimeEnd' => 'expire_time_end',
+            'serviceTypeCode' => 'service_type_code'
     ];
 
     /**
@@ -121,6 +127,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * limit  每次查询的条数。默认值为10。
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'offset' => 'setOffset',
             'limit' => 'setLimit',
             'expireTimeBegin' => 'setExpireTimeBegin',
-            'expireTimeEnd' => 'setExpireTimeEnd'
+            'expireTimeEnd' => 'setExpireTimeEnd',
+            'serviceTypeCode' => 'setServiceTypeCode'
     ];
 
     /**
@@ -145,6 +153,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     * limit  每次查询的条数。默认值为10。
     * expireTimeBegin  查询指定时间段内失效的资源列表，时间段的起始时间，UTC时间。
     * expireTimeEnd  查询指定时间段内失效的资源列表，时间段的结束时间，UTC时间。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             'offset' => 'getOffset',
             'limit' => 'getLimit',
             'expireTimeBegin' => 'getExpireTimeBegin',
-            'expireTimeEnd' => 'getExpireTimeEnd'
+            'expireTimeEnd' => 'getExpireTimeEnd',
+            'serviceTypeCode' => 'getServiceTypeCode'
     ];
 
     /**
@@ -225,6 +235,7 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['expireTimeBegin'] = isset($data['expireTimeBegin']) ? $data['expireTimeBegin'] : null;
         $this->container['expireTimeEnd'] = isset($data['expireTimeEnd']) ? $data['expireTimeEnd'] : null;
+        $this->container['serviceTypeCode'] = isset($data['serviceTypeCode']) ? $data['serviceTypeCode'] : null;
     }
 
     /**
@@ -270,6 +281,12 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['expireTimeEnd']) && (mb_strlen($this->container['expireTimeEnd']) < 0)) {
                 $invalidProperties[] = "invalid value for 'expireTimeEnd', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['serviceTypeCode']) && (mb_strlen($this->container['serviceTypeCode']) > 64)) {
+                $invalidProperties[] = "invalid value for 'serviceTypeCode', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['serviceTypeCode']) && (mb_strlen($this->container['serviceTypeCode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'serviceTypeCode', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -474,6 +491,30 @@ class QueryResourcesReq implements ModelInterface, ArrayAccess
     public function setExpireTimeEnd($expireTimeEnd)
     {
         $this->container['expireTimeEnd'] = $expireTimeEnd;
+        return $this;
+    }
+
+    /**
+    * Gets serviceTypeCode
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    *
+    * @return string|null
+    */
+    public function getServiceTypeCode()
+    {
+        return $this->container['serviceTypeCode'];
+    }
+
+    /**
+    * Sets serviceTypeCode
+    *
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。 此参数不携带、携带值为null，不作为筛选条件。此参数不允许为空串，有参数校验。
+    *
+    * @return $this
+    */
+    public function setServiceTypeCode($serviceTypeCode)
+    {
+        $this->container['serviceTypeCode'] = $serviceTypeCode;
         return $this;
     }
 

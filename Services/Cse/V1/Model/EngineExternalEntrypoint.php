@@ -20,10 +20,10 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * externalAddress  微服务引擎专享版暴露的IP地址。
-    * publicAddress  微服务引擎专享版的公网地址。
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicServiceEndpoint  微服务引擎专享版组件的公网地址。
+    * externalAddress  微服务引擎暴露的IP地址。
+    * publicAddress  微服务引擎的公网地址。
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicServiceEndpoint  微服务引擎组件的公网地址。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * externalAddress  微服务引擎专享版暴露的IP地址。
-    * publicAddress  微服务引擎专享版的公网地址。
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicServiceEndpoint  微服务引擎专享版组件的公网地址。
+    * externalAddress  微服务引擎暴露的IP地址。
+    * publicAddress  微服务引擎的公网地址。
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicServiceEndpoint  微服务引擎组件的公网地址。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * externalAddress  微服务引擎专享版暴露的IP地址。
-    * publicAddress  微服务引擎专享版的公网地址。
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicServiceEndpoint  微服务引擎专享版组件的公网地址。
+    * externalAddress  微服务引擎暴露的IP地址。
+    * publicAddress  微服务引擎的公网地址。
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicServiceEndpoint  微服务引擎组件的公网地址。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * externalAddress  微服务引擎专享版暴露的IP地址。
-    * publicAddress  微服务引擎专享版的公网地址。
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicServiceEndpoint  微服务引擎专享版组件的公网地址。
+    * externalAddress  微服务引擎暴露的IP地址。
+    * publicAddress  微服务引擎的公网地址。
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicServiceEndpoint  微服务引擎组件的公网地址。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * externalAddress  微服务引擎专享版暴露的IP地址。
-    * publicAddress  微服务引擎专享版的公网地址。
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicServiceEndpoint  微服务引擎专享版组件的公网地址。
+    * externalAddress  微服务引擎暴露的IP地址。
+    * publicAddress  微服务引擎的公网地址。
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicServiceEndpoint  微服务引擎组件的公网地址。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets externalAddress
-    *  微服务引擎专享版暴露的IP地址。
+    *  微服务引擎暴露的IP地址。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
     /**
     * Sets externalAddress
     *
-    * @param string|null $externalAddress 微服务引擎专享版暴露的IP地址。
+    * @param string|null $externalAddress 微服务引擎暴露的IP地址。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicAddress
-    *  微服务引擎专享版的公网地址。
+    *  微服务引擎的公网地址。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
     /**
     * Sets publicAddress
     *
-    * @param string|null $publicAddress 微服务引擎专享版的公网地址。
+    * @param string|null $publicAddress 微服务引擎的公网地址。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceEndpoint
-    *  微服务引擎专享版组件的访问地址。
+    *  微服务引擎组件的访问地址。
     *
     * @return map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null
     */
@@ -267,7 +267,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
     /**
     * Sets serviceEndpoint
     *
-    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $serviceEndpoint 微服务引擎专享版组件的访问地址。
+    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $serviceEndpoint 微服务引擎组件的访问地址。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicServiceEndpoint
-    *  微服务引擎专享版组件的公网地址。
+    *  微服务引擎组件的公网地址。
     *
     * @return map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null
     */
@@ -291,7 +291,7 @@ class EngineExternalEntrypoint implements ModelInterface, ArrayAccess
     /**
     * Sets publicServiceEndpoint
     *
-    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $publicServiceEndpoint 微服务引擎专享版组件的公网地址。
+    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $publicServiceEndpoint 微服务引擎组件的公网地址。
     *
     * @return $this
     */

@@ -39,6 +39,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * description  域名描述
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     *
     * @var string[]
     */
@@ -60,7 +61,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'premiumWafInstances' => '\HuaweiCloud\SDK\Waf\V1\Model\PremiumWafInstances[]',
             'description' => 'string',
             'exclusiveIp' => 'bool',
-            'region' => 'string'
+            'region' => 'string',
+            'server' => '\HuaweiCloud\SDK\Waf\V1\Model\WafServer[]'
     ];
 
     /**
@@ -83,6 +85,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * description  域名描述
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     *
     * @var string[]
     */
@@ -104,7 +107,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
         'premiumWafInstances' => null,
         'description' => null,
         'exclusiveIp' => null,
-        'region' => null
+        'region' => null,
+        'server' => null
     ];
 
     /**
@@ -148,6 +152,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * description  域名描述
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     *
     * @var string[]
     */
@@ -169,7 +174,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'premiumWafInstances' => 'premium_waf_instances',
             'description' => 'description',
             'exclusiveIp' => 'exclusive_ip',
-            'region' => 'region'
+            'region' => 'region',
+            'server' => 'server'
     ];
 
     /**
@@ -192,6 +198,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * description  域名描述
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     *
     * @var string[]
     */
@@ -213,7 +220,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'premiumWafInstances' => 'setPremiumWafInstances',
             'description' => 'setDescription',
             'exclusiveIp' => 'setExclusiveIp',
-            'region' => 'setRegion'
+            'region' => 'setRegion',
+            'server' => 'setServer'
     ];
 
     /**
@@ -236,6 +244,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     * description  域名描述
     * exclusiveIp  是否使用独享ip   - true：使用独享ip   - false：不实用独享ip
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
+    * server  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
     *
     * @var string[]
     */
@@ -257,7 +266,8 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
             'premiumWafInstances' => 'getPremiumWafInstances',
             'description' => 'getDescription',
             'exclusiveIp' => 'getExclusiveIp',
-            'region' => 'getRegion'
+            'region' => 'getRegion',
+            'server' => 'getServer'
     ];
 
     /**
@@ -336,6 +346,7 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['exclusiveIp'] = isset($data['exclusiveIp']) ? $data['exclusiveIp'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
+        $this->container['server'] = isset($data['server']) ? $data['server'] : null;
     }
 
     /**
@@ -789,6 +800,30 @@ class ShowCompositeHostResponse implements ModelInterface, ArrayAccess
     public function setRegion($region)
     {
         $this->container['region'] = $region;
+        return $this;
+    }
+
+    /**
+    * Gets server
+    *  防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\WafServer[]|null
+    */
+    public function getServer()
+    {
+        return $this->container['server'];
+    }
+
+    /**
+    * Sets server
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\WafServer[]|null $server 防护域名的源站服务器配置信息，只有独享模式域名才返回vpc_id
+    *
+    * @return $this
+    */
+    public function setServer($server)
+    {
+        $this->container['server'] = $server;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * path  路径。
-    * qualifiedName  名称。
+    * path  路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
+    * qualifiedName  资产名称。
     * level  主题所属层级。
     * name  名称。
     * nameEng  英文名称。
@@ -36,12 +36,12 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     * updateBy  更新人。
     * parent  parent
     * parentId  父节点ID。
-    * l1  是否为L1层。
-    * l2  是否为L2层。
-    * l3  是否为L3层。
-    * ordinal  顺序编号。
-    * tenantId  租户ID。
-    * selfDefinedFields  自定义项。
+    * l1  是否为L1层。主题域分组。
+    * l2  是否为L2层。主题域。
+    * l3  是否为L3层。业务对象。
+    * ordinal  顺序编号。主题返回时根据此编号由小到大排序。
+    * tenantId  租户ID。获取方式参考此接口的路径参数“project_id”获取。
+    * selfDefinedFields  自定义项。主题的自定义属性项。
     *
     * @var string[]
     */
@@ -72,8 +72,8 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * path  路径。
-    * qualifiedName  名称。
+    * path  路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
+    * qualifiedName  资产名称。
     * level  主题所属层级。
     * name  名称。
     * nameEng  英文名称。
@@ -88,12 +88,12 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     * updateBy  更新人。
     * parent  parent
     * parentId  父节点ID。
-    * l1  是否为L1层。
-    * l2  是否为L2层。
-    * l3  是否为L3层。
-    * ordinal  顺序编号。
-    * tenantId  租户ID。
-    * selfDefinedFields  自定义项。
+    * l1  是否为L1层。主题域分组。
+    * l2  是否为L2层。主题域。
+    * l3  是否为L3层。业务对象。
+    * ordinal  顺序编号。主题返回时根据此编号由小到大排序。
+    * tenantId  租户ID。获取方式参考此接口的路径参数“project_id”获取。
+    * selfDefinedFields  自定义项。主题的自定义属性项。
     *
     * @var string[]
     */
@@ -145,8 +145,8 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * path  路径。
-    * qualifiedName  名称。
+    * path  路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
+    * qualifiedName  资产名称。
     * level  主题所属层级。
     * name  名称。
     * nameEng  英文名称。
@@ -161,12 +161,12 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     * updateBy  更新人。
     * parent  parent
     * parentId  父节点ID。
-    * l1  是否为L1层。
-    * l2  是否为L2层。
-    * l3  是否为L3层。
-    * ordinal  顺序编号。
-    * tenantId  租户ID。
-    * selfDefinedFields  自定义项。
+    * l1  是否为L1层。主题域分组。
+    * l2  是否为L2层。主题域。
+    * l3  是否为L3层。业务对象。
+    * ordinal  顺序编号。主题返回时根据此编号由小到大排序。
+    * tenantId  租户ID。获取方式参考此接口的路径参数“project_id”获取。
+    * selfDefinedFields  自定义项。主题的自定义属性项。
     *
     * @var string[]
     */
@@ -197,8 +197,8 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * path  路径。
-    * qualifiedName  名称。
+    * path  路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
+    * qualifiedName  资产名称。
     * level  主题所属层级。
     * name  名称。
     * nameEng  英文名称。
@@ -213,12 +213,12 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     * updateBy  更新人。
     * parent  parent
     * parentId  父节点ID。
-    * l1  是否为L1层。
-    * l2  是否为L2层。
-    * l3  是否为L3层。
-    * ordinal  顺序编号。
-    * tenantId  租户ID。
-    * selfDefinedFields  自定义项。
+    * l1  是否为L1层。主题域分组。
+    * l2  是否为L2层。主题域。
+    * l3  是否为L3层。业务对象。
+    * ordinal  顺序编号。主题返回时根据此编号由小到大排序。
+    * tenantId  租户ID。获取方式参考此接口的路径参数“project_id”获取。
+    * selfDefinedFields  自定义项。主题的自定义属性项。
     *
     * @var string[]
     */
@@ -249,8 +249,8 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * path  路径。
-    * qualifiedName  名称。
+    * path  路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
+    * qualifiedName  资产名称。
     * level  主题所属层级。
     * name  名称。
     * nameEng  英文名称。
@@ -265,12 +265,12 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     * updateBy  更新人。
     * parent  parent
     * parentId  父节点ID。
-    * l1  是否为L1层。
-    * l2  是否为L2层。
-    * l3  是否为L3层。
-    * ordinal  顺序编号。
-    * tenantId  租户ID。
-    * selfDefinedFields  自定义项。
+    * l1  是否为L1层。主题域分组。
+    * l2  是否为L2层。主题域。
+    * l3  是否为L3层。业务对象。
+    * ordinal  顺序编号。主题返回时根据此编号由小到大排序。
+    * tenantId  租户ID。获取方式参考此接口的路径参数“project_id”获取。
+    * selfDefinedFields  自定义项。主题的自定义属性项。
     *
     * @var string[]
     */
@@ -429,7 +429,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  路径。
+    *  路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
     *
     * @return string
     */
@@ -441,7 +441,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string $path 路径。
+    * @param string $path 路径。用“/”作为分隔，如：运营领域/云学院/云学院培训方案。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualifiedName
-    *  名称。
+    *  资产名称。
     *
     * @return string
     */
@@ -465,7 +465,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualifiedName
     *
-    * @param string $qualifiedName 名称。
+    * @param string $qualifiedName 资产名称。
     *
     * @return $this
     */
@@ -813,7 +813,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  是否为L1层。
+    *  是否为L1层。主题域分组。
     *
     * @return bool|null
     */
@@ -825,7 +825,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param bool|null $l1 是否为L1层。
+    * @param bool|null $l1 是否为L1层。主题域分组。
     *
     * @return $this
     */
@@ -837,7 +837,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  是否为L2层。
+    *  是否为L2层。主题域。
     *
     * @return bool|null
     */
@@ -849,7 +849,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param bool|null $l2 是否为L2层。
+    * @param bool|null $l2 是否为L2层。主题域。
     *
     * @return $this
     */
@@ -861,7 +861,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  是否为L3层。
+    *  是否为L3层。业务对象。
     *
     * @return bool|null
     */
@@ -873,7 +873,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param bool|null $l3 是否为L3层。
+    * @param bool|null $l3 是否为L3层。业务对象。
     *
     * @return $this
     */
@@ -885,7 +885,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  顺序编号。
+    *  顺序编号。主题返回时根据此编号由小到大排序。
     *
     * @return int|null
     */
@@ -897,7 +897,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 顺序编号。
+    * @param int|null $ordinal 顺序编号。主题返回时根据此编号由小到大排序。
     *
     * @return $this
     */
@@ -909,7 +909,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  租户ID。
+    *  租户ID。获取方式参考此接口的路径参数“project_id”获取。
     *
     * @return string|null
     */
@@ -921,7 +921,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 租户ID。
+    * @param string|null $tenantId 租户ID。获取方式参考此接口的路径参数“project_id”获取。
     *
     * @return $this
     */
@@ -933,7 +933,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfDefinedFields
-    *  自定义项。
+    *  自定义项。主题的自定义属性项。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
     */
@@ -945,7 +945,7 @@ class CatalogAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets selfDefinedFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。主题的自定义属性项。
     *
     * @return $this
     */

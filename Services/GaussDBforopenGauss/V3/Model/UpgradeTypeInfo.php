@@ -23,13 +23,15 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
     * enable  可用，不可用
     * upgradeActionList  升级操作列表
+    * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'upgradeType' => 'string',
             'enable' => 'bool',
-            'upgradeActionList' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeActionInfo[]'
+            'upgradeActionList' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeActionInfo[]',
+            'isParallelUpgrade' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
     * enable  可用，不可用
     * upgradeActionList  升级操作列表
+    * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'upgradeType' => null,
         'enable' => null,
-        'upgradeActionList' => null
+        'upgradeActionList' => null,
+        'isParallelUpgrade' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
     * enable  可用，不可用
     * upgradeActionList  升级操作列表
+    * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'upgradeType' => 'upgrade_type',
             'enable' => 'enable',
-            'upgradeActionList' => 'upgrade_action_list'
+            'upgradeActionList' => 'upgrade_action_list',
+            'isParallelUpgrade' => 'is_parallel_upgrade'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
     * enable  可用，不可用
     * upgradeActionList  升级操作列表
+    * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
     */
     protected static $setters = [
             'upgradeType' => 'setUpgradeType',
             'enable' => 'setEnable',
-            'upgradeActionList' => 'setUpgradeActionList'
+            'upgradeActionList' => 'setUpgradeActionList',
+            'isParallelUpgrade' => 'setIsParallelUpgrade'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
     * enable  可用，不可用
     * upgradeActionList  升级操作列表
+    * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
     */
     protected static $getters = [
             'upgradeType' => 'getUpgradeType',
             'enable' => 'getEnable',
-            'upgradeActionList' => 'getUpgradeActionList'
+            'upgradeActionList' => 'getUpgradeActionList',
+            'isParallelUpgrade' => 'getIsParallelUpgrade'
     ];
 
     /**
@@ -187,6 +197,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
         $this->container['upgradeType'] = isset($data['upgradeType']) ? $data['upgradeType'] : null;
         $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
         $this->container['upgradeActionList'] = isset($data['upgradeActionList']) ? $data['upgradeActionList'] : null;
+        $this->container['isParallelUpgrade'] = isset($data['isParallelUpgrade']) ? $data['isParallelUpgrade'] : null;
     }
 
     /**
@@ -294,6 +305,30 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     public function setUpgradeActionList($upgradeActionList)
     {
         $this->container['upgradeActionList'] = $upgradeActionList;
+        return $this;
+    }
+
+    /**
+    * Gets isParallelUpgrade
+    *  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
+    *
+    * @return bool|null
+    */
+    public function getIsParallelUpgrade()
+    {
+        return $this->container['isParallelUpgrade'];
+    }
+
+    /**
+    * Sets isParallelUpgrade
+    *
+    * @param bool|null $isParallelUpgrade 是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
+    *
+    * @return $this
+    */
+    public function setIsParallelUpgrade($isParallelUpgrade)
+    {
+        $this->container['isParallelUpgrade'] = $isParallelUpgrade;
         return $this;
     }
 

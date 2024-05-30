@@ -20,32 +20,32 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * field1Id  属性1ID。
-    * field2Id  属性2ID。
+    * field1Id  属性1ID，填写String类型替代Long类型。
+    * field2Id  属性2ID，填写String类型替代Long类型。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'field1Id' => 'int',
-            'field2Id' => 'int',
+            'field1Id' => 'string',
+            'field2Id' => 'string',
             'field1Name' => 'string',
             'field2Name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * field1Id  属性1ID。
-    * field2Id  属性2ID。
+    * field1Id  属性1ID，填写String类型替代Long类型。
+    * field2Id  属性2ID，填写String类型替代Long类型。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'field1Id' => 'int64',
-        'field2Id' => 'int64',
+        'field1Id' => null,
+        'field2Id' => null,
         'field1Name' => null,
         'field2Name' => null
     ];
@@ -73,8 +73,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * field1Id  属性1ID。
-    * field2Id  属性2ID。
+    * field1Id  属性1ID，填写String类型替代Long类型。
+    * field2Id  属性2ID，填写String类型替代Long类型。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -89,8 +89,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * field1Id  属性1ID。
-    * field2Id  属性2ID。
+    * field1Id  属性1ID，填写String类型替代Long类型。
+    * field2Id  属性2ID，填写String类型替代Long类型。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -105,8 +105,8 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * field1Id  属性1ID。
-    * field2Id  属性2ID。
+    * field1Id  属性1ID，填写String类型替代Long类型。
+    * field2Id  属性2ID，填写String类型替代Long类型。
     * field1Name  属性1名称。
     * field2Name  属性2名称。
     *
@@ -219,9 +219,9 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field1Id
-    *  属性1ID。
+    *  属性1ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getField1Id()
     {
@@ -231,7 +231,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field1Id
     *
-    * @param int $field1Id 属性1ID。
+    * @param string $field1Id 属性1ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -243,9 +243,9 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets field2Id
-    *  属性2ID。
+    *  属性2ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getField2Id()
     {
@@ -255,7 +255,7 @@ class MappingJoinFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets field2Id
     *
-    * @param int $field2Id 属性2ID。
+    * @param string $field2Id 属性2ID，填写String类型替代Long类型。
     *
     * @return $this
     */

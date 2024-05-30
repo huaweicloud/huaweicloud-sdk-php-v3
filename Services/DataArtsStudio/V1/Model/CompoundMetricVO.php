@@ -20,51 +20,59 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
-    * metricIds  指标信息。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
+    * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    * metricIds  指标信息，填写String类型替代Long类型。
     * metricNames  指标名称信息。
-    * calFnIds  引用函数ID。
+    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricNames  复合指标名称信息
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，填写String类型替代Long类型。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID。
+    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'nameEn' => 'string',
             'nameCh' => 'string',
             'description' => 'string',
             'dimensionGroup' => 'string',
             'groupName' => 'string',
             'groupCode' => 'string',
-            'metricIds' => 'int[]',
+            'compoundType' => 'string',
+            'comparisonType' => 'string',
+            'metricIds' => 'string[]',
             'metricNames' => 'string[]',
-            'calFnIds' => 'int[]',
+            'compoundMetricIds' => 'string[]',
+            'compoundMetricNames' => 'string[]',
+            'calFnIds' => 'string[]',
             'calExp' => 'string',
-            'l1Id' => 'int',
+            'l1Id' => 'string',
             'l2Id' => 'string',
-            'l3Id' => 'int',
+            'l3Id' => 'string',
             'dataType' => 'string',
             'createBy' => 'string',
             'updateBy' => 'string',
@@ -77,56 +85,64 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
             'l1' => 'string',
             'l2' => 'string',
             'l3' => 'string',
-            'summaryTableId' => 'int'
+            'summaryTableId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
-    * metricIds  指标信息。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
+    * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    * metricIds  指标信息，填写String类型替代Long类型。
     * metricNames  指标名称信息。
-    * calFnIds  引用函数ID。
+    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricNames  复合指标名称信息
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，填写String类型替代Long类型。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID。
+    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'nameEn' => null,
         'nameCh' => null,
         'description' => null,
         'dimensionGroup' => null,
         'groupName' => null,
         'groupCode' => null,
-        'metricIds' => 'int64',
+        'compoundType' => null,
+        'comparisonType' => null,
+        'metricIds' => null,
         'metricNames' => null,
-        'calFnIds' => 'int64',
+        'compoundMetricIds' => null,
+        'compoundMetricNames' => null,
+        'calFnIds' => null,
         'calExp' => null,
-        'l1Id' => 'int64',
+        'l1Id' => null,
         'l2Id' => null,
-        'l3Id' => 'int64',
+        'l3Id' => null,
         'dataType' => null,
         'createBy' => null,
         'updateBy' => null,
@@ -139,7 +155,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
         'l1' => null,
         'l2' => null,
         'l3' => null,
-        'summaryTableId' => 'int64'
+        'summaryTableId' => null
     ];
 
     /**
@@ -165,33 +181,37 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
-    * metricIds  指标信息。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
+    * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    * metricIds  指标信息，填写String类型替代Long类型。
     * metricNames  指标名称信息。
-    * calFnIds  引用函数ID。
+    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricNames  复合指标名称信息
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，填写String类型替代Long类型。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID。
+    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -203,8 +223,12 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
             'dimensionGroup' => 'dimension_group',
             'groupName' => 'group_name',
             'groupCode' => 'group_code',
+            'compoundType' => 'compound_type',
+            'comparisonType' => 'comparison_type',
             'metricIds' => 'metric_ids',
             'metricNames' => 'metric_names',
+            'compoundMetricIds' => 'compound_metric_ids',
+            'compoundMetricNames' => 'compound_metric_names',
             'calFnIds' => 'cal_fn_ids',
             'calExp' => 'cal_exp',
             'l1Id' => 'l1_id',
@@ -227,33 +251,37 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
-    * metricIds  指标信息。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
+    * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    * metricIds  指标信息，填写String类型替代Long类型。
     * metricNames  指标名称信息。
-    * calFnIds  引用函数ID。
+    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricNames  复合指标名称信息
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，填写String类型替代Long类型。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID。
+    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -265,8 +293,12 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
             'dimensionGroup' => 'setDimensionGroup',
             'groupName' => 'setGroupName',
             'groupCode' => 'setGroupCode',
+            'compoundType' => 'setCompoundType',
+            'comparisonType' => 'setComparisonType',
             'metricIds' => 'setMetricIds',
             'metricNames' => 'setMetricNames',
+            'compoundMetricIds' => 'setCompoundMetricIds',
+            'compoundMetricNames' => 'setCompoundMetricNames',
             'calFnIds' => 'setCalFnIds',
             'calExp' => 'setCalExp',
             'l1Id' => 'setL1Id',
@@ -289,33 +321,37 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述
     * dimensionGroup  颗粒度ID。
-    * groupName  颗粒度名称。
-    * groupCode  颗粒度编码。
-    * metricIds  指标信息。
+    * groupName  颗粒度名称，只读。
+    * groupCode  颗粒度编码，只读。
+    * compoundType  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    * comparisonType  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    * metricIds  指标信息，填写String类型替代Long类型。
     * metricNames  指标名称信息。
-    * calFnIds  引用函数ID。
+    * compoundMetricIds  复合指标信息，填写String类型替代Long类型。
+    * compoundMetricNames  复合指标名称信息
+    * calFnIds  引用函数ID，填写String类型替代Long类型。
     * calExp  计算表达式，形如${index_id} + ${compound#index_id}，其中index_id代表引用的衍生指标ID，compound#index_id代表引用的复合指标ID。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，填写String类型替代Long类型。
     * dataType  字段类型。
     * createBy  创建人。
     * updateBy  更新人。
     * status  status
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * monitor  monitor
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * summaryTableId  汇总表ID。
+    * summaryTableId  汇总表ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -327,8 +363,12 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
             'dimensionGroup' => 'getDimensionGroup',
             'groupName' => 'getGroupName',
             'groupCode' => 'getGroupCode',
+            'compoundType' => 'getCompoundType',
+            'comparisonType' => 'getComparisonType',
             'metricIds' => 'getMetricIds',
             'metricNames' => 'getMetricNames',
+            'compoundMetricIds' => 'getCompoundMetricIds',
+            'compoundMetricNames' => 'getCompoundMetricNames',
             'calFnIds' => 'getCalFnIds',
             'calExp' => 'getCalExp',
             'l1Id' => 'getL1Id',
@@ -389,7 +429,41 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const COMPOUND_TYPE_EXPRESSION = 'EXPRESSION';
+    const COMPOUND_TYPE_PERIODICITY_VALUED_COMPARISON = 'PERIODICITY_VALUED_COMPARISON';
+    const COMPOUND_TYPE_INTERVAL_VALUED_COMPARISON = 'INTERVAL_VALUED_COMPARISON';
+    const COMPARISON_TYPE_YEAR_TO_YEAR = 'YEAR_TO_YEAR';
+    const COMPARISON_TYPE_MONTH_TO_MONTH = 'MONTH_TO_MONTH';
+    const COMPARISON_TYPE_WEEK_TO_WEEK = 'WEEK_TO_WEEK';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCompoundTypeAllowableValues()
+    {
+        return [
+            self::COMPOUND_TYPE_EXPRESSION,
+            self::COMPOUND_TYPE_PERIODICITY_VALUED_COMPARISON,
+            self::COMPOUND_TYPE_INTERVAL_VALUED_COMPARISON,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getComparisonTypeAllowableValues()
+    {
+        return [
+            self::COMPARISON_TYPE_YEAR_TO_YEAR,
+            self::COMPARISON_TYPE_MONTH_TO_MONTH,
+            self::COMPARISON_TYPE_WEEK_TO_WEEK,
+        ];
+    }
 
 
     /**
@@ -414,8 +488,12 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
         $this->container['dimensionGroup'] = isset($data['dimensionGroup']) ? $data['dimensionGroup'] : null;
         $this->container['groupName'] = isset($data['groupName']) ? $data['groupName'] : null;
         $this->container['groupCode'] = isset($data['groupCode']) ? $data['groupCode'] : null;
+        $this->container['compoundType'] = isset($data['compoundType']) ? $data['compoundType'] : null;
+        $this->container['comparisonType'] = isset($data['comparisonType']) ? $data['comparisonType'] : null;
         $this->container['metricIds'] = isset($data['metricIds']) ? $data['metricIds'] : null;
         $this->container['metricNames'] = isset($data['metricNames']) ? $data['metricNames'] : null;
+        $this->container['compoundMetricIds'] = isset($data['compoundMetricIds']) ? $data['compoundMetricIds'] : null;
+        $this->container['compoundMetricNames'] = isset($data['compoundMetricNames']) ? $data['compoundMetricNames'] : null;
         $this->container['calFnIds'] = isset($data['calFnIds']) ? $data['calFnIds'] : null;
         $this->container['calExp'] = isset($data['calExp']) ? $data['calExp'] : null;
         $this->container['l1Id'] = isset($data['l1Id']) ? $data['l1Id'] : null;
@@ -468,6 +546,22 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
         if ($this->container['dimensionGroup'] === null) {
             $invalidProperties[] = "'dimensionGroup' can't be null";
         }
+            $allowedValues = $this->getCompoundTypeAllowableValues();
+                if (!is_null($this->container['compoundType']) && !in_array($this->container['compoundType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'compoundType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getComparisonTypeAllowableValues();
+                if (!is_null($this->container['comparisonType']) && !in_array($this->container['comparisonType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'comparisonType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['metricIds'] === null) {
             $invalidProperties[] = "'metricIds' can't be null";
         }
@@ -490,9 +584,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -502,7 +596,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -610,7 +704,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  颗粒度名称。
+    *  颗粒度名称，只读。
     *
     * @return string|null
     */
@@ -622,7 +716,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 颗粒度名称。
+    * @param string|null $groupName 颗粒度名称，只读。
     *
     * @return $this
     */
@@ -634,7 +728,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupCode
-    *  颗粒度编码。
+    *  颗粒度编码，只读。
     *
     * @return string|null
     */
@@ -646,7 +740,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupCode
     *
-    * @param string|null $groupCode 颗粒度编码。
+    * @param string|null $groupCode 颗粒度编码，只读。
     *
     * @return $this
     */
@@ -657,10 +751,58 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets metricIds
-    *  指标信息。
+    * Gets compoundType
+    *  复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
     *
-    * @return int[]
+    * @return string|null
+    */
+    public function getCompoundType()
+    {
+        return $this->container['compoundType'];
+    }
+
+    /**
+    * Sets compoundType
+    *
+    * @param string|null $compoundType 复合指标类型。 枚举值：   - EXPRESSION: 表达式   - PERIODICITY_VALUED_COMPARISON: 环比   - INTERVAL_VALUED_COMPARISON: 同比
+    *
+    * @return $this
+    */
+    public function setCompoundType($compoundType)
+    {
+        $this->container['compoundType'] = $compoundType;
+        return $this;
+    }
+
+    /**
+    * Gets comparisonType
+    *  比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    *
+    * @return string|null
+    */
+    public function getComparisonType()
+    {
+        return $this->container['comparisonType'];
+    }
+
+    /**
+    * Sets comparisonType
+    *
+    * @param string|null $comparisonType 比较类型。 枚举值：   - YEAR_TO_YEAR: 年同比   - MONTH_TO_MONTH: 月同比   - WEEK_TO_WEEK: 周同比
+    *
+    * @return $this
+    */
+    public function setComparisonType($comparisonType)
+    {
+        $this->container['comparisonType'] = $comparisonType;
+        return $this;
+    }
+
+    /**
+    * Gets metricIds
+    *  指标信息，填写String类型替代Long类型。
+    *
+    * @return string[]
     */
     public function getMetricIds()
     {
@@ -670,7 +812,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricIds
     *
-    * @param int[] $metricIds 指标信息。
+    * @param string[] $metricIds 指标信息，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -705,10 +847,58 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets calFnIds
-    *  引用函数ID。
+    * Gets compoundMetricIds
+    *  复合指标信息，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
+    */
+    public function getCompoundMetricIds()
+    {
+        return $this->container['compoundMetricIds'];
+    }
+
+    /**
+    * Sets compoundMetricIds
+    *
+    * @param string[]|null $compoundMetricIds 复合指标信息，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setCompoundMetricIds($compoundMetricIds)
+    {
+        $this->container['compoundMetricIds'] = $compoundMetricIds;
+        return $this;
+    }
+
+    /**
+    * Gets compoundMetricNames
+    *  复合指标名称信息
+    *
+    * @return string[]|null
+    */
+    public function getCompoundMetricNames()
+    {
+        return $this->container['compoundMetricNames'];
+    }
+
+    /**
+    * Sets compoundMetricNames
+    *
+    * @param string[]|null $compoundMetricNames 复合指标名称信息
+    *
+    * @return $this
+    */
+    public function setCompoundMetricNames($compoundMetricNames)
+    {
+        $this->container['compoundMetricNames'] = $compoundMetricNames;
+        return $this;
+    }
+
+    /**
+    * Gets calFnIds
+    *  引用函数ID，填写String类型替代Long类型。
+    *
+    * @return string[]|null
     */
     public function getCalFnIds()
     {
@@ -718,7 +908,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets calFnIds
     *
-    * @param int[]|null $calFnIds 引用函数ID。
+    * @param string[]|null $calFnIds 引用函数ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -754,9 +944,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID。
+    *  主题域分组ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getL1Id()
     {
@@ -766,7 +956,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组ID。
+    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -802,9 +992,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID。
+    *  业务对象ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getL3Id()
     {
@@ -814,7 +1004,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int|null $l3Id 业务对象ID。
+    * @param string|null $l3Id 业务对象ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -922,7 +1112,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -934,7 +1124,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -946,7 +1136,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -958,7 +1148,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1114,9 +1304,9 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets summaryTableId
-    *  汇总表ID。
+    *  汇总表ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getSummaryTableId()
     {
@@ -1126,7 +1316,7 @@ class CompoundMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets summaryTableId
     *
-    * @param int|null $summaryTableId 汇总表ID。
+    * @param string|null $summaryTableId 汇总表ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */

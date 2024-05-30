@@ -20,30 +20,30 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  微服务引擎专享版的ID
+    * id  微服务引擎的ID
     * name  引擎的名称
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
-    * description  微服务引擎专享版的描述
-    * flavor  微服务引擎专享版的规格
-    * payment  微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
-    * authType  微服务引擎专享版的认证方式，RBAC/NONE
-    * status  微服务引擎专享版当前的状态
-    * externalAddress  微服务引擎专享版暴露的IP地址
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicAddress  微服务引擎专享版的公网IP地址
-    * publicServiceEndpoint  微服务引擎专享版的公网接入地址
-    * totalInstance  微服务引擎专享版可支持的实例总数
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * type  微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    * description  微服务引擎的描述
+    * flavor  微服务引擎的规格
+    * payment  微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
+    * authType  微服务引擎的认证方式，RBAC/NONE
+    * status  微服务引擎当前的状态
+    * externalAddress  微服务引擎暴露的IP地址
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicAddress  微服务引擎的公网IP地址
+    * publicServiceEndpoint  微服务引擎的公网接入地址
+    * totalInstance  微服务引擎可支持的实例总数
     * usedInstance  已使用的实例总数
     * availableInstance  可用实例总数
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * createTime  微服务引擎专享版创建时间
-    * dueTo  微服务引擎专享版到期时间
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * createTime  微服务引擎创建时间
+    * dueTo  微服务引擎到期时间
+    * latestJobId  微服务引擎最近的任务ID
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
     * reference  reference
     *
     * @var string[]
@@ -78,30 +78,30 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  微服务引擎专享版的ID
+    * id  微服务引擎的ID
     * name  引擎的名称
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
-    * description  微服务引擎专享版的描述
-    * flavor  微服务引擎专享版的规格
-    * payment  微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
-    * authType  微服务引擎专享版的认证方式，RBAC/NONE
-    * status  微服务引擎专享版当前的状态
-    * externalAddress  微服务引擎专享版暴露的IP地址
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicAddress  微服务引擎专享版的公网IP地址
-    * publicServiceEndpoint  微服务引擎专享版的公网接入地址
-    * totalInstance  微服务引擎专享版可支持的实例总数
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * type  微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    * description  微服务引擎的描述
+    * flavor  微服务引擎的规格
+    * payment  微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
+    * authType  微服务引擎的认证方式，RBAC/NONE
+    * status  微服务引擎当前的状态
+    * externalAddress  微服务引擎暴露的IP地址
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicAddress  微服务引擎的公网IP地址
+    * publicServiceEndpoint  微服务引擎的公网接入地址
+    * totalInstance  微服务引擎可支持的实例总数
     * usedInstance  已使用的实例总数
     * availableInstance  可用实例总数
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * createTime  微服务引擎专享版创建时间
-    * dueTo  微服务引擎专享版到期时间
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * createTime  微服务引擎创建时间
+    * dueTo  微服务引擎到期时间
+    * latestJobId  微服务引擎最近的任务ID
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
     * reference  reference
     *
     * @var string[]
@@ -157,30 +157,30 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  微服务引擎专享版的ID
+    * id  微服务引擎的ID
     * name  引擎的名称
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
-    * description  微服务引擎专享版的描述
-    * flavor  微服务引擎专享版的规格
-    * payment  微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
-    * authType  微服务引擎专享版的认证方式，RBAC/NONE
-    * status  微服务引擎专享版当前的状态
-    * externalAddress  微服务引擎专享版暴露的IP地址
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicAddress  微服务引擎专享版的公网IP地址
-    * publicServiceEndpoint  微服务引擎专享版的公网接入地址
-    * totalInstance  微服务引擎专享版可支持的实例总数
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * type  微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    * description  微服务引擎的描述
+    * flavor  微服务引擎的规格
+    * payment  微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
+    * authType  微服务引擎的认证方式，RBAC/NONE
+    * status  微服务引擎当前的状态
+    * externalAddress  微服务引擎暴露的IP地址
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicAddress  微服务引擎的公网IP地址
+    * publicServiceEndpoint  微服务引擎的公网接入地址
+    * totalInstance  微服务引擎可支持的实例总数
     * usedInstance  已使用的实例总数
     * availableInstance  可用实例总数
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * createTime  微服务引擎专享版创建时间
-    * dueTo  微服务引擎专享版到期时间
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * createTime  微服务引擎创建时间
+    * dueTo  微服务引擎到期时间
+    * latestJobId  微服务引擎最近的任务ID
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
     * reference  reference
     *
     * @var string[]
@@ -215,30 +215,30 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  微服务引擎专享版的ID
+    * id  微服务引擎的ID
     * name  引擎的名称
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
-    * description  微服务引擎专享版的描述
-    * flavor  微服务引擎专享版的规格
-    * payment  微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
-    * authType  微服务引擎专享版的认证方式，RBAC/NONE
-    * status  微服务引擎专享版当前的状态
-    * externalAddress  微服务引擎专享版暴露的IP地址
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicAddress  微服务引擎专享版的公网IP地址
-    * publicServiceEndpoint  微服务引擎专享版的公网接入地址
-    * totalInstance  微服务引擎专享版可支持的实例总数
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * type  微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    * description  微服务引擎的描述
+    * flavor  微服务引擎的规格
+    * payment  微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
+    * authType  微服务引擎的认证方式，RBAC/NONE
+    * status  微服务引擎当前的状态
+    * externalAddress  微服务引擎暴露的IP地址
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicAddress  微服务引擎的公网IP地址
+    * publicServiceEndpoint  微服务引擎的公网接入地址
+    * totalInstance  微服务引擎可支持的实例总数
     * usedInstance  已使用的实例总数
     * availableInstance  可用实例总数
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * createTime  微服务引擎专享版创建时间
-    * dueTo  微服务引擎专享版到期时间
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * createTime  微服务引擎创建时间
+    * dueTo  微服务引擎到期时间
+    * latestJobId  微服务引擎最近的任务ID
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
     * reference  reference
     *
     * @var string[]
@@ -273,30 +273,30 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  微服务引擎专享版的ID
+    * id  微服务引擎的ID
     * name  引擎的名称
-    * enterpriseProjectId  微服务引擎专享版所属企业项目ID
-    * enterpriseProjectName  微服务引擎专享版所属企业项目名称
-    * type  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
-    * description  微服务引擎专享版的描述
-    * flavor  微服务引擎专享版的规格
-    * payment  微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
-    * authType  微服务引擎专享版的认证方式，RBAC/NONE
-    * status  微服务引擎专享版当前的状态
-    * externalAddress  微服务引擎专享版暴露的IP地址
-    * serviceEndpoint  微服务引擎专享版组件的访问地址。
-    * publicAddress  微服务引擎专享版的公网IP地址
-    * publicServiceEndpoint  微服务引擎专享版的公网接入地址
-    * totalInstance  微服务引擎专享版可支持的实例总数
+    * enterpriseProjectId  微服务引擎所属企业项目ID
+    * enterpriseProjectName  微服务引擎所属企业项目名称
+    * type  微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    * description  微服务引擎的描述
+    * flavor  微服务引擎的规格
+    * payment  微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
+    * authType  微服务引擎的认证方式，RBAC/NONE
+    * status  微服务引擎当前的状态
+    * externalAddress  微服务引擎暴露的IP地址
+    * serviceEndpoint  微服务引擎组件的访问地址。
+    * publicAddress  微服务引擎的公网IP地址
+    * publicServiceEndpoint  微服务引擎的公网接入地址
+    * totalInstance  微服务引擎可支持的实例总数
     * usedInstance  已使用的实例总数
     * availableInstance  可用实例总数
-    * version  微服务引擎专享版当前版本
-    * latestVersion  微服务引擎专享版最新版本
-    * createTime  微服务引擎专享版创建时间
-    * dueTo  微服务引擎专享版到期时间
-    * latestJobId  微服务引擎专享版最近的任务ID
-    * engineAdditionalActions  微服务引擎专享版允许的附加操作
-    * specType  微服务引擎专享版应用部署类型
+    * version  微服务引擎当前版本
+    * latestVersion  微服务引擎最新版本
+    * createTime  微服务引擎创建时间
+    * dueTo  微服务引擎到期时间
+    * latestJobId  微服务引擎最近的任务ID
+    * engineAdditionalActions  微服务引擎允许的附加操作
+    * specType  微服务引擎应用部署类型
     * reference  reference
     *
     * @var string[]
@@ -375,6 +375,14 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     const FLAVOR_CSE_S1_MEDIUM2 = 'cse.s1.medium2';
     const FLAVOR_CSE_S1_LARGE2 = 'cse.s1.large2';
     const FLAVOR_CSE_S1_XLARGE2 = 'cse.s1.xlarge2';
+    const FLAVOR_CSE_NACOS2_C1_LARGE_10 = 'cse.nacos2.c1.large.10';
+    const FLAVOR_CSE_NACOS2_C1_XLARGE_20 = 'cse.nacos2.c1.xlarge.20';
+    const FLAVOR_CSE_NACOS2_C1_XLARGE_50 = 'cse.nacos2.c1.xlarge.50';
+    const FLAVOR_CSE_NACOS2_C1_XLARGE_60 = 'cse.nacos2.c1.xlarge.60';
+    const FLAVOR_CSE_NACOS2_C1_2XLARGE_100 = 'cse.nacos2.c1.2xlarge.100';
+    const FLAVOR_CSE_MICROGATEWAY_PRO_SMALL_1 = 'cse.microgateway.pro.small.1';
+    const FLAVOR_CSE_MICROGATEWAY_PRO_MEDIUM_1 = 'cse.microgateway.pro.medium.1';
+    const FLAVOR_CSE_MICROGATEWAY_PRO_LARGE_1 = 'cse.microgateway.pro.large.1';
     const AUTH_TYPE_RBAC = 'RBAC';
     const AUTH_TYPE_NONE = 'NONE';
     const STATUS_CREATING = 'Creating';
@@ -423,6 +431,14 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
             self::FLAVOR_CSE_S1_MEDIUM2,
             self::FLAVOR_CSE_S1_LARGE2,
             self::FLAVOR_CSE_S1_XLARGE2,
+            self::FLAVOR_CSE_NACOS2_C1_LARGE_10,
+            self::FLAVOR_CSE_NACOS2_C1_XLARGE_20,
+            self::FLAVOR_CSE_NACOS2_C1_XLARGE_50,
+            self::FLAVOR_CSE_NACOS2_C1_XLARGE_60,
+            self::FLAVOR_CSE_NACOS2_C1_2XLARGE_100,
+            self::FLAVOR_CSE_MICROGATEWAY_PRO_SMALL_1,
+            self::FLAVOR_CSE_MICROGATEWAY_PRO_MEDIUM_1,
+            self::FLAVOR_CSE_MICROGATEWAY_PRO_LARGE_1,
         ];
     }
 
@@ -601,7 +617,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  微服务引擎专享版的ID
+    *  微服务引擎的ID
     *
     * @return string|null
     */
@@ -613,7 +629,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 微服务引擎专享版的ID
+    * @param string|null $id 微服务引擎的ID
     *
     * @return $this
     */
@@ -649,7 +665,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  微服务引擎专享版所属企业项目ID
+    *  微服务引擎所属企业项目ID
     *
     * @return string|null
     */
@@ -661,7 +677,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 微服务引擎专享版所属企业项目ID
+    * @param string|null $enterpriseProjectId 微服务引擎所属企业项目ID
     *
     * @return $this
     */
@@ -673,7 +689,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectName
-    *  微服务引擎专享版所属企业项目名称
+    *  微服务引擎所属企业项目名称
     *
     * @return string|null
     */
@@ -685,7 +701,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectName
     *
-    * @param string|null $enterpriseProjectName 微服务引擎专享版所属企业项目名称
+    * @param string|null $enterpriseProjectName 微服务引擎所属企业项目名称
     *
     * @return $this
     */
@@ -697,7 +713,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    *  微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     *
     * @return string|null
     */
@@ -709,7 +725,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 微服务引擎专享版的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
+    * @param string|null $type 微服务引擎的类型，CSE为专享版引擎，CSE_Share表示为专业版引擎
     *
     * @return $this
     */
@@ -721,7 +737,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  微服务引擎专享版的描述
+    *  微服务引擎的描述
     *
     * @return string|null
     */
@@ -733,7 +749,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 微服务引擎专享版的描述
+    * @param string|null $description 微服务引擎的描述
     *
     * @return $this
     */
@@ -745,7 +761,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  微服务引擎专享版的规格
+    *  微服务引擎的规格
     *
     * @return string|null
     */
@@ -757,7 +773,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor 微服务引擎专享版的规格
+    * @param string|null $flavor 微服务引擎的规格
     *
     * @return $this
     */
@@ -769,7 +785,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets payment
-    *  微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
+    *  微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
     *
     * @return string|null
     */
@@ -781,7 +797,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets payment
     *
-    * @param string|null $payment 微服务引擎专享版的计费方式，0表示包周期，1表示按需，2表示免费
+    * @param string|null $payment 微服务引擎的计费方式，0表示包周期，1表示按需，2表示免费
     *
     * @return $this
     */
@@ -793,7 +809,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  微服务引擎专享版的认证方式，RBAC/NONE
+    *  微服务引擎的认证方式，RBAC/NONE
     *
     * @return string|null
     */
@@ -805,7 +821,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType 微服务引擎专享版的认证方式，RBAC/NONE
+    * @param string|null $authType 微服务引擎的认证方式，RBAC/NONE
     *
     * @return $this
     */
@@ -817,7 +833,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  微服务引擎专享版当前的状态
+    *  微服务引擎当前的状态
     *
     * @return string|null
     */
@@ -829,7 +845,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 微服务引擎专享版当前的状态
+    * @param string|null $status 微服务引擎当前的状态
     *
     * @return $this
     */
@@ -841,7 +857,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets externalAddress
-    *  微服务引擎专享版暴露的IP地址
+    *  微服务引擎暴露的IP地址
     *
     * @return string|null
     */
@@ -853,7 +869,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets externalAddress
     *
-    * @param string|null $externalAddress 微服务引擎专享版暴露的IP地址
+    * @param string|null $externalAddress 微服务引擎暴露的IP地址
     *
     * @return $this
     */
@@ -865,7 +881,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceEndpoint
-    *  微服务引擎专享版组件的访问地址。
+    *  微服务引擎组件的访问地址。
     *
     * @return map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null
     */
@@ -877,7 +893,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets serviceEndpoint
     *
-    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $serviceEndpoint 微服务引擎专享版组件的访问地址。
+    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $serviceEndpoint 微服务引擎组件的访问地址。
     *
     * @return $this
     */
@@ -889,7 +905,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicAddress
-    *  微服务引擎专享版的公网IP地址
+    *  微服务引擎的公网IP地址
     *
     * @return string|null
     */
@@ -901,7 +917,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicAddress
     *
-    * @param string|null $publicAddress 微服务引擎专享版的公网IP地址
+    * @param string|null $publicAddress 微服务引擎的公网IP地址
     *
     * @return $this
     */
@@ -913,7 +929,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicServiceEndpoint
-    *  微服务引擎专享版的公网接入地址
+    *  微服务引擎的公网接入地址
     *
     * @return map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null
     */
@@ -925,7 +941,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicServiceEndpoint
     *
-    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $publicServiceEndpoint 微服务引擎专享版的公网接入地址
+    * @param map[string,\HuaweiCloud\SDK\Cse\V1\Model\EntrypointItem]|null $publicServiceEndpoint 微服务引擎的公网接入地址
     *
     * @return $this
     */
@@ -937,7 +953,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalInstance
-    *  微服务引擎专享版可支持的实例总数
+    *  微服务引擎可支持的实例总数
     *
     * @return int|null
     */
@@ -949,7 +965,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets totalInstance
     *
-    * @param int|null $totalInstance 微服务引擎专享版可支持的实例总数
+    * @param int|null $totalInstance 微服务引擎可支持的实例总数
     *
     * @return $this
     */
@@ -1009,7 +1025,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  微服务引擎专享版当前版本
+    *  微服务引擎当前版本
     *
     * @return string|null
     */
@@ -1021,7 +1037,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 微服务引擎专享版当前版本
+    * @param string|null $version 微服务引擎当前版本
     *
     * @return $this
     */
@@ -1033,7 +1049,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestVersion
-    *  微服务引擎专享版最新版本
+    *  微服务引擎最新版本
     *
     * @return string|null
     */
@@ -1045,7 +1061,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestVersion
     *
-    * @param string|null $latestVersion 微服务引擎专享版最新版本
+    * @param string|null $latestVersion 微服务引擎最新版本
     *
     * @return $this
     */
@@ -1057,7 +1073,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  微服务引擎专享版创建时间
+    *  微服务引擎创建时间
     *
     * @return int|null
     */
@@ -1069,7 +1085,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param int|null $createTime 微服务引擎专享版创建时间
+    * @param int|null $createTime 微服务引擎创建时间
     *
     * @return $this
     */
@@ -1081,7 +1097,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dueTo
-    *  微服务引擎专享版到期时间
+    *  微服务引擎到期时间
     *
     * @return int|null
     */
@@ -1093,7 +1109,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dueTo
     *
-    * @param int|null $dueTo 微服务引擎专享版到期时间
+    * @param int|null $dueTo 微服务引擎到期时间
     *
     * @return $this
     */
@@ -1105,7 +1121,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latestJobId
-    *  微服务引擎专享版最近的任务ID
+    *  微服务引擎最近的任务ID
     *
     * @return int|null
     */
@@ -1117,7 +1133,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latestJobId
     *
-    * @param int|null $latestJobId 微服务引擎专享版最近的任务ID
+    * @param int|null $latestJobId 微服务引擎最近的任务ID
     *
     * @return $this
     */
@@ -1129,7 +1145,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineAdditionalActions
-    *  微服务引擎专享版允许的附加操作
+    *  微服务引擎允许的附加操作
     *
     * @return string[]|null
     */
@@ -1141,7 +1157,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets engineAdditionalActions
     *
-    * @param string[]|null $engineAdditionalActions 微服务引擎专享版允许的附加操作
+    * @param string[]|null $engineAdditionalActions 微服务引擎允许的附加操作
     *
     * @return $this
     */
@@ -1153,7 +1169,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets specType
-    *  微服务引擎专享版应用部署类型
+    *  微服务引擎应用部署类型
     *
     * @return string|null
     */
@@ -1165,7 +1181,7 @@ class EngineSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets specType
     *
-    * @param string|null $specType 微服务引擎专享版应用部署类型
+    * @param string|null $specType 微服务引擎应用部署类型
     *
     * @return $this
     */

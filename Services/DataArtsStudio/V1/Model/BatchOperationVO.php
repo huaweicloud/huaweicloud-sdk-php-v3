@@ -20,19 +20,19 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  批量审批ID。
+    * id  批量审批ID，填写String类型替代Long类型。
     * tenantId  项目ID。
-    * groupId  组ID。
+    * groupId  组ID，填写String类型替代Long类型。
     * bizName  业务名。
-    * bizId  业务ID。
-    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    * bizId  业务ID，填写String类型替代Long类型。
+    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
     * createBy  创建人。
     * remark  remark信息。
     * total  总数。
-    * success  成功个数。
-    * failed  失败个数。
+    * success  操作成功个数。
+    * failed  操作失败个数。
     * rate  当前进度。
     * logs  日志。
     * groups  分组信息。
@@ -40,11 +40,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'tenantId' => 'string',
-            'groupId' => 'int',
+            'groupId' => 'string',
             'bizName' => 'string',
-            'bizId' => 'int',
+            'bizId' => 'string',
             'operationStatus' => 'string',
             'operationType' => 'string',
             'bizInfo' => 'string',
@@ -60,19 +60,19 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  批量审批ID。
+    * id  批量审批ID，填写String类型替代Long类型。
     * tenantId  项目ID。
-    * groupId  组ID。
+    * groupId  组ID，填写String类型替代Long类型。
     * bizName  业务名。
-    * bizId  业务ID。
-    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    * bizId  业务ID，填写String类型替代Long类型。
+    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
     * createBy  创建人。
     * remark  remark信息。
     * total  总数。
-    * success  成功个数。
-    * failed  失败个数。
+    * success  操作成功个数。
+    * failed  操作失败个数。
     * rate  当前进度。
     * logs  日志。
     * groups  分组信息。
@@ -80,11 +80,11 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'tenantId' => null,
-        'groupId' => 'int64',
+        'groupId' => null,
         'bizName' => null,
-        'bizId' => 'int64',
+        'bizId' => null,
         'operationStatus' => null,
         'operationType' => null,
         'bizInfo' => null,
@@ -121,19 +121,19 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  批量审批ID。
+    * id  批量审批ID，填写String类型替代Long类型。
     * tenantId  项目ID。
-    * groupId  组ID。
+    * groupId  组ID，填写String类型替代Long类型。
     * bizName  业务名。
-    * bizId  业务ID。
-    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    * bizId  业务ID，填写String类型替代Long类型。
+    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
     * createBy  创建人。
     * remark  remark信息。
     * total  总数。
-    * success  成功个数。
-    * failed  失败个数。
+    * success  操作成功个数。
+    * failed  操作失败个数。
     * rate  当前进度。
     * logs  日志。
     * groups  分组信息。
@@ -161,19 +161,19 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  批量审批ID。
+    * id  批量审批ID，填写String类型替代Long类型。
     * tenantId  项目ID。
-    * groupId  组ID。
+    * groupId  组ID，填写String类型替代Long类型。
     * bizName  业务名。
-    * bizId  业务ID。
-    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    * bizId  业务ID，填写String类型替代Long类型。
+    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
     * createBy  创建人。
     * remark  remark信息。
     * total  总数。
-    * success  成功个数。
-    * failed  失败个数。
+    * success  操作成功个数。
+    * failed  操作失败个数。
     * rate  当前进度。
     * logs  日志。
     * groups  分组信息。
@@ -201,19 +201,19 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  批量审批ID。
+    * id  批量审批ID，填写String类型替代Long类型。
     * tenantId  项目ID。
-    * groupId  组ID。
+    * groupId  组ID，填写String类型替代Long类型。
     * bizName  业务名。
-    * bizId  业务ID。
-    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    * bizId  业务ID，填写String类型替代Long类型。
+    * operationStatus  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     * operationType  类型。
     * bizInfo  业务详情。
     * createBy  创建人。
     * remark  remark信息。
     * total  总数。
-    * success  成功个数。
-    * failed  失败个数。
+    * success  操作成功个数。
+    * failed  操作失败个数。
     * rate  当前进度。
     * logs  日志。
     * groups  分组信息。
@@ -364,9 +364,9 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  批量审批ID。
+    *  批量审批ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -376,7 +376,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 批量审批ID。
+    * @param string|null $id 批量审批ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -412,9 +412,9 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  组ID。
+    *  组ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getGroupId()
     {
@@ -424,7 +424,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param int|null $groupId 组ID。
+    * @param string|null $groupId 组ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -460,9 +460,9 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID。
+    *  业务ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getBizId()
     {
@@ -472,7 +472,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param int|null $bizId 业务ID。
+    * @param string|null $bizId 业务ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets operationStatus
-    *  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    *  操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     *
     * @return string|null
     */
@@ -496,7 +496,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets operationStatus
     *
-    * @param string|null $operationStatus 操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。
+    * @param string|null $operationStatus 操作结果类型枚举。RUNNING(运行中)、SUCCESS(操作成功)、FAILED(操作失败)。 枚举值：   - RUNNING: 运行中   - SUCCESS: 操作成功   - FAILED: 操作失败
     *
     * @return $this
     */
@@ -628,7 +628,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets success
-    *  成功个数。
+    *  操作成功个数。
     *
     * @return int|null
     */
@@ -640,7 +640,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets success
     *
-    * @param int|null $success 成功个数。
+    * @param int|null $success 操作成功个数。
     *
     * @return $this
     */
@@ -652,7 +652,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets failed
-    *  失败个数。
+    *  操作失败个数。
     *
     * @return int|null
     */
@@ -664,7 +664,7 @@ class BatchOperationVO implements ModelInterface, ArrayAccess
     /**
     * Sets failed
     *
-    * @param int|null $failed 失败个数。
+    * @param int|null $failed 操作失败个数。
     *
     * @return $this
     */

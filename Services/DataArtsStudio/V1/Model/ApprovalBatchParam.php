@@ -23,9 +23,10 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     * bizInfos  业务信息列表。
     * approverUserId  审批人ID。
     * approverUserName  审批人姓名。
-    * email  审批人邮箱。
+    * email  审批人邮箱，仅在创建审批人时填写。
     * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
-    * scheduleTime  作业调度时间。
+    * scheduleTime  作业调度时间。格式参照：30_18，表示18点30分。
+    * envType  envType
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
             'approverUserName' => 'string',
             'email' => 'string',
             'fastApproval' => 'bool',
-            'scheduleTime' => 'string'
+            'scheduleTime' => 'string',
+            'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum'
     ];
 
     /**
@@ -43,9 +45,10 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     * bizInfos  业务信息列表。
     * approverUserId  审批人ID。
     * approverUserName  审批人姓名。
-    * email  审批人邮箱。
+    * email  审批人邮箱，仅在创建审批人时填写。
     * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
-    * scheduleTime  作业调度时间。
+    * scheduleTime  作业调度时间。格式参照：30_18，表示18点30分。
+    * envType  envType
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
         'approverUserName' => null,
         'email' => null,
         'fastApproval' => null,
-        'scheduleTime' => null
+        'scheduleTime' => null,
+        'envType' => null
     ];
 
     /**
@@ -84,9 +88,10 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     * bizInfos  业务信息列表。
     * approverUserId  审批人ID。
     * approverUserName  审批人姓名。
-    * email  审批人邮箱。
+    * email  审批人邮箱，仅在创建审批人时填写。
     * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
-    * scheduleTime  作业调度时间。
+    * scheduleTime  作业调度时间。格式参照：30_18，表示18点30分。
+    * envType  envType
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
             'approverUserName' => 'approver_user_name',
             'email' => 'email',
             'fastApproval' => 'fast_approval',
-            'scheduleTime' => 'schedule_time'
+            'scheduleTime' => 'schedule_time',
+            'envType' => 'env_type'
     ];
 
     /**
@@ -104,9 +110,10 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     * bizInfos  业务信息列表。
     * approverUserId  审批人ID。
     * approverUserName  审批人姓名。
-    * email  审批人邮箱。
+    * email  审批人邮箱，仅在创建审批人时填写。
     * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
-    * scheduleTime  作业调度时间。
+    * scheduleTime  作业调度时间。格式参照：30_18，表示18点30分。
+    * envType  envType
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
             'approverUserName' => 'setApproverUserName',
             'email' => 'setEmail',
             'fastApproval' => 'setFastApproval',
-            'scheduleTime' => 'setScheduleTime'
+            'scheduleTime' => 'setScheduleTime',
+            'envType' => 'setEnvType'
     ];
 
     /**
@@ -124,9 +132,10 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     * bizInfos  业务信息列表。
     * approverUserId  审批人ID。
     * approverUserName  审批人姓名。
-    * email  审批人邮箱。
+    * email  审批人邮箱，仅在创建审批人时填写。
     * fastApproval  快速审批，非正式场景，用于快速上手体验，仅在当前用户有审批权限时提供。
-    * scheduleTime  作业调度时间。
+    * scheduleTime  作业调度时间。格式参照：30_18，表示18点30分。
+    * envType  envType
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
             'approverUserName' => 'getApproverUserName',
             'email' => 'getEmail',
             'fastApproval' => 'getFastApproval',
-            'scheduleTime' => 'getScheduleTime'
+            'scheduleTime' => 'getScheduleTime',
+            'envType' => 'getEnvType'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['fastApproval'] = isset($data['fastApproval']) ? $data['fastApproval'] : null;
         $this->container['scheduleTime'] = isset($data['scheduleTime']) ? $data['scheduleTime'] : null;
+        $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
     }
 
     /**
@@ -310,7 +321,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets email
-    *  审批人邮箱。
+    *  审批人邮箱，仅在创建审批人时填写。
     *
     * @return string|null
     */
@@ -322,7 +333,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets email
     *
-    * @param string|null $email 审批人邮箱。
+    * @param string|null $email 审批人邮箱，仅在创建审批人时填写。
     *
     * @return $this
     */
@@ -358,7 +369,7 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets scheduleTime
-    *  作业调度时间。
+    *  作业调度时间。格式参照：30_18，表示18点30分。
     *
     * @return string|null
     */
@@ -370,13 +381,37 @@ class ApprovalBatchParam implements ModelInterface, ArrayAccess
     /**
     * Sets scheduleTime
     *
-    * @param string|null $scheduleTime 作业调度时间。
+    * @param string|null $scheduleTime 作业调度时间。格式参照：30_18，表示18点30分。
     *
     * @return $this
     */
     public function setScheduleTime($scheduleTime)
     {
         $this->container['scheduleTime'] = $scheduleTime;
+        return $this;
+    }
+
+    /**
+    * Gets envType
+    *  envType
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null
+    */
+    public function getEnvType()
+    {
+        return $this->container['envType'];
+    }
+
+    /**
+    * Sets envType
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null $envType envType
+    *
+    * @return $this
+    */
+    public function setEnvType($envType)
+    {
+        $this->container['envType'] = $envType;
         return $this;
     }
 

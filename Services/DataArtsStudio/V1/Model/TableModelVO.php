@@ -20,17 +20,21 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * modelId  所属关系建模的模型ID。
-    * parentTableId  父表ID。
-    * parentTableName  父表名称。
-    * parentTableCode  父表编码。
+    * id  编码，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * parentTableId  父表ID，填写String类型替代Long类型。
+    * parentTableName  父表名称，只读。
+    * parentTableCode  父表编码，只读。
+    * relatedLogicTableId  关联逻辑实体的ID，填写String类型替代Long类型。
+    * relatedLogicTableName  关联逻辑实体的名称。
+    * relatedLogicTableModelId  关联逻辑实体的模型ID，填写String类型替代Long类型。
+    * relatedLogicTableModelName  关联逻辑实体的模型名称。
     * model  model
     * dataFormat  数据格式。
     * obsBucket  obs桶。
-    * obsLocation  obs路径。
+    * obsLocation  外表路径
     * configs  其他配置。
-    * tableType  表类型。
+    * tableType  表类型，只读。
     * owner  负责人。
     * tbName  表名。
     * dwId  数据连接ID。
@@ -38,20 +42,20 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * schema  DWS类型需要。
     * extendInfo  扩展信息。
-    * tbGuid  表物化后的guid。
-    * tbId  数据表ID。
+    * tbGuid  表物化后的guid，只读。
+    * tbId  数据表ID，只读。
     * logicTbName  逻辑实体名。
-    * logicTbGuid  逻辑实体的guid。
+    * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID。
-    * bizCatalogId  归属的业务分类的id。
+    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的业务分类的id，填写String类型替代Long类型。
     * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * attributes  表属性信息。
@@ -62,9 +66,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * partitionConf  分区表达式。
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -74,18 +78,27 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID。
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * isPartition  是否分区表。
+    * isPartition  是否分区表，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称。
+    * prodVersionName  生产环境版本名称。
+    * envType  envType
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  编码
+    * hasRelatedPhysicalTable  是否存在关联物理表。
+    * hasRelatedLogicTable  是否存在关联逻辑实体。
     *
     * @var string[]
     */
@@ -95,6 +108,10 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'parentTableId' => 'string',
             'parentTableName' => 'string',
             'parentTableCode' => 'string',
+            'relatedLogicTableId' => 'string',
+            'relatedLogicTableName' => 'string',
+            'relatedLogicTableModelId' => 'string',
+            'relatedLogicTableModelName' => 'string',
             'model' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\WorkspaceVO',
             'dataFormat' => 'string',
             'obsBucket' => 'string',
@@ -149,28 +166,41 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'distributeColumn' => 'string',
             'isPartition' => 'bool',
             'physicalTable' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
+            'devPhysicalTable' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'technicalAsset' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'businessAsset' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'metaDataLink' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'dataQuality' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
             'summaryStatus' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
+            'devVersion' => 'string',
+            'prodVersion' => 'string',
+            'devVersionName' => 'string',
+            'prodVersionName' => 'string',
+            'envType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum',
             'alias' => 'string',
-            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]'
+            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]',
+            'code' => 'string',
+            'hasRelatedPhysicalTable' => 'bool',
+            'hasRelatedLogicTable' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * modelId  所属关系建模的模型ID。
-    * parentTableId  父表ID。
-    * parentTableName  父表名称。
-    * parentTableCode  父表编码。
+    * id  编码，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * parentTableId  父表ID，填写String类型替代Long类型。
+    * parentTableName  父表名称，只读。
+    * parentTableCode  父表编码，只读。
+    * relatedLogicTableId  关联逻辑实体的ID，填写String类型替代Long类型。
+    * relatedLogicTableName  关联逻辑实体的名称。
+    * relatedLogicTableModelId  关联逻辑实体的模型ID，填写String类型替代Long类型。
+    * relatedLogicTableModelName  关联逻辑实体的模型名称。
     * model  model
     * dataFormat  数据格式。
     * obsBucket  obs桶。
-    * obsLocation  obs路径。
+    * obsLocation  外表路径
     * configs  其他配置。
-    * tableType  表类型。
+    * tableType  表类型，只读。
     * owner  负责人。
     * tbName  表名。
     * dwId  数据连接ID。
@@ -178,20 +208,20 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * schema  DWS类型需要。
     * extendInfo  扩展信息。
-    * tbGuid  表物化后的guid。
-    * tbId  数据表ID。
+    * tbGuid  表物化后的guid，只读。
+    * tbId  数据表ID，只读。
     * logicTbName  逻辑实体名。
-    * logicTbGuid  逻辑实体的guid。
+    * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID。
-    * bizCatalogId  归属的业务分类的id。
+    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的业务分类的id，填写String类型替代Long类型。
     * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * attributes  表属性信息。
@@ -202,9 +232,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * partitionConf  分区表达式。
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -214,27 +244,40 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID。
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * isPartition  是否分区表。
+    * isPartition  是否分区表，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称。
+    * prodVersionName  生产环境版本名称。
+    * envType  envType
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  编码
+    * hasRelatedPhysicalTable  是否存在关联物理表。
+    * hasRelatedLogicTable  是否存在关联逻辑实体。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'modelId' => 'int64',
-        'parentTableId' => 'int64',
+        'id' => null,
+        'modelId' => null,
+        'parentTableId' => null,
         'parentTableName' => null,
         'parentTableCode' => null,
+        'relatedLogicTableId' => null,
+        'relatedLogicTableName' => null,
+        'relatedLogicTableModelId' => null,
+        'relatedLogicTableModelName' => null,
         'model' => null,
         'dataFormat' => null,
         'obsBucket' => null,
@@ -254,8 +297,8 @@ class TableModelVO implements ModelInterface, ArrayAccess
         'logicTbGuid' => null,
         'description' => null,
         'status' => null,
-        'logicTbId' => 'int64',
-        'bizCatalogId' => 'int64',
+        'logicTbId' => null,
+        'bizCatalogId' => null,
         'catalogPath' => null,
         'createBy' => null,
         'updateBy' => null,
@@ -272,9 +315,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
         'l1' => null,
         'l2' => null,
         'l3' => null,
-        'l1Id' => 'int64',
+        'l1Id' => null,
         'l2Id' => null,
-        'l3Id' => 'int64',
+        'l3Id' => null,
         'partitionConf' => null,
         'dlfTaskId' => null,
         'useRecentlyPartition' => null,
@@ -284,18 +327,27 @@ class TableModelVO implements ModelInterface, ArrayAccess
         'dirtyOutPrefix' => null,
         'dirtyOutSuffix' => null,
         'qualityOwner' => null,
-        'qualityId' => 'int64',
+        'qualityId' => null,
         'distribute' => null,
         'distributeColumn' => null,
         'isPartition' => null,
         'physicalTable' => null,
+        'devPhysicalTable' => null,
         'technicalAsset' => null,
         'businessAsset' => null,
         'metaDataLink' => null,
         'dataQuality' => null,
         'summaryStatus' => null,
+        'devVersion' => null,
+        'prodVersion' => null,
+        'devVersionName' => null,
+        'prodVersionName' => null,
+        'envType' => null,
         'alias' => null,
-        'selfDefinedFields' => null
+        'selfDefinedFields' => null,
+        'code' => null,
+        'hasRelatedPhysicalTable' => null,
+        'hasRelatedLogicTable' => null
     ];
 
     /**
@@ -321,17 +373,21 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * modelId  所属关系建模的模型ID。
-    * parentTableId  父表ID。
-    * parentTableName  父表名称。
-    * parentTableCode  父表编码。
+    * id  编码，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * parentTableId  父表ID，填写String类型替代Long类型。
+    * parentTableName  父表名称，只读。
+    * parentTableCode  父表编码，只读。
+    * relatedLogicTableId  关联逻辑实体的ID，填写String类型替代Long类型。
+    * relatedLogicTableName  关联逻辑实体的名称。
+    * relatedLogicTableModelId  关联逻辑实体的模型ID，填写String类型替代Long类型。
+    * relatedLogicTableModelName  关联逻辑实体的模型名称。
     * model  model
     * dataFormat  数据格式。
     * obsBucket  obs桶。
-    * obsLocation  obs路径。
+    * obsLocation  外表路径
     * configs  其他配置。
-    * tableType  表类型。
+    * tableType  表类型，只读。
     * owner  负责人。
     * tbName  表名。
     * dwId  数据连接ID。
@@ -339,20 +395,20 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * schema  DWS类型需要。
     * extendInfo  扩展信息。
-    * tbGuid  表物化后的guid。
-    * tbId  数据表ID。
+    * tbGuid  表物化后的guid，只读。
+    * tbId  数据表ID，只读。
     * logicTbName  逻辑实体名。
-    * logicTbGuid  逻辑实体的guid。
+    * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID。
-    * bizCatalogId  归属的业务分类的id。
+    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的业务分类的id，填写String类型替代Long类型。
     * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * attributes  表属性信息。
@@ -363,9 +419,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * partitionConf  分区表达式。
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -375,18 +431,27 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID。
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * isPartition  是否分区表。
+    * isPartition  是否分区表，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称。
+    * prodVersionName  生产环境版本名称。
+    * envType  envType
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  编码
+    * hasRelatedPhysicalTable  是否存在关联物理表。
+    * hasRelatedLogicTable  是否存在关联逻辑实体。
     *
     * @var string[]
     */
@@ -396,6 +461,10 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'parentTableId' => 'parent_table_id',
             'parentTableName' => 'parent_table_name',
             'parentTableCode' => 'parent_table_code',
+            'relatedLogicTableId' => 'related_logic_table_id',
+            'relatedLogicTableName' => 'related_logic_table_name',
+            'relatedLogicTableModelId' => 'related_logic_table_model_id',
+            'relatedLogicTableModelName' => 'related_logic_table_model_name',
             'model' => 'model',
             'dataFormat' => 'data_format',
             'obsBucket' => 'obs_bucket',
@@ -450,28 +519,41 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'distributeColumn' => 'distribute_column',
             'isPartition' => 'is_partition',
             'physicalTable' => 'physical_table',
+            'devPhysicalTable' => 'dev_physical_table',
             'technicalAsset' => 'technical_asset',
             'businessAsset' => 'business_asset',
             'metaDataLink' => 'meta_data_link',
             'dataQuality' => 'data_quality',
             'summaryStatus' => 'summary_status',
+            'devVersion' => 'dev_version',
+            'prodVersion' => 'prod_version',
+            'devVersionName' => 'dev_version_name',
+            'prodVersionName' => 'prod_version_name',
+            'envType' => 'env_type',
             'alias' => 'alias',
-            'selfDefinedFields' => 'self_defined_fields'
+            'selfDefinedFields' => 'self_defined_fields',
+            'code' => 'code',
+            'hasRelatedPhysicalTable' => 'has_related_physical_table',
+            'hasRelatedLogicTable' => 'has_related_logic_table'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * modelId  所属关系建模的模型ID。
-    * parentTableId  父表ID。
-    * parentTableName  父表名称。
-    * parentTableCode  父表编码。
+    * id  编码，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * parentTableId  父表ID，填写String类型替代Long类型。
+    * parentTableName  父表名称，只读。
+    * parentTableCode  父表编码，只读。
+    * relatedLogicTableId  关联逻辑实体的ID，填写String类型替代Long类型。
+    * relatedLogicTableName  关联逻辑实体的名称。
+    * relatedLogicTableModelId  关联逻辑实体的模型ID，填写String类型替代Long类型。
+    * relatedLogicTableModelName  关联逻辑实体的模型名称。
     * model  model
     * dataFormat  数据格式。
     * obsBucket  obs桶。
-    * obsLocation  obs路径。
+    * obsLocation  外表路径
     * configs  其他配置。
-    * tableType  表类型。
+    * tableType  表类型，只读。
     * owner  负责人。
     * tbName  表名。
     * dwId  数据连接ID。
@@ -479,20 +561,20 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * schema  DWS类型需要。
     * extendInfo  扩展信息。
-    * tbGuid  表物化后的guid。
-    * tbId  数据表ID。
+    * tbGuid  表物化后的guid，只读。
+    * tbId  数据表ID，只读。
     * logicTbName  逻辑实体名。
-    * logicTbGuid  逻辑实体的guid。
+    * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID。
-    * bizCatalogId  归属的业务分类的id。
+    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的业务分类的id，填写String类型替代Long类型。
     * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * attributes  表属性信息。
@@ -503,9 +585,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * partitionConf  分区表达式。
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -515,18 +597,27 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID。
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * isPartition  是否分区表。
+    * isPartition  是否分区表，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称。
+    * prodVersionName  生产环境版本名称。
+    * envType  envType
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  编码
+    * hasRelatedPhysicalTable  是否存在关联物理表。
+    * hasRelatedLogicTable  是否存在关联逻辑实体。
     *
     * @var string[]
     */
@@ -536,6 +627,10 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'parentTableId' => 'setParentTableId',
             'parentTableName' => 'setParentTableName',
             'parentTableCode' => 'setParentTableCode',
+            'relatedLogicTableId' => 'setRelatedLogicTableId',
+            'relatedLogicTableName' => 'setRelatedLogicTableName',
+            'relatedLogicTableModelId' => 'setRelatedLogicTableModelId',
+            'relatedLogicTableModelName' => 'setRelatedLogicTableModelName',
             'model' => 'setModel',
             'dataFormat' => 'setDataFormat',
             'obsBucket' => 'setObsBucket',
@@ -590,28 +685,41 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'distributeColumn' => 'setDistributeColumn',
             'isPartition' => 'setIsPartition',
             'physicalTable' => 'setPhysicalTable',
+            'devPhysicalTable' => 'setDevPhysicalTable',
             'technicalAsset' => 'setTechnicalAsset',
             'businessAsset' => 'setBusinessAsset',
             'metaDataLink' => 'setMetaDataLink',
             'dataQuality' => 'setDataQuality',
             'summaryStatus' => 'setSummaryStatus',
+            'devVersion' => 'setDevVersion',
+            'prodVersion' => 'setProdVersion',
+            'devVersionName' => 'setDevVersionName',
+            'prodVersionName' => 'setProdVersionName',
+            'envType' => 'setEnvType',
             'alias' => 'setAlias',
-            'selfDefinedFields' => 'setSelfDefinedFields'
+            'selfDefinedFields' => 'setSelfDefinedFields',
+            'code' => 'setCode',
+            'hasRelatedPhysicalTable' => 'setHasRelatedPhysicalTable',
+            'hasRelatedLogicTable' => 'setHasRelatedLogicTable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * modelId  所属关系建模的模型ID。
-    * parentTableId  父表ID。
-    * parentTableName  父表名称。
-    * parentTableCode  父表编码。
+    * id  编码，填写String类型替代Long类型。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * parentTableId  父表ID，填写String类型替代Long类型。
+    * parentTableName  父表名称，只读。
+    * parentTableCode  父表编码，只读。
+    * relatedLogicTableId  关联逻辑实体的ID，填写String类型替代Long类型。
+    * relatedLogicTableName  关联逻辑实体的名称。
+    * relatedLogicTableModelId  关联逻辑实体的模型ID，填写String类型替代Long类型。
+    * relatedLogicTableModelName  关联逻辑实体的模型名称。
     * model  model
     * dataFormat  数据格式。
     * obsBucket  obs桶。
-    * obsLocation  obs路径。
+    * obsLocation  外表路径
     * configs  其他配置。
-    * tableType  表类型。
+    * tableType  表类型，只读。
     * owner  负责人。
     * tbName  表名。
     * dwId  数据连接ID。
@@ -619,20 +727,20 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * queueName  dli数据连接执行sql所需的队列，数据连接类型为DLI时必须。
     * schema  DWS类型需要。
     * extendInfo  扩展信息。
-    * tbGuid  表物化后的guid。
-    * tbId  数据表ID。
+    * tbGuid  表物化后的guid，只读。
+    * tbId  数据表ID，只读。
     * logicTbName  逻辑实体名。
-    * logicTbGuid  逻辑实体的guid。
+    * logicTbGuid  逻辑实体的guid，只读。
     * description  描述。
     * status  status
-    * logicTbId  逻辑实体的ID。
-    * bizCatalogId  归属的业务分类的id。
+    * logicTbId  逻辑实体的ID，填写String类型替代Long类型。
+    * bizCatalogId  归属的业务分类的id，填写String类型替代Long类型。
     * catalogPath  归属的业务分类的路径 {\"l1Id\":\"\",\"l2Id\":\"\",\"l3Id\":\"\"}。
-    * createBy  创建人。
-    * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
     * attributes  表属性信息。
@@ -643,9 +751,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * partitionConf  分区表达式。
     * dlfTaskId  DLF作业ID。
     * useRecentlyPartition  是否使用最新分区。
@@ -655,18 +763,27 @@ class TableModelVO implements ModelInterface, ArrayAccess
     * dirtyOutPrefix  异常表前缀。
     * dirtyOutSuffix  异常表后缀。
     * qualityOwner  质量责任人。
-    * qualityId  质量ID。
-    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * qualityId  质量ID，填写String类型替代Long类型。
+    * distribute  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     * distributeColumn  DISTRIBUTE BY HASH column.
-    * isPartition  是否分区表。
+    * isPartition  是否分区表，只读。
     * physicalTable  physicalTable
+    * devPhysicalTable  devPhysicalTable
     * technicalAsset  technicalAsset
     * businessAsset  businessAsset
     * metaDataLink  metaDataLink
     * dataQuality  dataQuality
     * summaryStatus  summaryStatus
+    * devVersion  开发环境版本，填写String类型替代Long类型。
+    * prodVersion  生产环境版本，填写String类型替代Long类型。
+    * devVersionName  开发环境版本名称。
+    * prodVersionName  生产环境版本名称。
+    * envType  envType
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  编码
+    * hasRelatedPhysicalTable  是否存在关联物理表。
+    * hasRelatedLogicTable  是否存在关联逻辑实体。
     *
     * @var string[]
     */
@@ -676,6 +793,10 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'parentTableId' => 'getParentTableId',
             'parentTableName' => 'getParentTableName',
             'parentTableCode' => 'getParentTableCode',
+            'relatedLogicTableId' => 'getRelatedLogicTableId',
+            'relatedLogicTableName' => 'getRelatedLogicTableName',
+            'relatedLogicTableModelId' => 'getRelatedLogicTableModelId',
+            'relatedLogicTableModelName' => 'getRelatedLogicTableModelName',
             'model' => 'getModel',
             'dataFormat' => 'getDataFormat',
             'obsBucket' => 'getObsBucket',
@@ -730,13 +851,22 @@ class TableModelVO implements ModelInterface, ArrayAccess
             'distributeColumn' => 'getDistributeColumn',
             'isPartition' => 'getIsPartition',
             'physicalTable' => 'getPhysicalTable',
+            'devPhysicalTable' => 'getDevPhysicalTable',
             'technicalAsset' => 'getTechnicalAsset',
             'businessAsset' => 'getBusinessAsset',
             'metaDataLink' => 'getMetaDataLink',
             'dataQuality' => 'getDataQuality',
             'summaryStatus' => 'getSummaryStatus',
+            'devVersion' => 'getDevVersion',
+            'prodVersion' => 'getProdVersion',
+            'devVersionName' => 'getDevVersionName',
+            'prodVersionName' => 'getProdVersionName',
+            'envType' => 'getEnvType',
             'alias' => 'getAlias',
-            'selfDefinedFields' => 'getSelfDefinedFields'
+            'selfDefinedFields' => 'getSelfDefinedFields',
+            'code' => 'getCode',
+            'hasRelatedPhysicalTable' => 'getHasRelatedPhysicalTable',
+            'hasRelatedLogicTable' => 'getHasRelatedLogicTable'
     ];
 
     /**
@@ -817,6 +947,10 @@ class TableModelVO implements ModelInterface, ArrayAccess
         $this->container['parentTableId'] = isset($data['parentTableId']) ? $data['parentTableId'] : null;
         $this->container['parentTableName'] = isset($data['parentTableName']) ? $data['parentTableName'] : null;
         $this->container['parentTableCode'] = isset($data['parentTableCode']) ? $data['parentTableCode'] : null;
+        $this->container['relatedLogicTableId'] = isset($data['relatedLogicTableId']) ? $data['relatedLogicTableId'] : null;
+        $this->container['relatedLogicTableName'] = isset($data['relatedLogicTableName']) ? $data['relatedLogicTableName'] : null;
+        $this->container['relatedLogicTableModelId'] = isset($data['relatedLogicTableModelId']) ? $data['relatedLogicTableModelId'] : null;
+        $this->container['relatedLogicTableModelName'] = isset($data['relatedLogicTableModelName']) ? $data['relatedLogicTableModelName'] : null;
         $this->container['model'] = isset($data['model']) ? $data['model'] : null;
         $this->container['dataFormat'] = isset($data['dataFormat']) ? $data['dataFormat'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
@@ -871,13 +1005,22 @@ class TableModelVO implements ModelInterface, ArrayAccess
         $this->container['distributeColumn'] = isset($data['distributeColumn']) ? $data['distributeColumn'] : null;
         $this->container['isPartition'] = isset($data['isPartition']) ? $data['isPartition'] : null;
         $this->container['physicalTable'] = isset($data['physicalTable']) ? $data['physicalTable'] : null;
+        $this->container['devPhysicalTable'] = isset($data['devPhysicalTable']) ? $data['devPhysicalTable'] : null;
         $this->container['technicalAsset'] = isset($data['technicalAsset']) ? $data['technicalAsset'] : null;
         $this->container['businessAsset'] = isset($data['businessAsset']) ? $data['businessAsset'] : null;
         $this->container['metaDataLink'] = isset($data['metaDataLink']) ? $data['metaDataLink'] : null;
         $this->container['dataQuality'] = isset($data['dataQuality']) ? $data['dataQuality'] : null;
         $this->container['summaryStatus'] = isset($data['summaryStatus']) ? $data['summaryStatus'] : null;
+        $this->container['devVersion'] = isset($data['devVersion']) ? $data['devVersion'] : null;
+        $this->container['prodVersion'] = isset($data['prodVersion']) ? $data['prodVersion'] : null;
+        $this->container['devVersionName'] = isset($data['devVersionName']) ? $data['devVersionName'] : null;
+        $this->container['prodVersionName'] = isset($data['prodVersionName']) ? $data['prodVersionName'] : null;
+        $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
         $this->container['selfDefinedFields'] = isset($data['selfDefinedFields']) ? $data['selfDefinedFields'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['hasRelatedPhysicalTable'] = isset($data['hasRelatedPhysicalTable']) ? $data['hasRelatedPhysicalTable'] : null;
+        $this->container['hasRelatedLogicTable'] = isset($data['hasRelatedLogicTable']) ? $data['hasRelatedLogicTable'] : null;
     }
 
     /**
@@ -900,6 +1043,9 @@ class TableModelVO implements ModelInterface, ArrayAccess
             if (!is_null($this->container['obsLocation']) && (mb_strlen($this->container['obsLocation']) > 2000)) {
                 $invalidProperties[] = "invalid value for 'obsLocation', the character length must be smaller than or equal to 2000.";
             }
+            if (!is_null($this->container['obsLocation']) && !preg_match("/^[a-zA-Z0-9_\\-\\.\/:]*$/", $this->container['obsLocation'])) {
+                $invalidProperties[] = "invalid value for 'obsLocation', must be conform to the pattern /^[a-zA-Z0-9_\\-\\.\/:]*$/.";
+            }
             if (!is_null($this->container['configs']) && (mb_strlen($this->container['configs']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'configs', the character length must be smaller than or equal to 1024.";
             }
@@ -912,11 +1058,17 @@ class TableModelVO implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['tbName']) > 400)) {
                 $invalidProperties[] = "invalid value for 'tbName', the character length must be smaller than or equal to 400.";
             }
+            if (!preg_match("/^[a-zA-Z_{}$][0-9a-zA-Z_{}$]*$/", $this->container['tbName'])) {
+                $invalidProperties[] = "invalid value for 'tbName', must be conform to the pattern /^[a-zA-Z_{}$][0-9a-zA-Z_{}$]*$/.";
+            }
         if ($this->container['logicTbName'] === null) {
             $invalidProperties[] = "'logicTbName' can't be null";
         }
             if ((mb_strlen($this->container['logicTbName']) > 200)) {
                 $invalidProperties[] = "invalid value for 'logicTbName', the character length must be smaller than or equal to 200.";
+            }
+            if (!preg_match("/^[a-zA-Z\\u4e00-\\u9fa5][a-zA-Z0-9_\\-\\u4e00-\\u9fa5\\(\\)（），,\\[\\]\\+#\/]*$/", $this->container['logicTbName'])) {
+                $invalidProperties[] = "invalid value for 'logicTbName', must be conform to the pattern /^[a-zA-Z\\u4e00-\\u9fa5][a-zA-Z0-9_\\-\\u4e00-\\u9fa5\\(\\)（），,\\[\\]\\+#\/]*$/.";
             }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
@@ -938,6 +1090,12 @@ class TableModelVO implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 128)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['code']) && !preg_match("/^(?![0-9_])[a-zA-Z0-9_]*$/", $this->container['code'])) {
+                $invalidProperties[] = "invalid value for 'code', must be conform to the pattern /^(?![0-9_])[a-zA-Z0-9_]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -954,7 +1112,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -966,7 +1124,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -978,7 +1136,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelId
-    *  所属关系建模的模型ID。
+    *  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -990,7 +1148,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param string $modelId 所属关系建模的模型ID。
+    * @param string $modelId 所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1002,7 +1160,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableId
-    *  父表ID。
+    *  父表ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -1014,7 +1172,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableId
     *
-    * @param string|null $parentTableId 父表ID。
+    * @param string|null $parentTableId 父表ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1026,7 +1184,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableName
-    *  父表名称。
+    *  父表名称，只读。
     *
     * @return string|null
     */
@@ -1038,7 +1196,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableName
     *
-    * @param string|null $parentTableName 父表名称。
+    * @param string|null $parentTableName 父表名称，只读。
     *
     * @return $this
     */
@@ -1050,7 +1208,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentTableCode
-    *  父表编码。
+    *  父表编码，只读。
     *
     * @return string|null
     */
@@ -1062,13 +1220,109 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentTableCode
     *
-    * @param string|null $parentTableCode 父表编码。
+    * @param string|null $parentTableCode 父表编码，只读。
     *
     * @return $this
     */
     public function setParentTableCode($parentTableCode)
     {
         $this->container['parentTableCode'] = $parentTableCode;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicTableId
+    *  关联逻辑实体的ID，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicTableId()
+    {
+        return $this->container['relatedLogicTableId'];
+    }
+
+    /**
+    * Sets relatedLogicTableId
+    *
+    * @param string|null $relatedLogicTableId 关联逻辑实体的ID，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setRelatedLogicTableId($relatedLogicTableId)
+    {
+        $this->container['relatedLogicTableId'] = $relatedLogicTableId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicTableName
+    *  关联逻辑实体的名称。
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicTableName()
+    {
+        return $this->container['relatedLogicTableName'];
+    }
+
+    /**
+    * Sets relatedLogicTableName
+    *
+    * @param string|null $relatedLogicTableName 关联逻辑实体的名称。
+    *
+    * @return $this
+    */
+    public function setRelatedLogicTableName($relatedLogicTableName)
+    {
+        $this->container['relatedLogicTableName'] = $relatedLogicTableName;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicTableModelId
+    *  关联逻辑实体的模型ID，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicTableModelId()
+    {
+        return $this->container['relatedLogicTableModelId'];
+    }
+
+    /**
+    * Sets relatedLogicTableModelId
+    *
+    * @param string|null $relatedLogicTableModelId 关联逻辑实体的模型ID，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setRelatedLogicTableModelId($relatedLogicTableModelId)
+    {
+        $this->container['relatedLogicTableModelId'] = $relatedLogicTableModelId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicTableModelName
+    *  关联逻辑实体的模型名称。
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicTableModelName()
+    {
+        return $this->container['relatedLogicTableModelName'];
+    }
+
+    /**
+    * Sets relatedLogicTableModelName
+    *
+    * @param string|null $relatedLogicTableModelName 关联逻辑实体的模型名称。
+    *
+    * @return $this
+    */
+    public function setRelatedLogicTableModelName($relatedLogicTableModelName)
+    {
+        $this->container['relatedLogicTableModelName'] = $relatedLogicTableModelName;
         return $this;
     }
 
@@ -1146,7 +1400,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsLocation
-    *  obs路径。
+    *  外表路径
     *
     * @return string|null
     */
@@ -1158,7 +1412,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets obsLocation
     *
-    * @param string|null $obsLocation obs路径。
+    * @param string|null $obsLocation 外表路径
     *
     * @return $this
     */
@@ -1194,7 +1448,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableType
-    *  表类型。
+    *  表类型，只读。
     *
     * @return string|null
     */
@@ -1206,7 +1460,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableType
     *
-    * @param string|null $tableType 表类型。
+    * @param string|null $tableType 表类型，只读。
     *
     * @return $this
     */
@@ -1386,7 +1640,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbGuid
-    *  表物化后的guid。
+    *  表物化后的guid，只读。
     *
     * @return string|null
     */
@@ -1398,7 +1652,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbGuid
     *
-    * @param string|null $tbGuid 表物化后的guid。
+    * @param string|null $tbGuid 表物化后的guid，只读。
     *
     * @return $this
     */
@@ -1410,7 +1664,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tbId
-    *  数据表ID。
+    *  数据表ID，只读。
     *
     * @return string|null
     */
@@ -1422,7 +1676,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets tbId
     *
-    * @param string|null $tbId 数据表ID。
+    * @param string|null $tbId 数据表ID，只读。
     *
     * @return $this
     */
@@ -1458,7 +1712,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicTbGuid
-    *  逻辑实体的guid。
+    *  逻辑实体的guid，只读。
     *
     * @return string|null
     */
@@ -1470,7 +1724,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets logicTbGuid
     *
-    * @param string|null $logicTbGuid 逻辑实体的guid。
+    * @param string|null $logicTbGuid 逻辑实体的guid，只读。
     *
     * @return $this
     */
@@ -1530,7 +1784,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets logicTbId
-    *  逻辑实体的ID。
+    *  逻辑实体的ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -1542,7 +1796,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets logicTbId
     *
-    * @param string|null $logicTbId 逻辑实体的ID。
+    * @param string|null $logicTbId 逻辑实体的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1554,7 +1808,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  归属的业务分类的id。
+    *  归属的业务分类的id，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -1566,7 +1820,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param string|null $bizCatalogId 归属的业务分类的id。
+    * @param string|null $bizCatalogId 归属的业务分类的id，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1602,7 +1856,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人。
+    *  创建人，只读。
     *
     * @return string|null
     */
@@ -1614,7 +1868,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人。
+    * @param string|null $createBy 创建人，只读。
     *
     * @return $this
     */
@@ -1626,7 +1880,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人。
+    *  更新人，只读。
     *
     * @return string|null
     */
@@ -1638,7 +1892,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人。
+    * @param string|null $updateBy 更新人，只读。
     *
     * @return $this
     */
@@ -1650,7 +1904,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1662,7 +1916,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1674,7 +1928,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1686,7 +1940,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1698,7 +1952,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  表标签。
+    *  表标签，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagRecordVO[]|null
     */
@@ -1710,7 +1964,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagRecordVO[]|null $tags 表标签。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagRecordVO[]|null $tags 表标签，只读。
     *
     * @return $this
     */
@@ -1962,7 +2216,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID。
+    *  主题域分组ID，只读，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -1974,7 +2228,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param string|null $l1Id 主题域分组ID。
+    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -2010,7 +2264,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID。
+    *  业务对象ID，只读，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -2022,7 +2276,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param string|null $l3Id 业务对象ID。
+    * @param string|null $l3Id 业务对象ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -2250,7 +2504,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityId
-    *  质量ID。
+    *  质量ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -2262,7 +2516,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityId
     *
-    * @param string|null $qualityId 质量ID。
+    * @param string|null $qualityId 质量ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -2274,7 +2528,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets distribute
-    *  DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    *  DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     *
     * @return string|null
     */
@@ -2286,7 +2540,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets distribute
     *
-    * @param string|null $distribute DISTRIBUTE BY [HASH(column)|REPLICATION]。HASH(对指定的列进行Hash，通过映射，把数据分布到指定DN)、REPLICATION(表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据)。
+    * @param string|null $distribute DISTRIBUTE BY [HASH(column)|REPLICATION]。 枚举值：   - HASH: 对指定的列进行Hash，通过映射，把数据分布到指定DN   - REPLICATION: 表的每一行存在所有数据节点（DN）中，即每个数据节点都有完整的表数据
     *
     * @return $this
     */
@@ -2322,7 +2576,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isPartition
-    *  是否分区表。
+    *  是否分区表，只读。
     *
     * @return bool|null
     */
@@ -2334,7 +2588,7 @@ class TableModelVO implements ModelInterface, ArrayAccess
     /**
     * Sets isPartition
     *
-    * @param bool|null $isPartition 是否分区表。
+    * @param bool|null $isPartition 是否分区表，只读。
     *
     * @return $this
     */
@@ -2365,6 +2619,30 @@ class TableModelVO implements ModelInterface, ArrayAccess
     public function setPhysicalTable($physicalTable)
     {
         $this->container['physicalTable'] = $physicalTable;
+        return $this;
+    }
+
+    /**
+    * Gets devPhysicalTable
+    *  devPhysicalTable
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum|null
+    */
+    public function getDevPhysicalTable()
+    {
+        return $this->container['devPhysicalTable'];
+    }
+
+    /**
+    * Sets devPhysicalTable
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum|null $devPhysicalTable devPhysicalTable
+    *
+    * @return $this
+    */
+    public function setDevPhysicalTable($devPhysicalTable)
+    {
+        $this->container['devPhysicalTable'] = $devPhysicalTable;
         return $this;
     }
 
@@ -2489,6 +2767,126 @@ class TableModelVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets devVersion
+    *  开发环境版本，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getDevVersion()
+    {
+        return $this->container['devVersion'];
+    }
+
+    /**
+    * Sets devVersion
+    *
+    * @param string|null $devVersion 开发环境版本，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setDevVersion($devVersion)
+    {
+        $this->container['devVersion'] = $devVersion;
+        return $this;
+    }
+
+    /**
+    * Gets prodVersion
+    *  生产环境版本，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getProdVersion()
+    {
+        return $this->container['prodVersion'];
+    }
+
+    /**
+    * Sets prodVersion
+    *
+    * @param string|null $prodVersion 生产环境版本，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setProdVersion($prodVersion)
+    {
+        $this->container['prodVersion'] = $prodVersion;
+        return $this;
+    }
+
+    /**
+    * Gets devVersionName
+    *  开发环境版本名称。
+    *
+    * @return string|null
+    */
+    public function getDevVersionName()
+    {
+        return $this->container['devVersionName'];
+    }
+
+    /**
+    * Sets devVersionName
+    *
+    * @param string|null $devVersionName 开发环境版本名称。
+    *
+    * @return $this
+    */
+    public function setDevVersionName($devVersionName)
+    {
+        $this->container['devVersionName'] = $devVersionName;
+        return $this;
+    }
+
+    /**
+    * Gets prodVersionName
+    *  生产环境版本名称。
+    *
+    * @return string|null
+    */
+    public function getProdVersionName()
+    {
+        return $this->container['prodVersionName'];
+    }
+
+    /**
+    * Sets prodVersionName
+    *
+    * @param string|null $prodVersionName 生产环境版本名称。
+    *
+    * @return $this
+    */
+    public function setProdVersionName($prodVersionName)
+    {
+        $this->container['prodVersionName'] = $prodVersionName;
+        return $this;
+    }
+
+    /**
+    * Gets envType
+    *  envType
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null
+    */
+    public function getEnvType()
+    {
+        return $this->container['envType'];
+    }
+
+    /**
+    * Sets envType
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\EnvTypeEnum|null $envType envType
+    *
+    * @return $this
+    */
+    public function setEnvType($envType)
+    {
+        $this->container['envType'] = $envType;
+        return $this;
+    }
+
+    /**
     * Gets alias
     *  别名。
     *
@@ -2533,6 +2931,78 @@ class TableModelVO implements ModelInterface, ArrayAccess
     public function setSelfDefinedFields($selfDefinedFields)
     {
         $this->container['selfDefinedFields'] = $selfDefinedFields;
+        return $this;
+    }
+
+    /**
+    * Gets code
+    *  编码
+    *
+    * @return string|null
+    */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+    * Sets code
+    *
+    * @param string|null $code 编码
+    *
+    * @return $this
+    */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets hasRelatedPhysicalTable
+    *  是否存在关联物理表。
+    *
+    * @return bool|null
+    */
+    public function getHasRelatedPhysicalTable()
+    {
+        return $this->container['hasRelatedPhysicalTable'];
+    }
+
+    /**
+    * Sets hasRelatedPhysicalTable
+    *
+    * @param bool|null $hasRelatedPhysicalTable 是否存在关联物理表。
+    *
+    * @return $this
+    */
+    public function setHasRelatedPhysicalTable($hasRelatedPhysicalTable)
+    {
+        $this->container['hasRelatedPhysicalTable'] = $hasRelatedPhysicalTable;
+        return $this;
+    }
+
+    /**
+    * Gets hasRelatedLogicTable
+    *  是否存在关联逻辑实体。
+    *
+    * @return bool|null
+    */
+    public function getHasRelatedLogicTable()
+    {
+        return $this->container['hasRelatedLogicTable'];
+    }
+
+    /**
+    * Sets hasRelatedLogicTable
+    *
+    * @param bool|null $hasRelatedLogicTable 是否存在关联逻辑实体。
+    *
+    * @return $this
+    */
+    public function setHasRelatedLogicTable($hasRelatedLogicTable)
+    {
+        $this->container['hasRelatedLogicTable'] = $hasRelatedLogicTable;
         return $this;
     }
 

@@ -20,24 +20,24 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * relationId  关系ID。
-    * sourceFieldId  源字段ID。
-    * targetFieldId  目标字段ID。
+    * id  编码，填写String类型替代Long类型。
+    * relationId  关系ID，填写String类型替代Long类型。
+    * sourceFieldId  源字段ID，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，填写String类型替代Long类型。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
-            'relationId' => 'int',
-            'sourceFieldId' => 'int',
-            'targetFieldId' => 'int',
+            'id' => 'string',
+            'relationId' => 'string',
+            'sourceFieldId' => 'string',
+            'targetFieldId' => 'string',
             'sourceFieldName' => 'string',
             'targetFieldName' => 'string',
             'createBy' => 'string',
@@ -48,24 +48,24 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * relationId  关系ID。
-    * sourceFieldId  源字段ID。
-    * targetFieldId  目标字段ID。
+    * id  编码，填写String类型替代Long类型。
+    * relationId  关系ID，填写String类型替代Long类型。
+    * sourceFieldId  源字段ID，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，填写String类型替代Long类型。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'relationId' => 'int64',
-        'sourceFieldId' => 'int64',
-        'targetFieldId' => 'int64',
+        'id' => null,
+        'relationId' => null,
+        'sourceFieldId' => null,
+        'targetFieldId' => null,
         'sourceFieldName' => null,
         'targetFieldName' => null,
         'createBy' => null,
@@ -97,16 +97,16 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * relationId  关系ID。
-    * sourceFieldId  源字段ID。
-    * targetFieldId  目标字段ID。
+    * id  编码，填写String类型替代Long类型。
+    * relationId  关系ID，填写String类型替代Long类型。
+    * sourceFieldId  源字段ID，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，填写String类型替代Long类型。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * relationId  关系ID。
-    * sourceFieldId  源字段ID。
-    * targetFieldId  目标字段ID。
+    * id  编码，填写String类型替代Long类型。
+    * relationId  关系ID，填写String类型替代Long类型。
+    * sourceFieldId  源字段ID，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，填写String类型替代Long类型。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * relationId  关系ID。
-    * sourceFieldId  源字段ID。
-    * targetFieldId  目标字段ID。
+    * id  编码，填写String类型替代Long类型。
+    * relationId  关系ID，填写String类型替代Long类型。
+    * sourceFieldId  源字段ID，填写String类型替代Long类型。
+    * targetFieldId  目标字段ID，填写String类型替代Long类型。
     * sourceFieldName  源表名称。
     * targetFieldName  目的表名称。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @var string[]
     */
@@ -273,9 +273,9 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -285,7 +285,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -297,9 +297,9 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets relationId
-    *  关系ID。
+    *  关系ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getRelationId()
     {
@@ -309,7 +309,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets relationId
     *
-    * @param int|null $relationId 关系ID。
+    * @param string|null $relationId 关系ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -321,9 +321,9 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceFieldId
-    *  源字段ID。
+    *  源字段ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getSourceFieldId()
     {
@@ -333,7 +333,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceFieldId
     *
-    * @param int|null $sourceFieldId 源字段ID。
+    * @param string|null $sourceFieldId 源字段ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -345,9 +345,9 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetFieldId
-    *  目标字段ID。
+    *  目标字段ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTargetFieldId()
     {
@@ -357,7 +357,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetFieldId
     *
-    * @param int|null $targetFieldId 目标字段ID。
+    * @param string|null $targetFieldId 目标字段ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -477,7 +477,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -501,7 +501,7 @@ class RelationMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

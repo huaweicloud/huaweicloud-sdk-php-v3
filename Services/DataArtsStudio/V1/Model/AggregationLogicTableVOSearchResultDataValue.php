@@ -20,7 +20,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * records  查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    * records  查询到的汇总表值对象（AggregationLogicTableVO）数组。
     * total  符合搜索条件的记录总数。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * records  查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    * records  查询到的汇总表值对象（AggregationLogicTableVO）数组。
     * total  符合搜索条件的记录总数。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * records  查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    * records  查询到的汇总表值对象（AggregationLogicTableVO）数组。
     * total  符合搜索条件的记录总数。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * records  查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    * records  查询到的汇总表值对象（AggregationLogicTableVO）数组。
     * total  符合搜索条件的记录总数。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * records  查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    * records  查询到的汇总表值对象（AggregationLogicTableVO）数组。
     * total  符合搜索条件的记录总数。
     *
     * @var string[]
@@ -185,7 +185,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
 
     /**
     * Gets records
-    *  查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    *  查询到的汇总表值对象（AggregationLogicTableVO）数组。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\AggregationLogicTableVO[]|null
     */
@@ -197,7 +197,7 @@ class AggregationLogicTableVOSearchResultDataValue implements ModelInterface, Ar
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\AggregationLogicTableVO[]|null $records 查询到的的汇总表值对象（AggregationLogicTableVO）数组。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\AggregationLogicTableVO[]|null $records 查询到的汇总表值对象（AggregationLogicTableVO）数组。
     *
     * @return $this
     */

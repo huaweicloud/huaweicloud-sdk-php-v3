@@ -21,7 +21,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"。
-    * engineId  微服务引擎专享版ID。
+    * engineId  微服务引擎ID。
     * jobId  任务ID。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"。
-    * engineId  微服务引擎专享版ID。
+    * engineId  微服务引擎ID。
     * jobId  任务ID。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"。
-    * engineId  微服务引擎专享版ID。
+    * engineId  微服务引擎ID。
     * jobId  任务ID。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"。
-    * engineId  微服务引擎专享版ID。
+    * engineId  微服务引擎ID。
     * jobId  任务ID。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"。
-    * engineId  微服务引擎专享版ID。
+    * engineId  微服务引擎ID。
     * jobId  任务ID。
     *
     * @var string[]
@@ -226,7 +226,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineId
-    *  微服务引擎专享版ID。
+    *  微服务引擎ID。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class ShowEngineJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets engineId
     *
-    * @param string $engineId 微服务引擎专享版ID。
+    * @param string $engineId 微服务引擎ID。
     *
     * @return $this
     */

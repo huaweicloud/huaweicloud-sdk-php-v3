@@ -26,12 +26,12 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * l3Id  业务对象l3的ID。
-    * tableId  关联表的ID。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * tableId  关联表的ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -46,8 +46,8 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'beginTime' => 'string',
             'endTime' => 'string',
-            'l3Id' => 'int',
-            'tableId' => 'int',
+            'l3Id' => 'string',
+            'tableId' => 'string',
             'limit' => 'int',
             'offset' => 'int'
     ];
@@ -60,12 +60,12 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * l3Id  业务对象l3的ID。
-    * tableId  关联表的ID。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * tableId  关联表的ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -80,8 +80,8 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'beginTime' => null,
         'endTime' => null,
-        'l3Id' => 'int64',
-        'tableId' => 'int64',
+        'l3Id' => null,
+        'tableId' => null,
         'limit' => 'int32',
         'offset' => 'int32'
     ];
@@ -115,12 +115,12 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * l3Id  业务对象l3的ID。
-    * tableId  关联表的ID。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * tableId  关联表的ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -149,12 +149,12 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * l3Id  业务对象l3的ID。
-    * tableId  关联表的ID。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * tableId  关联表的ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -183,12 +183,12 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     * name  按名称或编码模糊查询。
     * createBy  按创建者查询。
     * approver  按审核人查询。
-    * status  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * status  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     * beginTime  时间过滤左边界，与end_time一起使用，只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * endTime  时间过滤右边界，与begin_time一起使用只支持时间范围过滤，单边过滤无效。格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * l3Id  业务对象l3的ID。
-    * tableId  关联表的ID。
-    * limit  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * l3Id  业务对象l3的ID，填写String类型替代Long类型。
+    * tableId  关联表的ID，填写String类型替代Long类型。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
     *
     * @var string[]
@@ -517,7 +517,7 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    *  业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     *
     * @return string|null
     */
@@ -529,7 +529,7 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 业务状态。DRAFT(草稿)、PUBLISH_DEVELOPING(发布待审批)、PUBLISHED(已发布)、OFFLINE_DEVELOPING(下线待审批)、OFFLINE(已下线)、REJECT(已驳回)。
+    * @param string|null $status 业务状态。 枚举值：   - DRAFT: 草稿   - PUBLISH_DEVELOPING: 发布待审批   - PUBLISHED: 已发布   - OFFLINE_DEVELOPING: 下线待审批   - OFFLINE: 已下线   - REJECT: 已驳回
     *
     * @return $this
     */
@@ -589,9 +589,9 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象l3的ID。
+    *  业务对象l3的ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getL3Id()
     {
@@ -601,7 +601,7 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int|null $l3Id 业务对象l3的ID。
+    * @param string|null $l3Id 业务对象l3的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -613,9 +613,9 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableId
-    *  关联表的ID。
+    *  关联表的ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTableId()
     {
@@ -625,7 +625,7 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tableId
     *
-    * @param int|null $tableId 关联表的ID。
+    * @param string|null $tableId 关联表的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -637,7 +637,7 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    *  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return int|null
     */
@@ -649,7 +649,7 @@ class SearchAtomicIndexesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * @param int|null $limit 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
     *
     * @return $this
     */

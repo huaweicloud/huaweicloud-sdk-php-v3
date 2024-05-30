@@ -31,7 +31,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'domainName' => 'string',
             'businessType' => 'string',
-            'sources' => '\HuaweiCloud\SDK\Cdn\V2\Model\Sources[]',
+            'sources' => '\HuaweiCloud\SDK\Cdn\V2\Model\SourcesRequestBody[]',
             'serviceArea' => 'string',
             'enterpriseProjectId' => 'string'
     ];
@@ -335,7 +335,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     * Gets sources
     *  源站配置。
     *
-    * @return \HuaweiCloud\SDK\Cdn\V2\Model\Sources[]
+    * @return \HuaweiCloud\SDK\Cdn\V2\Model\SourcesRequestBody[]
     */
     public function getSources()
     {
@@ -345,7 +345,7 @@ class DomainBody implements ModelInterface, ArrayAccess
     /**
     * Sets sources
     *
-    * @param \HuaweiCloud\SDK\Cdn\V2\Model\Sources[] $sources 源站配置。
+    * @param \HuaweiCloud\SDK\Cdn\V2\Model\SourcesRequestBody[] $sources 源站配置。
     *
     * @return $this
     */

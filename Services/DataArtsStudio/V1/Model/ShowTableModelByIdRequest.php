@@ -23,7 +23,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
+    * id  实体ID，填写String类型替代Long类型。
     * latest  是否查询最新的。
     *
     * @var string[]
@@ -41,7 +41,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
+    * id  实体ID，填写String类型替代Long类型。
     * latest  是否查询最新的。
     *
     * @var string[]
@@ -50,7 +50,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
         'workspace' => null,
         'xProjectId' => null,
         'contentType' => null,
-        'id' => 'int64',
+        'id' => null,
         'latest' => null
     ];
 
@@ -80,7 +80,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
+    * id  实体ID，填写String类型替代Long类型。
     * latest  是否查询最新的。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
+    * id  实体ID，填写String类型替代Long类型。
     * latest  是否查询最新的。
     *
     * @var string[]
@@ -116,7 +116,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * id  实体ID
+    * id  实体ID，填写String类型替代Long类型。
     * latest  是否查询最新的。
     *
     * @var string[]
@@ -314,7 +314,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  实体ID
+    *  实体ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -326,7 +326,7 @@ class ShowTableModelByIdRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 实体ID
+    * @param string $id 实体ID，填写String类型替代Long类型。
     *
     * @return $this
     */

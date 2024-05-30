@@ -22,7 +22,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -36,7 +36,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -116,7 +116,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -130,7 +130,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -231,7 +231,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * and the value is the original name
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -245,7 +245,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -325,7 +325,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -339,7 +339,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -419,7 +419,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“ap-southeast-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“中国-香港”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -433,7 +433,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见如何获取企业项目ID。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后8位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -708,7 +708,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     *
     * @return int|null
     */
@@ -720,7 +720,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
+    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费15：消费-税金16：调账-扣费17：消费-保底差额 说明： 保底差额=客户签约保底合同后，如果没有达到保底消费，客户需要补交的费用，仅限于直销或者伙伴顾问销售类子客户，且为后付费用户。 20：退款-变更 23：消费-节省计划抵扣 24：退款-包年/包月转按需 100：退款-退订税金101：调账-补偿税金102：调账-扣费税金
     *
     * @return $this
     */
@@ -1044,7 +1044,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式。 1 : 包年/包月3：按需10：预留实例
+    *  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     *
     * @return int|null
     */
@@ -1056,7 +1056,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param int|null $chargeMode 计费模式。 1 : 包年/包月3：按需10：预留实例
+    * @param int|null $chargeMode 计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划。
     *
     * @return $this
     */

@@ -26,6 +26,8 @@ class UrlObject implements ModelInterface, ArrayAccess
     * createTime  url创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * taskId  任务id。
     * taskType  任务的类型， 其值可以为REFRESH：刷新任务、PREHEATING：预热任务、REFRESH_AFTER_PREHEATING：预热后刷新
+    * failClassify  失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    * failDesc  刷新预热失败描述。
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class UrlObject implements ModelInterface, ArrayAccess
             'status' => 'string',
             'createTime' => 'int',
             'taskId' => 'string',
-            'taskType' => 'string'
+            'taskType' => 'string',
+            'failClassify' => 'string',
+            'failDesc' => 'string'
     ];
 
     /**
@@ -46,6 +50,8 @@ class UrlObject implements ModelInterface, ArrayAccess
     * createTime  url创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * taskId  任务id。
     * taskType  任务的类型， 其值可以为REFRESH：刷新任务、PREHEATING：预热任务、REFRESH_AFTER_PREHEATING：预热后刷新
+    * failClassify  失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    * failDesc  刷新预热失败描述。
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class UrlObject implements ModelInterface, ArrayAccess
         'status' => null,
         'createTime' => 'int64',
         'taskId' => null,
-        'taskType' => null
+        'taskType' => null,
+        'failClassify' => null,
+        'failDesc' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class UrlObject implements ModelInterface, ArrayAccess
     * createTime  url创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * taskId  任务id。
     * taskType  任务的类型， 其值可以为REFRESH：刷新任务、PREHEATING：预热任务、REFRESH_AFTER_PREHEATING：预热后刷新
+    * failClassify  失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    * failDesc  刷新预热失败描述。
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class UrlObject implements ModelInterface, ArrayAccess
             'status' => 'status',
             'createTime' => 'create_time',
             'taskId' => 'task_id',
-            'taskType' => 'task_type'
+            'taskType' => 'task_type',
+            'failClassify' => 'fail_classify',
+            'failDesc' => 'fail_desc'
     ];
 
     /**
@@ -107,6 +119,8 @@ class UrlObject implements ModelInterface, ArrayAccess
     * createTime  url创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * taskId  任务id。
     * taskType  任务的类型， 其值可以为REFRESH：刷新任务、PREHEATING：预热任务、REFRESH_AFTER_PREHEATING：预热后刷新
+    * failClassify  失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    * failDesc  刷新预热失败描述。
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class UrlObject implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'createTime' => 'setCreateTime',
             'taskId' => 'setTaskId',
-            'taskType' => 'setTaskType'
+            'taskType' => 'setTaskType',
+            'failClassify' => 'setFailClassify',
+            'failDesc' => 'setFailDesc'
     ];
 
     /**
@@ -127,6 +143,8 @@ class UrlObject implements ModelInterface, ArrayAccess
     * createTime  url创建时间，相对于UTC 1970-01-01到当前时间相隔的毫秒数。
     * taskId  任务id。
     * taskType  任务的类型， 其值可以为REFRESH：刷新任务、PREHEATING：预热任务、REFRESH_AFTER_PREHEATING：预热后刷新
+    * failClassify  失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    * failDesc  刷新预热失败描述。
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class UrlObject implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'createTime' => 'getCreateTime',
             'taskId' => 'getTaskId',
-            'taskType' => 'getTaskType'
+            'taskType' => 'getTaskType',
+            'failClassify' => 'getFailClassify',
+            'failDesc' => 'getFailDesc'
     ];
 
     /**
@@ -203,6 +223,8 @@ class UrlObject implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
         $this->container['taskType'] = isset($data['taskType']) ? $data['taskType'] : null;
+        $this->container['failClassify'] = isset($data['failClassify']) ? $data['failClassify'] : null;
+        $this->container['failDesc'] = isset($data['failDesc']) ? $data['failDesc'] : null;
     }
 
     /**
@@ -368,6 +390,54 @@ class UrlObject implements ModelInterface, ArrayAccess
     public function setTaskType($taskType)
     {
         $this->container['taskType'] = $taskType;
+        return $this;
+    }
+
+    /**
+    * Gets failClassify
+    *  失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    *
+    * @return string|null
+    */
+    public function getFailClassify()
+    {
+        return $this->container['failClassify'];
+    }
+
+    /**
+    * Sets failClassify
+    *
+    * @param string|null $failClassify 失败原因，url状态为failed时返回。   - ORIGIN_ERROR：源站错误。   - INNER_ERROR：内部错误。   - UNKNOWN_ERROR：未知错误。
+    *
+    * @return $this
+    */
+    public function setFailClassify($failClassify)
+    {
+        $this->container['failClassify'] = $failClassify;
+        return $this;
+    }
+
+    /**
+    * Gets failDesc
+    *  刷新预热失败描述。
+    *
+    * @return string|null
+    */
+    public function getFailDesc()
+    {
+        return $this->container['failDesc'];
+    }
+
+    /**
+    * Sets failDesc
+    *
+    * @param string|null $failDesc 刷新预热失败描述。
+    *
+    * @return $this
+    */
+    public function setFailDesc($failDesc)
+    {
+        $this->container['failDesc'] = $failDesc;
         return $this;
     }
 

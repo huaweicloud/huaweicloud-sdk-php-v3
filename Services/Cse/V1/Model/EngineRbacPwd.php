@@ -20,7 +20,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pwd  开启安全认证的微服务引擎专享版默认root帐号的密码
+    * pwd  开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pwd  开启安全认证的微服务引擎专享版默认root帐号的密码
+    * pwd  开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pwd  开启安全认证的微服务引擎专享版默认root帐号的密码
+    * pwd  开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pwd  开启安全认证的微服务引擎专享版默认root帐号的密码
+    * pwd  开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pwd  开启安全认证的微服务引擎专享版默认root帐号的密码
+    * pwd  开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
 
     /**
     * Gets pwd
-    *  开启安全认证的微服务引擎专享版默认root帐号的密码
+    *  开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class EngineRbacPwd implements ModelInterface, ArrayAccess
     /**
     * Sets pwd
     *
-    * @param string|null $pwd 开启安全认证的微服务引擎专享版默认root帐号的密码
+    * @param string|null $pwd 开启安全认证的ServiceComb引擎专享版默认root帐号的密码
     *
     * @return $this
     */

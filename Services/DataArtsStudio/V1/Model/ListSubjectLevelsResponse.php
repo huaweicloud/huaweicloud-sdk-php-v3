@@ -21,22 +21,22 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * levels  主题层级信息。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'levels' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogLevelVO[]'
+            'data' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSubjectLevelsResultData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * levels  主题层级信息。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'levels' => null
+        'data' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * levels  主题层级信息。
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'levels' => 'levels'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * levels  主题层级信息。
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'levels' => 'setLevels'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * levels  主题层级信息。
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'levels' => 'getLevels'
+            'data' => 'getData'
     ];
 
     /**
@@ -148,7 +148,7 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['levels'] = isset($data['levels']) ? $data['levels'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class ListSubjectLevelsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets levels
-    *  主题层级信息。
+    * Gets data
+    *  data
     *
-    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogLevelVO[]|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSubjectLevelsResultData|null
     */
-    public function getLevels()
+    public function getData()
     {
-        return $this->container['levels'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets levels
+    * Sets data
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CatalogLevelVO[]|null $levels 主题层级信息。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSubjectLevelsResultData|null $data data
     *
     * @return $this
     */
-    public function setLevels($levels)
+    public function setData($data)
     {
-        $this->container['levels'] = $levels;
+        $this->container['data'] = $data;
         return $this;
     }
 

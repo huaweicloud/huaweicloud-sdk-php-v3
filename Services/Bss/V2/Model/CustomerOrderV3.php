@@ -26,7 +26,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * sourceType  客户订单来源类型： 1：客户2：代理3：合同4：分销商
     * status  订单状态。 1：待审核2：待退款3：处理中4：已取消5：已完成6：待付款9：待确认10：待发货11：待收货12：待上门取货13：换新中
-    * orderType  订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * orderType  订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
     * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * measureId  订单金额度量单位。 1：元
@@ -66,7 +66,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * sourceType  客户订单来源类型： 1：客户2：代理3：合同4：分销商
     * status  订单状态。 1：待审核2：待退款3：处理中4：已取消5：已完成6：待付款9：待确认10：待发货11：待收货12：待上门取货13：换新中
-    * orderType  订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * orderType  订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
     * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * measureId  订单金额度量单位。 1：元
@@ -127,7 +127,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * sourceType  客户订单来源类型： 1：客户2：代理3：合同4：分销商
     * status  订单状态。 1：待审核2：待退款3：处理中4：已取消5：已完成6：待付款9：待确认10：待发货11：待收货12：待上门取货13：换新中
-    * orderType  订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * orderType  订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
     * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * measureId  订单金额度量单位。 1：元
@@ -167,7 +167,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * sourceType  客户订单来源类型： 1：客户2：代理3：合同4：分销商
     * status  订单状态。 1：待审核2：待退款3：处理中4：已取消5：已完成6：待付款9：待确认10：待发货11：待收货12：待上门取货13：换新中
-    * orderType  订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * orderType  订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
     * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * measureId  订单金额度量单位。 1：元
@@ -207,7 +207,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     * serviceTypeName  云服务类型名称。例如ECS的云服务类型名称为“弹性云服务器”。
     * sourceType  客户订单来源类型： 1：客户2：代理3：合同4：分销商
     * status  订单状态。 1：待审核2：待退款3：处理中4：已取消5：已完成6：待付款9：待确认10：待发货11：待收货12：待上门取货13：换新中
-    * orderType  订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * orderType  订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     * amountAfterDiscount  订单优惠后金额（实付价格，不含券不含卡）。
     * officialAmount  订单金额（官网价）。 退订订单中，该金额等于currencyAfterDiscount。
     * measureId  订单金额度量单位。 1：元
@@ -483,7 +483,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderType
-    *  订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    *  订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     *
     * @return int|null
     */
@@ -495,7 +495,7 @@ class CustomerOrderV3 implements ModelInterface, ArrayAccess
     /**
     * Sets orderType
     *
-    * @param int|null $orderType 订单类型。 1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整
+    * @param int|null $orderType 订单类型。 1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整
     *
     * @return $this
     */

@@ -23,7 +23,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * currency  货币。 CNY：人民币
     * totalCount  总条数。
-    * costData  按天或按月的明细金额。
+    * costData  按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @var string[]
     */
@@ -37,7 +37,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * currency  货币。 CNY：人民币
     * totalCount  总条数。
-    * costData  按天或按月的明细金额。
+    * costData  按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * currency  货币。 CNY：人民币
     * totalCount  总条数。
-    * costData  按天或按月的明细金额。
+    * costData  按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * currency  货币。 CNY：人民币
     * totalCount  总条数。
-    * costData  按天或按月的明细金额。
+    * costData  按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * currency  货币。 CNY：人民币
     * totalCount  总条数。
-    * costData  按天或按月的明细金额。
+    * costData  按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @var string[]
     */
@@ -245,7 +245,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets costData
-    *  按天或按月的明细金额。
+    *  按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\CostDataByDimension[]|null
     */
@@ -257,7 +257,7 @@ class ListCostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets costData
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\CostDataByDimension[]|null $costData 按天或按月的明细金额。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\CostDataByDimension[]|null $costData 按天或按月的明细金额，具体请参见表 CostDataByDimension。
     *
     * @return $this
     */

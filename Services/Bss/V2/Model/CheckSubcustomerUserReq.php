@@ -21,7 +21,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * searchType  该字段内容可填为：“email”、“mobile”或“name”。
-    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * searchValue  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @var string[]
     */
@@ -227,7 +227,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchValue
-    *  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    *  手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class CheckSubcustomerUserReq implements ModelInterface, ArrayAccess
     /**
     * Sets searchValue
     *
-    * @param string $searchValue 手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^\\(\\[a-zA-Z-\\]\\(\\[a-zA-Z0-9_-\\]\\)\\{4,31\\}\\)$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
+    * @param string $searchValue 手机号、邮箱或登录名称。 手机号需符合正则表达式 ^\\d{4}-\\d+$；包括国家码，以00开头，格式：00XX-XXXXXXXX。目前手机号仅支持以86开头的国家码。邮箱需为含有@的正确格式的完整邮箱地址。name：符合正则表达式^([a-zA-Z-]([a-zA-Z0-9_-]){4,31})$，长度5-32；不能以“op_”或“shadow_”开头且不能全为数字，且只能以字母（不区分大小写）或者-开头。
     *
     * @return $this
     */

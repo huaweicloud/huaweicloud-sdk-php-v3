@@ -21,7 +21,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -41,22 +41,22 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * id  唯一标识。
+    * id  唯一标识。 按账期类型统计时不返回唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
-    * usage  资源的使用量。
-    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * usage  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     * freeResourceUsage  套餐内使用量。
     * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     * riUsage  预留实例使用量。
     * riUsageMeasureId  预留实例使用量单位。
-    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
-    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -69,13 +69,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
-    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * formula  实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -161,22 +161,22 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * id  唯一标识。
+    * id  唯一标识。 按账期类型统计时不返回唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
-    * usage  资源的使用量。
-    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * usage  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     * freeResourceUsage  套餐内使用量。
     * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     * riUsage  预留实例使用量。
     * riUsageMeasureId  预留实例使用量单位。
-    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
-    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -189,13 +189,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
-    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * formula  实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @var string[]
     */
@@ -282,7 +282,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -302,22 +302,22 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * id  唯一标识。
+    * id  唯一标识。 按账期类型统计时不返回唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
-    * usage  资源的使用量。
-    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * usage  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     * freeResourceUsage  套餐内使用量。
     * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     * riUsage  预留实例使用量。
     * riUsageMeasureId  预留实例使用量单位。
-    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
-    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -330,13 +330,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
-    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * formula  实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @var string[]
     */
@@ -402,7 +402,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -422,22 +422,22 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * id  唯一标识。
+    * id  唯一标识。 按账期类型统计时不返回唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
-    * usage  资源的使用量。
-    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * usage  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     * freeResourceUsage  套餐内使用量。
     * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     * riUsage  预留实例使用量。
     * riUsageMeasureId  预留实例使用量单位。
-    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
-    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -450,13 +450,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
-    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * formula  实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @var string[]
     */
@@ -522,7 +522,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * billDate  资源消费记录的日期。 格式：YYYY-MM-DD。按照东八区时间截取。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子查询消费记录，只能查询到自身的消费记录，则这个地方显示的是自身的客户ID如果是企业主查询消费记录，可以查询到自身以及企业子的消费记录，这个地方是消费的实际客户ID，如果是企业主自身消费，为企业主ID，如果这条消费记录是某个企业子客户的消费，这个地方的ID是企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -542,22 +542,22 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * specSize  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     * specSizeMeasureId  产品实例大小的单位，仅线性产品有该字段。 您可以调用查询度量单位列表接口获取。
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * id  唯一标识。
+    * id  唯一标识。 按账期类型统计时不返回唯一标识。
     * tradeTime  交易时间。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * orderId  订单ID。  说明： 包年/包月资源的使用记录才有该字段，按需资源则为空。
     * periodType  周期类型： 19：年20：月24：天25：小时5：一次性
     * usageType  资源使用量的类型，您可以调用查询使用量类型列表接口获取。
-    * usage  资源的使用量。
-    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * usage  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
+    * usageMeasureId  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     * freeResourceUsage  套餐内使用量。
     * freeResourceMeasureId  套餐内使用量的度量单位，您可以调用查询度量单位列表接口获取。
     * riUsage  预留实例使用量。
     * riUsageMeasureId  预留实例使用量单位。
-    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
-    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * unitPrice  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
+    * unit  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     * officialAmount  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     * discountAmount  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     * amount  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
@@ -570,13 +570,13 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * debtAmount  欠费金额。
     * adjustmentAmount  欠费核销金额。
     * measureId  金额单位。 1：元
-    * formula  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * formula  实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @var string[]
     */
@@ -803,7 +803,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     *
     * @return int|null
     */
@@ -815,7 +815,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     *
     * @return $this
     */
@@ -1283,7 +1283,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  唯一标识。
+    *  唯一标识。 按账期类型统计时不返回唯一标识。
     *
     * @return string|null
     */
@@ -1295,7 +1295,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 唯一标识。
+    * @param string|null $id 唯一标识。 按账期类型统计时不返回唯一标识。
     *
     * @return $this
     */
@@ -1379,7 +1379,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式。 1：包年/包月3：按需10：预留实例
+    *  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     *
     * @return string|null
     */
@@ -1391,7 +1391,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 计费模式。 1：包年/包月3：按需10：预留实例
+    * @param string|null $chargeMode 计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     *
     * @return $this
     */
@@ -1475,7 +1475,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets usage
-    *  资源的使用量。
+    *  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
     *
     * @return double|null
     */
@@ -1487,7 +1487,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets usage
     *
-    * @param double|null $usage 资源的使用量。
+    * @param double|null $usage 资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
     *
     * @return $this
     */
@@ -1499,7 +1499,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageMeasureId
-    *  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    *  资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     *
     * @return int|null
     */
@@ -1511,7 +1511,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets usageMeasureId
     *
-    * @param int|null $usageMeasureId 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。
+    * @param int|null $usageMeasureId 资源使用量的度量单位，您可以调用查询度量单位列表接口获取。  说明： 查询包周期资源，不返回资源使用量的度量单位。
     *
     * @return $this
     */
@@ -1619,7 +1619,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets unitPrice
-    *  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    *  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
     *
     * @return double|null
     */
@@ -1631,7 +1631,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets unitPrice
     *
-    * @param double|null $unitPrice 产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档
+    * @param double|null $unitPrice 产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
     *
     * @return $this
     */
@@ -1643,7 +1643,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets unit
-    *  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    *  产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     *
     * @return string|null
     */
@@ -1655,7 +1655,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets unit
     *
-    * @param string|null $unit 产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。
+    * @param string|null $unit 产品的单价单位。 线性产品的单价单位为“元/{线性单位}/月”或“元/{线性单位}/小时”等。非线性产品的单价单位为“元/月”或“元/小时”等。  说明： “线性单位”为线性产品（即订购时需要指定大小的产品）的大小的单位，比如硬盘的线性单位为GB，带宽的线性单位为Mbps。当statistic_type入参为1，按账期，查询包周期产品时，不返回单价单位。
     *
     * @return $this
     */
@@ -1955,7 +1955,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets formula
-    *  实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    *  实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
     *
     * @return string|null
     */
@@ -1967,7 +1967,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets formula
     *
-    * @param string|null $formula 实付金额计算公式。当前只包含如下场景： 按需简单定价 按需线性定价 包年包月新购和续费的简单定价 包年包月新购和续费的线性定价  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。
+    * @param string|null $formula 实付金额计算公式。当前只包含如下场景： 按需非线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 按需线性定价{使用量}【使用量】/{单位转化率}【单位转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{抹零金额}【抹零金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订非线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月新购和续订线性定价{周期数}【周期数】/{周期转化率}【周期转换】*{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订非线性定价{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】 包年包月（一次性）新购和续订线性定价{线性大小}【规格】*{单价}【单价】-{优惠金额}【优惠金额】-{代金券抵扣}【代金券抵扣】  说明： 实付金额计算公式得到的金额值等于amount - coupon_amount的差值。按账期类型查询时不返回计算公式。
     *
     * @return $this
     */
@@ -1979,7 +1979,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subServiceTypeCode
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的云服务类型编码。
     *
     * @return string|null
     */
@@ -1991,7 +1991,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subServiceTypeCode
     *
-    * @param string|null $subServiceTypeCode 该字段为预留字段。
+    * @param string|null $subServiceTypeCode 整机的子云服务的自身的云服务类型编码。
     *
     * @return $this
     */
@@ -2003,7 +2003,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subServiceTypeName
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的云服务类型名称。
     *
     * @return string|null
     */
@@ -2015,7 +2015,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subServiceTypeName
     *
-    * @param string|null $subServiceTypeName 该字段为预留字段。
+    * @param string|null $subServiceTypeName 整机的子云服务的自身的云服务类型名称。
     *
     * @return $this
     */
@@ -2027,7 +2027,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceTypeCode
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源类型编码。
     *
     * @return string|null
     */
@@ -2039,7 +2039,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceTypeCode
     *
-    * @param string|null $subResourceTypeCode 该字段为预留字段。
+    * @param string|null $subResourceTypeCode 整机的子云服务的自身的资源类型编码。
     *
     * @return $this
     */
@@ -2051,7 +2051,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceTypeName
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源类型名称。
     *
     * @return string|null
     */
@@ -2063,7 +2063,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceTypeName
     *
-    * @param string|null $subResourceTypeName 该字段为预留字段。
+    * @param string|null $subResourceTypeName 整机的子云服务的自身的资源类型名称。
     *
     * @return $this
     */
@@ -2075,7 +2075,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceId
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return string|null
     */
@@ -2087,7 +2087,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceId
     *
-    * @param string|null $subResourceId 该字段为预留字段。
+    * @param string|null $subResourceId 整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return $this
     */
@@ -2099,7 +2099,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceName
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return string|null
     */
@@ -2111,7 +2111,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceName
     *
-    * @param string|null $subResourceName 该字段为预留字段。
+    * @param string|null $subResourceName 整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return $this
     */

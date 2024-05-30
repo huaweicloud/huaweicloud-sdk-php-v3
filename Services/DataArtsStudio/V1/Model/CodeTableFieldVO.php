@@ -20,8 +20,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  码表字段ID。
-    * codeTableId  所属码表ID。
+    * id  码表字段ID，填写String类型替代Long类型。
+    * codeTableId  所属码表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -36,8 +36,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
-            'codeTableId' => 'int',
+            'id' => 'string',
+            'codeTableId' => 'string',
             'ordinal' => 'int',
             'nameEn' => 'string',
             'nameCh' => 'string',
@@ -52,8 +52,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  码表字段ID。
-    * codeTableId  所属码表ID。
+    * id  码表字段ID，填写String类型替代Long类型。
+    * codeTableId  所属码表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -68,8 +68,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'codeTableId' => 'int64',
+        'id' => null,
+        'codeTableId' => null,
         'ordinal' => null,
         'nameEn' => null,
         'nameCh' => null,
@@ -105,8 +105,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  码表字段ID。
-    * codeTableId  所属码表ID。
+    * id  码表字段ID，填写String类型替代Long类型。
+    * codeTableId  所属码表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -137,8 +137,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  码表字段ID。
-    * codeTableId  所属码表ID。
+    * id  码表字段ID，填写String类型替代Long类型。
+    * codeTableId  所属码表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -169,8 +169,8 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  码表字段ID。
-    * codeTableId  所属码表ID。
+    * id  码表字段ID，填写String类型替代Long类型。
+    * codeTableId  所属码表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名，英文。
     * nameCh  字段名，中文。
@@ -325,9 +325,9 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  码表字段ID。
+    *  码表字段ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -337,7 +337,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 码表字段ID。
+    * @param string|null $id 码表字段ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -349,9 +349,9 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets codeTableId
-    *  所属码表ID。
+    *  所属码表ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getCodeTableId()
     {
@@ -361,7 +361,7 @@ class CodeTableFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets codeTableId
     *
-    * @param int|null $codeTableId 所属码表ID。
+    * @param string|null $codeTableId 所属码表ID，填写String类型替代Long类型。
     *
     * @return $this
     */

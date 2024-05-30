@@ -20,54 +20,55 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码，更新时必填，创建是为空。
+    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
     * name  指标名称。
-    * code  指标编码。
+    * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID。
-    * bizCatalogPath  归属的流程架构路径。
-    * createBy  创建人。
-    * updateBy  更新人。
+    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogPath  归属的流程架构路径，只读。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
     * dataOrigin  数据来源。
     * unit  计量单位。
     * timeFilters  统计周期(时间限定)。
     * dimensions  统计维度。
     * generalFilters  统计口径和修饰词。
-    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标。
-    * technicalMetricName  关联技术指标名称。
+    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
     * owner  指标责任人。
     * ownerDepartment  指标管理部门。
     * destination  设置目的。
-    * guid  资产同步后的guid。
+    * guid  资产同步后的guid，只读。
     * definition  指标定义。
     * expression  计算公式。
     * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
+    * selfDefinedFields  自定义项
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'name' => 'string',
             'code' => 'string',
             'nameAlias' => 'string',
             'bizType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
             'status' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizStatusEnum',
-            'bizCatalogId' => 'int',
+            'bizCatalogId' => 'string',
             'bizCatalogPath' => 'string',
             'createBy' => 'string',
             'updateBy' => 'string',
@@ -78,7 +79,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             'generalFilters' => 'string',
             'intervalType' => 'string',
             'applyScenario' => 'string',
-            'technicalMetric' => 'int',
+            'technicalMetric' => 'string',
             'technicalMetricName' => 'string',
             'technicalMetricType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
             'measure' => 'string',
@@ -97,59 +98,61 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             'l2' => 'string',
             'l3' => 'string',
             'bizMetric' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
-            'summaryStatus' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum'
+            'summaryStatus' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SyncStatusEnum',
+            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码，更新时必填，创建是为空。
+    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
     * name  指标名称。
-    * code  指标编码。
+    * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID。
-    * bizCatalogPath  归属的流程架构路径。
-    * createBy  创建人。
-    * updateBy  更新人。
+    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogPath  归属的流程架构路径，只读。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
     * dataOrigin  数据来源。
     * unit  计量单位。
     * timeFilters  统计周期(时间限定)。
     * dimensions  统计维度。
     * generalFilters  统计口径和修饰词。
-    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标。
-    * technicalMetricName  关联技术指标名称。
+    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
     * owner  指标责任人。
     * ownerDepartment  指标管理部门。
     * destination  设置目的。
-    * guid  资产同步后的guid。
+    * guid  资产同步后的guid，只读。
     * definition  指标定义。
     * expression  计算公式。
     * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
+    * selfDefinedFields  自定义项
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'name' => null,
         'code' => null,
         'nameAlias' => null,
         'bizType' => null,
         'status' => null,
-        'bizCatalogId' => 'int64',
+        'bizCatalogId' => null,
         'bizCatalogPath' => null,
         'createBy' => null,
         'updateBy' => null,
@@ -160,7 +163,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
         'generalFilters' => null,
         'intervalType' => null,
         'applyScenario' => null,
-        'technicalMetric' => 'int64',
+        'technicalMetric' => null,
         'technicalMetricName' => null,
         'technicalMetricType' => null,
         'measure' => null,
@@ -179,7 +182,8 @@ class BizMetricVO implements ModelInterface, ArrayAccess
         'l2' => null,
         'l3' => null,
         'bizMetric' => null,
-        'summaryStatus' => null
+        'summaryStatus' => null,
+        'selfDefinedFields' => null
     ];
 
     /**
@@ -205,43 +209,44 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码，更新时必填，创建是为空。
+    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
     * name  指标名称。
-    * code  指标编码。
+    * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID。
-    * bizCatalogPath  归属的流程架构路径。
-    * createBy  创建人。
-    * updateBy  更新人。
+    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogPath  归属的流程架构路径，只读。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
     * dataOrigin  数据来源。
     * unit  计量单位。
     * timeFilters  统计周期(时间限定)。
     * dimensions  统计维度。
     * generalFilters  统计口径和修饰词。
-    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标。
-    * technicalMetricName  关联技术指标名称。
+    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
     * owner  指标责任人。
     * ownerDepartment  指标管理部门。
     * destination  设置目的。
-    * guid  资产同步后的guid。
+    * guid  资产同步后的guid，只读。
     * definition  指标定义。
     * expression  计算公式。
     * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
+    * selfDefinedFields  自定义项
     *
     * @var string[]
     */
@@ -282,48 +287,50 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             'l2' => 'l2',
             'l3' => 'l3',
             'bizMetric' => 'biz_metric',
-            'summaryStatus' => 'summary_status'
+            'summaryStatus' => 'summary_status',
+            'selfDefinedFields' => 'self_defined_fields'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码，更新时必填，创建是为空。
+    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
     * name  指标名称。
-    * code  指标编码。
+    * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID。
-    * bizCatalogPath  归属的流程架构路径。
-    * createBy  创建人。
-    * updateBy  更新人。
+    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogPath  归属的流程架构路径，只读。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
     * dataOrigin  数据来源。
     * unit  计量单位。
     * timeFilters  统计周期(时间限定)。
     * dimensions  统计维度。
     * generalFilters  统计口径和修饰词。
-    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标。
-    * technicalMetricName  关联技术指标名称。
+    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
     * owner  指标责任人。
     * ownerDepartment  指标管理部门。
     * destination  设置目的。
-    * guid  资产同步后的guid。
+    * guid  资产同步后的guid，只读。
     * definition  指标定义。
     * expression  计算公式。
     * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
+    * selfDefinedFields  自定义项
     *
     * @var string[]
     */
@@ -364,48 +371,50 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             'l2' => 'setL2',
             'l3' => 'setL3',
             'bizMetric' => 'setBizMetric',
-            'summaryStatus' => 'setSummaryStatus'
+            'summaryStatus' => 'setSummaryStatus',
+            'selfDefinedFields' => 'setSelfDefinedFields'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码，更新时必填，创建是为空。
+    * id  编码，更新时必填，创建时为空，填写String类型替代Long类型。
     * name  指标名称。
-    * code  指标编码。
+    * code  指标编码，只读。
     * nameAlias  指标别名。
     * bizType  bizType
     * status  status
-    * bizCatalogId  归属的流程架构的ID。
-    * bizCatalogPath  归属的流程架构路径。
-    * createBy  创建人。
-    * updateBy  更新人。
+    * bizCatalogId  归属的流程架构的ID，填写String类型替代Long类型。
+    * bizCatalogPath  归属的流程架构路径，只读。
+    * createBy  创建人，只读。
+    * updateBy  更新人，只读。
     * dataOrigin  数据来源。
     * unit  计量单位。
     * timeFilters  统计周期(时间限定)。
     * dimensions  统计维度。
     * generalFilters  统计口径和修饰词。
-    * intervalType  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * intervalType  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     * applyScenario  应用场景。
-    * technicalMetric  关联技术指标。
-    * technicalMetricName  关联技术指标名称。
+    * technicalMetric  关联技术指标，填写String类型替代Long类型。
+    * technicalMetricName  关联技术指标名称，只读。
     * technicalMetricType  technicalMetricType
     * measure  度量对象。
     * owner  指标责任人。
     * ownerDepartment  指标管理部门。
     * destination  设置目的。
-    * guid  资产同步后的guid。
+    * guid  资产同步后的guid，只读。
     * definition  指标定义。
     * expression  计算公式。
     * remark  备注。
     * approvalInfo  approvalInfo
     * newBiz  newBiz
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
     * bizMetric  bizMetric
     * summaryStatus  summaryStatus
+    * selfDefinedFields  自定义项
     *
     * @var string[]
     */
@@ -446,7 +455,8 @@ class BizMetricVO implements ModelInterface, ArrayAccess
             'l2' => 'getL2',
             'l3' => 'getL3',
             'bizMetric' => 'getBizMetric',
-            'summaryStatus' => 'getSummaryStatus'
+            'summaryStatus' => 'getSummaryStatus',
+            'selfDefinedFields' => 'getSelfDefinedFields'
     ];
 
     /**
@@ -579,6 +589,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
         $this->container['l3'] = isset($data['l3']) ? $data['l3'] : null;
         $this->container['bizMetric'] = isset($data['bizMetric']) ? $data['bizMetric'] : null;
         $this->container['summaryStatus'] = isset($data['summaryStatus']) ? $data['summaryStatus'] : null;
+        $this->container['selfDefinedFields'] = isset($data['selfDefinedFields']) ? $data['selfDefinedFields'] : null;
     }
 
     /**
@@ -706,9 +717,9 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码，更新时必填，创建是为空。
+    *  编码，更新时必填，创建时为空，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -718,7 +729,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码，更新时必填，创建是为空。
+    * @param string|null $id 编码，更新时必填，创建时为空，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -754,7 +765,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  指标编码。
+    *  指标编码，只读。
     *
     * @return string|null
     */
@@ -766,7 +777,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code 指标编码。
+    * @param string|null $code 指标编码，只读。
     *
     * @return $this
     */
@@ -850,9 +861,9 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogId
-    *  归属的流程架构的ID。
+    *  归属的流程架构的ID，填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getBizCatalogId()
     {
@@ -862,7 +873,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogId
     *
-    * @param int $bizCatalogId 归属的流程架构的ID。
+    * @param string $bizCatalogId 归属的流程架构的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -874,7 +885,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizCatalogPath
-    *  归属的流程架构路径。
+    *  归属的流程架构路径，只读。
     *
     * @return string|null
     */
@@ -886,7 +897,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizCatalogPath
     *
-    * @param string|null $bizCatalogPath 归属的流程架构路径。
+    * @param string|null $bizCatalogPath 归属的流程架构路径，只读。
     *
     * @return $this
     */
@@ -898,7 +909,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createBy
-    *  创建人。
+    *  创建人，只读。
     *
     * @return string|null
     */
@@ -910,7 +921,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createBy
     *
-    * @param string|null $createBy 创建人。
+    * @param string|null $createBy 创建人，只读。
     *
     * @return $this
     */
@@ -922,7 +933,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateBy
-    *  更新人。
+    *  更新人，只读。
     *
     * @return string|null
     */
@@ -934,7 +945,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateBy
     *
-    * @param string|null $updateBy 更新人。
+    * @param string|null $updateBy 更新人，只读。
     *
     * @return $this
     */
@@ -1066,7 +1077,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets intervalType
-    *  刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    *  刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     *
     * @return string
     */
@@ -1078,7 +1089,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets intervalType
     *
-    * @param string $intervalType 刷新频率。MINUTE(每分钟)、HOUR(每小时)、DAY(每天)、WEEK(每周)、MONTH(每月)、YEAR(每年)、REAL_TIME(实时)、HALF_HOUR(每半小时)、QUART(每15分钟)、DOUBLE_WEEK(每两周)、HALF_YEAR(每半年)、HALF_DAY(每半天)。
+    * @param string $intervalType 刷新频率。 枚举值：   - MINUTE: 每分钟   - HOUR: 每小时   - DAY: 每天   - WEEK: 每周   - MONTH: 每月   - YEAR: 每年   - REAL_TIME: 实时   - HALF_HOUR: 每半小时   - QUART: 每15分钟   - DOUBLE_WEEK: 每两周   - HALF_YEAR: 每半年   - HALF_DAY: 每半天
     *
     * @return $this
     */
@@ -1114,9 +1125,9 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets technicalMetric
-    *  关联技术指标。
+    *  关联技术指标，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTechnicalMetric()
     {
@@ -1126,7 +1137,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets technicalMetric
     *
-    * @param int|null $technicalMetric 关联技术指标。
+    * @param string|null $technicalMetric 关联技术指标，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -1138,7 +1149,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets technicalMetricName
-    *  关联技术指标名称。
+    *  关联技术指标名称，只读。
     *
     * @return string|null
     */
@@ -1150,7 +1161,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets technicalMetricName
     *
-    * @param string|null $technicalMetricName 关联技术指标名称。
+    * @param string|null $technicalMetricName 关联技术指标名称，只读。
     *
     * @return $this
     */
@@ -1282,7 +1293,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets guid
-    *  资产同步后的guid。
+    *  资产同步后的guid，只读。
     *
     * @return string|null
     */
@@ -1294,7 +1305,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets guid
     *
-    * @param string|null $guid 资产同步后的guid。
+    * @param string|null $guid 资产同步后的guid，只读。
     *
     * @return $this
     */
@@ -1426,7 +1437,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1438,7 +1449,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1450,7 +1461,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -1462,7 +1473,7 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -1589,6 +1600,30 @@ class BizMetricVO implements ModelInterface, ArrayAccess
     public function setSummaryStatus($summaryStatus)
     {
         $this->container['summaryStatus'] = $summaryStatus;
+        return $this;
+    }
+
+    /**
+    * Gets selfDefinedFields
+    *  自定义项
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
+    */
+    public function getSelfDefinedFields()
+    {
+        return $this->container['selfDefinedFields'];
+    }
+
+    /**
+    * Sets selfDefinedFields
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项
+    *
+    * @return $this
+    */
+    public function setSelfDefinedFields($selfDefinedFields)
+    {
+        $this->container['selfDefinedFields'] = $selfDefinedFields;
         return $this;
     }
 

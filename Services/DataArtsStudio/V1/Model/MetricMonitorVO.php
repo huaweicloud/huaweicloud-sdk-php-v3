@@ -20,44 +20,52 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * otherMetricIds  其他指标ID。
-    * otherMetricNames  其他指标名称。
+    * id  编码，填写String类型替代Long类型。
+    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * otherMetricNames  其他指标名称，只读。
+    * otherCompoundMetricIds  其他复合指标ID。
+    * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID。
+    * metricId  挂载指ID，填写String类型替代Long类型。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
-            'otherMetricIds' => 'int[]',
+            'id' => 'string',
+            'otherMetricIds' => 'string[]',
             'otherMetricNames' => 'string[]',
+            'otherCompoundMetricIds' => 'string[]',
+            'otherCompoundMetricNames' => 'string[]',
             'expression' => 'string',
-            'metricId' => 'int',
+            'metricId' => 'string',
             'frontConfigs' => 'string',
             'metricType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * otherMetricIds  其他指标ID。
-    * otherMetricNames  其他指标名称。
+    * id  编码，填写String类型替代Long类型。
+    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * otherMetricNames  其他指标名称，只读。
+    * otherCompoundMetricIds  其他复合指标ID。
+    * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID。
+    * metricId  挂载指ID，填写String类型替代Long类型。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'otherMetricIds' => 'int64',
+        'id' => null,
+        'otherMetricIds' => null,
         'otherMetricNames' => null,
+        'otherCompoundMetricIds' => null,
+        'otherCompoundMetricNames' => null,
         'expression' => null,
-        'metricId' => 'int64',
+        'metricId' => null,
         'frontConfigs' => null,
         'metricType' => null
     ];
@@ -85,11 +93,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * otherMetricIds  其他指标ID。
-    * otherMetricNames  其他指标名称。
+    * id  编码，填写String类型替代Long类型。
+    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * otherMetricNames  其他指标名称，只读。
+    * otherCompoundMetricIds  其他复合指标ID。
+    * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID。
+    * metricId  挂载指ID，填写String类型替代Long类型。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -99,6 +109,8 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
             'id' => 'id',
             'otherMetricIds' => 'other_metric_ids',
             'otherMetricNames' => 'other_metric_names',
+            'otherCompoundMetricIds' => 'other_compound_metric_ids',
+            'otherCompoundMetricNames' => 'other_compound_metric_names',
             'expression' => 'expression',
             'metricId' => 'metric_id',
             'frontConfigs' => 'front_configs',
@@ -107,11 +119,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * otherMetricIds  其他指标ID。
-    * otherMetricNames  其他指标名称。
+    * id  编码，填写String类型替代Long类型。
+    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * otherMetricNames  其他指标名称，只读。
+    * otherCompoundMetricIds  其他复合指标ID。
+    * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID。
+    * metricId  挂载指ID，填写String类型替代Long类型。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -121,6 +135,8 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'otherMetricIds' => 'setOtherMetricIds',
             'otherMetricNames' => 'setOtherMetricNames',
+            'otherCompoundMetricIds' => 'setOtherCompoundMetricIds',
+            'otherCompoundMetricNames' => 'setOtherCompoundMetricNames',
             'expression' => 'setExpression',
             'metricId' => 'setMetricId',
             'frontConfigs' => 'setFrontConfigs',
@@ -129,11 +145,13 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * otherMetricIds  其他指标ID。
-    * otherMetricNames  其他指标名称。
+    * id  编码，填写String类型替代Long类型。
+    * otherMetricIds  其他指标ID，填写String类型替代Long类型。
+    * otherMetricNames  其他指标名称，只读。
+    * otherCompoundMetricIds  其他复合指标ID。
+    * otherCompoundMetricNames  其他复合指标名称。
     * expression  告警表达式。
-    * metricId  挂载指ID。
+    * metricId  挂载指ID，填写String类型替代Long类型。
     * frontConfigs  前端表达式配置，用于前端数据恢复。
     * metricType  metricType
     *
@@ -143,6 +161,8 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'otherMetricIds' => 'getOtherMetricIds',
             'otherMetricNames' => 'getOtherMetricNames',
+            'otherCompoundMetricIds' => 'getOtherCompoundMetricIds',
+            'otherCompoundMetricNames' => 'getOtherCompoundMetricNames',
             'expression' => 'getExpression',
             'metricId' => 'getMetricId',
             'frontConfigs' => 'getFrontConfigs',
@@ -210,6 +230,8 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['otherMetricIds'] = isset($data['otherMetricIds']) ? $data['otherMetricIds'] : null;
         $this->container['otherMetricNames'] = isset($data['otherMetricNames']) ? $data['otherMetricNames'] : null;
+        $this->container['otherCompoundMetricIds'] = isset($data['otherCompoundMetricIds']) ? $data['otherCompoundMetricIds'] : null;
+        $this->container['otherCompoundMetricNames'] = isset($data['otherCompoundMetricNames']) ? $data['otherCompoundMetricNames'] : null;
         $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
         $this->container['metricId'] = isset($data['metricId']) ? $data['metricId'] : null;
         $this->container['frontConfigs'] = isset($data['frontConfigs']) ? $data['frontConfigs'] : null;
@@ -243,9 +265,9 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -255,7 +277,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -267,9 +289,9 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherMetricIds
-    *  其他指标ID。
+    *  其他指标ID，填写String类型替代Long类型。
     *
-    * @return int[]|null
+    * @return string[]|null
     */
     public function getOtherMetricIds()
     {
@@ -279,7 +301,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets otherMetricIds
     *
-    * @param int[]|null $otherMetricIds 其他指标ID。
+    * @param string[]|null $otherMetricIds 其他指标ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -291,7 +313,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets otherMetricNames
-    *  其他指标名称。
+    *  其他指标名称，只读。
     *
     * @return string[]|null
     */
@@ -303,13 +325,61 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets otherMetricNames
     *
-    * @param string[]|null $otherMetricNames 其他指标名称。
+    * @param string[]|null $otherMetricNames 其他指标名称，只读。
     *
     * @return $this
     */
     public function setOtherMetricNames($otherMetricNames)
     {
         $this->container['otherMetricNames'] = $otherMetricNames;
+        return $this;
+    }
+
+    /**
+    * Gets otherCompoundMetricIds
+    *  其他复合指标ID。
+    *
+    * @return string[]|null
+    */
+    public function getOtherCompoundMetricIds()
+    {
+        return $this->container['otherCompoundMetricIds'];
+    }
+
+    /**
+    * Sets otherCompoundMetricIds
+    *
+    * @param string[]|null $otherCompoundMetricIds 其他复合指标ID。
+    *
+    * @return $this
+    */
+    public function setOtherCompoundMetricIds($otherCompoundMetricIds)
+    {
+        $this->container['otherCompoundMetricIds'] = $otherCompoundMetricIds;
+        return $this;
+    }
+
+    /**
+    * Gets otherCompoundMetricNames
+    *  其他复合指标名称。
+    *
+    * @return string[]|null
+    */
+    public function getOtherCompoundMetricNames()
+    {
+        return $this->container['otherCompoundMetricNames'];
+    }
+
+    /**
+    * Sets otherCompoundMetricNames
+    *
+    * @param string[]|null $otherCompoundMetricNames 其他复合指标名称。
+    *
+    * @return $this
+    */
+    public function setOtherCompoundMetricNames($otherCompoundMetricNames)
+    {
+        $this->container['otherCompoundMetricNames'] = $otherCompoundMetricNames;
         return $this;
     }
 
@@ -339,9 +409,9 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets metricId
-    *  挂载指ID。
+    *  挂载指ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getMetricId()
     {
@@ -351,7 +421,7 @@ class MetricMonitorVO implements ModelInterface, ArrayAccess
     /**
     * Sets metricId
     *
-    * @param int|null $metricId 挂载指ID。
+    * @param string|null $metricId 挂载指ID，填写String类型替代Long类型。
     *
     * @return $this
     */

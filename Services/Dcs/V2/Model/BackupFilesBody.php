@@ -214,9 +214,6 @@ class BackupFilesBody implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['bucketName'] === null) {
-            $invalidProperties[] = "'bucketName' can't be null";
-        }
         if ($this->container['files'] === null) {
             $invalidProperties[] = "'files' can't be null";
         }
@@ -262,7 +259,7 @@ class BackupFilesBody implements ModelInterface, ArrayAccess
     * Gets bucketName
     *  OBS桶名。
     *
-    * @return string
+    * @return string|null
     */
     public function getBucketName()
     {
@@ -272,7 +269,7 @@ class BackupFilesBody implements ModelInterface, ArrayAccess
     /**
     * Sets bucketName
     *
-    * @param string $bucketName OBS桶名。
+    * @param string|null $bucketName OBS桶名。
     *
     * @return $this
     */

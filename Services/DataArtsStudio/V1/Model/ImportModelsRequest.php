@@ -23,9 +23,10 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * xLanguage  默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * directoryId  导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
@@ -35,6 +36,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
             'workspace' => 'string',
             'xProjectId' => 'string',
             'contentType' => 'string',
+            'xLanguage' => 'string',
             'actionId' => 'string',
             'modelId' => 'string',
             'directoryId' => 'string',
@@ -47,9 +49,10 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * xLanguage  默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * directoryId  导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
@@ -59,6 +62,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
         'workspace' => null,
         'xProjectId' => null,
         'contentType' => null,
+        'xLanguage' => null,
         'actionId' => null,
         'modelId' => null,
         'directoryId' => null,
@@ -92,9 +96,10 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * xLanguage  默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * directoryId  导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
@@ -104,6 +109,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
             'workspace' => 'workspace',
             'xProjectId' => 'X-Project-Id',
             'contentType' => 'Content-Type',
+            'xLanguage' => 'X-Language',
             'actionId' => 'action-id',
             'modelId' => 'model_id',
             'directoryId' => 'directory_id',
@@ -116,9 +122,10 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * xLanguage  默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * directoryId  导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
@@ -128,6 +135,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
             'workspace' => 'setWorkspace',
             'xProjectId' => 'setXProjectId',
             'contentType' => 'setContentType',
+            'xLanguage' => 'setXLanguage',
             'actionId' => 'setActionId',
             'modelId' => 'setModelId',
             'directoryId' => 'setDirectoryId',
@@ -140,9 +148,10 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * xLanguage  默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    * actionId  需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     * modelId  关系建模的模型ID，在导入模型（import_relation）时必填。
-    * directoryId  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * directoryId  导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     * skipExist  是否需要覆盖更新已有的实体。
     * body  body
     *
@@ -152,6 +161,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
             'workspace' => 'getWorkspace',
             'xProjectId' => 'getXProjectId',
             'contentType' => 'getContentType',
+            'xLanguage' => 'getXLanguage',
             'actionId' => 'getActionId',
             'modelId' => 'getModelId',
             'directoryId' => 'getDirectoryId',
@@ -251,6 +261,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['actionId'] = isset($data['actionId']) ? $data['actionId'] : null;
         $this->container['modelId'] = isset($data['modelId']) ? $data['modelId'] : null;
         $this->container['directoryId'] = isset($data['directoryId']) ? $data['directoryId'] : null;
@@ -286,6 +297,12 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
                 $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['xLanguage']) && (mb_strlen($this->container['xLanguage']) > 64)) {
+                $invalidProperties[] = "invalid value for 'xLanguage', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['xLanguage']) && (mb_strlen($this->container['xLanguage']) < 3)) {
+                $invalidProperties[] = "invalid value for 'xLanguage', the character length must be bigger than or equal to 3.";
             }
         if ($this->container['actionId'] === null) {
             $invalidProperties[] = "'actionId' can't be null";
@@ -385,8 +402,32 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xLanguage
+    *  默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 默认值：en-us 可选，导入导出接口必填，可选值有：zh-cn、en-us，分别表示中文、英文。
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
+        return $this;
+    }
+
+    /**
     * Gets actionId
-    *  需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    *  需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     *
     * @return string
     */
@@ -398,7 +439,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets actionId
     *
-    * @param string $actionId 需要执行的动作，根据导入的对象不同而选择不同的导入动作。import_relation(导入关系模型：逻辑实体/物理表)、import_dimension( 导入维度表、事实表)、import_codetable(导入码表)、import_datastandard(导入数据标准)、import_bizmetric(导入业务指标)、import_bizcatalog(导入流程架构)、import_atomic(导入原子指标)、import_derivative(导入衍生指标)、import_compound(导入复合指标)、import_aggregation(导入汇总表)。
+    * @param string $actionId 需要执行的动作，根据导入的对象不同而选择不同的导入动作。 枚举值：   - import_relation: 导入关系模型：逻辑实体/物理表   - import_dimension: 导入维度表、事实表   - import_codetable: 导入码表   - import_datastandard: 导入数据标准   - import_bizmetric: 导入业务指标   - import_bizcatalog: 导入流程架构   - import_atomic: 导入原子指标   - import_derivative: 导入衍生指标   - import_compound: 导入复合指标   - import_aggregation: 导入汇总表
     *
     * @return $this
     */
@@ -434,7 +475,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets directoryId
-    *  导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    *  导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     *
     * @return string|null
     */
@@ -446,7 +487,7 @@ class ImportModelsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets directoryId
     *
-    * @param string|null $directoryId 导入的目录id，在导入码表（import_datastandard）和数据标准（import_datastandard）时生效，选填。
+    * @param string|null $directoryId 导入的目录id，在导入码表（import_codetable）和数据标准（import_datastandard）时生效，选填。
     *
     * @return $this
     */

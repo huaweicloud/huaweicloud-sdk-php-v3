@@ -20,7 +20,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -36,15 +36,20 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
+    * secrecyLevels  密级
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  逻辑属性编码
+    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrName  关联逻辑实体属性中文名称
+    * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
     * @var string[]
     */
@@ -65,20 +70,25 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
             'extendField' => 'bool',
             'notNull' => 'bool',
             'ordinal' => 'int',
-            'tableModelId' => 'int',
+            'tableModelId' => 'string',
             'createTime' => '\DateTime',
             'updateTime' => '\DateTime',
             'tags' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]',
-            'standRowId' => 'int',
+            'secrecyLevels' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]',
+            'standRowId' => 'string',
             'standRowName' => 'string',
             'qualityInfos' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]',
             'alias' => 'string',
-            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]'
+            'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]',
+            'code' => 'string',
+            'relatedLogicAttrId' => 'string',
+            'relatedLogicAttrName' => 'string',
+            'relatedLogicAttrNameEn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -94,20 +104,25 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
+    * secrecyLevels  密级
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  逻辑属性编码
+    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrName  关联逻辑实体属性中文名称
+    * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'nameEn' => null,
         'nameCh' => null,
         'description' => null,
@@ -123,15 +138,20 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
         'extendField' => null,
         'notNull' => null,
         'ordinal' => null,
-        'tableModelId' => 'int64',
+        'tableModelId' => null,
         'createTime' => 'date-time',
         'updateTime' => 'date-time',
         'tags' => null,
-        'standRowId' => 'int64',
+        'secrecyLevels' => null,
+        'standRowId' => null,
         'standRowName' => null,
         'qualityInfos' => null,
         'alias' => null,
-        'selfDefinedFields' => null
+        'selfDefinedFields' => null,
+        'code' => null,
+        'relatedLogicAttrId' => null,
+        'relatedLogicAttrName' => null,
+        'relatedLogicAttrNameEn' => null
     ];
 
     /**
@@ -157,7 +177,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -173,15 +193,20 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
+    * secrecyLevels  密级
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  逻辑属性编码
+    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrName  关联逻辑实体属性中文名称
+    * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
     * @var string[]
     */
@@ -206,16 +231,21 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'tags' => 'tags',
+            'secrecyLevels' => 'secrecy_levels',
             'standRowId' => 'stand_row_id',
             'standRowName' => 'stand_row_name',
             'qualityInfos' => 'quality_infos',
             'alias' => 'alias',
-            'selfDefinedFields' => 'self_defined_fields'
+            'selfDefinedFields' => 'self_defined_fields',
+            'code' => 'code',
+            'relatedLogicAttrId' => 'related_logic_attr_id',
+            'relatedLogicAttrName' => 'related_logic_attr_name',
+            'relatedLogicAttrNameEn' => 'related_logic_attr_name_en'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -231,15 +261,20 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
+    * secrecyLevels  密级
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  逻辑属性编码
+    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrName  关联逻辑实体属性中文名称
+    * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
     * @var string[]
     */
@@ -264,16 +299,21 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'tags' => 'setTags',
+            'secrecyLevels' => 'setSecrecyLevels',
             'standRowId' => 'setStandRowId',
             'standRowName' => 'setStandRowName',
             'qualityInfos' => 'setQualityInfos',
             'alias' => 'setAlias',
-            'selfDefinedFields' => 'setSelfDefinedFields'
+            'selfDefinedFields' => 'setSelfDefinedFields',
+            'code' => 'setCode',
+            'relatedLogicAttrId' => 'setRelatedLogicAttrId',
+            'relatedLogicAttrName' => 'setRelatedLogicAttrName',
+            'relatedLogicAttrNameEn' => 'setRelatedLogicAttrNameEn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * nameEn  字段名。
     * nameCh  业务属性。
     * description  描述。
@@ -289,15 +329,20 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     * extendField  是否继承的属性。
     * notNull  是否不为空。
     * ordinal  序号。
-    * tableModelId  所属关系建模的模型ID。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * tags  表标签。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * tableModelId  所属关系建模的模型ID，填写String类型替代Long类型。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * tags  表标签，只读。
+    * secrecyLevels  密级
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     * selfDefinedFields  自定义项。
+    * code  逻辑属性编码
+    * relatedLogicAttrId  关联逻辑属性ID，填写String类型替代Long类型。
+    * relatedLogicAttrName  关联逻辑实体属性中文名称
+    * relatedLogicAttrNameEn  关联逻辑实体属性英文名称
     *
     * @var string[]
     */
@@ -322,11 +367,16 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'tags' => 'getTags',
+            'secrecyLevels' => 'getSecrecyLevels',
             'standRowId' => 'getStandRowId',
             'standRowName' => 'getStandRowName',
             'qualityInfos' => 'getQualityInfos',
             'alias' => 'getAlias',
-            'selfDefinedFields' => 'getSelfDefinedFields'
+            'selfDefinedFields' => 'getSelfDefinedFields',
+            'code' => 'getCode',
+            'relatedLogicAttrId' => 'getRelatedLogicAttrId',
+            'relatedLogicAttrName' => 'getRelatedLogicAttrName',
+            'relatedLogicAttrNameEn' => 'getRelatedLogicAttrNameEn'
     ];
 
     /**
@@ -407,11 +457,16 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['secrecyLevels'] = isset($data['secrecyLevels']) ? $data['secrecyLevels'] : null;
         $this->container['standRowId'] = isset($data['standRowId']) ? $data['standRowId'] : null;
         $this->container['standRowName'] = isset($data['standRowName']) ? $data['standRowName'] : null;
         $this->container['qualityInfos'] = isset($data['qualityInfos']) ? $data['qualityInfos'] : null;
         $this->container['alias'] = isset($data['alias']) ? $data['alias'] : null;
         $this->container['selfDefinedFields'] = isset($data['selfDefinedFields']) ? $data['selfDefinedFields'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['relatedLogicAttrId'] = isset($data['relatedLogicAttrId']) ? $data['relatedLogicAttrId'] : null;
+        $this->container['relatedLogicAttrName'] = isset($data['relatedLogicAttrName']) ? $data['relatedLogicAttrName'] : null;
+        $this->container['relatedLogicAttrNameEn'] = isset($data['relatedLogicAttrNameEn']) ? $data['relatedLogicAttrNameEn'] : null;
     }
 
     /**
@@ -458,6 +513,12 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
             if (!is_null($this->container['standRowName']) && (mb_strlen($this->container['standRowName']) > 600)) {
                 $invalidProperties[] = "invalid value for 'standRowName', the character length must be smaller than or equal to 600.";
             }
+            if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) > 128)) {
+                $invalidProperties[] = "invalid value for 'code', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['code']) && !preg_match("/^(?![0-9_])[a-zA-Z0-9_]*$/", $this->container['code'])) {
+                $invalidProperties[] = "invalid value for 'code', must be conform to the pattern /^(?![0-9_])[a-zA-Z0-9_]*$/.";
+            }
         return $invalidProperties;
     }
 
@@ -474,7 +535,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -486,7 +547,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -858,9 +919,9 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tableModelId
-    *  所属关系建模的模型ID。
+    *  所属关系建模的模型ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTableModelId()
     {
@@ -870,7 +931,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tableModelId
     *
-    * @param int|null $tableModelId 所属关系建模的模型ID。
+    * @param string|null $tableModelId 所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -882,7 +943,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -894,7 +955,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -906,7 +967,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -918,7 +979,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -930,7 +991,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  表标签。
+    *  表标签，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null
     */
@@ -942,7 +1003,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null $tags 表标签。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\TagVO[]|null $tags 表标签，只读。
     *
     * @return $this
     */
@@ -953,10 +1014,34 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets standRowId
-    *  关联的数据标准的ID。
+    * Gets secrecyLevels
+    *  密级
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]|null
+    */
+    public function getSecrecyLevels()
+    {
+        return $this->container['secrecyLevels'];
+    }
+
+    /**
+    * Sets secrecyLevels
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]|null $secrecyLevels 密级
+    *
+    * @return $this
+    */
+    public function setSecrecyLevels($secrecyLevels)
+    {
+        $this->container['secrecyLevels'] = $secrecyLevels;
+        return $this;
+    }
+
+    /**
+    * Gets standRowId
+    *  关联的数据标准的ID，填写String类型替代Long类型。
+    *
+    * @return string|null
     */
     public function getStandRowId()
     {
@@ -966,7 +1051,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param int|null $standRowId 关联的数据标准的ID。
+    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -978,7 +1063,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowName
-    *  关联的数据标准名称。
+    *  关联的数据标准名称，只读。
     *
     * @return string|null
     */
@@ -990,7 +1075,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowName
     *
-    * @param string|null $standRowName 关联的数据标准名称。
+    * @param string|null $standRowName 关联的数据标准名称，只读。
     *
     * @return $this
     */
@@ -1002,7 +1087,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityInfos
-    *  质量信息。
+    *  质量信息，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null
     */
@@ -1014,7 +1099,7 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfos
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息，只读。
     *
     * @return $this
     */
@@ -1069,6 +1154,102 @@ class TableModelAttributeVO implements ModelInterface, ArrayAccess
     public function setSelfDefinedFields($selfDefinedFields)
     {
         $this->container['selfDefinedFields'] = $selfDefinedFields;
+        return $this;
+    }
+
+    /**
+    * Gets code
+    *  逻辑属性编码
+    *
+    * @return string|null
+    */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+    * Sets code
+    *
+    * @param string|null $code 逻辑属性编码
+    *
+    * @return $this
+    */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicAttrId
+    *  关联逻辑属性ID，填写String类型替代Long类型。
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicAttrId()
+    {
+        return $this->container['relatedLogicAttrId'];
+    }
+
+    /**
+    * Sets relatedLogicAttrId
+    *
+    * @param string|null $relatedLogicAttrId 关联逻辑属性ID，填写String类型替代Long类型。
+    *
+    * @return $this
+    */
+    public function setRelatedLogicAttrId($relatedLogicAttrId)
+    {
+        $this->container['relatedLogicAttrId'] = $relatedLogicAttrId;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicAttrName
+    *  关联逻辑实体属性中文名称
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicAttrName()
+    {
+        return $this->container['relatedLogicAttrName'];
+    }
+
+    /**
+    * Sets relatedLogicAttrName
+    *
+    * @param string|null $relatedLogicAttrName 关联逻辑实体属性中文名称
+    *
+    * @return $this
+    */
+    public function setRelatedLogicAttrName($relatedLogicAttrName)
+    {
+        $this->container['relatedLogicAttrName'] = $relatedLogicAttrName;
+        return $this;
+    }
+
+    /**
+    * Gets relatedLogicAttrNameEn
+    *  关联逻辑实体属性英文名称
+    *
+    * @return string|null
+    */
+    public function getRelatedLogicAttrNameEn()
+    {
+        return $this->container['relatedLogicAttrNameEn'];
+    }
+
+    /**
+    * Sets relatedLogicAttrNameEn
+    *
+    * @param string|null $relatedLogicAttrNameEn 关联逻辑实体属性英文名称
+    *
+    * @return $this
+    */
+    public function setRelatedLogicAttrNameEn($relatedLogicAttrNameEn)
+    {
+        $this->container['relatedLogicAttrNameEn'] = $relatedLogicAttrNameEn;
         return $this;
     }
 

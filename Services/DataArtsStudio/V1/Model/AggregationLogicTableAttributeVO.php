@@ -20,23 +20,26 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
-    * aggregationLogicTableId  所属汇总表ID。
+    * id  编码，填写String类型替代Long类型。
+    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
     * attributeType  attributeType
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
+    * secrecyLevels  密级
     * notNull  是否不为空。
     * description  描述。
     * dataType  字段类型。
     * domainType  domainType
     * dataTypeExtend  数据类型扩展字段。
-    * refId  关联ID。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * refId  属性关联对象的id
+    * refNameCh  属性关联对象的中文名
+    * refNameEn  属性关联对象的英文名
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     *
     * @var string[]
@@ -50,12 +53,15 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
             'attributeType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizTypeEnum',
             'isPrimaryKey' => 'bool',
             'isPartitionKey' => 'bool',
+            'secrecyLevels' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]',
             'notNull' => 'bool',
             'description' => 'string',
             'dataType' => 'string',
             'domainType' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\DataTypeDomainEnum',
             'dataTypeExtend' => 'string',
             'refId' => 'string',
+            'refNameCh' => 'string',
+            'refNameEn' => 'string',
             'standRowId' => 'string',
             'standRowName' => 'string',
             'qualityInfos' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]',
@@ -64,43 +70,49 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
-    * aggregationLogicTableId  所属汇总表ID。
+    * id  编码，填写String类型替代Long类型。
+    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
     * attributeType  attributeType
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
+    * secrecyLevels  密级
     * notNull  是否不为空。
     * description  描述。
     * dataType  字段类型。
     * domainType  domainType
     * dataTypeExtend  数据类型扩展字段。
-    * refId  关联ID。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * refId  属性关联对象的id
+    * refNameCh  属性关联对象的中文名
+    * refNameEn  属性关联对象的英文名
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
-        'aggregationLogicTableId' => 'int64',
+        'id' => null,
+        'aggregationLogicTableId' => null,
         'ordinal' => null,
         'nameEn' => null,
         'nameCh' => null,
         'attributeType' => null,
         'isPrimaryKey' => null,
         'isPartitionKey' => null,
+        'secrecyLevels' => null,
         'notNull' => null,
         'description' => null,
         'dataType' => null,
         'domainType' => null,
         'dataTypeExtend' => null,
         'refId' => null,
-        'standRowId' => 'int64',
+        'refNameCh' => null,
+        'refNameEn' => null,
+        'standRowId' => null,
         'standRowName' => null,
         'qualityInfos' => null,
         'alias' => null
@@ -129,23 +141,26 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
-    * aggregationLogicTableId  所属汇总表ID。
+    * id  编码，填写String类型替代Long类型。
+    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
     * attributeType  attributeType
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
+    * secrecyLevels  密级
     * notNull  是否不为空。
     * description  描述。
     * dataType  字段类型。
     * domainType  domainType
     * dataTypeExtend  数据类型扩展字段。
-    * refId  关联ID。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * refId  属性关联对象的id
+    * refNameCh  属性关联对象的中文名
+    * refNameEn  属性关联对象的英文名
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     *
     * @var string[]
@@ -159,12 +174,15 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
             'attributeType' => 'attribute_type',
             'isPrimaryKey' => 'is_primary_key',
             'isPartitionKey' => 'is_partition_key',
+            'secrecyLevels' => 'secrecy_levels',
             'notNull' => 'not_null',
             'description' => 'description',
             'dataType' => 'data_type',
             'domainType' => 'domain_type',
             'dataTypeExtend' => 'data_type_extend',
             'refId' => 'ref_id',
+            'refNameCh' => 'ref_name_ch',
+            'refNameEn' => 'ref_name_en',
             'standRowId' => 'stand_row_id',
             'standRowName' => 'stand_row_name',
             'qualityInfos' => 'quality_infos',
@@ -173,23 +191,26 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
-    * aggregationLogicTableId  所属汇总表ID。
+    * id  编码，填写String类型替代Long类型。
+    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
     * attributeType  attributeType
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
+    * secrecyLevels  密级
     * notNull  是否不为空。
     * description  描述。
     * dataType  字段类型。
     * domainType  domainType
     * dataTypeExtend  数据类型扩展字段。
-    * refId  关联ID。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * refId  属性关联对象的id
+    * refNameCh  属性关联对象的中文名
+    * refNameEn  属性关联对象的英文名
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     *
     * @var string[]
@@ -203,12 +224,15 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
             'attributeType' => 'setAttributeType',
             'isPrimaryKey' => 'setIsPrimaryKey',
             'isPartitionKey' => 'setIsPartitionKey',
+            'secrecyLevels' => 'setSecrecyLevels',
             'notNull' => 'setNotNull',
             'description' => 'setDescription',
             'dataType' => 'setDataType',
             'domainType' => 'setDomainType',
             'dataTypeExtend' => 'setDataTypeExtend',
             'refId' => 'setRefId',
+            'refNameCh' => 'setRefNameCh',
+            'refNameEn' => 'setRefNameEn',
             'standRowId' => 'setStandRowId',
             'standRowName' => 'setStandRowName',
             'qualityInfos' => 'setQualityInfos',
@@ -217,23 +241,26 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
-    * aggregationLogicTableId  所属汇总表ID。
+    * id  编码，填写String类型替代Long类型。
+    * aggregationLogicTableId  所属汇总表ID，填写String类型替代Long类型。
     * ordinal  序号。
     * nameEn  字段名。
     * nameCh  业务属性。
     * attributeType  attributeType
     * isPrimaryKey  是否主键。
     * isPartitionKey  是否分区键。
+    * secrecyLevels  密级
     * notNull  是否不为空。
     * description  描述。
     * dataType  字段类型。
     * domainType  domainType
     * dataTypeExtend  数据类型扩展字段。
-    * refId  关联ID。
-    * standRowId  关联的数据标准的ID。
-    * standRowName  关联的数据标准名称。
-    * qualityInfos  质量信息。
+    * refId  属性关联对象的id
+    * refNameCh  属性关联对象的中文名
+    * refNameEn  属性关联对象的英文名
+    * standRowId  关联的数据标准的ID，填写String类型替代Long类型。
+    * standRowName  关联的数据标准名称，只读。
+    * qualityInfos  质量信息，只读。
     * alias  别名。
     *
     * @var string[]
@@ -247,12 +274,15 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
             'attributeType' => 'getAttributeType',
             'isPrimaryKey' => 'getIsPrimaryKey',
             'isPartitionKey' => 'getIsPartitionKey',
+            'secrecyLevels' => 'getSecrecyLevels',
             'notNull' => 'getNotNull',
             'description' => 'getDescription',
             'dataType' => 'getDataType',
             'domainType' => 'getDomainType',
             'dataTypeExtend' => 'getDataTypeExtend',
             'refId' => 'getRefId',
+            'refNameCh' => 'getRefNameCh',
+            'refNameEn' => 'getRefNameEn',
             'standRowId' => 'getStandRowId',
             'standRowName' => 'getStandRowName',
             'qualityInfos' => 'getQualityInfos',
@@ -325,12 +355,15 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
         $this->container['attributeType'] = isset($data['attributeType']) ? $data['attributeType'] : null;
         $this->container['isPrimaryKey'] = isset($data['isPrimaryKey']) ? $data['isPrimaryKey'] : null;
         $this->container['isPartitionKey'] = isset($data['isPartitionKey']) ? $data['isPartitionKey'] : null;
+        $this->container['secrecyLevels'] = isset($data['secrecyLevels']) ? $data['secrecyLevels'] : null;
         $this->container['notNull'] = isset($data['notNull']) ? $data['notNull'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['dataType'] = isset($data['dataType']) ? $data['dataType'] : null;
         $this->container['domainType'] = isset($data['domainType']) ? $data['domainType'] : null;
         $this->container['dataTypeExtend'] = isset($data['dataTypeExtend']) ? $data['dataTypeExtend'] : null;
         $this->container['refId'] = isset($data['refId']) ? $data['refId'] : null;
+        $this->container['refNameCh'] = isset($data['refNameCh']) ? $data['refNameCh'] : null;
+        $this->container['refNameEn'] = isset($data['refNameEn']) ? $data['refNameEn'] : null;
         $this->container['standRowId'] = isset($data['standRowId']) ? $data['standRowId'] : null;
         $this->container['standRowName'] = isset($data['standRowName']) ? $data['standRowName'] : null;
         $this->container['qualityInfos'] = isset($data['qualityInfos']) ? $data['qualityInfos'] : null;
@@ -400,7 +433,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -412,7 +445,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -424,7 +457,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets aggregationLogicTableId
-    *  所属汇总表ID。
+    *  所属汇总表ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -436,7 +469,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets aggregationLogicTableId
     *
-    * @param string|null $aggregationLogicTableId 所属汇总表ID。
+    * @param string|null $aggregationLogicTableId 所属汇总表ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -591,6 +624,30 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets secrecyLevels
+    *  密级
+    *
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]|null
+    */
+    public function getSecrecyLevels()
+    {
+        return $this->container['secrecyLevels'];
+    }
+
+    /**
+    * Sets secrecyLevels
+    *
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SecrecyLevelVO[]|null $secrecyLevels 密级
+    *
+    * @return $this
+    */
+    public function setSecrecyLevels($secrecyLevels)
+    {
+        $this->container['secrecyLevels'] = $secrecyLevels;
+        return $this;
+    }
+
+    /**
     * Gets notNull
     *  是否不为空。
     *
@@ -712,7 +769,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets refId
-    *  关联ID。
+    *  属性关联对象的id
     *
     * @return string|null
     */
@@ -724,7 +781,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets refId
     *
-    * @param string|null $refId 关联ID。
+    * @param string|null $refId 属性关联对象的id
     *
     * @return $this
     */
@@ -735,8 +792,56 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets refNameCh
+    *  属性关联对象的中文名
+    *
+    * @return string|null
+    */
+    public function getRefNameCh()
+    {
+        return $this->container['refNameCh'];
+    }
+
+    /**
+    * Sets refNameCh
+    *
+    * @param string|null $refNameCh 属性关联对象的中文名
+    *
+    * @return $this
+    */
+    public function setRefNameCh($refNameCh)
+    {
+        $this->container['refNameCh'] = $refNameCh;
+        return $this;
+    }
+
+    /**
+    * Gets refNameEn
+    *  属性关联对象的英文名
+    *
+    * @return string|null
+    */
+    public function getRefNameEn()
+    {
+        return $this->container['refNameEn'];
+    }
+
+    /**
+    * Sets refNameEn
+    *
+    * @param string|null $refNameEn 属性关联对象的英文名
+    *
+    * @return $this
+    */
+    public function setRefNameEn($refNameEn)
+    {
+        $this->container['refNameEn'] = $refNameEn;
+        return $this;
+    }
+
+    /**
     * Gets standRowId
-    *  关联的数据标准的ID。
+    *  关联的数据标准的ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -748,7 +853,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowId
     *
-    * @param string|null $standRowId 关联的数据标准的ID。
+    * @param string|null $standRowId 关联的数据标准的ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -760,7 +865,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets standRowName
-    *  关联的数据标准名称。
+    *  关联的数据标准名称，只读。
     *
     * @return string|null
     */
@@ -772,7 +877,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets standRowName
     *
-    * @param string|null $standRowName 关联的数据标准名称。
+    * @param string|null $standRowName 关联的数据标准名称，只读。
     *
     * @return $this
     */
@@ -784,7 +889,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets qualityInfos
-    *  质量信息。
+    *  质量信息，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null
     */
@@ -796,7 +901,7 @@ class AggregationLogicTableAttributeVO implements ModelInterface, ArrayAccess
     /**
     * Sets qualityInfos
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\QualityInfoVO[]|null $qualityInfos 质量信息，只读。
     *
     * @return $this
     */

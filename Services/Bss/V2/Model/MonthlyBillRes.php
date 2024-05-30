@@ -22,7 +22,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -36,7 +36,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -55,12 +55,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
     * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * preOrderId  原订单ID 。
     * azCodeInfos  可用区信息列表。具体请参见表 AzCodeInfo。
     *
@@ -116,7 +116,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -130,7 +130,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -149,12 +149,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
     * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * preOrderId  原订单ID 。
     * azCodeInfos  可用区信息列表。具体请参见表 AzCodeInfo。
     *
@@ -231,7 +231,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * and the value is the original name
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -245,7 +245,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -264,12 +264,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
     * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * preOrderId  原订单ID 。
     * azCodeInfos  可用区信息列表。具体请参见表 AzCodeInfo。
     *
@@ -325,7 +325,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -339,7 +339,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -358,12 +358,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
     * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * preOrderId  原订单ID 。
     * azCodeInfos  可用区信息列表。具体请参见表 AzCodeInfo。
     *
@@ -419,7 +419,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * cycle  资源详单数据所在账期，东八区时间，格式为YYYY-MM。 例如2020-01。
     * billDate  消费日期，东八区时间，格式为YYYY-MM-DD。  说明： 当statistic_type=2时该字段才有值，否则返回null。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * customerId  消费的客户账号ID。 如果是普通客户或者企业子客户查询消费记录，只能查询到客户自己的消费记录，且此处显示的是客户自己的客户ID。如果是企业主查询消费记录，可以查询到企业主以及企业子客户的消费记录，此处为消费的实际客户ID。如果是企业主自己的消费记录，则为企业主ID；如果是某个企业子客户的消费记录，则此处为企业子账号ID。
     * region  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * regionName  云服务区名称，例如：“华北-北京一”。具体请参见地区和终端节点对应云服务的“区域名称”列的值。
@@ -433,7 +433,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * skuCode  SKU编码，在账单中唯一标识一个资源的规格。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目名称。
-    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例
+    * chargeMode  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     * consumeAmount  客户购买云服务类型的消费金额，包含代金券、现金券，精确到小数点后2位。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     * cashAmount  现金支付金额。
     * creditAmount  信用额度支付金额。
@@ -452,12 +452,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * tradeId  订单ID 或 交易ID。 账单类型为1，2，3，4，8时为订单ID；其它场景下为： 交易ID(非月末扣费：应收ID；月末扣费：账单ID)。
     * id  唯一标识。 该字段为预留字段。
     * productSpecDesc  产品的规格描述。
-    * subServiceTypeCode  该字段为预留字段。
-    * subServiceTypeName  该字段为预留字段。
-    * subResourceTypeCode  该字段为预留字段。
-    * subResourceTypeName  该字段为预留字段。
-    * subResourceId  该字段为预留字段。
-    * subResourceName  该字段为预留字段。
+    * subServiceTypeCode  整机的子云服务的自身的云服务类型编码。
+    * subServiceTypeName  整机的子云服务的自身的云服务类型名称。
+    * subResourceTypeCode  整机的子云服务的自身的资源类型编码。
+    * subResourceTypeName  整机的子云服务的自身的资源类型名称。
+    * subResourceId  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
+    * subResourceName  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     * preOrderId  原订单ID 。
     * azCodeInfos  可用区信息列表。具体请参见表 AzCodeInfo。
     *
@@ -708,7 +708,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     *
     * @return int|null
     */
@@ -720,7 +720,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     *
     * @return $this
     */
@@ -1044,7 +1044,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式。 1 : 包年/包月3：按需10：预留实例
+    *  计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     *
     * @return int|null
     */
@@ -1056,7 +1056,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param int|null $chargeMode 计费模式。 1 : 包年/包月3：按需10：预留实例
+    * @param int|null $chargeMode 计费模式。 1 : 包年/包月3：按需10：预留实例11：节省计划
     *
     * @return $this
     */
@@ -1500,7 +1500,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets subServiceTypeCode
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的云服务类型编码。
     *
     * @return string|null
     */
@@ -1512,7 +1512,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets subServiceTypeCode
     *
-    * @param string|null $subServiceTypeCode 该字段为预留字段。
+    * @param string|null $subServiceTypeCode 整机的子云服务的自身的云服务类型编码。
     *
     * @return $this
     */
@@ -1524,7 +1524,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets subServiceTypeName
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的云服务类型名称。
     *
     * @return string|null
     */
@@ -1536,7 +1536,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets subServiceTypeName
     *
-    * @param string|null $subServiceTypeName 该字段为预留字段。
+    * @param string|null $subServiceTypeName 整机的子云服务的自身的云服务类型名称。
     *
     * @return $this
     */
@@ -1548,7 +1548,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceTypeCode
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源类型编码。
     *
     * @return string|null
     */
@@ -1560,7 +1560,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceTypeCode
     *
-    * @param string|null $subResourceTypeCode 该字段为预留字段。
+    * @param string|null $subResourceTypeCode 整机的子云服务的自身的资源类型编码。
     *
     * @return $this
     */
@@ -1572,7 +1572,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceTypeName
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源类型名称。
     *
     * @return string|null
     */
@@ -1584,7 +1584,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceTypeName
     *
-    * @param string|null $subResourceTypeName 该字段为预留字段。
+    * @param string|null $subResourceTypeName 整机的子云服务的自身的资源类型名称。
     *
     * @return $this
     */
@@ -1596,7 +1596,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceId
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return string|null
     */
@@ -1608,7 +1608,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceId
     *
-    * @param string|null $subResourceId 该字段为预留字段。
+    * @param string|null $subResourceId 整机的子云服务的自身的资源ID，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return $this
     */
@@ -1620,7 +1620,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResourceName
-    *  该字段为预留字段。
+    *  整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return string|null
     */
@@ -1632,7 +1632,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     /**
     * Sets subResourceName
     *
-    * @param string|null $subResourceName 该字段为预留字段。
+    * @param string|null $subResourceName 整机的子云服务的自身的资源名称，资源标识。（如果为预留实例，则为预留实例标识）
     *
     * @return $this
     */

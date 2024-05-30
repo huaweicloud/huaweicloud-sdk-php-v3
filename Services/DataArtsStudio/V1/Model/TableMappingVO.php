@@ -20,11 +20,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  名称。
     * description  描述。
-    * targetTableId  目的表ID。
-    * srcModelId  来源表在关系建模中的模型ID。
+    * targetTableId  目的表ID，填写String类型替代Long类型。
+    * srcModelId  来源表在关系建模中的模型ID，填写String类型替代Long类型。
     * srcModelName  来源模型名称。
     * viewText  采集的视图来源，dws视图逆向使用。
     * targetTableName  目的表名称。
@@ -39,11 +39,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'name' => 'string',
             'description' => 'string',
-            'targetTableId' => 'int',
-            'srcModelId' => 'int',
+            'targetTableId' => 'string',
+            'srcModelId' => 'string',
             'srcModelName' => 'string',
             'viewText' => 'string',
             'targetTableName' => 'string',
@@ -58,11 +58,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  名称。
     * description  描述。
-    * targetTableId  目的表ID。
-    * srcModelId  来源表在关系建模中的模型ID。
+    * targetTableId  目的表ID，填写String类型替代Long类型。
+    * srcModelId  来源表在关系建模中的模型ID，填写String类型替代Long类型。
     * srcModelName  来源模型名称。
     * viewText  采集的视图来源，dws视图逆向使用。
     * targetTableName  目的表名称。
@@ -77,11 +77,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'name' => null,
         'description' => null,
-        'targetTableId' => 'int64',
-        'srcModelId' => 'int64',
+        'targetTableId' => null,
+        'srcModelId' => null,
         'srcModelName' => null,
         'viewText' => null,
         'targetTableName' => null,
@@ -117,11 +117,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  名称。
     * description  描述。
-    * targetTableId  目的表ID。
-    * srcModelId  来源表在关系建模中的模型ID。
+    * targetTableId  目的表ID，填写String类型替代Long类型。
+    * srcModelId  来源表在关系建模中的模型ID，填写String类型替代Long类型。
     * srcModelName  来源模型名称。
     * viewText  采集的视图来源，dws视图逆向使用。
     * targetTableName  目的表名称。
@@ -155,11 +155,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  名称。
     * description  描述。
-    * targetTableId  目的表ID。
-    * srcModelId  来源表在关系建模中的模型ID。
+    * targetTableId  目的表ID，填写String类型替代Long类型。
+    * srcModelId  来源表在关系建模中的模型ID，填写String类型替代Long类型。
     * srcModelName  来源模型名称。
     * viewText  采集的视图来源，dws视图逆向使用。
     * targetTableName  目的表名称。
@@ -193,11 +193,11 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。
+    * id  编码，填写String类型替代Long类型。
     * name  名称。
     * description  描述。
-    * targetTableId  目的表ID。
-    * srcModelId  来源表在关系建模中的模型ID。
+    * targetTableId  目的表ID，填写String类型替代Long类型。
+    * srcModelId  来源表在关系建模中的模型ID，填写String类型替代Long类型。
     * srcModelName  来源模型名称。
     * viewText  采集的视图来源，dws视图逆向使用。
     * targetTableName  目的表名称。
@@ -337,9 +337,9 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。
+    *  编码，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -349,7 +349,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。
+    * @param string|null $id 编码，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -409,9 +409,9 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetTableId
-    *  目的表ID。
+    *  目的表ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getTargetTableId()
     {
@@ -421,7 +421,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets targetTableId
     *
-    * @param int|null $targetTableId 目的表ID。
+    * @param string|null $targetTableId 目的表ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -433,9 +433,9 @@ class TableMappingVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcModelId
-    *  来源表在关系建模中的模型ID。
+    *  来源表在关系建模中的模型ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getSrcModelId()
     {
@@ -445,7 +445,7 @@ class TableMappingVO implements ModelInterface, ArrayAccess
     /**
     * Sets srcModelId
     *
-    * @param int|null $srcModelId 来源表在关系建模中的模型ID。
+    * @param string|null $srcModelId 来源表在关系建模中的模型ID，填写String类型替代Long类型。
     *
     * @return $this
     */

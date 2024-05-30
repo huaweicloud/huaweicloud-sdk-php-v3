@@ -28,7 +28,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     * availableZone  可用区标识。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
     * sizeMeasureId  资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
-    * usageFactor  使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    * usageFactor  使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     * usageValue  使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     * usageMeasureId  使用量度量单位， 例如按小时询价，使用量值为1，使用量单位为小时。
     * subscriptionNum  订购数量。
@@ -60,7 +60,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     * availableZone  可用区标识。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
     * sizeMeasureId  资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
-    * usageFactor  使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    * usageFactor  使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     * usageValue  使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     * usageMeasureId  使用量度量单位， 例如按小时询价，使用量值为1，使用量单位为小时。
     * subscriptionNum  订购数量。
@@ -113,7 +113,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     * availableZone  可用区标识。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
     * sizeMeasureId  资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
-    * usageFactor  使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    * usageFactor  使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     * usageValue  使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     * usageMeasureId  使用量度量单位， 例如按小时询价，使用量值为1，使用量单位为小时。
     * subscriptionNum  订购数量。
@@ -145,7 +145,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     * availableZone  可用区标识。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
     * sizeMeasureId  资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
-    * usageFactor  使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    * usageFactor  使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     * usageValue  使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     * usageMeasureId  使用量度量单位， 例如按小时询价，使用量值为1，使用量单位为小时。
     * subscriptionNum  订购数量。
@@ -177,7 +177,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     * availableZone  可用区标识。此参数不携带或携带值为空串或携带值为null时，不作为筛选条件。
     * resourceSize  资源容量大小，例如购买的卷大小或带宽大小。 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
     * sizeMeasureId  资源容量度量标识，枚举值如下： 15：Mbps（购买带宽时使用）17：GB（购买云硬盘时使用）14：个（次） 线性产品时该参数不能为空。线性产品为包括硬盘，带宽等在订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小。非线性产品时此参数不携带或者携带值为null时，不作为筛选条件。
-    * usageFactor  使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    * usageFactor  使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     * usageValue  使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     * usageMeasureId  使用量度量单位， 例如按小时询价，使用量值为1，使用量单位为小时。
     * subscriptionNum  订购数量。
@@ -574,7 +574,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets usageFactor
-    *  使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    *  使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     *
     * @return string
     */
@@ -586,7 +586,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets usageFactor
     *
-    * @param string $usageFactor 使用量因子编码，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
+    * @param string $usageFactor 使用量因子编码，大小写不敏感，取值和话单中的使用量因子一致，云服务和使用量因子对应关系举例如下： 云服务器：Duration云硬盘：Duration弹性IP：Duration带宽：Duration或upflow市场镜像：Duration 您可以调用查询使用量类型列表接口获取响应参数表3中参数code的取值，即每种云服务对应的计费因子。
     *
     * @return $this
     */

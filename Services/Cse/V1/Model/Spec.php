@@ -20,16 +20,16 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  微服务引擎专享版CCE规格ID
-    * engineId  微服务引擎专享版ID
-    * specType  微服务引擎专享版CCE集群部署类型
-    * cluster  微服务引擎专享版CCE集群信息，目前为null
-    * clusterId  微服务引擎专享版CCE集群ID
+    * id  微服务引擎CCE规格ID
+    * engineId  微服务引擎ID
+    * specType  微服务引擎的集群部署类型
+    * cluster  微服务引擎的CCE集群信息，目前为null
+    * clusterId  微服务引擎的CCE集群ID
     * clusterNodes  clusterNodes
-    * flavor  微服务引擎专享版CCE集群规格
-    * region  微服务引擎专享版CCE集群所在region
-    * version  微服务引擎专享版CCE集群版本
-    * extendParam  微服务引擎专享版CCE集群附加参数
+    * flavor  微服务引擎的CCE集群规格
+    * region  微服务引擎的CCE集群所在region
+    * version  微服务引擎的CCE集群版本
+    * extendParam  微服务引擎的CCE集群附加参数
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  微服务引擎专享版CCE规格ID
-    * engineId  微服务引擎专享版ID
-    * specType  微服务引擎专享版CCE集群部署类型
-    * cluster  微服务引擎专享版CCE集群信息，目前为null
-    * clusterId  微服务引擎专享版CCE集群ID
+    * id  微服务引擎CCE规格ID
+    * engineId  微服务引擎ID
+    * specType  微服务引擎的集群部署类型
+    * cluster  微服务引擎的CCE集群信息，目前为null
+    * clusterId  微服务引擎的CCE集群ID
     * clusterNodes  clusterNodes
-    * flavor  微服务引擎专享版CCE集群规格
-    * region  微服务引擎专享版CCE集群所在region
-    * version  微服务引擎专享版CCE集群版本
-    * extendParam  微服务引擎专享版CCE集群附加参数
+    * flavor  微服务引擎的CCE集群规格
+    * region  微服务引擎的CCE集群所在region
+    * version  微服务引擎的CCE集群版本
+    * extendParam  微服务引擎的CCE集群附加参数
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  微服务引擎专享版CCE规格ID
-    * engineId  微服务引擎专享版ID
-    * specType  微服务引擎专享版CCE集群部署类型
-    * cluster  微服务引擎专享版CCE集群信息，目前为null
-    * clusterId  微服务引擎专享版CCE集群ID
+    * id  微服务引擎CCE规格ID
+    * engineId  微服务引擎ID
+    * specType  微服务引擎的集群部署类型
+    * cluster  微服务引擎的CCE集群信息，目前为null
+    * clusterId  微服务引擎的CCE集群ID
     * clusterNodes  clusterNodes
-    * flavor  微服务引擎专享版CCE集群规格
-    * region  微服务引擎专享版CCE集群所在region
-    * version  微服务引擎专享版CCE集群版本
-    * extendParam  微服务引擎专享版CCE集群附加参数
+    * flavor  微服务引擎的CCE集群规格
+    * region  微服务引擎的CCE集群所在region
+    * version  微服务引擎的CCE集群版本
+    * extendParam  微服务引擎的CCE集群附加参数
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  微服务引擎专享版CCE规格ID
-    * engineId  微服务引擎专享版ID
-    * specType  微服务引擎专享版CCE集群部署类型
-    * cluster  微服务引擎专享版CCE集群信息，目前为null
-    * clusterId  微服务引擎专享版CCE集群ID
+    * id  微服务引擎CCE规格ID
+    * engineId  微服务引擎ID
+    * specType  微服务引擎的集群部署类型
+    * cluster  微服务引擎的CCE集群信息，目前为null
+    * clusterId  微服务引擎的CCE集群ID
     * clusterNodes  clusterNodes
-    * flavor  微服务引擎专享版CCE集群规格
-    * region  微服务引擎专享版CCE集群所在region
-    * version  微服务引擎专享版CCE集群版本
-    * extendParam  微服务引擎专享版CCE集群附加参数
+    * flavor  微服务引擎的CCE集群规格
+    * region  微服务引擎的CCE集群所在region
+    * version  微服务引擎的CCE集群版本
+    * extendParam  微服务引擎的CCE集群附加参数
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  微服务引擎专享版CCE规格ID
-    * engineId  微服务引擎专享版ID
-    * specType  微服务引擎专享版CCE集群部署类型
-    * cluster  微服务引擎专享版CCE集群信息，目前为null
-    * clusterId  微服务引擎专享版CCE集群ID
+    * id  微服务引擎CCE规格ID
+    * engineId  微服务引擎ID
+    * specType  微服务引擎的集群部署类型
+    * cluster  微服务引擎的CCE集群信息，目前为null
+    * clusterId  微服务引擎的CCE集群ID
     * clusterNodes  clusterNodes
-    * flavor  微服务引擎专享版CCE集群规格
-    * region  微服务引擎专享版CCE集群所在region
-    * version  微服务引擎专享版CCE集群版本
-    * extendParam  微服务引擎专享版CCE集群附加参数
+    * flavor  微服务引擎的CCE集群规格
+    * region  微服务引擎的CCE集群所在region
+    * version  微服务引擎的CCE集群版本
+    * extendParam  微服务引擎的CCE集群附加参数
     *
     * @var string[]
     */
@@ -219,9 +219,9 @@ class Spec implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SPEC_TYPE_CCE = 'CCE';
-    const SPEC_TYPE_CSE = 'CSE';
-    const SPEC_TYPE_SPRING_CLOUD = 'SpringCloud';
+    const SPEC_TYPE_CSE2 = 'CSE2';
+    const SPEC_TYPE_NACOS2 = 'Nacos2';
+    const SPEC_TYPE_MICRO_GATEWAY = 'MicroGateway';
     
 
     /**
@@ -232,9 +232,9 @@ class Spec implements ModelInterface, ArrayAccess
     public function getSpecTypeAllowableValues()
     {
         return [
-            self::SPEC_TYPE_CCE,
-            self::SPEC_TYPE_CSE,
-            self::SPEC_TYPE_SPRING_CLOUD,
+            self::SPEC_TYPE_CSE2,
+            self::SPEC_TYPE_NACOS2,
+            self::SPEC_TYPE_MICRO_GATEWAY,
         ];
     }
 
@@ -298,7 +298,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  微服务引擎专享版CCE规格ID
+    *  微服务引擎CCE规格ID
     *
     * @return int|null
     */
@@ -310,7 +310,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 微服务引擎专享版CCE规格ID
+    * @param int|null $id 微服务引擎CCE规格ID
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineId
-    *  微服务引擎专享版ID
+    *  微服务引擎ID
     *
     * @return string|null
     */
@@ -334,7 +334,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets engineId
     *
-    * @param string|null $engineId 微服务引擎专享版ID
+    * @param string|null $engineId 微服务引擎ID
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets specType
-    *  微服务引擎专享版CCE集群部署类型
+    *  微服务引擎的集群部署类型
     *
     * @return string|null
     */
@@ -358,7 +358,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets specType
     *
-    * @param string|null $specType 微服务引擎专享版CCE集群部署类型
+    * @param string|null $specType 微服务引擎的集群部署类型
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets cluster
-    *  微服务引擎专享版CCE集群信息，目前为null
+    *  微服务引擎的CCE集群信息，目前为null
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets cluster
     *
-    * @param string|null $cluster 微服务引擎专享版CCE集群信息，目前为null
+    * @param string|null $cluster 微服务引擎的CCE集群信息，目前为null
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  微服务引擎专享版CCE集群ID
+    *  微服务引擎的CCE集群ID
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string|null $clusterId 微服务引擎专享版CCE集群ID
+    * @param string|null $clusterId 微服务引擎的CCE集群ID
     *
     * @return $this
     */
@@ -442,7 +442,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  微服务引擎专享版CCE集群规格
+    *  微服务引擎的CCE集群规格
     *
     * @return string|null
     */
@@ -454,7 +454,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string|null $flavor 微服务引擎专享版CCE集群规格
+    * @param string|null $flavor 微服务引擎的CCE集群规格
     *
     * @return $this
     */
@@ -466,7 +466,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  微服务引擎专享版CCE集群所在region
+    *  微服务引擎的CCE集群所在region
     *
     * @return string|null
     */
@@ -478,7 +478,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string|null $region 微服务引擎专享版CCE集群所在region
+    * @param string|null $region 微服务引擎的CCE集群所在region
     *
     * @return $this
     */
@@ -490,7 +490,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  微服务引擎专享版CCE集群版本
+    *  微服务引擎的CCE集群版本
     *
     * @return string|null
     */
@@ -502,7 +502,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 微服务引擎专享版CCE集群版本
+    * @param string|null $version 微服务引擎的CCE集群版本
     *
     * @return $this
     */
@@ -514,7 +514,7 @@ class Spec implements ModelInterface, ArrayAccess
 
     /**
     * Gets extendParam
-    *  微服务引擎专享版CCE集群附加参数
+    *  微服务引擎的CCE集群附加参数
     *
     * @return string|null
     */
@@ -526,7 +526,7 @@ class Spec implements ModelInterface, ArrayAccess
     /**
     * Sets extendParam
     *
-    * @param string|null $extendParam 微服务引擎专享版CCE集群附加参数
+    * @param string|null $extendParam 微服务引擎的CCE集群附加参数
     *
     * @return $this
     */

@@ -23,6 +23,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * name  功能说明：ACL名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
     *
     * @var string[]
@@ -31,6 +32,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
             'adminStateUp' => 'bool'
     ];
 
@@ -39,6 +41,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * name  功能说明：ACL名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
     *
     * @var string[]
@@ -47,6 +50,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'enterpriseProjectId' => null,
+        'tags' => null,
         'adminStateUp' => null
     ];
 
@@ -76,6 +80,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * name  功能说明：ACL名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
     *
     * @var string[]
@@ -84,6 +89,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags',
             'adminStateUp' => 'admin_state_up'
     ];
 
@@ -92,6 +98,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * name  功能说明：ACL名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
     *
     * @var string[]
@@ -100,6 +107,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags',
             'adminStateUp' => 'setAdminStateUp'
     ];
 
@@ -108,6 +116,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     * name  功能说明：ACL名称 取值范围：0-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：ACL描述信息 取值范围：0-255个字符 约束：不能包含“<”和“>”。
     * enterpriseProjectId  功能说明：ACL企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：ACL资源标签
     * adminStateUp  功能说明：ACL是否开启，默认值true 取值范围：true表示ACL开启；false表示ACL关闭
     *
     * @var string[]
@@ -116,6 +125,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags',
             'adminStateUp' => 'getAdminStateUp'
     ];
 
@@ -180,6 +190,7 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
     }
 
@@ -277,6 +288,30 @@ class CreateFirewallOption implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  功能描述：ACL资源标签
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 功能描述：ACL资源标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

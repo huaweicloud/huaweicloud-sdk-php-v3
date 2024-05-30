@@ -20,7 +20,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specType  微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    * specType  微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specType  微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    * specType  微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specType  微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    * specType  微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specType  微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    * specType  微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specType  微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    * specType  微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets specType
-    *  微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    *  微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ListFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets specType
     *
-    * @param string|null $specType 微服务引擎专享版应用部署类型，查询CSE微服务引擎专享版需要将该值设置为CSE2。
+    * @param string|null $specType 微服务引擎应用部署类型，查询ServiceComb引擎专享版需要将该值设置为CSE2，查询注册配置中心需要将该值设置为Nacos2，查询网关需要将该值设置为MicroGateway。
     *
     * @return $this
     */

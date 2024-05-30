@@ -20,19 +20,20 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * orderId  订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认此参数不携带或携带值为空时，不作为筛选条件。
-    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
-    * limit  每次查询的订单数量，默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * orderType  订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    * limit  每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+    * method  查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
     *
     * @var string[]
     */
@@ -49,24 +50,26 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'string',
             'paymentTimeBegin' => 'string',
             'paymentTimeEnd' => 'string',
-            'indirectPartnerId' => 'string'
+            'indirectPartnerId' => 'string',
+            'method' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * orderId  订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认此参数不携带或携带值为空时，不作为筛选条件。
-    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
-    * limit  每次查询的订单数量，默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * orderType  订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    * limit  每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+    * method  查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         'orderBy' => null,
         'paymentTimeBegin' => null,
         'paymentTimeEnd' => null,
-        'indirectPartnerId' => null
+        'indirectPartnerId' => null,
+        'method' => null
     ];
 
     /**
@@ -109,19 +113,20 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * orderId  订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认此参数不携带或携带值为空时，不作为筛选条件。
-    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
-    * limit  每次查询的订单数量，默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * orderType  订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    * limit  每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+    * method  查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
     *
     * @var string[]
     */
@@ -138,24 +143,26 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'order_by',
             'paymentTimeBegin' => 'payment_time_begin',
             'paymentTimeEnd' => 'payment_time_end',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'indirectPartnerId' => 'indirect_partner_id',
+            'method' => 'method'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * orderId  订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认此参数不携带或携带值为空时，不作为筛选条件。
-    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
-    * limit  每次查询的订单数量，默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * orderType  订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    * limit  每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+    * method  查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
     *
     * @var string[]
     */
@@ -172,24 +179,26 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'setOrderBy',
             'paymentTimeBegin' => 'setPaymentTimeBegin',
             'paymentTimeEnd' => 'setPaymentTimeEnd',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'indirectPartnerId' => 'setIndirectPartnerId',
+            'method' => 'setMethod'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * orderId  订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * orderId  订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     * customerId  客户账号ID。您可以调用查询客户列表接口获取customer_id。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeBegin  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * createTimeEnd  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * serviceTypeCode  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     * status  订单状态：1：待审核3：处理中4：已取消5：已完成6：待支付9：待确认此参数不携带或携带值为空时，不作为筛选条件。
-    * orderType  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
-    * limit  每次查询的订单数量，默认值为10。
-    * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
-    * orderBy  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
-    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * orderType  订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    * limit  每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
+    * offset  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * orderBy  查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeBegin  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
+    * paymentTimeEnd  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     * indirectPartnerId  云经销商ID。获取方法请参见[查询云经销商列表](https://support.huaweicloud.com/api-bpconsole/espp_00003.html)。华为云总经销商（一级经销商）查询云经销商的客户订单列表时，需要携带该参数；否则只能查询自己客户的订单列表。
+    * method  查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             'orderBy' => 'getOrderBy',
             'paymentTimeBegin' => 'getPaymentTimeBegin',
             'paymentTimeEnd' => 'getPaymentTimeEnd',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'indirectPartnerId' => 'getIndirectPartnerId',
+            'method' => 'getMethod'
     ];
 
     /**
@@ -249,7 +259,22 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const METHOD_ONESELF = 'oneself';
+    const METHOD_SUB_CUSTOMER = 'sub_customer';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMethodAllowableValues()
+    {
+        return [
+            self::METHOD_ONESELF,
+            self::METHOD_SUB_CUSTOMER,
+        ];
+    }
 
 
     /**
@@ -280,6 +305,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
         $this->container['paymentTimeBegin'] = isset($data['paymentTimeBegin']) ? $data['paymentTimeBegin'] : null;
         $this->container['paymentTimeEnd'] = isset($data['paymentTimeEnd']) ? $data['paymentTimeEnd'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
+        $this->container['method'] = isset($data['method']) ? $data['method'] : null;
     }
 
     /**
@@ -308,6 +334,14 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getMethodAllowableValues();
+                if (!is_null($this->container['method']) && !in_array($this->container['method'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'method', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -324,7 +358,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    *  订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     *
     * @return string|null
     */
@@ -336,7 +370,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单ID。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
+    * @param string|null $orderId 订单ID。大小写不敏感。此参数不携带或携带值为空时，不作为筛选条件。 说明： 使用特殊字符进行查询的时候，请注意进行URL编码转换，如“%”的转码应为“%25”。
     *
     * @return $this
     */
@@ -372,7 +406,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeBegin
-    *  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    *  订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -384,7 +418,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeBegin
     *
-    * @param string|null $createTimeBegin 订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $createTimeBegin 订单创建开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -396,7 +430,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTimeEnd
-    *  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    *  订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -408,7 +442,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets createTimeEnd
     *
-    * @param string|null $createTimeEnd 订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $createTimeEnd 订单创建结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单创建开始时间与订单创建结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -420,7 +454,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceTypeCode
-    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    *  云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -432,7 +466,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets serviceTypeCode
     *
-    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $serviceTypeCode 云服务类型编码，例如OBS的云服务类型编码为“hws.service.type.obs”。大小写不敏感。您可以调用查询云服务类型列表接口获取。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -468,7 +502,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderType
-    *  订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    *  订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -480,7 +514,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderType
     *
-    * @param string|null $orderType 订单类型：1：开通2：续订3：变更4：退订11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $orderType 订单类型：1：开通2：续订3：变更4：退订10：包年/包月转按需11：按需转包年/包月13：试用14：转商用15：费用调整此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -492,7 +526,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的订单数量，默认值为10。
+    *  每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
     *
     * @return int|null
     */
@@ -504,7 +538,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的订单数量，默认值为10。
+    * @param int|null $limit 每次查询的订单数量，默认值为10。此参数不携带或携带值为空或携带值为null，取默认值10。
     *
     * @return $this
     */
@@ -516,7 +550,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    *  偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return int|null
     */
@@ -528,7 +562,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
+    * @param int|null $offset 偏移量，从0开始。默认值为0。此参数不携带或携带值为空或携带值为null，取默认值10。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
     *
     * @return $this
     */
@@ -540,7 +574,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderBy
-    *  查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    *  查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -552,7 +586,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets orderBy
     *
-    * @param string|null $orderBy 查询的订单列表排序。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $orderBy 查询的订单列表排序。大小写不敏感。支持按照创建时间进行排序，带-表示倒序。创建时间：升序为createTime，倒序为-createTime。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -564,7 +598,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets paymentTimeBegin
-    *  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    *  订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -576,7 +610,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets paymentTimeBegin
     *
-    * @param string|null $paymentTimeBegin 订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $paymentTimeBegin 订单支付开始时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -588,7 +622,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets paymentTimeEnd
-    *  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    *  订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return string|null
     */
@@ -600,7 +634,7 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets paymentTimeEnd
     *
-    * @param string|null $paymentTimeEnd 订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。此参数不携带或携带值为空时，不作为筛选条件。
+    * @param string|null $paymentTimeEnd 订单支付结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。订单支付开始时间与订单支付结束时间间隔不能超过1年。此参数不携带或携带值为空时，不作为筛选条件。
     *
     * @return $this
     */
@@ -631,6 +665,30 @@ class ListCustomerOrdersRequest implements ModelInterface, ArrayAccess
     public function setIndirectPartnerId($indirectPartnerId)
     {
         $this->container['indirectPartnerId'] = $indirectPartnerId;
+        return $this;
+    }
+
+    /**
+    * Gets method
+    *  查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
+    *
+    * @return string|null
+    */
+    public function getMethod()
+    {
+        return $this->container['method'];
+    }
+
+    /**
+    * Sets method
+    *
+    * @param string|null $method 查询方式。oneself：客户自己订单sub_customer：客户给企业子代付订单此参数不携带或携带值为空串或携带值为null时，默认值为“oneself”。
+    *
+    * @return $this
+    */
+    public function setMethod($method)
+    {
+        $this->container['method'] = $method;
         return $this;
     }
 

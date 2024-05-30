@@ -20,6 +20,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * appName  调用审核系统的应用名称，开发人员自己定。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * email  邮箱地址。
@@ -30,6 +31,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'appName' => 'string',
             'approverName' => 'string',
             'userId' => 'string',
             'email' => 'string',
@@ -40,6 +42,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * appName  调用审核系统的应用名称，开发人员自己定。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * email  邮箱地址。
@@ -50,6 +53,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'appName' => null,
         'approverName' => null,
         'userId' => null,
         'email' => null,
@@ -81,6 +85,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * appName  调用审核系统的应用名称，开发人员自己定。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * email  邮箱地址。
@@ -91,6 +96,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'appName' => 'app_name',
             'approverName' => 'approver_name',
             'userId' => 'user_id',
             'email' => 'email',
@@ -101,6 +107,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * appName  调用审核系统的应用名称，开发人员自己定。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * email  邮箱地址。
@@ -111,6 +118,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'appName' => 'setAppName',
             'approverName' => 'setApproverName',
             'userId' => 'setUserId',
             'email' => 'setEmail',
@@ -121,6 +129,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * appName  调用审核系统的应用名称，开发人员自己定。
     * approverName  审批人姓名。
     * userId  审批人ID。
     * email  邮箱地址。
@@ -131,6 +140,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'appName' => 'getAppName',
             'approverName' => 'getApproverName',
             'userId' => 'getUserId',
             'email' => 'getEmail',
@@ -197,6 +207,7 @@ class ApproverParam implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['approverName'] = isset($data['approverName']) ? $data['approverName'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
@@ -240,6 +251,30 @@ class ApproverParam implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets appName
+    *  调用审核系统的应用名称，开发人员自己定。
+    *
+    * @return string|null
+    */
+    public function getAppName()
+    {
+        return $this->container['appName'];
+    }
+
+    /**
+    * Sets appName
+    *
+    * @param string|null $appName 调用审核系统的应用名称，开发人员自己定。
+    *
+    * @return $this
+    */
+    public function setAppName($appName)
+    {
+        $this->container['appName'] = $appName;
+        return $this;
     }
 
     /**

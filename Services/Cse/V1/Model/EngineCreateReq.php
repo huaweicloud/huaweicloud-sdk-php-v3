@@ -20,20 +20,33 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
-    * description  微服务引擎专享版描述，长度0~255。
-    * payment  微服务引擎专享版计费方式，1表示按需
-    * flavor  微服务引擎专享版的规格
-    * azList  当前局点可用区列表。
-    * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    * name  微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    * description  微服务引擎描述，长度0~255。
+    * payment  微服务引擎计费方式，1表示按需
+    * flavor  微服务引擎的规格
+    * azList  当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
+    * authType  ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
     * vpcId  vpc标识
-    * networkId  微服务引擎专享版子网ID
-    * subnetCidr  微服务引擎专享版子网划分
-    * publicIpId  微服务引擎专享版公网地址ID，当前为null
+    * networkId  微服务引擎子网ID
+    * subnetCidr  微服务引擎子网划分
+    * publicIpId  ServiceComb引擎专享版公网地址ID，当前为null
     * authCred  authCred
-    * specType  微服务引擎专享版应用部署类型
+    * specType  微服务引擎部署类型
     * inputs  引擎附加参数
+    * enginestateInfo  enginestateInfo
+    * periodType  创建阶段类型
+    * flavorType  flavorType
+    * enterpriseProject  enterpriseProject
+    * vpcCidr  网关vpc划分
+    * resourceParams  resourceParams
+    * productId  产品ID
+    * capacityProductId  容量产品ID
+    * isFree  微服务引擎是否免费
+    * subnetName  微服务引擎使用的子网名称
+    * tags  标签
+    * maintenanceConfig  maintenanceConfig
+    * elbid  微服务引擎使用的elb的id
     *
     * @var string[]
     */
@@ -51,25 +64,51 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'publicIpId' => 'string',
             'authCred' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineRbacPwd',
             'specType' => 'string',
-            'inputs' => 'map[string,string]'
+            'inputs' => 'map[string,string]',
+            'enginestateInfo' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqEnginestateInfo',
+            'periodType' => 'int',
+            'flavorType' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqFlavorType',
+            'enterpriseProject' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqEnterpriseProject',
+            'vpcCidr' => 'string',
+            'resourceParams' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqResourceParams',
+            'productId' => 'string',
+            'capacityProductId' => 'string',
+            'isFree' => 'bool',
+            'subnetName' => 'string',
+            'tags' => 'string[]',
+            'maintenanceConfig' => '\HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqMaintenanceConfig',
+            'elbid' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
-    * description  微服务引擎专享版描述，长度0~255。
-    * payment  微服务引擎专享版计费方式，1表示按需
-    * flavor  微服务引擎专享版的规格
-    * azList  当前局点可用区列表。
-    * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    * name  微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    * description  微服务引擎描述，长度0~255。
+    * payment  微服务引擎计费方式，1表示按需
+    * flavor  微服务引擎的规格
+    * azList  当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
+    * authType  ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
     * vpcId  vpc标识
-    * networkId  微服务引擎专享版子网ID
-    * subnetCidr  微服务引擎专享版子网划分
-    * publicIpId  微服务引擎专享版公网地址ID，当前为null
+    * networkId  微服务引擎子网ID
+    * subnetCidr  微服务引擎子网划分
+    * publicIpId  ServiceComb引擎专享版公网地址ID，当前为null
     * authCred  authCred
-    * specType  微服务引擎专享版应用部署类型
+    * specType  微服务引擎部署类型
     * inputs  引擎附加参数
+    * enginestateInfo  enginestateInfo
+    * periodType  创建阶段类型
+    * flavorType  flavorType
+    * enterpriseProject  enterpriseProject
+    * vpcCidr  网关vpc划分
+    * resourceParams  resourceParams
+    * productId  产品ID
+    * capacityProductId  容量产品ID
+    * isFree  微服务引擎是否免费
+    * subnetName  微服务引擎使用的子网名称
+    * tags  标签
+    * maintenanceConfig  maintenanceConfig
+    * elbid  微服务引擎使用的elb的id
     *
     * @var string[]
     */
@@ -87,7 +126,20 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
         'publicIpId' => null,
         'authCred' => null,
         'specType' => null,
-        'inputs' => null
+        'inputs' => null,
+        'enginestateInfo' => null,
+        'periodType' => 'int32',
+        'flavorType' => null,
+        'enterpriseProject' => null,
+        'vpcCidr' => null,
+        'resourceParams' => null,
+        'productId' => null,
+        'capacityProductId' => null,
+        'isFree' => null,
+        'subnetName' => null,
+        'tags' => null,
+        'maintenanceConfig' => null,
+        'elbid' => null
     ];
 
     /**
@@ -113,20 +165,33 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
-    * description  微服务引擎专享版描述，长度0~255。
-    * payment  微服务引擎专享版计费方式，1表示按需
-    * flavor  微服务引擎专享版的规格
-    * azList  当前局点可用区列表。
-    * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    * name  微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    * description  微服务引擎描述，长度0~255。
+    * payment  微服务引擎计费方式，1表示按需
+    * flavor  微服务引擎的规格
+    * azList  当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
+    * authType  ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
     * vpcId  vpc标识
-    * networkId  微服务引擎专享版子网ID
-    * subnetCidr  微服务引擎专享版子网划分
-    * publicIpId  微服务引擎专享版公网地址ID，当前为null
+    * networkId  微服务引擎子网ID
+    * subnetCidr  微服务引擎子网划分
+    * publicIpId  ServiceComb引擎专享版公网地址ID，当前为null
     * authCred  authCred
-    * specType  微服务引擎专享版应用部署类型
+    * specType  微服务引擎部署类型
     * inputs  引擎附加参数
+    * enginestateInfo  enginestateInfo
+    * periodType  创建阶段类型
+    * flavorType  flavorType
+    * enterpriseProject  enterpriseProject
+    * vpcCidr  网关vpc划分
+    * resourceParams  resourceParams
+    * productId  产品ID
+    * capacityProductId  容量产品ID
+    * isFree  微服务引擎是否免费
+    * subnetName  微服务引擎使用的子网名称
+    * tags  标签
+    * maintenanceConfig  maintenanceConfig
+    * elbid  微服务引擎使用的elb的id
     *
     * @var string[]
     */
@@ -144,25 +209,51 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'publicIpId' => 'publicIpId',
             'authCred' => 'auth_cred',
             'specType' => 'specType',
-            'inputs' => 'inputs'
+            'inputs' => 'inputs',
+            'enginestateInfo' => 'enginestateInfo',
+            'periodType' => 'periodType',
+            'flavorType' => 'flavorType',
+            'enterpriseProject' => 'enterpriseProject',
+            'vpcCidr' => 'vpcCidr',
+            'resourceParams' => 'resourceParams',
+            'productId' => 'productId',
+            'capacityProductId' => 'capacityProductId',
+            'isFree' => 'isFree',
+            'subnetName' => 'subnetName',
+            'tags' => 'tags',
+            'maintenanceConfig' => 'maintenanceConfig',
+            'elbid' => 'elbid'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
-    * description  微服务引擎专享版描述，长度0~255。
-    * payment  微服务引擎专享版计费方式，1表示按需
-    * flavor  微服务引擎专享版的规格
-    * azList  当前局点可用区列表。
-    * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    * name  微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    * description  微服务引擎描述，长度0~255。
+    * payment  微服务引擎计费方式，1表示按需
+    * flavor  微服务引擎的规格
+    * azList  当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
+    * authType  ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
     * vpcId  vpc标识
-    * networkId  微服务引擎专享版子网ID
-    * subnetCidr  微服务引擎专享版子网划分
-    * publicIpId  微服务引擎专享版公网地址ID，当前为null
+    * networkId  微服务引擎子网ID
+    * subnetCidr  微服务引擎子网划分
+    * publicIpId  ServiceComb引擎专享版公网地址ID，当前为null
     * authCred  authCred
-    * specType  微服务引擎专享版应用部署类型
+    * specType  微服务引擎部署类型
     * inputs  引擎附加参数
+    * enginestateInfo  enginestateInfo
+    * periodType  创建阶段类型
+    * flavorType  flavorType
+    * enterpriseProject  enterpriseProject
+    * vpcCidr  网关vpc划分
+    * resourceParams  resourceParams
+    * productId  产品ID
+    * capacityProductId  容量产品ID
+    * isFree  微服务引擎是否免费
+    * subnetName  微服务引擎使用的子网名称
+    * tags  标签
+    * maintenanceConfig  maintenanceConfig
+    * elbid  微服务引擎使用的elb的id
     *
     * @var string[]
     */
@@ -180,25 +271,51 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'publicIpId' => 'setPublicIpId',
             'authCred' => 'setAuthCred',
             'specType' => 'setSpecType',
-            'inputs' => 'setInputs'
+            'inputs' => 'setInputs',
+            'enginestateInfo' => 'setEnginestateInfo',
+            'periodType' => 'setPeriodType',
+            'flavorType' => 'setFlavorType',
+            'enterpriseProject' => 'setEnterpriseProject',
+            'vpcCidr' => 'setVpcCidr',
+            'resourceParams' => 'setResourceParams',
+            'productId' => 'setProductId',
+            'capacityProductId' => 'setCapacityProductId',
+            'isFree' => 'setIsFree',
+            'subnetName' => 'setSubnetName',
+            'tags' => 'setTags',
+            'maintenanceConfig' => 'setMaintenanceConfig',
+            'elbid' => 'setElbid'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
-    * description  微服务引擎专享版描述，长度0~255。
-    * payment  微服务引擎专享版计费方式，1表示按需
-    * flavor  微服务引擎专享版的规格
-    * azList  当前局点可用区列表。
-    * authType  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    * name  微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    * description  微服务引擎描述，长度0~255。
+    * payment  微服务引擎计费方式，1表示按需
+    * flavor  微服务引擎的规格
+    * azList  当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
+    * authType  ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     * vpc  vpc名称
     * vpcId  vpc标识
-    * networkId  微服务引擎专享版子网ID
-    * subnetCidr  微服务引擎专享版子网划分
-    * publicIpId  微服务引擎专享版公网地址ID，当前为null
+    * networkId  微服务引擎子网ID
+    * subnetCidr  微服务引擎子网划分
+    * publicIpId  ServiceComb引擎专享版公网地址ID，当前为null
     * authCred  authCred
-    * specType  微服务引擎专享版应用部署类型
+    * specType  微服务引擎部署类型
     * inputs  引擎附加参数
+    * enginestateInfo  enginestateInfo
+    * periodType  创建阶段类型
+    * flavorType  flavorType
+    * enterpriseProject  enterpriseProject
+    * vpcCidr  网关vpc划分
+    * resourceParams  resourceParams
+    * productId  产品ID
+    * capacityProductId  容量产品ID
+    * isFree  微服务引擎是否免费
+    * subnetName  微服务引擎使用的子网名称
+    * tags  标签
+    * maintenanceConfig  maintenanceConfig
+    * elbid  微服务引擎使用的elb的id
     *
     * @var string[]
     */
@@ -216,7 +333,20 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             'publicIpId' => 'getPublicIpId',
             'authCred' => 'getAuthCred',
             'specType' => 'getSpecType',
-            'inputs' => 'getInputs'
+            'inputs' => 'getInputs',
+            'enginestateInfo' => 'getEnginestateInfo',
+            'periodType' => 'getPeriodType',
+            'flavorType' => 'getFlavorType',
+            'enterpriseProject' => 'getEnterpriseProject',
+            'vpcCidr' => 'getVpcCidr',
+            'resourceParams' => 'getResourceParams',
+            'productId' => 'getProductId',
+            'capacityProductId' => 'getCapacityProductId',
+            'isFree' => 'getIsFree',
+            'subnetName' => 'getSubnetName',
+            'tags' => 'getTags',
+            'maintenanceConfig' => 'getMaintenanceConfig',
+            'elbid' => 'getElbid'
     ];
 
     /**
@@ -264,10 +394,19 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     const FLAVOR_CSE_S1_MEDIUM2 = 'cse.s1.medium2';
     const FLAVOR_CSE_S1_LARGE2 = 'cse.s1.large2';
     const FLAVOR_CSE_S1_XLARGE2 = 'cse.s1.xlarge2';
+    const FLAVOR_CSE_NACOS2_C1_LARGE_10 = 'cse.nacos2.c1.large.10';
+    const FLAVOR_CSE_NACOS2_C1_XLARGE_20 = 'cse.nacos2.c1.xlarge.20';
+    const FLAVOR_CSE_NACOS2_C1_XLARGE_50 = 'cse.nacos2.c1.xlarge.50';
+    const FLAVOR_CSE_NACOS2_C1_XLARGE_60 = 'cse.nacos2.c1.xlarge.60';
+    const FLAVOR_CSE_NACOS2_C1_2XLARGE_100 = 'cse.nacos2.c1.2xlarge.100';
+    const FLAVOR_CSE_MICROGATEWAY_PRO_SMALL_1 = 'cse.microgateway.pro.small.1';
+    const FLAVOR_CSE_MICROGATEWAY_PRO_MEDIUM_1 = 'cse.microgateway.pro.medium.1';
+    const FLAVOR_CSE_MICROGATEWAY_PRO_LARGE_1 = 'cse.microgateway.pro.large.1';
     const AUTH_TYPE_RBAC = 'RBAC';
     const AUTH_TYPE_NONE = 'NONE';
-    const SPEC_TYPE_CSE = 'CSE';
     const SPEC_TYPE_CSE2 = 'CSE2';
+    const SPEC_TYPE_NACOS2 = 'Nacos2';
+    const SPEC_TYPE_MICRO_GATEWAY = 'MicroGateway';
     
 
     /**
@@ -294,6 +433,14 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
             self::FLAVOR_CSE_S1_MEDIUM2,
             self::FLAVOR_CSE_S1_LARGE2,
             self::FLAVOR_CSE_S1_XLARGE2,
+            self::FLAVOR_CSE_NACOS2_C1_LARGE_10,
+            self::FLAVOR_CSE_NACOS2_C1_XLARGE_20,
+            self::FLAVOR_CSE_NACOS2_C1_XLARGE_50,
+            self::FLAVOR_CSE_NACOS2_C1_XLARGE_60,
+            self::FLAVOR_CSE_NACOS2_C1_2XLARGE_100,
+            self::FLAVOR_CSE_MICROGATEWAY_PRO_SMALL_1,
+            self::FLAVOR_CSE_MICROGATEWAY_PRO_MEDIUM_1,
+            self::FLAVOR_CSE_MICROGATEWAY_PRO_LARGE_1,
         ];
     }
 
@@ -318,8 +465,9 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     public function getSpecTypeAllowableValues()
     {
         return [
-            self::SPEC_TYPE_CSE,
             self::SPEC_TYPE_CSE2,
+            self::SPEC_TYPE_NACOS2,
+            self::SPEC_TYPE_MICRO_GATEWAY,
         ];
     }
 
@@ -353,6 +501,19 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
         $this->container['authCred'] = isset($data['authCred']) ? $data['authCred'] : null;
         $this->container['specType'] = isset($data['specType']) ? $data['specType'] : null;
         $this->container['inputs'] = isset($data['inputs']) ? $data['inputs'] : null;
+        $this->container['enginestateInfo'] = isset($data['enginestateInfo']) ? $data['enginestateInfo'] : null;
+        $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
+        $this->container['flavorType'] = isset($data['flavorType']) ? $data['flavorType'] : null;
+        $this->container['enterpriseProject'] = isset($data['enterpriseProject']) ? $data['enterpriseProject'] : null;
+        $this->container['vpcCidr'] = isset($data['vpcCidr']) ? $data['vpcCidr'] : null;
+        $this->container['resourceParams'] = isset($data['resourceParams']) ? $data['resourceParams'] : null;
+        $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
+        $this->container['capacityProductId'] = isset($data['capacityProductId']) ? $data['capacityProductId'] : null;
+        $this->container['isFree'] = isset($data['isFree']) ? $data['isFree'] : null;
+        $this->container['subnetName'] = isset($data['subnetName']) ? $data['subnetName'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['maintenanceConfig'] = isset($data['maintenanceConfig']) ? $data['maintenanceConfig'] : null;
+        $this->container['elbid'] = isset($data['elbid']) ? $data['elbid'] : null;
     }
 
     /**
@@ -397,9 +558,6 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['azList'] === null) {
-            $invalidProperties[] = "'azList' can't be null";
-        }
         if ($this->container['authType'] === null) {
             $invalidProperties[] = "'authType' can't be null";
         }
@@ -462,7 +620,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    *  微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
     *
     * @return string
     */
@@ -474,7 +632,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 微服务引擎专享版的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
+    * @param string $name 微服务引擎的名称，名称为字母开头，字母、数字、-组成，且不能以-结尾，3-24个字符。
     *
     * @return $this
     */
@@ -486,7 +644,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  微服务引擎专享版描述，长度0~255。
+    *  微服务引擎描述，长度0~255。
     *
     * @return string|null
     */
@@ -498,7 +656,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 微服务引擎专享版描述，长度0~255。
+    * @param string|null $description 微服务引擎描述，长度0~255。
     *
     * @return $this
     */
@@ -510,7 +668,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets payment
-    *  微服务引擎专享版计费方式，1表示按需
+    *  微服务引擎计费方式，1表示按需
     *
     * @return string
     */
@@ -522,7 +680,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets payment
     *
-    * @param string $payment 微服务引擎专享版计费方式，1表示按需
+    * @param string $payment 微服务引擎计费方式，1表示按需
     *
     * @return $this
     */
@@ -534,7 +692,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavor
-    *  微服务引擎专享版的规格
+    *  微服务引擎的规格
     *
     * @return string
     */
@@ -546,7 +704,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param string $flavor 微服务引擎专享版的规格
+    * @param string $flavor 微服务引擎的规格
     *
     * @return $this
     */
@@ -558,9 +716,9 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets azList
-    *  当前局点可用区列表。
+    *  当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getAzList()
     {
@@ -570,7 +728,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets azList
     *
-    * @param string[] $azList 当前局点可用区列表。
+    * @param string[]|null $azList 当前局点可用区列表，创建ServiceComb引擎专享版需要填写。
     *
     * @return $this
     */
@@ -582,7 +740,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    *  ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     *
     * @return string
     */
@@ -594,7 +752,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string $authType 微服务引擎专享版认证方式，RBAC为安全认证，NONE为无认证。
+    * @param string $authType ServiceComb引擎专享版与注册配置中心认证方式，RBAC为安全认证，NONE为无认证。
     *
     * @return $this
     */
@@ -654,7 +812,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkId
-    *  微服务引擎专享版子网ID
+    *  微服务引擎子网ID
     *
     * @return string
     */
@@ -666,7 +824,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets networkId
     *
-    * @param string $networkId 微服务引擎专享版子网ID
+    * @param string $networkId 微服务引擎子网ID
     *
     * @return $this
     */
@@ -678,7 +836,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidr
-    *  微服务引擎专享版子网划分
+    *  微服务引擎子网划分
     *
     * @return string
     */
@@ -690,7 +848,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidr
     *
-    * @param string $subnetCidr 微服务引擎专享版子网划分
+    * @param string $subnetCidr 微服务引擎子网划分
     *
     * @return $this
     */
@@ -702,7 +860,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpId
-    *  微服务引擎专享版公网地址ID，当前为null
+    *  ServiceComb引擎专享版公网地址ID，当前为null
     *
     * @return string|null
     */
@@ -714,7 +872,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpId
     *
-    * @param string|null $publicIpId 微服务引擎专享版公网地址ID，当前为null
+    * @param string|null $publicIpId ServiceComb引擎专享版公网地址ID，当前为null
     *
     * @return $this
     */
@@ -750,7 +908,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets specType
-    *  微服务引擎专享版应用部署类型
+    *  微服务引擎部署类型
     *
     * @return string
     */
@@ -762,7 +920,7 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets specType
     *
-    * @param string $specType 微服务引擎专享版应用部署类型
+    * @param string $specType 微服务引擎部署类型
     *
     * @return $this
     */
@@ -793,6 +951,318 @@ class EngineCreateReq implements ModelInterface, ArrayAccess
     public function setInputs($inputs)
     {
         $this->container['inputs'] = $inputs;
+        return $this;
+    }
+
+    /**
+    * Gets enginestateInfo
+    *  enginestateInfo
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqEnginestateInfo|null
+    */
+    public function getEnginestateInfo()
+    {
+        return $this->container['enginestateInfo'];
+    }
+
+    /**
+    * Sets enginestateInfo
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqEnginestateInfo|null $enginestateInfo enginestateInfo
+    *
+    * @return $this
+    */
+    public function setEnginestateInfo($enginestateInfo)
+    {
+        $this->container['enginestateInfo'] = $enginestateInfo;
+        return $this;
+    }
+
+    /**
+    * Gets periodType
+    *  创建阶段类型
+    *
+    * @return int|null
+    */
+    public function getPeriodType()
+    {
+        return $this->container['periodType'];
+    }
+
+    /**
+    * Sets periodType
+    *
+    * @param int|null $periodType 创建阶段类型
+    *
+    * @return $this
+    */
+    public function setPeriodType($periodType)
+    {
+        $this->container['periodType'] = $periodType;
+        return $this;
+    }
+
+    /**
+    * Gets flavorType
+    *  flavorType
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqFlavorType|null
+    */
+    public function getFlavorType()
+    {
+        return $this->container['flavorType'];
+    }
+
+    /**
+    * Sets flavorType
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqFlavorType|null $flavorType flavorType
+    *
+    * @return $this
+    */
+    public function setFlavorType($flavorType)
+    {
+        $this->container['flavorType'] = $flavorType;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProject
+    *  enterpriseProject
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqEnterpriseProject|null
+    */
+    public function getEnterpriseProject()
+    {
+        return $this->container['enterpriseProject'];
+    }
+
+    /**
+    * Sets enterpriseProject
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqEnterpriseProject|null $enterpriseProject enterpriseProject
+    *
+    * @return $this
+    */
+    public function setEnterpriseProject($enterpriseProject)
+    {
+        $this->container['enterpriseProject'] = $enterpriseProject;
+        return $this;
+    }
+
+    /**
+    * Gets vpcCidr
+    *  网关vpc划分
+    *
+    * @return string|null
+    */
+    public function getVpcCidr()
+    {
+        return $this->container['vpcCidr'];
+    }
+
+    /**
+    * Sets vpcCidr
+    *
+    * @param string|null $vpcCidr 网关vpc划分
+    *
+    * @return $this
+    */
+    public function setVpcCidr($vpcCidr)
+    {
+        $this->container['vpcCidr'] = $vpcCidr;
+        return $this;
+    }
+
+    /**
+    * Gets resourceParams
+    *  resourceParams
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqResourceParams|null
+    */
+    public function getResourceParams()
+    {
+        return $this->container['resourceParams'];
+    }
+
+    /**
+    * Sets resourceParams
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqResourceParams|null $resourceParams resourceParams
+    *
+    * @return $this
+    */
+    public function setResourceParams($resourceParams)
+    {
+        $this->container['resourceParams'] = $resourceParams;
+        return $this;
+    }
+
+    /**
+    * Gets productId
+    *  产品ID
+    *
+    * @return string|null
+    */
+    public function getProductId()
+    {
+        return $this->container['productId'];
+    }
+
+    /**
+    * Sets productId
+    *
+    * @param string|null $productId 产品ID
+    *
+    * @return $this
+    */
+    public function setProductId($productId)
+    {
+        $this->container['productId'] = $productId;
+        return $this;
+    }
+
+    /**
+    * Gets capacityProductId
+    *  容量产品ID
+    *
+    * @return string|null
+    */
+    public function getCapacityProductId()
+    {
+        return $this->container['capacityProductId'];
+    }
+
+    /**
+    * Sets capacityProductId
+    *
+    * @param string|null $capacityProductId 容量产品ID
+    *
+    * @return $this
+    */
+    public function setCapacityProductId($capacityProductId)
+    {
+        $this->container['capacityProductId'] = $capacityProductId;
+        return $this;
+    }
+
+    /**
+    * Gets isFree
+    *  微服务引擎是否免费
+    *
+    * @return bool|null
+    */
+    public function getIsFree()
+    {
+        return $this->container['isFree'];
+    }
+
+    /**
+    * Sets isFree
+    *
+    * @param bool|null $isFree 微服务引擎是否免费
+    *
+    * @return $this
+    */
+    public function setIsFree($isFree)
+    {
+        $this->container['isFree'] = $isFree;
+        return $this;
+    }
+
+    /**
+    * Gets subnetName
+    *  微服务引擎使用的子网名称
+    *
+    * @return string|null
+    */
+    public function getSubnetName()
+    {
+        return $this->container['subnetName'];
+    }
+
+    /**
+    * Sets subnetName
+    *
+    * @param string|null $subnetName 微服务引擎使用的子网名称
+    *
+    * @return $this
+    */
+    public function setSubnetName($subnetName)
+    {
+        $this->container['subnetName'] = $subnetName;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  标签
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags 标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets maintenanceConfig
+    *  maintenanceConfig
+    *
+    * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqMaintenanceConfig|null
+    */
+    public function getMaintenanceConfig()
+    {
+        return $this->container['maintenanceConfig'];
+    }
+
+    /**
+    * Sets maintenanceConfig
+    *
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineCreateReqMaintenanceConfig|null $maintenanceConfig maintenanceConfig
+    *
+    * @return $this
+    */
+    public function setMaintenanceConfig($maintenanceConfig)
+    {
+        $this->container['maintenanceConfig'] = $maintenanceConfig;
+        return $this;
+    }
+
+    /**
+    * Gets elbid
+    *  微服务引擎使用的elb的id
+    *
+    * @return string|null
+    */
+    public function getElbid()
+    {
+        return $this->container['elbid'];
+    }
+
+    /**
+    * Sets elbid
+    *
+    * @param string|null $elbid 微服务引擎使用的elb的id
+    *
+    * @return $this
+    */
+    public function setElbid($elbid)
+    {
+        $this->container['elbid'] = $elbid;
         return $this;
     }
 

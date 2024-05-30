@@ -24,18 +24,18 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     * description  描述。
     * guid  对应资产中ID。
     * owner  责任人。
-    * parentId  父目录ID，没有则为根目录。
-    * prevId  上个节点ID，没有则为首节点。
-    * nextId  下个节点ID，没有则为尾节点。
-    * id  创建时传空，更新时必填。
+    * parentId  父目录ID，没有则为根目录。填写String类型替代Long类型。
+    * prevId  上个节点ID，没有则为首节点。填写String类型替代Long类型。
+    * nextId  下个节点ID，没有则为尾节点。填写String类型替代Long类型。
+    * id  创建时传空，更新时必填。填写String类型替代Long类型。
     * qualifiedId  认证ID，自动生成。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * bizmetricNum  拥有业务指标数量，前端不传。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程。
-    * children  下层子目录。
+    * children  下层子目录，只读。
     *
     * @var string[]
     */
@@ -44,10 +44,10 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
             'description' => 'string',
             'guid' => 'string',
             'owner' => 'string',
-            'parentId' => 'int',
-            'prevId' => 'int',
-            'nextId' => 'int',
-            'id' => 'int',
+            'parentId' => 'string',
+            'prevId' => 'string',
+            'nextId' => 'string',
+            'id' => 'string',
             'qualifiedId' => 'string',
             'createBy' => 'string',
             'updateBy' => 'string',
@@ -64,18 +64,18 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     * description  描述。
     * guid  对应资产中ID。
     * owner  责任人。
-    * parentId  父目录ID，没有则为根目录。
-    * prevId  上个节点ID，没有则为首节点。
-    * nextId  下个节点ID，没有则为尾节点。
-    * id  创建时传空，更新时必填。
+    * parentId  父目录ID，没有则为根目录。填写String类型替代Long类型。
+    * prevId  上个节点ID，没有则为首节点。填写String类型替代Long类型。
+    * nextId  下个节点ID，没有则为尾节点。填写String类型替代Long类型。
+    * id  创建时传空，更新时必填。填写String类型替代Long类型。
     * qualifiedId  认证ID，自动生成。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * bizmetricNum  拥有业务指标数量，前端不传。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程。
-    * children  下层子目录。
+    * children  下层子目录，只读。
     *
     * @var string[]
     */
@@ -84,10 +84,10 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
         'description' => null,
         'guid' => null,
         'owner' => null,
-        'parentId' => 'int64',
-        'prevId' => 'int64',
-        'nextId' => 'int64',
-        'id' => 'int64',
+        'parentId' => null,
+        'prevId' => null,
+        'nextId' => null,
+        'id' => null,
         'qualifiedId' => null,
         'createBy' => null,
         'updateBy' => null,
@@ -125,18 +125,18 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     * description  描述。
     * guid  对应资产中ID。
     * owner  责任人。
-    * parentId  父目录ID，没有则为根目录。
-    * prevId  上个节点ID，没有则为首节点。
-    * nextId  下个节点ID，没有则为尾节点。
-    * id  创建时传空，更新时必填。
+    * parentId  父目录ID，没有则为根目录。填写String类型替代Long类型。
+    * prevId  上个节点ID，没有则为首节点。填写String类型替代Long类型。
+    * nextId  下个节点ID，没有则为尾节点。填写String类型替代Long类型。
+    * id  创建时传空，更新时必填。填写String类型替代Long类型。
     * qualifiedId  认证ID，自动生成。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * bizmetricNum  拥有业务指标数量，前端不传。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程。
-    * children  下层子目录。
+    * children  下层子目录，只读。
     *
     * @var string[]
     */
@@ -165,18 +165,18 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     * description  描述。
     * guid  对应资产中ID。
     * owner  责任人。
-    * parentId  父目录ID，没有则为根目录。
-    * prevId  上个节点ID，没有则为首节点。
-    * nextId  下个节点ID，没有则为尾节点。
-    * id  创建时传空，更新时必填。
+    * parentId  父目录ID，没有则为根目录。填写String类型替代Long类型。
+    * prevId  上个节点ID，没有则为首节点。填写String类型替代Long类型。
+    * nextId  下个节点ID，没有则为尾节点。填写String类型替代Long类型。
+    * id  创建时传空，更新时必填。填写String类型替代Long类型。
     * qualifiedId  认证ID，自动生成。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * bizmetricNum  拥有业务指标数量，前端不传。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程。
-    * children  下层子目录。
+    * children  下层子目录，只读。
     *
     * @var string[]
     */
@@ -205,18 +205,18 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     * description  描述。
     * guid  对应资产中ID。
     * owner  责任人。
-    * parentId  父目录ID，没有则为根目录。
-    * prevId  上个节点ID，没有则为首节点。
-    * nextId  下个节点ID，没有则为尾节点。
-    * id  创建时传空，更新时必填。
+    * parentId  父目录ID，没有则为根目录。填写String类型替代Long类型。
+    * prevId  上个节点ID，没有则为首节点。填写String类型替代Long类型。
+    * nextId  下个节点ID，没有则为尾节点。填写String类型替代Long类型。
+    * id  创建时传空，更新时必填。填写String类型替代Long类型。
     * qualifiedId  认证ID，自动生成。
     * createBy  创建人。
     * updateBy  更新人。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * bizmetricNum  拥有业务指标数量，前端不传。
     * childrenNum  拥有子流程的数量，不包括子流程的子流程。
-    * children  下层子目录。
+    * children  下层子目录，只读。
     *
     * @var string[]
     */
@@ -453,9 +453,9 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  父目录ID，没有则为根目录。
+    *  父目录ID，没有则为根目录。填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getParentId()
     {
@@ -465,7 +465,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param int|null $parentId 父目录ID，没有则为根目录。
+    * @param string|null $parentId 父目录ID，没有则为根目录。填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -477,9 +477,9 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets prevId
-    *  上个节点ID，没有则为首节点。
+    *  上个节点ID，没有则为首节点。填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getPrevId()
     {
@@ -489,7 +489,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets prevId
     *
-    * @param int|null $prevId 上个节点ID，没有则为首节点。
+    * @param string|null $prevId 上个节点ID，没有则为首节点。填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -501,9 +501,9 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextId
-    *  下个节点ID，没有则为尾节点。
+    *  下个节点ID，没有则为尾节点。填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getNextId()
     {
@@ -513,7 +513,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets nextId
     *
-    * @param int|null $nextId 下个节点ID，没有则为尾节点。
+    * @param string|null $nextId 下个节点ID，没有则为尾节点。填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -525,9 +525,9 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  创建时传空，更新时必填。
+    *  创建时传空，更新时必填。填写String类型替代Long类型。
     *
-    * @return int
+    * @return string
     */
     public function getId()
     {
@@ -537,7 +537,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int $id 创建时传空，更新时必填。
+    * @param string $id 创建时传空，更新时必填。填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -621,7 +621,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -633,7 +633,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -645,7 +645,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -657,7 +657,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -717,7 +717,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  下层子目录。
+    *  下层子目录，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizCatalogVO[]|null
     */
@@ -729,7 +729,7 @@ class BizCatalogVO implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizCatalogVO[]|null $children 下层子目录。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\BizCatalogVO[]|null $children 下层子目录，只读。
     *
     * @return $this
     */

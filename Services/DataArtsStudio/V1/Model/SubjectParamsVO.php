@@ -20,21 +20,21 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  编码。更新时必填，创建时可以为空。
+    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
     * alias  别名。
     * dataOwner  数据owner部门。
-    * dataOwnerList  数据owner人员。
-    * level  层级。
-    * parentId  上层主题ID，首层则为空。
-    * selfDefinedFields  属性自定义项。
+    * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
+    * level  层级。取值范围1-7。
+    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'int',
+            'id' => 'string',
             'nameCh' => 'string',
             'nameEn' => 'string',
             'description' => 'string',
@@ -42,27 +42,27 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
             'dataOwner' => 'string',
             'dataOwnerList' => 'string',
             'level' => 'int',
-            'parentId' => 'int',
+            'parentId' => 'string',
             'selfDefinedFields' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  编码。更新时必填，创建时可以为空。
+    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
     * alias  别名。
     * dataOwner  数据owner部门。
-    * dataOwnerList  数据owner人员。
-    * level  层级。
-    * parentId  上层主题ID，首层则为空。
-    * selfDefinedFields  属性自定义项。
+    * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
+    * level  层级。取值范围1-7。
+    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'nameCh' => null,
         'nameEn' => null,
         'description' => null,
@@ -70,7 +70,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
         'dataOwner' => null,
         'dataOwnerList' => null,
         'level' => null,
-        'parentId' => 'int64',
+        'parentId' => null,
         'selfDefinedFields' => null
     ];
 
@@ -97,16 +97,16 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  编码。更新时必填，创建时可以为空。
+    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
     * alias  别名。
     * dataOwner  数据owner部门。
-    * dataOwnerList  数据owner人员。
-    * level  层级。
-    * parentId  上层主题ID，首层则为空。
-    * selfDefinedFields  属性自定义项。
+    * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
+    * level  层级。取值范围1-7。
+    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  编码。更新时必填，创建时可以为空。
+    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
     * alias  别名。
     * dataOwner  数据owner部门。
-    * dataOwnerList  数据owner人员。
-    * level  层级。
-    * parentId  上层主题ID，首层则为空。
-    * selfDefinedFields  属性自定义项。
+    * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
+    * level  层级。取值范围1-7。
+    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  编码。更新时必填，创建时可以为空。
+    * id  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     * nameCh  中文名称。
     * nameEn  英文名称。
     * description  描述信息，业务对象必填。
     * alias  别名。
     * dataOwner  数据owner部门。
-    * dataOwnerList  数据owner人员。
-    * level  层级。
-    * parentId  上层主题ID，首层则为空。
-    * selfDefinedFields  属性自定义项。
+    * dataOwnerList  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
+    * level  层级。取值范围1-7。
+    * parentId  上层主题ID，首层则为空，填写String类型替代Long类型。
+    * selfDefinedFields  自定义项。主题的自定义属性。
     *
     * @var string[]
     */
@@ -318,9 +318,9 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  编码。更新时必填，创建时可以为空。
+    *  编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -330,7 +330,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 编码。更新时必填，创建时可以为空。
+    * @param string|null $id 编码。更新时必填，创建时可以为空，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -462,7 +462,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataOwnerList
-    *  数据owner人员。
+    *  数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     *
     * @return string
     */
@@ -474,7 +474,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets dataOwnerList
     *
-    * @param string $dataOwnerList 数据owner人员。
+    * @param string $dataOwnerList 数据owner人员。拼接成数组格式：[\"user_1\",\"user_2\"]。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  层级。
+    *  层级。取值范围1-7。
     *
     * @return int
     */
@@ -498,7 +498,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param int $level 层级。
+    * @param int $level 层级。取值范围1-7。
     *
     * @return $this
     */
@@ -510,9 +510,9 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets parentId
-    *  上层主题ID，首层则为空。
+    *  上层主题ID，首层则为空，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getParentId()
     {
@@ -522,7 +522,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets parentId
     *
-    * @param int|null $parentId 上层主题ID，首层则为空。
+    * @param string|null $parentId 上层主题ID，首层则为空，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets selfDefinedFields
-    *  属性自定义项。
+    *  自定义项。主题的自定义属性。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null
     */
@@ -546,7 +546,7 @@ class SubjectParamsVO implements ModelInterface, ArrayAccess
     /**
     * Sets selfDefinedFields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 属性自定义项。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\SelfDefinedFieldVO[]|null $selfDefinedFields 自定义项。主题的自定义属性。
     *
     * @return $this
     */

@@ -27,6 +27,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class SecurityGroup implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'createdAt' => '\DateTime',
             'updatedAt' => '\DateTime',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]'
     ];
 
     /**
@@ -49,6 +51,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class SecurityGroup implements ModelInterface, ArrayAccess
         'projectId' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time',
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'tags' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class SecurityGroup implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -114,6 +120,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class SecurityGroup implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -136,6 +144,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     * createdAt  功能说明：安全组创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * updatedAt  功能说明：安全组更新时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
     * enterpriseProjectId  功能说明：安全组所属的企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class SecurityGroup implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -214,6 +224,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -269,6 +280,9 @@ class SecurityGroup implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseProjectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['tags'] === null) {
+            $invalidProperties[] = "'tags' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -448,6 +462,30 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  功能描述：安全组的标签信息
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags 功能描述：安全组的标签信息
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -29,12 +29,12 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -95,12 +95,12 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -182,12 +182,12 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -248,12 +248,12 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -314,12 +314,12 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * regionCode  云服务区编码，例如：“cn-north-1”。具体请参见地区和终端节点对应云服务的“区域”列的值。
     * enterpriseProjectId  企业项目标识（企业项目ID）。 default项目对应ID：0未归集（表示该云服务不支持企业项目管理能力）项目对应ID：null其余项目对应ID获取方法请参见[如何获取企业项目ID](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0126101490.html)。
     * enterpriseProjectName  企业项目的名称。
-    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例
+    * chargingMode  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     * consumeTime  消费时间。 计费模式为包年/包月和预留实例场景时为订单的支付时间。计费模式为按需场景时为话单的生/失效时间。
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
-    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     * officialDiscountAmount  折扣金额。单位：元。
@@ -698,7 +698,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式。 1：包年/包月3：按需10：预留实例
+    *  计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     *
     * @return int|null
     */
@@ -710,7 +710,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int|null $chargingMode 计费模式。 1：包年/包月3：按需10：预留实例
+    * @param int|null $chargingMode 计费模式。 1：包年/包月3：按需10：预留实例11：节省计划
     *
     * @return $this
     */
@@ -818,7 +818,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
 
     /**
     * Gets billType
-    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    *  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     *
     * @return int|null
     */
@@ -830,7 +830,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets billType
     *
-    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更
+    * @param int|null $billType 账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     *
     * @return $this
     */

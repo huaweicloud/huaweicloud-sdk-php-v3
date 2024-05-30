@@ -20,7 +20,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
     * scope  租户级或者用户级。domain或user。
@@ -40,7 +40,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
     * scope  租户级或者用户级。domain或user。
@@ -81,7 +81,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
     * scope  租户级或者用户级。domain或user。
@@ -101,7 +101,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
     * scope  租户级或者用户级。domain或user。
@@ -121,7 +121,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    * name  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     * type  SSH密钥对的类型。ssh或x509。
     * publicKey  导入公钥的字符串信息。
     * scope  租户级或者用户级。domain或user。
@@ -290,7 +290,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    *  SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     *
     * @return string
     */
@@ -302,7 +302,7 @@ class CreateKeypairAction implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过64个字节
+    * @param string $name SSH密钥对的名称。 - 新创建的密钥对名称不能和已有密钥对的名称相同。 - SSH密钥对名称由英文字母、数字、下划线、中划线组成，长度不能超过255个字节
     *
     * @return $this
     */

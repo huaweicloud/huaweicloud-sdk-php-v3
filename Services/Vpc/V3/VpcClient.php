@@ -3306,6 +3306,875 @@ class VpcClient extends Client
     }
 
     /**
+     * 添加Clouddcn子网标签
+     *
+     * 添加Clouddcn子网的标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addClouddcnSubnetsTags($request)
+    {
+        return $this->addClouddcnSubnetsTagsWithHttpInfo($request);
+    }
+
+    public function addClouddcnSubnetsTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\AddClouddcnSubnetsTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\AddClouddcnSubnetsTagsRequest');
+    }
+
+    /**
+     * 批量添加Clouddcn子网标签
+     *
+     * 批量添加Clouddcn子网的标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateClouddcnSubnetsTags($request)
+    {
+        return $this->batchCreateClouddcnSubnetsTagsWithHttpInfo($request);
+    }
+
+    public function batchCreateClouddcnSubnetsTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/{resource_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateClouddcnSubnetsTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateClouddcnSubnetsTagsRequest');
+    }
+
+    /**
+     * 批量删除Clouddcn子网标签
+     *
+     * 批量删除Clouddcn子网的标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteClouddcnSubnetsTags($request)
+    {
+        return $this->batchDeleteClouddcnSubnetsTagsWithHttpInfo($request);
+    }
+
+    public function batchDeleteClouddcnSubnetsTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/{resource_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchDeleteClouddcnSubnetsTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchDeleteClouddcnSubnetsTagsRequest');
+    }
+
+    /**
+     * 创建clouddcn子网
+     *
+     * 创建clouddcn子网。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createClouddcnSubnet($request)
+    {
+        return $this->createClouddcnSubnetWithHttpInfo($request);
+    }
+
+    public function createClouddcnSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/clouddcn-subnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateClouddcnSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreateClouddcnSubnetRequest');
+    }
+
+    /**
+     * 删除clouddcn子网
+     *
+     * 删除clouddcn子网
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteClouddcnSubnet($request)
+    {
+        return $this->deleteClouddcnSubnetWithHttpInfo($request);
+    }
+
+    public function deleteClouddcnSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/clouddcn-subnets/{clouddcn_subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['clouddcnSubnetId'] !== null) {
+            $pathParams['clouddcn_subnet_id'] = $localVarParams['clouddcnSubnetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteClouddcnSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteClouddcnSubnetRequest');
+    }
+
+    /**
+     * 删除Clouddcn子网标签
+     *
+     * 删除Clouddcn子网的标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteClouddcnSubnetsTag($request)
+    {
+        return $this->deleteClouddcnSubnetsTagWithHttpInfo($request);
+    }
+
+    public function deleteClouddcnSubnetsTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/{resource_id}/tags/{tag_key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $pathParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteClouddcnSubnetsTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteClouddcnSubnetsTagRequest');
+    }
+
+    /**
+     * 查询clouddcn子网列表
+     *
+     * 查询clouddcn子网列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClouddcnSubnets($request)
+    {
+        return $this->listClouddcnSubnetsWithHttpInfo($request);
+    }
+
+    public function listClouddcnSubnetsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/clouddcn-subnets';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['vpcId'] !== null) {
+            $queryParams['vpc_id'] = $localVarParams['vpcId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsRequest');
+    }
+
+    /**
+     * 查询资源实例列表数目
+     *
+     * 查询资源实例列表数目
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClouddcnSubnetsCountFilterTags($request)
+    {
+        return $this->listClouddcnSubnetsCountFilterTagsWithHttpInfo($request);
+    }
+
+    public function listClouddcnSubnetsCountFilterTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/resource-instances/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsCountFilterTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsCountFilterTagsRequest');
+    }
+
+    /**
+     * 查询资源实例列表
+     *
+     * 查询资源实例列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClouddcnSubnetsFilterTags($request)
+    {
+        return $this->listClouddcnSubnetsFilterTagsWithHttpInfo($request);
+    }
+
+    public function listClouddcnSubnetsFilterTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/resource-instances/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsFilterTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsFilterTagsRequest');
+    }
+
+    /**
+     * 查询Clouddcn子网项目标签
+     *
+     * 查询Clouddcn子网的项目标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listClouddcnSubnetsTags($request)
+    {
+        return $this->listClouddcnSubnetsTagsWithHttpInfo($request);
+    }
+
+    public function listClouddcnSubnetsTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListClouddcnSubnetsTagsRequest');
+    }
+
+    /**
+     * 查询clouddcn子网
+     *
+     * 查询clouddcn子网详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClouddcnSubnet($request)
+    {
+        return $this->showClouddcnSubnetWithHttpInfo($request);
+    }
+
+    public function showClouddcnSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/clouddcn-subnets/{clouddcn_subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['clouddcnSubnetId'] !== null) {
+            $pathParams['clouddcn_subnet_id'] = $localVarParams['clouddcnSubnetId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowClouddcnSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowClouddcnSubnetRequest');
+    }
+
+    /**
+     * 查询Clouddcn子网标签
+     *
+     * 查询Clouddcn子网的标签
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClouddcnSubnetsTags($request)
+    {
+        return $this->showClouddcnSubnetsTagsWithHttpInfo($request);
+    }
+
+    public function showClouddcnSubnetsTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/clouddcn-subnets/{resource_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $pathParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowClouddcnSubnetsTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowClouddcnSubnetsTagsRequest');
+    }
+
+    /**
+     * 更新clouddcn子网
+     *
+     * 更新clouddcn子网。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateClouddcnSubnet($request)
+    {
+        return $this->updateClouddcnSubnetWithHttpInfo($request);
+    }
+
+    public function updateClouddcnSubnetWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/vpc/clouddcn-subnets/{clouddcn_subnet_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['clouddcnSubnetId'] !== null) {
+            $pathParams['clouddcn_subnet_id'] = $localVarParams['clouddcnSubnetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateClouddcnSubnetResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\UpdateClouddcnSubnetRequest');
+    }
+
+    /**
      * 创建地址组
      *
      * 创建地址组

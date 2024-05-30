@@ -27,7 +27,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @var string[]
     */
@@ -96,7 +96,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @var string[]
     */
@@ -120,7 +120,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @var string[]
     */
@@ -144,7 +144,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
     * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
     * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     * hostName  回源HOST，默认加速域名。
-    * obsBucketType  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * obsBucketType  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @var string[]
     */
@@ -428,7 +428,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets obsBucketType
-    *  OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    *  OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class SourcesDomainConfig implements ModelInterface, ArrayAccess
     /**
     * Sets obsBucketType
     *
-    * @param string|null $obsBucketType OBS桶源站类型： - “private” 私有桶； - “public” 公有桶，默认为公有桶。
+    * @param string|null $obsBucketType OBS桶类型。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     *
     * @return $this
     */

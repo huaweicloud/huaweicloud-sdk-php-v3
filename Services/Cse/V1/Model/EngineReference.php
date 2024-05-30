@@ -21,15 +21,15 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * vpc  vpc名称
-    * azList  微服务引擎专享版部署的可用区列表
-    * networkId  微服务引擎专享版子网网络ID
-    * subnetCidr  微服务引擎专享版ipv4子网划分
-    * subnetCidrV6  微服务引擎专享版ipv6子网划分
-    * subnetGateway  微服务引擎专享版子网网关
-    * publicIpId  微服务引擎专享版公网地址ID
-    * serviceLimit  微服务引擎专享版可支持的微服务总数
-    * instanceLimit  微服务引擎专享版可支持的实例总数
-    * inputs  微服务引擎专享版附加参数
+    * azList  微服务引擎部署的可用区列表
+    * networkId  微服务引擎子网网络ID
+    * subnetCidr  微服务引擎ipv4子网划分
+    * subnetCidrV6  微服务引擎ipv6子网划分
+    * subnetGateway  微服务引擎子网网关
+    * publicIpId  微服务引擎公网地址ID
+    * serviceLimit  微服务引擎可支持的微服务总数
+    * instanceLimit  微服务引擎可支持的实例总数
+    * inputs  微服务引擎附加参数
     *
     * @var string[]
     */
@@ -49,15 +49,15 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * vpc  vpc名称
-    * azList  微服务引擎专享版部署的可用区列表
-    * networkId  微服务引擎专享版子网网络ID
-    * subnetCidr  微服务引擎专享版ipv4子网划分
-    * subnetCidrV6  微服务引擎专享版ipv6子网划分
-    * subnetGateway  微服务引擎专享版子网网关
-    * publicIpId  微服务引擎专享版公网地址ID
-    * serviceLimit  微服务引擎专享版可支持的微服务总数
-    * instanceLimit  微服务引擎专享版可支持的实例总数
-    * inputs  微服务引擎专享版附加参数
+    * azList  微服务引擎部署的可用区列表
+    * networkId  微服务引擎子网网络ID
+    * subnetCidr  微服务引擎ipv4子网划分
+    * subnetCidrV6  微服务引擎ipv6子网划分
+    * subnetGateway  微服务引擎子网网关
+    * publicIpId  微服务引擎公网地址ID
+    * serviceLimit  微服务引擎可支持的微服务总数
+    * instanceLimit  微服务引擎可支持的实例总数
+    * inputs  微服务引擎附加参数
     *
     * @var string[]
     */
@@ -98,15 +98,15 @@ class EngineReference implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * vpc  vpc名称
-    * azList  微服务引擎专享版部署的可用区列表
-    * networkId  微服务引擎专享版子网网络ID
-    * subnetCidr  微服务引擎专享版ipv4子网划分
-    * subnetCidrV6  微服务引擎专享版ipv6子网划分
-    * subnetGateway  微服务引擎专享版子网网关
-    * publicIpId  微服务引擎专享版公网地址ID
-    * serviceLimit  微服务引擎专享版可支持的微服务总数
-    * instanceLimit  微服务引擎专享版可支持的实例总数
-    * inputs  微服务引擎专享版附加参数
+    * azList  微服务引擎部署的可用区列表
+    * networkId  微服务引擎子网网络ID
+    * subnetCidr  微服务引擎ipv4子网划分
+    * subnetCidrV6  微服务引擎ipv6子网划分
+    * subnetGateway  微服务引擎子网网关
+    * publicIpId  微服务引擎公网地址ID
+    * serviceLimit  微服务引擎可支持的微服务总数
+    * instanceLimit  微服务引擎可支持的实例总数
+    * inputs  微服务引擎附加参数
     *
     * @var string[]
     */
@@ -126,15 +126,15 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * vpc  vpc名称
-    * azList  微服务引擎专享版部署的可用区列表
-    * networkId  微服务引擎专享版子网网络ID
-    * subnetCidr  微服务引擎专享版ipv4子网划分
-    * subnetCidrV6  微服务引擎专享版ipv6子网划分
-    * subnetGateway  微服务引擎专享版子网网关
-    * publicIpId  微服务引擎专享版公网地址ID
-    * serviceLimit  微服务引擎专享版可支持的微服务总数
-    * instanceLimit  微服务引擎专享版可支持的实例总数
-    * inputs  微服务引擎专享版附加参数
+    * azList  微服务引擎部署的可用区列表
+    * networkId  微服务引擎子网网络ID
+    * subnetCidr  微服务引擎ipv4子网划分
+    * subnetCidrV6  微服务引擎ipv6子网划分
+    * subnetGateway  微服务引擎子网网关
+    * publicIpId  微服务引擎公网地址ID
+    * serviceLimit  微服务引擎可支持的微服务总数
+    * instanceLimit  微服务引擎可支持的实例总数
+    * inputs  微服务引擎附加参数
     *
     * @var string[]
     */
@@ -154,15 +154,15 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * vpc  vpc名称
-    * azList  微服务引擎专享版部署的可用区列表
-    * networkId  微服务引擎专享版子网网络ID
-    * subnetCidr  微服务引擎专享版ipv4子网划分
-    * subnetCidrV6  微服务引擎专享版ipv6子网划分
-    * subnetGateway  微服务引擎专享版子网网关
-    * publicIpId  微服务引擎专享版公网地址ID
-    * serviceLimit  微服务引擎专享版可支持的微服务总数
-    * instanceLimit  微服务引擎专享版可支持的实例总数
-    * inputs  微服务引擎专享版附加参数
+    * azList  微服务引擎部署的可用区列表
+    * networkId  微服务引擎子网网络ID
+    * subnetCidr  微服务引擎ipv4子网划分
+    * subnetCidrV6  微服务引擎ipv6子网划分
+    * subnetGateway  微服务引擎子网网关
+    * publicIpId  微服务引擎公网地址ID
+    * serviceLimit  微服务引擎可支持的微服务总数
+    * instanceLimit  微服务引擎可支持的实例总数
+    * inputs  微服务引擎附加参数
     *
     * @var string[]
     */
@@ -297,7 +297,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets azList
-    *  微服务引擎专享版部署的可用区列表
+    *  微服务引擎部署的可用区列表
     *
     * @return string[]|null
     */
@@ -309,7 +309,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets azList
     *
-    * @param string[]|null $azList 微服务引擎专享版部署的可用区列表
+    * @param string[]|null $azList 微服务引擎部署的可用区列表
     *
     * @return $this
     */
@@ -321,7 +321,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkId
-    *  微服务引擎专享版子网网络ID
+    *  微服务引擎子网网络ID
     *
     * @return string|null
     */
@@ -333,7 +333,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets networkId
     *
-    * @param string|null $networkId 微服务引擎专享版子网网络ID
+    * @param string|null $networkId 微服务引擎子网网络ID
     *
     * @return $this
     */
@@ -345,7 +345,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidr
-    *  微服务引擎专享版ipv4子网划分
+    *  微服务引擎ipv4子网划分
     *
     * @return string|null
     */
@@ -357,7 +357,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidr
     *
-    * @param string|null $subnetCidr 微服务引擎专享版ipv4子网划分
+    * @param string|null $subnetCidr 微服务引擎ipv4子网划分
     *
     * @return $this
     */
@@ -369,7 +369,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidrV6
-    *  微服务引擎专享版ipv6子网划分
+    *  微服务引擎ipv6子网划分
     *
     * @return string|null
     */
@@ -381,7 +381,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidrV6
     *
-    * @param string|null $subnetCidrV6 微服务引擎专享版ipv6子网划分
+    * @param string|null $subnetCidrV6 微服务引擎ipv6子网划分
     *
     * @return $this
     */
@@ -393,7 +393,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetGateway
-    *  微服务引擎专享版子网网关
+    *  微服务引擎子网网关
     *
     * @return string|null
     */
@@ -405,7 +405,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets subnetGateway
     *
-    * @param string|null $subnetGateway 微服务引擎专享版子网网关
+    * @param string|null $subnetGateway 微服务引擎子网网关
     *
     * @return $this
     */
@@ -417,7 +417,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpId
-    *  微服务引擎专享版公网地址ID
+    *  微服务引擎公网地址ID
     *
     * @return string|null
     */
@@ -429,7 +429,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpId
     *
-    * @param string|null $publicIpId 微服务引擎专享版公网地址ID
+    * @param string|null $publicIpId 微服务引擎公网地址ID
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceLimit
-    *  微服务引擎专享版可支持的微服务总数
+    *  微服务引擎可支持的微服务总数
     *
     * @return int|null
     */
@@ -453,7 +453,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets serviceLimit
     *
-    * @param int|null $serviceLimit 微服务引擎专享版可支持的微服务总数
+    * @param int|null $serviceLimit 微服务引擎可支持的微服务总数
     *
     * @return $this
     */
@@ -465,7 +465,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceLimit
-    *  微服务引擎专享版可支持的实例总数
+    *  微服务引擎可支持的实例总数
     *
     * @return int|null
     */
@@ -477,7 +477,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets instanceLimit
     *
-    * @param int|null $instanceLimit 微服务引擎专享版可支持的实例总数
+    * @param int|null $instanceLimit 微服务引擎可支持的实例总数
     *
     * @return $this
     */
@@ -489,7 +489,7 @@ class EngineReference implements ModelInterface, ArrayAccess
 
     /**
     * Gets inputs
-    *  微服务引擎专享版附加参数
+    *  微服务引擎附加参数
     *
     * @return map[string,string]|null
     */
@@ -501,7 +501,7 @@ class EngineReference implements ModelInterface, ArrayAccess
     /**
     * Sets inputs
     *
-    * @param map[string,string]|null $inputs 微服务引擎专享版附加参数
+    * @param map[string,string]|null $inputs 微服务引擎附加参数
     *
     * @return $this
     */

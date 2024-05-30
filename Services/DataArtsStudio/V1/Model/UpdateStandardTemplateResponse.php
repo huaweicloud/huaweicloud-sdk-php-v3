@@ -21,17 +21,17 @@ class UpdateStandardTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  返回的数据信息。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => 'object'
+            'data' => '\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateStandardTemplateResultData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  返回的数据信息。
+    * data  data
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class UpdateStandardTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  返回的数据信息。
+    * data  data
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class UpdateStandardTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  返回的数据信息。
+    * data  data
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class UpdateStandardTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  返回的数据信息。
+    * data  data
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class UpdateStandardTemplateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  返回的数据信息。
+    *  data
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateStandardTemplateResultData|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class UpdateStandardTemplateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data 返回的数据信息。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateStandardTemplateResultData|null $data data
     *
     * @return $this
     */

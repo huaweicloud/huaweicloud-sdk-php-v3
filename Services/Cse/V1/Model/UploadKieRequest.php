@@ -21,7 +21,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * override  覆盖策略，force 强制覆盖、abort 遇到第一个重复时终止导入后续的kv、skip 跳过重复的key
     * label  指定label导入，格式为：{标签key}:{标签value}，如果不填则按body的label导入
     * body  body
@@ -39,7 +39,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * override  覆盖策略，force 强制覆盖、abort 遇到第一个重复时终止导入后续的kv、skip 跳过重复的key
     * label  指定label导入，格式为：{标签key}:{标签value}，如果不填则按body的label导入
     * body  body
@@ -78,7 +78,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * override  覆盖策略，force 强制覆盖、abort 遇到第一个重复时终止导入后续的kv、skip 跳过重复的key
     * label  指定label导入，格式为：{标签key}:{标签value}，如果不填则按body的label导入
     * body  body
@@ -96,7 +96,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * override  覆盖策略，force 强制覆盖、abort 遇到第一个重复时终止导入后续的kv、skip 跳过重复的key
     * label  指定label导入，格式为：{标签key}:{标签value}，如果不填则按body的label导入
     * body  body
@@ -114,7 +114,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * xEnterpriseProjectId  如果不带则默认企业项目为\"default\"，ID为\"0\"
-    * xEngineId  微服务引擎专享版ID。
+    * xEngineId  微服务引擎ID。
     * override  覆盖策略，force 强制覆盖、abort 遇到第一个重复时终止导入后续的kv、skip 跳过重复的key
     * label  指定label导入，格式为：{标签key}:{标签value}，如果不填则按body的label导入
     * body  body
@@ -273,7 +273,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xEngineId
-    *  微服务引擎专享版ID。
+    *  微服务引擎ID。
     *
     * @return string
     */
@@ -285,7 +285,7 @@ class UploadKieRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xEngineId
     *
-    * @param string $xEngineId 微服务引擎专享版ID。
+    * @param string $xEngineId 微服务引擎ID。
     *
     * @return $this
     */

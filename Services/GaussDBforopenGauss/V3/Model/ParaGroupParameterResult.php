@@ -25,7 +25,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
     * needRestart  参数是否需要重启。 - 取值为\"true\"，需要重启。 - 取值为\"false\"，不需要重启。
     * readonly  该参数是否只读(true：只读；false：可编辑)。
     * valueRange  参数取值范围。
-    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     * description  参数描述。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
     * needRestart  参数是否需要重启。 - 取值为\"true\"，需要重启。 - 取值为\"false\"，不需要重启。
     * readonly  该参数是否只读(true：只读；false：可编辑)。
     * valueRange  参数取值范围。
-    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     * description  参数描述。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
     * needRestart  参数是否需要重启。 - 取值为\"true\"，需要重启。 - 取值为\"false\"，不需要重启。
     * readonly  该参数是否只读(true：只读；false：可编辑)。
     * valueRange  参数取值范围。
-    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     * description  参数描述。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
     * needRestart  参数是否需要重启。 - 取值为\"true\"，需要重启。 - 取值为\"false\"，不需要重启。
     * readonly  该参数是否只读(true：只读；false：可编辑)。
     * valueRange  参数取值范围。
-    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     * description  参数描述。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
     * needRestart  参数是否需要重启。 - 取值为\"true\"，需要重启。 - 取值为\"false\"，不需要重启。
     * readonly  该参数是否只读(true：只读；false：可编辑)。
     * valueRange  参数取值范围。
-    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * dataType  参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     * description  参数描述。
     *
     * @var string[]
@@ -410,7 +410,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataType
-    *  参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    *  参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     *
     * @return string
     */
@@ -422,7 +422,7 @@ class ParaGroupParameterResult implements ModelInterface, ArrayAccess
     /**
     * Sets dataType
     *
-    * @param string $dataType 参数类型，取值为“string”、“integer”、“boolean”、“list”或“float”之一。
+    * @param string $dataType 参数类型，取值为“string”、“integer”、“boolean”、“list”、\"all\"或“float”之一。
     *
     * @return $this
     */

@@ -27,6 +27,8 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     * maxVolumeSize  最大扩容磁盘容量。
     * triggerAvailablePercent  可用存储空间率。
     * percents  空间率集合。
+    * stepSize  扩容步长，固定大小扩容方式。
+    * stepPercent  扩容步长，百分比扩容方式。
     *
     * @var string[]
     */
@@ -36,7 +38,9 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
             'minVolumeSize' => 'int',
             'maxVolumeSize' => 'int',
             'triggerAvailablePercent' => 'int',
-            'percents' => 'int[]'
+            'percents' => 'int[]',
+            'stepSize' => 'int',
+            'stepPercent' => 'int'
     ];
 
     /**
@@ -47,6 +51,8 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     * maxVolumeSize  最大扩容磁盘容量。
     * triggerAvailablePercent  可用存储空间率。
     * percents  空间率集合。
+    * stepSize  扩容步长，固定大小扩容方式。
+    * stepPercent  扩容步长，百分比扩容方式。
     *
     * @var string[]
     */
@@ -56,7 +62,9 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
         'minVolumeSize' => null,
         'maxVolumeSize' => null,
         'triggerAvailablePercent' => null,
-        'percents' => null
+        'percents' => null,
+        'stepSize' => null,
+        'stepPercent' => null
     ];
 
     /**
@@ -88,6 +96,8 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     * maxVolumeSize  最大扩容磁盘容量。
     * triggerAvailablePercent  可用存储空间率。
     * percents  空间率集合。
+    * stepSize  扩容步长，固定大小扩容方式。
+    * stepPercent  扩容步长，百分比扩容方式。
     *
     * @var string[]
     */
@@ -97,7 +107,9 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
             'minVolumeSize' => 'min_volume_size',
             'maxVolumeSize' => 'max_volume_size',
             'triggerAvailablePercent' => 'trigger_available_percent',
-            'percents' => 'percents'
+            'percents' => 'percents',
+            'stepSize' => 'step_size',
+            'stepPercent' => 'step_percent'
     ];
 
     /**
@@ -108,6 +120,8 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     * maxVolumeSize  最大扩容磁盘容量。
     * triggerAvailablePercent  可用存储空间率。
     * percents  空间率集合。
+    * stepSize  扩容步长，固定大小扩容方式。
+    * stepPercent  扩容步长，百分比扩容方式。
     *
     * @var string[]
     */
@@ -117,7 +131,9 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
             'minVolumeSize' => 'setMinVolumeSize',
             'maxVolumeSize' => 'setMaxVolumeSize',
             'triggerAvailablePercent' => 'setTriggerAvailablePercent',
-            'percents' => 'setPercents'
+            'percents' => 'setPercents',
+            'stepSize' => 'setStepSize',
+            'stepPercent' => 'setStepPercent'
     ];
 
     /**
@@ -128,6 +144,8 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     * maxVolumeSize  最大扩容磁盘容量。
     * triggerAvailablePercent  可用存储空间率。
     * percents  空间率集合。
+    * stepSize  扩容步长，固定大小扩容方式。
+    * stepPercent  扩容步长，百分比扩容方式。
     *
     * @var string[]
     */
@@ -137,7 +155,9 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
             'minVolumeSize' => 'getMinVolumeSize',
             'maxVolumeSize' => 'getMaxVolumeSize',
             'triggerAvailablePercent' => 'getTriggerAvailablePercent',
-            'percents' => 'getPercents'
+            'percents' => 'getPercents',
+            'stepSize' => 'getStepSize',
+            'stepPercent' => 'getStepPercent'
     ];
 
     /**
@@ -204,6 +224,8 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
         $this->container['maxVolumeSize'] = isset($data['maxVolumeSize']) ? $data['maxVolumeSize'] : null;
         $this->container['triggerAvailablePercent'] = isset($data['triggerAvailablePercent']) ? $data['triggerAvailablePercent'] : null;
         $this->container['percents'] = isset($data['percents']) ? $data['percents'] : null;
+        $this->container['stepSize'] = isset($data['stepSize']) ? $data['stepSize'] : null;
+        $this->container['stepPercent'] = isset($data['stepPercent']) ? $data['stepPercent'] : null;
     }
 
     /**
@@ -369,6 +391,54 @@ class SearchAutoEnlargePolicyResponse implements ModelInterface, ArrayAccess
     public function setPercents($percents)
     {
         $this->container['percents'] = $percents;
+        return $this;
+    }
+
+    /**
+    * Gets stepSize
+    *  扩容步长，固定大小扩容方式。
+    *
+    * @return int|null
+    */
+    public function getStepSize()
+    {
+        return $this->container['stepSize'];
+    }
+
+    /**
+    * Sets stepSize
+    *
+    * @param int|null $stepSize 扩容步长，固定大小扩容方式。
+    *
+    * @return $this
+    */
+    public function setStepSize($stepSize)
+    {
+        $this->container['stepSize'] = $stepSize;
+        return $this;
+    }
+
+    /**
+    * Gets stepPercent
+    *  扩容步长，百分比扩容方式。
+    *
+    * @return int|null
+    */
+    public function getStepPercent()
+    {
+        return $this->container['stepPercent'];
+    }
+
+    /**
+    * Sets stepPercent
+    *
+    * @param int|null $stepPercent 扩容步长，百分比扩容方式。
+    *
+    * @return $this
+    */
+    public function setStepPercent($stepPercent)
+    {
+        $this->container['stepPercent'] = $stepPercent;
         return $this;
     }
 

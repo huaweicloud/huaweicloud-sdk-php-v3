@@ -23,13 +23,15 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     * name  功能描述：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]'
     ];
 
     /**
@@ -37,13 +39,15 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     * name  功能描述：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'tags' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     * name  功能描述：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'description' => 'description',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -86,13 +92,15 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     * name  功能描述：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'description' => 'setDescription',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -100,13 +108,15 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     * name  功能描述：安全组名称 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     * description  功能说明：安全组的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * enterpriseProjectId  功能说明：企业项目ID。创建安全组时，给安全组绑定企业项目ID。 取值范围：最大长度36字节，带“-”连字符的UUID格式，或者是字符串“0”。“0”表示默认企业项目。
+    * tags  功能描述：安全组的标签信息
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'description' => 'getDescription',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -170,6 +180,7 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class CreateSecurityGroupOption implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  功能描述：安全组的标签信息
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 功能描述：安全组的标签信息
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

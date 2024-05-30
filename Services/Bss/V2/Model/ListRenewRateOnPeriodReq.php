@@ -23,13 +23,15 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
     * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
     * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceIds' => 'string[]',
             'periodType' => 'int',
-            'periodNum' => 'int'
+            'periodNum' => 'int',
+            'includeRelativeResources' => 'bool'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
     * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
     * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceIds' => null,
         'periodType' => 'int32',
-        'periodNum' => 'int32'
+        'periodNum' => 'int32',
+        'includeRelativeResources' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
     * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
     * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceIds' => 'resource_ids',
             'periodType' => 'period_type',
-            'periodNum' => 'period_num'
+            'periodNum' => 'period_num',
+            'includeRelativeResources' => 'include_relative_resources'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
     * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
     * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceIds' => 'setResourceIds',
             'periodType' => 'setPeriodType',
-            'periodNum' => 'setPeriodNum'
+            'periodNum' => 'setPeriodNum',
+            'includeRelativeResources' => 'setIncludeRelativeResources'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     * resourceIds  |参数名称：资源ID列表。只支持传入主资源ID，最多10个资源ID。| |参数约束以及描述：资源ID列表。只支持传入主资源ID，最多10个资源ID。|
     * periodType  |参数名称：周期类型：2：月3：年| |参数的约束及描述：周期类型：2：月3：年|
     * periodNum  |参数名称：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3| |参数的约束及描述：周期数目：如果是月，目前支持1-11如果是年，目前支持1-3|
+    * includeRelativeResources  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceIds' => 'getResourceIds',
             'periodType' => 'getPeriodType',
-            'periodNum' => 'getPeriodNum'
+            'periodNum' => 'getPeriodNum',
+            'includeRelativeResources' => 'getIncludeRelativeResources'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
         $this->container['resourceIds'] = isset($data['resourceIds']) ? $data['resourceIds'] : null;
         $this->container['periodType'] = isset($data['periodType']) ? $data['periodType'] : null;
         $this->container['periodNum'] = isset($data['periodNum']) ? $data['periodNum'] : null;
+        $this->container['includeRelativeResources'] = isset($data['includeRelativeResources']) ? $data['includeRelativeResources'] : null;
     }
 
     /**
@@ -284,6 +295,30 @@ class ListRenewRateOnPeriodReq implements ModelInterface, ArrayAccess
     public function setPeriodNum($periodNum)
     {
         $this->container['periodNum'] = $periodNum;
+        return $this;
+    }
+
+    /**
+    * Gets includeRelativeResources
+    *  是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    *
+    * @return bool|null
+    */
+    public function getIncludeRelativeResources()
+    {
+        return $this->container['includeRelativeResources'];
+    }
+
+    /**
+    * Sets includeRelativeResources
+    *
+    * @param bool|null $includeRelativeResources 是否包含关联资源一起续费询价。 false：不包含true：包含 此参数不携带或携带值为空串时，默认值为“false\"。
+    *
+    * @return $this
+    */
+    public function setIncludeRelativeResources($includeRelativeResources)
+    {
+        $this->container['includeRelativeResources'] = $includeRelativeResources;
         return $this;
     }
 

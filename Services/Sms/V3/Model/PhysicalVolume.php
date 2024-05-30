@@ -28,6 +28,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     * size  大小
     * usedSize  使用大小
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * uuid  GUID，可从源端查询
     * sizePerCluster  每个cluster大小
     *
@@ -42,6 +43,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
             'size' => 'int',
             'usedSize' => 'int',
             'inodeSize' => 'int',
+            'inodeNums' => 'int',
             'uuid' => 'string',
             'sizePerCluster' => 'int'
     ];
@@ -56,6 +58,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     * size  大小
     * usedSize  使用大小
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * uuid  GUID，可从源端查询
     * sizePerCluster  每个cluster大小
     *
@@ -70,6 +73,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
         'size' => 'int64',
         'usedSize' => 'int64',
         'inodeSize' => 'int32',
+        'inodeNums' => 'int64',
         'uuid' => null,
         'sizePerCluster' => 'int32'
     ];
@@ -105,6 +109,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     * size  大小
     * usedSize  使用大小
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * uuid  GUID，可从源端查询
     * sizePerCluster  每个cluster大小
     *
@@ -119,6 +124,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
             'size' => 'size',
             'usedSize' => 'used_size',
             'inodeSize' => 'inode_size',
+            'inodeNums' => 'inode_nums',
             'uuid' => 'uuid',
             'sizePerCluster' => 'size_per_cluster'
     ];
@@ -133,6 +139,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     * size  大小
     * usedSize  使用大小
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * uuid  GUID，可从源端查询
     * sizePerCluster  每个cluster大小
     *
@@ -147,6 +154,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
             'size' => 'setSize',
             'usedSize' => 'setUsedSize',
             'inodeSize' => 'setInodeSize',
+            'inodeNums' => 'setInodeNums',
             'uuid' => 'setUuid',
             'sizePerCluster' => 'setSizePerCluster'
     ];
@@ -161,6 +169,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     * size  大小
     * usedSize  使用大小
     * inodeSize  inode数量
+    * inodeNums  inode节点数量
     * uuid  GUID，可从源端查询
     * sizePerCluster  每个cluster大小
     *
@@ -175,6 +184,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
             'size' => 'getSize',
             'usedSize' => 'getUsedSize',
             'inodeSize' => 'getInodeSize',
+            'inodeNums' => 'getInodeNums',
             'uuid' => 'getUuid',
             'sizePerCluster' => 'getSizePerCluster'
     ];
@@ -245,6 +255,7 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['usedSize'] = isset($data['usedSize']) ? $data['usedSize'] : null;
         $this->container['inodeSize'] = isset($data['inodeSize']) ? $data['inodeSize'] : null;
+        $this->container['inodeNums'] = isset($data['inodeNums']) ? $data['inodeNums'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['sizePerCluster'] = isset($data['sizePerCluster']) ? $data['sizePerCluster'] : null;
     }
@@ -304,6 +315,12 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['inodeSize']) && ($this->container['inodeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['inodeNums']) && ($this->container['inodeNums'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'inodeNums', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['inodeNums']) && ($this->container['inodeNums'] < 0)) {
+                $invalidProperties[] = "invalid value for 'inodeNums', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['uuid']) && (mb_strlen($this->container['uuid']) > 255)) {
                 $invalidProperties[] = "invalid value for 'uuid', the character length must be smaller than or equal to 255.";
@@ -520,6 +537,30 @@ class PhysicalVolume implements ModelInterface, ArrayAccess
     public function setInodeSize($inodeSize)
     {
         $this->container['inodeSize'] = $inodeSize;
+        return $this;
+    }
+
+    /**
+    * Gets inodeNums
+    *  inode节点数量
+    *
+    * @return int|null
+    */
+    public function getInodeNums()
+    {
+        return $this->container['inodeNums'];
+    }
+
+    /**
+    * Sets inodeNums
+    *
+    * @param int|null $inodeNums inode节点数量
+    *
+    * @return $this
+    */
+    public function setInodeNums($inodeNums)
+    {
+        $this->container['inodeNums'] = $inodeNums;
         return $this;
     }
 

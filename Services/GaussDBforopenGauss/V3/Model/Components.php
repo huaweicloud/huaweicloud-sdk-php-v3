@@ -24,6 +24,8 @@ class Components implements ModelInterface, ArrayAccess
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
     * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    * type  节点类型，包括：DN, CN, GTM, CM, ETCD。
+    * detail  详情。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class Components implements ModelInterface, ArrayAccess
             'id' => 'string',
             'role' => 'string',
             'status' => 'string',
-            'distributedId' => 'string'
+            'distributedId' => 'string',
+            'type' => 'string',
+            'detail' => 'string'
     ];
 
     /**
@@ -40,6 +44,8 @@ class Components implements ModelInterface, ArrayAccess
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
     * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    * type  节点类型，包括：DN, CN, GTM, CM, ETCD。
+    * detail  详情。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class Components implements ModelInterface, ArrayAccess
         'id' => null,
         'role' => null,
         'status' => null,
-        'distributedId' => null
+        'distributedId' => null,
+        'type' => null,
+        'detail' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class Components implements ModelInterface, ArrayAccess
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
     * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    * type  节点类型，包括：DN, CN, GTM, CM, ETCD。
+    * detail  详情。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class Components implements ModelInterface, ArrayAccess
             'id' => 'id',
             'role' => 'role',
             'status' => 'status',
-            'distributedId' => 'distributed_id'
+            'distributedId' => 'distributed_id',
+            'type' => 'type',
+            'detail' => 'detail'
     ];
 
     /**
@@ -93,6 +105,8 @@ class Components implements ModelInterface, ArrayAccess
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
     * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    * type  节点类型，包括：DN, CN, GTM, CM, ETCD。
+    * detail  详情。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class Components implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'role' => 'setRole',
             'status' => 'setStatus',
-            'distributedId' => 'setDistributedId'
+            'distributedId' => 'setDistributedId',
+            'type' => 'setType',
+            'detail' => 'setDetail'
     ];
 
     /**
@@ -109,6 +125,8 @@ class Components implements ModelInterface, ArrayAccess
     * role  节点类型，取值为“master”、“slave”，分别对应于主节点、备节点。
     * status  组件状态。 Primary：该组件为主。 Normal：该组件状态正常。 Down：该组件处于宕机状态。 Standby：该组件为备。 StateFollower：该ETCD为备。 StateLeader：该ETCD为主。 StateCandidate：该ETCD为仲裁。
     * distributedId  分组id，只有dn组件有分组id，用于区分是否是同一个分片下的组件。其他组件为空字符串。
+    * type  节点类型，包括：DN, CN, GTM, CM, ETCD。
+    * detail  详情。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class Components implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'role' => 'getRole',
             'status' => 'getStatus',
-            'distributedId' => 'getDistributedId'
+            'distributedId' => 'getDistributedId',
+            'type' => 'getType',
+            'detail' => 'getDetail'
     ];
 
     /**
@@ -181,6 +201,8 @@ class Components implements ModelInterface, ArrayAccess
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['distributedId'] = isset($data['distributedId']) ? $data['distributedId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
     }
 
     /**
@@ -298,6 +320,54 @@ class Components implements ModelInterface, ArrayAccess
     public function setDistributedId($distributedId)
     {
         $this->container['distributedId'] = $distributedId;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  节点类型，包括：DN, CN, GTM, CM, ETCD。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 节点类型，包括：DN, CN, GTM, CM, ETCD。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets detail
+    *  详情。
+    *
+    * @return string|null
+    */
+    public function getDetail()
+    {
+        return $this->container['detail'];
+    }
+
+    /**
+    * Sets detail
+    *
+    * @param string|null $detail 详情。
+    *
+    * @return $this
+    */
+    public function setDetail($detail)
+    {
+        $this->container['detail'] = $detail;
         return $this;
     }
 

@@ -21,21 +21,25 @@ class PolicyAction implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * category  web基础防护动作（log为仅记录、block为拦截）
+    * followedActionId  攻击惩罚规则ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'category' => 'string'
+            'category' => 'string',
+            'followedActionId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * category  web基础防护动作（log为仅记录、block为拦截）
+    * followedActionId  攻击惩罚规则ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'category' => null
+        'category' => null,
+        'followedActionId' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class PolicyAction implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * category  web基础防护动作（log为仅记录、block为拦截）
+    * followedActionId  攻击惩罚规则ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'category' => 'category'
+            'category' => 'category',
+            'followedActionId' => 'followed_action_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * category  web基础防护动作（log为仅记录、block为拦截）
+    * followedActionId  攻击惩罚规则ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'category' => 'setCategory'
+            'category' => 'setCategory',
+            'followedActionId' => 'setFollowedActionId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * category  web基础防护动作（log为仅记录、block为拦截）
+    * followedActionId  攻击惩罚规则ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'category' => 'getCategory'
+            'category' => 'getCategory',
+            'followedActionId' => 'getFollowedActionId'
     ];
 
     /**
@@ -163,6 +173,7 @@ class PolicyAction implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
+        $this->container['followedActionId'] = isset($data['followedActionId']) ? $data['followedActionId'] : null;
     }
 
     /**
@@ -216,6 +227,30 @@ class PolicyAction implements ModelInterface, ArrayAccess
     public function setCategory($category)
     {
         $this->container['category'] = $category;
+        return $this;
+    }
+
+    /**
+    * Gets followedActionId
+    *  攻击惩罚规则ID
+    *
+    * @return string|null
+    */
+    public function getFollowedActionId()
+    {
+        return $this->container['followedActionId'];
+    }
+
+    /**
+    * Sets followedActionId
+    *
+    * @param string|null $followedActionId 攻击惩罚规则ID
+    *
+    * @return $this
+    */
+    public function setFollowedActionId($followedActionId)
+    {
+        $this->container['followedActionId'] = $followedActionId;
         return $this;
     }
 

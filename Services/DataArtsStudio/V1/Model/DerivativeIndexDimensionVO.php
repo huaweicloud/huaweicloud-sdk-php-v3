@@ -22,29 +22,29 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * groupId  维度分组ID。
     * role  维度角色。
-    * dimensionId  维度ID。
-    * hierarchiesId  维度层级ID。
-    * ordinal  序号。
+    * dimensionId  维度ID，填写String类型替代Long类型。
+    * hierarchiesId  维度层级ID，填写String类型替代Long类型。
+    * ordinal  序号，只读。
     * groupName  维度分组名称。
     * groupCode  维度分组编码。
     * bizType  bizType
-    * hierarchies  层级属性。
+    * hierarchies  层级属性，只读。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * dwType  数据连接类型。
-    * id  id
+    * id  层级的ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'groupId' => 'string',
             'role' => 'string',
-            'dimensionId' => 'int',
-            'hierarchiesId' => 'int',
+            'dimensionId' => 'string',
+            'hierarchiesId' => 'string',
             'ordinal' => 'int',
             'groupName' => 'string',
             'groupCode' => 'string',
@@ -53,40 +53,40 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
             'l1' => 'string',
             'l2' => 'string',
             'l3' => 'string',
-            'l1Id' => 'int',
+            'l1Id' => 'string',
             'l2Id' => 'string',
-            'l3Id' => 'int',
+            'l3Id' => 'string',
             'dwType' => 'string',
-            'id' => 'int'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupId  维度分组ID。
     * role  维度角色。
-    * dimensionId  维度ID。
-    * hierarchiesId  维度层级ID。
-    * ordinal  序号。
+    * dimensionId  维度ID，填写String类型替代Long类型。
+    * hierarchiesId  维度层级ID，填写String类型替代Long类型。
+    * ordinal  序号，只读。
     * groupName  维度分组名称。
     * groupCode  维度分组编码。
     * bizType  bizType
-    * hierarchies  层级属性。
+    * hierarchies  层级属性，只读。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * dwType  数据连接类型。
-    * id  id
+    * id  层级的ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'groupId' => null,
         'role' => null,
-        'dimensionId' => 'int64',
-        'hierarchiesId' => 'int64',
+        'dimensionId' => null,
+        'hierarchiesId' => null,
         'ordinal' => null,
         'groupName' => null,
         'groupCode' => null,
@@ -95,11 +95,11 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
         'l1' => null,
         'l2' => null,
         'l3' => null,
-        'l1Id' => 'int64',
+        'l1Id' => null,
         'l2Id' => null,
-        'l3Id' => 'int64',
+        'l3Id' => null,
         'dwType' => null,
-        'id' => 'int64'
+        'id' => null
     ];
 
     /**
@@ -127,21 +127,21 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     * and the value is the original name
     * groupId  维度分组ID。
     * role  维度角色。
-    * dimensionId  维度ID。
-    * hierarchiesId  维度层级ID。
-    * ordinal  序号。
+    * dimensionId  维度ID，填写String类型替代Long类型。
+    * hierarchiesId  维度层级ID，填写String类型替代Long类型。
+    * ordinal  序号，只读。
     * groupName  维度分组名称。
     * groupCode  维度分组编码。
     * bizType  bizType
-    * hierarchies  层级属性。
+    * hierarchies  层级属性，只读。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * dwType  数据连接类型。
-    * id  id
+    * id  层级的ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -169,21 +169,21 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  维度分组ID。
     * role  维度角色。
-    * dimensionId  维度ID。
-    * hierarchiesId  维度层级ID。
-    * ordinal  序号。
+    * dimensionId  维度ID，填写String类型替代Long类型。
+    * hierarchiesId  维度层级ID，填写String类型替代Long类型。
+    * ordinal  序号，只读。
     * groupName  维度分组名称。
     * groupCode  维度分组编码。
     * bizType  bizType
-    * hierarchies  层级属性。
+    * hierarchies  层级属性，只读。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * dwType  数据连接类型。
-    * id  id
+    * id  层级的ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -211,21 +211,21 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  维度分组ID。
     * role  维度角色。
-    * dimensionId  维度ID。
-    * hierarchiesId  维度层级ID。
-    * ordinal  序号。
+    * dimensionId  维度ID，填写String类型替代Long类型。
+    * hierarchiesId  维度层级ID，填写String类型替代Long类型。
+    * ordinal  序号，只读。
     * groupName  维度分组名称。
     * groupCode  维度分组编码。
     * bizType  bizType
-    * hierarchies  层级属性。
+    * hierarchies  层级属性，只读。
     * l1  主题域分组中文名，只读，创建和更新时无需填写。
     * l2  主题域中文名，只读，创建和更新时无需填写。
     * l3  业务对象中文名，只读，创建和更新时无需填写。
-    * l1Id  主题域分组ID。
+    * l1Id  主题域分组ID，只读，填写String类型替代Long类型。
     * l2Id  主题域ID，只读，创建和更新时无需填写。
-    * l3Id  业务对象ID。
+    * l3Id  业务对象ID，只读，填写String类型替代Long类型。
     * dwType  数据连接类型。
-    * id  id
+    * id  层级的ID，只读，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -404,9 +404,9 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensionId
-    *  维度ID。
+    *  维度ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getDimensionId()
     {
@@ -416,7 +416,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets dimensionId
     *
-    * @param int|null $dimensionId 维度ID。
+    * @param string|null $dimensionId 维度ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -428,9 +428,9 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets hierarchiesId
-    *  维度层级ID。
+    *  维度层级ID，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getHierarchiesId()
     {
@@ -440,7 +440,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets hierarchiesId
     *
-    * @param int|null $hierarchiesId 维度层级ID。
+    * @param string|null $hierarchiesId 维度层级ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -452,7 +452,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets ordinal
-    *  序号。
+    *  序号，只读。
     *
     * @return int|null
     */
@@ -464,7 +464,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets ordinal
     *
-    * @param int|null $ordinal 序号。
+    * @param int|null $ordinal 序号，只读。
     *
     * @return $this
     */
@@ -548,7 +548,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets hierarchies
-    *  层级属性。
+    *  层级属性，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionHierarchiesVO[]|null
     */
@@ -560,7 +560,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets hierarchies
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionHierarchiesVO[]|null $hierarchies 层级属性。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\DimensionHierarchiesVO[]|null $hierarchies 层级属性，只读。
     *
     * @return $this
     */
@@ -644,9 +644,9 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1Id
-    *  主题域分组ID。
+    *  主题域分组ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getL1Id()
     {
@@ -656,7 +656,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1Id
     *
-    * @param int|null $l1Id 主题域分组ID。
+    * @param string|null $l1Id 主题域分组ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -692,9 +692,9 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3Id
-    *  业务对象ID。
+    *  业务对象ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getL3Id()
     {
@@ -704,7 +704,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3Id
     *
-    * @param int|null $l3Id 业务对象ID。
+    * @param string|null $l3Id 业务对象ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -740,9 +740,9 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  层级的ID，只读，填写String类型替代Long类型。
     *
-    * @return int|null
+    * @return string|null
     */
     public function getId()
     {
@@ -752,7 +752,7 @@ class DerivativeIndexDimensionVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id id
+    * @param string|null $id 层级的ID，只读，填写String类型替代Long类型。
     *
     * @return $this
     */

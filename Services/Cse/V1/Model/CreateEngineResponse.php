@@ -21,9 +21,9 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  创建的微服务引擎专享版ID
-    * name  创建的微服务引擎专享版名称
-    * jobId  微服务引擎专享版执行的任务ID
+    * id  创建的微服务引擎ID
+    * name  创建的微服务引擎名称
+    * jobId  微服务引擎执行的任务ID
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  创建的微服务引擎专享版ID
-    * name  创建的微服务引擎专享版名称
-    * jobId  微服务引擎专享版执行的任务ID
+    * id  创建的微服务引擎ID
+    * name  创建的微服务引擎名称
+    * jobId  微服务引擎执行的任务ID
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  创建的微服务引擎专享版ID
-    * name  创建的微服务引擎专享版名称
-    * jobId  微服务引擎专享版执行的任务ID
+    * id  创建的微服务引擎ID
+    * name  创建的微服务引擎名称
+    * jobId  微服务引擎执行的任务ID
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  创建的微服务引擎专享版ID
-    * name  创建的微服务引擎专享版名称
-    * jobId  微服务引擎专享版执行的任务ID
+    * id  创建的微服务引擎ID
+    * name  创建的微服务引擎名称
+    * jobId  微服务引擎执行的任务ID
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  创建的微服务引擎专享版ID
-    * name  创建的微服务引擎专享版名称
-    * jobId  微服务引擎专享版执行的任务ID
+    * id  创建的微服务引擎ID
+    * name  创建的微服务引擎名称
+    * jobId  微服务引擎执行的任务ID
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  创建的微服务引擎专享版ID
+    *  创建的微服务引擎ID
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 创建的微服务引擎专享版ID
+    * @param string|null $id 创建的微服务引擎ID
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  创建的微服务引擎专享版名称
+    *  创建的微服务引擎名称
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 创建的微服务引擎专享版名称
+    * @param string|null $name 创建的微服务引擎名称
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  微服务引擎专享版执行的任务ID
+    *  微服务引擎执行的任务ID
     *
     * @return int|null
     */
@@ -257,7 +257,7 @@ class CreateEngineResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param int|null $jobId 微服务引擎专享版执行的任务ID
+    * @param int|null $jobId 微服务引擎执行的任务ID
     *
     * @return $this
     */

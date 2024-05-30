@@ -23,7 +23,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * modelId  所属关系建模的模型ID。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -31,6 +33,8 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
             'workspace' => 'string',
             'xProjectId' => 'string',
             'contentType' => 'string',
+            'limit' => 'int',
+            'offset' => 'int',
             'modelId' => 'string'
     ];
 
@@ -39,7 +43,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * modelId  所属关系建模的模型ID。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
         'workspace' => null,
         'xProjectId' => null,
         'contentType' => null,
-        'modelId' => 'int64'
+        'limit' => 'int32',
+        'offset' => 'int32',
+        'modelId' => null
     ];
 
     /**
@@ -76,7 +84,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * modelId  所属关系建模的模型ID。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -84,6 +94,8 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
             'workspace' => 'workspace',
             'xProjectId' => 'X-Project-Id',
             'contentType' => 'Content-Type',
+            'limit' => 'limit',
+            'offset' => 'offset',
             'modelId' => 'model_id'
     ];
 
@@ -92,7 +104,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * modelId  所属关系建模的模型ID。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -100,6 +114,8 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
             'workspace' => 'setWorkspace',
             'xProjectId' => 'setXProjectId',
             'contentType' => 'setContentType',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'modelId' => 'setModelId'
     ];
 
@@ -108,7 +124,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * modelId  所属关系建模的模型ID。
+    * limit  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    * offset  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    * modelId  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @var string[]
     */
@@ -116,6 +134,8 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
             'workspace' => 'getWorkspace',
             'xProjectId' => 'getXProjectId',
             'contentType' => 'getContentType',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'modelId' => 'getModelId'
     ];
 
@@ -180,6 +200,8 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
         $this->container['workspace'] = isset($data['workspace']) ? $data['workspace'] : null;
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['modelId'] = isset($data['modelId']) ? $data['modelId'] : null;
     }
 
@@ -211,6 +233,9 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 3)) {
                 $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 100)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 100.";
             }
         if ($this->container['modelId'] === null) {
             $invalidProperties[] = "'modelId' can't be null";
@@ -302,8 +327,56 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets limit
+    *  每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 每页查询条数，即查询Y条数据。默认值50，取值范围[1,100]。
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 查询起始坐标，即跳过X条数据，仅支持0或limit的整数倍，不满足则向下取整，默认值0。
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
     * Gets modelId
-    *  所属关系建模的模型ID。
+    *  所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @return string
     */
@@ -315,7 +388,7 @@ class SearchFieldsForRelationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets modelId
     *
-    * @param string $modelId 所属关系建模的模型ID。
+    * @param string $modelId 所属关系建模的模型ID，填写String类型替代Long类型。
     *
     * @return $this
     */

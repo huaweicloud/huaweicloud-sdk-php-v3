@@ -21,8 +21,8 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  当前符合查询条件的微服务引擎专享版总个数
-    * data  微服务引擎专享版详情
+    * total  当前符合查询条件的微服务引擎个数
+    * data  微服务引擎详情
     *
     * @var string[]
     */
@@ -33,8 +33,8 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  当前符合查询条件的微服务引擎专享版总个数
-    * data  微服务引擎专享版详情
+    * total  当前符合查询条件的微服务引擎个数
+    * data  微服务引擎详情
     *
     * @var string[]
     */
@@ -66,8 +66,8 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  当前符合查询条件的微服务引擎专享版总个数
-    * data  微服务引擎专享版详情
+    * total  当前符合查询条件的微服务引擎个数
+    * data  微服务引擎详情
     *
     * @var string[]
     */
@@ -78,8 +78,8 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  当前符合查询条件的微服务引擎专享版总个数
-    * data  微服务引擎专享版详情
+    * total  当前符合查询条件的微服务引擎个数
+    * data  微服务引擎详情
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  当前符合查询条件的微服务引擎专享版总个数
-    * data  微服务引擎专享版详情
+    * total  当前符合查询条件的微服务引擎个数
+    * data  微服务引擎详情
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  当前符合查询条件的微服务引擎专享版总个数
+    *  当前符合查询条件的微服务引擎个数
     *
     * @return int|null
     */
@@ -198,7 +198,7 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 当前符合查询条件的微服务引擎专享版总个数
+    * @param int|null $total 当前符合查询条件的微服务引擎个数
     *
     * @return $this
     */
@@ -210,7 +210,7 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  微服务引擎专享版详情
+    *  微服务引擎详情
     *
     * @return \HuaweiCloud\SDK\Cse\V1\Model\EngineSimpleInfo[]|null
     */
@@ -222,7 +222,7 @@ class ListEnginesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineSimpleInfo[]|null $data 微服务引擎专享版详情
+    * @param \HuaweiCloud\SDK\Cse\V1\Model\EngineSimpleInfo[]|null $data 微服务引擎详情
     *
     * @return $this
     */

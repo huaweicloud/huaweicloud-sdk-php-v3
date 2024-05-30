@@ -20,21 +20,25 @@ class ListCustomerselfResourceRecordDetailsRequest implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xLanguage  大陆站默认中文，枚举：zh_cn：中文 en_us：英文
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xLanguage' => 'string',
             'body' => '\HuaweiCloud\SDK\Bss\V2\Model\QueryResRecordsDetailReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xLanguage  大陆站默认中文，枚举：zh_cn：中文 en_us：英文
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xLanguage' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class ListCustomerselfResourceRecordDetailsRequest implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xLanguage  大陆站默认中文，枚举：zh_cn：中文 en_us：英文
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xLanguage' => 'X-Language',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xLanguage  大陆站默认中文，枚举：zh_cn：中文 en_us：英文
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'xLanguage' => 'setXLanguage',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xLanguage  大陆站默认中文，枚举：zh_cn：中文 en_us：英文
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'xLanguage' => 'getXLanguage',
             'body' => 'getBody'
     ];
 
@@ -147,6 +157,7 @@ class ListCustomerselfResourceRecordDetailsRequest implements ModelInterface, Ar
     */
     public function __construct(array $data = null)
     {
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -158,6 +169,12 @@ class ListCustomerselfResourceRecordDetailsRequest implements ModelInterface, Ar
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['xLanguage']) && (mb_strlen($this->container['xLanguage']) > 10)) {
+                $invalidProperties[] = "invalid value for 'xLanguage', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['xLanguage']) && (mb_strlen($this->container['xLanguage']) < 0)) {
+                $invalidProperties[] = "invalid value for 'xLanguage', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -170,6 +187,30 @@ class ListCustomerselfResourceRecordDetailsRequest implements ModelInterface, Ar
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xLanguage
+    *  大陆站默认中文，枚举：zh_cn：中文 en_us：英文
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 大陆站默认中文，枚举：zh_cn：中文 en_us：英文
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
+        return $this;
     }
 
     /**

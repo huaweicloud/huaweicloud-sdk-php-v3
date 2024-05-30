@@ -21,15 +21,21 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * fdName  属性名称。
+    * fdNameEn  属性英文名称。
     * description  属性描述。
-    * id  数据标准ID。
-    * actived  是否显示，系统默认项必然显示不允许修改。
-    * required  是否必填。
-    * searchable  是否可搜索。
+    * descriptionEn  属性英文描述。
+    * label  属性标签。
+    * disabled  是否禁用。
+    * id  数据标准ID，填写String类型替代Long类型。
+    * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
+    * required  是否必填。true：必填，false：非必填。
+    * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
+    * optionalValues  允许值。
+    * fieldType  字段类型，0表示系统字段， 1表示自定义字段。
     * displayedName  前端展示名。
     * displayedNameEn  前端展示名英文。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     *
@@ -37,11 +43,17 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'fdName' => 'string',
+            'fdNameEn' => 'string',
             'description' => 'string',
-            'id' => 'int',
+            'descriptionEn' => 'string',
+            'label' => 'string',
+            'disabled' => 'bool',
+            'id' => 'string',
             'actived' => 'bool',
             'required' => 'bool',
             'searchable' => 'bool',
+            'optionalValues' => 'string',
+            'fieldType' => 'int',
             'displayedName' => 'string',
             'displayedNameEn' => 'string',
             'createTime' => '\DateTime',
@@ -53,15 +65,21 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fdName  属性名称。
+    * fdNameEn  属性英文名称。
     * description  属性描述。
-    * id  数据标准ID。
-    * actived  是否显示，系统默认项必然显示不允许修改。
-    * required  是否必填。
-    * searchable  是否可搜索。
+    * descriptionEn  属性英文描述。
+    * label  属性标签。
+    * disabled  是否禁用。
+    * id  数据标准ID，填写String类型替代Long类型。
+    * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
+    * required  是否必填。true：必填，false：非必填。
+    * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
+    * optionalValues  允许值。
+    * fieldType  字段类型，0表示系统字段， 1表示自定义字段。
     * displayedName  前端展示名。
     * displayedNameEn  前端展示名英文。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     *
@@ -69,11 +87,17 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'fdName' => null,
+        'fdNameEn' => null,
         'description' => null,
-        'id' => 'int64',
+        'descriptionEn' => null,
+        'label' => null,
+        'disabled' => null,
+        'id' => null,
         'actived' => null,
         'required' => null,
         'searchable' => null,
+        'optionalValues' => null,
+        'fieldType' => null,
         'displayedName' => null,
         'displayedNameEn' => null,
         'createTime' => 'date-time',
@@ -106,15 +130,21 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * fdName  属性名称。
+    * fdNameEn  属性英文名称。
     * description  属性描述。
-    * id  数据标准ID。
-    * actived  是否显示，系统默认项必然显示不允许修改。
-    * required  是否必填。
-    * searchable  是否可搜索。
+    * descriptionEn  属性英文描述。
+    * label  属性标签。
+    * disabled  是否禁用。
+    * id  数据标准ID，填写String类型替代Long类型。
+    * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
+    * required  是否必填。true：必填，false：非必填。
+    * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
+    * optionalValues  允许值。
+    * fieldType  字段类型，0表示系统字段， 1表示自定义字段。
     * displayedName  前端展示名。
     * displayedNameEn  前端展示名英文。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     *
@@ -122,11 +152,17 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'fdName' => 'fd_name',
+            'fdNameEn' => 'fd_name_en',
             'description' => 'description',
+            'descriptionEn' => 'descriptionEn',
+            'label' => 'label',
+            'disabled' => 'disabled',
             'id' => 'id',
             'actived' => 'actived',
             'required' => 'required',
             'searchable' => 'searchable',
+            'optionalValues' => 'optional_values',
+            'fieldType' => 'field_type',
             'displayedName' => 'displayed_name',
             'displayedNameEn' => 'displayed_name_en',
             'createTime' => 'create_time',
@@ -138,15 +174,21 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fdName  属性名称。
+    * fdNameEn  属性英文名称。
     * description  属性描述。
-    * id  数据标准ID。
-    * actived  是否显示，系统默认项必然显示不允许修改。
-    * required  是否必填。
-    * searchable  是否可搜索。
+    * descriptionEn  属性英文描述。
+    * label  属性标签。
+    * disabled  是否禁用。
+    * id  数据标准ID，填写String类型替代Long类型。
+    * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
+    * required  是否必填。true：必填，false：非必填。
+    * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
+    * optionalValues  允许值。
+    * fieldType  字段类型，0表示系统字段， 1表示自定义字段。
     * displayedName  前端展示名。
     * displayedNameEn  前端展示名英文。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     *
@@ -154,11 +196,17 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'fdName' => 'setFdName',
+            'fdNameEn' => 'setFdNameEn',
             'description' => 'setDescription',
+            'descriptionEn' => 'setDescriptionEn',
+            'label' => 'setLabel',
+            'disabled' => 'setDisabled',
             'id' => 'setId',
             'actived' => 'setActived',
             'required' => 'setRequired',
             'searchable' => 'setSearchable',
+            'optionalValues' => 'setOptionalValues',
+            'fieldType' => 'setFieldType',
             'displayedName' => 'setDisplayedName',
             'displayedNameEn' => 'setDisplayedNameEn',
             'createTime' => 'setCreateTime',
@@ -170,15 +218,21 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fdName  属性名称。
+    * fdNameEn  属性英文名称。
     * description  属性描述。
-    * id  数据标准ID。
-    * actived  是否显示，系统默认项必然显示不允许修改。
-    * required  是否必填。
-    * searchable  是否可搜索。
+    * descriptionEn  属性英文描述。
+    * label  属性标签。
+    * disabled  是否禁用。
+    * id  数据标准ID，填写String类型替代Long类型。
+    * actived  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
+    * required  是否必填。true：必填，false：非必填。
+    * searchable  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
+    * optionalValues  允许值。
+    * fieldType  字段类型，0表示系统字段， 1表示自定义字段。
     * displayedName  前端展示名。
     * displayedNameEn  前端展示名英文。
-    * createTime  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
-    * updateTime  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * createTime  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * updateTime  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     * createBy  创建人。
     * updateBy  更新人。
     *
@@ -186,11 +240,17 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'fdName' => 'getFdName',
+            'fdNameEn' => 'getFdNameEn',
             'description' => 'getDescription',
+            'descriptionEn' => 'getDescriptionEn',
+            'label' => 'getLabel',
+            'disabled' => 'getDisabled',
             'id' => 'getId',
             'actived' => 'getActived',
             'required' => 'getRequired',
             'searchable' => 'getSearchable',
+            'optionalValues' => 'getOptionalValues',
+            'fieldType' => 'getFieldType',
             'displayedName' => 'getDisplayedName',
             'displayedNameEn' => 'getDisplayedNameEn',
             'createTime' => 'getCreateTime',
@@ -258,11 +318,17 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['fdName'] = isset($data['fdName']) ? $data['fdName'] : null;
+        $this->container['fdNameEn'] = isset($data['fdNameEn']) ? $data['fdNameEn'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['descriptionEn'] = isset($data['descriptionEn']) ? $data['descriptionEn'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['disabled'] = isset($data['disabled']) ? $data['disabled'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['actived'] = isset($data['actived']) ? $data['actived'] : null;
         $this->container['required'] = isset($data['required']) ? $data['required'] : null;
         $this->container['searchable'] = isset($data['searchable']) ? $data['searchable'] : null;
+        $this->container['optionalValues'] = isset($data['optionalValues']) ? $data['optionalValues'] : null;
+        $this->container['fieldType'] = isset($data['fieldType']) ? $data['fieldType'] : null;
         $this->container['displayedName'] = isset($data['displayedName']) ? $data['displayedName'] : null;
         $this->container['displayedNameEn'] = isset($data['displayedNameEn']) ? $data['displayedNameEn'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
@@ -324,6 +390,30 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets fdNameEn
+    *  属性英文名称。
+    *
+    * @return string|null
+    */
+    public function getFdNameEn()
+    {
+        return $this->container['fdNameEn'];
+    }
+
+    /**
+    * Sets fdNameEn
+    *
+    * @param string|null $fdNameEn 属性英文名称。
+    *
+    * @return $this
+    */
+    public function setFdNameEn($fdNameEn)
+    {
+        $this->container['fdNameEn'] = $fdNameEn;
+        return $this;
+    }
+
+    /**
     * Gets description
     *  属性描述。
     *
@@ -348,10 +438,82 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  数据标准ID。
+    * Gets descriptionEn
+    *  属性英文描述。
     *
-    * @return int|null
+    * @return string|null
+    */
+    public function getDescriptionEn()
+    {
+        return $this->container['descriptionEn'];
+    }
+
+    /**
+    * Sets descriptionEn
+    *
+    * @param string|null $descriptionEn 属性英文描述。
+    *
+    * @return $this
+    */
+    public function setDescriptionEn($descriptionEn)
+    {
+        $this->container['descriptionEn'] = $descriptionEn;
+        return $this;
+    }
+
+    /**
+    * Gets label
+    *  属性标签。
+    *
+    * @return string|null
+    */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+    * Sets label
+    *
+    * @param string|null $label 属性标签。
+    *
+    * @return $this
+    */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
+        return $this;
+    }
+
+    /**
+    * Gets disabled
+    *  是否禁用。
+    *
+    * @return bool|null
+    */
+    public function getDisabled()
+    {
+        return $this->container['disabled'];
+    }
+
+    /**
+    * Sets disabled
+    *
+    * @param bool|null $disabled 是否禁用。
+    *
+    * @return $this
+    */
+    public function setDisabled($disabled)
+    {
+        $this->container['disabled'] = $disabled;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  数据标准ID，填写String类型替代Long类型。
+    *
+    * @return string|null
     */
     public function getId()
     {
@@ -361,7 +523,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 数据标准ID。
+    * @param string|null $id 数据标准ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -373,7 +535,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets actived
-    *  是否显示，系统默认项必然显示不允许修改。
+    *  是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     *
     * @return bool
     */
@@ -385,7 +547,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets actived
     *
-    * @param bool $actived 是否显示，系统默认项必然显示不允许修改。
+    * @param bool $actived 是否显示，系统默认项必然显示不允许修改。true表示使用数据标准时体现（增改查的时候可以操作该属性），false表示使用数据标准时不体现。
     *
     * @return $this
     */
@@ -397,7 +559,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets required
-    *  是否必填。
+    *  是否必填。true：必填，false：非必填。
     *
     * @return bool|null
     */
@@ -409,7 +571,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets required
     *
-    * @param bool|null $required 是否必填。
+    * @param bool|null $required 是否必填。true：必填，false：非必填。
     *
     * @return $this
     */
@@ -421,7 +583,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets searchable
-    *  是否可搜索。
+    *  是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
     *
     * @return bool|null
     */
@@ -433,13 +595,61 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets searchable
     *
-    * @param bool|null $searchable 是否可搜索。
+    * @param bool|null $searchable 是否可搜索。true表示在数据标准列表页面可搜索，false表示在数据标准列表页面不可搜索。
     *
     * @return $this
     */
     public function setSearchable($searchable)
     {
         $this->container['searchable'] = $searchable;
+        return $this;
+    }
+
+    /**
+    * Gets optionalValues
+    *  允许值。
+    *
+    * @return string|null
+    */
+    public function getOptionalValues()
+    {
+        return $this->container['optionalValues'];
+    }
+
+    /**
+    * Sets optionalValues
+    *
+    * @param string|null $optionalValues 允许值。
+    *
+    * @return $this
+    */
+    public function setOptionalValues($optionalValues)
+    {
+        $this->container['optionalValues'] = $optionalValues;
+        return $this;
+    }
+
+    /**
+    * Gets fieldType
+    *  字段类型，0表示系统字段， 1表示自定义字段。
+    *
+    * @return int|null
+    */
+    public function getFieldType()
+    {
+        return $this->container['fieldType'];
+    }
+
+    /**
+    * Sets fieldType
+    *
+    * @param int|null $fieldType 字段类型，0表示系统字段， 1表示自定义字段。
+    *
+    * @return $this
+    */
+    public function setFieldType($fieldType)
+    {
+        $this->container['fieldType'] = $fieldType;
         return $this;
     }
 
@@ -493,7 +703,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -505,7 +715,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param \DateTime|null $createTime 创建时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $createTime 创建时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */
@@ -517,7 +727,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    *  更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return \DateTime|null
     */
@@ -529,7 +739,7 @@ class StandElementFieldVO implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param \DateTime|null $updateTime 更新时间，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
+    * @param \DateTime|null $updateTime 更新时间，只读，格式遵循RFC3339，精确到秒，UTC时区，即yyyy-mm-ddTHH:MM:SSZ，如1970-01-01T00:00:00Z。
     *
     * @return $this
     */

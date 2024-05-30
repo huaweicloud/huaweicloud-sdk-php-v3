@@ -20,8 +20,8 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dimensions  维度列表。
-    * costs  成本值。
+    * dimensions  维度列表，具体请参见表 DimensionGroup。
+    * costs  成本值，具体请参见表 Cost。
     * amountByCosts  此维度值对应整个时间跨度的成本汇总金额。
     * officialAmountByCosts  此维度值对应整个时间跨度的官网价汇总金额。
     *
@@ -36,8 +36,8 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dimensions  维度列表。
-    * costs  成本值。
+    * dimensions  维度列表，具体请参见表 DimensionGroup。
+    * costs  成本值，具体请参见表 Cost。
     * amountByCosts  此维度值对应整个时间跨度的成本汇总金额。
     * officialAmountByCosts  此维度值对应整个时间跨度的官网价汇总金额。
     *
@@ -73,8 +73,8 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dimensions  维度列表。
-    * costs  成本值。
+    * dimensions  维度列表，具体请参见表 DimensionGroup。
+    * costs  成本值，具体请参见表 Cost。
     * amountByCosts  此维度值对应整个时间跨度的成本汇总金额。
     * officialAmountByCosts  此维度值对应整个时间跨度的官网价汇总金额。
     *
@@ -89,8 +89,8 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dimensions  维度列表。
-    * costs  成本值。
+    * dimensions  维度列表，具体请参见表 DimensionGroup。
+    * costs  成本值，具体请参见表 Cost。
     * amountByCosts  此维度值对应整个时间跨度的成本汇总金额。
     * officialAmountByCosts  此维度值对应整个时间跨度的官网价汇总金额。
     *
@@ -105,8 +105,8 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dimensions  维度列表。
-    * costs  成本值。
+    * dimensions  维度列表，具体请参见表 DimensionGroup。
+    * costs  成本值，具体请参见表 Cost。
     * amountByCosts  此维度值对应整个时间跨度的成本汇总金额。
     * officialAmountByCosts  此维度值对应整个时间跨度的官网价汇总金额。
     *
@@ -207,7 +207,7 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets dimensions
-    *  维度列表。
+    *  维度列表，具体请参见表 DimensionGroup。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\DimensionGroup[]|null
     */
@@ -219,7 +219,7 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
     /**
     * Sets dimensions
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\DimensionGroup[]|null $dimensions 维度列表。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\DimensionGroup[]|null $dimensions 维度列表，具体请参见表 DimensionGroup。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
 
     /**
     * Gets costs
-    *  成本值。
+    *  成本值，具体请参见表 Cost。
     *
     * @return \HuaweiCloud\SDK\Bss\V2\Model\Cost[]|null
     */
@@ -243,7 +243,7 @@ class CostDataByDimension implements ModelInterface, ArrayAccess
     /**
     * Sets costs
     *
-    * @param \HuaweiCloud\SDK\Bss\V2\Model\Cost[]|null $costs 成本值。
+    * @param \HuaweiCloud\SDK\Bss\V2\Model\Cost[]|null $costs 成本值，具体请参见表 Cost。
     *
     * @return $this
     */

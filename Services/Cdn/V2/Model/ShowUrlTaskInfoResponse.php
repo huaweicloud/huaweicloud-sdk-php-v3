@@ -22,7 +22,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  查询结果总数。
-    * count  当前查询到的总页数。
+    * count  当前页查询到的总数。
     * result  url信息。
     * xRequestId  xRequestId
     *
@@ -38,7 +38,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  查询结果总数。
-    * count  当前查询到的总页数。
+    * count  当前页查询到的总数。
     * result  url信息。
     * xRequestId  xRequestId
     *
@@ -75,7 +75,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  查询结果总数。
-    * count  当前查询到的总页数。
+    * count  当前页查询到的总数。
     * result  url信息。
     * xRequestId  xRequestId
     *
@@ -91,7 +91,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  查询结果总数。
-    * count  当前查询到的总页数。
+    * count  当前页查询到的总数。
     * result  url信息。
     * xRequestId  xRequestId
     *
@@ -107,7 +107,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  查询结果总数。
-    * count  当前查询到的总页数。
+    * count  当前页查询到的总数。
     * result  url信息。
     * xRequestId  xRequestId
     *
@@ -232,7 +232,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  当前查询到的总页数。
+    *  当前页查询到的总数。
     *
     * @return int|null
     */
@@ -244,7 +244,7 @@ class ShowUrlTaskInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 当前查询到的总页数。
+    * @param int|null $count 当前页查询到的总数。
     *
     * @return $this
     */

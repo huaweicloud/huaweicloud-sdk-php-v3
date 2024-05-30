@@ -20,7 +20,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fields  属性信息。
+    * fields  属性信息，只读。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fields  属性信息。
+    * fields  属性信息，只读。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fields  属性信息。
+    * fields  属性信息，只读。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fields  属性信息。
+    * fields  属性信息，只读。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fields  属性信息。
+    * fields  属性信息，只读。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  属性信息。
+    *  属性信息，只读。
     *
     * @return \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandElementFieldVO[]|null
     */
@@ -186,7 +186,7 @@ class StandElementFieldVOList implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandElementFieldVO[]|null $fields 属性信息。
+    * @param \HuaweiCloud\SDK\DataArtsStudio\V1\Model\StandElementFieldVO[]|null $fields 属性信息，只读。
     *
     * @return $this
     */

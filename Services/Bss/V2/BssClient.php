@@ -1765,6 +1765,9 @@ class BssClient extends Client
         if ($localVarParams['indirectPartnerId'] !== null) {
             $queryParams['indirect_partner_id'] = $localVarParams['indirectPartnerId'];
         }
+        if ($localVarParams['method'] !== null) {
+            $queryParams['method'] = $localVarParams['method'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1896,6 +1899,9 @@ class BssClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -2004,6 +2010,9 @@ class BssClient extends Client
         }
         if ($localVarParams['billDateEnd'] !== null) {
             $queryParams['bill_date_end'] = $localVarParams['billDateEnd'];
+        }
+        if ($localVarParams['statisticType'] !== null) {
+            $queryParams['statistic_type'] = $localVarParams['statisticType'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];

@@ -140,6 +140,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const INSTANCE_MODE_HA = 'ha';
+    const INSTANCE_MODE_HAREADONLY = 'ha:readonly';
     const INSTANCE_MODE_INDEPENDENT = 'independent';
     
 
@@ -152,6 +153,7 @@ class DatastoreOption implements ModelInterface, ArrayAccess
     {
         return [
             self::INSTANCE_MODE_HA,
+            self::INSTANCE_MODE_HAREADONLY,
             self::INSTANCE_MODE_INDEPENDENT,
         ];
     }

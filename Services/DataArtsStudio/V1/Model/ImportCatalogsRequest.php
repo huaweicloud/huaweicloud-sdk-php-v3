@@ -23,7 +23,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作。start-import(开始导入)。
+    * actionId  需要执行的动作。 枚举值：   - start-import: 开始导入
     * skipExist  是否需要覆盖更新已有的主题。
     * body  body
     *
@@ -43,7 +43,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作。start-import(开始导入)。
+    * actionId  需要执行的动作。 枚举值：   - start-import: 开始导入
     * skipExist  是否需要覆盖更新已有的主题。
     * body  body
     *
@@ -84,7 +84,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作。start-import(开始导入)。
+    * actionId  需要执行的动作。 枚举值：   - start-import: 开始导入
     * skipExist  是否需要覆盖更新已有的主题。
     * body  body
     *
@@ -104,7 +104,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作。start-import(开始导入)。
+    * actionId  需要执行的动作。 枚举值：   - start-import: 开始导入
     * skipExist  是否需要覆盖更新已有的主题。
     * body  body
     *
@@ -124,7 +124,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
     * workspace  工作空间ID，获取方法请参见[实例ID和工作空间ID](dataartsstudio_02_0350.xml)。
     * xProjectId  项目ID，获取方法请参见[项目ID和账号ID](projectid_accountid.xml)。  多project场景采用AK/SK认证的接口请求，则该字段必选。
     * contentType  默认值：application/json;charset=UTF-8 可选，有Body体的情况下必选，没有Body体则无需填写和校验。
-    * actionId  需要执行的动作。start-import(开始导入)。
+    * actionId  需要执行的动作。 枚举值：   - start-import: 开始导入
     * skipExist  是否需要覆盖更新已有的主题。
     * body  body
     *
@@ -325,7 +325,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionId
-    *  需要执行的动作。start-import(开始导入)。
+    *  需要执行的动作。 枚举值：   - start-import: 开始导入
     *
     * @return string
     */
@@ -337,7 +337,7 @@ class ImportCatalogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets actionId
     *
-    * @param string $actionId 需要执行的动作。start-import(开始导入)。
+    * @param string $actionId 需要执行的动作。 枚举值：   - start-import: 开始导入
     *
     * @return $this
     */

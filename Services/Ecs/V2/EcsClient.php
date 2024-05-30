@@ -929,6 +929,74 @@ class EcsClient extends Client
     }
 
     /**
+     * 更新云服务器指定网卡属性
+     *
+     * 更新云服务器指定网卡属性，当前仅支持更新网卡IP。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeServerNetworkInterface($request)
+    {
+        return $this->changeServerNetworkInterfaceWithHttpInfo($request);
+    }
+
+    public function changeServerNetworkInterfaceWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/cloudservers/{server_id}/os-interface/{port_id}/change-network-interface';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['serverId'] !== null) {
+            $pathParams['server_id'] = $localVarParams['serverId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerNetworkInterfaceResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ChangeServerNetworkInterfaceRequest');
+    }
+
+    /**
      * 切换弹性云服务器操作系统(安装Cloud init)
      *
      * 切换弹性云服务器操作系统。支持弹性云服务器数据盘不变的情况下，使用新镜像重装系统盘。

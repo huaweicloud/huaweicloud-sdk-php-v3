@@ -22,7 +22,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  实例ID。
     * name  实例名称。
-    * haMode  部署形态。
+    * haMode  部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
@@ -36,7 +36,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
-    * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    * mode  产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @var string[]
     */
@@ -64,7 +64,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  实例ID。
     * name  实例名称。
-    * haMode  部署形态。
+    * haMode  部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
@@ -78,7 +78,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
-    * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    * mode  产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  实例ID。
     * name  实例名称。
-    * haMode  部署形态。
+    * haMode  部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
@@ -141,7 +141,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
-    * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    * mode  产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @var string[]
     */
@@ -169,7 +169,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  实例ID。
     * name  实例名称。
-    * haMode  部署形态。
+    * haMode  部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
@@ -183,7 +183,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
-    * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    * mode  产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @var string[]
     */
@@ -211,7 +211,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  实例ID。
     * name  实例名称。
-    * haMode  部署形态。
+    * haMode  部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     * engineName  引擎名称
     * engineVersion  引擎版本号。
     * payModel  计费模式（0：按需计费；1：包年/包月）。
@@ -225,7 +225,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     * backupLevel  备份级别
     * recycleBackupId  备份ID。（指删除实例时产生备份信息中的备份ID）。
     * recycleStatus  回收站备份状态。（Running：运行中；Active：有效的）。
-    * mode  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    * mode  产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @var string[]
     */
@@ -556,7 +556,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets haMode
-    *  部署形态。
+    *  部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     *
     * @return string
     */
@@ -568,7 +568,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets haMode
     *
-    * @param string $haMode 部署形态。
+    * @param string $haMode 部署形态(Ha:主备版;Independent:独立部署;Combined:混合部署)。
     *
     * @return $this
     */
@@ -892,7 +892,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    *  产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @return string
     */
@@ -904,7 +904,7 @@ class RecycleInstancesDetailResult implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string $mode 实例类型（basic：基础版；standard：标准版；enterprise：企业版）。
+    * @param string $mode 产品类型（basic：基础版；standard：标准版；enterprise：企业版）。
     *
     * @return $this
     */

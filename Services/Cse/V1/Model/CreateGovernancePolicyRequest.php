@@ -21,7 +21,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * contentType  该字段内容填为 \"application/json;charset=UTF-8\"。
-    * xEngineId  微服务引擎专享版的实例ID
+    * xEngineId  微服务引擎的实例ID
     * xEnterpriseProjectId  企业项目ID
     * xEnvironment  所属环境
     * kind  治理策略类型
@@ -41,7 +41,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * contentType  该字段内容填为 \"application/json;charset=UTF-8\"。
-    * xEngineId  微服务引擎专享版的实例ID
+    * xEngineId  微服务引擎的实例ID
     * xEnterpriseProjectId  企业项目ID
     * xEnvironment  所属环境
     * kind  治理策略类型
@@ -82,7 +82,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * contentType  该字段内容填为 \"application/json;charset=UTF-8\"。
-    * xEngineId  微服务引擎专享版的实例ID
+    * xEngineId  微服务引擎的实例ID
     * xEnterpriseProjectId  企业项目ID
     * xEnvironment  所属环境
     * kind  治理策略类型
@@ -102,7 +102,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  该字段内容填为 \"application/json;charset=UTF-8\"。
-    * xEngineId  微服务引擎专享版的实例ID
+    * xEngineId  微服务引擎的实例ID
     * xEnterpriseProjectId  企业项目ID
     * xEnvironment  所属环境
     * kind  治理策略类型
@@ -122,7 +122,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  该字段内容填为 \"application/json;charset=UTF-8\"。
-    * xEngineId  微服务引擎专享版的实例ID
+    * xEngineId  微服务引擎的实例ID
     * xEnterpriseProjectId  企业项目ID
     * xEnvironment  所属环境
     * kind  治理策略类型
@@ -265,7 +265,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xEngineId
-    *  微服务引擎专享版的实例ID
+    *  微服务引擎的实例ID
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class CreateGovernancePolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xEngineId
     *
-    * @param string $xEngineId 微服务引擎专享版的实例ID
+    * @param string $xEngineId 微服务引擎的实例ID
     *
     * @return $this
     */

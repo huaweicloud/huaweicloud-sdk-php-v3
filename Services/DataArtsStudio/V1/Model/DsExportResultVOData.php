@@ -20,7 +20,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     * group  group
     * rate  当前进度。
     *
@@ -34,7 +34,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     * group  group
     * rate  当前进度。
     *
@@ -69,7 +69,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     * group  group
     * rate  当前进度。
     *
@@ -83,7 +83,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     * group  group
     * rate  当前进度。
     *
@@ -97,7 +97,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    * status  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     * group  group
     * rate  当前进度。
     *
@@ -221,7 +221,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    *  标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class DsExportResultVOData implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。
+    * @param string|null $status 标识本次导出的唯一值，用于查询导入结果。importing(导出中)、fail(导出失败)、success(导出成功)。 枚举值：   - importing: 导出中   - fail: 导出失败   - success: 导出成功
     *
     * @return $this
     */

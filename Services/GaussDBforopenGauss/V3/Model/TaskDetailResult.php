@@ -25,6 +25,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * process  任务进度，单位：%。
+    * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * endedAt  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * failReason  失败原因。
     *
     * @var string[]
@@ -35,6 +37,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
             'name' => 'string',
             'status' => 'string',
             'process' => 'string',
+            'createdAt' => 'string',
+            'endedAt' => 'string',
             'failReason' => 'string'
     ];
 
@@ -45,6 +49,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * process  任务进度，单位：%。
+    * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * endedAt  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * failReason  失败原因。
     *
     * @var string[]
@@ -55,6 +61,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
         'name' => null,
         'status' => null,
         'process' => null,
+        'createdAt' => null,
+        'endedAt' => null,
         'failReason' => null
     ];
 
@@ -86,6 +94,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * process  任务进度，单位：%。
+    * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * endedAt  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * failReason  失败原因。
     *
     * @var string[]
@@ -96,6 +106,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
             'name' => 'name',
             'status' => 'status',
             'process' => 'process',
+            'createdAt' => 'created_at',
+            'endedAt' => 'ended_at',
             'failReason' => 'fail_reason'
     ];
 
@@ -106,6 +118,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * process  任务进度，单位：%。
+    * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * endedAt  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * failReason  失败原因。
     *
     * @var string[]
@@ -116,6 +130,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'status' => 'setStatus',
             'process' => 'setProcess',
+            'createdAt' => 'setCreatedAt',
+            'endedAt' => 'setEndedAt',
             'failReason' => 'setFailReason'
     ];
 
@@ -126,6 +142,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
     * name  任务名称。
     * status  任务状态。
     * process  任务进度，单位：%。
+    * createdAt  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    * endedAt  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
     * failReason  失败原因。
     *
     * @var string[]
@@ -136,6 +154,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'status' => 'getStatus',
             'process' => 'getProcess',
+            'createdAt' => 'getCreatedAt',
+            'endedAt' => 'getEndedAt',
             'failReason' => 'getFailReason'
     ];
 
@@ -202,6 +222,8 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['process'] = isset($data['process']) ? $data['process'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['endedAt'] = isset($data['endedAt']) ? $data['endedAt'] : null;
         $this->container['failReason'] = isset($data['failReason']) ? $data['failReason'] : null;
     }
 
@@ -344,6 +366,54 @@ class TaskDetailResult implements ModelInterface, ArrayAccess
     public function setProcess($process)
     {
         $this->container['process'] = $process;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *
+    * @return string|null
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string|null $createdAt 创建时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets endedAt
+    *  结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *
+    * @return string|null
+    */
+    public function getEndedAt()
+    {
+        return $this->container['endedAt'];
+    }
+
+    /**
+    * Sets endedAt
+    *
+    * @param string|null $endedAt 结束时间，格式为“yyyy-mm-ddThh:mm:ssZ”。其中，T指某个时间的开始；Z指时区偏移量，例如北京时间偏移显示为+0800。
+    *
+    * @return $this
+    */
+    public function setEndedAt($endedAt)
+    {
+        $this->container['endedAt'] = $endedAt;
         return $this;
     }
 

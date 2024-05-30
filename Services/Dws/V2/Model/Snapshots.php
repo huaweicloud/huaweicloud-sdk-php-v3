@@ -26,7 +26,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型
     * clusterId  快照对应的集群ID
     *
@@ -52,7 +52,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型
     * clusterId  快照对应的集群ID
     *
@@ -99,7 +99,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型
     * clusterId  快照对应的集群ID
     *
@@ -125,7 +125,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型
     * clusterId  快照对应的集群ID
     *
@@ -151,7 +151,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     * started  快照创建的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * finished  快照完成的日期时间，格式为 ISO8601: YYYY-MM-DDThh:mm:ssZ。
     * size  快照大小，单位 GB。
-    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    * status  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     * type  快照创建类型
     * clusterId  快照对应的集群ID
     *
@@ -433,7 +433,7 @@ class Snapshots implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    *  快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     *
     * @return string
     */
@@ -445,7 +445,7 @@ class Snapshots implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。
+    * @param string $status 快照状态：  - CREATING：创建中。 - AVAILABLE：可用。 - UNAVAILABLE：不可用。 - FROZEN： 普通冻结。 - POLICE_FROZEN： 公安冻结。
     *
     * @return $this
     */

@@ -20,23 +20,23 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  审批单ID。
-    * tenantId  项目ID。
+    * id  审批单ID，填写String类型替代Long类型。
+    * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
-    * bizInfoObj  业务详情。
+    * bizInfo  序列化之后的业务详情，类型是string。
+    * bizInfoObj  业务详情，类型是object。
     * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
     * submitTime  提交时间。
     * createBy  创建者。
-    * l1  主题域分组。
-    * l2  主题域。
-    * l3  业务对象。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalTime  审核时间。
     * approver  审核人。
     * email  审核人邮箱。
@@ -72,23 +72,23 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  审批单ID。
-    * tenantId  项目ID。
+    * id  审批单ID，填写String类型替代Long类型。
+    * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
-    * bizInfoObj  业务详情。
+    * bizInfo  序列化之后的业务详情，类型是string。
+    * bizInfoObj  业务详情，类型是object。
     * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
     * submitTime  提交时间。
     * createBy  创建者。
-    * l1  主题域分组。
-    * l2  主题域。
-    * l3  业务对象。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalTime  审核时间。
     * approver  审核人。
     * email  审核人邮箱。
@@ -98,11 +98,11 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => 'int64',
+        'id' => null,
         'tenantId' => null,
         'nameCh' => null,
         'nameEn' => null,
-        'bizId' => 'int64',
+        'bizId' => null,
         'bizType' => null,
         'bizInfo' => null,
         'bizInfoObj' => null,
@@ -145,23 +145,23 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  审批单ID。
-    * tenantId  项目ID。
+    * id  审批单ID，填写String类型替代Long类型。
+    * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
-    * bizInfoObj  业务详情。
+    * bizInfo  序列化之后的业务详情，类型是string。
+    * bizInfoObj  业务详情，类型是object。
     * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
     * submitTime  提交时间。
     * createBy  创建者。
-    * l1  主题域分组。
-    * l2  主题域。
-    * l3  业务对象。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalTime  审核时间。
     * approver  审核人。
     * email  审核人邮箱。
@@ -197,23 +197,23 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  审批单ID。
-    * tenantId  项目ID。
+    * id  审批单ID，填写String类型替代Long类型。
+    * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
-    * bizInfoObj  业务详情。
+    * bizInfo  序列化之后的业务详情，类型是string。
+    * bizInfoObj  业务详情，类型是object。
     * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
     * submitTime  提交时间。
     * createBy  创建者。
-    * l1  主题域分组。
-    * l2  主题域。
-    * l3  业务对象。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalTime  审核时间。
     * approver  审核人。
     * email  审核人邮箱。
@@ -249,23 +249,23 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  审批单ID。
-    * tenantId  项目ID。
+    * id  审批单ID，填写String类型替代Long类型。
+    * tenantId  项目ID，获取方式参考接口路径参数“project_id”。
     * nameCh  业务中文名。
     * nameEn  业务英文名。
-    * bizId  业务ID。
+    * bizId  业务ID，填写String类型替代Long类型。
     * bizType  bizType
-    * bizInfo  业务详情。
-    * bizInfoObj  业务详情。
+    * bizInfo  序列化之后的业务详情，类型是string。
+    * bizInfoObj  业务详情，类型是object。
     * bizVersion  业务版本。
     * bizStatus  bizStatus
     * approvalStatus  approvalStatus
     * approvalType  approvalType
     * submitTime  提交时间。
     * createBy  创建者。
-    * l1  主题域分组。
-    * l2  主题域。
-    * l3  业务对象。
+    * l1  主题域分组中文名，只读，创建和更新时无需填写。
+    * l2  主题域中文名，只读，创建和更新时无需填写。
+    * l3  业务对象中文名，只读，创建和更新时无需填写。
     * approvalTime  审核时间。
     * approver  审核人。
     * email  审核人邮箱。
@@ -405,7 +405,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  审批单ID。
+    *  审批单ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -417,7 +417,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 审批单ID。
+    * @param string|null $id 审批单ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  项目ID。
+    *  项目ID，获取方式参考接口路径参数“project_id”。
     *
     * @return string|null
     */
@@ -441,7 +441,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 项目ID。
+    * @param string|null $tenantId 项目ID，获取方式参考接口路径参数“project_id”。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizId
-    *  业务ID。
+    *  业务ID，填写String类型替代Long类型。
     *
     * @return string|null
     */
@@ -513,7 +513,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizId
     *
-    * @param string|null $bizId 业务ID。
+    * @param string|null $bizId 业务ID，填写String类型替代Long类型。
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfo
-    *  业务详情。
+    *  序列化之后的业务详情，类型是string。
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfo
     *
-    * @param string|null $bizInfo 业务详情。
+    * @param string|null $bizInfo 序列化之后的业务详情，类型是string。
     *
     * @return $this
     */
@@ -573,7 +573,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets bizInfoObj
-    *  业务详情。
+    *  业务详情，类型是object。
     *
     * @return object|null
     */
@@ -585,7 +585,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets bizInfoObj
     *
-    * @param object|null $bizInfoObj 业务详情。
+    * @param object|null $bizInfoObj 业务详情，类型是object。
     *
     * @return $this
     */
@@ -741,7 +741,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l1
-    *  主题域分组。
+    *  主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -753,7 +753,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets l1
     *
-    * @param string|null $l1 主题域分组。
+    * @param string|null $l1 主题域分组中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -765,7 +765,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l2
-    *  主题域。
+    *  主题域中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -777,7 +777,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets l2
     *
-    * @param string|null $l2 主题域。
+    * @param string|null $l2 主题域中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */
@@ -789,7 +789,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets l3
-    *  业务对象。
+    *  业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return string|null
     */
@@ -801,7 +801,7 @@ class ApprovalVO implements ModelInterface, ArrayAccess
     /**
     * Sets l3
     *
-    * @param string|null $l3 业务对象。
+    * @param string|null $l3 业务对象中文名，只读，创建和更新时无需填写。
     *
     * @return $this
     */

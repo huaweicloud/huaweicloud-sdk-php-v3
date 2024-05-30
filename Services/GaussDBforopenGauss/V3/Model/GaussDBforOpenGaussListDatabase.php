@@ -25,6 +25,8 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
     * characterSet  数据库使用的字符集，例如UTF8。
     * collateSet  数据库排序集，例如en_US.UTF-8等。
     * size  数据库大小（单位：MB）。
+    * datctype  数据库使用的字符分类，例如en_US.UTF-8等。
+    * compatibilityType  数据库兼容的类型，如GaussDB，M。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
             'owner' => 'string',
             'characterSet' => 'string',
             'collateSet' => 'string',
-            'size' => 'string'
+            'size' => 'string',
+            'datctype' => 'string',
+            'compatibilityType' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
     * characterSet  数据库使用的字符集，例如UTF8。
     * collateSet  数据库排序集，例如en_US.UTF-8等。
     * size  数据库大小（单位：MB）。
+    * datctype  数据库使用的字符分类，例如en_US.UTF-8等。
+    * compatibilityType  数据库兼容的类型，如GaussDB，M。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
         'owner' => null,
         'characterSet' => null,
         'collateSet' => null,
-        'size' => null
+        'size' => null,
+        'datctype' => null,
+        'compatibilityType' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
     * characterSet  数据库使用的字符集，例如UTF8。
     * collateSet  数据库排序集，例如en_US.UTF-8等。
     * size  数据库大小（单位：MB）。
+    * datctype  数据库使用的字符分类，例如en_US.UTF-8等。
+    * compatibilityType  数据库兼容的类型，如GaussDB，M。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
             'owner' => 'owner',
             'characterSet' => 'character_set',
             'collateSet' => 'collate_set',
-            'size' => 'size'
+            'size' => 'size',
+            'datctype' => 'datctype',
+            'compatibilityType' => 'compatibility_type'
     ];
 
     /**
@@ -100,6 +112,8 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
     * characterSet  数据库使用的字符集，例如UTF8。
     * collateSet  数据库排序集，例如en_US.UTF-8等。
     * size  数据库大小（单位：MB）。
+    * datctype  数据库使用的字符分类，例如en_US.UTF-8等。
+    * compatibilityType  数据库兼容的类型，如GaussDB，M。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
             'owner' => 'setOwner',
             'characterSet' => 'setCharacterSet',
             'collateSet' => 'setCollateSet',
-            'size' => 'setSize'
+            'size' => 'setSize',
+            'datctype' => 'setDatctype',
+            'compatibilityType' => 'setCompatibilityType'
     ];
 
     /**
@@ -118,6 +134,8 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
     * characterSet  数据库使用的字符集，例如UTF8。
     * collateSet  数据库排序集，例如en_US.UTF-8等。
     * size  数据库大小（单位：MB）。
+    * datctype  数据库使用的字符分类，例如en_US.UTF-8等。
+    * compatibilityType  数据库兼容的类型，如GaussDB，M。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
             'owner' => 'getOwner',
             'characterSet' => 'getCharacterSet',
             'collateSet' => 'getCollateSet',
-            'size' => 'getSize'
+            'size' => 'getSize',
+            'datctype' => 'getDatctype',
+            'compatibilityType' => 'getCompatibilityType'
     ];
 
     /**
@@ -192,6 +212,8 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
         $this->container['characterSet'] = isset($data['characterSet']) ? $data['characterSet'] : null;
         $this->container['collateSet'] = isset($data['collateSet']) ? $data['collateSet'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['datctype'] = isset($data['datctype']) ? $data['datctype'] : null;
+        $this->container['compatibilityType'] = isset($data['compatibilityType']) ? $data['compatibilityType'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class GaussDBforOpenGaussListDatabase implements ModelInterface, ArrayAccess
     public function setSize($size)
     {
         $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets datctype
+    *  数据库使用的字符分类，例如en_US.UTF-8等。
+    *
+    * @return string|null
+    */
+    public function getDatctype()
+    {
+        return $this->container['datctype'];
+    }
+
+    /**
+    * Sets datctype
+    *
+    * @param string|null $datctype 数据库使用的字符分类，例如en_US.UTF-8等。
+    *
+    * @return $this
+    */
+    public function setDatctype($datctype)
+    {
+        $this->container['datctype'] = $datctype;
+        return $this;
+    }
+
+    /**
+    * Gets compatibilityType
+    *  数据库兼容的类型，如GaussDB，M。
+    *
+    * @return string|null
+    */
+    public function getCompatibilityType()
+    {
+        return $this->container['compatibilityType'];
+    }
+
+    /**
+    * Sets compatibilityType
+    *
+    * @param string|null $compatibilityType 数据库兼容的类型，如GaussDB，M。
+    *
+    * @return $this
+    */
+    public function setCompatibilityType($compatibilityType)
+    {
+        $this->container['compatibilityType'] = $compatibilityType;
         return $this;
     }
 

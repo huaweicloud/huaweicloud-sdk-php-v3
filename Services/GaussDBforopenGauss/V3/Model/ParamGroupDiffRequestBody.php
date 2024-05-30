@@ -21,7 +21,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sourceId  需要进行比较的参数组模板ID。
-    * targetId  需要进行比较的参数组模板ID。
+    * targetId  需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sourceId  需要进行比较的参数组模板ID。
-    * targetId  需要进行比较的参数组模板ID。
+    * targetId  需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sourceId  需要进行比较的参数组模板ID。
-    * targetId  需要进行比较的参数组模板ID。
+    * targetId  需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sourceId  需要进行比较的参数组模板ID。
-    * targetId  需要进行比较的参数组模板ID。
+    * targetId  需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sourceId  需要进行比较的参数组模板ID。
-    * targetId  需要进行比较的参数组模板ID。
+    * targetId  需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets targetId
-    *  需要进行比较的参数组模板ID。
+    *  需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ParamGroupDiffRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets targetId
     *
-    * @param string $targetId 需要进行比较的参数组模板ID。
+    * @param string $targetId 需要进行比较的参数组模板ID，需要与源参数组模板的部署形态相同才可比较。
     *
     * @return $this
     */

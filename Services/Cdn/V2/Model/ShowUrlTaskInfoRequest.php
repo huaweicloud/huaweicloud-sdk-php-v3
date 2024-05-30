@@ -22,8 +22,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * startTime  起始时间戳（毫秒），默认当天00:00。
     * endTime  结束时间戳（毫秒），默认次日00:00。
-    * offset  偏移量：特定数据字段与起始数据字段位置的距离。
-    * limit  单次查询数据条数，上限为100。
+    * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
+    * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
     * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
@@ -46,8 +46,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * startTime  起始时间戳（毫秒），默认当天00:00。
     * endTime  结束时间戳（毫秒），默认次日00:00。
-    * offset  偏移量：特定数据字段与起始数据字段位置的距离。
-    * limit  单次查询数据条数，上限为100。
+    * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
+    * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
     * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
@@ -91,8 +91,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * startTime  起始时间戳（毫秒），默认当天00:00。
     * endTime  结束时间戳（毫秒），默认次日00:00。
-    * offset  偏移量：特定数据字段与起始数据字段位置的距离。
-    * limit  单次查询数据条数，上限为100。
+    * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
+    * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
     * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
@@ -115,8 +115,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * startTime  起始时间戳（毫秒），默认当天00:00。
     * endTime  结束时间戳（毫秒），默认次日00:00。
-    * offset  偏移量：特定数据字段与起始数据字段位置的距离。
-    * limit  单次查询数据条数，上限为100。
+    * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
+    * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
     * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
@@ -139,8 +139,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * startTime  起始时间戳（毫秒），默认当天00:00。
     * endTime  结束时间戳（毫秒），默认次日00:00。
-    * offset  偏移量：特定数据字段与起始数据字段位置的距离。
-    * limit  单次查询数据条数，上限为100。
+    * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
+    * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
     * taskType  任务类型，REFRESH：刷新任务；PREHEATING：预热任务。
     * status  url状态，状态类型：processing：处理中；succeed：完成；failed：失败；waiting：等待；refreshing：刷新中; preheating : 预热中。
@@ -299,7 +299,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：特定数据字段与起始数据字段位置的距离。
+    *  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     *
     * @return int|null
     */
@@ -311,7 +311,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：特定数据字段与起始数据字段位置的距离。
+    * @param int|null $offset 偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  单次查询数据条数，上限为100。
+    *  单次查询数据条数，上限为100，默认为10。
     *
     * @return int|null
     */
@@ -335,7 +335,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 单次查询数据条数，上限为100。
+    * @param int|null $limit 单次查询数据条数，上限为100，默认为10。
     *
     * @return $this
     */
