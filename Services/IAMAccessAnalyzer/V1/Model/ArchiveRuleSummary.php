@@ -25,7 +25,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     * id  存档规则的唯一标识符。
     * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     * id  存档规则的唯一标识符。
     * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     * id  存档规则的唯一标识符。
     * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     * id  存档规则的唯一标识符。
     * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     * id  存档规则的唯一标识符。
     * name  创建存档规则的名称。
     * updatedAt  上次更新存档规则的时间。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -388,7 +388,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  访问分析的唯一资源标识。
+    *  存档规则的唯一资源标识符。
     *
     * @return string
     */
@@ -400,7 +400,7 @@ class ArchiveRuleSummary implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string $urn 访问分析的唯一资源标识。
+    * @param string $urn 存档规则的唯一资源标识符。
     *
     * @return $this
     */

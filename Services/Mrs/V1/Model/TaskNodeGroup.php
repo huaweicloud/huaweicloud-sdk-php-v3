@@ -23,7 +23,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
     * nodeNum  Task节点节点数量，取值范围0～500，Core与Task节点总数最大为500个。
     * nodeSize  Task节点的实例规格，例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * dataVolumeType  Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～20。
     * dataVolumeSize  Task节点数据磁盘存储大小。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -43,7 +43,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
     * nodeNum  Task节点节点数量，取值范围0～500，Core与Task节点总数最大为500个。
     * nodeSize  Task节点的实例规格，例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * dataVolumeType  Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～20。
     * dataVolumeSize  Task节点数据磁盘存储大小。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -84,7 +84,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
     * nodeNum  Task节点节点数量，取值范围0～500，Core与Task节点总数最大为500个。
     * nodeSize  Task节点的实例规格，例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * dataVolumeType  Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～20。
     * dataVolumeSize  Task节点数据磁盘存储大小。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -104,7 +104,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
     * nodeNum  Task节点节点数量，取值范围0～500，Core与Task节点总数最大为500个。
     * nodeSize  Task节点的实例规格，例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * dataVolumeType  Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～20。
     * dataVolumeSize  Task节点数据磁盘存储大小。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -124,7 +124,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
     * nodeNum  Task节点节点数量，取值范围0～500，Core与Task节点总数最大为500个。
     * nodeSize  Task节点的实例规格，例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * dataVolumeType  Task节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  Task节点数据磁盘存储数目，取值范围：0～20。
     * dataVolumeSize  Task节点数据磁盘存储大小。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -258,8 +258,8 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
         if ($this->container['dataVolumeCount'] === null) {
             $invalidProperties[] = "'dataVolumeCount' can't be null";
         }
-            if (($this->container['dataVolumeCount'] > 10)) {
-                $invalidProperties[] = "invalid value for 'dataVolumeCount', must be smaller than or equal to 10.";
+            if (($this->container['dataVolumeCount'] > 20)) {
+                $invalidProperties[] = "invalid value for 'dataVolumeCount', must be smaller than or equal to 20.";
             }
             if (($this->container['dataVolumeCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'dataVolumeCount', must be bigger than or equal to 0.";
@@ -361,7 +361,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataVolumeCount
-    *  Task节点数据磁盘存储数目，取值范围：0～10。
+    *  Task节点数据磁盘存储数目，取值范围：0～20。
     *
     * @return int
     */
@@ -373,7 +373,7 @@ class TaskNodeGroup implements ModelInterface, ArrayAccess
     /**
     * Sets dataVolumeCount
     *
-    * @param int $dataVolumeCount Task节点数据磁盘存储数目，取值范围：0～10。
+    * @param int $dataVolumeCount Task节点数据磁盘存储数目，取值范围：0～20。
     *
     * @return $this
     */

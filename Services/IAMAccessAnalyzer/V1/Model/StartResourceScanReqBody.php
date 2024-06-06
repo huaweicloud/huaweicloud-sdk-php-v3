@@ -21,28 +21,32 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceId' => 'string',
             'resourceOwnerAccount' => 'string',
+            'resourceProjectId' => 'string',
             'resourceUrn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceId' => null,
         'resourceOwnerAccount' => null,
+        'resourceProjectId' => null,
         'resourceUrn' => null
     ];
 
@@ -70,42 +74,48 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceId' => 'resource_id',
             'resourceOwnerAccount' => 'resource_owner_account',
+            'resourceProjectId' => 'resource_project_id',
             'resourceUrn' => 'resource_urn'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceId' => 'setResourceId',
             'resourceOwnerAccount' => 'setResourceOwnerAccount',
+            'resourceProjectId' => 'setResourceProjectId',
             'resourceUrn' => 'setResourceUrn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceId' => 'getResourceId',
             'resourceOwnerAccount' => 'getResourceOwnerAccount',
+            'resourceProjectId' => 'getResourceProjectId',
             'resourceUrn' => 'getResourceUrn'
     ];
 
@@ -169,6 +179,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     {
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceOwnerAccount'] = isset($data['resourceOwnerAccount']) ? $data['resourceOwnerAccount'] : null;
+        $this->container['resourceProjectId'] = isset($data['resourceProjectId']) ? $data['resourceProjectId'] : null;
         $this->container['resourceUrn'] = isset($data['resourceUrn']) ? $data['resourceUrn'] : null;
     }
 
@@ -200,6 +211,12 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['resourceOwnerAccount'])) {
                 $invalidProperties[] = "invalid value for 'resourceOwnerAccount', must be conform to the pattern /^[\\w-]+$/.";
+            }
+            if (!is_null($this->container['resourceProjectId']) && (mb_strlen($this->container['resourceProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'resourceProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['resourceProjectId']) && !preg_match("/^[\\w-]+$/", $this->container['resourceProjectId'])) {
+                $invalidProperties[] = "invalid value for 'resourceProjectId', must be conform to the pattern /^[\\w-]+$/.";
             }
         if ($this->container['resourceUrn'] === null) {
             $invalidProperties[] = "'resourceUrn' can't be null";
@@ -247,7 +264,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceOwnerAccount
-    *  拥有资源的账户ID。
+    *  拥有资源的账号ID。
     *
     * @return string
     */
@@ -259,7 +276,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceOwnerAccount
     *
-    * @param string $resourceOwnerAccount 拥有资源的账户ID。
+    * @param string $resourceOwnerAccount 拥有资源的账号ID。
     *
     * @return $this
     */
@@ -270,8 +287,32 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets resourceProjectId
+    *  资源所属的项目标识符
+    *
+    * @return string|null
+    */
+    public function getResourceProjectId()
+    {
+        return $this->container['resourceProjectId'];
+    }
+
+    /**
+    * Sets resourceProjectId
+    *
+    * @param string|null $resourceProjectId 资源所属的项目标识符
+    *
+    * @return $this
+    */
+    public function setResourceProjectId($resourceProjectId)
+    {
+        $this->container['resourceProjectId'] = $resourceProjectId;
+        return $this;
+    }
+
+    /**
     * Gets resourceUrn
-    *  访问分析的唯一资源标识。
+    *  资源的唯一资源标识符。
     *
     * @return string
     */
@@ -283,7 +324,7 @@ class StartResourceScanReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceUrn
     *
-    * @param string $resourceUrn 访问分析的唯一资源标识。
+    * @param string $resourceUrn 资源的唯一资源标识符。
     *
     * @return $this
     */

@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model;
+namespace HuaweiCloud\SDK\GaussDB\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListPreviewFindingsResponse implements ModelInterface, ArrayAccess
+class LtsConfig implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,38 @@ class ListPreviewFindingsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListPreviewFindingsResponse';
+    protected static $openAPIModelName = 'LtsConfig';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * findings  访问预览生成的分析结果列表。
-    * pageInfo  pageInfo
+    * logType  日志类型。
+    * ltsGroupId  日志组ID。
+    * ltsStreamId  日志流ID。
+    * enabled  是否开启
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'findings' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PreviewFinding[]',
-            'pageInfo' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PageInfo'
+            'logType' => 'string',
+            'ltsGroupId' => 'string',
+            'ltsStreamId' => 'string',
+            'enabled' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * findings  访问预览生成的分析结果列表。
-    * pageInfo  pageInfo
+    * logType  日志类型。
+    * ltsGroupId  日志组ID。
+    * ltsStreamId  日志流ID。
+    * enabled  是否开启
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'findings' => null,
-        'pageInfo' => null
+        'logType' => null,
+        'ltsGroupId' => null,
+        'ltsStreamId' => null,
+        'enabled' => null
     ];
 
     /**
@@ -66,38 +73,50 @@ class ListPreviewFindingsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * findings  访问预览生成的分析结果列表。
-    * pageInfo  pageInfo
+    * logType  日志类型。
+    * ltsGroupId  日志组ID。
+    * ltsStreamId  日志流ID。
+    * enabled  是否开启
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'findings' => 'findings',
-            'pageInfo' => 'page_info'
+            'logType' => 'log_type',
+            'ltsGroupId' => 'lts_group_id',
+            'ltsStreamId' => 'lts_stream_id',
+            'enabled' => 'enabled'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * findings  访问预览生成的分析结果列表。
-    * pageInfo  pageInfo
+    * logType  日志类型。
+    * ltsGroupId  日志组ID。
+    * ltsStreamId  日志流ID。
+    * enabled  是否开启
     *
     * @var string[]
     */
     protected static $setters = [
-            'findings' => 'setFindings',
-            'pageInfo' => 'setPageInfo'
+            'logType' => 'setLogType',
+            'ltsGroupId' => 'setLtsGroupId',
+            'ltsStreamId' => 'setLtsStreamId',
+            'enabled' => 'setEnabled'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * findings  访问预览生成的分析结果列表。
-    * pageInfo  pageInfo
+    * logType  日志类型。
+    * ltsGroupId  日志组ID。
+    * ltsStreamId  日志流ID。
+    * enabled  是否开启
     *
     * @var string[]
     */
     protected static $getters = [
-            'findings' => 'getFindings',
-            'pageInfo' => 'getPageInfo'
+            'logType' => 'getLogType',
+            'ltsGroupId' => 'getLtsGroupId',
+            'ltsStreamId' => 'getLtsStreamId',
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -158,8 +177,10 @@ class ListPreviewFindingsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['findings'] = isset($data['findings']) ? $data['findings'] : null;
-        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
+        $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
+        $this->container['ltsGroupId'] = isset($data['ltsGroupId']) ? $data['ltsGroupId'] : null;
+        $this->container['ltsStreamId'] = isset($data['ltsStreamId']) ? $data['ltsStreamId'] : null;
+        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**
@@ -185,50 +206,98 @@ class ListPreviewFindingsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets findings
-    *  访问预览生成的分析结果列表。
+    * Gets logType
+    *  日志类型。
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PreviewFinding[]|null
+    * @return string|null
     */
-    public function getFindings()
+    public function getLogType()
     {
-        return $this->container['findings'];
+        return $this->container['logType'];
     }
 
     /**
-    * Sets findings
+    * Sets logType
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PreviewFinding[]|null $findings 访问预览生成的分析结果列表。
+    * @param string|null $logType 日志类型。
     *
     * @return $this
     */
-    public function setFindings($findings)
+    public function setLogType($logType)
     {
-        $this->container['findings'] = $findings;
+        $this->container['logType'] = $logType;
         return $this;
     }
 
     /**
-    * Gets pageInfo
-    *  pageInfo
+    * Gets ltsGroupId
+    *  日志组ID。
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PageInfo|null
+    * @return string|null
     */
-    public function getPageInfo()
+    public function getLtsGroupId()
     {
-        return $this->container['pageInfo'];
+        return $this->container['ltsGroupId'];
     }
 
     /**
-    * Sets pageInfo
+    * Sets ltsGroupId
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PageInfo|null $pageInfo pageInfo
+    * @param string|null $ltsGroupId 日志组ID。
     *
     * @return $this
     */
-    public function setPageInfo($pageInfo)
+    public function setLtsGroupId($ltsGroupId)
     {
-        $this->container['pageInfo'] = $pageInfo;
+        $this->container['ltsGroupId'] = $ltsGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets ltsStreamId
+    *  日志流ID。
+    *
+    * @return string|null
+    */
+    public function getLtsStreamId()
+    {
+        return $this->container['ltsStreamId'];
+    }
+
+    /**
+    * Sets ltsStreamId
+    *
+    * @param string|null $ltsStreamId 日志流ID。
+    *
+    * @return $this
+    */
+    public function setLtsStreamId($ltsStreamId)
+    {
+        $this->container['ltsStreamId'] = $ltsStreamId;
+        return $this;
+    }
+
+    /**
+    * Gets enabled
+    *  是否开启
+    *
+    * @return bool|null
+    */
+    public function getEnabled()
+    {
+        return $this->container['enabled'];
+    }
+
+    /**
+    * Sets enabled
+    *
+    * @param bool|null $enabled 是否开启
+    *
+    * @return $this
+    */
+    public function setEnabled($enabled)
+    {
+        $this->container['enabled'] = $enabled;
         return $this;
     }
 

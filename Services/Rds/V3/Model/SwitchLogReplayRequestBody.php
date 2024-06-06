@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model;
+namespace HuaweiCloud\SDK\Rds\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class GetAccessPreviewRequest implements ModelInterface, ArrayAccess
+class SwitchLogReplayRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class GetAccessPreviewRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'GetAccessPreviewRequest';
+    protected static $openAPIModelName = 'SwitchLogReplayRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'analyzerId' => 'string',
-            'accessPreviewId' => 'string'
+            'pauseLogReplay' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'analyzerId' => null,
-        'accessPreviewId' => null
+        'pauseLogReplay' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class GetAccessPreviewRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'analyzerId' => 'analyzer_id',
-            'accessPreviewId' => 'access_preview_id'
+            'pauseLogReplay' => 'pause_log_replay'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $setters = [
-            'analyzerId' => 'setAnalyzerId',
-            'accessPreviewId' => 'setAccessPreviewId'
+            'pauseLogReplay' => 'setPauseLogReplay'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * pauseLogReplay  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @var string[]
     */
     protected static $getters = [
-            'analyzerId' => 'getAnalyzerId',
-            'accessPreviewId' => 'getAccessPreviewId'
+            'pauseLogReplay' => 'getPauseLogReplay'
     ];
 
     /**
@@ -157,8 +147,7 @@ class GetAccessPreviewRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['analyzerId'] = isset($data['analyzerId']) ? $data['analyzerId'] : null;
-        $this->container['accessPreviewId'] = isset($data['accessPreviewId']) ? $data['accessPreviewId'] : null;
+        $this->container['pauseLogReplay'] = isset($data['pauseLogReplay']) ? $data['pauseLogReplay'] : null;
     }
 
     /**
@@ -169,30 +158,9 @@ class GetAccessPreviewRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['analyzerId'] === null) {
-            $invalidProperties[] = "'analyzerId' can't be null";
+        if ($this->container['pauseLogReplay'] === null) {
+            $invalidProperties[] = "'pauseLogReplay' can't be null";
         }
-            if ((mb_strlen($this->container['analyzerId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'analyzerId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['analyzerId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'analyzerId', the character length must be bigger than or equal to 1.";
-            }
-            if (!preg_match("/^[\\w-]+$/", $this->container['analyzerId'])) {
-                $invalidProperties[] = "invalid value for 'analyzerId', must be conform to the pattern /^[\\w-]+$/.";
-            }
-        if ($this->container['accessPreviewId'] === null) {
-            $invalidProperties[] = "'accessPreviewId' can't be null";
-        }
-            if ((mb_strlen($this->container['accessPreviewId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'accessPreviewId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['accessPreviewId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'accessPreviewId', the character length must be bigger than or equal to 1.";
-            }
-            if (!preg_match("/^[\\w-]+$/", $this->container['accessPreviewId'])) {
-                $invalidProperties[] = "invalid value for 'accessPreviewId', must be conform to the pattern /^[\\w-]+$/.";
-            }
         return $invalidProperties;
     }
 
@@ -208,50 +176,26 @@ class GetAccessPreviewRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets analyzerId
-    *  分析器的唯一标识符。
+    * Gets pauseLogReplay
+    *  “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @return string
     */
-    public function getAnalyzerId()
+    public function getPauseLogReplay()
     {
-        return $this->container['analyzerId'];
+        return $this->container['pauseLogReplay'];
     }
 
     /**
-    * Sets analyzerId
+    * Sets pauseLogReplay
     *
-    * @param string $analyzerId 分析器的唯一标识符。
+    * @param string $pauseLogReplay “true”表示中止回放，“false”表示恢复回放，其他情况表示不做操作
     *
     * @return $this
     */
-    public function setAnalyzerId($analyzerId)
+    public function setPauseLogReplay($pauseLogReplay)
     {
-        $this->container['analyzerId'] = $analyzerId;
-        return $this;
-    }
-
-    /**
-    * Gets accessPreviewId
-    *  访问预览的唯一标识符。
-    *
-    * @return string
-    */
-    public function getAccessPreviewId()
-    {
-        return $this->container['accessPreviewId'];
-    }
-
-    /**
-    * Sets accessPreviewId
-    *
-    * @param string $accessPreviewId 访问预览的唯一标识符。
-    *
-    * @return $this
-    */
-    public function setAccessPreviewId($accessPreviewId)
-    {
-        $this->container['accessPreviewId'] = $accessPreviewId;
+        $this->container['pauseLogReplay'] = $pauseLogReplay;
         return $this;
     }
 

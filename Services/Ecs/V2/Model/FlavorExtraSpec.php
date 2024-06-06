@@ -47,6 +47,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * condspotoperationstatus  Flavor在竞价销售模式下的状态  - 不配置时等同abandon - normal，正常商用 - abandon，下线 - sellout，售罄 - obt，公测，未申请时提示申请（暂不支持） - private，私有，只给特定用户显示（暂不支持） - test，试用/免费（暂不支持） - promotion，推荐
     * condnetwork  网络约束 支持网络特性，不配置时以UI配置为准。
     * condstorage  存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
+    * condstoragetype  存储约束  - 支持磁盘特性，不配置时以UI配置为准。
     * condcomputeliveResizable  计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
     * condcompute  计算约束  - autorecovery，自动恢复特性。 - 不存在该字段，不支持自动恢复。
     * infogpuname  
@@ -86,6 +87,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condspotoperationstatus' => 'string',
             'condnetwork' => 'string',
             'condstorage' => 'string',
+            'condstoragetype' => 'string',
             'condcomputeliveResizable' => 'string',
             'condcompute' => 'string',
             'infogpuname' => 'string',
@@ -125,6 +127,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * condspotoperationstatus  Flavor在竞价销售模式下的状态  - 不配置时等同abandon - normal，正常商用 - abandon，下线 - sellout，售罄 - obt，公测，未申请时提示申请（暂不支持） - private，私有，只给特定用户显示（暂不支持） - test，试用/免费（暂不支持） - promotion，推荐
     * condnetwork  网络约束 支持网络特性，不配置时以UI配置为准。
     * condstorage  存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
+    * condstoragetype  存储约束  - 支持磁盘特性，不配置时以UI配置为准。
     * condcomputeliveResizable  计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
     * condcompute  计算约束  - autorecovery，自动恢复特性。 - 不存在该字段，不支持自动恢复。
     * infogpuname  
@@ -164,6 +167,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'condspotoperationstatus' => null,
         'condnetwork' => null,
         'condstorage' => null,
+        'condstoragetype' => null,
         'condcomputeliveResizable' => null,
         'condcompute' => null,
         'infogpuname' => null,
@@ -224,6 +228,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * condspotoperationstatus  Flavor在竞价销售模式下的状态  - 不配置时等同abandon - normal，正常商用 - abandon，下线 - sellout，售罄 - obt，公测，未申请时提示申请（暂不支持） - private，私有，只给特定用户显示（暂不支持） - test，试用/免费（暂不支持） - promotion，推荐
     * condnetwork  网络约束 支持网络特性，不配置时以UI配置为准。
     * condstorage  存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
+    * condstoragetype  存储约束  - 支持磁盘特性，不配置时以UI配置为准。
     * condcomputeliveResizable  计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
     * condcompute  计算约束  - autorecovery，自动恢复特性。 - 不存在该字段，不支持自动恢复。
     * infogpuname  
@@ -263,6 +268,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condspotoperationstatus' => 'cond:spot:operation:status',
             'condnetwork' => 'cond:network',
             'condstorage' => 'cond:storage',
+            'condstoragetype' => 'cond:storage:type',
             'condcomputeliveResizable' => 'cond:compute:live_resizable',
             'condcompute' => 'cond:compute',
             'infogpuname' => 'info:gpu:name',
@@ -302,6 +308,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * condspotoperationstatus  Flavor在竞价销售模式下的状态  - 不配置时等同abandon - normal，正常商用 - abandon，下线 - sellout，售罄 - obt，公测，未申请时提示申请（暂不支持） - private，私有，只给特定用户显示（暂不支持） - test，试用/免费（暂不支持） - promotion，推荐
     * condnetwork  网络约束 支持网络特性，不配置时以UI配置为准。
     * condstorage  存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
+    * condstoragetype  存储约束  - 支持磁盘特性，不配置时以UI配置为准。
     * condcomputeliveResizable  计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
     * condcompute  计算约束  - autorecovery，自动恢复特性。 - 不存在该字段，不支持自动恢复。
     * infogpuname  
@@ -341,6 +348,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condspotoperationstatus' => 'setCondspotoperationstatus',
             'condnetwork' => 'setCondnetwork',
             'condstorage' => 'setCondstorage',
+            'condstoragetype' => 'setCondstoragetype',
             'condcomputeliveResizable' => 'setCondcomputeliveResizable',
             'condcompute' => 'setCondcompute',
             'infogpuname' => 'setInfogpuname',
@@ -380,6 +388,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * condspotoperationstatus  Flavor在竞价销售模式下的状态  - 不配置时等同abandon - normal，正常商用 - abandon，下线 - sellout，售罄 - obt，公测，未申请时提示申请（暂不支持） - private，私有，只给特定用户显示（暂不支持） - test，试用/免费（暂不支持） - promotion，推荐
     * condnetwork  网络约束 支持网络特性，不配置时以UI配置为准。
     * condstorage  存储约束  - 支持磁盘特性，不配置时以UI配置为准。 - scsi，支持scsi - localdisk，支持本地盘 - ib，支持ib
+    * condstoragetype  存储约束  - 支持磁盘特性，不配置时以UI配置为准。
     * condcomputeliveResizable  计算约束  - true，支持在线扩容。 - false或不存在该字段，不支持在线扩容。
     * condcompute  计算约束  - autorecovery，自动恢复特性。 - 不存在该字段，不支持自动恢复。
     * infogpuname  
@@ -419,6 +428,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'condspotoperationstatus' => 'getCondspotoperationstatus',
             'condnetwork' => 'getCondnetwork',
             'condstorage' => 'getCondstorage',
+            'condstoragetype' => 'getCondstoragetype',
             'condcomputeliveResizable' => 'getCondcomputeliveResizable',
             'condcompute' => 'getCondcompute',
             'infogpuname' => 'getInfogpuname',
@@ -514,6 +524,7 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['condspotoperationstatus'] = isset($data['condspotoperationstatus']) ? $data['condspotoperationstatus'] : null;
         $this->container['condnetwork'] = isset($data['condnetwork']) ? $data['condnetwork'] : null;
         $this->container['condstorage'] = isset($data['condstorage']) ? $data['condstorage'] : null;
+        $this->container['condstoragetype'] = isset($data['condstoragetype']) ? $data['condstoragetype'] : null;
         $this->container['condcomputeliveResizable'] = isset($data['condcomputeliveResizable']) ? $data['condcomputeliveResizable'] : null;
         $this->container['condcompute'] = isset($data['condcompute']) ? $data['condcompute'] : null;
         $this->container['infogpuname'] = isset($data['infogpuname']) ? $data['infogpuname'] : null;
@@ -1191,6 +1202,30 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setCondstorage($condstorage)
     {
         $this->container['condstorage'] = $condstorage;
+        return $this;
+    }
+
+    /**
+    * Gets condstoragetype
+    *  存储约束  - 支持磁盘特性，不配置时以UI配置为准。
+    *
+    * @return string|null
+    */
+    public function getCondstoragetype()
+    {
+        return $this->container['condstoragetype'];
+    }
+
+    /**
+    * Sets condstoragetype
+    *
+    * @param string|null $condstoragetype 存储约束  - 支持磁盘特性，不配置时以UI配置为准。
+    *
+    * @return $this
+    */
+    public function setCondstoragetype($condstoragetype)
+    {
+        $this->container['condstoragetype'] = $condstoragetype;
         return $this;
     }
 

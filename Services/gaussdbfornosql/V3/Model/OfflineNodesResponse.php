@@ -21,22 +21,22 @@ class OfflineNodesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  body
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'body' => 'object'
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  body
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'body' => null
+        'jobId' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class OfflineNodesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  body
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'body' => 'body'
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  body
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'body' => 'setBody'
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  body
+    * jobId  工作流ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'body' => 'getBody'
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -148,7 +148,7 @@ class OfflineNodesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class OfflineNodesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets jobId
+    *  工作流ID。
     *
-    * @return object|null
+    * @return string|null
     */
-    public function getBody()
+    public function getJobId()
     {
-        return $this->container['body'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets body
+    * Sets jobId
     *
-    * @param object|null $body body
+    * @param string|null $jobId 工作流ID。
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setJobId($jobId)
     {
-        $this->container['body'] = $body;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

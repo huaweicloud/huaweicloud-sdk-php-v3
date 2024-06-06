@@ -29,7 +29,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'limit' => 'int',
             'marker' => 'string',
-            'type' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerType'
+            'type' => 'string'
     ];
 
     /**
@@ -149,7 +149,22 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_ACCOUNT = 'account';
+    const TYPE_ORGANIZATION = 'organization';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_ACCOUNT,
+            self::TYPE_ORGANIZATION,
+        ];
+    }
 
 
     /**
@@ -195,6 +210,14 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['marker']) && !preg_match("/^[A-Za-z0-9+\/=\\-_]+$/", $this->container['marker'])) {
                 $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /^[A-Za-z0-9+\/=\\-_]+$/.";
             }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -261,7 +284,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     * Gets type
     *  分析器的类型。
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerType|null
+    * @return string|null
     */
     public function getType()
     {
@@ -271,7 +294,7 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerType|null $type 分析器的类型。
+    * @param string|null $type 分析器的类型。
     *
     * @return $this
     */

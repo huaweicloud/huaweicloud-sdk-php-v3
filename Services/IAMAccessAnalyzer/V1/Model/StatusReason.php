@@ -129,6 +129,10 @@ class StatusReason implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CODE_DELEGATED_ADMINISTRATOR_DEREGISTERED = 'delegated_administrator_deregistered';
+    const CODE_TRUSTED_SERVICE_DISABLED = 'trusted_service_disabled';
+    const CODE_INTERNAL_ERROR = 'internal_error';
+    const CODE_ORGANIZATION_DELETED = 'organization_deleted';
     const CODE_SERVICE_LINKED_AGENCY_CREATION_FAILED = 'service_linked_agency_creation_failed';
     
 
@@ -140,6 +144,10 @@ class StatusReason implements ModelInterface, ArrayAccess
     public function getCodeAllowableValues()
     {
         return [
+            self::CODE_DELEGATED_ADMINISTRATOR_DEREGISTERED,
+            self::CODE_TRUSTED_SERVICE_DISABLED,
+            self::CODE_INTERNAL_ERROR,
+            self::CODE_ORGANIZATION_DELETED,
             self::CODE_SERVICE_LINKED_AGENCY_CREATION_FAILED,
         ];
     }

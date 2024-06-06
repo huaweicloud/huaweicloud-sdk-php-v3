@@ -21,7 +21,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * configurations  configurations
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * configurations  configurations
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * configurations  configurations
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * configurations  configurations
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * configurations  configurations
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceUrn
-    *  访问分析的唯一资源标识。
+    *  资源的唯一资源标识符。
     *
     * @return string
     */
@@ -230,7 +230,7 @@ class CreateAccessPreviewReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceUrn
     *
-    * @param string $resourceUrn 访问分析的唯一资源标识。
+    * @param string $resourceUrn 资源的唯一资源标识符。
     *
     * @return $this
     */

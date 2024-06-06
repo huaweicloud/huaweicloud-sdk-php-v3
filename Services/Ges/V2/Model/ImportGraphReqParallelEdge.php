@@ -22,24 +22,28 @@ class ImportGraphReqParallelEdge implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * action  处理方式，取值为allow，ignore和override，默认为allow。  - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。 图规格为（一千亿边）的图暂不支持该参数。
     * ignoreLabel  重复边的定义，是否忽略Label。取值为true或者false，默认取true。  - true 表示重复边定义不包含Label，即用<源点，终点>标记一条边，不包含Label。 - false 表示重复边定义包含Label，即用<源点，终点，Label>标记一条边。 图规格为（一千亿边）的图暂不支持该参数。
+    * sortKeyColumn  sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'action' => 'string',
-            'ignoreLabel' => 'bool'
+            'ignoreLabel' => 'bool',
+            'sortKeyColumn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  处理方式，取值为allow，ignore和override，默认为allow。  - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。 图规格为（一千亿边）的图暂不支持该参数。
     * ignoreLabel  重复边的定义，是否忽略Label。取值为true或者false，默认取true。  - true 表示重复边定义不包含Label，即用<源点，终点>标记一条边，不包含Label。 - false 表示重复边定义包含Label，即用<源点，终点，Label>标记一条边。 图规格为（一千亿边）的图暂不支持该参数。
+    * sortKeyColumn  sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'action' => null,
-        'ignoreLabel' => null
+        'ignoreLabel' => null,
+        'sortKeyColumn' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ImportGraphReqParallelEdge implements ModelInterface, ArrayAccess
     * and the value is the original name
     * action  处理方式，取值为allow，ignore和override，默认为allow。  - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。 图规格为（一千亿边）的图暂不支持该参数。
     * ignoreLabel  重复边的定义，是否忽略Label。取值为true或者false，默认取true。  - true 表示重复边定义不包含Label，即用<源点，终点>标记一条边，不包含Label。 - false 表示重复边定义包含Label，即用<源点，终点，Label>标记一条边。 图规格为（一千亿边）的图暂不支持该参数。
+    * sortKeyColumn  sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'action' => 'action',
-            'ignoreLabel' => 'ignore_label'
+            'ignoreLabel' => 'ignore_label',
+            'sortKeyColumn' => 'sort_key_column'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  处理方式，取值为allow，ignore和override，默认为allow。  - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。 图规格为（一千亿边）的图暂不支持该参数。
     * ignoreLabel  重复边的定义，是否忽略Label。取值为true或者false，默认取true。  - true 表示重复边定义不包含Label，即用<源点，终点>标记一条边，不包含Label。 - false 表示重复边定义包含Label，即用<源点，终点，Label>标记一条边。 图规格为（一千亿边）的图暂不支持该参数。
+    * sortKeyColumn  sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
     *
     * @var string[]
     */
     protected static $setters = [
             'action' => 'setAction',
-            'ignoreLabel' => 'setIgnoreLabel'
+            'ignoreLabel' => 'setIgnoreLabel',
+            'sortKeyColumn' => 'setSortKeyColumn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  处理方式，取值为allow，ignore和override，默认为allow。  - allow表示允许重复边。 - ignore表示忽略之后的重复边。 - override表示覆盖之前的重复边。 图规格为（一千亿边）的图暂不支持该参数。
     * ignoreLabel  重复边的定义，是否忽略Label。取值为true或者false，默认取true。  - true 表示重复边定义不包含Label，即用<源点，终点>标记一条边，不包含Label。 - false 表示重复边定义包含Label，即用<源点，终点，Label>标记一条边。 图规格为（一千亿边）的图暂不支持该参数。
+    * sortKeyColumn  sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
     *
     * @var string[]
     */
     protected static $getters = [
             'action' => 'getAction',
-            'ignoreLabel' => 'getIgnoreLabel'
+            'ignoreLabel' => 'getIgnoreLabel',
+            'sortKeyColumn' => 'getSortKeyColumn'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ImportGraphReqParallelEdge implements ModelInterface, ArrayAccess
     {
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['ignoreLabel'] = isset($data['ignoreLabel']) ? $data['ignoreLabel'] : null;
+        $this->container['sortKeyColumn'] = isset($data['sortKeyColumn']) ? $data['sortKeyColumn'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ImportGraphReqParallelEdge implements ModelInterface, ArrayAccess
     public function setIgnoreLabel($ignoreLabel)
     {
         $this->container['ignoreLabel'] = $ignoreLabel;
+        return $this;
+    }
+
+    /**
+    * Gets sortKeyColumn
+    *  sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
+    *
+    * @return string|null
+    */
+    public function getSortKeyColumn()
+    {
+        return $this->container['sortKeyColumn'];
+    }
+
+    /**
+    * Sets sortKeyColumn
+    *
+    * @param string|null $sortKeyColumn sortKey在边文件中的位置，当前仅支持\"lastColumn\"，边文件中无sortKey时，不传此参数。
+    *
+    * @return $this
+    */
+    public function setSortKeyColumn($sortKeyColumn)
+    {
+        $this->container['sortKeyColumn'] = $sortKeyColumn;
         return $this;
     }
 

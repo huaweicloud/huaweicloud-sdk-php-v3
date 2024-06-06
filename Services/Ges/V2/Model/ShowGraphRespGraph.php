@@ -64,6 +64,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * sortKeyType  持久化版图边数据的sortKey类型
     *
     * @var string[]
     */
@@ -111,7 +112,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'expandTime' => 'string',
             'resizeTime' => 'string',
             'enableMultiLabel' => 'bool',
-            'capacityRatio' => 'int'
+            'capacityRatio' => 'int',
+            'sortKeyType' => 'string'
     ];
 
     /**
@@ -160,6 +162,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * sortKeyType  持久化版图边数据的sortKey类型
     *
     * @var string[]
     */
@@ -207,7 +210,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         'expandTime' => null,
         'resizeTime' => null,
         'enableMultiLabel' => null,
-        'capacityRatio' => 'int32'
+        'capacityRatio' => 'int32',
+        'sortKeyType' => null
     ];
 
     /**
@@ -277,6 +281,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * sortKeyType  持久化版图边数据的sortKey类型
     *
     * @var string[]
     */
@@ -324,7 +329,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'expandTime' => 'expand_time',
             'resizeTime' => 'resize_time',
             'enableMultiLabel' => 'enable_multi_label',
-            'capacityRatio' => 'capacity_ratio'
+            'capacityRatio' => 'capacity_ratio',
+            'sortKeyType' => 'sort_key_type'
     ];
 
     /**
@@ -373,6 +379,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * sortKeyType  持久化版图边数据的sortKey类型
     *
     * @var string[]
     */
@@ -420,7 +427,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'expandTime' => 'setExpandTime',
             'resizeTime' => 'setResizeTime',
             'enableMultiLabel' => 'setEnableMultiLabel',
-            'capacityRatio' => 'setCapacityRatio'
+            'capacityRatio' => 'setCapacityRatio',
+            'sortKeyType' => 'setSortKeyType'
     ];
 
     /**
@@ -469,6 +477,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * resizeTime  图扩容的时间。
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
+    * sortKeyType  持久化版图边数据的sortKey类型
     *
     * @var string[]
     */
@@ -516,7 +525,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'expandTime' => 'getExpandTime',
             'resizeTime' => 'getResizeTime',
             'enableMultiLabel' => 'getEnableMultiLabel',
-            'capacityRatio' => 'getCapacityRatio'
+            'capacityRatio' => 'getCapacityRatio',
+            'sortKeyType' => 'getSortKeyType'
     ];
 
     /**
@@ -621,6 +631,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         $this->container['resizeTime'] = isset($data['resizeTime']) ? $data['resizeTime'] : null;
         $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
         $this->container['capacityRatio'] = isset($data['capacityRatio']) ? $data['capacityRatio'] : null;
+        $this->container['sortKeyType'] = isset($data['sortKeyType']) ? $data['sortKeyType'] : null;
     }
 
     /**
@@ -1698,6 +1709,30 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     public function setCapacityRatio($capacityRatio)
     {
         $this->container['capacityRatio'] = $capacityRatio;
+        return $this;
+    }
+
+    /**
+    * Gets sortKeyType
+    *  持久化版图边数据的sortKey类型
+    *
+    * @return string|null
+    */
+    public function getSortKeyType()
+    {
+        return $this->container['sortKeyType'];
+    }
+
+    /**
+    * Sets sortKeyType
+    *
+    * @param string|null $sortKeyType 持久化版图边数据的sortKey类型
+    *
+    * @return $this
+    */
+    public function setSortKeyType($sortKeyType)
+    {
+        $this->container['sortKeyType'] = $sortKeyType;
         return $this;
     }
 

@@ -25,7 +25,7 @@ class ChangeVpcSecurityGroups implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'object'
+            'id' => 'string'
     ];
 
     /**
@@ -179,7 +179,7 @@ class ChangeVpcSecurityGroups implements ModelInterface, ArrayAccess
     * Gets id
     *  安全组id
     *
-    * @return object
+    * @return string
     */
     public function getId()
     {
@@ -189,7 +189,7 @@ class ChangeVpcSecurityGroups implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param object $id 安全组id
+    * @param string $id 安全组id
     *
     * @return $this
     */

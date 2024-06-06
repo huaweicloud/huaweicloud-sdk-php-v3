@@ -938,7 +938,7 @@ class IAMAccessAnalyzerClient extends Client
     /**
      * 创建访问预览
      *
-     * 创建访问预览
+     * 创建访问预览。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1001,23 +1001,23 @@ class IAMAccessAnalyzerClient extends Client
     }
 
     /**
-     * 获取相关访问预览的信息
+     * 获取相关预览生成的分析结果
      *
-     * 获取相关访问预览的信息。
+     * 获取相关预览生成的分析结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function getAccessPreview($request)
+    public function listAccessPreviewFindings($request)
     {
-        return $this->getAccessPreviewWithHttpInfo($request);
+        return $this->listAccessPreviewFindingsWithHttpInfo($request);
     }
 
-    public function getAccessPreviewWithHttpInfo($request)
+    public function listAccessPreviewFindingsWithHttpInfo($request)
     {
-        $resourcePath = '/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}';
+        $resourcePath = '/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}/findings';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1037,6 +1037,9 @@ class IAMAccessAnalyzerClient extends Client
         if ($localVarParams['accessPreviewId'] !== null) {
             $pathParams['access_preview_id'] = $localVarParams['accessPreviewId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1044,7 +1047,7 @@ class IAMAccessAnalyzerClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -1053,7 +1056,7 @@ class IAMAccessAnalyzerClient extends Client
         );
 
         return $this->callApi(
-            $method='GET',
+            $method='POST',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -1061,14 +1064,14 @@ class IAMAccessAnalyzerClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\GetAccessPreviewResponse',
-            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\GetAccessPreviewRequest');
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListAccessPreviewFindingsResponse',
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListAccessPreviewFindingsRequest');
     }
 
     /**
      * 获取所有访问预览
      *
-     * 获取所有访问预览
+     * 获取所有访问预览。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1134,23 +1137,23 @@ class IAMAccessAnalyzerClient extends Client
     }
 
     /**
-     * 获取相关预览生成的分析结果
+     * 获取相关访问预览的信息
      *
-     * 获取相关预览生成的分析结果
+     * 获取相关访问预览的信息。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
      * @param $request 请求对象
      * @return response
      */
-    public function listPreviewFindings($request)
+    public function showAccessPreview($request)
     {
-        return $this->listPreviewFindingsWithHttpInfo($request);
+        return $this->showAccessPreviewWithHttpInfo($request);
     }
 
-    public function listPreviewFindingsWithHttpInfo($request)
+    public function showAccessPreviewWithHttpInfo($request)
     {
-        $resourcePath = '/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}/findings';
+        $resourcePath = '/v5/analyzers/{analyzer_id}/access-previews/{access_preview_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1170,9 +1173,6 @@ class IAMAccessAnalyzerClient extends Client
         if ($localVarParams['accessPreviewId'] !== null) {
             $pathParams['access_preview_id'] = $localVarParams['accessPreviewId'];
         }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']
@@ -1180,7 +1180,7 @@ class IAMAccessAnalyzerClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json']
+                []
             );
         }
         $headers = array_merge(
@@ -1189,7 +1189,7 @@ class IAMAccessAnalyzerClient extends Client
         );
 
         return $this->callApi(
-            $method='POST',
+            $method='GET',
             $resourcePath,
             $pathParams,
             $queryParams,
@@ -1197,8 +1197,8 @@ class IAMAccessAnalyzerClient extends Client
             $body=$httpBody,
             $multipart = $multipart,
             $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListPreviewFindingsResponse',
-            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListPreviewFindingsRequest');
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ShowAccessPreviewResponse',
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ShowAccessPreviewRequest');
     }
 
     /**

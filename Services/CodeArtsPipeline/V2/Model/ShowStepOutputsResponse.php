@@ -40,7 +40,7 @@ class ShowStepOutputsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'stepOutputs' => null,
-        'currentSystemTime' => 'int32'
+        'currentSystemTime' => 'int64'
     ];
 
     /**

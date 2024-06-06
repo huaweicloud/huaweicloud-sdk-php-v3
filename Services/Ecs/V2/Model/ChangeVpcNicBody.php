@@ -22,7 +22,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡必须带有安全组。 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * subnetId  云服务器云主机添加网卡的信息。 需要指定云服务器云主机所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
-    * securityGroups  securityGroups
+    * securityGroups  添加网卡的安全组信息
     * ipAddress  P地址，无该参数表示自动分配IP地址
     *
     * @var string[]
@@ -30,7 +30,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'portId' => 'string',
             'subnetId' => 'string',
-            'securityGroups' => '\HuaweiCloud\SDK\Ecs\V2\Model\ChangeVpcSecurityGroups',
+            'securityGroups' => '\HuaweiCloud\SDK\Ecs\V2\Model\ChangeVpcSecurityGroups[]',
             'ipAddress' => 'string'
     ];
 
@@ -38,7 +38,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡必须带有安全组。 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * subnetId  云服务器云主机添加网卡的信息。 需要指定云服务器云主机所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
-    * securityGroups  securityGroups
+    * securityGroups  添加网卡的安全组信息
     * ipAddress  P地址，无该参数表示自动分配IP地址
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡必须带有安全组。 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * subnetId  云服务器云主机添加网卡的信息。 需要指定云服务器云主机所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
-    * securityGroups  securityGroups
+    * securityGroups  添加网卡的安全组信息
     * ipAddress  P地址，无该参数表示自动分配IP地址
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡必须带有安全组。 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * subnetId  云服务器云主机添加网卡的信息。 需要指定云服务器云主机所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
-    * securityGroups  securityGroups
+    * securityGroups  添加网卡的安全组信息
     * ipAddress  P地址，无该参数表示自动分配IP地址
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * portId  网卡ID，UUID格式。 当该字段不为空时，表示挂载指定的网卡。port_id和subnet_id不能同时为空。 网卡ID可以从虚拟私有云的“查询端口列表”章节查询到。 约束： 网卡必须带有安全组。 网卡状态必须为DOWN。 网卡的vpcid必须和传入的vpcid一致。 当port_id和subnet_id同时存在的时候，优先使用port_id。当选择port_id不为空时，代表此时使用的是弹性网卡，此时security_groups和ip_address等参数不生效。
     * subnetId  云服务器云主机添加网卡的信息。 需要指定云服务器云主机所属虚拟私有云下已创建的网络（network）的ID，UUID格式。
-    * securityGroups  securityGroups
+    * securityGroups  添加网卡的安全组信息
     * ipAddress  P地址，无该参数表示自动分配IP地址
     *
     * @var string[]
@@ -255,9 +255,9 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets securityGroups
-    *  securityGroups
+    *  添加网卡的安全组信息
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ChangeVpcSecurityGroups|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ChangeVpcSecurityGroups[]|null
     */
     public function getSecurityGroups()
     {
@@ -267,7 +267,7 @@ class ChangeVpcNicBody implements ModelInterface, ArrayAccess
     /**
     * Sets securityGroups
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ChangeVpcSecurityGroups|null $securityGroups securityGroups
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ChangeVpcSecurityGroups[]|null $securityGroups 添加网卡的安全组信息
     *
     * @return $this
     */

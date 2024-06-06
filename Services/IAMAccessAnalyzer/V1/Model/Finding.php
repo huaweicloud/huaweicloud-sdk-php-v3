@@ -27,9 +27,10 @@ class Finding implements ModelInterface, ArrayAccess
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
+    * resource  资源的唯一资源标识符。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
@@ -48,6 +49,7 @@ class Finding implements ModelInterface, ArrayAccess
             'resource' => 'string',
             'resourceId' => 'string',
             'resourceOwnerAccount' => 'string',
+            'resourceProjectId' => 'string',
             'resourceType' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ResourceType',
             'sources' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSourceType[]',
             'status' => 'string',
@@ -63,9 +65,10 @@ class Finding implements ModelInterface, ArrayAccess
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
+    * resource  资源的唯一资源标识符。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
@@ -84,6 +87,7 @@ class Finding implements ModelInterface, ArrayAccess
         'resource' => null,
         'resourceId' => null,
         'resourceOwnerAccount' => null,
+        'resourceProjectId' => null,
         'resourceType' => null,
         'sources' => null,
         'status' => null,
@@ -120,9 +124,10 @@ class Finding implements ModelInterface, ArrayAccess
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
+    * resource  资源的唯一资源标识符。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
@@ -141,6 +146,7 @@ class Finding implements ModelInterface, ArrayAccess
             'resource' => 'resource',
             'resourceId' => 'resource_id',
             'resourceOwnerAccount' => 'resource_owner_account',
+            'resourceProjectId' => 'resource_project_id',
             'resourceType' => 'resource_type',
             'sources' => 'sources',
             'status' => 'status',
@@ -156,9 +162,10 @@ class Finding implements ModelInterface, ArrayAccess
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
+    * resource  资源的唯一资源标识符。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
@@ -177,6 +184,7 @@ class Finding implements ModelInterface, ArrayAccess
             'resource' => 'setResource',
             'resourceId' => 'setResourceId',
             'resourceOwnerAccount' => 'setResourceOwnerAccount',
+            'resourceProjectId' => 'setResourceProjectId',
             'resourceType' => 'setResourceType',
             'sources' => 'setSources',
             'status' => 'setStatus',
@@ -192,9 +200,10 @@ class Finding implements ModelInterface, ArrayAccess
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
+    * resource  资源的唯一资源标识符。
     * resourceId  资源的唯一标识符。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resourceOwnerAccount  拥有资源的账号ID。
+    * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  结果的当前状态。
@@ -213,6 +222,7 @@ class Finding implements ModelInterface, ArrayAccess
             'resource' => 'getResource',
             'resourceId' => 'getResourceId',
             'resourceOwnerAccount' => 'getResourceOwnerAccount',
+            'resourceProjectId' => 'getResourceProjectId',
             'resourceType' => 'getResourceType',
             'sources' => 'getSources',
             'status' => 'getStatus',
@@ -304,6 +314,7 @@ class Finding implements ModelInterface, ArrayAccess
         $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceOwnerAccount'] = isset($data['resourceOwnerAccount']) ? $data['resourceOwnerAccount'] : null;
+        $this->container['resourceProjectId'] = isset($data['resourceProjectId']) ? $data['resourceProjectId'] : null;
         $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
@@ -374,6 +385,12 @@ class Finding implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['resourceOwnerAccount'])) {
                 $invalidProperties[] = "invalid value for 'resourceOwnerAccount', must be conform to the pattern /^[\\w-]+$/.";
+            }
+            if (!is_null($this->container['resourceProjectId']) && (mb_strlen($this->container['resourceProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'resourceProjectId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['resourceProjectId']) && !preg_match("/^[\\w-]+$/", $this->container['resourceProjectId'])) {
+                $invalidProperties[] = "invalid value for 'resourceProjectId', must be conform to the pattern /^[\\w-]+$/.";
             }
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
@@ -576,7 +593,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
-    *  访问分析的唯一资源标识。
+    *  资源的唯一资源标识符。
     *
     * @return string
     */
@@ -588,7 +605,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string $resource 访问分析的唯一资源标识。
+    * @param string $resource 资源的唯一资源标识符。
     *
     * @return $this
     */
@@ -624,7 +641,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceOwnerAccount
-    *  拥有资源的账户ID。
+    *  拥有资源的账号ID。
     *
     * @return string
     */
@@ -636,13 +653,37 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets resourceOwnerAccount
     *
-    * @param string $resourceOwnerAccount 拥有资源的账户ID。
+    * @param string $resourceOwnerAccount 拥有资源的账号ID。
     *
     * @return $this
     */
     public function setResourceOwnerAccount($resourceOwnerAccount)
     {
         $this->container['resourceOwnerAccount'] = $resourceOwnerAccount;
+        return $this;
+    }
+
+    /**
+    * Gets resourceProjectId
+    *  资源所属的项目标识符
+    *
+    * @return string|null
+    */
+    public function getResourceProjectId()
+    {
+        return $this->container['resourceProjectId'];
+    }
+
+    /**
+    * Sets resourceProjectId
+    *
+    * @param string|null $resourceProjectId 资源所属的项目标识符
+    *
+    * @return $this
+    */
+    public function setResourceProjectId($resourceProjectId)
+    {
+        $this->container['resourceProjectId'] = $resourceProjectId;
         return $this;
     }
 

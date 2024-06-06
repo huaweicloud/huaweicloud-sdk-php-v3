@@ -35,7 +35,7 @@ class InstancesResult implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'volumeType' => 'string',
             'dataVolumeSize' => 'float',
-            'version' => 'float',
+            'version' => 'string',
             'mode' => 'string',
             'instanceMode' => 'string'
     ];
@@ -386,7 +386,7 @@ class InstancesResult implements ModelInterface, ArrayAccess
     * Gets version
     *  实例版本信息。
     *
-    * @return float|null
+    * @return string|null
     */
     public function getVersion()
     {
@@ -396,7 +396,7 @@ class InstancesResult implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param float|null $version 实例版本信息。
+    * @param string|null $version 实例版本信息。
     *
     * @return $this
     */

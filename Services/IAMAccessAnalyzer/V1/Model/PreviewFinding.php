@@ -23,14 +23,14 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * action  允许外部主体使用的操作。
     * changeType  结果状态的变化。
     * condition  分析的策略语句中导致访问预览分析结果的条件。
-    * createdAt  生成预览访问分析结果的时间。
+    * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  结果的当前状态。
+    * existingFindingStatus  分析结果的当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resource  资源的唯一资源标识符。
+    * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
@@ -59,14 +59,14 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * action  允许外部主体使用的操作。
     * changeType  结果状态的变化。
     * condition  分析的策略语句中导致访问预览分析结果的条件。
-    * createdAt  生成预览访问分析结果的时间。
+    * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  结果的当前状态。
+    * existingFindingStatus  分析结果的当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resource  资源的唯一资源标识符。
+    * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
@@ -116,14 +116,14 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * action  允许外部主体使用的操作。
     * changeType  结果状态的变化。
     * condition  分析的策略语句中导致访问预览分析结果的条件。
-    * createdAt  生成预览访问分析结果的时间。
+    * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  结果的当前状态。
+    * existingFindingStatus  分析结果的当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resource  资源的唯一资源标识符。
+    * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
@@ -152,14 +152,14 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * action  允许外部主体使用的操作。
     * changeType  结果状态的变化。
     * condition  分析的策略语句中导致访问预览分析结果的条件。
-    * createdAt  生成预览访问分析结果的时间。
+    * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  结果的当前状态。
+    * existingFindingStatus  分析结果的当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resource  资源的唯一资源标识符。
+    * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
@@ -188,14 +188,14 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * action  允许外部主体使用的操作。
     * changeType  结果状态的变化。
     * condition  分析的策略语句中导致访问预览分析结果的条件。
-    * createdAt  生成预览访问分析结果的时间。
+    * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  结果的当前状态。
+    * existingFindingStatus  分析结果的当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
-    * resource  访问分析的唯一资源标识。
-    * resourceOwnerAccount  拥有资源的账户ID。
+    * resource  资源的唯一资源标识符。
+    * resourceOwnerAccount  拥有资源的账号ID。
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
     * status  变化后的状态。
@@ -527,7 +527,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  生成预览访问分析结果的时间。
+    *  生成访问预览分析结果的时间。
     *
     * @return \DateTime
     */
@@ -539,7 +539,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime $createdAt 生成预览访问分析结果的时间。
+    * @param \DateTime $createdAt 生成访问预览分析结果的时间。
     *
     * @return $this
     */
@@ -575,7 +575,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets existingFindingStatus
-    *  结果的当前状态。
+    *  分析结果的当前状态。
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets existingFindingStatus
     *
-    * @param string|null $existingFindingStatus 结果的当前状态。
+    * @param string|null $existingFindingStatus 分析结果的当前状态。
     *
     * @return $this
     */
@@ -671,7 +671,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
-    *  访问分析的唯一资源标识。
+    *  资源的唯一资源标识符。
     *
     * @return string
     */
@@ -683,7 +683,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string $resource 访问分析的唯一资源标识。
+    * @param string $resource 资源的唯一资源标识符。
     *
     * @return $this
     */
@@ -695,7 +695,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceOwnerAccount
-    *  拥有资源的账户ID。
+    *  拥有资源的账号ID。
     *
     * @return string
     */
@@ -707,7 +707,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets resourceOwnerAccount
     *
-    * @param string $resourceOwnerAccount 拥有资源的账户ID。
+    * @param string $resourceOwnerAccount 拥有资源的账号ID。
     *
     * @return $this
     */

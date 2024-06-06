@@ -26,7 +26,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
     * rootVolumeSize  节点系统磁盘存储大小。
     * rootVolumeType  节点系统磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
     * dataVolumeType  节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～20。
     * dataVolumeSize  节点数据磁盘存储大小 取值范围：100GB～32000GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -52,7 +52,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
     * rootVolumeSize  节点系统磁盘存储大小。
     * rootVolumeType  节点系统磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
     * dataVolumeType  节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～20。
     * dataVolumeSize  节点数据磁盘存储大小 取值范围：100GB～32000GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -99,7 +99,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
     * rootVolumeSize  节点系统磁盘存储大小。
     * rootVolumeType  节点系统磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
     * dataVolumeType  节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～20。
     * dataVolumeSize  节点数据磁盘存储大小 取值范围：100GB～32000GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -125,7 +125,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
     * rootVolumeSize  节点系统磁盘存储大小。
     * rootVolumeType  节点系统磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
     * dataVolumeType  节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～20。
     * dataVolumeSize  节点数据磁盘存储大小 取值范围：100GB～32000GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -151,7 +151,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
     * rootVolumeSize  节点系统磁盘存储大小。
     * rootVolumeType  节点系统磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
     * dataVolumeType  节点数据磁盘存储类别，目前支持SATA、SAS和SSD。 - SATA：普通IO - SAS：高IO - SSD：超高IO - GPSSD：通用型SSD
-    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目 取值范围：0～20。
     * dataVolumeSize  节点数据磁盘存储大小 取值范围：100GB～32000GB。
     * autoScalingPolicy  autoScalingPolicy
     *
@@ -421,7 +421,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataVolumeCount
-    *  节点数据磁盘存储数目 取值范围：0～10。
+    *  节点数据磁盘存储数目 取值范围：0～20。
     *
     * @return int|null
     */
@@ -433,7 +433,7 @@ class NodeGroupV11 implements ModelInterface, ArrayAccess
     /**
     * Sets dataVolumeCount
     *
-    * @param int|null $dataVolumeCount 节点数据磁盘存储数目 取值范围：0～10。
+    * @param int|null $dataVolumeCount 节点数据磁盘存储数目 取值范围：0～20。
     *
     * @return $this
     */

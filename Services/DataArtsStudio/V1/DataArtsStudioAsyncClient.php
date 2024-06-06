@@ -14870,6 +14870,95 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 获取计算维度成本列表信息
+     *
+     * 获取计算维度成本列表信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchSgcComputeDimensionsAsync($request)
+    {
+        return $this->searchSgcComputeDimensionsAsyncWithHttpInfo($request);
+    }
+    
+    public function searchSgcComputeDimensionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/costmgmt/{instance_id}/{workspace_id}/compute-dimension';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['nodeCreatorName'] !== null) {
+            $queryParams['node_creator_name'] = $localVarParams['nodeCreatorName'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['nodeType'] !== null) {
+            $queryParams['node_type'] = $localVarParams['nodeType'];
+        }
+        if ($localVarParams['orderBy'] !== null) {
+            $queryParams['order_by'] = $localVarParams['orderBy'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $pathParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchSgcComputeDimensionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\SearchSgcComputeDimensionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查找主题列表
      *
      * 通过名称（支持模糊查询）、创建者、责任人、状态、修改时间分页查找主题。

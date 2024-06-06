@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model;
+namespace HuaweiCloud\SDK\GaussDB\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
+class DeleteLtsConfigsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,33 +16,29 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ListPreviewFindingsRequest';
+    protected static $openAPIModelName = 'DeleteLtsConfigsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * xLanguage  语言。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'analyzerId' => 'string',
-            'accessPreviewId' => 'string',
-            'body' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListPreviewFindingsReqBody'
+            'xLanguage' => 'string',
+            'body' => '\HuaweiCloud\SDK\GaussDB\V3\Model\DeleteLtsConfigsRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * xLanguage  语言。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'analyzerId' => null,
-        'accessPreviewId' => null,
+        'xLanguage' => null,
         'body' => null
     ];
 
@@ -69,43 +65,37 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * xLanguage  语言。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'analyzerId' => 'analyzer_id',
-            'accessPreviewId' => 'access_preview_id',
+            'xLanguage' => 'X-Language',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * xLanguage  语言。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'analyzerId' => 'setAnalyzerId',
-            'accessPreviewId' => 'setAccessPreviewId',
+            'xLanguage' => 'setXLanguage',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * analyzerId  分析器的唯一标识符。
-    * accessPreviewId  访问预览的唯一标识符。
+    * xLanguage  语言。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'analyzerId' => 'getAnalyzerId',
-            'accessPreviewId' => 'getAccessPreviewId',
+            'xLanguage' => 'getXLanguage',
             'body' => 'getBody'
     ];
 
@@ -167,8 +157,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['analyzerId'] = isset($data['analyzerId']) ? $data['analyzerId'] : null;
-        $this->container['accessPreviewId'] = isset($data['accessPreviewId']) ? $data['accessPreviewId'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -180,30 +169,6 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['analyzerId'] === null) {
-            $invalidProperties[] = "'analyzerId' can't be null";
-        }
-            if ((mb_strlen($this->container['analyzerId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'analyzerId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['analyzerId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'analyzerId', the character length must be bigger than or equal to 1.";
-            }
-            if (!preg_match("/^[\\w-]+$/", $this->container['analyzerId'])) {
-                $invalidProperties[] = "invalid value for 'analyzerId', must be conform to the pattern /^[\\w-]+$/.";
-            }
-        if ($this->container['accessPreviewId'] === null) {
-            $invalidProperties[] = "'accessPreviewId' can't be null";
-        }
-            if ((mb_strlen($this->container['accessPreviewId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'accessPreviewId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['accessPreviewId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'accessPreviewId', the character length must be bigger than or equal to 1.";
-            }
-            if (!preg_match("/^[\\w-]+$/", $this->container['accessPreviewId'])) {
-                $invalidProperties[] = "invalid value for 'accessPreviewId', must be conform to the pattern /^[\\w-]+$/.";
-            }
         return $invalidProperties;
     }
 
@@ -219,50 +184,26 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets analyzerId
-    *  分析器的唯一标识符。
+    * Gets xLanguage
+    *  语言。
     *
-    * @return string
+    * @return string|null
     */
-    public function getAnalyzerId()
+    public function getXLanguage()
     {
-        return $this->container['analyzerId'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets analyzerId
+    * Sets xLanguage
     *
-    * @param string $analyzerId 分析器的唯一标识符。
+    * @param string|null $xLanguage 语言。
     *
     * @return $this
     */
-    public function setAnalyzerId($analyzerId)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['analyzerId'] = $analyzerId;
-        return $this;
-    }
-
-    /**
-    * Gets accessPreviewId
-    *  访问预览的唯一标识符。
-    *
-    * @return string
-    */
-    public function getAccessPreviewId()
-    {
-        return $this->container['accessPreviewId'];
-    }
-
-    /**
-    * Sets accessPreviewId
-    *
-    * @param string $accessPreviewId 访问预览的唯一标识符。
-    *
-    * @return $this
-    */
-    public function setAccessPreviewId($accessPreviewId)
-    {
-        $this->container['accessPreviewId'] = $accessPreviewId;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
@@ -270,7 +211,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListPreviewFindingsReqBody|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\DeleteLtsConfigsRequestBody|null
     */
     public function getBody()
     {
@@ -280,7 +221,7 @@ class ListPreviewFindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ListPreviewFindingsReqBody|null $body body
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\DeleteLtsConfigsRequestBody|null $body body
     *
     * @return $this
     */

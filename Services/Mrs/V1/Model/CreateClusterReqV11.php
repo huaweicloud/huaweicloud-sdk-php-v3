@@ -43,7 +43,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
     * masterDataVolumeCount  该参数为多磁盘参数，表示Master节点数据磁盘个数。取值只能是1。
     * coreDataVolumeType  该参数为多磁盘参数，表示Core节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
     * coreDataVolumeSize  该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
-    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     * taskNodeGroups  Task节点列表信息。
     * bootstrapScripts  配置引导操作脚本信息。
     * nodePublicCertName  密钥对名称。用户可以使用密钥对方式登录集群节点。当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。
@@ -123,7 +123,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
     * masterDataVolumeCount  该参数为多磁盘参数，表示Master节点数据磁盘个数。取值只能是1。
     * coreDataVolumeType  该参数为多磁盘参数，表示Core节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
     * coreDataVolumeSize  该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
-    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     * taskNodeGroups  Task节点列表信息。
     * bootstrapScripts  配置引导操作脚本信息。
     * nodePublicCertName  密钥对名称。用户可以使用密钥对方式登录集群节点。当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。
@@ -224,7 +224,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
     * masterDataVolumeCount  该参数为多磁盘参数，表示Master节点数据磁盘个数。取值只能是1。
     * coreDataVolumeType  该参数为多磁盘参数，表示Core节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
     * coreDataVolumeSize  该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
-    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     * taskNodeGroups  Task节点列表信息。
     * bootstrapScripts  配置引导操作脚本信息。
     * nodePublicCertName  密钥对名称。用户可以使用密钥对方式登录集群节点。当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。
@@ -304,7 +304,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
     * masterDataVolumeCount  该参数为多磁盘参数，表示Master节点数据磁盘个数。取值只能是1。
     * coreDataVolumeType  该参数为多磁盘参数，表示Core节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
     * coreDataVolumeSize  该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
-    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     * taskNodeGroups  Task节点列表信息。
     * bootstrapScripts  配置引导操作脚本信息。
     * nodePublicCertName  密钥对名称。用户可以使用密钥对方式登录集群节点。当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。
@@ -384,7 +384,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
     * masterDataVolumeCount  该参数为多磁盘参数，表示Master节点数据磁盘个数。取值只能是1。
     * coreDataVolumeType  该参数为多磁盘参数，表示Core节点数据磁盘存储类别，目前支持SATA、SAS、SSD和GPSSD。
     * coreDataVolumeSize  该参数为多磁盘参数，表示Core节点数据磁盘存储空间。为增大数据存储容量，创建集群时可同时添加磁盘。  取值范围：100GB～32000GB，传值只需填数字，不需要带单位GB。
-    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    * coreDataVolumeCount  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     * taskNodeGroups  Task节点列表信息。
     * bootstrapScripts  配置引导操作脚本信息。
     * nodePublicCertName  密钥对名称。用户可以使用密钥对方式登录集群节点。当“login_mode”配置为“1”时，请求消息体中包含node_public_cert_name字段。
@@ -789,8 +789,8 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
             if (!is_null($this->container['coreDataVolumeSize']) && ($this->container['coreDataVolumeSize'] < 100)) {
                 $invalidProperties[] = "invalid value for 'coreDataVolumeSize', must be bigger than or equal to 100.";
             }
-            if (!is_null($this->container['coreDataVolumeCount']) && ($this->container['coreDataVolumeCount'] > 10)) {
-                $invalidProperties[] = "invalid value for 'coreDataVolumeCount', must be smaller than or equal to 10.";
+            if (!is_null($this->container['coreDataVolumeCount']) && ($this->container['coreDataVolumeCount'] > 20)) {
+                $invalidProperties[] = "invalid value for 'coreDataVolumeCount', must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['coreDataVolumeCount']) && ($this->container['coreDataVolumeCount'] < 1)) {
                 $invalidProperties[] = "invalid value for 'coreDataVolumeCount', must be bigger than or equal to 1.";
@@ -1410,7 +1410,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
 
     /**
     * Gets coreDataVolumeCount
-    *  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    *  该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     *
     * @return int|null
     */
@@ -1422,7 +1422,7 @@ class CreateClusterReqV11 implements ModelInterface, ArrayAccess
     /**
     * Sets coreDataVolumeCount
     *
-    * @param int|null $coreDataVolumeCount 该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～10
+    * @param int|null $coreDataVolumeCount 该参数为多磁盘参数，表示Core节点数据磁盘个数。 取值范围：1～20
     *
     * @return $this
     */

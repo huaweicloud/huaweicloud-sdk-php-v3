@@ -20,7 +20,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specCpde  资源规格编码。
+    * specCode  资源规格编码。
     * vcpus  CPU核数。
     * ram  内存大小，单位：GB。
     * azStatus  其中key是可用区编号，value是规格所在az的状态。
@@ -28,7 +28,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'specCpde' => 'string',
+            'specCode' => 'string',
             'vcpus' => 'string',
             'ram' => 'string',
             'azStatus' => 'map[string,string]'
@@ -36,7 +36,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specCpde  资源规格编码。
+    * specCode  资源规格编码。
     * vcpus  CPU核数。
     * ram  内存大小，单位：GB。
     * azStatus  其中key是可用区编号，value是规格所在az的状态。
@@ -44,7 +44,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'specCpde' => null,
+        'specCode' => null,
         'vcpus' => null,
         'ram' => null,
         'azStatus' => null
@@ -73,7 +73,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specCpde  资源规格编码。
+    * specCode  资源规格编码。
     * vcpus  CPU核数。
     * ram  内存大小，单位：GB。
     * azStatus  其中key是可用区编号，value是规格所在az的状态。
@@ -81,7 +81,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'specCpde' => 'spec_cpde',
+            'specCode' => 'spec_code',
             'vcpus' => 'vcpus',
             'ram' => 'ram',
             'azStatus' => 'az_status'
@@ -89,7 +89,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specCpde  资源规格编码。
+    * specCode  资源规格编码。
     * vcpus  CPU核数。
     * ram  内存大小，单位：GB。
     * azStatus  其中key是可用区编号，value是规格所在az的状态。
@@ -97,7 +97,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'specCpde' => 'setSpecCpde',
+            'specCode' => 'setSpecCode',
             'vcpus' => 'setVcpus',
             'ram' => 'setRam',
             'azStatus' => 'setAzStatus'
@@ -105,7 +105,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specCpde  资源规格编码。
+    * specCode  资源规格编码。
     * vcpus  CPU核数。
     * ram  内存大小，单位：GB。
     * azStatus  其中key是可用区编号，value是规格所在az的状态。
@@ -113,7 +113,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'specCpde' => 'getSpecCpde',
+            'specCode' => 'getSpecCode',
             'vcpus' => 'getVcpus',
             'ram' => 'getRam',
             'azStatus' => 'getAzStatus'
@@ -177,7 +177,7 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['specCpde'] = isset($data['specCpde']) ? $data['specCpde'] : null;
+        $this->container['specCode'] = isset($data['specCode']) ? $data['specCode'] : null;
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
         $this->container['azStatus'] = isset($data['azStatus']) ? $data['azStatus'] : null;
@@ -206,26 +206,26 @@ class AvailableFlavorInfoResult implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets specCpde
+    * Gets specCode
     *  资源规格编码。
     *
     * @return string|null
     */
-    public function getSpecCpde()
+    public function getSpecCode()
     {
-        return $this->container['specCpde'];
+        return $this->container['specCode'];
     }
 
     /**
-    * Sets specCpde
+    * Sets specCode
     *
-    * @param string|null $specCpde 资源规格编码。
+    * @param string|null $specCode 资源规格编码。
     *
     * @return $this
     */
-    public function setSpecCpde($specCpde)
+    public function setSpecCode($specCode)
     {
-        $this->container['specCpde'] = $specCpde;
+        $this->container['specCode'] = $specCode;
         return $this;
     }
 

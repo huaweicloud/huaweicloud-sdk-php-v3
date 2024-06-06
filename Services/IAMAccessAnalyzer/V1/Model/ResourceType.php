@@ -12,6 +12,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      */
     const IAMAGENCY = 'iam:agency';
     const OBSBUCKET = 'obs:bucket';
+    const KMSCMK = 'kms:cmk';
     
     /**
      * Gets allowable values of the enum
@@ -22,6 +23,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
         return [
             self::IAMAGENCY,
             self::OBSBUCKET,
+            self::KMSCMK,
         ];
     }
 }

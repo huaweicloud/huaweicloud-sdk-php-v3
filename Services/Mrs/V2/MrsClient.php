@@ -1166,6 +1166,95 @@ class MrsClient extends Client
     }
 
     /**
+     * 查询集群节点列表
+     *
+     * 查询集群节点列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNodes($request)
+    {
+        return $this->listNodesWithHttpInfo($request);
+    }
+
+    public function listNodesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/nodes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['nodeGroup'] !== null) {
+            $queryParams['node_group'] = $localVarParams['nodeGroup'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['nodeName'] !== null) {
+            $queryParams['node_name'] = $localVarParams['nodeName'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['queryNodeDetail'] !== null) {
+            $queryParams['query_node_detail'] = $localVarParams['queryNodeDetail'];
+        }
+        if ($localVarParams['queryEcsDetail'] !== null) {
+            $queryParams['query_ecs_detail'] = $localVarParams['queryEcsDetail'];
+        }
+        if ($localVarParams['internalIp'] !== null) {
+            $queryParams['internal_ip'] = $localVarParams['internalIp'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Mrs\V2\Model\ListNodesResponse',
+            $requestType='\HuaweiCloud\SDK\Mrs\V2\Model\ListNodesRequest');
+    }
+
+    /**
      * 缩容集群
      *
      * 对MRS集群进行缩容。
@@ -2182,6 +2271,9 @@ class MrsClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
         }
         if ($localVarParams['versionName'] !== null) {
             $pathParams['version_name'] = $localVarParams['versionName'];

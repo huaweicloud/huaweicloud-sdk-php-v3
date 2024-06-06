@@ -22,7 +22,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  存档规则的唯一标识符。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  存档规则的唯一标识符。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  存档规则的唯一标识符。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  存档规则的唯一标识符。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  存档规则的唯一标识符。
-    * urn  访问分析的唯一资源标识。
+    * urn  存档规则的唯一资源标识符。
     *
     * @var string[]
     */
@@ -222,7 +222,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  访问分析的唯一资源标识。
+    *  存档规则的唯一资源标识符。
     *
     * @return string|null
     */
@@ -234,7 +234,7 @@ class CreateArchiveRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string|null $urn 访问分析的唯一资源标识。
+    * @param string|null $urn 存档规则的唯一资源标识符。
     *
     * @return $this
     */

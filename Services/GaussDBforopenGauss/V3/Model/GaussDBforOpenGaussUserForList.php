@@ -21,29 +21,33 @@ class GaussDBforOpenGaussUserForList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  帐号名。
-    * attributes  attributes
+    * attribute  attribute
     * memberof  用户的默认权限。
+    * lockStatus  用户是否被锁，取值为“true”或“false”。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'attributes' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussUserForListAttributes',
-            'memberof' => 'string'
+            'attribute' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussUserForListAttribute',
+            'memberof' => 'string',
+            'lockStatus' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  帐号名。
-    * attributes  attributes
+    * attribute  attribute
     * memberof  用户的默认权限。
+    * lockStatus  用户是否被锁，取值为“true”或“false”。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'attributes' => null,
-        'memberof' => null
+        'attribute' => null,
+        'memberof' => null,
+        'lockStatus' => null
     ];
 
     /**
@@ -70,43 +74,49 @@ class GaussDBforOpenGaussUserForList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  帐号名。
-    * attributes  attributes
+    * attribute  attribute
     * memberof  用户的默认权限。
+    * lockStatus  用户是否被锁，取值为“true”或“false”。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'attributes' => 'attributes',
-            'memberof' => 'memberof'
+            'attribute' => 'attribute',
+            'memberof' => 'memberof',
+            'lockStatus' => 'lock_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  帐号名。
-    * attributes  attributes
+    * attribute  attribute
     * memberof  用户的默认权限。
+    * lockStatus  用户是否被锁，取值为“true”或“false”。
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'attributes' => 'setAttributes',
-            'memberof' => 'setMemberof'
+            'attribute' => 'setAttribute',
+            'memberof' => 'setMemberof',
+            'lockStatus' => 'setLockStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  帐号名。
-    * attributes  attributes
+    * attribute  attribute
     * memberof  用户的默认权限。
+    * lockStatus  用户是否被锁，取值为“true”或“false”。
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'attributes' => 'getAttributes',
-            'memberof' => 'getMemberof'
+            'attribute' => 'getAttribute',
+            'memberof' => 'getMemberof',
+            'lockStatus' => 'getLockStatus'
     ];
 
     /**
@@ -168,8 +178,9 @@ class GaussDBforOpenGaussUserForList implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
+        $this->container['attribute'] = isset($data['attribute']) ? $data['attribute'] : null;
         $this->container['memberof'] = isset($data['memberof']) ? $data['memberof'] : null;
+        $this->container['lockStatus'] = isset($data['lockStatus']) ? $data['lockStatus'] : null;
     }
 
     /**
@@ -222,26 +233,26 @@ class GaussDBforOpenGaussUserForList implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets attributes
-    *  attributes
+    * Gets attribute
+    *  attribute
     *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussUserForListAttributes|null
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussUserForListAttribute|null
     */
-    public function getAttributes()
+    public function getAttribute()
     {
-        return $this->container['attributes'];
+        return $this->container['attribute'];
     }
 
     /**
-    * Sets attributes
+    * Sets attribute
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussUserForListAttributes|null $attributes attributes
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\GaussDBforOpenGaussUserForListAttribute|null $attribute attribute
     *
     * @return $this
     */
-    public function setAttributes($attributes)
+    public function setAttribute($attribute)
     {
-        $this->container['attributes'] = $attributes;
+        $this->container['attribute'] = $attribute;
         return $this;
     }
 
@@ -266,6 +277,30 @@ class GaussDBforOpenGaussUserForList implements ModelInterface, ArrayAccess
     public function setMemberof($memberof)
     {
         $this->container['memberof'] = $memberof;
+        return $this;
+    }
+
+    /**
+    * Gets lockStatus
+    *  用户是否被锁，取值为“true”或“false”。
+    *
+    * @return bool|null
+    */
+    public function getLockStatus()
+    {
+        return $this->container['lockStatus'];
+    }
+
+    /**
+    * Sets lockStatus
+    *
+    * @param bool|null $lockStatus 用户是否被锁，取值为“true”或“false”。
+    *
+    * @return $this
+    */
+    public function setLockStatus($lockStatus)
+    {
+        $this->container['lockStatus'] = $lockStatus;
         return $this;
     }
 

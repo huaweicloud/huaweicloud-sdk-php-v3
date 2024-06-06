@@ -21,7 +21,7 @@ class Position implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * line  位置的行号，从1开始。
-    * column  位置的列号，从0开开始。
+    * column  位置的列号，从0开始。
     * offset  策略中与位置对应的偏移量，从0开始。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class Position implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * line  位置的行号，从1开始。
-    * column  位置的列号，从0开开始。
+    * column  位置的列号，从0开始。
     * offset  策略中与位置对应的偏移量，从0开始。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class Position implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * line  位置的行号，从1开始。
-    * column  位置的列号，从0开开始。
+    * column  位置的列号，从0开始。
     * offset  策略中与位置对应的偏移量，从0开始。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class Position implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * line  位置的行号，从1开始。
-    * column  位置的列号，从0开开始。
+    * column  位置的列号，从0开始。
     * offset  策略中与位置对应的偏移量，从0开始。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class Position implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * line  位置的行号，从1开始。
-    * column  位置的列号，从0开开始。
+    * column  位置的列号，从0开始。
     * offset  策略中与位置对应的偏移量，从0开始。
     *
     * @var string[]
@@ -229,7 +229,7 @@ class Position implements ModelInterface, ArrayAccess
 
     /**
     * Gets column
-    *  位置的列号，从0开开始。
+    *  位置的列号，从0开始。
     *
     * @return int
     */
@@ -241,7 +241,7 @@ class Position implements ModelInterface, ArrayAccess
     /**
     * Sets column
     *
-    * @param int $column 位置的列号，从0开开始。
+    * @param int $column 位置的列号，从0开始。
     *
     * @return $this
     */

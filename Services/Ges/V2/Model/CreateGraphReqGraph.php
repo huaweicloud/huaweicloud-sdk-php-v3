@@ -42,6 +42,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * isDynamicGraph  是否为动态图
+    * sortKeyType  持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
     *
     * @var string[]
     */
@@ -67,7 +68,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'vertexIdType' => '\HuaweiCloud\SDK\Ges\V2\Model\CreateGraphReqGraphVertexIdType',
             'enableMultiLabel' => 'bool',
             'capacityRatio' => 'int',
-            'isDynamicGraph' => 'bool'
+            'isDynamicGraph' => 'bool',
+            'sortKeyType' => 'string'
     ];
 
     /**
@@ -94,6 +96,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * isDynamicGraph  是否为动态图
+    * sortKeyType  持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
     *
     * @var string[]
     */
@@ -119,7 +122,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         'vertexIdType' => null,
         'enableMultiLabel' => null,
         'capacityRatio' => 'int32',
-        'isDynamicGraph' => null
+        'isDynamicGraph' => null,
+        'sortKeyType' => null
     ];
 
     /**
@@ -167,6 +171,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * isDynamicGraph  是否为动态图
+    * sortKeyType  持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
     *
     * @var string[]
     */
@@ -192,7 +197,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'vertexIdType' => 'vertex_id_type',
             'enableMultiLabel' => 'enable_multi_label',
             'capacityRatio' => 'capacity_ratio',
-            'isDynamicGraph' => 'is_dynamic_graph'
+            'isDynamicGraph' => 'is_dynamic_graph',
+            'sortKeyType' => 'sort_key_type'
     ];
 
     /**
@@ -219,6 +225,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * isDynamicGraph  是否为动态图
+    * sortKeyType  持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
     *
     * @var string[]
     */
@@ -244,7 +251,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'vertexIdType' => 'setVertexIdType',
             'enableMultiLabel' => 'setEnableMultiLabel',
             'capacityRatio' => 'setCapacityRatio',
-            'isDynamicGraph' => 'setIsDynamicGraph'
+            'isDynamicGraph' => 'setIsDynamicGraph',
+            'sortKeyType' => 'setSortKeyType'
     ];
 
     /**
@@ -271,6 +279,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * isDynamicGraph  是否为动态图
+    * sortKeyType  持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
     *
     * @var string[]
     */
@@ -296,7 +305,8 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
             'vertexIdType' => 'getVertexIdType',
             'enableMultiLabel' => 'getEnableMultiLabel',
             'capacityRatio' => 'getCapacityRatio',
-            'isDynamicGraph' => 'getIsDynamicGraph'
+            'isDynamicGraph' => 'getIsDynamicGraph',
+            'sortKeyType' => 'getSortKeyType'
     ];
 
     /**
@@ -379,6 +389,7 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
         $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
         $this->container['capacityRatio'] = isset($data['capacityRatio']) ? $data['capacityRatio'] : null;
         $this->container['isDynamicGraph'] = isset($data['isDynamicGraph']) ? $data['isDynamicGraph'] : null;
+        $this->container['sortKeyType'] = isset($data['sortKeyType']) ? $data['sortKeyType'] : null;
     }
 
     /**
@@ -949,6 +960,30 @@ class CreateGraphReqGraph implements ModelInterface, ArrayAccess
     public function setIsDynamicGraph($isDynamicGraph)
     {
         $this->container['isDynamicGraph'] = $isDynamicGraph;
+        return $this;
+    }
+
+    /**
+    * Gets sortKeyType
+    *  持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
+    *
+    * @return string|null
+    */
+    public function getSortKeyType()
+    {
+        return $this->container['sortKeyType'];
+    }
+
+    /**
+    * Sets sortKeyType
+    *
+    * @param string|null $sortKeyType 持久化版图数据的sortKey的类型，通过配置不同SortKey的值来区分重复边（源点，终点，Label三者都相同的边），仅持久化图需要填写。取值为： - int：整型 - string：字节长度小于等于40的字符串 - varString：不限长度字符串，过长会影响读写性能，建议长度控制在1K字节以内，最大不要超过2K字节
+    *
+    * @return $this
+    */
+    public function setSortKeyType($sortKeyType)
+    {
+        $this->container['sortKeyType'] = $sortKeyType;
         return $this;
     }
 

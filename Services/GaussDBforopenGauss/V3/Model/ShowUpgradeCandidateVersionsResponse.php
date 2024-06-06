@@ -29,6 +29,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * hotfixUpgradeInfos  hotfixUpgradeInfos
+    * hotfixRollbackInfos  hotfixRollbackInfos
     *
     * @var string[]
     */
@@ -40,7 +42,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
             'rollUpgradeProgress' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RollUpgradeProgress',
             'upgradeCandidateVersions' => 'string[]',
             'hotfixUpgradeCandidateVersions' => 'string[]',
-            'hotfixRollbackCandidateVersions' => 'string[]'
+            'hotfixRollbackCandidateVersions' => 'string[]',
+            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos',
+            'hotfixRollbackInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos'
     ];
 
     /**
@@ -53,6 +57,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * hotfixUpgradeInfos  hotfixUpgradeInfos
+    * hotfixRollbackInfos  hotfixRollbackInfos
     *
     * @var string[]
     */
@@ -64,7 +70,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
         'rollUpgradeProgress' => null,
         'upgradeCandidateVersions' => null,
         'hotfixUpgradeCandidateVersions' => null,
-        'hotfixRollbackCandidateVersions' => null
+        'hotfixRollbackCandidateVersions' => null,
+        'hotfixUpgradeInfos' => null,
+        'hotfixRollbackInfos' => null
     ];
 
     /**
@@ -98,6 +106,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * hotfixUpgradeInfos  hotfixUpgradeInfos
+    * hotfixRollbackInfos  hotfixRollbackInfos
     *
     * @var string[]
     */
@@ -109,7 +119,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
             'rollUpgradeProgress' => 'roll_upgrade_progress',
             'upgradeCandidateVersions' => 'upgrade_candidate_versions',
             'hotfixUpgradeCandidateVersions' => 'hotfix_upgrade_candidate_versions',
-            'hotfixRollbackCandidateVersions' => 'hotfix_rollback_candidate_versions'
+            'hotfixRollbackCandidateVersions' => 'hotfix_rollback_candidate_versions',
+            'hotfixUpgradeInfos' => 'hotfix_upgrade_infos',
+            'hotfixRollbackInfos' => 'hotfix_rollback_infos'
     ];
 
     /**
@@ -122,6 +134,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * hotfixUpgradeInfos  hotfixUpgradeInfos
+    * hotfixRollbackInfos  hotfixRollbackInfos
     *
     * @var string[]
     */
@@ -133,7 +147,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
             'rollUpgradeProgress' => 'setRollUpgradeProgress',
             'upgradeCandidateVersions' => 'setUpgradeCandidateVersions',
             'hotfixUpgradeCandidateVersions' => 'setHotfixUpgradeCandidateVersions',
-            'hotfixRollbackCandidateVersions' => 'setHotfixRollbackCandidateVersions'
+            'hotfixRollbackCandidateVersions' => 'setHotfixRollbackCandidateVersions',
+            'hotfixUpgradeInfos' => 'setHotfixUpgradeInfos',
+            'hotfixRollbackInfos' => 'setHotfixRollbackInfos'
     ];
 
     /**
@@ -146,6 +162,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
     * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
     * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * hotfixUpgradeInfos  hotfixUpgradeInfos
+    * hotfixRollbackInfos  hotfixRollbackInfos
     *
     * @var string[]
     */
@@ -157,7 +175,9 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
             'rollUpgradeProgress' => 'getRollUpgradeProgress',
             'upgradeCandidateVersions' => 'getUpgradeCandidateVersions',
             'hotfixUpgradeCandidateVersions' => 'getHotfixUpgradeCandidateVersions',
-            'hotfixRollbackCandidateVersions' => 'getHotfixRollbackCandidateVersions'
+            'hotfixRollbackCandidateVersions' => 'getHotfixRollbackCandidateVersions',
+            'hotfixUpgradeInfos' => 'getHotfixUpgradeInfos',
+            'hotfixRollbackInfos' => 'getHotfixRollbackInfos'
     ];
 
     /**
@@ -226,6 +246,8 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
         $this->container['upgradeCandidateVersions'] = isset($data['upgradeCandidateVersions']) ? $data['upgradeCandidateVersions'] : null;
         $this->container['hotfixUpgradeCandidateVersions'] = isset($data['hotfixUpgradeCandidateVersions']) ? $data['hotfixUpgradeCandidateVersions'] : null;
         $this->container['hotfixRollbackCandidateVersions'] = isset($data['hotfixRollbackCandidateVersions']) ? $data['hotfixRollbackCandidateVersions'] : null;
+        $this->container['hotfixUpgradeInfos'] = isset($data['hotfixUpgradeInfos']) ? $data['hotfixUpgradeInfos'] : null;
+        $this->container['hotfixRollbackInfos'] = isset($data['hotfixRollbackInfos']) ? $data['hotfixRollbackInfos'] : null;
     }
 
     /**
@@ -451,6 +473,54 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     public function setHotfixRollbackCandidateVersions($hotfixRollbackCandidateVersions)
     {
         $this->container['hotfixRollbackCandidateVersions'] = $hotfixRollbackCandidateVersions;
+        return $this;
+    }
+
+    /**
+    * Gets hotfixUpgradeInfos
+    *  hotfixUpgradeInfos
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos|null
+    */
+    public function getHotfixUpgradeInfos()
+    {
+        return $this->container['hotfixUpgradeInfos'];
+    }
+
+    /**
+    * Sets hotfixUpgradeInfos
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixUpgradeInfos|null $hotfixUpgradeInfos hotfixUpgradeInfos
+    *
+    * @return $this
+    */
+    public function setHotfixUpgradeInfos($hotfixUpgradeInfos)
+    {
+        $this->container['hotfixUpgradeInfos'] = $hotfixUpgradeInfos;
+        return $this;
+    }
+
+    /**
+    * Gets hotfixRollbackInfos
+    *  hotfixRollbackInfos
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos|null
+    */
+    public function getHotfixRollbackInfos()
+    {
+        return $this->container['hotfixRollbackInfos'];
+    }
+
+    /**
+    * Sets hotfixRollbackInfos
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixRollbackInfos|null $hotfixRollbackInfos hotfixRollbackInfos
+    *
+    * @return $this
+    */
+    public function setHotfixRollbackInfos($hotfixRollbackInfos)
+    {
+        $this->container['hotfixRollbackInfos'] = $hotfixRollbackInfos;
         return $this;
     }
 

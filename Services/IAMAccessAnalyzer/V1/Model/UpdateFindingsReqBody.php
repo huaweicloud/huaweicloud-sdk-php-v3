@@ -21,7 +21,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ids  要更新的访问分析结果唯一标识符数组。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     * status  要更新的访问分析结果状态。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ids  要更新的访问分析结果唯一标识符数组。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     * status  要更新的访问分析结果状态。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ids  要更新的访问分析结果唯一标识符数组。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     * status  要更新的访问分析结果状态。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ids  要更新的访问分析结果唯一标识符数组。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     * status  要更新的访问分析结果状态。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ids  要更新的访问分析结果唯一标识符数组。
-    * resourceUrn  访问分析的唯一资源标识。
+    * resourceUrn  资源的唯一资源标识符。
     * status  要更新的访问分析结果状态。
     *
     * @var string[]
@@ -249,7 +249,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceUrn
-    *  访问分析的唯一资源标识。
+    *  资源的唯一资源标识符。
     *
     * @return string|null
     */
@@ -261,7 +261,7 @@ class UpdateFindingsReqBody implements ModelInterface, ArrayAccess
     /**
     * Sets resourceUrn
     *
-    * @param string|null $resourceUrn 访问分析的唯一资源标识。
+    * @param string|null $resourceUrn 资源的唯一资源标识符。
     *
     * @return $this
     */

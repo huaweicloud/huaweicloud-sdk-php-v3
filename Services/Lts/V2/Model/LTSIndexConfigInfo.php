@@ -20,30 +20,34 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * logStreamId  日志流ID
     * fullTextIndex  fullTextIndex
     * fields  字段索引配置
+    * sqlAnalysisEnable  是否开启可视化
+    * logStreamId  日志流id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'logStreamId' => 'string',
             'fullTextIndex' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSFullTextIndexInfo',
-            'fields' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSFieldsInfo[]'
+            'fields' => '\HuaweiCloud\SDK\Lts\V2\Model\LTSFieldsInfo[]',
+            'sqlAnalysisEnable' => 'bool',
+            'logStreamId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * logStreamId  日志流ID
     * fullTextIndex  fullTextIndex
     * fields  字段索引配置
+    * sqlAnalysisEnable  是否开启可视化
+    * logStreamId  日志流id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'logStreamId' => null,
         'fullTextIndex' => null,
-        'fields' => null
+        'fields' => null,
+        'sqlAnalysisEnable' => null,
+        'logStreamId' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * logStreamId  日志流ID
     * fullTextIndex  fullTextIndex
     * fields  字段索引配置
+    * sqlAnalysisEnable  是否开启可视化
+    * logStreamId  日志流id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'logStreamId' => 'logStreamId',
             'fullTextIndex' => 'fullTextIndex',
-            'fields' => 'fields'
+            'fields' => 'fields',
+            'sqlAnalysisEnable' => 'sqlAnalysisEnable',
+            'logStreamId' => 'logStreamId'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * logStreamId  日志流ID
     * fullTextIndex  fullTextIndex
     * fields  字段索引配置
+    * sqlAnalysisEnable  是否开启可视化
+    * logStreamId  日志流id
     *
     * @var string[]
     */
     protected static $setters = [
-            'logStreamId' => 'setLogStreamId',
             'fullTextIndex' => 'setFullTextIndex',
-            'fields' => 'setFields'
+            'fields' => 'setFields',
+            'sqlAnalysisEnable' => 'setSqlAnalysisEnable',
+            'logStreamId' => 'setLogStreamId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * logStreamId  日志流ID
     * fullTextIndex  fullTextIndex
     * fields  字段索引配置
+    * sqlAnalysisEnable  是否开启可视化
+    * logStreamId  日志流id
     *
     * @var string[]
     */
     protected static $getters = [
-            'logStreamId' => 'getLogStreamId',
             'fullTextIndex' => 'getFullTextIndex',
-            'fields' => 'getFields'
+            'fields' => 'getFields',
+            'sqlAnalysisEnable' => 'getSqlAnalysisEnable',
+            'logStreamId' => 'getLogStreamId'
     ];
 
     /**
@@ -167,9 +177,10 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['fullTextIndex'] = isset($data['fullTextIndex']) ? $data['fullTextIndex'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['sqlAnalysisEnable'] = isset($data['sqlAnalysisEnable']) ? $data['sqlAnalysisEnable'] : null;
+        $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
     }
 
     /**
@@ -183,6 +194,12 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
         if ($this->container['fullTextIndex'] === null) {
             $invalidProperties[] = "'fullTextIndex' can't be null";
         }
+            if (!is_null($this->container['logStreamId']) && (mb_strlen($this->container['logStreamId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'logStreamId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['logStreamId']) && (mb_strlen($this->container['logStreamId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'logStreamId', the character length must be bigger than or equal to 36.";
+            }
         return $invalidProperties;
     }
 
@@ -195,30 +212,6 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets logStreamId
-    *  日志流ID
-    *
-    * @return string|null
-    */
-    public function getLogStreamId()
-    {
-        return $this->container['logStreamId'];
-    }
-
-    /**
-    * Sets logStreamId
-    *
-    * @param string|null $logStreamId 日志流ID
-    *
-    * @return $this
-    */
-    public function setLogStreamId($logStreamId)
-    {
-        $this->container['logStreamId'] = $logStreamId;
-        return $this;
     }
 
     /**
@@ -266,6 +259,54 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     public function setFields($fields)
     {
         $this->container['fields'] = $fields;
+        return $this;
+    }
+
+    /**
+    * Gets sqlAnalysisEnable
+    *  是否开启可视化
+    *
+    * @return bool|null
+    */
+    public function getSqlAnalysisEnable()
+    {
+        return $this->container['sqlAnalysisEnable'];
+    }
+
+    /**
+    * Sets sqlAnalysisEnable
+    *
+    * @param bool|null $sqlAnalysisEnable 是否开启可视化
+    *
+    * @return $this
+    */
+    public function setSqlAnalysisEnable($sqlAnalysisEnable)
+    {
+        $this->container['sqlAnalysisEnable'] = $sqlAnalysisEnable;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamId
+    *  日志流id
+    *
+    * @return string|null
+    */
+    public function getLogStreamId()
+    {
+        return $this->container['logStreamId'];
+    }
+
+    /**
+    * Sets logStreamId
+    *
+    * @param string|null $logStreamId 日志流id
+    *
+    * @return $this
+    */
+    public function setLogStreamId($logStreamId)
+    {
+        $this->container['logStreamId'] = $logStreamId;
         return $this;
     }
 

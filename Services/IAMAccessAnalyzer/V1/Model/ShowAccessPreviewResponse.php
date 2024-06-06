@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class GetAccessPreviewResponse implements ModelInterface, ArrayAccess
+class ShowAccessPreviewResponse implements ModelInterface, ArrayAccess
 {
     use SdkResponse;
     const DISCRIMINATOR = null;
@@ -17,7 +17,7 @@ class GetAccessPreviewResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'GetAccessPreviewResponse';
+    protected static $openAPIModelName = 'ShowAccessPreviewResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization

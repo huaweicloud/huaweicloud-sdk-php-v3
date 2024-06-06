@@ -23,21 +23,21 @@ class ShowProxyIpgroupResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enableIpGroup  允许访问控制或者不允许 true | false。
     * type  白名单或者黑名单 'white' | 'black'
-    * ipGroup  白名单或黑名单详细信息
+    * ipGroup  ipGroup
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'enableIpGroup' => 'bool',
             'type' => 'string',
-            'ipGroup' => 'object'
+            'ipGroup' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ProxyIpGroupDetail'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enableIpGroup  允许访问控制或者不允许 true | false。
     * type  白名单或者黑名单 'white' | 'black'
-    * ipGroup  白名单或黑名单详细信息
+    * ipGroup  ipGroup
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowProxyIpgroupResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enableIpGroup  允许访问控制或者不允许 true | false。
     * type  白名单或者黑名单 'white' | 'black'
-    * ipGroup  白名单或黑名单详细信息
+    * ipGroup  ipGroup
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowProxyIpgroupResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * enableIpGroup  允许访问控制或者不允许 true | false。
     * type  白名单或者黑名单 'white' | 'black'
-    * ipGroup  白名单或黑名单详细信息
+    * ipGroup  ipGroup
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowProxyIpgroupResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * enableIpGroup  允许访问控制或者不允许 true | false。
     * type  白名单或者黑名单 'white' | 'black'
-    * ipGroup  白名单或黑名单详细信息
+    * ipGroup  ipGroup
     *
     * @var string[]
     */
@@ -245,9 +245,9 @@ class ShowProxyIpgroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipGroup
-    *  白名单或黑名单详细信息
+    *  ipGroup
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\ProxyIpGroupDetail|null
     */
     public function getIpGroup()
     {
@@ -257,7 +257,7 @@ class ShowProxyIpgroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ipGroup
     *
-    * @param object|null $ipGroup 白名单或黑名单详细信息
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\ProxyIpGroupDetail|null $ipGroup ipGroup
     *
     * @return $this
     */

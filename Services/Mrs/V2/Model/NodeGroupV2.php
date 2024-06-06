@@ -25,7 +25,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
     * nodeSize  节点的实例规格。 例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * rootVolume  rootVolume
     * dataVolume  dataVolume
-    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～20。
     * chargeInfo  chargeInfo
     * autoScalingPolicy  autoScalingPolicy
     * assignedRoles  当集群类型为CUSTOM时，该参数必选。可以指定节点组中部署的角色，该参数是一个字符串数组，每个字符串表示一个角色表达式。 角色表达式定义： - 当该角色在节点组所有节点部署时： {role name}，如“DataNode”。 - 当该角色在节点组指定下标节点部署时：{role name}:{index1},{index2}…,{indexN}，如“NameNode:1,2”，下标从1开始计数。 - 部分角色支持多实例部署（即在一个节点部署多个同角色的实例）：{role name}[{instance count}]，如“EsNode[9]” 可选的角色请参考[MRS支持的角色与组件对应表](https://support.huaweicloud.com/api-mrs/mrs_02_0106.html)。
@@ -51,7 +51,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
     * nodeSize  节点的实例规格。 例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * rootVolume  rootVolume
     * dataVolume  dataVolume
-    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～20。
     * chargeInfo  chargeInfo
     * autoScalingPolicy  autoScalingPolicy
     * assignedRoles  当集群类型为CUSTOM时，该参数必选。可以指定节点组中部署的角色，该参数是一个字符串数组，每个字符串表示一个角色表达式。 角色表达式定义： - 当该角色在节点组所有节点部署时： {role name}，如“DataNode”。 - 当该角色在节点组指定下标节点部署时：{role name}:{index1},{index2}…,{indexN}，如“NameNode:1,2”，下标从1开始计数。 - 部分角色支持多实例部署（即在一个节点部署多个同角色的实例）：{role name}[{instance count}]，如“EsNode[9]” 可选的角色请参考[MRS支持的角色与组件对应表](https://support.huaweicloud.com/api-mrs/mrs_02_0106.html)。
@@ -98,7 +98,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
     * nodeSize  节点的实例规格。 例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * rootVolume  rootVolume
     * dataVolume  dataVolume
-    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～20。
     * chargeInfo  chargeInfo
     * autoScalingPolicy  autoScalingPolicy
     * assignedRoles  当集群类型为CUSTOM时，该参数必选。可以指定节点组中部署的角色，该参数是一个字符串数组，每个字符串表示一个角色表达式。 角色表达式定义： - 当该角色在节点组所有节点部署时： {role name}，如“DataNode”。 - 当该角色在节点组指定下标节点部署时：{role name}:{index1},{index2}…,{indexN}，如“NameNode:1,2”，下标从1开始计数。 - 部分角色支持多实例部署（即在一个节点部署多个同角色的实例）：{role name}[{instance count}]，如“EsNode[9]” 可选的角色请参考[MRS支持的角色与组件对应表](https://support.huaweicloud.com/api-mrs/mrs_02_0106.html)。
@@ -124,7 +124,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
     * nodeSize  节点的实例规格。 例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * rootVolume  rootVolume
     * dataVolume  dataVolume
-    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～20。
     * chargeInfo  chargeInfo
     * autoScalingPolicy  autoScalingPolicy
     * assignedRoles  当集群类型为CUSTOM时，该参数必选。可以指定节点组中部署的角色，该参数是一个字符串数组，每个字符串表示一个角色表达式。 角色表达式定义： - 当该角色在节点组所有节点部署时： {role name}，如“DataNode”。 - 当该角色在节点组指定下标节点部署时：{role name}:{index1},{index2}…,{indexN}，如“NameNode:1,2”，下标从1开始计数。 - 部分角色支持多实例部署（即在一个节点部署多个同角色的实例）：{role name}[{instance count}]，如“EsNode[9]” 可选的角色请参考[MRS支持的角色与组件对应表](https://support.huaweicloud.com/api-mrs/mrs_02_0106.html)。
@@ -150,7 +150,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
     * nodeSize  节点的实例规格。 例如：c3.4xlarge.2.linux.bigdata。实例规格详细说明请参见[MRS所使用的弹性云服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9006.html)和[MRS所使用的裸金属服务器规格](https://support.huaweicloud.com/api-mrs/mrs_01_9001.html)。 该参数建议从MRS控制台的集群创建页面获取对应区域对应版本所支持的规格。
     * rootVolume  rootVolume
     * dataVolume  dataVolume
-    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～10。
+    * dataVolumeCount  节点数据磁盘存储数目，取值范围：0～20。
     * chargeInfo  chargeInfo
     * autoScalingPolicy  autoScalingPolicy
     * assignedRoles  当集群类型为CUSTOM时，该参数必选。可以指定节点组中部署的角色，该参数是一个字符串数组，每个字符串表示一个角色表达式。 角色表达式定义： - 当该角色在节点组所有节点部署时： {role name}，如“DataNode”。 - 当该角色在节点组指定下标节点部署时：{role name}:{index1},{index2}…,{indexN}，如“NameNode:1,2”，下标从1开始计数。 - 部分角色支持多实例部署（即在一个节点部署多个同角色的实例）：{role name}[{instance count}]，如“EsNode[9]” 可选的角色请参考[MRS支持的角色与组件对应表](https://support.huaweicloud.com/api-mrs/mrs_02_0106.html)。
@@ -261,8 +261,8 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
         if ($this->container['nodeSize'] === null) {
             $invalidProperties[] = "'nodeSize' can't be null";
         }
-            if (!is_null($this->container['dataVolumeCount']) && ($this->container['dataVolumeCount'] > 10)) {
-                $invalidProperties[] = "invalid value for 'dataVolumeCount', must be smaller than or equal to 10.";
+            if (!is_null($this->container['dataVolumeCount']) && ($this->container['dataVolumeCount'] > 20)) {
+                $invalidProperties[] = "invalid value for 'dataVolumeCount', must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['dataVolumeCount']) && ($this->container['dataVolumeCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'dataVolumeCount', must be bigger than or equal to 0.";
@@ -403,7 +403,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
 
     /**
     * Gets dataVolumeCount
-    *  节点数据磁盘存储数目，取值范围：0～10。
+    *  节点数据磁盘存储数目，取值范围：0～20。
     *
     * @return int|null
     */
@@ -415,7 +415,7 @@ class NodeGroupV2 implements ModelInterface, ArrayAccess
     /**
     * Sets dataVolumeCount
     *
-    * @param int|null $dataVolumeCount 节点数据磁盘存储数目，取值范围：0～10。
+    * @param int|null $dataVolumeCount 节点数据磁盘存储数目，取值范围：0～20。
     *
     * @return $this
     */

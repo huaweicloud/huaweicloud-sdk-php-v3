@@ -390,8 +390,8 @@ class NodeGroupV10 implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['dataVolumeCount']) && ($this->container['dataVolumeCount'] > 10)) {
-                $invalidProperties[] = "invalid value for 'dataVolumeCount', must be smaller than or equal to 10.";
+            if (!is_null($this->container['dataVolumeCount']) && ($this->container['dataVolumeCount'] > 20)) {
+                $invalidProperties[] = "invalid value for 'dataVolumeCount', must be smaller than or equal to 20.";
             }
             if (!is_null($this->container['dataVolumeCount']) && ($this->container['dataVolumeCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'dataVolumeCount', must be bigger than or equal to 0.";

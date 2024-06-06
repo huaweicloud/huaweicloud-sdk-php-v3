@@ -22,14 +22,15 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
+    * organizationId  组织ID。
     * status  分析器的状态。
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
-    * urn  访问分析的唯一资源标识。
+    * urn  分析器的唯一资源标识符。
     *
     * @var string[]
     */
@@ -39,6 +40,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'lastAnalyzedResource' => 'string',
             'lastResourceAnalyzedAt' => '\DateTime',
             'name' => 'string',
+            'organizationId' => 'string',
             'status' => 'string',
             'statusReason' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\StatusReason',
             'tags' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]',
@@ -50,14 +52,15 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
+    * organizationId  组织ID。
     * status  分析器的状态。
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
-    * urn  访问分析的唯一资源标识。
+    * urn  分析器的唯一资源标识符。
     *
     * @var string[]
     */
@@ -67,6 +70,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
         'lastAnalyzedResource' => null,
         'lastResourceAnalyzedAt' => 'date-time',
         'name' => null,
+        'organizationId' => null,
         'status' => null,
         'statusReason' => null,
         'tags' => null,
@@ -99,14 +103,15 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * and the value is the original name
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
+    * organizationId  组织ID。
     * status  分析器的状态。
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
-    * urn  访问分析的唯一资源标识。
+    * urn  分析器的唯一资源标识符。
     *
     * @var string[]
     */
@@ -116,6 +121,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'lastAnalyzedResource' => 'last_analyzed_resource',
             'lastResourceAnalyzedAt' => 'last_resource_analyzed_at',
             'name' => 'name',
+            'organizationId' => 'organization_id',
             'status' => 'status',
             'statusReason' => 'status_reason',
             'tags' => 'tags',
@@ -127,14 +133,15 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
+    * organizationId  组织ID。
     * status  分析器的状态。
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
-    * urn  访问分析的唯一资源标识。
+    * urn  分析器的唯一资源标识符。
     *
     * @var string[]
     */
@@ -144,6 +151,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'lastAnalyzedResource' => 'setLastAnalyzedResource',
             'lastResourceAnalyzedAt' => 'setLastResourceAnalyzedAt',
             'name' => 'setName',
+            'organizationId' => 'setOrganizationId',
             'status' => 'setStatus',
             'statusReason' => 'setStatusReason',
             'tags' => 'setTags',
@@ -155,14 +163,15 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
-    * lastAnalyzedResource  访问分析的唯一资源标识。
+    * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
     * lastResourceAnalyzedAt  最近一次分析资源的时间。
     * name  分析器的名称。
+    * organizationId  组织ID。
     * status  分析器的状态。
     * statusReason  statusReason
     * tags  自定义标签列表。
     * type  type
-    * urn  访问分析的唯一资源标识。
+    * urn  分析器的唯一资源标识符。
     *
     * @var string[]
     */
@@ -172,6 +181,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             'lastAnalyzedResource' => 'getLastAnalyzedResource',
             'lastResourceAnalyzedAt' => 'getLastResourceAnalyzedAt',
             'name' => 'getName',
+            'organizationId' => 'getOrganizationId',
             'status' => 'getStatus',
             'statusReason' => 'getStatusReason',
             'tags' => 'getTags',
@@ -221,6 +231,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     }
     const STATUS_ACTIVE = 'active';
     const STATUS_CREATING = 'creating';
+    const STATUS_DISABLED = 'disabled';
     const STATUS_FAILED = 'failed';
     
 
@@ -234,6 +245,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
         return [
             self::STATUS_ACTIVE,
             self::STATUS_CREATING,
+            self::STATUS_DISABLED,
             self::STATUS_FAILED,
         ];
     }
@@ -259,6 +271,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
         $this->container['lastAnalyzedResource'] = isset($data['lastAnalyzedResource']) ? $data['lastAnalyzedResource'] : null;
         $this->container['lastResourceAnalyzedAt'] = isset($data['lastResourceAnalyzedAt']) ? $data['lastResourceAnalyzedAt'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['statusReason'] = isset($data['statusReason']) ? $data['statusReason'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -303,6 +316,15 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[A-Za-z][A-Za-z0-9_.-]*$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[A-Za-z][A-Za-z0-9_.-]*$/.";
+            }
+            if (!is_null($this->container['organizationId']) && (mb_strlen($this->container['organizationId']) > 35)) {
+                $invalidProperties[] = "invalid value for 'organizationId', the character length must be smaller than or equal to 35.";
+            }
+            if (!is_null($this->container['organizationId']) && (mb_strlen($this->container['organizationId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'organizationId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['organizationId']) && !preg_match("/^ou-[0-9a-z]{8,32}$/", $this->container['organizationId'])) {
+                $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^ou-[0-9a-z]{8,32}$/.";
             }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
@@ -388,7 +410,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastAnalyzedResource
-    *  访问分析的唯一资源标识。
+    *  最近分析的资源的唯一资源标识符。
     *
     * @return string|null
     */
@@ -400,7 +422,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets lastAnalyzedResource
     *
-    * @param string|null $lastAnalyzedResource 访问分析的唯一资源标识。
+    * @param string|null $lastAnalyzedResource 最近分析的资源的唯一资源标识符。
     *
     * @return $this
     */
@@ -455,6 +477,30 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets organizationId
+    *  组织ID。
+    *
+    * @return string|null
+    */
+    public function getOrganizationId()
+    {
+        return $this->container['organizationId'];
+    }
+
+    /**
+    * Sets organizationId
+    *
+    * @param string|null $organizationId 组织ID。
+    *
+    * @return $this
+    */
+    public function setOrganizationId($organizationId)
+    {
+        $this->container['organizationId'] = $organizationId;
         return $this;
     }
 
@@ -556,7 +602,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Gets urn
-    *  访问分析的唯一资源标识。
+    *  分析器的唯一资源标识符。
     *
     * @return string
     */
@@ -568,7 +614,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Sets urn
     *
-    * @param string $urn 访问分析的唯一资源标识。
+    * @param string $urn 分析器的唯一资源标识符。
     *
     * @return $this
     */

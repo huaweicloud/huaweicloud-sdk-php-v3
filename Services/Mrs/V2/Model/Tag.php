@@ -20,8 +20,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
-    * value  值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    * key  标签键。
+    * value  标签值。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
-    * value  值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    * key  标签键。
+    * value  标签值。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
-    * value  值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    * key  标签键。
+    * value  标签值。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
-    * value  值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    * key  标签键。
+    * value  标签值。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
-    * value  值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    * key  标签键。
+    * value  标签值。
     *
     * @var string[]
     */
@@ -203,7 +203,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
+    *  标签键。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。 - 最大长度36个unicode字符，不能为空字符串。 - 标签的key值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。 - 同一资源的key值不能重复。
+    * @param string $key 标签键。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class Tag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    *  标签值。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值。 - 最大长度43个unicode字符，可以为空字符串。 - 标签的value值不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”，且首尾字符不能为空格。
+    * @param string $value 标签值。
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class MysqlUpdateInstanceNameRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名称。  用于表示实例的名称，同一租户下，同类型的实例名可重名。取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
+    * isModifyNodeName  是否同步修改节点名称，取值：true或false, 默认值为true。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string'
+            'name' => 'string',
+            'isModifyNodeName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名称。  用于表示实例的名称，同一租户下，同类型的实例名可重名。取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
+    * isModifyNodeName  是否同步修改节点名称，取值：true或false, 默认值为true。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null
+        'name' => null,
+        'isModifyNodeName' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class MysqlUpdateInstanceNameRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  实例名称。  用于表示实例的名称，同一租户下，同类型的实例名可重名。取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
+    * isModifyNodeName  是否同步修改节点名称，取值：true或false, 默认值为true。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name'
+            'name' => 'name',
+            'isModifyNodeName' => 'is_modify_node_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名称。  用于表示实例的名称，同一租户下，同类型的实例名可重名。取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
+    * isModifyNodeName  是否同步修改节点名称，取值：true或false, 默认值为true。
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName'
+            'name' => 'setName',
+            'isModifyNodeName' => 'setIsModifyNodeName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名称。  用于表示实例的名称，同一租户下，同类型的实例名可重名。取值范围：最小为4个字符，最大为64个字符且不超过64个字节（注意：一个中文字符占用3个字节），必须以字母或中文开头，区分大小写，可以包含字母、数字、中划线、下划线或中文，不能包含其他特殊字符。
+    * isModifyNodeName  是否同步修改节点名称，取值：true或false, 默认值为true。
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName'
+            'name' => 'getName',
+            'isModifyNodeName' => 'getIsModifyNodeName'
     ];
 
     /**
@@ -148,6 +158,7 @@ class MysqlUpdateInstanceNameRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['isModifyNodeName'] = isset($data['isModifyNodeName']) ? $data['isModifyNodeName'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class MysqlUpdateInstanceNameRequest implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets isModifyNodeName
+    *  是否同步修改节点名称，取值：true或false, 默认值为true。
+    *
+    * @return string|null
+    */
+    public function getIsModifyNodeName()
+    {
+        return $this->container['isModifyNodeName'];
+    }
+
+    /**
+    * Sets isModifyNodeName
+    *
+    * @param string|null $isModifyNodeName 是否同步修改节点名称，取值：true或false, 默认值为true。
+    *
+    * @return $this
+    */
+    public function setIsModifyNodeName($isModifyNodeName)
+    {
+        $this->container['isModifyNodeName'] = $isModifyNodeName;
         return $this;
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model;
+namespace HuaweiCloud\SDK\Mrs\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Urn implements ModelInterface, ArrayAccess
+class VolumeInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,24 +16,34 @@ class Urn implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Urn';
+    protected static $openAPIModelName = 'VolumeInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * type  磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    * size  磁盘大小。单位为GB。
+    * count  磁盘数量。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'type' => 'string',
+            'size' => 'int',
+            'count' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * type  磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    * size  磁盘大小。单位为GB。
+    * count  磁盘数量。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'type' => null,
+        'size' => 'int32',
+        'count' => 'int32'
     ];
 
     /**
@@ -59,29 +69,44 @@ class Urn implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * type  磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    * size  磁盘大小。单位为GB。
+    * count  磁盘数量。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'type' => 'type',
+            'size' => 'size',
+            'count' => 'count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * type  磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    * size  磁盘大小。单位为GB。
+    * count  磁盘数量。
     *
     * @var string[]
     */
     protected static $setters = [
+            'type' => 'setType',
+            'size' => 'setSize',
+            'count' => 'setCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * type  磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    * size  磁盘大小。单位为GB。
+    * count  磁盘数量。
     *
     * @var string[]
     */
     protected static $getters = [
+            'type' => 'getType',
+            'size' => 'getSize',
+            'count' => 'getCount'
     ];
 
     /**
@@ -142,6 +167,9 @@ class Urn implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
     }
 
     /**
@@ -152,6 +180,27 @@ class Urn implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+            if ((mb_strlen($this->container['type']) < 3)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 3.";
+            }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+            if (($this->container['size'] > 32768)) {
+                $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 32768.";
+            }
+            if (($this->container['size'] < 10)) {
+                $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 10.";
+            }
+        if ($this->container['count'] === null) {
+            $invalidProperties[] = "'count' can't be null";
+        }
+            if (($this->container['count'] < 0)) {
+                $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -164,6 +213,78 @@ class Urn implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets type
+    *  磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 磁盘类型。 - SATA：普通IO磁盘类型。 - SAS：高IO磁盘类型。 - SSD：超高IO磁盘类型。 - GPSSD：通用型SSD磁盘类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  磁盘大小。单位为GB。
+    *
+    * @return int
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int $size 磁盘大小。单位为GB。
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
+        return $this;
+    }
+
+    /**
+    * Gets count
+    *  磁盘数量。
+    *
+    * @return int
+    */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+    * Sets count
+    *
+    * @param int $count 磁盘数量。
+    *
+    * @return $this
+    */
+    public function setCount($count)
+    {
+        $this->container['count'] = $count;
+        return $this;
     }
 
     /**

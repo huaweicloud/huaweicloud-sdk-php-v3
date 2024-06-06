@@ -28,6 +28,8 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
     * withColumnHeader  导出csv格式数据时，是否导出列名。  设置为“true”，表示导出列名。 设置为“false”，表示不导出列名。 若为空，默认为“false”。
     * limitNum  导出数据条数，默认为0表示全部
     * encodingType  导出数据的编码格式。支持\"utf-8\"，\"gb2312\"，\"gbk\"三种，如果不填写默认为\"utf-8\"。
+    * quoteChar  用户自定义引用字符
+    * escapeChar  用户自定义转义字符
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
             'exportMode' => 'string',
             'withColumnHeader' => 'bool',
             'limitNum' => 'int',
-            'encodingType' => 'string'
+            'encodingType' => 'string',
+            'quoteChar' => 'string',
+            'escapeChar' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
     * withColumnHeader  导出csv格式数据时，是否导出列名。  设置为“true”，表示导出列名。 设置为“false”，表示不导出列名。 若为空，默认为“false”。
     * limitNum  导出数据条数，默认为0表示全部
     * encodingType  导出数据的编码格式。支持\"utf-8\"，\"gb2312\"，\"gbk\"三种，如果不填写默认为\"utf-8\"。
+    * quoteChar  用户自定义引用字符
+    * escapeChar  用户自定义转义字符
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
         'exportMode' => null,
         'withColumnHeader' => null,
         'limitNum' => 'int32',
-        'encodingType' => null
+        'encodingType' => null,
+        'quoteChar' => null,
+        'escapeChar' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
     * withColumnHeader  导出csv格式数据时，是否导出列名。  设置为“true”，表示导出列名。 设置为“false”，表示不导出列名。 若为空，默认为“false”。
     * limitNum  导出数据条数，默认为0表示全部
     * encodingType  导出数据的编码格式。支持\"utf-8\"，\"gb2312\"，\"gbk\"三种，如果不填写默认为\"utf-8\"。
+    * quoteChar  用户自定义引用字符
+    * escapeChar  用户自定义转义字符
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
             'exportMode' => 'export_mode',
             'withColumnHeader' => 'with_column_header',
             'limitNum' => 'limit_num',
-            'encodingType' => 'encoding_type'
+            'encodingType' => 'encoding_type',
+            'quoteChar' => 'quote_char',
+            'escapeChar' => 'escape_char'
     ];
 
     /**
@@ -121,6 +133,8 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
     * withColumnHeader  导出csv格式数据时，是否导出列名。  设置为“true”，表示导出列名。 设置为“false”，表示不导出列名。 若为空，默认为“false”。
     * limitNum  导出数据条数，默认为0表示全部
     * encodingType  导出数据的编码格式。支持\"utf-8\"，\"gb2312\"，\"gbk\"三种，如果不填写默认为\"utf-8\"。
+    * quoteChar  用户自定义引用字符
+    * escapeChar  用户自定义转义字符
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
             'exportMode' => 'setExportMode',
             'withColumnHeader' => 'setWithColumnHeader',
             'limitNum' => 'setLimitNum',
-            'encodingType' => 'setEncodingType'
+            'encodingType' => 'setEncodingType',
+            'quoteChar' => 'setQuoteChar',
+            'escapeChar' => 'setEscapeChar'
     ];
 
     /**
@@ -145,6 +161,8 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
     * withColumnHeader  导出csv格式数据时，是否导出列名。  设置为“true”，表示导出列名。 设置为“false”，表示不导出列名。 若为空，默认为“false”。
     * limitNum  导出数据条数，默认为0表示全部
     * encodingType  导出数据的编码格式。支持\"utf-8\"，\"gb2312\"，\"gbk\"三种，如果不填写默认为\"utf-8\"。
+    * quoteChar  用户自定义引用字符
+    * escapeChar  用户自定义转义字符
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
             'exportMode' => 'getExportMode',
             'withColumnHeader' => 'getWithColumnHeader',
             'limitNum' => 'getLimitNum',
-            'encodingType' => 'getEncodingType'
+            'encodingType' => 'getEncodingType',
+            'quoteChar' => 'getQuoteChar',
+            'escapeChar' => 'getEscapeChar'
     ];
 
     /**
@@ -240,6 +260,8 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
         $this->container['withColumnHeader'] = isset($data['withColumnHeader']) ? $data['withColumnHeader'] : null;
         $this->container['limitNum'] = isset($data['limitNum']) ? $data['limitNum'] : null;
         $this->container['encodingType'] = isset($data['encodingType']) ? $data['encodingType'] : null;
+        $this->container['quoteChar'] = isset($data['quoteChar']) ? $data['quoteChar'] : null;
+        $this->container['escapeChar'] = isset($data['escapeChar']) ? $data['escapeChar'] : null;
     }
 
     /**
@@ -470,6 +492,54 @@ class ExportSqlJobResultRequestBody implements ModelInterface, ArrayAccess
     public function setEncodingType($encodingType)
     {
         $this->container['encodingType'] = $encodingType;
+        return $this;
+    }
+
+    /**
+    * Gets quoteChar
+    *  用户自定义引用字符
+    *
+    * @return string|null
+    */
+    public function getQuoteChar()
+    {
+        return $this->container['quoteChar'];
+    }
+
+    /**
+    * Sets quoteChar
+    *
+    * @param string|null $quoteChar 用户自定义引用字符
+    *
+    * @return $this
+    */
+    public function setQuoteChar($quoteChar)
+    {
+        $this->container['quoteChar'] = $quoteChar;
+        return $this;
+    }
+
+    /**
+    * Gets escapeChar
+    *  用户自定义转义字符
+    *
+    * @return string|null
+    */
+    public function getEscapeChar()
+    {
+        return $this->container['escapeChar'];
+    }
+
+    /**
+    * Sets escapeChar
+    *
+    * @param string|null $escapeChar 用户自定义转义字符
+    *
+    * @return $this
+    */
+    public function setEscapeChar($escapeChar)
+    {
+        $this->container['escapeChar'] = $escapeChar;
         return $this;
     }
 

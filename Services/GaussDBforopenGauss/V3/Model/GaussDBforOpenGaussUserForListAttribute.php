@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayAccess
+class GaussDBforOpenGaussUserForListAttribute implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     *
     * @var string
     */
-    protected static $openAPIModelName = 'GaussDBforOpenGaussUserForList_attributes';
+    protected static $openAPIModelName = 'GaussDBforOpenGaussUserForList_attribute';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -28,6 +28,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     * rolconnlimit  用户连接实例的最大并发连接数。-1表示没有限制。
     * rolreplication  用户是否属于复制角色，取值为“true”或“false”。
     * rolbypassrls  用户是否绕过每个行级安全策略，取值为“true”或“false”。
+    * rolpassworddeadline  用户密码过期时间。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
             'rolcanlogin' => 'bool',
             'rolconnlimit' => 'int',
             'rolreplication' => 'bool',
-            'rolbypassrls' => 'bool'
+            'rolbypassrls' => 'bool',
+            'rolpassworddeadline' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     * rolconnlimit  用户连接实例的最大并发连接数。-1表示没有限制。
     * rolreplication  用户是否属于复制角色，取值为“true”或“false”。
     * rolbypassrls  用户是否绕过每个行级安全策略，取值为“true”或“false”。
+    * rolpassworddeadline  用户密码过期时间。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
         'rolcanlogin' => null,
         'rolconnlimit' => 'int32',
         'rolreplication' => null,
-        'rolbypassrls' => null
+        'rolbypassrls' => null,
+        'rolpassworddeadline' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     * rolconnlimit  用户连接实例的最大并发连接数。-1表示没有限制。
     * rolreplication  用户是否属于复制角色，取值为“true”或“false”。
     * rolbypassrls  用户是否绕过每个行级安全策略，取值为“true”或“false”。
+    * rolpassworddeadline  用户密码过期时间。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
             'rolcanlogin' => 'rolcanlogin',
             'rolconnlimit' => 'rolconnlimit',
             'rolreplication' => 'rolreplication',
-            'rolbypassrls' => 'rolbypassrls'
+            'rolbypassrls' => 'rolbypassrls',
+            'rolpassworddeadline' => 'rolpassworddeadline'
     ];
 
     /**
@@ -121,6 +127,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     * rolconnlimit  用户连接实例的最大并发连接数。-1表示没有限制。
     * rolreplication  用户是否属于复制角色，取值为“true”或“false”。
     * rolbypassrls  用户是否绕过每个行级安全策略，取值为“true”或“false”。
+    * rolpassworddeadline  用户密码过期时间。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
             'rolcanlogin' => 'setRolcanlogin',
             'rolconnlimit' => 'setRolconnlimit',
             'rolreplication' => 'setRolreplication',
-            'rolbypassrls' => 'setRolbypassrls'
+            'rolbypassrls' => 'setRolbypassrls',
+            'rolpassworddeadline' => 'setRolpassworddeadline'
     ];
 
     /**
@@ -145,6 +153,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     * rolconnlimit  用户连接实例的最大并发连接数。-1表示没有限制。
     * rolreplication  用户是否属于复制角色，取值为“true”或“false”。
     * rolbypassrls  用户是否绕过每个行级安全策略，取值为“true”或“false”。
+    * rolpassworddeadline  用户密码过期时间。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
             'rolcanlogin' => 'getRolcanlogin',
             'rolconnlimit' => 'getRolconnlimit',
             'rolreplication' => 'getRolreplication',
-            'rolbypassrls' => 'getRolbypassrls'
+            'rolbypassrls' => 'getRolbypassrls',
+            'rolpassworddeadline' => 'getRolpassworddeadline'
     ];
 
     /**
@@ -225,6 +235,7 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
         $this->container['rolconnlimit'] = isset($data['rolconnlimit']) ? $data['rolconnlimit'] : null;
         $this->container['rolreplication'] = isset($data['rolreplication']) ? $data['rolreplication'] : null;
         $this->container['rolbypassrls'] = isset($data['rolbypassrls']) ? $data['rolbypassrls'] : null;
+        $this->container['rolpassworddeadline'] = isset($data['rolpassworddeadline']) ? $data['rolpassworddeadline'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class GaussDBforOpenGaussUserForListAttributes implements ModelInterface, ArrayA
     public function setRolbypassrls($rolbypassrls)
     {
         $this->container['rolbypassrls'] = $rolbypassrls;
+        return $this;
+    }
+
+    /**
+    * Gets rolpassworddeadline
+    *  用户密码过期时间。
+    *
+    * @return string|null
+    */
+    public function getRolpassworddeadline()
+    {
+        return $this->container['rolpassworddeadline'];
+    }
+
+    /**
+    * Sets rolpassworddeadline
+    *
+    * @param string|null $rolpassworddeadline 用户密码过期时间。
+    *
+    * @return $this
+    */
+    public function setRolpassworddeadline($rolpassworddeadline)
+    {
+        $this->container['rolpassworddeadline'] = $rolpassworddeadline;
         return $this;
     }
 

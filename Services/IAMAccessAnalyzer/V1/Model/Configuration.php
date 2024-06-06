@@ -22,24 +22,28 @@ class Configuration implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * iamAgency  iamAgency
     * obsBucket  obsBucket
+    * kmsCmk  kmsCmk
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'iamAgency' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\IAMAgency',
-            'obsBucket' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\OBSBucket'
+            'obsBucket' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\OBSBucket',
+            'kmsCmk' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\KMSCmk'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * iamAgency  iamAgency
     * obsBucket  obsBucket
+    * kmsCmk  kmsCmk
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'iamAgency' => null,
-        'obsBucket' => null
+        'obsBucket' => null,
+        'kmsCmk' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class Configuration implements ModelInterface, ArrayAccess
     * and the value is the original name
     * iamAgency  iamAgency
     * obsBucket  obsBucket
+    * kmsCmk  kmsCmk
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'iamAgency' => 'iam_agency',
-            'obsBucket' => 'obs_bucket'
+            'obsBucket' => 'obs_bucket',
+            'kmsCmk' => 'kms_cmk'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * iamAgency  iamAgency
     * obsBucket  obsBucket
+    * kmsCmk  kmsCmk
     *
     * @var string[]
     */
     protected static $setters = [
             'iamAgency' => 'setIamAgency',
-            'obsBucket' => 'setObsBucket'
+            'obsBucket' => 'setObsBucket',
+            'kmsCmk' => 'setKmsCmk'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * iamAgency  iamAgency
     * obsBucket  obsBucket
+    * kmsCmk  kmsCmk
     *
     * @var string[]
     */
     protected static $getters = [
             'iamAgency' => 'getIamAgency',
-            'obsBucket' => 'getObsBucket'
+            'obsBucket' => 'getObsBucket',
+            'kmsCmk' => 'getKmsCmk'
     ];
 
     /**
@@ -159,6 +169,7 @@ class Configuration implements ModelInterface, ArrayAccess
     {
         $this->container['iamAgency'] = isset($data['iamAgency']) ? $data['iamAgency'] : null;
         $this->container['obsBucket'] = isset($data['obsBucket']) ? $data['obsBucket'] : null;
+        $this->container['kmsCmk'] = isset($data['kmsCmk']) ? $data['kmsCmk'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class Configuration implements ModelInterface, ArrayAccess
     public function setObsBucket($obsBucket)
     {
         $this->container['obsBucket'] = $obsBucket;
+        return $this;
+    }
+
+    /**
+    * Gets kmsCmk
+    *  kmsCmk
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\KMSCmk|null
+    */
+    public function getKmsCmk()
+    {
+        return $this->container['kmsCmk'];
+    }
+
+    /**
+    * Sets kmsCmk
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\KMSCmk|null $kmsCmk kmsCmk
+    *
+    * @return $this
+    */
+    public function setKmsCmk($kmsCmk)
+    {
+        $this->container['kmsCmk'] = $kmsCmk;
         return $this;
     }
 

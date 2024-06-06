@@ -21,21 +21,25 @@ class ShowMrsFlavorsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * versionName  MRS集群版本，不支持多版本查询 ，例如 MRS%203.1.5.1
+    * availabilityZone  可用区id，用于查询指定可用区的可用规格
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'versionName' => 'string'
+            'versionName' => 'string',
+            'availabilityZone' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * versionName  MRS集群版本，不支持多版本查询 ，例如 MRS%203.1.5.1
+    * availabilityZone  可用区id，用于查询指定可用区的可用规格
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'versionName' => null
+        'versionName' => null,
+        'availabilityZone' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ShowMrsFlavorsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * versionName  MRS集群版本，不支持多版本查询 ，例如 MRS%203.1.5.1
+    * availabilityZone  可用区id，用于查询指定可用区的可用规格
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'versionName' => 'version_name'
+            'versionName' => 'version_name',
+            'availabilityZone' => 'availability_zone'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * versionName  MRS集群版本，不支持多版本查询 ，例如 MRS%203.1.5.1
+    * availabilityZone  可用区id，用于查询指定可用区的可用规格
     *
     * @var string[]
     */
     protected static $setters = [
-            'versionName' => 'setVersionName'
+            'versionName' => 'setVersionName',
+            'availabilityZone' => 'setAvailabilityZone'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * versionName  MRS集群版本，不支持多版本查询 ，例如 MRS%203.1.5.1
+    * availabilityZone  可用区id，用于查询指定可用区的可用规格
     *
     * @var string[]
     */
     protected static $getters = [
-            'versionName' => 'getVersionName'
+            'versionName' => 'getVersionName',
+            'availabilityZone' => 'getAvailabilityZone'
     ];
 
     /**
@@ -148,6 +158,7 @@ class ShowMrsFlavorsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['versionName'] = isset($data['versionName']) ? $data['versionName'] : null;
+        $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
     }
 
     /**
@@ -166,6 +177,12 @@ class ShowMrsFlavorsRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['versionName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'versionName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) > 64)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['availabilityZone']) && (mb_strlen($this->container['availabilityZone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'availabilityZone', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -202,6 +219,30 @@ class ShowMrsFlavorsRequest implements ModelInterface, ArrayAccess
     public function setVersionName($versionName)
     {
         $this->container['versionName'] = $versionName;
+        return $this;
+    }
+
+    /**
+    * Gets availabilityZone
+    *  可用区id，用于查询指定可用区的可用规格
+    *
+    * @return string|null
+    */
+    public function getAvailabilityZone()
+    {
+        return $this->container['availabilityZone'];
+    }
+
+    /**
+    * Sets availabilityZone
+    *
+    * @param string|null $availabilityZone 可用区id，用于查询指定可用区的可用规格
+    *
+    * @return $this
+    */
+    public function setAvailabilityZone($availabilityZone)
+    {
+        $this->container['availabilityZone'] = $availabilityZone;
         return $this;
     }
 

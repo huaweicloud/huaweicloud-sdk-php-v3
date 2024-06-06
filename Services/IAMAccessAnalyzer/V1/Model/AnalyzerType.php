@@ -11,6 +11,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      * Possible values of this enum
      */
     const ACCOUNT = 'account';
+    const ORGANIZATION = 'organization';
     
     /**
      * Gets allowable values of the enum
@@ -20,6 +21,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     {
         return [
             self::ACCOUNT,
+            self::ORGANIZATION,
         ];
     }
 }
