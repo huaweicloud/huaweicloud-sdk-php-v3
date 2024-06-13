@@ -31,6 +31,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
             'introductionAudioAssetId' => 'string',
             'videoAssetName' => 'string',
             'gender' => 'string',
-            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig'
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig'
     ];
 
     /**
@@ -61,6 +63,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
         'introductionAudioAssetId' => null,
         'videoAssetName' => null,
         'gender' => null,
-        'reviewConfig' => null
+        'reviewConfig' => null,
+        'callbackConfig' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
             'introductionAudioAssetId' => 'introduction_audio_asset_id',
             'videoAssetName' => 'video_asset_name',
             'gender' => 'gender',
-            'reviewConfig' => 'review_config'
+            'reviewConfig' => 'review_config',
+            'callbackConfig' => 'callback_config'
     ];
 
     /**
@@ -142,6 +148,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
             'introductionAudioAssetId' => 'setIntroductionAudioAssetId',
             'videoAssetName' => 'setVideoAssetName',
             'gender' => 'setGender',
-            'reviewConfig' => 'setReviewConfig'
+            'reviewConfig' => 'setReviewConfig',
+            'callbackConfig' => 'setCallbackConfig'
     ];
 
     /**
@@ -172,6 +180,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
             'introductionAudioAssetId' => 'getIntroductionAudioAssetId',
             'videoAssetName' => 'getVideoAssetName',
             'gender' => 'getGender',
-            'reviewConfig' => 'getReviewConfig'
+            'reviewConfig' => 'getReviewConfig',
+            'callbackConfig' => 'getCallbackConfig'
     ];
 
     /**
@@ -301,6 +311,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
         $this->container['videoAssetName'] = isset($data['videoAssetName']) ? $data['videoAssetName'] : null;
         $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['callbackConfig'] = isset($data['callbackConfig']) ? $data['callbackConfig'] : null;
     }
 
     /**
@@ -652,6 +663,30 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     public function setReviewConfig($reviewConfig)
     {
         $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets callbackConfig
+    *  callbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null
+    */
+    public function getCallbackConfig()
+    {
+        return $this->container['callbackConfig'];
+    }
+
+    /**
+    * Sets callbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null $callbackConfig callbackConfig
+    *
+    * @return $this
+    */
+    public function setCallbackConfig($callbackConfig)
+    {
+        $this->container['callbackConfig'] = $callbackConfig;
         return $this;
     }
 

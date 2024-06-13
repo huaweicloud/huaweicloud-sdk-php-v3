@@ -43,7 +43,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     * accessIPv4  预留属性。
     * accessIPv6  预留属性。
-    * fault  fault
+    * fault  弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     * progress  弹性云服务器进度。
     * osExtStSpowerState  扩展属性，弹性云服务器电源状态。
     * configDrive  config drive信息。
@@ -94,7 +94,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
             'osDcFdiskConfig' => 'string',
             'accessIPv4' => 'string',
             'accessIPv6' => 'string',
-            'fault' => '\HuaweiCloud\SDK\Ecs\V2\Model\ServerFault',
+            'fault' => 'object',
             'progress' => 'int',
             'osExtStSpowerState' => 'int',
             'configDrive' => 'string',
@@ -145,7 +145,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     * accessIPv4  预留属性。
     * accessIPv6  预留属性。
-    * fault  fault
+    * fault  弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     * progress  弹性云服务器进度。
     * osExtStSpowerState  扩展属性，弹性云服务器电源状态。
     * configDrive  config drive信息。
@@ -268,7 +268,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     * accessIPv4  预留属性。
     * accessIPv6  预留属性。
-    * fault  fault
+    * fault  弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     * progress  弹性云服务器进度。
     * osExtStSpowerState  扩展属性，弹性云服务器电源状态。
     * configDrive  config drive信息。
@@ -370,7 +370,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     * accessIPv4  预留属性。
     * accessIPv6  预留属性。
-    * fault  fault
+    * fault  弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     * progress  弹性云服务器进度。
     * osExtStSpowerState  扩展属性，弹性云服务器电源状态。
     * configDrive  config drive信息。
@@ -472,7 +472,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     * osDcFdiskConfig  扩展属性， diskConfig的类型。  - MANUAL，镜像空间不会扩展。 - AUTO，系统盘镜像空间会自动扩展为与flavor大小一致。
     * accessIPv4  预留属性。
     * accessIPv6  预留属性。
-    * fault  fault
+    * fault  弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     * progress  弹性云服务器进度。
     * osExtStSpowerState  扩展属性，弹性云服务器电源状态。
     * configDrive  config drive信息。
@@ -1337,9 +1337,9 @@ class ServerDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets fault
-    *  fault
+    *  弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     *
-    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ServerFault|null
+    * @return object|null
     */
     public function getFault()
     {
@@ -1349,7 +1349,7 @@ class ServerDetail implements ModelInterface, ArrayAccess
     /**
     * Sets fault
     *
-    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ServerFault|null $fault fault
+    * @param object|null $fault 弹性云服务器故障信息。  可选参数，在弹性云服务器状态为ERROR且存在异常的情况下返回。
     *
     * @return $this
     */

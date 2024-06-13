@@ -191,8 +191,6 @@ class CommitJobReq implements ModelInterface, ArrayAccess
     }
     const SEX_FEMALE = 'FEMALE';
     const SEX_MALE = 'MALE';
-    const LANGUAGE_CN = 'CN';
-    const LANGUAGE_EN = 'EN';
     
 
     /**
@@ -205,19 +203,6 @@ class CommitJobReq implements ModelInterface, ArrayAccess
         return [
             self::SEX_FEMALE,
             self::SEX_MALE,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getLanguageAllowableValues()
-    {
-        return [
-            self::LANGUAGE_CN,
-            self::LANGUAGE_EN,
         ];
     }
 
@@ -274,14 +259,6 @@ class CommitJobReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['voiceName']) && (mb_strlen($this->container['voiceName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'voiceName', the character length must be bigger than or equal to 1.";
             }
-            $allowedValues = $this->getLanguageAllowableValues();
-                if (!is_null($this->container['language']) && !in_array($this->container['language'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'language', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             if (!is_null($this->container['language']) && (mb_strlen($this->container['language']) > 64)) {
                 $invalidProperties[] = "invalid value for 'language', the character length must be smaller than or equal to 64.";
             }

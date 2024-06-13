@@ -36,6 +36,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
+    * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
@@ -43,6 +44,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
+    * isRealtimeVoice  音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * humanModel2dVersion  模型版本
+    * includeDeviceName  资产已执行的任务名称
+    * excludeDeviceName  资产已执行的任务名称
     *
     * @var string[]
     */
@@ -63,13 +68,18 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'assetState' => 'string',
             'styleId' => 'string',
             'renderEngine' => 'string',
+            'assetId' => 'string[]',
             'sex' => 'string',
             'language' => 'string',
             'systemProperty' => 'string',
             'actionEditable' => 'bool',
             'isMovable' => 'bool',
             'voiceProvider' => 'string',
-            'role' => 'string'
+            'role' => 'string',
+            'isRealtimeVoice' => 'bool',
+            'humanModel2dVersion' => 'string',
+            'includeDeviceName' => 'string',
+            'excludeDeviceName' => 'string'
     ];
 
     /**
@@ -90,6 +100,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
+    * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
@@ -97,6 +108,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
+    * isRealtimeVoice  音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * humanModel2dVersion  模型版本
+    * includeDeviceName  资产已执行的任务名称
+    * excludeDeviceName  资产已执行的任务名称
     *
     * @var string[]
     */
@@ -117,13 +132,18 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         'assetState' => null,
         'styleId' => null,
         'renderEngine' => null,
+        'assetId' => null,
         'sex' => null,
         'language' => null,
         'systemProperty' => null,
         'actionEditable' => null,
         'isMovable' => null,
         'voiceProvider' => null,
-        'role' => null
+        'role' => null,
+        'isRealtimeVoice' => null,
+        'humanModel2dVersion' => null,
+        'includeDeviceName' => null,
+        'excludeDeviceName' => null
     ];
 
     /**
@@ -165,6 +185,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
+    * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
@@ -172,6 +193,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
+    * isRealtimeVoice  音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * humanModel2dVersion  模型版本
+    * includeDeviceName  资产已执行的任务名称
+    * excludeDeviceName  资产已执行的任务名称
     *
     * @var string[]
     */
@@ -192,13 +217,18 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'assetState' => 'asset_state',
             'styleId' => 'style_id',
             'renderEngine' => 'render_engine',
+            'assetId' => 'asset_id',
             'sex' => 'sex',
             'language' => 'language',
             'systemProperty' => 'system_property',
             'actionEditable' => 'action_editable',
             'isMovable' => 'is_movable',
             'voiceProvider' => 'voice_provider',
-            'role' => 'role'
+            'role' => 'role',
+            'isRealtimeVoice' => 'is_realtime_voice',
+            'humanModel2dVersion' => 'human_model_2d_version',
+            'includeDeviceName' => 'include_device_name',
+            'excludeDeviceName' => 'exclude_device_name'
     ];
 
     /**
@@ -219,6 +249,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
+    * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
@@ -226,6 +257,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
+    * isRealtimeVoice  音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * humanModel2dVersion  模型版本
+    * includeDeviceName  资产已执行的任务名称
+    * excludeDeviceName  资产已执行的任务名称
     *
     * @var string[]
     */
@@ -246,13 +281,18 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'assetState' => 'setAssetState',
             'styleId' => 'setStyleId',
             'renderEngine' => 'setRenderEngine',
+            'assetId' => 'setAssetId',
             'sex' => 'setSex',
             'language' => 'setLanguage',
             'systemProperty' => 'setSystemProperty',
             'actionEditable' => 'setActionEditable',
             'isMovable' => 'setIsMovable',
             'voiceProvider' => 'setVoiceProvider',
-            'role' => 'setRole'
+            'role' => 'setRole',
+            'isRealtimeVoice' => 'setIsRealtimeVoice',
+            'humanModel2dVersion' => 'setHumanModel2dVersion',
+            'includeDeviceName' => 'setIncludeDeviceName',
+            'excludeDeviceName' => 'setExcludeDeviceName'
     ];
 
     /**
@@ -273,6 +313,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * assetState  资产状态。多个资产状态使用英文逗号分割。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK：资产被冻结，资产不可用，不可查看文件。 默认查询所有状态的资产。
     * styleId  基于风格化ID查询关联资产。 * system_male_001：男性风格01 * system_female_001：女性风格01 * system_male_002：男性风格02  * system_female_002：女性风格02
     * renderEngine  可用引擎。 * UE：UE引擎 * MetaEngine：MetaEngine引擎 > 该字段当前只对MetaEngine白名单用户生效
+    * assetId  资产id
     * sex  性别。多选使用英文逗号分隔。
     * language  语言。多选使用英文逗号分隔。
     * systemProperty  系统属性。  key和value间用\":\"分隔，多个key之间用\",\"分隔。  如system_property=BACKGROUND_IMG:Yes,RENDER_ENGINE:MetaEngine。  不同Key对应Value取值如下：  公共资产属性： * BACKGROUND_IMG：视频制作的2D背景图片，可取值Yes * CREATED_BY_PLATFORM：是否平台生成，可取值Yes  分身数字人资产属性： * MATERIAL_IMG：素材图片，用作前景。可取值Yes * MATERIAL_VIDEO：素材视频，用作前景。可取值Yes * TO_BE_TRANSLATED_VIDEO: 视频翻译的源视频。可取值Yes  3D数字人资产属性： * STYLE_ID：风格Id * RENDER_ENGINE：引擎类型，可取值UE或MetaEngine * BACKGROUND_SCENE：视频制作的2D背景场景，可取值Horizontal（横屏）或者Vertical（竖屏）
@@ -280,6 +321,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     * isMovable  分身数字人是否支持走动。仅在分身数字人模型查询时有效。
     * voiceProvider  取值：HUAWEI_METASTUDIO、MOBVOI。 HUAWEI_METASTUDIO：MetaStudio自研音色 MOBVOI：出门问问音色
     * role  角色。 SHARER：共享方，SHAREE：被共享方
+    * isRealtimeVoice  音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * humanModel2dVersion  模型版本
+    * includeDeviceName  资产已执行的任务名称
+    * excludeDeviceName  资产已执行的任务名称
     *
     * @var string[]
     */
@@ -300,13 +345,18 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
             'assetState' => 'getAssetState',
             'styleId' => 'getStyleId',
             'renderEngine' => 'getRenderEngine',
+            'assetId' => 'getAssetId',
             'sex' => 'getSex',
             'language' => 'getLanguage',
             'systemProperty' => 'getSystemProperty',
             'actionEditable' => 'getActionEditable',
             'isMovable' => 'getIsMovable',
             'voiceProvider' => 'getVoiceProvider',
-            'role' => 'getRole'
+            'role' => 'getRole',
+            'isRealtimeVoice' => 'getIsRealtimeVoice',
+            'humanModel2dVersion' => 'getHumanModel2dVersion',
+            'includeDeviceName' => 'getIncludeDeviceName',
+            'excludeDeviceName' => 'getExcludeDeviceName'
     ];
 
     /**
@@ -415,6 +465,7 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['styleId'] = isset($data['styleId']) ? $data['styleId'] : null;
         $this->container['renderEngine'] = isset($data['renderEngine']) ? $data['renderEngine'] : null;
+        $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['sex'] = isset($data['sex']) ? $data['sex'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['systemProperty'] = isset($data['systemProperty']) ? $data['systemProperty'] : null;
@@ -422,6 +473,10 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
         $this->container['isMovable'] = isset($data['isMovable']) ? $data['isMovable'] : null;
         $this->container['voiceProvider'] = isset($data['voiceProvider']) ? $data['voiceProvider'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['isRealtimeVoice'] = isset($data['isRealtimeVoice']) ? $data['isRealtimeVoice'] : null;
+        $this->container['humanModel2dVersion'] = isset($data['humanModel2dVersion']) ? $data['humanModel2dVersion'] : null;
+        $this->container['includeDeviceName'] = isset($data['includeDeviceName']) ? $data['includeDeviceName'] : null;
+        $this->container['excludeDeviceName'] = isset($data['excludeDeviceName']) ? $data['excludeDeviceName'] : null;
     }
 
     /**
@@ -562,6 +617,24 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['humanModel2dVersion']) && (mb_strlen($this->container['humanModel2dVersion']) > 128)) {
+                $invalidProperties[] = "invalid value for 'humanModel2dVersion', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['humanModel2dVersion']) && (mb_strlen($this->container['humanModel2dVersion']) < 1)) {
+                $invalidProperties[] = "invalid value for 'humanModel2dVersion', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['includeDeviceName']) && (mb_strlen($this->container['includeDeviceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'includeDeviceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['includeDeviceName']) && (mb_strlen($this->container['includeDeviceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'includeDeviceName', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['excludeDeviceName']) && (mb_strlen($this->container['excludeDeviceName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'excludeDeviceName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['excludeDeviceName']) && (mb_strlen($this->container['excludeDeviceName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'excludeDeviceName', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -961,6 +1034,30 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets assetId
+    *  资产id
+    *
+    * @return string[]|null
+    */
+    public function getAssetId()
+    {
+        return $this->container['assetId'];
+    }
+
+    /**
+    * Sets assetId
+    *
+    * @param string[]|null $assetId 资产id
+    *
+    * @return $this
+    */
+    public function setAssetId($assetId)
+    {
+        $this->container['assetId'] = $assetId;
+        return $this;
+    }
+
+    /**
     * Gets sex
     *  性别。多选使用英文逗号分隔。
     *
@@ -1125,6 +1222,102 @@ class ListAssetsRequest implements ModelInterface, ArrayAccess
     public function setRole($role)
     {
         $this->container['role'] = $role;
+        return $this;
+    }
+
+    /**
+    * Gets isRealtimeVoice
+    *  音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    *
+    * @return bool|null
+    */
+    public function getIsRealtimeVoice()
+    {
+        return $this->container['isRealtimeVoice'];
+    }
+
+    /**
+    * Sets isRealtimeVoice
+    *
+    * @param bool|null $isRealtimeVoice 音色是否支持实时合成。仅在音色查询时有效。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    *
+    * @return $this
+    */
+    public function setIsRealtimeVoice($isRealtimeVoice)
+    {
+        $this->container['isRealtimeVoice'] = $isRealtimeVoice;
+        return $this;
+    }
+
+    /**
+    * Gets humanModel2dVersion
+    *  模型版本
+    *
+    * @return string|null
+    */
+    public function getHumanModel2dVersion()
+    {
+        return $this->container['humanModel2dVersion'];
+    }
+
+    /**
+    * Sets humanModel2dVersion
+    *
+    * @param string|null $humanModel2dVersion 模型版本
+    *
+    * @return $this
+    */
+    public function setHumanModel2dVersion($humanModel2dVersion)
+    {
+        $this->container['humanModel2dVersion'] = $humanModel2dVersion;
+        return $this;
+    }
+
+    /**
+    * Gets includeDeviceName
+    *  资产已执行的任务名称
+    *
+    * @return string|null
+    */
+    public function getIncludeDeviceName()
+    {
+        return $this->container['includeDeviceName'];
+    }
+
+    /**
+    * Sets includeDeviceName
+    *
+    * @param string|null $includeDeviceName 资产已执行的任务名称
+    *
+    * @return $this
+    */
+    public function setIncludeDeviceName($includeDeviceName)
+    {
+        $this->container['includeDeviceName'] = $includeDeviceName;
+        return $this;
+    }
+
+    /**
+    * Gets excludeDeviceName
+    *  资产已执行的任务名称
+    *
+    * @return string|null
+    */
+    public function getExcludeDeviceName()
+    {
+        return $this->container['excludeDeviceName'];
+    }
+
+    /**
+    * Sets excludeDeviceName
+    *
+    * @param string|null $excludeDeviceName 资产已执行的任务名称
+    *
+    * @return $this
+    */
+    public function setExcludeDeviceName($excludeDeviceName)
+    {
+        $this->container['excludeDeviceName'] = $excludeDeviceName;
         return $this;
     }
 

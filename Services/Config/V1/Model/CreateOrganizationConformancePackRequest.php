@@ -21,24 +21,28 @@ class CreateOrganizationConformancePackRequest implements ModelInterface, ArrayA
     /**
     * Array of property to type mappings. Used for (de)serialization
     * organizationId  组织ID。
+    * xLanguage  组织合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'organizationId' => 'string',
+            'xLanguage' => 'string',
             'body' => '\HuaweiCloud\SDK\Config\V1\Model\OrgConformancePackRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * organizationId  组织ID。
+    * xLanguage  组织合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'organizationId' => null,
+        'xLanguage' => null,
         'body' => null
     ];
 
@@ -66,36 +70,42 @@ class CreateOrganizationConformancePackRequest implements ModelInterface, ArrayA
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * organizationId  组织ID。
+    * xLanguage  组织合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'organizationId' => 'organization_id',
+            'xLanguage' => 'X-Language',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * organizationId  组织ID。
+    * xLanguage  组织合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'organizationId' => 'setOrganizationId',
+            'xLanguage' => 'setXLanguage',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * organizationId  组织ID。
+    * xLanguage  组织合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'organizationId' => 'getOrganizationId',
+            'xLanguage' => 'getXLanguage',
             'body' => 'getBody'
     ];
 
@@ -139,7 +149,22 @@ class CreateOrganizationConformancePackRequest implements ModelInterface, ArrayA
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const X_LANGUAGE_EN_US = 'en-us';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_ZH_CN,
+            self::X_LANGUAGE_EN_US,
+        ];
+    }
 
 
     /**
@@ -158,6 +183,7 @@ class CreateOrganizationConformancePackRequest implements ModelInterface, ArrayA
     public function __construct(array $data = null)
     {
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -178,6 +204,14 @@ class CreateOrganizationConformancePackRequest implements ModelInterface, ArrayA
             if (!preg_match("/^o-[0-9a-z]{10,32}$/", $this->container['organizationId'])) {
                 $invalidProperties[] = "invalid value for 'organizationId', must be conform to the pattern /^o-[0-9a-z]{10,32}$/.";
             }
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -213,6 +247,30 @@ class CreateOrganizationConformancePackRequest implements ModelInterface, ArrayA
     public function setOrganizationId($organizationId)
     {
         $this->container['organizationId'] = $organizationId;
+        return $this;
+    }
+
+    /**
+    * Gets xLanguage
+    *  组织合规包信息语言，默认为\"en-us\"英文
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 组织合规包信息语言，默认为\"en-us\"英文
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 

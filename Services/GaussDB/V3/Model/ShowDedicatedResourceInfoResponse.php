@@ -22,7 +22,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  专属资源池ID。
-    * name  专属资源池名称。
+    * resourceName  专属资源池名称。
     * engineName  引擎名称。
     * availabilityZoneIds  可用区。
     * architecture  资源规格类型。
@@ -34,7 +34,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'name' => 'string',
+            'resourceName' => 'string',
             'engineName' => 'string',
             'availabilityZoneIds' => 'string[]',
             'architecture' => 'string',
@@ -46,7 +46,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  专属资源池ID。
-    * name  专属资源池名称。
+    * resourceName  专属资源池名称。
     * engineName  引擎名称。
     * availabilityZoneIds  可用区。
     * architecture  资源规格类型。
@@ -58,7 +58,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'name' => null,
+        'resourceName' => null,
         'engineName' => null,
         'availabilityZoneIds' => null,
         'architecture' => null,
@@ -91,7 +91,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  专属资源池ID。
-    * name  专属资源池名称。
+    * resourceName  专属资源池名称。
     * engineName  引擎名称。
     * availabilityZoneIds  可用区。
     * architecture  资源规格类型。
@@ -103,7 +103,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'id' => 'id',
-            'name' => 'name',
+            'resourceName' => 'resource_name',
             'engineName' => 'engine_name',
             'availabilityZoneIds' => 'availability_zone_ids',
             'architecture' => 'architecture',
@@ -115,7 +115,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  专属资源池ID。
-    * name  专属资源池名称。
+    * resourceName  专属资源池名称。
     * engineName  引擎名称。
     * availabilityZoneIds  可用区。
     * architecture  资源规格类型。
@@ -127,7 +127,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'id' => 'setId',
-            'name' => 'setName',
+            'resourceName' => 'setResourceName',
             'engineName' => 'setEngineName',
             'availabilityZoneIds' => 'setAvailabilityZoneIds',
             'architecture' => 'setArchitecture',
@@ -139,7 +139,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  专属资源池ID。
-    * name  专属资源池名称。
+    * resourceName  专属资源池名称。
     * engineName  引擎名称。
     * availabilityZoneIds  可用区。
     * architecture  资源规格类型。
@@ -151,7 +151,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'id' => 'getId',
-            'name' => 'getName',
+            'resourceName' => 'getResourceName',
             'engineName' => 'getEngineName',
             'availabilityZoneIds' => 'getAvailabilityZoneIds',
             'architecture' => 'getArchitecture',
@@ -219,7 +219,7 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['engineName'] = isset($data['engineName']) ? $data['engineName'] : null;
         $this->container['availabilityZoneIds'] = isset($data['availabilityZoneIds']) ? $data['availabilityZoneIds'] : null;
         $this->container['architecture'] = isset($data['architecture']) ? $data['architecture'] : null;
@@ -275,26 +275,26 @@ class ShowDedicatedResourceInfoResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
+    * Gets resourceName
     *  专属资源池名称。
     *
     * @return string|null
     */
-    public function getName()
+    public function getResourceName()
     {
-        return $this->container['name'];
+        return $this->container['resourceName'];
     }
 
     /**
-    * Sets name
+    * Sets resourceName
     *
-    * @param string|null $name 专属资源池名称。
+    * @param string|null $resourceName 专属资源池名称。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setResourceName($resourceName)
     {
-        $this->container['name'] = $name;
+        $this->container['resourceName'] = $resourceName;
         return $this;
     }
 

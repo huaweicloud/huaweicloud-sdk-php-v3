@@ -26,6 +26,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
@@ -37,6 +39,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'language' => 'string',
             'speedRatio' => 'float',
             'volumeRatio' => 'float',
+            'isRealtimeVoice' => 'bool',
+            'voiceCapability' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceCapability',
             'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta'
     ];
 
@@ -48,6 +52,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
@@ -59,6 +65,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         'language' => null,
         'speedRatio' => 'float',
         'volumeRatio' => 'float',
+        'isRealtimeVoice' => null,
+        'voiceCapability' => null,
         'externalVoiceMeta' => null
     ];
 
@@ -91,6 +99,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
@@ -102,6 +112,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'language' => 'language',
             'speedRatio' => 'speed_ratio',
             'volumeRatio' => 'volume_ratio',
+            'isRealtimeVoice' => 'is_realtime_voice',
+            'voiceCapability' => 'voice_capability',
             'externalVoiceMeta' => 'external_voice_meta'
     ];
 
@@ -113,6 +125,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
@@ -124,6 +138,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'language' => 'setLanguage',
             'speedRatio' => 'setSpeedRatio',
             'volumeRatio' => 'setVolumeRatio',
+            'isRealtimeVoice' => 'setIsRealtimeVoice',
+            'voiceCapability' => 'setVoiceCapability',
             'externalVoiceMeta' => 'setExternalVoiceMeta'
     ];
 
@@ -135,6 +151,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
     * speedRatio  语速缩放比例
     * volumeRatio  音量缩放比例
+    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     *
     * @var string[]
@@ -146,6 +164,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'language' => 'getLanguage',
             'speedRatio' => 'getSpeedRatio',
             'volumeRatio' => 'getVolumeRatio',
+            'isRealtimeVoice' => 'getIsRealtimeVoice',
+            'voiceCapability' => 'getVoiceCapability',
             'externalVoiceMeta' => 'getExternalVoiceMeta'
     ];
 
@@ -310,6 +330,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['speedRatio'] = isset($data['speedRatio']) ? $data['speedRatio'] : null;
         $this->container['volumeRatio'] = isset($data['volumeRatio']) ? $data['volumeRatio'] : null;
+        $this->container['isRealtimeVoice'] = isset($data['isRealtimeVoice']) ? $data['isRealtimeVoice'] : null;
+        $this->container['voiceCapability'] = isset($data['voiceCapability']) ? $data['voiceCapability'] : null;
         $this->container['externalVoiceMeta'] = isset($data['externalVoiceMeta']) ? $data['externalVoiceMeta'] : null;
     }
 
@@ -536,6 +558,54 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function setVolumeRatio($volumeRatio)
     {
         $this->container['volumeRatio'] = $volumeRatio;
+        return $this;
+    }
+
+    /**
+    * Gets isRealtimeVoice
+    *  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    *
+    * @return bool|null
+    */
+    public function getIsRealtimeVoice()
+    {
+        return $this->container['isRealtimeVoice'];
+    }
+
+    /**
+    * Sets isRealtimeVoice
+    *
+    * @param bool|null $isRealtimeVoice 该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    *
+    * @return $this
+    */
+    public function setIsRealtimeVoice($isRealtimeVoice)
+    {
+        $this->container['isRealtimeVoice'] = $isRealtimeVoice;
+        return $this;
+    }
+
+    /**
+    * Gets voiceCapability
+    *  voiceCapability
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceCapability|null
+    */
+    public function getVoiceCapability()
+    {
+        return $this->container['voiceCapability'];
+    }
+
+    /**
+    * Sets voiceCapability
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceCapability|null $voiceCapability voiceCapability
+    *
+    * @return $this
+    */
+    public function setVoiceCapability($voiceCapability)
+    {
+        $this->container['voiceCapability'] = $voiceCapability;
         return $this;
     }
 

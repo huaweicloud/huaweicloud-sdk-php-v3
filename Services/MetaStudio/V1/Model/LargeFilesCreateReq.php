@@ -222,8 +222,8 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['fileName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'fileName', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['fileSize']) && ($this->container['fileSize'] > 5368709120)) {
-                $invalidProperties[] = "invalid value for 'fileSize', must be smaller than or equal to 5368709120.";
+            if (!is_null($this->container['fileSize']) && ($this->container['fileSize'] > 536870912000)) {
+                $invalidProperties[] = "invalid value for 'fileSize', must be smaller than or equal to 536870912000.";
             }
             if (!is_null($this->container['fileSize']) && ($this->container['fileSize'] < 1)) {
                 $invalidProperties[] = "invalid value for 'fileSize', must be bigger than or equal to 1.";

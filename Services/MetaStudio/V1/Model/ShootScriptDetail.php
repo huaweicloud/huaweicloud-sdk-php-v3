@@ -22,9 +22,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
-    * animationConfig  动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
     * backgroundConfig  背景配置。
-    * emotionConfig  情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
     * layerConfig  图层配置。
     * thumbnailUrl  剧本场景缩略图url。
     *
@@ -33,9 +31,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'scriptType' => 'string',
             'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TextConfig',
-            'animationConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AnimationConfig[]',
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo[]',
-            'emotionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\EmotionConfig[]',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
             'thumbnailUrl' => 'string'
     ];
@@ -44,9 +40,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
-    * animationConfig  动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
     * backgroundConfig  背景配置。
-    * emotionConfig  情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
     * layerConfig  图层配置。
     * thumbnailUrl  剧本场景缩略图url。
     *
@@ -55,9 +49,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'scriptType' => null,
         'textConfig' => null,
-        'animationConfig' => null,
         'backgroundConfig' => null,
-        'emotionConfig' => null,
         'layerConfig' => null,
         'thumbnailUrl' => null
     ];
@@ -87,9 +79,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * and the value is the original name
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
-    * animationConfig  动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
     * backgroundConfig  背景配置。
-    * emotionConfig  情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
     * layerConfig  图层配置。
     * thumbnailUrl  剧本场景缩略图url。
     *
@@ -98,9 +88,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'scriptType' => 'script_type',
             'textConfig' => 'text_config',
-            'animationConfig' => 'animation_config',
             'backgroundConfig' => 'background_config',
-            'emotionConfig' => 'emotion_config',
             'layerConfig' => 'layer_config',
             'thumbnailUrl' => 'thumbnail_url'
     ];
@@ -109,9 +97,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
-    * animationConfig  动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
     * backgroundConfig  背景配置。
-    * emotionConfig  情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
     * layerConfig  图层配置。
     * thumbnailUrl  剧本场景缩略图url。
     *
@@ -120,9 +106,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     protected static $setters = [
             'scriptType' => 'setScriptType',
             'textConfig' => 'setTextConfig',
-            'animationConfig' => 'setAnimationConfig',
             'backgroundConfig' => 'setBackgroundConfig',
-            'emotionConfig' => 'setEmotionConfig',
             'layerConfig' => 'setLayerConfig',
             'thumbnailUrl' => 'setThumbnailUrl'
     ];
@@ -131,9 +115,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
-    * animationConfig  动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
     * backgroundConfig  背景配置。
-    * emotionConfig  情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
     * layerConfig  图层配置。
     * thumbnailUrl  剧本场景缩略图url。
     *
@@ -142,9 +124,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     protected static $getters = [
             'scriptType' => 'getScriptType',
             'textConfig' => 'getTextConfig',
-            'animationConfig' => 'getAnimationConfig',
             'backgroundConfig' => 'getBackgroundConfig',
-            'emotionConfig' => 'getEmotionConfig',
             'layerConfig' => 'getLayerConfig',
             'thumbnailUrl' => 'getThumbnailUrl'
     ];
@@ -224,9 +204,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     {
         $this->container['scriptType'] = isset($data['scriptType']) ? $data['scriptType'] : null;
         $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
-        $this->container['animationConfig'] = isset($data['animationConfig']) ? $data['animationConfig'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
-        $this->container['emotionConfig'] = isset($data['emotionConfig']) ? $data['emotionConfig'] : null;
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
         $this->container['thumbnailUrl'] = isset($data['thumbnailUrl']) ? $data['thumbnailUrl'] : null;
     }
@@ -316,30 +294,6 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets animationConfig
-    *  动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AnimationConfig[]|null
-    */
-    public function getAnimationConfig()
-    {
-        return $this->container['animationConfig'];
-    }
-
-    /**
-    * Sets animationConfig
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AnimationConfig[]|null $animationConfig 动作配置。 > * 推荐使用text_config中插入动作标签，不配置animation_config。 > * 使用animation_config方式配置动作，在整个讲解过程中动作循环播放。 > * 分身数字人视频制作时此参数不生效。
-    *
-    * @return $this
-    */
-    public function setAnimationConfig($animationConfig)
-    {
-        $this->container['animationConfig'] = $animationConfig;
-        return $this;
-    }
-
-    /**
     * Gets backgroundConfig
     *  背景配置。
     *
@@ -360,30 +314,6 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     public function setBackgroundConfig($backgroundConfig)
     {
         $this->container['backgroundConfig'] = $backgroundConfig;
-        return $this;
-    }
-
-    /**
-    * Gets emotionConfig
-    *  情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\EmotionConfig[]|null
-    */
-    public function getEmotionConfig()
-    {
-        return $this->container['emotionConfig'];
-    }
-
-    /**
-    * Sets emotionConfig
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\EmotionConfig[]|null $emotionConfig 情感标签配置。  > * 分身数字人视频制作时此参数不生效。  > * 推荐在text_config中插入情感标签，此参数将被废弃。
-    *
-    * @return $this
-    */
-    public function setEmotionConfig($emotionConfig)
-    {
-        $this->container['emotionConfig'] = $emotionConfig;
         return $this;
     }
 

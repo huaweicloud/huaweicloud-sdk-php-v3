@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Vpc\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class EmotionConfig implements ModelInterface, ArrayAccess
+class BatchCreateFirewallTagsRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class EmotionConfig implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'EmotionConfig';
+    protected static $openAPIModelName = 'BatchCreateFirewallTagsRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * emotion  情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'emotion' => 'string'
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * emotion  情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'emotion' => 'string'
+        'tags' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class EmotionConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * emotion  情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'emotion' => 'emotion'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * emotion  情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $setters = [
-            'emotion' => 'setEmotion'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * emotion  情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * tags  标签列表
     *
     * @var string[]
     */
     protected static $getters = [
-            'emotion' => 'getEmotion'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -129,26 +129,7 @@ class EmotionConfig implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const EMOTION_HAPPY = 'HAPPY';
-    const EMOTION_SAD = 'SAD';
-    const EMOTION_CALM = 'CALM';
-    const EMOTION_ANGER = 'ANGER';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEmotionAllowableValues()
-    {
-        return [
-            self::EMOTION_HAPPY,
-            self::EMOTION_SAD,
-            self::EMOTION_CALM,
-            self::EMOTION_ANGER,
-        ];
-    }
 
 
     /**
@@ -166,7 +147,7 @@ class EmotionConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['emotion'] = isset($data['emotion']) ? $data['emotion'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -177,20 +158,6 @@ class EmotionConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getEmotionAllowableValues();
-                if (!is_null($this->container['emotion']) && !in_array($this->container['emotion'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'emotion', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['emotion']) && (mb_strlen($this->container['emotion']) > 64)) {
-                $invalidProperties[] = "invalid value for 'emotion', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['emotion']) && (mb_strlen($this->container['emotion']) < 1)) {
-                $invalidProperties[] = "invalid value for 'emotion', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -206,26 +173,26 @@ class EmotionConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets emotion
-    *  情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * Gets tags
+    *  标签列表
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
     */
-    public function getEmotion()
+    public function getTags()
     {
-        return $this->container['emotion'];
+        return $this->container['tags'];
     }
 
     /**
-    * Sets emotion
+    * Sets tags
     *
-    * @param string|null $emotion 情感标签配置。 * HAPPY：开心 * SAD：悲伤 * CALM：平静 * ANGER：愤怒  默认HAPPY。
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 标签列表
     *
     * @return $this
     */
-    public function setEmotion($emotion)
+    public function setTags($tags)
     {
-        $this->container['emotion'] = $emotion;
+        $this->container['tags'] = $tags;
         return $this;
     }
 

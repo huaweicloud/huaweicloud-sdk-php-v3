@@ -43,7 +43,7 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
-            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig'
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig'
     ];
 
     /**
@@ -579,7 +579,7 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * Gets sharedConfig
     *  sharedConfig
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig|null
     */
     public function getSharedConfig()
     {
@@ -589,7 +589,7 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sharedConfig
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig|null $sharedConfig sharedConfig
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig|null $sharedConfig sharedConfig
     *
     * @return $this
     */

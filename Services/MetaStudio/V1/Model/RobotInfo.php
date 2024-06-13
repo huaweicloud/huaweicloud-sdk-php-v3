@@ -39,6 +39,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
+    * enableQuestionAudit  是否开启提问文本审核开关
     *
     * @var string[]
     */
@@ -61,7 +63,9 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'tailSilenceTime' => 'int',
             'roleId' => 'string',
             'sisRegion' => 'int',
-            'sisProjectId' => 'string'
+            'sisProjectId' => 'string',
+            'enableHotWords' => 'bool',
+            'enableQuestionAudit' => 'bool'
     ];
 
     /**
@@ -85,6 +89,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
+    * enableQuestionAudit  是否开启提问文本审核开关
     *
     * @var string[]
     */
@@ -107,7 +113,9 @@ class RobotInfo implements ModelInterface, ArrayAccess
         'tailSilenceTime' => null,
         'roleId' => null,
         'sisRegion' => null,
-        'sisProjectId' => null
+        'sisProjectId' => null,
+        'enableHotWords' => null,
+        'enableQuestionAudit' => null
     ];
 
     /**
@@ -152,6 +160,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
+    * enableQuestionAudit  是否开启提问文本审核开关
     *
     * @var string[]
     */
@@ -174,7 +184,9 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'tailSilenceTime' => 'tail_silence_time',
             'roleId' => 'role_id',
             'sisRegion' => 'sis_region',
-            'sisProjectId' => 'sis_project_id'
+            'sisProjectId' => 'sis_project_id',
+            'enableHotWords' => 'enable_hot_words',
+            'enableQuestionAudit' => 'enable_question_audit'
     ];
 
     /**
@@ -198,6 +210,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
+    * enableQuestionAudit  是否开启提问文本审核开关
     *
     * @var string[]
     */
@@ -220,7 +234,9 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'tailSilenceTime' => 'setTailSilenceTime',
             'roleId' => 'setRoleId',
             'sisRegion' => 'setSisRegion',
-            'sisProjectId' => 'setSisProjectId'
+            'sisProjectId' => 'setSisProjectId',
+            'enableHotWords' => 'setEnableHotWords',
+            'enableQuestionAudit' => 'setEnableQuestionAudit'
     ];
 
     /**
@@ -244,6 +260,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
     * roleId  奇妙问角色ID。
     * sisRegion  SIS所在区域
     * sisProjectId  SIS所在区域的projectId
+    * enableHotWords  是否开启热词
+    * enableQuestionAudit  是否开启提问文本审核开关
     *
     * @var string[]
     */
@@ -266,7 +284,9 @@ class RobotInfo implements ModelInterface, ArrayAccess
             'tailSilenceTime' => 'getTailSilenceTime',
             'roleId' => 'getRoleId',
             'sisRegion' => 'getSisRegion',
-            'sisProjectId' => 'getSisProjectId'
+            'sisProjectId' => 'getSisProjectId',
+            'enableHotWords' => 'getEnableHotWords',
+            'enableQuestionAudit' => 'getEnableQuestionAudit'
     ];
 
     /**
@@ -346,6 +366,8 @@ class RobotInfo implements ModelInterface, ArrayAccess
         $this->container['roleId'] = isset($data['roleId']) ? $data['roleId'] : null;
         $this->container['sisRegion'] = isset($data['sisRegion']) ? $data['sisRegion'] : null;
         $this->container['sisProjectId'] = isset($data['sisProjectId']) ? $data['sisProjectId'] : null;
+        $this->container['enableHotWords'] = isset($data['enableHotWords']) ? $data['enableHotWords'] : null;
+        $this->container['enableQuestionAudit'] = isset($data['enableQuestionAudit']) ? $data['enableQuestionAudit'] : null;
     }
 
     /**
@@ -919,6 +941,54 @@ class RobotInfo implements ModelInterface, ArrayAccess
     public function setSisProjectId($sisProjectId)
     {
         $this->container['sisProjectId'] = $sisProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enableHotWords
+    *  是否开启热词
+    *
+    * @return bool|null
+    */
+    public function getEnableHotWords()
+    {
+        return $this->container['enableHotWords'];
+    }
+
+    /**
+    * Sets enableHotWords
+    *
+    * @param bool|null $enableHotWords 是否开启热词
+    *
+    * @return $this
+    */
+    public function setEnableHotWords($enableHotWords)
+    {
+        $this->container['enableHotWords'] = $enableHotWords;
+        return $this;
+    }
+
+    /**
+    * Gets enableQuestionAudit
+    *  是否开启提问文本审核开关
+    *
+    * @return bool|null
+    */
+    public function getEnableQuestionAudit()
+    {
+        return $this->container['enableQuestionAudit'];
+    }
+
+    /**
+    * Sets enableQuestionAudit
+    *
+    * @param bool|null $enableQuestionAudit 是否开启提问文本审核开关
+    *
+    * @return $this
+    */
+    public function setEnableQuestionAudit($enableQuestionAudit)
+    {
+        $this->container['enableQuestionAudit'] = $enableQuestionAudit;
         return $this;
     }
 

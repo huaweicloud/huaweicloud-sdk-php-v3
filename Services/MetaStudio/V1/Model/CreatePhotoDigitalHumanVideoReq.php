@@ -28,6 +28,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'shootScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptItem[]',
             'outputAssetConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\OutputAssetConfig',
             'backgroundMusicConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundMusicConfig',
-            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig'
+            'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
+            'callbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig'
     ];
 
     /**
@@ -52,6 +54,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         'shootScripts' => null,
         'outputAssetConfig' => null,
         'backgroundMusicConfig' => null,
-        'reviewConfig' => null
+        'reviewConfig' => null,
+        'callbackConfig' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'shootScripts' => 'shoot_scripts',
             'outputAssetConfig' => 'output_asset_config',
             'backgroundMusicConfig' => 'background_music_config',
-            'reviewConfig' => 'review_config'
+            'reviewConfig' => 'review_config',
+            'callbackConfig' => 'callback_config'
     ];
 
     /**
@@ -121,6 +127,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'shootScripts' => 'setShootScripts',
             'outputAssetConfig' => 'setOutputAssetConfig',
             'backgroundMusicConfig' => 'setBackgroundMusicConfig',
-            'reviewConfig' => 'setReviewConfig'
+            'reviewConfig' => 'setReviewConfig',
+            'callbackConfig' => 'setCallbackConfig'
     ];
 
     /**
@@ -145,6 +153,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * outputAssetConfig  outputAssetConfig
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
+    * callbackConfig  callbackConfig
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
             'shootScripts' => 'getShootScripts',
             'outputAssetConfig' => 'getOutputAssetConfig',
             'backgroundMusicConfig' => 'getBackgroundMusicConfig',
-            'reviewConfig' => 'getReviewConfig'
+            'reviewConfig' => 'getReviewConfig',
+            'callbackConfig' => 'getCallbackConfig'
     ];
 
     /**
@@ -225,6 +235,7 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
         $this->container['outputAssetConfig'] = isset($data['outputAssetConfig']) ? $data['outputAssetConfig'] : null;
         $this->container['backgroundMusicConfig'] = isset($data['backgroundMusicConfig']) ? $data['backgroundMusicConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
+        $this->container['callbackConfig'] = isset($data['callbackConfig']) ? $data['callbackConfig'] : null;
     }
 
     /**
@@ -459,6 +470,30 @@ class CreatePhotoDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     public function setReviewConfig($reviewConfig)
     {
         $this->container['reviewConfig'] = $reviewConfig;
+        return $this;
+    }
+
+    /**
+    * Gets callbackConfig
+    *  callbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null
+    */
+    public function getCallbackConfig()
+    {
+        return $this->container['callbackConfig'];
+    }
+
+    /**
+    * Sets callbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\CallBackConfig|null $callbackConfig callbackConfig
+    *
+    * @return $this
+    */
+    public function setCallbackConfig($callbackConfig)
+    {
+        $this->container['callbackConfig'] = $callbackConfig;
         return $this;
     }
 

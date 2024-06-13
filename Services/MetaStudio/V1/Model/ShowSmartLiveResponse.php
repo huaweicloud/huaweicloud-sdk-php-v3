@@ -34,6 +34,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
@@ -57,6 +58,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
             'liveEventReportUrl' => 'string',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'rtcCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig',
             'streamDuration' => 'float',
             'blockReason' => 'string',
             'coverUrl' => 'string',
@@ -80,6 +82,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
@@ -103,6 +106,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         'rtcRoomInfo' => null,
         'liveEventReportUrl' => null,
         'liveEventCallbackConfig' => null,
+        'rtcCallbackConfig' => null,
         'streamDuration' => 'float',
         'blockReason' => null,
         'coverUrl' => null,
@@ -147,6 +151,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
@@ -170,6 +175,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'rtc_room_info',
             'liveEventReportUrl' => 'live_event_report_url',
             'liveEventCallbackConfig' => 'live_event_callback_config',
+            'rtcCallbackConfig' => 'rtc_callback_config',
             'streamDuration' => 'stream_duration',
             'blockReason' => 'block_reason',
             'coverUrl' => 'cover_url',
@@ -193,6 +199,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
@@ -216,6 +223,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'setRtcRoomInfo',
             'liveEventReportUrl' => 'setLiveEventReportUrl',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'rtcCallbackConfig' => 'setRtcCallbackConfig',
             'streamDuration' => 'setStreamDuration',
             'blockReason' => 'setBlockReason',
             'coverUrl' => 'setCoverUrl',
@@ -239,6 +247,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * streamDuration  数字人直播推流时长，单位秒
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
@@ -262,6 +271,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'getRtcRoomInfo',
             'liveEventReportUrl' => 'getLiveEventReportUrl',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'rtcCallbackConfig' => 'getRtcCallbackConfig',
             'streamDuration' => 'getStreamDuration',
             'blockReason' => 'getBlockReason',
             'coverUrl' => 'getCoverUrl',
@@ -362,6 +372,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['liveEventReportUrl'] = isset($data['liveEventReportUrl']) ? $data['liveEventReportUrl'] : null;
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['rtcCallbackConfig'] = isset($data['rtcCallbackConfig']) ? $data['rtcCallbackConfig'] : null;
         $this->container['streamDuration'] = isset($data['streamDuration']) ? $data['streamDuration'] : null;
         $this->container['blockReason'] = isset($data['blockReason']) ? $data['blockReason'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
@@ -787,6 +798,30 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     public function setLiveEventCallbackConfig($liveEventCallbackConfig)
     {
         $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets rtcCallbackConfig
+    *  rtcCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig|null
+    */
+    public function getRtcCallbackConfig()
+    {
+        return $this->container['rtcCallbackConfig'];
+    }
+
+    /**
+    * Sets rtcCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig|null $rtcCallbackConfig rtcCallbackConfig
+    *
+    * @return $this
+    */
+    public function setRtcCallbackConfig($rtcCallbackConfig)
+    {
+        $this->container['rtcCallbackConfig'] = $rtcCallbackConfig;
         return $this;
     }
 

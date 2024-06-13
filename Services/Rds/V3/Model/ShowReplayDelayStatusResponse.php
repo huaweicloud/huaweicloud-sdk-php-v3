@@ -22,6 +22,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * curDelayTimeMills  当前配置的延迟时间，单位ms
+    * delayTimeValueRange  延迟时间参数取值范围
     * realDelayTimeMills  真实延迟时间，单位ms
     * curLogReplayPaused  当前日志回放状态。true表示回放暂停，false表示回放正常
     * latestReceiveLog  最新接收的日志
@@ -31,6 +32,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'curDelayTimeMills' => 'int',
+            'delayTimeValueRange' => 'string',
             'realDelayTimeMills' => 'int',
             'curLogReplayPaused' => 'bool',
             'latestReceiveLog' => 'string',
@@ -40,6 +42,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * curDelayTimeMills  当前配置的延迟时间，单位ms
+    * delayTimeValueRange  延迟时间参数取值范围
     * realDelayTimeMills  真实延迟时间，单位ms
     * curLogReplayPaused  当前日志回放状态。true表示回放暂停，false表示回放正常
     * latestReceiveLog  最新接收的日志
@@ -49,6 +52,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'curDelayTimeMills' => 'int32',
+        'delayTimeValueRange' => null,
         'realDelayTimeMills' => 'int32',
         'curLogReplayPaused' => null,
         'latestReceiveLog' => null,
@@ -79,6 +83,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * curDelayTimeMills  当前配置的延迟时间，单位ms
+    * delayTimeValueRange  延迟时间参数取值范围
     * realDelayTimeMills  真实延迟时间，单位ms
     * curLogReplayPaused  当前日志回放状态。true表示回放暂停，false表示回放正常
     * latestReceiveLog  最新接收的日志
@@ -88,6 +93,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'curDelayTimeMills' => 'cur_delay_time_mills',
+            'delayTimeValueRange' => 'delay_time_value_range',
             'realDelayTimeMills' => 'real_delay_time_mills',
             'curLogReplayPaused' => 'cur_log_replay_paused',
             'latestReceiveLog' => 'latest_receive_log',
@@ -97,6 +103,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * curDelayTimeMills  当前配置的延迟时间，单位ms
+    * delayTimeValueRange  延迟时间参数取值范围
     * realDelayTimeMills  真实延迟时间，单位ms
     * curLogReplayPaused  当前日志回放状态。true表示回放暂停，false表示回放正常
     * latestReceiveLog  最新接收的日志
@@ -106,6 +113,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'curDelayTimeMills' => 'setCurDelayTimeMills',
+            'delayTimeValueRange' => 'setDelayTimeValueRange',
             'realDelayTimeMills' => 'setRealDelayTimeMills',
             'curLogReplayPaused' => 'setCurLogReplayPaused',
             'latestReceiveLog' => 'setLatestReceiveLog',
@@ -115,6 +123,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * curDelayTimeMills  当前配置的延迟时间，单位ms
+    * delayTimeValueRange  延迟时间参数取值范围
     * realDelayTimeMills  真实延迟时间，单位ms
     * curLogReplayPaused  当前日志回放状态。true表示回放暂停，false表示回放正常
     * latestReceiveLog  最新接收的日志
@@ -124,6 +133,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'curDelayTimeMills' => 'getCurDelayTimeMills',
+            'delayTimeValueRange' => 'getDelayTimeValueRange',
             'realDelayTimeMills' => 'getRealDelayTimeMills',
             'curLogReplayPaused' => 'getCurLogReplayPaused',
             'latestReceiveLog' => 'getLatestReceiveLog',
@@ -189,6 +199,7 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['curDelayTimeMills'] = isset($data['curDelayTimeMills']) ? $data['curDelayTimeMills'] : null;
+        $this->container['delayTimeValueRange'] = isset($data['delayTimeValueRange']) ? $data['delayTimeValueRange'] : null;
         $this->container['realDelayTimeMills'] = isset($data['realDelayTimeMills']) ? $data['realDelayTimeMills'] : null;
         $this->container['curLogReplayPaused'] = isset($data['curLogReplayPaused']) ? $data['curLogReplayPaused'] : null;
         $this->container['latestReceiveLog'] = isset($data['latestReceiveLog']) ? $data['latestReceiveLog'] : null;
@@ -238,6 +249,30 @@ class ShowReplayDelayStatusResponse implements ModelInterface, ArrayAccess
     public function setCurDelayTimeMills($curDelayTimeMills)
     {
         $this->container['curDelayTimeMills'] = $curDelayTimeMills;
+        return $this;
+    }
+
+    /**
+    * Gets delayTimeValueRange
+    *  延迟时间参数取值范围
+    *
+    * @return string|null
+    */
+    public function getDelayTimeValueRange()
+    {
+        return $this->container['delayTimeValueRange'];
+    }
+
+    /**
+    * Sets delayTimeValueRange
+    *
+    * @param string|null $delayTimeValueRange 延迟时间参数取值范围
+    *
+    * @return $this
+    */
+    public function setDelayTimeValueRange($delayTimeValueRange)
+    {
+        $this->container['delayTimeValueRange'] = $delayTimeValueRange;
         return $this;
     }
 

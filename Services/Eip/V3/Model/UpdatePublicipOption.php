@@ -22,8 +22,8 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * alias  功能说明：公网IP的名称。
     * description  功能说明：公网IP的描述信息 取值范围：0-256长度的字符串，不支持特殊字符<>
-    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
-    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
+    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * alias  功能说明：公网IP的名称。
     * description  功能说明：公网IP的描述信息 取值范围：0-256长度的字符串，不支持特殊字符<>
-    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
-    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
+    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * alias  功能说明：公网IP的名称。
     * description  功能说明：公网IP的描述信息 取值范围：0-256长度的字符串，不支持特殊字符<>
-    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
-    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
+    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * alias  功能说明：公网IP的名称。
     * description  功能说明：公网IP的描述信息 取值范围：0-256长度的字符串，不支持特殊字符<>
-    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
-    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
+    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * alias  功能说明：公网IP的名称。
     * description  功能说明：公网IP的描述信息 取值范围：0-256长度的字符串，不支持特殊字符<>
-    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
-    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * associateInstanceType  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
+    * associateInstanceId  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     const ASSOCIATE_INSTANCE_TYPE_PORT = 'PORT';
     const ASSOCIATE_INSTANCE_TYPE_NATGW = 'NATGW';
     const ASSOCIATE_INSTANCE_TYPE_ELB = 'ELB';
-    const ASSOCIATE_INSTANCE_TYPE_EMPTY = '';
+    const ASSOCIATE_INSTANCE_TYPE_VPN = 'VPN';
     
 
     /**
@@ -176,7 +176,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
             self::ASSOCIATE_INSTANCE_TYPE_PORT,
             self::ASSOCIATE_INSTANCE_TYPE_NATGW,
             self::ASSOCIATE_INSTANCE_TYPE_ELB,
-            self::ASSOCIATE_INSTANCE_TYPE_EMPTY,
+            self::ASSOCIATE_INSTANCE_TYPE_VPN,
         ];
     }
 
@@ -306,7 +306,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceType
-    *  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    *  功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @return string|null
     */
@@ -318,7 +318,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceType
     *
-    * @param string|null $associateInstanceType 功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * @param string|null $associateInstanceType 功能说明：端口所属实例类型 取值范围：PORT、NATGW、VPN、ELB、null 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @return $this
     */
@@ -330,7 +330,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceId
-    *  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    *  功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @return string|null
     */
@@ -342,7 +342,7 @@ class UpdatePublicipOption implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceId
     *
-    * @param string|null $associateInstanceId 功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例； associate_instance_type和associate_instance_id都为null时解绑实例 约束：双栈公网IP不允许修改绑定的实例
+    * @param string|null $associateInstanceId 功能说明：端口所属实例ID，例如RDS实例ID 约束：associate_instance_type和associate_instance_id都不为空时表示绑定实例。 约束：associate_instance_type和associate_instance_id都为null时表示解绑实例，通过APIE调用需要切换为文本输入方式输入null值，可参考解绑请求实例。 约束：双栈公网IP不允许修改绑定的实例。
     *
     * @return $this
     */

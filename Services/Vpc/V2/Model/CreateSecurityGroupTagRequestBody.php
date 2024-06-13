@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class MobvoiVoiceAssetMeta implements ModelInterface, ArrayAccess
+class CreateSecurityGroupTagRequestBody implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,26 @@ class MobvoiVoiceAssetMeta implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'MobvoiVoiceAssetMeta';
+    protected static $openAPIModelName = 'CreateSecurityGroupTagRequestBody';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * speaker  合成音频指定发音人
+    * tag  tag
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'speaker' => 'string'
+            'tag' => '\HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * speaker  合成音频指定发音人
+    * tag  tag
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'speaker' => null
+        'tag' => null
     ];
 
     /**
@@ -61,32 +61,32 @@ class MobvoiVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * speaker  合成音频指定发音人
+    * tag  tag
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'speaker' => 'speaker'
+            'tag' => 'tag'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * speaker  合成音频指定发音人
+    * tag  tag
     *
     * @var string[]
     */
     protected static $setters = [
-            'speaker' => 'setSpeaker'
+            'tag' => 'setTag'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * speaker  合成音频指定发音人
+    * tag  tag
     *
     * @var string[]
     */
     protected static $getters = [
-            'speaker' => 'getSpeaker'
+            'tag' => 'getTag'
     ];
 
     /**
@@ -147,7 +147,7 @@ class MobvoiVoiceAssetMeta implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['speaker'] = isset($data['speaker']) ? $data['speaker'] : null;
+        $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
     }
 
     /**
@@ -158,15 +158,9 @@ class MobvoiVoiceAssetMeta implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['speaker'] === null) {
-            $invalidProperties[] = "'speaker' can't be null";
+        if ($this->container['tag'] === null) {
+            $invalidProperties[] = "'tag' can't be null";
         }
-            if ((mb_strlen($this->container['speaker']) > 128)) {
-                $invalidProperties[] = "invalid value for 'speaker', the character length must be smaller than or equal to 128.";
-            }
-            if ((mb_strlen($this->container['speaker']) < 1)) {
-                $invalidProperties[] = "invalid value for 'speaker', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -182,26 +176,26 @@ class MobvoiVoiceAssetMeta implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets speaker
-    *  合成音频指定发音人
+    * Gets tag
+    *  tag
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag
     */
-    public function getSpeaker()
+    public function getTag()
     {
-        return $this->container['speaker'];
+        return $this->container['tag'];
     }
 
     /**
-    * Sets speaker
+    * Sets tag
     *
-    * @param string $speaker 合成音频指定发音人
+    * @param \HuaweiCloud\SDK\Vpc\V2\Model\ResourceTag $tag tag
     *
     * @return $this
     */
-    public function setSpeaker($speaker)
+    public function setTag($tag)
     {
-        $this->container['speaker'] = $speaker;
+        $this->container['tag'] = $tag;
         return $this;
     }
 

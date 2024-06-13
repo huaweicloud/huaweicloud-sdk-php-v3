@@ -28,7 +28,7 @@ class Input implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'value' => 'string',
+            'value' => 'object',
             'type' => 'string'
     ];
 
@@ -228,7 +228,7 @@ class Input implements ModelInterface, ArrayAccess
     * Gets value
     *  参数值
     *
-    * @return string
+    * @return object
     */
     public function getValue()
     {
@@ -238,7 +238,7 @@ class Input implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 参数值
+    * @param object $value 参数值
     *
     * @return $this
     */

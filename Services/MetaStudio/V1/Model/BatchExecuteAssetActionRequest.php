@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateAssetbyReplicationInfoRequest implements ModelInterface, ArrayAccess
+class BatchExecuteAssetActionRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,7 +16,7 @@ class CreateAssetbyReplicationInfoRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateAssetbyReplicationInfoRequest';
+    protected static $openAPIModelName = 'BatchExecuteAssetActionRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
@@ -31,7 +31,7 @@ class CreateAssetbyReplicationInfoRequest implements ModelInterface, ArrayAccess
             'authorization' => 'string',
             'xSdkDate' => 'string',
             'xAppUserId' => 'string',
-            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplicationAssetInfo'
+            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BatchAssetActionReq'
     ];
 
     /**
@@ -299,7 +299,7 @@ class CreateAssetbyReplicationInfoRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplicationAssetInfo|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\BatchAssetActionReq|null
     */
     public function getBody()
     {
@@ -309,7 +309,7 @@ class CreateAssetbyReplicationInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplicationAssetInfo|null $body body
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\BatchAssetActionReq|null $body body
     *
     * @return $this
     */

@@ -1412,6 +1412,9 @@ class ConfigAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1476,6 +1479,9 @@ class ConfigAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
         }
         if ($localVarParams['organizationId'] !== null) {
             $pathParams['organization_id'] = $localVarParams['organizationId'];
@@ -2666,6 +2672,210 @@ class ConfigAsyncClient extends Client
     }
 
     /**
+     * 批量创建修正例外
+     *
+     * 批量创建合规规则修正例外。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateRemediationExceptionsAsync($request)
+    {
+        return $this->batchCreateRemediationExceptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateRemediationExceptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-exception/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\BatchCreateRemediationExceptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\BatchCreateRemediationExceptionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除修正例外
+     *
+     * 批量删除合规规则修正例外。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteRemediationExceptionsAsync($request)
+    {
+        return $this->batchDeleteRemediationExceptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteRemediationExceptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-exception/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\BatchDeleteRemediationExceptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\BatchDeleteRemediationExceptionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建或更新修正配置
+     *
+     * 创建或更新合规规则修正配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOrUpdateRemediationConfigurationAsync($request)
+    {
+        return $this->createOrUpdateRemediationConfigurationAsyncWithHttpInfo($request);
+    }
+    
+    public function createOrUpdateRemediationConfigurationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-configuration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\CreateOrUpdateRemediationConfigurationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\CreateOrUpdateRemediationConfigurationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建组织合规规则
      *
      * 创建组织合规规则，如果规则名称已存在，则为更新操作。
@@ -2928,6 +3138,71 @@ class ConfigAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\DeletePolicyAssignmentResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\DeletePolicyAssignmentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除修正配置
+     *
+     * 删除合规规则修正配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRemediationConfigurationAsync($request)
+    {
+        return $this->deleteRemediationConfigurationAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteRemediationConfigurationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-configuration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\DeleteRemediationConfigurationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\DeleteRemediationConfigurationRequest',
             $asyncRequest = true);
     }
 
@@ -3506,6 +3781,160 @@ class ConfigAsyncClient extends Client
     }
 
     /**
+     * 查询修正例外
+     *
+     * 查询合规规则修正例外。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRemediationExceptionsAsync($request)
+    {
+        return $this->listRemediationExceptionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listRemediationExceptionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-exception';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ListRemediationExceptionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ListRemediationExceptionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询修正执行结果
+     *
+     * 查询合规规则修正执行结果详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listRemediationExecutionStatusesAsync($request)
+    {
+        return $this->listRemediationExecutionStatusesAsyncWithHttpInfo($request);
+    }
+    
+    public function listRemediationExecutionStatusesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-execution-statuses';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ListRemediationExecutionStatusesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ListRemediationExecutionStatusesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 运行合规评估
      *
      * 根据规则ID评估此规则
@@ -3567,6 +3996,74 @@ class ConfigAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\RunEvaluationByPolicyAssignmentIdResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\RunEvaluationByPolicyAssignmentIdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 运行修正执行
+     *
+     * 手动运行合规规则修正执行。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function runRemediationExecutionAsync($request)
+    {
+        return $this->runRemediationExecutionAsyncWithHttpInfo($request);
+    }
+    
+    public function runRemediationExecutionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-execution';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\RunRemediationExecutionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\RunRemediationExecutionRequest',
             $asyncRequest = true);
     }
 
@@ -3990,6 +4487,71 @@ class ConfigAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Config\V1\Model\ShowPolicyAssignmentResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Config\V1\Model\ShowPolicyAssignmentRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询修正配置
+     *
+     * 查询合规规则修正配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRemediationConfigurationAsync($request)
+    {
+        return $this->showRemediationConfigurationAsyncWithHttpInfo($request);
+    }
+    
+    public function showRemediationConfigurationAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/resource-manager/domains/{domain_id}/policy-assignments/{policy_assignment_id}/remediation-configuration';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyAssignmentId'] !== null) {
+            $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Config\V1\Model\ShowRemediationConfigurationResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Config\V1\Model\ShowRemediationConfigurationRequest',
             $asyncRequest = true);
     }
 

@@ -20,6 +20,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * projectId  租户id
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
@@ -38,6 +39,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'assetId' => 'string',
             'assetName' => 'string',
             'assetDescription' => 'string',
@@ -56,6 +58,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * projectId  租户id
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
@@ -74,6 +77,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'assetId' => null,
         'assetName' => null,
         'assetDescription' => null,
@@ -113,6 +117,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * projectId  租户id
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
@@ -131,6 +136,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'assetId' => 'asset_id',
             'assetName' => 'asset_name',
             'assetDescription' => 'asset_description',
@@ -149,6 +155,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * projectId  租户id
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
@@ -167,6 +174,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'assetId' => 'setAssetId',
             'assetName' => 'setAssetName',
             'assetDescription' => 'setAssetDescription',
@@ -185,6 +193,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * projectId  租户id
     * assetId  资产ID。
     * assetName  资产名称。
     * assetDescription  资产描述。
@@ -203,6 +212,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'assetId' => 'getAssetId',
             'assetName' => 'getAssetName',
             'assetDescription' => 'getAssetDescription',
@@ -356,6 +366,7 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['assetDescription'] = isset($data['assetDescription']) ? $data['assetDescription'] : null;
@@ -380,6 +391,12 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) > 256)) {
                 $invalidProperties[] = "invalid value for 'assetId', the character length must be smaller than or equal to 256.";
             }
@@ -458,6 +475,30 @@ class DigitalAssetInfo implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets projectId
+    *  租户id
+    *
+    * @return string|null
+    */
+    public function getProjectId()
+    {
+        return $this->container['projectId'];
+    }
+
+    /**
+    * Sets projectId
+    *
+    * @param string|null $projectId 租户id
+    *
+    * @return $this
+    */
+    public function setProjectId($projectId)
+    {
+        $this->container['projectId'] = $projectId;
+        return $this;
     }
 
     /**

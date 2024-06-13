@@ -362,7 +362,6 @@ class PublicipUpdateResp implements ModelInterface, ArrayAccess
     const ASSOCIATE_INSTANCE_TYPE_ELB = 'ELB';
     const ASSOCIATE_INSTANCE_TYPE_ELBV1 = 'ELBV1';
     const ASSOCIATE_INSTANCE_TYPE_VPN = 'VPN';
-    const ASSOCIATE_INSTANCE_TYPE_NULL = 'null';
     
 
     /**
@@ -429,7 +428,6 @@ class PublicipUpdateResp implements ModelInterface, ArrayAccess
             self::ASSOCIATE_INSTANCE_TYPE_ELB,
             self::ASSOCIATE_INSTANCE_TYPE_ELBV1,
             self::ASSOCIATE_INSTANCE_TYPE_VPN,
-            self::ASSOCIATE_INSTANCE_TYPE_NULL,
         ];
     }
 

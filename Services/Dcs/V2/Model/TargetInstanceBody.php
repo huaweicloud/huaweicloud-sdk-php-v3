@@ -23,6 +23,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
     * id  Redis实例ID（target_instance信息中必须填写）。
     * name  Redis实例名称(target_instance信息中填写)。
     * password  Redis密码，如果设置了密码，则必须填写。
+    * taskStatus  任务状态。
     * ip  Redis IP地址。
     * port  Redis端口。
     * addrs  Redis实例地址。
@@ -35,6 +36,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'password' => 'string',
+            'taskStatus' => 'string',
             'ip' => 'string',
             'port' => 'string',
             'addrs' => 'string',
@@ -47,6 +49,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
     * id  Redis实例ID（target_instance信息中必须填写）。
     * name  Redis实例名称(target_instance信息中填写)。
     * password  Redis密码，如果设置了密码，则必须填写。
+    * taskStatus  任务状态。
     * ip  Redis IP地址。
     * port  Redis端口。
     * addrs  Redis实例地址。
@@ -59,6 +62,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'password' => null,
+        'taskStatus' => null,
         'ip' => null,
         'port' => null,
         'addrs' => null,
@@ -92,6 +96,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
     * id  Redis实例ID（target_instance信息中必须填写）。
     * name  Redis实例名称(target_instance信息中填写)。
     * password  Redis密码，如果设置了密码，则必须填写。
+    * taskStatus  任务状态。
     * ip  Redis IP地址。
     * port  Redis端口。
     * addrs  Redis实例地址。
@@ -104,6 +109,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'password' => 'password',
+            'taskStatus' => 'task_status',
             'ip' => 'ip',
             'port' => 'port',
             'addrs' => 'addrs',
@@ -116,6 +122,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
     * id  Redis实例ID（target_instance信息中必须填写）。
     * name  Redis实例名称(target_instance信息中填写)。
     * password  Redis密码，如果设置了密码，则必须填写。
+    * taskStatus  任务状态。
     * ip  Redis IP地址。
     * port  Redis端口。
     * addrs  Redis实例地址。
@@ -128,6 +135,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'password' => 'setPassword',
+            'taskStatus' => 'setTaskStatus',
             'ip' => 'setIp',
             'port' => 'setPort',
             'addrs' => 'setAddrs',
@@ -140,6 +148,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
     * id  Redis实例ID（target_instance信息中必须填写）。
     * name  Redis实例名称(target_instance信息中填写)。
     * password  Redis密码，如果设置了密码，则必须填写。
+    * taskStatus  任务状态。
     * ip  Redis IP地址。
     * port  Redis端口。
     * addrs  Redis实例地址。
@@ -152,6 +161,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'password' => 'getPassword',
+            'taskStatus' => 'getTaskStatus',
             'ip' => 'getIp',
             'port' => 'getPort',
             'addrs' => 'getAddrs',
@@ -220,6 +230,7 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['taskStatus'] = isset($data['taskStatus']) ? $data['taskStatus'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
         $this->container['addrs'] = isset($data['addrs']) ? $data['addrs'] : null;
@@ -321,6 +332,30 @@ class TargetInstanceBody implements ModelInterface, ArrayAccess
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+        return $this;
+    }
+
+    /**
+    * Gets taskStatus
+    *  任务状态。
+    *
+    * @return string|null
+    */
+    public function getTaskStatus()
+    {
+        return $this->container['taskStatus'];
+    }
+
+    /**
+    * Sets taskStatus
+    *
+    * @param string|null $taskStatus 任务状态。
+    *
+    * @return $this
+    */
+    public function setTaskStatus($taskStatus)
+    {
+        $this->container['taskStatus'] = $taskStatus;
         return $this;
     }
 

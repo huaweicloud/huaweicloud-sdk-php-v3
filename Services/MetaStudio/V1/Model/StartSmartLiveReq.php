@@ -26,6 +26,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
@@ -38,6 +39,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'string[]',
             'interactionCallbackUrl' => 'string',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'rtcCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig',
             'viewMode' => 'string',
             'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig'
     ];
@@ -50,6 +52,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
@@ -62,6 +65,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         'streamKeys' => null,
         'interactionCallbackUrl' => null,
         'liveEventCallbackConfig' => null,
+        'rtcCallbackConfig' => null,
         'viewMode' => null,
         'coStreamerConfig' => null
     ];
@@ -95,6 +99,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
@@ -107,6 +112,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'stream_keys',
             'interactionCallbackUrl' => 'interaction_callback_url',
             'liveEventCallbackConfig' => 'live_event_callback_config',
+            'rtcCallbackConfig' => 'rtc_callback_config',
             'viewMode' => 'view_mode',
             'coStreamerConfig' => 'co_streamer_config'
     ];
@@ -119,6 +125,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
@@ -131,6 +138,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'setStreamKeys',
             'interactionCallbackUrl' => 'setInteractionCallbackUrl',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'rtcCallbackConfig' => 'setRtcCallbackConfig',
             'viewMode' => 'setViewMode',
             'coStreamerConfig' => 'setCoStreamerConfig'
     ];
@@ -143,6 +151,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * interactionCallbackUrl  互动回调URL，含鉴权信息。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
@@ -155,6 +164,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'getStreamKeys',
             'interactionCallbackUrl' => 'getInteractionCallbackUrl',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'rtcCallbackConfig' => 'getRtcCallbackConfig',
             'viewMode' => 'getViewMode',
             'coStreamerConfig' => 'getCoStreamerConfig'
     ];
@@ -238,6 +248,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
         $this->container['streamKeys'] = isset($data['streamKeys']) ? $data['streamKeys'] : null;
         $this->container['interactionCallbackUrl'] = isset($data['interactionCallbackUrl']) ? $data['interactionCallbackUrl'] : null;
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['rtcCallbackConfig'] = isset($data['rtcCallbackConfig']) ? $data['rtcCallbackConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
     }
@@ -419,6 +430,30 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     public function setLiveEventCallbackConfig($liveEventCallbackConfig)
     {
         $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets rtcCallbackConfig
+    *  rtcCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig|null
+    */
+    public function getRtcCallbackConfig()
+    {
+        return $this->container['rtcCallbackConfig'];
+    }
+
+    /**
+    * Sets rtcCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig|null $rtcCallbackConfig rtcCallbackConfig
+    *
+    * @return $this
+    */
+    public function setRtcCallbackConfig($rtcCallbackConfig)
+    {
+        $this->container['rtcCallbackConfig'] = $rtcCallbackConfig;
         return $this;
     }
 

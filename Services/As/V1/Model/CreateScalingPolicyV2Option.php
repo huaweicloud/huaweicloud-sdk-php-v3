@@ -27,6 +27,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * description  伸缩策略描述（1-256个字符）
     *
@@ -40,6 +41,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
             'alarmId' => 'string',
             'scheduledPolicy' => '\HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy',
             'scalingPolicyAction' => '\HuaweiCloud\SDK\_As\V1\Model\ScalingPolicyActionV2',
+            'intervalAlarmActions' => '\HuaweiCloud\SDK\_As\V1\Model\IntervalAlarmActionsV2[]',
             'coolDownTime' => 'int',
             'description' => 'string'
     ];
@@ -53,6 +55,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * description  伸缩策略描述（1-256个字符）
     *
@@ -66,6 +69,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
         'alarmId' => null,
         'scheduledPolicy' => null,
         'scalingPolicyAction' => null,
+        'intervalAlarmActions' => null,
         'coolDownTime' => null,
         'description' => null
     ];
@@ -100,6 +104,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * description  伸缩策略描述（1-256个字符）
     *
@@ -113,6 +118,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
             'alarmId' => 'alarm_id',
             'scheduledPolicy' => 'scheduled_policy',
             'scalingPolicyAction' => 'scaling_policy_action',
+            'intervalAlarmActions' => 'interval_alarm_actions',
             'coolDownTime' => 'cool_down_time',
             'description' => 'description'
     ];
@@ -126,6 +132,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * description  伸缩策略描述（1-256个字符）
     *
@@ -139,6 +146,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
             'alarmId' => 'setAlarmId',
             'scheduledPolicy' => 'setScheduledPolicy',
             'scalingPolicyAction' => 'setScalingPolicyAction',
+            'intervalAlarmActions' => 'setIntervalAlarmActions',
             'coolDownTime' => 'setCoolDownTime',
             'description' => 'setDescription'
     ];
@@ -152,6 +160,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
     * alarmId  告警ID，即告警规则的ID，当scaling_policy_type为ALARM时该项必选，此时scheduled_policy不生效。创建告警策略成功后，会自动为该告警ID对应的告警规则的alarm_actions字段增加类型为autoscaling的告警触发动作。告警ID通过查询云监控告警规则列表获取，详见《云监控API参考》的“查询告警规则列表”。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * description  伸缩策略描述（1-256个字符）
     *
@@ -165,6 +174,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
             'alarmId' => 'getAlarmId',
             'scheduledPolicy' => 'getScheduledPolicy',
             'scalingPolicyAction' => 'getScalingPolicyAction',
+            'intervalAlarmActions' => 'getIntervalAlarmActions',
             'coolDownTime' => 'getCoolDownTime',
             'description' => 'getDescription'
     ];
@@ -266,6 +276,7 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
         $this->container['alarmId'] = isset($data['alarmId']) ? $data['alarmId'] : null;
         $this->container['scheduledPolicy'] = isset($data['scheduledPolicy']) ? $data['scheduledPolicy'] : null;
         $this->container['scalingPolicyAction'] = isset($data['scalingPolicyAction']) ? $data['scalingPolicyAction'] : null;
+        $this->container['intervalAlarmActions'] = isset($data['intervalAlarmActions']) ? $data['intervalAlarmActions'] : null;
         $this->container['coolDownTime'] = isset($data['coolDownTime']) ? $data['coolDownTime'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
@@ -497,6 +508,30 @@ class CreateScalingPolicyV2Option implements ModelInterface, ArrayAccess
     public function setScalingPolicyAction($scalingPolicyAction)
     {
         $this->container['scalingPolicyAction'] = $scalingPolicyAction;
+        return $this;
+    }
+
+    /**
+    * Gets intervalAlarmActions
+    *  intervalAlarmActions
+    *
+    * @return \HuaweiCloud\SDK\_As\V1\Model\IntervalAlarmActionsV2[]|null
+    */
+    public function getIntervalAlarmActions()
+    {
+        return $this->container['intervalAlarmActions'];
+    }
+
+    /**
+    * Sets intervalAlarmActions
+    *
+    * @param \HuaweiCloud\SDK\_As\V1\Model\IntervalAlarmActionsV2[]|null $intervalAlarmActions intervalAlarmActions
+    *
+    * @return $this
+    */
+    public function setIntervalAlarmActions($intervalAlarmActions)
+    {
+        $this->container['intervalAlarmActions'] = $intervalAlarmActions;
         return $this;
     }
 

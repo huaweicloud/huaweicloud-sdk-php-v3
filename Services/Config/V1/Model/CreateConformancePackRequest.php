@@ -20,21 +20,25 @@ class CreateConformancePackRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xLanguage  合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xLanguage' => 'string',
             'body' => '\HuaweiCloud\SDK\Config\V1\Model\ConformancePackRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xLanguage  合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xLanguage' => null,
         'body' => null
     ];
 
@@ -61,31 +65,37 @@ class CreateConformancePackRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xLanguage  合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xLanguage' => 'X-Language',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xLanguage  合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'xLanguage' => 'setXLanguage',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xLanguage  合规包信息语言，默认为\"en-us\"英文
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'xLanguage' => 'getXLanguage',
             'body' => 'getBody'
     ];
 
@@ -129,7 +139,22 @@ class CreateConformancePackRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const X_LANGUAGE_ZH_CN = 'zh-cn';
+    const X_LANGUAGE_EN_US = 'en-us';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getXLanguageAllowableValues()
+    {
+        return [
+            self::X_LANGUAGE_ZH_CN,
+            self::X_LANGUAGE_EN_US,
+        ];
+    }
 
 
     /**
@@ -147,6 +172,7 @@ class CreateConformancePackRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -158,6 +184,14 @@ class CreateConformancePackRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getXLanguageAllowableValues();
+                if (!is_null($this->container['xLanguage']) && !in_array($this->container['xLanguage'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'xLanguage', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -170,6 +204,30 @@ class CreateConformancePackRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xLanguage
+    *  合规包信息语言，默认为\"en-us\"英文
+    *
+    * @return string|null
+    */
+    public function getXLanguage()
+    {
+        return $this->container['xLanguage'];
+    }
+
+    /**
+    * Sets xLanguage
+    *
+    * @param string|null $xLanguage 合规包信息语言，默认为\"en-us\"英文
+    *
+    * @return $this
+    */
+    public function setXLanguage($xLanguage)
+    {
+        $this->container['xLanguage'] = $xLanguage;
+        return $this;
     }
 
     /**

@@ -21,13 +21,14 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    * robotId  机器人ID。
     *
     * @var string[]
     */
@@ -39,19 +40,21 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyTexts' => 'string[]',
             'replyAudios' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]',
             'replyOrder' => 'string',
-            'replyRole' => 'string'
+            'replyRole' => 'string',
+            'robotId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    * robotId  机器人ID。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         'replyTexts' => null,
         'replyAudios' => null,
         'replyOrder' => null,
-        'replyRole' => null
+        'replyRole' => null,
+        'robotId' => null
     ];
 
     /**
@@ -90,13 +94,14 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    * robotId  机器人ID。
     *
     * @var string[]
     */
@@ -108,19 +113,21 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyTexts' => 'reply_texts',
             'replyAudios' => 'reply_audios',
             'replyOrder' => 'reply_order',
-            'replyRole' => 'reply_role'
+            'replyRole' => 'reply_role',
+            'robotId' => 'robot_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    * robotId  机器人ID。
     *
     * @var string[]
     */
@@ -132,19 +139,21 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyTexts' => 'setReplyTexts',
             'replyAudios' => 'setReplyAudios',
             'replyOrder' => 'setReplyOrder',
-            'replyRole' => 'setReplyRole'
+            'replyRole' => 'setReplyRole',
+            'robotId' => 'setRobotId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
     * replyTexts  回复话术集
     * replyAudios  回复音频集。填写audio_url。
     * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
     * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    * robotId  机器人ID。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyTexts' => 'getReplyTexts',
             'replyAudios' => 'getReplyAudios',
             'replyOrder' => 'getReplyOrder',
-            'replyRole' => 'getReplyRole'
+            'replyRole' => 'getReplyRole',
+            'robotId' => 'getRobotId'
     ];
 
     /**
@@ -202,6 +212,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     const REPLY_MODE_SYSTEM_REPLY = 'SYSTEM_REPLY';
     const REPLY_MODE_CALLBACK = 'CALLBACK';
     const REPLY_MODE_SHOW_LAYER = 'SHOW_LAYER';
+    const REPLY_MODE_INTELLIGENT_REPLY = 'INTELLIGENT_REPLY';
     const REPLY_ORDER_RANDOM = 'RANDOM';
     const REPLY_ORDER_ORDER = 'ORDER';
     const REPLY_ROLE_STREAMER = 'STREAMER';
@@ -219,6 +230,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             self::REPLY_MODE_SYSTEM_REPLY,
             self::REPLY_MODE_CALLBACK,
             self::REPLY_MODE_SHOW_LAYER,
+            self::REPLY_MODE_INTELLIGENT_REPLY,
         ];
     }
 
@@ -272,6 +284,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         $this->container['replyAudios'] = isset($data['replyAudios']) ? $data['replyAudios'] : null;
         $this->container['replyOrder'] = isset($data['replyOrder']) ? $data['replyOrder'] : null;
         $this->container['replyRole'] = isset($data['replyRole']) ? $data['replyRole'] : null;
+        $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
     }
 
     /**
@@ -330,6 +343,12 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             if (!is_null($this->container['replyRole']) && (mb_strlen($this->container['replyRole']) < 0)) {
                 $invalidProperties[] = "invalid value for 'replyRole', the character length must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'robotId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -370,7 +389,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyMode
-    *  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    *  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     *
     * @return string|null
     */
@@ -382,7 +401,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyMode
     *
-    * @param string|null $replyMode 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。
+    * @param string|null $replyMode 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
     *
     * @return $this
     */
@@ -533,6 +552,30 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     public function setReplyRole($replyRole)
     {
         $this->container['replyRole'] = $replyRole;
+        return $this;
+    }
+
+    /**
+    * Gets robotId
+    *  机器人ID。
+    *
+    * @return string|null
+    */
+    public function getRobotId()
+    {
+        return $this->container['robotId'];
+    }
+
+    /**
+    * Sets robotId
+    *
+    * @param string|null $robotId 机器人ID。
+    *
+    * @return $this
+    */
+    public function setRobotId($robotId)
+    {
+        $this->container['robotId'] = $robotId;
         return $this;
     }
 

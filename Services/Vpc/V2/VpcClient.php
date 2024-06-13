@@ -156,6 +156,75 @@ class VpcClient extends Client
     }
 
     /**
+     * 批量创建安全组资源标签
+     *
+     * 为指定的安全组资源实例批量添加标签。
+     * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateSecurityGroupTags($request)
+    {
+        return $this->batchCreateSecurityGroupTagsWithHttpInfo($request);
+    }
+
+    public function batchCreateSecurityGroupTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/{security_group_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['securityGroupId'] !== null) {
+            $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateSecurityGroupTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateSecurityGroupTagsRequest');
+    }
+
+    /**
      * 批量创建子网资源标签
      *
      * 为指定的子网资源实例批量添加标签。
@@ -222,6 +291,75 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateSubnetTagsResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\BatchCreateSubnetTagsRequest');
+    }
+
+    /**
+     * 批量删除安全组资源标签
+     *
+     * 为指定的安全组资源实例批量删除标签
+     * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSecurityGroupTags($request)
+    {
+        return $this->batchDeleteSecurityGroupTagsWithHttpInfo($request);
+    }
+
+    public function batchDeleteSecurityGroupTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/{security_group_id}/tags/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['securityGroupId'] !== null) {
+            $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\BatchDeleteSecurityGroupTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\BatchDeleteSecurityGroupTagsRequest');
     }
 
     /**
@@ -618,6 +756,75 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupRuleResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupRuleRequest');
+    }
+
+    /**
+     * 创建安全组资源标签
+     *
+     * 给指定安全组资源实例增加标签信息。
+     * 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSecurityGroupTag($request)
+    {
+        return $this->createSecurityGroupTagWithHttpInfo($request);
+    }
+
+    public function createSecurityGroupTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/{security_group_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['securityGroupId'] !== null) {
+            $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\CreateSecurityGroupTagRequest');
     }
 
     /**
@@ -1139,6 +1346,75 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSecurityGroupRuleResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSecurityGroupRuleRequest');
+    }
+
+    /**
+     * 删除安全组资源标签
+     *
+     * 删除指定安全组资源实例的标签信息。
+     * 该接口为幂等接口：删除的key不存在报404，Key不能为空或者空字符串
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSecurityGroupTag($request)
+    {
+        return $this->deleteSecurityGroupTagWithHttpInfo($request);
+    }
+
+    public function deleteSecurityGroupTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/{security_group_id}/tags/{key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['key'] !== null) {
+            $pathParams['key'] = $localVarParams['key'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['securityGroupId'] !== null) {
+            $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSecurityGroupTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\DeleteSecurityGroupTagRequest');
     }
 
     /**
@@ -1766,6 +2042,68 @@ class VpcClient extends Client
     }
 
     /**
+     * 查询安全组项目标签
+     *
+     * 查询租户在指定区域和实例类型的所有标签集合
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityGroupTags($request)
+    {
+        return $this->listSecurityGroupTagsWithHttpInfo($request);
+    }
+
+    public function listSecurityGroupTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupTagsRequest');
+    }
+
+    /**
      * 查询安全组列表
      *
      * 查询安全组列表
@@ -1837,6 +2175,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupsResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupsRequest');
+    }
+
+    /**
+     * 查询安全组资源实例
+     *
+     * 使用标签过滤实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityGroupsByTags($request)
+    {
+        return $this->listSecurityGroupsByTagsWithHttpInfo($request);
+    }
+
+    public function listSecurityGroupsByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/resource_instances/action';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupsByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ListSecurityGroupsByTagsRequest');
     }
 
     /**
@@ -2567,6 +2970,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSecurityGroupRuleResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSecurityGroupRuleRequest');
+    }
+
+    /**
+     * 查询安全组资源标签
+     *
+     * 查询指定安全组实例的标签信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecurityGroupTags($request)
+    {
+        return $this->showSecurityGroupTagsWithHttpInfo($request);
+    }
+
+    public function showSecurityGroupTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2.0/{project_id}/security-groups/{security_group_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['securityGroupId'] !== null) {
+            $pathParams['security_group_id'] = $localVarParams['securityGroupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSecurityGroupTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V2\Model\ShowSecurityGroupTagsRequest');
     }
 
     /**

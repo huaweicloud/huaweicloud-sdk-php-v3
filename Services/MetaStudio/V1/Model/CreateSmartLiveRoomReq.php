@@ -31,6 +31,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
@@ -43,13 +44,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'roomDescription' => 'string',
             'roomType' => 'string',
             'sceneScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveVideoScriptInfo[]',
-            'interactionRules' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleInfo[]',
+            'interactionRules' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionRuleInfo[]',
             'playPolicy' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlayPolicy',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
             'outputUrls' => 'string[]',
             'streamKeys' => 'string[]',
             'backupModelAssetIds' => 'string[]',
             'liveEventCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveEventCallBackConfig',
+            'rtcCallbackConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'viewMode' => 'string',
@@ -69,6 +71,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
@@ -88,6 +91,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         'streamKeys' => null,
         'backupModelAssetIds' => null,
         'liveEventCallbackConfig' => null,
+        'rtcCallbackConfig' => null,
         'reviewConfig' => null,
         'sharedConfig' => null,
         'viewMode' => null,
@@ -128,6 +132,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
@@ -147,6 +152,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'stream_keys',
             'backupModelAssetIds' => 'backup_model_asset_ids',
             'liveEventCallbackConfig' => 'live_event_callback_config',
+            'rtcCallbackConfig' => 'rtc_callback_config',
             'reviewConfig' => 'review_config',
             'sharedConfig' => 'shared_config',
             'viewMode' => 'view_mode',
@@ -166,6 +172,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
@@ -185,6 +192,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'setStreamKeys',
             'backupModelAssetIds' => 'setBackupModelAssetIds',
             'liveEventCallbackConfig' => 'setLiveEventCallbackConfig',
+            'rtcCallbackConfig' => 'setRtcCallbackConfig',
             'reviewConfig' => 'setReviewConfig',
             'sharedConfig' => 'setSharedConfig',
             'viewMode' => 'setViewMode',
@@ -204,6 +212,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
     * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
     * liveEventCallbackConfig  liveEventCallbackConfig
+    * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
@@ -223,6 +232,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'streamKeys' => 'getStreamKeys',
             'backupModelAssetIds' => 'getBackupModelAssetIds',
             'liveEventCallbackConfig' => 'getLiveEventCallbackConfig',
+            'rtcCallbackConfig' => 'getRtcCallbackConfig',
             'reviewConfig' => 'getReviewConfig',
             'sharedConfig' => 'getSharedConfig',
             'viewMode' => 'getViewMode',
@@ -330,6 +340,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         $this->container['streamKeys'] = isset($data['streamKeys']) ? $data['streamKeys'] : null;
         $this->container['backupModelAssetIds'] = isset($data['backupModelAssetIds']) ? $data['backupModelAssetIds'] : null;
         $this->container['liveEventCallbackConfig'] = isset($data['liveEventCallbackConfig']) ? $data['liveEventCallbackConfig'] : null;
+        $this->container['rtcCallbackConfig'] = isset($data['rtcCallbackConfig']) ? $data['rtcCallbackConfig'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
@@ -495,7 +506,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * Gets interactionRules
     *  互动规则列表
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleInfo[]|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionRuleInfo[]|null
     */
     public function getInteractionRules()
     {
@@ -505,7 +516,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets interactionRules
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\InteractionRuleInfo[]|null $interactionRules 互动规则列表
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionRuleInfo[]|null $interactionRules 互动规则列表
     *
     * @return $this
     */
@@ -656,6 +667,30 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function setLiveEventCallbackConfig($liveEventCallbackConfig)
     {
         $this->container['liveEventCallbackConfig'] = $liveEventCallbackConfig;
+        return $this;
+    }
+
+    /**
+    * Gets rtcCallbackConfig
+    *  rtcCallbackConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig|null
+    */
+    public function getRtcCallbackConfig()
+    {
+        return $this->container['rtcCallbackConfig'];
+    }
+
+    /**
+    * Sets rtcCallbackConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RTCLiveEventCallBackConfig|null $rtcCallbackConfig rtcCallbackConfig
+    *
+    * @return $this
+    */
+    public function setRtcCallbackConfig($rtcCallbackConfig)
+    {
+        $this->container['rtcCallbackConfig'] = $rtcCallbackConfig;
         return $this;
     }
 

@@ -29,6 +29,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
     * alarmId  告警ID。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * createTime  创建伸缩策略时间，遵循UTC时间
     * metaData  metaData
@@ -46,6 +47,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
             'alarmId' => 'string',
             'scheduledPolicy' => '\HuaweiCloud\SDK\_As\V1\Model\ScheduledPolicy',
             'scalingPolicyAction' => '\HuaweiCloud\SDK\_As\V1\Model\ScalingPolicyActionV2',
+            'intervalAlarmActions' => '\HuaweiCloud\SDK\_As\V1\Model\IntervalAlarmActionsV2[]',
             'coolDownTime' => 'int',
             'createTime' => '\DateTime',
             'metaData' => '\HuaweiCloud\SDK\_As\V1\Model\ScalingPolicyV2MetaData',
@@ -63,6 +65,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
     * alarmId  告警ID。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * createTime  创建伸缩策略时间，遵循UTC时间
     * metaData  metaData
@@ -80,6 +83,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
         'alarmId' => null,
         'scheduledPolicy' => null,
         'scalingPolicyAction' => null,
+        'intervalAlarmActions' => null,
         'coolDownTime' => null,
         'createTime' => 'date-time',
         'metaData' => null,
@@ -118,6 +122,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
     * alarmId  告警ID。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * createTime  创建伸缩策略时间，遵循UTC时间
     * metaData  metaData
@@ -135,6 +140,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
             'alarmId' => 'alarm_id',
             'scheduledPolicy' => 'scheduled_policy',
             'scalingPolicyAction' => 'scaling_policy_action',
+            'intervalAlarmActions' => 'interval_alarm_actions',
             'coolDownTime' => 'cool_down_time',
             'createTime' => 'create_time',
             'metaData' => 'meta_data',
@@ -152,6 +158,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
     * alarmId  告警ID。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * createTime  创建伸缩策略时间，遵循UTC时间
     * metaData  metaData
@@ -169,6 +176,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
             'alarmId' => 'setAlarmId',
             'scheduledPolicy' => 'setScheduledPolicy',
             'scalingPolicyAction' => 'setScalingPolicyAction',
+            'intervalAlarmActions' => 'setIntervalAlarmActions',
             'coolDownTime' => 'setCoolDownTime',
             'createTime' => 'setCreateTime',
             'metaData' => 'setMetaData',
@@ -186,6 +194,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
     * alarmId  告警ID。
     * scheduledPolicy  scheduledPolicy
     * scalingPolicyAction  scalingPolicyAction
+    * intervalAlarmActions  intervalAlarmActions
     * coolDownTime  冷却时间，取值范围0-86400，默认为300，单位是秒。
     * createTime  创建伸缩策略时间，遵循UTC时间
     * metaData  metaData
@@ -203,6 +212,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
             'alarmId' => 'getAlarmId',
             'scheduledPolicy' => 'getScheduledPolicy',
             'scalingPolicyAction' => 'getScalingPolicyAction',
+            'intervalAlarmActions' => 'getIntervalAlarmActions',
             'coolDownTime' => 'getCoolDownTime',
             'createTime' => 'getCreateTime',
             'metaData' => 'getMetaData',
@@ -325,6 +335,7 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
         $this->container['alarmId'] = isset($data['alarmId']) ? $data['alarmId'] : null;
         $this->container['scheduledPolicy'] = isset($data['scheduledPolicy']) ? $data['scheduledPolicy'] : null;
         $this->container['scalingPolicyAction'] = isset($data['scalingPolicyAction']) ? $data['scalingPolicyAction'] : null;
+        $this->container['intervalAlarmActions'] = isset($data['intervalAlarmActions']) ? $data['intervalAlarmActions'] : null;
         $this->container['coolDownTime'] = isset($data['coolDownTime']) ? $data['coolDownTime'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['metaData'] = isset($data['metaData']) ? $data['metaData'] : null;
@@ -605,6 +616,30 @@ class ScalingV2PolicyDetail implements ModelInterface, ArrayAccess
     public function setScalingPolicyAction($scalingPolicyAction)
     {
         $this->container['scalingPolicyAction'] = $scalingPolicyAction;
+        return $this;
+    }
+
+    /**
+    * Gets intervalAlarmActions
+    *  intervalAlarmActions
+    *
+    * @return \HuaweiCloud\SDK\_As\V1\Model\IntervalAlarmActionsV2[]|null
+    */
+    public function getIntervalAlarmActions()
+    {
+        return $this->container['intervalAlarmActions'];
+    }
+
+    /**
+    * Sets intervalAlarmActions
+    *
+    * @param \HuaweiCloud\SDK\_As\V1\Model\IntervalAlarmActionsV2[]|null $intervalAlarmActions intervalAlarmActions
+    *
+    * @return $this
+    */
+    public function setIntervalAlarmActions($intervalAlarmActions)
+    {
+        $this->container['intervalAlarmActions'] = $intervalAlarmActions;
         return $this;
     }
 

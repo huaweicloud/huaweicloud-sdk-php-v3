@@ -25,6 +25,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * roomId  智能交互对话房间ID。
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
+    * enableQuestionAudit  提问文本审核开关
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -39,6 +40,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'roomId' => 'string',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'tailSilenceTime' => 'int',
+            'enableQuestionAudit' => 'bool',
             'huaweiEiCbs' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\HuaweiEiCbs',
             'iflytekAiuiConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekAiuiConfig',
             'iflytekSpark' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\IflytekSpark',
@@ -53,6 +55,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * roomId  智能交互对话房间ID。
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
+    * enableQuestionAudit  提问文本审核开关
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -67,6 +70,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
         'roomId' => null,
         'language' => null,
         'tailSilenceTime' => null,
+        'enableQuestionAudit' => null,
         'huaweiEiCbs' => null,
         'iflytekAiuiConfig' => null,
         'iflytekSpark' => null,
@@ -102,6 +106,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * roomId  智能交互对话房间ID。
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
+    * enableQuestionAudit  提问文本审核开关
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -116,6 +121,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'roomId' => 'room_id',
             'language' => 'language',
             'tailSilenceTime' => 'tail_silence_time',
+            'enableQuestionAudit' => 'enable_question_audit',
             'huaweiEiCbs' => 'huawei_ei_cbs',
             'iflytekAiuiConfig' => 'iflytek_aiui_config',
             'iflytekSpark' => 'iflytek_spark',
@@ -130,6 +136,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * roomId  智能交互对话房间ID。
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
+    * enableQuestionAudit  提问文本审核开关
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -144,6 +151,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'roomId' => 'setRoomId',
             'language' => 'setLanguage',
             'tailSilenceTime' => 'setTailSilenceTime',
+            'enableQuestionAudit' => 'setEnableQuestionAudit',
             'huaweiEiCbs' => 'setHuaweiEiCbs',
             'iflytekAiuiConfig' => 'setIflytekAiuiConfig',
             'iflytekSpark' => 'setIflytekSpark',
@@ -158,6 +166,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * roomId  智能交互对话房间ID。
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
+    * enableQuestionAudit  提问文本审核开关
     * huaweiEiCbs  huaweiEiCbs
     * iflytekAiuiConfig  iflytekAiuiConfig
     * iflytekSpark  iflytekSpark
@@ -172,6 +181,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'roomId' => 'getRoomId',
             'language' => 'getLanguage',
             'tailSilenceTime' => 'getTailSilenceTime',
+            'enableQuestionAudit' => 'getEnableQuestionAudit',
             'huaweiEiCbs' => 'getHuaweiEiCbs',
             'iflytekAiuiConfig' => 'getIflytekAiuiConfig',
             'iflytekSpark' => 'getIflytekSpark',
@@ -242,6 +252,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['tailSilenceTime'] = isset($data['tailSilenceTime']) ? $data['tailSilenceTime'] : null;
+        $this->container['enableQuestionAudit'] = isset($data['enableQuestionAudit']) ? $data['enableQuestionAudit'] : null;
         $this->container['huaweiEiCbs'] = isset($data['huaweiEiCbs']) ? $data['huaweiEiCbs'] : null;
         $this->container['iflytekAiuiConfig'] = isset($data['iflytekAiuiConfig']) ? $data['iflytekAiuiConfig'] : null;
         $this->container['iflytekSpark'] = isset($data['iflytekSpark']) ? $data['iflytekSpark'] : null;
@@ -418,6 +429,30 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     public function setTailSilenceTime($tailSilenceTime)
     {
         $this->container['tailSilenceTime'] = $tailSilenceTime;
+        return $this;
+    }
+
+    /**
+    * Gets enableQuestionAudit
+    *  提问文本审核开关
+    *
+    * @return bool|null
+    */
+    public function getEnableQuestionAudit()
+    {
+        return $this->container['enableQuestionAudit'];
+    }
+
+    /**
+    * Sets enableQuestionAudit
+    *
+    * @param bool|null $enableQuestionAudit 提问文本审核开关
+    *
+    * @return $this
+    */
+    public function setEnableQuestionAudit($enableQuestionAudit)
+    {
+        $this->container['enableQuestionAudit'] = $enableQuestionAudit;
         return $this;
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Ecs\V2\Model;
+namespace HuaweiCloud\SDK\Vpc\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ServerFault implements ModelInterface, ArrayAccess
+class Match implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,30 @@ class ServerFault implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ServerFault';
+    protected static $openAPIModelName = 'Match';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  错误码。
-    * created  异常出现的时间。
-    * message  异常描述信息。
-    * details  异常详情信息。
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符.
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'code' => 'int',
-            'created' => 'string',
-            'message' => 'string',
-            'details' => 'string'
+            'key' => 'string',
+            'value' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  错误码。
-    * created  异常出现的时间。
-    * message  异常描述信息。
-    * details  异常详情信息。
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符.
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'code' => 'int32',
-        'created' => null,
-        'message' => null,
-        'details' => null
+        'key' => null,
+        'value' => null
     ];
 
     /**
@@ -73,50 +65,38 @@ class ServerFault implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  错误码。
-    * created  异常出现的时间。
-    * message  异常描述信息。
-    * details  异常详情信息。
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符.
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'code' => 'code',
-            'created' => 'created',
-            'message' => 'message',
-            'details' => 'details'
+            'key' => 'key',
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  错误码。
-    * created  异常出现的时间。
-    * message  异常描述信息。
-    * details  异常详情信息。
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符.
     *
     * @var string[]
     */
     protected static $setters = [
-            'code' => 'setCode',
-            'created' => 'setCreated',
-            'message' => 'setMessage',
-            'details' => 'setDetails'
+            'key' => 'setKey',
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  错误码。
-    * created  异常出现的时间。
-    * message  异常描述信息。
-    * details  异常详情信息。
+    * key  键。当前仅限定为resource_name
+    * value  值。每个值最大长度255个unicode字符.
     *
     * @var string[]
     */
     protected static $getters = [
-            'code' => 'getCode',
-            'created' => 'getCreated',
-            'message' => 'getMessage',
-            'details' => 'getDetails'
+            'key' => 'getKey',
+            'value' => 'getValue'
     ];
 
     /**
@@ -177,10 +157,8 @@ class ServerFault implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -191,6 +169,24 @@ class ServerFault implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+            if ((mb_strlen($this->container['key']) > 128)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
+            }
+            if ((mb_strlen($this->container['key']) < 1)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
+            if ((mb_strlen($this->container['value']) > 255)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['value']) < 0)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -206,98 +202,50 @@ class ServerFault implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets code
-    *  错误码。
+    * Gets key
+    *  键。当前仅限定为resource_name
     *
-    * @return int|null
+    * @return string
     */
-    public function getCode()
+    public function getKey()
     {
-        return $this->container['code'];
+        return $this->container['key'];
     }
 
     /**
-    * Sets code
+    * Sets key
     *
-    * @param int|null $code 错误码。
+    * @param string $key 键。当前仅限定为resource_name
     *
     * @return $this
     */
-    public function setCode($code)
+    public function setKey($key)
     {
-        $this->container['code'] = $code;
+        $this->container['key'] = $key;
         return $this;
     }
 
     /**
-    * Gets created
-    *  异常出现的时间。
+    * Gets value
+    *  值。每个值最大长度255个unicode字符.
     *
-    * @return string|null
+    * @return string
     */
-    public function getCreated()
+    public function getValue()
     {
-        return $this->container['created'];
+        return $this->container['value'];
     }
 
     /**
-    * Sets created
+    * Sets value
     *
-    * @param string|null $created 异常出现的时间。
+    * @param string $value 值。每个值最大长度255个unicode字符.
     *
     * @return $this
     */
-    public function setCreated($created)
+    public function setValue($value)
     {
-        $this->container['created'] = $created;
-        return $this;
-    }
-
-    /**
-    * Gets message
-    *  异常描述信息。
-    *
-    * @return string|null
-    */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-    * Sets message
-    *
-    * @param string|null $message 异常描述信息。
-    *
-    * @return $this
-    */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
-        return $this;
-    }
-
-    /**
-    * Gets details
-    *  异常详情信息。
-    *
-    * @return string|null
-    */
-    public function getDetails()
-    {
-        return $this->container['details'];
-    }
-
-    /**
-    * Sets details
-    *
-    * @param string|null $details 异常详情信息。
-    *
-    * @return $this
-    */
-    public function setDetails($details)
-    {
-        $this->container['details'] = $details;
+        $this->container['value'] = $value;
         return $this;
     }
 

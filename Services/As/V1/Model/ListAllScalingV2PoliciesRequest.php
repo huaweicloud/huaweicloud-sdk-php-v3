@@ -390,9 +390,6 @@ class ListAllScalingV2PoliciesRequest implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['enterpriseProjectId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
-            }
         return $invalidProperties;
     }
 

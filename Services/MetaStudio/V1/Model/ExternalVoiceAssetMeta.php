@@ -20,26 +20,22 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * mobvoiVoiceMeta  mobvoiVoiceMeta
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'provider' => 'string',
-            'mobvoiVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\MobvoiVoiceAssetMeta'
+            'provider' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * mobvoiVoiceMeta  mobvoiVoiceMeta
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'provider' => null,
-        'mobvoiVoiceMeta' => null
+        'provider' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * mobvoiVoiceMeta  mobvoiVoiceMeta
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'provider' => 'provider',
-            'mobvoiVoiceMeta' => 'mobvoi_voice_meta'
+            'provider' => 'provider'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * mobvoiVoiceMeta  mobvoiVoiceMeta
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @var string[]
     */
     protected static $setters = [
-            'provider' => 'setProvider',
-            'mobvoiVoiceMeta' => 'setMobvoiVoiceMeta'
+            'provider' => 'setProvider'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
-    * mobvoiVoiceMeta  mobvoiVoiceMeta
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @var string[]
     */
     protected static $getters = [
-            'provider' => 'getProvider',
-            'mobvoiVoiceMeta' => 'getMobvoiVoiceMeta'
+            'provider' => 'getProvider'
     ];
 
     /**
@@ -142,6 +132,10 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     const PROVIDER_XIMALAYA = 'XIMALAYA';
     const PROVIDER_HUAWEI_EI = 'HUAWEI_EI';
     const PROVIDER_MOBVOI = 'MOBVOI';
+    const PROVIDER_AUDIOX = 'AUDIOX';
+    const PROVIDER_SINOVOICE = 'SINOVOICE';
+    const PROVIDER_DATABACK = 'DATABACK';
+    const PROVIDER_AISPEECH = 'AISPEECH';
     
 
     /**
@@ -155,6 +149,10 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
             self::PROVIDER_XIMALAYA,
             self::PROVIDER_HUAWEI_EI,
             self::PROVIDER_MOBVOI,
+            self::PROVIDER_AUDIOX,
+            self::PROVIDER_SINOVOICE,
+            self::PROVIDER_DATABACK,
+            self::PROVIDER_AISPEECH,
         ];
     }
 
@@ -175,7 +173,6 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['provider'] = isset($data['provider']) ? $data['provider'] : null;
-        $this->container['mobvoiVoiceMeta'] = isset($data['mobvoiVoiceMeta']) ? $data['mobvoiVoiceMeta'] : null;
     }
 
     /**
@@ -219,7 +216,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
+    *  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @return string
     */
@@ -231,37 +228,13 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string $provider 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：EI TTS * MOBVOI：出门问问TTS
+    * @param string $provider 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
     *
     * @return $this
     */
     public function setProvider($provider)
     {
         $this->container['provider'] = $provider;
-        return $this;
-    }
-
-    /**
-    * Gets mobvoiVoiceMeta
-    *  mobvoiVoiceMeta
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\MobvoiVoiceAssetMeta|null
-    */
-    public function getMobvoiVoiceMeta()
-    {
-        return $this->container['mobvoiVoiceMeta'];
-    }
-
-    /**
-    * Sets mobvoiVoiceMeta
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\MobvoiVoiceAssetMeta|null $mobvoiVoiceMeta mobvoiVoiceMeta
-    *
-    * @return $this
-    */
-    public function setMobvoiVoiceMeta($mobvoiVoiceMeta)
-    {
-        $this->container['mobvoiVoiceMeta'] = $mobvoiVoiceMeta;
         return $this;
     }
 

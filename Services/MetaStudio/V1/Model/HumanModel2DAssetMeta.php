@@ -25,6 +25,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * supportLive  是否支持直播
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  已执行编译任务
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'isRealBackground' => 'bool',
             'supportLive' => 'bool',
             'modelVersion' => 'string',
-            'modelResolution' => 'string'
+            'modelResolution' => 'string',
+            'deviceNames' => 'string[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * supportLive  是否支持直播
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  已执行编译任务
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
         'isRealBackground' => null,
         'supportLive' => null,
         'modelVersion' => null,
-        'modelResolution' => null
+        'modelResolution' => null,
+        'deviceNames' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * supportLive  是否支持直播
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  已执行编译任务
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'isRealBackground' => 'is_real_background',
             'supportLive' => 'support_live',
             'modelVersion' => 'model_version',
-            'modelResolution' => 'model_resolution'
+            'modelResolution' => 'model_resolution',
+            'deviceNames' => 'device_names'
     ];
 
     /**
@@ -100,6 +106,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * supportLive  是否支持直播
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  已执行编译任务
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'isRealBackground' => 'setIsRealBackground',
             'supportLive' => 'setSupportLive',
             'modelVersion' => 'setModelVersion',
-            'modelResolution' => 'setModelResolution'
+            'modelResolution' => 'setModelResolution',
+            'deviceNames' => 'setDeviceNames'
     ];
 
     /**
@@ -118,6 +126,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * supportLive  是否支持直播
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  已执行编译任务
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'isRealBackground' => 'getIsRealBackground',
             'supportLive' => 'getSupportLive',
             'modelVersion' => 'getModelVersion',
-            'modelResolution' => 'getModelResolution'
+            'modelResolution' => 'getModelResolution',
+            'deviceNames' => 'getDeviceNames'
     ];
 
     /**
@@ -209,6 +219,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
         $this->container['supportLive'] = isset($data['supportLive']) ? $data['supportLive'] : null;
         $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
         $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
+        $this->container['deviceNames'] = isset($data['deviceNames']) ? $data['deviceNames'] : null;
     }
 
     /**
@@ -364,6 +375,30 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     public function setModelResolution($modelResolution)
     {
         $this->container['modelResolution'] = $modelResolution;
+        return $this;
+    }
+
+    /**
+    * Gets deviceNames
+    *  已执行编译任务
+    *
+    * @return string[]|null
+    */
+    public function getDeviceNames()
+    {
+        return $this->container['deviceNames'];
+    }
+
+    /**
+    * Sets deviceNames
+    *
+    * @param string[]|null $deviceNames 已执行编译任务
+    *
+    * @return $this
+    */
+    public function setDeviceNames($deviceNames)
+    {
+        $this->container['deviceNames'] = $deviceNames;
         return $this;
     }
 

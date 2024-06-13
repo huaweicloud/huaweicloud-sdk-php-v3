@@ -30,6 +30,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * subtitleConfig  subtitleConfig
     * dx  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dx最小值是0，最大值是1920。
     * dy  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080
+    * isEnableSuperResolution  视频是否开启超分。 > true: 开启 > false: 不开启
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'isSubtitleEnable' => 'bool',
             'subtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleConfig',
             'dx' => 'int',
-            'dy' => 'int'
+            'dy' => 'int',
+            'isEnableSuperResolution' => 'bool'
     ];
 
     /**
@@ -58,6 +60,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * subtitleConfig  subtitleConfig
     * dx  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dx最小值是0，最大值是1920。
     * dy  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080
+    * isEnableSuperResolution  视频是否开启超分。 > true: 开启 > false: 不开启
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
         'isSubtitleEnable' => null,
         'subtitleConfig' => null,
         'dx' => 'int32',
-        'dy' => 'int32'
+        'dy' => 'int32',
+        'isEnableSuperResolution' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * subtitleConfig  subtitleConfig
     * dx  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dx最小值是0，最大值是1920。
     * dy  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080
+    * isEnableSuperResolution  视频是否开启超分。 > true: 开启 > false: 不开启
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'isSubtitleEnable' => 'is_subtitle_enable',
             'subtitleConfig' => 'subtitle_config',
             'dx' => 'dx',
-            'dy' => 'dy'
+            'dy' => 'dy',
+            'isEnableSuperResolution' => 'is_enable_super_resolution'
     ];
 
     /**
@@ -135,6 +141,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * subtitleConfig  subtitleConfig
     * dx  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dx最小值是0，最大值是1920。
     * dy  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080
+    * isEnableSuperResolution  视频是否开启超分。 > true: 开启 > false: 不开启
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'isSubtitleEnable' => 'setIsSubtitleEnable',
             'subtitleConfig' => 'setSubtitleConfig',
             'dx' => 'setDx',
-            'dy' => 'setDy'
+            'dy' => 'setDy',
+            'isEnableSuperResolution' => 'setIsEnableSuperResolution'
     ];
 
     /**
@@ -163,6 +171,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
     * subtitleConfig  subtitleConfig
     * dx  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dx最小值是0，最大值是1920。
     * dy  裁剪视频左上角像素点坐标。  clip_mode= CROP时生效。 > * 以模特分辨率为画布大小，比如1920*1080分辨率的模特，dy最小值是0，最大值是1080
+    * isEnableSuperResolution  视频是否开启超分。 > true: 开启 > false: 不开启
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class VideoConfig implements ModelInterface, ArrayAccess
             'isSubtitleEnable' => 'getIsSubtitleEnable',
             'subtitleConfig' => 'getSubtitleConfig',
             'dx' => 'getDx',
-            'dy' => 'getDy'
+            'dy' => 'getDy',
+            'isEnableSuperResolution' => 'getIsEnableSuperResolution'
     ];
 
     /**
@@ -296,6 +306,7 @@ class VideoConfig implements ModelInterface, ArrayAccess
         $this->container['subtitleConfig'] = isset($data['subtitleConfig']) ? $data['subtitleConfig'] : null;
         $this->container['dx'] = isset($data['dx']) ? $data['dx'] : null;
         $this->container['dy'] = isset($data['dy']) ? $data['dy'] : null;
+        $this->container['isEnableSuperResolution'] = isset($data['isEnableSuperResolution']) ? $data['isEnableSuperResolution'] : null;
     }
 
     /**
@@ -629,6 +640,30 @@ class VideoConfig implements ModelInterface, ArrayAccess
     public function setDy($dy)
     {
         $this->container['dy'] = $dy;
+        return $this;
+    }
+
+    /**
+    * Gets isEnableSuperResolution
+    *  视频是否开启超分。 > true: 开启 > false: 不开启
+    *
+    * @return bool|null
+    */
+    public function getIsEnableSuperResolution()
+    {
+        return $this->container['isEnableSuperResolution'];
+    }
+
+    /**
+    * Sets isEnableSuperResolution
+    *
+    * @param bool|null $isEnableSuperResolution 视频是否开启超分。 > true: 开启 > false: 不开启
+    *
+    * @return $this
+    */
+    public function setIsEnableSuperResolution($isEnableSuperResolution)
+    {
+        $this->container['isEnableSuperResolution'] = $isEnableSuperResolution;
         return $this;
     }
 

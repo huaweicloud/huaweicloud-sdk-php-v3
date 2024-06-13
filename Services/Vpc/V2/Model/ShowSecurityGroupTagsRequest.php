@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Vpc\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateAssetbyReplicationInfoResponse implements ModelInterface, ArrayAccess
+class ShowSecurityGroupTagsRequest implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,26 +16,30 @@ class CreateAssetbyReplicationInfoResponse implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateAssetbyReplicationInfoResponse';
+    protected static $openAPIModelName = 'ShowSecurityGroupTagsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xRequestId  xRequestId
+    * projectId  项目ID
+    * securityGroupId  安全组资源ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xRequestId' => 'string'
+            'projectId' => 'string',
+            'securityGroupId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xRequestId  xRequestId
+    * projectId  项目ID
+    * securityGroupId  安全组资源ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xRequestId' => null
+        'projectId' => null,
+        'securityGroupId' => null
     ];
 
     /**
@@ -62,32 +65,38 @@ class CreateAssetbyReplicationInfoResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xRequestId  xRequestId
+    * projectId  项目ID
+    * securityGroupId  安全组资源ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xRequestId' => 'X-Request-Id'
+            'projectId' => 'project_id',
+            'securityGroupId' => 'security_group_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xRequestId  xRequestId
+    * projectId  项目ID
+    * securityGroupId  安全组资源ID
     *
     * @var string[]
     */
     protected static $setters = [
-            'xRequestId' => 'setXRequestId'
+            'projectId' => 'setProjectId',
+            'securityGroupId' => 'setSecurityGroupId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xRequestId  xRequestId
+    * projectId  项目ID
+    * securityGroupId  安全组资源ID
     *
     * @var string[]
     */
     protected static $getters = [
-            'xRequestId' => 'getXRequestId'
+            'projectId' => 'getProjectId',
+            'securityGroupId' => 'getSecurityGroupId'
     ];
 
     /**
@@ -148,7 +157,8 @@ class CreateAssetbyReplicationInfoResponse implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
     }
 
     /**
@@ -159,6 +169,18 @@ class CreateAssetbyReplicationInfoResponse implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if (!preg_match("/[0-9a-fA-F]{32}/", $this->container['projectId'])) {
+                $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
+            }
+        if ($this->container['securityGroupId'] === null) {
+            $invalidProperties[] = "'securityGroupId' can't be null";
+        }
+            if (!preg_match("/[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/", $this->container['securityGroupId'])) {
+                $invalidProperties[] = "invalid value for 'securityGroupId', must be conform to the pattern /[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}/.";
+            }
         return $invalidProperties;
     }
 
@@ -174,26 +196,50 @@ class CreateAssetbyReplicationInfoResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets xRequestId
-    *  xRequestId
+    * Gets projectId
+    *  项目ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getXRequestId()
+    public function getProjectId()
     {
-        return $this->container['xRequestId'];
+        return $this->container['projectId'];
     }
 
     /**
-    * Sets xRequestId
+    * Sets projectId
     *
-    * @param string|null $xRequestId xRequestId
+    * @param string $projectId 项目ID
     *
     * @return $this
     */
-    public function setXRequestId($xRequestId)
+    public function setProjectId($projectId)
     {
-        $this->container['xRequestId'] = $xRequestId;
+        $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets securityGroupId
+    *  安全组资源ID
+    *
+    * @return string
+    */
+    public function getSecurityGroupId()
+    {
+        return $this->container['securityGroupId'];
+    }
+
+    /**
+    * Sets securityGroupId
+    *
+    * @param string $securityGroupId 安全组资源ID
+    *
+    * @return $this
+    */
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->container['securityGroupId'] = $securityGroupId;
         return $this;
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Config\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class AnimationConfig implements ModelInterface, ArrayAccess
+class BatchDeleteRemediationExceptionsRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class AnimationConfig implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'AnimationConfig';
+    protected static $openAPIModelName = 'BatchDeleteRemediationExceptionsRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * animation  动作资产ID。
+    * policyAssignmentId  规则ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'animation' => 'string'
+            'policyAssignmentId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Config\V1\Model\BatchDeleteRemediationExceptionsRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * animation  动作资产ID。
+    * policyAssignmentId  规则ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'animation' => null
+        'policyAssignmentId' => null,
+        'body' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class AnimationConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * animation  动作资产ID。
+    * policyAssignmentId  规则ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'animation' => 'animation'
+            'policyAssignmentId' => 'policy_assignment_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * animation  动作资产ID。
+    * policyAssignmentId  规则ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'animation' => 'setAnimation'
+            'policyAssignmentId' => 'setPolicyAssignmentId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * animation  动作资产ID。
+    * policyAssignmentId  规则ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'animation' => 'getAnimation'
+            'policyAssignmentId' => 'getPolicyAssignmentId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -147,7 +157,8 @@ class AnimationConfig implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['animation'] = isset($data['animation']) ? $data['animation'] : null;
+        $this->container['policyAssignmentId'] = isset($data['policyAssignmentId']) ? $data['policyAssignmentId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -158,11 +169,14 @@ class AnimationConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['animation']) && (mb_strlen($this->container['animation']) > 64)) {
-                $invalidProperties[] = "invalid value for 'animation', the character length must be smaller than or equal to 64.";
+        if ($this->container['policyAssignmentId'] === null) {
+            $invalidProperties[] = "'policyAssignmentId' can't be null";
+        }
+            if ((mb_strlen($this->container['policyAssignmentId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'policyAssignmentId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['animation']) && (mb_strlen($this->container['animation']) < 1)) {
-                $invalidProperties[] = "invalid value for 'animation', the character length must be bigger than or equal to 1.";
+            if (!preg_match("/[\\w-]+/", $this->container['policyAssignmentId'])) {
+                $invalidProperties[] = "invalid value for 'policyAssignmentId', must be conform to the pattern /[\\w-]+/.";
             }
         return $invalidProperties;
     }
@@ -179,26 +193,50 @@ class AnimationConfig implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets animation
-    *  动作资产ID。
+    * Gets policyAssignmentId
+    *  规则ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getAnimation()
+    public function getPolicyAssignmentId()
     {
-        return $this->container['animation'];
+        return $this->container['policyAssignmentId'];
     }
 
     /**
-    * Sets animation
+    * Sets policyAssignmentId
     *
-    * @param string|null $animation 动作资产ID。
+    * @param string $policyAssignmentId 规则ID
     *
     * @return $this
     */
-    public function setAnimation($animation)
+    public function setPolicyAssignmentId($policyAssignmentId)
     {
-        $this->container['animation'] = $animation;
+        $this->container['policyAssignmentId'] = $policyAssignmentId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Config\V1\Model\BatchDeleteRemediationExceptionsRequestBody|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Config\V1\Model\BatchDeleteRemediationExceptionsRequestBody|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 
