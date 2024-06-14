@@ -1,3 +1,14 @@
+# 3.1.97 2024-06-14
+
+### HuaweiCloud SDK DLI
+
+- _新增特性_
+  - 无
+- _解决问题_
+  - 无
+- _特性变更_
+  - 移除接口`CreateStreamJob`
+
 # 3.1.96 2024-06-13
 
 ### HuaweiCloud SDK AS

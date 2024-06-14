@@ -1045,68 +1045,6 @@ class DliClient extends Client
     }
 
     /**
-     * 提交流作业
-     *
-     * 通过 POST 方式，提交流式作业，请求体为 JSON 格式。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createStreamJob($request)
-    {
-        return $this->createStreamJobWithHttpInfo($request);
-    }
-
-    public function createStreamJobWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/{project_id}/streams';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Dli\V1\Model\CreateStreamJobResponse',
-            $requestType='\HuaweiCloud\SDK\Dli\V1\Model\CreateStreamJobRequest');
-    }
-
-    /**
      * 删除跨源认证
      *
      * 该API用于删除跨源认证信息。
