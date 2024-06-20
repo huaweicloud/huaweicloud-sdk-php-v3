@@ -246,6 +246,15 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['supportUrl'] === null) {
+            $invalidProperties[] = "'supportUrl' can't be null";
+        }
+        if ($this->container['enName'] === null) {
+            $invalidProperties[] = "'enName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -264,7 +273,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Gets name
     *  名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -274,7 +283,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string $name 名称
     *
     * @return $this
     */
@@ -384,7 +393,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Gets supportUrl
     *  地址
     *
-    * @return string|null
+    * @return string
     */
     public function getSupportUrl()
     {
@@ -394,7 +403,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     /**
     * Sets supportUrl
     *
-    * @param string|null $supportUrl 地址
+    * @param string $supportUrl 地址
     *
     * @return $this
     */
@@ -432,7 +441,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     * Gets enName
     *  英文名
     *
-    * @return string|null
+    * @return string
     */
     public function getEnName()
     {
@@ -442,7 +451,7 @@ class PublisherRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enName
     *
-    * @param string|null $enName 英文名
+    * @param string $enName 英文名
     *
     * @return $this
     */

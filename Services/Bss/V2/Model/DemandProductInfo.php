@@ -45,7 +45,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
             'resourceSize' => 'int',
             'sizeMeasureId' => 'int',
             'usageFactor' => 'string',
-            'usageValue' => 'double',
+            'usageValue' => 'float',
             'usageMeasureId' => 'int',
             'subscriptionNum' => 'int'
     ];
@@ -77,7 +77,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
         'resourceSize' => 'int32',
         'sizeMeasureId' => 'int32',
         'usageFactor' => null,
-        'usageValue' => 'double',
+        'usageValue' => 'bigdecimal',
         'usageMeasureId' => 'int32',
         'subscriptionNum' => 'int32'
     ];
@@ -600,7 +600,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     * Gets usageValue
     *  使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     *
-    * @return double
+    * @return float
     */
     public function getUsageValue()
     {
@@ -610,7 +610,7 @@ class DemandProductInfo implements ModelInterface, ArrayAccess
     /**
     * Sets usageValue
     *
-    * @param double $usageValue 使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
+    * @param float $usageValue 使用量值。 例如按小时询价，使用量值为1，使用量单位为小时。
     *
     * @return $this
     */

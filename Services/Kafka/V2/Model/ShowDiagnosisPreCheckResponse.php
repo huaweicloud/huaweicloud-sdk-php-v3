@@ -21,7 +21,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * body  kafka消息积压诊断预检查返回对象
+    * body  Kafka消息积压诊断预检查返回对象
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * body  kafka消息积压诊断预检查返回对象
+    * body  Kafka消息积压诊断预检查返回对象
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * body  kafka消息积压诊断预检查返回对象
+    * body  Kafka消息积压诊断预检查返回对象
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * body  kafka消息积压诊断预检查返回对象
+    * body  Kafka消息积压诊断预检查返回对象
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * body  kafka消息积压诊断预检查返回对象
+    * body  Kafka消息积压诊断预检查返回对象
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets body
-    *  kafka消息积压诊断预检查返回对象
+    *  Kafka消息积压诊断预检查返回对象
     *
     * @return \HuaweiCloud\SDK\Kafka\V2\Model\KafkaDiagnosisCheckEntity[]|null
     */
@@ -187,7 +187,7 @@ class ShowDiagnosisPreCheckResponse implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaDiagnosisCheckEntity[]|null $body kafka消息积压诊断预检查返回对象
+    * @param \HuaweiCloud\SDK\Kafka\V2\Model\KafkaDiagnosisCheckEntity[]|null $body Kafka消息积压诊断预检查返回对象
     *
     * @return $this
     */

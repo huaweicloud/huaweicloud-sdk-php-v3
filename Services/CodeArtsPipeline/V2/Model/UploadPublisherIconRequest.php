@@ -183,6 +183,9 @@ class UploadPublisherIconRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+        if ($this->container['publisherEnName'] === null) {
+            $invalidProperties[] = "'publisherEnName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -225,7 +228,7 @@ class UploadPublisherIconRequest implements ModelInterface, ArrayAccess
     * Gets publisherEnName
     *  发布商名称
     *
-    * @return string|null
+    * @return string
     */
     public function getPublisherEnName()
     {
@@ -235,7 +238,7 @@ class UploadPublisherIconRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publisherEnName
     *
-    * @param string|null $publisherEnName 发布商名称
+    * @param string $publisherEnName 发布商名称
     *
     * @return $this
     */

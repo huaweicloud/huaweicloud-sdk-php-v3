@@ -32,6 +32,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * groupId  流水线组ID
     * id  若为复制场景，则为原流水线ID
+    * concurrencyControl  concurrencyControl
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'definition' => 'string',
             'projectName' => 'string',
             'groupId' => 'string',
-            'id' => 'string'
+            'id' => 'string',
+            'concurrencyControl' => '\HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineConcurrencyMgmt'
     ];
 
     /**
@@ -64,6 +66,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * groupId  流水线组ID
     * id  若为复制场景，则为原流水线ID
+    * concurrencyControl  concurrencyControl
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         'definition' => null,
         'projectName' => null,
         'groupId' => null,
-        'id' => null
+        'id' => null,
+        'concurrencyControl' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * groupId  流水线组ID
     * id  若为复制场景，则为原流水线ID
+    * concurrencyControl  concurrencyControl
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'definition' => 'definition',
             'projectName' => 'project_name',
             'groupId' => 'group_id',
-            'id' => 'id'
+            'id' => 'id',
+            'concurrencyControl' => 'concurrency_control'
     ];
 
     /**
@@ -149,6 +155,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * groupId  流水线组ID
     * id  若为复制场景，则为原流水线ID
+    * concurrencyControl  concurrencyControl
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'definition' => 'setDefinition',
             'projectName' => 'setProjectName',
             'groupId' => 'setGroupId',
-            'id' => 'setId'
+            'id' => 'setId',
+            'concurrencyControl' => 'setConcurrencyControl'
     ];
 
     /**
@@ -181,6 +189,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * groupId  流水线组ID
     * id  若为复制场景，则为原流水线ID
+    * concurrencyControl  concurrencyControl
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class PipelineDTO implements ModelInterface, ArrayAccess
             'definition' => 'getDefinition',
             'projectName' => 'getProjectName',
             'groupId' => 'getGroupId',
-            'id' => 'getId'
+            'id' => 'getId',
+            'concurrencyControl' => 'getConcurrencyControl'
     ];
 
     /**
@@ -269,6 +279,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['concurrencyControl'] = isset($data['concurrencyControl']) ? $data['concurrencyControl'] : null;
     }
 
     /**
@@ -279,6 +290,15 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['isPublish'] === null) {
+            $invalidProperties[] = "'isPublish' can't be null";
+        }
+        if ($this->container['definition'] === null) {
+            $invalidProperties[] = "'definition' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -297,7 +317,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * Gets name
     *  流水线名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -307,7 +327,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 流水线名称
+    * @param string $name 流水线名称
     *
     * @return $this
     */
@@ -345,7 +365,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * Gets isPublish
     *  是否为发布流水线
     *
-    * @return bool|null
+    * @return bool
     */
     public function getIsPublish()
     {
@@ -355,7 +375,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isPublish
     *
-    * @param bool|null $isPublish 是否为发布流水线
+    * @param bool $isPublish 是否为发布流水线
     *
     * @return $this
     */
@@ -489,7 +509,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     * Gets definition
     *  流水线结构定义
     *
-    * @return string|null
+    * @return string
     */
     public function getDefinition()
     {
@@ -499,7 +519,7 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     /**
     * Sets definition
     *
-    * @param string|null $definition 流水线结构定义
+    * @param string $definition 流水线结构定义
     *
     * @return $this
     */
@@ -578,6 +598,30 @@ class PipelineDTO implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets concurrencyControl
+    *  concurrencyControl
+    *
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineConcurrencyMgmt|null
+    */
+    public function getConcurrencyControl()
+    {
+        return $this->container['concurrencyControl'];
+    }
+
+    /**
+    * Sets concurrencyControl
+    *
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PipelineConcurrencyMgmt|null $concurrencyControl concurrencyControl
+    *
+    * @return $this
+    */
+    public function setConcurrencyControl($concurrencyControl)
+    {
+        $this->container['concurrencyControl'] = $concurrencyControl;
         return $this;
     }
 

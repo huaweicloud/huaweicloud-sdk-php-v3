@@ -98,7 +98,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'productName' => 'string',
             'productSpecDesc' => 'string',
             'skuCode' => 'string',
-            'specSize' => 'double',
+            'specSize' => 'float',
             'specSizeMeasureId' => 'int',
             'tradeId' => 'string',
             'id' => 'string',
@@ -109,25 +109,25 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
             'orderId' => 'string',
             'periodType' => 'string',
             'usageType' => 'string',
-            'usage' => 'double',
+            'usage' => 'float',
             'usageMeasureId' => 'int',
-            'freeResourceUsage' => 'double',
+            'freeResourceUsage' => 'float',
             'freeResourceMeasureId' => 'int',
-            'riUsage' => 'double',
+            'riUsage' => 'float',
             'riUsageMeasureId' => 'int',
-            'unitPrice' => 'double',
+            'unitPrice' => 'float',
             'unit' => 'string',
-            'officialAmount' => 'double',
-            'discountAmount' => 'double',
-            'amount' => 'double',
-            'cashAmount' => 'double',
-            'creditAmount' => 'double',
-            'couponAmount' => 'double',
-            'flexipurchaseCouponAmount' => 'double',
-            'storedCardAmount' => 'double',
-            'bonusAmount' => 'double',
-            'debtAmount' => 'double',
-            'adjustmentAmount' => 'double',
+            'officialAmount' => 'float',
+            'discountAmount' => 'float',
+            'amount' => 'float',
+            'cashAmount' => 'float',
+            'creditAmount' => 'float',
+            'couponAmount' => 'float',
+            'flexipurchaseCouponAmount' => 'float',
+            'storedCardAmount' => 'float',
+            'bonusAmount' => 'float',
+            'debtAmount' => 'float',
+            'adjustmentAmount' => 'float',
             'measureId' => 'int',
             'formula' => 'string',
             'subServiceTypeCode' => 'string',
@@ -218,7 +218,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'productName' => null,
         'productSpecDesc' => null,
         'skuCode' => null,
-        'specSize' => 'double',
+        'specSize' => 'bigdecimal',
         'specSizeMeasureId' => 'int32',
         'tradeId' => null,
         'id' => null,
@@ -229,25 +229,25 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
         'orderId' => null,
         'periodType' => null,
         'usageType' => null,
-        'usage' => 'double',
+        'usage' => 'bigdecimal',
         'usageMeasureId' => 'int32',
-        'freeResourceUsage' => 'double',
+        'freeResourceUsage' => 'bigdecimal',
         'freeResourceMeasureId' => 'int32',
-        'riUsage' => 'double',
+        'riUsage' => 'bigdecimal',
         'riUsageMeasureId' => 'int32',
-        'unitPrice' => 'double',
+        'unitPrice' => 'bigdecimal',
         'unit' => null,
-        'officialAmount' => 'double',
-        'discountAmount' => 'double',
-        'amount' => 'double',
-        'cashAmount' => 'double',
-        'creditAmount' => 'double',
-        'couponAmount' => 'double',
-        'flexipurchaseCouponAmount' => 'double',
-        'storedCardAmount' => 'double',
-        'bonusAmount' => 'double',
-        'debtAmount' => 'double',
-        'adjustmentAmount' => 'double',
+        'officialAmount' => 'bigdecimal',
+        'discountAmount' => 'bigdecimal',
+        'amount' => 'bigdecimal',
+        'cashAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
+        'couponAmount' => 'bigdecimal',
+        'flexipurchaseCouponAmount' => 'bigdecimal',
+        'storedCardAmount' => 'bigdecimal',
+        'bonusAmount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'adjustmentAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'formula' => null,
         'subServiceTypeCode' => null,
@@ -1213,7 +1213,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets specSize
     *  产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getSpecSize()
     {
@@ -1223,7 +1223,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets specSize
     *
-    * @param double|null $specSize 产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
+    * @param float|null $specSize 产品的实例大小，仅线性产品有效。  说明： 线性产品是指订购时需要指定大小的产品。例如硬盘在订购时需选择10G、20G等不同大小规格。
     *
     * @return $this
     */
@@ -1477,7 +1477,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets usage
     *  资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getUsage()
     {
@@ -1487,7 +1487,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets usage
     *
-    * @param double|null $usage 资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
+    * @param float|null $usage 资源的使用量。  说明： 查询包周期资源，不返回资源的使用量。
     *
     * @return $this
     */
@@ -1525,7 +1525,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets freeResourceUsage
     *  套餐内使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFreeResourceUsage()
     {
@@ -1535,7 +1535,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets freeResourceUsage
     *
-    * @param double|null $freeResourceUsage 套餐内使用量。
+    * @param float|null $freeResourceUsage 套餐内使用量。
     *
     * @return $this
     */
@@ -1573,7 +1573,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets riUsage
     *  预留实例使用量。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getRiUsage()
     {
@@ -1583,7 +1583,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets riUsage
     *
-    * @param double|null $riUsage 预留实例使用量。
+    * @param float|null $riUsage 预留实例使用量。
     *
     * @return $this
     */
@@ -1621,7 +1621,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets unitPrice
     *  产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getUnitPrice()
     {
@@ -1631,7 +1631,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets unitPrice
     *
-    * @param double|null $unitPrice 产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
+    * @param float|null $unitPrice 产品的单价。 按需产品的单价，只有简单定价，不分档的场景会返回。 包周期产品的单价，只有包周期的如下场景会返回：包周期订购/续订/降配/升配/扩容简单定价，不分档 预留实例的单价，只有如下场景下会返回：订购/续订/降配/升配/扩容/按时计费简单定价，不分档  说明： 当statistic_type入参为1，按账期，查询包周期产品时，不返回单价。
     *
     * @return $this
     */
@@ -1669,7 +1669,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets officialAmount
     *  官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialAmount()
     {
@@ -1679,7 +1679,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param double|null $officialAmount 官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
+    * @param float|null $officialAmount 官网价，华为云商品在官网上未叠加应用商务折扣、促销折扣等优惠的销售价格。
     *
     * @return $this
     */
@@ -1693,7 +1693,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets discountAmount
     *  优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDiscountAmount()
     {
@@ -1703,7 +1703,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param double|null $discountAmount 优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
+    * @param float|null $discountAmount 优惠金额，用户使用云服务享受折扣优惠如商务折扣、伙伴授予折扣以及促销优惠等减免的金额。
     *
     * @return $this
     */
@@ -1717,7 +1717,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets amount
     *  应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -1727,7 +1727,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
+    * @param float|null $amount 应付金额，用户使用云服务享受折扣优惠后需要支付的费用金额，包括现金券和储值卡和代金券金额，精确到小数点后2位。  说明： amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_card_amount，bonus_amount，debt_amount，adjustment_amount的总和。
     *
     * @return $this
     */
@@ -1741,7 +1741,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets cashAmount
     *  现金支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCashAmount()
     {
@@ -1751,7 +1751,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param double|null $cashAmount 现金支付金额。
+    * @param float|null $cashAmount 现金支付金额。
     *
     * @return $this
     */
@@ -1765,7 +1765,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用额度支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -1775,7 +1775,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用额度支付金额。
+    * @param float|null $creditAmount 信用额度支付金额。
     *
     * @return $this
     */
@@ -1789,7 +1789,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets couponAmount
     *  代金券支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCouponAmount()
     {
@@ -1799,7 +1799,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount 代金券支付金额。
+    * @param float|null $couponAmount 代金券支付金额。
     *
     * @return $this
     */
@@ -1813,7 +1813,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets flexipurchaseCouponAmount
     *  现金券支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -1823,7 +1823,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param double|null $flexipurchaseCouponAmount 现金券支付金额。
+    * @param float|null $flexipurchaseCouponAmount 现金券支付金额。
     *
     * @return $this
     */
@@ -1837,7 +1837,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets storedCardAmount
     *  储值卡支付金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getStoredCardAmount()
     {
@@ -1847,7 +1847,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets storedCardAmount
     *
-    * @param double|null $storedCardAmount 储值卡支付金额。
+    * @param float|null $storedCardAmount 储值卡支付金额。
     *
     * @return $this
     */
@@ -1861,7 +1861,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets bonusAmount
     *  奖励金支付金额（用于现网客户未使用完的奖励金）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getBonusAmount()
     {
@@ -1871,7 +1871,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets bonusAmount
     *
-    * @param double|null $bonusAmount 奖励金支付金额（用于现网客户未使用完的奖励金）。
+    * @param float|null $bonusAmount 奖励金支付金额（用于现网客户未使用完的奖励金）。
     *
     * @return $this
     */
@@ -1885,7 +1885,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  欠费金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -1895,7 +1895,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 欠费金额。
+    * @param float|null $debtAmount 欠费金额。
     *
     * @return $this
     */
@@ -1909,7 +1909,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     * Gets adjustmentAmount
     *  欠费核销金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAdjustmentAmount()
     {
@@ -1919,7 +1919,7 @@ class ResFeeRecordV2 implements ModelInterface, ArrayAccess
     /**
     * Sets adjustmentAmount
     *
-    * @param double|null $adjustmentAmount 欠费核销金额。
+    * @param float|null $adjustmentAmount 欠费核销金额。
     *
     * @return $this
     */

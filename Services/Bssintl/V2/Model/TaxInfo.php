@@ -31,7 +31,7 @@ class TaxInfo implements ModelInterface, ArrayAccess
             'taxClass' => 'string',
             'taxRate' => 'string',
             'subTaxClass' => 'string',
-            'taxAmount' => 'double'
+            'taxAmount' => 'float'
     ];
 
     /**
@@ -47,7 +47,7 @@ class TaxInfo implements ModelInterface, ArrayAccess
         'taxClass' => null,
         'taxRate' => null,
         'subTaxClass' => null,
-        'taxAmount' => 'double'
+        'taxAmount' => 'bigdecimal'
     ];
 
     /**
@@ -299,7 +299,7 @@ class TaxInfo implements ModelInterface, ArrayAccess
     * Gets taxAmount
     *  税金金额。 单位：美元
     *
-    * @return double|null
+    * @return float|null
     */
     public function getTaxAmount()
     {
@@ -309,7 +309,7 @@ class TaxInfo implements ModelInterface, ArrayAccess
     /**
     * Sets taxAmount
     *
-    * @param double|null $taxAmount 税金金额。 单位：美元
+    * @param float|null $taxAmount 税金金额。 单位：美元
     *
     * @return $this
     */

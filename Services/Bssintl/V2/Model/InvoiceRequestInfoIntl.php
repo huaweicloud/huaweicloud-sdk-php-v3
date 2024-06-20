@@ -52,7 +52,7 @@ class InvoiceRequestInfoIntl implements ModelInterface, ArrayAccess
             'channelType' => 'int',
             'invoiceType' => 'int',
             'invoiceTitle' => 'string',
-            'invoiceAmount' => 'double',
+            'invoiceAmount' => 'float',
             'invoiceMethod' => 'int',
             'invoiceClass' => 'int',
             'invoiceState' => 'int',
@@ -104,7 +104,7 @@ class InvoiceRequestInfoIntl implements ModelInterface, ArrayAccess
         'channelType' => 'int32',
         'invoiceType' => 'int32',
         'invoiceTitle' => null,
-        'invoiceAmount' => 'double',
+        'invoiceAmount' => 'bigdecimal',
         'invoiceMethod' => 'int32',
         'invoiceClass' => 'int32',
         'invoiceState' => 'int32',
@@ -611,7 +611,7 @@ class InvoiceRequestInfoIntl implements ModelInterface, ArrayAccess
     * Gets invoiceAmount
     *  已开票金额（美元） 。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getInvoiceAmount()
     {
@@ -621,7 +621,7 @@ class InvoiceRequestInfoIntl implements ModelInterface, ArrayAccess
     /**
     * Sets invoiceAmount
     *
-    * @param double|null $invoiceAmount 已开票金额（美元） 。
+    * @param float|null $invoiceAmount 已开票金额（美元） 。
     *
     * @return $this
     */

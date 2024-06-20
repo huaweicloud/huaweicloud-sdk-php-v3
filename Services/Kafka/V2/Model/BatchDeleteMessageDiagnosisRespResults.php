@@ -21,7 +21,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * result  报告删除结果
-    * id  报告id
+    * id  报告ID
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  报告删除结果
-    * id  报告id
+    * id  报告ID
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * result  报告删除结果
-    * id  报告id
+    * id  报告ID
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  报告删除结果
-    * id  报告id
+    * id  报告ID
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  报告删除结果
-    * id  报告id
+    * id  报告ID
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
 
     /**
     * Gets id
-    *  报告id
+    *  报告ID
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class BatchDeleteMessageDiagnosisRespResults implements ModelInterface, ArrayAcc
     /**
     * Sets id
     *
-    * @param string $id 报告id
+    * @param string $id 报告ID
     *
     * @return $this
     */

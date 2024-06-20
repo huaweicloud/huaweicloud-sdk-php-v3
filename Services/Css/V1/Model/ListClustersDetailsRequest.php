@@ -22,24 +22,28 @@ class ListClustersDetailsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * start  指定查询起始值，默认值为1，即从第1个集群开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个集群信息。
+    * datastoreType  指定查询的集群引擎类型。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'start' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'datastoreType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * start  指定查询起始值，默认值为1，即从第1个集群开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个集群信息。
+    * datastoreType  指定查询的集群引擎类型。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'start' => null,
-        'limit' => null
+        'limit' => null,
+        'datastoreType' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ListClustersDetailsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * start  指定查询起始值，默认值为1，即从第1个集群开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个集群信息。
+    * datastoreType  指定查询的集群引擎类型。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'start' => 'start',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'datastoreType' => 'datastoreType'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * start  指定查询起始值，默认值为1，即从第1个集群开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个集群信息。
+    * datastoreType  指定查询的集群引擎类型。
     *
     * @var string[]
     */
     protected static $setters = [
             'start' => 'setStart',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'datastoreType' => 'setDatastoreType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * start  指定查询起始值，默认值为1，即从第1个集群开始查询。
     * limit  指定查询个数，默认值为10，即一次查询10个集群信息。
+    * datastoreType  指定查询的集群引擎类型。
     *
     * @var string[]
     */
     protected static $getters = [
             'start' => 'getStart',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'datastoreType' => 'getDatastoreType'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ListClustersDetailsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['start'] = isset($data['start']) ? $data['start'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['datastoreType'] = isset($data['datastoreType']) ? $data['datastoreType'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ListClustersDetailsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets datastoreType
+    *  指定查询的集群引擎类型。
+    *
+    * @return string|null
+    */
+    public function getDatastoreType()
+    {
+        return $this->container['datastoreType'];
+    }
+
+    /**
+    * Sets datastoreType
+    *
+    * @param string|null $datastoreType 指定查询的集群引擎类型。
+    *
+    * @return $this
+    */
+    public function setDatastoreType($datastoreType)
+    {
+        $this->container['datastoreType'] = $datastoreType;
         return $this;
     }
 

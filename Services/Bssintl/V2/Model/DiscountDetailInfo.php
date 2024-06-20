@@ -29,7 +29,7 @@ class DiscountDetailInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'promotionType' => 'string',
-            'discountAmount' => 'double',
+            'discountAmount' => 'float',
             'promotionId' => 'string',
             'measureId' => 'int'
     ];
@@ -45,7 +45,7 @@ class DiscountDetailInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'promotionType' => null,
-        'discountAmount' => 'double',
+        'discountAmount' => 'bigdecimal',
         'promotionId' => null,
         'measureId' => 'int32'
     ];
@@ -233,7 +233,7 @@ class DiscountDetailInfo implements ModelInterface, ArrayAccess
     * Gets discountAmount
     *  折扣金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDiscountAmount()
     {
@@ -243,7 +243,7 @@ class DiscountDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param double|null $discountAmount 折扣金额。
+    * @param float|null $discountAmount 折扣金额。
     *
     * @return $this
     */

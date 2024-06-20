@@ -24,13 +24,17 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
     * connections  connections
     * vpcepUpdateSwitch  终端节点更新开关。 - true： 开启终端节点。 - false： 关闭终端节点。
     * totalCount  终端节点数量。
+    * vpcServiceName  终端节点服务名称。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'connections' => '\HuaweiCloud\SDK\Css\V1\Model\Connections[]',
             'vpcepUpdateSwitch' => 'bool',
-            'totalCount' => 'int'
+            'totalCount' => 'int',
+            'vpcServiceName' => 'string',
+            'permissions' => '\HuaweiCloud\SDK\Css\V1\Model\PermissionInfo[]'
     ];
 
     /**
@@ -38,13 +42,17 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
     * connections  connections
     * vpcepUpdateSwitch  终端节点更新开关。 - true： 开启终端节点。 - false： 关闭终端节点。
     * totalCount  终端节点数量。
+    * vpcServiceName  终端节点服务名称。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'connections' => null,
         'vpcepUpdateSwitch' => null,
-        'totalCount' => null
+        'totalCount' => null,
+        'vpcServiceName' => null,
+        'permissions' => null
     ];
 
     /**
@@ -73,13 +81,17 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
     * connections  connections
     * vpcepUpdateSwitch  终端节点更新开关。 - true： 开启终端节点。 - false： 关闭终端节点。
     * totalCount  终端节点数量。
+    * vpcServiceName  终端节点服务名称。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'connections' => 'connections',
             'vpcepUpdateSwitch' => 'vpcepUpdateSwitch',
-            'totalCount' => 'total_count'
+            'totalCount' => 'total_count',
+            'vpcServiceName' => 'vpcServiceName',
+            'permissions' => 'permissions'
     ];
 
     /**
@@ -87,13 +99,17 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
     * connections  connections
     * vpcepUpdateSwitch  终端节点更新开关。 - true： 开启终端节点。 - false： 关闭终端节点。
     * totalCount  终端节点数量。
+    * vpcServiceName  终端节点服务名称。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $setters = [
             'connections' => 'setConnections',
             'vpcepUpdateSwitch' => 'setVpcepUpdateSwitch',
-            'totalCount' => 'setTotalCount'
+            'totalCount' => 'setTotalCount',
+            'vpcServiceName' => 'setVpcServiceName',
+            'permissions' => 'setPermissions'
     ];
 
     /**
@@ -101,13 +117,17 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
     * connections  connections
     * vpcepUpdateSwitch  终端节点更新开关。 - true： 开启终端节点。 - false： 关闭终端节点。
     * totalCount  终端节点数量。
+    * vpcServiceName  终端节点服务名称。
+    * permissions  permissions
     *
     * @var string[]
     */
     protected static $getters = [
             'connections' => 'getConnections',
             'vpcepUpdateSwitch' => 'getVpcepUpdateSwitch',
-            'totalCount' => 'getTotalCount'
+            'totalCount' => 'getTotalCount',
+            'vpcServiceName' => 'getVpcServiceName',
+            'permissions' => 'getPermissions'
     ];
 
     /**
@@ -171,6 +191,8 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
         $this->container['connections'] = isset($data['connections']) ? $data['connections'] : null;
         $this->container['vpcepUpdateSwitch'] = isset($data['vpcepUpdateSwitch']) ? $data['vpcepUpdateSwitch'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
+        $this->container['vpcServiceName'] = isset($data['vpcServiceName']) ? $data['vpcServiceName'] : null;
+        $this->container['permissions'] = isset($data['permissions']) ? $data['permissions'] : null;
     }
 
     /**
@@ -264,6 +286,54 @@ class ShowVpcepConnectionResponse implements ModelInterface, ArrayAccess
     public function setTotalCount($totalCount)
     {
         $this->container['totalCount'] = $totalCount;
+        return $this;
+    }
+
+    /**
+    * Gets vpcServiceName
+    *  终端节点服务名称。
+    *
+    * @return string|null
+    */
+    public function getVpcServiceName()
+    {
+        return $this->container['vpcServiceName'];
+    }
+
+    /**
+    * Sets vpcServiceName
+    *
+    * @param string|null $vpcServiceName 终端节点服务名称。
+    *
+    * @return $this
+    */
+    public function setVpcServiceName($vpcServiceName)
+    {
+        $this->container['vpcServiceName'] = $vpcServiceName;
+        return $this;
+    }
+
+    /**
+    * Gets permissions
+    *  permissions
+    *
+    * @return \HuaweiCloud\SDK\Css\V1\Model\PermissionInfo[]|null
+    */
+    public function getPermissions()
+    {
+        return $this->container['permissions'];
+    }
+
+    /**
+    * Sets permissions
+    *
+    * @param \HuaweiCloud\SDK\Css\V1\Model\PermissionInfo[]|null $permissions permissions
+    *
+    * @return $this
+    */
+    public function setPermissions($permissions)
+    {
+        $this->container['permissions'] = $permissions;
         return $this;
     }
 

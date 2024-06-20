@@ -31,7 +31,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'discountId' => 'string',
             'discountType' => 'int',
-            'amount' => 'double',
+            'amount' => 'float',
             'measureId' => 'int',
             'discountName' => 'string'
     ];
@@ -49,7 +49,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'discountId' => null,
         'discountType' => 'int32',
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'measureId' => 'int32',
         'discountName' => null
     ];
@@ -280,7 +280,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     * Gets amount
     *  折扣的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -290,7 +290,7 @@ class DemandDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 折扣的金额。
+    * @param float|null $amount 折扣的金额。
     *
     * @return $this
     */

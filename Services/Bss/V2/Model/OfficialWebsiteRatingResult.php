@@ -29,7 +29,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'officialWebsiteAmount' => 'double',
+            'officialWebsiteAmount' => 'float',
             'installmentOfficialWebsiteAmount' => 'string',
             'installmentPeriodType' => 'int',
             'measureId' => 'int',
@@ -47,7 +47,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'officialWebsiteAmount' => 'double',
+        'officialWebsiteAmount' => 'bigdecimal',
         'installmentOfficialWebsiteAmount' => null,
         'installmentPeriodType' => 'int32',
         'measureId' => 'int32',
@@ -220,7 +220,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * Gets officialWebsiteAmount
     *  包年/包月产品的官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -230,7 +230,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
+    * @param float|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */

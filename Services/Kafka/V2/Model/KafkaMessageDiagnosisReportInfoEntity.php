@@ -21,7 +21,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     /**
     * Array of property to type mappings. Used for (de)serialization
     * reportId  诊断报告ID
-    * status  消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    * status  消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
@@ -43,7 +43,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     /**
     * Array of property to format mappings. Used for (de)serialization
     * reportId  诊断报告ID
-    * status  消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    * status  消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
@@ -86,7 +86,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * reportId  诊断报告ID
-    * status  消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    * status  消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
@@ -108,7 +108,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * reportId  诊断报告ID
-    * status  消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    * status  消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
@@ -130,7 +130,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * reportId  诊断报告ID
-    * status  消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    * status  消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     * beginTime  诊断任务开始时间
     * endTime  诊断任务结束时间
     * groupName  该次诊断任务诊断的消费组名称
@@ -313,7 +313,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
 
     /**
     * Gets status
-    *  消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    *  消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     *
     * @return string
     */
@@ -325,7 +325,7 @@ class KafkaMessageDiagnosisReportInfoEntity implements ModelInterface, ArrayAcce
     /**
     * Sets status
     *
-    * @param string $status 消息积压诊断任务状态。 - diagnosing：诊断中; - failed：诊断失败; - deleted：手动删除; - finished：诊断完成; - normal：诊断结果正常; - abnormal：诊断结果异常
+    * @param string $status 消息积压诊断任务状态。 - diagnosing：诊断中 - failed：诊断失败 - deleted：手动删除 - finished：诊断完成 - normal：诊断结果正常 - abnormal：诊断结果异常
     *
     * @return $this
     */

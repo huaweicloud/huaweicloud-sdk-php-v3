@@ -1358,6 +1358,9 @@ class CssClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['datastoreType'] !== null) {
+            $queryParams['datastoreType'] = $localVarParams['datastoreType'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['application/json']

@@ -42,13 +42,13 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
             'errorMsg' => 'string',
             'currency' => 'string',
             'totalCount' => 'int',
-            'totalAmount' => 'double',
-            'debtAmount' => 'double',
-            'couponAmount' => 'double',
-            'cashcouponAmount' => 'double',
-            'storedcardAmount' => 'double',
-            'debitAmount' => 'double',
-            'creditAmount' => 'double',
+            'totalAmount' => 'float',
+            'debtAmount' => 'float',
+            'couponAmount' => 'float',
+            'cashcouponAmount' => 'float',
+            'storedcardAmount' => 'float',
+            'debitAmount' => 'float',
+            'creditAmount' => 'float',
             'measureId' => 'int',
             'billSums' => '\HuaweiCloud\SDK\Bssintl\V2\Model\BillSumRecordInfo[]'
     ];
@@ -76,13 +76,13 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
         'errorMsg' => null,
         'currency' => null,
         'totalCount' => 'int32',
-        'totalAmount' => 'double',
-        'debtAmount' => 'double',
-        'couponAmount' => 'double',
-        'cashcouponAmount' => 'double',
-        'storedcardAmount' => 'double',
-        'debitAmount' => 'double',
-        'creditAmount' => 'double',
+        'totalAmount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'couponAmount' => 'bigdecimal',
+        'cashcouponAmount' => 'bigdecimal',
+        'storedcardAmount' => 'bigdecimal',
+        'debitAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'billSums' => null
     ];
@@ -405,7 +405,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets totalAmount
     *  总金额（包含退订）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getTotalAmount()
     {
@@ -415,7 +415,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets totalAmount
     *
-    * @param double|null $totalAmount 总金额（包含退订）。
+    * @param float|null $totalAmount 总金额（包含退订）。
     *
     * @return $this
     */
@@ -429,7 +429,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  总欠费金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -439,7 +439,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 总欠费金额。
+    * @param float|null $debtAmount 总欠费金额。
     *
     * @return $this
     */
@@ -453,7 +453,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets couponAmount
     *  代金券金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCouponAmount()
     {
@@ -463,7 +463,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount 代金券金额。
+    * @param float|null $couponAmount 代金券金额。
     *
     * @return $this
     */
@@ -477,7 +477,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets cashcouponAmount
     *  现金券金额，预留。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCashcouponAmount()
     {
@@ -487,7 +487,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets cashcouponAmount
     *
-    * @param double|null $cashcouponAmount 现金券金额，预留。
+    * @param float|null $cashcouponAmount 现金券金额，预留。
     *
     * @return $this
     */
@@ -501,7 +501,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets storedcardAmount
     *  储值卡金额，预留。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getStoredcardAmount()
     {
@@ -511,7 +511,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets storedcardAmount
     *
-    * @param double|null $storedcardAmount 储值卡金额，预留。
+    * @param float|null $storedcardAmount 储值卡金额，预留。
     *
     * @return $this
     */
@@ -525,7 +525,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets debitAmount
     *  现金账户金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebitAmount()
     {
@@ -535,7 +535,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets debitAmount
     *
-    * @param double|null $debitAmount 现金账户金额。
+    * @param float|null $debitAmount 现金账户金额。
     *
     * @return $this
     */
@@ -549,7 +549,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用账户金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -559,7 +559,7 @@ class ListMonthlyExpendituresResponse implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用账户金额。
+    * @param float|null $creditAmount 信用账户金额。
     *
     * @return $this
     */

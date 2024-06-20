@@ -21,21 +21,25 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * url  音频url地址。
+    * language  支持的语言，默认为zh，zh：中文
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'url' => 'string'
+            'url' => 'string',
+            'language' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  音频url地址。
+    * language  支持的语言，默认为zh，zh：中文
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'url' => null
+        'url' => null,
+        'language' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * url  音频url地址。
+    * language  支持的语言，默认为zh，zh：中文
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'url' => 'url'
+            'url' => 'url',
+            'language' => 'language'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  音频url地址。
+    * language  支持的语言，默认为zh，zh：中文
     *
     * @var string[]
     */
     protected static $setters = [
-            'url' => 'setUrl'
+            'url' => 'setUrl',
+            'language' => 'setLanguage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  音频url地址。
+    * language  支持的语言，默认为zh，zh：中文
     *
     * @var string[]
     */
     protected static $getters = [
-            'url' => 'getUrl'
+            'url' => 'getUrl',
+            'language' => 'getLanguage'
     ];
 
     /**
@@ -148,6 +158,7 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -196,6 +207,30 @@ class AudioInputBody implements ModelInterface, ArrayAccess
     public function setUrl($url)
     {
         $this->container['url'] = $url;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  支持的语言，默认为zh，zh：中文
+    *
+    * @return string|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param string|null $language 支持的语言，默认为zh，zh：中文
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 

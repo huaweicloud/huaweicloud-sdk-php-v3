@@ -33,10 +33,10 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'accountId' => 'string',
             'accountType' => 'int',
-            'amount' => 'double',
+            'amount' => 'float',
             'currency' => 'string',
-            'designatedAmount' => 'double',
-            'creditAmount' => 'double',
+            'designatedAmount' => 'float',
+            'creditAmount' => 'float',
             'measureId' => 'int'
     ];
 
@@ -55,10 +55,10 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'accountId' => null,
         'accountType' => 'int32',
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'currency' => null,
-        'designatedAmount' => 'double',
-        'creditAmount' => 'double',
+        'designatedAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
         'measureId' => 'int32'
     ];
 
@@ -305,7 +305,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     * Gets amount
     *  账户余额。
     *
-    * @return double
+    * @return float
     */
     public function getAmount()
     {
@@ -315,7 +315,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double $amount 账户余额。
+    * @param float $amount 账户余额。
     *
     * @return $this
     */
@@ -353,7 +353,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     * Gets designatedAmount
     *  专款专用余额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDesignatedAmount()
     {
@@ -363,7 +363,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets designatedAmount
     *
-    * @param double|null $designatedAmount 专款专用余额。
+    * @param float|null $designatedAmount 专款专用余额。
     *
     * @return $this
     */
@@ -377,7 +377,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  总信用额度，仅信用账户存在该字段。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -387,7 +387,7 @@ class AccountBalanceV3 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 总信用额度，仅信用账户存在该字段。
+    * @param float|null $creditAmount 总信用额度，仅信用账户存在该字段。
     *
     * @return $this
     */

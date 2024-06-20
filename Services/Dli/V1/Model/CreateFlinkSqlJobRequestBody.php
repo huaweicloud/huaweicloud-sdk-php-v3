@@ -36,7 +36,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
     * restartWhenException  是否开启作业异常自动重启。默认为false。
     * idleStateRetention  空闲状态过期周期，单位为秒，默认值为3600。
-    * jobType  作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
     * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
@@ -100,7 +100,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
     * restartWhenException  是否开启作业异常自动重启。默认为false。
     * idleStateRetention  空闲状态过期周期，单位为秒，默认值为3600。
-    * jobType  作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
     * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
@@ -185,7 +185,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
     * restartWhenException  是否开启作业异常自动重启。默认为false。
     * idleStateRetention  空闲状态过期周期，单位为秒，默认值为3600。
-    * jobType  作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
     * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
@@ -249,7 +249,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
     * restartWhenException  是否开启作业异常自动重启。默认为false。
     * idleStateRetention  空闲状态过期周期，单位为秒，默认值为3600。
-    * jobType  作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
     * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
@@ -313,7 +313,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     * smnTopic  当作业异常时，向该SMN主题推送告警信息。
     * restartWhenException  是否开启作业异常自动重启。默认为false。
     * idleStateRetention  空闲状态过期周期，单位为秒，默认值为3600。
-    * jobType  作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    * jobType  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     * edgeGroupIds  边缘计算组ID列表。
     * dirtyDataStrategy  作业脏数据策略。 “2”：保存； “1”：抛出异常； “0”：忽略； 默认值为“0”。
     * udfJarUrl  用户已上传到DLI资源管理系统的资源包名，用户sql作业的udf jar通过该参数传入。
@@ -876,7 +876,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobType
-    *  作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    *  作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     *
     * @return string|null
     */
@@ -888,7 +888,7 @@ class CreateFlinkSqlJobRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets jobType
     *
-    * @param string|null $jobType 作业类型：flink_sql_job和flink_sql_edge_job。 run_mode为edge_node时，作业类型须为flink_sql_edge_job。 run_mode为shared_cluster跟exclusive_cluster时，作业类型须为flink_sql_job。 默认值：flink_sql_job。
+    * @param string|null $jobType 作业类型：flink_sql_job、flink_opensource_sql_job。 默认值：“flink_opensource_sql_job”。  “run_mode”为“exclusive_cluster”时，作业类型须为“flink_sql_job”或“flink_opensource_sql_job”。  “run_mode””为“shared_cluster”时作业类型必须为”flink_sql_job“。
     *
     * @return $this
     */

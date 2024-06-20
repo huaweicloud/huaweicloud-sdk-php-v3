@@ -23,8 +23,8 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * pluginName  插件名
     * displayName  展示名
     * version  版本号
-    * pluginAttribution  插件属性
-    * versionAttribution  版本属性
+    * pluginAttribution  插件属性,custom/official
+    * versionAttribution  版本属性,draft/formal
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * pluginName  插件名
     * displayName  展示名
     * version  版本号
-    * pluginAttribution  插件属性
-    * versionAttribution  版本属性
+    * pluginAttribution  插件属性,custom/official
+    * versionAttribution  版本属性,draft/formal
     *
     * @var string[]
     */
@@ -80,8 +80,8 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * pluginName  插件名
     * displayName  展示名
     * version  版本号
-    * pluginAttribution  插件属性
-    * versionAttribution  版本属性
+    * pluginAttribution  插件属性,custom/official
+    * versionAttribution  版本属性,draft/formal
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * pluginName  插件名
     * displayName  展示名
     * version  版本号
-    * pluginAttribution  插件属性
-    * versionAttribution  版本属性
+    * pluginAttribution  插件属性,custom/official
+    * versionAttribution  版本属性,draft/formal
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * pluginName  插件名
     * displayName  展示名
     * version  版本号
-    * pluginAttribution  插件属性
-    * versionAttribution  版本属性
+    * pluginAttribution  插件属性,custom/official
+    * versionAttribution  版本属性,draft/formal
     *
     * @var string[]
     */
@@ -202,6 +202,18 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
+        if ($this->container['displayName'] === null) {
+            $invalidProperties[] = "'displayName' can't be null";
+        }
+        if ($this->container['version'] === null) {
+            $invalidProperties[] = "'version' can't be null";
+        }
+        if ($this->container['pluginAttribution'] === null) {
+            $invalidProperties[] = "'pluginAttribution' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -220,7 +232,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * Gets pluginName
     *  插件名
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -230,7 +242,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string $pluginName 插件名
     *
     * @return $this
     */
@@ -244,7 +256,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * Gets displayName
     *  展示名
     *
-    * @return string|null
+    * @return string
     */
     public function getDisplayName()
     {
@@ -254,7 +266,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string $displayName 展示名
     *
     * @return $this
     */
@@ -268,7 +280,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     * Gets version
     *  版本号
     *
-    * @return string|null
+    * @return string
     */
     public function getVersion()
     {
@@ -278,7 +290,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本号
+    * @param string $version 版本号
     *
     * @return $this
     */
@@ -290,9 +302,9 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  插件属性
+    *  插件属性,custom/official
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginAttribution()
     {
@@ -302,7 +314,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution 插件属性
+    * @param string $pluginAttribution 插件属性,custom/official
     *
     * @return $this
     */
@@ -314,7 +326,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets versionAttribution
-    *  版本属性
+    *  版本属性,draft/formal
     *
     * @return string|null
     */
@@ -326,7 +338,7 @@ class PluginPartQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets versionAttribution
     *
-    * @param string|null $versionAttribution 版本属性
+    * @param string|null $versionAttribution 版本属性,draft/formal
     *
     * @return $this
     */

@@ -22,8 +22,8 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移
-    * startOffset  查询日志起始偏移
+    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     * log  日志内容
     * location  日志存储位置
     * stepRunId  所属步骤ID
@@ -42,8 +42,8 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移
-    * startOffset  查询日志起始偏移
+    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     * log  日志内容
     * location  日志存储位置
     * stepRunId  所属步骤ID
@@ -83,8 +83,8 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移
-    * startOffset  查询日志起始偏移
+    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     * log  日志内容
     * location  日志存储位置
     * stepRunId  所属步骤ID
@@ -103,8 +103,8 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移
-    * startOffset  查询日志起始偏移
+    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     * log  日志内容
     * location  日志存储位置
     * stepRunId  所属步骤ID
@@ -123,8 +123,8 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * hasMore  是否有更多日志
-    * endOffset  查询日志结束偏移
-    * startOffset  查询日志起始偏移
+    * endOffset  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
+    * startOffset  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     * log  日志内容
     * location  日志存储位置
     * stepRunId  所属步骤ID
@@ -254,7 +254,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endOffset
-    *  查询日志结束偏移
+    *  查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endOffset
     *
-    * @param string|null $endOffset 查询日志结束偏移
+    * @param string|null $endOffset 查询日志结束偏移。填入请求体end_offset字段，用于查询下一页日志。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startOffset
-    *  查询日志起始偏移
+    *  查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     *
     * @return string|null
     */
@@ -290,7 +290,7 @@ class ShowPipelineLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startOffset
     *
-    * @param string|null $startOffset 查询日志起始偏移
+    * @param string|null $startOffset 查询日志起始偏移。填入请求体start_offset字段，用于查询下一页日志。
     *
     * @return $this
     */

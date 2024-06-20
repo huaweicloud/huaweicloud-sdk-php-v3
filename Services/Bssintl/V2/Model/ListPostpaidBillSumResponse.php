@@ -33,11 +33,11 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'billCycle' => 'string',
-            'initialAmountDue' => 'double',
-            'consumeAmount' => 'double',
-            'refunds' => 'double',
-            'adjustments' => 'double',
-            'taxAmount' => 'double',
+            'initialAmountDue' => 'float',
+            'consumeAmount' => 'float',
+            'refunds' => 'float',
+            'adjustments' => 'float',
+            'taxAmount' => 'float',
             'currency' => 'string'
     ];
 
@@ -55,11 +55,11 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'billCycle' => null,
-        'initialAmountDue' => 'double',
-        'consumeAmount' => 'double',
-        'refunds' => 'double',
-        'adjustments' => 'double',
-        'taxAmount' => 'double',
+        'initialAmountDue' => 'bigdecimal',
+        'consumeAmount' => 'bigdecimal',
+        'refunds' => 'bigdecimal',
+        'adjustments' => 'bigdecimal',
+        'taxAmount' => 'bigdecimal',
         'currency' => null
     ];
 
@@ -267,7 +267,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     * Gets initialAmountDue
     *  账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
     *
-    * @return double|null
+    * @return float|null
     */
     public function getInitialAmountDue()
     {
@@ -277,7 +277,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets initialAmountDue
     *
-    * @param double|null $initialAmountDue 账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
+    * @param float|null $initialAmountDue 账单中的应还金额（含税）。 应还金额（包含销项税）=消费金额+退款金额+调账金额
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     * Gets consumeAmount
     *  账单中的消费金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getConsumeAmount()
     {
@@ -301,7 +301,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param double|null $consumeAmount 账单中的消费金额。
+    * @param float|null $consumeAmount 账单中的消费金额。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     * Gets refunds
     *  账单中的退款金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getRefunds()
     {
@@ -325,7 +325,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets refunds
     *
-    * @param double|null $refunds 账单中的退款金额。
+    * @param float|null $refunds 账单中的退款金额。
     *
     * @return $this
     */
@@ -339,7 +339,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     * Gets adjustments
     *  账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAdjustments()
     {
@@ -349,7 +349,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets adjustments
     *
-    * @param double|null $adjustments 账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
+    * @param float|null $adjustments 账单中的调账金额，即伙伴在账期内的调账信息如：欠款核销金额等。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     * Gets taxAmount
     *  账单中的销项税金额，销项税不计入应还金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getTaxAmount()
     {
@@ -373,7 +373,7 @@ class ListPostpaidBillSumResponse implements ModelInterface, ArrayAccess
     /**
     * Sets taxAmount
     *
-    * @param double|null $taxAmount 账单中的销项税金额，销项税不计入应还金额。
+    * @param float|null $taxAmount 账单中的销项税金额，销项税不计入应还金额。
     *
     * @return $this
     */

@@ -30,11 +30,11 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'availTransferAmount' => 'double',
+            'availTransferAmount' => 'float',
             'measureId' => 'int',
             'currency' => 'string',
-            'amount' => 'double',
-            'creditAmount' => 'double',
+            'amount' => 'float',
+            'creditAmount' => 'float',
             'expireTime' => 'string'
     ];
 
@@ -50,11 +50,11 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'availTransferAmount' => 'double',
+        'availTransferAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null,
-        'amount' => 'double',
-        'creditAmount' => 'double',
+        'amount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
         'expireTime' => null
     ];
 
@@ -231,7 +231,7 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     * Gets availTransferAmount
     *  可拨款的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAvailTransferAmount()
     {
@@ -241,7 +241,7 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets availTransferAmount
     *
-    * @param double|null $availTransferAmount 可拨款的金额。
+    * @param float|null $availTransferAmount 可拨款的金额。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     * Gets amount
     *  账户余额（仅balance_type=信用账户时才有这个字段）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -313,7 +313,7 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 账户余额（仅balance_type=信用账户时才有这个字段）。
+    * @param float|null $amount 账户余额（仅balance_type=信用账户时才有这个字段）。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用额度（仅balance_type=信用账户时才有这个字段）。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -337,7 +337,7 @@ class TransferAmountInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用额度（仅balance_type=信用账户时才有这个字段）。
+    * @param float|null $creditAmount 信用额度（仅balance_type=信用账户时才有这个字段）。
     *
     * @return $this
     */

@@ -308,8 +308,8 @@ class ListAlarmHistoriesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['to']) && (mb_strlen($this->container['to']) < 0)) {
                 $invalidProperties[] = "invalid value for 'to', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 999)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 999.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 999999)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 999999.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";

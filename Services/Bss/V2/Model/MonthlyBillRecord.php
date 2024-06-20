@@ -69,18 +69,18 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'tradeId' => 'string',
             'billType' => 'int',
             'status' => 'int',
-            'officialAmount' => 'double',
-            'officialDiscountAmount' => 'double',
-            'eraseAmount' => 'double',
-            'consumeAmount' => 'double',
-            'cashAmount' => 'double',
-            'creditAmount' => 'double',
-            'couponAmount' => 'double',
-            'flexipurchaseCouponAmount' => 'double',
-            'storedValueCardAmount' => 'double',
-            'bonusAmount' => 'double',
-            'debtAmount' => 'double',
-            'writeoffAmount' => 'double',
+            'officialAmount' => 'float',
+            'officialDiscountAmount' => 'float',
+            'eraseAmount' => 'float',
+            'consumeAmount' => 'float',
+            'cashAmount' => 'float',
+            'creditAmount' => 'float',
+            'couponAmount' => 'float',
+            'flexipurchaseCouponAmount' => 'float',
+            'storedValueCardAmount' => 'float',
+            'bonusAmount' => 'float',
+            'debtAmount' => 'float',
+            'writeoffAmount' => 'float',
             'regionName' => 'string'
     ];
 
@@ -135,18 +135,18 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         'tradeId' => null,
         'billType' => 'int32',
         'status' => 'int32',
-        'officialAmount' => 'double',
-        'officialDiscountAmount' => 'double',
-        'eraseAmount' => 'double',
-        'consumeAmount' => 'double',
-        'cashAmount' => 'double',
-        'creditAmount' => 'double',
-        'couponAmount' => 'double',
-        'flexipurchaseCouponAmount' => 'double',
-        'storedValueCardAmount' => 'double',
-        'bonusAmount' => 'double',
-        'debtAmount' => 'double',
-        'writeoffAmount' => 'double',
+        'officialAmount' => 'bigdecimal',
+        'officialDiscountAmount' => 'bigdecimal',
+        'eraseAmount' => 'bigdecimal',
+        'consumeAmount' => 'bigdecimal',
+        'cashAmount' => 'bigdecimal',
+        'creditAmount' => 'bigdecimal',
+        'couponAmount' => 'bigdecimal',
+        'flexipurchaseCouponAmount' => 'bigdecimal',
+        'storedValueCardAmount' => 'bigdecimal',
+        'bonusAmount' => 'bigdecimal',
+        'debtAmount' => 'bigdecimal',
+        'writeoffAmount' => 'bigdecimal',
         'regionName' => null
     ];
 
@@ -868,7 +868,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets officialAmount
     *  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialAmount()
     {
@@ -878,7 +878,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets officialAmount
     *
-    * @param double|null $officialAmount 官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
+    * @param float|null $officialAmount 官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
     *
     * @return $this
     */
@@ -892,7 +892,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets officialDiscountAmount
     *  折扣金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialDiscountAmount()
     {
@@ -902,7 +902,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets officialDiscountAmount
     *
-    * @param double|null $officialDiscountAmount 折扣金额。单位：元。
+    * @param float|null $officialDiscountAmount 折扣金额。单位：元。
     *
     * @return $this
     */
@@ -916,7 +916,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets eraseAmount
     *  抹零金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getEraseAmount()
     {
@@ -926,7 +926,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets eraseAmount
     *
-    * @param double|null $eraseAmount 抹零金额。单位：元。
+    * @param float|null $eraseAmount 抹零金额。单位：元。
     *
     * @return $this
     */
@@ -940,7 +940,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets consumeAmount
     *  应付金额，包括现金券和储值卡和代金券金额。单位：元。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_value_card_amount，bonus_amount，debt_amount，writeoff_amount的总和。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getConsumeAmount()
     {
@@ -950,7 +950,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param double|null $consumeAmount 应付金额，包括现金券和储值卡和代金券金额。单位：元。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_value_card_amount，bonus_amount，debt_amount，writeoff_amount的总和。
+    * @param float|null $consumeAmount 应付金额，包括现金券和储值卡和代金券金额。单位：元。  说明： consume_amount的值等于cash_amount，credit_amount，coupon_amount，flexipurchase_coupon_amount，stored_value_card_amount，bonus_amount，debt_amount，writeoff_amount的总和。
     *
     * @return $this
     */
@@ -964,7 +964,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets cashAmount
     *  现金支付金额。单位：元.
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCashAmount()
     {
@@ -974,7 +974,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets cashAmount
     *
-    * @param double|null $cashAmount 现金支付金额。单位：元.
+    * @param float|null $cashAmount 现金支付金额。单位：元.
     *
     * @return $this
     */
@@ -988,7 +988,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets creditAmount
     *  信用额度支付金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCreditAmount()
     {
@@ -998,7 +998,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets creditAmount
     *
-    * @param double|null $creditAmount 信用额度支付金额。单位：元。
+    * @param float|null $creditAmount 信用额度支付金额。单位：元。
     *
     * @return $this
     */
@@ -1012,7 +1012,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets couponAmount
     *  代金券支付金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getCouponAmount()
     {
@@ -1022,7 +1022,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets couponAmount
     *
-    * @param double|null $couponAmount 代金券支付金额。单位：元。
+    * @param float|null $couponAmount 代金券支付金额。单位：元。
     *
     * @return $this
     */
@@ -1036,7 +1036,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets flexipurchaseCouponAmount
     *  现金券支付金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getFlexipurchaseCouponAmount()
     {
@@ -1046,7 +1046,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets flexipurchaseCouponAmount
     *
-    * @param double|null $flexipurchaseCouponAmount 现金券支付金额。单位：元。
+    * @param float|null $flexipurchaseCouponAmount 现金券支付金额。单位：元。
     *
     * @return $this
     */
@@ -1060,7 +1060,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets storedValueCardAmount
     *  储值卡支付金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getStoredValueCardAmount()
     {
@@ -1070,7 +1070,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets storedValueCardAmount
     *
-    * @param double|null $storedValueCardAmount 储值卡支付金额。单位：元。
+    * @param float|null $storedValueCardAmount 储值卡支付金额。单位：元。
     *
     * @return $this
     */
@@ -1084,7 +1084,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets bonusAmount
     *  奖励金支付金额（奖励金已经下线，目前用于现网客户未使用完的奖励金）。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getBonusAmount()
     {
@@ -1094,7 +1094,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets bonusAmount
     *
-    * @param double|null $bonusAmount 奖励金支付金额（奖励金已经下线，目前用于现网客户未使用完的奖励金）。单位：元。
+    * @param float|null $bonusAmount 奖励金支付金额（奖励金已经下线，目前用于现网客户未使用完的奖励金）。单位：元。
     *
     * @return $this
     */
@@ -1108,7 +1108,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets debtAmount
     *  欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebtAmount()
     {
@@ -1118,7 +1118,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets debtAmount
     *
-    * @param double|null $debtAmount 欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
+    * @param float|null $debtAmount 欠费金额。单位：元。  说明： 对于月结客户，欠费金额即页面上的月度结算金额。
     *
     * @return $this
     */
@@ -1132,7 +1132,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * Gets writeoffAmount
     *  欠费核销金额。单位：元。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getWriteoffAmount()
     {
@@ -1142,7 +1142,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     /**
     * Sets writeoffAmount
     *
-    * @param double|null $writeoffAmount 欠费核销金额。单位：元。
+    * @param float|null $writeoffAmount 欠费核销金额。单位：元。
     *
     * @return $this
     */

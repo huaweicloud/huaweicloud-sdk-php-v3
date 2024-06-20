@@ -169,7 +169,10 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 85)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 85)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 85.";
             }
         return $invalidProperties;
@@ -190,7 +193,7 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     * Gets name
     *  规则模版实例名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -200,7 +203,7 @@ class UpdateRuleSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 规则模版实例名称
+    * @param string $name 规则模版实例名称
     *
     * @return $this
     */

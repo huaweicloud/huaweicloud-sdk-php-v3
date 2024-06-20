@@ -25,7 +25,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     * ecsFlavorId  底层资源类型。
     * billingCode  账单计费类型。
     * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     * ios  支持的磁盘IO类型列表。
     * supportFeatures  当前规格实例支持的功能特性列表。
     * properties  properties
@@ -51,7 +51,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     * ecsFlavorId  底层资源类型。
     * billingCode  账单计费类型。
     * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     * ios  支持的磁盘IO类型列表。
     * supportFeatures  当前规格实例支持的功能特性列表。
     * properties  properties
@@ -98,7 +98,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     * ecsFlavorId  底层资源类型。
     * billingCode  账单计费类型。
     * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     * ios  支持的磁盘IO类型列表。
     * supportFeatures  当前规格实例支持的功能特性列表。
     * properties  properties
@@ -124,7 +124,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     * ecsFlavorId  底层资源类型。
     * billingCode  账单计费类型。
     * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     * ios  支持的磁盘IO类型列表。
     * supportFeatures  当前规格实例支持的功能特性列表。
     * properties  properties
@@ -150,7 +150,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     * ecsFlavorId  底层资源类型。
     * billingCode  账单计费类型。
     * archTypes  CPU架构。
-    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    * chargingMode  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     * ios  支持的磁盘IO类型列表。
     * supportFeatures  当前规格实例支持的功能特性列表。
     * properties  properties
@@ -382,7 +382,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    *  [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     *
     * @return string[]|null
     */
@@ -394,7 +394,7 @@ class ListEngineProductsEntity implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string[]|null $chargingMode [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,sbc,hk_sbc,cmcc,hws_eu)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm)
+    * @param string[]|null $chargingMode [计费模式。monthly：包年/包月类型。hourly：按需类型。](tag:hws,hws_hk,ctc,cmcc)[暂未使用。](tag:hws_ocb,ocb,hcs)[计费模式。hourly：按需类型。](tag:dt,g42,tm,hk_g42,hk_tm,sbc,hk_sbc,hws_eu)
     *
     * @return $this
     */

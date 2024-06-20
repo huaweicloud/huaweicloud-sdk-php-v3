@@ -194,6 +194,12 @@ class ListPublisherRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -236,7 +242,7 @@ class ListPublisherRequest implements ModelInterface, ArrayAccess
     * Gets offset
     *  偏移
     *
-    * @return string|null
+    * @return string
     */
     public function getOffset()
     {
@@ -246,7 +252,7 @@ class ListPublisherRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移
+    * @param string $offset 偏移
     *
     * @return $this
     */
@@ -260,7 +266,7 @@ class ListPublisherRequest implements ModelInterface, ArrayAccess
     * Gets limit
     *  大小
     *
-    * @return string|null
+    * @return string
     */
     public function getLimit()
     {
@@ -270,7 +276,7 @@ class ListPublisherRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 大小
+    * @param string $limit 大小
     *
     * @return $this
     */

@@ -180,6 +180,15 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
+        if ($this->container['version'] === null) {
+            $invalidProperties[] = "'version' can't be null";
+        }
+        if ($this->container['publisherUniqueId'] === null) {
+            $invalidProperties[] = "'publisherUniqueId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -198,7 +207,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     * Gets pluginName
     *  插件名
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -208,7 +217,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string $pluginName 插件名
     *
     * @return $this
     */
@@ -222,7 +231,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     * Gets version
     *  版本
     *
-    * @return string|null
+    * @return string
     */
     public function getVersion()
     {
@@ -232,7 +241,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string $version 版本
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     * Gets publisherUniqueId
     *  发布商ID
     *
-    * @return string|null
+    * @return string
     */
     public function getPublisherUniqueId()
     {
@@ -256,7 +265,7 @@ class PublishPluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets publisherUniqueId
     *
-    * @param string|null $publisherUniqueId 发布商ID
+    * @param string $publisherUniqueId 发布商ID
     *
     * @return $this
     */

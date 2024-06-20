@@ -34,9 +34,9 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'discountId' => 'string',
-            'amount' => 'double',
-            'officialWebsiteAmount' => 'double',
-            'discountAmount' => 'double',
+            'amount' => 'float',
+            'officialWebsiteAmount' => 'float',
+            'discountAmount' => 'float',
             'measureId' => 'int',
             'discountType' => 'int',
             'discountName' => 'string',
@@ -60,9 +60,9 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'discountId' => null,
-        'amount' => 'double',
-        'officialWebsiteAmount' => 'double',
-        'discountAmount' => 'double',
+        'amount' => 'bigdecimal',
+        'officialWebsiteAmount' => 'bigdecimal',
+        'discountAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'discountType' => 'int32',
         'discountName' => null,
@@ -300,7 +300,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * Gets amount
     *  总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getAmount()
     {
@@ -310,7 +310,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double|null $amount 总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
+    * @param float|null $amount 总额，即最终优惠后的金额。 amount= official_website_amount - discountAmount。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * Gets officialWebsiteAmount
     *  包年/包月产品的官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -334,7 +334,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
+    * @param float|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     * Gets discountAmount
     *  可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDiscountAmount()
     {
@@ -358,7 +358,7 @@ class OptionalDiscountRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param double|null $discountAmount 可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
+    * @param float|null $discountAmount 可选折扣优惠额，如商务折扣、伙伴折扣、促销折扣和折扣券选用时的优惠额。
     *
     * @return $this
     */

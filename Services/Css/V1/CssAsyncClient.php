@@ -1417,6 +1417,9 @@ class CssAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['datastoreType'] !== null) {
+            $queryParams['datastore_type'] = $localVarParams['datastoreType'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(

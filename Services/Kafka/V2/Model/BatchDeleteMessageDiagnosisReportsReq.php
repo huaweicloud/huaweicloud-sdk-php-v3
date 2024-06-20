@@ -20,7 +20,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reportIdList  待删除report id 列表
+    * reportIdList  待删除report id列表
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reportIdList  待删除report id 列表
+    * reportIdList  待删除report id列表
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reportIdList  待删除report id 列表
+    * reportIdList  待删除report id列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reportIdList  待删除report id 列表
+    * reportIdList  待删除report id列表
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reportIdList  待删除report id 列表
+    * reportIdList  待删除report id列表
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
 
     /**
     * Gets reportIdList
-    *  待删除report id 列表
+    *  待删除report id列表
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class BatchDeleteMessageDiagnosisReportsReq implements ModelInterface, ArrayAcce
     /**
     * Sets reportIdList
     *
-    * @param string[] $reportIdList 待删除report id 列表
+    * @param string[] $reportIdList 待删除report id列表
     *
     * @return $this
     */

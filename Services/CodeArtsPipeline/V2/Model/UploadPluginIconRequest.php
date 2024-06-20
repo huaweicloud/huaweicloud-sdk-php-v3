@@ -183,6 +183,9 @@ class UploadPluginIconRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -225,7 +228,7 @@ class UploadPluginIconRequest implements ModelInterface, ArrayAccess
     * Gets pluginName
     *  pluginName
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -235,7 +238,7 @@ class UploadPluginIconRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName pluginName
+    * @param string $pluginName pluginName
     *
     * @return $this
     */

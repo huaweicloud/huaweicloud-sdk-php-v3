@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class CbhRegion {
 
-    public static $REGION = array("https://cbh.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://cbh.cn-north-9.myhuaweicloud.com"=>"cn-north-9","https://cbh.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://cbh.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://cbh.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://cbh.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://cbh.sa-brazil-1.myhuaweicloud.com"=>"sa-brazil-1","https://cbh.la-south-2.myhuaweicloud.com"=>"la-south-2","https://cbh.la-north-2.myhuaweicloud.com"=>"la-north-2","https://cbh.ap-southeast-4.myhuaweicloud.com"=>"ap-southeast-4",);
+    public static $REGION = array("https://cbh.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://cbh.cn-north-9.myhuaweicloud.com"=>"cn-north-9","https://cbh.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://cbh.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://cbh.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://cbh.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://cbh.sa-brazil-1.myhuaweicloud.com"=>"sa-brazil-1","https://cbh.la-south-2.myhuaweicloud.com"=>"la-south-2","https://cbh.la-north-2.myhuaweicloud.com"=>"la-north-2","https://cbh.ap-southeast-4.myhuaweicloud.com"=>"ap-southeast-4","https://cbh.ru-moscow-1.myhuaweicloud.com"=>"ru-moscow-1","https://cbh.my-kualalumpur-1.myhuaweicloud.com"=>"my-kualalumpur-1",);
 
     public static function valueOf($regionId)
     {

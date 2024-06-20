@@ -20,7 +20,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * useCondition  用于区分插件为流水线可使用/模板可使用
+    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
     * inputSourceType  用于区分单源/多源的情况
     * businessType  业务类型
@@ -38,7 +38,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * useCondition  用于区分插件为流水线可使用/模板可使用
+    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
     * inputSourceType  用于区分单源/多源的情况
     * businessType  业务类型
@@ -77,7 +77,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * useCondition  用于区分插件为流水线可使用/模板可使用
+    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
     * inputSourceType  用于区分单源/多源的情况
     * businessType  业务类型
@@ -95,7 +95,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * useCondition  用于区分插件为流水线可使用/模板可使用
+    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
     * inputSourceType  用于区分单源/多源的情况
     * businessType  业务类型
@@ -113,7 +113,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * useCondition  用于区分插件为流水线可使用/模板可使用
+    * useCondition  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     * inputRepoType  用于区分源的代码仓类型codehub/gitlab/github等
     * inputSourceType  用于区分单源/多源的情况
     * businessType  业务类型
@@ -218,7 +218,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets useCondition
-    *  用于区分插件为流水线可使用/模板可使用
+    *  用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class BusinessTypePluginsQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets useCondition
     *
-    * @param string|null $useCondition 用于区分插件为流水线可使用/模板可使用
+    * @param string|null $useCondition 用于区分插件为流水线可使用/模板可使用, 可选pipeline/template
     *
     * @return $this
     */

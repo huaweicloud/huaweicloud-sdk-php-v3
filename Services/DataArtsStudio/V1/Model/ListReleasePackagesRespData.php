@@ -37,7 +37,7 @@ class ListReleasePackagesRespData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'applyTimestamp' => 'string',
+            'applyTimestamp' => 'int',
             'applyUserId' => 'string',
             'applyUserName' => 'string',
             'deleteFlag' => 'int',
@@ -71,7 +71,7 @@ class ListReleasePackagesRespData implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'applyTimestamp' => null,
+        'applyTimestamp' => 'int64',
         'applyUserId' => null,
         'applyUserName' => null,
         'deleteFlag' => 'int32',
@@ -311,7 +311,7 @@ class ListReleasePackagesRespData implements ModelInterface, ArrayAccess
     * Gets applyTimestamp
     *  申请时间，13位时间戳
     *
-    * @return string|null
+    * @return int|null
     */
     public function getApplyTimestamp()
     {
@@ -321,7 +321,7 @@ class ListReleasePackagesRespData implements ModelInterface, ArrayAccess
     /**
     * Sets applyTimestamp
     *
-    * @param string|null $applyTimestamp 申请时间，13位时间戳
+    * @param int|null $applyTimestamp 申请时间，13位时间戳
     *
     * @return $this
     */

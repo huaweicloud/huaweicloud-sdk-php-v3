@@ -30,8 +30,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'budgetAmount' => 'double',
-            'usedAmount' => 'double',
+            'budgetAmount' => 'float',
+            'usedAmount' => 'float',
             'measureId' => 'int',
             'currency' => 'string',
             'budgetType' => 'string'
@@ -48,8 +48,8 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'budgetAmount' => 'double',
-        'usedAmount' => 'double',
+        'budgetAmount' => 'bigdecimal',
+        'usedAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'currency' => null,
         'budgetType' => null
@@ -244,7 +244,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * Gets budgetAmount
     *  初始预算金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getBudgetAmount()
     {
@@ -254,7 +254,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets budgetAmount
     *
-    * @param double|null $budgetAmount 初始预算金额。
+    * @param float|null $budgetAmount 初始预算金额。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     * Gets usedAmount
     *  已经使用的预算。该预算存在一定的时延和误差。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getUsedAmount()
     {
@@ -278,7 +278,7 @@ class ShowSubCustomerBudgetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedAmount
     *
-    * @param double|null $usedAmount 已经使用的预算。该预算存在一定的时延和误差。
+    * @param float|null $usedAmount 已经使用的预算。该预算存在一定的时延和误差。
     *
     * @return $this
     */

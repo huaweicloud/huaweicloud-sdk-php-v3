@@ -21,25 +21,33 @@ class DeleteBasicPluginRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainId  租户ID
-    * pluginName  是否调用成功
+    * pluginName  需要删除的插件名
+    * type  删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    * version  需要删除的插件版本
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'domainId' => 'string',
-            'pluginName' => 'string'
+            'pluginName' => 'string',
+            'type' => 'string',
+            'version' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainId  租户ID
-    * pluginName  是否调用成功
+    * pluginName  需要删除的插件名
+    * type  删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    * version  需要删除的插件版本
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'domainId' => null,
-        'pluginName' => null
+        'pluginName' => null,
+        'type' => null,
+        'version' => null
     ];
 
     /**
@@ -66,37 +74,49 @@ class DeleteBasicPluginRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainId  租户ID
-    * pluginName  是否调用成功
+    * pluginName  需要删除的插件名
+    * type  删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    * version  需要删除的插件版本
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'domainId' => 'domain_id',
-            'pluginName' => 'plugin_name'
+            'pluginName' => 'plugin_name',
+            'type' => 'type',
+            'version' => 'version'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  租户ID
-    * pluginName  是否调用成功
+    * pluginName  需要删除的插件名
+    * type  删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    * version  需要删除的插件版本
     *
     * @var string[]
     */
     protected static $setters = [
             'domainId' => 'setDomainId',
-            'pluginName' => 'setPluginName'
+            'pluginName' => 'setPluginName',
+            'type' => 'setType',
+            'version' => 'setVersion'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  租户ID
-    * pluginName  是否调用成功
+    * pluginName  需要删除的插件名
+    * type  删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    * version  需要删除的插件版本
     *
     * @var string[]
     */
     protected static $getters = [
             'domainId' => 'getDomainId',
-            'pluginName' => 'getPluginName'
+            'pluginName' => 'getPluginName',
+            'type' => 'getType',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -159,6 +179,8 @@ class DeleteBasicPluginRequest implements ModelInterface, ArrayAccess
     {
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['pluginName'] = isset($data['pluginName']) ? $data['pluginName'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -171,6 +193,12 @@ class DeleteBasicPluginRequest implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
+        }
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -212,9 +240,9 @@ class DeleteBasicPluginRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  是否调用成功
+    *  需要删除的插件名
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -224,13 +252,61 @@ class DeleteBasicPluginRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 是否调用成功
+    * @param string $pluginName 需要删除的插件名
     *
     * @return $this
     */
     public function setPluginName($pluginName)
     {
         $this->container['pluginName'] = $pluginName;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    *
+    * @return string
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string $type 删除类型，all 代表删除整个插件，single代表删除单个插件版本
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  需要删除的插件版本
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 需要删除的插件版本
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

@@ -35,7 +35,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'id' => 'string',
-            'amount' => 'double',
+            'amount' => 'float',
             'measureId' => 'string',
             'customerId' => 'string',
             'resourceTypeCode' => 'string',
@@ -63,7 +63,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'id' => null,
-        'amount' => 'double',
+        'amount' => 'bigdecimal',
         'measureId' => null,
         'customerId' => null,
         'resourceTypeCode' => null,
@@ -320,7 +320,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     * Gets amount
     *  金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
     *
-    * @return double
+    * @return float
     */
     public function getAmount()
     {
@@ -330,7 +330,7 @@ class OrderRefundInfoV2 implements ModelInterface, ArrayAccess
     /**
     * Sets amount
     *
-    * @param double $amount 金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
+    * @param float $amount 金额。 金额为负数，表示退订金额。金额为正数，表示已消费金额或收取的退订手续费。
     *
     * @return $this
     */

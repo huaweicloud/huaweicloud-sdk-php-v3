@@ -279,6 +279,18 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
+        if ($this->container['displayName'] === null) {
+            $invalidProperties[] = "'displayName' can't be null";
+        }
+        if ($this->container['businessType'] === null) {
+            $invalidProperties[] = "'businessType' can't be null";
+        }
+        if ($this->container['businessTypeDisplayName'] === null) {
+            $invalidProperties[] = "'businessTypeDisplayName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -369,7 +381,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * Gets pluginName
     *  插件名
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -379,7 +391,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string $pluginName 插件名
     *
     * @return $this
     */
@@ -393,7 +405,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * Gets displayName
     *  展示名
     *
-    * @return string|null
+    * @return string
     */
     public function getDisplayName()
     {
@@ -403,7 +415,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string $displayName 展示名
     *
     * @return $this
     */
@@ -417,7 +429,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * Gets businessType
     *  业务类型
     *
-    * @return string|null
+    * @return string
     */
     public function getBusinessType()
     {
@@ -427,7 +439,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string $businessType 业务类型
     *
     * @return $this
     */
@@ -441,7 +453,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     * Gets businessTypeDisplayName
     *  业务类型展示名
     *
-    * @return string|null
+    * @return string
     */
     public function getBusinessTypeDisplayName()
     {
@@ -451,7 +463,7 @@ class PluginBasicDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessTypeDisplayName
     *
-    * @param string|null $businessTypeDisplayName 业务类型展示名
+    * @param string $businessTypeDisplayName 业务类型展示名
     *
     * @return $this
     */

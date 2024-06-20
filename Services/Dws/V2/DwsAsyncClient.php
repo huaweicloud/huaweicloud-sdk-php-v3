@@ -780,6 +780,74 @@ class DwsAsyncClient extends Client
     }
 
     /**
+     * 修改集群安全组
+     *
+     * 该接口用于修改集群安全组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeSecurityGroupAsync($request)
+    {
+        return $this->changeSecurityGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function changeSecurityGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/security-group';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ChangeSecurityGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ChangeSecurityGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建集群前检查
      *
      * 创建集群前预检查
@@ -8446,6 +8514,74 @@ class DwsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\SaveClusterDescriptionInfoResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\SaveClusterDescriptionInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询集群规格详情
+     *
+     * 查询集群使用的规格详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterFlavorAsync($request)
+    {
+        return $this->showClusterFlavorAsyncWithHttpInfo($request);
+    }
+    
+    public function showClusterFlavorAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/clusters/{cluster_id}/flavor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterFlavorResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\ShowClusterFlavorRequest',
             $asyncRequest = true);
     }
 

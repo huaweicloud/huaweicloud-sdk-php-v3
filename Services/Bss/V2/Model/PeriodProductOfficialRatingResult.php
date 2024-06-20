@@ -32,7 +32,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'productId' => 'string',
-            'officialWebsiteAmount' => 'double',
+            'officialWebsiteAmount' => 'float',
             'measureId' => 'int',
             'installmentOfficialWebsiteAmount' => 'string',
             'installmentPeriodType' => 'int'
@@ -52,7 +52,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'productId' => null,
-        'officialWebsiteAmount' => 'double',
+        'officialWebsiteAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'installmentOfficialWebsiteAmount' => null,
         'installmentPeriodType' => 'int32'
@@ -291,7 +291,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     * Gets officialWebsiteAmount
     *  包年/包月产品的官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -301,7 +301,7 @@ class PeriodProductOfficialRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
+    * @param float|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */

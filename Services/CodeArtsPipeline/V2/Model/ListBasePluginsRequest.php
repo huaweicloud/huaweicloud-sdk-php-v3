@@ -21,7 +21,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainId  租户ID
-    * attribution  属性
+    * attribution  插件属性,可选official、published
     * offset  偏移
     * limit  大小
     *
@@ -37,7 +37,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainId  租户ID
-    * attribution  属性
+    * attribution  插件属性,可选official、published
     * offset  偏移
     * limit  大小
     *
@@ -74,7 +74,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainId  租户ID
-    * attribution  属性
+    * attribution  插件属性,可选official、published
     * offset  偏移
     * limit  大小
     *
@@ -90,7 +90,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  租户ID
-    * attribution  属性
+    * attribution  插件属性,可选official、published
     * offset  偏移
     * limit  大小
     *
@@ -106,7 +106,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  租户ID
-    * attribution  属性
+    * attribution  插件属性,可选official、published
     * offset  偏移
     * limit  大小
     *
@@ -194,6 +194,15 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+        if ($this->container['attribution'] === null) {
+            $invalidProperties[] = "'attribution' can't be null";
+        }
+        if ($this->container['offset'] === null) {
+            $invalidProperties[] = "'offset' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalidProperties[] = "'limit' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -234,9 +243,9 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets attribution
-    *  属性
+    *  插件属性,可选official、published
     *
-    * @return string|null
+    * @return string
     */
     public function getAttribution()
     {
@@ -246,7 +255,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets attribution
     *
-    * @param string|null $attribution 属性
+    * @param string $attribution 插件属性,可选official、published
     *
     * @return $this
     */
@@ -260,7 +269,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     * Gets offset
     *  偏移
     *
-    * @return string|null
+    * @return string
     */
     public function getOffset()
     {
@@ -270,7 +279,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移
+    * @param string $offset 偏移
     *
     * @return $this
     */
@@ -284,7 +293,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     * Gets limit
     *  大小
     *
-    * @return string|null
+    * @return string
     */
     public function getLimit()
     {
@@ -294,7 +303,7 @@ class ListBasePluginsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 大小
+    * @param string $limit 大小
     *
     * @return $this
     */

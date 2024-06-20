@@ -27,7 +27,7 @@ class BalanceTypePay implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'balanceTypeId' => 'string',
-            'deductAmount' => 'double'
+            'deductAmount' => 'float'
     ];
 
     /**
@@ -39,7 +39,7 @@ class BalanceTypePay implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'balanceTypeId' => null,
-        'deductAmount' => 'double'
+        'deductAmount' => 'bigdecimal'
     ];
 
     /**
@@ -211,7 +211,7 @@ class BalanceTypePay implements ModelInterface, ArrayAccess
     * Gets deductAmount
     *  支出金额。 单位：分
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDeductAmount()
     {
@@ -221,7 +221,7 @@ class BalanceTypePay implements ModelInterface, ArrayAccess
     /**
     * Sets deductAmount
     *
-    * @param double|null $deductAmount 支出金额。 单位：分
+    * @param float|null $deductAmount 支出金额。 单位：分
     *
     * @return $this
     */

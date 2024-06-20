@@ -312,6 +312,30 @@ class PluginDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['runtimeAttribution'] === null) {
+            $invalidProperties[] = "'runtimeAttribution' can't be null";
+        }
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
+        if ($this->container['displayName'] === null) {
+            $invalidProperties[] = "'displayName' can't be null";
+        }
+        if ($this->container['businessType'] === null) {
+            $invalidProperties[] = "'businessType' can't be null";
+        }
+        if ($this->container['businessTypeDisplayName'] === null) {
+            $invalidProperties[] = "'businessTypeDisplayName' can't be null";
+        }
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
+        }
+        if ($this->container['version'] === null) {
+            $invalidProperties[] = "'version' can't be null";
+        }
+        if ($this->container['executionInfo'] === null) {
+            $invalidProperties[] = "'executionInfo' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -378,7 +402,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets runtimeAttribution
     *  运行属性
     *
-    * @return string|null
+    * @return string
     */
     public function getRuntimeAttribution()
     {
@@ -388,7 +412,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets runtimeAttribution
     *
-    * @param string|null $runtimeAttribution 运行属性
+    * @param string $runtimeAttribution 运行属性
     *
     * @return $this
     */
@@ -402,7 +426,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets pluginName
     *  插件名
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -412,7 +436,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string $pluginName 插件名
     *
     * @return $this
     */
@@ -426,7 +450,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets displayName
     *  展示名
     *
-    * @return string|null
+    * @return string
     */
     public function getDisplayName()
     {
@@ -436,7 +460,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 展示名
+    * @param string $displayName 展示名
     *
     * @return $this
     */
@@ -450,7 +474,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets businessType
     *  业务类型
     *
-    * @return string|null
+    * @return string
     */
     public function getBusinessType()
     {
@@ -460,7 +484,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string $businessType 业务类型
     *
     * @return $this
     */
@@ -474,7 +498,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets businessTypeDisplayName
     *  业务类型展示名
     *
-    * @return string|null
+    * @return string
     */
     public function getBusinessTypeDisplayName()
     {
@@ -484,7 +508,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessTypeDisplayName
     *
-    * @param string|null $businessTypeDisplayName 业务类型展示名
+    * @param string $businessTypeDisplayName 业务类型展示名
     *
     * @return $this
     */
@@ -498,7 +522,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets description
     *  描述
     *
-    * @return string|null
+    * @return string
     */
     public function getDescription()
     {
@@ -508,7 +532,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string $description 描述
     *
     * @return $this
     */
@@ -594,7 +618,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets version
     *  版本号
     *
-    * @return string|null
+    * @return string
     */
     public function getVersion()
     {
@@ -604,7 +628,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本号
+    * @param string $version 版本号
     *
     * @return $this
     */
@@ -642,7 +666,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     * Gets executionInfo
     *  executionInfo
     *
-    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfo|null
+    * @return \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfo
     */
     public function getExecutionInfo()
     {
@@ -652,7 +676,7 @@ class PluginDTO implements ModelInterface, ArrayAccess
     /**
     * Sets executionInfo
     *
-    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfo|null $executionInfo executionInfo
+    * @param \HuaweiCloud\SDK\CodeArtsPipeline\V2\Model\PluginDTOExecutionInfo $executionInfo executionInfo
     *
     * @return $this
     */

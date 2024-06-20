@@ -24,7 +24,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     * isSystem  是否系统模板
     * name  模板名称
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量
+    * limit  每次查询的条目数量，默认为10。
     * sortKey  用于排序的字段，非必选。取值为：name，create_time
     * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
     *
@@ -46,7 +46,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     * isSystem  是否系统模板
     * name  模板名称
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量
+    * limit  每次查询的条目数量，默认为10。
     * sortKey  用于排序的字段，非必选。取值为：name，create_time
     * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
     *
@@ -89,7 +89,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     * isSystem  是否系统模板
     * name  模板名称
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量
+    * limit  每次查询的条目数量，默认为10。
     * sortKey  用于排序的字段，非必选。取值为：name，create_time
     * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
     *
@@ -111,7 +111,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     * isSystem  是否系统模板
     * name  模板名称
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量
+    * limit  每次查询的条目数量，默认为10。
     * sortKey  用于排序的字段，非必选。取值为：name，create_time
     * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
     *
@@ -133,7 +133,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     * isSystem  是否系统模板
     * name  模板名称
     * offset  偏移量，表示从此偏移量开始查询，offset大于等于0，默认为0
-    * limit  每次查询的条目数量
+    * limit  每次查询的条目数量，默认为10。
     * sortKey  用于排序的字段，非必选。取值为：name，create_time
     * sortDir  排序类型，非必选。asc按排序字段升序，desc按排序字段降序
     *
@@ -336,7 +336,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每次查询的条目数量
+    *  每次查询的条目数量，默认为10。
     *
     * @return int|null
     */
@@ -348,7 +348,7 @@ class ListPipelineTemplatesQuery implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每次查询的条目数量
+    * @param int|null $limit 每次查询的条目数量，默认为10。
     *
     * @return $this
     */

@@ -20,11 +20,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pluginName  pluginName
-    * regexName  regexName
-    * maintainer  maintainer
-    * businessType  businessType
-    * pluginAttribution  pluginAttribution
+    * pluginName  可选的查询条件-插件名
+    * regexName  可选的查询条件-匹配名称
+    * maintainer  维护者
+    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
+    * pluginAttribution  插件属性，official/custom
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pluginName  pluginName
-    * regexName  regexName
-    * maintainer  maintainer
-    * businessType  businessType
-    * pluginAttribution  pluginAttribution
+    * pluginName  可选的查询条件-插件名
+    * regexName  可选的查询条件-匹配名称
+    * maintainer  维护者
+    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
+    * pluginAttribution  插件属性，official/custom
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pluginName  pluginName
-    * regexName  regexName
-    * maintainer  maintainer
-    * businessType  businessType
-    * pluginAttribution  pluginAttribution
+    * pluginName  可选的查询条件-插件名
+    * regexName  可选的查询条件-匹配名称
+    * maintainer  维护者
+    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
+    * pluginAttribution  插件属性，official/custom
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pluginName  pluginName
-    * regexName  regexName
-    * maintainer  maintainer
-    * businessType  businessType
-    * pluginAttribution  pluginAttribution
+    * pluginName  可选的查询条件-插件名
+    * regexName  可选的查询条件-匹配名称
+    * maintainer  维护者
+    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
+    * pluginAttribution  插件属性，official/custom
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pluginName  pluginName
-    * regexName  regexName
-    * maintainer  maintainer
-    * businessType  businessType
-    * pluginAttribution  pluginAttribution
+    * pluginName  可选的查询条件-插件名
+    * regexName  可选的查询条件-匹配名称
+    * maintainer  维护者
+    * businessType  业务类型,[Build,Gate,Deploy,Test,Normal]
+    * pluginAttribution  插件属性，official/custom
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginName
-    *  pluginName
+    *  可选的查询条件-插件名
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName pluginName
+    * @param string|null $pluginName 可选的查询条件-插件名
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets regexName
-    *  regexName
+    *  可选的查询条件-匹配名称
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets regexName
     *
-    * @param string|null $regexName regexName
+    * @param string|null $regexName 可选的查询条件-匹配名称
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maintainer
-    *  maintainer
+    *  维护者
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets maintainer
     *
-    * @param string|null $maintainer maintainer
+    * @param string|null $maintainer 维护者
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessType
-    *  businessType
+    *  业务类型,[Build,Gate,Deploy,Test,Normal]
     *
     * @return string[]|null
     */
@@ -302,7 +302,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string[]|null $businessType businessType
+    * @param string[]|null $businessType 业务类型,[Build,Gate,Deploy,Test,Normal]
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets pluginAttribution
-    *  pluginAttribution
+    *  插件属性，official/custom
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class AgentPluginInfoQueryDTO implements ModelInterface, ArrayAccess
     /**
     * Sets pluginAttribution
     *
-    * @param string|null $pluginAttribution pluginAttribution
+    * @param string|null $pluginAttribution 插件属性，official/custom
     *
     * @return $this
     */

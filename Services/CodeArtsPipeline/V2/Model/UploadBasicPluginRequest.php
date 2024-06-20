@@ -194,6 +194,12 @@ class UploadBasicPluginRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+        if ($this->container['pluginName'] === null) {
+            $invalidProperties[] = "'pluginName' can't be null";
+        }
+        if ($this->container['businessType'] === null) {
+            $invalidProperties[] = "'businessType' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -236,7 +242,7 @@ class UploadBasicPluginRequest implements ModelInterface, ArrayAccess
     * Gets pluginName
     *  插件名
     *
-    * @return string|null
+    * @return string
     */
     public function getPluginName()
     {
@@ -246,7 +252,7 @@ class UploadBasicPluginRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pluginName
     *
-    * @param string|null $pluginName 插件名
+    * @param string $pluginName 插件名
     *
     * @return $this
     */
@@ -260,7 +266,7 @@ class UploadBasicPluginRequest implements ModelInterface, ArrayAccess
     * Gets businessType
     *  业务类型
     *
-    * @return string|null
+    * @return string
     */
     public function getBusinessType()
     {
@@ -270,7 +276,7 @@ class UploadBasicPluginRequest implements ModelInterface, ArrayAccess
     /**
     * Sets businessType
     *
-    * @param string|null $businessType 业务类型
+    * @param string $businessType 业务类型
     *
     * @return $this
     */

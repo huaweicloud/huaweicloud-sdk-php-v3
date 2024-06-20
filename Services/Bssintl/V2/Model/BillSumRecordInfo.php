@@ -44,9 +44,9 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
             'cloudServiceTypeCode' => 'string',
             'consumeTime' => 'string',
             'payMethod' => 'string',
-            'consumeAmount' => 'double',
-            'debt' => 'double',
-            'discount' => 'double',
+            'consumeAmount' => 'float',
+            'debt' => 'float',
+            'discount' => 'float',
             'measureId' => 'int',
             'billType' => 'int',
             'accountDetails' => '\HuaweiCloud\SDK\Bssintl\V2\Model\BalanceTypePay[]',
@@ -80,9 +80,9 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
         'cloudServiceTypeCode' => null,
         'consumeTime' => null,
         'payMethod' => null,
-        'consumeAmount' => 'double',
-        'debt' => 'double',
-        'discount' => 'double',
+        'consumeAmount' => 'bigdecimal',
+        'debt' => 'bigdecimal',
+        'discount' => 'bigdecimal',
         'measureId' => 'int32',
         'billType' => 'int32',
         'accountDetails' => null,
@@ -463,7 +463,7 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
     * Gets consumeAmount
     *  消费的金额，即从客户账户实际扣除的金额。包含代金券支付的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getConsumeAmount()
     {
@@ -473,7 +473,7 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
     /**
     * Sets consumeAmount
     *
-    * @param double|null $consumeAmount 消费的金额，即从客户账户实际扣除的金额。包含代金券支付的金额。
+    * @param float|null $consumeAmount 消费的金额，即从客户账户实际扣除的金额。包含代金券支付的金额。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
     * Gets debt
     *  欠费金额，即从客户账户扣费的时候，客户账户金额不足，欠费的金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDebt()
     {
@@ -497,7 +497,7 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
     /**
     * Sets debt
     *
-    * @param double|null $debt 欠费金额，即从客户账户扣费的时候，客户账户金额不足，欠费的金额。
+    * @param float|null $debt 欠费金额，即从客户账户扣费的时候，客户账户金额不足，欠费的金额。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
     * Gets discount
     *  折扣金额。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getDiscount()
     {
@@ -521,7 +521,7 @@ class BillSumRecordInfo implements ModelInterface, ArrayAccess
     /**
     * Sets discount
     *
-    * @param double|null $discount 折扣金额。
+    * @param float|null $discount 折扣金额。
     *
     * @return $this
     */

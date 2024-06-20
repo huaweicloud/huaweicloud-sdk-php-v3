@@ -27,7 +27,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'officialWebsiteAmount' => 'double',
+            'officialWebsiteAmount' => 'float',
             'measureId' => 'int',
             'productRatingResults' => '\HuaweiCloud\SDK\Bssintl\V2\Model\PeriodProductOfficialRatingResult[]'
     ];
@@ -41,7 +41,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'officialWebsiteAmount' => 'double',
+        'officialWebsiteAmount' => 'bigdecimal',
         'measureId' => 'int32',
         'productRatingResults' => null
     ];
@@ -198,7 +198,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     * Gets officialWebsiteAmount
     *  包年/包月产品的官网价。
     *
-    * @return double|null
+    * @return float|null
     */
     public function getOfficialWebsiteAmount()
     {
@@ -208,7 +208,7 @@ class OfficialWebsiteRatingResult implements ModelInterface, ArrayAccess
     /**
     * Sets officialWebsiteAmount
     *
-    * @param double|null $officialWebsiteAmount 包年/包月产品的官网价。
+    * @param float|null $officialWebsiteAmount 包年/包月产品的官网价。
     *
     * @return $this
     */

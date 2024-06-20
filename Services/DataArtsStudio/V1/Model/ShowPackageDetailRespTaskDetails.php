@@ -26,6 +26,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
     * pendingItemId  发布任务ID
     * pendingVersion  节点版本
     * scriptId  具体脚本ID
+    * taskId  作业ID
+    * startJobStatus  作业启动状态，2：成功，3：失败
     * submitTimestamp  提交时间戳，13位时间戳
     * submitUserId  提交人id
     * submitUserName  提交人名称
@@ -41,6 +43,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
             'pendingItemId' => 'string',
             'pendingVersion' => 'int',
             'scriptId' => 'string',
+            'taskId' => 'string',
+            'startJobStatus' => 'int',
             'submitTimestamp' => 'int',
             'submitUserId' => 'string',
             'submitUserName' => 'string',
@@ -56,6 +60,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
     * pendingItemId  发布任务ID
     * pendingVersion  节点版本
     * scriptId  具体脚本ID
+    * taskId  作业ID
+    * startJobStatus  作业启动状态，2：成功，3：失败
     * submitTimestamp  提交时间戳，13位时间戳
     * submitUserId  提交人id
     * submitUserName  提交人名称
@@ -71,6 +77,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
         'pendingItemId' => null,
         'pendingVersion' => 'int32',
         'scriptId' => null,
+        'taskId' => null,
+        'startJobStatus' => 'int32',
         'submitTimestamp' => 'int64',
         'submitUserId' => null,
         'submitUserName' => null,
@@ -107,6 +115,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
     * pendingItemId  发布任务ID
     * pendingVersion  节点版本
     * scriptId  具体脚本ID
+    * taskId  作业ID
+    * startJobStatus  作业启动状态，2：成功，3：失败
     * submitTimestamp  提交时间戳，13位时间戳
     * submitUserId  提交人id
     * submitUserName  提交人名称
@@ -122,6 +132,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
             'pendingItemId' => 'pending_item_id',
             'pendingVersion' => 'pending_version',
             'scriptId' => 'script_id',
+            'taskId' => 'task_id',
+            'startJobStatus' => 'start_job_status',
             'submitTimestamp' => 'submit_timestamp',
             'submitUserId' => 'submit_user_id',
             'submitUserName' => 'submit_user_name',
@@ -137,6 +149,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
     * pendingItemId  发布任务ID
     * pendingVersion  节点版本
     * scriptId  具体脚本ID
+    * taskId  作业ID
+    * startJobStatus  作业启动状态，2：成功，3：失败
     * submitTimestamp  提交时间戳，13位时间戳
     * submitUserId  提交人id
     * submitUserName  提交人名称
@@ -152,6 +166,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
             'pendingItemId' => 'setPendingItemId',
             'pendingVersion' => 'setPendingVersion',
             'scriptId' => 'setScriptId',
+            'taskId' => 'setTaskId',
+            'startJobStatus' => 'setStartJobStatus',
             'submitTimestamp' => 'setSubmitTimestamp',
             'submitUserId' => 'setSubmitUserId',
             'submitUserName' => 'setSubmitUserName',
@@ -167,6 +183,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
     * pendingItemId  发布任务ID
     * pendingVersion  节点版本
     * scriptId  具体脚本ID
+    * taskId  作业ID
+    * startJobStatus  作业启动状态，2：成功，3：失败
     * submitTimestamp  提交时间戳，13位时间戳
     * submitUserId  提交人id
     * submitUserName  提交人名称
@@ -182,6 +200,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
             'pendingItemId' => 'getPendingItemId',
             'pendingVersion' => 'getPendingVersion',
             'scriptId' => 'getScriptId',
+            'taskId' => 'getTaskId',
+            'startJobStatus' => 'getStartJobStatus',
             'submitTimestamp' => 'getSubmitTimestamp',
             'submitUserId' => 'getSubmitUserId',
             'submitUserName' => 'getSubmitUserName',
@@ -253,6 +273,8 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
         $this->container['pendingItemId'] = isset($data['pendingItemId']) ? $data['pendingItemId'] : null;
         $this->container['pendingVersion'] = isset($data['pendingVersion']) ? $data['pendingVersion'] : null;
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
+        $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['startJobStatus'] = isset($data['startJobStatus']) ? $data['startJobStatus'] : null;
         $this->container['submitTimestamp'] = isset($data['submitTimestamp']) ? $data['submitTimestamp'] : null;
         $this->container['submitUserId'] = isset($data['submitUserId']) ? $data['submitUserId'] : null;
         $this->container['submitUserName'] = isset($data['submitUserName']) ? $data['submitUserName'] : null;
@@ -423,6 +445,54 @@ class ShowPackageDetailRespTaskDetails implements ModelInterface, ArrayAccess
     public function setScriptId($scriptId)
     {
         $this->container['scriptId'] = $scriptId;
+        return $this;
+    }
+
+    /**
+    * Gets taskId
+    *  作业ID
+    *
+    * @return string|null
+    */
+    public function getTaskId()
+    {
+        return $this->container['taskId'];
+    }
+
+    /**
+    * Sets taskId
+    *
+    * @param string|null $taskId 作业ID
+    *
+    * @return $this
+    */
+    public function setTaskId($taskId)
+    {
+        $this->container['taskId'] = $taskId;
+        return $this;
+    }
+
+    /**
+    * Gets startJobStatus
+    *  作业启动状态，2：成功，3：失败
+    *
+    * @return int|null
+    */
+    public function getStartJobStatus()
+    {
+        return $this->container['startJobStatus'];
+    }
+
+    /**
+    * Sets startJobStatus
+    *
+    * @param int|null $startJobStatus 作业启动状态，2：成功，3：失败
+    *
+    * @return $this
+    */
+    public function setStartJobStatus($startJobStatus)
+    {
+        $this->container['startJobStatus'] = $startJobStatus;
         return $this;
     }
 

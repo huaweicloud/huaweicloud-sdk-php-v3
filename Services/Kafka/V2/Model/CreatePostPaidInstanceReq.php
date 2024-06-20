@@ -25,7 +25,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
-    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。](tag:hc,hk)
     * partitionNum  Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800    [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/productdesc-kafka/Kafka-specification.html](tag:hws)   [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/intl/zh-cn/productdesc-kafka/Kafka-specification.html](tag:hws_hk)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -99,7 +99,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
-    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。](tag:hc,hk)
     * partitionNum  Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800    [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/productdesc-kafka/Kafka-specification.html](tag:hws)   [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/intl/zh-cn/productdesc-kafka/Kafka-specification.html](tag:hws_hk)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -194,7 +194,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
-    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。](tag:hc,hk)
     * partitionNum  Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800    [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/productdesc-kafka/Kafka-specification.html](tag:hws)   [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/intl/zh-cn/productdesc-kafka/Kafka-specification.html](tag:hws_hk)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -268,7 +268,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
-    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。](tag:hc,hk)
     * partitionNum  Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800    [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/productdesc-kafka/Kafka-specification.html](tag:hws)   [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/intl/zh-cn/productdesc-kafka/Kafka-specification.html](tag:hws_hk)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -342,7 +342,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     * engine  消息引擎。取值填写为：kafka。
     * engineVersion  消息引擎的版本。取值填写为：   - 1.1.0   [- 2.3.0](tag:ocb,hws_ocb,sbc,hk_sbc,cmcc,hws_eu,dt,ctc,g42,hk_g42,tm,hk_tm)   - 2.7
     * specification  [新规格实例：Kafka实例业务TPS规格，取值范围：   - c6.2u4g.cluster   - c6.4u8g.cluster   - c6.8u16g.cluster   - c6.12u24g.cluster   - c6.16u32g.cluster  老规格实例：](tag:hws,hws_hk) Kafka实例的基准带宽，表示单位时间内传送的最大数据量，单位MB。取值范围：   - 100MB   - 300MB   - 600MB   - 1200MB  注：此参数无需设置，其取值实际是由产品ID（product_id）决定。
-    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    * brokerNum  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     * storageSpace  消息存储空间，单位GB。   - Kafka实例规格为100MB时，存储空间取值范围600GB ~ 90000GB。   - Kafka实例规格为300MB时，存储空间取值范围1200GB ~ 90000GB。   - Kafka实例规格为600MB时，存储空间取值范围2400GB ~ 90000GB。   - Kafka实例规格为1200MB，存储空间取值范围4800GB ~ 90000GB   [- Kafka实例规格为c6.2u4g.cluster时，存储空间取值范围300GB ~ 300000GB。   - Kafka实例规格为c6.4u8g.cluster时，存储空间取值范围300GB ~ 600000GB。   - Kafka实例规格为c6.8u16g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.12u24g.cluster时，存储空间取值范围300GB ~ 900000GB。   - Kafka实例规格为c6.16u32g.cluster时，存储空间取值范围300GB ~ 900000GB。](tag:hc,hk)
     * partitionNum  Kafka实例的最大分区数量。   - 参数specification为100MB时，取值300   - 参数specification为300MB时，取值900   - 参数specification为600MB时，取值1800   - 参数specification为1200MB时，取值1800    [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/productdesc-kafka/Kafka-specification.html](tag:hws)   [新规格实例此参数无需设置，每种规格对应的分区数上限参考：https://support.huaweicloud.com/intl/zh-cn/productdesc-kafka/Kafka-specification.html](tag:hws_hk)
     * accessUser  当ssl_enable为true时，该参数必选，ssl_enable为false时，该参数无效。  认证用户名，只能由英文字母、数字、中划线组成，长度为4~64的字符。
@@ -836,7 +836,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerNum
-    *  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    *  代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     *
     * @return int|null
     */
@@ -848,7 +848,7 @@ class CreatePostPaidInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets brokerNum
     *
-    * @param int|null $brokerNum 代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 30。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb) [此参数无需设置](tag:sbc,hk_sbc,cmcc)
+    * @param int|null $brokerNum 代理个数。 [取值范围:  - 老规格实例此参数无需设置  - 新规格必须设置，取值范围：3 ~ 50。](tag:hws,hws_hk,g42,tm,hk_g42,hk_tm,ctc,dt,ocb,hws_ocb,sbc,hk_sbc) [此参数无需设置](tag:cmcc)
     *
     * @return $this
     */

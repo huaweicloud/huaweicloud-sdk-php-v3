@@ -172,6 +172,9 @@ class DeletePublisherRequest implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
+        if ($this->container['publisherUniqueId'] === null) {
+            $invalidProperties[] = "'publisherUniqueId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -214,7 +217,7 @@ class DeletePublisherRequest implements ModelInterface, ArrayAccess
     * Gets publisherUniqueId
     *  发布商ID
     *
-    * @return string|null
+    * @return string
     */
     public function getPublisherUniqueId()
     {
@@ -224,7 +227,7 @@ class DeletePublisherRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publisherUniqueId
     *
-    * @param string|null $publisherUniqueId 发布商ID
+    * @param string $publisherUniqueId 发布商ID
     *
     * @return $this
     */

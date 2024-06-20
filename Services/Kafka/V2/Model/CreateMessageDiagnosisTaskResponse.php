@@ -21,7 +21,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * reportId  诊断报告id。
+    * reportId  诊断报告ID。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * reportId  诊断报告id。
+    * reportId  诊断报告ID。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * reportId  诊断报告id。
+    * reportId  诊断报告ID。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * reportId  诊断报告id。
+    * reportId  诊断报告ID。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * reportId  诊断报告id。
+    * reportId  诊断报告ID。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets reportId
-    *  诊断报告id。
+    *  诊断报告ID。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateMessageDiagnosisTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets reportId
     *
-    * @param string|null $reportId 诊断报告id。
+    * @param string|null $reportId 诊断报告ID。
     *
     * @return $this
     */

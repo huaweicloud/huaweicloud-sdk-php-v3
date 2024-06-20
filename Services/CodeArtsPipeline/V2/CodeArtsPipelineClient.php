@@ -1028,6 +1028,12 @@ class CodeArtsPipelineClient extends Client
         if ($localVarParams['pluginName'] !== null) {
             $queryParams['plugin_name'] = $localVarParams['pluginName'];
         }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
         if ($localVarParams['domainId'] !== null) {
             $pathParams['domain_id'] = $localVarParams['domainId'];
         }

@@ -35,9 +35,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
     * flushSize  flush_size。（仅目标端类型为OBS时会显示）
     * timezone  时区。（仅目标端类型为OBS时会显示）
-    * connectorClass  connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    * storageClass  storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    * formatClass  format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
     * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
     * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
     * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
@@ -62,9 +59,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
             'obsPartSize' => 'int',
             'flushSize' => 'int',
             'timezone' => 'string',
-            'connectorClass' => 'string',
-            'storageClass' => 'string',
-            'formatClass' => 'string',
             'schemaGeneratorClass' => 'string',
             'partitionerClass' => 'string',
             'valueConverter' => 'string',
@@ -89,9 +83,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
     * flushSize  flush_size。（仅目标端类型为OBS时会显示）
     * timezone  时区。（仅目标端类型为OBS时会显示）
-    * connectorClass  connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    * storageClass  storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    * formatClass  format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
     * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
     * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
     * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
@@ -116,9 +107,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
         'obsPartSize' => null,
         'flushSize' => null,
         'timezone' => null,
-        'connectorClass' => null,
-        'storageClass' => null,
-        'formatClass' => null,
         'schemaGeneratorClass' => null,
         'partitionerClass' => null,
         'valueConverter' => null,
@@ -164,9 +152,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
     * flushSize  flush_size。（仅目标端类型为OBS时会显示）
     * timezone  时区。（仅目标端类型为OBS时会显示）
-    * connectorClass  connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    * storageClass  storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    * formatClass  format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
     * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
     * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
     * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
@@ -191,9 +176,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
             'obsPartSize' => 'obs_part_size',
             'flushSize' => 'flush_size',
             'timezone' => 'timezone',
-            'connectorClass' => 'connector_class',
-            'storageClass' => 'storage_class',
-            'formatClass' => 'format_class',
             'schemaGeneratorClass' => 'schema_generator_class',
             'partitionerClass' => 'partitioner_class',
             'valueConverter' => 'value_converter',
@@ -218,9 +200,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
     * flushSize  flush_size。（仅目标端类型为OBS时会显示）
     * timezone  时区。（仅目标端类型为OBS时会显示）
-    * connectorClass  connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    * storageClass  storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    * formatClass  format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
     * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
     * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
     * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
@@ -245,9 +224,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
             'obsPartSize' => 'setObsPartSize',
             'flushSize' => 'setFlushSize',
             'timezone' => 'setTimezone',
-            'connectorClass' => 'setConnectorClass',
-            'storageClass' => 'setStorageClass',
-            'formatClass' => 'setFormatClass',
             'schemaGeneratorClass' => 'setSchemaGeneratorClass',
             'partitionerClass' => 'setPartitionerClass',
             'valueConverter' => 'setValueConverter',
@@ -272,9 +248,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     * obsPartSize  每个传输文件多大后就开始上传，单位为byte；默认值5242880。（仅目标端类型为OBS时会显示）
     * flushSize  flush_size。（仅目标端类型为OBS时会显示）
     * timezone  时区。（仅目标端类型为OBS时会显示）
-    * connectorClass  connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    * storageClass  storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    * formatClass  format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
     * schemaGeneratorClass  schema_generator类，默认为\"io.confluent.connect.storage.hive.schema.DefaultSchemaGenerator\"。（仅目标端类型为OBS时会显示）
     * partitionerClass  partitioner类，默认\"io.confluent.connect.storage.partitioner.TimeBasedPartitioner\"。（仅目标端类型为OBS时会显示）
     * valueConverter  value_converter，默认为\"org.apache.kafka.connect.converters.ByteArrayConverter\"。（仅目标端类型为OBS时会显示）
@@ -299,9 +272,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
             'obsPartSize' => 'getObsPartSize',
             'flushSize' => 'getFlushSize',
             'timezone' => 'getTimezone',
-            'connectorClass' => 'getConnectorClass',
-            'storageClass' => 'getStorageClass',
-            'formatClass' => 'getFormatClass',
             'schemaGeneratorClass' => 'getSchemaGeneratorClass',
             'partitionerClass' => 'getPartitionerClass',
             'valueConverter' => 'getValueConverter',
@@ -382,9 +352,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
         $this->container['obsPartSize'] = isset($data['obsPartSize']) ? $data['obsPartSize'] : null;
         $this->container['flushSize'] = isset($data['flushSize']) ? $data['flushSize'] : null;
         $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
-        $this->container['connectorClass'] = isset($data['connectorClass']) ? $data['connectorClass'] : null;
-        $this->container['storageClass'] = isset($data['storageClass']) ? $data['storageClass'] : null;
-        $this->container['formatClass'] = isset($data['formatClass']) ? $data['formatClass'] : null;
         $this->container['schemaGeneratorClass'] = isset($data['schemaGeneratorClass']) ? $data['schemaGeneratorClass'] : null;
         $this->container['partitionerClass'] = isset($data['partitionerClass']) ? $data['partitionerClass'] : null;
         $this->container['valueConverter'] = isset($data['valueConverter']) ? $data['valueConverter'] : null;
@@ -771,78 +738,6 @@ class SmartConnectTaskRespSinkConfig implements ModelInterface, ArrayAccess
     public function setTimezone($timezone)
     {
         $this->container['timezone'] = $timezone;
-        return $this;
-    }
-
-    /**
-    * Gets connectorClass
-    *  connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    *
-    * @return string|null
-    */
-    public function getConnectorClass()
-    {
-        return $this->container['connectorClass'];
-    }
-
-    /**
-    * Sets connectorClass
-    *
-    * @param string|null $connectorClass connector类，默认为\"com.huawei.dms.connector.obs.OBSSinkConnector\"。（仅目标端类型为OBS时会显示）
-    *
-    * @return $this
-    */
-    public function setConnectorClass($connectorClass)
-    {
-        $this->container['connectorClass'] = $connectorClass;
-        return $this;
-    }
-
-    /**
-    * Gets storageClass
-    *  storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    *
-    * @return string|null
-    */
-    public function getStorageClass()
-    {
-        return $this->container['storageClass'];
-    }
-
-    /**
-    * Sets storageClass
-    *
-    * @param string|null $storageClass storage类，默认为com.huawei.dms.connector.obs.storage.OBSStorage\"。（仅目标端类型为OBS时会显示）
-    *
-    * @return $this
-    */
-    public function setStorageClass($storageClass)
-    {
-        $this->container['storageClass'] = $storageClass;
-        return $this;
-    }
-
-    /**
-    * Gets formatClass
-    *  format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
-    *
-    * @return string|null
-    */
-    public function getFormatClass()
-    {
-        return $this->container['formatClass'];
-    }
-
-    /**
-    * Sets formatClass
-    *
-    * @param string|null $formatClass format类，默认为\"com.huawei.dms.connector.obs.format.bytearray.ByteArrayFormat\"。（仅目标端类型为OBS时会显示）
-    *
-    * @return $this
-    */
-    public function setFormatClass($formatClass)
-    {
-        $this->container['formatClass'] = $formatClass;
         return $this;
     }
 

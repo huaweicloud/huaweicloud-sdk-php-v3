@@ -30,8 +30,8 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'orderLineItemIds' => 'string[]',
             'discountMode' => 'int',
-            'discountAmount' => 'double',
-            'discountRatio' => 'double'
+            'discountAmount' => 'float',
+            'discountRatio' => 'float'
     ];
 
     /**
@@ -46,8 +46,8 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'orderLineItemIds' => null,
         'discountMode' => 'int32',
-        'discountAmount' => 'double',
-        'discountRatio' => 'double'
+        'discountAmount' => 'bigdecimal',
+        'discountRatio' => 'bigdecimal'
     ];
 
     /**
@@ -269,7 +269,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     * Gets discountAmount
     *  订单可用的折扣金额（即减免金额）。
     *
-    * @return double
+    * @return float
     */
     public function getDiscountAmount()
     {
@@ -279,7 +279,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountAmount
     *
-    * @param double $discountAmount 订单可用的折扣金额（即减免金额）。
+    * @param float $discountAmount 订单可用的折扣金额（即减免金额）。
     *
     * @return $this
     */
@@ -293,7 +293,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     * Gets discountRatio
     *  订单可用的折扣比例。
     *
-    * @return double
+    * @return float
     */
     public function getDiscountRatio()
     {
@@ -303,7 +303,7 @@ class OrderLineItemV3 implements ModelInterface, ArrayAccess
     /**
     * Sets discountRatio
     *
-    * @param double $discountRatio 订单可用的折扣比例。
+    * @param float $discountRatio 订单可用的折扣比例。
     *
     * @return $this
     */
