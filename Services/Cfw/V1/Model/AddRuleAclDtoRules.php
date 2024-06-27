@@ -34,7 +34,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -57,7 +56,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'int',
             'description' => 'string',
             'direction' => 'int',
-            'profile' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto',
             'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest',
             'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForRequest',
             'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
@@ -80,7 +78,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -103,7 +100,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         'longConnectEnable' => 'int32',
         'description' => null,
         'direction' => 'int32',
-        'profile' => null,
         'source' => null,
         'destination' => null,
         'service' => null,
@@ -147,7 +143,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -170,7 +165,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'long_connect_enable',
             'description' => 'description',
             'direction' => 'direction',
-            'profile' => 'profile',
             'source' => 'source',
             'destination' => 'destination',
             'service' => 'service',
@@ -193,7 +187,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -216,7 +209,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'setLongConnectEnable',
             'description' => 'setDescription',
             'direction' => 'setDirection',
-            'profile' => 'setProfile',
             'source' => 'setSource',
             'destination' => 'setDestination',
             'service' => 'setService',
@@ -239,7 +231,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     * longConnectEnable  是否支持长连接，0表示不支持长连接，1表示支持长连接
     * description  描述
     * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -262,7 +253,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
             'longConnectEnable' => 'getLongConnectEnable',
             'description' => 'getDescription',
             'direction' => 'getDirection',
-            'profile' => 'getProfile',
             'source' => 'getSource',
             'destination' => 'getDestination',
             'service' => 'getService',
@@ -403,7 +393,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
         $this->container['longConnectEnable'] = isset($data['longConnectEnable']) ? $data['longConnectEnable'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
-        $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
@@ -824,30 +813,6 @@ class AddRuleAclDtoRules implements ModelInterface, ArrayAccess
     public function setDirection($direction)
     {
         $this->container['direction'] = $direction;
-        return $this;
-    }
-
-    /**
-    * Gets profile
-    *  profile
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null
-    */
-    public function getProfile()
-    {
-        return $this->container['profile'];
-    }
-
-    /**
-    * Sets profile
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null $profile profile
-    *
-    * @return $this
-    */
-    public function setProfile($profile)
-    {
-        $this->container['profile'] = $profile;
         return $this;
     }
 

@@ -169,6 +169,9 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['dnsServer'] === null) {
+            $invalidProperties[] = "'dnsServer' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     * Gets dnsServer
     *  DNS服务器
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[]
     */
     public function getDnsServer()
     {
@@ -197,7 +200,7 @@ class UpdateDnsServersRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets dnsServer
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[]|null $dnsServer DNS服务器
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\UpdateDnsServersRequestBodyDnsServer[] $dnsServer DNS服务器
     *
     * @return $this
     */

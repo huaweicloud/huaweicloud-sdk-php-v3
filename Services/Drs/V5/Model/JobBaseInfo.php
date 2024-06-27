@@ -33,6 +33,7 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束。单位为天。(范围14-100)，不传默认为14天。
     * tags  标签信息，最多添加10个标签。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
             'description' => 'string',
             'startTime' => 'string',
             'expiredDays' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Drs\V5\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\Drs\V5\Model\ResourceTag[]',
+            'isOpenFastClean' => 'bool'
     ];
 
     /**
@@ -67,6 +69,7 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束。单位为天。(范围14-100)，不传默认为14天。
     * tags  标签信息，最多添加10个标签。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
         'description' => null,
         'startTime' => null,
         'expiredDays' => null,
-        'tags' => null
+        'tags' => null,
+        'isOpenFastClean' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束。单位为天。(范围14-100)，不传默认为14天。
     * tags  标签信息，最多添加10个标签。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
             'description' => 'description',
             'startTime' => 'start_time',
             'expiredDays' => 'expired_days',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'isOpenFastClean' => 'is_open_fast_clean'
     ];
 
     /**
@@ -156,6 +162,7 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束。单位为天。(范围14-100)，不传默认为14天。
     * tags  标签信息，最多添加10个标签。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'startTime' => 'setStartTime',
             'expiredDays' => 'setExpiredDays',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'isOpenFastClean' => 'setIsOpenFastClean'
     ];
 
     /**
@@ -190,6 +198,7 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束。单位为天。(范围14-100)，不传默认为14天。
     * tags  标签信息，最多添加10个标签。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'startTime' => 'getStartTime',
             'expiredDays' => 'getExpiredDays',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'isOpenFastClean' => 'getIsOpenFastClean'
     ];
 
     /**
@@ -380,6 +390,7 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['expiredDays'] = isset($data['expiredDays']) ? $data['expiredDays'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['isOpenFastClean'] = isset($data['isOpenFastClean']) ? $data['isOpenFastClean'] : null;
     }
 
     /**
@@ -773,6 +784,30 @@ class JobBaseInfo implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets isOpenFastClean
+    *  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    *
+    * @return bool|null
+    */
+    public function getIsOpenFastClean()
+    {
+        return $this->container['isOpenFastClean'];
+    }
+
+    /**
+    * Sets isOpenFastClean
+    *
+    * @param bool|null $isOpenFastClean 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    *
+    * @return $this
+    */
+    public function setIsOpenFastClean($isOpenFastClean)
+    {
+        $this->container['isOpenFastClean'] = $isOpenFastClean;
         return $this;
     }
 

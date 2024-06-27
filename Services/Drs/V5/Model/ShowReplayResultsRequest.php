@@ -22,7 +22,7 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     * startTime  查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
     * endTime  查询数据的结束时间，在type为shard_statistics、slow_sql、error_sql时必填
     * offset  分页查询数据表当前超始偏移量, 在type为slow_sql、error_sql、slow_sql_template、error_sql_template必填
@@ -30,6 +30,9 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * sortKey  返回结果按该关键字排序（slow_sql_template支持count，maxLatency、avgLatency关键字，error_sql_template支持count关键字）
     * sortDir  排序规则，取值如下： - asc：升序 - desc：降序
     * targetName  回放数据库名称，用于在一致性回放策略场景，过滤目标库与源库镜像库回放结果。参数非必须，不提供则默认查询所有数据，其取值如下： - target：查询目标库回放结果 - target_mirror：查询源库镜像库回放结果
+    * isSample  是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    * errorType  错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    * sqlTemplateMd5  sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
     *
     * @var string[]
     */
@@ -43,14 +46,17 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'sortKey' => 'string',
             'sortDir' => 'string',
-            'targetName' => 'string'
+            'targetName' => 'string',
+            'isSample' => 'bool',
+            'errorType' => 'string',
+            'sqlTemplateMd5' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     * startTime  查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
     * endTime  查询数据的结束时间，在type为shard_statistics、slow_sql、error_sql时必填
     * offset  分页查询数据表当前超始偏移量, 在type为slow_sql、error_sql、slow_sql_template、error_sql_template必填
@@ -58,6 +64,9 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * sortKey  返回结果按该关键字排序（slow_sql_template支持count，maxLatency、avgLatency关键字，error_sql_template支持count关键字）
     * sortDir  排序规则，取值如下： - asc：升序 - desc：降序
     * targetName  回放数据库名称，用于在一致性回放策略场景，过滤目标库与源库镜像库回放结果。参数非必须，不提供则默认查询所有数据，其取值如下： - target：查询目标库回放结果 - target_mirror：查询源库镜像库回放结果
+    * isSample  是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    * errorType  错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    * sqlTemplateMd5  sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
     *
     * @var string[]
     */
@@ -71,7 +80,10 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
         'limit' => 'int64',
         'sortKey' => null,
         'sortDir' => null,
-        'targetName' => null
+        'targetName' => null,
+        'isSample' => null,
+        'errorType' => null,
+        'sqlTemplateMd5' => null
     ];
 
     /**
@@ -99,7 +111,7 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     * startTime  查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
     * endTime  查询数据的结束时间，在type为shard_statistics、slow_sql、error_sql时必填
     * offset  分页查询数据表当前超始偏移量, 在type为slow_sql、error_sql、slow_sql_template、error_sql_template必填
@@ -107,6 +119,9 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * sortKey  返回结果按该关键字排序（slow_sql_template支持count，maxLatency、avgLatency关键字，error_sql_template支持count关键字）
     * sortDir  排序规则，取值如下： - asc：升序 - desc：降序
     * targetName  回放数据库名称，用于在一致性回放策略场景，过滤目标库与源库镜像库回放结果。参数非必须，不提供则默认查询所有数据，其取值如下： - target：查询目标库回放结果 - target_mirror：查询源库镜像库回放结果
+    * isSample  是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    * errorType  错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    * sqlTemplateMd5  sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
     *
     * @var string[]
     */
@@ -120,14 +135,17 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'sortKey' => 'sort_key',
             'sortDir' => 'sort_dir',
-            'targetName' => 'target_name'
+            'targetName' => 'target_name',
+            'isSample' => 'is_sample',
+            'errorType' => 'error_type',
+            'sqlTemplateMd5' => 'sql_template_md5'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     * startTime  查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
     * endTime  查询数据的结束时间，在type为shard_statistics、slow_sql、error_sql时必填
     * offset  分页查询数据表当前超始偏移量, 在type为slow_sql、error_sql、slow_sql_template、error_sql_template必填
@@ -135,6 +153,9 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * sortKey  返回结果按该关键字排序（slow_sql_template支持count，maxLatency、avgLatency关键字，error_sql_template支持count关键字）
     * sortDir  排序规则，取值如下： - asc：升序 - desc：降序
     * targetName  回放数据库名称，用于在一致性回放策略场景，过滤目标库与源库镜像库回放结果。参数非必须，不提供则默认查询所有数据，其取值如下： - target：查询目标库回放结果 - target_mirror：查询源库镜像库回放结果
+    * isSample  是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    * errorType  错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    * sqlTemplateMd5  sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
     *
     * @var string[]
     */
@@ -148,14 +169,17 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'sortKey' => 'setSortKey',
             'sortDir' => 'setSortDir',
-            'targetName' => 'setTargetName'
+            'targetName' => 'setTargetName',
+            'isSample' => 'setIsSample',
+            'errorType' => 'setErrorType',
+            'sqlTemplateMd5' => 'setSqlTemplateMd5'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    * type  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     * startTime  查询数据的起始时间，在type为shard_statistics、slow_sql、error_sql时必填
     * endTime  查询数据的结束时间，在type为shard_statistics、slow_sql、error_sql时必填
     * offset  分页查询数据表当前超始偏移量, 在type为slow_sql、error_sql、slow_sql_template、error_sql_template必填
@@ -163,6 +187,9 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     * sortKey  返回结果按该关键字排序（slow_sql_template支持count，maxLatency、avgLatency关键字，error_sql_template支持count关键字）
     * sortDir  排序规则，取值如下： - asc：升序 - desc：降序
     * targetName  回放数据库名称，用于在一致性回放策略场景，过滤目标库与源库镜像库回放结果。参数非必须，不提供则默认查询所有数据，其取值如下： - target：查询目标库回放结果 - target_mirror：查询源库镜像库回放结果
+    * isSample  是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    * errorType  错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    * sqlTemplateMd5  sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
     *
     * @var string[]
     */
@@ -176,7 +203,10 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'sortKey' => 'getSortKey',
             'sortDir' => 'getSortDir',
-            'targetName' => 'getTargetName'
+            'targetName' => 'getTargetName',
+            'isSample' => 'getIsSample',
+            'errorType' => 'getErrorType',
+            'sqlTemplateMd5' => 'getSqlTemplateMd5'
     ];
 
     /**
@@ -227,6 +257,7 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     const TYPE_SLOW_SQL_TEMPLATE = 'slow_sql_template';
     const TYPE_ERROR_SQL_TEMPLATE = 'error_sql_template';
     const TYPE_REPLAYING_SQL = 'replaying_sql';
+    const TYPE_ERROR_CLASSIFICATION = 'error_classification';
     const SORT_DIR_ASC = 'asc';
     const SORT_DIR_DESC = 'desc';
     const TARGET_NAME_TARGET = 'target';
@@ -260,6 +291,7 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
             self::TYPE_SLOW_SQL_TEMPLATE,
             self::TYPE_ERROR_SQL_TEMPLATE,
             self::TYPE_REPLAYING_SQL,
+            self::TYPE_ERROR_CLASSIFICATION,
         ];
     }
 
@@ -315,6 +347,9 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['targetName'] = isset($data['targetName']) ? $data['targetName'] : null;
+        $this->container['isSample'] = isset($data['isSample']) ? $data['isSample'] : null;
+        $this->container['errorType'] = isset($data['errorType']) ? $data['errorType'] : null;
+        $this->container['sqlTemplateMd5'] = isset($data['sqlTemplateMd5']) ? $data['sqlTemplateMd5'] : null;
     }
 
     /**
@@ -427,7 +462,7 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    *  结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     *
     * @return string
     */
@@ -439,7 +474,7 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。
+    * @param string $type 结果类型。取值： - shard_statistics：回放概览基于时间维度统计信息。 - slow_sql：慢SQL详情。 - error_sql： 回放异常SQL详情。 - slow_sql_template：慢SQL统计信息。  - error_sql_template：异常SQL统计信息。 - replaying_sql：正在回放SQL详情。 - error_classification：回放异常SQL分类。
     *
     * @return $this
     */
@@ -614,6 +649,78 @@ class ShowReplayResultsRequest implements ModelInterface, ArrayAccess
     public function setTargetName($targetName)
     {
         $this->container['targetName'] = $targetName;
+        return $this;
+    }
+
+    /**
+    * Gets isSample
+    *  是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    *
+    * @return bool|null
+    */
+    public function getIsSample()
+    {
+        return $this->container['isSample'];
+    }
+
+    /**
+    * Sets isSample
+    *
+    * @param bool|null $isSample 是否查询样例true/false，type=slow_sql/error_sql时生效，值为true时只查询一条样例数据。
+    *
+    * @return $this
+    */
+    public function setIsSample($isSample)
+    {
+        $this->container['isSample'] = $isSample;
+        return $this;
+    }
+
+    /**
+    * Gets errorType
+    *  错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    *
+    * @return string|null
+    */
+    public function getErrorType()
+    {
+        return $this->container['errorType'];
+    }
+
+    /**
+    * Sets errorType
+    *
+    * @param string|null $errorType 错误分类，type=error_sql/error_sql_template时生效，根据错误分类过滤数据。
+    *
+    * @return $this
+    */
+    public function setErrorType($errorType)
+    {
+        $this->container['errorType'] = $errorType;
+        return $this;
+    }
+
+    /**
+    * Gets sqlTemplateMd5
+    *  sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
+    *
+    * @return string|null
+    */
+    public function getSqlTemplateMd5()
+    {
+        return $this->container['sqlTemplateMd5'];
+    }
+
+    /**
+    * Sets sqlTemplateMd5
+    *
+    * @param string|null $sqlTemplateMd5 sql模板md5，type=slow_sql/error_sql时生效，根据模板过滤对应的异常SQL和慢SQL，该值为本接口type=slow_sql_template/error_sql_template时的返回字段。
+    *
+    * @return $this
+    */
+    public function setSqlTemplateMd5($sqlTemplateMd5)
+    {
+        $this->container['sqlTemplateMd5'] = $sqlTemplateMd5;
         return $this;
     }
 

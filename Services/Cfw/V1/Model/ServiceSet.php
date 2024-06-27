@@ -25,7 +25,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * description  描述
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
-    * status  状态
     * projectId  项目id
     * protocols  协议类型列表
     *
@@ -37,7 +36,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'description' => 'string',
             'serviceSetType' => 'int',
             'refCount' => 'int',
-            'status' => 'string',
             'projectId' => 'string',
             'protocols' => 'int[]'
     ];
@@ -49,7 +47,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * description  描述
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
-    * status  状态
     * projectId  项目id
     * protocols  协议类型列表
     *
@@ -61,7 +58,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
         'description' => null,
         'serviceSetType' => 'int32',
         'refCount' => 'int32',
-        'status' => null,
         'projectId' => null,
         'protocols' => 'int32'
     ];
@@ -94,7 +90,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * description  描述
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
-    * status  状态
     * projectId  项目id
     * protocols  协议类型列表
     *
@@ -106,7 +101,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'description' => 'description',
             'serviceSetType' => 'service_set_type',
             'refCount' => 'ref_count',
-            'status' => 'status',
             'projectId' => 'project_id',
             'protocols' => 'protocols'
     ];
@@ -118,7 +112,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * description  描述
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
-    * status  状态
     * projectId  项目id
     * protocols  协议类型列表
     *
@@ -130,7 +123,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'serviceSetType' => 'setServiceSetType',
             'refCount' => 'setRefCount',
-            'status' => 'setStatus',
             'projectId' => 'setProjectId',
             'protocols' => 'setProtocols'
     ];
@@ -142,7 +134,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
     * description  描述
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     * refCount  引用次数
-    * status  状态
     * projectId  项目id
     * protocols  协议类型列表
     *
@@ -154,7 +145,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'serviceSetType' => 'getServiceSetType',
             'refCount' => 'getRefCount',
-            'status' => 'getStatus',
             'projectId' => 'getProjectId',
             'protocols' => 'getProtocols'
     ];
@@ -222,7 +212,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['serviceSetType'] = isset($data['serviceSetType']) ? $data['serviceSetType'] : null;
         $this->container['refCount'] = isset($data['refCount']) ? $data['refCount'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['protocols'] = isset($data['protocols']) ? $data['protocols'] : null;
     }
@@ -366,30 +355,6 @@ class ServiceSet implements ModelInterface, ArrayAccess
     public function setRefCount($refCount)
     {
         $this->container['refCount'] = $refCount;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  状态
-    *
-    * @return string|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param string|null $status 状态
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
         return $this;
     }
 

@@ -24,7 +24,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
@@ -37,9 +37,9 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
@@ -74,7 +74,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
@@ -87,9 +87,9 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
@@ -145,7 +145,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
@@ -158,9 +158,9 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
@@ -195,7 +195,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
@@ -208,9 +208,9 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
@@ -245,7 +245,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * id  终端节点的ID，唯一标识。
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
@@ -258,9 +258,9 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     * error  错误信息。 当终端节点状态异常，即“status”的值为“failed”时，会返回该字段。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
     *
@@ -509,7 +509,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStatus
-    *  帐号状态。  - frozen：冻结  - active：解冻
+    *  账号状态。  - frozen：冻结  - active：解冻
     *
     * @return string[]|null
     */
@@ -521,7 +521,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets activeStatus
     *
-    * @param string[]|null $activeStatus 帐号状态。  - frozen：冻结  - active：解冻
+    * @param string[]|null $activeStatus 账号状态。  - frozen：冻结  - active：解冻
     *
     * @return $this
     */
@@ -821,7 +821,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routetables
-    *  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    *  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     *
     * @return string[]|null
     */
@@ -833,7 +833,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routetables
     *
-    * @param string[]|null $routetables 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * @param string[]|null $routetables 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     *
     * @return $this
     */
@@ -869,7 +869,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatement
-    *  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    *  终端节点策略信息
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
@@ -881,7 +881,7 @@ class UpdateEndpointPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
     *
     * @return $this
     */

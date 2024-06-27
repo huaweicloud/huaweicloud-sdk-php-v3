@@ -22,7 +22,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * Array of property to type mappings. Used for (de)serialization
     * projectId  项目ID。
     * vpcEndpointServiceId  终端节点服务的ID。
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    * permission  权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
@@ -44,7 +44,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * Array of property to format mappings. Used for (de)serialization
     * projectId  项目ID。
     * vpcEndpointServiceId  终端节点服务的ID。
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    * permission  权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
@@ -87,7 +87,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * and the value is the original name
     * projectId  项目ID。
     * vpcEndpointServiceId  终端节点服务的ID。
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    * permission  权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
@@ -109,7 +109,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  项目ID。
     * vpcEndpointServiceId  终端节点服务的ID。
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    * permission  权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
@@ -131,7 +131,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  项目ID。
     * vpcEndpointServiceId  终端节点服务的ID。
-    * permission  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    * permission  权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     * limit  查询返回终端节点服务的白名单数量限制，即每页返回的个数。 取值范围：0~500，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点服务列表的排序字段，取值为：  - create_at：终端节点服务的创建时间  - update_at：终端节点服务的更新时间 默认值为create_at。
@@ -367,7 +367,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets permission
-    *  权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    *  权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     *
     * @return string|null
     */
@@ -379,7 +379,7 @@ class ListServicePermissionsDetailsRequest implements ModelInterface, ArrayAcces
     /**
     * Sets permission
     *
-    * @param string|null $permission 权限帐号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的帐号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
+    * @param string|null $permission 权限账号ID，格式为“iam:domain::domain_id”。 其中“domain_id”为授权用户的账号ID， 例如“iam:domain::6e9dfd51d1124e8d8498dce894923a0d”，支持模糊搜索。
     *
     * @return $this
     */

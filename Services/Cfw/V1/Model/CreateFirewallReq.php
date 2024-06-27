@@ -205,6 +205,9 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ($this->container['flavor'] === null) {
+            $invalidProperties[] = "'flavor' can't be null";
+        }
         if ($this->container['chargeInfo'] === null) {
             $invalidProperties[] = "'chargeInfo' can't be null";
         }
@@ -298,7 +301,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     * Gets flavor
     *  flavor
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqFlavor|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqFlavor
     */
     public function getFlavor()
     {
@@ -308,7 +311,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets flavor
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqFlavor|null $flavor flavor
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqFlavor $flavor flavor
     *
     * @return $this
     */

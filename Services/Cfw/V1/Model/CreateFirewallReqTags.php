@@ -169,12 +169,6 @@ class CreateFirewallReqTags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class CreateFirewallReqTags implements ModelInterface, ArrayAccess
     * Gets key
     *  标签KEY
     *
-    * @return string
+    * @return string|null
     */
     public function getKey()
     {
@@ -203,7 +197,7 @@ class CreateFirewallReqTags implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签KEY
+    * @param string|null $key 标签KEY
     *
     * @return $this
     */
@@ -217,7 +211,7 @@ class CreateFirewallReqTags implements ModelInterface, ArrayAccess
     * Gets value
     *  标签VALUE
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -227,7 +221,7 @@ class CreateFirewallReqTags implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 标签VALUE
+    * @param string|null $value 标签VALUE
     *
     * @return $this
     */

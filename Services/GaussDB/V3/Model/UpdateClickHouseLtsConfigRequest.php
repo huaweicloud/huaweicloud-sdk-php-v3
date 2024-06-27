@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SrCreateInstanceRspInstanceTagsInfoTags implements ModelInterface, ArrayAccess
+class UpdateClickHouseLtsConfigRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class SrCreateInstanceRspInstanceTagsInfoTags implements ModelInterface, ArrayAc
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SrCreateInstanceRsp_instance_tags_info_tags';
+    protected static $openAPIModelName = 'UpdateClickHouseLtsConfigRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'xLanguage' => 'string',
+            'body' => '\HuaweiCloud\SDK\GaussDB\V3\Model\CreateChLtsConfigRequestBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签键。
-    * value  标签值。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'xLanguage' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class SrCreateInstanceRspInstanceTagsInfoTags implements ModelInterface, ArrayAc
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签键。
-    * value  标签值。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'xLanguage' => 'X-Language',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签键。
-    * value  标签值。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'xLanguage' => 'setXLanguage',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签键。
-    * value  标签值。
+    * xLanguage  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'xLanguage' => 'getXLanguage',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +157,8 @@ class SrCreateInstanceRspInstanceTagsInfoTags implements ModelInterface, ArrayAc
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -184,50 +184,50 @@ class SrCreateInstanceRspInstanceTagsInfoTags implements ModelInterface, ArrayAc
     }
 
     /**
-    * Gets key
-    *  标签键。
+    * Gets xLanguage
+    *  请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @return string|null
     */
-    public function getKey()
+    public function getXLanguage()
     {
-        return $this->container['key'];
+        return $this->container['xLanguage'];
     }
 
     /**
-    * Sets key
+    * Sets xLanguage
     *
-    * @param string|null $key 标签键。
+    * @param string|null $xLanguage 请求语言类型。默认en-us。 取值范围： - en-us - zh-cn
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setXLanguage($xLanguage)
     {
-        $this->container['key'] = $key;
+        $this->container['xLanguage'] = $xLanguage;
         return $this;
     }
 
     /**
-    * Gets value
-    *  标签值。
+    * Gets body
+    *  body
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\CreateChLtsConfigRequestBody|null
     */
-    public function getValue()
+    public function getBody()
     {
-        return $this->container['value'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets value
+    * Sets body
     *
-    * @param string|null $value 标签值。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\CreateChLtsConfigRequestBody|null $body body
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setBody($body)
     {
-        $this->container['value'] = $value;
+        $this->container['body'] = $body;
         return $this;
     }
 

@@ -34,10 +34,11 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
-    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
     *
     * @var string[]
     */
@@ -58,7 +59,8 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'tcpProxy' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
             'description' => 'string',
-            'enablePolicy' => 'bool'
+            'enablePolicy' => 'bool',
+            'ipVersion' => 'string'
     ];
 
     /**
@@ -76,10 +78,11 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
-    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
     *
     * @var string[]
     */
@@ -100,7 +103,8 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
         'tcpProxy' => null,
         'tags' => null,
         'description' => null,
-        'enablePolicy' => null
+        'enablePolicy' => null,
+        'ipVersion' => null
     ];
 
     /**
@@ -139,10 +143,11 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
-    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
     *
     * @var string[]
     */
@@ -163,7 +168,8 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'tcpProxy' => 'tcp_proxy',
             'tags' => 'tags',
             'description' => 'description',
-            'enablePolicy' => 'enable_policy'
+            'enablePolicy' => 'enable_policy',
+            'ipVersion' => 'ip_version'
     ];
 
     /**
@@ -181,10 +187,11 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
-    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
     *
     * @var string[]
     */
@@ -205,7 +212,8 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'tcpProxy' => 'setTcpProxy',
             'tags' => 'setTags',
             'description' => 'setDescription',
-            'enablePolicy' => 'setEnablePolicy'
+            'enablePolicy' => 'setEnablePolicy',
+            'ipVersion' => 'setIpVersion'
     ];
 
     /**
@@ -223,10 +231,11 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * projectId  项目ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
-    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
     *
     * @var string[]
     */
@@ -247,7 +256,8 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             'tcpProxy' => 'getTcpProxy',
             'tags' => 'getTags',
             'description' => 'getDescription',
-            'enablePolicy' => 'getEnablePolicy'
+            'enablePolicy' => 'getEnablePolicy',
+            'ipVersion' => 'getIpVersion'
     ];
 
     /**
@@ -290,7 +300,22 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const IP_VERSION_IPV4 = 'ipv4';
+    const IP_VERSION_IPV6 = 'ipv6';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpVersionAllowableValues()
+    {
+        return [
+            self::IP_VERSION_IPV4,
+            self::IP_VERSION_IPV6,
+        ];
+    }
 
 
     /**
@@ -325,6 +350,7 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enablePolicy'] = isset($data['enablePolicy']) ? $data['enablePolicy'] : null;
+        $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
     }
 
     /**
@@ -371,6 +397,14 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getIpVersionAllowableValues();
+                if (!is_null($this->container['ipVersion']) && !in_array($this->container['ipVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -699,7 +733,7 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tcpProxy
-    *  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    *  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     *
     * @return string|null
     */
@@ -711,7 +745,7 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tcpProxy
     *
-    * @param string|null $tcpProxy 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。  - proxy_vni: 关闭toa，开启proxy和vni。 默认值为“close”。
+    * @param string|null $tcpProxy 用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     *
     * @return $this
     */
@@ -771,7 +805,7 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePolicy
-    *  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    *  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @return bool|null
     */
@@ -783,13 +817,37 @@ class CreateEndpointServiceResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enablePolicy
     *
-    * @param bool|null $enablePolicy 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * @param bool|null $enablePolicy 是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @return $this
     */
     public function setEnablePolicy($enablePolicy)
     {
         $this->container['enablePolicy'] = $enablePolicy;
+        return $this;
+    }
+
+    /**
+    * Gets ipVersion
+    *  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    *
+    * @return string|null
+    */
+    public function getIpVersion()
+    {
+        return $this->container['ipVersion'];
+    }
+
+    /**
+    * Sets ipVersion
+    *
+    * @param string|null $ipVersion 指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    *
+    * @return $this
+    */
+    public function setIpVersion($ipVersion)
+    {
+        $this->container['ipVersion'] = $ipVersion;
         return $this;
     }
 

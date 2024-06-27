@@ -25,7 +25,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
@@ -47,7 +47,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
@@ -90,7 +90,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
@@ -112,7 +112,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
@@ -134,7 +134,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * description  描述信息
     * name  地址组名称
     * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @var string[]
@@ -360,7 +360,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string|null $objectId 互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @return $this
     */

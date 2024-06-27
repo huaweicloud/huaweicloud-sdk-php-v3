@@ -24,6 +24,8 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
     * templateName  用户希望创建的模板名称
     * versionId  模板版本ID，以大写V开头，每次创建模板版本，模板版本ID数字部分会自增加一
     * templateId  模板的ID。当template_id存在时，模板服务会检查template_id是否和template_name匹配，不匹配会返回400
+    * accessControlSourceVpcIds  允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * accessControlSourceIps  允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'string',
             'templateName' => 'string',
             'versionId' => 'string',
-            'templateId' => 'string'
+            'templateId' => 'string',
+            'accessControlSourceVpcIds' => 'string[]',
+            'accessControlSourceIps' => 'string[]'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
     * templateName  用户希望创建的模板名称
     * versionId  模板版本ID，以大写V开头，每次创建模板版本，模板版本ID数字部分会自增加一
     * templateId  模板的ID。当template_id存在时，模板服务会检查template_id是否和template_name匹配，不匹配会返回400
+    * accessControlSourceVpcIds  允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * accessControlSourceIps  允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
         'clientRequestId' => null,
         'templateName' => null,
         'versionId' => null,
-        'templateId' => null
+        'templateId' => null,
+        'accessControlSourceVpcIds' => null,
+        'accessControlSourceIps' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
     * templateName  用户希望创建的模板名称
     * versionId  模板版本ID，以大写V开头，每次创建模板版本，模板版本ID数字部分会自增加一
     * templateId  模板的ID。当template_id存在时，模板服务会检查template_id是否和template_name匹配，不匹配会返回400
+    * accessControlSourceVpcIds  允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * accessControlSourceIps  允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'Client-Request-Id',
             'templateName' => 'template_name',
             'versionId' => 'version_id',
-            'templateId' => 'template_id'
+            'templateId' => 'template_id',
+            'accessControlSourceVpcIds' => 'access_control_source_vpc_ids',
+            'accessControlSourceIps' => 'access_control_source_ips'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
     * templateName  用户希望创建的模板名称
     * versionId  模板版本ID，以大写V开头，每次创建模板版本，模板版本ID数字部分会自增加一
     * templateId  模板的ID。当template_id存在时，模板服务会检查template_id是否和template_name匹配，不匹配会返回400
+    * accessControlSourceVpcIds  允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * accessControlSourceIps  允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'setClientRequestId',
             'templateName' => 'setTemplateName',
             'versionId' => 'setVersionId',
-            'templateId' => 'setTemplateId'
+            'templateId' => 'setTemplateId',
+            'accessControlSourceVpcIds' => 'setAccessControlSourceVpcIds',
+            'accessControlSourceIps' => 'setAccessControlSourceIps'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
     * templateName  用户希望创建的模板名称
     * versionId  模板版本ID，以大写V开头，每次创建模板版本，模板版本ID数字部分会自增加一
     * templateId  模板的ID。当template_id存在时，模板服务会检查template_id是否和template_name匹配，不匹配会返回400
+    * accessControlSourceVpcIds  允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * accessControlSourceIps  允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'getClientRequestId',
             'templateName' => 'getTemplateName',
             'versionId' => 'getVersionId',
-            'templateId' => 'getTemplateId'
+            'templateId' => 'getTemplateId',
+            'accessControlSourceVpcIds' => 'getAccessControlSourceVpcIds',
+            'accessControlSourceIps' => 'getAccessControlSourceIps'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
         $this->container['templateName'] = isset($data['templateName']) ? $data['templateName'] : null;
         $this->container['versionId'] = isset($data['versionId']) ? $data['versionId'] : null;
         $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
+        $this->container['accessControlSourceVpcIds'] = isset($data['accessControlSourceVpcIds']) ? $data['accessControlSourceVpcIds'] : null;
+        $this->container['accessControlSourceIps'] = isset($data['accessControlSourceIps']) ? $data['accessControlSourceIps'] : null;
     }
 
     /**
@@ -343,6 +365,54 @@ class ShowTemplateVersionContentRequest implements ModelInterface, ArrayAccess
     public function setTemplateId($templateId)
     {
         $this->container['templateId'] = $templateId;
+        return $this;
+    }
+
+    /**
+    * Gets accessControlSourceVpcIds
+    *  允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    *
+    * @return string[]|null
+    */
+    public function getAccessControlSourceVpcIds()
+    {
+        return $this->container['accessControlSourceVpcIds'];
+    }
+
+    /**
+    * Sets accessControlSourceVpcIds
+    *
+    * @param string[]|null $accessControlSourceVpcIds 允许访问资源栈模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    *
+    * @return $this
+    */
+    public function setAccessControlSourceVpcIds($accessControlSourceVpcIds)
+    {
+        $this->container['accessControlSourceVpcIds'] = $accessControlSourceVpcIds;
+        return $this;
+    }
+
+    /**
+    * Gets accessControlSourceIps
+    *  允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    *
+    * @return string[]|null
+    */
+    public function getAccessControlSourceIps()
+    {
+        return $this->container['accessControlSourceIps'];
+    }
+
+    /**
+    * Sets accessControlSourceIps
+    *
+    * @param string[]|null $accessControlSourceIps 允许访问资源栈模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    *
+    * @return $this
+    */
+    public function setAccessControlSourceIps($accessControlSourceIps)
+    {
+        $this->container['accessControlSourceIps'] = $accessControlSourceIps;
         return $this;
     }
 

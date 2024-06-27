@@ -21,12 +21,10 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6,2:domain
+    * addressType  地址类型0：ipv4,1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * port  端口
-    * listType  黑白名单类型4：黑名单，5：白名单
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * description  描述
     *
     * @var string[]
@@ -37,20 +35,16 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'address' => 'string',
             'protocol' => 'int',
             'port' => 'string',
-            'listType' => 'int',
-            'objectId' => 'string',
             'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6,2:domain
+    * addressType  地址类型0：ipv4,1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * port  端口
-    * listType  黑白名单类型4：黑名单，5：白名单
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * description  描述
     *
     * @var string[]
@@ -61,8 +55,6 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
         'address' => null,
         'protocol' => null,
         'port' => null,
-        'listType' => 'int32',
-        'objectId' => null,
         'description' => null
     ];
 
@@ -90,12 +82,10 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6,2:domain
+    * addressType  地址类型0：ipv4,1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * port  端口
-    * listType  黑白名单类型4：黑名单，5：白名单
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * description  描述
     *
     * @var string[]
@@ -106,20 +96,16 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'address' => 'address',
             'protocol' => 'protocol',
             'port' => 'port',
-            'listType' => 'list_type',
-            'objectId' => 'object_id',
             'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6,2:domain
+    * addressType  地址类型0：ipv4,1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * port  端口
-    * listType  黑白名单类型4：黑名单，5：白名单
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * description  描述
     *
     * @var string[]
@@ -130,20 +116,16 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'address' => 'setAddress',
             'protocol' => 'setProtocol',
             'port' => 'setPort',
-            'listType' => 'setListType',
-            'objectId' => 'setObjectId',
             'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6,2:domain
+    * addressType  地址类型0：ipv4,1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * port  端口
-    * listType  黑白名单类型4：黑名单，5：白名单
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
     * description  描述
     *
     * @var string[]
@@ -154,8 +136,6 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
             'address' => 'getAddress',
             'protocol' => 'getProtocol',
             'port' => 'getPort',
-            'listType' => 'getListType',
-            'objectId' => 'getObjectId',
             'description' => 'getDescription'
     ];
 
@@ -199,22 +179,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const LIST_TYPE_4 = 4;
-    const LIST_TYPE_5 = 5;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getListTypeAllowableValues()
-    {
-        return [
-            self::LIST_TYPE_4,
-            self::LIST_TYPE_5,
-        ];
-    }
 
 
     /**
@@ -237,8 +202,6 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['port'] = isset($data['port']) ? $data['port'] : null;
-        $this->container['listType'] = isset($data['listType']) ? $data['listType'] : null;
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -250,14 +213,9 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getListTypeAllowableValues();
-                if (!is_null($this->container['listType']) && !in_array($this->container['listType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'listType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -298,7 +256,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型0：ipv4,1:ipv6,2:domain
+    *  地址类型0：ipv4,1:ipv6
     *
     * @return int|null
     */
@@ -310,7 +268,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0：ipv4,1:ipv6,2:domain
+    * @param int|null $addressType 地址类型0：ipv4,1:ipv6
     *
     * @return $this
     */
@@ -324,7 +282,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Gets address
     *  ip地址
     *
-    * @return string|null
+    * @return string
     */
     public function getAddress()
     {
@@ -334,7 +292,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address ip地址
+    * @param string $address ip地址
     *
     * @return $this
     */
@@ -389,54 +347,6 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     public function setPort($port)
     {
         $this->container['port'] = $port;
-        return $this;
-    }
-
-    /**
-    * Gets listType
-    *  黑白名单类型4：黑名单，5：白名单
-    *
-    * @return int|null
-    */
-    public function getListType()
-    {
-        return $this->container['listType'];
-    }
-
-    /**
-    * Sets listType
-    *
-    * @param int|null $listType 黑白名单类型4：黑名单，5：白名单
-    *
-    * @return $this
-    */
-    public function setListType($listType)
-    {
-        $this->container['listType'] = $listType;
-        return $this;
-    }
-
-    /**
-    * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    *
-    * @return string|null
-    */
-    public function getObjectId()
-    {
-        return $this->container['objectId'];
-    }
-
-    /**
-    * Sets objectId
-    *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
-    *
-    * @return $this
-    */
-    public function setObjectId($objectId)
-    {
-        $this->container['objectId'] = $objectId;
         return $this;
     }
 

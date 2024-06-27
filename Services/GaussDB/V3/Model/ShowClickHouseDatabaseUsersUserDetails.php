@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\GaussDB\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class RuleProfileDto implements ModelInterface, ArrayAccess
+class ShowClickHouseDatabaseUsersUserDetails implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,38 @@ class RuleProfileDto implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'RuleProfileDto';
+    protected static $openAPIModelName = 'ShowClickHouseDatabaseUsers_user_details';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  域名url
+    * userName  数据库账户名。
+    * databases  已授权数据库。
+    * dml  DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    * ddl  DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'url' => 'string'
+            'userName' => 'string',
+            'databases' => 'string[]',
+            'dml' => 'int',
+            'ddl' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  域名url
+    * userName  数据库账户名。
+    * databases  已授权数据库。
+    * dml  DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    * ddl  DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'url' => null
+        'userName' => null,
+        'databases' => null,
+        'dml' => 'int32',
+        'ddl' => 'int32'
     ];
 
     /**
@@ -61,32 +73,50 @@ class RuleProfileDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  域名url
+    * userName  数据库账户名。
+    * databases  已授权数据库。
+    * dml  DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    * ddl  DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'url' => 'url'
+            'userName' => 'user_name',
+            'databases' => 'databases',
+            'dml' => 'dml',
+            'ddl' => 'ddl'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  域名url
+    * userName  数据库账户名。
+    * databases  已授权数据库。
+    * dml  DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    * ddl  DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
     *
     * @var string[]
     */
     protected static $setters = [
-            'url' => 'setUrl'
+            'userName' => 'setUserName',
+            'databases' => 'setDatabases',
+            'dml' => 'setDml',
+            'ddl' => 'setDdl'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  域名url
+    * userName  数据库账户名。
+    * databases  已授权数据库。
+    * dml  DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    * ddl  DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
     *
     * @var string[]
     */
     protected static $getters = [
-            'url' => 'getUrl'
+            'userName' => 'getUserName',
+            'databases' => 'getDatabases',
+            'dml' => 'getDml',
+            'ddl' => 'getDdl'
     ];
 
     /**
@@ -147,7 +177,10 @@ class RuleProfileDto implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
+        $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
+        $this->container['dml'] = isset($data['dml']) ? $data['dml'] : null;
+        $this->container['ddl'] = isset($data['ddl']) ? $data['ddl'] : null;
     }
 
     /**
@@ -158,6 +191,18 @@ class RuleProfileDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['userName'] === null) {
+            $invalidProperties[] = "'userName' can't be null";
+        }
+        if ($this->container['databases'] === null) {
+            $invalidProperties[] = "'databases' can't be null";
+        }
+        if ($this->container['dml'] === null) {
+            $invalidProperties[] = "'dml' can't be null";
+        }
+        if ($this->container['ddl'] === null) {
+            $invalidProperties[] = "'ddl' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -173,26 +218,98 @@ class RuleProfileDto implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets url
-    *  域名url
+    * Gets userName
+    *  数据库账户名。
     *
-    * @return string|null
+    * @return string
     */
-    public function getUrl()
+    public function getUserName()
     {
-        return $this->container['url'];
+        return $this->container['userName'];
     }
 
     /**
-    * Sets url
+    * Sets userName
     *
-    * @param string|null $url 域名url
+    * @param string $userName 数据库账户名。
     *
     * @return $this
     */
-    public function setUrl($url)
+    public function setUserName($userName)
     {
-        $this->container['url'] = $url;
+        $this->container['userName'] = $userName;
+        return $this;
+    }
+
+    /**
+    * Gets databases
+    *  已授权数据库。
+    *
+    * @return string[]
+    */
+    public function getDatabases()
+    {
+        return $this->container['databases'];
+    }
+
+    /**
+    * Sets databases
+    *
+    * @param string[] $databases 已授权数据库。
+    *
+    * @return $this
+    */
+    public function setDatabases($databases)
+    {
+        $this->container['databases'] = $databases;
+        return $this;
+    }
+
+    /**
+    * Gets dml
+    *  DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    *
+    * @return int
+    */
+    public function getDml()
+    {
+        return $this->container['dml'];
+    }
+
+    /**
+    * Sets dml
+    *
+    * @param int $dml DML权限。 取值范围： - 1：只读权限 - 2：读取和设置权限
+    *
+    * @return $this
+    */
+    public function setDml($dml)
+    {
+        $this->container['dml'] = $dml;
+        return $this;
+    }
+
+    /**
+    * Gets ddl
+    *  DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
+    *
+    * @return int
+    */
+    public function getDdl()
+    {
+        return $this->container['ddl'];
+    }
+
+    /**
+    * Sets ddl
+    *
+    * @param int $ddl DDL授权。 取值范围： - 0：无DDL权限 - 1：有DDL权限
+    *
+    * @return $this
+    */
+    public function setDdl($ddl)
+    {
+        $this->container['ddl'] = $ddl;
         return $this;
     }
 

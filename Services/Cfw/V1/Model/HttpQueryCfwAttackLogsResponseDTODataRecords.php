@@ -22,14 +22,14 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * Array of property to type mappings. Used for (de)serialization
     * direction  方向，有内到外和外到内两种
     * action  动作
-    * eventTime  事件时间
+    * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
     * level  威胁等级
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * logId  日志ID
     * srcIp  源IP
     * srcPort  源端口
@@ -39,11 +39,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
-    * dstHost  目标主机
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
     * dstRegionId  目的区域id
     * dstRegionName  目的区域名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -67,25 +74,32 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'packet' => 'string',
             'app' => 'string',
             'packetMessages' => '\HuaweiCloud\SDK\Cfw\V1\Model\PacketMessage[]',
-            'dstHost' => 'string',
             'srcRegionId' => 'string',
             'srcRegionName' => 'string',
             'dstRegionId' => 'string',
-            'dstRegionName' => 'string'
+            'dstRegionName' => 'string',
+            'srcProvinceId' => 'string',
+            'srcProvinceName' => 'string',
+            'srcCityId' => 'string',
+            'srcCityName' => 'string',
+            'dstProvinceId' => 'string',
+            'dstProvinceName' => 'string',
+            'dstCityId' => 'string',
+            'dstCityName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * direction  方向，有内到外和外到内两种
     * action  动作
-    * eventTime  事件时间
+    * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
     * level  威胁等级
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * logId  日志ID
     * srcIp  源IP
     * srcPort  源端口
@@ -95,11 +109,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
-    * dstHost  目标主机
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
     * dstRegionId  目的区域id
     * dstRegionName  目的区域名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -113,7 +134,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         'source' => null,
         'packetLength' => 'int64',
         'attackRuleId' => null,
-        'hitTime' => null,
+        'hitTime' => 'int64',
         'logId' => null,
         'srcIp' => null,
         'srcPort' => 'int32',
@@ -123,11 +144,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         'packet' => null,
         'app' => null,
         'packetMessages' => null,
-        'dstHost' => null,
         'srcRegionId' => null,
         'srcRegionName' => null,
         'dstRegionId' => null,
-        'dstRegionName' => null
+        'dstRegionName' => null,
+        'srcProvinceId' => null,
+        'srcProvinceName' => null,
+        'srcCityId' => null,
+        'srcCityName' => null,
+        'dstProvinceId' => null,
+        'dstProvinceName' => null,
+        'dstCityId' => null,
+        'dstCityName' => null
     ];
 
     /**
@@ -155,14 +183,14 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * and the value is the original name
     * direction  方向，有内到外和外到内两种
     * action  动作
-    * eventTime  事件时间
+    * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
     * level  威胁等级
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * logId  日志ID
     * srcIp  源IP
     * srcPort  源端口
@@ -172,11 +200,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
-    * dstHost  目标主机
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
     * dstRegionId  目的区域id
     * dstRegionName  目的区域名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -200,25 +235,32 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'packet' => 'packet',
             'app' => 'app',
             'packetMessages' => 'packetMessages',
-            'dstHost' => 'dst_host',
             'srcRegionId' => 'src_region_id',
             'srcRegionName' => 'src_region_name',
             'dstRegionId' => 'dst_region_id',
-            'dstRegionName' => 'dst_region_name'
+            'dstRegionName' => 'dst_region_name',
+            'srcProvinceId' => 'src_province_id',
+            'srcProvinceName' => 'src_province_name',
+            'srcCityId' => 'src_city_id',
+            'srcCityName' => 'src_city_name',
+            'dstProvinceId' => 'dst_province_id',
+            'dstProvinceName' => 'dst_province_name',
+            'dstCityId' => 'dst_city_id',
+            'dstCityName' => 'dst_city_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * direction  方向，有内到外和外到内两种
     * action  动作
-    * eventTime  事件时间
+    * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
     * level  威胁等级
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * logId  日志ID
     * srcIp  源IP
     * srcPort  源端口
@@ -228,11 +270,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
-    * dstHost  目标主机
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
     * dstRegionId  目的区域id
     * dstRegionName  目的区域名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -256,25 +305,32 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'packet' => 'setPacket',
             'app' => 'setApp',
             'packetMessages' => 'setPacketMessages',
-            'dstHost' => 'setDstHost',
             'srcRegionId' => 'setSrcRegionId',
             'srcRegionName' => 'setSrcRegionName',
             'dstRegionId' => 'setDstRegionId',
-            'dstRegionName' => 'setDstRegionName'
+            'dstRegionName' => 'setDstRegionName',
+            'srcProvinceId' => 'setSrcProvinceId',
+            'srcProvinceName' => 'setSrcProvinceName',
+            'srcCityId' => 'setSrcCityId',
+            'srcCityName' => 'setSrcCityName',
+            'dstProvinceId' => 'setDstProvinceId',
+            'dstProvinceName' => 'setDstProvinceName',
+            'dstCityId' => 'setDstCityId',
+            'dstCityName' => 'setDstCityName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * direction  方向，有内到外和外到内两种
     * action  动作
-    * eventTime  事件时间
+    * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
     * level  威胁等级
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * logId  日志ID
     * srcIp  源IP
     * srcPort  源端口
@@ -284,11 +340,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * packet  攻击日志报文
     * app  应用协议
     * packetMessages  攻击报文信息
-    * dstHost  目标主机
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
     * dstRegionId  目的区域id
     * dstRegionName  目的区域名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -312,11 +375,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
             'packet' => 'getPacket',
             'app' => 'getApp',
             'packetMessages' => 'getPacketMessages',
-            'dstHost' => 'getDstHost',
             'srcRegionId' => 'getSrcRegionId',
             'srcRegionName' => 'getSrcRegionName',
             'dstRegionId' => 'getDstRegionId',
-            'dstRegionName' => 'getDstRegionName'
+            'dstRegionName' => 'getDstRegionName',
+            'srcProvinceId' => 'getSrcProvinceId',
+            'srcProvinceName' => 'getSrcProvinceName',
+            'srcCityId' => 'getSrcCityId',
+            'srcCityName' => 'getSrcCityName',
+            'dstProvinceId' => 'getDstProvinceId',
+            'dstProvinceName' => 'getDstProvinceName',
+            'dstCityId' => 'getDstCityId',
+            'dstCityName' => 'getDstCityName'
     ];
 
     /**
@@ -411,11 +481,18 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
         $this->container['packet'] = isset($data['packet']) ? $data['packet'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['packetMessages'] = isset($data['packetMessages']) ? $data['packetMessages'] : null;
-        $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
         $this->container['srcRegionId'] = isset($data['srcRegionId']) ? $data['srcRegionId'] : null;
         $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
         $this->container['dstRegionId'] = isset($data['dstRegionId']) ? $data['dstRegionId'] : null;
         $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
+        $this->container['srcProvinceId'] = isset($data['srcProvinceId']) ? $data['srcProvinceId'] : null;
+        $this->container['srcProvinceName'] = isset($data['srcProvinceName']) ? $data['srcProvinceName'] : null;
+        $this->container['srcCityId'] = isset($data['srcCityId']) ? $data['srcCityId'] : null;
+        $this->container['srcCityName'] = isset($data['srcCityName']) ? $data['srcCityName'] : null;
+        $this->container['dstProvinceId'] = isset($data['dstProvinceId']) ? $data['dstProvinceId'] : null;
+        $this->container['dstProvinceName'] = isset($data['dstProvinceName']) ? $data['dstProvinceName'] : null;
+        $this->container['dstCityId'] = isset($data['dstCityId']) ? $data['dstCityId'] : null;
+        $this->container['dstCityName'] = isset($data['dstCityName']) ? $data['dstCityName'] : null;
     }
 
     /**
@@ -510,7 +587,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets eventTime
-    *  事件时间
+    *  事件时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int|null
     */
@@ -522,7 +599,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets eventTime
     *
-    * @param int|null $eventTime 事件时间
+    * @param int|null $eventTime 事件时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -678,7 +755,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets hitTime
-    *  命中时间
+    *  命中时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int|null
     */
@@ -690,7 +767,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets hitTime
     *
-    * @param int|null $hitTime 命中时间
+    * @param int|null $hitTime 命中时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -917,30 +994,6 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     }
 
     /**
-    * Gets dstHost
-    *  目标主机
-    *
-    * @return string|null
-    */
-    public function getDstHost()
-    {
-        return $this->container['dstHost'];
-    }
-
-    /**
-    * Sets dstHost
-    *
-    * @param string|null $dstHost 目标主机
-    *
-    * @return $this
-    */
-    public function setDstHost($dstHost)
-    {
-        $this->container['dstHost'] = $dstHost;
-        return $this;
-    }
-
-    /**
     * Gets srcRegionId
     *  源区域id
     *
@@ -1033,6 +1086,198 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     public function setDstRegionName($dstRegionName)
     {
         $this->container['dstRegionName'] = $dstRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceId
+    *  源省份id
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceId()
+    {
+        return $this->container['srcProvinceId'];
+    }
+
+    /**
+    * Sets srcProvinceId
+    *
+    * @param string|null $srcProvinceId 源省份id
+    *
+    * @return $this
+    */
+    public function setSrcProvinceId($srcProvinceId)
+    {
+        $this->container['srcProvinceId'] = $srcProvinceId;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceName
+    *  源省份名称
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceName()
+    {
+        return $this->container['srcProvinceName'];
+    }
+
+    /**
+    * Sets srcProvinceName
+    *
+    * @param string|null $srcProvinceName 源省份名称
+    *
+    * @return $this
+    */
+    public function setSrcProvinceName($srcProvinceName)
+    {
+        $this->container['srcProvinceName'] = $srcProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityId
+    *  源城市id
+    *
+    * @return string|null
+    */
+    public function getSrcCityId()
+    {
+        return $this->container['srcCityId'];
+    }
+
+    /**
+    * Sets srcCityId
+    *
+    * @param string|null $srcCityId 源城市id
+    *
+    * @return $this
+    */
+    public function setSrcCityId($srcCityId)
+    {
+        $this->container['srcCityId'] = $srcCityId;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityName
+    *  源城市名称
+    *
+    * @return string|null
+    */
+    public function getSrcCityName()
+    {
+        return $this->container['srcCityName'];
+    }
+
+    /**
+    * Sets srcCityName
+    *
+    * @param string|null $srcCityName 源城市名称
+    *
+    * @return $this
+    */
+    public function setSrcCityName($srcCityName)
+    {
+        $this->container['srcCityName'] = $srcCityName;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceId
+    *  目的省份id
+    *
+    * @return string|null
+    */
+    public function getDstProvinceId()
+    {
+        return $this->container['dstProvinceId'];
+    }
+
+    /**
+    * Sets dstProvinceId
+    *
+    * @param string|null $dstProvinceId 目的省份id
+    *
+    * @return $this
+    */
+    public function setDstProvinceId($dstProvinceId)
+    {
+        $this->container['dstProvinceId'] = $dstProvinceId;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceName
+    *  目的省份名称
+    *
+    * @return string|null
+    */
+    public function getDstProvinceName()
+    {
+        return $this->container['dstProvinceName'];
+    }
+
+    /**
+    * Sets dstProvinceName
+    *
+    * @param string|null $dstProvinceName 目的省份名称
+    *
+    * @return $this
+    */
+    public function setDstProvinceName($dstProvinceName)
+    {
+        $this->container['dstProvinceName'] = $dstProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityId
+    *  目的城市id
+    *
+    * @return string|null
+    */
+    public function getDstCityId()
+    {
+        return $this->container['dstCityId'];
+    }
+
+    /**
+    * Sets dstCityId
+    *
+    * @param string|null $dstCityId 目的城市id
+    *
+    * @return $this
+    */
+    public function setDstCityId($dstCityId)
+    {
+        $this->container['dstCityId'] = $dstCityId;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityName
+    *  目的城市名称
+    *
+    * @return string|null
+    */
+    public function getDstCityName()
+    {
+        return $this->container['dstCityName'];
+    }
+
+    /**
+    * Sets dstCityName
+    *
+    * @param string|null $dstCityName 目的城市名称
+    *
+    * @return $this
+    */
+    public function setDstCityName($dstCityName)
+    {
+        $this->container['dstCityName'] = $dstCityName;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业租户id
     * projectId  租户id
     * enableIpv6  是否开启ipv6
+    * attachmentId  连接id
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ErInstance implements ModelInterface, ArrayAccess
             'state' => 'string',
             'enterpriseProjectId' => 'string',
             'projectId' => 'string',
-            'enableIpv6' => 'string'
+            'enableIpv6' => 'string',
+            'attachmentId' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业租户id
     * projectId  租户id
     * enableIpv6  是否开启ipv6
+    * attachmentId  连接id
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ErInstance implements ModelInterface, ArrayAccess
         'state' => null,
         'enterpriseProjectId' => null,
         'projectId' => null,
-        'enableIpv6' => null
+        'enableIpv6' => null,
+        'attachmentId' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业租户id
     * projectId  租户id
     * enableIpv6  是否开启ipv6
+    * attachmentId  连接id
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ErInstance implements ModelInterface, ArrayAccess
             'state' => 'state',
             'enterpriseProjectId' => 'enterprise_project_id',
             'projectId' => 'project_id',
-            'enableIpv6' => 'enable_ipv6'
+            'enableIpv6' => 'enable_ipv6',
+            'attachmentId' => 'attachment_id'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业租户id
     * projectId  租户id
     * enableIpv6  是否开启ipv6
+    * attachmentId  连接id
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ErInstance implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'projectId' => 'setProjectId',
-            'enableIpv6' => 'setEnableIpv6'
+            'enableIpv6' => 'setEnableIpv6',
+            'attachmentId' => 'setAttachmentId'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     * enterpriseProjectId  企业租户id
     * projectId  租户id
     * enableIpv6  是否开启ipv6
+    * attachmentId  连接id
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ErInstance implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'projectId' => 'getProjectId',
-            'enableIpv6' => 'getEnableIpv6'
+            'enableIpv6' => 'getEnableIpv6',
+            'attachmentId' => 'getAttachmentId'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ErInstance implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['enableIpv6'] = isset($data['enableIpv6']) ? $data['enableIpv6'] : null;
+        $this->container['attachmentId'] = isset($data['attachmentId']) ? $data['attachmentId'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class ErInstance implements ModelInterface, ArrayAccess
     public function setEnableIpv6($enableIpv6)
     {
         $this->container['enableIpv6'] = $enableIpv6;
+        return $this;
+    }
+
+    /**
+    * Gets attachmentId
+    *  连接id
+    *
+    * @return string|null
+    */
+    public function getAttachmentId()
+    {
+        return $this->container['attachmentId'];
+    }
+
+    /**
+    * Sets attachmentId
+    *
+    * @param string|null $attachmentId 连接id
+    *
+    * @return $this
+    */
+    public function setAttachmentId($attachmentId)
+    {
+        $this->container['attachmentId'] = $attachmentId;
         return $this;
     }
 

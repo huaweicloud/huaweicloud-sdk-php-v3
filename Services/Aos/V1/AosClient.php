@@ -601,11 +601,11 @@ class AosClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'example']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'example'],
+                ['application/json'],
                 []
             );
         }
@@ -1466,6 +1466,12 @@ class AosClient extends Client
         if ($localVarParams['stackId'] !== null) {
             $queryParams['stack_id'] = $localVarParams['stackId'];
         }
+        if ($localVarParams['accessControlSourceIps'] !== null) {
+            $queryParams['access_control_source_ips'] = $localVarParams['accessControlSourceIps'];
+        }
+        if ($localVarParams['accessControlSourceVpcIds'] !== null) {
+            $queryParams['access_control_source_vpc_ids'] = $localVarParams['accessControlSourceVpcIds'];
+        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -2230,6 +2236,9 @@ class AosClient extends Client
         if ($localVarParams['stackSetId'] !== null) {
             $queryParams['stack_set_id'] = $localVarParams['stackSetId'];
         }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
+        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -2393,6 +2402,9 @@ class AosClient extends Client
         if ($localVarParams['sortDir'] !== null) {
             $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
+        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -2476,6 +2488,9 @@ class AosClient extends Client
         if ($localVarParams['sortDir'] !== null) {
             $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
+        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -2557,6 +2572,9 @@ class AosClient extends Client
         if ($localVarParams['sortDir'] !== null) {
             $queryParams['sort_dir'] = $localVarParams['sortDir'];
         }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
+        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -2623,6 +2641,9 @@ class AosClient extends Client
         }
         if ($localVarParams['stackSetId'] !== null) {
             $queryParams['stack_set_id'] = $localVarParams['stackSetId'];
+        }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -2697,6 +2718,9 @@ class AosClient extends Client
         if ($localVarParams['stackSetId'] !== null) {
             $queryParams['stack_set_id'] = $localVarParams['stackSetId'];
         }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
+        }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
         }
@@ -2768,6 +2792,9 @@ class AosClient extends Client
         }
         if ($localVarParams['stackSetId'] !== null) {
             $queryParams['stack_set_id'] = $localVarParams['stackSetId'];
+        }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -2844,6 +2871,15 @@ class AosClient extends Client
         }
         if ($localVarParams['stackSetId'] !== null) {
             $queryParams['stack_set_id'] = $localVarParams['stackSetId'];
+        }
+        if ($localVarParams['accessControlSourceIps'] !== null) {
+            $queryParams['access_control_source_ips'] = $localVarParams['accessControlSourceIps'];
+        }
+        if ($localVarParams['accessControlSourceVpcIds'] !== null) {
+            $queryParams['access_control_source_vpc_ids'] = $localVarParams['accessControlSourceVpcIds'];
+        }
+        if ($localVarParams['callIdentity'] !== null) {
+            $queryParams['call_identity'] = $localVarParams['callIdentity'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];
@@ -3522,6 +3558,12 @@ class AosClient extends Client
         }
         if ($localVarParams['templateId'] !== null) {
             $queryParams['template_id'] = $localVarParams['templateId'];
+        }
+        if ($localVarParams['accessControlSourceVpcIds'] !== null) {
+            $queryParams['access_control_source_vpc_ids'] = $localVarParams['accessControlSourceVpcIds'];
+        }
+        if ($localVarParams['accessControlSourceIps'] !== null) {
+            $queryParams['access_control_source_ips'] = $localVarParams['accessControlSourceIps'];
         }
         if ($localVarParams['clientRequestId'] !== null) {
             $headerParams[$arr['clientRequestId']] = $localVarParams['clientRequestId'];

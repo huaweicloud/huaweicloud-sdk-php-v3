@@ -25,11 +25,6 @@ class Flavor implements ModelInterface, ArrayAccess
     * vpcCount  vpc数量
     * bandwidth  带宽
     * logStorage  日志存储
-    * sessionConcurrent  目前的会话数
-    * sessionCreate  创建会话数
-    * totalRuleCount  总计规则数
-    * usedRuleCount  已使用规则数
-    * vpcBandwith  vpc间带宽
     * defaultBandwidth  默认防火墙带宽
     * defaultEipCount  默认eip数
     * defaultLogStorage  默认日志存储
@@ -43,11 +38,6 @@ class Flavor implements ModelInterface, ArrayAccess
             'vpcCount' => 'int',
             'bandwidth' => 'int',
             'logStorage' => 'int',
-            'sessionConcurrent' => 'int',
-            'sessionCreate' => 'int',
-            'totalRuleCount' => 'int',
-            'usedRuleCount' => 'int',
-            'vpcBandwith' => 'int',
             'defaultBandwidth' => 'int',
             'defaultEipCount' => 'int',
             'defaultLogStorage' => 'int',
@@ -61,11 +51,6 @@ class Flavor implements ModelInterface, ArrayAccess
     * vpcCount  vpc数量
     * bandwidth  带宽
     * logStorage  日志存储
-    * sessionConcurrent  目前的会话数
-    * sessionCreate  创建会话数
-    * totalRuleCount  总计规则数
-    * usedRuleCount  已使用规则数
-    * vpcBandwith  vpc间带宽
     * defaultBandwidth  默认防火墙带宽
     * defaultEipCount  默认eip数
     * defaultLogStorage  默认日志存储
@@ -79,11 +64,6 @@ class Flavor implements ModelInterface, ArrayAccess
         'vpcCount' => 'int32',
         'bandwidth' => 'int32',
         'logStorage' => 'int32',
-        'sessionConcurrent' => 'int32',
-        'sessionCreate' => 'int32',
-        'totalRuleCount' => null,
-        'usedRuleCount' => null,
-        'vpcBandwith' => null,
         'defaultBandwidth' => 'int32',
         'defaultEipCount' => 'int32',
         'defaultLogStorage' => 'int32',
@@ -118,11 +98,6 @@ class Flavor implements ModelInterface, ArrayAccess
     * vpcCount  vpc数量
     * bandwidth  带宽
     * logStorage  日志存储
-    * sessionConcurrent  目前的会话数
-    * sessionCreate  创建会话数
-    * totalRuleCount  总计规则数
-    * usedRuleCount  已使用规则数
-    * vpcBandwith  vpc间带宽
     * defaultBandwidth  默认防火墙带宽
     * defaultEipCount  默认eip数
     * defaultLogStorage  默认日志存储
@@ -136,11 +111,6 @@ class Flavor implements ModelInterface, ArrayAccess
             'vpcCount' => 'vpc_count',
             'bandwidth' => 'bandwidth',
             'logStorage' => 'log_storage',
-            'sessionConcurrent' => 'session_concurrent',
-            'sessionCreate' => 'session_create',
-            'totalRuleCount' => 'total_rule_count',
-            'usedRuleCount' => 'used_rule_count',
-            'vpcBandwith' => 'vpc_bandwith',
             'defaultBandwidth' => 'default_bandwidth',
             'defaultEipCount' => 'default_eip_count',
             'defaultLogStorage' => 'default_log_storage',
@@ -154,11 +124,6 @@ class Flavor implements ModelInterface, ArrayAccess
     * vpcCount  vpc数量
     * bandwidth  带宽
     * logStorage  日志存储
-    * sessionConcurrent  目前的会话数
-    * sessionCreate  创建会话数
-    * totalRuleCount  总计规则数
-    * usedRuleCount  已使用规则数
-    * vpcBandwith  vpc间带宽
     * defaultBandwidth  默认防火墙带宽
     * defaultEipCount  默认eip数
     * defaultLogStorage  默认日志存储
@@ -172,11 +137,6 @@ class Flavor implements ModelInterface, ArrayAccess
             'vpcCount' => 'setVpcCount',
             'bandwidth' => 'setBandwidth',
             'logStorage' => 'setLogStorage',
-            'sessionConcurrent' => 'setSessionConcurrent',
-            'sessionCreate' => 'setSessionCreate',
-            'totalRuleCount' => 'setTotalRuleCount',
-            'usedRuleCount' => 'setUsedRuleCount',
-            'vpcBandwith' => 'setVpcBandwith',
             'defaultBandwidth' => 'setDefaultBandwidth',
             'defaultEipCount' => 'setDefaultEipCount',
             'defaultLogStorage' => 'setDefaultLogStorage',
@@ -190,11 +150,6 @@ class Flavor implements ModelInterface, ArrayAccess
     * vpcCount  vpc数量
     * bandwidth  带宽
     * logStorage  日志存储
-    * sessionConcurrent  目前的会话数
-    * sessionCreate  创建会话数
-    * totalRuleCount  总计规则数
-    * usedRuleCount  已使用规则数
-    * vpcBandwith  vpc间带宽
     * defaultBandwidth  默认防火墙带宽
     * defaultEipCount  默认eip数
     * defaultLogStorage  默认日志存储
@@ -208,11 +163,6 @@ class Flavor implements ModelInterface, ArrayAccess
             'vpcCount' => 'getVpcCount',
             'bandwidth' => 'getBandwidth',
             'logStorage' => 'getLogStorage',
-            'sessionConcurrent' => 'getSessionConcurrent',
-            'sessionCreate' => 'getSessionCreate',
-            'totalRuleCount' => 'getTotalRuleCount',
-            'usedRuleCount' => 'getUsedRuleCount',
-            'vpcBandwith' => 'getVpcBandwith',
             'defaultBandwidth' => 'getDefaultBandwidth',
             'defaultEipCount' => 'getDefaultEipCount',
             'defaultLogStorage' => 'getDefaultLogStorage',
@@ -301,11 +251,6 @@ class Flavor implements ModelInterface, ArrayAccess
         $this->container['vpcCount'] = isset($data['vpcCount']) ? $data['vpcCount'] : null;
         $this->container['bandwidth'] = isset($data['bandwidth']) ? $data['bandwidth'] : null;
         $this->container['logStorage'] = isset($data['logStorage']) ? $data['logStorage'] : null;
-        $this->container['sessionConcurrent'] = isset($data['sessionConcurrent']) ? $data['sessionConcurrent'] : null;
-        $this->container['sessionCreate'] = isset($data['sessionCreate']) ? $data['sessionCreate'] : null;
-        $this->container['totalRuleCount'] = isset($data['totalRuleCount']) ? $data['totalRuleCount'] : null;
-        $this->container['usedRuleCount'] = isset($data['usedRuleCount']) ? $data['usedRuleCount'] : null;
-        $this->container['vpcBandwith'] = isset($data['vpcBandwith']) ? $data['vpcBandwith'] : null;
         $this->container['defaultBandwidth'] = isset($data['defaultBandwidth']) ? $data['defaultBandwidth'] : null;
         $this->container['defaultEipCount'] = isset($data['defaultEipCount']) ? $data['defaultEipCount'] : null;
         $this->container['defaultLogStorage'] = isset($data['defaultLogStorage']) ? $data['defaultLogStorage'] : null;
@@ -468,126 +413,6 @@ class Flavor implements ModelInterface, ArrayAccess
     public function setLogStorage($logStorage)
     {
         $this->container['logStorage'] = $logStorage;
-        return $this;
-    }
-
-    /**
-    * Gets sessionConcurrent
-    *  目前的会话数
-    *
-    * @return int|null
-    */
-    public function getSessionConcurrent()
-    {
-        return $this->container['sessionConcurrent'];
-    }
-
-    /**
-    * Sets sessionConcurrent
-    *
-    * @param int|null $sessionConcurrent 目前的会话数
-    *
-    * @return $this
-    */
-    public function setSessionConcurrent($sessionConcurrent)
-    {
-        $this->container['sessionConcurrent'] = $sessionConcurrent;
-        return $this;
-    }
-
-    /**
-    * Gets sessionCreate
-    *  创建会话数
-    *
-    * @return int|null
-    */
-    public function getSessionCreate()
-    {
-        return $this->container['sessionCreate'];
-    }
-
-    /**
-    * Sets sessionCreate
-    *
-    * @param int|null $sessionCreate 创建会话数
-    *
-    * @return $this
-    */
-    public function setSessionCreate($sessionCreate)
-    {
-        $this->container['sessionCreate'] = $sessionCreate;
-        return $this;
-    }
-
-    /**
-    * Gets totalRuleCount
-    *  总计规则数
-    *
-    * @return int|null
-    */
-    public function getTotalRuleCount()
-    {
-        return $this->container['totalRuleCount'];
-    }
-
-    /**
-    * Sets totalRuleCount
-    *
-    * @param int|null $totalRuleCount 总计规则数
-    *
-    * @return $this
-    */
-    public function setTotalRuleCount($totalRuleCount)
-    {
-        $this->container['totalRuleCount'] = $totalRuleCount;
-        return $this;
-    }
-
-    /**
-    * Gets usedRuleCount
-    *  已使用规则数
-    *
-    * @return int|null
-    */
-    public function getUsedRuleCount()
-    {
-        return $this->container['usedRuleCount'];
-    }
-
-    /**
-    * Sets usedRuleCount
-    *
-    * @param int|null $usedRuleCount 已使用规则数
-    *
-    * @return $this
-    */
-    public function setUsedRuleCount($usedRuleCount)
-    {
-        $this->container['usedRuleCount'] = $usedRuleCount;
-        return $this;
-    }
-
-    /**
-    * Gets vpcBandwith
-    *  vpc间带宽
-    *
-    * @return int|null
-    */
-    public function getVpcBandwith()
-    {
-        return $this->container['vpcBandwith'];
-    }
-
-    /**
-    * Sets vpcBandwith
-    *
-    * @param int|null $vpcBandwith vpc间带宽
-    *
-    * @return $this
-    */
-    public function setVpcBandwith($vpcBandwith)
-    {
-        $this->container['vpcBandwith'] = $vpcBandwith;
         return $this;
     }
 

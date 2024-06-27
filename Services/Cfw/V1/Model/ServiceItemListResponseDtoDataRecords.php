@@ -24,7 +24,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
@@ -34,7 +33,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
             'protocol' => 'int',
             'sourcePort' => 'string',
             'destPort' => 'string',
-            'name' => 'string',
             'description' => 'string'
     ];
 
@@ -44,7 +42,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
@@ -54,7 +51,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
         'protocol' => null,
         'sourcePort' => null,
         'destPort' => null,
-        'name' => null,
         'description' => null
     ];
 
@@ -85,7 +81,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
@@ -95,7 +90,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
             'protocol' => 'protocol',
             'sourcePort' => 'source_port',
             'destPort' => 'dest_port',
-            'name' => 'name',
             'description' => 'description'
     ];
 
@@ -105,7 +99,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
@@ -115,7 +108,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
             'protocol' => 'setProtocol',
             'sourcePort' => 'setSourcePort',
             'destPort' => 'setDestPort',
-            'name' => 'setName',
             'description' => 'setDescription'
     ];
 
@@ -125,7 +117,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
@@ -135,7 +126,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
             'protocol' => 'getProtocol',
             'sourcePort' => 'getSourcePort',
             'destPort' => 'getDestPort',
-            'name' => 'getName',
             'description' => 'getDescription'
     ];
 
@@ -201,7 +191,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['sourcePort'] = isset($data['sourcePort']) ? $data['sourcePort'] : null;
         $this->container['destPort'] = isset($data['destPort']) ? $data['destPort'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -320,30 +309,6 @@ class ServiceItemListResponseDtoDataRecords implements ModelInterface, ArrayAcce
     public function setDestPort($destPort)
     {
         $this->container['destPort'] = $destPort;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  服务成员名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 服务成员名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
         return $this;
     }
 

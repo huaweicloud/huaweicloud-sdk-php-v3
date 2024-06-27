@@ -34,7 +34,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -58,7 +57,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'longConnectTimeSecond' => 'int',
             'longConnectTime' => 'int',
             'longConnectEnable' => 'int',
-            'profile' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto',
             'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
             'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
@@ -82,7 +80,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -106,7 +103,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
         'longConnectTimeSecond' => 'int64',
         'longConnectTime' => 'int64',
         'longConnectEnable' => 'int32',
-        'profile' => null,
         'source' => null,
         'destination' => null,
         'service' => null,
@@ -151,7 +147,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -175,7 +170,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'longConnectTimeSecond' => 'long_connect_time_second',
             'longConnectTime' => 'long_connect_time',
             'longConnectEnable' => 'long_connect_enable',
-            'profile' => 'profile',
             'source' => 'source',
             'destination' => 'destination',
             'service' => 'service',
@@ -199,7 +193,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -223,7 +216,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'longConnectTimeSecond' => 'setLongConnectTimeSecond',
             'longConnectTime' => 'setLongConnectTime',
             'longConnectEnable' => 'setLongConnectEnable',
-            'profile' => 'setProfile',
             'source' => 'setSource',
             'destination' => 'setDestination',
             'service' => 'setService',
@@ -247,7 +239,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
-    * profile  profile
     * source  source
     * destination  destination
     * service  service
@@ -271,7 +262,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
             'longConnectTimeSecond' => 'getLongConnectTimeSecond',
             'longConnectTime' => 'getLongConnectTime',
             'longConnectEnable' => 'getLongConnectEnable',
-            'profile' => 'getProfile',
             'source' => 'getSource',
             'destination' => 'getDestination',
             'service' => 'getService',
@@ -428,7 +418,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
         $this->container['longConnectTimeSecond'] = isset($data['longConnectTimeSecond']) ? $data['longConnectTimeSecond'] : null;
         $this->container['longConnectTime'] = isset($data['longConnectTime']) ? $data['longConnectTime'] : null;
         $this->container['longConnectEnable'] = isset($data['longConnectEnable']) ? $data['longConnectEnable'] : null;
-        $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
@@ -831,30 +820,6 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     public function setLongConnectEnable($longConnectEnable)
     {
         $this->container['longConnectEnable'] = $longConnectEnable;
-        return $this;
-    }
-
-    /**
-    * Gets profile
-    *  profile
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null
-    */
-    public function getProfile()
-    {
-        return $this->container['profile'];
-    }
-
-    /**
-    * Sets profile
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleProfileDto|null $profile profile
-    *
-    * @return $this
-    */
-    public function setProfile($profile)
-    {
-        $this->container['profile'] = $profile;
         return $this;
     }
 

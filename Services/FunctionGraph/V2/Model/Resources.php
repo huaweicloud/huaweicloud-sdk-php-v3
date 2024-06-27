@@ -22,7 +22,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * quota  函数配额限制。
     * used  已使用的配额。
-    * type  “资源类型”
+    * type  资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     * unit  资源的计数单位。fgs_func_code_size,单位为MB,其他场景无单位
     *
     * @var string[]
@@ -38,7 +38,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * quota  函数配额限制。
     * used  已使用的配额。
-    * type  “资源类型”
+    * type  资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     * unit  资源的计数单位。fgs_func_code_size,单位为MB,其他场景无单位
     *
     * @var string[]
@@ -75,7 +75,7 @@ class Resources implements ModelInterface, ArrayAccess
     * and the value is the original name
     * quota  函数配额限制。
     * used  已使用的配额。
-    * type  “资源类型”
+    * type  资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     * unit  资源的计数单位。fgs_func_code_size,单位为MB,其他场景无单位
     *
     * @var string[]
@@ -91,7 +91,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * quota  函数配额限制。
     * used  已使用的配额。
-    * type  “资源类型”
+    * type  资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     * unit  资源的计数单位。fgs_func_code_size,单位为MB,其他场景无单位
     *
     * @var string[]
@@ -107,7 +107,7 @@ class Resources implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * quota  函数配额限制。
     * used  已使用的配额。
-    * type  “资源类型”
+    * type  资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     * unit  资源的计数单位。fgs_func_code_size,单位为MB,其他场景无单位
     *
     * @var string[]
@@ -165,6 +165,8 @@ class Resources implements ModelInterface, ArrayAccess
     const TYPE_FGS_FUNC_NUM = 'fgs_func_num';
     const TYPE_FGS_FUNC_CODE_SIZE = 'fgs_func_code_size';
     const TYPE_FGS_WORKFLOW_NUM = 'fgs_workflow_num';
+    const TYPE_FGS_ON_DEMAND_INSTANCE_LIMIT = 'fgs_on_demand_instance_limit';
+    const TYPE_FGS_FUNC_QOS_LIMIT = 'fgs_func_qos_limit';
     
 
     /**
@@ -181,6 +183,8 @@ class Resources implements ModelInterface, ArrayAccess
             self::TYPE_FGS_FUNC_NUM,
             self::TYPE_FGS_FUNC_CODE_SIZE,
             self::TYPE_FGS_WORKFLOW_NUM,
+            self::TYPE_FGS_ON_DEMAND_INSTANCE_LIMIT,
+            self::TYPE_FGS_FUNC_QOS_LIMIT,
         ];
     }
 
@@ -286,7 +290,7 @@ class Resources implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  “资源类型”
+    *  资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     *
     * @return string|null
     */
@@ -298,7 +302,7 @@ class Resources implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type “资源类型”
+    * @param string|null $type 资源类型。 fgs_func_scale_down_timeout：v1版本函数的实例闲置释放时间 fgs_func_occurs：v1版本函数为实例数配额, v2版本函数为预留实例配额 fgs_func_pat_idle_time：vpc函数的pat闲置释放时间 fgs_func_num：用户函数数量配额 fgs_func_code_size：用户函数总代码大小配额 fgs_workflow_num：用户函数流数量配额 fgs_on_demand_instance_limit：v2版本函数单函数最大实例数配额 fgs_func_qos_limit 用户函数实例数配额
     *
     * @return $this
     */

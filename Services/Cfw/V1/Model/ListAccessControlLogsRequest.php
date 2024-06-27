@@ -21,27 +21,31 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * ruleId  规则ID
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  文档ID,第一页为空，其他页不为空
-    * nextDate  日期,第一页为空，其他页不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
     * ruleName  规则名称
-    * action  动作0：permit,1：deny
+    * action  动作包含permit，deny
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -67,33 +71,41 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'ruleName' => 'string',
             'action' => 'string',
             'srcRegionName' => 'string',
-            'dstRegionName' => 'string'
+            'dstRegionName' => 'string',
+            'srcProvinceName' => 'string',
+            'dstProvinceName' => 'string',
+            'srcCityName' => 'string',
+            'dstCityName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * ruleId  规则ID
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  文档ID,第一页为空，其他页不为空
-    * nextDate  日期,第一页为空，其他页不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
     * ruleName  规则名称
-    * action  动作0：permit,1：deny
+    * action  动作包含permit，deny
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -119,7 +131,11 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         'ruleName' => null,
         'action' => null,
         'srcRegionName' => null,
-        'dstRegionName' => null
+        'dstRegionName' => null,
+        'srcProvinceName' => null,
+        'dstProvinceName' => null,
+        'srcCityName' => null,
+        'dstCityName' => null
     ];
 
     /**
@@ -146,27 +162,31 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  租户项目id
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * ruleId  规则ID
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  文档ID,第一页为空，其他页不为空
-    * nextDate  日期,第一页为空，其他页不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
     * ruleName  规则名称
-    * action  动作0：permit,1：deny
+    * action  动作包含permit，deny
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -192,33 +212,41 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'ruleName' => 'rule_name',
             'action' => 'action',
             'srcRegionName' => 'src_region_name',
-            'dstRegionName' => 'dst_region_name'
+            'dstRegionName' => 'dst_region_name',
+            'srcProvinceName' => 'src_province_name',
+            'dstProvinceName' => 'dst_province_name',
+            'srcCityName' => 'src_city_name',
+            'dstCityName' => 'dst_city_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * ruleId  规则ID
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  文档ID,第一页为空，其他页不为空
-    * nextDate  日期,第一页为空，其他页不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
     * ruleName  规则名称
-    * action  动作0：permit,1：deny
+    * action  动作包含permit，deny
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -244,33 +272,41 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'ruleName' => 'setRuleName',
             'action' => 'setAction',
             'srcRegionName' => 'setSrcRegionName',
-            'dstRegionName' => 'setDstRegionName'
+            'dstRegionName' => 'setDstRegionName',
+            'srcProvinceName' => 'setSrcProvinceName',
+            'dstProvinceName' => 'setDstProvinceName',
+            'srcCityName' => 'setSrcCityName',
+            'dstCityName' => 'setDstCityName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * ruleId  规则ID
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  文档ID,第一页为空，其他页不为空
-    * nextDate  日期,第一页为空，其他页不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
     * ruleName  规则名称
-    * action  动作0：permit,1：deny
+    * action  动作包含permit，deny
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -296,7 +332,11 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
             'ruleName' => 'getRuleName',
             'action' => 'getAction',
             'srcRegionName' => 'getSrcRegionName',
-            'dstRegionName' => 'getDstRegionName'
+            'dstRegionName' => 'getDstRegionName',
+            'srcProvinceName' => 'getSrcProvinceName',
+            'dstProvinceName' => 'getDstProvinceName',
+            'srcCityName' => 'getSrcCityName',
+            'dstCityName' => 'getDstCityName'
     ];
 
     /**
@@ -396,6 +436,10 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
         $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
+        $this->container['srcProvinceName'] = isset($data['srcProvinceName']) ? $data['srcProvinceName'] : null;
+        $this->container['dstProvinceName'] = isset($data['dstProvinceName']) ? $data['dstProvinceName'] : null;
+        $this->container['srcCityName'] = isset($data['srcCityName']) ? $data['srcCityName'] : null;
+        $this->container['dstCityName'] = isset($data['dstCityName']) ? $data['dstCityName'] : null;
     }
 
     /**
@@ -475,7 +519,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     *
     * @return string
     */
@@ -487,7 +531,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     *
     * @return $this
     */
@@ -523,7 +567,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  开始时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int
     */
@@ -535,7 +579,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int $startTime 开始时间
+    * @param int $startTime 开始时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -547,7 +591,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  结束时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int
     */
@@ -559,7 +603,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int $endTime 结束时间
+    * @param int $endTime 结束时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -667,7 +711,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议
+    *  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     *
     * @return string|null
     */
@@ -679,7 +723,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议
+    * @param string|null $protocol 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     *
     * @return $this
     */
@@ -715,7 +759,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logId
-    *  文档ID,第一页为空，其他页不为空
+    *  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     *
     * @return string|null
     */
@@ -727,7 +771,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logId
     *
-    * @param string|null $logId 文档ID,第一页为空，其他页不为空
+    * @param string|null $logId 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     *
     * @return $this
     */
@@ -739,7 +783,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextDate
-    *  日期,第一页为空，其他页不为空
+    *  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     *
     * @return int|null
     */
@@ -751,7 +795,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nextDate
     *
-    * @param int|null $nextDate 日期,第一页为空，其他页不为空
+    * @param int|null $nextDate 下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的start_time
     *
     * @return $this
     */
@@ -763,7 +807,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     *
     * @return int|null
     */
@@ -775,7 +819,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     *
     * @return $this
     */
@@ -811,7 +855,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logType
-    *  日志类型
+    *  日志类型包括：internet，vpc，nat
     *
     * @return string|null
     */
@@ -823,7 +867,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logType
     *
-    * @param string|null $logType 日志类型
+    * @param string|null $logType 日志类型包括：internet，vpc，nat
     *
     * @return $this
     */
@@ -907,7 +951,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  动作0：permit,1：deny
+    *  动作包含permit，deny
     *
     * @return string|null
     */
@@ -919,7 +963,7 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 动作0：permit,1：deny
+    * @param string|null $action 动作包含permit，deny
     *
     * @return $this
     */
@@ -974,6 +1018,102 @@ class ListAccessControlLogsRequest implements ModelInterface, ArrayAccess
     public function setDstRegionName($dstRegionName)
     {
         $this->container['dstRegionName'] = $dstRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceName
+    *  源省份名称
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceName()
+    {
+        return $this->container['srcProvinceName'];
+    }
+
+    /**
+    * Sets srcProvinceName
+    *
+    * @param string|null $srcProvinceName 源省份名称
+    *
+    * @return $this
+    */
+    public function setSrcProvinceName($srcProvinceName)
+    {
+        $this->container['srcProvinceName'] = $srcProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceName
+    *  目的省份名称
+    *
+    * @return string|null
+    */
+    public function getDstProvinceName()
+    {
+        return $this->container['dstProvinceName'];
+    }
+
+    /**
+    * Sets dstProvinceName
+    *
+    * @param string|null $dstProvinceName 目的省份名称
+    *
+    * @return $this
+    */
+    public function setDstProvinceName($dstProvinceName)
+    {
+        $this->container['dstProvinceName'] = $dstProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityName
+    *  源城市名称
+    *
+    * @return string|null
+    */
+    public function getSrcCityName()
+    {
+        return $this->container['srcCityName'];
+    }
+
+    /**
+    * Sets srcCityName
+    *
+    * @param string|null $srcCityName 源城市名称
+    *
+    * @return $this
+    */
+    public function setSrcCityName($srcCityName)
+    {
+        $this->container['srcCityName'] = $srcCityName;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityName
+    *  目的城市名称
+    *
+    * @return string|null
+    */
+    public function getDstCityName()
+    {
+        return $this->container['dstCityName'];
+    }
+
+    /**
+    * Sets dstCityName
+    *
+    * @param string|null $dstCityName 目的城市名称
+    *
+    * @return $this
+    */
+    public function setDstCityName($dstCityName)
+    {
+        $this->container['dstCityName'] = $dstCityName;
         return $this;
     }
 

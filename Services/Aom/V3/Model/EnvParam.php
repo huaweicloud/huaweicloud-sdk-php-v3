@@ -21,8 +21,8 @@ class EnvParam implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * componentId  环境关联组件id；id长度不能超过36位，由大小写字母、数字组成。创建环境必传，修改环境时非必选
-    * description  描述：最大255字符
-    * envName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  描述
+    * envName  环境名称
     * envType  环境类型，取值：DEV、TEST、PRE、ONLINE，不区分大小写
     * osType  OS类型，取值：LINUX、WINDOWS。创建环境必传，不可修改
     * region  环境关联region。创建环境必传，不可修改
@@ -43,8 +43,8 @@ class EnvParam implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * componentId  环境关联组件id；id长度不能超过36位，由大小写字母、数字组成。创建环境必传，修改环境时非必选
-    * description  描述：最大255字符
-    * envName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  描述
+    * envName  环境名称
     * envType  环境类型，取值：DEV、TEST、PRE、ONLINE，不区分大小写
     * osType  OS类型，取值：LINUX、WINDOWS。创建环境必传，不可修改
     * region  环境关联region。创建环境必传，不可修改
@@ -86,8 +86,8 @@ class EnvParam implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * componentId  环境关联组件id；id长度不能超过36位，由大小写字母、数字组成。创建环境必传，修改环境时非必选
-    * description  描述：最大255字符
-    * envName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  描述
+    * envName  环境名称
     * envType  环境类型，取值：DEV、TEST、PRE、ONLINE，不区分大小写
     * osType  OS类型，取值：LINUX、WINDOWS。创建环境必传，不可修改
     * region  环境关联region。创建环境必传，不可修改
@@ -108,8 +108,8 @@ class EnvParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * componentId  环境关联组件id；id长度不能超过36位，由大小写字母、数字组成。创建环境必传，修改环境时非必选
-    * description  描述：最大255字符
-    * envName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  描述
+    * envName  环境名称
     * envType  环境类型，取值：DEV、TEST、PRE、ONLINE，不区分大小写
     * osType  OS类型，取值：LINUX、WINDOWS。创建环境必传，不可修改
     * region  环境关联region。创建环境必传，不可修改
@@ -130,8 +130,8 @@ class EnvParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * componentId  环境关联组件id；id长度不能超过36位，由大小写字母、数字组成。创建环境必传，修改环境时非必选
-    * description  描述：最大255字符
-    * envName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  描述
+    * envName  环境名称
     * envType  环境类型，取值：DEV、TEST、PRE、ONLINE，不区分大小写
     * osType  OS类型，取值：LINUX、WINDOWS。创建环境必传，不可修改
     * region  环境关联region。创建环境必传，不可修改
@@ -189,58 +189,7 @@ class EnvParam implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENV_TYPE_DEV = 'DEV';
-    const ENV_TYPE_TEST = 'TEST';
-    const ENV_TYPE_PRE = 'PRE';
-    const ENV_TYPE_ONLINE = 'ONLINE';
-    const OS_TYPE_LINUX = 'LINUX';
-    const OS_TYPE_WINDOWS = 'WINDOWS';
-    const REGISTER_TYPE_API = 'API';
-    const REGISTER_TYPE_CONSOLE = 'CONSOLE';
-    const REGISTER_TYPE_SERVICE_DISCOVERY = 'SERVICE_DISCOVERY';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEnvTypeAllowableValues()
-    {
-        return [
-            self::ENV_TYPE_DEV,
-            self::ENV_TYPE_TEST,
-            self::ENV_TYPE_PRE,
-            self::ENV_TYPE_ONLINE,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getOsTypeAllowableValues()
-    {
-        return [
-            self::OS_TYPE_LINUX,
-            self::OS_TYPE_WINDOWS,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getRegisterTypeAllowableValues()
-    {
-        return [
-            self::REGISTER_TYPE_API,
-            self::REGISTER_TYPE_CONSOLE,
-            self::REGISTER_TYPE_SERVICE_DISCOVERY,
-        ];
-    }
 
 
     /**
@@ -278,48 +227,15 @@ class EnvParam implements ModelInterface, ArrayAccess
         if ($this->container['componentId'] === null) {
             $invalidProperties[] = "'componentId' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9\\-]{32,36}$/", $this->container['componentId'])) {
-                $invalidProperties[] = "invalid value for 'componentId', must be conform to the pattern /^[a-zA-Z0-9\\-]{32,36}$/.";
-            }
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s\\S]{0,255}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s\\S]{0,255}$/.";
-            }
         if ($this->container['envName'] === null) {
             $invalidProperties[] = "'envName' can't be null";
         }
-            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/", $this->container['envName'])) {
-                $invalidProperties[] = "invalid value for 'envName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/.";
-            }
         if ($this->container['envType'] === null) {
             $invalidProperties[] = "'envType' can't be null";
         }
-            $allowedValues = $this->getEnvTypeAllowableValues();
-                if (!is_null($this->container['envType']) && !in_array($this->container['envType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'envType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['osType'] === null) {
             $invalidProperties[] = "'osType' can't be null";
         }
-            $allowedValues = $this->getOsTypeAllowableValues();
-                if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'osType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getRegisterTypeAllowableValues();
-                if (!is_null($this->container['registerType']) && !in_array($this->container['registerType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'registerType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -360,7 +276,7 @@ class EnvParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述：最大255字符
+    *  描述
     *
     * @return string|null
     */
@@ -372,7 +288,7 @@ class EnvParam implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述：最大255字符
+    * @param string|null $description 描述
     *
     * @return $this
     */
@@ -384,7 +300,7 @@ class EnvParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets envName
-    *  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    *  环境名称
     *
     * @return string
     */
@@ -396,7 +312,7 @@ class EnvParam implements ModelInterface, ArrayAccess
     /**
     * Sets envName
     *
-    * @param string $envName 显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * @param string $envName 环境名称
     *
     * @return $this
     */

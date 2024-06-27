@@ -26,7 +26,7 @@ class SrCreateInstanceRspInstanceTagsInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\SrCreateInstanceRspInstanceTagsInfoTags[]',
+            'tags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\CreateChInstanceInfoTagsInfoTags[]',
             'sysTags' => '\HuaweiCloud\SDK\GaussDB\V3\Model\SrCreateInstanceRspInstanceTagsInfoSysTags[]'
     ];
 
@@ -187,7 +187,7 @@ class SrCreateInstanceRspInstanceTagsInfo implements ModelInterface, ArrayAccess
     * Gets tags
     *  用户标签。默认为空。
     *
-    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\SrCreateInstanceRspInstanceTagsInfoTags[]|null
+    * @return \HuaweiCloud\SDK\GaussDB\V3\Model\CreateChInstanceInfoTagsInfoTags[]|null
     */
     public function getTags()
     {
@@ -197,7 +197,7 @@ class SrCreateInstanceRspInstanceTagsInfo implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\SrCreateInstanceRspInstanceTagsInfoTags[]|null $tags 用户标签。默认为空。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\CreateChInstanceInfoTagsInfoTags[]|null $tags 用户标签。默认为空。
     *
     * @return $this
     */

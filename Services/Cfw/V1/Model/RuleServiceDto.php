@@ -46,7 +46,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
             'customService' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceItem[]',
             'predefinedGroup' => 'string[]',
             'serviceGroup' => 'string[]',
-            'serviceGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]',
+            'serviceGroupNames' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceGroupVO[]',
             'serviceSetType' => 'int'
     ];
 
@@ -543,7 +543,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * Gets serviceGroupNames
     *  服务组名称列表
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceGroupVO[]|null
     */
     public function getServiceGroupNames()
     {
@@ -553,7 +553,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceGroupNames
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressGroupVO[]|null $serviceGroupNames 服务组名称列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceGroupVO[]|null $serviceGroupNames 服务组名称列表
     *
     * @return $this
     */

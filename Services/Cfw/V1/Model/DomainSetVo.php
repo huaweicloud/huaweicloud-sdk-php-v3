@@ -24,7 +24,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * name  域名组名称
     * description  描述
     * refCount  引用次数
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     * configStatus  配置状态
     * message  异常信息
     * rules  使用规则id列表
@@ -48,7 +48,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * name  域名组名称
     * description  描述
     * refCount  引用次数
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     * configStatus  配置状态
     * message  异常信息
     * rules  使用规则id列表
@@ -93,7 +93,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * name  域名组名称
     * description  描述
     * refCount  引用次数
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     * configStatus  配置状态
     * message  异常信息
     * rules  使用规则id列表
@@ -117,7 +117,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * name  域名组名称
     * description  描述
     * refCount  引用次数
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     * configStatus  配置状态
     * message  异常信息
     * rules  使用规则id列表
@@ -141,7 +141,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * name  域名组名称
     * description  描述
     * refCount  引用次数
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     * configStatus  配置状态
     * message  异常信息
     * rules  使用规则id列表
@@ -347,7 +347,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetType
-    *  域名组类型，0表示URL过滤，1表示地址解析
+    *  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @return int|null
     */
@@ -359,7 +359,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetType
     *
-    * @param int|null $domainSetType 域名组类型，0表示URL过滤，1表示地址解析
+    * @param int|null $domainSetType 域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @return $this
     */

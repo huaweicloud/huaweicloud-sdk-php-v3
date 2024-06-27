@@ -20,12 +20,12 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * name  域名组名称
     * description  描述
     * domainNames  域名信息列表
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * name  域名组名称
     * description  描述
     * domainNames  域名信息列表
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * name  域名组名称
     * description  描述
     * domainNames  域名信息列表
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * name  域名组名称
     * description  描述
     * domainNames  域名信息列表
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     * name  域名组名称
     * description  描述
     * domainNames  域名信息列表
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
+    * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @var string[]
     */
@@ -222,6 +222,9 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
+        if ($this->container['domainNames'] === null) {
+            $invalidProperties[] = "'domainNames' can't be null";
+        }
         if ($this->container['domainSetType'] === null) {
             $invalidProperties[] = "'domainSetType' can't be null";
         }
@@ -241,7 +244,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return string
     */
@@ -253,7 +256,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return $this
     */
@@ -265,7 +268,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @return string
     */
@@ -277,7 +280,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string $objectId 互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @return $this
     */
@@ -339,7 +342,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
     * Gets domainNames
     *  域名信息列表
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\DomainSetInfoDto[]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\DomainSetInfoDto[]
     */
     public function getDomainNames()
     {
@@ -349,7 +352,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets domainNames
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\DomainSetInfoDto[]|null $domainNames 域名信息列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\DomainSetInfoDto[] $domainNames 域名信息列表
     *
     * @return $this
     */
@@ -361,7 +364,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetType
-    *  域名组类型，0表示URL过滤，1表示地址解析
+    *  域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @return int
     */
@@ -373,7 +376,7 @@ class AddDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetType
     *
-    * @param int $domainSetType 域名组类型，0表示URL过滤，1表示地址解析
+    * @param int $domainSetType 域名组类型，0表示应用域名组，1表示网络域名组
     *
     * @return $this
     */

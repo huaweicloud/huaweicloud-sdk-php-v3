@@ -37,13 +37,14 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * taskType  迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
     * customizeSutnetId  DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
     * productId  产品id。
-    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
     * masterAz  主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
-    * publicIpList  指定公网IP的信息
+    * publicIpList  指定公网IP的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
     *
     * @var string[]
     */
@@ -71,7 +72,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'slaveAz' => 'string',
             'chargingMode' => 'string',
             'periodOrder' => '\HuaweiCloud\SDK\Drs\V3\Model\PeriodOrderInfo',
-            'publicIpList' => '\HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]'
+            'publicIpList' => '\HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]',
+            'isOpenFastClean' => 'bool'
     ];
 
     /**
@@ -93,13 +95,14 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * taskType  迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
     * customizeSutnetId  DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
     * productId  产品id。
-    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
     * masterAz  主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
-    * publicIpList  指定公网IP的信息
+    * publicIpList  指定公网IP的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
     *
     * @var string[]
     */
@@ -127,7 +130,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         'slaveAz' => null,
         'chargingMode' => null,
         'periodOrder' => null,
-        'publicIpList' => null
+        'publicIpList' => null,
+        'isOpenFastClean' => null
     ];
 
     /**
@@ -170,13 +174,14 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * taskType  迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
     * customizeSutnetId  DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
     * productId  产品id。
-    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
     * masterAz  主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
-    * publicIpList  指定公网IP的信息
+    * publicIpList  指定公网IP的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
     *
     * @var string[]
     */
@@ -204,7 +209,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'slaveAz' => 'slave_az',
             'chargingMode' => 'charging_mode',
             'periodOrder' => 'period_order',
-            'publicIpList' => 'public_ip_list'
+            'publicIpList' => 'public_ip_list',
+            'isOpenFastClean' => 'is_open_fast_clean'
     ];
 
     /**
@@ -226,13 +232,14 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * taskType  迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
     * customizeSutnetId  DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
     * productId  产品id。
-    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
     * masterAz  主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
-    * publicIpList  指定公网IP的信息
+    * publicIpList  指定公网IP的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
     *
     * @var string[]
     */
@@ -260,7 +267,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'slaveAz' => 'setSlaveAz',
             'chargingMode' => 'setChargingMode',
             'periodOrder' => 'setPeriodOrder',
-            'publicIpList' => 'setPublicIpList'
+            'publicIpList' => 'setPublicIpList',
+            'isOpenFastClean' => 'setIsOpenFastClean'
     ];
 
     /**
@@ -282,13 +290,14 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * taskType  迁移模式，FULL_TRANS 全量,FULL_INCR_TRANS 全量+增量,INCR_TRANS 增量，灾备场景单主灾备仅支持全量加增量（FULL_INCR_TRANS）
     * customizeSutnetId  DRS实例所在子网ID，对应目标库相同VPC下已创建的子网（subnet）的网络ID，UUID格式。
     * productId  产品id。
-    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    * sysTags  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     * expiredDays  任务处于异常状态一段时间后，将会自动结束，单位为天。(范围14-100)，不传默认为14天。
     * masterAz  主备任务主任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * slaveAz  主备任务备任务所在可用区code，可以通过查询规格未售罄的可用区接口获取 - master_az和slave_az同时填写时生效 - 目前支持mysql，gaussdbv5ha-to-kafka
     * chargingMode  计费模式，不填默认为按需计费。 取值范围： - period：包年包月。 - on_demand：按需计费。
     * periodOrder  periodOrder
-    * publicIpList  指定公网IP的信息
+    * publicIpList  指定公网IP的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
     *
     * @var string[]
     */
@@ -316,7 +325,8 @@ class CreateJobReq implements ModelInterface, ArrayAccess
             'slaveAz' => 'getSlaveAz',
             'chargingMode' => 'getChargingMode',
             'periodOrder' => 'getPeriodOrder',
-            'publicIpList' => 'getPublicIpList'
+            'publicIpList' => 'getPublicIpList',
+            'isOpenFastClean' => 'getIsOpenFastClean'
     ];
 
     /**
@@ -524,6 +534,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
         $this->container['periodOrder'] = isset($data['periodOrder']) ? $data['periodOrder'] : null;
         $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
+        $this->container['isOpenFastClean'] = isset($data['isOpenFastClean']) ? $data['isOpenFastClean'] : null;
     }
 
     /**
@@ -1059,7 +1070,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sysTags
-    *  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    *  企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\ResourceTag[]|null
     */
@@ -1071,7 +1082,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\ResourceTag[]|null $sysTags 企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能有一个企业项目。
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\ResourceTag[]|null $sysTags 企业项目，不填默认为default，key值必须为_sys_enterprise_project_id，value为企业项目ID，只能填一个企业项目。
     *
     * @return $this
     */
@@ -1203,7 +1214,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpList
-    *  指定公网IP的信息
+    *  指定公网IP的信息。
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null
     */
@@ -1215,13 +1226,37 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpList
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null $publicIpList 指定公网IP的信息
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null $publicIpList 指定公网IP的信息。
     *
     * @return $this
     */
     public function setPublicIpList($publicIpList)
     {
         $this->container['publicIpList'] = $publicIpList;
+        return $this;
+    }
+
+    /**
+    * Gets isOpenFastClean
+    *  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
+    *
+    * @return bool|null
+    */
+    public function getIsOpenFastClean()
+    {
+        return $this->container['isOpenFastClean'];
+    }
+
+    /**
+    * Sets isOpenFastClean
+    *
+    * @param bool|null $isOpenFastClean 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。不传默认为false，不开启快速清理。
+    *
+    * @return $this
+    */
+    public function setIsOpenFastClean($isOpenFastClean)
+    {
+        $this->container['isOpenFastClean'] = $isOpenFastClean;
         return $this;
     }
 

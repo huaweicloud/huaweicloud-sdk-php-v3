@@ -28,7 +28,7 @@ class SmnInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'smnNotifiedContent' => 'string',
-            'smnSubscriptionStatus' => 'string',
+            'smnSubscriptionStatus' => 'int',
             'smnSubscriptionType' => 'string'
     ];
 
@@ -42,7 +42,7 @@ class SmnInfo implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'smnNotifiedContent' => null,
-        'smnSubscriptionStatus' => null,
+        'smnSubscriptionStatus' => 'int32',
         'smnSubscriptionType' => null
     ];
 
@@ -186,12 +186,6 @@ class SmnInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['smnNotifiedContent']) && (mb_strlen($this->container['smnNotifiedContent']) < 1)) {
                 $invalidProperties[] = "invalid value for 'smnNotifiedContent', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['smnSubscriptionStatus']) && (mb_strlen($this->container['smnSubscriptionStatus']) > 1)) {
-                $invalidProperties[] = "invalid value for 'smnSubscriptionStatus', the character length must be smaller than or equal to 1.";
-            }
-            if (!is_null($this->container['smnSubscriptionStatus']) && (mb_strlen($this->container['smnSubscriptionStatus']) < 1)) {
-                $invalidProperties[] = "invalid value for 'smnSubscriptionStatus', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['smnSubscriptionType']) && (mb_strlen($this->container['smnSubscriptionType']) > 100)) {
                 $invalidProperties[] = "invalid value for 'smnSubscriptionType', the character length must be smaller than or equal to 100.";
             }
@@ -240,7 +234,7 @@ class SmnInfo implements ModelInterface, ArrayAccess
     * Gets smnSubscriptionStatus
     *  smn的订阅的状态
     *
-    * @return string|null
+    * @return int|null
     */
     public function getSmnSubscriptionStatus()
     {
@@ -250,7 +244,7 @@ class SmnInfo implements ModelInterface, ArrayAccess
     /**
     * Sets smnSubscriptionStatus
     *
-    * @param string|null $smnSubscriptionStatus smn的订阅的状态
+    * @param int|null $smnSubscriptionStatus smn的订阅的状态
     *
     * @return $this
     */

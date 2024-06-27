@@ -22,32 +22,24 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  域名组名称UUID
     * description  描述
-    * setId  域名组id
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
-            'description' => 'string',
-            'setId' => 'string',
-            'domainSetType' => 'int'
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  域名组名称UUID
     * description  描述
-    * setId  域名组id
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
-        'description' => null,
-        'setId' => null,
-        'domainSetType' => 'int32'
+        'description' => null
     ];
 
     /**
@@ -75,48 +67,36 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  域名组名称UUID
     * description  描述
-    * setId  域名组id
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
-            'description' => 'description',
-            'setId' => 'set_id',
-            'domainSetType' => 'domain_set_type'
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  域名组名称UUID
     * description  描述
-    * setId  域名组id
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
-            'description' => 'setDescription',
-            'setId' => 'setSetId',
-            'domainSetType' => 'setDomainSetType'
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  域名组名称UUID
     * description  描述
-    * setId  域名组id
-    * domainSetType  域名组类型，0表示URL过滤，1表示地址解析
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
-            'description' => 'getDescription',
-            'setId' => 'getSetId',
-            'domainSetType' => 'getDomainSetType'
+            'description' => 'getDescription'
     ];
 
     /**
@@ -179,8 +159,6 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
-        $this->container['domainSetType'] = isset($data['domainSetType']) ? $data['domainSetType'] : null;
     }
 
     /**
@@ -253,54 +231,6 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets setId
-    *  域名组id
-    *
-    * @return string|null
-    */
-    public function getSetId()
-    {
-        return $this->container['setId'];
-    }
-
-    /**
-    * Sets setId
-    *
-    * @param string|null $setId 域名组id
-    *
-    * @return $this
-    */
-    public function setSetId($setId)
-    {
-        $this->container['setId'] = $setId;
-        return $this;
-    }
-
-    /**
-    * Gets domainSetType
-    *  域名组类型，0表示URL过滤，1表示地址解析
-    *
-    * @return int|null
-    */
-    public function getDomainSetType()
-    {
-        return $this->container['domainSetType'];
-    }
-
-    /**
-    * Sets domainSetType
-    *
-    * @param int|null $domainSetType 域名组类型，0表示URL过滤，1表示地址解析
-    *
-    * @return $this
-    */
-    public function setDomainSetType($domainSetType)
-    {
-        $this->container['domainSetType'] = $domainSetType;
         return $this;
     }
 

@@ -22,7 +22,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * xLanguage  请求语言类型。
-    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    * fileImportDbLevel  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     * body  body
     *
     * @var string[]
@@ -163,6 +163,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     const X_LANGUAGE_ZH_CN = 'zh-cn';
     const FILE_IMPORT_DB_LEVEL_DATABASE = 'database';
     const FILE_IMPORT_DB_LEVEL_TABLE = 'table';
+    const FILE_IMPORT_DB_LEVEL_COLUMN = 'column';
     
 
     /**
@@ -188,6 +189,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
         return [
             self::FILE_IMPORT_DB_LEVEL_DATABASE,
             self::FILE_IMPORT_DB_LEVEL_TABLE,
+            self::FILE_IMPORT_DB_LEVEL_COLUMN,
         ];
     }
 
@@ -304,7 +306,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileImportDbLevel
-    *  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    *  文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     *
     * @return string|null
     */
@@ -316,7 +318,7 @@ class UploadDbObjectTemplateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fileImportDbLevel
     *
-    * @param string|null $fileImportDbLevel 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级
+    * @param string|null $fileImportDbLevel 文件模板支持数据同步级别，不填默认为table表级。 - database：库级 - table：表级 - column：列级
     *
     * @return $this
     */

@@ -24,6 +24,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * deploymentTargets  deploymentTargets
     * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
             'stackSetId' => 'string',
             'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets',
             'varOverrides' => '\HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides',
-            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences'
+            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences',
+            'callIdentity' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * deploymentTargets  deploymentTargets
     * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
         'stackSetId' => null,
         'deploymentTargets' => null,
         'varOverrides' => null,
-        'operationPreferences' => null
+        'operationPreferences' => null,
+        'callIdentity' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * deploymentTargets  deploymentTargets
     * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
             'stackSetId' => 'stack_set_id',
             'deploymentTargets' => 'deployment_targets',
             'varOverrides' => 'var_overrides',
-            'operationPreferences' => 'operation_preferences'
+            'operationPreferences' => 'operation_preferences',
+            'callIdentity' => 'call_identity'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * deploymentTargets  deploymentTargets
     * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
             'stackSetId' => 'setStackSetId',
             'deploymentTargets' => 'setDeploymentTargets',
             'varOverrides' => 'setVarOverrides',
-            'operationPreferences' => 'setOperationPreferences'
+            'operationPreferences' => 'setOperationPreferences',
+            'callIdentity' => 'setCallIdentity'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * deploymentTargets  deploymentTargets
     * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
             'stackSetId' => 'getStackSetId',
             'deploymentTargets' => 'getDeploymentTargets',
             'varOverrides' => 'getVarOverrides',
-            'operationPreferences' => 'getOperationPreferences'
+            'operationPreferences' => 'getOperationPreferences',
+            'callIdentity' => 'getCallIdentity'
     ];
 
     /**
@@ -159,7 +169,22 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CALL_IDENTITY_SELF = 'SELF';
+    const CALL_IDENTITY_DELEGATED_ADMIN = 'DELEGATED_ADMIN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCallIdentityAllowableValues()
+    {
+        return [
+            self::CALL_IDENTITY_SELF,
+            self::CALL_IDENTITY_DELEGATED_ADMIN,
+        ];
+    }
 
 
     /**
@@ -181,6 +206,7 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['deploymentTargets'] = isset($data['deploymentTargets']) ? $data['deploymentTargets'] : null;
         $this->container['varOverrides'] = isset($data['varOverrides']) ? $data['varOverrides'] : null;
         $this->container['operationPreferences'] = isset($data['operationPreferences']) ? $data['operationPreferences'] : null;
+        $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
     }
 
     /**
@@ -203,6 +229,14 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['deploymentTargets'] === null) {
             $invalidProperties[] = "'deploymentTargets' can't be null";
         }
+            $allowedValues = $this->getCallIdentityAllowableValues();
+                if (!is_null($this->container['callIdentity']) && !in_array($this->container['callIdentity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'callIdentity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -310,6 +344,30 @@ class CreateStackInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setOperationPreferences($operationPreferences)
     {
         $this->container['operationPreferences'] = $operationPreferences;
+        return $this;
+    }
+
+    /**
+    * Gets callIdentity
+    *  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return string|null
+    */
+    public function getCallIdentity()
+    {
+        return $this->container['callIdentity'];
+    }
+
+    /**
+    * Sets callIdentity
+    *
+    * @param string|null $callIdentity 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return $this
+    */
+    public function setCallIdentity($callIdentity)
+    {
+        $this->container['callIdentity'] = $callIdentity;
         return $this;
     }
 

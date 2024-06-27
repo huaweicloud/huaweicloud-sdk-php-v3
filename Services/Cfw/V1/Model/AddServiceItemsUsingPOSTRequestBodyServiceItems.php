@@ -20,41 +20,33 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * itemId  服务成员id
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'itemId' => 'string',
             'protocol' => 'int',
             'sourcePort' => 'string',
             'destPort' => 'string',
-            'name' => 'string',
             'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * itemId  服务成员id
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'itemId' => null,
         'protocol' => null,
         'sourcePort' => null,
         'destPort' => null,
-        'name' => null,
         'description' => null
     ];
 
@@ -81,61 +73,49 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * itemId  服务成员id
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'itemId' => 'item_id',
             'protocol' => 'protocol',
             'sourcePort' => 'source_port',
             'destPort' => 'dest_port',
-            'name' => 'name',
             'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * itemId  服务成员id
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
     */
     protected static $setters = [
-            'itemId' => 'setItemId',
             'protocol' => 'setProtocol',
             'sourcePort' => 'setSourcePort',
             'destPort' => 'setDestPort',
-            'name' => 'setName',
             'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * itemId  服务成员id
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * name  服务成员名称
     * description  服务成员描述
     *
     * @var string[]
     */
     protected static $getters = [
-            'itemId' => 'getItemId',
             'protocol' => 'getProtocol',
             'sourcePort' => 'getSourcePort',
             'destPort' => 'getDestPort',
-            'name' => 'getName',
             'description' => 'getDescription'
     ];
 
@@ -197,11 +177,9 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     */
     public function __construct(array $data = null)
     {
-        $this->container['itemId'] = isset($data['itemId']) ? $data['itemId'] : null;
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['sourcePort'] = isset($data['sourcePort']) ? $data['sourcePort'] : null;
         $this->container['destPort'] = isset($data['destPort']) ? $data['destPort'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -234,30 +212,6 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets itemId
-    *  服务成员id
-    *
-    * @return string|null
-    */
-    public function getItemId()
-    {
-        return $this->container['itemId'];
-    }
-
-    /**
-    * Sets itemId
-    *
-    * @param string|null $itemId 服务成员id
-    *
-    * @return $this
-    */
-    public function setItemId($itemId)
-    {
-        $this->container['itemId'] = $itemId;
-        return $this;
     }
 
     /**
@@ -329,30 +283,6 @@ class AddServiceItemsUsingPOSTRequestBodyServiceItems implements ModelInterface,
     public function setDestPort($destPort)
     {
         $this->container['destPort'] = $destPort;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  服务成员名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 服务成员名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
         return $this;
     }
 

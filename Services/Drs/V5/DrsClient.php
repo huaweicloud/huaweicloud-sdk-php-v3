@@ -3068,6 +3068,9 @@ class DrsClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
         }
@@ -3135,6 +3138,9 @@ class DrsClient extends Client
         }
         if ($localVarParams['type'] !== null) {
             $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['fileExportObjectLevel'] !== null) {
+            $queryParams['file_export_object_level'] = $localVarParams['fileExportObjectLevel'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
@@ -4230,6 +4236,15 @@ class DrsClient extends Client
         }
         if ($localVarParams['targetName'] !== null) {
             $queryParams['target_name'] = $localVarParams['targetName'];
+        }
+        if ($localVarParams['isSample'] !== null) {
+            $queryParams['is_sample'] = $localVarParams['isSample'];
+        }
+        if ($localVarParams['errorType'] !== null) {
+            $queryParams['error_type'] = $localVarParams['errorType'];
+        }
+        if ($localVarParams['sqlTemplateMd5'] !== null) {
+            $queryParams['sql_template_md5'] = $localVarParams['sqlTemplateMd5'];
         }
         if ($localVarParams['xLanguage'] !== null) {
             $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];

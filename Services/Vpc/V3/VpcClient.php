@@ -162,6 +162,75 @@ class VpcClient extends Client
     }
 
     /**
+     * 批量添加端口资源标签
+     *
+     * 为指定的端口批量添加标签。
+     * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreatePortTags($request)
+    {
+        return $this->batchCreatePortTagsWithHttpInfo($request);
+    }
+
+    public function batchCreatePortTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreatePortTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreatePortTagsRequest');
+    }
+
+    /**
      * 批量创建安全组规则
      *
      * 在特定安全组下批量创建安全组规则
@@ -292,6 +361,209 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchCreateSubNetworkInterfaceRequest');
+    }
+
+    /**
+     * 批量删除端口资源标签
+     *
+     * 为指定的端口资源实例批量删除标签。
+     * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeletePortTags($request)
+    {
+        return $this->batchDeletePortTagsWithHttpInfo($request);
+    }
+
+    public function batchDeletePortTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchDeletePortTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\BatchDeletePortTagsRequest');
+    }
+
+    /**
+     * 查询端口资源实例数量
+     *
+     * 使用标签过滤查询端口实例数量。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countPortsByTags($request)
+    {
+        return $this->countPortsByTagsWithHttpInfo($request);
+    }
+
+    public function countPortsByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/resource-instances/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CountPortsByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CountPortsByTagsRequest');
+    }
+
+    /**
+     * 添加端口资源标签
+     *
+     * 给指定端口资源实例增加标签信息
+     * 此接口为幂等接口：创建时，如果创建的标签已经存在（key相同），则覆盖。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPortTag($request)
+    {
+        return $this->createPortTagWithHttpInfo($request);
+    }
+
+    public function createPortTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\CreatePortTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\CreatePortTagRequest');
     }
 
     /**
@@ -685,6 +957,75 @@ class VpcClient extends Client
     }
 
     /**
+     * 删除端口资源标签
+     *
+     * 删除指定端口的标签信息
+     * 该接口为幂等接口：删除的key不存在报404，key不能为空或者空字符串
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deletePortTag($request)
+    {
+        return $this->deletePortTagWithHttpInfo($request);
+    }
+
+    public function deletePortTagWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/tags/{tag_key}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['tagKey'] !== null) {
+            $pathParams['tag_key'] = $localVarParams['tagKey'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeletePortTagResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeletePortTagRequest');
+    }
+
+    /**
      * 删除安全组
      *
      * 删除安全组
@@ -1072,6 +1413,145 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorSessionResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\DeleteTrafficMirrorSessionRequest');
+    }
+
+    /**
+     * 查询端口项目标签
+     *
+     * 查询租户在指定Project中实例类型的所有资源标签集合
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPortTags($request)
+    {
+        return $this->listPortTagsWithHttpInfo($request);
+    }
+
+    public function listPortTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortTagsRequest');
+    }
+
+    /**
+     * 查询端口资源实例列表
+     *
+     * 使用标签过滤查询端口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPortsByTags($request)
+    {
+        return $this->listPortsByTagsWithHttpInfo($request);
+    }
+
+    public function listPortsByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/resource-instances/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortsByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ListPortsByTagsRequest');
     }
 
     /**
@@ -1825,6 +2305,71 @@ class VpcClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveSourcesFromTrafficMirrorSessionResponse',
             $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\RemoveSourcesFromTrafficMirrorSessionRequest');
+    }
+
+    /**
+     * 查询端口资源标签
+     *
+     * 查询指定端口的标签信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPortTags($request)
+    {
+        return $this->showPortTagsWithHttpInfo($request);
+    }
+
+    public function showPortTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/ports/{port_id}/tags';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['portId'] !== null) {
+            $pathParams['port_id'] = $localVarParams['portId'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowPortTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpc\V3\Model\ShowPortTagsRequest');
     }
 
     /**
@@ -2758,7 +3303,7 @@ class VpcClient extends Client
     /**
      * 批量添加ACL资源标签
      *
-     * 为指定的IP地址组资源实例批量添加标签。
+     * 为指定的网络ACL资源实例批量添加标签。
      * 此接口为幂等接口：创建时如果请求体中存在重复key则报错。创建时，不允许设置重复key数据，如果数据库已存在该key，就覆盖value的值。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -2827,7 +3372,7 @@ class VpcClient extends Client
     /**
      * 批量删除ACL资源标签
      *
-     * 为指定的IP地址组资源实例批量删除标签。
+     * 为指定的网络ACL资源实例批量删除标签。
      * 此接口为幂等接口：删除时，如果删除的标签不存在，默认处理成功；删除时不对标签字符集范围做校验。删除时tags结构体不能缺失，key不能为空，或者空字符串。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -3407,6 +3952,12 @@ class VpcClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];

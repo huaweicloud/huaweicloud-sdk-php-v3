@@ -21,25 +21,21 @@ class ChangeIpsSwitchStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * traceId  trace_id
     * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'traceId' => 'string',
             'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\CommonResponseDTOData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * traceId  trace_id
     * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'traceId' => null,
         'data' => null
     ];
 
@@ -66,37 +62,31 @@ class ChangeIpsSwitchStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * traceId  trace_id
     * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'traceId' => 'trace_id',
             'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * traceId  trace_id
     * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'traceId' => 'setTraceId',
             'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * traceId  trace_id
     * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'traceId' => 'getTraceId',
             'data' => 'getData'
     ];
 
@@ -158,7 +148,6 @@ class ChangeIpsSwitchStatusResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -182,30 +171,6 @@ class ChangeIpsSwitchStatusResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets traceId
-    *  trace_id
-    *
-    * @return string|null
-    */
-    public function getTraceId()
-    {
-        return $this->container['traceId'];
-    }
-
-    /**
-    * Sets traceId
-    *
-    * @param string|null $traceId trace_id
-    *
-    * @return $this
-    */
-    public function setTraceId($traceId)
-    {
-        $this->container['traceId'] = $traceId;
-        return $this;
     }
 
     /**

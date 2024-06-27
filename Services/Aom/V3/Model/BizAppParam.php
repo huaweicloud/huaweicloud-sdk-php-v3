@@ -20,11 +20,11 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  描述：最大255字符
-    * displayName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  应用描述
+    * displayName  应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     * epsId  应用关联的企业项目id。企业级用户必传
-    * name  名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    * name  唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  描述：最大255字符
-    * displayName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  应用描述
+    * displayName  应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     * epsId  应用关联的企业项目id。企业级用户必传
-    * name  名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    * name  唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class BizAppParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  描述：最大255字符
-    * displayName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  应用描述
+    * displayName  应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     * epsId  应用关联的企业项目id。企业级用户必传
-    * name  名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    * name  唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  描述：最大255字符
-    * displayName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  应用描述
+    * displayName  应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     * epsId  应用关联的企业项目id。企业级用户必传
-    * name  名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    * name  唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  描述：最大255字符
-    * displayName  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * description  应用描述
+    * displayName  应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     * epsId  应用关联的企业项目id。企业级用户必传
-    * name  名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    * name  唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * registerType  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @var string[]
     */
@@ -170,8 +170,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const REGISTER_TYPE_API = 'API';
-    const REGISTER_TYPE_CONSOLE = 'CONSOLE';
-    const REGISTER_TYPE_SERVICE_DISCOVERY = 'SERVICE_DISCOVERY';
+    const REGISTER_TYPE_CONSOLESERVICE_DISCOVERY = 'CONSOLESERVICE_DISCOVERY';
     
 
     /**
@@ -183,8 +182,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
     {
         return [
             self::REGISTER_TYPE_API,
-            self::REGISTER_TYPE_CONSOLE,
-            self::REGISTER_TYPE_SERVICE_DISCOVERY,
+            self::REGISTER_TYPE_CONSOLESERVICE_DISCOVERY,
         ];
     }
 
@@ -219,20 +217,26 @@ class BizAppParam implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s\\S]{0,255}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s\\S]{0,255}$/.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
             }
-            if (!is_null($this->container['displayName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/", $this->container['displayName'])) {
-                $invalidProperties[] = "invalid value for 'displayName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['epsId']) && !preg_match("/^0|([a-zA-Z0-9\\-]{36})$/", $this->container['epsId'])) {
-                $invalidProperties[] = "invalid value for 'epsId', must be conform to the pattern /^0|([a-zA-Z0-9\\-]{36})$/.";
+            if (!is_null($this->container['displayName']) && (mb_strlen($this->container['displayName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'displayName', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['displayName']) && (mb_strlen($this->container['displayName']) < 2)) {
+                $invalidProperties[] = "invalid value for 'displayName', the character length must be bigger than or equal to 2.";
+            }
+            if (!is_null($this->container['epsId']) && !preg_match("/^[a-zA-Z0-9\\-]{36}$/", $this->container['epsId'])) {
+                $invalidProperties[] = "invalid value for 'epsId', must be conform to the pattern /^[a-zA-Z0-9\\-]{36}$/.";
             }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9_\\-.]{2,64}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9_\\-.]{2,64}$/.";
+            if (!preg_match("/^[a-zA-Z0-9\\-]{32,36}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z0-9\\-]{32,36}$/.";
             }
             $allowedValues = $this->getRegisterTypeAllowableValues();
                 if (!is_null($this->container['registerType']) && !in_array($this->container['registerType'], $allowedValues, true)) {
@@ -258,7 +262,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述：最大255字符
+    *  应用描述
     *
     * @return string|null
     */
@@ -270,7 +274,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述：最大255字符
+    * @param string|null $description 应用描述
     *
     * @return $this
     */
@@ -282,7 +286,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    *  应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     *
     * @return string|null
     */
@@ -294,7 +298,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * @param string|null $displayName 应用名称.字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
     *
     * @return $this
     */
@@ -330,7 +334,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    *  唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
     *
     * @return string
     */
@@ -342,7 +346,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * @param string $name 唯一标识.字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
     *
     * @return $this
     */
@@ -354,7 +358,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets registerType
-    *  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    *  前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @return string|null
     */
@@ -366,7 +370,7 @@ class BizAppParam implements ModelInterface, ArrayAccess
     /**
     * Sets registerType
     *
-    * @param string|null $registerType 前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY。创建应用必填，修改应用非必填
+    * @param string|null $registerType 前端默认是CONSOLE，不需要传参。rest接口无参数是API，有参数只能是：SERVICE_DISCOVERY
     *
     * @return $this
     */

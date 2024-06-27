@@ -28,7 +28,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
-    * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
     */
@@ -40,8 +39,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'offset' => 'int',
             'sortKey' => 'string',
-            'sortDir' => 'string',
-            'publicBorderGroup' => 'string'
+            'sortDir' => 'string'
     ];
 
     /**
@@ -54,7 +52,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
-    * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
     */
@@ -66,8 +63,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
         'limit' => null,
         'offset' => null,
         'sortKey' => null,
-        'sortDir' => null,
-        'publicBorderGroup' => null
+        'sortDir' => null
     ];
 
     /**
@@ -101,7 +97,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
-    * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
     */
@@ -113,8 +108,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'offset' => 'offset',
             'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir',
-            'publicBorderGroup' => 'public_border_group'
+            'sortDir' => 'sort_dir'
     ];
 
     /**
@@ -127,7 +121,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
-    * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
     */
@@ -139,8 +132,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir',
-            'publicBorderGroup' => 'setPublicBorderGroup'
+            'sortDir' => 'setSortDir'
     ];
 
     /**
@@ -153,7 +145,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * sortKey  查询结果中终端节点列表的排序字段，取值为：  - create_at：终端节点的创建时间  - update_at：终端节点的更新时间 默认值为create_at。
     * sortDir  查询结果中终端节点列表的排序方式，取值为：  - desc：降序排序  - asc：升序排序 默认值为desc。
-    * publicBorderGroup  筛选结果中匹配边缘属性的EPS
     *
     * @var string[]
     */
@@ -165,8 +156,7 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir',
-            'publicBorderGroup' => 'getPublicBorderGroup'
+            'sortDir' => 'getSortDir'
     ];
 
     /**
@@ -265,7 +255,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
-        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
 
     /**
@@ -531,30 +520,6 @@ class ListEndpointsRequest implements ModelInterface, ArrayAccess
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
-        return $this;
-    }
-
-    /**
-    * Gets publicBorderGroup
-    *  筛选结果中匹配边缘属性的EPS
-    *
-    * @return string|null
-    */
-    public function getPublicBorderGroup()
-    {
-        return $this->container['publicBorderGroup'];
-    }
-
-    /**
-    * Sets publicBorderGroup
-    *
-    * @param string|null $publicBorderGroup 筛选结果中匹配边缘属性的EPS
-    *
-    * @return $this
-    */
-    public function setPublicBorderGroup($publicBorderGroup)
-    {
-        $this->container['publicBorderGroup'] = $publicBorderGroup;
         return $this;
     }
 

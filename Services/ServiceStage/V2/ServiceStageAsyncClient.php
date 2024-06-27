@@ -1449,6 +1449,83 @@ class ServiceStageAsyncClient extends Client
     }
 
     /**
+     * 获取应用所有组件部署信息
+     *
+     * 通过此API获取应用下所有应用组件部署信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listComponentOverviewsAsync($request)
+    {
+        return $this->listComponentOverviewsAsyncWithHttpInfo($request);
+    }
+    
+    public function listComponentOverviewsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/cas/applications/{application_id}/components/overviews';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['orderBy'] !== null) {
+            $queryParams['order_by'] = $localVarParams['orderBy'];
+        }
+        if ($localVarParams['order'] !== null) {
+            $queryParams['order'] = $localVarParams['order'];
+        }
+        if ($localVarParams['applicationId'] !== null) {
+            $pathParams['application_id'] = $localVarParams['applicationId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\ServiceStage\V2\Model\ListComponentOverviewsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\ServiceStage\V2\Model\ListComponentOverviewsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取应用所有组件
      *
      * 通过此API获取应用下所有应用组件。

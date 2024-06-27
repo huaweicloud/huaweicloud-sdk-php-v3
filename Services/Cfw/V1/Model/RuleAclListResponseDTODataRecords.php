@@ -23,16 +23,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * ruleId  规则id
     * addressType  地址类型0 ipv4,1 ipv6
     * name  规则名称
-    * sequence  sequence
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
+    * longConnectTime  长连接时长
+    * longConnectEnable  长连接支持
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
     * source  source
     * destination  destination
     * service  service
@@ -47,19 +46,18 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'ruleId' => 'string',
             'addressType' => 'int',
             'name' => 'string',
-            'sequence' => '\HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleAclDto',
             'direction' => 'int',
             'actionType' => 'int',
             'status' => 'int',
             'description' => 'string',
+            'longConnectTime' => 'int',
+            'longConnectEnable' => 'int',
             'longConnectTimeHour' => 'int',
             'longConnectTimeMinute' => 'int',
             'longConnectTimeSecond' => 'int',
-            'longConnectTime' => 'int',
-            'longConnectEnable' => 'int',
-            'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
-            'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto',
-            'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto',
+            'source' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForResponse',
+            'destination' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForResponse',
+            'service' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDtoForResponse',
             'type' => 'int',
             'createdDate' => 'string',
             'lastOpenTime' => 'string',
@@ -71,16 +69,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * ruleId  规则id
     * addressType  地址类型0 ipv4,1 ipv6
     * name  规则名称
-    * sequence  sequence
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
+    * longConnectTime  长连接时长
+    * longConnectEnable  长连接支持
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
     * source  source
     * destination  destination
     * service  service
@@ -95,16 +92,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         'ruleId' => null,
         'addressType' => 'int32',
         'name' => null,
-        'sequence' => null,
         'direction' => 'int32',
         'actionType' => null,
         'status' => null,
         'description' => null,
+        'longConnectTime' => 'int64',
+        'longConnectEnable' => 'int32',
         'longConnectTimeHour' => 'int64',
         'longConnectTimeMinute' => 'int64',
         'longConnectTimeSecond' => 'int64',
-        'longConnectTime' => 'int64',
-        'longConnectEnable' => 'int32',
         'source' => null,
         'destination' => null,
         'service' => null,
@@ -140,16 +136,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * ruleId  规则id
     * addressType  地址类型0 ipv4,1 ipv6
     * name  规则名称
-    * sequence  sequence
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
+    * longConnectTime  长连接时长
+    * longConnectEnable  长连接支持
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
     * source  source
     * destination  destination
     * service  service
@@ -164,16 +159,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'ruleId' => 'rule_id',
             'addressType' => 'address_type',
             'name' => 'name',
-            'sequence' => 'sequence',
             'direction' => 'direction',
             'actionType' => 'action_type',
             'status' => 'status',
             'description' => 'description',
+            'longConnectTime' => 'long_connect_time',
+            'longConnectEnable' => 'long_connect_enable',
             'longConnectTimeHour' => 'long_connect_time_hour',
             'longConnectTimeMinute' => 'long_connect_time_minute',
             'longConnectTimeSecond' => 'long_connect_time_second',
-            'longConnectTime' => 'long_connect_time',
-            'longConnectEnable' => 'long_connect_enable',
             'source' => 'source',
             'destination' => 'destination',
             'service' => 'service',
@@ -188,16 +182,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * ruleId  规则id
     * addressType  地址类型0 ipv4,1 ipv6
     * name  规则名称
-    * sequence  sequence
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
+    * longConnectTime  长连接时长
+    * longConnectEnable  长连接支持
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
     * source  source
     * destination  destination
     * service  service
@@ -212,16 +205,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'ruleId' => 'setRuleId',
             'addressType' => 'setAddressType',
             'name' => 'setName',
-            'sequence' => 'setSequence',
             'direction' => 'setDirection',
             'actionType' => 'setActionType',
             'status' => 'setStatus',
             'description' => 'setDescription',
+            'longConnectTime' => 'setLongConnectTime',
+            'longConnectEnable' => 'setLongConnectEnable',
             'longConnectTimeHour' => 'setLongConnectTimeHour',
             'longConnectTimeMinute' => 'setLongConnectTimeMinute',
             'longConnectTimeSecond' => 'setLongConnectTimeSecond',
-            'longConnectTime' => 'setLongConnectTime',
-            'longConnectEnable' => 'setLongConnectEnable',
             'source' => 'setSource',
             'destination' => 'setDestination',
             'service' => 'setService',
@@ -236,16 +228,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * ruleId  规则id
     * addressType  地址类型0 ipv4,1 ipv6
     * name  规则名称
-    * sequence  sequence
     * direction  规则方向0：外到内1：内到外
     * actionType  动作0：permit,1：deny
     * status  规则下发状态 0：禁用,1：启用
     * description  描述
+    * longConnectTime  长连接时长
+    * longConnectEnable  长连接支持
     * longConnectTimeHour  长连接时长小时
     * longConnectTimeMinute  长连接时长分钟
     * longConnectTimeSecond  长连接时长秒
-    * longConnectTime  长连接时长
-    * longConnectEnable  长连接支持
     * source  source
     * destination  destination
     * service  service
@@ -260,16 +251,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
             'ruleId' => 'getRuleId',
             'addressType' => 'getAddressType',
             'name' => 'getName',
-            'sequence' => 'getSequence',
             'direction' => 'getDirection',
             'actionType' => 'getActionType',
             'status' => 'getStatus',
             'description' => 'getDescription',
+            'longConnectTime' => 'getLongConnectTime',
+            'longConnectEnable' => 'getLongConnectEnable',
             'longConnectTimeHour' => 'getLongConnectTimeHour',
             'longConnectTimeMinute' => 'getLongConnectTimeMinute',
             'longConnectTimeSecond' => 'getLongConnectTimeSecond',
-            'longConnectTime' => 'getLongConnectTime',
-            'longConnectEnable' => 'getLongConnectEnable',
             'source' => 'getSource',
             'destination' => 'getDestination',
             'service' => 'getService',
@@ -372,16 +362,15 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
         $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['longConnectTime'] = isset($data['longConnectTime']) ? $data['longConnectTime'] : null;
+        $this->container['longConnectEnable'] = isset($data['longConnectEnable']) ? $data['longConnectEnable'] : null;
         $this->container['longConnectTimeHour'] = isset($data['longConnectTimeHour']) ? $data['longConnectTimeHour'] : null;
         $this->container['longConnectTimeMinute'] = isset($data['longConnectTimeMinute']) ? $data['longConnectTimeMinute'] : null;
         $this->container['longConnectTimeSecond'] = isset($data['longConnectTimeSecond']) ? $data['longConnectTimeSecond'] : null;
-        $this->container['longConnectTime'] = isset($data['longConnectTime']) ? $data['longConnectTime'] : null;
-        $this->container['longConnectEnable'] = isset($data['longConnectEnable']) ? $data['longConnectEnable'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['destination'] = isset($data['destination']) ? $data['destination'] : null;
         $this->container['service'] = isset($data['service']) ? $data['service'] : null;
@@ -505,30 +494,6 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets sequence
-    *  sequence
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleAclDto|null
-    */
-    public function getSequence()
-    {
-        return $this->container['sequence'];
-    }
-
-    /**
-    * Sets sequence
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleAclDto|null $sequence sequence
-    *
-    * @return $this
-    */
-    public function setSequence($sequence)
-    {
-        $this->container['sequence'] = $sequence;
-        return $this;
-    }
-
-    /**
     * Gets direction
     *  规则方向0：外到内1：内到外
     *
@@ -625,6 +590,54 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets longConnectTime
+    *  长连接时长
+    *
+    * @return int|null
+    */
+    public function getLongConnectTime()
+    {
+        return $this->container['longConnectTime'];
+    }
+
+    /**
+    * Sets longConnectTime
+    *
+    * @param int|null $longConnectTime 长连接时长
+    *
+    * @return $this
+    */
+    public function setLongConnectTime($longConnectTime)
+    {
+        $this->container['longConnectTime'] = $longConnectTime;
+        return $this;
+    }
+
+    /**
+    * Gets longConnectEnable
+    *  长连接支持
+    *
+    * @return int|null
+    */
+    public function getLongConnectEnable()
+    {
+        return $this->container['longConnectEnable'];
+    }
+
+    /**
+    * Sets longConnectEnable
+    *
+    * @param int|null $longConnectEnable 长连接支持
+    *
+    * @return $this
+    */
+    public function setLongConnectEnable($longConnectEnable)
+    {
+        $this->container['longConnectEnable'] = $longConnectEnable;
+        return $this;
+    }
+
+    /**
     * Gets longConnectTimeHour
     *  长连接时长小时
     *
@@ -697,58 +710,10 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets longConnectTime
-    *  长连接时长
-    *
-    * @return int|null
-    */
-    public function getLongConnectTime()
-    {
-        return $this->container['longConnectTime'];
-    }
-
-    /**
-    * Sets longConnectTime
-    *
-    * @param int|null $longConnectTime 长连接时长
-    *
-    * @return $this
-    */
-    public function setLongConnectTime($longConnectTime)
-    {
-        $this->container['longConnectTime'] = $longConnectTime;
-        return $this;
-    }
-
-    /**
-    * Gets longConnectEnable
-    *  长连接支持
-    *
-    * @return int|null
-    */
-    public function getLongConnectEnable()
-    {
-        return $this->container['longConnectEnable'];
-    }
-
-    /**
-    * Sets longConnectEnable
-    *
-    * @param int|null $longConnectEnable 长连接支持
-    *
-    * @return $this
-    */
-    public function setLongConnectEnable($longConnectEnable)
-    {
-        $this->container['longConnectEnable'] = $longConnectEnable;
-        return $this;
-    }
-
-    /**
     * Gets source
     *  source
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForResponse|null
     */
     public function getSource()
     {
@@ -758,7 +723,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets source
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto|null $source source
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForResponse|null $source source
     *
     * @return $this
     */
@@ -772,7 +737,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * Gets destination
     *  destination
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForResponse|null
     */
     public function getDestination()
     {
@@ -782,7 +747,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets destination
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDto|null $destination destination
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleAddressDtoForResponse|null $destination destination
     *
     * @return $this
     */
@@ -796,7 +761,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * Gets service
     *  service
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDtoForResponse|null
     */
     public function getService()
     {
@@ -806,7 +771,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets service
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDto|null $service service
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleServiceDtoForResponse|null $service service
     *
     * @return $this
     */

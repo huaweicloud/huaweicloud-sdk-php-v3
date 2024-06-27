@@ -26,8 +26,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * templateUri  HCL模板的OBS地址，该模板描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以“.tf”或者“.tf.json”结尾，并遵守HCL语法，且文件的编码格式须为UTF-8  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件。解压前最大支持1MB，解压后最大支持1MB。zip压缩包文件数量不能超过100个  template_body和template_uri 必须有且只有一个存在  **注意：**   * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储template_uri对应的模板文件内容。   * template_uri对应的模板文件如果为zip类型，则内部的文件或文件夹名称长度不得超过255个字节，最深路径长度不得超过2048字节，zip包大小不得超过1MB
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
-    * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'string',
             'varsUri' => 'string',
             'varsBody' => 'string',
-            'varOverrides' => '\HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides',
-            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences'
+            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences',
+            'callIdentity' => 'string'
     ];
 
     /**
@@ -50,8 +50,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * templateUri  HCL模板的OBS地址，该模板描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以“.tf”或者“.tf.json”结尾，并遵守HCL语法，且文件的编码格式须为UTF-8  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件。解压前最大支持1MB，解压后最大支持1MB。zip压缩包文件数量不能超过100个  template_body和template_uri 必须有且只有一个存在  **注意：**   * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储template_uri对应的模板文件内容。   * template_uri对应的模板文件如果为zip类型，则内部的文件或文件夹名称长度不得超过255个字节，最深路径长度不得超过2048字节，zip包大小不得超过1MB
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
-    * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -62,8 +62,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
         'templateUri' => null,
         'varsUri' => null,
         'varsBody' => null,
-        'varOverrides' => null,
-        'operationPreferences' => null
+        'operationPreferences' => null,
+        'callIdentity' => null
     ];
 
     /**
@@ -95,8 +95,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * templateUri  HCL模板的OBS地址，该模板描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以“.tf”或者“.tf.json”结尾，并遵守HCL语法，且文件的编码格式须为UTF-8  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件。解压前最大支持1MB，解压后最大支持1MB。zip压缩包文件数量不能超过100个  template_body和template_uri 必须有且只有一个存在  **注意：**   * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储template_uri对应的模板文件内容。   * template_uri对应的模板文件如果为zip类型，则内部的文件或文件夹名称长度不得超过255个字节，最深路径长度不得超过2048字节，zip包大小不得超过1MB
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
-    * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'template_uri',
             'varsUri' => 'vars_uri',
             'varsBody' => 'vars_body',
-            'varOverrides' => 'var_overrides',
-            'operationPreferences' => 'operation_preferences'
+            'operationPreferences' => 'operation_preferences',
+            'callIdentity' => 'call_identity'
     ];
 
     /**
@@ -119,8 +119,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * templateUri  HCL模板的OBS地址，该模板描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以“.tf”或者“.tf.json”结尾，并遵守HCL语法，且文件的编码格式须为UTF-8  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件。解压前最大支持1MB，解压后最大支持1MB。zip压缩包文件数量不能超过100个  template_body和template_uri 必须有且只有一个存在  **注意：**   * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储template_uri对应的模板文件内容。   * template_uri对应的模板文件如果为zip类型，则内部的文件或文件夹名称长度不得超过255个字节，最深路径长度不得超过2048字节，zip包大小不得超过1MB
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
-    * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -131,8 +131,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'setTemplateUri',
             'varsUri' => 'setVarsUri',
             'varsBody' => 'setVarsBody',
-            'varOverrides' => 'setVarOverrides',
-            'operationPreferences' => 'setOperationPreferences'
+            'operationPreferences' => 'setOperationPreferences',
+            'callIdentity' => 'setCallIdentity'
     ];
 
     /**
@@ -143,8 +143,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     * templateUri  HCL模板的OBS地址，该模板描述了资源的目标状态。资源编排服务将比较此模板与当前远程资源的状态之间的区别  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  对应的文件应该是纯tf文件或zip压缩包  纯tf文件需要以“.tf”或者“.tf.json”结尾，并遵守HCL语法，且文件的编码格式须为UTF-8  压缩包目前只支持zip格式，文件需要以\".zip\"结尾。解压后的文件不得包含\".tfvars\"文件。解压前最大支持1MB，解压后最大支持1MB。zip压缩包文件数量不能超过100个  template_body和template_uri 必须有且只有一个存在  **注意：**   * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储template_uri对应的模板文件内容。   * template_uri对应的模板文件如果为zip类型，则内部的文件或文件夹名称长度不得超过255个字节，最深路径长度不得超过2048字节，zip包大小不得超过1MB
     * varsUri  HCL参数文件的OBS地址。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  OBS地址支持同类型Region之间进行互相访问（Region分为通用Region和专属Region，通用Region指面向公共租户提供通用云服务的Region；专属Region指只承载同一类业务或只面向特定租户提供业务服务的专用Region）  * vars_uri需要指向一个OBS的pre-signed URL地址，其他地址暂不支持  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * vars_uri中的内容使用HCL的tfvars格式，用户可以将“.tfvars”中的内容保存到文件并上传到OBS中，并将OBS pre-signed URL传递给vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储vars_uri对应的参数文件内容
     * varsBody  HCL参数文件的内容。HCL模板支持参数传入，即，同一个模板可以给予不同的参数而达到不同的效果。  * vars_body使用HCL的tfvars格式，用户可以将“.tfvars”中的内容提交到vars_body中  * 资源编排服务支持vars_body和vars_uri，如果以上两种方式中声名了同一个变量，将报错400  * 如果vars_body过大，可以使用vars_uri  * 资源栈集不支持敏感数据加密，资源编排服务会直接明文使用、log、展示、存储对应的vars_body。
-    * varOverrides  varOverrides
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -155,8 +155,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             'templateUri' => 'getTemplateUri',
             'varsUri' => 'getVarsUri',
             'varsBody' => 'getVarsBody',
-            'varOverrides' => 'getVarOverrides',
-            'operationPreferences' => 'getOperationPreferences'
+            'operationPreferences' => 'getOperationPreferences',
+            'callIdentity' => 'getCallIdentity'
     ];
 
     /**
@@ -199,7 +199,22 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CALL_IDENTITY_SELF = 'SELF';
+    const CALL_IDENTITY_DELEGATED_ADMIN = 'DELEGATED_ADMIN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCallIdentityAllowableValues()
+    {
+        return [
+            self::CALL_IDENTITY_SELF,
+            self::CALL_IDENTITY_DELEGATED_ADMIN,
+        ];
+    }
 
 
     /**
@@ -223,8 +238,8 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
         $this->container['templateUri'] = isset($data['templateUri']) ? $data['templateUri'] : null;
         $this->container['varsUri'] = isset($data['varsUri']) ? $data['varsUri'] : null;
         $this->container['varsBody'] = isset($data['varsBody']) ? $data['varsBody'] : null;
-        $this->container['varOverrides'] = isset($data['varOverrides']) ? $data['varOverrides'] : null;
         $this->container['operationPreferences'] = isset($data['operationPreferences']) ? $data['operationPreferences'] : null;
+        $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
     }
 
     /**
@@ -277,6 +292,14 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['varsBody']) && (mb_strlen($this->container['varsBody']) < 0)) {
                 $invalidProperties[] = "invalid value for 'varsBody', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getCallIdentityAllowableValues();
+                if (!is_null($this->container['callIdentity']) && !in_array($this->container['callIdentity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'callIdentity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -436,30 +459,6 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets varOverrides
-    *  varOverrides
-    *
-    * @return \HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides|null
-    */
-    public function getVarOverrides()
-    {
-        return $this->container['varOverrides'];
-    }
-
-    /**
-    * Sets varOverrides
-    *
-    * @param \HuaweiCloud\SDK\Aos\V1\Model\VarOverridesPrimitiveTypeHolderVarOverrides|null $varOverrides varOverrides
-    *
-    * @return $this
-    */
-    public function setVarOverrides($varOverrides)
-    {
-        $this->container['varOverrides'] = $varOverrides;
-        return $this;
-    }
-
-    /**
     * Gets operationPreferences
     *  operationPreferences
     *
@@ -480,6 +479,30 @@ class DeployStackSetRequestBody implements ModelInterface, ArrayAccess
     public function setOperationPreferences($operationPreferences)
     {
         $this->container['operationPreferences'] = $operationPreferences;
+        return $this;
+    }
+
+    /**
+    * Gets callIdentity
+    *  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return string|null
+    */
+    public function getCallIdentity()
+    {
+        return $this->container['callIdentity'];
+    }
+
+    /**
+    * Sets callIdentity
+    *
+    * @param string|null $callIdentity 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return $this
+    */
+    public function setCallIdentity($callIdentity)
+    {
+        $this->container['callIdentity'] = $callIdentity;
         return $this;
     }
 

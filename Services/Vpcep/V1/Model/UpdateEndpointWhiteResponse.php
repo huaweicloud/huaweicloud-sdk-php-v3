@@ -25,11 +25,11 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置，用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  - 当查询连接interface类型终端节点服务的终端节点时。  - 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
@@ -69,11 +69,11 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置，用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  - 当查询连接interface类型终端节点服务的终端节点时。  - 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
@@ -134,11 +134,11 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置，用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  - 当查询连接interface类型终端节点服务的终端节点时。  - 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
@@ -178,11 +178,11 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置，用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  - 当查询连接interface类型终端节点服务的终端节点时。  - 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
@@ -222,11 +222,11 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置，用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  访问所连接的终端节点服务的IP。 仅当同时满足如下条件时，返回该参数：  - 当查询连接interface类型终端节点服务的终端节点时。  - 终端节点服务启用“连接审批”功能，且已经“接受”连接审批。 “status”可以是“accepted”或者“rejected（仅支持“接受”连接审批后再“拒绝”的情况）”。
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * dnsNames  访问所连接的终端节点服务的域名。 当“enable_dns”为true时，该参数可见。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
@@ -494,7 +494,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStatus
-    *  帐号状态。  - frozen：冻结  - active：解冻
+    *  账号状态。  - frozen：冻结  - active：解冻
     *
     * @return string[]|null
     */
@@ -506,7 +506,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     /**
     * Sets activeStatus
     *
-    * @param string[]|null $activeStatus 帐号状态。  - frozen：冻结  - active：解冻
+    * @param string[]|null $activeStatus 账号状态。  - frozen：冻结  - active：解冻
     *
     * @return $this
     */
@@ -590,7 +590,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableDns
-    *  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    *  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     *
     * @return bool|null
     */
@@ -602,7 +602,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableDns
     *
-    * @param bool|null $enableDns 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * @param bool|null $enableDns 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     *
     * @return $this
     */

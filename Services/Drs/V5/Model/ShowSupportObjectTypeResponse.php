@@ -32,6 +32,7 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * fileSize  对象导入支持的文件大小。
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
+    * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
     *
     * @var string[]
     */
@@ -46,7 +47,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'isTableSupportSearch' => 'bool',
             'fileSize' => 'string',
             'previousSelect' => 'string',
-            'importLevel' => 'string'
+            'importLevel' => 'string',
+            'isImportCloumn' => 'bool'
     ];
 
     /**
@@ -62,6 +64,7 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * fileSize  对象导入支持的文件大小。
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
+    * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
     *
     * @var string[]
     */
@@ -76,7 +79,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
         'isTableSupportSearch' => null,
         'fileSize' => null,
         'previousSelect' => null,
-        'importLevel' => null
+        'importLevel' => null,
+        'isImportCloumn' => null
     ];
 
     /**
@@ -113,6 +117,7 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * fileSize  对象导入支持的文件大小。
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
+    * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
     *
     * @var string[]
     */
@@ -127,7 +132,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'isTableSupportSearch' => 'is_table_support_search',
             'fileSize' => 'file_size',
             'previousSelect' => 'previous_select',
-            'importLevel' => 'import_level'
+            'importLevel' => 'import_level',
+            'isImportCloumn' => 'is_import_cloumn'
     ];
 
     /**
@@ -143,6 +149,7 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * fileSize  对象导入支持的文件大小。
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
+    * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
     *
     * @var string[]
     */
@@ -157,7 +164,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'isTableSupportSearch' => 'setIsTableSupportSearch',
             'fileSize' => 'setFileSize',
             'previousSelect' => 'setPreviousSelect',
-            'importLevel' => 'setImportLevel'
+            'importLevel' => 'setImportLevel',
+            'isImportCloumn' => 'setIsImportCloumn'
     ];
 
     /**
@@ -173,6 +181,7 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     * fileSize  对象导入支持的文件大小。
     * previousSelect  上一次选择迁移对象或者同步对象的方式。 - srcImportObject：当前任务上次选择的方式为导入方式
     * importLevel  对象导入类型。 - table：表级 - database：库级
+    * isImportCloumn  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
     *
     * @var string[]
     */
@@ -187,7 +196,8 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
             'isTableSupportSearch' => 'getIsTableSupportSearch',
             'fileSize' => 'getFileSize',
             'previousSelect' => 'getPreviousSelect',
-            'importLevel' => 'getImportLevel'
+            'importLevel' => 'getImportLevel',
+            'isImportCloumn' => 'getIsImportCloumn'
     ];
 
     /**
@@ -259,6 +269,7 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
         $this->container['fileSize'] = isset($data['fileSize']) ? $data['fileSize'] : null;
         $this->container['previousSelect'] = isset($data['previousSelect']) ? $data['previousSelect'] : null;
         $this->container['importLevel'] = isset($data['importLevel']) ? $data['importLevel'] : null;
+        $this->container['isImportCloumn'] = isset($data['isImportCloumn']) ? $data['isImportCloumn'] : null;
     }
 
     /**
@@ -544,6 +555,30 @@ class ShowSupportObjectTypeResponse implements ModelInterface, ArrayAccess
     public function setImportLevel($importLevel)
     {
         $this->container['importLevel'] = $importLevel;
+        return $this;
+    }
+
+    /**
+    * Gets isImportCloumn
+    *  取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    *
+    * @return bool|null
+    */
+    public function getIsImportCloumn()
+    {
+        return $this->container['isImportCloumn'];
+    }
+
+    /**
+    * Sets isImportCloumn
+    *
+    * @param bool|null $isImportCloumn 取值： - true： 当前任务上次选择列加工方式为导入方式 - false 或者 空：当前任务上次选择列加工方式为手动选择方式
+    *
+    * @return $this
+    */
+    public function setIsImportCloumn($isImportCloumn)
+    {
+        $this->container['isImportCloumn'] = $isImportCloumn;
         return $this;
     }
 

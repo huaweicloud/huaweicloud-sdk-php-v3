@@ -22,7 +22,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
     * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    * xTraceId  xTraceId
     * body  body
     *
     * @var string[]
@@ -30,7 +29,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'projectId' => 'string',
             'xClientToken' => 'string',
-            'xTraceId' => 'string',
             'body' => '\HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReq'
     ];
 
@@ -38,7 +36,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
     * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    * xTraceId  xTraceId
     * body  body
     *
     * @var string[]
@@ -46,7 +43,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'projectId' => null,
         'xClientToken' => null,
-        'xTraceId' => null,
         'body' => null
     ];
 
@@ -75,7 +71,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * projectId  租户项目id
     * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    * xTraceId  xTraceId
     * body  body
     *
     * @var string[]
@@ -83,7 +78,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'projectId' => 'project_id',
             'xClientToken' => 'X-Client-Token',
-            'xTraceId' => 'X-Trace-Id',
             'body' => 'body'
     ];
 
@@ -91,7 +85,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
     * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    * xTraceId  xTraceId
     * body  body
     *
     * @var string[]
@@ -99,7 +92,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'projectId' => 'setProjectId',
             'xClientToken' => 'setXClientToken',
-            'xTraceId' => 'setXTraceId',
             'body' => 'setBody'
     ];
 
@@ -107,7 +99,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
     * xClientToken  保证客户端请求幂等性的标识。  该标识为32位UUID格式，由客户端生成，且需确保不同请求之间该标识具有唯一性。
-    * xTraceId  xTraceId
     * body  body
     *
     * @var string[]
@@ -115,7 +106,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'projectId' => 'getProjectId',
             'xClientToken' => 'getXClientToken',
-            'xTraceId' => 'getXTraceId',
             'body' => 'getBody'
     ];
 
@@ -179,7 +169,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     {
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['xClientToken'] = isset($data['xClientToken']) ? $data['xClientToken'] : null;
-        $this->container['xTraceId'] = isset($data['xTraceId']) ? $data['xTraceId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -253,30 +242,6 @@ class CreateFirewallRequest implements ModelInterface, ArrayAccess
     public function setXClientToken($xClientToken)
     {
         $this->container['xClientToken'] = $xClientToken;
-        return $this;
-    }
-
-    /**
-    * Gets xTraceId
-    *  xTraceId
-    *
-    * @return string|null
-    */
-    public function getXTraceId()
-    {
-        return $this->container['xTraceId'];
-    }
-
-    /**
-    * Sets xTraceId
-    *
-    * @param string|null $xTraceId xTraceId
-    *
-    * @return $this
-    */
-    public function setXTraceId($xTraceId)
-    {
-        $this->container['xTraceId'] = $xTraceId;
         return $this;
     }
 

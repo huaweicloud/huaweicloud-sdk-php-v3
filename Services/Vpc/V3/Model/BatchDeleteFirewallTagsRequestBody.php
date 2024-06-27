@@ -25,7 +25,7 @@ class BatchDeleteFirewallTagsRequestBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]'
     ];
 
     /**
@@ -176,7 +176,7 @@ class BatchDeleteFirewallTagsRequestBody implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]|null
     */
     public function getTags()
     {
@@ -186,7 +186,7 @@ class BatchDeleteFirewallTagsRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 标签列表
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\DeleteResourceTagRequestBody[]|null $tags 标签列表
     *
     * @return $this
     */

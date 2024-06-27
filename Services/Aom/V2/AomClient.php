@@ -90,7 +90,7 @@ class AomClient extends Client
     /**
      * 添加阈值规则
      *
-     * 该接口用于添加一条阈值规则。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于添加一条阈值规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -214,7 +214,7 @@ class AomClient extends Client
     /**
      * 添加监控数据
      *
-     * 该接口用于向服务端添加一条或多条监控数据。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于向服务端添加一条或多条监控数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -336,9 +336,77 @@ class AomClient extends Client
     }
 
     /**
+     * 添加或修改指标类或事件类告警规则
+     *
+     * 添加或修改AOM2.0指标类或事件类告警规则。(注：接口目前开放的region为：华东-上海一)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addOrUpdateMetricOrEventAlarmRule($request)
+    {
+        return $this->addOrUpdateMetricOrEventAlarmRuleWithHttpInfo($request);
+    }
+
+    public function addOrUpdateMetricOrEventAlarmRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v4/{project_id}/alarm-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['actionId'] !== null) {
+            $queryParams['action_id'] = $localVarParams['actionId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\AddOrUpdateMetricOrEventAlarmRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\AddOrUpdateMetricOrEventAlarmRuleRequest');
+    }
+
+    /**
      * 添加或修改服务发现规则
      *
-     * 该接口用于添加或修改一条或多条服务发现规则。同一projectid下可添加的规则上限为100条。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于添加或修改一条或多条服务发现规则。同一projectid下可添加的规则上限为100条。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -527,7 +595,7 @@ class AomClient extends Client
     /**
      * 删除阈值规则
      *
-     * 该接口用于删除阈值规则。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于删除阈值规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -589,7 +657,7 @@ class AomClient extends Client
     /**
      * 批量删除阈值规则
      *
-     * 批量删除阈值规则[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于批量删除阈值规则
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -711,6 +779,68 @@ class AomClient extends Client
     }
 
     /**
+     * 删除指标类或事件类告警规则
+     *
+     * 删除AOM2.0指标类或事件类告警规则。(注：接口目前开放的region为：华东-上海一)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteMetricOrEventAlarmRule($request)
+    {
+        return $this->deleteMetricOrEventAlarmRuleWithHttpInfo($request);
+    }
+
+    public function deleteMetricOrEventAlarmRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v4/{project_id}/alarm-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteMetricOrEventAlarmRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\DeleteMetricOrEventAlarmRuleRequest');
+    }
+
+    /**
      * 删除静默规则
      *
      * 删除静默规则。
@@ -775,7 +905,7 @@ class AomClient extends Client
     /**
      * 删除服务发现规则
      *
-     * 该接口用于删除服务发现规则。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于删除服务发现规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -961,7 +1091,7 @@ class AomClient extends Client
     /**
      * 查询阈值规则列表
      *
-     * 该接口用于查询阈值规则列表。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询阈值规则列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1218,7 +1348,7 @@ class AomClient extends Client
     /**
      * 查询指标
      *
-     * 该接口用于查询系统当前可监控的指标列表，可以指定指标命名空间、指标名称、维度、所属资源的编号（格式为：resType_resId），分页查询的起始位置和返回的最大记录条数。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询系统当前可监控的指标列表，可以指定指标命名空间、指标名称、维度、所属资源的编号（格式为：resType_resId），分页查询的起始位置和返回的最大记录条数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1284,6 +1414,101 @@ class AomClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListMetricItemsResponse',
             $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListMetricItemsRequest');
+    }
+
+    /**
+     * 查询指标类或者事件类告警规则列表
+     *
+     * 查询AOM2.0指标类或者事件类告警规则列表。(注：接口目前开放的region为：华东-上海一)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listMetricOrEventAlarmRule($request)
+    {
+        return $this->listMetricOrEventAlarmRuleWithHttpInfo($request);
+    }
+
+    public function listMetricOrEventAlarmRuleWithHttpInfo($request)
+    {
+        $resourcePath = '/v4/{project_id}/alarm-rules';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['sortBy'] !== null) {
+            $queryParams['sort_by'] = $localVarParams['sortBy'];
+        }
+        if ($localVarParams['eventSource'] !== null) {
+            $queryParams['event_source'] = $localVarParams['eventSource'];
+        }
+        if ($localVarParams['eventSeverity'] !== null) {
+            $queryParams['event_severity'] = $localVarParams['eventSeverity'];
+        }
+        if ($localVarParams['alarmRuleStatus'] !== null) {
+            $queryParams['alarm_rule_status'] = $localVarParams['alarmRuleStatus'];
+        }
+        if ($localVarParams['alarmRuleType'] !== null) {
+            $queryParams['alarm_rule_type'] = $localVarParams['alarmRuleType'];
+        }
+        if ($localVarParams['promInstanceId'] !== null) {
+            $queryParams['prom_instance_id'] = $localVarParams['promInstanceId'];
+        }
+        if ($localVarParams['bindNotificationRuleId'] !== null) {
+            $queryParams['bind_notification_rule_id'] = $localVarParams['bindNotificationRuleId'];
+        }
+        if ($localVarParams['relatedCceClusters'] !== null) {
+            $queryParams['related_cce_clusters'] = $localVarParams['relatedCceClusters'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aom\V2\Model\ListMetricOrEventAlarmRuleResponse',
+            $requestType='\HuaweiCloud\SDK\Aom\V2\Model\ListMetricOrEventAlarmRuleRequest');
     }
 
     /**
@@ -1469,7 +1694,7 @@ class AomClient extends Client
     /**
      * 查询时序数据
      *
-     * 该接口用于查询指定时间范围内的监控时序数据，可以通过参数指定需要查询的数据维度，数据周期等。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询指定时间范围内的监控时序数据，可以通过参数指定需要查询的数据维度，数据周期等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1534,7 +1759,7 @@ class AomClient extends Client
     /**
      * 查询时间序列
      *
-     * 该接口用于查询系统当前可监控的时间序列列表，可以指定时间序列命名空间、名称、维度、所属资源的编号（格式为：resType_resId），分页查询的起始位置和返回的最大记录条数。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询系统当前可监控的时间序列列表，可以指定时间序列命名空间、名称、维度、所属资源的编号（格式为：resType_resId），分页查询的起始位置和返回的最大记录条数。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1602,7 +1827,7 @@ class AomClient extends Client
     /**
      * 查询系统中已有服务发现规则
      *
-     * 该接口用于查询系统当前已存在的服务发现规则。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询系统当前已存在的服务发现规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1794,7 +2019,7 @@ class AomClient extends Client
     /**
      * 查询单条阈值规则
      *
-     * 该接口用于查询单条阈值规则。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询单条阈值规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1856,7 +2081,7 @@ class AomClient extends Client
     /**
      * 查询监控数据
      *
-     * 该接口用于查询指定时间范围内指标的监控数据，可以通过参数指定需要查询的数据维度，数据周期等。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于查询指定时间范围内指标的监控数据，可以通过参数指定需要查询的数据维度，数据周期等。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1983,7 +2208,7 @@ class AomClient extends Client
     /**
      * 修改阈值规则
      *
-     * 该接口用于修改一条阈值规则。[（当前接口未上线墨西哥城二、圣地亚哥、圣保罗一）](tag:hws,hws_hk)
+     * 该接口用于修改一条阈值规则。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2423,7 +2648,7 @@ class AomClient extends Client
     /**
      * GET方法查询瞬时数据
      *
-     * 该接口使用GET方法查询PromQL(Prometheus Query Language)在特定时间点下的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口使用GET方法查询PromQL(Prometheus Query Language)在特定时间点下的计算结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2488,7 +2713,7 @@ class AomClient extends Client
     /**
      * （推荐）POST方法查询瞬时数据
      *
-     * 该接口使用POST方法查询PromQL(Prometheus Query Language) 在特定时间点下的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）
+     * 该接口使用POST方法查询PromQL(Prometheus Query Language) 在特定时间点下的计算结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2553,7 +2778,7 @@ class AomClient extends Client
     /**
      * 查询标签值
      *
-     * 该接口用于查询带有指定标签的时间序列列表。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口用于查询带有指定标签的时间序列列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2615,7 +2840,7 @@ class AomClient extends Client
     /**
      * GET方法获取标签名列表
      *
-     * 该接口使用GET方法获取标签名列表。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口使用GET方法获取标签名列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2674,7 +2899,7 @@ class AomClient extends Client
     /**
      * （推荐）POST方法获取标签名列表
      *
-     * 该接口使用POST方法获取标签名列表。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口使用POST方法获取标签名列表。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2733,7 +2958,7 @@ class AomClient extends Client
     /**
      * 元数据查询
      *
-     * 该接口用于查询序列及序列标签的元数据。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口用于查询序列及序列标签的元数据。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2866,7 +3091,7 @@ class AomClient extends Client
     /**
      * GET方法查询区间数据
      *
-     * 该接口使用GET方法查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口使用GET方法查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2937,7 +3162,7 @@ class AomClient extends Client
     /**
      * （推荐）POST方法查询区间数据
      *
-     * 该接口使用POST方法查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。（注：接口目前开放的region为：北京四、上海一和广州）。
+     * 该接口使用POST方法查询PromQL(Prometheus Query Language)在一段时间返回内的计算结果。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

@@ -24,6 +24,7 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
+    * type  默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
             'jobId' => 'string',
             'xLanguage' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'type' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
+    * type  默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
         'jobId' => null,
         'xLanguage' => null,
         'offset' => 'int32',
-        'limit' => 'int32'
+        'limit' => 'int32',
+        'type' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
+    * type  默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
             'jobId' => 'job_id',
             'xLanguage' => 'X-Language',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'type' => 'type'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
+    * type  默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
             'jobId' => 'setJobId',
             'xLanguage' => 'setXLanguage',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'type' => 'setType'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
     * xLanguage  请求语言类型。
     * offset  偏移量，表示查询该偏移量后面的记录。
     * limit  查询返回记录的数量限制。
+    * type  默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
             'jobId' => 'getJobId',
             'xLanguage' => 'getXLanguage',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'type' => 'getType'
     ];
 
     /**
@@ -196,6 +206,7 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -324,6 +335,30 @@ class ShowDbObjectTemplateProgressRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 默认为空。 - column：当进行列加工导入时，查询列加工导入进度。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

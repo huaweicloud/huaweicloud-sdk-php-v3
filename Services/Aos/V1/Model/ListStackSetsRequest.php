@@ -24,6 +24,7 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持双等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'string',
             'filter' => 'string',
             'sortKey' => 'string[]',
-            'sortDir' => 'string[]'
+            'sortDir' => 'string[]',
+            'callIdentity' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持双等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
         'clientRequestId' => null,
         'filter' => null,
         'sortKey' => null,
-        'sortDir' => null
+        'sortDir' => null,
+        'callIdentity' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持双等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'Client-Request-Id',
             'filter' => 'filter',
             'sortKey' => 'sort_key',
-            'sortDir' => 'sort_dir'
+            'sortDir' => 'sort_dir',
+            'callIdentity' => 'call_identity'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持双等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'setClientRequestId',
             'filter' => 'setFilter',
             'sortKey' => 'setSortKey',
-            'sortDir' => 'setSortDir'
+            'sortDir' => 'setSortDir',
+            'callIdentity' => 'setCallIdentity'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     * filter  过滤条件  * 与（AND）运算符使用逗号（，）定义 * 或（OR）运算符使用竖线（|）定义，OR运算符优先级高于AND运算符 * 不支持括号 * 过滤运算符仅支持双等号（==） * 过滤参数名及其值仅支持包含大小写英文、数字和下划线 * 过滤条件中禁止使用分号，如果有分号，则此条过滤会被忽略 * 一个过滤参数仅能与一个与条件相关，一个与条件中的多个或条件仅能与一个过滤参数相关
     * sortKey  排序字段，仅支持给予create_time
     * sortDir  指定升序还是降序   * `asc` - 升序   * `desc` - 降序
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
             'clientRequestId' => 'getClientRequestId',
             'filter' => 'getFilter',
             'sortKey' => 'getSortKey',
-            'sortDir' => 'getSortDir'
+            'sortDir' => 'getSortDir',
+            'callIdentity' => 'getCallIdentity'
     ];
 
     /**
@@ -162,6 +172,8 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     const SORT_KEY_CREATE_TIME = 'create_time';
     const SORT_DIR_ASC = 'asc';
     const SORT_DIR_DESC = 'desc';
+    const CALL_IDENTITY_SELF = 'SELF';
+    const CALL_IDENTITY_DELEGATED_ADMIN = 'DELEGATED_ADMIN';
     
 
     /**
@@ -189,6 +201,19 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCallIdentityAllowableValues()
+    {
+        return [
+            self::CALL_IDENTITY_SELF,
+            self::CALL_IDENTITY_DELEGATED_ADMIN,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -209,6 +234,7 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
         $this->container['sortKey'] = isset($data['sortKey']) ? $data['sortKey'] : null;
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
+        $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
     }
 
     /**
@@ -237,6 +263,14 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['filter']) && (mb_strlen($this->container['filter']) < 0)) {
                 $invalidProperties[] = "invalid value for 'filter', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getCallIdentityAllowableValues();
+                if (!is_null($this->container['callIdentity']) && !in_array($this->container['callIdentity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'callIdentity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -344,6 +378,30 @@ class ListStackSetsRequest implements ModelInterface, ArrayAccess
     public function setSortDir($sortDir)
     {
         $this->container['sortDir'] = $sortDir;
+        return $this;
+    }
+
+    /**
+    * Gets callIdentity
+    *  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return string|null
+    */
+    public function getCallIdentity()
+    {
+        return $this->container['callIdentity'];
+    }
+
+    /**
+    * Sets callIdentity
+    *
+    * @param string|null $callIdentity 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return $this
+    */
+    public function setCallIdentity($callIdentity)
+    {
+        $this->container['callIdentity'] = $callIdentity;
         return $this;
     }
 

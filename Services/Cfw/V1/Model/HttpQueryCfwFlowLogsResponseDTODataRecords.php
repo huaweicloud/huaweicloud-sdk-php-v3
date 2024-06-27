@@ -23,8 +23,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * bytes  字节
     * direction  方向，有内到外和外到内两种
     * packets  包
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -37,6 +37,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstRegionName  目的地域名称
     * srcRegionId  源地域id
     * srcRegionName  源地域名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
     *
     * @var string[]
     */
@@ -57,7 +65,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstRegionId' => 'string',
             'dstRegionName' => 'string',
             'srcRegionId' => 'string',
-            'srcRegionName' => 'string'
+            'srcRegionName' => 'string',
+            'dstProvinceId' => 'string',
+            'dstProvinceName' => 'string',
+            'dstCityId' => 'string',
+            'dstCityName' => 'string',
+            'srcProvinceId' => 'string',
+            'srcProvinceName' => 'string',
+            'srcCityId' => 'string',
+            'srcCityName' => 'string'
     ];
 
     /**
@@ -65,8 +81,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * bytes  字节
     * direction  方向，有内到外和外到内两种
     * packets  包
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -79,6 +95,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstRegionName  目的地域名称
     * srcRegionId  源地域id
     * srcRegionName  源地域名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
     *
     * @var string[]
     */
@@ -99,7 +123,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         'dstRegionId' => null,
         'dstRegionName' => null,
         'srcRegionId' => null,
-        'srcRegionName' => null
+        'srcRegionName' => null,
+        'dstProvinceId' => null,
+        'dstProvinceName' => null,
+        'dstCityId' => null,
+        'dstCityName' => null,
+        'srcProvinceId' => null,
+        'srcProvinceName' => null,
+        'srcCityId' => null,
+        'srcCityName' => null
     ];
 
     /**
@@ -128,8 +160,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * bytes  字节
     * direction  方向，有内到外和外到内两种
     * packets  包
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -142,6 +174,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstRegionName  目的地域名称
     * srcRegionId  源地域id
     * srcRegionName  源地域名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
     *
     * @var string[]
     */
@@ -162,7 +202,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstRegionId' => 'dst_region_id',
             'dstRegionName' => 'dst_region_name',
             'srcRegionId' => 'src_region_id',
-            'srcRegionName' => 'src_region_name'
+            'srcRegionName' => 'src_region_name',
+            'dstProvinceId' => 'dst_province_id',
+            'dstProvinceName' => 'dst_province_name',
+            'dstCityId' => 'dst_city_id',
+            'dstCityName' => 'dst_city_name',
+            'srcProvinceId' => 'src_province_id',
+            'srcProvinceName' => 'src_province_name',
+            'srcCityId' => 'src_city_id',
+            'srcCityName' => 'src_city_name'
     ];
 
     /**
@@ -170,8 +218,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * bytes  字节
     * direction  方向，有内到外和外到内两种
     * packets  包
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -184,6 +232,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstRegionName  目的地域名称
     * srcRegionId  源地域id
     * srcRegionName  源地域名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
     *
     * @var string[]
     */
@@ -204,7 +260,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstRegionId' => 'setDstRegionId',
             'dstRegionName' => 'setDstRegionName',
             'srcRegionId' => 'setSrcRegionId',
-            'srcRegionName' => 'setSrcRegionName'
+            'srcRegionName' => 'setSrcRegionName',
+            'dstProvinceId' => 'setDstProvinceId',
+            'dstProvinceName' => 'setDstProvinceName',
+            'dstCityId' => 'setDstCityId',
+            'dstCityName' => 'setDstCityName',
+            'srcProvinceId' => 'setSrcProvinceId',
+            'srcProvinceName' => 'setSrcProvinceName',
+            'srcCityId' => 'setSrcCityId',
+            'srcCityName' => 'setSrcCityName'
     ];
 
     /**
@@ -212,8 +276,8 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * bytes  字节
     * direction  方向，有内到外和外到内两种
     * packets  包
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
@@ -226,6 +290,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * dstRegionName  目的地域名称
     * srcRegionId  源地域id
     * srcRegionName  源地域名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
     *
     * @var string[]
     */
@@ -246,7 +318,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
             'dstRegionId' => 'getDstRegionId',
             'dstRegionName' => 'getDstRegionName',
             'srcRegionId' => 'getSrcRegionId',
-            'srcRegionName' => 'getSrcRegionName'
+            'srcRegionName' => 'getSrcRegionName',
+            'dstProvinceId' => 'getDstProvinceId',
+            'dstProvinceName' => 'getDstProvinceName',
+            'dstCityId' => 'getDstCityId',
+            'dstCityName' => 'getDstCityName',
+            'srcProvinceId' => 'getSrcProvinceId',
+            'srcProvinceName' => 'getSrcProvinceName',
+            'srcCityId' => 'getSrcCityId',
+            'srcCityName' => 'getSrcCityName'
     ];
 
     /**
@@ -339,6 +419,14 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
         $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
         $this->container['srcRegionId'] = isset($data['srcRegionId']) ? $data['srcRegionId'] : null;
         $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
+        $this->container['dstProvinceId'] = isset($data['dstProvinceId']) ? $data['dstProvinceId'] : null;
+        $this->container['dstProvinceName'] = isset($data['dstProvinceName']) ? $data['dstProvinceName'] : null;
+        $this->container['dstCityId'] = isset($data['dstCityId']) ? $data['dstCityId'] : null;
+        $this->container['dstCityName'] = isset($data['dstCityName']) ? $data['dstCityName'] : null;
+        $this->container['srcProvinceId'] = isset($data['srcProvinceId']) ? $data['srcProvinceId'] : null;
+        $this->container['srcProvinceName'] = isset($data['srcProvinceName']) ? $data['srcProvinceName'] : null;
+        $this->container['srcCityId'] = isset($data['srcCityId']) ? $data['srcCityId'] : null;
+        $this->container['srcCityName'] = isset($data['srcCityName']) ? $data['srcCityName'] : null;
     }
 
     /**
@@ -445,7 +533,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
 
     /**
     * Gets startTime
-    *  开始时间
+    *  开始时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int|null
     */
@@ -457,7 +545,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 开始时间
+    * @param int|null $startTime 开始时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -469,7 +557,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
 
     /**
     * Gets endTime
-    *  结束时间
+    *  结束时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int|null
     */
@@ -481,7 +569,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间
+    * @param int|null $endTime 结束时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -776,6 +864,198 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     public function setSrcRegionName($srcRegionName)
     {
         $this->container['srcRegionName'] = $srcRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceId
+    *  目的省份id
+    *
+    * @return string|null
+    */
+    public function getDstProvinceId()
+    {
+        return $this->container['dstProvinceId'];
+    }
+
+    /**
+    * Sets dstProvinceId
+    *
+    * @param string|null $dstProvinceId 目的省份id
+    *
+    * @return $this
+    */
+    public function setDstProvinceId($dstProvinceId)
+    {
+        $this->container['dstProvinceId'] = $dstProvinceId;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceName
+    *  目的省份名称
+    *
+    * @return string|null
+    */
+    public function getDstProvinceName()
+    {
+        return $this->container['dstProvinceName'];
+    }
+
+    /**
+    * Sets dstProvinceName
+    *
+    * @param string|null $dstProvinceName 目的省份名称
+    *
+    * @return $this
+    */
+    public function setDstProvinceName($dstProvinceName)
+    {
+        $this->container['dstProvinceName'] = $dstProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityId
+    *  目的城市id
+    *
+    * @return string|null
+    */
+    public function getDstCityId()
+    {
+        return $this->container['dstCityId'];
+    }
+
+    /**
+    * Sets dstCityId
+    *
+    * @param string|null $dstCityId 目的城市id
+    *
+    * @return $this
+    */
+    public function setDstCityId($dstCityId)
+    {
+        $this->container['dstCityId'] = $dstCityId;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityName
+    *  目的城市名称
+    *
+    * @return string|null
+    */
+    public function getDstCityName()
+    {
+        return $this->container['dstCityName'];
+    }
+
+    /**
+    * Sets dstCityName
+    *
+    * @param string|null $dstCityName 目的城市名称
+    *
+    * @return $this
+    */
+    public function setDstCityName($dstCityName)
+    {
+        $this->container['dstCityName'] = $dstCityName;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceId
+    *  源省份id
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceId()
+    {
+        return $this->container['srcProvinceId'];
+    }
+
+    /**
+    * Sets srcProvinceId
+    *
+    * @param string|null $srcProvinceId 源省份id
+    *
+    * @return $this
+    */
+    public function setSrcProvinceId($srcProvinceId)
+    {
+        $this->container['srcProvinceId'] = $srcProvinceId;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceName
+    *  源省份名称
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceName()
+    {
+        return $this->container['srcProvinceName'];
+    }
+
+    /**
+    * Sets srcProvinceName
+    *
+    * @param string|null $srcProvinceName 源省份名称
+    *
+    * @return $this
+    */
+    public function setSrcProvinceName($srcProvinceName)
+    {
+        $this->container['srcProvinceName'] = $srcProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityId
+    *  源城市id
+    *
+    * @return string|null
+    */
+    public function getSrcCityId()
+    {
+        return $this->container['srcCityId'];
+    }
+
+    /**
+    * Sets srcCityId
+    *
+    * @param string|null $srcCityId 源城市id
+    *
+    * @return $this
+    */
+    public function setSrcCityId($srcCityId)
+    {
+        $this->container['srcCityId'] = $srcCityId;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityName
+    *  源城市名称
+    *
+    * @return string|null
+    */
+    public function getSrcCityName()
+    {
+        return $this->container['srcCityName'];
+    }
+
+    /**
+    * Sets srcCityName
+    *
+    * @param string|null $srcCityName 源城市名称
+    *
+    * @return $this
+    */
+    public function setSrcCityName($srcCityName)
+    {
+        $this->container['srcCityName'] = $srcCityName;
         return $this;
     }
 

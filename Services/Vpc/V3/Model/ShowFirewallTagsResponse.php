@@ -21,30 +21,26 @@ class ShowFirewallTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
-    * sysTags  sysTags
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag',
-            'requestId' => 'string',
-            'sysTags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag'
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
+            'requestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
-    * sysTags  sysTags
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'tags' => null,
-        'requestId' => null,
-        'sysTags' => null
+        'requestId' => null
     ];
 
     /**
@@ -70,44 +66,38 @@ class ShowFirewallTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
-    * sysTags  sysTags
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'tags' => 'tags',
-            'requestId' => 'request_id',
-            'sysTags' => 'sys_tags'
+            'requestId' => 'request_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
-    * sysTags  sysTags
     *
     * @var string[]
     */
     protected static $setters = [
             'tags' => 'setTags',
-            'requestId' => 'setRequestId',
-            'sysTags' => 'setSysTags'
+            'requestId' => 'setRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
-    * sysTags  sysTags
     *
     * @var string[]
     */
     protected static $getters = [
             'tags' => 'getTags',
-            'requestId' => 'getRequestId',
-            'sysTags' => 'getSysTags'
+            'requestId' => 'getRequestId'
     ];
 
     /**
@@ -170,7 +160,6 @@ class ShowFirewallTagsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
     }
 
     /**
@@ -197,9 +186,9 @@ class ShowFirewallTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  tag对象列表
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
     */
     public function getTags()
     {
@@ -209,7 +198,7 @@ class ShowFirewallTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag|null $tags tags
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags tag对象列表
     *
     * @return $this
     */
@@ -240,30 +229,6 @@ class ShowFirewallTagsResponse implements ModelInterface, ArrayAccess
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  sysTags
-    *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag|null $sysTags sysTags
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
         return $this;
     }
 

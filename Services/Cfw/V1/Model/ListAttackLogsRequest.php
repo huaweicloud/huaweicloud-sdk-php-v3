@@ -21,31 +21,34 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  日志ID，当是第一页时为空，不是第一页时不为空
-    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
-    * action  动作0：permit,1：deny
-    * direction  方向0：外到内1：内到外
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * action  动作包含permit，deny
+    * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
-    * level  威胁等级
-    * source  判断来源
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -69,43 +72,49 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'string',
             'attackRule' => 'string',
             'level' => 'string',
-            'source' => 'string',
             'enterpriseProjectId' => 'string',
             'dstHost' => 'string',
             'logType' => 'string',
             'attackRuleId' => 'string',
             'srcRegionName' => 'string',
-            'dstRegionName' => 'string'
+            'dstRegionName' => 'string',
+            'srcProvinceName' => 'string',
+            'dstProvinceName' => 'string',
+            'srcCityName' => 'string',
+            'dstCityName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  日志ID，当是第一页时为空，不是第一页时不为空
-    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
-    * action  动作0：permit,1：deny
-    * direction  方向0：外到内1：内到外
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * action  动作包含permit，deny
+    * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
-    * level  威胁等级
-    * source  判断来源
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -129,13 +138,16 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         'attackType' => null,
         'attackRule' => null,
         'level' => null,
-        'source' => null,
         'enterpriseProjectId' => null,
         'dstHost' => null,
         'logType' => null,
         'attackRuleId' => null,
         'srcRegionName' => null,
-        'dstRegionName' => null
+        'dstRegionName' => null,
+        'srcProvinceName' => null,
+        'dstProvinceName' => null,
+        'srcCityName' => null,
+        'dstCityName' => null
     ];
 
     /**
@@ -162,31 +174,34 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  租户项目id
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  日志ID，当是第一页时为空，不是第一页时不为空
-    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
-    * action  动作0：permit,1：deny
-    * direction  方向0：外到内1：内到外
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * action  动作包含permit，deny
+    * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
-    * level  威胁等级
-    * source  判断来源
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -210,43 +225,49 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'attack_type',
             'attackRule' => 'attack_rule',
             'level' => 'level',
-            'source' => 'source',
             'enterpriseProjectId' => 'enterprise_project_id',
             'dstHost' => 'dst_host',
             'logType' => 'log_type',
             'attackRuleId' => 'attack_rule_id',
             'srcRegionName' => 'src_region_name',
-            'dstRegionName' => 'dst_region_name'
+            'dstRegionName' => 'dst_region_name',
+            'srcProvinceName' => 'src_province_name',
+            'dstProvinceName' => 'dst_province_name',
+            'srcCityName' => 'src_city_name',
+            'dstCityName' => 'dst_city_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  日志ID，当是第一页时为空，不是第一页时不为空
-    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
-    * action  动作0：permit,1：deny
-    * direction  方向0：外到内1：内到外
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * action  动作包含permit，deny
+    * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
-    * level  威胁等级
-    * source  判断来源
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -270,43 +291,49 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'setAttackType',
             'attackRule' => 'setAttackRule',
             'level' => 'setLevel',
-            'source' => 'setSource',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'dstHost' => 'setDstHost',
             'logType' => 'setLogType',
             'attackRuleId' => 'setAttackRuleId',
             'srcRegionName' => 'setSrcRegionName',
-            'dstRegionName' => 'setDstRegionName'
+            'dstRegionName' => 'setDstRegionName',
+            'srcProvinceName' => 'setSrcProvinceName',
+            'dstProvinceName' => 'setDstProvinceName',
+            'srcCityName' => 'setSrcCityName',
+            'dstCityName' => 'setDstCityName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
-    * startTime  开始时间
-    * endTime  结束时间
+    * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
+    * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
     * srcPort  源端口号
     * dstIp  目的IP
     * dstPort  目的端口号
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * app  应用协议
-    * logId  日志ID，当是第一页时为空，不是第一页时不为空
-    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
+    * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
+    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
-    * action  动作0：permit,1：deny
-    * direction  方向0：外到内1：内到外
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * action  动作包含permit，deny
+    * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
-    * level  威胁等级
-    * source  判断来源
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
     * dstHost  目标主机
-    * logType  日志类型
+    * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
     * srcRegionName  源region名称
     * dstRegionName  目的region名称
+    * srcProvinceName  源省份名称
+    * dstProvinceName  目的省份名称
+    * srcCityName  源城市名称
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -330,13 +357,16 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             'attackType' => 'getAttackType',
             'attackRule' => 'getAttackRule',
             'level' => 'getLevel',
-            'source' => 'getSource',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'dstHost' => 'getDstHost',
             'logType' => 'getLogType',
             'attackRuleId' => 'getAttackRuleId',
             'srcRegionName' => 'getSrcRegionName',
-            'dstRegionName' => 'getDstRegionName'
+            'dstRegionName' => 'getDstRegionName',
+            'srcProvinceName' => 'getSrcProvinceName',
+            'dstProvinceName' => 'getDstProvinceName',
+            'srcCityName' => 'getSrcCityName',
+            'dstCityName' => 'getDstCityName'
     ];
 
     /**
@@ -379,59 +409,10 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const PROTOCOL__6 = '6';
-    const PROTOCOL__17 = '17';
-    const PROTOCOL__1 = '1';
-    const PROTOCOL__58 = '58';
-    const ACTION__0 = '0';
-    const ACTION__1 = '1';
-    const DIRECTION__0 = '0';
-    const DIRECTION__1 = '1';
     const LOG_TYPE_INTERNET = 'internet';
     const LOG_TYPE_NAT = 'nat';
     const LOG_TYPE_VPC = 'vpc';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getProtocolAllowableValues()
-    {
-        return [
-            self::PROTOCOL__6,
-            self::PROTOCOL__17,
-            self::PROTOCOL__1,
-            self::PROTOCOL__58,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION__0,
-            self::ACTION__1,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getDirectionAllowableValues()
-    {
-        return [
-            self::DIRECTION__0,
-            self::DIRECTION__1,
-        ];
-    }
 
     /**
     * Gets allowable values of the enum
@@ -482,13 +463,16 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
         $this->container['attackType'] = isset($data['attackType']) ? $data['attackType'] : null;
         $this->container['attackRule'] = isset($data['attackRule']) ? $data['attackRule'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
-        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
         $this->container['logType'] = isset($data['logType']) ? $data['logType'] : null;
         $this->container['attackRuleId'] = isset($data['attackRuleId']) ? $data['attackRuleId'] : null;
         $this->container['srcRegionName'] = isset($data['srcRegionName']) ? $data['srcRegionName'] : null;
         $this->container['dstRegionName'] = isset($data['dstRegionName']) ? $data['dstRegionName'] : null;
+        $this->container['srcProvinceName'] = isset($data['srcProvinceName']) ? $data['srcProvinceName'] : null;
+        $this->container['dstProvinceName'] = isset($data['dstProvinceName']) ? $data['dstProvinceName'] : null;
+        $this->container['srcCityName'] = isset($data['srcCityName']) ? $data['srcCityName'] : null;
+        $this->container['dstCityName'] = isset($data['dstCityName']) ? $data['dstCityName'] : null;
     }
 
     /**
@@ -520,36 +504,12 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['dstPort']) && ($this->container['dstPort'] < 0)) {
                 $invalidProperties[] = "invalid value for 'dstPort', must be bigger than or equal to 0.";
             }
-            $allowedValues = $this->getProtocolAllowableValues();
-                if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'protocol', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['limit'] === null) {
             $invalidProperties[] = "'limit' can't be null";
         }
         if ($this->container['fwInstanceId'] === null) {
             $invalidProperties[] = "'fwInstanceId' can't be null";
         }
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getDirectionAllowableValues();
-                if (!is_null($this->container['direction']) && !in_array($this->container['direction'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'direction', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
             $allowedValues = $this->getLogTypeAllowableValues();
                 if (!is_null($this->container['logType']) && !in_array($this->container['logType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -598,7 +558,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  开始时间
+    *  开始时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int
     */
@@ -610,7 +570,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int $startTime 开始时间
+    * @param int $startTime 开始时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -622,7 +582,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间
+    *  结束时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int
     */
@@ -634,7 +594,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int $endTime 结束时间
+    * @param int $endTime 结束时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -742,7 +702,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     *
     * @return string|null
     */
@@ -754,7 +714,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * @param string|null $protocol 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     *
     * @return $this
     */
@@ -790,7 +750,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logId
-    *  日志ID，当是第一页时为空，不是第一页时不为空
+    *  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     *
     * @return string|null
     */
@@ -802,7 +762,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logId
     *
-    * @param string|null $logId 日志ID，当是第一页时为空，不是第一页时不为空
+    * @param string|null $logId 文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     *
     * @return $this
     */
@@ -814,7 +774,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextDate
-    *  下个日期，当是第一页时为空，不是第一页时不为空
+    *  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     *
     * @return int|null
     */
@@ -826,7 +786,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets nextDate
     *
-    * @param int|null $nextDate 下个日期，当是第一页时为空，不是第一页时不为空
+    * @param int|null $nextDate 下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     *
     * @return $this
     */
@@ -838,7 +798,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     *
     * @return int|null
     */
@@ -850,7 +810,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     *
     * @return $this
     */
@@ -886,7 +846,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     *
     * @return string
     */
@@ -898,7 +858,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     *
     * @return $this
     */
@@ -910,7 +870,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  动作0：permit,1：deny
+    *  动作包含permit，deny
     *
     * @return string|null
     */
@@ -922,7 +882,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 动作0：permit,1：deny
+    * @param string|null $action 动作包含permit，deny
     *
     * @return $this
     */
@@ -934,7 +894,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets direction
-    *  方向0：外到内1：内到外
+    *  方向，包含in2out，out2in
     *
     * @return string|null
     */
@@ -946,7 +906,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param string|null $direction 方向0：外到内1：内到外
+    * @param string|null $direction 方向，包含in2out，out2in
     *
     * @return $this
     */
@@ -1006,7 +966,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  威胁等级
+    *  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     *
     * @return string|null
     */
@@ -1018,37 +978,13 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string|null $level 威胁等级
+    * @param string|null $level 威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     *
     * @return $this
     */
     public function setLevel($level)
     {
         $this->container['level'] = $level;
-        return $this;
-    }
-
-    /**
-    * Gets source
-    *  判断来源
-    *
-    * @return string|null
-    */
-    public function getSource()
-    {
-        return $this->container['source'];
-    }
-
-    /**
-    * Sets source
-    *
-    * @param string|null $source 判断来源
-    *
-    * @return $this
-    */
-    public function setSource($source)
-    {
-        $this->container['source'] = $source;
         return $this;
     }
 
@@ -1102,7 +1038,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets logType
-    *  日志类型
+    *  日志类型包括：internet，vpc，nat
     *
     * @return string|null
     */
@@ -1114,7 +1050,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets logType
     *
-    * @param string|null $logType 日志类型
+    * @param string|null $logType 日志类型包括：internet，vpc，nat
     *
     * @return $this
     */
@@ -1193,6 +1129,102 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     public function setDstRegionName($dstRegionName)
     {
         $this->container['dstRegionName'] = $dstRegionName;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceName
+    *  源省份名称
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceName()
+    {
+        return $this->container['srcProvinceName'];
+    }
+
+    /**
+    * Sets srcProvinceName
+    *
+    * @param string|null $srcProvinceName 源省份名称
+    *
+    * @return $this
+    */
+    public function setSrcProvinceName($srcProvinceName)
+    {
+        $this->container['srcProvinceName'] = $srcProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceName
+    *  目的省份名称
+    *
+    * @return string|null
+    */
+    public function getDstProvinceName()
+    {
+        return $this->container['dstProvinceName'];
+    }
+
+    /**
+    * Sets dstProvinceName
+    *
+    * @param string|null $dstProvinceName 目的省份名称
+    *
+    * @return $this
+    */
+    public function setDstProvinceName($dstProvinceName)
+    {
+        $this->container['dstProvinceName'] = $dstProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityName
+    *  源城市名称
+    *
+    * @return string|null
+    */
+    public function getSrcCityName()
+    {
+        return $this->container['srcCityName'];
+    }
+
+    /**
+    * Sets srcCityName
+    *
+    * @param string|null $srcCityName 源城市名称
+    *
+    * @return $this
+    */
+    public function setSrcCityName($srcCityName)
+    {
+        $this->container['srcCityName'] = $srcCityName;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityName
+    *  目的城市名称
+    *
+    * @return string|null
+    */
+    public function getDstCityName()
+    {
+        return $this->container['dstCityName'];
+    }
+
+    /**
+    * Sets dstCityName
+    *
+    * @param string|null $dstCityName 目的城市名称
+    *
+    * @return $this
+    */
+    public function setDstCityName($dstCityName)
+    {
+        $this->container['dstCityName'] = $dstCityName;
         return $this;
     }
 

@@ -36,7 +36,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  企业项目ID
-    * connectionMonitorId  连接监控ID
     * haRole  连接的HA角色
     * tags  标签
     *
@@ -59,7 +58,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'enterpriseProjectId' => 'string',
-            'connectionMonitorId' => 'string',
             'haRole' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpn\V5\Model\VpnResourceTag[]'
     ];
@@ -82,7 +80,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  企业项目ID
-    * connectionMonitorId  连接监控ID
     * haRole  连接的HA角色
     * tags  标签
     *
@@ -105,7 +102,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
         'createdAt' => null,
         'updatedAt' => null,
         'enterpriseProjectId' => null,
-        'connectionMonitorId' => null,
         'haRole' => null,
         'tags' => null
     ];
@@ -149,7 +145,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  企业项目ID
-    * connectionMonitorId  连接监控ID
     * haRole  连接的HA角色
     * tags  标签
     *
@@ -172,7 +167,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'connectionMonitorId' => 'connection_monitor_id',
             'haRole' => 'ha_role',
             'tags' => 'tags'
     ];
@@ -195,7 +189,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  企业项目ID
-    * connectionMonitorId  连接监控ID
     * haRole  连接的HA角色
     * tags  标签
     *
@@ -218,7 +211,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'connectionMonitorId' => 'setConnectionMonitorId',
             'haRole' => 'setHaRole',
             'tags' => 'setTags'
     ];
@@ -241,7 +233,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  企业项目ID
-    * connectionMonitorId  连接监控ID
     * haRole  连接的HA角色
     * tags  标签
     *
@@ -264,7 +255,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'connectionMonitorId' => 'getConnectionMonitorId',
             'haRole' => 'getHaRole',
             'tags' => 'getTags'
     ];
@@ -360,7 +350,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
-        $this->container['connectionMonitorId'] = isset($data['connectionMonitorId']) ? $data['connectionMonitorId'] : null;
         $this->container['haRole'] = isset($data['haRole']) ? $data['haRole'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
@@ -800,30 +789,6 @@ class CreateResponseVpnConnection implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets connectionMonitorId
-    *  连接监控ID
-    *
-    * @return string|null
-    */
-    public function getConnectionMonitorId()
-    {
-        return $this->container['connectionMonitorId'];
-    }
-
-    /**
-    * Sets connectionMonitorId
-    *
-    * @param string|null $connectionMonitorId 连接监控ID
-    *
-    * @return $this
-    */
-    public function setConnectionMonitorId($connectionMonitorId)
-    {
-        $this->container['connectionMonitorId'] = $connectionMonitorId;
         return $this;
     }
 

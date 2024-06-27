@@ -206,6 +206,9 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['version'] === null) {
+            $invalidProperties[] = "'version' can't be null";
+        }
             $allowedValues = $this->getVersionAllowableValues();
                 if (!is_null($this->container['version']) && !in_array($this->container['version'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -250,7 +253,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     * Gets version
     *  防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     *
-    * @return string|null
+    * @return string
     */
     public function getVersion()
     {
@@ -260,7 +263,7 @@ class CreateFirewallReqFlavor implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
+    * @param string $version 防火墙版本 “charge_mode”为“prePaid”时，仅支持专业版。 “charge_mode”为“postPaid”时，支持标准版、专业版。  Standard - 标准版 Professional - 专业版
     *
     * @return $this
     */

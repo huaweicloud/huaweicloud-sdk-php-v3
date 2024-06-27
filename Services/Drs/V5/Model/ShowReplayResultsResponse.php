@@ -28,6 +28,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqls  异常SQL信息列表，在type为error_sql时返回
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
+    * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'slowSqlTemplates' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplaySlowSqlTemplateResp[]',
             'errorSqls' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorSqlResp[]',
             'errorSqlTemplates' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorSqlTemplateResp[]',
-            'replayingSqls' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayingSqlResp[]'
+            'replayingSqls' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayingSqlResp[]',
+            'errorClassifications' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorClassification[]'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqls  异常SQL信息列表，在type为error_sql时返回
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
+    * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
         'slowSqlTemplates' => null,
         'errorSqls' => null,
         'errorSqlTemplates' => null,
-        'replayingSqls' => null
+        'replayingSqls' => null,
+        'errorClassifications' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqls  异常SQL信息列表，在type为error_sql时返回
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
+    * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'slowSqlTemplates' => 'slow_sql_templates',
             'errorSqls' => 'error_sqls',
             'errorSqlTemplates' => 'error_sql_templates',
-            'replayingSqls' => 'replaying_sqls'
+            'replayingSqls' => 'replaying_sqls',
+            'errorClassifications' => 'error_classifications'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqls  异常SQL信息列表，在type为error_sql时返回
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
+    * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'slowSqlTemplates' => 'setSlowSqlTemplates',
             'errorSqls' => 'setErrorSqls',
             'errorSqlTemplates' => 'setErrorSqlTemplates',
-            'replayingSqls' => 'setReplayingSqls'
+            'replayingSqls' => 'setReplayingSqls',
+            'errorClassifications' => 'setErrorClassifications'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     * errorSqls  异常SQL信息列表，在type为error_sql时返回
     * errorSqlTemplates  异常SQL统计信息列表，在type为error_sql_template时返回
     * replayingSqls  正在回放SQL信息列表，在type为replaying_sql时返回
+    * errorClassifications  回放异常SQL分类信息，在type为error_classification时返回
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
             'slowSqlTemplates' => 'getSlowSqlTemplates',
             'errorSqls' => 'getErrorSqls',
             'errorSqlTemplates' => 'getErrorSqlTemplates',
-            'replayingSqls' => 'getReplayingSqls'
+            'replayingSqls' => 'getReplayingSqls',
+            'errorClassifications' => 'getErrorClassifications'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
         $this->container['errorSqls'] = isset($data['errorSqls']) ? $data['errorSqls'] : null;
         $this->container['errorSqlTemplates'] = isset($data['errorSqlTemplates']) ? $data['errorSqlTemplates'] : null;
         $this->container['replayingSqls'] = isset($data['replayingSqls']) ? $data['replayingSqls'] : null;
+        $this->container['errorClassifications'] = isset($data['errorClassifications']) ? $data['errorClassifications'] : null;
     }
 
     /**
@@ -404,6 +415,30 @@ class ShowReplayResultsResponse implements ModelInterface, ArrayAccess
     public function setReplayingSqls($replayingSqls)
     {
         $this->container['replayingSqls'] = $replayingSqls;
+        return $this;
+    }
+
+    /**
+    * Gets errorClassifications
+    *  回放异常SQL分类信息，在type为error_classification时返回
+    *
+    * @return \HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorClassification[]|null
+    */
+    public function getErrorClassifications()
+    {
+        return $this->container['errorClassifications'];
+    }
+
+    /**
+    * Sets errorClassifications
+    *
+    * @param \HuaweiCloud\SDK\Drs\V5\Model\ReplayErrorClassification[]|null $errorClassifications 回放异常SQL分类信息，在type为error_classification时返回
+    *
+    * @return $this
+    */
+    public function setErrorClassifications($errorClassifications)
+    {
+        $this->container['errorClassifications'] = $errorClassifications;
         return $this;
     }
 

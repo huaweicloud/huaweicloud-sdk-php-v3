@@ -76,10 +76,11 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * objectInfos  已同步对象信息。
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
-    * tags  DRS任务标签
-    * publicIpList  指定公网Ip的信息
-    * bindPublicIpState  是否成功绑定公网IP
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * tags  DRS任务标签。
+    * publicIpList  指定公网Ip的信息。
+    * bindPublicIpState  是否成功绑定公网IP。
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -143,7 +144,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Drs\V3\Model\Tag[]',
             'publicIpList' => '\HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]',
             'bindPublicIpState' => 'string',
-            'children' => '\HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]'
+            'children' => '\HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]',
+            'isOpenFastClean' => 'bool'
     ];
 
     /**
@@ -204,10 +206,11 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * objectInfos  已同步对象信息。
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
-    * tags  DRS任务标签
-    * publicIpList  指定公网Ip的信息
-    * bindPublicIpState  是否成功绑定公网IP
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * tags  DRS任务标签。
+    * publicIpList  指定公网Ip的信息。
+    * bindPublicIpState  是否成功绑定公网IP。
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -271,7 +274,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         'tags' => null,
         'publicIpList' => null,
         'bindPublicIpState' => null,
-        'children' => null
+        'children' => null,
+        'isOpenFastClean' => null
     ];
 
     /**
@@ -353,10 +357,11 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * objectInfos  已同步对象信息。
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
-    * tags  DRS任务标签
-    * publicIpList  指定公网Ip的信息
-    * bindPublicIpState  是否成功绑定公网IP
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * tags  DRS任务标签。
+    * publicIpList  指定公网Ip的信息。
+    * bindPublicIpState  是否成功绑定公网IP。
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -420,7 +425,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'publicIpList' => 'public_ip_list',
             'bindPublicIpState' => 'bind_public_ip_state',
-            'children' => 'children'
+            'children' => 'children',
+            'isOpenFastClean' => 'is_open_fast_clean'
     ];
 
     /**
@@ -481,10 +487,11 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * objectInfos  已同步对象信息。
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
-    * tags  DRS任务标签
-    * publicIpList  指定公网Ip的信息
-    * bindPublicIpState  是否成功绑定公网IP
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * tags  DRS任务标签。
+    * publicIpList  指定公网Ip的信息。
+    * bindPublicIpState  是否成功绑定公网IP。
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -548,7 +555,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'publicIpList' => 'setPublicIpList',
             'bindPublicIpState' => 'setBindPublicIpState',
-            'children' => 'setChildren'
+            'children' => 'setChildren',
+            'isOpenFastClean' => 'setIsOpenFastClean'
     ];
 
     /**
@@ -609,10 +617,11 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     * objectInfos  已同步对象信息。
     * originalJobDirection  初始任务方向。 取值： - up：入云，灾备场景时对应本云为备。 - down：出云，灾备场景时对应本云为主。 - non-dbs：自建。
     * dataTransformation  dataTransformation
-    * tags  DRS任务标签
-    * publicIpList  指定公网Ip的信息
-    * bindPublicIpState  是否成功绑定公网IP
-    * children  多任务时，存在子任务绑定失败时，返回子任务的信息
+    * tags  DRS任务标签。
+    * publicIpList  指定公网Ip的信息。
+    * bindPublicIpState  是否成功绑定公网IP。
+    * children  多任务时，存在子任务绑定失败时，返回子任务的信息。
+    * isOpenFastClean  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
     *
     * @var string[]
     */
@@ -676,7 +685,8 @@ class QueryJobResp implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'publicIpList' => 'getPublicIpList',
             'bindPublicIpState' => 'getBindPublicIpState',
-            'children' => 'getChildren'
+            'children' => 'getChildren',
+            'isOpenFastClean' => 'getIsOpenFastClean'
     ];
 
     /**
@@ -985,6 +995,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
         $this->container['publicIpList'] = isset($data['publicIpList']) ? $data['publicIpList'] : null;
         $this->container['bindPublicIpState'] = isset($data['bindPublicIpState']) ? $data['bindPublicIpState'] : null;
         $this->container['children'] = isset($data['children']) ? $data['children'] : null;
+        $this->container['isOpenFastClean'] = isset($data['isOpenFastClean']) ? $data['isOpenFastClean'] : null;
     }
 
     /**
@@ -2419,7 +2430,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  DRS任务标签
+    *  DRS任务标签。
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\Tag[]|null
     */
@@ -2431,7 +2442,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\Tag[]|null $tags DRS任务标签
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\Tag[]|null $tags DRS任务标签。
     *
     * @return $this
     */
@@ -2443,7 +2454,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpList
-    *  指定公网Ip的信息
+    *  指定公网Ip的信息。
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null
     */
@@ -2455,7 +2466,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpList
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null $publicIpList 指定公网Ip的信息
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\PublicIpConfig[]|null $publicIpList 指定公网Ip的信息。
     *
     * @return $this
     */
@@ -2467,7 +2478,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bindPublicIpState
-    *  是否成功绑定公网IP
+    *  是否成功绑定公网IP。
     *
     * @return string|null
     */
@@ -2479,7 +2490,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets bindPublicIpState
     *
-    * @param string|null $bindPublicIpState 是否成功绑定公网IP
+    * @param string|null $bindPublicIpState 是否成功绑定公网IP。
     *
     * @return $this
     */
@@ -2491,7 +2502,7 @@ class QueryJobResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets children
-    *  多任务时，存在子任务绑定失败时，返回子任务的信息
+    *  多任务时，存在子任务绑定失败时，返回子任务的信息。
     *
     * @return \HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]|null
     */
@@ -2503,13 +2514,37 @@ class QueryJobResp implements ModelInterface, ArrayAccess
     /**
     * Sets children
     *
-    * @param \HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]|null $children 多任务时，存在子任务绑定失败时，返回子任务的信息
+    * @param \HuaweiCloud\SDK\Drs\V3\Model\FailedToBindEipChildInfo[]|null $children 多任务时，存在子任务绑定失败时，返回子任务的信息。
     *
     * @return $this
     */
     public function setChildren($children)
     {
         $this->container['children'] = $children;
+        return $this;
+    }
+
+    /**
+    * Gets isOpenFastClean
+    *  是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    *
+    * @return bool|null
+    */
+    public function getIsOpenFastClean()
+    {
+        return $this->container['isOpenFastClean'];
+    }
+
+    /**
+    * Sets isOpenFastClean
+    *
+    * @param bool|null $isOpenFastClean 是否开启云数据库RDS for MySQL/MariaDB的binlog快速清理。
+    *
+    * @return $this
+    */
+    public function setIsOpenFastClean($isOpenFastClean)
+    {
+        $this->container['isOpenFastClean'] = $isOpenFastClean;
         return $this;
     }
 

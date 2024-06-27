@@ -25,7 +25,7 @@ class ServiceItemIds implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'items' => '\HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]'
+            'items' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceItemIdsItems[]'
     ];
 
     /**
@@ -176,7 +176,7 @@ class ServiceItemIds implements ModelInterface, ArrayAccess
     * Gets items
     *  服务组成员id列表
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceItemIdsItems[]|null
     */
     public function getItems()
     {
@@ -186,7 +186,7 @@ class ServiceItemIds implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]|null $items 服务组成员id列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceItemIdsItems[]|null $items 服务组成员id列表
     *
     * @return $this
     */

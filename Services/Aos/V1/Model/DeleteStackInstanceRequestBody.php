@@ -23,13 +23,15 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'stackSetId' => 'string',
             'deploymentTargets' => '\HuaweiCloud\SDK\Aos\V1\Model\DeploymentTargets',
-            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences'
+            'operationPreferences' => '\HuaweiCloud\SDK\Aos\V1\Model\OperationPreferences',
+            'callIdentity' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'stackSetId' => null,
         'deploymentTargets' => null,
-        'operationPreferences' => null
+        'operationPreferences' => null,
+        'callIdentity' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'stackSetId' => 'stack_set_id',
             'deploymentTargets' => 'deployment_targets',
-            'operationPreferences' => 'operation_preferences'
+            'operationPreferences' => 'operation_preferences',
+            'callIdentity' => 'call_identity'
     ];
 
     /**
@@ -86,13 +92,15 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $setters = [
             'stackSetId' => 'setStackSetId',
             'deploymentTargets' => 'setDeploymentTargets',
-            'operationPreferences' => 'setOperationPreferences'
+            'operationPreferences' => 'setOperationPreferences',
+            'callIdentity' => 'setCallIdentity'
     ];
 
     /**
@@ -100,13 +108,15 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，在重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我以为的那个，而不是又其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * deploymentTargets  deploymentTargets
     * operationPreferences  operationPreferences
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $getters = [
             'stackSetId' => 'getStackSetId',
             'deploymentTargets' => 'getDeploymentTargets',
-            'operationPreferences' => 'getOperationPreferences'
+            'operationPreferences' => 'getOperationPreferences',
+            'callIdentity' => 'getCallIdentity'
     ];
 
     /**
@@ -149,7 +159,22 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CALL_IDENTITY_SELF = 'SELF';
+    const CALL_IDENTITY_DELEGATED_ADMIN = 'DELEGATED_ADMIN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCallIdentityAllowableValues()
+    {
+        return [
+            self::CALL_IDENTITY_SELF,
+            self::CALL_IDENTITY_DELEGATED_ADMIN,
+        ];
+    }
 
 
     /**
@@ -170,6 +195,7 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
         $this->container['stackSetId'] = isset($data['stackSetId']) ? $data['stackSetId'] : null;
         $this->container['deploymentTargets'] = isset($data['deploymentTargets']) ? $data['deploymentTargets'] : null;
         $this->container['operationPreferences'] = isset($data['operationPreferences']) ? $data['operationPreferences'] : null;
+        $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
     }
 
     /**
@@ -192,6 +218,14 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['deploymentTargets'] === null) {
             $invalidProperties[] = "'deploymentTargets' can't be null";
         }
+            $allowedValues = $this->getCallIdentityAllowableValues();
+                if (!is_null($this->container['callIdentity']) && !in_array($this->container['callIdentity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'callIdentity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -275,6 +309,30 @@ class DeleteStackInstanceRequestBody implements ModelInterface, ArrayAccess
     public function setOperationPreferences($operationPreferences)
     {
         $this->container['operationPreferences'] = $operationPreferences;
+        return $this;
+    }
+
+    /**
+    * Gets callIdentity
+    *  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return string|null
+    */
+    public function getCallIdentity()
+    {
+        return $this->container['callIdentity'];
+    }
+
+    /**
+    * Sets callIdentity
+    *
+    * @param string|null $callIdentity 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 当资源栈集权限模式为SELF_MANAGED时，默认为SELF。 * 无论指定何种用户身份，涉及操作的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return $this
+    */
+    public function setCallIdentity($callIdentity)
+    {
+        $this->container['callIdentity'] = $callIdentity;
         return $this;
     }
 

@@ -21,26 +21,30 @@ class ListFirewallTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
+    * totalCount  资源数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ListTag',
-            'requestId' => 'string'
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ListTag[]',
+            'requestId' => 'string',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
+    * totalCount  资源数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'tags' => null,
-        'requestId' => null
+        'requestId' => null,
+        'totalCount' => 'int32'
     ];
 
     /**
@@ -66,38 +70,44 @@ class ListFirewallTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
+    * totalCount  资源数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'tags' => 'tags',
-            'requestId' => 'request_id'
+            'requestId' => 'request_id',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
+    * totalCount  资源数量
     *
     * @var string[]
     */
     protected static $setters = [
             'tags' => 'setTags',
-            'requestId' => 'setRequestId'
+            'requestId' => 'setRequestId',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  tags
+    * tags  tag对象列表
     * requestId  请求ID
+    * totalCount  资源数量
     *
     * @var string[]
     */
     protected static $getters = [
             'tags' => 'getTags',
-            'requestId' => 'getRequestId'
+            'requestId' => 'getRequestId',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListFirewallTagsResponse implements ModelInterface, ArrayAccess
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -186,9 +197,9 @@ class ListFirewallTagsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  tags
+    *  tag对象列表
     *
-    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ListTag|null
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ListTag[]|null
     */
     public function getTags()
     {
@@ -198,7 +209,7 @@ class ListFirewallTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ListTag|null $tags tags
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ListTag[]|null $tags tag对象列表
     *
     * @return $this
     */
@@ -229,6 +240,30 @@ class ListFirewallTagsResponse implements ModelInterface, ArrayAccess
     public function setRequestId($requestId)
     {
         $this->container['requestId'] = $requestId;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  资源数量
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 资源数量
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
         return $this;
     }
 

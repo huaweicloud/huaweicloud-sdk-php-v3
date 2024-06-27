@@ -56,6 +56,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * quotavifMaxNum  最多支持的弹性网卡个数
     * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
+    * securityenclaveSupported  该规格是否支持QingTian Enclave。
     *
     * @var string[]
     */
@@ -95,7 +97,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotagpu' => 'string',
             'quotavifMaxNum' => 'string',
             'quotasubNetworkInterfaceMaxNum' => 'string',
-            'ecsinstanceArchitecture' => 'string'
+            'ecsinstanceArchitecture' => 'string',
+            'networkInterfacetrafficMirroringSupported' => 'string',
+            'securityenclaveSupported' => 'string'
     ];
 
     /**
@@ -136,6 +140,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * quotavifMaxNum  最多支持的弹性网卡个数
     * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
+    * securityenclaveSupported  该规格是否支持QingTian Enclave。
     *
     * @var string[]
     */
@@ -175,7 +181,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'quotagpu' => null,
         'quotavifMaxNum' => null,
         'quotasubNetworkInterfaceMaxNum' => null,
-        'ecsinstanceArchitecture' => null
+        'ecsinstanceArchitecture' => null,
+        'networkInterfacetrafficMirroringSupported' => null,
+        'securityenclaveSupported' => null
     ];
 
     /**
@@ -237,6 +245,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * quotavifMaxNum  最多支持的弹性网卡个数
     * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
+    * securityenclaveSupported  该规格是否支持QingTian Enclave。
     *
     * @var string[]
     */
@@ -276,7 +286,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotagpu' => 'quota:gpu',
             'quotavifMaxNum' => 'quota:vif_max_num',
             'quotasubNetworkInterfaceMaxNum' => 'quota:sub_network_interface_max_num',
-            'ecsinstanceArchitecture' => 'ecs:instance_architecture'
+            'ecsinstanceArchitecture' => 'ecs:instance_architecture',
+            'networkInterfacetrafficMirroringSupported' => 'network_interface:traffic_mirroring_supported',
+            'securityenclaveSupported' => 'security:enclave_supported'
     ];
 
     /**
@@ -317,6 +329,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * quotavifMaxNum  最多支持的弹性网卡个数
     * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
+    * securityenclaveSupported  该规格是否支持QingTian Enclave。
     *
     * @var string[]
     */
@@ -356,7 +370,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotagpu' => 'setQuotagpu',
             'quotavifMaxNum' => 'setQuotavifMaxNum',
             'quotasubNetworkInterfaceMaxNum' => 'setQuotasubNetworkInterfaceMaxNum',
-            'ecsinstanceArchitecture' => 'setEcsinstanceArchitecture'
+            'ecsinstanceArchitecture' => 'setEcsinstanceArchitecture',
+            'networkInterfacetrafficMirroringSupported' => 'setNetworkInterfacetrafficMirroringSupported',
+            'securityenclaveSupported' => 'setSecurityenclaveSupported'
     ];
 
     /**
@@ -397,6 +413,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * quotavifMaxNum  最多支持的弹性网卡个数
     * quotasubNetworkInterfaceMaxNum  最多支持的辅助弹性网卡个数
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
+    * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
+    * securityenclaveSupported  该规格是否支持QingTian Enclave。
     *
     * @var string[]
     */
@@ -436,7 +454,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotagpu' => 'getQuotagpu',
             'quotavifMaxNum' => 'getQuotavifMaxNum',
             'quotasubNetworkInterfaceMaxNum' => 'getQuotasubNetworkInterfaceMaxNum',
-            'ecsinstanceArchitecture' => 'getEcsinstanceArchitecture'
+            'ecsinstanceArchitecture' => 'getEcsinstanceArchitecture',
+            'networkInterfacetrafficMirroringSupported' => 'getNetworkInterfacetrafficMirroringSupported',
+            'securityenclaveSupported' => 'getSecurityenclaveSupported'
     ];
 
     /**
@@ -533,6 +553,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['quotavifMaxNum'] = isset($data['quotavifMaxNum']) ? $data['quotavifMaxNum'] : null;
         $this->container['quotasubNetworkInterfaceMaxNum'] = isset($data['quotasubNetworkInterfaceMaxNum']) ? $data['quotasubNetworkInterfaceMaxNum'] : null;
         $this->container['ecsinstanceArchitecture'] = isset($data['ecsinstanceArchitecture']) ? $data['ecsinstanceArchitecture'] : null;
+        $this->container['networkInterfacetrafficMirroringSupported'] = isset($data['networkInterfacetrafficMirroringSupported']) ? $data['networkInterfacetrafficMirroringSupported'] : null;
+        $this->container['securityenclaveSupported'] = isset($data['securityenclaveSupported']) ? $data['securityenclaveSupported'] : null;
     }
 
     /**
@@ -1418,6 +1440,54 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setEcsinstanceArchitecture($ecsinstanceArchitecture)
     {
         $this->container['ecsinstanceArchitecture'] = $ecsinstanceArchitecture;
+        return $this;
+    }
+
+    /**
+    * Gets networkInterfacetrafficMirroringSupported
+    *  该规格是否支持流量镜像。
+    *
+    * @return string|null
+    */
+    public function getNetworkInterfacetrafficMirroringSupported()
+    {
+        return $this->container['networkInterfacetrafficMirroringSupported'];
+    }
+
+    /**
+    * Sets networkInterfacetrafficMirroringSupported
+    *
+    * @param string|null $networkInterfacetrafficMirroringSupported 该规格是否支持流量镜像。
+    *
+    * @return $this
+    */
+    public function setNetworkInterfacetrafficMirroringSupported($networkInterfacetrafficMirroringSupported)
+    {
+        $this->container['networkInterfacetrafficMirroringSupported'] = $networkInterfacetrafficMirroringSupported;
+        return $this;
+    }
+
+    /**
+    * Gets securityenclaveSupported
+    *  该规格是否支持QingTian Enclave。
+    *
+    * @return string|null
+    */
+    public function getSecurityenclaveSupported()
+    {
+        return $this->container['securityenclaveSupported'];
+    }
+
+    /**
+    * Sets securityenclaveSupported
+    *
+    * @param string|null $securityenclaveSupported 该规格是否支持QingTian Enclave。
+    *
+    * @return $this
+    */
+    public function setSecurityenclaveSupported($securityenclaveSupported)
+    {
+        $this->container['securityenclaveSupported'] = $securityenclaveSupported;
         return $this;
     }
 

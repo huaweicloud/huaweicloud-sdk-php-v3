@@ -169,6 +169,9 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['domainName'] === null) {
+            $invalidProperties[] = "'domainName' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -187,7 +190,7 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     * Gets domainName
     *  域名
     *
-    * @return string|null
+    * @return string
     */
     public function getDomainName()
     {
@@ -197,7 +200,7 @@ class DomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 域名
+    * @param string $domainName 域名
     *
     * @return $this
     */

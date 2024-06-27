@@ -20,10 +20,10 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * listType  黑白名单类型4：黑名单，5：白名单
     * direction  地址方向0：源地址1：目的地址
-    * addressType  Ip地址类型 0：ipv4,1:ipv6,2:domain
+    * addressType  Ip地址类型 0：ipv4,1:ipv6
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
@@ -44,10 +44,10 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * listType  黑白名单类型4：黑名单，5：白名单
     * direction  地址方向0：源地址1：目的地址
-    * addressType  Ip地址类型 0：ipv4,1:ipv6,2:domain
+    * addressType  Ip地址类型 0：ipv4,1:ipv6
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
@@ -89,10 +89,10 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * listType  黑白名单类型4：黑名单，5：白名单
     * direction  地址方向0：源地址1：目的地址
-    * addressType  Ip地址类型 0：ipv4,1:ipv6,2:domain
+    * addressType  Ip地址类型 0：ipv4,1:ipv6
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
@@ -113,10 +113,10 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * listType  黑白名单类型4：黑名单，5：白名单
     * direction  地址方向0：源地址1：目的地址
-    * addressType  Ip地址类型 0：ipv4,1:ipv6,2:domain
+    * addressType  Ip地址类型 0：ipv4,1:ipv6
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
@@ -137,10 +137,10 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * listType  黑白名单类型4：黑名单，5：白名单
     * direction  地址方向0：源地址1：目的地址
-    * addressType  Ip地址类型 0：ipv4,1:ipv6,2:domain
+    * addressType  Ip地址类型 0：ipv4,1:ipv6
     * address  地址类型
     * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  目的端口
@@ -275,7 +275,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     *
     * @return string
     */
@@ -287,7 +287,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  Ip地址类型 0：ipv4,1:ipv6,2:domain
+    *  Ip地址类型 0：ipv4,1:ipv6
     *
     * @return int
     */
@@ -359,7 +359,7 @@ class AddBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int $addressType Ip地址类型 0：ipv4,1:ipv6,2:domain
+    * @param int $addressType Ip地址类型 0：ipv4,1:ipv6
     *
     * @return $this
     */

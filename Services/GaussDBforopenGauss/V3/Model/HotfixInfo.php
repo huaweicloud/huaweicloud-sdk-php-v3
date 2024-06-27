@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class Tag implements ModelInterface, ArrayAccess
+class HotfixInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,38 @@ class Tag implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'Tag';
+    protected static $openAPIModelName = 'HotfixInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * version  热补丁版本
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
+    * backupSensitive  是否和备份相关
+    * descripition  补丁的描述信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string'
+            'version' => 'string',
+            'commonPatch' => 'string',
+            'backupSensitive' => 'bool',
+            'descripition' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * version  热补丁版本
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
+    * backupSensitive  是否和备份相关
+    * descripition  补丁的描述信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null
+        'version' => null,
+        'commonPatch' => null,
+        'backupSensitive' => null,
+        'descripition' => null
     ];
 
     /**
@@ -65,38 +73,50 @@ class Tag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键
-    * value  值
+    * version  热补丁版本
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
+    * backupSensitive  是否和备份相关
+    * descripition  补丁的描述信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value'
+            'version' => 'version',
+            'commonPatch' => 'common_patch',
+            'backupSensitive' => 'backup_sensitive',
+            'descripition' => 'descripition'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键
-    * value  值
+    * version  热补丁版本
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
+    * backupSensitive  是否和备份相关
+    * descripition  补丁的描述信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue'
+            'version' => 'setVersion',
+            'commonPatch' => 'setCommonPatch',
+            'backupSensitive' => 'setBackupSensitive',
+            'descripition' => 'setDescripition'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键
-    * value  值
+    * version  热补丁版本
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
+    * backupSensitive  是否和备份相关
+    * descripition  补丁的描述信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue'
+            'version' => 'getVersion',
+            'commonPatch' => 'getCommonPatch',
+            'backupSensitive' => 'getBackupSensitive',
+            'descripition' => 'getDescripition'
     ];
 
     /**
@@ -139,7 +159,22 @@ class Tag implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const COMMON_PATCH_COMMON = 'common';
+    const COMMON_PATCH_CERTAIN = 'certain';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCommonPatchAllowableValues()
+    {
+        return [
+            self::COMMON_PATCH_COMMON,
+            self::COMMON_PATCH_CERTAIN,
+        ];
+    }
 
 
     /**
@@ -157,8 +192,10 @@ class Tag implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['commonPatch'] = isset($data['commonPatch']) ? $data['commonPatch'] : null;
+        $this->container['backupSensitive'] = isset($data['backupSensitive']) ? $data['backupSensitive'] : null;
+        $this->container['descripition'] = isset($data['descripition']) ? $data['descripition'] : null;
     }
 
     /**
@@ -169,6 +206,14 @@ class Tag implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getCommonPatchAllowableValues();
+                if (!is_null($this->container['commonPatch']) && !in_array($this->container['commonPatch'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'commonPatch', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -184,50 +229,98 @@ class Tag implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  键
+    * Gets version
+    *  热补丁版本
     *
     * @return string|null
     */
-    public function getKey()
+    public function getVersion()
     {
-        return $this->container['key'];
+        return $this->container['version'];
     }
 
     /**
-    * Sets key
+    * Sets version
     *
-    * @param string|null $key 键
+    * @param string|null $version 热补丁版本
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setVersion($version)
     {
-        $this->container['key'] = $key;
+        $this->container['version'] = $version;
         return $this;
     }
 
     /**
-    * Gets value
-    *  值
+    * Gets commonPatch
+    *  通用非通用信息,common=通用补丁,certain=定制补丁
     *
     * @return string|null
     */
-    public function getValue()
+    public function getCommonPatch()
     {
-        return $this->container['value'];
+        return $this->container['commonPatch'];
     }
 
     /**
-    * Sets value
+    * Sets commonPatch
     *
-    * @param string|null $value 值
+    * @param string|null $commonPatch 通用非通用信息,common=通用补丁,certain=定制补丁
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setCommonPatch($commonPatch)
     {
-        $this->container['value'] = $value;
+        $this->container['commonPatch'] = $commonPatch;
+        return $this;
+    }
+
+    /**
+    * Gets backupSensitive
+    *  是否和备份相关
+    *
+    * @return bool|null
+    */
+    public function getBackupSensitive()
+    {
+        return $this->container['backupSensitive'];
+    }
+
+    /**
+    * Sets backupSensitive
+    *
+    * @param bool|null $backupSensitive 是否和备份相关
+    *
+    * @return $this
+    */
+    public function setBackupSensitive($backupSensitive)
+    {
+        $this->container['backupSensitive'] = $backupSensitive;
+        return $this;
+    }
+
+    /**
+    * Gets descripition
+    *  补丁的描述信息
+    *
+    * @return string|null
+    */
+    public function getDescripition()
+    {
+        return $this->container['descripition'];
+    }
+
+    /**
+    * Sets descripition
+    *
+    * @param string|null $descripition 补丁的描述信息
+    *
+    * @return $this
+    */
+    public function setDescripition($descripition)
+    {
+        $this->container['descripition'] = $descripition;
         return $this;
     }
 

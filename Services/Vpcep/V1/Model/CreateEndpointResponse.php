@@ -22,14 +22,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * serviceType  终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  终端节点ip
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
     * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -38,13 +38,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * ipv6Address  终端节点的IPv6地址,仅专业型终端节点支持此参数
     *
     * @var string[]
     */
@@ -72,20 +73,21 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
             'enableStatus' => 'string',
             'endpointPoolId' => 'string',
-            'publicBorderGroup' => 'string'
+            'publicBorderGroup' => 'string',
+            'ipv6Address' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * serviceType  终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  终端节点ip
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
     * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -94,13 +96,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * ipv6Address  终端节点的IPv6地址,仅专业型终端节点支持此参数
     *
     * @var string[]
     */
@@ -128,7 +131,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         'policyStatement' => null,
         'enableStatus' => null,
         'endpointPoolId' => null,
-        'publicBorderGroup' => null
+        'publicBorderGroup' => null,
+        'ipv6Address' => 'ipv6'
     ];
 
     /**
@@ -155,14 +159,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * serviceType  终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  终端节点ip
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
     * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -171,13 +175,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * ipv6Address  终端节点的IPv6地址,仅专业型终端节点支持此参数
     *
     * @var string[]
     */
@@ -205,20 +210,21 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'policyStatement' => 'policy_statement',
             'enableStatus' => 'enable_status',
             'endpointPoolId' => 'endpoint_pool_id',
-            'publicBorderGroup' => 'public_border_group'
+            'publicBorderGroup' => 'public_border_group',
+            'ipv6Address' => 'ipv6_address'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * serviceType  终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  终端节点ip
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
     * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -227,13 +233,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * ipv6Address  终端节点的IPv6地址,仅专业型终端节点支持此参数
     *
     * @var string[]
     */
@@ -261,20 +268,21 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'policyStatement' => 'setPolicyStatement',
             'enableStatus' => 'setEnableStatus',
             'endpointPoolId' => 'setEndpointPoolId',
-            'publicBorderGroup' => 'setPublicBorderGroup'
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'ipv6Address' => 'setIpv6Address'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点的ID，唯一标识。
-    * serviceType  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * serviceType  终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     * status  终端节点的状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
     * ip  终端节点ip
-    * activeStatus  帐号状态。  - frozen：冻结  - active：解冻
+    * activeStatus  账号状态。  - frozen：冻结  - active：解冻
     * endpointServiceName  终端节点服务的名称。
     * markerId  终端节点的报文标识。
     * endpointServiceId  终端节点服务的ID。
-    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * enableDns  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     * subnetId  vpc_id对应VPC下已创建的网络（network）的ID，UUID格式。
     * vpcId  终端节点所在的VPC的ID。
     * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
@@ -283,13 +291,14 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * policyStatement  终端节点策略信息
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
+    * ipv6Address  终端节点的IPv6地址,仅专业型终端节点支持此参数
     *
     * @var string[]
     */
@@ -317,7 +326,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'policyStatement' => 'getPolicyStatement',
             'enableStatus' => 'getEnableStatus',
             'endpointPoolId' => 'getEndpointPoolId',
-            'publicBorderGroup' => 'getPublicBorderGroup'
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'ipv6Address' => 'getIpv6Address'
     ];
 
     /**
@@ -402,6 +412,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         $this->container['enableStatus'] = isset($data['enableStatus']) ? $data['enableStatus'] : null;
         $this->container['endpointPoolId'] = isset($data['endpointPoolId']) ? $data['endpointPoolId'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['ipv6Address'] = isset($data['ipv6Address']) ? $data['ipv6Address'] : null;
     }
 
     /**
@@ -500,7 +511,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    *  终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     *
     * @return string|null
     */
@@ -512,7 +523,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 终端节点连接的终端节点服务类型。  - gateway：由运维人员配置。用户无需创建，可直接使用。  - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。您可以通过查询公共终端节点服务列表， 查看由运维人员配置的所有用户可见且可连接的终端节点服务， 并通过创建终端节点服务创建Interface类型的终端节点服务。
+    * @param string|null $serviceType 终端节点连接的终端节点服务类型。   - gateway：由运维人员配置。用户无需创建，可直接使用。   - interface：包括运维人员配置的云服务和用户自己创建的私有服务。 其中，运维人员配置的云服务无需创建，用户可直接使用。 您可以通过\"查询公共终端节点服务列表\"查看由运维人员配置的所有用户可见且可连接的终端节点服务，并通过创建终端节点服务创建Interface类型的终端节点服务。
     *
     * @return $this
     */
@@ -572,7 +583,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets activeStatus
-    *  帐号状态。  - frozen：冻结  - active：解冻
+    *  账号状态。  - frozen：冻结  - active：解冻
     *
     * @return string[]|null
     */
@@ -584,7 +595,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets activeStatus
     *
-    * @param string[]|null $activeStatus 帐号状态。  - frozen：冻结  - active：解冻
+    * @param string[]|null $activeStatus 账号状态。  - frozen：冻结  - active：解冻
     *
     * @return $this
     */
@@ -668,7 +679,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableDns
-    *  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    *  是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     *
     * @return bool|null
     */
@@ -680,7 +691,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enableDns
     *
-    * @param bool|null $enableDns 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建连接gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
+    * @param bool|null $enableDns 是否创建域名。  - true：创建域名  - false：不创建域名 说明 当创建gateway类型终端节点服务的终端节点时， “enable_dns”设置为true或者false，均不创建域名。
     *
     * @return $this
     */
@@ -884,7 +895,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routetables
-    *  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    *  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     *
     * @return string[]|null
     */
@@ -896,7 +907,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routetables
     *
-    * @param string[]|null $routetables 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建连接Gateway类型终端节点服务的终端节点时，显示此参数。
+    * @param string[]|null $routetables 路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     *
     * @return $this
     */
@@ -956,7 +967,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatement
-    *  只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    *  终端节点策略信息
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
@@ -968,7 +979,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 只涉及开启双端固定的网关型终端节点，响应体展示此字段
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
     *
     * @return $this
     */
@@ -1047,6 +1058,30 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     public function setPublicBorderGroup($publicBorderGroup)
     {
         $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Address
+    *  终端节点的IPv6地址,仅专业型终端节点支持此参数
+    *
+    * @return string|null
+    */
+    public function getIpv6Address()
+    {
+        return $this->container['ipv6Address'];
+    }
+
+    /**
+    * Sets ipv6Address
+    *
+    * @param string|null $ipv6Address 终端节点的IPv6地址,仅专业型终端节点支持此参数
+    *
+    * @return $this
+    */
+    public function setIpv6Address($ipv6Address)
+    {
+        $this->container['ipv6Address'] = $ipv6Address;
         return $this;
     }
 

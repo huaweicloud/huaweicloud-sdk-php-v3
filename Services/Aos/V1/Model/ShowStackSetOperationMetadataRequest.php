@@ -24,6 +24,7 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
             'clientRequestId' => 'string',
             'stackSetName' => 'string',
             'stackSetId' => 'string',
-            'stackSetOperationId' => 'string'
+            'stackSetOperationId' => 'string',
+            'callIdentity' => 'string'
     ];
 
     /**
@@ -40,6 +42,7 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
         'clientRequestId' => null,
         'stackSetName' => null,
         'stackSetId' => null,
-        'stackSetOperationId' => null
+        'stackSetOperationId' => null,
+        'callIdentity' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
             'clientRequestId' => 'Client-Request-Id',
             'stackSetName' => 'stack_set_name',
             'stackSetId' => 'stack_set_id',
-            'stackSetOperationId' => 'stack_set_operation_id'
+            'stackSetOperationId' => 'stack_set_operation_id',
+            'callIdentity' => 'call_identity'
     ];
 
     /**
@@ -93,6 +99,7 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
             'clientRequestId' => 'setClientRequestId',
             'stackSetName' => 'setStackSetName',
             'stackSetId' => 'setStackSetId',
-            'stackSetOperationId' => 'setStackSetOperationId'
+            'stackSetOperationId' => 'setStackSetOperationId',
+            'callIdentity' => 'setCallIdentity'
     ];
 
     /**
@@ -109,6 +117,7 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
     * stackSetOperationId  资源栈集操作（stack_set_operation）的唯一Id。  此ID由资源编排服务在生成资源栈集操作的时候生成，为UUID。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
             'clientRequestId' => 'getClientRequestId',
             'stackSetName' => 'getStackSetName',
             'stackSetId' => 'getStackSetId',
-            'stackSetOperationId' => 'getStackSetOperationId'
+            'stackSetOperationId' => 'getStackSetOperationId',
+            'callIdentity' => 'getCallIdentity'
     ];
 
     /**
@@ -159,7 +169,22 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     {
         return self::$openAPIModelName;
     }
+    const CALL_IDENTITY_SELF = 'SELF';
+    const CALL_IDENTITY_DELEGATED_ADMIN = 'DELEGATED_ADMIN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCallIdentityAllowableValues()
+    {
+        return [
+            self::CALL_IDENTITY_SELF,
+            self::CALL_IDENTITY_DELEGATED_ADMIN,
+        ];
+    }
 
 
     /**
@@ -181,6 +206,7 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
         $this->container['stackSetName'] = isset($data['stackSetName']) ? $data['stackSetName'] : null;
         $this->container['stackSetId'] = isset($data['stackSetId']) ? $data['stackSetId'] : null;
         $this->container['stackSetOperationId'] = isset($data['stackSetOperationId']) ? $data['stackSetOperationId'] : null;
+        $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
     }
 
     /**
@@ -236,6 +262,14 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
             if (!preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['stackSetOperationId'])) {
                 $invalidProperties[] = "invalid value for 'stackSetOperationId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
             }
+            $allowedValues = $this->getCallIdentityAllowableValues();
+                if (!is_null($this->container['callIdentity']) && !in_array($this->container['callIdentity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'callIdentity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -343,6 +377,30 @@ class ShowStackSetOperationMetadataRequest implements ModelInterface, ArrayAcces
     public function setStackSetOperationId($stackSetOperationId)
     {
         $this->container['stackSetOperationId'] = $stackSetOperationId;
+        return $this;
+    }
+
+    /**
+    * Gets callIdentity
+    *  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return string|null
+    */
+    public function getCallIdentity()
+    {
+        return $this->container['callIdentity'];
+    }
+
+    /**
+    * Sets callIdentity
+    *
+    * @param string|null $callIdentity 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return $this
+    */
+    public function setCallIdentity($callIdentity)
+    {
+        $this->container['callIdentity'] = $callIdentity;
         return $this;
     }
 

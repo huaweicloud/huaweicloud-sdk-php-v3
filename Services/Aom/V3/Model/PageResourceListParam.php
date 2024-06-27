@@ -199,26 +199,7 @@ class PageResourceListParam implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const CI_TYPE_APPLICATION = 'APPLICATION';
-    const CI_TYPE_SUB_APPLICATION = 'SUB_APPLICATION';
-    const CI_TYPE_COMPONENT = 'COMPONENT';
-    const CI_TYPE_ENVIRONMENT = 'ENVIRONMENT';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getCiTypeAllowableValues()
-    {
-        return [
-            self::CI_TYPE_APPLICATION,
-            self::CI_TYPE_SUB_APPLICATION,
-            self::CI_TYPE_COMPONENT,
-            self::CI_TYPE_ENVIRONMENT,
-        ];
-    }
 
 
     /**
@@ -257,20 +238,6 @@ class PageResourceListParam implements ModelInterface, ArrayAccess
         if ($this->container['ciType'] === null) {
             $invalidProperties[] = "'ciType' can't be null";
         }
-            $allowedValues = $this->getCiTypeAllowableValues();
-                if (!is_null($this->container['ciType']) && !in_array($this->container['ciType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'ciType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['ciRegion']) && !preg_match("/^[\\s\\S]{1,128}$/", $this->container['ciRegion'])) {
-                $invalidProperties[] = "invalid value for 'ciRegion', must be conform to the pattern /^[\\s\\S]{1,128}$/.";
-            }
-            if (!is_null($this->container['ciId']) && !preg_match("/^[a-zA-Z0-9\\-]{32,36}$/", $this->container['ciId'])) {
-                $invalidProperties[] = "invalid value for 'ciId', must be conform to the pattern /^[a-zA-Z0-9\\-]{32,36}$/.";
-            }
         return $invalidProperties;
     }
 

@@ -23,13 +23,11 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目ID
     * domainSetId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * domainName  域名名称
-    * description  描述
-    * setId  域名组id
-    * objectId  防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @var string[]
     */
@@ -41,8 +39,6 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'limit' => 'int',
             'offset' => 'int',
             'domainName' => 'string',
-            'description' => 'string',
-            'setId' => 'string',
             'objectId' => 'string'
     ];
 
@@ -51,13 +47,11 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目ID
     * domainSetId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * domainName  域名名称
-    * description  描述
-    * setId  域名组id
-    * objectId  防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @var string[]
     */
@@ -69,8 +63,6 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
         'limit' => 'int32',
         'offset' => 'int32',
         'domainName' => null,
-        'description' => null,
-        'setId' => null,
         'objectId' => null
     ];
 
@@ -100,13 +92,11 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目ID
     * domainSetId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * domainName  域名名称
-    * description  描述
-    * setId  域名组id
-    * objectId  防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @var string[]
     */
@@ -118,8 +108,6 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'offset' => 'offset',
             'domainName' => 'domain_name',
-            'description' => 'description',
-            'setId' => 'set_id',
             'objectId' => 'object_Id'
     ];
 
@@ -128,13 +116,11 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目ID
     * domainSetId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * domainName  域名名称
-    * description  描述
-    * setId  域名组id
-    * objectId  防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @var string[]
     */
@@ -146,8 +132,6 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'offset' => 'setOffset',
             'domainName' => 'setDomainName',
-            'description' => 'setDescription',
-            'setId' => 'setSetId',
             'objectId' => 'setObjectId'
     ];
 
@@ -156,13 +140,11 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目ID
     * domainSetId  域名组id
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * domainName  域名名称
-    * description  描述
-    * setId  域名组id
-    * objectId  防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @var string[]
     */
@@ -174,8 +156,6 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'offset' => 'getOffset',
             'domainName' => 'getDomainName',
-            'description' => 'getDescription',
-            'setId' => 'getSetId',
             'objectId' => 'getObjectId'
     ];
 
@@ -244,8 +224,6 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
     }
 
@@ -360,7 +338,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return string
     */
@@ -372,7 +350,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return $this
     */
@@ -455,56 +433,8 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets description
-    *  描述
-    *
-    * @return string|null
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string|null $description 描述
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets setId
-    *  域名组id
-    *
-    * @return string|null
-    */
-    public function getSetId()
-    {
-        return $this->container['setId'];
-    }
-
-    /**
-    * Sets setId
-    *
-    * @param string|null $setId 域名组id
-    *
-    * @return $this
-    */
-    public function setSetId($setId)
-    {
-        $this->container['setId'] = $setId;
-        return $this;
-    }
-
-    /**
     * Gets objectId
-    *  防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @return string|null
     */
@@ -516,7 +446,7 @@ class ListDomainsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id,是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id,可通过调用查询防火墙实例接口获得,注意type为0的为互联网边界防护对象id,type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string|null $objectId 互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
     *
     * @return $this
     */

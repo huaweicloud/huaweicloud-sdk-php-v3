@@ -20,9 +20,9 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * displayName  子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
-    * description  描述：最大255字符
+    * name  子应用唯一标识
+    * displayName  子应用节点显示名称
+    * description  子应用描述
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * displayName  子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
-    * description  描述：最大255字符
+    * name  子应用唯一标识
+    * displayName  子应用节点显示名称
+    * description  子应用描述
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * displayName  子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
-    * description  描述：最大255字符
+    * name  子应用唯一标识
+    * displayName  子应用节点显示名称
+    * description  子应用描述
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * displayName  子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
-    * description  描述：最大255字符
+    * name  子应用唯一标识
+    * displayName  子应用节点显示名称
+    * description  子应用描述
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
-    * displayName  子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
-    * description  描述：最大255字符
+    * name  子应用唯一标识
+    * displayName  子应用节点显示名称
+    * description  子应用描述
     *
     * @var string[]
     */
@@ -189,8 +189,11 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
             if (!is_null($this->container['displayName']) && !preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/", $this->container['displayName'])) {
                 $invalidProperties[] = "invalid value for 'displayName', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/.";
             }
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s\\S]{0,255}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s\\S]{0,255}$/.";
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -208,7 +211,7 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    *  子应用唯一标识
     *
     * @return string
     */
@@ -220,7 +223,7 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 子应用名称：字符集长度2-64，仅支持字符集：英文字母、数字、下划线、中划线、点
+    * @param string $name 子应用唯一标识
     *
     * @return $this
     */
@@ -232,7 +235,7 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayName
-    *  子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    *  子应用节点显示名称
     *
     * @return string|null
     */
@@ -244,7 +247,7 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
     /**
     * Sets displayName
     *
-    * @param string|null $displayName 子应用节点显示名：字符集长度2-64，仅支持字符集：中文字符、英文字母、数字、下划线、中划线、点
+    * @param string|null $displayName 子应用节点显示名称
     *
     * @return $this
     */
@@ -256,7 +259,7 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述：最大255字符
+    *  子应用描述
     *
     * @return string|null
     */
@@ -268,7 +271,7 @@ class SubAppUpdateParam implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述：最大255字符
+    * @param string|null $description 子应用描述
     *
     * @return $this
     */

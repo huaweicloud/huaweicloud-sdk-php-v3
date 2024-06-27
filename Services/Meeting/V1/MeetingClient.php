@@ -4264,6 +4264,80 @@ class MeetingClient extends Client
     }
 
     /**
+     * 查询会场网络质量
+     *
+     * 查询会场网络质量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listNetworkQuality($request)
+    {
+        return $this->listNetworkQualityWithHttpInfo($request);
+    }
+
+    public function listNetworkQualityWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/cqs/media/qos';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['conferenceid'] !== null) {
+            $queryParams['conferenceid'] = $localVarParams['conferenceid'];
+        }
+        if ($localVarParams['appid'] !== null) {
+            $queryParams['appid'] = $localVarParams['appid'];
+        }
+        if ($localVarParams['confuuid'] !== null) {
+            $queryParams['confuuid'] = $localVarParams['confuuid'];
+        }
+        if ($localVarParams['confToken'] !== null) {
+            $headerParams[$arr['confToken']] = $localVarParams['confToken'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ListNetworkQualityResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ListNetworkQualityRequest');
+    }
+
+    /**
      * 查询正在召开的网络研讨会列表
      *
      * 该接口用于查询正在召开的网络研讨会。管理员可查询企业内正在召开网络研讨会，非管理员可查询自己预订的正在召开的网络研讨会。

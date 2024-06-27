@@ -27,7 +27,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -49,7 +49,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -114,7 +114,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -136,7 +136,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     * createdAt  终端节点服务的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
     * isCharge  连接该终端节点服务的终端节点是否计费。  - true：计费  - false：不计费
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * enablePolicy  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * enablePolicy  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @var string[]
     */
@@ -391,7 +391,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets enablePolicy
-    *  是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    *  是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @return bool|null
     */
@@ -403,7 +403,7 @@ class ListServiceDescribeDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets enablePolicy
     *
-    * @param bool|null $enablePolicy 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false 是否开启终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
+    * @param bool|null $enablePolicy 是否允许自定义终端节点策略。  - false：不支持设置终端节点策略  - true：支持设置终端节点策略 默认为false
     *
     * @return $this
     */

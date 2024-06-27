@@ -20,7 +20,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  组件描述：最大255字符
+    * description  组件描述
     * modelId  应用Id、子应用Id,id长度不能超过36位，由大小写字母、数字组成
     * modelType  应用、子应用，取值：APPLICATION、SUB_APPLICATION ，不区分大小写
     * name  组件名称
@@ -36,7 +36,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  组件描述：最大255字符
+    * description  组件描述
     * modelId  应用Id、子应用Id,id长度不能超过36位，由大小写字母、数字组成
     * modelType  应用、子应用，取值：APPLICATION、SUB_APPLICATION ，不区分大小写
     * name  组件名称
@@ -73,7 +73,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  组件描述：最大255字符
+    * description  组件描述
     * modelId  应用Id、子应用Id,id长度不能超过36位，由大小写字母、数字组成
     * modelType  应用、子应用，取值：APPLICATION、SUB_APPLICATION ，不区分大小写
     * name  组件名称
@@ -89,7 +89,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  组件描述：最大255字符
+    * description  组件描述
     * modelId  应用Id、子应用Id,id长度不能超过36位，由大小写字母、数字组成
     * modelType  应用、子应用，取值：APPLICATION、SUB_APPLICATION ，不区分大小写
     * name  组件名称
@@ -105,7 +105,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  组件描述：最大255字符
+    * description  组件描述
     * modelId  应用Id、子应用Id,id长度不能超过36位，由大小写字母、数字组成
     * modelType  应用、子应用，取值：APPLICATION、SUB_APPLICATION ，不区分大小写
     * name  组件名称
@@ -159,22 +159,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const MODEL_TYPE_APPLICATION = 'APPLICATION';
-    const MODEL_TYPE_SUB_APPLICATION = 'SUB_APPLICATION';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getModelTypeAllowableValues()
-    {
-        return [
-            self::MODEL_TYPE_APPLICATION,
-            self::MODEL_TYPE_SUB_APPLICATION,
-        ];
-    }
 
 
     /**
@@ -206,32 +191,15 @@ class ComponentParam implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['description']) && !preg_match("/^[\\s\\S]{0,255}$/", $this->container['description'])) {
-                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[\\s\\S]{0,255}$/.";
-            }
         if ($this->container['modelId'] === null) {
             $invalidProperties[] = "'modelId' can't be null";
         }
-            if (!preg_match("/^[a-zA-Z0-9\\-]{32,36}$/", $this->container['modelId'])) {
-                $invalidProperties[] = "invalid value for 'modelId', must be conform to the pattern /^[a-zA-Z0-9\\-]{32,36}$/.";
-            }
         if ($this->container['modelType'] === null) {
             $invalidProperties[] = "'modelType' can't be null";
         }
-            $allowedValues = $this->getModelTypeAllowableValues();
-                if (!is_null($this->container['modelType']) && !in_array($this->container['modelType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'modelType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
-            if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/", $this->container['name'])) {
-                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-.]{2,64}$/.";
-            }
         return $invalidProperties;
     }
 
@@ -248,7 +216,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  组件描述：最大255字符
+    *  组件描述
     *
     * @return string|null
     */
@@ -260,7 +228,7 @@ class ComponentParam implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 组件描述：最大255字符
+    * @param string|null $description 组件描述
     *
     * @return $this
     */

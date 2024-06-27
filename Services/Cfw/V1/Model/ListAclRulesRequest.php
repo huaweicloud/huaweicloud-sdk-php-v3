@@ -21,19 +21,18 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * type  规则Type0：互联网规则,1：vpc规则, 2:nat规则
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * ip  ip地址
     * name  名称
     * direction  方向0：外到内1：内到外
     * status  规则下发状态 0：禁用,1：启用
     * actionType  动作0：permit,1：deny
-    * addressType  地址类型0 ipv4,1 ipv6,2 domain
+    * addressType  地址类型0 ipv4
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * tagsId  标签id
     * source  源地址
     * destination  目的地址
@@ -46,7 +45,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'objectId' => 'string',
             'type' => 'int',
-            'protocol' => 'int',
             'ip' => 'string',
             'name' => 'string',
             'direction' => 'int',
@@ -67,19 +65,18 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * type  规则Type0：互联网规则,1：vpc规则, 2:nat规则
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * ip  ip地址
     * name  名称
     * direction  方向0：外到内1：内到外
     * status  规则下发状态 0：禁用,1：启用
     * actionType  动作0：permit,1：deny
-    * addressType  地址类型0 ipv4,1 ipv6,2 domain
+    * addressType  地址类型0 ipv4
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * tagsId  标签id
     * source  源地址
     * destination  目的地址
@@ -92,7 +89,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
         'projectId' => null,
         'objectId' => null,
         'type' => 'int32',
-        'protocol' => null,
         'ip' => null,
         'name' => null,
         'direction' => 'int32',
@@ -134,19 +130,18 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * type  规则Type0：互联网规则,1：vpc规则, 2:nat规则
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * ip  ip地址
     * name  名称
     * direction  方向0：外到内1：内到外
     * status  规则下发状态 0：禁用,1：启用
     * actionType  动作0：permit,1：deny
-    * addressType  地址类型0 ipv4,1 ipv6,2 domain
+    * addressType  地址类型0 ipv4
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * tagsId  标签id
     * source  源地址
     * destination  目的地址
@@ -159,7 +154,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'objectId' => 'object_id',
             'type' => 'type',
-            'protocol' => 'protocol',
             'ip' => 'ip',
             'name' => 'name',
             'direction' => 'direction',
@@ -180,19 +174,18 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * type  规则Type0：互联网规则,1：vpc规则, 2:nat规则
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * ip  ip地址
     * name  名称
     * direction  方向0：外到内1：内到外
     * status  规则下发状态 0：禁用,1：启用
     * actionType  动作0：permit,1：deny
-    * addressType  地址类型0 ipv4,1 ipv6,2 domain
+    * addressType  地址类型0 ipv4
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * tagsId  标签id
     * source  源地址
     * destination  目的地址
@@ -205,7 +198,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'objectId' => 'setObjectId',
             'type' => 'setType',
-            'protocol' => 'setProtocol',
             'ip' => 'setIp',
             'name' => 'setName',
             'direction' => 'setDirection',
@@ -226,19 +218,18 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  租户项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * type  规则Type0：互联网规则,1：vpc规则, 2:nat规则
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
     * ip  ip地址
     * name  名称
     * direction  方向0：外到内1：内到外
     * status  规则下发状态 0：禁用,1：启用
     * actionType  动作0：permit,1：deny
-    * addressType  地址类型0 ipv4,1 ipv6,2 domain
+    * addressType  地址类型0 ipv4
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     * tagsId  标签id
     * source  源地址
     * destination  目的地址
@@ -251,7 +242,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'objectId' => 'getObjectId',
             'type' => 'getType',
-            'protocol' => 'getProtocol',
             'ip' => 'getIp',
             'name' => 'getName',
             'direction' => 'getDirection',
@@ -312,10 +302,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     const TYPE_0 = 0;
     const TYPE_1 = 1;
     const TYPE_2 = 2;
-    const PROTOCOL_6 = 6;
-    const PROTOCOL_17 = 17;
-    const PROTOCOL_1 = 1;
-    const PROTOCOL_58 = 58;
     const STATUS_0 = 0;
     const STATUS_1 = 1;
     const ACTION_TYPE_0 = 0;
@@ -336,21 +322,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
             self::TYPE_0,
             self::TYPE_1,
             self::TYPE_2,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getProtocolAllowableValues()
-    {
-        return [
-            self::PROTOCOL_6,
-            self::PROTOCOL_17,
-            self::PROTOCOL_1,
-            self::PROTOCOL_58,
         ];
     }
 
@@ -413,7 +384,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
@@ -452,14 +422,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            $allowedValues = $this->getProtocolAllowableValues();
-                if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'protocol', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -534,7 +496,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     *
     * @return string
     */
@@ -546,7 +508,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用查询防火墙实例接口获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。具体可参考APIExlorer和帮助中心FAQ。
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     *
     * @return $this
     */
@@ -577,30 +539,6 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets protocol
-    *  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
-    *
-    * @return int|null
-    */
-    public function getProtocol()
-    {
-        return $this->container['protocol'];
-    }
-
-    /**
-    * Sets protocol
-    *
-    * @param int|null $protocol 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
-    *
-    * @return $this
-    */
-    public function setProtocol($protocol)
-    {
-        $this->container['protocol'] = $protocol;
         return $this;
     }
 
@@ -726,7 +664,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型0 ipv4,1 ipv6,2 domain
+    *  地址类型0 ipv4
     *
     * @return int|null
     */
@@ -738,7 +676,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0 ipv4,1 ipv6,2 domain
+    * @param int|null $addressType 地址类型0 ipv4
     *
     * @return $this
     */
@@ -822,7 +760,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return string|null
     */
@@ -834,7 +772,7 @@ class ListAclRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return $this
     */

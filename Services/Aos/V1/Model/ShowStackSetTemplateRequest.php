@@ -23,13 +23,19 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
+    * accessControlSourceIps  允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    * accessControlSourceVpcIds  允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clientRequestId' => 'string',
             'stackSetName' => 'string',
-            'stackSetId' => 'string'
+            'stackSetId' => 'string',
+            'accessControlSourceIps' => 'string[]',
+            'accessControlSourceVpcIds' => 'string[]',
+            'callIdentity' => 'string'
     ];
 
     /**
@@ -37,13 +43,19 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
+    * accessControlSourceIps  允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    * accessControlSourceVpcIds  允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clientRequestId' => null,
         'stackSetName' => null,
-        'stackSetId' => null
+        'stackSetId' => null,
+        'accessControlSourceIps' => null,
+        'accessControlSourceVpcIds' => null,
+        'callIdentity' => null
     ];
 
     /**
@@ -72,13 +84,19 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
+    * accessControlSourceIps  允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    * accessControlSourceVpcIds  允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clientRequestId' => 'Client-Request-Id',
             'stackSetName' => 'stack_set_name',
-            'stackSetId' => 'stack_set_id'
+            'stackSetId' => 'stack_set_id',
+            'accessControlSourceIps' => 'access_control_source_ips',
+            'accessControlSourceVpcIds' => 'access_control_source_vpc_ids',
+            'callIdentity' => 'call_identity'
     ];
 
     /**
@@ -86,13 +104,19 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
+    * accessControlSourceIps  允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    * accessControlSourceVpcIds  允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $setters = [
             'clientRequestId' => 'setClientRequestId',
             'stackSetName' => 'setStackSetName',
-            'stackSetId' => 'setStackSetId'
+            'stackSetId' => 'setStackSetId',
+            'accessControlSourceIps' => 'setAccessControlSourceIps',
+            'accessControlSourceVpcIds' => 'setAccessControlSourceVpcIds',
+            'callIdentity' => 'setCallIdentity'
     ];
 
     /**
@@ -100,13 +124,19 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     * clientRequestId  用户指定的，对于此请求的唯一ID，用于定位某个请求，推荐使用UUID
     * stackSetName  资源栈集的名称。此名字在domain_id+region下应唯一，可以使用中文、大小写英文、数字、下划线、中划线。首字符需为中文或者英文，区分大小写。
     * stackSetId  资源栈集（stack_set）的唯一ID。  此ID由资源编排服务在生成资源栈集的时候生成，为UUID。  由于资源栈集名称仅仅在同一时间下唯一，即用户允许先生成一个叫HelloWorld的资源栈集，删除，再重新创建一个同名资源栈集。  对于团队并行开发，用户可能希望确保，当前我操作的资源栈集就是我认为的那个，而不是其他队友删除后创建的同名资源栈集。因此，使用ID就可以做到强匹配。  资源编排服务保证每次创建的资源栈集所对应的ID都不相同，更新不会影响ID。如果给予的stack_set_id和当前资源栈集的ID不一致，则返回400
+    * accessControlSourceIps  允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    * accessControlSourceVpcIds  允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    * callIdentity  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
     *
     * @var string[]
     */
     protected static $getters = [
             'clientRequestId' => 'getClientRequestId',
             'stackSetName' => 'getStackSetName',
-            'stackSetId' => 'getStackSetId'
+            'stackSetId' => 'getStackSetId',
+            'accessControlSourceIps' => 'getAccessControlSourceIps',
+            'accessControlSourceVpcIds' => 'getAccessControlSourceVpcIds',
+            'callIdentity' => 'getCallIdentity'
     ];
 
     /**
@@ -149,7 +179,22 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const CALL_IDENTITY_SELF = 'SELF';
+    const CALL_IDENTITY_DELEGATED_ADMIN = 'DELEGATED_ADMIN';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCallIdentityAllowableValues()
+    {
+        return [
+            self::CALL_IDENTITY_SELF,
+            self::CALL_IDENTITY_DELEGATED_ADMIN,
+        ];
+    }
 
 
     /**
@@ -170,6 +215,9 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
         $this->container['clientRequestId'] = isset($data['clientRequestId']) ? $data['clientRequestId'] : null;
         $this->container['stackSetName'] = isset($data['stackSetName']) ? $data['stackSetName'] : null;
         $this->container['stackSetId'] = isset($data['stackSetId']) ? $data['stackSetId'] : null;
+        $this->container['accessControlSourceIps'] = isset($data['accessControlSourceIps']) ? $data['accessControlSourceIps'] : null;
+        $this->container['accessControlSourceVpcIds'] = isset($data['accessControlSourceVpcIds']) ? $data['accessControlSourceVpcIds'] : null;
+        $this->container['callIdentity'] = isset($data['callIdentity']) ? $data['callIdentity'] : null;
     }
 
     /**
@@ -213,6 +261,14 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['stackSetId']) && !preg_match("/^[a-z0-9]+[a-z0-9-]*$/", $this->container['stackSetId'])) {
                 $invalidProperties[] = "invalid value for 'stackSetId', must be conform to the pattern /^[a-z0-9]+[a-z0-9-]*$/.";
             }
+            $allowedValues = $this->getCallIdentityAllowableValues();
+                if (!is_null($this->container['callIdentity']) && !in_array($this->container['callIdentity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'callIdentity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -296,6 +352,78 @@ class ShowStackSetTemplateRequest implements ModelInterface, ArrayAccess
     public function setStackSetId($stackSetId)
     {
         $this->container['stackSetId'] = $stackSetId;
+        return $this;
+    }
+
+    /**
+    * Gets accessControlSourceIps
+    *  允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    *
+    * @return string[]|null
+    */
+    public function getAccessControlSourceIps()
+    {
+        return $this->container['accessControlSourceIps'];
+    }
+
+    /**
+    * Sets accessControlSourceIps
+    *
+    * @param string[]|null $accessControlSourceIps 允许访问资源栈集模板的source ip列表，source ip应是具有CIDR表示法且带有子网掩码的IPv4地址。
+    *
+    * @return $this
+    */
+    public function setAccessControlSourceIps($accessControlSourceIps)
+    {
+        $this->container['accessControlSourceIps'] = $accessControlSourceIps;
+        return $this;
+    }
+
+    /**
+    * Gets accessControlSourceVpcIds
+    *  允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    *
+    * @return string[]|null
+    */
+    public function getAccessControlSourceVpcIds()
+    {
+        return $this->container['accessControlSourceVpcIds'];
+    }
+
+    /**
+    * Sets accessControlSourceVpcIds
+    *
+    * @param string[]|null $accessControlSourceVpcIds 允许访问资源栈集模板的source vpc id列表， source vpc id应仅包含小写字母、数字或中划线。
+    *
+    * @return $this
+    */
+    public function setAccessControlSourceVpcIds($accessControlSourceVpcIds)
+    {
+        $this->container['accessControlSourceVpcIds'] = $accessControlSourceVpcIds;
+        return $this;
+    }
+
+    /**
+    * Gets callIdentity
+    *  仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return string|null
+    */
+    public function getCallIdentity()
+    {
+        return $this->container['callIdentity'];
+    }
+
+    /**
+    * Sets callIdentity
+    *
+    * @param string|null $callIdentity 仅支持资源栈集权限模式为SERVICE_MANAGED时指定该参数。用于指定用户是以组织管理账号还是成员帐户中的服务委托管理员身份调用资源栈集。默认为SELF。 * 无论指定何种用户身份，创建或部署的资源栈集始终在组织管理账号名下。*   * `SELF` - 以组织管理账号身份调用。   * `DELEGATED_ADMIN` - 以服务委托管理员身份调用。用户的华为云账号必须在组织中已经被注册为”资源编排资源栈集服务“的委托管理员。
+    *
+    * @return $this
+    */
+    public function setCallIdentity($callIdentity)
+    {
+        $this->container['callIdentity'] = $callIdentity;
         return $this;
     }
 

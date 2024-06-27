@@ -33,6 +33,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * predefinedGroup  预定义地址组列表
+    * addressGroup  地址组列表
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
             'domainSetName' => 'string',
             'ipAddress' => 'string[]',
             'addressSetType' => 'int',
-            'predefinedGroup' => 'string[]'
+            'predefinedGroup' => 'string[]',
+            'addressGroup' => 'string[]'
     ];
 
     /**
@@ -67,6 +69,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * predefinedGroup  预定义地址组列表
+    * addressGroup  地址组列表
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
         'domainSetName' => null,
         'ipAddress' => null,
         'addressSetType' => 'int32',
-        'predefinedGroup' => null
+        'predefinedGroup' => null,
+        'addressGroup' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * predefinedGroup  预定义地址组列表
+    * addressGroup  地址组列表
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
             'domainSetName' => 'domain_set_name',
             'ipAddress' => 'ip_address',
             'addressSetType' => 'address_set_type',
-            'predefinedGroup' => 'predefined_group'
+            'predefinedGroup' => 'predefined_group',
+            'addressGroup' => 'address_group'
     ];
 
     /**
@@ -156,6 +162,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * predefinedGroup  预定义地址组列表
+    * addressGroup  地址组列表
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
             'domainSetName' => 'setDomainSetName',
             'ipAddress' => 'setIpAddress',
             'addressSetType' => 'setAddressSetType',
-            'predefinedGroup' => 'setPredefinedGroup'
+            'predefinedGroup' => 'setPredefinedGroup',
+            'addressGroup' => 'setAddressGroup'
     ];
 
     /**
@@ -190,6 +198,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     * ipAddress  IP地址列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     * predefinedGroup  预定义地址组列表
+    * addressGroup  地址组列表
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
             'domainSetName' => 'getDomainSetName',
             'ipAddress' => 'getIpAddress',
             'addressSetType' => 'getAddressSetType',
-            'predefinedGroup' => 'getPredefinedGroup'
+            'predefinedGroup' => 'getPredefinedGroup',
+            'addressGroup' => 'getAddressGroup'
     ];
 
     /**
@@ -280,6 +290,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
         $this->container['ipAddress'] = isset($data['ipAddress']) ? $data['ipAddress'] : null;
         $this->container['addressSetType'] = isset($data['addressSetType']) ? $data['addressSetType'] : null;
         $this->container['predefinedGroup'] = isset($data['predefinedGroup']) ? $data['predefinedGroup'] : null;
+        $this->container['addressGroup'] = isset($data['addressGroup']) ? $data['addressGroup'] : null;
     }
 
     /**
@@ -616,6 +627,30 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     public function setPredefinedGroup($predefinedGroup)
     {
         $this->container['predefinedGroup'] = $predefinedGroup;
+        return $this;
+    }
+
+    /**
+    * Gets addressGroup
+    *  地址组列表
+    *
+    * @return string[]|null
+    */
+    public function getAddressGroup()
+    {
+        return $this->container['addressGroup'];
+    }
+
+    /**
+    * Sets addressGroup
+    *
+    * @param string[]|null $addressGroup 地址组列表
+    *
+    * @return $this
+    */
+    public function setAddressGroup($addressGroup)
+    {
+        $this->container['addressGroup'] = $addressGroup;
         return $this;
     }
 

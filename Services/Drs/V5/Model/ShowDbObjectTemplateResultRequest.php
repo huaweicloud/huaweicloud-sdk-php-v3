@@ -23,13 +23,15 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * xLanguage  请求语言类型。
     * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
+    * fileExportObjectLevel  默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'jobId' => 'string',
             'xLanguage' => 'string',
-            'type' => 'string'
+            'type' => 'string',
+            'fileExportObjectLevel' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * xLanguage  请求语言类型。
     * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
+    * fileExportObjectLevel  默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'jobId' => null,
         'xLanguage' => null,
-        'type' => null
+        'type' => null,
+        'fileExportObjectLevel' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * xLanguage  请求语言类型。
     * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
+    * fileExportObjectLevel  默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'jobId' => 'job_id',
             'xLanguage' => 'X-Language',
-            'type' => 'type'
+            'type' => 'type',
+            'fileExportObjectLevel' => 'file_export_object_level'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * xLanguage  请求语言类型。
     * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
+    * fileExportObjectLevel  默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
     *
     * @var string[]
     */
     protected static $setters = [
             'jobId' => 'setJobId',
             'xLanguage' => 'setXLanguage',
-            'type' => 'setType'
+            'type' => 'setType',
+            'fileExportObjectLevel' => 'setFileExportObjectLevel'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * xLanguage  请求语言类型。
     * type  导入的结果类型。取值： - detail：获取最新导入的文件与校验结果，上传后的文件若存在错误，会同时将错误原因标记在文件内。 - synchronized：获取已同步的（已下发的）对象文件结果。 - change: 获取新增和删除的对象结果（当再编辑时使用）
+    * fileExportObjectLevel  默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
     *
     * @var string[]
     */
     protected static $getters = [
             'jobId' => 'getJobId',
             'xLanguage' => 'getXLanguage',
-            'type' => 'getType'
+            'type' => 'getType',
+            'fileExportObjectLevel' => 'getFileExportObjectLevel'
     ];
 
     /**
@@ -202,6 +212,7 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['fileExportObjectLevel'] = isset($data['fileExportObjectLevel']) ? $data['fileExportObjectLevel'] : null;
     }
 
     /**
@@ -317,6 +328,30 @@ class ShowDbObjectTemplateResultRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets fileExportObjectLevel
+    *  默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
+    *
+    * @return string|null
+    */
+    public function getFileExportObjectLevel()
+    {
+        return $this->container['fileExportObjectLevel'];
+    }
+
+    /**
+    * Sets fileExportObjectLevel
+    *
+    * @param string|null $fileExportObjectLevel 默认为空。当进行列加工导入时，查询列加工导入进度，取值column。
+    *
+    * @return $this
+    */
+    public function setFileExportObjectLevel($fileExportObjectLevel)
+    {
+        $this->container['fileExportObjectLevel'] = $fileExportObjectLevel;
         return $this;
     }
 

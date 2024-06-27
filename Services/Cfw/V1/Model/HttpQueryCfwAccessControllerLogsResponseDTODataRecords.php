@@ -23,7 +23,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * action  动作0：permit,1：deny
     * ruleName  规则名称
     * ruleId  规则ID
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
     * dstRegionId  目的区域id
@@ -36,6 +36,14 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
     * dstHost  目标主机
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -55,7 +63,15 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'dstPort' => 'int',
             'protocol' => 'string',
             'app' => 'string',
-            'dstHost' => 'string'
+            'dstHost' => 'string',
+            'srcProvinceId' => 'string',
+            'srcProvinceName' => 'string',
+            'srcCityId' => 'string',
+            'srcCityName' => 'string',
+            'dstProvinceId' => 'string',
+            'dstProvinceName' => 'string',
+            'dstCityId' => 'string',
+            'dstCityName' => 'string'
     ];
 
     /**
@@ -63,7 +79,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * action  动作0：permit,1：deny
     * ruleName  规则名称
     * ruleId  规则ID
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
     * dstRegionId  目的区域id
@@ -76,6 +92,14 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
     * dstHost  目标主机
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -95,7 +119,15 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
         'dstPort' => 'int32',
         'protocol' => null,
         'app' => null,
-        'dstHost' => null
+        'dstHost' => null,
+        'srcProvinceId' => null,
+        'srcProvinceName' => null,
+        'srcCityId' => null,
+        'srcCityName' => null,
+        'dstProvinceId' => null,
+        'dstProvinceName' => null,
+        'dstCityId' => null,
+        'dstCityName' => null
     ];
 
     /**
@@ -124,7 +156,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * action  动作0：permit,1：deny
     * ruleName  规则名称
     * ruleId  规则ID
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
     * dstRegionId  目的区域id
@@ -137,6 +169,14 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
     * dstHost  目标主机
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -156,7 +196,15 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'dstPort' => 'dst_port',
             'protocol' => 'protocol',
             'app' => 'app',
-            'dstHost' => 'dst_host'
+            'dstHost' => 'dst_host',
+            'srcProvinceId' => 'src_province_id',
+            'srcProvinceName' => 'src_province_name',
+            'srcCityId' => 'src_city_id',
+            'srcCityName' => 'src_city_name',
+            'dstProvinceId' => 'dst_province_id',
+            'dstProvinceName' => 'dst_province_name',
+            'dstCityId' => 'dst_city_id',
+            'dstCityName' => 'dst_city_name'
     ];
 
     /**
@@ -164,7 +212,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * action  动作0：permit,1：deny
     * ruleName  规则名称
     * ruleId  规则ID
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
     * dstRegionId  目的区域id
@@ -177,6 +225,14 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
     * dstHost  目标主机
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -196,7 +252,15 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'dstPort' => 'setDstPort',
             'protocol' => 'setProtocol',
             'app' => 'setApp',
-            'dstHost' => 'setDstHost'
+            'dstHost' => 'setDstHost',
+            'srcProvinceId' => 'setSrcProvinceId',
+            'srcProvinceName' => 'setSrcProvinceName',
+            'srcCityId' => 'setSrcCityId',
+            'srcCityName' => 'setSrcCityName',
+            'dstProvinceId' => 'setDstProvinceId',
+            'dstProvinceName' => 'setDstProvinceName',
+            'dstCityId' => 'setDstCityId',
+            'dstCityName' => 'setDstCityName'
     ];
 
     /**
@@ -204,7 +268,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * action  动作0：permit,1：deny
     * ruleName  规则名称
     * ruleId  规则ID
-    * hitTime  命中时间
+    * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
     * dstRegionId  目的区域id
@@ -217,6 +281,14 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * app  应用协议
     * dstHost  目标主机
+    * srcProvinceId  源省份id
+    * srcProvinceName  源省份名称
+    * srcCityId  源城市id
+    * srcCityName  源城市名称
+    * dstProvinceId  目的省份id
+    * dstProvinceName  目的省份名称
+    * dstCityId  目的城市id
+    * dstCityName  目的城市名称
     *
     * @var string[]
     */
@@ -236,7 +308,15 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
             'dstPort' => 'getDstPort',
             'protocol' => 'getProtocol',
             'app' => 'getApp',
-            'dstHost' => 'getDstHost'
+            'dstHost' => 'getDstHost',
+            'srcProvinceId' => 'getSrcProvinceId',
+            'srcProvinceName' => 'getSrcProvinceName',
+            'srcCityId' => 'getSrcCityId',
+            'srcCityName' => 'getSrcCityName',
+            'dstProvinceId' => 'getDstProvinceId',
+            'dstProvinceName' => 'getDstProvinceName',
+            'dstCityId' => 'getDstCityId',
+            'dstCityName' => 'getDstCityName'
     ];
 
     /**
@@ -313,6 +393,14 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
         $this->container['protocol'] = isset($data['protocol']) ? $data['protocol'] : null;
         $this->container['app'] = isset($data['app']) ? $data['app'] : null;
         $this->container['dstHost'] = isset($data['dstHost']) ? $data['dstHost'] : null;
+        $this->container['srcProvinceId'] = isset($data['srcProvinceId']) ? $data['srcProvinceId'] : null;
+        $this->container['srcProvinceName'] = isset($data['srcProvinceName']) ? $data['srcProvinceName'] : null;
+        $this->container['srcCityId'] = isset($data['srcCityId']) ? $data['srcCityId'] : null;
+        $this->container['srcCityName'] = isset($data['srcCityName']) ? $data['srcCityName'] : null;
+        $this->container['dstProvinceId'] = isset($data['dstProvinceId']) ? $data['dstProvinceId'] : null;
+        $this->container['dstProvinceName'] = isset($data['dstProvinceName']) ? $data['dstProvinceName'] : null;
+        $this->container['dstCityId'] = isset($data['dstCityId']) ? $data['dstCityId'] : null;
+        $this->container['dstCityName'] = isset($data['dstCityName']) ? $data['dstCityName'] : null;
     }
 
     /**
@@ -411,7 +499,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Gets hitTime
-    *  命中时间
+    *  命中时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return int|null
     */
@@ -423,7 +511,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Sets hitTime
     *
-    * @param int|null $hitTime 命中时间
+    * @param int|null $hitTime 命中时间，以毫秒为单位的时间戳，如1718936272648
     *
     * @return $this
     */
@@ -718,6 +806,198 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     public function setDstHost($dstHost)
     {
         $this->container['dstHost'] = $dstHost;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceId
+    *  源省份id
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceId()
+    {
+        return $this->container['srcProvinceId'];
+    }
+
+    /**
+    * Sets srcProvinceId
+    *
+    * @param string|null $srcProvinceId 源省份id
+    *
+    * @return $this
+    */
+    public function setSrcProvinceId($srcProvinceId)
+    {
+        $this->container['srcProvinceId'] = $srcProvinceId;
+        return $this;
+    }
+
+    /**
+    * Gets srcProvinceName
+    *  源省份名称
+    *
+    * @return string|null
+    */
+    public function getSrcProvinceName()
+    {
+        return $this->container['srcProvinceName'];
+    }
+
+    /**
+    * Sets srcProvinceName
+    *
+    * @param string|null $srcProvinceName 源省份名称
+    *
+    * @return $this
+    */
+    public function setSrcProvinceName($srcProvinceName)
+    {
+        $this->container['srcProvinceName'] = $srcProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityId
+    *  源城市id
+    *
+    * @return string|null
+    */
+    public function getSrcCityId()
+    {
+        return $this->container['srcCityId'];
+    }
+
+    /**
+    * Sets srcCityId
+    *
+    * @param string|null $srcCityId 源城市id
+    *
+    * @return $this
+    */
+    public function setSrcCityId($srcCityId)
+    {
+        $this->container['srcCityId'] = $srcCityId;
+        return $this;
+    }
+
+    /**
+    * Gets srcCityName
+    *  源城市名称
+    *
+    * @return string|null
+    */
+    public function getSrcCityName()
+    {
+        return $this->container['srcCityName'];
+    }
+
+    /**
+    * Sets srcCityName
+    *
+    * @param string|null $srcCityName 源城市名称
+    *
+    * @return $this
+    */
+    public function setSrcCityName($srcCityName)
+    {
+        $this->container['srcCityName'] = $srcCityName;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceId
+    *  目的省份id
+    *
+    * @return string|null
+    */
+    public function getDstProvinceId()
+    {
+        return $this->container['dstProvinceId'];
+    }
+
+    /**
+    * Sets dstProvinceId
+    *
+    * @param string|null $dstProvinceId 目的省份id
+    *
+    * @return $this
+    */
+    public function setDstProvinceId($dstProvinceId)
+    {
+        $this->container['dstProvinceId'] = $dstProvinceId;
+        return $this;
+    }
+
+    /**
+    * Gets dstProvinceName
+    *  目的省份名称
+    *
+    * @return string|null
+    */
+    public function getDstProvinceName()
+    {
+        return $this->container['dstProvinceName'];
+    }
+
+    /**
+    * Sets dstProvinceName
+    *
+    * @param string|null $dstProvinceName 目的省份名称
+    *
+    * @return $this
+    */
+    public function setDstProvinceName($dstProvinceName)
+    {
+        $this->container['dstProvinceName'] = $dstProvinceName;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityId
+    *  目的城市id
+    *
+    * @return string|null
+    */
+    public function getDstCityId()
+    {
+        return $this->container['dstCityId'];
+    }
+
+    /**
+    * Sets dstCityId
+    *
+    * @param string|null $dstCityId 目的城市id
+    *
+    * @return $this
+    */
+    public function setDstCityId($dstCityId)
+    {
+        $this->container['dstCityId'] = $dstCityId;
+        return $this;
+    }
+
+    /**
+    * Gets dstCityName
+    *  目的城市名称
+    *
+    * @return string|null
+    */
+    public function getDstCityName()
+    {
+        return $this->container['dstCityName'];
+    }
+
+    /**
+    * Sets dstCityName
+    *
+    * @param string|null $dstCityName 目的城市名称
+    *
+    * @return $this
+    */
+    public function setDstCityName($dstCityName)
+    {
+        $this->container['dstCityName'] = $dstCityName;
         return $this;
     }
 

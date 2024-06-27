@@ -21,6 +21,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * sqlTemplate  SQL模板
+    * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
     * queryType  SQL类型
@@ -31,6 +32,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'sqlTemplate' => 'string',
+            'sqlTemplateMd5' => 'string',
             'targetName' => 'string',
             'schemaName' => 'string',
             'queryType' => 'string',
@@ -41,6 +43,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sqlTemplate  SQL模板
+    * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
     * queryType  SQL类型
@@ -51,6 +54,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'sqlTemplate' => null,
+        'sqlTemplateMd5' => null,
         'targetName' => null,
         'schemaName' => null,
         'queryType' => null,
@@ -82,6 +86,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * sqlTemplate  SQL模板
+    * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
     * queryType  SQL类型
@@ -92,6 +97,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'sqlTemplate' => 'sql_template',
+            'sqlTemplateMd5' => 'sql_template_md5',
             'targetName' => 'target_name',
             'schemaName' => 'schema_name',
             'queryType' => 'query_type',
@@ -102,6 +108,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sqlTemplate  SQL模板
+    * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
     * queryType  SQL类型
@@ -112,6 +119,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'sqlTemplate' => 'setSqlTemplate',
+            'sqlTemplateMd5' => 'setSqlTemplateMd5',
             'targetName' => 'setTargetName',
             'schemaName' => 'setSchemaName',
             'queryType' => 'setQueryType',
@@ -122,6 +130,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sqlTemplate  SQL模板
+    * sqlTemplateMd5  SQL模板MD5
     * targetName  目标库昵称
     * schemaName  schema名称
     * queryType  SQL类型
@@ -132,6 +141,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'sqlTemplate' => 'getSqlTemplate',
+            'sqlTemplateMd5' => 'getSqlTemplateMd5',
             'targetName' => 'getTargetName',
             'schemaName' => 'getSchemaName',
             'queryType' => 'getQueryType',
@@ -198,6 +208,7 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['sqlTemplate'] = isset($data['sqlTemplate']) ? $data['sqlTemplate'] : null;
+        $this->container['sqlTemplateMd5'] = isset($data['sqlTemplateMd5']) ? $data['sqlTemplateMd5'] : null;
         $this->container['targetName'] = isset($data['targetName']) ? $data['targetName'] : null;
         $this->container['schemaName'] = isset($data['schemaName']) ? $data['schemaName'] : null;
         $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
@@ -248,6 +259,30 @@ class ReplayErrorSqlTemplateResp implements ModelInterface, ArrayAccess
     public function setSqlTemplate($sqlTemplate)
     {
         $this->container['sqlTemplate'] = $sqlTemplate;
+        return $this;
+    }
+
+    /**
+    * Gets sqlTemplateMd5
+    *  SQL模板MD5
+    *
+    * @return string|null
+    */
+    public function getSqlTemplateMd5()
+    {
+        return $this->container['sqlTemplateMd5'];
+    }
+
+    /**
+    * Sets sqlTemplateMd5
+    *
+    * @param string|null $sqlTemplateMd5 SQL模板MD5
+    *
+    * @return $this
+    */
+    public function setSqlTemplateMd5($sqlTemplateMd5)
+    {
+        $this->container['sqlTemplateMd5'] = $sqlTemplateMd5;
         return $this;
     }
 

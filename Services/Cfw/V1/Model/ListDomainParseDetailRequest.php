@@ -23,8 +23,8 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * domainName  域名
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * addressType  地址类型，0 ipv4,1 ipv6,2 domain
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * addressType  地址类型，0 ipv4,1 ipv6
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
             'domainName' => 'string',
             'enterpriseProjectId' => 'string',
             'fwInstanceId' => 'string',
-            'addressType' => 'string'
+            'addressType' => 'int'
     ];
 
     /**
@@ -41,8 +41,8 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * domainName  域名
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * addressType  地址类型，0 ipv4,1 ipv6,2 domain
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * addressType  地址类型，0 ipv4,1 ipv6
     *
     * @var string[]
     */
@@ -51,7 +51,7 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
         'domainName' => null,
         'enterpriseProjectId' => null,
         'fwInstanceId' => null,
-        'addressType' => null
+        'addressType' => 'int32'
     ];
 
     /**
@@ -80,8 +80,8 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * domainName  域名
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * addressType  地址类型，0 ipv4,1 ipv6,2 domain
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * addressType  地址类型，0 ipv4,1 ipv6
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * domainName  域名
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * addressType  地址类型，0 ipv4,1 ipv6,2 domain
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * addressType  地址类型，0 ipv4,1 ipv6
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     * projectId  租户项目id
     * domainName  域名
     * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
-    * addressType  地址类型，0 ipv4,1 ipv6,2 domain
+    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * addressType  地址类型，0 ipv4,1 ipv6
     *
     * @var string[]
     */
@@ -296,7 +296,7 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用查询防火墙实例接口获得。具体可参考APIExlorer和帮助中心FAQ。默认情况下，fw_instance_Id为空时，返回帐号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
+    * @param string|null $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，默认情况下，fw_instance_Id为空时，返回账号下第一个墙的信息；fw_instance_Id非空时，返回与fw_instance_Id对应墙的信息。
     *
     * @return $this
     */
@@ -320,9 +320,9 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型，0 ipv4,1 ipv6,2 domain
+    *  地址类型，0 ipv4,1 ipv6
     *
-    * @return string|null
+    * @return int|null
     */
     public function getAddressType()
     {
@@ -332,7 +332,7 @@ class ListDomainParseDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param string|null $addressType 地址类型，0 ipv4,1 ipv6,2 domain
+    * @param int|null $addressType 地址类型，0 ipv4,1 ipv6
     *
     * @return $this
     */
