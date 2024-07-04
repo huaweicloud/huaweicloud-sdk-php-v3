@@ -26,8 +26,8 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -50,8 +50,8 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -95,8 +95,8 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -119,8 +119,8 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -143,8 +143,8 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     * port  端口号
     * type  端口类型：目前包括TCP，UDP两种
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -446,7 +446,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -458,7 +458,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -482,7 +482,7 @@ class ListPortHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

@@ -1131,6 +1131,77 @@ class RdsAsyncClient extends Client
     }
 
     /**
+     * 创建数据库实例V5接口，仅支持IAM5的新平面认证方式（AK/SK认证方式）
+     *
+     * 创建数据库实例V5接口，仅支持IAM5的新平面认证方式（AK/SK认证方式）
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createInstanceIam5Async($request)
+    {
+        return $this->createInstanceIam5AsyncWithHttpInfo($request);
+    }
+    
+    public function createInstanceIam5AsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v5/{project_id}/instances';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams['x_client_token'] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\CreateInstanceIam5Response',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\CreateInstanceIam5Request',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建手动备份
      *
      * 创建手动备份。
@@ -1544,6 +1615,77 @@ class RdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteConfigurationResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteConfigurationRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 解除实例容灾关系接口
+     *
+     * 解除实例容灾关系接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDisasterRecoveryAsync($request)
+    {
+        return $this->deleteDisasterRecoveryAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteDisasterRecoveryAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/delete-disaster-recovery';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteDisasterRecoveryResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\DeleteDisasterRecoveryRequest',
             $asyncRequest = true);
     }
 
@@ -3067,6 +3209,74 @@ class RdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListFlavorsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListFlavorsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询数据库可变更规格接口
+     *
+     * 查询数据库可变更规格接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listFlavorsResizeAsync($request)
+    {
+        return $this->listFlavorsResizeAsyncWithHttpInfo($request);
+    }
+    
+    public function listFlavorsResizeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/flavors-resize';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\ListFlavorsResizeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\ListFlavorsResizeRequest',
             $asyncRequest = true);
     }
 
@@ -9228,6 +9438,77 @@ class RdsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSslResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Rds\V3\Model\SwitchSslRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 解除节点只读状态接口
+     *
+     * 解除节点只读状态接口
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function unlockNodeReadonlyStatusAsync($request)
+    {
+        return $this->unlockNodeReadonlyStatusAsyncWithHttpInfo($request);
+    }
+    
+    public function unlockNodeReadonlyStatusAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/unlock-node-readonly-status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Rds\V3\Model\UnlockNodeReadonlyStatusResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Rds\V3\Model\UnlockNodeReadonlyStatusRequest',
             $asyncRequest = true);
     }
 

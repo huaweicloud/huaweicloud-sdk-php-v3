@@ -9612,6 +9612,71 @@ class GaussDBClient extends Client
     }
 
     /**
+     * 参数对比
+     *
+     * 对比实例参数和默认模板的差异
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkStarrocksParams($request)
+    {
+        return $this->checkStarrocksParamsWithHttpInfo($request);
+    }
+
+    public function checkStarrocksParamsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/configurations/starrocks/comparison';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\CheckStarrocksParamsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\CheckStarrocksParamsRequest');
+    }
+
+    /**
      * HTAP数据同步表配置校验
      *
      * HTAP数据同步表配置校验。
@@ -11927,6 +11992,74 @@ class GaussDBClient extends Client
     }
 
     /**
+     * StarRocks实例规格变更
+     *
+     * StarRocks实例规格变更。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resizeStarRocksFlavor($request)
+    {
+        return $this->resizeStarRocksFlavorWithHttpInfo($request);
+    }
+
+    public function resizeStarRocksFlavorWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/resize-flavor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ResizeStarRocksFlavorResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ResizeStarRocksFlavorRequest');
+    }
+
+    /**
      * 重启StarRocks实例
      *
      * 重启StarRocks实例。
@@ -12486,6 +12619,148 @@ class GaussDBClient extends Client
     }
 
     /**
+     * 查询参数
+     *
+     * 按节点类型查询参数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStarrocksParams($request)
+    {
+        return $this->showStarrocksParamsWithHttpInfo($request);
+    }
+
+    public function showStarrocksParamsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['nodeType'] !== null) {
+            $queryParams['node_type'] = $localVarParams['nodeType'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowStarrocksParamsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\ShowStarrocksParamsRequest');
+    }
+
+    /**
+     * StarRocks实例开启行列分流
+     *
+     * StarRocks实例开启行列分流。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function syncStarRocksUsers($request)
+    {
+        return $this->syncStarRocksUsersWithHttpInfo($request);
+    }
+
+    public function syncStarRocksUsersWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/users/sync';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\SyncStarRocksUsersResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\SyncStarRocksUsersRequest');
+    }
+
+    /**
      * 修改数据同步
      *
      * 修改数据同步。
@@ -12956,6 +13231,74 @@ class GaussDBClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateStarRocksDatabaseUserPermissionResponse',
             $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateStarRocksDatabaseUserPermissionRequest');
+    }
+
+    /**
+     * 修改参数
+     *
+     * 按节点类型修改节点参数
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateStarrocksParams($request)
+    {
+        return $this->updateStarrocksParamsWithHttpInfo($request);
+    }
+
+    public function updateStarrocksParamsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/{instance_id}/starrocks/configurations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateStarrocksParamsResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDB\V3\Model\UpdateStarrocksParamsRequest');
     }
 
     /**

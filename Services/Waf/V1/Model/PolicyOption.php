@@ -22,7 +22,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * webattack  基础防护是否开启
     * common  常规检测是否开启
-    * crawler  预留参数，改参数值一直为true，用户可忽略该参数值
+    * crawler  预留参数，该参数值一直为true，用户可忽略该参数值
     * crawlerEngine  搜索engine是否开启
     * crawlerScanner  反爬虫检测是否开启
     * crawlerScript  脚本反爬虫是否开启
@@ -66,7 +66,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * webattack  基础防护是否开启
     * common  常规检测是否开启
-    * crawler  预留参数，改参数值一直为true，用户可忽略该参数值
+    * crawler  预留参数，该参数值一直为true，用户可忽略该参数值
     * crawlerEngine  搜索engine是否开启
     * crawlerScanner  反爬虫检测是否开启
     * crawlerScript  脚本反爬虫是否开启
@@ -131,7 +131,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * and the value is the original name
     * webattack  基础防护是否开启
     * common  常规检测是否开启
-    * crawler  预留参数，改参数值一直为true，用户可忽略该参数值
+    * crawler  预留参数，该参数值一直为true，用户可忽略该参数值
     * crawlerEngine  搜索engine是否开启
     * crawlerScanner  反爬虫检测是否开启
     * crawlerScript  脚本反爬虫是否开启
@@ -175,7 +175,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * webattack  基础防护是否开启
     * common  常规检测是否开启
-    * crawler  预留参数，改参数值一直为true，用户可忽略该参数值
+    * crawler  预留参数，该参数值一直为true，用户可忽略该参数值
     * crawlerEngine  搜索engine是否开启
     * crawlerScanner  反爬虫检测是否开启
     * crawlerScript  脚本反爬虫是否开启
@@ -219,7 +219,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * webattack  基础防护是否开启
     * common  常规检测是否开启
-    * crawler  预留参数，改参数值一直为true，用户可忽略该参数值
+    * crawler  预留参数，该参数值一直为true，用户可忽略该参数值
     * crawlerEngine  搜索engine是否开启
     * crawlerScanner  反爬虫检测是否开启
     * crawlerScript  脚本反爬虫是否开启
@@ -409,7 +409,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets crawler
-    *  预留参数，改参数值一直为true，用户可忽略该参数值
+    *  预留参数，该参数值一直为true，用户可忽略该参数值
     *
     * @return bool|null
     */
@@ -421,7 +421,7 @@ class PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets crawler
     *
-    * @param bool|null $crawler 预留参数，改参数值一直为true，用户可忽略该参数值
+    * @param bool|null $crawler 预留参数，该参数值一直为true，用户可忽略该参数值
     *
     * @return $this
     */

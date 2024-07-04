@@ -21,10 +21,10 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
@@ -57,10 +57,10 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
@@ -114,10 +114,10 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
@@ -150,10 +150,10 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
@@ -186,10 +186,10 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageId  镜像id
     * instanceId  企业仓库实例ID，swr共享版无需使用该参数
     * namespace  组织名称
@@ -301,16 +301,13 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['region'] === null) {
-            $invalidProperties[] = "'region' can't be null";
-        }
-            if ((mb_strlen($this->container['region']) > 128)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) > 128)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['region']) < 0)) {
+            if (!is_null($this->container['region']) && (mb_strlen($this->container['region']) < 0)) {
                 $invalidProperties[] = "invalid value for 'region', the character length must be bigger than or equal to 0.";
             }
-            if (!preg_match("/^.*$/", $this->container['region'])) {
+            if (!is_null($this->container['region']) && !preg_match("/^.*$/", $this->container['region'])) {
                 $invalidProperties[] = "invalid value for 'region', must be conform to the pattern /^.*$/.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 256)) {
@@ -427,7 +424,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * Gets region
     *  Region ID
     *
-    * @return string
+    * @return string|null
     */
     public function getRegion()
     {
@@ -437,7 +434,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region Region ID
+    * @param string|null $region Region ID
     *
     * @return $this
     */
@@ -449,7 +446,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -461,7 +458,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -497,7 +494,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -509,7 +506,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */
@@ -521,7 +518,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -533,7 +530,7 @@ class ListImageVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */

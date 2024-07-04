@@ -20,7 +20,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机id(鼠标在“服务器名称”放置后上浮显示)
+    * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
@@ -50,7 +50,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机id(鼠标在“服务器名称”放置后上浮显示)
+    * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
@@ -101,7 +101,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机id(鼠标在“服务器名称”放置后上浮显示)
+    * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
@@ -131,7 +131,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机id(鼠标在“服务器名称”放置后上浮显示)
+    * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
@@ -161,7 +161,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机id(鼠标在“服务器名称”放置后上浮显示)
+    * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器IP（私有IP），为兼容用户使用，不删除此字段
     * privateIp  服务器私有IP
@@ -320,7 +320,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机id(鼠标在“服务器名称”放置后上浮显示)
+    *  主机id
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class PwdPolicyInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机id(鼠标在“服务器名称”放置后上浮显示)
+    * @param string|null $hostId 主机id
     *
     * @return $this
     */

@@ -26,7 +26,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
@@ -54,7 +54,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
@@ -103,7 +103,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
@@ -131,7 +131,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
@@ -159,7 +159,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * alarmLevel  告警级别 - 1 : 低危 - 2 : 中危 - 3 : 高危 - 4 : 严重
     * severity  威胁等级   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
@@ -492,7 +492,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets offset
-    *  offset
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int
     */
@@ -504,7 +504,7 @@ class ListHostRaspProtectHistoryInfoRequest implements ModelInterface, ArrayAcce
     /**
     * Sets offset
     *
-    * @param int $offset offset
+    * @param int $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

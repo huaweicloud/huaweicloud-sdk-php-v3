@@ -22,6 +22,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范。
     *
     * @var string[]
@@ -29,6 +31,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'minSslVersion' => 'string',
             'isHttpRedirectToHttps' => 'bool',
+            'ingressHttpPort' => 'int',
+            'ingressHttpsPort' => 'int',
             'urlDomain' => 'string'
     ];
 
@@ -36,6 +40,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范。
     *
     * @var string[]
@@ -43,6 +49,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'minSslVersion' => null,
         'isHttpRedirectToHttps' => null,
+        'ingressHttpPort' => null,
+        'ingressHttpsPort' => null,
         'urlDomain' => null
     ];
 
@@ -71,6 +79,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * and the value is the original name
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范。
     *
     * @var string[]
@@ -78,6 +88,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'minSslVersion' => 'min_ssl_version',
             'isHttpRedirectToHttps' => 'is_http_redirect_to_https',
+            'ingressHttpPort' => 'ingress_http_port',
+            'ingressHttpsPort' => 'ingress_https_port',
             'urlDomain' => 'url_domain'
     ];
 
@@ -85,6 +97,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范。
     *
     * @var string[]
@@ -92,6 +106,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     protected static $setters = [
             'minSslVersion' => 'setMinSslVersion',
             'isHttpRedirectToHttps' => 'setIsHttpRedirectToHttps',
+            'ingressHttpPort' => 'setIngressHttpPort',
+            'ingressHttpsPort' => 'setIngressHttpsPort',
             'urlDomain' => 'setUrlDomain'
     ];
 
@@ -99,6 +115,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * isHttpRedirectToHttps  是否开启http到https的重定向，false为关闭，true为开启，默认为false
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     * urlDomain  自定义域名。长度为0-255位的字符串，需要符合域名规范。
     *
     * @var string[]
@@ -106,6 +124,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     protected static $getters = [
             'minSslVersion' => 'getMinSslVersion',
             'isHttpRedirectToHttps' => 'getIsHttpRedirectToHttps',
+            'ingressHttpPort' => 'getIngressHttpPort',
+            'ingressHttpsPort' => 'getIngressHttpsPort',
             'urlDomain' => 'getUrlDomain'
     ];
 
@@ -184,6 +204,8 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     {
         $this->container['minSslVersion'] = isset($data['minSslVersion']) ? $data['minSslVersion'] : null;
         $this->container['isHttpRedirectToHttps'] = isset($data['isHttpRedirectToHttps']) ? $data['isHttpRedirectToHttps'] : null;
+        $this->container['ingressHttpPort'] = isset($data['ingressHttpPort']) ? $data['ingressHttpPort'] : null;
+        $this->container['ingressHttpsPort'] = isset($data['ingressHttpsPort']) ? $data['ingressHttpsPort'] : null;
         $this->container['urlDomain'] = isset($data['urlDomain']) ? $data['urlDomain'] : null;
     }
 
@@ -203,6 +225,18 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['ingressHttpPort']) && ($this->container['ingressHttpPort'] > 49151)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpPort', must be smaller than or equal to 49151.";
+            }
+            if (!is_null($this->container['ingressHttpPort']) && ($this->container['ingressHttpPort'] < -1)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpPort', must be bigger than or equal to -1.";
+            }
+            if (!is_null($this->container['ingressHttpsPort']) && ($this->container['ingressHttpsPort'] > 49151)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpsPort', must be smaller than or equal to 49151.";
+            }
+            if (!is_null($this->container['ingressHttpsPort']) && ($this->container['ingressHttpsPort'] < -1)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpsPort', must be bigger than or equal to -1.";
+            }
         return $invalidProperties;
     }
 
@@ -262,6 +296,54 @@ class UrlDomainCreate implements ModelInterface, ArrayAccess
     public function setIsHttpRedirectToHttps($isHttpRedirectToHttps)
     {
         $this->container['isHttpRedirectToHttps'] = $isHttpRedirectToHttps;
+        return $this;
+    }
+
+    /**
+    * Gets ingressHttpPort
+    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return int|null
+    */
+    public function getIngressHttpPort()
+    {
+        return $this->container['ingressHttpPort'];
+    }
+
+    /**
+    * Sets ingressHttpPort
+    *
+    * @param int|null $ingressHttpPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return $this
+    */
+    public function setIngressHttpPort($ingressHttpPort)
+    {
+        $this->container['ingressHttpPort'] = $ingressHttpPort;
+        return $this;
+    }
+
+    /**
+    * Gets ingressHttpsPort
+    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return int|null
+    */
+    public function getIngressHttpsPort()
+    {
+        return $this->container['ingressHttpsPort'];
+    }
+
+    /**
+    * Sets ingressHttpsPort
+    *
+    * @param int|null $ingressHttpsPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return $this
+    */
+    public function setIngressHttpsPort($ingressHttpsPort)
+    {
+        $this->container['ingressHttpsPort'] = $ingressHttpsPort;
         return $this;
     }
 

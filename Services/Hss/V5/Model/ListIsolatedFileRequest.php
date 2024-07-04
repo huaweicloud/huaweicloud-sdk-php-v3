@@ -28,7 +28,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * publicIp  服务器公网IP
     * fileHash  文件hash,当前为sha256
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
     * @var string[]
@@ -56,7 +56,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * publicIp  服务器公网IP
     * fileHash  文件hash,当前为sha256
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
     * @var string[]
@@ -105,7 +105,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * publicIp  服务器公网IP
     * fileHash  文件hash,当前为sha256
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
     * @var string[]
@@ -133,7 +133,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * publicIp  服务器公网IP
     * fileHash  文件hash,当前为sha256
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
     * @var string[]
@@ -161,7 +161,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     * publicIp  服务器公网IP
     * fileHash  文件hash,当前为sha256
     * assetValue  资产重要性，包含如下3种   - important ：重要资产   - common ：一般资产   - test ：测试资产
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     *
     * @var string[]
@@ -537,7 +537,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -549,7 +549,7 @@ class ListIsolatedFileRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

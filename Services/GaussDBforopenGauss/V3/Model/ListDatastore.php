@@ -24,6 +24,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
     * version  数据库大版本。
     * completeVersion  数据库小版本。
     * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    * targetVersion  数据库正在升级的目标版本。
+    * hotfixFinishedTimes  热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class ListDatastore implements ModelInterface, ArrayAccess
             'type' => 'string',
             'version' => 'string',
             'completeVersion' => 'string',
-            'hotfixVersions' => 'string'
+            'hotfixVersions' => 'string',
+            'targetVersion' => 'string',
+            'hotfixFinishedTimes' => 'string[]'
     ];
 
     /**
@@ -40,6 +44,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
     * version  数据库大版本。
     * completeVersion  数据库小版本。
     * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    * targetVersion  数据库正在升级的目标版本。
+    * hotfixFinishedTimes  热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class ListDatastore implements ModelInterface, ArrayAccess
         'type' => null,
         'version' => null,
         'completeVersion' => null,
-        'hotfixVersions' => null
+        'hotfixVersions' => null,
+        'targetVersion' => null,
+        'hotfixFinishedTimes' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
     * version  数据库大版本。
     * completeVersion  数据库小版本。
     * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    * targetVersion  数据库正在升级的目标版本。
+    * hotfixFinishedTimes  热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class ListDatastore implements ModelInterface, ArrayAccess
             'type' => 'type',
             'version' => 'version',
             'completeVersion' => 'complete_version',
-            'hotfixVersions' => 'hotfix_versions'
+            'hotfixVersions' => 'hotfix_versions',
+            'targetVersion' => 'target_version',
+            'hotfixFinishedTimes' => 'hotfix_finished_times'
     ];
 
     /**
@@ -93,6 +105,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
     * version  数据库大版本。
     * completeVersion  数据库小版本。
     * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    * targetVersion  数据库正在升级的目标版本。
+    * hotfixFinishedTimes  热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class ListDatastore implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'version' => 'setVersion',
             'completeVersion' => 'setCompleteVersion',
-            'hotfixVersions' => 'setHotfixVersions'
+            'hotfixVersions' => 'setHotfixVersions',
+            'targetVersion' => 'setTargetVersion',
+            'hotfixFinishedTimes' => 'setHotfixFinishedTimes'
     ];
 
     /**
@@ -109,6 +125,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
     * version  数据库大版本。
     * completeVersion  数据库小版本。
     * hotfixVersions  数据库已升级的热补丁版本，当数据库热补丁升级成功后，该值不为空。
+    * targetVersion  数据库正在升级的目标版本。
+    * hotfixFinishedTimes  热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class ListDatastore implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'version' => 'getVersion',
             'completeVersion' => 'getCompleteVersion',
-            'hotfixVersions' => 'getHotfixVersions'
+            'hotfixVersions' => 'getHotfixVersions',
+            'targetVersion' => 'getTargetVersion',
+            'hotfixFinishedTimes' => 'getHotfixFinishedTimes'
     ];
 
     /**
@@ -181,6 +201,8 @@ class ListDatastore implements ModelInterface, ArrayAccess
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
         $this->container['completeVersion'] = isset($data['completeVersion']) ? $data['completeVersion'] : null;
         $this->container['hotfixVersions'] = isset($data['hotfixVersions']) ? $data['hotfixVersions'] : null;
+        $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
+        $this->container['hotfixFinishedTimes'] = isset($data['hotfixFinishedTimes']) ? $data['hotfixFinishedTimes'] : null;
     }
 
     /**
@@ -304,6 +326,54 @@ class ListDatastore implements ModelInterface, ArrayAccess
     public function setHotfixVersions($hotfixVersions)
     {
         $this->container['hotfixVersions'] = $hotfixVersions;
+        return $this;
+    }
+
+    /**
+    * Gets targetVersion
+    *  数据库正在升级的目标版本。
+    *
+    * @return string|null
+    */
+    public function getTargetVersion()
+    {
+        return $this->container['targetVersion'];
+    }
+
+    /**
+    * Sets targetVersion
+    *
+    * @param string|null $targetVersion 数据库正在升级的目标版本。
+    *
+    * @return $this
+    */
+    public function setTargetVersion($targetVersion)
+    {
+        $this->container['targetVersion'] = $targetVersion;
+        return $this;
+    }
+
+    /**
+    * Gets hotfixFinishedTimes
+    *  热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
+    *
+    * @return string[]|null
+    */
+    public function getHotfixFinishedTimes()
+    {
+        return $this->container['hotfixFinishedTimes'];
+    }
+
+    /**
+    * Sets hotfixFinishedTimes
+    *
+    * @param string[]|null $hotfixFinishedTimes 热补丁升级完成时间列表。  热补丁升级完成时间，格式为“yyyy-mm-dd hh:mm:ss timezone”。  其中timezone是指时区。
+    *
+    * @return $this
+    */
+    public function setHotfixFinishedTimes($hotfixFinishedTimes)
+    {
+        $this->container['hotfixFinishedTimes'] = $hotfixFinishedTimes;
         return $this;
     }
 

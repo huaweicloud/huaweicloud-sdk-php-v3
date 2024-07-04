@@ -30,7 +30,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * resourceId  HSS配额的资源ID
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -60,7 +60,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * resourceId  HSS配额的资源ID
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -111,7 +111,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * resourceId  HSS配额的资源ID
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -141,7 +141,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * resourceId  HSS配额的资源ID
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -171,7 +171,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     * resourceId  HSS配额的资源ID
     * chargingMode  收费模式，包含如下2种。   - packet_cycle ：包年/包月。   - on_demand ：按需。
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -590,7 +590,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -602,7 +602,7 @@ class ListQuotasDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

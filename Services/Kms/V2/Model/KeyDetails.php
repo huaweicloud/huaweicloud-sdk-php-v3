@@ -38,7 +38,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
     * keyLabel  密钥在加密机中的标签
-    * partitionType  分区类型，枚举如下：  - 1为专业版
     *
     * @var string[]
     */
@@ -60,8 +59,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'string',
             'sysEnterpriseProjectId' => 'string',
             'keystoreId' => 'string',
-            'keyLabel' => 'string',
-            'partitionType' => 'string'
+            'keyLabel' => 'string'
     ];
 
     /**
@@ -84,7 +82,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
     * keyLabel  密钥在加密机中的标签
-    * partitionType  分区类型，枚举如下：  - 1为专业版
     *
     * @var string[]
     */
@@ -106,8 +103,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
         'keyRotationEnabled' => null,
         'sysEnterpriseProjectId' => null,
         'keystoreId' => null,
-        'keyLabel' => null,
-        'partitionType' => null
+        'keyLabel' => null
     ];
 
     /**
@@ -151,7 +147,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
     * keyLabel  密钥在加密机中的标签
-    * partitionType  分区类型，枚举如下：  - 1为专业版
     *
     * @var string[]
     */
@@ -173,8 +168,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'key_rotation_enabled',
             'sysEnterpriseProjectId' => 'sys_enterprise_project_id',
             'keystoreId' => 'keystore_id',
-            'keyLabel' => 'key_label',
-            'partitionType' => 'partition_type'
+            'keyLabel' => 'key_label'
     ];
 
     /**
@@ -197,7 +191,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
     * keyLabel  密钥在加密机中的标签
-    * partitionType  分区类型，枚举如下：  - 1为专业版
     *
     * @var string[]
     */
@@ -219,8 +212,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'setKeyRotationEnabled',
             'sysEnterpriseProjectId' => 'setSysEnterpriseProjectId',
             'keystoreId' => 'setKeystoreId',
-            'keyLabel' => 'setKeyLabel',
-            'partitionType' => 'setPartitionType'
+            'keyLabel' => 'setKeyLabel'
     ];
 
     /**
@@ -243,7 +235,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
     * keyLabel  密钥在加密机中的标签
-    * partitionType  分区类型，枚举如下：  - 1为专业版
     *
     * @var string[]
     */
@@ -265,8 +256,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'keyRotationEnabled' => 'getKeyRotationEnabled',
             'sysEnterpriseProjectId' => 'getSysEnterpriseProjectId',
             'keystoreId' => 'getKeystoreId',
-            'keyLabel' => 'getKeyLabel',
-            'partitionType' => 'getPartitionType'
+            'keyLabel' => 'getKeyLabel'
     ];
 
     /**
@@ -402,7 +392,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
         $this->container['sysEnterpriseProjectId'] = isset($data['sysEnterpriseProjectId']) ? $data['sysEnterpriseProjectId'] : null;
         $this->container['keystoreId'] = isset($data['keystoreId']) ? $data['keystoreId'] : null;
         $this->container['keyLabel'] = isset($data['keyLabel']) ? $data['keyLabel'] : null;
-        $this->container['partitionType'] = isset($data['partitionType']) ? $data['partitionType'] : null;
     }
 
     /**
@@ -958,30 +947,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     public function setKeyLabel($keyLabel)
     {
         $this->container['keyLabel'] = $keyLabel;
-        return $this;
-    }
-
-    /**
-    * Gets partitionType
-    *  分区类型，枚举如下：  - 1为专业版
-    *
-    * @return string|null
-    */
-    public function getPartitionType()
-    {
-        return $this->container['partitionType'];
-    }
-
-    /**
-    * Sets partitionType
-    *
-    * @param string|null $partitionType 分区类型，枚举如下：  - 1为专业版
-    *
-    * @return $this
-    */
-    public function setPartitionType($partitionType)
-    {
-        $this->container['partitionType'] = $partitionType;
         return $this;
     }
 

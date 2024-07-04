@@ -30,7 +30,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
     * eventName  事件名称
@@ -70,7 +70,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
     * eventName  事件名称
@@ -131,7 +131,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
     * eventName  事件名称
@@ -171,7 +171,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
     * eventName  事件名称
@@ -211,7 +211,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     * privateIp  服务器私有IP
     * publicIp  弹性公网IP地址
     * assetValue  资产重要性
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentVersion  agent版本
     * isolateSource  隔离来源，包含如下:   - event : 安全告警事件   - antivirus : 病毒查杀
     * eventName  事件名称
@@ -687,7 +687,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  事件白名单更新时间，毫秒
+    *  更新时间，毫秒
     *
     * @return int
     */
@@ -699,7 +699,7 @@ class IsolatedFileResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int $updateTime 事件白名单更新时间，毫秒
+    * @param int $updateTime 更新时间，毫秒
     *
     * @return $this
     */

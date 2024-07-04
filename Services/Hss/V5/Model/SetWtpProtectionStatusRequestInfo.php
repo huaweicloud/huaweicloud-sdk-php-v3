@@ -20,7 +20,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  开启关闭状态
+    * status  开启关闭状态，true表示enable， false表示disable
     * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
@@ -36,7 +36,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  开启关闭状态
+    * status  开启关闭状态，true表示enable， false表示disable
     * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
@@ -73,7 +73,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  开启关闭状态
+    * status  开启关闭状态，true表示enable， false表示disable
     * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
@@ -89,7 +89,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  开启关闭状态
+    * status  开启关闭状态，true表示enable， false表示disable
     * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
@@ -105,7 +105,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  开启关闭状态
+    * status  开启关闭状态，true表示enable， false表示disable
     * hostIdList  主机ID数组，不能为空
     * resourceId  资源ID
     * chargingMode  计费模式   - packet_cycle: 包周期
@@ -225,7 +225,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  开启关闭状态
+    *  开启关闭状态，true表示enable， false表示disable
     *
     * @return bool
     */
@@ -237,7 +237,7 @@ class SetWtpProtectionStatusRequestInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param bool $status 开启关闭状态
+    * @param bool $status 开启关闭状态，true表示enable， false表示disable
     *
     * @return $this
     */

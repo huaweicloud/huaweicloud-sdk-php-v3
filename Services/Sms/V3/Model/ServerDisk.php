@@ -331,8 +331,8 @@ class ServerDisk implements ModelInterface, ArrayAccess
             if (!is_null($this->container['relationName']) && (mb_strlen($this->container['relationName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'relationName', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['inodeSize']) && ($this->container['inodeSize'] > 4294967296)) {
-                $invalidProperties[] = "invalid value for 'inodeSize', must be smaller than or equal to 4294967296.";
+            if (!is_null($this->container['inodeSize']) && ($this->container['inodeSize'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'inodeSize', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['inodeSize']) && ($this->container['inodeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be bigger than or equal to 0.";

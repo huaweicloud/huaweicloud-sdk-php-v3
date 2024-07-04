@@ -25,6 +25,12 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true: 返回身份证头像照片的 base64 编码 - false: 不返回身份证头像照片的 base64 编码 未传入该参数时默认为“false”，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true: 返回身份证头像的位置坐标 - false: 不返回身份证头像的位置坐标 未传入该参数时默认为“false”，即不返回身份证的头像坐标。
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true:返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * detectBorderIntegrity  返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    * detectBlockingWithinBorder  返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    * detectBlur  返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
     *
     * @var string[]
     */
@@ -33,7 +39,13 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'url' => 'string',
             'returnPortraitImage' => 'bool',
             'returnPortraitLocation' => 'bool',
-            'returnIdcardType' => 'bool'
+            'returnIdcardType' => 'bool',
+            'detectBorderIntegrity' => 'bool',
+            'detectBlockingWithinBorder' => 'bool',
+            'detectBlur' => 'bool',
+            'detectGlare' => 'bool',
+            'returnAdjustedImage' => 'bool',
+            'detectTampering' => 'bool'
     ];
 
     /**
@@ -43,6 +55,12 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true: 返回身份证头像照片的 base64 编码 - false: 不返回身份证头像照片的 base64 编码 未传入该参数时默认为“false”，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true: 返回身份证头像的位置坐标 - false: 不返回身份证头像的位置坐标 未传入该参数时默认为“false”，即不返回身份证的头像坐标。
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true:返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * detectBorderIntegrity  返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    * detectBlockingWithinBorder  返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    * detectBlur  返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
     *
     * @var string[]
     */
@@ -51,7 +69,13 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
         'url' => null,
         'returnPortraitImage' => null,
         'returnPortraitLocation' => null,
-        'returnIdcardType' => null
+        'returnIdcardType' => null,
+        'detectBorderIntegrity' => null,
+        'detectBlockingWithinBorder' => null,
+        'detectBlur' => null,
+        'detectGlare' => null,
+        'returnAdjustedImage' => null,
+        'detectTampering' => null
     ];
 
     /**
@@ -82,6 +106,12 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true: 返回身份证头像照片的 base64 编码 - false: 不返回身份证头像照片的 base64 编码 未传入该参数时默认为“false”，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true: 返回身份证头像的位置坐标 - false: 不返回身份证头像的位置坐标 未传入该参数时默认为“false”，即不返回身份证的头像坐标。
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true:返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * detectBorderIntegrity  返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    * detectBlockingWithinBorder  返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    * detectBlur  返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
     *
     * @var string[]
     */
@@ -90,7 +120,13 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'url' => 'url',
             'returnPortraitImage' => 'return_portrait_image',
             'returnPortraitLocation' => 'return_portrait_location',
-            'returnIdcardType' => 'return_idcard_type'
+            'returnIdcardType' => 'return_idcard_type',
+            'detectBorderIntegrity' => 'detect_border_integrity',
+            'detectBlockingWithinBorder' => 'detect_blocking_within_border',
+            'detectBlur' => 'detect_blur',
+            'detectGlare' => 'detect_glare',
+            'returnAdjustedImage' => 'return_adjusted_image',
+            'detectTampering' => 'detect_tampering'
     ];
 
     /**
@@ -100,6 +136,12 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true: 返回身份证头像照片的 base64 编码 - false: 不返回身份证头像照片的 base64 编码 未传入该参数时默认为“false”，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true: 返回身份证头像的位置坐标 - false: 不返回身份证头像的位置坐标 未传入该参数时默认为“false”，即不返回身份证的头像坐标。
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true:返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * detectBorderIntegrity  返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    * detectBlockingWithinBorder  返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    * detectBlur  返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
     *
     * @var string[]
     */
@@ -108,7 +150,13 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'url' => 'setUrl',
             'returnPortraitImage' => 'setReturnPortraitImage',
             'returnPortraitLocation' => 'setReturnPortraitLocation',
-            'returnIdcardType' => 'setReturnIdcardType'
+            'returnIdcardType' => 'setReturnIdcardType',
+            'detectBorderIntegrity' => 'setDetectBorderIntegrity',
+            'detectBlockingWithinBorder' => 'setDetectBlockingWithinBorder',
+            'detectBlur' => 'setDetectBlur',
+            'detectGlare' => 'setDetectGlare',
+            'returnAdjustedImage' => 'setReturnAdjustedImage',
+            'detectTampering' => 'setDetectTampering'
     ];
 
     /**
@@ -118,6 +166,12 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * returnPortraitImage  是否返回头像内容开关，可选值如下所示： - true: 返回身份证头像照片的 base64 编码 - false: 不返回身份证头像照片的 base64 编码 未传入该参数时默认为“false”，即不返回身份证头像照片的 base64 编码。
     * returnPortraitLocation  是否返回头像坐标的开关，可选值如下所示： - true: 返回身份证头像的位置坐标 - false: 不返回身份证头像的位置坐标 未传入该参数时默认为“false”，即不返回身份证的头像坐标。
     * returnIdcardType  是否返回身份证类型的开关，可选值如下所示： - true:返回身份证的类型，类型包括身份证原件以及身份证复印件 - false：不返回身份证的类型
+    * detectBorderIntegrity  返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    * detectBlockingWithinBorder  返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    * detectBlur  返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
     *
     * @var string[]
     */
@@ -126,7 +180,13 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'url' => 'getUrl',
             'returnPortraitImage' => 'getReturnPortraitImage',
             'returnPortraitLocation' => 'getReturnPortraitLocation',
-            'returnIdcardType' => 'getReturnIdcardType'
+            'returnIdcardType' => 'getReturnIdcardType',
+            'detectBorderIntegrity' => 'getDetectBorderIntegrity',
+            'detectBlockingWithinBorder' => 'getDetectBlockingWithinBorder',
+            'detectBlur' => 'getDetectBlur',
+            'detectGlare' => 'getDetectGlare',
+            'returnAdjustedImage' => 'getReturnAdjustedImage',
+            'detectTampering' => 'getDetectTampering'
     ];
 
     /**
@@ -192,6 +252,12 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
         $this->container['returnPortraitImage'] = isset($data['returnPortraitImage']) ? $data['returnPortraitImage'] : null;
         $this->container['returnPortraitLocation'] = isset($data['returnPortraitLocation']) ? $data['returnPortraitLocation'] : null;
         $this->container['returnIdcardType'] = isset($data['returnIdcardType']) ? $data['returnIdcardType'] : null;
+        $this->container['detectBorderIntegrity'] = isset($data['detectBorderIntegrity']) ? $data['detectBorderIntegrity'] : null;
+        $this->container['detectBlockingWithinBorder'] = isset($data['detectBlockingWithinBorder']) ? $data['detectBlockingWithinBorder'] : null;
+        $this->container['detectBlur'] = isset($data['detectBlur']) ? $data['detectBlur'] : null;
+        $this->container['detectGlare'] = isset($data['detectGlare']) ? $data['detectGlare'] : null;
+        $this->container['returnAdjustedImage'] = isset($data['returnAdjustedImage']) ? $data['returnAdjustedImage'] : null;
+        $this->container['detectTampering'] = isset($data['detectTampering']) ? $data['detectTampering'] : null;
     }
 
     /**
@@ -333,6 +399,150 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     public function setReturnIdcardType($returnIdcardType)
     {
         $this->container['returnIdcardType'] = $returnIdcardType;
+        return $this;
+    }
+
+    /**
+    * Gets detectBorderIntegrity
+    *  返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    *
+    * @return bool|null
+    */
+    public function getDetectBorderIntegrity()
+    {
+        return $this->container['detectBorderIntegrity'];
+    }
+
+    /**
+    * Sets detectBorderIntegrity
+    *
+    * @param bool|null $detectBorderIntegrity 返回身份证边框完整性的告警结果的开关，可选值如下所示 - true：打开身份证图像边框完整性告警功能  - false：关闭身份证图像边框完整性告警功能
+    *
+    * @return $this
+    */
+    public function setDetectBorderIntegrity($detectBorderIntegrity)
+    {
+        $this->container['detectBorderIntegrity'] = $detectBorderIntegrity;
+        return $this;
+    }
+
+    /**
+    * Gets detectBlockingWithinBorder
+    *  返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    *
+    * @return bool|null
+    */
+    public function getDetectBlockingWithinBorder()
+    {
+        return $this->container['detectBlockingWithinBorder'];
+    }
+
+    /**
+    * Sets detectBlockingWithinBorder
+    *
+    * @param bool|null $detectBlockingWithinBorder 返回身份证内部是否有被遮挡的告警结果的开关，可选值如下所示 - true：打开身份证内部是否有被遮挡的告警功能  - false：关闭身份证内部是否有被遮挡的告警功能
+    *
+    * @return $this
+    */
+    public function setDetectBlockingWithinBorder($detectBlockingWithinBorder)
+    {
+        $this->container['detectBlockingWithinBorder'] = $detectBlockingWithinBorder;
+        return $this;
+    }
+
+    /**
+    * Gets detectBlur
+    *  返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    *
+    * @return bool|null
+    */
+    public function getDetectBlur()
+    {
+        return $this->container['detectBlur'];
+    }
+
+    /**
+    * Sets detectBlur
+    *
+    * @param bool|null $detectBlur 返回身份证模糊告警结果的开关，可选值如下所示 - true:打开身份证是否模糊的告警功能 - false：关闭身份证是否模糊的告警功能
+    *
+    * @return $this
+    */
+    public function setDetectBlur($detectBlur)
+    {
+        $this->container['detectBlur'] = $detectBlur;
+        return $this;
+    }
+
+    /**
+    * Gets detectGlare
+    *  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    *
+    * @return bool|null
+    */
+    public function getDetectGlare()
+    {
+        return $this->container['detectGlare'];
+    }
+
+    /**
+    * Sets detectGlare
+    *
+    * @param bool|null $detectGlare 返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
+    *
+    * @return $this
+    */
+    public function setDetectGlare($detectGlare)
+    {
+        $this->container['detectGlare'] = $detectGlare;
+        return $this;
+    }
+
+    /**
+    * Gets returnAdjustedImage
+    *  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    *
+    * @return bool|null
+    */
+    public function getReturnAdjustedImage()
+    {
+        return $this->container['returnAdjustedImage'];
+    }
+
+    /**
+    * Sets returnAdjustedImage
+    *
+    * @param bool|null $returnAdjustedImage 返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
+    *
+    * @return $this
+    */
+    public function setReturnAdjustedImage($returnAdjustedImage)
+    {
+        $this->container['returnAdjustedImage'] = $returnAdjustedImage;
+        return $this;
+    }
+
+    /**
+    * Gets detectTampering
+    *  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    *
+    * @return bool|null
+    */
+    public function getDetectTampering()
+    {
+        return $this->container['detectTampering'];
+    }
+
+    /**
+    * Sets detectTampering
+    *
+    * @param bool|null $detectTampering 返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    *
+    * @return $this
+    */
+    public function setDetectTampering($detectTampering)
+    {
+        $this->container['detectTampering'] = $detectTampering;
         return $this;
     }
 

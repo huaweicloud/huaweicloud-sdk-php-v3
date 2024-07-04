@@ -20,7 +20,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  HSS的Agent ID
+    * agentId  Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
@@ -48,7 +48,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  HSS的Agent ID
+    * agentId  Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
@@ -97,7 +97,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  HSS的Agent ID
+    * agentId  Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
@@ -125,7 +125,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  HSS的Agent ID
+    * agentId  Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
@@ -153,7 +153,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  HSS的Agent ID
+    * agentId  Agent ID
     * hostId  主机id
     * hostName  服务器名称
     * hostIp  服务器ip
@@ -333,7 +333,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  HSS的Agent ID
+    *  Agent ID
     *
     * @return string|null
     */
@@ -345,7 +345,7 @@ class AppResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string|null $agentId HSS的Agent ID
+    * @param string|null $agentId Agent ID
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentId  Agent ID
     *
     * @var string[]
@@ -59,7 +59,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentId  Agent ID
     *
     * @var string[]
@@ -110,7 +110,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentId  Agent ID
     *
     * @var string[]
@@ -140,7 +140,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentId  Agent ID
     *
     * @var string[]
@@ -170,7 +170,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     * fileAttr  文件属性
     * fileCtime  文件创建时间
     * fileMtime  文件更新时间
-    * updateTime  事件白名单更新时间，毫秒
+    * updateTime  更新时间，毫秒
     * agentId  Agent ID
     *
     * @var string[]
@@ -545,7 +545,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  事件白名单更新时间，毫秒
+    *  更新时间，毫秒
     *
     * @return int|null
     */
@@ -557,7 +557,7 @@ class AntivirusResultDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param int|null $updateTime 事件白名单更新时间，毫秒
+    * @param int|null $updateTime 更新时间，毫秒
     *
     * @return $this
     */

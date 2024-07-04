@@ -24,7 +24,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * name  迁移项目名称
     * description  迁移项目描述
     * isdefault  是否为默认模板
-    * template  template
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
     * speedLimit  限制迁移速率，单位：Mbps
@@ -42,7 +41,6 @@ class MigProject implements ModelInterface, ArrayAccess
             'name' => 'string',
             'description' => 'string',
             'isdefault' => 'bool',
-            'template' => '\HuaweiCloud\SDK\Sms\V3\Model\TemplateResponseBody',
             'region' => 'string',
             'startTargetServer' => 'bool',
             'speedLimit' => 'int',
@@ -60,7 +58,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * name  迁移项目名称
     * description  迁移项目描述
     * isdefault  是否为默认模板
-    * template  template
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
     * speedLimit  限制迁移速率，单位：Mbps
@@ -78,7 +75,6 @@ class MigProject implements ModelInterface, ArrayAccess
         'name' => null,
         'description' => null,
         'isdefault' => null,
-        'template' => null,
         'region' => null,
         'startTargetServer' => null,
         'speedLimit' => 'int32',
@@ -117,7 +113,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * name  迁移项目名称
     * description  迁移项目描述
     * isdefault  是否为默认模板
-    * template  template
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
     * speedLimit  限制迁移速率，单位：Mbps
@@ -135,7 +130,6 @@ class MigProject implements ModelInterface, ArrayAccess
             'name' => 'name',
             'description' => 'description',
             'isdefault' => 'isdefault',
-            'template' => 'template',
             'region' => 'region',
             'startTargetServer' => 'start_target_server',
             'speedLimit' => 'speed_limit',
@@ -153,7 +147,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * name  迁移项目名称
     * description  迁移项目描述
     * isdefault  是否为默认模板
-    * template  template
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
     * speedLimit  限制迁移速率，单位：Mbps
@@ -171,7 +164,6 @@ class MigProject implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'description' => 'setDescription',
             'isdefault' => 'setIsdefault',
-            'template' => 'setTemplate',
             'region' => 'setRegion',
             'startTargetServer' => 'setStartTargetServer',
             'speedLimit' => 'setSpeedLimit',
@@ -189,7 +181,6 @@ class MigProject implements ModelInterface, ArrayAccess
     * name  迁移项目名称
     * description  迁移项目描述
     * isdefault  是否为默认模板
-    * template  template
     * region  区域名称
     * startTargetServer  迁移后是否启动目的端虚拟机
     * speedLimit  限制迁移速率，单位：Mbps
@@ -207,7 +198,6 @@ class MigProject implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'description' => 'getDescription',
             'isdefault' => 'getIsdefault',
-            'template' => 'getTemplate',
             'region' => 'getRegion',
             'startTargetServer' => 'getStartTargetServer',
             'speedLimit' => 'getSpeedLimit',
@@ -296,7 +286,6 @@ class MigProject implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['isdefault'] = isset($data['isdefault']) ? $data['isdefault'] : null;
-        $this->container['template'] = isset($data['template']) ? $data['template'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
         $this->container['speedLimit'] = isset($data['speedLimit']) ? $data['speedLimit'] : null;
@@ -485,30 +474,6 @@ class MigProject implements ModelInterface, ArrayAccess
     public function setIsdefault($isdefault)
     {
         $this->container['isdefault'] = $isdefault;
-        return $this;
-    }
-
-    /**
-    * Gets template
-    *  template
-    *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\TemplateResponseBody|null
-    */
-    public function getTemplate()
-    {
-        return $this->container['template'];
-    }
-
-    /**
-    * Sets template
-    *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\TemplateResponseBody|null $template template
-    *
-    * @return $this
-    */
-    public function setTemplate($template)
-    {
-        $this->container['template'] = $template;
         return $this;
     }
 

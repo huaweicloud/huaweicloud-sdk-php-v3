@@ -268,8 +268,8 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['blockCount']) && ($this->container['blockCount'] > 4294967296)) {
-                $invalidProperties[] = "invalid value for 'blockCount', must be smaller than or equal to 4294967296.";
+            if (!is_null($this->container['blockCount']) && ($this->container['blockCount'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'blockCount', must be smaller than or equal to 2147483647.";
             }
             if (!is_null($this->container['blockCount']) && ($this->container['blockCount'] < 0)) {
                 $invalidProperties[] = "invalid value for 'blockCount', must be bigger than or equal to 0.";
@@ -292,8 +292,8 @@ class LogicalVolumes implements ModelInterface, ArrayAccess
         if ($this->container['inodeSize'] === null) {
             $invalidProperties[] = "'inodeSize' can't be null";
         }
-            if (($this->container['inodeSize'] > 4294967296)) {
-                $invalidProperties[] = "invalid value for 'inodeSize', must be smaller than or equal to 4294967296.";
+            if (($this->container['inodeSize'] > 2147483647)) {
+                $invalidProperties[] = "invalid value for 'inodeSize', must be smaller than or equal to 2147483647.";
             }
             if (($this->container['inodeSize'] < 0)) {
                 $invalidProperties[] = "invalid value for 'inodeSize', must be bigger than or equal to 0.";

@@ -2333,6 +2333,136 @@ class KmsAsyncClient extends Client
     }
 
     /**
+     * 查询跨区域密钥所支持的区域
+     *
+     * - 功能介绍：查询跨区域密钥所支持的区域。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSupportRegionsAsync($request)
+    {
+        return $this->listSupportRegionsAsyncWithHttpInfo($request);
+    }
+    
+    public function listSupportRegionsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/kms/regions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ListSupportRegionsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ListSupportRegionsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 复制密钥到指定区域
+     *
+     * 将本区域的密钥复制到指定区域。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function replicateKeyAsync($request)
+    {
+        return $this->replicateKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function replicateKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/kms/keys/{key_id}/replicate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyId'] !== null) {
+            $pathParams['key_id'] = $localVarParams['keyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\ReplicateKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\ReplicateKeyRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询密钥轮换状态
      *
      * - 功能介绍：查询用户主密钥轮换状态。
@@ -2979,6 +3109,74 @@ class KmsAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyRotationIntervalResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Kms\V2\Model\UpdateKeyRotationIntervalRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改密钥所属的主区域
+     *
+     * 修改密钥所属的主区域。修改后当前区域会变为副本区域。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePrimaryRegionAsync($request)
+    {
+        return $this->updatePrimaryRegionAsyncWithHttpInfo($request);
+    }
+    
+    public function updatePrimaryRegionAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/kms/keys/{key_id}/update-primary-region';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['keyId'] !== null) {
+            $pathParams['key_id'] = $localVarParams['keyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Kms\V2\Model\UpdatePrimaryRegionResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Kms\V2\Model\UpdatePrimaryRegionRequest',
             $asyncRequest = true);
     }
 

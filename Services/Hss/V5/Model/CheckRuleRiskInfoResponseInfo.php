@@ -30,7 +30,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
-    * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    * enableClick  该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
@@ -62,7 +62,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
-    * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    * enableClick  该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
@@ -115,7 +115,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
-    * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    * enableClick  该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
@@ -147,7 +147,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
-    * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    * enableClick  该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
@@ -179,7 +179,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     * scanResult  检测结果，包含如下：   - pass   - failed
     * status  状态，包含如下：   - safe : 无需处理   - ignored : 已忽略   - unhandled : 未处理   - fixing : 修复中   - fix-failed : 修复失败   - verifying : 验证中
     * enableFix  是否支持一键修复,1:支持一键修复,0:不支持
-    * enableClick  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    * enableClick  该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     * ruleParams  支持传递参数修复的检查项可传递参数的范围，只有支持传递参数修复的检查项才返回此数据
     *
     * @var string[]
@@ -595,7 +595,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableClick
-    *  该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    *  该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     *
     * @return bool|null
     */
@@ -607,7 +607,7 @@ class CheckRuleRiskInfoResponseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enableClick
     *
-    * @param bool|null $enableClick 该检查项的修复&忽略&验证按钮是否可点击,true:按钮可点击,false:按钮不可点击
+    * @param bool|null $enableClick 该检查项的修复&忽略&验证按钮是否可单击,true:按钮可单击,false:按钮不可单击
     *
     * @return $this
     */

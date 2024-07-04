@@ -30,6 +30,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * regionId  目的端服务器的区域ID
     * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
     * enterpriseProjectId  企业项目ID
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
     * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
     * projectName  目的端服务器所在项目名称
@@ -66,6 +67,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'startTargetServer' => 'bool',
             'enterpriseProjectId' => 'string',
+            'existServer' => 'bool',
             'migrationIp' => 'string',
             'regionName' => 'string',
             'projectName' => 'string',
@@ -102,6 +104,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * regionId  目的端服务器的区域ID
     * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
     * enterpriseProjectId  企业项目ID
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
     * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
     * projectName  目的端服务器所在项目名称
@@ -138,6 +141,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         'regionId' => null,
         'startTargetServer' => null,
         'enterpriseProjectId' => null,
+        'existServer' => null,
         'migrationIp' => null,
         'regionName' => null,
         'projectName' => null,
@@ -195,6 +199,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * regionId  目的端服务器的区域ID
     * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
     * enterpriseProjectId  企业项目ID
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
     * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
     * projectName  目的端服务器所在项目名称
@@ -231,6 +236,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'startTargetServer' => 'start_target_server',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'existServer' => 'exist_server',
             'migrationIp' => 'migration_ip',
             'regionName' => 'region_name',
             'projectName' => 'project_name',
@@ -267,6 +273,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * regionId  目的端服务器的区域ID
     * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
     * enterpriseProjectId  企业项目ID
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
     * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
     * projectName  目的端服务器所在项目名称
@@ -303,6 +310,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'startTargetServer' => 'setStartTargetServer',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'existServer' => 'setExistServer',
             'migrationIp' => 'setMigrationIp',
             'regionName' => 'setRegionName',
             'projectName' => 'setProjectName',
@@ -339,6 +347,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     * regionId  目的端服务器的区域ID
     * startTargetServer  迁移完成后是否启动目的端服务器  true：启动  false：停止
     * enterpriseProjectId  企业项目ID
+    * existServer  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
     * migrationIp  目的端服务器的IP地址。  公网迁移时请填写弹性IP地址  专线迁移时请填写私有IP地址
     * regionName  目的端服务器的区域名称
     * projectName  目的端服务器所在项目名称
@@ -375,6 +384,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'startTargetServer' => 'getStartTargetServer',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'existServer' => 'getExistServer',
             'migrationIp' => 'getMigrationIp',
             'regionName' => 'getRegionName',
             'projectName' => 'getProjectName',
@@ -514,6 +524,7 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['migrationIp'] = isset($data['migrationIp']) ? $data['migrationIp'] : null;
         $this->container['regionName'] = isset($data['regionName']) ? $data['regionName'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
@@ -942,6 +953,30 @@ class ShowTaskResponse implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets existServer
+    *  目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    *
+    * @return bool|null
+    */
+    public function getExistServer()
+    {
+        return $this->container['existServer'];
+    }
+
+    /**
+    * Sets existServer
+    *
+    * @param bool|null $existServer 目的端服务器是否存在。true代表已有目的端服务器，false代表需要新建目的端服务器
+    *
+    * @return $this
+    */
+    public function setExistServer($existServer)
+    {
+        $this->container['existServer'] = $existServer;
         return $this;
     }
 

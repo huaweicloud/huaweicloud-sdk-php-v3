@@ -28,6 +28,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
+    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'string',
             'enablePublicip' => 'bool',
             'publicipId' => 'string',
-            'enterpriseProjectId' => 'string'
+            'enterpriseProjectId' => 'string',
+            'enableAcl' => 'bool'
     ];
 
     /**
@@ -52,6 +54,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
+    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
         'securityGroupId' => null,
         'enablePublicip' => null,
         'publicipId' => null,
-        'enterpriseProjectId' => null
+        'enterpriseProjectId' => null,
+        'enableAcl' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
+    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'security_group_id',
             'enablePublicip' => 'enable_publicip',
             'publicipId' => 'publicip_id',
-            'enterpriseProjectId' => 'enterprise_project_id'
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'enableAcl' => 'enable_acl'
     ];
 
     /**
@@ -121,6 +127,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
+    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'setSecurityGroupId',
             'enablePublicip' => 'setEnablePublicip',
             'publicipId' => 'setPublicipId',
-            'enterpriseProjectId' => 'setEnterpriseProjectId'
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'enableAcl' => 'setEnableAcl'
     ];
 
     /**
@@ -145,6 +153,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
+    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
             'securityGroupId' => 'getSecurityGroupId',
             'enablePublicip' => 'getEnablePublicip',
             'publicipId' => 'getPublicipId',
-            'enterpriseProjectId' => 'getEnterpriseProjectId'
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'enableAcl' => 'getEnableAcl'
     ];
 
     /**
@@ -225,6 +235,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
         $this->container['enablePublicip'] = isset($data['enablePublicip']) ? $data['enablePublicip'] : null;
         $this->container['publicipId'] = isset($data['publicipId']) ? $data['publicipId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['enableAcl'] = isset($data['enableAcl']) ? $data['enableAcl'] : null;
     }
 
     /**
@@ -438,6 +449,30 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enableAcl
+    *  ACL访问控制（仅AMQP版本支持此参数）。
+    *
+    * @return bool|null
+    */
+    public function getEnableAcl()
+    {
+        return $this->container['enableAcl'];
+    }
+
+    /**
+    * Sets enableAcl
+    *
+    * @param bool|null $enableAcl ACL访问控制（仅AMQP版本支持此参数）。
+    *
+    * @return $this
+    */
+    public function setEnableAcl($enableAcl)
+    {
+        $this->container['enableAcl'] = $enableAcl;
         return $this;
     }
 

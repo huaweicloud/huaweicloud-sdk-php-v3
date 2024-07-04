@@ -26,8 +26,8 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * hostId  主机id
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -50,8 +50,8 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * hostId  主机id
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -95,8 +95,8 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * hostId  主机id
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -119,8 +119,8 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * hostId  主机id
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -143,8 +143,8 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危
     * standard  标准类型，包含如下:   - cn_standard : 等保合规标准   - hw_standard : 云安全实践标准
     * hostId  主机id
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -443,7 +443,7 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -455,7 +455,7 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -467,7 +467,7 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -479,7 +479,7 @@ class ListRiskConfigsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

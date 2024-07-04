@@ -21,13 +21,13 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
-    * imageName  镜像名称 id
+    * imageName  镜像名称
     * imageVersion  镜像版本
     * latestVersion  仅关注最新版本镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
@@ -69,13 +69,13 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
-    * imageName  镜像名称 id
+    * imageName  镜像名称
     * imageVersion  镜像版本
     * latestVersion  仅关注最新版本镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
@@ -138,13 +138,13 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
-    * imageName  镜像名称 id
+    * imageName  镜像名称
     * imageVersion  镜像版本
     * latestVersion  仅关注最新版本镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
@@ -186,13 +186,13 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
-    * imageName  镜像名称 id
+    * imageName  镜像名称
     * imageVersion  镜像版本
     * latestVersion  仅关注最新版本镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
@@ -234,13 +234,13 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
-    * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
     * namespace  组织名称
-    * imageName  镜像名称 id
+    * imageName  镜像名称
     * imageVersion  镜像版本
     * latestVersion  仅关注最新版本镜像
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * limit  每页显示个数
+    * offset  偏移量：指定返回记录的开始位置
+    * limit  每页显示数量
     * imageType  镜像类型，包含如下:   - private_image : 私有镜像仓库   - shared_image : 共享镜像仓库   - local_image : 本地镜像   - instance_image : 企业镜像
     * scanStatus  扫描状态，包含如下:   - unscan : 未扫描   - success : 扫描完成   - scanning : 扫描中   - failed : 扫描失败   - waiting_for_scan : 等待扫描
     * instanceName  企业镜像实例名称
@@ -524,7 +524,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    *  企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return string|null
     */
@@ -536,7 +536,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 租户企业项目ID，查询所有企业项目时填写：all_granted_eps
+    * @param string|null $enterpriseProjectId 企业项目ID，查询所有企业项目时填写：all_granted_eps
     *
     * @return $this
     */
@@ -572,7 +572,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets imageName
-    *  镜像名称 id
+    *  镜像名称
     *
     * @return string|null
     */
@@ -584,7 +584,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets imageName
     *
-    * @param string|null $imageName 镜像名称 id
+    * @param string|null $imageName 镜像名称
     *
     * @return $this
     */
@@ -644,7 +644,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -656,7 +656,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */
@@ -668,7 +668,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -680,7 +680,7 @@ class ListSwrImageRepositoryRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */

@@ -22,8 +22,8 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线、中文，特殊字符!@.-等，不包括中文标点符号
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -40,8 +40,8 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线、中文，特殊字符!@.-等，不包括中文标点符号
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -79,8 +79,8 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线、中文，特殊字符!@.-等，不包括中文标点符号
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -97,8 +97,8 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线、中文，特殊字符!@.-等，不包括中文标点符号
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -115,8 +115,8 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * userName  账号名称，参考windows文件命名规则，支持字母、数字、下划线、中文，特殊字符!@.-等，不包括中文标点符号
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     *
     * @var string[]
@@ -296,7 +296,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -308,7 +308,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -320,7 +320,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -332,7 +332,7 @@ class ListUserStatisticsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

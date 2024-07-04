@@ -614,22 +614,16 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['ip'] === null) {
-            $invalidProperties[] = "'ip' can't be null";
-        }
-            if ((mb_strlen($this->container['ip']) > 255)) {
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) > 255)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['ip']) < 0)) {
+            if (!is_null($this->container['ip']) && (mb_strlen($this->container['ip']) < 0)) {
                 $invalidProperties[] = "invalid value for 'ip', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-            if ((mb_strlen($this->container['name']) > 255)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 255)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['name']) < 0)) {
+            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['hostname']) && (mb_strlen($this->container['hostname']) > 255)) {
@@ -638,9 +632,6 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hostname']) && (mb_strlen($this->container['hostname']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostname', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['osType'] === null) {
-            $invalidProperties[] = "'osType' can't be null";
-        }
             $allowedValues = $this->getOsTypeAllowableValues();
                 if (!is_null($this->container['osType']) && !in_array($this->container['osType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -649,10 +640,10 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['osType']) > 255)) {
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) > 255)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['osType']) < 0)) {
+            if (!is_null($this->container['osType']) && (mb_strlen($this->container['osType']) < 0)) {
                 $invalidProperties[] = "invalid value for 'osType', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['osVersion']) && (mb_strlen($this->container['osVersion']) > 255)) {
@@ -725,13 +716,10 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['systemDir']) && (mb_strlen($this->container['systemDir']) < 0)) {
                 $invalidProperties[] = "invalid value for 'systemDir', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['agentVersion'] === null) {
-            $invalidProperties[] = "'agentVersion' can't be null";
-        }
-            if ((mb_strlen($this->container['agentVersion']) > 255)) {
+            if (!is_null($this->container['agentVersion']) && (mb_strlen($this->container['agentVersion']) > 255)) {
                 $invalidProperties[] = "invalid value for 'agentVersion', the character length must be smaller than or equal to 255.";
             }
-            if ((mb_strlen($this->container['agentVersion']) < 0)) {
+            if (!is_null($this->container['agentVersion']) && (mb_strlen($this->container['agentVersion']) < 0)) {
                 $invalidProperties[] = "invalid value for 'agentVersion', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['kernelVersion']) && (mb_strlen($this->container['kernelVersion']) > 255)) {
@@ -818,7 +806,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * Gets ip
     *  源端服务器ip，注册源端时必选，更新非必选
     *
-    * @return string
+    * @return string|null
     */
     public function getIp()
     {
@@ -828,7 +816,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip 源端服务器ip，注册源端时必选，更新非必选
+    * @param string|null $ip 源端服务器ip，注册源端时必选，更新非必选
     *
     * @return $this
     */
@@ -842,7 +830,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * Gets name
     *  用来区分不同源端服务器的名称
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -852,7 +840,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 用来区分不同源端服务器的名称
+    * @param string|null $name 用来区分不同源端服务器的名称
     *
     * @return $this
     */
@@ -890,7 +878,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * Gets osType
     *  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     *
-    * @return string
+    * @return string|null
     */
     public function getOsType()
     {
@@ -900,7 +888,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets osType
     *
-    * @param string $osType 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
+    * @param string|null $osType 源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     *
     * @return $this
     */
@@ -1370,7 +1358,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     * Gets agentVersion
     *  Agent版本
     *
-    * @return string
+    * @return string|null
     */
     public function getAgentVersion()
     {
@@ -1380,7 +1368,7 @@ class PostSourceServerBody implements ModelInterface, ArrayAccess
     /**
     * Sets agentVersion
     *
-    * @param string $agentVersion Agent版本
+    * @param string|null $agentVersion Agent版本
     *
     * @return $this
     */

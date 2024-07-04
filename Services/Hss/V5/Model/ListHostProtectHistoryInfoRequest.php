@@ -26,7 +26,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * hostName  服务器名称
     * hostIp  服务器ip
     * filePath  防护文件
@@ -56,7 +56,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * hostName  服务器名称
     * hostIp  服务器ip
     * filePath  防护文件
@@ -107,7 +107,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * hostName  服务器名称
     * hostIp  服务器ip
     * filePath  防护文件
@@ -137,7 +137,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * hostName  服务器名称
     * hostIp  服务器ip
     * filePath  防护文件
@@ -167,7 +167,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     * startTime  起始时间(ms)
     * endTime  终止时间(ms)
     * limit  limit
-    * offset  offset
+    * offset  偏移量：指定返回记录的开始位置
     * hostName  服务器名称
     * hostIp  服务器ip
     * filePath  防护文件
@@ -509,7 +509,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  offset
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int
     */
@@ -521,7 +521,7 @@ class ListHostProtectHistoryInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int $offset offset
+    * @param int $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

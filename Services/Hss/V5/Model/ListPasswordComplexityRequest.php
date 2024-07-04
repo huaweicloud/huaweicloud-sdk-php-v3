@@ -24,8 +24,8 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -44,8 +44,8 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -85,8 +85,8 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -105,8 +105,8 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -125,8 +125,8 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     * hostName  服务器名称
     * hostIp  服务器IP地址
     * hostId  主机id，不赋值时，查租户所有主机
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -361,7 +361,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -373,7 +373,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -397,7 +397,7 @@ class ListPasswordComplexityRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

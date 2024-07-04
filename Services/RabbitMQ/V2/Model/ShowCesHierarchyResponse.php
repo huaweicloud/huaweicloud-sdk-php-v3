@@ -24,8 +24,8 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     * dimensions  监控维度。
     * instanceIds  实例信息。
     * nodes  节点信息。
-    * queues  队列信息。
-    * vhosts  vhost信息
+    * queues  Queue信息。
+    * vhosts  Vhost信息
     * exchanges  exchange信息
     * groups  消费组信息。
     *
@@ -46,8 +46,8 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     * dimensions  监控维度。
     * instanceIds  实例信息。
     * nodes  节点信息。
-    * queues  队列信息。
-    * vhosts  vhost信息
+    * queues  Queue信息。
+    * vhosts  Vhost信息
     * exchanges  exchange信息
     * groups  消费组信息。
     *
@@ -89,8 +89,8 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     * dimensions  监控维度。
     * instanceIds  实例信息。
     * nodes  节点信息。
-    * queues  队列信息。
-    * vhosts  vhost信息
+    * queues  Queue信息。
+    * vhosts  Vhost信息
     * exchanges  exchange信息
     * groups  消费组信息。
     *
@@ -111,8 +111,8 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     * dimensions  监控维度。
     * instanceIds  实例信息。
     * nodes  节点信息。
-    * queues  队列信息。
-    * vhosts  vhost信息
+    * queues  Queue信息。
+    * vhosts  Vhost信息
     * exchanges  exchange信息
     * groups  消费组信息。
     *
@@ -133,8 +133,8 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     * dimensions  监控维度。
     * instanceIds  实例信息。
     * nodes  节点信息。
-    * queues  队列信息。
-    * vhosts  vhost信息
+    * queues  Queue信息。
+    * vhosts  Vhost信息
     * exchanges  exchange信息
     * groups  消费组信息。
     *
@@ -313,7 +313,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets queues
-    *  队列信息。
+    *  Queue信息。
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespQueues[]|null
     */
@@ -325,7 +325,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets queues
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespQueues[]|null $queues 队列信息。
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespQueues[]|null $queues Queue信息。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhosts
-    *  vhost信息
+    *  Vhost信息
     *
     * @return \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespVhosts[]|null
     */
@@ -349,7 +349,7 @@ class ShowCesHierarchyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets vhosts
     *
-    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespVhosts[]|null $vhosts vhost信息
+    * @param \HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowCeshierarchyRespVhosts[]|null $vhosts Vhost信息
     *
     * @return $this
     */

@@ -30,6 +30,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * timeArg  时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'key' => 'string',
             'backupKey' => 'string',
             'signArg' => 'string',
-            'timeFormat' => 'string'
+            'timeFormat' => 'string',
+            'timeArg' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * timeArg  时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
         'key' => null,
         'backupKey' => null,
         'signArg' => null,
-        'timeFormat' => null
+        'timeFormat' => null,
+        'timeArg' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * timeArg  时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'key' => 'key',
             'backupKey' => 'backup_key',
             'signArg' => 'sign_arg',
-            'timeFormat' => 'time_format'
+            'timeFormat' => 'time_format',
+            'timeArg' => 'time_arg'
     ];
 
     /**
@@ -135,6 +141,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * timeArg  时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'key' => 'setKey',
             'backupKey' => 'setBackupKey',
             'signArg' => 'setSignArg',
-            'timeFormat' => 'setTimeFormat'
+            'timeFormat' => 'setTimeFormat',
+            'timeArg' => 'setTimeArg'
     ];
 
     /**
@@ -163,6 +171,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
     * backupKey  鉴权KEY（备） 由6-32位大小写字母、数字构成。
     * signArg  鉴权参数：1-100位可以由大小写字母、数字、下划线构成（不能以数字开头）。
     * timeFormat  时间格式 dec：十进制 hex：十六进制 鉴权方式A：只支持十进制 鉴权方式B：只支持十进制 鉴权方式C1：只支持十六进制鉴权方式 鉴权方式C2：支持十进制/十六进制
+    * timeArg  时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class UrlAuth implements ModelInterface, ArrayAccess
             'key' => 'getKey',
             'backupKey' => 'getBackupKey',
             'signArg' => 'getSignArg',
-            'timeFormat' => 'getTimeFormat'
+            'timeFormat' => 'getTimeFormat',
+            'timeArg' => 'getTimeArg'
     ];
 
     /**
@@ -247,6 +257,7 @@ class UrlAuth implements ModelInterface, ArrayAccess
         $this->container['backupKey'] = isset($data['backupKey']) ? $data['backupKey'] : null;
         $this->container['signArg'] = isset($data['signArg']) ? $data['signArg'] : null;
         $this->container['timeFormat'] = isset($data['timeFormat']) ? $data['timeFormat'] : null;
+        $this->container['timeArg'] = isset($data['timeArg']) ? $data['timeArg'] : null;
     }
 
     /**
@@ -511,6 +522,30 @@ class UrlAuth implements ModelInterface, ArrayAccess
     public function setTimeFormat($timeFormat)
     {
         $this->container['timeFormat'] = $timeFormat;
+        return $this;
+    }
+
+    /**
+    * Gets timeArg
+    *  时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
+    *
+    * @return string|null
+    */
+    public function getTimeArg()
+    {
+        return $this->container['timeArg'];
+    }
+
+    /**
+    * Sets timeArg
+    *
+    * @param string|null $timeArg 时间参数名称：当type为“type_c2”时，该字段可选。由1-100个字符组成。必须以字母开头，后面可以衔接任意数字、字母和下划线，不允许出现其他特殊符号。鉴权方式为C2时，不传或传空默认设置为“timestamp”。
+    *
+    * @return $this
+    */
+    public function setTimeArg($timeArg)
+    {
+        $this->container['timeArg'] = $timeArg;
         return $this;
     }
 

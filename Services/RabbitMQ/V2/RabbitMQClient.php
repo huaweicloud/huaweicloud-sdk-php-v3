@@ -282,6 +282,71 @@ class RabbitMQClient extends Client
     }
 
     /**
+     * 创建用户
+     *
+     * 创建用户（仅AMQP版本支持）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createUser($request)
+    {
+        return $this->createUserWithHttpInfo($request);
+    }
+
+    public function createUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateUserResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateUserRequest');
+    }
+
+    /**
      * 删除后台任务管理中的指定记录
      *
      * 删除后台任务管理中的指定记录。
@@ -406,6 +471,71 @@ class RabbitMQClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteInstanceResponse',
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteInstanceRequest');
+    }
+
+    /**
+     * 删除用户
+     *
+     * 删除用户（仅AMQP版本支持）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteUser($request)
+    {
+        return $this->deleteUserWithHttpInfo($request);
+    }
+
+    public function deleteUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/users/{user_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['userName'] !== null) {
+            $pathParams['user_name'] = $localVarParams['userName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteUserResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteUserRequest');
     }
 
     /**
@@ -814,6 +944,74 @@ class RabbitMQClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsResponse',
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListProductsRequest');
+    }
+
+    /**
+     * 查询用户列表
+     *
+     * 查询用户列表（仅AMQP版本支持）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUser($request)
+    {
+        return $this->listUserWithHttpInfo($request);
+    }
+
+    public function listUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListUserResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListUserRequest');
     }
 
     /**
@@ -1653,6 +1851,1038 @@ class RabbitMQClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdatePluginsResponse',
             $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdatePluginsRequest');
+    }
+
+    /**
+     * 修改用户参数
+     *
+     * 修改用户参数（仅AMQP版本支持）。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateUser($request)
+    {
+        return $this->updateUserWithHttpInfo($request);
+    }
+
+    public function updateUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/instances/{instance_id}/users/{user_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['userName'] !== null) {
+            $pathParams['user_name'] = $localVarParams['userName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateUserResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\UpdateUserRequest');
+    }
+
+    /**
+     * 添加绑定
+     *
+     * 添加绑定。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createBinding($request)
+    {
+        return $this->createBindingWithHttpInfo($request);
+    }
+
+    public function createBindingWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/exchanges/{exchange}/binding';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['exchange'] !== null) {
+            $pathParams['exchange'] = $localVarParams['exchange'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateBindingResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateBindingRequest');
+    }
+
+    /**
+     * 删除绑定
+     *
+     * 删除绑定。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteBinding($request)
+    {
+        return $this->deleteBindingWithHttpInfo($request);
+    }
+
+    public function deleteBindingWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/exchanges/{exchange}/destination-type/{destination_type}/destination/{destination}/properties-key/{properties_key}/unbinding';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['exchange'] !== null) {
+            $pathParams['exchange'] = $localVarParams['exchange'];
+        }
+        if ($localVarParams['destinationType'] !== null) {
+            $pathParams['destination_type'] = $localVarParams['destinationType'];
+        }
+        if ($localVarParams['destination'] !== null) {
+            $pathParams['destination'] = $localVarParams['destination'];
+        }
+        if ($localVarParams['propertiesKey'] !== null) {
+            $pathParams['properties_key'] = $localVarParams['propertiesKey'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteBindingResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteBindingRequest');
+    }
+
+    /**
+     * 查询Exchange绑定信息列表
+     *
+     * 查询Exchange绑定信息列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBindings($request)
+    {
+        return $this->listBindingsWithHttpInfo($request);
+    }
+
+    public function listBindingsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/exchanges/{exchange}/binding';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['exchange'] !== null) {
+            $pathParams['exchange'] = $localVarParams['exchange'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListBindingsResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListBindingsRequest');
+    }
+
+    /**
+     * 批量删除指定Exchange
+     *
+     * 批量删除指定Exchange。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteExchanges($request)
+    {
+        return $this->batchDeleteExchangesWithHttpInfo($request);
+    }
+
+    public function batchDeleteExchangesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/exchanges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\BatchDeleteExchangesResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\BatchDeleteExchangesRequest');
+    }
+
+    /**
+     * 创建Exchange
+     *
+     * 创建Exchange。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createExchange($request)
+    {
+        return $this->createExchangeWithHttpInfo($request);
+    }
+
+    public function createExchangeWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/exchanges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateExchangeResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateExchangeRequest');
+    }
+
+    /**
+     * 查询Exchange列表
+     *
+     * 查询Exchange列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listExchanges($request)
+    {
+        return $this->listExchangesWithHttpInfo($request);
+    }
+
+    public function listExchangesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/exchanges';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListExchangesResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListExchangesRequest');
+    }
+
+    /**
+     * 批量删除指定Queue
+     *
+     * 批量删除指定Queue。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteQueues($request)
+    {
+        return $this->batchDeleteQueuesWithHttpInfo($request);
+    }
+
+    public function batchDeleteQueuesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/queues';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\BatchDeleteQueuesResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\BatchDeleteQueuesRequest');
+    }
+
+    /**
+     * 创建Queue
+     *
+     * 创建Queue。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createQueue($request)
+    {
+        return $this->createQueueWithHttpInfo($request);
+    }
+
+    public function createQueueWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/queues';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateQueueResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateQueueRequest');
+    }
+
+    /**
+     * 清空Queue消息
+     *
+     * 清空Queue消息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteQueueInfo($request)
+    {
+        return $this->deleteQueueInfoWithHttpInfo($request);
+    }
+
+    public function deleteQueueInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/queues/{queue}/contents';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['queue'] !== null) {
+            $pathParams['queue'] = $localVarParams['queue'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteQueueInfoResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\DeleteQueueInfoRequest');
+    }
+
+    /**
+     * 查询所属Vhost下Queue的列表
+     *
+     * 查询所属Vhost下Queue的列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listQueues($request)
+    {
+        return $this->listQueuesWithHttpInfo($request);
+    }
+
+    public function listQueuesWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/queues';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListQueuesResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListQueuesRequest');
+    }
+
+    /**
+     * 查询指定Queue详情
+     *
+     * 查询指定Queue详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showQueueDetails($request)
+    {
+        return $this->showQueueDetailsWithHttpInfo($request);
+    }
+
+    public function showQueueDetailsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts/{vhost}/queues/{queue}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['vhost'] !== null) {
+            $pathParams['vhost'] = $localVarParams['vhost'];
+        }
+        if ($localVarParams['queue'] !== null) {
+            $pathParams['queue'] = $localVarParams['queue'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowQueueDetailsResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ShowQueueDetailsRequest');
+    }
+
+    /**
+     * 批量删除指定Vhost
+     *
+     * 批量删除指定Vhost。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteVhosts($request)
+    {
+        return $this->batchDeleteVhostsWithHttpInfo($request);
+    }
+
+    public function batchDeleteVhostsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\BatchDeleteVhostsResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\BatchDeleteVhostsRequest');
+    }
+
+    /**
+     * 创建Vhost
+     *
+     * 创建Vhost。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVhost($request)
+    {
+        return $this->createVhostWithHttpInfo($request);
+    }
+
+    public function createVhostWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateVhostResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\CreateVhostRequest');
+    }
+
+    /**
+     * 查询Vhost列表
+     *
+     * 查询Vhost列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVhosts($request)
+    {
+        return $this->listVhostsWithHttpInfo($request);
+    }
+
+    public function listVhostsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/rabbitmq/{project_id}/instances/{instance_id}/vhosts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListVhostsResponse',
+            $requestType='\HuaweiCloud\SDK\RabbitMQ\V2\Model\ListVhostsRequest');
     }
 
     protected function callApi(

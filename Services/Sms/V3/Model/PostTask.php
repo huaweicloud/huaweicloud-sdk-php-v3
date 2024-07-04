@@ -23,6 +23,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * name  任务名称
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
+    * autoStart  是否自动启动
     * osType  操作系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
@@ -31,8 +32,10 @@ class PostTask implements ModelInterface, ArrayAccess
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
+    * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
     * usePublicIp  是否使用公网ip
+    * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
@@ -43,6 +46,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'name' => 'string',
             'type' => 'string',
             'startTargetServer' => 'bool',
+            'autoStart' => 'bool',
             'osType' => 'string',
             'sourceServer' => '\HuaweiCloud\SDK\Sms\V3\Model\SourceServerByTask',
             'targetServer' => '\HuaweiCloud\SDK\Sms\V3\Model\TargetServerByTask',
@@ -51,8 +55,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'projectName' => 'string',
             'projectId' => 'string',
+            'priority' => 'int',
             'vmTemplateId' => 'string',
             'usePublicIp' => 'bool',
+            'useIpv6' => 'bool',
             'syncing' => 'bool',
             'existServer' => 'bool',
             'startNetworkCheck' => 'bool'
@@ -63,6 +69,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * name  任务名称
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
+    * autoStart  是否自动启动
     * osType  操作系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
@@ -71,8 +78,10 @@ class PostTask implements ModelInterface, ArrayAccess
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
+    * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
     * usePublicIp  是否使用公网ip
+    * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
@@ -83,6 +92,7 @@ class PostTask implements ModelInterface, ArrayAccess
         'name' => null,
         'type' => null,
         'startTargetServer' => null,
+        'autoStart' => null,
         'osType' => null,
         'sourceServer' => null,
         'targetServer' => null,
@@ -91,8 +101,10 @@ class PostTask implements ModelInterface, ArrayAccess
         'regionId' => null,
         'projectName' => null,
         'projectId' => null,
+        'priority' => 'int32',
         'vmTemplateId' => null,
         'usePublicIp' => null,
+        'useIpv6' => null,
         'syncing' => null,
         'existServer' => null,
         'startNetworkCheck' => null
@@ -124,6 +136,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * name  任务名称
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
+    * autoStart  是否自动启动
     * osType  操作系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
@@ -132,8 +145,10 @@ class PostTask implements ModelInterface, ArrayAccess
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
+    * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
     * usePublicIp  是否使用公网ip
+    * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
@@ -144,6 +159,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'name' => 'name',
             'type' => 'type',
             'startTargetServer' => 'start_target_server',
+            'autoStart' => 'auto_start',
             'osType' => 'os_type',
             'sourceServer' => 'source_server',
             'targetServer' => 'target_server',
@@ -152,8 +168,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'projectName' => 'project_name',
             'projectId' => 'project_id',
+            'priority' => 'priority',
             'vmTemplateId' => 'vm_template_id',
             'usePublicIp' => 'use_public_ip',
+            'useIpv6' => 'use_ipv6',
             'syncing' => 'syncing',
             'existServer' => 'exist_server',
             'startNetworkCheck' => 'start_network_check'
@@ -164,6 +182,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * name  任务名称
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
+    * autoStart  是否自动启动
     * osType  操作系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
@@ -172,8 +191,10 @@ class PostTask implements ModelInterface, ArrayAccess
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
+    * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
     * usePublicIp  是否使用公网ip
+    * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
@@ -184,6 +205,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'type' => 'setType',
             'startTargetServer' => 'setStartTargetServer',
+            'autoStart' => 'setAutoStart',
             'osType' => 'setOsType',
             'sourceServer' => 'setSourceServer',
             'targetServer' => 'setTargetServer',
@@ -192,8 +214,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'projectName' => 'setProjectName',
             'projectId' => 'setProjectId',
+            'priority' => 'setPriority',
             'vmTemplateId' => 'setVmTemplateId',
             'usePublicIp' => 'setUsePublicIp',
+            'useIpv6' => 'setUseIpv6',
             'syncing' => 'setSyncing',
             'existServer' => 'setExistServer',
             'startNetworkCheck' => 'setStartNetworkCheck'
@@ -204,6 +228,7 @@ class PostTask implements ModelInterface, ArrayAccess
     * name  任务名称
     * type  任务类型 MIGRATE_FILE:文件级迁移 MIGRATE_BLOCK:块级迁移
     * startTargetServer  迁移后是否启动目的端虚拟机
+    * autoStart  是否自动启动
     * osType  操作系统类型
     * sourceServer  sourceServer
     * targetServer  targetServer
@@ -212,8 +237,10 @@ class PostTask implements ModelInterface, ArrayAccess
     * regionId  region ID
     * projectName  项目名称
     * projectId  项目ID
+    * priority  优先级。默认为1
     * vmTemplateId  自动创建虚拟机使用模板
     * usePublicIp  是否使用公网ip
+    * useIpv6  是否使用ipv6
     * syncing  复制或者同步后是否会继续持续同步，不添加则默认是false
     * existServer  是否存在服务，如果存在，则创建任务
     * startNetworkCheck  是否开启网络检测
@@ -224,6 +251,7 @@ class PostTask implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'type' => 'getType',
             'startTargetServer' => 'getStartTargetServer',
+            'autoStart' => 'getAutoStart',
             'osType' => 'getOsType',
             'sourceServer' => 'getSourceServer',
             'targetServer' => 'getTargetServer',
@@ -232,8 +260,10 @@ class PostTask implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'projectName' => 'getProjectName',
             'projectId' => 'getProjectId',
+            'priority' => 'getPriority',
             'vmTemplateId' => 'getVmTemplateId',
             'usePublicIp' => 'getUsePublicIp',
+            'useIpv6' => 'getUseIpv6',
             'syncing' => 'getSyncing',
             'existServer' => 'getExistServer',
             'startNetworkCheck' => 'getStartNetworkCheck'
@@ -315,6 +345,7 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['startTargetServer'] = isset($data['startTargetServer']) ? $data['startTargetServer'] : null;
+        $this->container['autoStart'] = isset($data['autoStart']) ? $data['autoStart'] : null;
         $this->container['osType'] = isset($data['osType']) ? $data['osType'] : null;
         $this->container['sourceServer'] = isset($data['sourceServer']) ? $data['sourceServer'] : null;
         $this->container['targetServer'] = isset($data['targetServer']) ? $data['targetServer'] : null;
@@ -323,8 +354,10 @@ class PostTask implements ModelInterface, ArrayAccess
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['projectName'] = isset($data['projectName']) ? $data['projectName'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['vmTemplateId'] = isset($data['vmTemplateId']) ? $data['vmTemplateId'] : null;
         $this->container['usePublicIp'] = isset($data['usePublicIp']) ? $data['usePublicIp'] : null;
+        $this->container['useIpv6'] = isset($data['useIpv6']) ? $data['useIpv6'] : null;
         $this->container['syncing'] = isset($data['syncing']) ? $data['syncing'] : null;
         $this->container['existServer'] = isset($data['existServer']) ? $data['existServer'] : null;
         $this->container['startNetworkCheck'] = isset($data['startNetworkCheck']) ? $data['startNetworkCheck'] : null;
@@ -504,6 +537,30 @@ class PostTask implements ModelInterface, ArrayAccess
     public function setStartTargetServer($startTargetServer)
     {
         $this->container['startTargetServer'] = $startTargetServer;
+        return $this;
+    }
+
+    /**
+    * Gets autoStart
+    *  是否自动启动
+    *
+    * @return bool|null
+    */
+    public function getAutoStart()
+    {
+        return $this->container['autoStart'];
+    }
+
+    /**
+    * Sets autoStart
+    *
+    * @param bool|null $autoStart 是否自动启动
+    *
+    * @return $this
+    */
+    public function setAutoStart($autoStart)
+    {
+        $this->container['autoStart'] = $autoStart;
         return $this;
     }
 
@@ -700,6 +757,30 @@ class PostTask implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets priority
+    *  优先级。默认为1
+    *
+    * @return int|null
+    */
+    public function getPriority()
+    {
+        return $this->container['priority'];
+    }
+
+    /**
+    * Sets priority
+    *
+    * @param int|null $priority 优先级。默认为1
+    *
+    * @return $this
+    */
+    public function setPriority($priority)
+    {
+        $this->container['priority'] = $priority;
+        return $this;
+    }
+
+    /**
     * Gets vmTemplateId
     *  自动创建虚拟机使用模板
     *
@@ -744,6 +825,30 @@ class PostTask implements ModelInterface, ArrayAccess
     public function setUsePublicIp($usePublicIp)
     {
         $this->container['usePublicIp'] = $usePublicIp;
+        return $this;
+    }
+
+    /**
+    * Gets useIpv6
+    *  是否使用ipv6
+    *
+    * @return bool|null
+    */
+    public function getUseIpv6()
+    {
+        return $this->container['useIpv6'];
+    }
+
+    /**
+    * Sets useIpv6
+    *
+    * @param bool|null $useIpv6 是否使用ipv6
+    *
+    * @return $this
+    */
+    public function setUseIpv6($useIpv6)
+    {
+        $this->container['useIpv6'] = $useIpv6;
         return $this;
     }
 

@@ -28,6 +28,8 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class UrlDomain implements ModelInterface, ArrayAccess
             'sslName' => 'string',
             'minSslVersion' => 'string',
             'verifiedClientCertificateEnabled' => 'bool',
-            'isHasTrustedRootCa' => 'bool'
+            'isHasTrustedRootCa' => 'bool',
+            'ingressHttpPort' => 'int',
+            'ingressHttpsPort' => 'int'
     ];
 
     /**
@@ -52,6 +56,8 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class UrlDomain implements ModelInterface, ArrayAccess
         'sslName' => null,
         'minSslVersion' => null,
         'verifiedClientCertificateEnabled' => null,
-        'isHasTrustedRootCa' => null
+        'isHasTrustedRootCa' => null,
+        'ingressHttpPort' => null,
+        'ingressHttpsPort' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class UrlDomain implements ModelInterface, ArrayAccess
             'sslName' => 'ssl_name',
             'minSslVersion' => 'min_ssl_version',
             'verifiedClientCertificateEnabled' => 'verified_client_certificate_enabled',
-            'isHasTrustedRootCa' => 'is_has_trusted_root_ca'
+            'isHasTrustedRootCa' => 'is_has_trusted_root_ca',
+            'ingressHttpPort' => 'ingress_http_port',
+            'ingressHttpsPort' => 'ingress_https_port'
     ];
 
     /**
@@ -121,6 +133,8 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class UrlDomain implements ModelInterface, ArrayAccess
             'sslName' => 'setSslName',
             'minSslVersion' => 'setMinSslVersion',
             'verifiedClientCertificateEnabled' => 'setVerifiedClientCertificateEnabled',
-            'isHasTrustedRootCa' => 'setIsHasTrustedRootCa'
+            'isHasTrustedRootCa' => 'setIsHasTrustedRootCa',
+            'ingressHttpPort' => 'setIngressHttpPort',
+            'ingressHttpsPort' => 'setIngressHttpsPort'
     ];
 
     /**
@@ -145,6 +161,8 @@ class UrlDomain implements ModelInterface, ArrayAccess
     * minSslVersion  最小ssl协议版本号。支持TLSv1.1或TLSv1.2
     * verifiedClientCertificateEnabled  是否开启客户端证书校验。只有绑定证书时，该参数才生效。当绑定证书存在trusted_root_ca时，默认开启；当绑定证书不存在trusted_root_ca时，默认关闭。
     * isHasTrustedRootCa  是否存在信任的根证书CA。当绑定证书存在trusted_root_ca时为true。
+    * ingressHttpPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    * ingressHttpsPort  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class UrlDomain implements ModelInterface, ArrayAccess
             'sslName' => 'getSslName',
             'minSslVersion' => 'getMinSslVersion',
             'verifiedClientCertificateEnabled' => 'getVerifiedClientCertificateEnabled',
-            'isHasTrustedRootCa' => 'getIsHasTrustedRootCa'
+            'isHasTrustedRootCa' => 'getIsHasTrustedRootCa',
+            'ingressHttpPort' => 'getIngressHttpPort',
+            'ingressHttpsPort' => 'getIngressHttpsPort'
     ];
 
     /**
@@ -240,6 +260,8 @@ class UrlDomain implements ModelInterface, ArrayAccess
         $this->container['minSslVersion'] = isset($data['minSslVersion']) ? $data['minSslVersion'] : null;
         $this->container['verifiedClientCertificateEnabled'] = isset($data['verifiedClientCertificateEnabled']) ? $data['verifiedClientCertificateEnabled'] : null;
         $this->container['isHasTrustedRootCa'] = isset($data['isHasTrustedRootCa']) ? $data['isHasTrustedRootCa'] : null;
+        $this->container['ingressHttpPort'] = isset($data['ingressHttpPort']) ? $data['ingressHttpPort'] : null;
+        $this->container['ingressHttpsPort'] = isset($data['ingressHttpsPort']) ? $data['ingressHttpsPort'] : null;
     }
 
     /**
@@ -258,6 +280,18 @@ class UrlDomain implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['ingressHttpPort']) && ($this->container['ingressHttpPort'] > 49151)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpPort', must be smaller than or equal to 49151.";
+            }
+            if (!is_null($this->container['ingressHttpPort']) && ($this->container['ingressHttpPort'] < -1)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpPort', must be bigger than or equal to -1.";
+            }
+            if (!is_null($this->container['ingressHttpsPort']) && ($this->container['ingressHttpsPort'] > 49151)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpsPort', must be smaller than or equal to 49151.";
+            }
+            if (!is_null($this->container['ingressHttpsPort']) && ($this->container['ingressHttpsPort'] < -1)) {
+                $invalidProperties[] = "invalid value for 'ingressHttpsPort', must be bigger than or equal to -1.";
+            }
         return $invalidProperties;
     }
 
@@ -461,6 +495,54 @@ class UrlDomain implements ModelInterface, ArrayAccess
     public function setIsHasTrustedRootCa($isHasTrustedRootCa)
     {
         $this->container['isHasTrustedRootCa'] = $isHasTrustedRootCa;
+        return $this;
+    }
+
+    /**
+    * Gets ingressHttpPort
+    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return int|null
+    */
+    public function getIngressHttpPort()
+    {
+        return $this->container['ingressHttpPort'];
+    }
+
+    /**
+    * Sets ingressHttpPort
+    *
+    * @param int|null $ingressHttpPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用80默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTP协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认80端口；若填写该参数，则必须同时填写https_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return $this
+    */
+    public function setIngressHttpPort($ingressHttpPort)
+    {
+        $this->container['ingressHttpPort'] = $ingressHttpPort;
+        return $this;
+    }
+
+    /**
+    * Gets ingressHttpsPort
+    *  访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return int|null
+    */
+    public function getIngressHttpsPort()
+    {
+        return $this->container['ingressHttpsPort'];
+    }
+
+    /**
+    * Sets ingressHttpsPort
+    *
+    * @param int|null $ingressHttpsPort 访问该域名绑定的http协议入方向端口，-1表示无端口且协议不支持，可使用443默认端口，其他有效端口允许的取值范围为1024~49151，需为实例已开放的HTTPS协议的自定义入方向端口。  当创建域名时，该参数未填表示用默认443端口；若填写该参数，则必须同时填写http_port；若要http_port和https_port同时使用默认端口，则两个参数都不填。  当修改域名时，该参数未填表示不修改该端口。
+    *
+    * @return $this
+    */
+    public function setIngressHttpsPort($ingressHttpsPort)
+    {
+        $this->container['ingressHttpsPort'] = $ingressHttpsPort;
         return $this;
     }
 

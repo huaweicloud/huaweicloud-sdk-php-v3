@@ -25,7 +25,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * vulId  漏洞ID
     * vulName  漏洞名称
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
@@ -59,7 +59,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * vulId  漏洞ID
     * vulName  漏洞名称
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
@@ -114,7 +114,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * vulId  漏洞ID
     * vulName  漏洞名称
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
@@ -148,7 +148,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * vulId  漏洞ID
     * vulName  漏洞名称
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
@@ -182,7 +182,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     * vulId  漏洞ID
     * vulName  漏洞名称
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * repairPriority  修复优先级 Critical 紧急 High  高 Medium 中 Low 低
     * handleStatus  处置状态，包含如下:   - unhandled ：未处理   - handled : 已处理
     * cveId  漏洞编号
@@ -504,7 +504,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -516,7 +516,7 @@ class ListVulnerabilitiesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

@@ -27,8 +27,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * version  软件版本号
     * installDir  安装目录
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -57,8 +57,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * version  软件版本号
     * installDir  安装目录
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -108,8 +108,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * version  软件版本号
     * installDir  安装目录
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -138,8 +138,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * version  软件版本号
     * installDir  安装目录
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -168,8 +168,8 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * version  软件版本号
     * installDir  安装目录
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     * category  类别，默认为host，包含如下： - host：主机 - container：容器
     * partMatch  是否模糊匹配，默认false表示精确匹配
     *
@@ -515,7 +515,7 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -527,7 +527,7 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -539,7 +539,7 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -551,7 +551,7 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

@@ -46,8 +46,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
-    * limit  每页显示个数，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -110,8 +110,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
-    * limit  每页显示个数，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -195,8 +195,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
-    * limit  每页显示个数，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -259,8 +259,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
-    * limit  每页显示个数，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -323,8 +323,8 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     * label  资产标签
     * serverGroup  资产服务器组
     * agentUpgradable  agent是否可升级
-    * limit  每页显示个数，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -1227,7 +1227,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示个数，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -1239,7 +1239,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示个数，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -1251,7 +1251,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -1263,7 +1263,7 @@ class ListHostStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

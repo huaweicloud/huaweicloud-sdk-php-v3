@@ -25,8 +25,8 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * path  进程可执行文件路径
     * category  类型，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -47,8 +47,8 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * path  进程可执行文件路径
     * category  类型，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -90,8 +90,8 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * path  进程可执行文件路径
     * category  类型，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -112,8 +112,8 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * path  进程可执行文件路径
     * category  类型，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -134,8 +134,8 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     * hostIp  主机ip
     * path  进程可执行文件路径
     * category  类型，默认为host，包含如下： - host：主机 - container：容器
-    * limit  每页显示数量，默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * limit  每页显示数量
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -402,7 +402,7 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页显示数量，默认10
+    *  每页显示数量
     *
     * @return int|null
     */
@@ -414,7 +414,7 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页显示数量，默认10
+    * @param int|null $limit 每页显示数量
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -438,7 +438,7 @@ class ListProcessesHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

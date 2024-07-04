@@ -23,7 +23,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     * taskId  任务ID
     * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     *
     * @var string[]
@@ -41,7 +41,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     * taskId  任务ID
     * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     *
     * @var string[]
@@ -80,7 +80,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     * taskId  任务ID
     * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     *
     * @var string[]
@@ -98,7 +98,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     * taskId  任务ID
     * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     *
     * @var string[]
@@ -116,7 +116,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     * taskId  任务ID
     * enterpriseProjectId  企业租户ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanStatus  主机的扫描状态，包含如下：   -scanning : 扫描中   -success : 扫描成功   -failed : 扫描失败
     *
     * @var string[]
@@ -323,7 +323,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -335,7 +335,7 @@ class ListVulScanTaskHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

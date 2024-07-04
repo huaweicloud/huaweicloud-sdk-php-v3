@@ -25,7 +25,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
     * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
     * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
     * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
     * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
     * standard  标准类型，包含如下: - cn_standard : 等保合规标准 - hw_standard : 云安全实践标准
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -391,7 +391,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -403,7 +403,7 @@ class ShowRiskConfigDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

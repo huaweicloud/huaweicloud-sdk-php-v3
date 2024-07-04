@@ -28,7 +28,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     * severity  风险等级，包含如下:   - Security : 安全   - Low : 低危   - Medium : 中危   - High : 高危   - Critical : 危急
     * hostId  主机ID，不赋值时，查租户所有主机
     * limit  每页数量
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -514,7 +514,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -526,7 +526,7 @@ class ListRiskConfigCheckRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0。
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

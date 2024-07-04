@@ -36,7 +36,14 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * machineCode3  机器码第三行。
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * idcardType  身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * idcardType  身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * adjustedImage  身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    * detectBorderIntegrityResult  身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    * detectBlockingWithinBorderResult  身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -59,6 +66,13 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'portraitImage' => 'string',
             'portraitLocation' => 'int[][]',
             'idcardType' => 'string',
+            'adjustedImage' => 'string',
+            'detectBorderIntegrityResult' => 'bool',
+            'detectBlockingWithinBorderResult' => 'bool',
+            'detectBlurResult' => 'bool',
+            'detectGlareResult' => 'bool',
+            'detectTamperingResult' => 'bool',
+            'scoreInfo' => '\HuaweiCloud\SDK\Ocr\V1\Model\CambodianIdCardScoreInformationResult',
             'confidence' => 'object'
     ];
 
@@ -80,7 +94,14 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * machineCode3  机器码第三行。
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * idcardType  身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * idcardType  身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * adjustedImage  身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    * detectBorderIntegrityResult  身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    * detectBlockingWithinBorderResult  身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -103,6 +124,13 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
         'portraitImage' => null,
         'portraitLocation' => 'int32',
         'idcardType' => null,
+        'adjustedImage' => null,
+        'detectBorderIntegrityResult' => null,
+        'detectBlockingWithinBorderResult' => null,
+        'detectBlurResult' => null,
+        'detectGlareResult' => null,
+        'detectTamperingResult' => null,
+        'scoreInfo' => null,
         'confidence' => null
     ];
 
@@ -145,7 +173,14 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * machineCode3  机器码第三行。
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * idcardType  身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * idcardType  身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * adjustedImage  身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    * detectBorderIntegrityResult  身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    * detectBlockingWithinBorderResult  身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -168,6 +203,13 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'portraitImage' => 'portrait_image',
             'portraitLocation' => 'portrait_location',
             'idcardType' => 'idcard_type',
+            'adjustedImage' => 'adjusted_image',
+            'detectBorderIntegrityResult' => 'detect_border_integrity_result',
+            'detectBlockingWithinBorderResult' => 'detect_blocking_within_border_result',
+            'detectBlurResult' => 'detect_blur_result',
+            'detectGlareResult' => 'detect_glare_result',
+            'detectTamperingResult' => 'detect_tampering_result',
+            'scoreInfo' => 'score_info',
             'confidence' => 'confidence'
     ];
 
@@ -189,7 +231,14 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * machineCode3  机器码第三行。
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * idcardType  身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * idcardType  身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * adjustedImage  身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    * detectBorderIntegrityResult  身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    * detectBlockingWithinBorderResult  身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -212,6 +261,13 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'portraitImage' => 'setPortraitImage',
             'portraitLocation' => 'setPortraitLocation',
             'idcardType' => 'setIdcardType',
+            'adjustedImage' => 'setAdjustedImage',
+            'detectBorderIntegrityResult' => 'setDetectBorderIntegrityResult',
+            'detectBlockingWithinBorderResult' => 'setDetectBlockingWithinBorderResult',
+            'detectBlurResult' => 'setDetectBlurResult',
+            'detectGlareResult' => 'setDetectGlareResult',
+            'detectTamperingResult' => 'setDetectTamperingResult',
+            'scoreInfo' => 'setScoreInfo',
             'confidence' => 'setConfidence'
     ];
 
@@ -233,7 +289,14 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * machineCode3  机器码第三行。
     * portraitImage  头像的base64编码。 当输入参数“return_portrait_image”为“true”时，才返回该参数。
     * portraitLocation  头像在原图上的位置。 当输入参数“return_portrait_location”为“true”时，才返回该参数。以列表形式显示，包含头像区域四个顶点的二维坐标（x,y），坐标原点为图片左上角，x轴沿水平方向，y轴沿竖直方向。
-    * idcardType  身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * idcardType  身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * adjustedImage  身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    * detectBorderIntegrityResult  身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    * detectBlockingWithinBorderResult  身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -256,6 +319,13 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'portraitImage' => 'getPortraitImage',
             'portraitLocation' => 'getPortraitLocation',
             'idcardType' => 'getIdcardType',
+            'adjustedImage' => 'getAdjustedImage',
+            'detectBorderIntegrityResult' => 'getDetectBorderIntegrityResult',
+            'detectBlockingWithinBorderResult' => 'getDetectBlockingWithinBorderResult',
+            'detectBlurResult' => 'getDetectBlurResult',
+            'detectGlareResult' => 'getDetectGlareResult',
+            'detectTamperingResult' => 'getDetectTamperingResult',
+            'scoreInfo' => 'getScoreInfo',
             'confidence' => 'getConfidence'
     ];
 
@@ -334,6 +404,13 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
         $this->container['portraitImage'] = isset($data['portraitImage']) ? $data['portraitImage'] : null;
         $this->container['portraitLocation'] = isset($data['portraitLocation']) ? $data['portraitLocation'] : null;
         $this->container['idcardType'] = isset($data['idcardType']) ? $data['idcardType'] : null;
+        $this->container['adjustedImage'] = isset($data['adjustedImage']) ? $data['adjustedImage'] : null;
+        $this->container['detectBorderIntegrityResult'] = isset($data['detectBorderIntegrityResult']) ? $data['detectBorderIntegrityResult'] : null;
+        $this->container['detectBlockingWithinBorderResult'] = isset($data['detectBlockingWithinBorderResult']) ? $data['detectBlockingWithinBorderResult'] : null;
+        $this->container['detectBlurResult'] = isset($data['detectBlurResult']) ? $data['detectBlurResult'] : null;
+        $this->container['detectGlareResult'] = isset($data['detectGlareResult']) ? $data['detectGlareResult'] : null;
+        $this->container['detectTamperingResult'] = isset($data['detectTamperingResult']) ? $data['detectTamperingResult'] : null;
+        $this->container['scoreInfo'] = isset($data['scoreInfo']) ? $data['scoreInfo'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
@@ -745,7 +822,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets idcardType
-    *  身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    *  身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
     *
     * @return string|null
     */
@@ -757,13 +834,181 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     /**
     * Sets idcardType
     *
-    * @param string|null $idcardType 身份证的类型。当输入参数“ idcard_type ”为“true”时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
+    * @param string|null $idcardType 身份证的类型。当输入参数\"idcard_type \"为\"true\"时，才返回该参数。取值如下所示： - normal：身份证原件 - copy：复印的身份证
     *
     * @return $this
     */
     public function setIdcardType($idcardType)
     {
         $this->container['idcardType'] = $idcardType;
+        return $this;
+    }
+
+    /**
+    * Gets adjustedImage
+    *  身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    *
+    * @return string|null
+    */
+    public function getAdjustedImage()
+    {
+        return $this->container['adjustedImage'];
+    }
+
+    /**
+    * Sets adjustedImage
+    *
+    * @param string|null $adjustedImage 身份证原图的base64编码。 当输入参数\"return_adjusted_image\"为\"true\"时，才返回该参数。
+    *
+    * @return $this
+    */
+    public function setAdjustedImage($adjustedImage)
+    {
+        $this->container['adjustedImage'] = $adjustedImage;
+        return $this;
+    }
+
+    /**
+    * Gets detectBorderIntegrityResult
+    *  身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectBorderIntegrityResult()
+    {
+        return $this->container['detectBorderIntegrityResult'];
+    }
+
+    /**
+    * Sets detectBorderIntegrityResult
+    *
+    * @param bool|null $detectBorderIntegrityResult 身份证图片边框完整性告警结果，\"true\"表示边框不完整，\"false\"表示边框完整。仅在输入参数detect_border_integrity为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectBorderIntegrityResult($detectBorderIntegrityResult)
+    {
+        $this->container['detectBorderIntegrityResult'] = $detectBorderIntegrityResult;
+        return $this;
+    }
+
+    /**
+    * Gets detectBlockingWithinBorderResult
+    *  身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectBlockingWithinBorderResult()
+    {
+        return $this->container['detectBlockingWithinBorderResult'];
+    }
+
+    /**
+    * Sets detectBlockingWithinBorderResult
+    *
+    * @param bool|null $detectBlockingWithinBorderResult 身份证图像框内是否存在遮挡的告警结果，\"true\"表示边框内部存在遮挡，\"false\"表示边框内部完整。仅在输入参数detect_blocking_within_border为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectBlockingWithinBorderResult($detectBlockingWithinBorderResult)
+    {
+        $this->container['detectBlockingWithinBorderResult'] = $detectBlockingWithinBorderResult;
+        return $this;
+    }
+
+    /**
+    * Gets detectBlurResult
+    *  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectBlurResult()
+    {
+        return $this->container['detectBlurResult'];
+    }
+
+    /**
+    * Sets detectBlurResult
+    *
+    * @param bool|null $detectBlurResult 身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectBlurResult($detectBlurResult)
+    {
+        $this->container['detectBlurResult'] = $detectBlurResult;
+        return $this;
+    }
+
+    /**
+    * Gets detectGlareResult
+    *  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectGlareResult()
+    {
+        return $this->container['detectGlareResult'];
+    }
+
+    /**
+    * Sets detectGlareResult
+    *
+    * @param bool|null $detectGlareResult 身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectGlareResult($detectGlareResult)
+    {
+        $this->container['detectGlareResult'] = $detectGlareResult;
+        return $this;
+    }
+
+    /**
+    * Gets detectTamperingResult
+    *  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectTamperingResult()
+    {
+        return $this->container['detectTamperingResult'];
+    }
+
+    /**
+    * Sets detectTamperingResult
+    *
+    * @param bool|null $detectTamperingResult 身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectTamperingResult($detectTamperingResult)
+    {
+        $this->container['detectTamperingResult'] = $detectTamperingResult;
+        return $this;
+    }
+
+    /**
+    * Gets scoreInfo
+    *  scoreInfo
+    *
+    * @return \HuaweiCloud\SDK\Ocr\V1\Model\CambodianIdCardScoreInformationResult|null
+    */
+    public function getScoreInfo()
+    {
+        return $this->container['scoreInfo'];
+    }
+
+    /**
+    * Sets scoreInfo
+    *
+    * @param \HuaweiCloud\SDK\Ocr\V1\Model\CambodianIdCardScoreInformationResult|null $scoreInfo scoreInfo
+    *
+    * @return $this
+    */
+    public function setScoreInfo($scoreInfo)
+    {
+        $this->container['scoreInfo'] = $scoreInfo;
         return $this;
     }
 

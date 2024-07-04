@@ -23,8 +23,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
-    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
@@ -75,8 +75,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
-    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
@@ -148,8 +148,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
-    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
@@ -200,8 +200,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
-    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
@@ -252,8 +252,8 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * name  实例名称。  由英文字符开头，只能由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * description  实例的描述信息。  长度不超过1024的字符串。[且字符串不能包含\">\"与\"<\"，字符串首字符不能为\"=\",\"+\",\"-\",\"@\"的全角和半角字符。](tag:hcs)  > \\与\"在json报文中属于特殊字符，如果参数值中需要显示\\或者\"字符，请在字符前增加转义字符\\，比如\\\\或者\\\"。
     * engine  消息引擎：rabbitmq。
-    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
-    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    * engineVersion  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    * storageSpace  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     * accessUser  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     * password  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     * vpcId  租户VPC ID。  获取方法如下：登录虚拟私有云服务的控制台界面，在虚拟私有云的详情页面查找VPC ID。
@@ -340,7 +340,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const ENGINE_RABBITMQ = 'rabbitmq';
-    const ENGINE_VERSION__3_8_35 = '3.8.35';
     const BROKER_NUM_1 = 1;
     const BROKER_NUM_3 = 3;
     const BROKER_NUM_5 = 5;
@@ -360,18 +359,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     {
         return [
             self::ENGINE_RABBITMQ,
-        ];
-    }
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getEngineVersionAllowableValues()
-    {
-        return [
-            self::ENGINE_VERSION__3_8_35,
         ];
     }
 
@@ -470,14 +457,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         if ($this->container['engineVersion'] === null) {
             $invalidProperties[] = "'engineVersion' can't be null";
         }
-            $allowedValues = $this->getEngineVersionAllowableValues();
-                if (!is_null($this->container['engineVersion']) && !in_array($this->container['engineVersion'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'engineVersion', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         if ($this->container['storageSpace'] === null) {
             $invalidProperties[] = "'storageSpace' can't be null";
         }
@@ -609,7 +588,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets engineVersion
-    *  消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    *  消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     *
     * @return string
     */
@@ -621,7 +600,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets engineVersion
     *
-    * @param string $engineVersion 消息引擎的版本。   - RabbitMQ版本有：3.8.35[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
+    * @param string $engineVersion 消息引擎的版本。   - RabbitMQ版本有：3.8.35[、AMQP-0-9-1](tag:hws,hws_hk)[和3.7.17](tag:tm,hk_tm,hk_sbc,sbc)。
     *
     * @return $this
     */
@@ -633,7 +612,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets storageSpace
-    *  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    *  消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     *
     * @return int
     */
@@ -645,7 +624,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets storageSpace
     *
-    * @param int $storageSpace 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)      [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
+    * @param int $storageSpace 消息存储空间，单位GB。   [- 单机RabbitMQ实例的存储空间的取值范围100GB~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 单机RabbitMQ实例的存储空间的取值范围100GB~30000GB。](tag:hcs)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB*节点数~90000GB、200GB*节点数~90000GB、300GB*节点数~90000GB。](tag:hws,hws_eu,hws_hk,ocb,hws_ocb,ctc,g42,hk_g42,tm,hk_tm)    [- 集群RabbitMQ实例的存储空间的取值范围为100GB乘以代理数~30000GB乘以代理数。](tag:hcs)
     *
     * @return $this
     */

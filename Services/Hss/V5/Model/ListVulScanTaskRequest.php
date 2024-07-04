@@ -22,7 +22,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanType  扫描任务的类型，包含如下：   -manual : 手动扫描任务   -schedule : 定时扫描任务
     * taskId  扫描任务ID
     * minStartTime  扫描任务开始时间的最小值
@@ -44,7 +44,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanType  扫描任务的类型，包含如下：   -manual : 手动扫描任务   -schedule : 定时扫描任务
     * taskId  扫描任务ID
     * minStartTime  扫描任务开始时间的最小值
@@ -87,7 +87,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanType  扫描任务的类型，包含如下：   -manual : 手动扫描任务   -schedule : 定时扫描任务
     * taskId  扫描任务ID
     * minStartTime  扫描任务开始时间的最小值
@@ -109,7 +109,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanType  扫描任务的类型，包含如下：   -manual : 手动扫描任务   -schedule : 定时扫描任务
     * taskId  扫描任务ID
     * minStartTime  扫描任务开始时间的最小值
@@ -131,7 +131,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseProjectId  租户企业项目ID，查询所有企业项目时填写：all_granted_eps
     * limit  每页显示个数
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * scanType  扫描任务的类型，包含如下：   -manual : 手动扫描任务   -schedule : 定时扫描任务
     * taskId  扫描任务ID
     * minStartTime  扫描任务开始时间的最小值
@@ -333,7 +333,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -345,7 +345,7 @@ class ListVulScanTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
-    * param  操作参数
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
     *
@@ -29,15 +29,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'operation' => 'string',
-            'param' => 'map[string,string]',
+            'templateId' => 'string',
             'switchHce' => 'bool',
             'isNeedConsistencyCheck' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
-    * param  操作参数
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
     *
@@ -45,7 +45,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'operation' => null,
-        'param' => null,
+        'templateId' => null,
         'switchHce' => null,
         'isNeedConsistencyCheck' => null
     ];
@@ -73,8 +73,8 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
-    * param  操作参数
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
     *
@@ -82,15 +82,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'operation' => 'operation',
-            'param' => 'param',
+            'templateId' => 'template_id',
             'switchHce' => 'switch_hce',
             'isNeedConsistencyCheck' => 'is_need_consistency_check'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
-    * param  操作参数
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
     *
@@ -98,15 +98,15 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'operation' => 'setOperation',
-            'param' => 'setParam',
+            'templateId' => 'setTemplateId',
             'switchHce' => 'setSwitchHce',
             'isNeedConsistencyCheck' => 'setIsNeedConsistencyCheck'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
-    * param  操作参数
+    * operation  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
+    * templateId  模板id
     * switchHce  是否切换hce
     * isNeedConsistencyCheck  是否进行一致性校验
     *
@@ -114,7 +114,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'operation' => 'getOperation',
-            'param' => 'getParam',
+            'templateId' => 'getTemplateId',
             'switchHce' => 'getSwitchHce',
             'isNeedConsistencyCheck' => 'getIsNeedConsistencyCheck'
     ];
@@ -161,11 +161,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     }
     const OPERATION_START = 'start';
     const OPERATION_STOP = 'stop';
-    const OPERATION_COLLECT_LOG = 'collect_log';
     const OPERATION_TEST = 'test';
     const OPERATION_CLONE_TEST = 'clone_test';
     const OPERATION_RESTART = 'restart';
-    const OPERATION_SYNC_FAILED_ROLLBACK = 'sync_failed_rollback';
     const OPERATION_NETWORK_CHECK = 'network_check';
     
 
@@ -179,11 +177,9 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
         return [
             self::OPERATION_START,
             self::OPERATION_STOP,
-            self::OPERATION_COLLECT_LOG,
             self::OPERATION_TEST,
             self::OPERATION_CLONE_TEST,
             self::OPERATION_RESTART,
-            self::OPERATION_SYNC_FAILED_ROLLBACK,
             self::OPERATION_NETWORK_CHECK,
         ];
     }
@@ -205,7 +201,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
-        $this->container['param'] = isset($data['param']) ? $data['param'] : null;
+        $this->container['templateId'] = isset($data['templateId']) ? $data['templateId'] : null;
         $this->container['switchHce'] = isset($data['switchHce']) ? $data['switchHce'] : null;
         $this->container['isNeedConsistencyCheck'] = isset($data['isNeedConsistencyCheck']) ? $data['isNeedConsistencyCheck'] : null;
     }
@@ -245,7 +241,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets operation
-    *  操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
+    *  操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
     *
     * @return string
     */
@@ -257,7 +253,7 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     /**
     * Sets operation
     *
-    * @param string $operation 操作任务的具体动作 start:开始任务 stop:停止任务 collect_log:收集日志 test:测试 clone_test:克隆测试 restart:重新开始 sync_failed_rollback:同步失败回滚 network_check:网络质量检测
+    * @param string $operation 操作任务的具体动作 start:开始任务 stop:停止任务 test:测试 clone_test:克隆测试 restart:重新开始 network_check:网络质量检测
     *
     * @return $this
     */
@@ -268,26 +264,26 @@ class UpdateTaskStatusReq implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets param
-    *  操作参数
+    * Gets templateId
+    *  模板id
     *
-    * @return map[string,string]|null
+    * @return string|null
     */
-    public function getParam()
+    public function getTemplateId()
     {
-        return $this->container['param'];
+        return $this->container['templateId'];
     }
 
     /**
-    * Sets param
+    * Sets templateId
     *
-    * @param map[string,string]|null $param 操作参数
+    * @param string|null $templateId 模板id
     *
     * @return $this
     */
-    public function setParam($param)
+    public function setTemplateId($templateId)
     {
-        $this->container['param'] = $param;
+        $this->container['templateId'] = $templateId;
         return $this;
     }
 

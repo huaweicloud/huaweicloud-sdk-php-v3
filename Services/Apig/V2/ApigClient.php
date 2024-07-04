@@ -91,6 +91,71 @@ class ApigClient extends Client
     }
 
     /**
+     * 新增实例的自定义入方向端口
+     *
+     * 新增实例的自定义入方向端口，在同个实例中，一个端口仅能支持一种协议。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addCustomIngressPort($request)
+    {
+        return $this->addCustomIngressPortWithHttpInfo($request);
+    }
+
+    public function addCustomIngressPortWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/custom-ingress-ports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\AddCustomIngressPortResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\AddCustomIngressPortRequest');
+    }
+
+    /**
      * 实例更新或绑定EIP
      *
      * 实例更新或绑定EIP
@@ -422,6 +487,7 @@ class ApigClient extends Client
      * 绑定域名证书
      *
      * 如果创建API时，“定义API请求”使用HTTPS请求协议，那么在独立域名中需要添加SSL证书。
+     * 使用实例自定义入方向端口的特性时，相同的域名会同时绑定证书，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
      * 本章节主要介绍为特定域名绑定证书。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
@@ -2377,6 +2443,71 @@ class ApigClient extends Client
     }
 
     /**
+     * 删除实例指定的自定义入方向端口
+     *
+     * 删除实例指定的自定义入方向端口，不包含默认端口80和443。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteCustomIngressPort($request)
+    {
+        return $this->deleteCustomIngressPortWithHttpInfo($request);
+    }
+
+    public function deleteCustomIngressPortWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/custom-ingress-ports/{ingress_port_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['ingressPortId'] !== null) {
+            $pathParams['ingress_port_id'] = $localVarParams['ingressPortId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\DeleteCustomIngressPortResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\DeleteCustomIngressPortRequest');
+    }
+
+    /**
      * 批量删除实例终端节点连接白名单
      *
      * 批量删除实例终端节点连接白名单。
@@ -3249,7 +3380,7 @@ class ApigClient extends Client
     /**
      * 删除域名证书
      *
-     * 如果域名证书不再需要或者已过期，则可以删除证书内容。
+     * 如果域名证书不再需要或者已过期，则可以删除证书内容。在使用自定义入方向端口的特性时，相同的域名会同时解绑证书。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4689,6 +4820,154 @@ class ApigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListCustomAuthorizersV2Response',
             $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListCustomAuthorizersV2Request');
+    }
+
+    /**
+     * 查询实例指定的自定义入方向端口绑定的域名信息
+     *
+     * 查询实例指定的自定义入方向端口绑定的域名信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCustomIngressPortDomains($request)
+    {
+        return $this->listCustomIngressPortDomainsWithHttpInfo($request);
+    }
+
+    public function listCustomIngressPortDomainsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/custom-ingress-ports/{ingress_port_id}/domains';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['domainName'] !== null) {
+            $queryParams['domain_name'] = $localVarParams['domainName'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['ingressPortId'] !== null) {
+            $pathParams['ingress_port_id'] = $localVarParams['ingressPortId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListCustomIngressPortDomainsResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListCustomIngressPortDomainsRequest');
+    }
+
+    /**
+     * 查询实例的自定义入方向端口列表
+     *
+     * 查询实例的自定义入方向端口列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCustomIngressPorts($request)
+    {
+        return $this->listCustomIngressPortsWithHttpInfo($request);
+    }
+
+    public function listCustomIngressPortsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/custom-ingress-ports';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['protocol'] !== null) {
+            $queryParams['protocol'] = $localVarParams['protocol'];
+        }
+        if ($localVarParams['ingressPort'] !== null) {
+            $queryParams['ingress_port'] = $localVarParams['ingressPort'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListCustomIngressPortsResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListCustomIngressPortsRequest');
     }
 
     /**
@@ -7975,7 +8254,7 @@ class ApigClient extends Client
     /**
      * 修改域名
      *
-     * 修改绑定的域名所对应的配置信息。
+     * 修改绑定的域名所对应的配置信息。使用实例自定义入方向端口的特性时，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12103,7 +12382,7 @@ class ApigClient extends Client
     /**
      * 域名绑定SSL证书
      *
-     * 域名绑定SSL证书。目前暂时仅支持单个绑定，请求体当中的certificate_ids里面有且只能有一个证书ID。
+     * 域名绑定SSL证书。目前暂时仅支持单个绑定，请求体当中的certificate_ids里面有且只能有一个证书ID。使用实例自定义入方向端口的特性时，相同的域名会同时绑定证书，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12174,7 +12453,7 @@ class ApigClient extends Client
     /**
      * SSL证书绑定域名
      *
-     * SSL证书绑定域名。
+     * SSL证书绑定域名。使用实例自定义入方向端口的特性时，相同的域名会同时绑定证书，注意开启/关闭客户端校验会对相同域名的不同端口同时生效。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12239,7 +12518,7 @@ class ApigClient extends Client
     /**
      * 域名解绑SSL证书
      *
-     * 域名解绑SSL证书。目前暂时仅支持单个解绑，请求体当中的certificate_ids里面有且只能有一个证书ID。
+     * 域名解绑SSL证书。目前暂时仅支持单个解绑，请求体当中的certificate_ids里面有且只能有一个证书ID。在使用自定义入方向端口的特性时，相同的域名会同时解绑证书。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12310,7 +12589,7 @@ class ApigClient extends Client
     /**
      * SSL证书解绑域名
      *
-     * SSL证书解绑域名。
+     * SSL证书解绑域名。在使用自定义入方向端口的特性时，相同的域名会同时解绑证书。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

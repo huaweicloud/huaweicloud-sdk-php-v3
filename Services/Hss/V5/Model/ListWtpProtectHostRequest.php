@@ -31,7 +31,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -63,7 +63,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -116,7 +116,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     * protectStatus  防护状态   - closed : 未开启   - opened : 防护中
     * agentStatus  客户端状态   - not_installed : agent未安装   - online : agent在线   - offline : agent不在线
     * limit  默认10
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    * offset  偏移量：指定返回记录的开始位置
     *
     * @var string[]
     */
@@ -634,7 +634,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -646,7 +646,7 @@ class ListWtpProtectHostRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

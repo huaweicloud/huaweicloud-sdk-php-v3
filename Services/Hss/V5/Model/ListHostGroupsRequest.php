@@ -22,7 +22,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * groupName  服务器组名称
     *
@@ -40,7 +40,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * groupName  服务器组名称
     *
@@ -79,7 +79,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * groupName  服务器组名称
     *
@@ -97,7 +97,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * groupName  服务器组名称
     *
@@ -115,7 +115,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * region  Region ID
     * enterpriseProjectId  企业项目ID，查询所有企业项目时填写：all_granted_eps
-    * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * offset  偏移量：指定返回记录的开始位置
     * limit  每页显示个数
     * groupName  服务器组名称
     *
@@ -308,7 +308,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    *  偏移量：指定返回记录的开始位置
     *
     * @return int|null
     */
@@ -320,7 +320,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
+    * @param int|null $offset 偏移量：指定返回记录的开始位置
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  exchange名称。
-    * vhost  对应的vhost。
+    * name  Exchange名称。
+    * vhost  对应的Vhost。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  exchange名称。
-    * vhost  对应的vhost。
+    * name  Exchange名称。
+    * vhost  对应的Vhost。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  exchange名称。
-    * vhost  对应的vhost。
+    * name  Exchange名称。
+    * vhost  对应的Vhost。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  exchange名称。
-    * vhost  对应的vhost。
+    * name  Exchange名称。
+    * vhost  对应的Vhost。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  exchange名称。
-    * vhost  对应的vhost。
+    * name  Exchange名称。
+    * vhost  对应的Vhost。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  exchange名称。
+    *  Exchange名称。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name exchange名称。
+    * @param string|null $name Exchange名称。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
 
     /**
     * Gets vhost
-    *  对应的vhost。
+    *  对应的Vhost。
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class ShowCeshierarchyRespExchanges implements ModelInterface, ArrayAccess
     /**
     * Sets vhost
     *
-    * @param string|null $vhost 对应的vhost。
+    * @param string|null $vhost 对应的Vhost。
     *
     * @return $this
     */

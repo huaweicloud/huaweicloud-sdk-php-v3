@@ -20,7 +20,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  vhost名称。
+    * name  Vhost名称。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  vhost名称。
+    * name  Vhost名称。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  vhost名称。
+    * name  Vhost名称。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  vhost名称。
+    * name  Vhost名称。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  vhost名称。
+    * name  Vhost名称。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  vhost名称。
+    *  Vhost名称。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ShowCeshierarchyRespVhosts implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name vhost名称。
+    * @param string|null $name Vhost名称。
     *
     * @return $this
     */

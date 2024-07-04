@@ -28,7 +28,7 @@ class ListComponentOverviewsResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'components' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ComponentView[]'
+            'components' => '\HuaweiCloud\SDK\ServiceStage\V2\Model\ComponentOverview[]'
     ];
 
     /**
@@ -212,7 +212,7 @@ class ListComponentOverviewsResponse implements ModelInterface, ArrayAccess
     * Gets components
     *  组件部署信息列表。
     *
-    * @return \HuaweiCloud\SDK\ServiceStage\V2\Model\ComponentView[]|null
+    * @return \HuaweiCloud\SDK\ServiceStage\V2\Model\ComponentOverview[]|null
     */
     public function getComponents()
     {
@@ -222,7 +222,7 @@ class ListComponentOverviewsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets components
     *
-    * @param \HuaweiCloud\SDK\ServiceStage\V2\Model\ComponentView[]|null $components 组件部署信息列表。
+    * @param \HuaweiCloud\SDK\ServiceStage\V2\Model\ComponentOverview[]|null $components 组件部署信息列表。
     *
     * @return $this
     */
