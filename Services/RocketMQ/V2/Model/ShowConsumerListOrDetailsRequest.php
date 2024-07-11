@@ -22,7 +22,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  待查询的topic，不指定时查询topic列表，指定时查询详情。
+    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
@@ -40,7 +40,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  待查询的topic，不指定时查询topic列表，指定时查询详情。
+    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
@@ -79,7 +79,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  待查询的topic，不指定时查询topic列表，指定时查询详情。
+    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
@@ -97,7 +97,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  待查询的topic，不指定时查询topic列表，指定时查询详情。
+    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
@@ -115,7 +115,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
     * group  消费组名称。
-    * topic  待查询的topic，不指定时查询topic列表，指定时查询详情。
+    * topic  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     * limit  当次查询返回的最大个数，默认值为10，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     *
@@ -281,7 +281,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  待查询的topic，不指定时查询topic列表，指定时查询详情。
+    *  待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     *
     * @return string|null
     */
@@ -293,7 +293,7 @@ class ShowConsumerListOrDetailsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 待查询的topic，不指定时查询topic列表，指定时查询详情。
+    * @param string|null $topic 待查询的Topic，不指定时查询Topic列表，指定时查询详情。
     *
     * @return $this
     */

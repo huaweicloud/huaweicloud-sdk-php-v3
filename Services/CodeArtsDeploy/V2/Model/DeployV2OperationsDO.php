@@ -20,10 +20,11 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * id  步骤id
     * name  步骤名称
     * description  步骤描述
     * code  下载地址
-    * params  参数
+    * params  步骤详细定义
     * entrance  入口函数
     * version  版本
     * moduleId  模块id
@@ -31,6 +32,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'id' => 'string',
             'name' => 'string',
             'description' => 'string',
             'code' => 'string',
@@ -42,10 +44,11 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * id  步骤id
     * name  步骤名称
     * description  步骤描述
     * code  下载地址
-    * params  参数
+    * params  步骤详细定义
     * entrance  入口函数
     * version  版本
     * moduleId  模块id
@@ -53,6 +56,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'id' => null,
         'name' => null,
         'description' => null,
         'code' => null,
@@ -85,10 +89,11 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * id  步骤id
     * name  步骤名称
     * description  步骤描述
     * code  下载地址
-    * params  参数
+    * params  步骤详细定义
     * entrance  入口函数
     * version  版本
     * moduleId  模块id
@@ -96,6 +101,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'id' => 'id',
             'name' => 'name',
             'description' => 'description',
             'code' => 'code',
@@ -107,10 +113,11 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * id  步骤id
     * name  步骤名称
     * description  步骤描述
     * code  下载地址
-    * params  参数
+    * params  步骤详细定义
     * entrance  入口函数
     * version  版本
     * moduleId  模块id
@@ -118,6 +125,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
             'code' => 'setCode',
@@ -129,10 +137,11 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * id  步骤id
     * name  步骤名称
     * description  步骤描述
     * code  下载地址
-    * params  参数
+    * params  步骤详细定义
     * entrance  入口函数
     * version  版本
     * moduleId  模块id
@@ -140,6 +149,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
             'code' => 'getCode',
@@ -207,6 +217,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
@@ -236,6 +247,30 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets id
+    *  步骤id
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 步骤id
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
     }
 
     /**
@@ -312,7 +347,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
 
     /**
     * Gets params
-    *  参数
+    *  步骤详细定义
     *
     * @return string|null
     */
@@ -324,7 +359,7 @@ class DeployV2OperationsDO implements ModelInterface, ArrayAccess
     /**
     * Sets params
     *
-    * @param string|null $params 参数
+    * @param string|null $params 步骤详细定义
     *
     * @return $this
     */

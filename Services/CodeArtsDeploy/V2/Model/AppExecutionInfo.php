@@ -24,7 +24,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * duration  部署时间
     * isDisable  当前应用是否被禁用
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * isCare  当前用户是否已收藏
     * canModify  是否有编辑权限
@@ -36,8 +36,8 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
-    * createUserId  应用创建者用户ID
-    * createTenantId  应用创建者租户ID
+    * createUserId  应用创建者用户id
+    * createTenantId  应用创建者租户id
     * createTime  创建时间
     * updateTime  修改时间
     * executionTime  最后一次部署时间
@@ -86,7 +86,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * duration  部署时间
     * isDisable  当前应用是否被禁用
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * isCare  当前用户是否已收藏
     * canModify  是否有编辑权限
@@ -98,8 +98,8 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
-    * createUserId  应用创建者用户ID
-    * createTenantId  应用创建者租户ID
+    * createUserId  应用创建者用户id
+    * createTenantId  应用创建者租户id
     * createTime  创建时间
     * updateTime  修改时间
     * executionTime  最后一次部署时间
@@ -169,7 +169,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * duration  部署时间
     * isDisable  当前应用是否被禁用
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * isCare  当前用户是否已收藏
     * canModify  是否有编辑权限
@@ -181,8 +181,8 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
-    * createUserId  应用创建者用户ID
-    * createTenantId  应用创建者租户ID
+    * createUserId  应用创建者用户id
+    * createTenantId  应用创建者租户id
     * createTime  创建时间
     * updateTime  修改时间
     * executionTime  最后一次部署时间
@@ -231,7 +231,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * duration  部署时间
     * isDisable  当前应用是否被禁用
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * isCare  当前用户是否已收藏
     * canModify  是否有编辑权限
@@ -243,8 +243,8 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
-    * createUserId  应用创建者用户ID
-    * createTenantId  应用创建者租户ID
+    * createUserId  应用创建者用户id
+    * createTenantId  应用创建者租户id
     * createTime  创建时间
     * updateTime  修改时间
     * executionTime  最后一次部署时间
@@ -293,7 +293,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * name  应用名称
     * duration  部署时间
     * isDisable  当前应用是否被禁用
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * isCare  当前用户是否已收藏
     * canModify  是否有编辑权限
@@ -305,8 +305,8 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
-    * createUserId  应用创建者用户ID
-    * createTenantId  应用创建者租户ID
+    * createUserId  应用创建者用户id
+    * createTenantId  应用创建者租户id
     * createTime  创建时间
     * updateTime  修改时间
     * executionTime  最后一次部署时间
@@ -604,7 +604,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -616,7 +616,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */
@@ -892,7 +892,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createUserId
-    *  应用创建者用户ID
+    *  应用创建者用户id
     *
     * @return string|null
     */
@@ -904,7 +904,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createUserId
     *
-    * @param string|null $createUserId 应用创建者用户ID
+    * @param string|null $createUserId 应用创建者用户id
     *
     * @return $this
     */
@@ -916,7 +916,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTenantId
-    *  应用创建者租户ID
+    *  应用创建者租户id
     *
     * @return string|null
     */
@@ -928,7 +928,7 @@ class AppExecutionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTenantId
     *
-    * @param string|null $createTenantId 应用创建者租户ID
+    * @param string|null $createTenantId 应用创建者租户id
     *
     * @return $this
     */

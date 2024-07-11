@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class OcrRegion {
 
-    public static $REGION = array("https://ocr.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://ocr.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://ocr.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://ocr.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://ocr.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://ocr.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://ocr.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://ocr.la-south-2.myhuaweicloud.com"=>"la-south-2","https://ocr.af-south-1.myhuaweicloud.com"=>"af-south-1","https://ocr.la-north-2.myhuaweicloud.com"=>"la-north-2",);
+    public static $REGION = array("https://ocr.cn-north-4.myhuaweicloud.com"=>"cn-north-4","https://ocr.cn-south-1.myhuaweicloud.com"=>"cn-south-1","https://ocr.cn-east-3.myhuaweicloud.com"=>"cn-east-3","https://ocr.cn-north-1.myhuaweicloud.com"=>"cn-north-1","https://ocr.ap-southeast-2.myhuaweicloud.com"=>"ap-southeast-2","https://ocr.cn-southwest-2.myhuaweicloud.com"=>"cn-southwest-2","https://ocr.ap-southeast-1.myhuaweicloud.com"=>"ap-southeast-1","https://ocr.ap-southeast-3.myhuaweicloud.com"=>"ap-southeast-3","https://ocr.la-south-2.myhuaweicloud.com"=>"la-south-2","https://ocr.af-south-1.myhuaweicloud.com"=>"af-south-1","https://ocr.la-north-2.myhuaweicloud.com"=>"la-north-2",);
 
     public static function valueOf($regionId)
     {

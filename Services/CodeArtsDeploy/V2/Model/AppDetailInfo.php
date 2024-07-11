@@ -26,7 +26,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * description  描述
     * isDisable  当前应用是否被禁用
     * createType  创建方式
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -38,9 +38,9 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
-    * ownerTenantId  应用所属人租户ID
+    * ownerTenantId  应用所属人租户id
     * createUserId  应用创建者用户名
-    * createTenantId  应用创建人租户ID
+    * createTenantId  应用创建人租户id
     * createTime  创建时间
     * updateTime  修改时间
     * permissionLevel  权限等级
@@ -84,7 +84,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * description  描述
     * isDisable  当前应用是否被禁用
     * createType  创建方式
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -96,9 +96,9 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
-    * ownerTenantId  应用所属人租户ID
+    * ownerTenantId  应用所属人租户id
     * createUserId  应用创建者用户名
-    * createTenantId  应用创建人租户ID
+    * createTenantId  应用创建人租户id
     * createTime  创建时间
     * updateTime  修改时间
     * permissionLevel  权限等级
@@ -163,7 +163,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * description  描述
     * isDisable  当前应用是否被禁用
     * createType  创建方式
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -175,9 +175,9 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
-    * ownerTenantId  应用所属人租户ID
+    * ownerTenantId  应用所属人租户id
     * createUserId  应用创建者用户名
-    * createTenantId  应用创建人租户ID
+    * createTenantId  应用创建人租户id
     * createTime  创建时间
     * updateTime  修改时间
     * permissionLevel  权限等级
@@ -221,7 +221,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * description  描述
     * isDisable  当前应用是否被禁用
     * createType  创建方式
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -233,9 +233,9 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
-    * ownerTenantId  应用所属人租户ID
+    * ownerTenantId  应用所属人租户id
     * createUserId  应用创建者用户名
-    * createTenantId  应用创建人租户ID
+    * createTenantId  应用创建人租户id
     * createTime  创建时间
     * updateTime  修改时间
     * permissionLevel  权限等级
@@ -279,7 +279,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * description  描述
     * isDisable  当前应用是否被禁用
     * createType  创建方式
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -291,9 +291,9 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canCreateEnv  是否有创建环境的权限
     * canDisable  是否有禁用应用的权限
-    * ownerTenantId  应用所属人租户ID
+    * ownerTenantId  应用所属人租户id
     * createUserId  应用创建者用户名
-    * createTenantId  应用创建人租户ID
+    * createTenantId  应用创建人租户id
     * createTime  创建时间
     * updateTime  修改时间
     * permissionLevel  权限等级
@@ -621,7 +621,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -633,7 +633,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */
@@ -909,7 +909,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ownerTenantId
-    *  应用所属人租户ID
+    *  应用所属人租户id
     *
     * @return string|null
     */
@@ -921,7 +921,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ownerTenantId
     *
-    * @param string|null $ownerTenantId 应用所属人租户ID
+    * @param string|null $ownerTenantId 应用所属人租户id
     *
     * @return $this
     */
@@ -957,7 +957,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTenantId
-    *  应用创建人租户ID
+    *  应用创建人租户id
     *
     * @return string|null
     */
@@ -969,7 +969,7 @@ class AppDetailInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTenantId
     *
-    * @param string|null $createTenantId 应用创建人租户ID
+    * @param string|null $createTenantId 应用创建人租户id
     *
     * @return $this
     */

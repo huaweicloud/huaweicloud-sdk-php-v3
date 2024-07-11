@@ -20,7 +20,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * templateId  部署模板id
     * taskName  应用名称
@@ -40,7 +40,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * templateId  部署模板id
     * taskName  应用名称
@@ -81,7 +81,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * templateId  部署模板id
     * taskName  应用名称
@@ -101,7 +101,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * templateId  部署模板id
     * taskName  应用名称
@@ -121,7 +121,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * templateId  部署模板id
     * taskName  应用名称
@@ -265,7 +265,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class TemplateTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

@@ -22,7 +22,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * successRate  成功率
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * startDate  应用部署开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  应用部署开始时间范围的右边界（包含），格式yyyy-MM-dd
@@ -46,7 +46,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * successRate  成功率
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * startDate  应用部署开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  应用部署开始时间范围的右边界（包含），格式yyyy-MM-dd
@@ -91,7 +91,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * successRate  成功率
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * startDate  应用部署开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  应用部署开始时间范围的右边界（包含），格式yyyy-MM-dd
@@ -115,7 +115,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * successRate  成功率
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * startDate  应用部署开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  应用部署开始时间范围的右边界（包含），格式yyyy-MM-dd
@@ -139,7 +139,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * successRate  成功率
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * startDate  应用部署开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  应用部署开始时间范围的右边界（包含），格式yyyy-MM-dd
@@ -276,7 +276,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class ShowProjectSuccessRateResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */

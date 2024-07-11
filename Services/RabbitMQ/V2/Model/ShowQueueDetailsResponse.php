@@ -27,7 +27,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     * consumerDetails  订阅该Queue的消费者信息。
     * queueBindings  以此Queue为目标的绑定信息列表。
@@ -55,7 +55,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     * consumerDetails  订阅该Queue的消费者信息。
     * queueBindings  以此Queue为目标的绑定信息列表。
@@ -104,7 +104,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     * consumerDetails  订阅该Queue的消费者信息。
     * queueBindings  以此Queue为目标的绑定信息列表。
@@ -132,7 +132,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     * consumerDetails  订阅该Queue的消费者信息。
     * queueBindings  以此Queue为目标的绑定信息列表。
@@ -160,7 +160,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     * consumerDetails  订阅该Queue的消费者信息。
     * queueBindings  以此Queue为目标的绑定信息列表。
@@ -418,7 +418,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
-    *  策略（AMQP版本不支持policy，不涉及此参数）
+    *  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     *
     * @return string|null
     */
@@ -430,7 +430,7 @@ class ShowQueueDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param string|null $policy 策略（AMQP版本不支持policy，不涉及此参数）
+    * @param string|null $policy 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     *
     * @return $this
     */

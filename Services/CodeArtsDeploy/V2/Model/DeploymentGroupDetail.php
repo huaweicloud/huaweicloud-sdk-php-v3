@@ -27,7 +27,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * name  主机集群名
     * regionName  局点信息
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
@@ -67,7 +67,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * name  主机集群名
     * regionName  局点信息
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
@@ -128,7 +128,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * name  主机集群名
     * regionName  局点信息
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
@@ -168,7 +168,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * name  主机集群名
     * regionName  局点信息
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
@@ -208,7 +208,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
     * projectName  项目名称
     * name  主机集群名
     * regionName  局点信息
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * autoConnectionTestSwitch  自动测试功能已下架，该字段已失效
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
@@ -534,7 +534,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -546,7 +546,7 @@ class DeploymentGroupDetail implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */

@@ -28,7 +28,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * createdAt  创建时间戳。
     * permissions  权限集。
-    * consumeOrderly  是否按序消费。
+    * consumeOrderly  是否按顺序消费。
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * createdAt  创建时间戳。
     * permissions  权限集。
-    * consumeOrderly  是否按序消费。
+    * consumeOrderly  是否按顺序消费。
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * createdAt  创建时间戳。
     * permissions  权限集。
-    * consumeOrderly  是否按序消费。
+    * consumeOrderly  是否按顺序消费。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * createdAt  创建时间戳。
     * permissions  权限集。
-    * consumeOrderly  是否按序消费。
+    * consumeOrderly  是否按顺序消费。
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * createdAt  创建时间戳。
     * permissions  权限集。
-    * consumeOrderly  是否按序消费。
+    * consumeOrderly  是否按顺序消费。
     *
     * @var string[]
     */
@@ -460,7 +460,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeOrderly
-    *  是否按序消费。
+    *  是否按顺序消费。
     *
     * @return bool|null
     */
@@ -472,7 +472,7 @@ class ConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly 是否按序消费。
+    * @param bool|null $consumeOrderly 是否按顺序消费。
     *
     * @return $this
     */

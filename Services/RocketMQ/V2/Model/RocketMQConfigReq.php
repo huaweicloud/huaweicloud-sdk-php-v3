@@ -20,8 +20,8 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  RocketMQ配置名称
-    * value  RocketMQ配置目标值
+    * name  RocketMQ配置名称。
+    * value  RocketMQ配置目标值。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  RocketMQ配置名称
-    * value  RocketMQ配置目标值
+    * name  RocketMQ配置名称。
+    * value  RocketMQ配置目标值。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  RocketMQ配置名称
-    * value  RocketMQ配置目标值
+    * name  RocketMQ配置名称。
+    * value  RocketMQ配置目标值。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  RocketMQ配置名称
-    * value  RocketMQ配置目标值
+    * name  RocketMQ配置名称。
+    * value  RocketMQ配置目标值。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  RocketMQ配置名称
-    * value  RocketMQ配置目标值
+    * name  RocketMQ配置名称。
+    * value  RocketMQ配置目标值。
     *
     * @var string[]
     */
@@ -206,7 +206,7 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  RocketMQ配置名称
+    *  RocketMQ配置名称。
     *
     * @return string|null
     */
@@ -218,7 +218,7 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name RocketMQ配置名称
+    * @param string|null $name RocketMQ配置名称。
     *
     * @return $this
     */
@@ -230,7 +230,7 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  RocketMQ配置目标值
+    *  RocketMQ配置目标值。
     *
     * @return string|null
     */
@@ -242,7 +242,7 @@ class RocketMQConfigReq implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value RocketMQ配置目标值
+    * @param string|null $value RocketMQ配置目标值。
     *
     * @return $this
     */

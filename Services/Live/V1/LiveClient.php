@@ -1021,6 +1021,68 @@ class LiveClient extends Client
     }
 
     /**
+     * 删除Referer防盗链黑白名单
+     *
+     * 删除Referer防盗链黑白名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteRefererChain($request)
+    {
+        return $this->deleteRefererChainWithHttpInfo($request);
+    }
+
+    public function deleteRefererChainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/referer-chain';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRefererChainResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteRefererChainRequest');
+    }
+
+    /**
      * 删除直播截图配置
      *
      * 删除直播截图配置接口
@@ -1340,6 +1402,68 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListGeoBlockingConfigResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListGeoBlockingConfigRequest');
+    }
+
+    /**
+     * 查询域名HLS配置
+     *
+     * 查询域名HLS配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHlsConfig($request)
+    {
+        return $this->listHlsConfigWithHttpInfo($request);
+    }
+
+    public function listHlsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/domain/hls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['pushDomain'] !== null) {
+            $queryParams['push_domain'] = $localVarParams['pushDomain'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListHlsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListHlsConfigRequest');
     }
 
     /**
@@ -2053,6 +2177,68 @@ class LiveClient extends Client
     }
 
     /**
+     * 设置Referer防盗链黑白名单
+     *
+     * 设置Referer黑白名单，直播服务会根据配置的referer黑白名单，对访问者的身份进行识别和过滤，符合规则的可以顺利访问到该内容。如果不符合规则，该访问请求将会被禁止。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function setRefererChain($request)
+    {
+        return $this->setRefererChainWithHttpInfo($request);
+    }
+
+    public function setRefererChainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/referer-chain';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\SetRefererChainResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\SetRefererChainRequest');
+    }
+
+    /**
      * 查询直播域名
      *
      * 查询直播域名
@@ -2363,6 +2549,68 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowRecordRuleResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowRecordRuleRequest');
+    }
+
+    /**
+     * 查询Referer防盗链黑白名单
+     *
+     * 查询Referer防盗链黑白名单
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRefererChain($request)
+    {
+        return $this->showRefererChainWithHttpInfo($request);
+    }
+
+    public function showRefererChainWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/guard/referer-chain';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ShowRefererChainResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ShowRefererChainRequest');
     }
 
     /**
@@ -2750,6 +2998,68 @@ class LiveClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateGeoBlockingConfigResponse',
             $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateGeoBlockingConfigRequest');
+    }
+
+    /**
+     * 修改域名HLS配置
+     *
+     * 修改域名HLS配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateHlsConfig($request)
+    {
+        return $this->updateHlsConfigWithHttpInfo($request);
+    }
+
+    public function updateHlsConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/domain/hls';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateHlsConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateHlsConfigRequest');
     }
 
     /**

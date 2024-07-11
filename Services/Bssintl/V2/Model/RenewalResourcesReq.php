@@ -223,13 +223,10 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
             if (($this->container['periodNum'] < 1)) {
                 $invalidProperties[] = "invalid value for 'periodNum', must be bigger than or equal to 1.";
             }
-        if ($this->container['expirePolicy'] === null) {
-            $invalidProperties[] = "'expirePolicy' can't be null";
-        }
-            if (($this->container['expirePolicy'] > 3)) {
+            if (!is_null($this->container['expirePolicy']) && ($this->container['expirePolicy'] > 3)) {
                 $invalidProperties[] = "invalid value for 'expirePolicy', must be smaller than or equal to 3.";
             }
-            if (($this->container['expirePolicy'] < 0)) {
+            if (!is_null($this->container['expirePolicy']) && ($this->container['expirePolicy'] < 0)) {
                 $invalidProperties[] = "invalid value for 'expirePolicy', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['isAutoPay']) && ($this->container['isAutoPay'] > 1)) {
@@ -328,7 +325,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     * Gets expirePolicy
     *  到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     *
-    * @return int
+    * @return int|null
     */
     public function getExpirePolicy()
     {
@@ -338,7 +335,7 @@ class RenewalResourcesReq implements ModelInterface, ArrayAccess
     /**
     * Sets expirePolicy
     *
-    * @param int $expirePolicy 到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
+    * @param int|null $expirePolicy 到期策略（字段已废弃，请勿使用该字段。此字段必填，需携带，但携带的枚举实际并不生效）： 0：进入宽限期/保留期1：转按需2：自动退订3：自动续订
     *
     * @return $this
     */

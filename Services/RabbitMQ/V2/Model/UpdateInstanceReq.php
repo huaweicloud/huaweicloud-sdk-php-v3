@@ -28,7 +28,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
-    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
+    * enableAcl  ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
-    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
+    * enableAcl  ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
-    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
+    * enableAcl  ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
-    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
+    * enableAcl  ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     * enablePublicip  RabbitMQ实例是否开启公网访问功能。   - true：开启   - false：不开启
     * publicipId  RabbitMQ实例绑定的弹性IP地址的id。  如果开启了公网访问功能（即enable_publicip为true），该字段为必选。  获取方法：登录弹性公网IP和带宽的控制台界面，在弹性公网IP的详情页面查的基本信息栏找ID。
     * enterpriseProjectId  企业项目。
-    * enableAcl  ACL访问控制（仅AMQP版本支持此参数）。
+    * enableAcl  ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -454,7 +454,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableAcl
-    *  ACL访问控制（仅AMQP版本支持此参数）。
+    *  ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @return bool|null
     */
@@ -466,7 +466,7 @@ class UpdateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets enableAcl
     *
-    * @param bool|null $enableAcl ACL访问控制（仅AMQP版本支持此参数）。
+    * @param bool|null $enableAcl ACL访问控制[（仅AMQP版本支持此参数）](tag:hws,hws_hk)。
     *
     * @return $this
     */

@@ -26,7 +26,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -50,7 +50,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -95,7 +95,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -119,7 +119,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -143,7 +143,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -401,7 +401,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
 
     /**
     * Gets consumeOrderly
-    *  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    *  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     *
     * @return bool|null
     */
@@ -413,7 +413,7 @@ class CreateConsumerGroupOrBatchDeleteConsumerGroupReq implements ModelInterface
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly 是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * @param bool|null $consumeOrderly 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     *
     * @return $this
     */

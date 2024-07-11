@@ -21,7 +21,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
@@ -51,7 +51,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
@@ -102,7 +102,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
@@ -132,7 +132,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
@@ -162,7 +162,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * topic  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * topic  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     * asc  是否按照时间排序。
     * startTime  开始时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
     * endTime  结束时间。  Unix毫秒时间戳。  查询消息偏移量时，为必选参数。
@@ -320,7 +320,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    *  Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     *
     * @return string
     */
@@ -332,7 +332,7 @@ class ShowInstanceMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string $topic Topic名称。  Topic名称必现以字母开头且只支持大小写字母、中横线、下划线以及数字。
+    * @param string $topic Topic名称。  Topic名称必须以字母开头且只支持大小写字母、中横线、下划线以及数字。
     *
     * @return $this
     */

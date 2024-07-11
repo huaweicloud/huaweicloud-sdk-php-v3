@@ -21,7 +21,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * group  Group ID。
-    * topic  消息所属topic。
+    * topic  消息所属Topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -37,7 +37,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * group  Group ID。
-    * topic  消息所属topic。
+    * topic  消息所属Topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -74,7 +74,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * group  Group ID。
-    * topic  消息所属topic。
+    * topic  消息所属Topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -90,7 +90,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * group  Group ID。
-    * topic  消息所属topic。
+    * topic  消息所属Topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -106,7 +106,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * group  Group ID。
-    * topic  消息所属topic。
+    * topic  消息所属Topic。
     * clientId  客户端ID。
     * msgIdList  消息列表。
     *
@@ -231,7 +231,7 @@ class ResendReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  消息所属topic。
+    *  消息所属Topic。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class ResendReq implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 消息所属topic。
+    * @param string|null $topic 消息所属Topic。
     *
     * @return $this
     */

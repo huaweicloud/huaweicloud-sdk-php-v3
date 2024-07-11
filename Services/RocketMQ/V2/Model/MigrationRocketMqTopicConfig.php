@@ -20,13 +20,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topicName  topic名称。
+    * topicName  Topic名称。
     * order  是否有序消息。
-    * perm  topic权限。
+    * perm  Topic权限。
     * readQueueNums  读队列个数。
     * writeQueueNums  写队列个数。
-    * topicFilterType  topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  topic系统标志位。
+    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * topicSysFlag  Topic系统标志位。
     *
     * @var string[]
     */
@@ -42,13 +42,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topicName  topic名称。
+    * topicName  Topic名称。
     * order  是否有序消息。
-    * perm  topic权限。
+    * perm  Topic权限。
     * readQueueNums  读队列个数。
     * writeQueueNums  写队列个数。
-    * topicFilterType  topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  topic系统标志位。
+    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * topicSysFlag  Topic系统标志位。
     *
     * @var string[]
     */
@@ -85,13 +85,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topicName  topic名称。
+    * topicName  Topic名称。
     * order  是否有序消息。
-    * perm  topic权限。
+    * perm  Topic权限。
     * readQueueNums  读队列个数。
     * writeQueueNums  写队列个数。
-    * topicFilterType  topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  topic系统标志位。
+    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * topicSysFlag  Topic系统标志位。
     *
     * @var string[]
     */
@@ -107,13 +107,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topicName  topic名称。
+    * topicName  Topic名称。
     * order  是否有序消息。
-    * perm  topic权限。
+    * perm  Topic权限。
     * readQueueNums  读队列个数。
     * writeQueueNums  写队列个数。
-    * topicFilterType  topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  topic系统标志位。
+    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * topicSysFlag  Topic系统标志位。
     *
     * @var string[]
     */
@@ -129,13 +129,13 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topicName  topic名称。
+    * topicName  Topic名称。
     * order  是否有序消息。
-    * perm  topic权限。
+    * perm  Topic权限。
     * readQueueNums  读队列个数。
     * writeQueueNums  写队列个数。
-    * topicFilterType  topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
-    * topicSysFlag  topic系统标志位。
+    * topicFilterType  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * topicSysFlag  Topic系统标志位。
     *
     * @var string[]
     */
@@ -240,7 +240,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicName
-    *  topic名称。
+    *  Topic名称。
     *
     * @return string|null
     */
@@ -252,7 +252,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicName
     *
-    * @param string|null $topicName topic名称。
+    * @param string|null $topicName Topic名称。
     *
     * @return $this
     */
@@ -288,7 +288,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets perm
-    *  topic权限。
+    *  Topic权限。
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets perm
     *
-    * @param int|null $perm topic权限。
+    * @param int|null $perm Topic权限。
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicFilterType
-    *  topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    *  Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicFilterType
     *
-    * @param string|null $topicFilterType topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
+    * @param string|null $topicFilterType Topic过滤类型。   - SINGLE_TAG：单标签   - MULTI_TAG：多标签
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets topicSysFlag
-    *  topic系统标志位。
+    *  Topic系统标志位。
     *
     * @return int|null
     */
@@ -396,7 +396,7 @@ class MigrationRocketMqTopicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets topicSysFlag
     *
-    * @param int|null $topicSysFlag topic系统标志位。
+    * @param int|null $topicSysFlag Topic系统标志位。
     *
     * @return $this
     */

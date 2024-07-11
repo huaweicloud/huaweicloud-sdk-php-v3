@@ -24,8 +24,6 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * type  恢复备份类型：backup，timestamp，different
     * backupId  用于恢复的备份ID。
     * restoreTime  UTC时间，时间戳
-    * tableList  表基础信息。
-    * schemaType  备份级别取值, 默认值：INSTANCE
     *
     * @var string[]
     */
@@ -33,9 +31,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'type' => 'string',
             'backupId' => 'string',
-            'restoreTime' => 'string',
-            'tableList' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestoreTableListDetail[]',
-            'schemaType' => 'string'
+            'restoreTime' => 'string'
     ];
 
     /**
@@ -44,8 +40,6 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * type  恢复备份类型：backup，timestamp，different
     * backupId  用于恢复的备份ID。
     * restoreTime  UTC时间，时间戳
-    * tableList  表基础信息。
-    * schemaType  备份级别取值, 默认值：INSTANCE
     *
     * @var string[]
     */
@@ -53,9 +47,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'type' => null,
         'backupId' => null,
-        'restoreTime' => null,
-        'tableList' => null,
-        'schemaType' => null
+        'restoreTime' => null
     ];
 
     /**
@@ -85,8 +77,6 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * type  恢复备份类型：backup，timestamp，different
     * backupId  用于恢复的备份ID。
     * restoreTime  UTC时间，时间戳
-    * tableList  表基础信息。
-    * schemaType  备份级别取值, 默认值：INSTANCE
     *
     * @var string[]
     */
@@ -94,9 +84,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'type' => 'type',
             'backupId' => 'backup_id',
-            'restoreTime' => 'restore_time',
-            'tableList' => 'table_list',
-            'schemaType' => 'schema_type'
+            'restoreTime' => 'restore_time'
     ];
 
     /**
@@ -105,8 +93,6 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * type  恢复备份类型：backup，timestamp，different
     * backupId  用于恢复的备份ID。
     * restoreTime  UTC时间，时间戳
-    * tableList  表基础信息。
-    * schemaType  备份级别取值, 默认值：INSTANCE
     *
     * @var string[]
     */
@@ -114,9 +100,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'type' => 'setType',
             'backupId' => 'setBackupId',
-            'restoreTime' => 'setRestoreTime',
-            'tableList' => 'setTableList',
-            'schemaType' => 'setSchemaType'
+            'restoreTime' => 'setRestoreTime'
     ];
 
     /**
@@ -125,8 +109,6 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * type  恢复备份类型：backup，timestamp，different
     * backupId  用于恢复的备份ID。
     * restoreTime  UTC时间，时间戳
-    * tableList  表基础信息。
-    * schemaType  备份级别取值, 默认值：INSTANCE
     *
     * @var string[]
     */
@@ -134,9 +116,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'type' => 'getType',
             'backupId' => 'getBackupId',
-            'restoreTime' => 'getRestoreTime',
-            'tableList' => 'getTableList',
-            'schemaType' => 'getSchemaType'
+            'restoreTime' => 'getRestoreTime'
     ];
 
     /**
@@ -179,24 +159,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const SCHEMA_TYPE_INSTANCE = 'INSTANCE 实例级备份';
-    const SCHEMA_TYPE_DATABASE = 'DATABASE 库级备份';
-    const SCHEMA_TYPE_DATABASE_TABLE = 'DATABASE_TABLE 表级备份';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getSchemaTypeAllowableValues()
-    {
-        return [
-            self::SCHEMA_TYPE_INSTANCE,
-            self::SCHEMA_TYPE_DATABASE,
-            self::SCHEMA_TYPE_DATABASE_TABLE,
-        ];
-    }
 
 
     /**
@@ -218,8 +181,6 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
         $this->container['restoreTime'] = isset($data['restoreTime']) ? $data['restoreTime'] : null;
-        $this->container['tableList'] = isset($data['tableList']) ? $data['tableList'] : null;
-        $this->container['schemaType'] = isset($data['schemaType']) ? $data['schemaType'] : null;
     }
 
     /**
@@ -233,20 +194,9 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
-        if ($this->container['backupId'] === null) {
-            $invalidProperties[] = "'backupId' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['restoreTime'] === null) {
-            $invalidProperties[] = "'restoreTime' can't be null";
-        }
-            $allowedValues = $this->getSchemaTypeAllowableValues();
-                if (!is_null($this->container['schemaType']) && !in_array($this->container['schemaType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'schemaType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -289,7 +239,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * Gets type
     *  恢复备份类型：backup，timestamp，different
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -299,7 +249,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 恢复备份类型：backup，timestamp，different
+    * @param string $type 恢复备份类型：backup，timestamp，different
     *
     * @return $this
     */
@@ -313,7 +263,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * Gets backupId
     *  用于恢复的备份ID。
     *
-    * @return string
+    * @return string|null
     */
     public function getBackupId()
     {
@@ -323,7 +273,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     /**
     * Sets backupId
     *
-    * @param string $backupId 用于恢复的备份ID。
+    * @param string|null $backupId 用于恢复的备份ID。
     *
     * @return $this
     */
@@ -337,7 +287,7 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     * Gets restoreTime
     *  UTC时间，时间戳
     *
-    * @return string
+    * @return string|null
     */
     public function getRestoreTime()
     {
@@ -347,61 +297,13 @@ class RecoveryBackupSource implements ModelInterface, ArrayAccess
     /**
     * Sets restoreTime
     *
-    * @param string $restoreTime UTC时间，时间戳
+    * @param string|null $restoreTime UTC时间，时间戳
     *
     * @return $this
     */
     public function setRestoreTime($restoreTime)
     {
         $this->container['restoreTime'] = $restoreTime;
-        return $this;
-    }
-
-    /**
-    * Gets tableList
-    *  表基础信息。
-    *
-    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestoreTableListDetail[]|null
-    */
-    public function getTableList()
-    {
-        return $this->container['tableList'];
-    }
-
-    /**
-    * Sets tableList
-    *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\RestoreTableListDetail[]|null $tableList 表基础信息。
-    *
-    * @return $this
-    */
-    public function setTableList($tableList)
-    {
-        $this->container['tableList'] = $tableList;
-        return $this;
-    }
-
-    /**
-    * Gets schemaType
-    *  备份级别取值, 默认值：INSTANCE
-    *
-    * @return string|null
-    */
-    public function getSchemaType()
-    {
-        return $this->container['schemaType'];
-    }
-
-    /**
-    * Sets schemaType
-    *
-    * @param string|null $schemaType 备份级别取值, 默认值：INSTANCE
-    *
-    * @return $this
-    */
-    public function setSchemaType($schemaType)
-    {
-        $this->container['schemaType'] = $schemaType;
         return $this;
     }
 

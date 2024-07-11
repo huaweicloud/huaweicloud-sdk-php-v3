@@ -26,6 +26,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * autoscaling  autoscaling
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
+    * extensionScaleGroups  extensionScaleGroups
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     *
     * @var string[]
@@ -37,6 +38,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling',
             'nodeManagement' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeManagement',
             'podSecurityGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\SecurityID[]',
+            'extensionScaleGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup',
             'customSecurityGroups' => 'string[]'
     ];
 
@@ -48,6 +50,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * autoscaling  autoscaling
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
+    * extensionScaleGroups  extensionScaleGroups
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     *
     * @var string[]
@@ -59,6 +62,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
         'autoscaling' => null,
         'nodeManagement' => null,
         'podSecurityGroups' => null,
+        'extensionScaleGroups' => null,
         'customSecurityGroups' => null
     ];
 
@@ -91,6 +95,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * autoscaling  autoscaling
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
+    * extensionScaleGroups  extensionScaleGroups
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     *
     * @var string[]
@@ -102,6 +107,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'autoscaling' => 'autoscaling',
             'nodeManagement' => 'nodeManagement',
             'podSecurityGroups' => 'podSecurityGroups',
+            'extensionScaleGroups' => 'extensionScaleGroups',
             'customSecurityGroups' => 'customSecurityGroups'
     ];
 
@@ -113,6 +119,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * autoscaling  autoscaling
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
+    * extensionScaleGroups  extensionScaleGroups
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     *
     * @var string[]
@@ -124,6 +131,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'autoscaling' => 'setAutoscaling',
             'nodeManagement' => 'setNodeManagement',
             'podSecurityGroups' => 'setPodSecurityGroups',
+            'extensionScaleGroups' => 'setExtensionScaleGroups',
             'customSecurityGroups' => 'setCustomSecurityGroups'
     ];
 
@@ -135,6 +143,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     * autoscaling  autoscaling
     * nodeManagement  nodeManagement
     * podSecurityGroups  1.21版本集群节点池支持绑定安全组，最多五个。
+    * extensionScaleGroups  extensionScaleGroups
     * customSecurityGroups  节点池自定义安全组相关配置。支持节点池新扩容节点绑定指定的安全组。  - 未指定安全组ID，新建节点将添加Node节点默认安全组。  - 指定有效安全组ID，新建节点将使用指定安全组。  - 指定安全组，应避免对CCE运行依赖的端口规则进行修改。[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/cce_faq/cce_faq_00265.html)。](tag:hws)[详细设置请参考[集群安全组规则配置](https://support.huaweicloud.com/intl/zh-cn/cce_faq/cce_faq_00265.html)。](tag:hws_hk)
     *
     * @var string[]
@@ -146,6 +155,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
             'autoscaling' => 'getAutoscaling',
             'nodeManagement' => 'getNodeManagement',
             'podSecurityGroups' => 'getPodSecurityGroups',
+            'extensionScaleGroups' => 'getExtensionScaleGroups',
             'customSecurityGroups' => 'getCustomSecurityGroups'
     ];
 
@@ -230,6 +240,7 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
         $this->container['autoscaling'] = isset($data['autoscaling']) ? $data['autoscaling'] : null;
         $this->container['nodeManagement'] = isset($data['nodeManagement']) ? $data['nodeManagement'] : null;
         $this->container['podSecurityGroups'] = isset($data['podSecurityGroups']) ? $data['podSecurityGroups'] : null;
+        $this->container['extensionScaleGroups'] = isset($data['extensionScaleGroups']) ? $data['extensionScaleGroups'] : null;
         $this->container['customSecurityGroups'] = isset($data['customSecurityGroups']) ? $data['customSecurityGroups'] : null;
     }
 
@@ -407,6 +418,30 @@ class NodePoolSpec implements ModelInterface, ArrayAccess
     public function setPodSecurityGroups($podSecurityGroups)
     {
         $this->container['podSecurityGroups'] = $podSecurityGroups;
+        return $this;
+    }
+
+    /**
+    * Gets extensionScaleGroups
+    *  extensionScaleGroups
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup|null
+    */
+    public function getExtensionScaleGroups()
+    {
+        return $this->container['extensionScaleGroups'];
+    }
+
+    /**
+    * Sets extensionScaleGroups
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup|null $extensionScaleGroups extensionScaleGroups
+    *
+    * @return $this
+    */
+    public function setExtensionScaleGroups($extensionScaleGroups)
+    {
+        $this->container['extensionScaleGroups'] = $extensionScaleGroups;
         return $this;
     }
 

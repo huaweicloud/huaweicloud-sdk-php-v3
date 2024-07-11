@@ -22,7 +22,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * total  主机数量
-    * status  请求状态
+    * status  请求成功失败状态
     * result  主机信息列表
     *
     * @var string[]
@@ -36,7 +36,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  主机数量
-    * status  请求状态
+    * status  请求成功失败状态
     * result  主机信息列表
     *
     * @var string[]
@@ -71,7 +71,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * total  主机数量
-    * status  请求状态
+    * status  请求成功失败状态
     * result  主机信息列表
     *
     * @var string[]
@@ -85,7 +85,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  主机数量
-    * status  请求状态
+    * status  请求成功失败状态
     * result  主机信息列表
     *
     * @var string[]
@@ -99,7 +99,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  主机数量
-    * status  请求状态
+    * status  请求成功失败状态
     * result  主机信息列表
     *
     * @var string[]
@@ -227,7 +227,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  请求状态
+    *  请求成功失败状态
     *
     * @return string|null
     */
@@ -239,7 +239,7 @@ class ListNewHostsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 请求状态
+    * @param string|null $status 请求成功失败状态
     *
     * @return $this
     */

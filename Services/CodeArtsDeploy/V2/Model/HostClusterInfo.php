@@ -23,7 +23,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * id  主机集群id
     * hostCount  集群内主机数量，一个主机集群内最多可添加200台主机
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * createdBy  createdBy
@@ -53,7 +53,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * id  主机集群id
     * hostCount  集群内主机数量，一个主机集群内最多可添加200台主机
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * createdBy  createdBy
@@ -104,7 +104,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * id  主机集群id
     * hostCount  集群内主机数量，一个主机集群内最多可添加200台主机
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * createdBy  createdBy
@@ -134,7 +134,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * id  主机集群id
     * hostCount  集群内主机数量，一个主机集群内最多可添加200台主机
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * createdBy  createdBy
@@ -164,7 +164,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     * id  主机集群id
     * hostCount  集群内主机数量，一个主机集群内最多可添加200台主机
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * createdBy  createdBy
@@ -377,7 +377,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -389,7 +389,7 @@ class HostClusterInfo implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */

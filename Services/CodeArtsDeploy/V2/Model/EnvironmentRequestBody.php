@@ -20,7 +20,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * name  环境名称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * os  操作系统：windows|linux，需要和主机集群保持一致
@@ -38,7 +38,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * name  环境名称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * os  操作系统：windows|linux，需要和主机集群保持一致
@@ -77,7 +77,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目id
     * name  环境名称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * os  操作系统：windows|linux，需要和主机集群保持一致
@@ -95,7 +95,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目id
     * name  环境名称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * os  操作系统：windows|linux，需要和主机集群保持一致
@@ -113,7 +113,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目id
     * name  环境名称
     * deployType  部署类型：0表示主机, 1表示kubernetes
     * os  操作系统：windows|linux，需要和主机集群保持一致
@@ -253,7 +253,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class EnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

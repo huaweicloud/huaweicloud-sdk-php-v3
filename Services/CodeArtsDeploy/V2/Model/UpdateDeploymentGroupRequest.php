@@ -20,7 +20,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  主机集群ID
+    * groupId  主机集群id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * body  body
     *
@@ -34,7 +34,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  主机集群ID
+    * groupId  主机集群id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * body  body
     *
@@ -69,7 +69,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  主机集群ID
+    * groupId  主机集群id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * body  body
     *
@@ -83,7 +83,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  主机集群ID
+    * groupId  主机集群id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * body  body
     *
@@ -97,7 +97,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  主机集群ID
+    * groupId  主机集群id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * body  body
     *
@@ -228,7 +228,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  主机集群ID
+    *  主机集群id
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class UpdateDeploymentGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 主机集群ID
+    * @param string $groupId 主机集群id
     *
     * @return $this
     */

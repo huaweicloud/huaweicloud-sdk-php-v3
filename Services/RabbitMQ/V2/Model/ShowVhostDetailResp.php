@@ -21,7 +21,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  Vhost名称。
-    * tracing  是否开启消息轨迹（AMQP版本不涉及此字段）
+    * tracing  是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  Vhost名称。
-    * tracing  是否开启消息轨迹（AMQP版本不涉及此字段）
+    * tracing  是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  Vhost名称。
-    * tracing  是否开启消息轨迹（AMQP版本不涉及此字段）
+    * tracing  是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  Vhost名称。
-    * tracing  是否开启消息轨迹（AMQP版本不涉及此字段）
+    * tracing  是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  Vhost名称。
-    * tracing  是否开启消息轨迹（AMQP版本不涉及此字段）
+    * tracing  是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets tracing
-    *  是否开启消息轨迹（AMQP版本不涉及此字段）
+    *  是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @return bool|null
     */
@@ -221,7 +221,7 @@ class ShowVhostDetailResp implements ModelInterface, ArrayAccess
     /**
     * Sets tracing
     *
-    * @param bool|null $tracing 是否开启消息轨迹（AMQP版本不涉及此字段）
+    * @param bool|null $tracing 是否开启消息轨迹[（AMQP版本不涉及此字段）](tag:hws,hws_hk)。
     *
     * @return $this
     */

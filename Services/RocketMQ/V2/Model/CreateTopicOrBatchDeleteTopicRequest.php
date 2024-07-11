@@ -21,7 +21,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * action  批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * action  批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * action  批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * action  批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * action  批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    * action  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     * body  body
     *
     * @var string[]
@@ -223,7 +223,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
 
     /**
     * Gets action
-    *  批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    *  批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class CreateTopicOrBatchDeleteTopicRequest implements ModelInterface, ArrayAcces
     /**
     * Sets action
     *
-    * @param string|null $action 批量删除topic时使用，不配置则为创建接口。删除操作：delete。
+    * @param string|null $action 批量删除Topic时使用，不配置则为创建接口。删除操作：delete。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instances  实例的ID列表。
-    * action  对实例的操作：delete
+    * action  对实例的操作：delete。
     * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instances  实例的ID列表。
-    * action  对实例的操作：delete
+    * action  对实例的操作：delete。
     * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instances  实例的ID列表。
-    * action  对实例的操作：delete
+    * action  对实例的操作：delete。
     * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instances  实例的ID列表。
-    * action  对实例的操作：delete
+    * action  对实例的操作：delete。
     * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instances  实例的ID列表。
-    * action  对实例的操作：delete
+    * action  对实例的操作：delete。
     * allFailure  参数值为reliability，表示删除租户所有创建失败的RocketMQ实例。
     *
     * @var string[]
@@ -265,7 +265,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  对实例的操作：delete
+    *  对实例的操作：delete。
     *
     * @return string
     */
@@ -277,7 +277,7 @@ class BatchDeleteInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string $action 对实例的操作：delete
+    * @param string $action 对实例的操作：delete。
     *
     * @return $this
     */

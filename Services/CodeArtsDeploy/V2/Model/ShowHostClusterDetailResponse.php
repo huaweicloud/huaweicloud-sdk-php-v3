@@ -21,7 +21,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * status  请求状态
+    * status  请求成功失败状态
     * result  result
     *
     * @var string[]
@@ -33,7 +33,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * status  请求状态
+    * status  请求成功失败状态
     * result  result
     *
     * @var string[]
@@ -66,7 +66,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * status  请求状态
+    * status  请求成功失败状态
     * result  result
     *
     * @var string[]
@@ -78,7 +78,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * status  请求状态
+    * status  请求成功失败状态
     * result  result
     *
     * @var string[]
@@ -90,7 +90,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * status  请求状态
+    * status  请求成功失败状态
     * result  result
     *
     * @var string[]
@@ -186,7 +186,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  请求状态
+    *  请求成功失败状态
     *
     * @return string|null
     */
@@ -198,7 +198,7 @@ class ShowHostClusterDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 请求状态
+    * @param string|null $status 请求成功失败状态
     *
     * @return $this
     */

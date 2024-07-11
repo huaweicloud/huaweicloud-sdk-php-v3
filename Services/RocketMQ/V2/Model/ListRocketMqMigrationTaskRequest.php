@@ -21,10 +21,10 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * id  任务ID
-    * type  查询类型
-    * offset  当前页，从1开始
-    * limit  当前页大小
+    * id  任务ID。
+    * type  查询类型。
+    * offset  当前页，从1开始。
+    * limit  当前页大小。
     * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
     *
     * @var string[]
@@ -41,10 +41,10 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * id  任务ID
-    * type  查询类型
-    * offset  当前页，从1开始
-    * limit  当前页大小
+    * id  任务ID。
+    * type  查询类型。
+    * offset  当前页，从1开始。
+    * limit  当前页大小。
     * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
     *
     * @var string[]
@@ -82,10 +82,10 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * id  任务ID
-    * type  查询类型
-    * offset  当前页，从1开始
-    * limit  当前页大小
+    * id  任务ID。
+    * type  查询类型。
+    * offset  当前页，从1开始。
+    * limit  当前页大小。
     * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
     *
     * @var string[]
@@ -102,10 +102,10 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * id  任务ID
-    * type  查询类型
-    * offset  当前页，从1开始
-    * limit  当前页大小
+    * id  任务ID。
+    * type  查询类型。
+    * offset  当前页，从1开始。
+    * limit  当前页大小。
     * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
     *
     * @var string[]
@@ -122,10 +122,10 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * id  任务ID
-    * type  查询类型
-    * offset  当前页，从1开始
-    * limit  当前页大小
+    * id  任务ID。
+    * type  查询类型。
+    * offset  当前页，从1开始。
+    * limit  当前页大小。
     * name  - 查询vhost列表时，该字段可为空。 - 查询exchange列表时，该字段为exchange所属vhost名称。 - 查询queue列表时，该字段为queue所属vhost-所属exchange，例vhost1-exchange1。
     *
     * @var string[]
@@ -283,7 +283,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID
+    *  任务ID。
     *
     * @return string|null
     */
@@ -295,7 +295,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 任务ID
+    * @param string|null $id 任务ID。
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  查询类型
+    *  查询类型。
     *
     * @return string|null
     */
@@ -319,7 +319,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 查询类型
+    * @param string|null $type 查询类型。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  当前页，从1开始
+    *  当前页，从1开始。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 当前页，从1开始
+    * @param string|null $offset 当前页，从1开始。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  当前页大小
+    *  当前页大小。
     *
     * @return string|null
     */
@@ -367,7 +367,7 @@ class ListRocketMqMigrationTaskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 当前页大小
+    * @param string|null $limit 当前页大小。
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
     * sourceType  回源方式。 - domain: 回源客户源站，源站地址是域名格式。回源域名，可配置多个，如果回源失败，将按照配置顺序进行轮循。 - ipaddr: 回源客户源站，源站地址是IP格式。回源IP，可配置多个，如果回源失败，将按照配置顺序进行轮循。同时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl字段填该域名，否则按当前IP作为HOST。 - huawei: 回源华为源站，域名创建后的默认值。
     * sources  回源域名列表，最多可配置10个。 - 当回源方式是“domain”时，此参数必选，域名配置多个时，如果回源失败，将按照配置顺序进行轮循。 - 当回源方式是“ipaddr”时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl 字段填该域名，否则按当前IP作为HOST。
     * sourcesIp  回源IP地址列表，最多可配置10个。当回源方式是“ipaddr”时，此参数必选，IP配置多个时，如果回源失败，将按照配置顺序进行轮循。
+    * sourcePort  回源端口。
     * scheme  回源协议，回源方式非“huawei”时必选。
     * additionalArgs  回源客户源站时在URL携带的参数。
     *
@@ -35,6 +36,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
             'sourceType' => 'string',
             'sources' => 'string[]',
             'sourcesIp' => 'string[]',
+            'sourcePort' => 'int',
             'scheme' => 'string',
             'additionalArgs' => 'map[string,string]'
     ];
@@ -45,6 +47,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
     * sourceType  回源方式。 - domain: 回源客户源站，源站地址是域名格式。回源域名，可配置多个，如果回源失败，将按照配置顺序进行轮循。 - ipaddr: 回源客户源站，源站地址是IP格式。回源IP，可配置多个，如果回源失败，将按照配置顺序进行轮循。同时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl字段填该域名，否则按当前IP作为HOST。 - huawei: 回源华为源站，域名创建后的默认值。
     * sources  回源域名列表，最多可配置10个。 - 当回源方式是“domain”时，此参数必选，域名配置多个时，如果回源失败，将按照配置顺序进行轮循。 - 当回源方式是“ipaddr”时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl 字段填该域名，否则按当前IP作为HOST。
     * sourcesIp  回源IP地址列表，最多可配置10个。当回源方式是“ipaddr”时，此参数必选，IP配置多个时，如果回源失败，将按照配置顺序进行轮循。
+    * sourcePort  回源端口。
     * scheme  回源协议，回源方式非“huawei”时必选。
     * additionalArgs  回源客户源站时在URL携带的参数。
     *
@@ -55,6 +58,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
         'sourceType' => null,
         'sources' => null,
         'sourcesIp' => null,
+        'sourcePort' => null,
         'scheme' => null,
         'additionalArgs' => null
     ];
@@ -86,6 +90,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
     * sourceType  回源方式。 - domain: 回源客户源站，源站地址是域名格式。回源域名，可配置多个，如果回源失败，将按照配置顺序进行轮循。 - ipaddr: 回源客户源站，源站地址是IP格式。回源IP，可配置多个，如果回源失败，将按照配置顺序进行轮循。同时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl字段填该域名，否则按当前IP作为HOST。 - huawei: 回源华为源站，域名创建后的默认值。
     * sources  回源域名列表，最多可配置10个。 - 当回源方式是“domain”时，此参数必选，域名配置多个时，如果回源失败，将按照配置顺序进行轮循。 - 当回源方式是“ipaddr”时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl 字段填该域名，否则按当前IP作为HOST。
     * sourcesIp  回源IP地址列表，最多可配置10个。当回源方式是“ipaddr”时，此参数必选，IP配置多个时，如果回源失败，将按照配置顺序进行轮循。
+    * sourcePort  回源端口。
     * scheme  回源协议，回源方式非“huawei”时必选。
     * additionalArgs  回源客户源站时在URL携带的参数。
     *
@@ -96,6 +101,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
             'sourceType' => 'source_type',
             'sources' => 'sources',
             'sourcesIp' => 'sources_ip',
+            'sourcePort' => 'source_port',
             'scheme' => 'scheme',
             'additionalArgs' => 'additional_args'
     ];
@@ -106,6 +112,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
     * sourceType  回源方式。 - domain: 回源客户源站，源站地址是域名格式。回源域名，可配置多个，如果回源失败，将按照配置顺序进行轮循。 - ipaddr: 回源客户源站，源站地址是IP格式。回源IP，可配置多个，如果回源失败，将按照配置顺序进行轮循。同时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl字段填该域名，否则按当前IP作为HOST。 - huawei: 回源华为源站，域名创建后的默认值。
     * sources  回源域名列表，最多可配置10个。 - 当回源方式是“domain”时，此参数必选，域名配置多个时，如果回源失败，将按照配置顺序进行轮循。 - 当回源方式是“ipaddr”时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl 字段填该域名，否则按当前IP作为HOST。
     * sourcesIp  回源IP地址列表，最多可配置10个。当回源方式是“ipaddr”时，此参数必选，IP配置多个时，如果回源失败，将按照配置顺序进行轮循。
+    * sourcePort  回源端口。
     * scheme  回源协议，回源方式非“huawei”时必选。
     * additionalArgs  回源客户源站时在URL携带的参数。
     *
@@ -116,6 +123,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
             'sourceType' => 'setSourceType',
             'sources' => 'setSources',
             'sourcesIp' => 'setSourcesIp',
+            'sourcePort' => 'setSourcePort',
             'scheme' => 'setScheme',
             'additionalArgs' => 'setAdditionalArgs'
     ];
@@ -126,6 +134,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
     * sourceType  回源方式。 - domain: 回源客户源站，源站地址是域名格式。回源域名，可配置多个，如果回源失败，将按照配置顺序进行轮循。 - ipaddr: 回源客户源站，源站地址是IP格式。回源IP，可配置多个，如果回源失败，将按照配置顺序进行轮循。同时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl字段填该域名，否则按当前IP作为HOST。 - huawei: 回源华为源站，域名创建后的默认值。
     * sources  回源域名列表，最多可配置10个。 - 当回源方式是“domain”时，此参数必选，域名配置多个时，如果回源失败，将按照配置顺序进行轮循。 - 当回源方式是“ipaddr”时，最多可以配置一个回源域名，如果配置，回源时httpflv HOST头填该域名，RTMP tcurl 字段填该域名，否则按当前IP作为HOST。
     * sourcesIp  回源IP地址列表，最多可配置10个。当回源方式是“ipaddr”时，此参数必选，IP配置多个时，如果回源失败，将按照配置顺序进行轮循。
+    * sourcePort  回源端口。
     * scheme  回源协议，回源方式非“huawei”时必选。
     * additionalArgs  回源客户源站时在URL携带的参数。
     *
@@ -136,6 +145,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
             'sourceType' => 'getSourceType',
             'sources' => 'getSources',
             'sourcesIp' => 'getSourcesIp',
+            'sourcePort' => 'getSourcePort',
             'scheme' => 'getScheme',
             'additionalArgs' => 'getAdditionalArgs'
     ];
@@ -234,6 +244,7 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
         $this->container['sourceType'] = isset($data['sourceType']) ? $data['sourceType'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
         $this->container['sourcesIp'] = isset($data['sourcesIp']) ? $data['sourcesIp'] : null;
+        $this->container['sourcePort'] = isset($data['sourcePort']) ? $data['sourcePort'] : null;
         $this->container['scheme'] = isset($data['scheme']) ? $data['scheme'] : null;
         $this->container['additionalArgs'] = isset($data['additionalArgs']) ? $data['additionalArgs'] : null;
     }
@@ -254,6 +265,12 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['sourcePort']) && ($this->container['sourcePort'] > 65535)) {
+                $invalidProperties[] = "invalid value for 'sourcePort', must be smaller than or equal to 65535.";
+            }
+            if (!is_null($this->container['sourcePort']) && ($this->container['sourcePort'] < 1)) {
+                $invalidProperties[] = "invalid value for 'sourcePort', must be bigger than or equal to 1.";
+            }
             $allowedValues = $this->getSchemeAllowableValues();
                 if (!is_null($this->container['scheme']) && !in_array($this->container['scheme'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -369,6 +386,30 @@ class ShowPullSourcesConfigResponse implements ModelInterface, ArrayAccess
     public function setSourcesIp($sourcesIp)
     {
         $this->container['sourcesIp'] = $sourcesIp;
+        return $this;
+    }
+
+    /**
+    * Gets sourcePort
+    *  回源端口。
+    *
+    * @return int|null
+    */
+    public function getSourcePort()
+    {
+        return $this->container['sourcePort'];
+    }
+
+    /**
+    * Sets sourcePort
+    *
+    * @param int|null $sourcePort 回源端口。
+    *
+    * @return $this
+    */
+    public function setSourcePort($sourcePort)
+    {
+        $this->container['sourcePort'] = $sourcePort;
         return $this;
     }
 

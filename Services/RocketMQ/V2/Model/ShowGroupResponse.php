@@ -27,7 +27,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * name  消费组名称。
     * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
-    * appId  应用id。
+    * appId  应用ID。
     * appName  应用名称。
     * permissions  权限。
     *
@@ -53,7 +53,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * name  消费组名称。
     * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
-    * appId  应用id。
+    * appId  应用ID。
     * appName  应用名称。
     * permissions  权限。
     *
@@ -100,7 +100,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * name  消费组名称。
     * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
-    * appId  应用id。
+    * appId  应用ID。
     * appName  应用名称。
     * permissions  权限。
     *
@@ -126,7 +126,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * name  消费组名称。
     * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
-    * appId  应用id。
+    * appId  应用ID。
     * appName  应用名称。
     * permissions  权限。
     *
@@ -152,7 +152,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     * name  消费组名称。
     * groupDesc  消费组描述。
     * retryMaxTime  最大重试次数。
-    * appId  应用id。
+    * appId  应用ID。
     * appName  应用名称。
     * permissions  权限。
     *
@@ -407,7 +407,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets appId
-    *  应用id。
+    *  应用ID。
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class ShowGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets appId
     *
-    * @param string|null $appId 应用id。
+    * @param string|null $appId 应用ID。
     *
     * @return $this
     */

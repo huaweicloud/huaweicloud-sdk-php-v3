@@ -24,7 +24,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     * orderId  订单ID。
     * promotionPlanId  促销计划ID。
     * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
@@ -52,7 +52,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     * orderId  订单ID。
     * promotionPlanId  促销计划ID。
     * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
@@ -101,7 +101,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     * orderId  订单ID。
     * promotionPlanId  促销计划ID。
     * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
@@ -129,7 +129,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     * orderId  订单ID。
     * promotionPlanId  促销计划ID。
     * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
@@ -157,7 +157,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     * orderId  订单ID。
     * promotionPlanId  促销计划ID。
     * couponType  优惠券类型：1：代金券2：折扣券（预留）3：产品券（预留）4：现金券（预留）
-    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * status  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     * activeStartTime  激活时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * activeEndTime  结束时间。UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”。其中，HH范围是0～23，mm和ss范围是0～59。
     * offset  偏移量，从0开始。默认值为0。 说明： offset用于分页处理，如不涉及分页，请使用默认值0。offset表示相对于满足条件的第一个数据的偏移量。如offset = 1，则返回满足条件的第二个数据至最后一个数据。例如，满足查询条件的结果共10条数据，limit取值为10，offset取值为1，则返回的数据为2~10，第一条数据不返回。
@@ -263,8 +263,8 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['couponType']) && ($this->container['couponType'] < 1)) {
                 $invalidProperties[] = "invalid value for 'couponType', must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['status']) && ($this->container['status'] > 4)) {
-                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 4.";
+            if (!is_null($this->container['status']) && ($this->container['status'] > 5)) {
+                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 5.";
             }
             if (!is_null($this->container['status']) && ($this->container['status'] < 1)) {
                 $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 1.";
@@ -393,7 +393,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    *  客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     *
     * @return int|null
     */
@@ -405,7 +405,7 @@ class ListSubCustomerCouponsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期
+    * @param int|null $status 客户优惠券实例状态：1：未激活2：待使用3：已使用4：已过期5：已回收。此参数不携带或携带值为空时，不作为筛选条件。 说明： 已使用、已过期和已回收优惠券，只返回12个月以内的数据。
     *
     * @return $this
     */

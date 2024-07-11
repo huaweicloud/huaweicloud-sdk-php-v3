@@ -22,28 +22,24 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * refer  referer值。
     * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'refer' => 'string',
-            'value' => 'int',
-            'ratio' => 'double'
+            'value' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * refer  referer值。
     * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'refer' => null,
-        'value' => 'int64',
-        'ratio' => 'double'
+        'value' => 'int64'
     ];
 
     /**
@@ -71,42 +67,36 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     * and the value is the original name
     * refer  referer值。
     * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'refer' => 'refer',
-            'value' => 'value',
-            'ratio' => 'ratio'
+            'value' => 'value'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * refer  referer值。
     * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
     *
     * @var string[]
     */
     protected static $setters = [
             'refer' => 'setRefer',
-            'value' => 'setValue',
-            'ratio' => 'setRatio'
+            'value' => 'setValue'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * refer  referer值。
     * value  对应查询类型的值。（流量单位：Byte）
-    * ratio  该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
     *
     * @var string[]
     */
     protected static $getters = [
             'refer' => 'getRefer',
-            'value' => 'getValue',
-            'ratio' => 'getRatio'
+            'value' => 'getValue'
     ];
 
     /**
@@ -169,7 +159,6 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     {
         $this->container['refer'] = isset($data['refer']) ? $data['refer'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['ratio'] = isset($data['ratio']) ? $data['ratio'] : null;
     }
 
     /**
@@ -239,30 +228,6 @@ class TopReferSummary implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
-        return $this;
-    }
-
-    /**
-    * Gets ratio
-    *  该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
-    *
-    * @return double|null
-    */
-    public function getRatio()
-    {
-        return $this->container['ratio'];
-    }
-
-    /**
-    * Sets ratio
-    *
-    * @param double|null $ratio 该referer的流量(或请求数)占当前查询条件下总流量(或请求数)的比例。保留4位小数
-    *
-    * @return $this
-    */
-    public function setRatio($ratio)
-    {
-        $this->container['ratio'] = $ratio;
         return $this;
     }
 

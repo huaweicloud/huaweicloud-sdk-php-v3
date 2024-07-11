@@ -20,7 +20,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * name  应用名称
     * description  描述
     * groupId  分组id
@@ -46,7 +46,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * name  应用名称
     * description  描述
     * groupId  分组id
@@ -93,7 +93,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目id
     * name  应用名称
     * description  描述
     * groupId  分组id
@@ -119,7 +119,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目id
     * name  应用名称
     * description  描述
     * groupId  分组id
@@ -145,7 +145,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目id
     * name  应用名称
     * description  描述
     * groupId  分组id
@@ -310,7 +310,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -322,7 +322,7 @@ class CreateAppRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

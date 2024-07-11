@@ -32,6 +32,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * type  告警策略类型。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
             'count' => 'int',
             'type' => 'string',
             'suppressDuration' => '\HuaweiCloud\SDK\Ces\V2\Model\SuppressDuration',
-            'alarmLevel' => 'int'
+            'alarmLevel' => 'int',
+            'selectedUnit' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * type  告警策略类型。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
         'count' => null,
         'type' => null,
         'suppressDuration' => null,
-        'alarmLevel' => 'int32'
+        'alarmLevel' => 'int32',
+        'selectedUnit' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * type  告警策略类型。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
             'count' => 'count',
             'type' => 'type',
             'suppressDuration' => 'suppress_duration',
-            'alarmLevel' => 'alarm_level'
+            'alarmLevel' => 'alarm_level',
+            'selectedUnit' => 'selected_unit'
     ];
 
     /**
@@ -149,6 +155,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * type  告警策略类型。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
             'count' => 'setCount',
             'type' => 'setType',
             'suppressDuration' => 'setSuppressDuration',
-            'alarmLevel' => 'setAlarmLevel'
+            'alarmLevel' => 'setAlarmLevel',
+            'selectedUnit' => 'setSelectedUnit'
     ];
 
     /**
@@ -181,6 +189,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     * type  告警策略类型。
     * suppressDuration  suppressDuration
     * alarmLevel  告警级别，1为紧急，2为重要，3为次要，4为提示
+    * selectedUnit  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
             'count' => 'getCount',
             'type' => 'getType',
             'suppressDuration' => 'getSuppressDuration',
-            'alarmLevel' => 'getAlarmLevel'
+            'alarmLevel' => 'getAlarmLevel',
+            'selectedUnit' => 'getSelectedUnit'
     ];
 
     /**
@@ -269,6 +279,7 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['suppressDuration'] = isset($data['suppressDuration']) ? $data['suppressDuration'] : null;
         $this->container['alarmLevel'] = isset($data['alarmLevel']) ? $data['alarmLevel'] : null;
+        $this->container['selectedUnit'] = isset($data['selectedUnit']) ? $data['selectedUnit'] : null;
     }
 
     /**
@@ -350,6 +361,12 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['alarmLevel']) && ($this->container['alarmLevel'] < 1)) {
                 $invalidProperties[] = "invalid value for 'alarmLevel', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['selectedUnit']) && (mb_strlen($this->container['selectedUnit']) > 64)) {
+                $invalidProperties[] = "invalid value for 'selectedUnit', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['selectedUnit']) && (mb_strlen($this->container['selectedUnit']) < 0)) {
+                $invalidProperties[] = "invalid value for 'selectedUnit', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -650,6 +667,30 @@ class PoliciesInListResp implements ModelInterface, ArrayAccess
     public function setAlarmLevel($alarmLevel)
     {
         $this->container['alarmLevel'] = $alarmLevel;
+        return $this;
+    }
+
+    /**
+    * Gets selectedUnit
+    *  用户在页面中选择的指标单位， 用于后续指标数据回显和计算
+    *
+    * @return string|null
+    */
+    public function getSelectedUnit()
+    {
+        return $this->container['selectedUnit'];
+    }
+
+    /**
+    * Sets selectedUnit
+    *
+    * @param string|null $selectedUnit 用户在页面中选择的指标单位， 用于后续指标数据回显和计算
+    *
+    * @return $this
+    */
+    public function setSelectedUnit($selectedUnit)
+    {
+        $this->container['selectedUnit'] = $selectedUnit;
         return $this;
     }
 

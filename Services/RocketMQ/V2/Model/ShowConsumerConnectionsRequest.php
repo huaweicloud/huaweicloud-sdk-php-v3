@@ -20,8 +20,8 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * group  消费组名称
+    * instanceId  实例ID。
+    * group  消费组名称。
     * limit  查询数量，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * isDetail  是否查询消费者详细列表，参数为“true”则表示查询详细列表，否则表示查询简易列表。
@@ -38,8 +38,8 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * group  消费组名称
+    * instanceId  实例ID。
+    * group  消费组名称。
     * limit  查询数量，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * isDetail  是否查询消费者详细列表，参数为“true”则表示查询详细列表，否则表示查询简易列表。
@@ -77,8 +77,8 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID
-    * group  消费组名称
+    * instanceId  实例ID。
+    * group  消费组名称。
     * limit  查询数量，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * isDetail  是否查询消费者详细列表，参数为“true”则表示查询详细列表，否则表示查询简易列表。
@@ -95,8 +95,8 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID
-    * group  消费组名称
+    * instanceId  实例ID。
+    * group  消费组名称。
     * limit  查询数量，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * isDetail  是否查询消费者详细列表，参数为“true”则表示查询详细列表，否则表示查询简易列表。
@@ -113,8 +113,8 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID
-    * group  消费组名称
+    * instanceId  实例ID。
+    * group  消费组名称。
     * limit  查询数量，取值范围为1~50。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
     * isDetail  是否查询消费者详细列表，参数为“true”则表示查询详细列表，否则表示查询简易列表。
@@ -224,7 +224,7 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  实例ID。
     *
     * @return string
     */
@@ -236,7 +236,7 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID
+    * @param string $instanceId 实例ID。
     *
     * @return $this
     */
@@ -248,7 +248,7 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets group
-    *  消费组名称
+    *  消费组名称。
     *
     * @return string
     */
@@ -260,7 +260,7 @@ class ShowConsumerConnectionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets group
     *
-    * @param string $group 消费组名称
+    * @param string $group 消费组名称。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class HostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * uuid  主机ID
+    * uuid  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口
@@ -29,7 +29,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * asProxy  是否为代理机
     * groupId  主机集群id
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerId  主机所属人id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
@@ -68,7 +68,7 @@ class HostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * uuid  主机ID
+    * uuid  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口
@@ -77,7 +77,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * asProxy  是否为代理机
     * groupId  主机集群id
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerId  主机所属人id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
@@ -137,7 +137,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * uuid  主机ID
+    * uuid  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口
@@ -146,7 +146,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * asProxy  是否为代理机
     * groupId  主机集群id
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerId  主机所属人id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
@@ -185,7 +185,7 @@ class HostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * uuid  主机ID
+    * uuid  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口
@@ -194,7 +194,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * asProxy  是否为代理机
     * groupId  主机集群id
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerId  主机所属人id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
@@ -233,7 +233,7 @@ class HostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * uuid  主机ID
+    * uuid  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口
@@ -242,7 +242,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     * hostName  主机名称
     * asProxy  是否为代理机
     * groupId  主机集群id
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerId  主机所属人id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
@@ -386,7 +386,7 @@ class HostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets uuid
-    *  主机ID
+    *  主机id
     *
     * @return string|null
     */
@@ -398,7 +398,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets uuid
     *
-    * @param string|null $uuid 主机ID
+    * @param string|null $uuid 主机id
     *
     * @return $this
     */
@@ -602,7 +602,7 @@ class HostInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyHostId
-    *  代理机ID
+    *  代理机id
     *
     * @return string|null
     */
@@ -614,7 +614,7 @@ class HostInfo implements ModelInterface, ArrayAccess
     /**
     * Sets proxyHostId
     *
-    * @param string|null $proxyHostId 代理机ID
+    * @param string|null $proxyHostId 代理机id
     *
     * @return $this
     */

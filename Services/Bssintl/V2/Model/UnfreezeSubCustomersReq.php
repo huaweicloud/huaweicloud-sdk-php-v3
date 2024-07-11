@@ -23,13 +23,15 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'customerIds' => 'string[]',
             'reason' => 'string',
-            'indirectPartnerId' => 'string'
+            'indirectPartnerId' => 'string',
+            'unfreezeType' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'customerIds' => null,
         'reason' => null,
-        'indirectPartnerId' => null
+        'indirectPartnerId' => null,
+        'unfreezeType' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'customerIds' => 'customer_ids',
             'reason' => 'reason',
-            'indirectPartnerId' => 'indirect_partner_id'
+            'indirectPartnerId' => 'indirect_partner_id',
+            'unfreezeType' => 'unfreeze_type'
     ];
 
     /**
@@ -86,13 +92,15 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
     *
     * @var string[]
     */
     protected static $setters = [
             'customerIds' => 'setCustomerIds',
             'reason' => 'setReason',
-            'indirectPartnerId' => 'setIndirectPartnerId'
+            'indirectPartnerId' => 'setIndirectPartnerId',
+            'unfreezeType' => 'setUnfreezeType'
     ];
 
     /**
@@ -100,13 +108,15 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
     *
     * @var string[]
     */
     protected static $getters = [
             'customerIds' => 'getCustomerIds',
             'reason' => 'getReason',
-            'indirectPartnerId' => 'getIndirectPartnerId'
+            'indirectPartnerId' => 'getIndirectPartnerId',
+            'unfreezeType' => 'getUnfreezeType'
     ];
 
     /**
@@ -149,7 +159,22 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const UNFREEZE_TYPE_ACCOUNT = 'ACCOUNT';
+    const UNFREEZE_TYPE_ACCOUNT_AND_RESOURCE = 'ACCOUNT_AND_RESOURCE';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getUnfreezeTypeAllowableValues()
+    {
+        return [
+            self::UNFREEZE_TYPE_ACCOUNT,
+            self::UNFREEZE_TYPE_ACCOUNT_AND_RESOURCE,
+        ];
+    }
 
 
     /**
@@ -170,6 +195,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
         $this->container['customerIds'] = isset($data['customerIds']) ? $data['customerIds'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
         $this->container['indirectPartnerId'] = isset($data['indirectPartnerId']) ? $data['indirectPartnerId'] : null;
+        $this->container['unfreezeType'] = isset($data['unfreezeType']) ? $data['unfreezeType'] : null;
     }
 
     /**
@@ -198,6 +224,14 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['indirectPartnerId']) && (mb_strlen($this->container['indirectPartnerId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'indirectPartnerId', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getUnfreezeTypeAllowableValues();
+                if (!is_null($this->container['unfreezeType']) && !in_array($this->container['unfreezeType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'unfreezeType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -281,6 +315,30 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     public function setIndirectPartnerId($indirectPartnerId)
     {
         $this->container['indirectPartnerId'] = $indirectPartnerId;
+        return $this;
+    }
+
+    /**
+    * Gets unfreezeType
+    *  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    *
+    * @return string|null
+    */
+    public function getUnfreezeType()
+    {
+        return $this->container['unfreezeType'];
+    }
+
+    /**
+    * Sets unfreezeType
+    *
+    * @param string|null $unfreezeType |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    *
+    * @return $this
+    */
+    public function setUnfreezeType($unfreezeType)
+    {
+        $this->container['unfreezeType'] = $unfreezeType;
         return $this;
     }
 

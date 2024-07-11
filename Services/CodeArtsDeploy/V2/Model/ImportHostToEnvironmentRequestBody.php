@@ -21,7 +21,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupId  主机集群id
-    * hostIds  要导入的主机ids
+    * hostIds  要导入的主机id列表
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupId  主机集群id
-    * hostIds  要导入的主机ids
+    * hostIds  要导入的主机id列表
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupId  主机集群id
-    * hostIds  要导入的主机ids
+    * hostIds  要导入的主机id列表
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupId  主机集群id
-    * hostIds  要导入的主机ids
+    * hostIds  要导入的主机id列表
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupId  主机集群id
-    * hostIds  要导入的主机ids
+    * hostIds  要导入的主机id列表
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostIds
-    *  要导入的主机ids
+    *  要导入的主机id列表
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class ImportHostToEnvironmentRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets hostIds
     *
-    * @param string[] $hostIds 要导入的主机ids
+    * @param string[] $hostIds 要导入的主机id列表
     *
     * @return $this
     */

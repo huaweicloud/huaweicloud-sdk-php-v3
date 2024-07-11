@@ -20,7 +20,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -36,7 +36,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -73,7 +73,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -89,7 +89,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -105,7 +105,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目id
     * contentType  消息体的类型（格式），下方类型可任选其一使用：                         application/json;charset=utf-8                         application/json
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
@@ -251,7 +251,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -263,7 +263,7 @@ class ListDeployTasksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

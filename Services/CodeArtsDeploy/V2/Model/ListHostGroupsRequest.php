@@ -20,7 +20,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -44,7 +44,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -89,7 +89,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目id
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -113,7 +113,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目id
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -137,7 +137,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目id
     * regionName  局点信息
     * os  操作系统：windows|linux
     * offset  偏移量,表示从此偏移量开始查询,offset大于等于0
@@ -333,7 +333,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -345,7 +345,7 @@ class ListHostGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

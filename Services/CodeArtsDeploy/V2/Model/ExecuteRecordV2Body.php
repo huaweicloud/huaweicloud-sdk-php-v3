@@ -23,7 +23,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
     * duration  部署用时
     * state  应用状态
     * operator  操作人用户名
-    * executionId  部署记录ID
+    * executionId  部署记录id
     * startTime  部署应用的开始时间
     * nickname  操作人昵称
     * endTime  部署应用的结束时间
@@ -49,7 +49,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
     * duration  部署用时
     * state  应用状态
     * operator  操作人用户名
-    * executionId  部署记录ID
+    * executionId  部署记录id
     * startTime  部署应用的开始时间
     * nickname  操作人昵称
     * endTime  部署应用的结束时间
@@ -96,7 +96,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
     * duration  部署用时
     * state  应用状态
     * operator  操作人用户名
-    * executionId  部署记录ID
+    * executionId  部署记录id
     * startTime  部署应用的开始时间
     * nickname  操作人昵称
     * endTime  部署应用的结束时间
@@ -122,7 +122,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
     * duration  部署用时
     * state  应用状态
     * operator  操作人用户名
-    * executionId  部署记录ID
+    * executionId  部署记录id
     * startTime  部署应用的开始时间
     * nickname  操作人昵称
     * endTime  部署应用的结束时间
@@ -148,7 +148,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
     * duration  部署用时
     * state  应用状态
     * operator  操作人用户名
-    * executionId  部署记录ID
+    * executionId  部署记录id
     * startTime  部署应用的开始时间
     * nickname  操作人昵称
     * endTime  部署应用的结束时间
@@ -334,7 +334,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionId
-    *  部署记录ID
+    *  部署记录id
     *
     * @return string|null
     */
@@ -346,7 +346,7 @@ class ExecuteRecordV2Body implements ModelInterface, ArrayAccess
     /**
     * Sets executionId
     *
-    * @param string|null $executionId 部署记录ID
+    * @param string|null $executionId 部署记录id
     *
     * @return $this
     */

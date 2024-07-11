@@ -20,7 +20,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
@@ -34,7 +34,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
+    * projectId  项目id
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
@@ -69,7 +69,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
+    * projectId  项目id
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
@@ -83,7 +83,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
+    * projectId  项目id
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
@@ -97,7 +97,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
+    * projectId  项目id
     * startDate  部署应用开始时间范围的左边界（包含），格式yyyy-MM-dd
     * endDate  部署应用开始时间范围的右边界（包含），格式yyyy-MM-dd 。最大时间范围为1年。
     *
@@ -205,7 +205,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class ShowProjectSuccessRateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

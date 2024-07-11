@@ -23,13 +23,15 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
+    * extensionScaleGroups  extensionScaleGroups
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdate',
             'initialNodeCount' => 'int',
-            'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling'
+            'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling',
+            'extensionScaleGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup'
     ];
 
     /**
@@ -37,13 +39,15 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
+    * extensionScaleGroups  extensionScaleGroups
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'nodeTemplate' => null,
         'initialNodeCount' => 'int32',
-        'autoscaling' => null
+        'autoscaling' => null,
+        'extensionScaleGroups' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
+    * extensionScaleGroups  extensionScaleGroups
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'nodeTemplate' => 'nodeTemplate',
             'initialNodeCount' => 'initialNodeCount',
-            'autoscaling' => 'autoscaling'
+            'autoscaling' => 'autoscaling',
+            'extensionScaleGroups' => 'extensionScaleGroups'
     ];
 
     /**
@@ -86,13 +92,15 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
+    * extensionScaleGroups  extensionScaleGroups
     *
     * @var string[]
     */
     protected static $setters = [
             'nodeTemplate' => 'setNodeTemplate',
             'initialNodeCount' => 'setInitialNodeCount',
-            'autoscaling' => 'setAutoscaling'
+            'autoscaling' => 'setAutoscaling',
+            'extensionScaleGroups' => 'setExtensionScaleGroups'
     ];
 
     /**
@@ -100,13 +108,15 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
+    * extensionScaleGroups  extensionScaleGroups
     *
     * @var string[]
     */
     protected static $getters = [
             'nodeTemplate' => 'getNodeTemplate',
             'initialNodeCount' => 'getInitialNodeCount',
-            'autoscaling' => 'getAutoscaling'
+            'autoscaling' => 'getAutoscaling',
+            'extensionScaleGroups' => 'getExtensionScaleGroups'
     ];
 
     /**
@@ -170,6 +180,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
         $this->container['nodeTemplate'] = isset($data['nodeTemplate']) ? $data['nodeTemplate'] : null;
         $this->container['initialNodeCount'] = isset($data['initialNodeCount']) ? $data['initialNodeCount'] : null;
         $this->container['autoscaling'] = isset($data['autoscaling']) ? $data['autoscaling'] : null;
+        $this->container['extensionScaleGroups'] = isset($data['extensionScaleGroups']) ? $data['extensionScaleGroups'] : null;
     }
 
     /**
@@ -272,6 +283,30 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     public function setAutoscaling($autoscaling)
     {
         $this->container['autoscaling'] = $autoscaling;
+        return $this;
+    }
+
+    /**
+    * Gets extensionScaleGroups
+    *  extensionScaleGroups
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup|null
+    */
+    public function getExtensionScaleGroups()
+    {
+        return $this->container['extensionScaleGroups'];
+    }
+
+    /**
+    * Sets extensionScaleGroups
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup|null $extensionScaleGroups extensionScaleGroups
+    *
+    * @return $this
+    */
+    public function setExtensionScaleGroups($extensionScaleGroups)
+    {
+        $this->container['extensionScaleGroups'] = $extensionScaleGroups;
         return $this;
     }
 

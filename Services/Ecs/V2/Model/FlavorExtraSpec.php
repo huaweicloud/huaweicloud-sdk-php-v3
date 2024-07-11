@@ -58,6 +58,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
+    * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     *
     * @var string[]
     */
@@ -99,7 +101,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotasubNetworkInterfaceMaxNum' => 'string',
             'ecsinstanceArchitecture' => 'string',
             'networkInterfacetrafficMirroringSupported' => 'string',
-            'securityenclaveSupported' => 'string'
+            'securityenclaveSupported' => 'string',
+            'infogpus' => 'string',
+            'infoasicAccelerators' => 'string'
     ];
 
     /**
@@ -142,6 +146,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
+    * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     *
     * @var string[]
     */
@@ -183,7 +189,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         'quotasubNetworkInterfaceMaxNum' => null,
         'ecsinstanceArchitecture' => null,
         'networkInterfacetrafficMirroringSupported' => null,
-        'securityenclaveSupported' => null
+        'securityenclaveSupported' => null,
+        'infogpus' => null,
+        'infoasicAccelerators' => null
     ];
 
     /**
@@ -247,6 +255,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
+    * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     *
     * @var string[]
     */
@@ -288,7 +298,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotasubNetworkInterfaceMaxNum' => 'quota:sub_network_interface_max_num',
             'ecsinstanceArchitecture' => 'ecs:instance_architecture',
             'networkInterfacetrafficMirroringSupported' => 'network_interface:traffic_mirroring_supported',
-            'securityenclaveSupported' => 'security:enclave_supported'
+            'securityenclaveSupported' => 'security:enclave_supported',
+            'infogpus' => 'info:gpus',
+            'infoasicAccelerators' => 'info:asic_accelerators'
     ];
 
     /**
@@ -331,6 +343,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
+    * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     *
     * @var string[]
     */
@@ -372,7 +386,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotasubNetworkInterfaceMaxNum' => 'setQuotasubNetworkInterfaceMaxNum',
             'ecsinstanceArchitecture' => 'setEcsinstanceArchitecture',
             'networkInterfacetrafficMirroringSupported' => 'setNetworkInterfacetrafficMirroringSupported',
-            'securityenclaveSupported' => 'setSecurityenclaveSupported'
+            'securityenclaveSupported' => 'setSecurityenclaveSupported',
+            'infogpus' => 'setInfogpus',
+            'infoasicAccelerators' => 'setInfoasicAccelerators'
     ];
 
     /**
@@ -415,6 +431,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     * ecsinstanceArchitecture  该规格对应的CPU架构，且仅鲲鹏实例架构规格返回该字段  - 取值为arm64表示CPU架构为鲲鹏计算。
     * networkInterfacetrafficMirroringSupported  该规格是否支持流量镜像。
     * securityenclaveSupported  该规格是否支持QingTian Enclave。
+    * infogpus  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    * infoasicAccelerators  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
     *
     * @var string[]
     */
@@ -456,7 +474,9 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
             'quotasubNetworkInterfaceMaxNum' => 'getQuotasubNetworkInterfaceMaxNum',
             'ecsinstanceArchitecture' => 'getEcsinstanceArchitecture',
             'networkInterfacetrafficMirroringSupported' => 'getNetworkInterfacetrafficMirroringSupported',
-            'securityenclaveSupported' => 'getSecurityenclaveSupported'
+            'securityenclaveSupported' => 'getSecurityenclaveSupported',
+            'infogpus' => 'getInfogpus',
+            'infoasicAccelerators' => 'getInfoasicAccelerators'
     ];
 
     /**
@@ -555,6 +575,8 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
         $this->container['ecsinstanceArchitecture'] = isset($data['ecsinstanceArchitecture']) ? $data['ecsinstanceArchitecture'] : null;
         $this->container['networkInterfacetrafficMirroringSupported'] = isset($data['networkInterfacetrafficMirroringSupported']) ? $data['networkInterfacetrafficMirroringSupported'] : null;
         $this->container['securityenclaveSupported'] = isset($data['securityenclaveSupported']) ? $data['securityenclaveSupported'] : null;
+        $this->container['infogpus'] = isset($data['infogpus']) ? $data['infogpus'] : null;
+        $this->container['infoasicAccelerators'] = isset($data['infoasicAccelerators']) ? $data['infoasicAccelerators'] : null;
     }
 
     /**
@@ -1488,6 +1510,54 @@ class FlavorExtraSpec implements ModelInterface, ArrayAccess
     public function setSecurityenclaveSupported($securityenclaveSupported)
     {
         $this->container['securityenclaveSupported'] = $securityenclaveSupported;
+        return $this;
+    }
+
+    /**
+    * Gets infogpus
+    *  该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    *
+    * @return string|null
+    */
+    public function getInfogpus()
+    {
+        return $this->container['infogpus'];
+    }
+
+    /**
+    * Sets infogpus
+    *
+    * @param string|null $infogpus 该规格的GPU卡信息。  name：GPU名称 memory_mb：GPU显存大小 count：GPU显卡数量 alias_prefix：GPU显卡内部别名
+    *
+    * @return $this
+    */
+    public function setInfogpus($infogpus)
+    {
+        $this->container['infogpus'] = $infogpus;
+        return $this;
+    }
+
+    /**
+    * Gets infoasicAccelerators
+    *  该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    *
+    * @return string|null
+    */
+    public function getInfoasicAccelerators()
+    {
+        return $this->container['infoasicAccelerators'];
+    }
+
+    /**
+    * Sets infoasicAccelerators
+    *
+    * @param string|null $infoasicAccelerators 该规格的加速器信息。  name：加速器名称 memory_mb：加速器显存大小 count：加速器显卡数量 alias_prefix：加速器显卡内部别名
+    *
+    * @return $this
+    */
+    public function setInfoasicAccelerators($infoasicAccelerators)
+    {
+        $this->container['infoasicAccelerators'] = $infoasicAccelerators;
         return $this;
     }
 

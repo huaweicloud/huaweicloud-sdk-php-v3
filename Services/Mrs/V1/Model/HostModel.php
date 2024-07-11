@@ -35,6 +35,7 @@ class HostModel implements ModelInterface, ArrayAccess
     * dataVolumeType  数据盘类型
     * dataVolumeSize  数据盘容量
     * dataVolumeCount  数据盘个数
+    * nodeGroupName  节点组名称
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class HostModel implements ModelInterface, ArrayAccess
             'rootVolumeSize' => 'string',
             'dataVolumeType' => 'string',
             'dataVolumeSize' => 'int',
-            'dataVolumeCount' => 'int'
+            'dataVolumeCount' => 'int',
+            'nodeGroupName' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class HostModel implements ModelInterface, ArrayAccess
     * dataVolumeType  数据盘类型
     * dataVolumeSize  数据盘容量
     * dataVolumeCount  数据盘个数
+    * nodeGroupName  节点组名称
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class HostModel implements ModelInterface, ArrayAccess
         'rootVolumeSize' => null,
         'dataVolumeType' => null,
         'dataVolumeSize' => 'int32',
-        'dataVolumeCount' => 'int32'
+        'dataVolumeCount' => 'int32',
+        'nodeGroupName' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class HostModel implements ModelInterface, ArrayAccess
     * dataVolumeType  数据盘类型
     * dataVolumeSize  数据盘容量
     * dataVolumeCount  数据盘个数
+    * nodeGroupName  节点组名称
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class HostModel implements ModelInterface, ArrayAccess
             'rootVolumeSize' => 'root_volume_size',
             'dataVolumeType' => 'data_volume_type',
             'dataVolumeSize' => 'data_volume_size',
-            'dataVolumeCount' => 'data_volume_count'
+            'dataVolumeCount' => 'data_volume_count',
+            'nodeGroupName' => 'node_group_name'
     ];
 
     /**
@@ -170,6 +176,7 @@ class HostModel implements ModelInterface, ArrayAccess
     * dataVolumeType  数据盘类型
     * dataVolumeSize  数据盘容量
     * dataVolumeCount  数据盘个数
+    * nodeGroupName  节点组名称
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class HostModel implements ModelInterface, ArrayAccess
             'rootVolumeSize' => 'setRootVolumeSize',
             'dataVolumeType' => 'setDataVolumeType',
             'dataVolumeSize' => 'setDataVolumeSize',
-            'dataVolumeCount' => 'setDataVolumeCount'
+            'dataVolumeCount' => 'setDataVolumeCount',
+            'nodeGroupName' => 'setNodeGroupName'
     ];
 
     /**
@@ -208,6 +216,7 @@ class HostModel implements ModelInterface, ArrayAccess
     * dataVolumeType  数据盘类型
     * dataVolumeSize  数据盘容量
     * dataVolumeCount  数据盘个数
+    * nodeGroupName  节点组名称
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class HostModel implements ModelInterface, ArrayAccess
             'rootVolumeSize' => 'getRootVolumeSize',
             'dataVolumeType' => 'getDataVolumeType',
             'dataVolumeSize' => 'getDataVolumeSize',
-            'dataVolumeCount' => 'getDataVolumeCount'
+            'dataVolumeCount' => 'getDataVolumeCount',
+            'nodeGroupName' => 'getNodeGroupName'
     ];
 
     /**
@@ -302,6 +312,7 @@ class HostModel implements ModelInterface, ArrayAccess
         $this->container['dataVolumeType'] = isset($data['dataVolumeType']) ? $data['dataVolumeType'] : null;
         $this->container['dataVolumeSize'] = isset($data['dataVolumeSize']) ? $data['dataVolumeSize'] : null;
         $this->container['dataVolumeCount'] = isset($data['dataVolumeCount']) ? $data['dataVolumeCount'] : null;
+        $this->container['nodeGroupName'] = isset($data['nodeGroupName']) ? $data['nodeGroupName'] : null;
     }
 
     /**
@@ -683,6 +694,30 @@ class HostModel implements ModelInterface, ArrayAccess
     public function setDataVolumeCount($dataVolumeCount)
     {
         $this->container['dataVolumeCount'] = $dataVolumeCount;
+        return $this;
+    }
+
+    /**
+    * Gets nodeGroupName
+    *  节点组名称
+    *
+    * @return string|null
+    */
+    public function getNodeGroupName()
+    {
+        return $this->container['nodeGroupName'];
+    }
+
+    /**
+    * Sets nodeGroupName
+    *
+    * @param string|null $nodeGroupName 节点组名称
+    *
+    * @return $this
+    */
+    public function setNodeGroupName($nodeGroupName)
+    {
+        $this->container['nodeGroupName'] = $nodeGroupName;
         return $this;
     }
 

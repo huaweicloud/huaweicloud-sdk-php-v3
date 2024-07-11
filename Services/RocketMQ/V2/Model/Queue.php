@@ -20,11 +20,11 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  队列ID
-    * lag  队列消费堆积总数
-    * brokerOffset  队列消息总数
-    * consumerOffset  已消费消息数
-    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式
+    * id  队列ID。
+    * lag  队列消费堆积总数。
+    * brokerOffset  队列消息总数。
+    * consumerOffset  已消费消息数。
+    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  队列ID
-    * lag  队列消费堆积总数
-    * brokerOffset  队列消息总数
-    * consumerOffset  已消费消息数
-    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式
+    * id  队列ID。
+    * lag  队列消费堆积总数。
+    * brokerOffset  队列消息总数。
+    * consumerOffset  已消费消息数。
+    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  队列ID
-    * lag  队列消费堆积总数
-    * brokerOffset  队列消息总数
-    * consumerOffset  已消费消息数
-    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式
+    * id  队列ID。
+    * lag  队列消费堆积总数。
+    * brokerOffset  队列消息总数。
+    * consumerOffset  已消费消息数。
+    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  队列ID
-    * lag  队列消费堆积总数
-    * brokerOffset  队列消息总数
-    * consumerOffset  已消费消息数
-    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式
+    * id  队列ID。
+    * lag  队列消费堆积总数。
+    * brokerOffset  队列消息总数。
+    * consumerOffset  已消费消息数。
+    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  队列ID
-    * lag  队列消费堆积总数
-    * brokerOffset  队列消息总数
-    * consumerOffset  已消费消息数
-    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式
+    * id  队列ID。
+    * lag  队列消费堆积总数。
+    * brokerOffset  队列消息总数。
+    * consumerOffset  已消费消息数。
+    * lastMessageTime  最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  队列ID
+    *  队列ID。
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id 队列ID
+    * @param int|null $id 队列ID。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets lag
-    *  队列消费堆积总数
+    *  队列消费堆积总数。
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets lag
     *
-    * @param int|null $lag 队列消费堆积总数
+    * @param int|null $lag 队列消费堆积总数。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets brokerOffset
-    *  队列消息总数
+    *  队列消息总数。
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets brokerOffset
     *
-    * @param int|null $brokerOffset 队列消息总数
+    * @param int|null $brokerOffset 队列消息总数。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumerOffset
-    *  已消费消息数
+    *  已消费消息数。
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets consumerOffset
     *
-    * @param int|null $consumerOffset 已消费消息数
+    * @param int|null $consumerOffset 已消费消息数。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class Queue implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastMessageTime
-    *  最新消费消息的存储时间，unix毫秒时间戳格式
+    *  最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class Queue implements ModelInterface, ArrayAccess
     /**
     * Sets lastMessageTime
     *
-    * @param int|null $lastMessageTime 最新消费消息的存储时间，unix毫秒时间戳格式
+    * @param int|null $lastMessageTime 最新消费消息的存储时间，unix毫秒时间戳格式。
     *
     * @return $this
     */

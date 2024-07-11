@@ -20,7 +20,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupId  项目ID
+    * groupId  项目id
     * keyField  主机名模糊查询信息
     * environmentId  环境id
     * pageIndex  页码数
@@ -44,7 +44,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupId  项目ID
+    * groupId  项目id
     * keyField  主机名模糊查询信息
     * environmentId  环境id
     * pageIndex  页码数
@@ -89,7 +89,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupId  项目ID
+    * groupId  项目id
     * keyField  主机名模糊查询信息
     * environmentId  环境id
     * pageIndex  页码数
@@ -113,7 +113,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupId  项目ID
+    * groupId  项目id
     * keyField  主机名模糊查询信息
     * environmentId  环境id
     * pageIndex  页码数
@@ -137,7 +137,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupId  项目ID
+    * groupId  项目id
     * keyField  主机名模糊查询信息
     * environmentId  环境id
     * pageIndex  页码数
@@ -307,7 +307,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -319,7 +319,7 @@ class ListNewHostsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string $groupId 项目ID
+    * @param string $groupId 项目id
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ioSpec  存储IO规格
-    * availableZones  有可用资源的可用区列表
-    * type  IO类型
-    * unavailableZones  资源售罄的可用区列表
+    * ioSpec  存储IO规格。
+    * availableZones  有可用资源的可用区列表。
+    * type  IO类型。
+    * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ioSpec  存储IO规格
-    * availableZones  有可用资源的可用区列表
-    * type  IO类型
-    * unavailableZones  资源售罄的可用区列表
+    * ioSpec  存储IO规格。
+    * availableZones  有可用资源的可用区列表。
+    * type  IO类型。
+    * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ioSpec  存储IO规格
-    * availableZones  有可用资源的可用区列表
-    * type  IO类型
-    * unavailableZones  资源售罄的可用区列表
+    * ioSpec  存储IO规格。
+    * availableZones  有可用资源的可用区列表。
+    * type  IO类型。
+    * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ioSpec  存储IO规格
-    * availableZones  有可用资源的可用区列表
-    * type  IO类型
-    * unavailableZones  资源售罄的可用区列表
+    * ioSpec  存储IO规格。
+    * availableZones  有可用资源的可用区列表。
+    * type  IO类型。
+    * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ioSpec  存储IO规格
-    * availableZones  有可用资源的可用区列表
-    * type  IO类型
-    * unavailableZones  资源售罄的可用区列表
+    * ioSpec  存储IO规格。
+    * availableZones  有可用资源的可用区列表。
+    * type  IO类型。
+    * unavailableZones  资源售罄的可用区列表。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ioSpec
-    *  存储IO规格
+    *  存储IO规格。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ioSpec
     *
-    * @param string|null $ioSpec 存储IO规格
+    * @param string|null $ioSpec 存储IO规格。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  有可用资源的可用区列表
+    *  有可用资源的可用区列表。
     *
     * @return string[]|null
     */
@@ -243,7 +243,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 有可用资源的可用区列表
+    * @param string[]|null $availableZones 有可用资源的可用区列表。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  IO类型
+    *  IO类型。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type IO类型
+    * @param string|null $type IO类型。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  资源售罄的可用区列表
+    *  资源售罄的可用区列表。
     *
     * @return string[]|null
     */
@@ -291,7 +291,7 @@ class RocketMQExtendProductIosEntity implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones 资源售罄的可用区列表
+    * @param string[]|null $unavailableZones 资源售罄的可用区列表。
     *
     * @return $this
     */

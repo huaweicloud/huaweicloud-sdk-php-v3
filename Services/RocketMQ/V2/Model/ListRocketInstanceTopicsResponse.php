@@ -21,12 +21,12 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  topic总数。
-    * max  最大可创建topic数量。
-    * remaining  剩余可创建topic数量。
+    * total  Topic总数。
+    * max  最大可创建Topic数量。
+    * remaining  剩余可创建Topic数量。
     * nextOffset  下个分页的offset。
     * previousOffset  上个分页的offset。
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -41,12 +41,12 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  topic总数。
-    * max  最大可创建topic数量。
-    * remaining  剩余可创建topic数量。
+    * total  Topic总数。
+    * max  最大可创建Topic数量。
+    * remaining  剩余可创建Topic数量。
     * nextOffset  下个分页的offset。
     * previousOffset  上个分页的offset。
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -82,12 +82,12 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  topic总数。
-    * max  最大可创建topic数量。
-    * remaining  剩余可创建topic数量。
+    * total  Topic总数。
+    * max  最大可创建Topic数量。
+    * remaining  剩余可创建Topic数量。
     * nextOffset  下个分页的offset。
     * previousOffset  上个分页的offset。
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -102,12 +102,12 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  topic总数。
-    * max  最大可创建topic数量。
-    * remaining  剩余可创建topic数量。
+    * total  Topic总数。
+    * max  最大可创建Topic数量。
+    * remaining  剩余可创建Topic数量。
     * nextOffset  下个分页的offset。
     * previousOffset  上个分页的offset。
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -122,12 +122,12 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  topic总数。
-    * max  最大可创建topic数量。
-    * remaining  剩余可创建topic数量。
+    * total  Topic总数。
+    * max  最大可创建Topic数量。
+    * remaining  剩余可创建Topic数量。
     * nextOffset  下个分页的offset。
     * previousOffset  上个分页的offset。
-    * topics  topic列表。
+    * topics  Topic列表。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  topic总数。
+    *  Topic总数。
     *
     * @return int|null
     */
@@ -242,7 +242,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total topic总数。
+    * @param int|null $total Topic总数。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets max
-    *  最大可创建topic数量。
+    *  最大可创建Topic数量。
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets max
     *
-    * @param int|null $max 最大可创建topic数量。
+    * @param int|null $max 最大可创建Topic数量。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets remaining
-    *  剩余可创建topic数量。
+    *  剩余可创建Topic数量。
     *
     * @return int|null
     */
@@ -290,7 +290,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets remaining
     *
-    * @param int|null $remaining 剩余可创建topic数量。
+    * @param int|null $remaining 剩余可创建Topic数量。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  topic列表。
+    *  Topic列表。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\Topic[]|null
     */
@@ -362,7 +362,7 @@ class ListRocketInstanceTopicsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Topic[]|null $topics topic列表。
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\Topic[]|null $topics Topic列表。
     *
     * @return $this
     */

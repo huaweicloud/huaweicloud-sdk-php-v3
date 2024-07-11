@@ -20,8 +20,8 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID
-    * id  任务ID
+    * projectId  项目id
+    * id  任务id
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * startDate  区间开始时间，格式yyyy-MM-dd。 开始时间和结束时间间隔不能超过30天
@@ -42,8 +42,8 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID
-    * id  任务ID
+    * projectId  项目id
+    * id  任务id
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * startDate  区间开始时间，格式yyyy-MM-dd。 开始时间和结束时间间隔不能超过30天
@@ -85,8 +85,8 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID
-    * id  任务ID
+    * projectId  项目id
+    * id  任务id
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * startDate  区间开始时间，格式yyyy-MM-dd。 开始时间和结束时间间隔不能超过30天
@@ -107,8 +107,8 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID
-    * id  任务ID
+    * projectId  项目id
+    * id  任务id
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * startDate  区间开始时间，格式yyyy-MM-dd。 开始时间和结束时间间隔不能超过30天
@@ -129,8 +129,8 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID
-    * id  任务ID
+    * projectId  项目id
+    * id  任务id
     * page  分页页码， 表示从此页开始查询， page大于等于1
     * size  每页显示的条目数量，size小于等于100
     * startDate  区间开始时间，格式yyyy-MM-dd。 开始时间和结束时间间隔不能超过30天
@@ -293,7 +293,7 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -305,7 +305,7 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */
@@ -317,7 +317,7 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  任务ID
+    *  任务id
     *
     * @return string
     */
@@ -329,7 +329,7 @@ class ListDeployTaskHistoryByDateRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 任务ID
+    * @param string $id 任务id
     *
     * @return $this
     */

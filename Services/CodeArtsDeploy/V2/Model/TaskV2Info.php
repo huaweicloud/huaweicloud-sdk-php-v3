@@ -26,17 +26,17 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * description  描述
     * owner  部署任务所属人
     * steps  部署步骤
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createTime  创建时间
     * updateTime  修改时间
-    * roleId  角色ID
+    * roleId  角色id
     * isDefautPermission  是否为默认角色
     * templateId  模板id
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -98,17 +98,17 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * description  描述
     * owner  部署任务所属人
     * steps  部署步骤
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createTime  创建时间
     * updateTime  修改时间
-    * roleId  角色ID
+    * roleId  角色id
     * isDefautPermission  是否为默认角色
     * templateId  模板id
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -191,17 +191,17 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * description  描述
     * owner  部署任务所属人
     * steps  部署步骤
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createTime  创建时间
     * updateTime  修改时间
-    * roleId  角色ID
+    * roleId  角色id
     * isDefautPermission  是否为默认角色
     * templateId  模板id
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -263,17 +263,17 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * description  描述
     * owner  部署任务所属人
     * steps  部署步骤
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createTime  创建时间
     * updateTime  修改时间
-    * roleId  角色ID
+    * roleId  角色id
     * isDefautPermission  是否为默认角色
     * templateId  模板id
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -335,17 +335,17 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     * description  描述
     * owner  部署任务所属人
     * steps  部署步骤
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate、ansible、shell
     * createTime  创建时间
     * updateTime  修改时间
-    * roleId  角色ID
+    * roleId  角色id
     * isDefautPermission  是否为默认角色
     * templateId  模板id
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -710,7 +710,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -722,7 +722,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */
@@ -830,7 +830,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
 
     /**
     * Gets roleId
-    *  角色ID
+    *  角色id
     *
     * @return int|null
     */
@@ -842,7 +842,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     /**
     * Sets roleId
     *
-    * @param int|null $roleId 角色ID
+    * @param int|null $roleId 角色id
     *
     * @return $this
     */
@@ -926,7 +926,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
 
     /**
     * Gets ownerId
-    *  应用创建者用户ID
+    *  应用创建者用户id
     *
     * @return string|null
     */
@@ -938,7 +938,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     /**
     * Sets ownerId
     *
-    * @param string|null $ownerId 应用创建者用户ID
+    * @param string|null $ownerId 应用创建者用户id
     *
     * @return $this
     */
@@ -950,7 +950,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  应用创建者租户ID
+    *  应用创建者租户id
     *
     * @return string|null
     */
@@ -962,7 +962,7 @@ class TaskV2Info implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 应用创建者租户ID
+    * @param string|null $tenantId 应用创建者租户id
     *
     * @return $this
     */

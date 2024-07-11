@@ -20,8 +20,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topics  Topic列表（当查询topic消费“列表”时才显示此参数）。
-    * total  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * topics  Topic列表（当查询Topic消费“列表”时才显示此参数）。
+    * total  Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Gets topics
-    *  Topic列表（当查询topic消费“列表”时才显示此参数）。
+    *  Topic列表（当查询Topic消费“列表”时才显示此参数）。
     *
     * @return string[]|null
     */
@@ -197,7 +197,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
     /**
     * Sets topics
     *
-    * @param string[]|null $topics Topic列表（当查询topic消费“列表”时才显示此参数）。
+    * @param string[]|null $topics Topic列表（当查询Topic消费“列表”时才显示此参数）。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  Topic总数（当查询topic消费“列表”时才显示此参数）。
+    *  Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ConsumerList implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total Topic总数（当查询topic消费“列表”时才显示此参数）。
+    * @param int|null $total Topic总数（当查询Topic消费“列表”时才显示此参数）。
     *
     * @return $this
     */

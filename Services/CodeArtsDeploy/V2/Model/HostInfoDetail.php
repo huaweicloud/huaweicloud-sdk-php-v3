@@ -20,7 +20,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * hostId  主机ID
+    * hostId  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口号
@@ -29,7 +29,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * groupId  主机集群id
     * hostName  主机名
     * asProxy  是否为代理机
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
     * connectionStatus  连通性状态
@@ -66,7 +66,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * hostId  主机ID
+    * hostId  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口号
@@ -75,7 +75,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * groupId  主机集群id
     * hostName  主机名
     * asProxy  是否为代理机
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
     * connectionStatus  连通性状态
@@ -133,7 +133,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * hostId  主机ID
+    * hostId  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口号
@@ -142,7 +142,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * groupId  主机集群id
     * hostName  主机名
     * asProxy  是否为代理机
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
     * connectionStatus  连通性状态
@@ -179,7 +179,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * hostId  主机ID
+    * hostId  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口号
@@ -188,7 +188,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * groupId  主机集群id
     * hostName  主机名
     * asProxy  是否为代理机
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
     * connectionStatus  连通性状态
@@ -225,7 +225,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * hostId  主机ID
+    * hostId  主机id
     * ip  主机IP
     * os  主机操作系统
     * port  端口号
@@ -234,7 +234,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     * groupId  主机集群id
     * hostName  主机名
     * asProxy  是否为代理机
-    * proxyHostId  代理机ID
+    * proxyHostId  代理机id
     * ownerName  主机所属人名称
     * proxyHost  proxyHost
     * connectionStatus  连通性状态
@@ -375,7 +375,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  主机id
     *
     * @return string|null
     */
@@ -387,7 +387,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId 主机id
     *
     * @return $this
     */
@@ -591,7 +591,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyHostId
-    *  代理机ID
+    *  代理机id
     *
     * @return string|null
     */
@@ -603,7 +603,7 @@ class HostInfoDetail implements ModelInterface, ArrayAccess
     /**
     * Sets proxyHostId
     *
-    * @param string|null $proxyHostId 代理机ID
+    * @param string|null $proxyHostId 代理机id
     *
     * @return $this
     */

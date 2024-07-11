@@ -22,7 +22,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of property to type mappings. Used for (de)serialization
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
-    * type  产品的类型。 advanced：专享版
+    * type  产品的类型。 advanced：专享版。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of property to format mappings. Used for (de)serialization
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
-    * type  产品的类型。 advanced：专享版
+    * type  产品的类型。 advanced：专享版。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * and the value is the original name
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
-    * type  产品的类型。 advanced：专享版
+    * type  产品的类型。 advanced：专享版。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of attributes to setter functions (for deserialization of responses)
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
-    * type  产品的类型。 advanced：专享版
+    * type  产品的类型。 advanced：专享版。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     * Array of attributes to getter functions (for serialization of requests)
     * engine  消息引擎的类型。支持的类型为rocketmq。
     * instanceId  实例ID。
-    * type  产品的类型。 advanced：专享版
+    * type  产品的类型。 advanced：专享版。
     *
     * @var string[]
     */
@@ -271,7 +271,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
 
     /**
     * Gets type
-    *  产品的类型。 advanced：专享版
+    *  产品的类型。 advanced：专享版。
     *
     * @return string|null
     */
@@ -283,7 +283,7 @@ class ShowEngineInstanceExtendProductInfoRequest implements ModelInterface, Arra
     /**
     * Sets type
     *
-    * @param string|null $type 产品的类型。 advanced：专享版
+    * @param string|null $type 产品的类型。 advanced：专享版。
     *
     * @return $this
     */

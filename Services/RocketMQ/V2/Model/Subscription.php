@@ -20,9 +20,9 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * topic  订阅的topic名称
-    * type  订阅类型，取值如下：TAG和SQL92
-    * expression  订阅tag字符
+    * topic  订阅的Topic名称。
+    * type  订阅类型，取值如下：TAG和SQL92。
+    * expression  订阅tag字符。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * topic  订阅的topic名称
-    * type  订阅类型，取值如下：TAG和SQL92
-    * expression  订阅tag字符
+    * topic  订阅的Topic名称。
+    * type  订阅类型，取值如下：TAG和SQL92。
+    * expression  订阅tag字符。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * topic  订阅的topic名称
-    * type  订阅类型，取值如下：TAG和SQL92
-    * expression  订阅tag字符
+    * topic  订阅的Topic名称。
+    * type  订阅类型，取值如下：TAG和SQL92。
+    * expression  订阅tag字符。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * topic  订阅的topic名称
-    * type  订阅类型，取值如下：TAG和SQL92
-    * expression  订阅tag字符
+    * topic  订阅的Topic名称。
+    * type  订阅类型，取值如下：TAG和SQL92。
+    * expression  订阅tag字符。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * topic  订阅的topic名称
-    * type  订阅类型，取值如下：TAG和SQL92
-    * expression  订阅tag字符
+    * topic  订阅的Topic名称。
+    * type  订阅类型，取值如下：TAG和SQL92。
+    * expression  订阅tag字符。
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Gets topic
-    *  订阅的topic名称
+    *  订阅的Topic名称。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Sets topic
     *
-    * @param string|null $topic 订阅的topic名称
+    * @param string|null $topic 订阅的Topic名称。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  订阅类型，取值如下：TAG和SQL92
+    *  订阅类型，取值如下：TAG和SQL92。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 订阅类型，取值如下：TAG和SQL92
+    * @param string|null $type 订阅类型，取值如下：TAG和SQL92。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class Subscription implements ModelInterface, ArrayAccess
 
     /**
     * Gets expression
-    *  订阅tag字符
+    *  订阅tag字符。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
     * Sets expression
     *
-    * @param string|null $expression 订阅tag字符
+    * @param string|null $expression 订阅tag字符。
     *
     * @return $this
     */

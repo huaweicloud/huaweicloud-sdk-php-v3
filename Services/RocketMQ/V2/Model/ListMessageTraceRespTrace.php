@@ -26,7 +26,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -74,7 +74,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -143,7 +143,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -191,7 +191,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -239,7 +239,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     * groupName  生产组或消费组。
     * costTime  耗时。
     * requestId  请求ID。
-    * consumeStatus  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    * consumeStatus  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     * topic  主题名称。
     * msgId  消息ID。
     * offsetMsgId  offset消息ID。
@@ -606,7 +606,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeStatus
-    *  消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    *  消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     *
     * @return float|null
     */
@@ -618,7 +618,7 @@ class ListMessageTraceRespTrace implements ModelInterface, ArrayAccess
     /**
     * Sets consumeStatus
     *
-    * @param float|null $consumeStatus 消费状态。0-消费成功, 1-消费超时, 2-消费发生异常, 3-消费返回NULL, 5-消费失败。
+    * @param float|null $consumeStatus 消费状态：  - 0-消费成功  - 1-消费超时  - 2-消费发生异常   - 3-消费返回NULL  - 5-消费失败
     *
     * @return $this
     */

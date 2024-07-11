@@ -23,7 +23,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
     * id  创建的应用id
     * name  创建应用名称
     * region  应用所属区域
-    * arrangeInfos  部署任务列表
+    * arrangeInfos  部署任务列表信息
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
     * id  创建的应用id
     * name  创建应用名称
     * region  应用所属区域
-    * arrangeInfos  部署任务列表
+    * arrangeInfos  部署任务列表信息
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
     * id  创建的应用id
     * name  创建应用名称
     * region  应用所属区域
-    * arrangeInfos  部署任务列表
+    * arrangeInfos  部署任务列表信息
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
     * id  创建的应用id
     * name  创建应用名称
     * region  应用所属区域
-    * arrangeInfos  部署任务列表
+    * arrangeInfos  部署任务列表信息
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
     * id  创建的应用id
     * name  创建应用名称
     * region  应用所属区域
-    * arrangeInfos  部署任务列表
+    * arrangeInfos  部署任务列表信息
     *
     * @var string[]
     */
@@ -279,7 +279,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets arrangeInfos
-    *  部署任务列表
+    *  部署任务列表信息
     *
     * @return \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskBaseBody[]|null
     */
@@ -291,7 +291,7 @@ class AppBaseResponse implements ModelInterface, ArrayAccess
     /**
     * Sets arrangeInfos
     *
-    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskBaseBody[]|null $arrangeInfos 部署任务列表
+    * @param \HuaweiCloud\SDK\CodeArtsDeploy\V2\Model\TaskBaseBody[]|null $arrangeInfos 部署任务列表信息
     *
     * @return $this
     */

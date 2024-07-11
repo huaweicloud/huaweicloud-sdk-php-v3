@@ -23,7 +23,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * taskId  部署任务id
     * name  应用名称
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate，ansible，shell
     * createTime  创建时间
@@ -35,8 +35,8 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * templateId  模板id
     * owner  应用创建者用户名
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -48,7 +48,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
-    * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
     * isDisable  当前应用是否被禁用
@@ -103,7 +103,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * taskId  部署任务id
     * name  应用名称
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate，ansible，shell
     * createTime  创建时间
@@ -115,8 +115,8 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * templateId  模板id
     * owner  应用创建者用户名
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -128,7 +128,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
-    * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
     * isDisable  当前应用是否被禁用
@@ -204,7 +204,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * taskId  部署任务id
     * name  应用名称
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate，ansible，shell
     * createTime  创建时间
@@ -216,8 +216,8 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * templateId  模板id
     * owner  应用创建者用户名
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -229,7 +229,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
-    * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
     * isDisable  当前应用是否被禁用
@@ -284,7 +284,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * taskId  部署任务id
     * name  应用名称
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate，ansible，shell
     * createTime  创建时间
@@ -296,8 +296,8 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * templateId  模板id
     * owner  应用创建者用户名
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -309,7 +309,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
-    * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
     * isDisable  当前应用是否被禁用
@@ -364,7 +364,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * taskId  部署任务id
     * name  应用名称
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * deploySystem  部署类型模式，包括deployTemplate，ansible，shell
     * createTime  创建时间
@@ -376,8 +376,8 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * templateId  模板id
     * owner  应用创建者用户名
     * nickName  应用创建者昵称
-    * ownerId  应用创建者用户ID
-    * tenantId  应用创建者租户ID
+    * ownerId  应用创建者用户id
+    * tenantId  应用创建者租户id
     * tenantName  应用创建者租户名
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * isCare  当前用户是否已收藏
@@ -389,7 +389,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     * canManage  是否有编辑应用权限矩阵的权限
     * canDisable  是否有禁用应用的权限
     * appComponentList  应用和AOM应用组件对应关系
-    * roleId  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    * roleId  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     * id  部署任务id
     * releaseId  部署记录序列号
     * isDisable  当前应用是否被禁用
@@ -709,7 +709,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -721,7 +721,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */
@@ -997,7 +997,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ownerId
-    *  应用创建者用户ID
+    *  应用创建者用户id
     *
     * @return string|null
     */
@@ -1009,7 +1009,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ownerId
     *
-    * @param string|null $ownerId 应用创建者用户ID
+    * @param string|null $ownerId 应用创建者用户id
     *
     * @return $this
     */
@@ -1021,7 +1021,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tenantId
-    *  应用创建者租户ID
+    *  应用创建者租户id
     *
     * @return string|null
     */
@@ -1033,7 +1033,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tenantId
     *
-    * @param string|null $tenantId 应用创建者租户ID
+    * @param string|null $tenantId 应用创建者租户id
     *
     * @return $this
     */
@@ -1309,7 +1309,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roleId
-    *  角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    *  角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     *
     * @return int|null
     */
@@ -1321,7 +1321,7 @@ class ShowDeployTaskDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roleId
     *
-    * @param int|null $roleId 角色ID,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
+    * @param int|null $roleId 角色id,0：应用创建者，-1：项目创建者，3：项目经理，4：开发人员，5：测试经理，6：测试人员，7：参与者，8：浏览者
     *
     * @return $this
     */

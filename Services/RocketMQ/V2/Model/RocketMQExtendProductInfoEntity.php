@@ -20,17 +20,17 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  实例类型
-    * productId  产品ID
-    * ecsFlavorId  该产品使用的ECS规格
+    * type  实例类型。
+    * productId  产品ID。
+    * ecsFlavorId  该产品使用的ECS规格。
     * billingCode  账单计费类型。
-    * archTypes  支持的CPU架构类型
-    * chargingMode  支持的计费模式类型
-    * ios  磁盘IO信息
+    * archTypes  支持的CPU架构类型。
+    * chargingMode  支持的计费模式类型。
+    * ios  磁盘IO信息。
     * properties  properties
-    * availableZones  有可用资源的可用区列表
-    * unavailableZones  资源售罄的可用区列表
-    * supportFeatures  支持的特性功能
+    * availableZones  有可用资源的可用区列表。
+    * unavailableZones  资源售罄的可用区列表。
+    * supportFeatures  支持的特性功能。
     * qingtianIncompatible  是否为擎天实例。
     *
     * @var string[]
@@ -52,17 +52,17 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  实例类型
-    * productId  产品ID
-    * ecsFlavorId  该产品使用的ECS规格
+    * type  实例类型。
+    * productId  产品ID。
+    * ecsFlavorId  该产品使用的ECS规格。
     * billingCode  账单计费类型。
-    * archTypes  支持的CPU架构类型
-    * chargingMode  支持的计费模式类型
-    * ios  磁盘IO信息
+    * archTypes  支持的CPU架构类型。
+    * chargingMode  支持的计费模式类型。
+    * ios  磁盘IO信息。
     * properties  properties
-    * availableZones  有可用资源的可用区列表
-    * unavailableZones  资源售罄的可用区列表
-    * supportFeatures  支持的特性功能
+    * availableZones  有可用资源的可用区列表。
+    * unavailableZones  资源售罄的可用区列表。
+    * supportFeatures  支持的特性功能。
     * qingtianIncompatible  是否为擎天实例。
     *
     * @var string[]
@@ -105,17 +105,17 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  实例类型
-    * productId  产品ID
-    * ecsFlavorId  该产品使用的ECS规格
+    * type  实例类型。
+    * productId  产品ID。
+    * ecsFlavorId  该产品使用的ECS规格。
     * billingCode  账单计费类型。
-    * archTypes  支持的CPU架构类型
-    * chargingMode  支持的计费模式类型
-    * ios  磁盘IO信息
+    * archTypes  支持的CPU架构类型。
+    * chargingMode  支持的计费模式类型。
+    * ios  磁盘IO信息。
     * properties  properties
-    * availableZones  有可用资源的可用区列表
-    * unavailableZones  资源售罄的可用区列表
-    * supportFeatures  支持的特性功能
+    * availableZones  有可用资源的可用区列表。
+    * unavailableZones  资源售罄的可用区列表。
+    * supportFeatures  支持的特性功能。
     * qingtianIncompatible  是否为擎天实例。
     *
     * @var string[]
@@ -137,17 +137,17 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  实例类型
-    * productId  产品ID
-    * ecsFlavorId  该产品使用的ECS规格
+    * type  实例类型。
+    * productId  产品ID。
+    * ecsFlavorId  该产品使用的ECS规格。
     * billingCode  账单计费类型。
-    * archTypes  支持的CPU架构类型
-    * chargingMode  支持的计费模式类型
-    * ios  磁盘IO信息
+    * archTypes  支持的CPU架构类型。
+    * chargingMode  支持的计费模式类型。
+    * ios  磁盘IO信息。
     * properties  properties
-    * availableZones  有可用资源的可用区列表
-    * unavailableZones  资源售罄的可用区列表
-    * supportFeatures  支持的特性功能
+    * availableZones  有可用资源的可用区列表。
+    * unavailableZones  资源售罄的可用区列表。
+    * supportFeatures  支持的特性功能。
     * qingtianIncompatible  是否为擎天实例。
     *
     * @var string[]
@@ -169,17 +169,17 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  实例类型
-    * productId  产品ID
-    * ecsFlavorId  该产品使用的ECS规格
+    * type  实例类型。
+    * productId  产品ID。
+    * ecsFlavorId  该产品使用的ECS规格。
     * billingCode  账单计费类型。
-    * archTypes  支持的CPU架构类型
-    * chargingMode  支持的计费模式类型
-    * ios  磁盘IO信息
+    * archTypes  支持的CPU架构类型。
+    * chargingMode  支持的计费模式类型。
+    * ios  磁盘IO信息。
     * properties  properties
-    * availableZones  有可用资源的可用区列表
-    * unavailableZones  资源售罄的可用区列表
-    * supportFeatures  支持的特性功能
+    * availableZones  有可用资源的可用区列表。
+    * unavailableZones  资源售罄的可用区列表。
+    * supportFeatures  支持的特性功能。
     * qingtianIncompatible  是否为擎天实例。
     *
     * @var string[]
@@ -295,7 +295,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  实例类型
+    *  实例类型。
     *
     * @return string|null
     */
@@ -307,7 +307,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 实例类型
+    * @param string|null $type 实例类型。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets productId
-    *  产品ID
+    *  产品ID。
     *
     * @return string|null
     */
@@ -331,7 +331,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets productId
     *
-    * @param string|null $productId 产品ID
+    * @param string|null $productId 产品ID。
     *
     * @return $this
     */
@@ -343,7 +343,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ecsFlavorId
-    *  该产品使用的ECS规格
+    *  该产品使用的ECS规格。
     *
     * @return string|null
     */
@@ -355,7 +355,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ecsFlavorId
     *
-    * @param string|null $ecsFlavorId 该产品使用的ECS规格
+    * @param string|null $ecsFlavorId 该产品使用的ECS规格。
     *
     * @return $this
     */
@@ -391,7 +391,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets archTypes
-    *  支持的CPU架构类型
+    *  支持的CPU架构类型。
     *
     * @return string[]|null
     */
@@ -403,7 +403,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets archTypes
     *
-    * @param string[]|null $archTypes 支持的CPU架构类型
+    * @param string[]|null $archTypes 支持的CPU架构类型。
     *
     * @return $this
     */
@@ -415,7 +415,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  支持的计费模式类型
+    *  支持的计费模式类型。
     *
     * @return string[]|null
     */
@@ -427,7 +427,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string[]|null $chargingMode 支持的计费模式类型
+    * @param string[]|null $chargingMode 支持的计费模式类型。
     *
     * @return $this
     */
@@ -439,7 +439,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets ios
-    *  磁盘IO信息
+    *  磁盘IO信息。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQExtendProductIosEntity[]|null
     */
@@ -451,7 +451,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets ios
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQExtendProductIosEntity[]|null $ios 磁盘IO信息
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQExtendProductIosEntity[]|null $ios 磁盘IO信息。
     *
     * @return $this
     */
@@ -487,7 +487,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets availableZones
-    *  有可用资源的可用区列表
+    *  有可用资源的可用区列表。
     *
     * @return string[]|null
     */
@@ -499,7 +499,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets availableZones
     *
-    * @param string[]|null $availableZones 有可用资源的可用区列表
+    * @param string[]|null $availableZones 有可用资源的可用区列表。
     *
     * @return $this
     */
@@ -511,7 +511,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets unavailableZones
-    *  资源售罄的可用区列表
+    *  资源售罄的可用区列表。
     *
     * @return string[]|null
     */
@@ -523,7 +523,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets unavailableZones
     *
-    * @param string[]|null $unavailableZones 资源售罄的可用区列表
+    * @param string[]|null $unavailableZones 资源售罄的可用区列表。
     *
     * @return $this
     */
@@ -535,7 +535,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportFeatures
-    *  支持的特性功能
+    *  支持的特性功能。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQProductSupportFeaturesEntity[]|null
     */
@@ -547,7 +547,7 @@ class RocketMQExtendProductInfoEntity implements ModelInterface, ArrayAccess
     /**
     * Sets supportFeatures
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQProductSupportFeaturesEntity[]|null $supportFeatures 支持的特性功能
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\RocketMQProductSupportFeaturesEntity[]|null $supportFeatures 支持的特性功能。
     *
     * @return $this
     */

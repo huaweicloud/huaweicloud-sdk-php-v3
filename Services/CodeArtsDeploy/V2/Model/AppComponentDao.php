@@ -25,7 +25,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
     * appName  AOM应用名称
     * compId  AOM应用组件id
     * compName  AOM应用组件名称
-    * domainId  租户ID
+    * domainId  租户id
     * region  局点信息
     * state  AOM应用组件是否生效，0表示初始化，1表示执行成功，已生效
     *
@@ -49,7 +49,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
     * appName  AOM应用名称
     * compId  AOM应用组件id
     * compName  AOM应用组件名称
-    * domainId  租户ID
+    * domainId  租户id
     * region  局点信息
     * state  AOM应用组件是否生效，0表示初始化，1表示执行成功，已生效
     *
@@ -94,7 +94,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
     * appName  AOM应用名称
     * compId  AOM应用组件id
     * compName  AOM应用组件名称
-    * domainId  租户ID
+    * domainId  租户id
     * region  局点信息
     * state  AOM应用组件是否生效，0表示初始化，1表示执行成功，已生效
     *
@@ -118,7 +118,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
     * appName  AOM应用名称
     * compId  AOM应用组件id
     * compName  AOM应用组件名称
-    * domainId  租户ID
+    * domainId  租户id
     * region  局点信息
     * state  AOM应用组件是否生效，0表示初始化，1表示执行成功，已生效
     *
@@ -142,7 +142,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
     * appName  AOM应用名称
     * compId  AOM应用组件id
     * compName  AOM应用组件名称
-    * domainId  租户ID
+    * domainId  租户id
     * region  局点信息
     * state  AOM应用组件是否生效，0表示初始化，1表示执行成功，已生效
     *
@@ -407,7 +407,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  租户ID
+    *  租户id
     *
     * @return string|null
     */
@@ -419,7 +419,7 @@ class AppComponentDao implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId 租户ID
+    * @param string|null $domainId 租户id
     *
     * @return $this
     */

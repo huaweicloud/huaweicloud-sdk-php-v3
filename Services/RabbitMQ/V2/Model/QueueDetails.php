@@ -26,7 +26,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     *
     * @var string[]
@@ -50,7 +50,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     *
     * @var string[]
@@ -95,7 +95,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     *
     * @var string[]
@@ -119,7 +119,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     *
     * @var string[]
@@ -143,7 +143,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
     * autoDelete  是否自动删除
     * messages  待消费消息数
     * consumers  连接的消费者数
-    * policy  策略（AMQP版本不支持policy，不涉及此参数）
+    * policy  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     * arguments  arguments
     *
     * @var string[]
@@ -395,7 +395,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
 
     /**
     * Gets policy
-    *  策略（AMQP版本不支持policy，不涉及此参数）
+    *  策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class QueueDetails implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param string|null $policy 策略（AMQP版本不支持policy，不涉及此参数）
+    * @param string|null $policy 策略[（AMQP版本不支持policy，不涉及此参数）](tag:hws,hws_hk)
     *
     * @return $this
     */

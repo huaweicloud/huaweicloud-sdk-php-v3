@@ -21,13 +21,13 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * groupName  消费组名称
-    * online  消费组是否在线
-    * subscriptionConsistency  订阅关系是否一致
-    * total  消费者总数
-    * nextOffset  下个分页的offset
-    * previousOffset  上个分页的offset
-    * clients  消费者订阅详情列表
+    * groupName  消费组名称。
+    * online  消费组是否在线。
+    * subscriptionConsistency  订阅关系是否一致。
+    * total  消费者总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
+    * clients  消费者订阅详情列表。
     *
     * @var string[]
     */
@@ -43,13 +43,13 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * groupName  消费组名称
-    * online  消费组是否在线
-    * subscriptionConsistency  订阅关系是否一致
-    * total  消费者总数
-    * nextOffset  下个分页的offset
-    * previousOffset  上个分页的offset
-    * clients  消费者订阅详情列表
+    * groupName  消费组名称。
+    * online  消费组是否在线。
+    * subscriptionConsistency  订阅关系是否一致。
+    * total  消费者总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
+    * clients  消费者订阅详情列表。
     *
     * @var string[]
     */
@@ -86,13 +86,13 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * groupName  消费组名称
-    * online  消费组是否在线
-    * subscriptionConsistency  订阅关系是否一致
-    * total  消费者总数
-    * nextOffset  下个分页的offset
-    * previousOffset  上个分页的offset
-    * clients  消费者订阅详情列表
+    * groupName  消费组名称。
+    * online  消费组是否在线。
+    * subscriptionConsistency  订阅关系是否一致。
+    * total  消费者总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
+    * clients  消费者订阅详情列表。
     *
     * @var string[]
     */
@@ -108,13 +108,13 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * groupName  消费组名称
-    * online  消费组是否在线
-    * subscriptionConsistency  订阅关系是否一致
-    * total  消费者总数
-    * nextOffset  下个分页的offset
-    * previousOffset  上个分页的offset
-    * clients  消费者订阅详情列表
+    * groupName  消费组名称。
+    * online  消费组是否在线。
+    * subscriptionConsistency  订阅关系是否一致。
+    * total  消费者总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
+    * clients  消费者订阅详情列表。
     *
     * @var string[]
     */
@@ -130,13 +130,13 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * groupName  消费组名称
-    * online  消费组是否在线
-    * subscriptionConsistency  订阅关系是否一致
-    * total  消费者总数
-    * nextOffset  下个分页的offset
-    * previousOffset  上个分页的offset
-    * clients  消费者订阅详情列表
+    * groupName  消费组名称。
+    * online  消费组是否在线。
+    * subscriptionConsistency  订阅关系是否一致。
+    * total  消费者总数。
+    * nextOffset  下个分页的offset。
+    * previousOffset  上个分页的offset。
+    * clients  消费者订阅详情列表。
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  消费组名称
+    *  消费组名称。
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 消费组名称
+    * @param string|null $groupName 消费组名称。
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets online
-    *  消费组是否在线
+    *  消费组是否在线。
     *
     * @return bool|null
     */
@@ -277,7 +277,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets online
     *
-    * @param bool|null $online 消费组是否在线
+    * @param bool|null $online 消费组是否在线。
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subscriptionConsistency
-    *  订阅关系是否一致
+    *  订阅关系是否一致。
     *
     * @return bool|null
     */
@@ -301,7 +301,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subscriptionConsistency
     *
-    * @param bool|null $subscriptionConsistency 订阅关系是否一致
+    * @param bool|null $subscriptionConsistency 订阅关系是否一致。
     *
     * @return $this
     */
@@ -313,7 +313,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  消费者总数
+    *  消费者总数。
     *
     * @return int|null
     */
@@ -325,7 +325,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 消费者总数
+    * @param int|null $total 消费者总数。
     *
     * @return $this
     */
@@ -337,7 +337,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextOffset
-    *  下个分页的offset
+    *  下个分页的offset。
     *
     * @return int|null
     */
@@ -349,7 +349,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets nextOffset
     *
-    * @param int|null $nextOffset 下个分页的offset
+    * @param int|null $nextOffset 下个分页的offset。
     *
     * @return $this
     */
@@ -361,7 +361,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousOffset
-    *  上个分页的offset
+    *  上个分页的offset。
     *
     * @return int|null
     */
@@ -373,7 +373,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets previousOffset
     *
-    * @param int|null $previousOffset 上个分页的offset
+    * @param int|null $previousOffset 上个分页的offset。
     *
     * @return $this
     */
@@ -385,7 +385,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets clients
-    *  消费者订阅详情列表
+    *  消费者订阅详情列表。
     *
     * @return \HuaweiCloud\SDK\RocketMQ\V2\Model\ClientData[]|null
     */
@@ -397,7 +397,7 @@ class ShowConsumerConnectionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets clients
     *
-    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ClientData[]|null $clients 消费者订阅详情列表
+    * @param \HuaweiCloud\SDK\RocketMQ\V2\Model\ClientData[]|null $clients 消费者订阅详情列表。
     *
     * @return $this
     */

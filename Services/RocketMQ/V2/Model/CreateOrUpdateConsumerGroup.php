@@ -25,7 +25,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -47,7 +47,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -90,7 +90,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -112,7 +112,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -134,7 +134,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
     * broadcast  是否广播。
     * retryMaxTime  最大重试次数，取值范围为1~16。
     * enabled  是否可以消费。
-    * consumeOrderly  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * consumeOrderly  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     * groupDesc  消费组描述，长度0~200个字符。
     *
     * @var string[]
@@ -366,7 +366,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets consumeOrderly
-    *  是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    *  是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     *
     * @return bool|null
     */
@@ -378,7 +378,7 @@ class CreateOrUpdateConsumerGroup implements ModelInterface, ArrayAccess
     /**
     * Sets consumeOrderly
     *
-    * @param bool|null $consumeOrderly 是否按序消费（仅RocketMQ实例5.x版本需要填写此参数）。
+    * @param bool|null $consumeOrderly 是否按顺序消费（仅RocketMQ实例5.x版本需要填写此参数）。
     *
     * @return $this
     */

@@ -460,12 +460,6 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
         if ($this->container['storageSpace'] === null) {
             $invalidProperties[] = "'storageSpace' can't be null";
         }
-        if ($this->container['accessUser'] === null) {
-            $invalidProperties[] = "'accessUser' can't be null";
-        }
-        if ($this->container['password'] === null) {
-            $invalidProperties[] = "'password' can't be null";
-        }
         if ($this->container['vpcId'] === null) {
             $invalidProperties[] = "'vpcId' can't be null";
         }
@@ -638,7 +632,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Gets accessUser
     *  认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
-    * @return string
+    * @return string|null
     */
     public function getAccessUser()
     {
@@ -648,7 +642,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets accessUser
     *
-    * @param string $accessUser 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
+    * @param string|null $accessUser 认证用户名，只能由英文字母开头且由英文字母、数字、中划线、下划线组成，长度为4~64的字符。
     *
     * @return $this
     */
@@ -662,7 +656,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     * Gets password
     *  实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
-    * @return string
+    * @return string|null
     */
     public function getPassword()
     {
@@ -672,7 +666,7 @@ class CreateInstanceReq implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string $password 实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
+    * @param string|null $password 实例的认证密码。  复杂度要求： - 输入长度为8到32位的字符串。 - 必须包含如下四种字符中的两种组合：   - 小写字母   - 大写字母   - 数字   - 特殊字符包括（`~!@#$%^&*()-_=+\\|[{}]:'\",<.>/?）
     *
     * @return $this
     */

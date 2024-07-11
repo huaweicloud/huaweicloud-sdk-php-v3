@@ -26,8 +26,8 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     * maxStoragePerNode  每个节点的最大存储。单位为GB
     * minBroker  Broker的最小个数。
     * engineVersions  消息引擎版本。
-    * minStoragePerNode  每个节点的最小存储。单位为GB
-    * productAlias  product_id的别名
+    * minStoragePerNode  每个节点的最小存储。单位为GB。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -50,8 +50,8 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     * maxStoragePerNode  每个节点的最大存储。单位为GB
     * minBroker  Broker的最小个数。
     * engineVersions  消息引擎版本。
-    * minStoragePerNode  每个节点的最小存储。单位为GB
-    * productAlias  product_id的别名
+    * minStoragePerNode  每个节点的最小存储。单位为GB。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -95,8 +95,8 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     * maxStoragePerNode  每个节点的最大存储。单位为GB
     * minBroker  Broker的最小个数。
     * engineVersions  消息引擎版本。
-    * minStoragePerNode  每个节点的最小存储。单位为GB
-    * productAlias  product_id的别名
+    * minStoragePerNode  每个节点的最小存储。单位为GB。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -119,8 +119,8 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     * maxStoragePerNode  每个节点的最大存储。单位为GB
     * minBroker  Broker的最小个数。
     * engineVersions  消息引擎版本。
-    * minStoragePerNode  每个节点的最小存储。单位为GB
-    * productAlias  product_id的别名
+    * minStoragePerNode  每个节点的最小存储。单位为GB。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -143,8 +143,8 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     * maxStoragePerNode  每个节点的最大存储。单位为GB
     * minBroker  Broker的最小个数。
     * engineVersions  消息引擎版本。
-    * minStoragePerNode  每个节点的最小存储。单位为GB
-    * productAlias  product_id的别名
+    * minStoragePerNode  每个节点的最小存储。单位为GB。
+    * productAlias  product_id的别名。
     *
     * @var string[]
     */
@@ -395,7 +395,7 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
 
     /**
     * Gets minStoragePerNode
-    *  每个节点的最小存储。单位为GB
+    *  每个节点的最小存储。单位为GB。
     *
     * @return string|null
     */
@@ -407,7 +407,7 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     /**
     * Sets minStoragePerNode
     *
-    * @param string|null $minStoragePerNode 每个节点的最小存储。单位为GB
+    * @param string|null $minStoragePerNode 每个节点的最小存储。单位为GB。
     *
     * @return $this
     */
@@ -419,7 +419,7 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
 
     /**
     * Gets productAlias
-    *  product_id的别名
+    *  product_id的别名。
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class RocketMQExtendProductPropertiesEntity implements ModelInterface, ArrayAcce
     /**
     * Sets productAlias
     *
-    * @param string|null $productAlias product_id的别名
+    * @param string|null $productAlias product_id的别名。
     *
     * @return $this
     */

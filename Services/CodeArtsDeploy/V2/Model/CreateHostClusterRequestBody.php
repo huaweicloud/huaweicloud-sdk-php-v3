@@ -21,7 +21,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * description  描述
@@ -41,7 +41,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * description  描述
@@ -82,7 +82,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * description  描述
@@ -102,7 +102,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * description  描述
@@ -122,7 +122,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * os  操作系统：windows|linux
     * slaveClusterId  slave集群id，默认为null时使用默认slave集群，用户自定义slave时为slave集群id
     * description  描述
@@ -306,7 +306,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string
     */
@@ -318,7 +318,7 @@ class CreateHostClusterRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID
+    * @param string $projectId 项目id
     *
     * @return $this
     */

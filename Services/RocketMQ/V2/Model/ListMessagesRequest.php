@@ -25,7 +25,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * key  消息的key
+    * key  消息的key。
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -51,7 +51,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * key  消息的key
+    * key  消息的key。
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -98,7 +98,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * key  消息的key
+    * key  消息的key。
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -124,7 +124,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * key  消息的key
+    * key  消息的key。
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -150,7 +150,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     * topic  主题名称。
     * limit  查询数量。
     * offset  偏移量，表示从此偏移量开始查询， offset大于等于0。
-    * key  消息的key
+    * key  消息的key。
     * startTime  开始时间（不通过msg_id精确查询消息时，此参数必填）。
     * endTime  结束时间（不通过msg_id精确查询消息时，此参数必填）。
     * msgId  消息ID。
@@ -412,7 +412,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  消息的key
+    *  消息的key。
     *
     * @return string|null
     */
@@ -424,7 +424,7 @@ class ListMessagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 消息的key
+    * @param string|null $key 消息的key。
     *
     * @return $this
     */

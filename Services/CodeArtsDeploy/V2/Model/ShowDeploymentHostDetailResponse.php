@@ -30,10 +30,10 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     * proxyHostId  代理机id
     * authorization  authorization
     * installIcagent  免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
-    * hostId  主机ID
+    * hostId  主机id
     * proxyHost  proxyHost
     * groupName  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * permission  permission
     * updateTime  更新时间
@@ -88,10 +88,10 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     * proxyHostId  代理机id
     * authorization  authorization
     * installIcagent  免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
-    * hostId  主机ID
+    * hostId  主机id
     * proxyHost  proxyHost
     * groupName  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * permission  permission
     * updateTime  更新时间
@@ -167,10 +167,10 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     * proxyHostId  代理机id
     * authorization  authorization
     * installIcagent  免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
-    * hostId  主机ID
+    * hostId  主机id
     * proxyHost  proxyHost
     * groupName  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * permission  permission
     * updateTime  更新时间
@@ -225,10 +225,10 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     * proxyHostId  代理机id
     * authorization  authorization
     * installIcagent  免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
-    * hostId  主机ID
+    * hostId  主机id
     * proxyHost  proxyHost
     * groupName  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * permission  permission
     * updateTime  更新时间
@@ -283,10 +283,10 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     * proxyHostId  代理机id
     * authorization  authorization
     * installIcagent  免费启用应用运维服务（AOM），提供指标监控、日志查询、告警功能（自动安装数据采集器 ICAgent，仅支持华为云linux主机）
-    * hostId  主机ID
+    * hostId  主机id
     * proxyHost  proxyHost
     * groupName  主机集群名
-    * projectId  项目ID
+    * projectId  项目id
     * projectName  项目名称
     * permission  permission
     * updateTime  更新时间
@@ -741,7 +741,7 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hostId
-    *  主机ID
+    *  主机id
     *
     * @return string|null
     */
@@ -753,7 +753,7 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string|null $hostId 主机ID
+    * @param string|null $hostId 主机id
     *
     * @return $this
     */
@@ -813,7 +813,7 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID
+    *  项目id
     *
     * @return string|null
     */
@@ -825,7 +825,7 @@ class ShowDeploymentHostDetailResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目ID
+    * @param string|null $projectId 项目id
     *
     * @return $this
     */

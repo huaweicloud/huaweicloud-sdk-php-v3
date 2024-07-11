@@ -23,6 +23,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容（http状态码：400 、401、402 、 403 、404 、 405 、500 、501 、502 、503、 504 、507；手机：phone、身份证号：id_card、邮箱：email）
+    * action  action
     * description  规则描述
     *
     * @var string[]
@@ -31,6 +32,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
             'url' => 'string',
             'category' => 'string',
             'contents' => 'string[]',
+            'action' => '\HuaweiCloud\SDK\Waf\V1\Model\CreateAntileakageRuleRequestBodyAction',
             'description' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容（http状态码：400 、401、402 、 403 、404 、 405 、500 、501 、502 、503、 504 、507；手机：phone、身份证号：id_card、邮箱：email）
+    * action  action
     * description  规则描述
     *
     * @var string[]
@@ -47,6 +50,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
         'url' => null,
         'category' => null,
         'contents' => null,
+        'action' => null,
         'description' => null
     ];
 
@@ -76,6 +80,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容（http状态码：400 、401、402 、 403 、404 、 405 、500 、501 、502 、503、 504 、507；手机：phone、身份证号：id_card、邮箱：email）
+    * action  action
     * description  规则描述
     *
     * @var string[]
@@ -84,6 +89,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
             'url' => 'url',
             'category' => 'category',
             'contents' => 'contents',
+            'action' => 'action',
             'description' => 'description'
     ];
 
@@ -92,6 +98,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容（http状态码：400 、401、402 、 403 、404 、 405 、500 、501 、502 、503、 504 、507；手机：phone、身份证号：id_card、邮箱：email）
+    * action  action
     * description  规则描述
     *
     * @var string[]
@@ -100,6 +107,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
             'url' => 'setUrl',
             'category' => 'setCategory',
             'contents' => 'setContents',
+            'action' => 'setAction',
             'description' => 'setDescription'
     ];
 
@@ -108,6 +116,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     * url  规则应用的url
     * category  类别（响应码：code，敏感信息：sensitive）
     * contents  内容（http状态码：400 、401、402 、 403 、404 、 405 、500 、501 、502 、503、 504 、507；手机：phone、身份证号：id_card、邮箱：email）
+    * action  action
     * description  规则描述
     *
     * @var string[]
@@ -116,6 +125,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
             'url' => 'getUrl',
             'category' => 'getCategory',
             'contents' => 'getContents',
+            'action' => 'getAction',
             'description' => 'getDescription'
     ];
 
@@ -195,6 +205,7 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['category'] = isset($data['category']) ? $data['category'] : null;
         $this->container['contents'] = isset($data['contents']) ? $data['contents'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -306,6 +317,30 @@ class UpdateAntileakageRuleRequestBody implements ModelInterface, ArrayAccess
     public function setContents($contents)
     {
         $this->container['contents'] = $contents;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  action
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\CreateAntileakageRuleRequestBodyAction|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\CreateAntileakageRuleRequestBodyAction|null $action action
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

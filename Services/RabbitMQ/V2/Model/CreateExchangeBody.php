@@ -22,9 +22,9 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  Exchange名称
     * type  类型（direct、fanout、topic、headers）
-    * durable  是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
-    * internal  内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -40,9 +40,9 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  Exchange名称
     * type  类型（direct、fanout、topic、headers）
-    * durable  是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
-    * internal  内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -79,9 +79,9 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  Exchange名称
     * type  类型（direct、fanout、topic、headers）
-    * durable  是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
-    * internal  内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  Exchange名称
     * type  类型（direct、fanout、topic、headers）
-    * durable  是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
-    * internal  内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -115,9 +115,9 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  Exchange名称
     * type  类型（direct、fanout、topic、headers）
-    * durable  是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    * durable  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     * autoDelete  是否自动删除
-    * internal  内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    * internal  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @var string[]
     */
@@ -275,7 +275,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets durable
-    *  是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    *  是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @return bool|null
     */
@@ -287,7 +287,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     /**
     * Sets durable
     *
-    * @param bool|null $durable 是否持久化（AMQP版本默认持久化，不涉及此参数）。
+    * @param bool|null $durable 是否持久化[（AMQP版本默认持久化，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets internal
-    *  内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    *  内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @return bool|null
     */
@@ -335,7 +335,7 @@ class CreateExchangeBody implements ModelInterface, ArrayAccess
     /**
     * Sets internal
     *
-    * @param bool|null $internal 内部Exchange（AMQP版本不支持内部Exchange，不涉及此参数）。
+    * @param bool|null $internal 内部Exchange[（AMQP版本不支持内部Exchange，不涉及此参数）](tag:hws,hws_hk)。
     *
     * @return $this
     */

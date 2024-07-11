@@ -279,13 +279,10 @@ class Policy implements ModelInterface, ArrayAccess
             if (!preg_match("/^(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)$/", $this->container['comparisonOperator'])) {
                 $invalidProperties[] = "invalid value for 'comparisonOperator', must be conform to the pattern /^(>|<|>=|<=|=|!=|cycle_decrease|cycle_increase|cycle_wave)$/.";
             }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
-            if (($this->container['value'] > 1.7976931348623156E+108)) {
+            if (!is_null($this->container['value']) && ($this->container['value'] > 1.7976931348623156E+108)) {
                 $invalidProperties[] = "invalid value for 'value', must be smaller than or equal to 1.7976931348623156E+108.";
             }
-            if (($this->container['value'] < 0)) {
+            if (!is_null($this->container['value']) && ($this->container['value'] < 0)) {
                 $invalidProperties[] = "invalid value for 'value', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['unit']) && (mb_strlen($this->container['unit']) > 32)) {
@@ -426,7 +423,7 @@ class Policy implements ModelInterface, ArrayAccess
     * Gets value
     *  阈值
     *
-    * @return double
+    * @return double|null
     */
     public function getValue()
     {
@@ -436,7 +433,7 @@ class Policy implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param double $value 阈值
+    * @param double|null $value 阈值
     *
     * @return $this
     */

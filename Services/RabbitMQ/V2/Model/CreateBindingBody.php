@@ -22,7 +22,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue或Exchange中
-    * destinationType  绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    * destinationType  绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue或Exchange中
-    * destinationType  绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    * destinationType  绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue或Exchange中
-    * destinationType  绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    * destinationType  绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue或Exchange中
-    * destinationType  绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    * destinationType  绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * destination  要投递的Exchange或Queue名称
     * routingKey  绑定键值，用于告知Exchange应该将消息投递到哪些Queue或Exchange中
-    * destinationType  绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    * destinationType  绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @var string[]
     */
@@ -253,7 +253,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets destinationType
-    *  绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    *  绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class CreateBindingBody implements ModelInterface, ArrayAccess
     /**
     * Sets destinationType
     *
-    * @param string $destinationType 绑定目标端类型，Exchange或Queue（AMQP版本只支持绑定Queue）
+    * @param string $destinationType 绑定目标端类型，Exchange或Queue。[（AMQP版本只支持绑定Queue）](tag:hws,hws_hk)
     *
     * @return $this
     */
