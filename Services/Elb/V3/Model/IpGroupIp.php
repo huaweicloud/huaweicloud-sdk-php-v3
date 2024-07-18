@@ -20,7 +20,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ip  IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ip  IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ip  IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ip  IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ip  IP地址，可以是具体的IP地址或者IP地址段。
+    * ip  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
 
     /**
     * Gets ip
-    *  IP地址，可以是具体的IP地址或者IP地址段。
+    *  参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class IpGroupIp implements ModelInterface, ArrayAccess
     /**
     * Sets ip
     *
-    * @param string $ip IP地址，可以是具体的IP地址或者IP地址段。
+    * @param string $ip 参数解释：IP地址，可以是具体的IP地址或者IP地址段。
     *
     * @return $this
     */

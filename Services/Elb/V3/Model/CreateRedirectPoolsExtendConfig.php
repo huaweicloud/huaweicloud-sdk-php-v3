@@ -20,26 +20,38 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rewriteUrlEnable  url重写的开关
+    * rewriteUrlEnable  是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'rewriteUrlEnable' => 'bool',
-            'rewriteUrlConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateRewriteUrlConfig'
+            'rewriteUrlConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateRewriteUrlConfig',
+            'insertHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateInsertHeadersConfig',
+            'removeHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateRemoveHeadersConfig',
+            'trafficLimitConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateTrafficLimitConfig'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rewriteUrlEnable  url重写的开关
+    * rewriteUrlEnable  是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'rewriteUrlEnable' => null,
-        'rewriteUrlConfig' => null
+        'rewriteUrlConfig' => null,
+        'insertHeadersConfig' => null,
+        'removeHeadersConfig' => null,
+        'trafficLimitConfig' => null
     ];
 
     /**
@@ -65,38 +77,56 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rewriteUrlEnable  url重写的开关
+    * rewriteUrlEnable  是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'rewriteUrlEnable' => 'rewrite_url_enable',
-            'rewriteUrlConfig' => 'rewrite_url_config'
+            'rewriteUrlConfig' => 'rewrite_url_config',
+            'insertHeadersConfig' => 'insert_headers_config',
+            'removeHeadersConfig' => 'remove_headers_config',
+            'trafficLimitConfig' => 'traffic_limit_config'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rewriteUrlEnable  url重写的开关
+    * rewriteUrlEnable  是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'rewriteUrlEnable' => 'setRewriteUrlEnable',
-            'rewriteUrlConfig' => 'setRewriteUrlConfig'
+            'rewriteUrlConfig' => 'setRewriteUrlConfig',
+            'insertHeadersConfig' => 'setInsertHeadersConfig',
+            'removeHeadersConfig' => 'setRemoveHeadersConfig',
+            'trafficLimitConfig' => 'setTrafficLimitConfig'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rewriteUrlEnable  url重写的开关
+    * rewriteUrlEnable  是否开启url重定向。
     * rewriteUrlConfig  rewriteUrlConfig
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'rewriteUrlEnable' => 'getRewriteUrlEnable',
-            'rewriteUrlConfig' => 'getRewriteUrlConfig'
+            'rewriteUrlConfig' => 'getRewriteUrlConfig',
+            'insertHeadersConfig' => 'getInsertHeadersConfig',
+            'removeHeadersConfig' => 'getRemoveHeadersConfig',
+            'trafficLimitConfig' => 'getTrafficLimitConfig'
     ];
 
     /**
@@ -159,6 +189,9 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     {
         $this->container['rewriteUrlEnable'] = isset($data['rewriteUrlEnable']) ? $data['rewriteUrlEnable'] : null;
         $this->container['rewriteUrlConfig'] = isset($data['rewriteUrlConfig']) ? $data['rewriteUrlConfig'] : null;
+        $this->container['insertHeadersConfig'] = isset($data['insertHeadersConfig']) ? $data['insertHeadersConfig'] : null;
+        $this->container['removeHeadersConfig'] = isset($data['removeHeadersConfig']) ? $data['removeHeadersConfig'] : null;
+        $this->container['trafficLimitConfig'] = isset($data['trafficLimitConfig']) ? $data['trafficLimitConfig'] : null;
     }
 
     /**
@@ -185,7 +218,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets rewriteUrlEnable
-    *  url重写的开关
+    *  是否开启url重定向。
     *
     * @return bool|null
     */
@@ -197,7 +230,7 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     /**
     * Sets rewriteUrlEnable
     *
-    * @param bool|null $rewriteUrlEnable url重写的开关
+    * @param bool|null $rewriteUrlEnable 是否开启url重定向。
     *
     * @return $this
     */
@@ -228,6 +261,78 @@ class CreateRedirectPoolsExtendConfig implements ModelInterface, ArrayAccess
     public function setRewriteUrlConfig($rewriteUrlConfig)
     {
         $this->container['rewriteUrlConfig'] = $rewriteUrlConfig;
+        return $this;
+    }
+
+    /**
+    * Gets insertHeadersConfig
+    *  insertHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateInsertHeadersConfig|null
+    */
+    public function getInsertHeadersConfig()
+    {
+        return $this->container['insertHeadersConfig'];
+    }
+
+    /**
+    * Sets insertHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateInsertHeadersConfig|null $insertHeadersConfig insertHeadersConfig
+    *
+    * @return $this
+    */
+    public function setInsertHeadersConfig($insertHeadersConfig)
+    {
+        $this->container['insertHeadersConfig'] = $insertHeadersConfig;
+        return $this;
+    }
+
+    /**
+    * Gets removeHeadersConfig
+    *  removeHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateRemoveHeadersConfig|null
+    */
+    public function getRemoveHeadersConfig()
+    {
+        return $this->container['removeHeadersConfig'];
+    }
+
+    /**
+    * Sets removeHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateRemoveHeadersConfig|null $removeHeadersConfig removeHeadersConfig
+    *
+    * @return $this
+    */
+    public function setRemoveHeadersConfig($removeHeadersConfig)
+    {
+        $this->container['removeHeadersConfig'] = $removeHeadersConfig;
+        return $this;
+    }
+
+    /**
+    * Gets trafficLimitConfig
+    *  trafficLimitConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateTrafficLimitConfig|null
+    */
+    public function getTrafficLimitConfig()
+    {
+        return $this->container['trafficLimitConfig'];
+    }
+
+    /**
+    * Sets trafficLimitConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateTrafficLimitConfig|null $trafficLimitConfig trafficLimitConfig
+    *
+    * @return $this
+    */
+    public function setTrafficLimitConfig($trafficLimitConfig)
+    {
+        $this->container['trafficLimitConfig'] = $trafficLimitConfig;
         return $this;
     }
 

@@ -21,7 +21,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  证书ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  证书的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
@@ -29,6 +29,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
     * @var string[]
     */
@@ -41,13 +43,15 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'description' => 'string[]',
             'adminStateUp' => 'bool',
             'domain' => 'string[]',
-            'type' => 'string[]'
+            'type' => 'string[]',
+            'commonName' => 'string[]',
+            'fingerprint' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  证书ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  证书的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
@@ -55,6 +59,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         'description' => null,
         'adminStateUp' => null,
         'domain' => null,
-        'type' => null
+        'type' => null,
+        'commonName' => null,
+        'fingerprint' => null
     ];
 
     /**
@@ -94,7 +102,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  证书ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  证书的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
@@ -102,6 +110,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
     * @var string[]
     */
@@ -114,13 +124,15 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'description' => 'description',
             'adminStateUp' => 'admin_state_up',
             'domain' => 'domain',
-            'type' => 'type'
+            'type' => 'type',
+            'commonName' => 'common_name',
+            'fingerprint' => 'fingerprint'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  证书ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  证书的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
@@ -128,6 +140,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
     * @var string[]
     */
@@ -140,13 +154,15 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'adminStateUp' => 'setAdminStateUp',
             'domain' => 'setDomain',
-            'type' => 'setType'
+            'type' => 'setType',
+            'commonName' => 'setCommonName',
+            'fingerprint' => 'setFingerprint'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  证书ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  证书的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
@@ -154,6 +170,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     * adminStateUp  证书的管理状态。  不支持该字段，请勿使用。
     * domain  服务器证书所签域名。该字段仅type为server时有效。  支持多值查询，查询条件格式：domain=xxx&domain=xxx。
     * type  证书的类型。分为服务器证书(server)和CA证书(client)。  支持多值查询，查询条件格式：type=xxx&type=xxx。
+    * commonName  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    * fingerprint  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'adminStateUp' => 'getAdminStateUp',
             'domain' => 'getDomain',
-            'type' => 'getType'
+            'type' => 'getType',
+            'commonName' => 'getCommonName',
+            'fingerprint' => 'getFingerprint'
     ];
 
     /**
@@ -236,6 +256,8 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['commonName'] = isset($data['commonName']) ? $data['commonName'] : null;
+        $this->container['fingerprint'] = isset($data['fingerprint']) ? $data['fingerprint'] : null;
     }
 
     /**
@@ -292,7 +314,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。
+    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return int|null
     */
@@ -304,7 +326,7 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。
+    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return $this
     */
@@ -479,6 +501,54 @@ class ListCertificatesRequest implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets commonName
+    *  证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    *
+    * @return string[]|null
+    */
+    public function getCommonName()
+    {
+        return $this->container['commonName'];
+    }
+
+    /**
+    * Sets commonName
+    *
+    * @param string[]|null $commonName 证书的主域名。  支持多值查询，查询条件格式：common_name=xxx&common_name=xxx。
+    *
+    * @return $this
+    */
+    public function setCommonName($commonName)
+    {
+        $this->container['commonName'] = $commonName;
+        return $this;
+    }
+
+    /**
+    * Gets fingerprint
+    *  证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    *
+    * @return string[]|null
+    */
+    public function getFingerprint()
+    {
+        return $this->container['fingerprint'];
+    }
+
+    /**
+    * Sets fingerprint
+    *
+    * @param string[]|null $fingerprint 证书的指纹。  支持多值查询，查询条件格式：fingerprint=xxx&fingerprint=xxx。
+    *
+    * @return $this
+    */
+    public function setFingerprint($fingerprint)
+    {
+        $this->container['fingerprint'] = $fingerprint;
         return $this;
     }
 

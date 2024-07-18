@@ -27,7 +27,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     * taskType  任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
-    * nodeType  node规格类型，测试连接之后修改调用时必填。
+    * nodeType  node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     * engineType  引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
     * netType  网络类型，测试连接之后修改调用时必填。
     * storeDbInfo  保存数据库信息，测试连接之后修改调用时必填为true。
@@ -71,7 +71,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     * taskType  任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
-    * nodeType  node规格类型，测试连接之后修改调用时必填。
+    * nodeType  node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     * engineType  引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
     * netType  网络类型，测试连接之后修改调用时必填。
     * storeDbInfo  保存数据库信息，测试连接之后修改调用时必填为true。
@@ -136,7 +136,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     * taskType  任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
-    * nodeType  node规格类型，测试连接之后修改调用时必填。
+    * nodeType  node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     * engineType  引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
     * netType  网络类型，测试连接之后修改调用时必填。
     * storeDbInfo  保存数据库信息，测试连接之后修改调用时必填为true。
@@ -180,7 +180,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     * taskType  任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
-    * nodeType  node规格类型，测试连接之后修改调用时必填。
+    * nodeType  node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     * engineType  引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
     * netType  网络类型，测试连接之后修改调用时必填。
     * storeDbInfo  保存数据库信息，测试连接之后修改调用时必填为true。
@@ -224,7 +224,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     * taskType  任务模式，FULL_TRANS：全量；FULL_INCR_TRANS：全量+增量；INCR_TRANS：增量。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
-    * nodeType  node规格类型，测试连接之后修改调用时必填。
+    * nodeType  node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     * engineType  引擎类型，测试连接之后修改调用时必填。mysql：迁移，同步使用。mongodb：迁移使用。cloudDataGuard-mysql：灾备使用
     * netType  网络类型，测试连接之后修改调用时必填。
     * storeDbInfo  保存数据库信息，测试连接之后修改调用时必填为true。
@@ -302,7 +302,12 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     const TASK_TYPE_FULL_TRANS = 'FULL_TRANS';
     const TASK_TYPE_INCR_TRANS = 'INCR_TRANS';
     const TASK_TYPE_FULL_INCR_TRANS = 'FULL_INCR_TRANS';
+    const NODE_TYPE_MICRO = 'micro';
+    const NODE_TYPE_SMALL = 'small';
+    const NODE_TYPE_MEDIUM = 'medium';
     const NODE_TYPE_HIGH = 'high';
+    const NODE_TYPE_XLARGE = 'xlarge';
+    const NODE_TYPE__2XLARGE = '2xlarge';
     const ENGINE_TYPE_MYSQL = 'mysql';
     const ENGINE_TYPE_MONGODB = 'mongodb';
     const ENGINE_TYPE_CLOUD_DATA_GUARD_MYSQL = 'cloudDataGuard-mysql';
@@ -344,7 +349,12 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     public function getNodeTypeAllowableValues()
     {
         return [
+            self::NODE_TYPE_MICRO,
+            self::NODE_TYPE_SMALL,
+            self::NODE_TYPE_MEDIUM,
             self::NODE_TYPE_HIGH,
+            self::NODE_TYPE_XLARGE,
+            self::NODE_TYPE__2XLARGE,
         ];
     }
 
@@ -700,7 +710,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  node规格类型，测试连接之后修改调用时必填。
+    *  node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     *
     * @return string|null
     */
@@ -712,7 +722,7 @@ class ModifyJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string|null $nodeType node规格类型，测试连接之后修改调用时必填。
+    * @param string|null $nodeType node规格类型，测试连接之后修改调用时必填。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。
     *
     * @return $this
     */

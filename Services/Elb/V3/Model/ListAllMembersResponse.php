@@ -30,7 +30,7 @@ class ListAllMembersResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'requestId' => 'string',
             'pageInfo' => '\HuaweiCloud\SDK\Elb\V3\Model\PageInfo',
-            'members' => '\HuaweiCloud\SDK\Elb\V3\Model\Member[]'
+            'members' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberInfo[]'
     ];
 
     /**
@@ -247,7 +247,7 @@ class ListAllMembersResponse implements ModelInterface, ArrayAccess
     * Gets members
     *  后端服务器对象列表。
     *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\Member[]|null
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\MemberInfo[]|null
     */
     public function getMembers()
     {
@@ -257,7 +257,7 @@ class ListAllMembersResponse implements ModelInterface, ArrayAccess
     /**
     * Sets members
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\Member[]|null $members 后端服务器对象列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\MemberInfo[]|null $members 后端服务器对象列表。
     *
     * @return $this
     */

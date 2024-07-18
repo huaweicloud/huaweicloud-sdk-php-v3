@@ -28,7 +28,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     * clientRecMode  客户端本地录制权限的范围，默认为仅主持人支持本地录制 - 0: 所有用户 - 1：全部人可录制 - 2：部分人可录制
     * allowOpenCamera  与会人自行开启摄像头 0:禁止 1:允许
     * allowRename  是否允许与会人改名 0:不允许 1:允许
-    * labelPermission  标注权限 0:所有人可标注 1:仅共享人可标注
+    * isLock  锁定会议 0：解锁 1：锁定
     * freeShare  抢共享权限设置 0:仅主持人/联席 1:所有人可抢共享
     *
     * @var string[]
@@ -42,7 +42,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
             'clientRecMode' => 'int',
             'allowOpenCamera' => 'int',
             'allowRename' => 'int',
-            'labelPermission' => 'int',
+            'isLock' => 'int',
             'freeShare' => 'int'
     ];
 
@@ -56,7 +56,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     * clientRecMode  客户端本地录制权限的范围，默认为仅主持人支持本地录制 - 0: 所有用户 - 1：全部人可录制 - 2：部分人可录制
     * allowOpenCamera  与会人自行开启摄像头 0:禁止 1:允许
     * allowRename  是否允许与会人改名 0:不允许 1:允许
-    * labelPermission  标注权限 0:所有人可标注 1:仅共享人可标注
+    * isLock  锁定会议 0：解锁 1：锁定
     * freeShare  抢共享权限设置 0:仅主持人/联席 1:所有人可抢共享
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
         'clientRecMode' => 'int32',
         'allowOpenCamera' => 'int32',
         'allowRename' => 'int32',
-        'labelPermission' => 'int32',
+        'isLock' => 'int32',
         'freeShare' => 'int32'
     ];
 
@@ -105,7 +105,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     * clientRecMode  客户端本地录制权限的范围，默认为仅主持人支持本地录制 - 0: 所有用户 - 1：全部人可录制 - 2：部分人可录制
     * allowOpenCamera  与会人自行开启摄像头 0:禁止 1:允许
     * allowRename  是否允许与会人改名 0:不允许 1:允许
-    * labelPermission  标注权限 0:所有人可标注 1:仅共享人可标注
+    * isLock  锁定会议 0：解锁 1：锁定
     * freeShare  抢共享权限设置 0:仅主持人/联席 1:所有人可抢共享
     *
     * @var string[]
@@ -119,7 +119,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
             'clientRecMode' => 'clientRecMode',
             'allowOpenCamera' => 'allowOpenCamera',
             'allowRename' => 'allowRename',
-            'labelPermission' => 'labelPermission',
+            'isLock' => 'isLock',
             'freeShare' => 'freeShare'
     ];
 
@@ -133,7 +133,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     * clientRecMode  客户端本地录制权限的范围，默认为仅主持人支持本地录制 - 0: 所有用户 - 1：全部人可录制 - 2：部分人可录制
     * allowOpenCamera  与会人自行开启摄像头 0:禁止 1:允许
     * allowRename  是否允许与会人改名 0:不允许 1:允许
-    * labelPermission  标注权限 0:所有人可标注 1:仅共享人可标注
+    * isLock  锁定会议 0：解锁 1：锁定
     * freeShare  抢共享权限设置 0:仅主持人/联席 1:所有人可抢共享
     *
     * @var string[]
@@ -147,7 +147,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
             'clientRecMode' => 'setClientRecMode',
             'allowOpenCamera' => 'setAllowOpenCamera',
             'allowRename' => 'setAllowRename',
-            'labelPermission' => 'setLabelPermission',
+            'isLock' => 'setIsLock',
             'freeShare' => 'setFreeShare'
     ];
 
@@ -161,7 +161,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     * clientRecMode  客户端本地录制权限的范围，默认为仅主持人支持本地录制 - 0: 所有用户 - 1：全部人可录制 - 2：部分人可录制
     * allowOpenCamera  与会人自行开启摄像头 0:禁止 1:允许
     * allowRename  是否允许与会人改名 0:不允许 1:允许
-    * labelPermission  标注权限 0:所有人可标注 1:仅共享人可标注
+    * isLock  锁定会议 0：解锁 1：锁定
     * freeShare  抢共享权限设置 0:仅主持人/联席 1:所有人可抢共享
     *
     * @var string[]
@@ -175,7 +175,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
             'clientRecMode' => 'getClientRecMode',
             'allowOpenCamera' => 'getAllowOpenCamera',
             'allowRename' => 'getAllowRename',
-            'labelPermission' => 'getLabelPermission',
+            'isLock' => 'getIsLock',
             'freeShare' => 'getFreeShare'
     ];
 
@@ -245,7 +245,7 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
         $this->container['clientRecMode'] = isset($data['clientRecMode']) ? $data['clientRecMode'] : null;
         $this->container['allowOpenCamera'] = isset($data['allowOpenCamera']) ? $data['allowOpenCamera'] : null;
         $this->container['allowRename'] = isset($data['allowRename']) ? $data['allowRename'] : null;
-        $this->container['labelPermission'] = isset($data['labelPermission']) ? $data['labelPermission'] : null;
+        $this->container['isLock'] = isset($data['isLock']) ? $data['isLock'] : null;
         $this->container['freeShare'] = isset($data['freeShare']) ? $data['freeShare'] : null;
     }
 
@@ -305,11 +305,11 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['allowRename']) && ($this->container['allowRename'] < 0)) {
                 $invalidProperties[] = "invalid value for 'allowRename', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['labelPermission']) && ($this->container['labelPermission'] > 1)) {
-                $invalidProperties[] = "invalid value for 'labelPermission', must be smaller than or equal to 1.";
+            if (!is_null($this->container['isLock']) && ($this->container['isLock'] > 1)) {
+                $invalidProperties[] = "invalid value for 'isLock', must be smaller than or equal to 1.";
             }
-            if (!is_null($this->container['labelPermission']) && ($this->container['labelPermission'] < 0)) {
-                $invalidProperties[] = "invalid value for 'labelPermission', must be bigger than or equal to 0.";
+            if (!is_null($this->container['isLock']) && ($this->container['isLock'] < 0)) {
+                $invalidProperties[] = "invalid value for 'isLock', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['freeShare']) && ($this->container['freeShare'] > 1)) {
                 $invalidProperties[] = "invalid value for 'freeShare', must be smaller than or equal to 1.";
@@ -524,26 +524,26 @@ class UpdateStartedConfigReqBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets labelPermission
-    *  标注权限 0:所有人可标注 1:仅共享人可标注
+    * Gets isLock
+    *  锁定会议 0：解锁 1：锁定
     *
     * @return int|null
     */
-    public function getLabelPermission()
+    public function getIsLock()
     {
-        return $this->container['labelPermission'];
+        return $this->container['isLock'];
     }
 
     /**
-    * Sets labelPermission
+    * Sets isLock
     *
-    * @param int|null $labelPermission 标注权限 0:所有人可标注 1:仅共享人可标注
+    * @param int|null $isLock 锁定会议 0：解锁 1：锁定
     *
     * @return $this
     */
-    public function setLabelPermission($labelPermission)
+    public function setIsLock($isLock)
     {
-        $this->container['labelPermission'] = $labelPermission;
+        $this->container['isLock'] = $isLock;
         return $this;
     }
 

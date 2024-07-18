@@ -26,6 +26,334 @@ class VpnClient extends Client
 
 
     /**
+     * 校验客户端CA
+     *
+     * 创建服务端时，可以先调用客户端CA的预校验API，检查CA的合法性
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkClientCaCertificate($request)
+    {
+        return $this->checkClientCaCertificateWithHttpInfo($request);
+    }
+
+    public function checkClientCaCertificateWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/client-ca-certificates/check';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CheckClientCaCertificateResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CheckClientCaCertificateRequest');
+    }
+
+    /**
+     * 删除客户端的CA证书
+     *
+     * 删除客户端CA证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteClientCa($request)
+    {
+        return $this->deleteClientCaWithHttpInfo($request);
+    }
+
+    public function deleteClientCaWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/client-ca-certificates/{client_ca_certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['clientCaCertificateId'] !== null) {
+            $pathParams['client_ca_certificate_id'] = $localVarParams['clientCaCertificateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteClientCaResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteClientCaRequest');
+    }
+
+    /**
+     * 导入客户端 CA 证书
+     *
+     * 导入客户端 CA 证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function importClientCa($request)
+    {
+        return $this->importClientCaWithHttpInfo($request);
+    }
+
+    public function importClientCaWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/client-ca-certificates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ImportClientCaResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ImportClientCaRequest');
+    }
+
+    /**
+     * 查询客户端的CA证书
+     *
+     * 查询客户端CA证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClientCa($request)
+    {
+        return $this->showClientCaWithHttpInfo($request);
+    }
+
+    public function showClientCaWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/client-ca-certificates/{client_ca_certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['clientCaCertificateId'] !== null) {
+            $pathParams['client_ca_certificate_id'] = $localVarParams['clientCaCertificateId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowClientCaResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowClientCaRequest');
+    }
+
+    /**
+     * 修改客户端的CA证书
+     *
+     * 修改客户端CA证书
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateClientCa($request)
+    {
+        return $this->updateClientCaWithHttpInfo($request);
+    }
+
+    public function updateClientCaWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/client-ca-certificates/{client_ca_certificate_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['clientCaCertificateId'] !== null) {
+            $pathParams['client_ca_certificate_id'] = $localVarParams['clientCaCertificateId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateClientCaResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateClientCaRequest');
+    }
+
+    /**
      * 创建VPN连接监控
      *
      * 创建VPN连接监控
@@ -596,6 +924,322 @@ class VpnClient extends Client
     }
 
     /**
+     * 查询P2C VPN网关可用区
+     *
+     * 查询P2C VPN网关可用区
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listP2cVgwAvailabilityZones($request)
+    {
+        return $this->listP2cVgwAvailabilityZonesWithHttpInfo($request);
+    }
+
+    public function listP2cVgwAvailabilityZonesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/availability-zones';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['flavor'] !== null) {
+            $queryParams['flavor'] = $localVarParams['flavor'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListP2cVgwAvailabilityZonesResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListP2cVgwAvailabilityZonesRequest');
+    }
+
+    /**
+     * 查询P2C VPN网关连接信息列表
+     *
+     * List p2c vpn gateway connections
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listP2cVgwConnections($request)
+    {
+        return $this->listP2cVgwConnectionsWithHttpInfo($request);
+    }
+
+    public function listP2cVgwConnectionsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/{p2c_vgw_id}/connections';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['p2cVgwId'] !== null) {
+            $pathParams['p2c_vgw_id'] = $localVarParams['p2cVgwId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListP2cVgwConnectionsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListP2cVgwConnectionsRequest');
+    }
+
+    /**
+     * 查询P2C VPN网关列表
+     *
+     * 查询P2C VPN网关列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listP2cVgws($request)
+    {
+        return $this->listP2cVgwsWithHttpInfo($request);
+    }
+
+    public function listP2cVgwsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListP2cVgwsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListP2cVgwsRequest');
+    }
+
+    /**
+     * 查询P2C VPN网关
+     *
+     * 根据P2C VPN网关ID，查询指定的VPN网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showP2cVgw($request)
+    {
+        return $this->showP2cVgwWithHttpInfo($request);
+    }
+
+    public function showP2cVgwWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/{p2c_vgw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['p2cVgwId'] !== null) {
+            $pathParams['p2c_vgw_id'] = $localVarParams['p2cVgwId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowP2cVgwResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowP2cVgwRequest');
+    }
+
+    /**
+     * 更新P2C VPN网关
+     *
+     * 根据P2C VPN网关ID，更新指定的P2C VPN网关
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateP2cVgw($request)
+    {
+        return $this->updateP2cVgwWithHttpInfo($request);
+    }
+
+    public function updateP2cVgwWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/{p2c_vgw_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['p2cVgwId'] !== null) {
+            $pathParams['p2c_vgw_id'] = $localVarParams['p2cVgwId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateP2cVgwResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateP2cVgwRequest');
+    }
+
+    /**
      * 批量添加资源标签
      *
      * 为指定实例批量添加标签
@@ -992,6 +1636,340 @@ class VpnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowResourceTagsResponse',
             $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowResourceTagsRequest');
+    }
+
+    /**
+     * 创建VPN访问策略
+     *
+     * 创建VPN访问策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVpnAccessPolicy($request)
+    {
+        return $this->createVpnAccessPolicyWithHttpInfo($request);
+    }
+
+    public function createVpnAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/access-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnAccessPolicyRequest');
+    }
+
+    /**
+     * 删除VPN访问策略
+     *
+     * 删除VPN访问策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteVpnAccessPolicy($request)
+    {
+        return $this->deleteVpnAccessPolicyWithHttpInfo($request);
+    }
+
+    public function deleteVpnAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/access-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteVpnAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteVpnAccessPolicyRequest');
+    }
+
+    /**
+     * 查询VPN访问策略列表
+     *
+     * 查询VPN访问策略列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnAccessPolicies($request)
+    {
+        return $this->listVpnAccessPoliciesWithHttpInfo($request);
+    }
+
+    public function listVpnAccessPoliciesWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/access-policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnAccessPoliciesResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnAccessPoliciesRequest');
+    }
+
+    /**
+     * 查询VPN访问策略
+     *
+     * 查询VPN访问策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVpnAccessPolicy($request)
+    {
+        return $this->showVpnAccessPolicyWithHttpInfo($request);
+    }
+
+    public function showVpnAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/access-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnAccessPolicyRequest');
+    }
+
+    /**
+     * 修改VPN访问策略
+     *
+     * 修改VPN访问策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVpnAccessPolicy($request)
+    {
+        return $this->updateVpnAccessPolicyWithHttpInfo($request);
+    }
+
+    public function updateVpnAccessPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/access-policies/{policy_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnAccessPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnAccessPolicyRequest');
     }
 
     /**
@@ -1952,6 +2930,1333 @@ class VpnClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowQuotasInfoResponse',
             $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowQuotasInfoRequest');
+    }
+
+    /**
+     * 创建一个VPN 服务端
+     *
+     * 创建一个VPN 服务端
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVpnServer($request)
+    {
+        return $this->createVpnServerWithHttpInfo($request);
+    }
+
+    public function createVpnServerWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/{p2c_vgw_id}/vpn-servers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['p2cVgwId'] !== null) {
+            $pathParams['p2c_vgw_id'] = $localVarParams['p2cVgwId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnServerResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnServerRequest');
+    }
+
+    /**
+     * 导出服务端对应的客户端配置信息
+     *
+     * 导出客户端配置信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function exportClientConfig($request)
+    {
+        return $this->exportClientConfigWithHttpInfo($request);
+    }
+
+    public function exportClientConfigWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/client-config/export';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ExportClientConfigResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ExportClientConfigRequest');
+    }
+
+    /**
+     * 查询租户下的所有服务端信息
+     *
+     * 查询租户下的所有服务端信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnServersByProject($request)
+    {
+        return $this->listVpnServersByProjectWithHttpInfo($request);
+    }
+
+    public function listVpnServersByProjectWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-servers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnServersByProjectResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnServersByProjectRequest');
+    }
+
+    /**
+     * 查询一个网关下的服务端信息
+     *
+     * 查询一个网关下的服务端信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnServersByVgw($request)
+    {
+        return $this->listVpnServersByVgwWithHttpInfo($request);
+    }
+
+    public function listVpnServersByVgwWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/{p2c_vgw_id}/vpn-servers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['p2cVgwId'] !== null) {
+            $pathParams['p2c_vgw_id'] = $localVarParams['p2cVgwId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnServersByVgwResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnServersByVgwRequest');
+    }
+
+    /**
+     * 更新指定VPN 服务端
+     *
+     * 更新指定VPN 服务端
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVpnServer($request)
+    {
+        return $this->updateVpnServerWithHttpInfo($request);
+    }
+
+    public function updateVpnServerWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnServerResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnServerRequest');
+    }
+
+    /**
+     * 创建VPN用户
+     *
+     * 创建VPN用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVpnUser($request)
+    {
+        return $this->createVpnUserWithHttpInfo($request);
+    }
+
+    public function createVpnUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnUserResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnUserRequest');
+    }
+
+    /**
+     * 删除VPN用户
+     *
+     * 删除VPN用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteVpnUser($request)
+    {
+        return $this->deleteVpnUserWithHttpInfo($request);
+    }
+
+    public function deleteVpnUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteVpnUserResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteVpnUserRequest');
+    }
+
+    /**
+     * 查询VPN用户列表
+     *
+     * 查询VPN用户列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnUsers($request)
+    {
+        return $this->listVpnUsersWithHttpInfo($request);
+    }
+
+    public function listVpnUsersWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnUsersResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnUsersRequest');
+    }
+
+    /**
+     * 重置VPN用户密码
+     *
+     * 重置VPN用户密码
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetVpnUserPassword($request)
+    {
+        return $this->resetVpnUserPasswordWithHttpInfo($request);
+    }
+
+    public function resetVpnUserPasswordWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users/{user_id}/reset-password';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ResetVpnUserPasswordResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ResetVpnUserPasswordRequest');
+    }
+
+    /**
+     * 查询VPN用户
+     *
+     * 查询VPN用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVpnUser($request)
+    {
+        return $this->showVpnUserWithHttpInfo($request);
+    }
+
+    public function showVpnUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnUserResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnUserRequest');
+    }
+
+    /**
+     * 修改VPN用户
+     *
+     * 修改VPN用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVpnUser($request)
+    {
+        return $this->updateVpnUserWithHttpInfo($request);
+    }
+
+    public function updateVpnUserWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserRequest');
+    }
+
+    /**
+     * 修改VPN用户密码
+     *
+     * 修改VPN用户密码
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVpnUserPassword($request)
+    {
+        return $this->updateVpnUserPasswordWithHttpInfo($request);
+    }
+
+    public function updateVpnUserPasswordWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/users/{user_id}/password';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserPasswordResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserPasswordRequest');
+    }
+
+    /**
+     * 添加VPN用户到组
+     *
+     * 添加VPN用户到组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addVpnUsersToGroup($request)
+    {
+        return $this->addVpnUsersToGroupWithHttpInfo($request);
+    }
+
+    public function addVpnUsersToGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups/{group_id}/add-users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\AddVpnUsersToGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\AddVpnUsersToGroupRequest');
+    }
+
+    /**
+     * 创建VPN用户组
+     *
+     * 创建VPN用户组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createVpnUserGroup($request)
+    {
+        return $this->createVpnUserGroupWithHttpInfo($request);
+    }
+
+    public function createVpnUserGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xClientToken'] !== null) {
+            $headerParams[$arr['xClientToken']] = $localVarParams['xClientToken'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnUserGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\CreateVpnUserGroupRequest');
+    }
+
+    /**
+     * 删除VPN用户组
+     *
+     * 删除VPN用户组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteVpnUserGroup($request)
+    {
+        return $this->deleteVpnUserGroupWithHttpInfo($request);
+    }
+
+    public function deleteVpnUserGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteVpnUserGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\DeleteVpnUserGroupRequest');
+    }
+
+    /**
+     * 查询VPN用户组列表
+     *
+     * 查询VPN用户组列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnUserGroups($request)
+    {
+        return $this->listVpnUserGroupsWithHttpInfo($request);
+    }
+
+    public function listVpnUserGroupsWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnUserGroupsResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnUserGroupsRequest');
+    }
+
+    /**
+     * 查询组内VPN用户
+     *
+     * 查询组内VPN用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listVpnUsersInGroup($request)
+    {
+        return $this->listVpnUsersInGroupWithHttpInfo($request);
+    }
+
+    public function listVpnUsersInGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups/{group_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnUsersInGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ListVpnUsersInGroupRequest');
+    }
+
+    /**
+     * 删除组内VPN用户
+     *
+     * 删除组内VPN用户
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function removeVpnUsersFromGroup($request)
+    {
+        return $this->removeVpnUsersFromGroupWithHttpInfo($request);
+    }
+
+    public function removeVpnUsersFromGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups/{group_id}/remove-users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\RemoveVpnUsersFromGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\RemoveVpnUsersFromGroupRequest');
+    }
+
+    /**
+     * 查询VPN用户组
+     *
+     * 查询VPN用户组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVpnUserGroup($request)
+    {
+        return $this->showVpnUserGroupWithHttpInfo($request);
+    }
+
+    public function showVpnUserGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnUserGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\ShowVpnUserGroupRequest');
+    }
+
+    /**
+     * 修改VPN用户组
+     *
+     * 修改VPN用户组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateVpnUserGroup($request)
+    {
+        return $this->updateVpnUserGroupWithHttpInfo($request);
+    }
+
+    public function updateVpnUserGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/p2c-vpn-gateways/vpn-servers/{vpn_server_id}/groups/{group_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vpnServerId'] !== null) {
+            $pathParams['vpn_server_id'] = $localVarParams['vpnServerId'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdateVpnUserGroupRequest');
     }
 
     protected function callApi(

@@ -20,13 +20,14 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
-    * id  IP地址组的ID。
-    * name  IP地址组的名称。
-    * description  IP地址组的描述信息。
-    * ipList  IP地址，多个用逗号分隔。
+    * marker  参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * pageReverse  参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址，多个用逗号分隔。
+    * enterpriseProjectId  参数解释：企业项目ID。
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
             'id' => 'string[]',
             'name' => 'string[]',
             'description' => 'string[]',
-            'ipList' => 'string[]'
+            'ipList' => 'string[]',
+            'enterpriseProjectId' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
-    * id  IP地址组的ID。
-    * name  IP地址组的名称。
-    * description  IP地址组的描述信息。
-    * ipList  IP地址，多个用逗号分隔。
+    * marker  参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * pageReverse  参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址，多个用逗号分隔。
+    * enterpriseProjectId  参数解释：企业项目ID。
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'description' => null,
-        'ipList' => null
+        'ipList' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -85,13 +89,14 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
-    * id  IP地址组的ID。
-    * name  IP地址组的名称。
-    * description  IP地址组的描述信息。
-    * ipList  IP地址，多个用逗号分隔。
+    * marker  参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * pageReverse  参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址，多个用逗号分隔。
+    * enterpriseProjectId  参数解释：企业项目ID。
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'description' => 'description',
-            'ipList' => 'ip_list'
+            'ipList' => 'ip_list',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
-    * id  IP地址组的ID。
-    * name  IP地址组的名称。
-    * description  IP地址组的描述信息。
-    * ipList  IP地址，多个用逗号分隔。
+    * marker  参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * pageReverse  参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址，多个用逗号分隔。
+    * enterpriseProjectId  参数解释：企业项目ID。
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'description' => 'setDescription',
-            'ipList' => 'setIpList'
+            'ipList' => 'setIpList',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
-    * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
-    * id  IP地址组的ID。
-    * name  IP地址组的名称。
-    * description  IP地址组的描述信息。
-    * ipList  IP地址，多个用逗号分隔。
+    * marker  参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
+    * pageReverse  参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址，多个用逗号分隔。
+    * enterpriseProjectId  参数解释：企业项目ID。
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'description' => 'getDescription',
-            'ipList' => 'getIpList'
+            'ipList' => 'getIpList',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['ipList'] = isset($data['ipList']) ? $data['ipList'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -246,7 +257,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets marker
-    *  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    *  参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     *
     * @return string|null
     */
@@ -258,7 +269,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets marker
     *
-    * @param string|null $marker 上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
+    * @param string|null $marker 参数解释：上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     *
     * @return $this
     */
@@ -270,7 +281,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。
+    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return int|null
     */
@@ -282,7 +293,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。
+    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return $this
     */
@@ -294,7 +305,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageReverse
-    *  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    *  参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     *
     * @return bool|null
     */
@@ -306,7 +317,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageReverse
     *
-    * @param bool|null $pageReverse 是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
+    * @param bool|null $pageReverse 参数解释：是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     *
     * @return $this
     */
@@ -318,7 +329,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  IP地址组的ID。
+    *  参数解释：IP地址组的ID。
     *
     * @return string[]|null
     */
@@ -330,7 +341,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string[]|null $id IP地址组的ID。
+    * @param string[]|null $id 参数解释：IP地址组的ID。
     *
     * @return $this
     */
@@ -342,7 +353,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  IP地址组的名称。
+    *  参数解释：IP地址组的名称。
     *
     * @return string[]|null
     */
@@ -354,7 +365,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string[]|null $name IP地址组的名称。
+    * @param string[]|null $name 参数解释：IP地址组的名称。
     *
     * @return $this
     */
@@ -366,7 +377,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  IP地址组的描述信息。
+    *  参数解释：IP地址组的描述信息。
     *
     * @return string[]|null
     */
@@ -378,7 +389,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string[]|null $description IP地址组的描述信息。
+    * @param string[]|null $description 参数解释：IP地址组的描述信息。
     *
     * @return $this
     */
@@ -390,7 +401,7 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  IP地址，多个用逗号分隔。
+    *  参数解释：IP地址，多个用逗号分隔。
     *
     * @return string[]|null
     */
@@ -402,13 +413,37 @@ class ListIpGroupsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param string[]|null $ipList IP地址，多个用逗号分隔。
+    * @param string[]|null $ipList 参数解释：IP地址，多个用逗号分隔。
     *
     * @return $this
     */
     public function setIpList($ipList)
     {
         $this->container['ipList'] = $ipList;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  参数解释：企业项目ID。
+    *
+    * @return string[]|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string[]|null $enterpriseProjectId 参数解释：企业项目ID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

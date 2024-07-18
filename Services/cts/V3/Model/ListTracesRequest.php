@@ -34,6 +34,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
     * traceId  标示某一条事件的事件ID。当传入这个查询条件时，其他查询条件自动不生效。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
     * traceName  标示查询事件列表对应的事件名称。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。 说明：该字段可能包含大写字母。
     * traceRating  标示查询事件列表对应的事件等级目前有三种：正常(normal), 警告(warning),事故(incident)。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
+    * accessKeyId  标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    * enterpriseProjectId  标示查询事件列表对应的企业项目ID。
     *
     * @var string[]
     */
@@ -51,7 +53,9 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
             'resourceType' => 'string',
             'traceId' => 'string',
             'traceName' => 'string',
-            'traceRating' => 'string'
+            'traceRating' => 'string',
+            'accessKeyId' => 'string',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -70,6 +74,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
     * traceId  标示某一条事件的事件ID。当传入这个查询条件时，其他查询条件自动不生效。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
     * traceName  标示查询事件列表对应的事件名称。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。 说明：该字段可能包含大写字母。
     * traceRating  标示查询事件列表对应的事件等级目前有三种：正常(normal), 警告(warning),事故(incident)。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
+    * accessKeyId  标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    * enterpriseProjectId  标示查询事件列表对应的企业项目ID。
     *
     * @var string[]
     */
@@ -87,7 +93,9 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
         'resourceType' => null,
         'traceId' => null,
         'traceName' => null,
-        'traceRating' => null
+        'traceRating' => null,
+        'accessKeyId' => null,
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -127,6 +135,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
     * traceId  标示某一条事件的事件ID。当传入这个查询条件时，其他查询条件自动不生效。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
     * traceName  标示查询事件列表对应的事件名称。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。 说明：该字段可能包含大写字母。
     * traceRating  标示查询事件列表对应的事件等级目前有三种：正常(normal), 警告(warning),事故(incident)。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
+    * accessKeyId  标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    * enterpriseProjectId  标示查询事件列表对应的企业项目ID。
     *
     * @var string[]
     */
@@ -144,7 +154,9 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
             'resourceType' => 'resource_type',
             'traceId' => 'trace_id',
             'traceName' => 'trace_name',
-            'traceRating' => 'trace_rating'
+            'traceRating' => 'trace_rating',
+            'accessKeyId' => 'access_key_id',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -163,6 +175,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
     * traceId  标示某一条事件的事件ID。当传入这个查询条件时，其他查询条件自动不生效。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
     * traceName  标示查询事件列表对应的事件名称。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。 说明：该字段可能包含大写字母。
     * traceRating  标示查询事件列表对应的事件等级目前有三种：正常(normal), 警告(warning),事故(incident)。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
+    * accessKeyId  标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    * enterpriseProjectId  标示查询事件列表对应的企业项目ID。
     *
     * @var string[]
     */
@@ -180,7 +194,9 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
             'resourceType' => 'setResourceType',
             'traceId' => 'setTraceId',
             'traceName' => 'setTraceName',
-            'traceRating' => 'setTraceRating'
+            'traceRating' => 'setTraceRating',
+            'accessKeyId' => 'setAccessKeyId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -199,6 +215,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
     * traceId  标示某一条事件的事件ID。当传入这个查询条件时，其他查询条件自动不生效。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
     * traceName  标示查询事件列表对应的事件名称。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。 说明：该字段可能包含大写字母。
     * traceRating  标示查询事件列表对应的事件等级目前有三种：正常(normal), 警告(warning),事故(incident)。 当\"trace_type\"字段值为\"system\"时，该字段筛选有效\"。
+    * accessKeyId  标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    * enterpriseProjectId  标示查询事件列表对应的企业项目ID。
     *
     * @var string[]
     */
@@ -216,7 +234,9 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
             'resourceType' => 'getResourceType',
             'traceId' => 'getTraceId',
             'traceName' => 'getTraceName',
-            'traceRating' => 'getTraceRating'
+            'traceRating' => 'getTraceRating',
+            'accessKeyId' => 'getAccessKeyId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -323,6 +343,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
         $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
         $this->container['traceName'] = isset($data['traceName']) ? $data['traceName'] : null;
         $this->container['traceRating'] = isset($data['traceRating']) ? $data['traceRating'] : null;
+        $this->container['accessKeyId'] = isset($data['accessKeyId']) ? $data['accessKeyId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -374,8 +396,8 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['to']) && ($this->container['to'] < 946656000000)) {
                 $invalidProperties[] = "invalid value for 'to', must be bigger than or equal to 946656000000.";
             }
-            if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) > 32)) {
-                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'trackerName', the character length must be bigger than or equal to 1.";
@@ -435,6 +457,18 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['traceRating']) && (mb_strlen($this->container['traceRating']) < 5)) {
                 $invalidProperties[] = "invalid value for 'traceRating', the character length must be bigger than or equal to 5.";
+            }
+            if (!is_null($this->container['accessKeyId']) && (mb_strlen($this->container['accessKeyId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'accessKeyId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['accessKeyId']) && (mb_strlen($this->container['accessKeyId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'accessKeyId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 40)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 40.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 15)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 15.";
             }
         return $invalidProperties;
     }
@@ -783,6 +817,54 @@ class ListTracesRequest implements ModelInterface, ArrayAccess
     public function setTraceRating($traceRating)
     {
         $this->container['traceRating'] = $traceRating;
+        return $this;
+    }
+
+    /**
+    * Gets accessKeyId
+    *  标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    *
+    * @return string|null
+    */
+    public function getAccessKeyId()
+    {
+        return $this->container['accessKeyId'];
+    }
+
+    /**
+    * Sets accessKeyId
+    *
+    * @param string|null $accessKeyId 标示查询事件列表对应的访问密钥ID。包含临时访问凭证和永久访问密钥。
+    *
+    * @return $this
+    */
+    public function setAccessKeyId($accessKeyId)
+    {
+        $this->container['accessKeyId'] = $accessKeyId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  标示查询事件列表对应的企业项目ID。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 标示查询事件列表对应的企业项目ID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

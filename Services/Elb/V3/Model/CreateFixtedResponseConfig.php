@@ -23,13 +23,19 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     * statusCode  返回码。支持200~299,400~499,500~599。
     * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
     * messageBody  返回消息内容。
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'statusCode' => 'string',
             'contentType' => 'string',
-            'messageBody' => 'string'
+            'messageBody' => 'string',
+            'insertHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateInsertHeadersConfig',
+            'removeHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateRemoveHeadersConfig',
+            'trafficLimitConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\CreateTrafficLimitConfig'
     ];
 
     /**
@@ -37,13 +43,19 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     * statusCode  返回码。支持200~299,400~499,500~599。
     * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
     * messageBody  返回消息内容。
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'statusCode' => null,
         'contentType' => null,
-        'messageBody' => null
+        'messageBody' => null,
+        'insertHeadersConfig' => null,
+        'removeHeadersConfig' => null,
+        'trafficLimitConfig' => null
     ];
 
     /**
@@ -72,13 +84,19 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     * statusCode  返回码。支持200~299,400~499,500~599。
     * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
     * messageBody  返回消息内容。
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'statusCode' => 'status_code',
             'contentType' => 'content_type',
-            'messageBody' => 'message_body'
+            'messageBody' => 'message_body',
+            'insertHeadersConfig' => 'insert_headers_config',
+            'removeHeadersConfig' => 'remove_headers_config',
+            'trafficLimitConfig' => 'traffic_limit_config'
     ];
 
     /**
@@ -86,13 +104,19 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     * statusCode  返回码。支持200~299,400~499,500~599。
     * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
     * messageBody  返回消息内容。
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $setters = [
             'statusCode' => 'setStatusCode',
             'contentType' => 'setContentType',
-            'messageBody' => 'setMessageBody'
+            'messageBody' => 'setMessageBody',
+            'insertHeadersConfig' => 'setInsertHeadersConfig',
+            'removeHeadersConfig' => 'setRemoveHeadersConfig',
+            'trafficLimitConfig' => 'setTrafficLimitConfig'
     ];
 
     /**
@@ -100,13 +124,19 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     * statusCode  返回码。支持200~299,400~499,500~599。
     * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
     * messageBody  返回消息内容。
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
+    * trafficLimitConfig  trafficLimitConfig
     *
     * @var string[]
     */
     protected static $getters = [
             'statusCode' => 'getStatusCode',
             'contentType' => 'getContentType',
-            'messageBody' => 'getMessageBody'
+            'messageBody' => 'getMessageBody',
+            'insertHeadersConfig' => 'getInsertHeadersConfig',
+            'removeHeadersConfig' => 'getRemoveHeadersConfig',
+            'trafficLimitConfig' => 'getTrafficLimitConfig'
     ];
 
     /**
@@ -191,6 +221,9 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
         $this->container['statusCode'] = isset($data['statusCode']) ? $data['statusCode'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['messageBody'] = isset($data['messageBody']) ? $data['messageBody'] : null;
+        $this->container['insertHeadersConfig'] = isset($data['insertHeadersConfig']) ? $data['insertHeadersConfig'] : null;
+        $this->container['removeHeadersConfig'] = isset($data['removeHeadersConfig']) ? $data['removeHeadersConfig'] : null;
+        $this->container['trafficLimitConfig'] = isset($data['trafficLimitConfig']) ? $data['trafficLimitConfig'] : null;
     }
 
     /**
@@ -319,6 +352,78 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     public function setMessageBody($messageBody)
     {
         $this->container['messageBody'] = $messageBody;
+        return $this;
+    }
+
+    /**
+    * Gets insertHeadersConfig
+    *  insertHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateInsertHeadersConfig|null
+    */
+    public function getInsertHeadersConfig()
+    {
+        return $this->container['insertHeadersConfig'];
+    }
+
+    /**
+    * Sets insertHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateInsertHeadersConfig|null $insertHeadersConfig insertHeadersConfig
+    *
+    * @return $this
+    */
+    public function setInsertHeadersConfig($insertHeadersConfig)
+    {
+        $this->container['insertHeadersConfig'] = $insertHeadersConfig;
+        return $this;
+    }
+
+    /**
+    * Gets removeHeadersConfig
+    *  removeHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateRemoveHeadersConfig|null
+    */
+    public function getRemoveHeadersConfig()
+    {
+        return $this->container['removeHeadersConfig'];
+    }
+
+    /**
+    * Sets removeHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateRemoveHeadersConfig|null $removeHeadersConfig removeHeadersConfig
+    *
+    * @return $this
+    */
+    public function setRemoveHeadersConfig($removeHeadersConfig)
+    {
+        $this->container['removeHeadersConfig'] = $removeHeadersConfig;
+        return $this;
+    }
+
+    /**
+    * Gets trafficLimitConfig
+    *  trafficLimitConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateTrafficLimitConfig|null
+    */
+    public function getTrafficLimitConfig()
+    {
+        return $this->container['trafficLimitConfig'];
+    }
+
+    /**
+    * Sets trafficLimitConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateTrafficLimitConfig|null $trafficLimitConfig trafficLimitConfig
+    *
+    * @return $this
+    */
+    public function setTrafficLimitConfig($trafficLimitConfig)
+    {
+        $this->container['trafficLimitConfig'] = $trafficLimitConfig;
         return $this;
     }
 

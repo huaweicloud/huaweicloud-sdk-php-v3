@@ -21,14 +21,14 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * description  后端云服务器组的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * healthmonitorId  后端云服务器组关联的健康检查的ID。  支持多值查询，查询条件格式：*healthmonitor_id=xxx&healthmonitor_id=xxx*。
     * id  后端云服务器组的ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  后端云服务器组的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * loadbalancerId  后端云服务器组绑定的负载均衡器ID。  支持多值查询，查询条件格式：*loadbalancer_id=xxx&loadbalancer_id=xxx*。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： 1、ROUND_ROBIN：加权轮询算法。 2、LEAST_CONNECTIONS：加权最少连接算法。 3、SOURCE_IP：源IP算法。 4、QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
     * enterpriseProjectId  企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权； 如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * ipVersion  后端云服务器组支持的IP版本。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
@@ -67,14 +67,14 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * description  后端云服务器组的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * healthmonitorId  后端云服务器组关联的健康检查的ID。  支持多值查询，查询条件格式：*healthmonitor_id=xxx&healthmonitor_id=xxx*。
     * id  后端云服务器组的ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  后端云服务器组的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * loadbalancerId  后端云服务器组绑定的负载均衡器ID。  支持多值查询，查询条件格式：*loadbalancer_id=xxx&loadbalancer_id=xxx*。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： 1、ROUND_ROBIN：加权轮询算法。 2、LEAST_CONNECTIONS：加权最少连接算法。 3、SOURCE_IP：源IP算法。 4、QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
     * enterpriseProjectId  企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权； 如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * ipVersion  后端云服务器组支持的IP版本。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
@@ -134,14 +134,14 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * description  后端云服务器组的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * healthmonitorId  后端云服务器组关联的健康检查的ID。  支持多值查询，查询条件格式：*healthmonitor_id=xxx&healthmonitor_id=xxx*。
     * id  后端云服务器组的ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  后端云服务器组的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * loadbalancerId  后端云服务器组绑定的负载均衡器ID。  支持多值查询，查询条件格式：*loadbalancer_id=xxx&loadbalancer_id=xxx*。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： 1、ROUND_ROBIN：加权轮询算法。 2、LEAST_CONNECTIONS：加权最少连接算法。 3、SOURCE_IP：源IP算法。 4、QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
     * enterpriseProjectId  企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权； 如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * ipVersion  后端云服务器组支持的IP版本。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
@@ -180,14 +180,14 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * description  后端云服务器组的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * healthmonitorId  后端云服务器组关联的健康检查的ID。  支持多值查询，查询条件格式：*healthmonitor_id=xxx&healthmonitor_id=xxx*。
     * id  后端云服务器组的ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  后端云服务器组的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * loadbalancerId  后端云服务器组绑定的负载均衡器ID。  支持多值查询，查询条件格式：*loadbalancer_id=xxx&loadbalancer_id=xxx*。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： 1、ROUND_ROBIN：加权轮询算法。 2、LEAST_CONNECTIONS：加权最少连接算法。 3、SOURCE_IP：源IP算法。 4、QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
     * enterpriseProjectId  企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权； 如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * ipVersion  后端云服务器组支持的IP版本。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
@@ -226,14 +226,14 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * description  后端云服务器组的描述信息。  支持多值查询，查询条件格式：*description=xxx&description=xxx*。
     * healthmonitorId  后端云服务器组关联的健康检查的ID。  支持多值查询，查询条件格式：*healthmonitor_id=xxx&healthmonitor_id=xxx*。
     * id  后端云服务器组的ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
     * name  后端云服务器组的名称。  支持多值查询，查询条件格式：*name=xxx&name=xxx*。
     * loadbalancerId  后端云服务器组绑定的负载均衡器ID。  支持多值查询，查询条件格式：*loadbalancer_id=xxx&loadbalancer_id=xxx*。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * lbAlgorithm  后端云服务器组的负载均衡算法。  取值： 1、ROUND_ROBIN：加权轮询算法。 2、LEAST_CONNECTIONS：加权最少连接算法。 3、SOURCE_IP：源IP算法。 4、QUIC_CID：连接ID算法。  支持多值查询，查询条件格式：*lb_algorithm=xxx&lb_algorithm=xxx*。  [不支持QUIC_CID。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC_CID。](tag:dt,dt_test)
     * enterpriseProjectId  企业项目ID。不传时查询default企业项目\"0\"下的资源，鉴权按照default企业项目鉴权； 如果传值，则传已存在的企业项目ID或all_granted_eps（表示查询所有企业项目）进行查询。  支持多值查询，查询条件格式： *enterprise_project_id=xxx&enterprise_project_id=xxx*。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     * ipVersion  后端云服务器组支持的IP版本。  支持多值查询，查询条件格式：*ip_version=xxx&ip_version=xxx*。
@@ -402,7 +402,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。
+    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return int|null
     */
@@ -414,7 +414,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。
+    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    *  后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     *
     * @return string[]|null
     */
@@ -582,7 +582,7 @@ class ListMasterSlavePoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string[]|null $protocol 后端云服务器组的后端协议。  取值：TCP、UDP、HTTP、HTTPS和QUIC。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * @param string[]|null $protocol 后端云服务器组的后端协议。  取值：TCP、UDP、[IP、](tag:hws_eu)TLS、GRPC、HTTP、HTTPS和QUIC。 IP类型为网关型LB独有的后端服务器组协议。  支持多值查询，查询条件格式：*protocol=xxx&protocol=xxx*。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     *
     * @return $this
     */

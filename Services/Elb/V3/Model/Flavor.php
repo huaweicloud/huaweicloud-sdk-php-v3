@@ -20,13 +20,15 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  规格ID。
+    * id  参数解释：规格ID。
     * info  info
-    * name  规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
-    * shared  是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
-    * projectId  项目ID。
-    * type  规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    * name  参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
+    * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    * projectId  参数解释：项目ID。
+    * type  参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    * publicBorderGroup  参数解释：可用区组，如：center
+    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -37,18 +39,22 @@ class Flavor implements ModelInterface, ArrayAccess
             'shared' => 'bool',
             'projectId' => 'string',
             'type' => 'string',
-            'flavorSoldOut' => 'bool'
+            'flavorSoldOut' => 'bool',
+            'publicBorderGroup' => 'string',
+            'category' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  规格ID。
+    * id  参数解释：规格ID。
     * info  info
-    * name  规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
-    * shared  是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
-    * projectId  项目ID。
-    * type  规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    * name  参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
+    * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    * projectId  参数解释：项目ID。
+    * type  参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    * publicBorderGroup  参数解释：可用区组，如：center
+    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class Flavor implements ModelInterface, ArrayAccess
         'shared' => null,
         'projectId' => null,
         'type' => null,
-        'flavorSoldOut' => null
+        'flavorSoldOut' => null,
+        'publicBorderGroup' => null,
+        'category' => 'int32'
     ];
 
     /**
@@ -85,13 +93,15 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  规格ID。
+    * id  参数解释：规格ID。
     * info  info
-    * name  规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
-    * shared  是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
-    * projectId  项目ID。
-    * type  规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    * name  参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
+    * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    * projectId  参数解释：项目ID。
+    * type  参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    * publicBorderGroup  参数解释：可用区组，如：center
+    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -102,18 +112,22 @@ class Flavor implements ModelInterface, ArrayAccess
             'shared' => 'shared',
             'projectId' => 'project_id',
             'type' => 'type',
-            'flavorSoldOut' => 'flavor_sold_out'
+            'flavorSoldOut' => 'flavor_sold_out',
+            'publicBorderGroup' => 'public_border_group',
+            'category' => 'category'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  规格ID。
+    * id  参数解释：规格ID。
     * info  info
-    * name  规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
-    * shared  是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
-    * projectId  项目ID。
-    * type  规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    * name  参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
+    * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    * projectId  参数解释：项目ID。
+    * type  参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    * publicBorderGroup  参数解释：可用区组，如：center
+    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -124,18 +138,22 @@ class Flavor implements ModelInterface, ArrayAccess
             'shared' => 'setShared',
             'projectId' => 'setProjectId',
             'type' => 'setType',
-            'flavorSoldOut' => 'setFlavorSoldOut'
+            'flavorSoldOut' => 'setFlavorSoldOut',
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'category' => 'setCategory'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  规格ID。
+    * id  参数解释：规格ID。
     * info  info
-    * name  规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
-    * shared  是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
-    * projectId  项目ID。
-    * type  规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
-    * flavorSoldOut  [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    * name  参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
+    * shared  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    * projectId  参数解释：项目ID。
+    * type  参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
+    * flavorSoldOut  参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
+    * publicBorderGroup  参数解释：可用区组，如：center
+    * category  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class Flavor implements ModelInterface, ArrayAccess
             'shared' => 'getShared',
             'projectId' => 'getProjectId',
             'type' => 'getType',
-            'flavorSoldOut' => 'getFlavorSoldOut'
+            'flavorSoldOut' => 'getFlavorSoldOut',
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'category' => 'getCategory'
     ];
 
     /**
@@ -214,6 +234,8 @@ class Flavor implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['flavorSoldOut'] = isset($data['flavorSoldOut']) ? $data['flavorSoldOut'] : null;
+        $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
     }
 
     /**
@@ -267,7 +289,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  规格ID。
+    *  参数解释：规格ID。
     *
     * @return string
     */
@@ -279,7 +301,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 规格ID。
+    * @param string $id 参数解释：规格ID。
     *
     * @return $this
     */
@@ -315,7 +337,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
+    *  参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
     *
     * @return string
     */
@@ -327,7 +349,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 规格名称。  规格名称与控制台展示的对应关系如下：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II
+    * @param string $name 参数解释：规格名称。  取值范围：  网络型有如下规格：   - L4_flavor.elb.s1.small: 小型 I   - L4_flavor.elb.s2.small: 小型 II   - L4_flavor.elb.s1.medium: 中型 I   - L4_flavor.elb.s2.medium: 中型 II   - L4_flavor.elb.s1.large: 大型 I   - L4_flavor.elb.s2.large: 大型 II   - L4_flavor.elb.pro.max: 四层弹性规格  应用型有如下规格：   - L7_flavor.elb.s1.small: 小型 I   - L7_flavor.elb.s2.small: 小型 II   - L7_flavor.elb.s1.medium: 中型 I   - L7_flavor.elb.s2.medium: 中型 II   - L7_flavor.elb.s1.large: 大型 I   - L7_flavor.elb.s2.large: 大型 II   - L7_flavor.elb.s1.extra-large: 超大型 I   - L7_flavor.elb.s2.extra-large: 超大型 II   - L7_flavor.elb.pro.max: 七层弹性规格
     *
     * @return $this
     */
@@ -339,7 +361,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets shared
-    *  是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    *  参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     *
     * @return bool
     */
@@ -351,7 +373,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets shared
     *
-    * @param bool $shared 是否公共规格。  取值： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
+    * @param bool $shared 参数解释：是否公共规格。  取值范围： - true表示公共规格，所有租户可见。 - false表示私有规格，为当前租户所有。
     *
     * @return $this
     */
@@ -363,7 +385,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID。
+    *  参数解释：项目ID。
     *
     * @return string
     */
@@ -375,7 +397,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID。
+    * @param string $projectId 参数解释：项目ID。
     *
     * @return $this
     */
@@ -387,7 +409,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
+    *  参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
     *
     * @return string
     */
@@ -399,7 +421,7 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 规格类别。  取值： - L4和L7 表示四层网络型和七层应用型flavor。 - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。 - L4_elastic_max和L7_elastic_max 表示弹性扩缩容实例的上限规格。
+    * @param string $type 参数解释：规格类别。    取值：   - L4和L7 表示四层网络型和七层应用型flavor。   [- gateway 表示网关型LB的flavor，目前只支持弹性计费类型。当前仅支持欧洲局点。](tag:hws_eu)   - L4_elastic和L7_elastic 表示弹性扩缩容实例的下限规格。   - L4_elastic_max、L7_elastic_max[和gateway_elastic_max](tag:hws_eu) 表示弹性扩缩容实例的上限规格。
     *
     * @return $this
     */
@@ -411,7 +433,7 @@ class Flavor implements ModelInterface, ArrayAccess
 
     /**
     * Gets flavorSoldOut
-    *  [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    *  参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
     *
     * @return bool
     */
@@ -423,13 +445,61 @@ class Flavor implements ModelInterface, ArrayAccess
     /**
     * Sets flavorSoldOut
     *
-    * @param bool $flavorSoldOut [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt) [是否无法购买该规格的LB](tag:ocb,tm)  取值： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,fcs,fcs_dt,dt)可购买该规格的LB。
+    * @param bool $flavorSoldOut 参数解释： [是否售罄。](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt) [是否无法购买该规格的LB](tag:ocb,tm,fcs,fcs_dt,hcso,hcso_dt,hk_vdf)  取值范围： - true：[已售罄，将](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)无法购买该规格的LB。 - false：[未售罄，](tag:hws,hk,hws_eu,otc,tlf,ctc,sbc,g42,cmcc,hk_g42,dt_test,mix,hk_sbc,hws_ocb,dt)可购买该规格的LB。
     *
     * @return $this
     */
     public function setFlavorSoldOut($flavorSoldOut)
     {
         $this->container['flavorSoldOut'] = $flavorSoldOut;
+        return $this;
+    }
+
+    /**
+    * Gets publicBorderGroup
+    *  参数解释：可用区组，如：center
+    *
+    * @return string|null
+    */
+    public function getPublicBorderGroup()
+    {
+        return $this->container['publicBorderGroup'];
+    }
+
+    /**
+    * Sets publicBorderGroup
+    *
+    * @param string|null $publicBorderGroup 参数解释：可用区组，如：center
+    *
+    * @return $this
+    */
+    public function setPublicBorderGroup($publicBorderGroup)
+    {
+        $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets category
+    *  参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    *
+    * @return int|null
+    */
+    public function getCategory()
+    {
+        return $this->container['category'];
+    }
+
+    /**
+    * Sets category
+    *
+    * @param int|null $category 参数解释：可用区组编码。  取值范围：0表示center，21表示homezone。
+    *
+    * @return $this
+    */
+    public function setCategory($category)
+    {
+        $this->container['category'] = $category;
         return $this;
     }
 

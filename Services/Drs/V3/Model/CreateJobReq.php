@@ -30,7 +30,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
     * netType  网络类型
     * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
-    * nodeType  规格类型。
+    * nodeType  规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
     * tags  标签信息。
@@ -88,7 +88,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
     * netType  网络类型
     * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
-    * nodeType  规格类型。
+    * nodeType  规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
     * tags  标签信息。
@@ -167,7 +167,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
     * netType  网络类型
     * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
-    * nodeType  规格类型。
+    * nodeType  规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
     * tags  标签信息。
@@ -225,7 +225,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
     * netType  网络类型
     * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
-    * nodeType  规格类型。
+    * nodeType  规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
     * tags  标签信息。
@@ -283,7 +283,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     * multiWrite  - db_use_type 是cloudDataGuard时，必填，灾备类型是双主灾备时 muti_write取值true, 否则为false。 - db_use_type 是其他类型时，muti_write是非必选参数
     * netType  网络类型
     * nodeNum  节点个数。MongoDB数据库时对应源端分片个数，源库为集群时必填，[1-32]，MySQL双主灾备时会默认设置为2。
-    * nodeType  规格类型。
+    * nodeType  规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     * sourceEndpoint  sourceEndpoint
     * targetEndpoint  targetEndpoint
     * tags  标签信息。
@@ -386,7 +386,12 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     const NET_TYPE_VPN = 'vpn';
     const NET_TYPE_VPC = 'vpc';
     const NET_TYPE_EIP = 'eip';
+    const NODE_TYPE_MICRO = 'micro';
+    const NODE_TYPE_SMALL = 'small';
+    const NODE_TYPE_MEDIUM = 'medium';
     const NODE_TYPE_HIGH = 'high';
+    const NODE_TYPE_XLARGE = 'xlarge';
+    const NODE_TYPE__2XLARGE = '2xlarge';
     const TASK_TYPE_FULL_TRANS = 'FULL_TRANS';
     const TASK_TYPE_FULL_INCR_TRANS = 'FULL_INCR_TRANS';
     const TASK_TYPE_INCR_TRANS = 'INCR_TRANS';
@@ -463,7 +468,12 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     public function getNodeTypeAllowableValues()
     {
         return [
+            self::NODE_TYPE_MICRO,
+            self::NODE_TYPE_SMALL,
+            self::NODE_TYPE_MEDIUM,
             self::NODE_TYPE_HIGH,
+            self::NODE_TYPE_XLARGE,
+            self::NODE_TYPE__2XLARGE,
         ];
     }
 
@@ -902,7 +912,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets nodeType
-    *  规格类型。
+    *  规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     *
     * @return string
     */
@@ -914,7 +924,7 @@ class CreateJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets nodeType
     *
-    * @param string $nodeType 规格类型。
+    * @param string $nodeType 规格类型。取值： - micro：极小规格。 - small：小规格。 - medium：中规格。 - high：大规格。 - xlarge：超大规格。 - 2xlarge：极大规格。 具体某种场景支持的取值可以通过[查询可用的Node规格接口](https://support.huaweicloud.com/api-drs/drs_03_0239.html)获取。
     *
     * @return $this
     */

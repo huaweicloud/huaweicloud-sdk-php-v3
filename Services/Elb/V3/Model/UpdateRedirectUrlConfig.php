@@ -26,6 +26,8 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'string',
             'path' => 'string',
             'query' => 'string',
-            'statusCode' => 'string'
+            'statusCode' => 'string',
+            'insertHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateInsertHeadersConfig',
+            'removeHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateRemoveHeadersConfig'
     ];
 
     /**
@@ -46,6 +50,8 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
         'port' => null,
         'path' => null,
         'query' => null,
-        'statusCode' => null
+        'statusCode' => null,
+        'insertHeadersConfig' => null,
+        'removeHeadersConfig' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'port',
             'path' => 'path',
             'query' => 'query',
-            'statusCode' => 'status_code'
+            'statusCode' => 'status_code',
+            'insertHeadersConfig' => 'insert_headers_config',
+            'removeHeadersConfig' => 'remove_headers_config'
     ];
 
     /**
@@ -107,6 +119,8 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'setPort',
             'path' => 'setPath',
             'query' => 'setQuery',
-            'statusCode' => 'setStatusCode'
+            'statusCode' => 'setStatusCode',
+            'insertHeadersConfig' => 'setInsertHeadersConfig',
+            'removeHeadersConfig' => 'setRemoveHeadersConfig'
     ];
 
     /**
@@ -127,6 +143,8 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'getPort',
             'path' => 'getPath',
             'query' => 'getQuery',
-            'statusCode' => 'getStatusCode'
+            'statusCode' => 'getStatusCode',
+            'insertHeadersConfig' => 'getInsertHeadersConfig',
+            'removeHeadersConfig' => 'getRemoveHeadersConfig'
     ];
 
     /**
@@ -241,6 +261,8 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
         $this->container['statusCode'] = isset($data['statusCode']) ? $data['statusCode'] : null;
+        $this->container['insertHeadersConfig'] = isset($data['insertHeadersConfig']) ? $data['insertHeadersConfig'] : null;
+        $this->container['removeHeadersConfig'] = isset($data['removeHeadersConfig']) ? $data['removeHeadersConfig'] : null;
     }
 
     /**
@@ -458,6 +480,54 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     public function setStatusCode($statusCode)
     {
         $this->container['statusCode'] = $statusCode;
+        return $this;
+    }
+
+    /**
+    * Gets insertHeadersConfig
+    *  insertHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateInsertHeadersConfig|null
+    */
+    public function getInsertHeadersConfig()
+    {
+        return $this->container['insertHeadersConfig'];
+    }
+
+    /**
+    * Sets insertHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateInsertHeadersConfig|null $insertHeadersConfig insertHeadersConfig
+    *
+    * @return $this
+    */
+    public function setInsertHeadersConfig($insertHeadersConfig)
+    {
+        $this->container['insertHeadersConfig'] = $insertHeadersConfig;
+        return $this;
+    }
+
+    /**
+    * Gets removeHeadersConfig
+    *  removeHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateRemoveHeadersConfig|null
+    */
+    public function getRemoveHeadersConfig()
+    {
+        return $this->container['removeHeadersConfig'];
+    }
+
+    /**
+    * Sets removeHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateRemoveHeadersConfig|null $removeHeadersConfig removeHeadersConfig
+    *
+    * @return $this
+    */
+    public function setRemoveHeadersConfig($removeHeadersConfig)
+    {
+        $this->container['removeHeadersConfig'] = $removeHeadersConfig;
         return $this;
     }
 

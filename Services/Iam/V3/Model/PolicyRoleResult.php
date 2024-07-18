@@ -49,7 +49,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
             'id' => 'string',
             'displayName' => 'string',
             'type' => 'string',
-            'policy' => '\HuaweiCloud\SDK\Iam\V3\Model\ServicePolicy'
+            'policy' => '\HuaweiCloud\SDK\Iam\V3\Model\CustomPolicy'
     ];
 
     /**
@@ -623,7 +623,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * Gets policy
     *  policy
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\ServicePolicy
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\CustomPolicy
     */
     public function getPolicy()
     {
@@ -633,7 +633,7 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\ServicePolicy $policy policy
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\CustomPolicy $policy policy
     *
     * @return $this
     */

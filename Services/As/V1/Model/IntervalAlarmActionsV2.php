@@ -25,6 +25,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * size  操作大小，取值范围为0到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size为实例个数,取值范围为0-300的整数，默认为1。当scaling_resource_type为BANDWIDTH时，size表示带宽大小，单位为Mbit/s，取值范围为1到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size和percentage参数只能选其中一个进行配置。
     * lowerBound  lowerBound
     * upperBound  upperBound
+    * percentage  操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
     *
     * @var string[]
     */
@@ -32,8 +33,9 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
             'operation' => 'string',
             'limits' => 'int',
             'size' => 'int',
-            'lowerBound' => 'int',
-            'upperBound' => 'int'
+            'lowerBound' => 'double',
+            'upperBound' => 'double',
+            'percentage' => 'int'
     ];
 
     /**
@@ -43,6 +45,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * size  操作大小，取值范围为0到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size为实例个数,取值范围为0-300的整数，默认为1。当scaling_resource_type为BANDWIDTH时，size表示带宽大小，单位为Mbit/s，取值范围为1到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size和percentage参数只能选其中一个进行配置。
     * lowerBound  lowerBound
     * upperBound  upperBound
+    * percentage  操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
     *
     * @var string[]
     */
@@ -50,8 +53,9 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
         'operation' => null,
         'limits' => 'int32',
         'size' => 'int32',
-        'lowerBound' => 'int32',
-        'upperBound' => 'int32'
+        'lowerBound' => 'double',
+        'upperBound' => 'double',
+        'percentage' => 'int32'
     ];
 
     /**
@@ -82,6 +86,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * size  操作大小，取值范围为0到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size为实例个数,取值范围为0-300的整数，默认为1。当scaling_resource_type为BANDWIDTH时，size表示带宽大小，单位为Mbit/s，取值范围为1到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size和percentage参数只能选其中一个进行配置。
     * lowerBound  lowerBound
     * upperBound  upperBound
+    * percentage  操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
             'limits' => 'limits',
             'size' => 'size',
             'lowerBound' => 'lower_bound',
-            'upperBound' => 'upper_bound'
+            'upperBound' => 'upper_bound',
+            'percentage' => 'percentage'
     ];
 
     /**
@@ -100,6 +106,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * size  操作大小，取值范围为0到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size为实例个数,取值范围为0-300的整数，默认为1。当scaling_resource_type为BANDWIDTH时，size表示带宽大小，单位为Mbit/s，取值范围为1到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size和percentage参数只能选其中一个进行配置。
     * lowerBound  lowerBound
     * upperBound  upperBound
+    * percentage  操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
             'limits' => 'setLimits',
             'size' => 'setSize',
             'lowerBound' => 'setLowerBound',
-            'upperBound' => 'setUpperBound'
+            'upperBound' => 'setUpperBound',
+            'percentage' => 'setPercentage'
     ];
 
     /**
@@ -118,6 +126,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * size  操作大小，取值范围为0到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size为实例个数,取值范围为0-300的整数，默认为1。当scaling_resource_type为BANDWIDTH时，size表示带宽大小，单位为Mbit/s，取值范围为1到300的整数，默认为1。当scaling_resource_type为SCALING_GROUP时，size和percentage参数只能选其中一个进行配置。
     * lowerBound  lowerBound
     * upperBound  upperBound
+    * percentage  操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
             'limits' => 'getLimits',
             'size' => 'getSize',
             'lowerBound' => 'getLowerBound',
-            'upperBound' => 'getUpperBound'
+            'upperBound' => 'getUpperBound',
+            'percentage' => 'getPercentage'
     ];
 
     /**
@@ -192,6 +202,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['lowerBound'] = isset($data['lowerBound']) ? $data['lowerBound'] : null;
         $this->container['upperBound'] = isset($data['upperBound']) ? $data['upperBound'] : null;
+        $this->container['percentage'] = isset($data['percentage']) ? $data['percentage'] : null;
     }
 
     /**
@@ -292,7 +303,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * Gets lowerBound
     *  lowerBound
     *
-    * @return int|null
+    * @return double|null
     */
     public function getLowerBound()
     {
@@ -302,7 +313,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     /**
     * Sets lowerBound
     *
-    * @param int|null $lowerBound lowerBound
+    * @param double|null $lowerBound lowerBound
     *
     * @return $this
     */
@@ -316,7 +327,7 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     * Gets upperBound
     *  upperBound
     *
-    * @return int|null
+    * @return double|null
     */
     public function getUpperBound()
     {
@@ -326,13 +337,37 @@ class IntervalAlarmActionsV2 implements ModelInterface, ArrayAccess
     /**
     * Sets upperBound
     *
-    * @param int|null $upperBound upperBound
+    * @param double|null $upperBound upperBound
     *
     * @return $this
     */
     public function setUpperBound($upperBound)
     {
         $this->container['upperBound'] = $upperBound;
+        return $this;
+    }
+
+    /**
+    * Gets percentage
+    *  操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
+    *
+    * @return int|null
+    */
+    public function getPercentage()
+    {
+        return $this->container['percentage'];
+    }
+
+    /**
+    * Sets percentage
+    *
+    * @param int|null $percentage 操作百分比，取值为0到20000的整数。当scaling_resource_type为SCALING_GROUP时，size和instance_percentage参数均无配置，则size默认为1。当scaling_resource_type为BANDWIDTH时，不支持配置instance_percentage参数。
+    *
+    * @return $this
+    */
+    public function setPercentage($percentage)
+    {
+        $this->container['percentage'] = $percentage;
         return $this;
     }
 

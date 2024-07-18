@@ -23,8 +23,8 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
     * requestId  请求ID。  注：自动生成 。
-    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
-    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @var string[]
     */
@@ -39,8 +39,8 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
     * requestId  请求ID。  注：自动生成 。
-    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
-    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @var string[]
     */
@@ -76,8 +76,8 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * loadbalancer  loadbalancer
     * requestId  请求ID。  注：自动生成 。
-    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
-    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @var string[]
     */
@@ -92,8 +92,8 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancer  loadbalancer
     * requestId  请求ID。  注：自动生成 。
-    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
-    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @var string[]
     */
@@ -108,8 +108,8 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancer  loadbalancer
     * requestId  请求ID。  注：自动生成 。
-    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
-    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * loadbalancerId  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * orderId  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    *  负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string|null $loadbalancerId 负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * @param string|null $loadbalancerId 负载均衡器ID[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    *  订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @return string|null
     */
@@ -298,7 +298,7 @@ class BatchAddAvailableZonesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
+    * @param string|null $orderId 订单号[（包周期场景返回该字段）](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,ctc,cmcc,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * l7policyId  策略ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  转发规则ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -55,7 +55,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * l7policyId  策略ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  转发规则ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -110,7 +110,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * l7policyId  策略ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  转发规则ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -144,7 +144,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * l7policyId  策略ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  转发规则ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -178,7 +178,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * l7policyId  策略ID。
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
     * id  转发规则ID。  支持多值查询，查询条件格式：*id=xxx&id=xxx*。
@@ -339,7 +339,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。
+    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return int|null
     */
@@ -351,7 +351,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。
+    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return $this
     */

@@ -802,6 +802,12 @@ class CtsClient extends Client
         if ($localVarParams['traceRating'] !== null) {
             $queryParams['trace_rating'] = $localVarParams['traceRating'];
         }
+        if ($localVarParams['accessKeyId'] !== null) {
+            $queryParams['access_key_id'] = $localVarParams['accessKeyId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

@@ -3682,6 +3682,9 @@ class FunctionGraphAsyncClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['status'] !== null) {
             $queryParams['status'] = $localVarParams['status'];
         }

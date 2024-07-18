@@ -20,7 +20,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipList  IP列表。
+    * ipList  参数解释：IP列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipList  IP列表。
+    * ipList  参数解释：IP列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipList  IP列表。
+    * ipList  参数解释：IP列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipList  IP列表。
+    * ipList  参数解释：IP列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipList  IP列表。
+    * ipList  参数解释：IP列表。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  IP列表。
+    *  参数解释：IP列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\IpGroupIp[]|null
     */
@@ -186,7 +186,7 @@ class BatchDeleteIpListOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpGroupIp[]|null $ipList IP列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpGroupIp[]|null $ipList 参数解释：IP列表。
     *
     * @return $this
     */

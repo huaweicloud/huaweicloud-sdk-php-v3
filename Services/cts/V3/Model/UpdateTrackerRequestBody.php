@@ -336,8 +336,8 @@ class UpdateTrackerRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['trackerName'] === null) {
             $invalidProperties[] = "'trackerName' can't be null";
         }
-            if ((mb_strlen($this->container['trackerName']) > 32)) {
-                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['trackerName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 64.";
             }
             if ((mb_strlen($this->container['trackerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'trackerName', the character length must be bigger than or equal to 1.";

@@ -20,9 +20,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * previousMarker  分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
-    * nextMarker  分页查询结果中最后一条记录的ID。通常用于查询下一页。
-    * currentCount  当前的记录数。
+    * previousMarker  参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    * nextMarker  参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    * currentCount  参数解释：当前的记录数。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * previousMarker  分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
-    * nextMarker  分页查询结果中最后一条记录的ID。通常用于查询下一页。
-    * currentCount  当前的记录数。
+    * previousMarker  参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    * nextMarker  参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    * currentCount  参数解释：当前的记录数。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * previousMarker  分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
-    * nextMarker  分页查询结果中最后一条记录的ID。通常用于查询下一页。
-    * currentCount  当前的记录数。
+    * previousMarker  参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    * nextMarker  参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    * currentCount  参数解释：当前的记录数。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * previousMarker  分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
-    * nextMarker  分页查询结果中最后一条记录的ID。通常用于查询下一页。
-    * currentCount  当前的记录数。
+    * previousMarker  参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    * nextMarker  参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    * currentCount  参数解释：当前的记录数。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * previousMarker  分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
-    * nextMarker  分页查询结果中最后一条记录的ID。通常用于查询下一页。
-    * currentCount  当前的记录数。
+    * previousMarker  参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    * nextMarker  参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    * currentCount  参数解释：当前的记录数。
     *
     * @var string[]
     */
@@ -202,7 +202,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets previousMarker
-    *  分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    *  参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
     *
     * @return string
     */
@@ -214,7 +214,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets previousMarker
     *
-    * @param string $previousMarker 分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
+    * @param string $previousMarker 参数解释：分页查询结果中第一条记录的ID。通常用于配合page_reverse=true查询上一页。
     *
     * @return $this
     */
@@ -226,7 +226,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets nextMarker
-    *  分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    *  参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
     *
     * @return string|null
     */
@@ -238,7 +238,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets nextMarker
     *
-    * @param string|null $nextMarker 分页查询结果中最后一条记录的ID。通常用于查询下一页。
+    * @param string|null $nextMarker 参数解释：分页查询结果中最后一条记录的ID。通常用于查询下一页。
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class PageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets currentCount
-    *  当前的记录数。
+    *  参数解释：当前的记录数。
     *
     * @return int
     */
@@ -262,7 +262,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentCount
     *
-    * @param int $currentCount 当前的记录数。
+    * @param int $currentCount 参数解释：当前的记录数。
     *
     * @return $this
     */

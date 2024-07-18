@@ -37,7 +37,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * keyRotationEnabled  密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
-    * keyLabel  密钥在加密机中的标签
     *
     * @var string[]
     */
@@ -58,8 +57,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'origin' => 'string',
             'keyRotationEnabled' => 'string',
             'sysEnterpriseProjectId' => 'string',
-            'keystoreId' => 'string',
-            'keyLabel' => 'string'
+            'keystoreId' => 'string'
     ];
 
     /**
@@ -81,7 +79,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * keyRotationEnabled  密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
-    * keyLabel  密钥在加密机中的标签
     *
     * @var string[]
     */
@@ -102,8 +99,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
         'origin' => null,
         'keyRotationEnabled' => null,
         'sysEnterpriseProjectId' => null,
-        'keystoreId' => null,
-        'keyLabel' => null
+        'keystoreId' => null
     ];
 
     /**
@@ -146,7 +142,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * keyRotationEnabled  密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
-    * keyLabel  密钥在加密机中的标签
     *
     * @var string[]
     */
@@ -167,8 +162,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'origin' => 'origin',
             'keyRotationEnabled' => 'key_rotation_enabled',
             'sysEnterpriseProjectId' => 'sys_enterprise_project_id',
-            'keystoreId' => 'keystore_id',
-            'keyLabel' => 'key_label'
+            'keystoreId' => 'keystore_id'
     ];
 
     /**
@@ -190,7 +184,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * keyRotationEnabled  密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
-    * keyLabel  密钥在加密机中的标签
     *
     * @var string[]
     */
@@ -211,8 +204,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'origin' => 'setOrigin',
             'keyRotationEnabled' => 'setKeyRotationEnabled',
             'sysEnterpriseProjectId' => 'setSysEnterpriseProjectId',
-            'keystoreId' => 'setKeystoreId',
-            'keyLabel' => 'setKeyLabel'
+            'keystoreId' => 'setKeystoreId'
     ];
 
     /**
@@ -234,7 +226,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     * keyRotationEnabled  密钥轮换状态，默认为“false”，表示关闭密钥轮换功能。
     * sysEnterpriseProjectId  企业项目ID，默认为“0”。  - 对于开通企业项目的用户，表示资源处于默认企业项目下。  - 对于未开通企业项目的用户，表示资源未处于企业项目下。
     * keystoreId  密钥库ID
-    * keyLabel  密钥在加密机中的标签
     *
     * @var string[]
     */
@@ -255,8 +246,7 @@ class KeyDetails implements ModelInterface, ArrayAccess
             'origin' => 'getOrigin',
             'keyRotationEnabled' => 'getKeyRotationEnabled',
             'sysEnterpriseProjectId' => 'getSysEnterpriseProjectId',
-            'keystoreId' => 'getKeystoreId',
-            'keyLabel' => 'getKeyLabel'
+            'keystoreId' => 'getKeystoreId'
     ];
 
     /**
@@ -391,7 +381,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
         $this->container['keyRotationEnabled'] = isset($data['keyRotationEnabled']) ? $data['keyRotationEnabled'] : null;
         $this->container['sysEnterpriseProjectId'] = isset($data['sysEnterpriseProjectId']) ? $data['sysEnterpriseProjectId'] : null;
         $this->container['keystoreId'] = isset($data['keystoreId']) ? $data['keystoreId'] : null;
-        $this->container['keyLabel'] = isset($data['keyLabel']) ? $data['keyLabel'] : null;
     }
 
     /**
@@ -923,30 +912,6 @@ class KeyDetails implements ModelInterface, ArrayAccess
     public function setKeystoreId($keystoreId)
     {
         $this->container['keystoreId'] = $keystoreId;
-        return $this;
-    }
-
-    /**
-    * Gets keyLabel
-    *  密钥在加密机中的标签
-    *
-    * @return string|null
-    */
-    public function getKeyLabel()
-    {
-        return $this->container['keyLabel'];
-    }
-
-    /**
-    * Sets keyLabel
-    *
-    * @param string|null $keyLabel 密钥在加密机中的标签
-    *
-    * @return $this
-    */
-    public function setKeyLabel($keyLabel)
-    {
-        $this->container['keyLabel'] = $keyLabel;
         return $this;
     }
 

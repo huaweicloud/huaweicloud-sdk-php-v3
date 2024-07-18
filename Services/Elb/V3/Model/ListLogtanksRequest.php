@@ -20,7 +20,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * enterpriseProjectId  企业项目ID。 支持多值查询，查询条件格式：enterprise_project_id=xxx&enterprise_project_id=xxx。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -44,7 +44,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * enterpriseProjectId  企业项目ID。 支持多值查询，查询条件格式：enterprise_project_id=xxx&enterprise_project_id=xxx。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -89,7 +89,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * enterpriseProjectId  企业项目ID。 支持多值查询，查询条件格式：enterprise_project_id=xxx&enterprise_project_id=xxx。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -113,7 +113,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * enterpriseProjectId  企业项目ID。 支持多值查询，查询条件格式：enterprise_project_id=xxx&enterprise_project_id=xxx。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -137,7 +137,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  每页返回的个数。
+    * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker
     * enterpriseProjectId  企业项目ID。 支持多值查询，查询条件格式：enterprise_project_id=xxx&enterprise_project_id=xxx。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -257,7 +257,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  每页返回的个数。
+    *  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return int|null
     */
@@ -269,7 +269,7 @@ class ListLogtanksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 每页返回的个数。
+    * @param int|null $limit 参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     *
     * @return $this
     */

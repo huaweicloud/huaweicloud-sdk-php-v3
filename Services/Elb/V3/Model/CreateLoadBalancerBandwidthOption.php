@@ -20,12 +20,12 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
-    * size  带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
-    * chargeMode  计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
-    * shareType  带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
-    * billingInfo  资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
-    * id  功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    * name  参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * size  参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
+    * chargeMode  参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
+    * shareType  参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
+    * billingInfo  参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
+    * id  参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
-    * size  带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
-    * chargeMode  计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
-    * shareType  带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
-    * billingInfo  资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
-    * id  功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    * name  参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * size  参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
+    * chargeMode  参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
+    * shareType  参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
+    * billingInfo  参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
+    * id  参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
-    * size  带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
-    * chargeMode  计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
-    * shareType  带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
-    * billingInfo  资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
-    * id  功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    * name  参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * size  参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
+    * chargeMode  参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
+    * shareType  参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
+    * billingInfo  参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
+    * id  参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
-    * size  带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
-    * chargeMode  计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
-    * shareType  带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
-    * billingInfo  资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
-    * id  功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    * name  参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * size  参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
+    * chargeMode  参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
+    * shareType  参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
+    * billingInfo  参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
+    * id  参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
-    * size  带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
-    * chargeMode  计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
-    * shareType  带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
-    * billingInfo  资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
-    * id  功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    * name  参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
+    * size  参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
+    * chargeMode  参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
+    * shareType  参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
+    * billingInfo  参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
+    * id  参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @var string[]
     */
@@ -308,7 +308,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
+    *  参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return string|null
     */
@@ -320,7 +320,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 带宽名称。  取值：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）  使用说明： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。
+    * @param string|null $name 参数解释：带宽名称。  约束限制： - 如果share_type是PER，该字段是必选。 - 如果bandwidth对象的id有值，该字段被忽略。  取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点）
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
+    *  参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
     *
     * @return int|null
     */
@@ -344,7 +344,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 带宽大小 取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。  注意:调整带宽时的最小单位会根据带宽范围不同存在差异。 小于等于300Mbit/s:默认最小单位为1Mbit/s。 300Mbit/s~1000Mbit/s:默认最小单位为50Mbit/s。 大于1000Mbit/s:默认最小单位为500Mbit/s。  使用说明：当id字段为null时，size是必须的。
+    * @param int|null $size 参数解释：带宽大小  约束限制：当id字段为null时，size是必须的。 注意，调整带宽时的最小单位会根据带宽范围不同存在差异。 - 小于等于300Mbit/s: 默认最小单位为1Mbit/s。 - 300Mbit/s~1000Mbit/s: 默认最小单位为50Mbit/s。 - 大于1000Mbit/s: 默认最小单位为500Mbit/s。  取值范围:默认1Mbit/s~2000Mbit/s(具体范围以各区域配置为准,请参见控制台对应页面显示)。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
+    *  参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 计费模式。  [取值：bandwidth表示按带宽计费，traffic表示按流量计费。 ](tag:hws,hws_hk,ocb,ctc,hcs,tm,cmcc,hws_ocb,fcs)  [当前仅支持traffic按流量计费](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  使用说明：当id字段为null时，charge_mode是必须的。
+    * @param string|null $chargeMode 参数解释：计费模式。bandwidth 按带宽计费；traffic 按流量计费。  约束限制：当id字段为null时，charge_mode是必须的。  [当前仅支持traffic按流量计费。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt)  取值范围：  - bandwidth：按带宽计费。  - traffic： 按流量计费。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets shareType
-    *  带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
+    *  参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets shareType
     *
-    * @param string|null $shareType 带宽类型。  取值： - PER：独享带宽。 - WHOLE：共享带宽。  使用说明： - 当id字段为null时，share_type是必须的。当id不为null时，该字段被忽略。 - 该字段为WHOLE时,必须指定带宽ID。 - IPv6的EIP不支持WHOLE类型带宽。
+    * @param string|null $shareType 参数解释：带宽类型。  取值范围： - PER：独享带宽。 - WHOLE：共享带宽。
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets billingInfo
-    *  资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
+    *  参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets billingInfo
     *
-    * @param string|null $billingInfo 资源账单信息。  [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽 ](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,fcs)
+    * @param string|null $billingInfo 参数解释：资源计费信息。  约束限制： [如果billing_info不为空，说明是包周期计费的带宽，否则为按需计费的带宽。](tag:hws,hws_hk,tlf,ctc,hcso,sbc,cmcc)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs)
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    *  参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class CreateLoadBalancerBandwidthOption implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 功能说明：使用已有的共享带宽创建IP 取值范围：共享带宽ID 使用说明： WHOLE类型的带宽ID； 在预付费的情况下，不填该值。该字段取空字符串时，会被忽略。
+    * @param string|null $id 参数解释：共享带宽ID。使用已存在的共享带宽。  约束限制：必须是已存在共享带宽ID。在预付费的情况下，不填该字段。该字段取空字符串时，会被忽略。
     *
     * @return $this
     */

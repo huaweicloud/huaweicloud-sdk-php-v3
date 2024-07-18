@@ -21,21 +21,25 @@ class RealTimeConfInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * chairId  主持人与会者标识。
+    * coHosts  联席主持人会场id。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'chairId' => 'string'
+            'chairId' => 'string',
+            'coHosts' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * chairId  主持人与会者标识。
+    * coHosts  联席主持人会场id。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'chairId' => null
+        'chairId' => null,
+        'coHosts' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class RealTimeConfInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * chairId  主持人与会者标识。
+    * coHosts  联席主持人会场id。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'chairId' => 'chairID'
+            'chairId' => 'chairID',
+            'coHosts' => 'coHosts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * chairId  主持人与会者标识。
+    * coHosts  联席主持人会场id。
     *
     * @var string[]
     */
     protected static $setters = [
-            'chairId' => 'setChairId'
+            'chairId' => 'setChairId',
+            'coHosts' => 'setCoHosts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * chairId  主持人与会者标识。
+    * coHosts  联席主持人会场id。
     *
     * @var string[]
     */
     protected static $getters = [
-            'chairId' => 'getChairId'
+            'chairId' => 'getChairId',
+            'coHosts' => 'getCoHosts'
     ];
 
     /**
@@ -148,6 +158,7 @@ class RealTimeConfInfo implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['chairId'] = isset($data['chairId']) ? $data['chairId'] : null;
+        $this->container['coHosts'] = isset($data['coHosts']) ? $data['coHosts'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class RealTimeConfInfo implements ModelInterface, ArrayAccess
     public function setChairId($chairId)
     {
         $this->container['chairId'] = $chairId;
+        return $this;
+    }
+
+    /**
+    * Gets coHosts
+    *  联席主持人会场id。
+    *
+    * @return string[]|null
+    */
+    public function getCoHosts()
+    {
+        return $this->container['coHosts'];
+    }
+
+    /**
+    * Sets coHosts
+    *
+    * @param string[]|null $coHosts 联席主持人会场id。
+    *
+    * @return $this
+    */
+    public function setCoHosts($coHosts)
+    {
+        $this->container['coHosts'] = $coHosts;
         return $this;
     }
 

@@ -23,7 +23,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * createTime  委托创建时间。
     * description  委托描述信息。
     * domainId  委托方账号ID。
-    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
     * expireTime  委托过期时间。“null”表示不过期。
     * id  委托ID。
     * name  委托名。
@@ -36,7 +35,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'createTime' => 'string',
             'description' => 'string',
             'domainId' => 'string',
-            'duration' => 'string',
             'expireTime' => 'string',
             'id' => 'string',
             'name' => 'string',
@@ -49,7 +47,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * createTime  委托创建时间。
     * description  委托描述信息。
     * domainId  委托方账号ID。
-    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
     * expireTime  委托过期时间。“null”表示不过期。
     * id  委托ID。
     * name  委托名。
@@ -62,7 +59,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
         'createTime' => null,
         'description' => null,
         'domainId' => null,
-        'duration' => null,
         'expireTime' => null,
         'id' => null,
         'name' => null,
@@ -96,7 +92,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * createTime  委托创建时间。
     * description  委托描述信息。
     * domainId  委托方账号ID。
-    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
     * expireTime  委托过期时间。“null”表示不过期。
     * id  委托ID。
     * name  委托名。
@@ -109,7 +104,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'createTime' => 'create_time',
             'description' => 'description',
             'domainId' => 'domain_id',
-            'duration' => 'duration',
             'expireTime' => 'expire_time',
             'id' => 'id',
             'name' => 'name',
@@ -122,7 +116,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * createTime  委托创建时间。
     * description  委托描述信息。
     * domainId  委托方账号ID。
-    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
     * expireTime  委托过期时间。“null”表示不过期。
     * id  委托ID。
     * name  委托名。
@@ -135,7 +128,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'createTime' => 'setCreateTime',
             'description' => 'setDescription',
             'domainId' => 'setDomainId',
-            'duration' => 'setDuration',
             'expireTime' => 'setExpireTime',
             'id' => 'setId',
             'name' => 'setName',
@@ -148,7 +140,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * createTime  委托创建时间。
     * description  委托描述信息。
     * domainId  委托方账号ID。
-    * duration  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
     * expireTime  委托过期时间。“null”表示不过期。
     * id  委托ID。
     * name  委托名。
@@ -161,7 +152,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'createTime' => 'getCreateTime',
             'description' => 'getDescription',
             'domainId' => 'getDomainId',
-            'duration' => 'getDuration',
             'expireTime' => 'getExpireTime',
             'id' => 'getId',
             'name' => 'getName',
@@ -230,7 +220,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['duration'] = isset($data['duration']) ? $data['duration'] : null;
         $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -251,9 +240,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
         }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
-        }
-        if ($this->container['duration'] === null) {
-            $invalidProperties[] = "'duration' can't be null";
         }
         if ($this->container['expireTime'] === null) {
             $invalidProperties[] = "'expireTime' can't be null";
@@ -347,30 +333,6 @@ class AgencyResult implements ModelInterface, ArrayAccess
     public function setDomainId($domainId)
     {
         $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
-    * Gets duration
-    *  委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
-    *
-    * @return string
-    */
-    public function getDuration()
-    {
-        return $this->container['duration'];
-    }
-
-    /**
-    * Sets duration
-    *
-    * @param string $duration 委托的期限。取值为\"FOREVER\"或“null”表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。
-    *
-    * @return $this
-    */
-    public function setDuration($duration)
-    {
-        $this->container['duration'] = $duration;
         return $this;
     }
 

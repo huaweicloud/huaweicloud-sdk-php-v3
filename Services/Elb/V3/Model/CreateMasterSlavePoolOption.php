@@ -26,14 +26,14 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * listenerId  后端云服务器组关联的监听器的ID。  使用说明：listener_id，loadbalancer_id，type至少指定一个。
     * name  后端云服务器组的名称。
     * projectId  后端云服务器组所属的项目ID。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * sessionPersistence  sessionPersistence
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
     * ipVersion  后端云服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
-    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     *
     * @var string[]
@@ -64,14 +64,14 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * listenerId  后端云服务器组关联的监听器的ID。  使用说明：listener_id，loadbalancer_id，type至少指定一个。
     * name  后端云服务器组的名称。
     * projectId  后端云服务器组所属的项目ID。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * sessionPersistence  sessionPersistence
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
     * ipVersion  后端云服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
-    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     *
     * @var string[]
@@ -123,14 +123,14 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * listenerId  后端云服务器组关联的监听器的ID。  使用说明：listener_id，loadbalancer_id，type至少指定一个。
     * name  后端云服务器组的名称。
     * projectId  后端云服务器组所属的项目ID。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * sessionPersistence  sessionPersistence
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
     * ipVersion  后端云服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
-    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     *
     * @var string[]
@@ -161,14 +161,14 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * listenerId  后端云服务器组关联的监听器的ID。  使用说明：listener_id，loadbalancer_id，type至少指定一个。
     * name  后端云服务器组的名称。
     * projectId  后端云服务器组所属的项目ID。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * sessionPersistence  sessionPersistence
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
     * ipVersion  后端云服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
-    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     *
     * @var string[]
@@ -199,14 +199,14 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     * listenerId  后端云服务器组关联的监听器的ID。  使用说明：listener_id，loadbalancer_id，type至少指定一个。
     * name  后端云服务器组的名称。
     * projectId  后端云服务器组所属的项目ID。
-    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * protocol  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     * sessionPersistence  sessionPersistence
     * vpcId  后端云服务器组关联的虚拟私有云的ID。  指定了vpc_id的约束： - 只能挂载到该虚拟私有云下。 - 只能添加该虚拟私有云下的后端服务器或跨VPC的后端服务器。 - type必须指定为instance。  没有指定vpc_id的约束： - 后续添加后端服务器时，vpc_id由后端服务器所在的虚拟私有云确定。
     * type  后端服务器组的类型。  取值： - instance：允许任意类型的后端，type指定为该类型时，vpc_id是必选字段。 - ip：只能添加跨VPC后端，type指定为该类型时，vpc_id不允许指定。
     * ipVersion  后端云服务器组支持的IP版本。  [取值： - 共享型：固定为v4； -  独享型：取值dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。  当协议为HTTP时，ip_version为v4。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,fcs)  [取值：dualstack、v4、v6。当协议为TCP/UDP时，ip_version为dualstack，表示双栈。 当协议为HTTP时，ip_version为v4。](tag:hcso_dt)  [不支持IPv6，只会返回v4。](tag:dt,dt_test)
     * members  主备主机组的后端服务器。 只能添加2个后端云服务器，必须有一个为主，一个为备。
     * healthmonitor  healthmonitor
-    * anyPortEnable  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * anyPortEnable  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     * connectionDrain  connectionDrain
     *
     * @var string[]
@@ -342,8 +342,8 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectId']) && !preg_match("/[0-9a-fA-F]{32}/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
@@ -544,7 +544,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    *  后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     *
     * @return string
     */
@@ -556,7 +556,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string $protocol 后端云服务器组的后端协议。  取值：TCP、UDP、QUIC。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时pool的protocol必须为TCP。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
+    * @param string $protocol 后端云服务器组的后端协议。  取值：TCP、UDP、QUIC、TLS。  使用说明： - listener的protocol为UDP时，pool的protocol必须为UDP或QUIC。 - listener的protocol为TCP时，pool的protocol必须为TCP。 - listener的protocol为TLS时，pool的protocol必须为TLS或TCP（且只能使用ip_version为v4的TCP pool）。 - 其他协议监听器不支持主备后端服务器组。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt)  [荷兰region不支持QUIC。](tag:dt,dt_test)
     *
     * @return $this
     */
@@ -712,7 +712,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets anyPortEnable
-    *  后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    *  后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     *
     * @return bool|null
     */
@@ -724,7 +724,7 @@ class CreateMasterSlavePoolOption implements ModelInterface, ArrayAccess
     /**
     * Sets anyPortEnable
     *
-    * @param bool|null $anyPortEnable 后端是否开启端口透传，开启后，后端服务器端口与前端监听器端口保持一致。取值：false不开启，true开启，默认false。 > 关闭端口透传后，请求会转发给后端服务器protocol_port字段指定端口。
+    * @param bool|null $anyPortEnable 后端是否开启端口透传。开启后，后端服务器端口与前端监听器端口保持一致。关闭后，请求会转发给后端服务器protocol_port字段指定端口。取值：false不开启，true开启。  使用说明： - 仅QUIC,TCP,UDP的pool支持。
     *
     * @return $this
     */

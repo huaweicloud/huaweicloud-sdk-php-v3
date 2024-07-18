@@ -22,6 +22,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * workflowId  函数工作流ID
     * limit  分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
+    * offset  分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
     * status  需要过滤的流程实例状态
     * startTime  查询开始时间，UTC时间。若起始时间未填写，以终止时间前推3天为起始时间
     * endTime  查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
@@ -31,6 +32,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'workflowId' => 'string',
             'limit' => 'int',
+            'offset' => 'int',
             'status' => 'string',
             'startTime' => 'string',
             'endTime' => 'string'
@@ -40,6 +42,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * workflowId  函数工作流ID
     * limit  分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
+    * offset  分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
     * status  需要过滤的流程实例状态
     * startTime  查询开始时间，UTC时间。若起始时间未填写，以终止时间前推3天为起始时间
     * endTime  查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
@@ -49,6 +52,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'workflowId' => null,
         'limit' => 'int32',
+        'offset' => 'int32',
         'status' => null,
         'startTime' => null,
         'endTime' => null
@@ -79,6 +83,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * workflowId  函数工作流ID
     * limit  分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
+    * offset  分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
     * status  需要过滤的流程实例状态
     * startTime  查询开始时间，UTC时间。若起始时间未填写，以终止时间前推3天为起始时间
     * endTime  查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
@@ -88,6 +93,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'workflowId' => 'workflow_id',
             'limit' => 'limit',
+            'offset' => 'offset',
             'status' => 'status',
             'startTime' => 'start_time',
             'endTime' => 'end_time'
@@ -97,6 +103,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * workflowId  函数工作流ID
     * limit  分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
+    * offset  分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
     * status  需要过滤的流程实例状态
     * startTime  查询开始时间，UTC时间。若起始时间未填写，以终止时间前推3天为起始时间
     * endTime  查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
@@ -106,6 +113,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'workflowId' => 'setWorkflowId',
             'limit' => 'setLimit',
+            'offset' => 'setOffset',
             'status' => 'setStatus',
             'startTime' => 'setStartTime',
             'endTime' => 'setEndTime'
@@ -115,6 +123,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * workflowId  函数工作流ID
     * limit  分页查询，每页显示的条目数量，最大数量200，超过200后只返回200
+    * offset  分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
     * status  需要过滤的流程实例状态
     * startTime  查询开始时间，UTC时间。若起始时间未填写，以终止时间前推3天为起始时间
     * endTime  查询开始时间，UTC时间。若终止时间未填写，以起始时间后退3天未终止时间。若均未填写，默认查询最近3天数据。
@@ -124,6 +133,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'workflowId' => 'getWorkflowId',
             'limit' => 'getLimit',
+            'offset' => 'getOffset',
             'status' => 'getStatus',
             'startTime' => 'getStartTime',
             'endTime' => 'getEndTime'
@@ -210,6 +220,7 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['workflowId'] = isset($data['workflowId']) ? $data['workflowId'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
@@ -237,6 +248,9 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
             }
             $allowedValues = $this->getStatusAllowableValues();
                 if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
@@ -311,6 +325,30 @@ class ListWorkflowExecutionsRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 分页查询，分页的偏移量，默认值为0 offset小于0时，按照0处理
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

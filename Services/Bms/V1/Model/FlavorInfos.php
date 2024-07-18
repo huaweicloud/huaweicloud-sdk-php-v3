@@ -25,6 +25,8 @@ class FlavorInfos implements ModelInterface, ArrayAccess
     * disk  该裸金属服务器规格对应要求系统盘大小，0为不限制。
     * vcpus  该裸金属服务器规格对应的CPU核数
     * ram  该裸金属服务器规格对应的内存大小，单位为MB
+    * gpus  该裸金属服务器规格对应的GPU设备。
+    * asicAccelerators  该裸金属服务器规格对应的ASIC设备。
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class FlavorInfos implements ModelInterface, ArrayAccess
             'name' => 'string',
             'disk' => 'string',
             'vcpus' => 'string',
-            'ram' => 'string'
+            'ram' => 'string',
+            'gpus' => '\HuaweiCloud\SDK\Bms\V1\Model\GpuInfo[]',
+            'asicAccelerators' => '\HuaweiCloud\SDK\Bms\V1\Model\ASICAcceleratorInfo[]'
     ];
 
     /**
@@ -43,6 +47,8 @@ class FlavorInfos implements ModelInterface, ArrayAccess
     * disk  该裸金属服务器规格对应要求系统盘大小，0为不限制。
     * vcpus  该裸金属服务器规格对应的CPU核数
     * ram  该裸金属服务器规格对应的内存大小，单位为MB
+    * gpus  该裸金属服务器规格对应的GPU设备。
+    * asicAccelerators  该裸金属服务器规格对应的ASIC设备。
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class FlavorInfos implements ModelInterface, ArrayAccess
         'name' => null,
         'disk' => null,
         'vcpus' => null,
-        'ram' => null
+        'ram' => null,
+        'gpus' => null,
+        'asicAccelerators' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class FlavorInfos implements ModelInterface, ArrayAccess
     * disk  该裸金属服务器规格对应要求系统盘大小，0为不限制。
     * vcpus  该裸金属服务器规格对应的CPU核数
     * ram  该裸金属服务器规格对应的内存大小，单位为MB
+    * gpus  该裸金属服务器规格对应的GPU设备。
+    * asicAccelerators  该裸金属服务器规格对应的ASIC设备。
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class FlavorInfos implements ModelInterface, ArrayAccess
             'name' => 'name',
             'disk' => 'disk',
             'vcpus' => 'vcpus',
-            'ram' => 'ram'
+            'ram' => 'ram',
+            'gpus' => 'gpus',
+            'asicAccelerators' => 'asic_accelerators'
     ];
 
     /**
@@ -100,6 +112,8 @@ class FlavorInfos implements ModelInterface, ArrayAccess
     * disk  该裸金属服务器规格对应要求系统盘大小，0为不限制。
     * vcpus  该裸金属服务器规格对应的CPU核数
     * ram  该裸金属服务器规格对应的内存大小，单位为MB
+    * gpus  该裸金属服务器规格对应的GPU设备。
+    * asicAccelerators  该裸金属服务器规格对应的ASIC设备。
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class FlavorInfos implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'disk' => 'setDisk',
             'vcpus' => 'setVcpus',
-            'ram' => 'setRam'
+            'ram' => 'setRam',
+            'gpus' => 'setGpus',
+            'asicAccelerators' => 'setAsicAccelerators'
     ];
 
     /**
@@ -118,6 +134,8 @@ class FlavorInfos implements ModelInterface, ArrayAccess
     * disk  该裸金属服务器规格对应要求系统盘大小，0为不限制。
     * vcpus  该裸金属服务器规格对应的CPU核数
     * ram  该裸金属服务器规格对应的内存大小，单位为MB
+    * gpus  该裸金属服务器规格对应的GPU设备。
+    * asicAccelerators  该裸金属服务器规格对应的ASIC设备。
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class FlavorInfos implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'disk' => 'getDisk',
             'vcpus' => 'getVcpus',
-            'ram' => 'getRam'
+            'ram' => 'getRam',
+            'gpus' => 'getGpus',
+            'asicAccelerators' => 'getAsicAccelerators'
     ];
 
     /**
@@ -192,6 +212,8 @@ class FlavorInfos implements ModelInterface, ArrayAccess
         $this->container['disk'] = isset($data['disk']) ? $data['disk'] : null;
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
+        $this->container['gpus'] = isset($data['gpus']) ? $data['gpus'] : null;
+        $this->container['asicAccelerators'] = isset($data['asicAccelerators']) ? $data['asicAccelerators'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class FlavorInfos implements ModelInterface, ArrayAccess
     public function setRam($ram)
     {
         $this->container['ram'] = $ram;
+        return $this;
+    }
+
+    /**
+    * Gets gpus
+    *  该裸金属服务器规格对应的GPU设备。
+    *
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\GpuInfo[]|null
+    */
+    public function getGpus()
+    {
+        return $this->container['gpus'];
+    }
+
+    /**
+    * Sets gpus
+    *
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\GpuInfo[]|null $gpus 该裸金属服务器规格对应的GPU设备。
+    *
+    * @return $this
+    */
+    public function setGpus($gpus)
+    {
+        $this->container['gpus'] = $gpus;
+        return $this;
+    }
+
+    /**
+    * Gets asicAccelerators
+    *  该裸金属服务器规格对应的ASIC设备。
+    *
+    * @return \HuaweiCloud\SDK\Bms\V1\Model\ASICAcceleratorInfo[]|null
+    */
+    public function getAsicAccelerators()
+    {
+        return $this->container['asicAccelerators'];
+    }
+
+    /**
+    * Sets asicAccelerators
+    *
+    * @param \HuaweiCloud\SDK\Bms\V1\Model\ASICAcceleratorInfo[]|null $asicAccelerators 该裸金属服务器规格对应的ASIC设备。
+    *
+    * @return $this
+    */
+    public function setAsicAccelerators($asicAccelerators)
+    {
+        $this->container['asicAccelerators'] = $asicAccelerators;
         return $this;
     }
 

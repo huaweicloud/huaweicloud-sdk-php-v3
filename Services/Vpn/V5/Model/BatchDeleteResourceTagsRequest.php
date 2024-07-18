@@ -152,6 +152,7 @@ class BatchDeleteResourceTagsRequest implements ModelInterface, ArrayAccess
     const RESOURCE_TYPE_VPN_GATEWAY = 'vpn-gateway';
     const RESOURCE_TYPE_VPN_CONNECTION = 'vpn-connection';
     const RESOURCE_TYPE_CUSTOMER_GATEWAY = 'customer-gateway';
+    const RESOURCE_TYPE_P2C_VPN_GATEWAYS = 'p2c-vpn-gateways';
     
 
     /**
@@ -165,6 +166,7 @@ class BatchDeleteResourceTagsRequest implements ModelInterface, ArrayAccess
             self::RESOURCE_TYPE_VPN_GATEWAY,
             self::RESOURCE_TYPE_VPN_CONNECTION,
             self::RESOURCE_TYPE_CUSTOMER_GATEWAY,
+            self::RESOURCE_TYPE_P2C_VPN_GATEWAYS,
         ];
     }
 

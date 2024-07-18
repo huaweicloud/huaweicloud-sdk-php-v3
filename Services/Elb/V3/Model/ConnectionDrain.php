@@ -20,7 +20,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  延迟注销功能开关，默认值：false； true：开启； false：关闭
+    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     * timeout  延迟注销时间，单位：s； 取值范围：10~4000
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  延迟注销功能开关，默认值：false； true：开启； false：关闭
+    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     * timeout  延迟注销时间，单位：s； 取值范围：10~4000
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  延迟注销功能开关，默认值：false； true：开启； false：关闭
+    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     * timeout  延迟注销时间，单位：s； 取值范围：10~4000
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  延迟注销功能开关，默认值：false； true：开启； false：关闭
+    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     * timeout  延迟注销时间，单位：s； 取值范围：10~4000
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  延迟注销功能开关，默认值：false； true：开启； false：关闭
+    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     * timeout  延迟注销时间，单位：s； 取值范围：10~4000
     *
     * @var string[]
@@ -185,7 +185,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  延迟注销功能开关，默认值：false； true：开启； false：关闭
+    *  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     *
     * @return bool|null
     */
@@ -197,7 +197,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 延迟注销功能开关，默认值：false； true：开启； false：关闭
+    * @param bool|null $enable 延迟注销功能开关。取值：true 开启，false 关闭，默认true。
     *
     * @return $this
     */

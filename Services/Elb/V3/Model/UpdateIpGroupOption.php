@@ -20,9 +20,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * description  IP地址组的描述信息
-    * name  IP地址组的名称
-    * ipList  IP地址组中包含的IP列表。
+    * description  参数解释：IP地址组的描述信息
+    * name  参数解释：IP地址组的名称
+    * ipList  参数解释：IP地址组中包含的IP列表。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * description  IP地址组的描述信息
-    * name  IP地址组的名称
-    * ipList  IP地址组中包含的IP列表。
+    * description  参数解释：IP地址组的描述信息
+    * name  参数解释：IP地址组的名称
+    * ipList  参数解释：IP地址组中包含的IP列表。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * description  IP地址组的描述信息
-    * name  IP地址组的名称
-    * ipList  IP地址组中包含的IP列表。
+    * description  参数解释：IP地址组的描述信息
+    * name  参数解释：IP地址组的名称
+    * ipList  参数解释：IP地址组中包含的IP列表。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * description  IP地址组的描述信息
-    * name  IP地址组的名称
-    * ipList  IP地址组中包含的IP列表。
+    * description  参数解释：IP地址组的描述信息
+    * name  参数解释：IP地址组的名称
+    * ipList  参数解释：IP地址组中包含的IP列表。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * description  IP地址组的描述信息
-    * name  IP地址组的名称
-    * ipList  IP地址组中包含的IP列表。
+    * description  参数解释：IP地址组的描述信息
+    * name  参数解释：IP地址组的名称
+    * ipList  参数解释：IP地址组中包含的IP列表。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  IP地址组的描述信息
+    *  参数解释：IP地址组的描述信息
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description IP地址组的描述信息
+    * @param string|null $description 参数解释：IP地址组的描述信息
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  IP地址组的名称
+    *  参数解释：IP地址组的名称
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name IP地址组的名称
+    * @param string|null $name 参数解释：IP地址组的名称
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  IP地址组中包含的IP列表。
+    *  参数解释：IP地址组中包含的IP列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\UpadateIpGroupIpOption[]|null
     */
@@ -268,7 +268,7 @@ class UpdateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpadateIpGroupIpOption[]|null $ipList IP地址组中包含的IP列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpadateIpGroupIpOption[]|null $ipList 参数解释：IP地址组中包含的IP列表。
     *
     * @return $this
     */

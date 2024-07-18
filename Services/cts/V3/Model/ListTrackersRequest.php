@@ -184,8 +184,8 @@ class ListTrackersRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) > 32)) {
-                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) > 64)) {
+                $invalidProperties[] = "invalid value for 'trackerName', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['trackerName']) && (mb_strlen($this->container['trackerName']) < 1)) {
                 $invalidProperties[] = "invalid value for 'trackerName', the character length must be bigger than or equal to 1.";

@@ -21,24 +21,32 @@ class VodSampleData implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * storage  存储空间。  单位：GB。
-    * transcode  转码时长。  单位：秒。
+    * storageWarm  低频存储空间。  单位：GB。
+    * storageCold  归档存储空间。  单位：GB。
+    * transcode  转码时长。  单位：分钟。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'storage' => 'float',
+            'storageWarm' => 'float',
+            'storageCold' => 'float',
             'transcode' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * storage  存储空间。  单位：GB。
-    * transcode  转码时长。  单位：秒。
+    * storageWarm  低频存储空间。  单位：GB。
+    * storageCold  归档存储空间。  单位：GB。
+    * transcode  转码时长。  单位：分钟。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'storage' => 'float',
+        'storageWarm' => 'float',
+        'storageCold' => 'float',
         'transcode' => 'int64'
     ];
 
@@ -66,36 +74,48 @@ class VodSampleData implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * storage  存储空间。  单位：GB。
-    * transcode  转码时长。  单位：秒。
+    * storageWarm  低频存储空间。  单位：GB。
+    * storageCold  归档存储空间。  单位：GB。
+    * transcode  转码时长。  单位：分钟。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'storage' => 'storage',
+            'storageWarm' => 'storage_warm',
+            'storageCold' => 'storage_cold',
             'transcode' => 'transcode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * storage  存储空间。  单位：GB。
-    * transcode  转码时长。  单位：秒。
+    * storageWarm  低频存储空间。  单位：GB。
+    * storageCold  归档存储空间。  单位：GB。
+    * transcode  转码时长。  单位：分钟。
     *
     * @var string[]
     */
     protected static $setters = [
             'storage' => 'setStorage',
+            'storageWarm' => 'setStorageWarm',
+            'storageCold' => 'setStorageCold',
             'transcode' => 'setTranscode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * storage  存储空间。  单位：GB。
-    * transcode  转码时长。  单位：秒。
+    * storageWarm  低频存储空间。  单位：GB。
+    * storageCold  归档存储空间。  单位：GB。
+    * transcode  转码时长。  单位：分钟。
     *
     * @var string[]
     */
     protected static $getters = [
             'storage' => 'getStorage',
+            'storageWarm' => 'getStorageWarm',
+            'storageCold' => 'getStorageCold',
             'transcode' => 'getTranscode'
     ];
 
@@ -158,6 +178,8 @@ class VodSampleData implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['storage'] = isset($data['storage']) ? $data['storage'] : null;
+        $this->container['storageWarm'] = isset($data['storageWarm']) ? $data['storageWarm'] : null;
+        $this->container['storageCold'] = isset($data['storageCold']) ? $data['storageCold'] : null;
         $this->container['transcode'] = isset($data['transcode']) ? $data['transcode'] : null;
     }
 
@@ -208,8 +230,56 @@ class VodSampleData implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets storageWarm
+    *  低频存储空间。  单位：GB。
+    *
+    * @return float|null
+    */
+    public function getStorageWarm()
+    {
+        return $this->container['storageWarm'];
+    }
+
+    /**
+    * Sets storageWarm
+    *
+    * @param float|null $storageWarm 低频存储空间。  单位：GB。
+    *
+    * @return $this
+    */
+    public function setStorageWarm($storageWarm)
+    {
+        $this->container['storageWarm'] = $storageWarm;
+        return $this;
+    }
+
+    /**
+    * Gets storageCold
+    *  归档存储空间。  单位：GB。
+    *
+    * @return float|null
+    */
+    public function getStorageCold()
+    {
+        return $this->container['storageCold'];
+    }
+
+    /**
+    * Sets storageCold
+    *
+    * @param float|null $storageCold 归档存储空间。  单位：GB。
+    *
+    * @return $this
+    */
+    public function setStorageCold($storageCold)
+    {
+        $this->container['storageCold'] = $storageCold;
+        return $this;
+    }
+
+    /**
     * Gets transcode
-    *  转码时长。  单位：秒。
+    *  转码时长。  单位：分钟。
     *
     * @return int|null
     */
@@ -221,7 +291,7 @@ class VodSampleData implements ModelInterface, ArrayAccess
     /**
     * Sets transcode
     *
-    * @param int|null $transcode 转码时长。  单位：秒。
+    * @param int|null $transcode 转码时长。  单位：分钟。
     *
     * @return $this
     */

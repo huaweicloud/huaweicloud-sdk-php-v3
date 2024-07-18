@@ -20,49 +20,53 @@ class IpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * createdAt  IP地址组的创建时间。
-    * description  IP地址组的描述信息。
-    * id  IP地址组的ID。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  与IP地址组关联的监听器的ID列表。
-    * name  IP地址组的名称。
-    * projectId  IP地址组的项目ID。
-    * updatedAt  IP地址组的更新时间。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
+    * projectId  参数解释：IP地址组的项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * createdAt  参数解释：IP地址组的创建时间。
+    * updatedAt  参数解释：IP地址组的更新时间。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'createdAt' => 'string',
-            'description' => 'string',
             'id' => 'string',
+            'name' => 'string',
+            'description' => 'string',
             'ipList' => '\HuaweiCloud\SDK\Elb\V3\Model\IpInfo[]',
             'listeners' => '\HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]',
-            'name' => 'string',
             'projectId' => 'string',
+            'enterpriseProjectId' => 'string',
+            'createdAt' => 'string',
             'updatedAt' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * createdAt  IP地址组的创建时间。
-    * description  IP地址组的描述信息。
-    * id  IP地址组的ID。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  与IP地址组关联的监听器的ID列表。
-    * name  IP地址组的名称。
-    * projectId  IP地址组的项目ID。
-    * updatedAt  IP地址组的更新时间。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
+    * projectId  参数解释：IP地址组的项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * createdAt  参数解释：IP地址组的创建时间。
+    * updatedAt  参数解释：IP地址组的更新时间。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'createdAt' => null,
-        'description' => null,
         'id' => null,
+        'name' => null,
+        'description' => null,
         'ipList' => null,
         'listeners' => null,
-        'name' => null,
         'projectId' => null,
+        'enterpriseProjectId' => null,
+        'createdAt' => null,
         'updatedAt' => null
     ];
 
@@ -89,73 +93,79 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * createdAt  IP地址组的创建时间。
-    * description  IP地址组的描述信息。
-    * id  IP地址组的ID。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  与IP地址组关联的监听器的ID列表。
-    * name  IP地址组的名称。
-    * projectId  IP地址组的项目ID。
-    * updatedAt  IP地址组的更新时间。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
+    * projectId  参数解释：IP地址组的项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * createdAt  参数解释：IP地址组的创建时间。
+    * updatedAt  参数解释：IP地址组的更新时间。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'createdAt' => 'created_at',
-            'description' => 'description',
             'id' => 'id',
+            'name' => 'name',
+            'description' => 'description',
             'ipList' => 'ip_list',
             'listeners' => 'listeners',
-            'name' => 'name',
             'projectId' => 'project_id',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'createdAt' => 'created_at',
             'updatedAt' => 'updated_at'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * createdAt  IP地址组的创建时间。
-    * description  IP地址组的描述信息。
-    * id  IP地址组的ID。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  与IP地址组关联的监听器的ID列表。
-    * name  IP地址组的名称。
-    * projectId  IP地址组的项目ID。
-    * updatedAt  IP地址组的更新时间。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
+    * projectId  参数解释：IP地址组的项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * createdAt  参数解释：IP地址组的创建时间。
+    * updatedAt  参数解释：IP地址组的更新时间。
     *
     * @var string[]
     */
     protected static $setters = [
-            'createdAt' => 'setCreatedAt',
-            'description' => 'setDescription',
             'id' => 'setId',
+            'name' => 'setName',
+            'description' => 'setDescription',
             'ipList' => 'setIpList',
             'listeners' => 'setListeners',
-            'name' => 'setName',
             'projectId' => 'setProjectId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * createdAt  IP地址组的创建时间。
-    * description  IP地址组的描述信息。
-    * id  IP地址组的ID。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * listeners  与IP地址组关联的监听器的ID列表。
-    * name  IP地址组的名称。
-    * projectId  IP地址组的项目ID。
-    * updatedAt  IP地址组的更新时间。
+    * id  参数解释：IP地址组的ID。
+    * name  参数解释：IP地址组的名称。
+    * description  参数解释：IP地址组的描述信息。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * listeners  参数解释：与IP地址组关联的监听器的ID列表。
+    * projectId  参数解释：IP地址组的项目ID。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * createdAt  参数解释：IP地址组的创建时间。
+    * updatedAt  参数解释：IP地址组的更新时间。
     *
     * @var string[]
     */
     protected static $getters = [
-            'createdAt' => 'getCreatedAt',
-            'description' => 'getDescription',
             'id' => 'getId',
+            'name' => 'getName',
+            'description' => 'getDescription',
             'ipList' => 'getIpList',
             'listeners' => 'getListeners',
-            'name' => 'getName',
             'projectId' => 'getProjectId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt'
     ];
 
@@ -217,13 +227,14 @@ class IpGroup implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['ipList'] = isset($data['ipList']) ? $data['ipList'] : null;
         $this->container['listeners'] = isset($data['listeners']) ? $data['listeners'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
     }
 
@@ -235,14 +246,14 @@ class IpGroup implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['createdAt'] === null) {
-            $invalidProperties[] = "'createdAt' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
         }
         if ($this->container['description'] === null) {
             $invalidProperties[] = "'description' can't be null";
-        }
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
         }
         if ($this->container['ipList'] === null) {
             $invalidProperties[] = "'ipList' can't be null";
@@ -250,11 +261,11 @@ class IpGroup implements ModelInterface, ArrayAccess
         if ($this->container['listeners'] === null) {
             $invalidProperties[] = "'listeners' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
+        }
+        if ($this->container['createdAt'] === null) {
+            $invalidProperties[] = "'createdAt' can't be null";
         }
         if ($this->container['updatedAt'] === null) {
             $invalidProperties[] = "'updatedAt' can't be null";
@@ -274,56 +285,8 @@ class IpGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets createdAt
-    *  IP地址组的创建时间。
-    *
-    * @return string
-    */
-    public function getCreatedAt()
-    {
-        return $this->container['createdAt'];
-    }
-
-    /**
-    * Sets createdAt
-    *
-    * @param string $createdAt IP地址组的创建时间。
-    *
-    * @return $this
-    */
-    public function setCreatedAt($createdAt)
-    {
-        $this->container['createdAt'] = $createdAt;
-        return $this;
-    }
-
-    /**
-    * Gets description
-    *  IP地址组的描述信息。
-    *
-    * @return string
-    */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-    * Sets description
-    *
-    * @param string $description IP地址组的描述信息。
-    *
-    * @return $this
-    */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
     * Gets id
-    *  IP地址组的ID。
+    *  参数解释：IP地址组的ID。
     *
     * @return string
     */
@@ -335,7 +298,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id IP地址组的ID。
+    * @param string $id 参数解释：IP地址组的ID。
     *
     * @return $this
     */
@@ -346,56 +309,8 @@ class IpGroup implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ipList
-    *  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[]
-    */
-    public function getIpList()
-    {
-        return $this->container['ipList'];
-    }
-
-    /**
-    * Sets ipList
-    *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[] $ipList IP地址组中包含的IP或网段列表。[]表示任意IP。
-    *
-    * @return $this
-    */
-    public function setIpList($ipList)
-    {
-        $this->container['ipList'] = $ipList;
-        return $this;
-    }
-
-    /**
-    * Gets listeners
-    *  与IP地址组关联的监听器的ID列表。
-    *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]
-    */
-    public function getListeners()
-    {
-        return $this->container['listeners'];
-    }
-
-    /**
-    * Sets listeners
-    *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners 与IP地址组关联的监听器的ID列表。
-    *
-    * @return $this
-    */
-    public function setListeners($listeners)
-    {
-        $this->container['listeners'] = $listeners;
-        return $this;
-    }
-
-    /**
     * Gets name
-    *  IP地址组的名称。
+    *  参数解释：IP地址组的名称。
     *
     * @return string
     */
@@ -407,7 +322,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name IP地址组的名称。
+    * @param string $name 参数解释：IP地址组的名称。
     *
     * @return $this
     */
@@ -418,8 +333,80 @@ class IpGroup implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets description
+    *  参数解释：IP地址组的描述信息。
+    *
+    * @return string
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string $description 参数解释：IP地址组的描述信息。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets ipList
+    *  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[]
+    */
+    public function getIpList()
+    {
+        return $this->container['ipList'];
+    }
+
+    /**
+    * Sets ipList
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\IpInfo[] $ipList 参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    *
+    * @return $this
+    */
+    public function setIpList($ipList)
+    {
+        $this->container['ipList'] = $ipList;
+        return $this;
+    }
+
+    /**
+    * Gets listeners
+    *  参数解释：与IP地址组关联的监听器的ID列表。
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[]
+    */
+    public function getListeners()
+    {
+        return $this->container['listeners'];
+    }
+
+    /**
+    * Sets listeners
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\ListenerRef[] $listeners 参数解释：与IP地址组关联的监听器的ID列表。
+    *
+    * @return $this
+    */
+    public function setListeners($listeners)
+    {
+        $this->container['listeners'] = $listeners;
+        return $this;
+    }
+
+    /**
     * Gets projectId
-    *  IP地址组的项目ID。
+    *  参数解释：IP地址组的项目ID。
     *
     * @return string
     */
@@ -431,7 +418,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId IP地址组的项目ID。
+    * @param string $projectId 参数解释：IP地址组的项目ID。
     *
     * @return $this
     */
@@ -442,8 +429,56 @@ class IpGroup implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets enterpriseProjectId
+    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets createdAt
+    *  参数解释：IP地址组的创建时间。
+    *
+    * @return string
+    */
+    public function getCreatedAt()
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+    * Sets createdAt
+    *
+    * @param string $createdAt 参数解释：IP地址组的创建时间。
+    *
+    * @return $this
+    */
+    public function setCreatedAt($createdAt)
+    {
+        $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
     * Gets updatedAt
-    *  IP地址组的更新时间。
+    *  参数解释：IP地址组的更新时间。
     *
     * @return string
     */
@@ -455,7 +490,7 @@ class IpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string $updatedAt IP地址组的更新时间。
+    * @param string $updatedAt 参数解释：IP地址组的更新时间。
     *
     * @return $this
     */

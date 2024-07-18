@@ -25,11 +25,13 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     * name  转发策略名称。
     * redirectListenerId  转发到的listener的ID。  使用说明： - 当action为REDIRECT_TO_LISTENER时不能更新为空或null。 - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。
     * redirectPoolId  转发到pool的ID。  使用说明： - 指定的pool不能是listener的default_pool。不能是其他listener的l7policy使用的pool。 - 当action为REDIRECT_TO_POOL时为必选字段，不能更新为空或null。 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectPoolsConfig  转发到多个主机组列表。一个policy最多配置5个pool。
+    * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * redirectUrlConfig  redirectUrlConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
     * rules  转发策略关联的转发规则对象。 详细参考表l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。
-    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -39,6 +41,8 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
             'name' => 'string',
             'redirectListenerId' => 'string',
             'redirectPoolId' => 'string',
+            'redirectPoolsConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsConfig[]',
+            'redirectPoolsStickySessionConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsStickySessionConfig',
             'redirectUrlConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectUrlConfig',
             'fixedResponseConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateFixtedResponseConfig',
             'redirectPoolsExtendConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsExtendConfig',
@@ -53,11 +57,13 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     * name  转发策略名称。
     * redirectListenerId  转发到的listener的ID。  使用说明： - 当action为REDIRECT_TO_LISTENER时不能更新为空或null。 - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。
     * redirectPoolId  转发到pool的ID。  使用说明： - 指定的pool不能是listener的default_pool。不能是其他listener的l7policy使用的pool。 - 当action为REDIRECT_TO_POOL时为必选字段，不能更新为空或null。 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectPoolsConfig  转发到多个主机组列表。一个policy最多配置5个pool。
+    * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * redirectUrlConfig  redirectUrlConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
     * rules  转发策略关联的转发规则对象。 详细参考表l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。
-    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -67,6 +73,8 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
         'name' => null,
         'redirectListenerId' => null,
         'redirectPoolId' => null,
+        'redirectPoolsConfig' => null,
+        'redirectPoolsStickySessionConfig' => null,
         'redirectUrlConfig' => null,
         'fixedResponseConfig' => null,
         'redirectPoolsExtendConfig' => null,
@@ -102,11 +110,13 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     * name  转发策略名称。
     * redirectListenerId  转发到的listener的ID。  使用说明： - 当action为REDIRECT_TO_LISTENER时不能更新为空或null。 - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。
     * redirectPoolId  转发到pool的ID。  使用说明： - 指定的pool不能是listener的default_pool。不能是其他listener的l7policy使用的pool。 - 当action为REDIRECT_TO_POOL时为必选字段，不能更新为空或null。 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectPoolsConfig  转发到多个主机组列表。一个policy最多配置5个pool。
+    * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * redirectUrlConfig  redirectUrlConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
     * rules  转发策略关联的转发规则对象。 详细参考表l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。
-    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -116,6 +126,8 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
             'name' => 'name',
             'redirectListenerId' => 'redirect_listener_id',
             'redirectPoolId' => 'redirect_pool_id',
+            'redirectPoolsConfig' => 'redirect_pools_config',
+            'redirectPoolsStickySessionConfig' => 'redirect_pools_sticky_session_config',
             'redirectUrlConfig' => 'redirect_url_config',
             'fixedResponseConfig' => 'fixed_response_config',
             'redirectPoolsExtendConfig' => 'redirect_pools_extend_config',
@@ -130,11 +142,13 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     * name  转发策略名称。
     * redirectListenerId  转发到的listener的ID。  使用说明： - 当action为REDIRECT_TO_LISTENER时不能更新为空或null。 - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。
     * redirectPoolId  转发到pool的ID。  使用说明： - 指定的pool不能是listener的default_pool。不能是其他listener的l7policy使用的pool。 - 当action为REDIRECT_TO_POOL时为必选字段，不能更新为空或null。 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectPoolsConfig  转发到多个主机组列表。一个policy最多配置5个pool。
+    * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * redirectUrlConfig  redirectUrlConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
     * rules  转发策略关联的转发规则对象。 详细参考表l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。
-    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -144,6 +158,8 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'redirectListenerId' => 'setRedirectListenerId',
             'redirectPoolId' => 'setRedirectPoolId',
+            'redirectPoolsConfig' => 'setRedirectPoolsConfig',
+            'redirectPoolsStickySessionConfig' => 'setRedirectPoolsStickySessionConfig',
             'redirectUrlConfig' => 'setRedirectUrlConfig',
             'fixedResponseConfig' => 'setFixedResponseConfig',
             'redirectPoolsExtendConfig' => 'setRedirectPoolsExtendConfig',
@@ -158,11 +174,13 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     * name  转发策略名称。
     * redirectListenerId  转发到的listener的ID。  使用说明： - 当action为REDIRECT_TO_LISTENER时不能更新为空或null。 - 只支持protocol为HTTPS/TERMINATED_HTTPS的listener。 - 不能指定为其他loadbalancer下的listener。 - 当action为REDIRECT_TO_POOL时，创建或更新时不能传入该参数。
     * redirectPoolId  转发到pool的ID。  使用说明： - 指定的pool不能是listener的default_pool。不能是其他listener的l7policy使用的pool。 - 当action为REDIRECT_TO_POOL时为必选字段，不能更新为空或null。 当action为REDIRECT_TO_LISTENER时，不可指定。
+    * redirectPoolsConfig  转发到多个主机组列表。一个policy最多配置5个pool。
+    * redirectPoolsStickySessionConfig  redirectPoolsStickySessionConfig
     * redirectUrlConfig  redirectUrlConfig
     * fixedResponseConfig  fixedResponseConfig
     * redirectPoolsExtendConfig  redirectPoolsExtendConfig
     * rules  转发策略关联的转发规则对象。 详细参考表l7rule字段说明。rules列表中最多含有10个rule规则 （若rule中包含conditions字段，一条condition算一个规则）， 且列表中type为HOST_NAME，PATH，METHOD，SOURCE_IP的rule不能重复，至多指定一条。
-    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * priority  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -172,6 +190,8 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'redirectListenerId' => 'getRedirectListenerId',
             'redirectPoolId' => 'getRedirectPoolId',
+            'redirectPoolsConfig' => 'getRedirectPoolsConfig',
+            'redirectPoolsStickySessionConfig' => 'getRedirectPoolsStickySessionConfig',
             'redirectUrlConfig' => 'getRedirectUrlConfig',
             'fixedResponseConfig' => 'getFixedResponseConfig',
             'redirectPoolsExtendConfig' => 'getRedirectPoolsExtendConfig',
@@ -242,6 +262,8 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['redirectListenerId'] = isset($data['redirectListenerId']) ? $data['redirectListenerId'] : null;
         $this->container['redirectPoolId'] = isset($data['redirectPoolId']) ? $data['redirectPoolId'] : null;
+        $this->container['redirectPoolsConfig'] = isset($data['redirectPoolsConfig']) ? $data['redirectPoolsConfig'] : null;
+        $this->container['redirectPoolsStickySessionConfig'] = isset($data['redirectPoolsStickySessionConfig']) ? $data['redirectPoolsStickySessionConfig'] : null;
         $this->container['redirectUrlConfig'] = isset($data['redirectUrlConfig']) ? $data['redirectUrlConfig'] : null;
         $this->container['fixedResponseConfig'] = isset($data['fixedResponseConfig']) ? $data['fixedResponseConfig'] : null;
         $this->container['redirectPoolsExtendConfig'] = isset($data['redirectPoolsExtendConfig']) ? $data['redirectPoolsExtendConfig'] : null;
@@ -410,6 +432,54 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets redirectPoolsConfig
+    *  转发到多个主机组列表。一个policy最多配置5个pool。
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsConfig[]|null
+    */
+    public function getRedirectPoolsConfig()
+    {
+        return $this->container['redirectPoolsConfig'];
+    }
+
+    /**
+    * Sets redirectPoolsConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsConfig[]|null $redirectPoolsConfig 转发到多个主机组列表。一个policy最多配置5个pool。
+    *
+    * @return $this
+    */
+    public function setRedirectPoolsConfig($redirectPoolsConfig)
+    {
+        $this->container['redirectPoolsConfig'] = $redirectPoolsConfig;
+        return $this;
+    }
+
+    /**
+    * Gets redirectPoolsStickySessionConfig
+    *  redirectPoolsStickySessionConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsStickySessionConfig|null
+    */
+    public function getRedirectPoolsStickySessionConfig()
+    {
+        return $this->container['redirectPoolsStickySessionConfig'];
+    }
+
+    /**
+    * Sets redirectPoolsStickySessionConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\UpdateRedirectPoolsStickySessionConfig|null $redirectPoolsStickySessionConfig redirectPoolsStickySessionConfig
+    *
+    * @return $this
+    */
+    public function setRedirectPoolsStickySessionConfig($redirectPoolsStickySessionConfig)
+    {
+        $this->container['redirectPoolsStickySessionConfig'] = $redirectPoolsStickySessionConfig;
+        return $this;
+    }
+
+    /**
     * Gets redirectUrlConfig
     *  redirectUrlConfig
     *
@@ -507,7 +577,7 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    *  转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @return int|null
     */
@@ -519,7 +589,7 @@ class UpdateL7PolicyOption implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt)
+    * @param int|null $priority 转发策略的优先级。数字越小表示优先级越高，同一监听器下不允许重复。  当监听器的高级转发策略功能（enhance_l7policy_enable）开启后才会生效，未开启传入该字段会报错。  当action为REDIRECT_TO_LISTENER时，仅支持指定为0，优先级最高。  当关联的listener没有开启enhance_l7policy_enable，按原有policy的排序逻辑，自动排序。 各域名之间优先级独立，相同域名下，按path的compare_type排序， 精确>前缀>正则，匹配类型相同时，path的长度越长优先级越高。 若policy下只有域名rule，没有路径rule，默认path为前缀匹配/。  当关联的listener开启了enhance_l7policy_enable，且不传该字段， 则新创建的转发策略的优先级的值为：同一监听器下已有转发策略的优先级的最大值+1。 因此，若当前已有转发策略的优先级的最大值是10000，新创建会因超出取值范围10000而失败。 此时可通过传入指定priority，或调整原有policy的优先级来避免错误。 若监听器下没有转发策略，则新建的转发策略的优先级为1。  [共享型负载均衡器下的转发策略不支持该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)  [不支持该字段，请勿使用。](tag:hcso_dt)  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @return $this
     */

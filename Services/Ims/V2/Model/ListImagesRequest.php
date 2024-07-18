@@ -512,6 +512,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     const PLATFORM_OTHER = 'Other';
     const PLATFORM_CORE_OS = 'CoreOS';
     const PLATFORM_EULER_OS = 'EulerOS';
+    const PLATFORM_HUAWEI_CLOUD_EULER_OS = 'Huawei Cloud EulerOS';
     const DISK_FORMAT_VHD = 'vhd';
     const DISK_FORMAT_ZVHD = 'zvhd';
     const DISK_FORMAT_RAW = 'raw';
@@ -618,6 +619,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
             self::PLATFORM_OTHER,
             self::PLATFORM_CORE_OS,
             self::PLATFORM_EULER_OS,
+            self::PLATFORM_HUAWEI_CLOUD_EULER_OS,
         ];
     }
 

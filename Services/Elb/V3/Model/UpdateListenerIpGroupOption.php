@@ -195,8 +195,8 @@ class UpdateListenerIpGroupOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ipgroupId']) && (mb_strlen($this->container['ipgroupId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ipgroupId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['ipgroupId']) && (mb_strlen($this->container['ipgroupId']) > 3600)) {
+                $invalidProperties[] = "invalid value for 'ipgroupId', the character length must be smaller than or equal to 3600.";
             }
             if (!is_null($this->container['ipgroupId']) && (mb_strlen($this->container['ipgroupId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ipgroupId', the character length must be bigger than or equal to 1.";

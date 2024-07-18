@@ -1397,6 +1397,71 @@ class VodAsyncClient extends Client
     }
 
     /**
+     * 删除转码产物
+     *
+     * 删除转码产物。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteTranscodeProductAsync($request)
+    {
+        return $this->deleteTranscodeProductAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteTranscodeProductAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/asset/transcode-product';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeProductResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\DeleteTranscodeProductRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除自定义模板
      *
      * 删除自定义模板
@@ -2233,6 +2298,71 @@ class VodAsyncClient extends Client
     }
 
     /**
+     * 多字幕封装
+     *
+     * 多字幕封装，仅支持 HLS VTT格式
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifySubtitleAsync($request)
+    {
+        return $this->modifySubtitleAsyncWithHttpInfo($request);
+    }
+    
+    public function modifySubtitleAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/asset/subtitles';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ModifySubtitleResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ModifySubtitleRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 创建媒资：OBS转存方式
      *
      * 若您在使用点播服务前，已经在OBS桶中存储了音视频文件，您可以使用该接口将存储在OBS桶中的音视频文件转存到点播服务中，使用点播服务的音视频管理功能。调用该接口前，您需要调用[桶授权](https://support.huaweicloud.com/api-vod/vod_04_0199.html)接口，将存储音视频文件的OBS桶授权给点播服务。
@@ -2846,6 +2976,81 @@ class VodAsyncClient extends Client
     }
 
     /**
+     * 查询取回数据信息
+     *
+     * ## 典型场景 ##
+     * 用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
+     * 
+     * ## 接口功能 ##
+     * 用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showVodRetrievalAsync($request)
+    {
+        return $this->showVodRetrievalAsyncWithHttpInfo($request);
+    }
+    
+    public function showVodRetrievalAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/asset/vod-retrieval';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['interval'] !== null) {
+            $queryParams['interval'] = $localVarParams['interval'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowVodRetrievalResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowVodRetrievalRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询源站统计信息
      *
      * 查询点播源站的统计数据，包括流量、存储空间、转码时长。
@@ -3330,6 +3535,72 @@ class VodAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateCoverByThumbnailResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateCoverByThumbnailRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改媒资文件在obs的存储模式
+     *
+     * ## 接口功能 ##
+     * 修改媒资文件在obs的存储模式&lt;br/&gt;
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateStorageModeAsync($request)
+    {
+        return $this->updateStorageModeAsyncWithHttpInfo($request);
+    }
+    
+    public function updateStorageModeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/asset/storage-mode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeRequest',
             $asyncRequest = true);
     }
 
@@ -3892,212 +4163,6 @@ class VodAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverTaskDetailsResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowTakeOverTaskDetailsRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询取回数据信息
-     *
-     * ## 典型场景 ##
-     * 用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
-     * 
-     * ## 接口功能 ##
-     * 用于查询点播低频和归档取回量统计数据。&lt;br/&gt;
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showVodRetrievalAsync($request)
-    {
-        return $this->showVodRetrievalAsyncWithHttpInfo($request);
-    }
-    
-    public function showVodRetrievalAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/asset/vod-retrieval';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['startTime'] !== null) {
-            $queryParams['start_time'] = $localVarParams['startTime'];
-        }
-        if ($localVarParams['endTime'] !== null) {
-            $queryParams['end_time'] = $localVarParams['endTime'];
-        }
-        if ($localVarParams['interval'] !== null) {
-            $queryParams['interval'] = $localVarParams['interval'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowVodRetrievalResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowVodRetrievalRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 多字幕封装
-     *
-     * 多字幕封装，仅支持 HLS VTT格式
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function modifySubtitleAsync($request)
-    {
-        return $this->modifySubtitleAsyncWithHttpInfo($request);
-    }
-    
-    public function modifySubtitleAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/asset/subtitles';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json', 'application/json; charset=UTF-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ModifySubtitleResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ModifySubtitleRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 修改媒资文件在obs的存储模式
-     *
-     * ## 接口功能 ##
-     * 修改媒资文件在obs的存储模式&lt;br/&gt;
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function updateStorageModeAsync($request)
-    {
-        return $this->updateStorageModeAsyncWithHttpInfo($request);
-    }
-    
-    public function updateStorageModeAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v1/{project_id}/asset/storage-mode';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json', 'application/json; charset=UTF-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeRequest',
             $asyncRequest = true);
     }
 

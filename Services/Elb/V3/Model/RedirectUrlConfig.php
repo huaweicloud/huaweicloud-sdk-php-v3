@@ -26,6 +26,8 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'string',
             'path' => 'string',
             'query' => 'string',
-            'statusCode' => 'string'
+            'statusCode' => 'string',
+            'insertHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\InsertHeadersConfig',
+            'removeHeadersConfig' => '\HuaweiCloud\SDK\Elb\V3\Model\RemoveHeadersConfig'
     ];
 
     /**
@@ -46,6 +50,8 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
         'port' => null,
         'path' => null,
         'query' => null,
-        'statusCode' => null
+        'statusCode' => null,
+        'insertHeadersConfig' => null,
+        'removeHeadersConfig' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'port',
             'path' => 'path',
             'query' => 'query',
-            'statusCode' => 'status_code'
+            'statusCode' => 'status_code',
+            'insertHeadersConfig' => 'insert_headers_config',
+            'removeHeadersConfig' => 'remove_headers_config'
     ];
 
     /**
@@ -107,6 +119,8 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'setPort',
             'path' => 'setPath',
             'query' => 'setQuery',
-            'statusCode' => 'setStatusCode'
+            'statusCode' => 'setStatusCode',
+            'insertHeadersConfig' => 'setInsertHeadersConfig',
+            'removeHeadersConfig' => 'setRemoveHeadersConfig'
     ];
 
     /**
@@ -127,6 +143,8 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * insertHeadersConfig  insertHeadersConfig
+    * removeHeadersConfig  removeHeadersConfig
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
             'port' => 'getPort',
             'path' => 'getPath',
             'query' => 'getQuery',
-            'statusCode' => 'getStatusCode'
+            'statusCode' => 'getStatusCode',
+            'insertHeadersConfig' => 'getInsertHeadersConfig',
+            'removeHeadersConfig' => 'getRemoveHeadersConfig'
     ];
 
     /**
@@ -241,6 +261,8 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
         $this->container['path'] = isset($data['path']) ? $data['path'] : null;
         $this->container['query'] = isset($data['query']) ? $data['query'] : null;
         $this->container['statusCode'] = isset($data['statusCode']) ? $data['statusCode'] : null;
+        $this->container['insertHeadersConfig'] = isset($data['insertHeadersConfig']) ? $data['insertHeadersConfig'] : null;
+        $this->container['removeHeadersConfig'] = isset($data['removeHeadersConfig']) ? $data['removeHeadersConfig'] : null;
     }
 
     /**
@@ -251,9 +273,6 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['protocol'] === null) {
-            $invalidProperties[] = "'protocol' can't be null";
-        }
             $allowedValues = $this->getProtocolAllowableValues();
                 if (!is_null($this->container['protocol']) && !in_array($this->container['protocol'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -262,51 +281,36 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['protocol']) > 36)) {
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 36)) {
                 $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['protocol']) < 1)) {
+            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 1)) {
                 $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['host'] === null) {
-            $invalidProperties[] = "'host' can't be null";
-        }
-            if ((mb_strlen($this->container['host']) > 128)) {
+            if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) > 128)) {
                 $invalidProperties[] = "invalid value for 'host', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['host']) < 1)) {
+            if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) < 1)) {
                 $invalidProperties[] = "invalid value for 'host', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['port'] === null) {
-            $invalidProperties[] = "'port' can't be null";
-        }
-            if ((mb_strlen($this->container['port']) > 16)) {
+            if (!is_null($this->container['port']) && (mb_strlen($this->container['port']) > 16)) {
                 $invalidProperties[] = "invalid value for 'port', the character length must be smaller than or equal to 16.";
             }
-            if ((mb_strlen($this->container['port']) < 1)) {
+            if (!is_null($this->container['port']) && (mb_strlen($this->container['port']) < 1)) {
                 $invalidProperties[] = "invalid value for 'port', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['path'] === null) {
-            $invalidProperties[] = "'path' can't be null";
-        }
-            if ((mb_strlen($this->container['path']) > 128)) {
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) > 128)) {
                 $invalidProperties[] = "invalid value for 'path', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['path']) < 1)) {
+            if (!is_null($this->container['path']) && (mb_strlen($this->container['path']) < 1)) {
                 $invalidProperties[] = "invalid value for 'path', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['query'] === null) {
-            $invalidProperties[] = "'query' can't be null";
-        }
-            if ((mb_strlen($this->container['query']) > 128)) {
+            if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) > 128)) {
                 $invalidProperties[] = "invalid value for 'query', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['query']) < 0)) {
+            if (!is_null($this->container['query']) && (mb_strlen($this->container['query']) < 0)) {
                 $invalidProperties[] = "invalid value for 'query', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['statusCode'] === null) {
-            $invalidProperties[] = "'statusCode' can't be null";
-        }
             $allowedValues = $this->getStatusCodeAllowableValues();
                 if (!is_null($this->container['statusCode']) && !in_array($this->container['statusCode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -315,10 +319,10 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['statusCode']) > 16)) {
+            if (!is_null($this->container['statusCode']) && (mb_strlen($this->container['statusCode']) > 16)) {
                 $invalidProperties[] = "invalid value for 'statusCode', the character length must be smaller than or equal to 16.";
             }
-            if ((mb_strlen($this->container['statusCode']) < 1)) {
+            if (!is_null($this->container['statusCode']) && (mb_strlen($this->container['statusCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'statusCode', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
@@ -339,7 +343,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * Gets protocol
     *  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值： - HTTP - HTTPS - ${protocol}
     *
-    * @return string
+    * @return string|null
     */
     public function getProtocol()
     {
@@ -349,7 +353,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string $protocol 重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值： - HTTP - HTTPS - ${protocol}
+    * @param string|null $protocol 重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值： - HTTP - HTTPS - ${protocol}
     *
     * @return $this
     */
@@ -363,7 +367,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * Gets host
     *  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”。 且必须以字母、数字开头。默认值${host}表示继承原值（即与被转发请求保持一致）。
     *
-    * @return string
+    * @return string|null
     */
     public function getHost()
     {
@@ -373,7 +377,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets host
     *
-    * @param string $host 重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”。 且必须以字母、数字开头。默认值${host}表示继承原值（即与被转发请求保持一致）。
+    * @param string|null $host 重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”。 且必须以字母、数字开头。默认值${host}表示继承原值（即与被转发请求保持一致）。
     *
     * @return $this
     */
@@ -387,7 +391,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * Gets port
     *  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
     *
-    * @return string
+    * @return string|null
     */
     public function getPort()
     {
@@ -397,7 +401,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param string $port 重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
+    * @param string|null $port 重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
     *
     * @return $this
     */
@@ -411,7 +415,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * Gets path
     *  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     *
-    * @return string
+    * @return string|null
     */
     public function getPath()
     {
@@ -421,7 +425,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string $path 重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
+    * @param string|null $path 重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  支持英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。
     *
     * @return $this
     */
@@ -435,7 +439,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * Gets query
     *  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     *
-    * @return string
+    * @return string|null
     */
     public function getQuery()
     {
@@ -445,7 +449,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets query
     *
-    * @param string $query 重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
+    * @param string|null $query 重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
     *
     * @return $this
     */
@@ -459,7 +463,7 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     * Gets statusCode
     *  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     *
-    * @return string
+    * @return string|null
     */
     public function getStatusCode()
     {
@@ -469,13 +473,61 @@ class RedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets statusCode
     *
-    * @param string $statusCode 重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * @param string|null $statusCode 重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     *
     * @return $this
     */
     public function setStatusCode($statusCode)
     {
         $this->container['statusCode'] = $statusCode;
+        return $this;
+    }
+
+    /**
+    * Gets insertHeadersConfig
+    *  insertHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\InsertHeadersConfig|null
+    */
+    public function getInsertHeadersConfig()
+    {
+        return $this->container['insertHeadersConfig'];
+    }
+
+    /**
+    * Sets insertHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\InsertHeadersConfig|null $insertHeadersConfig insertHeadersConfig
+    *
+    * @return $this
+    */
+    public function setInsertHeadersConfig($insertHeadersConfig)
+    {
+        $this->container['insertHeadersConfig'] = $insertHeadersConfig;
+        return $this;
+    }
+
+    /**
+    * Gets removeHeadersConfig
+    *  removeHeadersConfig
+    *
+    * @return \HuaweiCloud\SDK\Elb\V3\Model\RemoveHeadersConfig|null
+    */
+    public function getRemoveHeadersConfig()
+    {
+        return $this->container['removeHeadersConfig'];
+    }
+
+    /**
+    * Sets removeHeadersConfig
+    *
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\RemoveHeadersConfig|null $removeHeadersConfig removeHeadersConfig
+    *
+    * @return $this
+    */
+    public function setRemoveHeadersConfig($removeHeadersConfig)
+    {
+        $this->container['removeHeadersConfig'] = $removeHeadersConfig;
         return $this;
     }
 

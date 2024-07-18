@@ -20,11 +20,11 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  IP地址组所在的项目ID。
-    * description  IP地址组的描述。
-    * name  IP地址组的名称。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * projectId  参数解释：IP地址组所在的项目ID。
+    * description  参数解释：IP地址组的描述。
+    * name  参数解释：IP地址组的名称。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  IP地址组所在的项目ID。
-    * description  IP地址组的描述。
-    * name  IP地址组的名称。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * projectId  参数解释：IP地址组所在的项目ID。
+    * description  参数解释：IP地址组的描述。
+    * name  参数解释：IP地址组的名称。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  IP地址组所在的项目ID。
-    * description  IP地址组的描述。
-    * name  IP地址组的名称。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * projectId  参数解释：IP地址组所在的项目ID。
+    * description  参数解释：IP地址组的描述。
+    * name  参数解释：IP地址组的名称。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  IP地址组所在的项目ID。
-    * description  IP地址组的描述。
-    * name  IP地址组的名称。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * projectId  参数解释：IP地址组所在的项目ID。
+    * description  参数解释：IP地址组的描述。
+    * name  参数解释：IP地址组的名称。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  IP地址组所在的项目ID。
-    * description  IP地址组的描述。
-    * name  IP地址组的名称。
-    * ipList  IP地址组中包含的IP或网段列表。[]表示任意IP。
-    * enterpriseProjectId  IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * projectId  参数解释：IP地址组所在的项目ID。
+    * description  参数解释：IP地址组的描述。
+    * name  参数解释：IP地址组的名称。
+    * ipList  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * enterpriseProjectId  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @var string[]
     */
@@ -205,8 +205,8 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectId']) && !preg_match("/[0-9a-fA-F]{32}/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /[0-9a-fA-F]{32}/.";
@@ -242,7 +242,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  IP地址组所在的项目ID。
+    *  参数解释：IP地址组所在的项目ID。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId IP地址组所在的项目ID。
+    * @param string|null $projectId 参数解释：IP地址组所在的项目ID。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  IP地址组的描述。
+    *  参数解释：IP地址组的描述。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description IP地址组的描述。
+    * @param string|null $description 参数解释：IP地址组的描述。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  IP地址组的名称。
+    *  参数解释：IP地址组的名称。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name IP地址组的名称。
+    * @param string|null $name 参数解释：IP地址组的名称。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipList
-    *  IP地址组中包含的IP或网段列表。[]表示任意IP。
+    *  参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\CreateIpGroupIpOption[]
     */
@@ -326,7 +326,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets ipList
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateIpGroupIpOption[] $ipList IP地址组中包含的IP或网段列表。[]表示任意IP。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\CreateIpGroupIpOption[] $ipList 参数解释：IP地址组中包含的IP或网段列表。[]表示任意IP。
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    *  参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class CreateIpGroupOption implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
+    * @param string|null $enterpriseProjectId 参数解释：IP地址组所在的企业项目ID。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
     *
     * @return $this
     */

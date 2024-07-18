@@ -224,6 +224,7 @@ class UpdateScalingV2PolicyOption implements ModelInterface, ArrayAccess
     const SCALING_POLICY_TYPE_ALARM = 'ALARM';
     const SCALING_POLICY_TYPE_SCHEDULED = 'SCHEDULED';
     const SCALING_POLICY_TYPE_RECURRENCE = 'RECURRENCE';
+    const SCALING_POLICY_TYPE_INTERVAL_ALARM = 'INTERVAL_ALARM';
     
 
     /**
@@ -250,6 +251,7 @@ class UpdateScalingV2PolicyOption implements ModelInterface, ArrayAccess
             self::SCALING_POLICY_TYPE_ALARM,
             self::SCALING_POLICY_TYPE_SCHEDULED,
             self::SCALING_POLICY_TYPE_RECURRENCE,
+            self::SCALING_POLICY_TYPE_INTERVAL_ALARM,
         ];
     }
 

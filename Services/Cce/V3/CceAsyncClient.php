@@ -5725,6 +5725,3329 @@ class CceAsyncClient extends Client
             $asyncRequest = true);
     }
 
+    /**
+     * 批量添加指定集群的资源标签
+     *
+     * 该API用于批量添加指定集群的资源标签。
+     * &gt; - 每个集群支持最多20个资源标签。
+     * &gt; - 此接口为幂等接口：创建时，如果创建的标签已经存在（key/value均相同视为重复），默认处理成功；key相同，value不同时会覆盖原有标签。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchCreateAutopilotClusterTagsAsync($request)
+    {
+        return $this->batchCreateAutopilotClusterTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchCreateAutopilotClusterTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/tags/create';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateAutopilotClusterTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateAutopilotClusterTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 批量删除指定集群的资源标签
+     *
+     * 该API用于批量删除指定集群的资源标签。
+     * &gt; - 此接口为幂等接口：删除时，如果删除的标签key不存在，默认处理成功。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteAutopilotClusterTagsAsync($request)
+    {
+        return $this->batchDeleteAutopilotClusterTagsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchDeleteAutopilotClusterTagsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/tags/delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\BatchDeleteAutopilotClusterTagsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\BatchDeleteAutopilotClusterTagsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建AddonInstance
+     *
+     * 根据提供的插件模板，安装插件实例。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotAddonInstanceAsync($request)
+    {
+        return $this->createAutopilotAddonInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotAddonInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addons';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotAddonInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotAddonInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建集群
+     *
+     * 该API用于创建一个空集群（即只有控制节点Master，没有工作节点Node）。请在调用本接口完成集群创建之后，通过[创建节点](cce_02_0242.xml)添加节点。
+     * 
+     * 
+     * &gt;   - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * &gt;   - 调用该接口创建集群时，默认不安装ICAgent，若需安装ICAgent，可在请求Body参数的annotations中加入\&quot;cluster.install.addons.external/install\&quot;:\&quot;[{\&quot;addonTemplateName\&quot;:\&quot;icagent\&quot;}]\&quot;的集群注解，将在创建集群时自动安装ICAgent。ICAgent是应用性能管理APM的采集代理，运行在应用所在的服务器上，用于实时采集探针所获取的数据，安装ICAgent是使用应用性能管理APM的前提。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotClusterAsync($request)
+    {
+        return $this->createAutopilotClusterAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotClusterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotClusterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 集群备份
+     *
+     * 集群备份
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotClusterMasterSnapshotAsync($request)
+    {
+        return $this->createAutopilotClusterMasterSnapshotAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotClusterMasterSnapshotAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3.1/projects/{project_id}/clusters/{cluster_id}/operation/snapshot';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotClusterMasterSnapshotResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotClusterMasterSnapshotRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群证书
+     *
+     * 该API用于获取指定集群的证书信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotKubernetesClusterCertAsync($request)
+    {
+        return $this->createAutopilotKubernetesClusterCertAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotKubernetesClusterCertAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/clustercert';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotKubernetesClusterCertResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotKubernetesClusterCertRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 集群升级后确认
+     *
+     * 集群升级后确认，该接口建议配合Console使用，主要用于升级步骤完成后，客户确认集群状态和业务正常后做反馈。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotPostCheckAsync($request)
+    {
+        return $this->createAutopilotPostCheckAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotPostCheckAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/postcheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotPostCheckResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotPostCheckRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 集群升级前检查
+     *
+     * 集群升级前检查
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotPreCheckAsync($request)
+    {
+        return $this->createAutopilotPreCheckAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotPreCheckAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/precheck';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotPreCheckResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotPreCheckRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 创建模板实例
+     *
+     * 创建模板实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotReleaseAsync($request)
+    {
+        return $this->createAutopilotReleaseAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotReleaseAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/cam/v3/clusters/{cluster_id}/releases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotReleaseResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotReleaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 开启集群升级流程引导任务
+     *
+     * 该API用于创建一个集群升级流程引导任务。请在调用本接口完成引导任务创建之后，通过集群升级前检查开始检查任务。
+     * 升级流程任务用于控制集群升级任务的执行流程，执行流程为 升级前检查 &#x3D;&gt; 集群升级 &#x3D;&gt; 升级后检查。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAutopilotUpgradeWorkFlowAsync($request)
+    {
+        return $this->createAutopilotUpgradeWorkFlowAsyncWithHttpInfo($request);
+    }
+    
+    public function createAutopilotUpgradeWorkFlowAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotUpgradeWorkFlowResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\CreateAutopilotUpgradeWorkFlowRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除AddonInstance
+     *
+     * 删除插件实例的功能。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutopilotAddonInstanceAsync($request)
+    {
+        return $this->deleteAutopilotAddonInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAutopilotAddonInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addons/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotAddonInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotAddonInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除模板
+     *
+     * 删除模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutopilotChartAsync($request)
+    {
+        return $this->deleteAutopilotChartAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAutopilotChartAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts/{chart_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['chartId'] !== null) {
+            $pathParams['chart_id'] = $localVarParams['chartId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotChartResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotChartRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除集群
+     *
+     * 该API用于删除一个指定的集群。
+     * &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutopilotClusterAsync($request)
+    {
+        return $this->deleteAutopilotClusterAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAutopilotClusterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['deleteEfs'] !== null) {
+            $queryParams['delete_efs'] = $localVarParams['deleteEfs'];
+        }
+        if ($localVarParams['deleteEni'] !== null) {
+            $queryParams['delete_eni'] = $localVarParams['deleteEni'];
+        }
+        if ($localVarParams['deleteNet'] !== null) {
+            $queryParams['delete_net'] = $localVarParams['deleteNet'];
+        }
+        if ($localVarParams['deleteObs'] !== null) {
+            $queryParams['delete_obs'] = $localVarParams['deleteObs'];
+        }
+        if ($localVarParams['deleteSfs30'] !== null) {
+            $queryParams['delete_sfs30'] = $localVarParams['deleteSfs30'];
+        }
+        if ($localVarParams['ltsReclaimPolicy'] !== null) {
+            $queryParams['lts_reclaim_policy'] = $localVarParams['ltsReclaimPolicy'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotClusterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除指定模板实例
+     *
+     * 删除指定模板实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAutopilotReleaseAsync($request)
+    {
+        return $this->deleteAutopilotReleaseAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAutopilotReleaseAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/cam/v3/clusters/{cluster_id}/namespace/{namespace}/releases/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotReleaseResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DeleteAutopilotReleaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 下载模板
+     *
+     * 下载模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function downloadAutopilotChartAsync($request)
+    {
+        return $this->downloadAutopilotChartAsyncWithHttpInfo($request);
+    }
+    
+    public function downloadAutopilotChartAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts/{chart_id}/archive';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['chartId'] !== null) {
+            $pathParams['chart_id'] = $localVarParams['chartId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/octet-stream']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/octet-stream'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\DownloadAutopilotChartResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\DownloadAutopilotChartRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取AddonInstance列表
+     *
+     * 获取集群所有已安装插件实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotAddonInstancesAsync($request)
+    {
+        return $this->listAutopilotAddonInstancesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotAddonInstancesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addons';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotAddonInstancesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotAddonInstancesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询AddonTemplates列表
+     *
+     * 插件模板查询接口，查询插件信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotAddonTemplatesAsync($request)
+    {
+        return $this->listAutopilotAddonTemplatesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotAddonTemplatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addontemplates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['addonTemplateName'] !== null) {
+            $queryParams['addon_template_name'] = $localVarParams['addonTemplateName'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotAddonTemplatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotAddonTemplatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取模板列表
+     *
+     * 获取模板列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotChartsAsync($request)
+    {
+        return $this->listAutopilotChartsAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotChartsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotChartsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotChartsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群备份任务详情列表
+     *
+     * 获取集群备份任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotClusterMasterSnapshotTasksAsync($request)
+    {
+        return $this->listAutopilotClusterMasterSnapshotTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotClusterMasterSnapshotTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3.1/projects/{project_id}/clusters/{cluster_id}/operation/snapshot/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClusterMasterSnapshotTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClusterMasterSnapshotTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级特性开关配置
+     *
+     * 获取集群升级特性开关配置
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotClusterUpgradeFeatureGatesAsync($request)
+    {
+        return $this->listAutopilotClusterUpgradeFeatureGatesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotClusterUpgradeFeatureGatesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/clusterupgradefeaturegates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClusterUpgradeFeatureGatesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClusterUpgradeFeatureGatesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级路径
+     *
+     * 获取集群升级路径
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotClusterUpgradePathsAsync($request)
+    {
+        return $this->listAutopilotClusterUpgradePathsAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotClusterUpgradePathsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/clusterupgradepaths';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClusterUpgradePathsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClusterUpgradePathsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定项目下的集群
+     *
+     * 该API用于获取指定项目下所有集群的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotClustersAsync($request)
+    {
+        return $this->listAutopilotClustersAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotClustersAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['detail'] !== null) {
+            $queryParams['detail'] = $localVarParams['detail'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['type'] !== null) {
+            $queryParams['type'] = $localVarParams['type'];
+        }
+        if ($localVarParams['version'] !== null) {
+            $queryParams['version'] = $localVarParams['version'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClustersResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotClustersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级前检查任务详情列表
+     *
+     * 获取集群升级前检查任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotPreCheckTasksAsync($request)
+    {
+        return $this->listAutopilotPreCheckTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotPreCheckTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/precheck/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotPreCheckTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotPreCheckTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取模板实例列表
+     *
+     * 获取模板实例列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotReleasesAsync($request)
+    {
+        return $this->listAutopilotReleasesAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotReleasesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/cam/v3/clusters/{cluster_id}/releases';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['chartId'] !== null) {
+            $queryParams['chart_id'] = $localVarParams['chartId'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $queryParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotReleasesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotReleasesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级任务详情列表
+     *
+     * 获取集群升级任务详情列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotUpgradeClusterTasksAsync($request)
+    {
+        return $this->listAutopilotUpgradeClusterTasksAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotUpgradeClusterTasksAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgrade/tasks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotUpgradeClusterTasksResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotUpgradeClusterTasksRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取UpgradeWorkFlows列表
+     *
+     * 获取历史集群升级引导任务列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listAutopilotUpgradeWorkFlowsAsync($request)
+    {
+        return $this->listAutopilotUpgradeWorkFlowsAsyncWithHttpInfo($request);
+    }
+    
+    public function listAutopilotUpgradeWorkFlowsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotUpgradeWorkFlowsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ListAutopilotUpgradeWorkFlowsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 重试集群升级任务
+     *
+     * 重新执行失败的集群升级任务。
+     * &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+     * &gt; - 当前集群升级相关接口受限开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function retryAutopilotUpgradeClusterTaskAsync($request)
+    {
+        return $this->retryAutopilotUpgradeClusterTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function retryAutopilotUpgradeClusterTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgrade/retry';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\RetryAutopilotUpgradeClusterTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\RetryAutopilotUpgradeClusterTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 回滚AddonInstance
+     *
+     * 将插件实例回滚到升级前的版本。只有在当前插件实例版本支持回滚到升级前的版本（status.isRollbackable为true），且插件实例状态为running（运行中）、available（可用）、abnormal（不可用）、upgradeFailed（升级失败）、rollbackFailed（回滚失败）时支持回滚。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function rollbackAutopilotAddonInstanceAsync($request)
+    {
+        return $this->rollbackAutopilotAddonInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function rollbackAutopilotAddonInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addons/{id}/operation/rollback';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\RollbackAutopilotAddonInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\RollbackAutopilotAddonInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取AddonInstance详情
+     *
+     * 获取插件实例详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotAddonInstanceAsync($request)
+    {
+        return $this->showAutopilotAddonInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotAddonInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addons/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $queryParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotAddonInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotAddonInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取模板
+     *
+     * 获取模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotChartAsync($request)
+    {
+        return $this->showAutopilotChartAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotChartAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts/{chart_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['chartId'] !== null) {
+            $pathParams['chart_id'] = $localVarParams['chartId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotChartResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotChartRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取模板Values
+     *
+     * 获取模板Values
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotChartValuesAsync($request)
+    {
+        return $this->showAutopilotChartValuesAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotChartValuesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts/{chart_id}/values';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['chartId'] !== null) {
+            $pathParams['chart_id'] = $localVarParams['chartId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotChartValuesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotChartValuesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定的集群
+     *
+     * 该API用于获取指定集群的详细信息。
+     * &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotClusterAsync($request)
+    {
+        return $this->showAutopilotClusterAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotClusterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['detail'] !== null) {
+            $queryParams['detail'] = $localVarParams['detail'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群访问的地址
+     *
+     * 该API用于通过集群ID获取集群访问的地址，包括PrivateIP(HA集群返回VIP)与PublicIP
+     * &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotClusterEndpointsAsync($request)
+    {
+        return $this->showAutopilotClusterEndpointsAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotClusterEndpointsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/openapi';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterEndpointsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterEndpointsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级相关信息
+     *
+     * 获取集群升级相关信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotClusterUpgradeInfoAsync($request)
+    {
+        return $this->showAutopilotClusterUpgradeInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotClusterUpgradeInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/upgradeinfo';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterUpgradeInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotClusterUpgradeInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取任务信息
+     *
+     * 该API用于获取任务信息。通过某一任务请求下发后返回的jobID来查询指定任务的进度。
+     * &gt; - 集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径
+     * &gt; - 该接口通常使用场景为：
+     * &gt;   - 创建、删除集群时，查询相应任务的进度。
+     * &gt;   - 创建、删除节点时，查询相应任务的进度。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotJobAsync($request)
+    {
+        return $this->showAutopilotJobAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotJobAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotJobResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotJobRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级前检查任务详情
+     *
+     * 获取集群升级前检查任务详情，任务ID由调用集群检查API后从响应体中uid字段获取。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotPreCheckAsync($request)
+    {
+        return $this->showAutopilotPreCheckAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotPreCheckAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/precheck/tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotPreCheckResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotPreCheckRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询CCE服务下的资源配额
+     *
+     * 该API用于查询CCE服务下的资源配额。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotQuotasAsync($request)
+    {
+        return $this->showAutopilotQuotasAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotQuotasAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotQuotasResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotQuotasRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定模板实例
+     *
+     * 获取指定模板实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotReleaseAsync($request)
+    {
+        return $this->showAutopilotReleaseAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotReleaseAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/cam/v3/clusters/{cluster_id}/namespace/{namespace}/releases/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotReleaseResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotReleaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查询指定模板实例历史记录
+     *
+     * 查询指定模板实例历史记录
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotReleaseHistoryAsync($request)
+    {
+        return $this->showAutopilotReleaseHistoryAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotReleaseHistoryAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/cam/v3/clusters/{cluster_id}/namespace/{namespace}/releases/{name}/history';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotReleaseHistoryResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotReleaseHistoryRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取集群升级任务详情
+     *
+     * 获取集群升级任务详情，任务ID由调用集群升级API后从响应体中uid字段获取。
+     * &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+     * &gt; - 当前集群升级相关接口受限开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotUpgradeClusterTaskAsync($request)
+    {
+        return $this->showAutopilotUpgradeClusterTaskAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotUpgradeClusterTaskAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgrade/tasks/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotUpgradeClusterTaskResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotUpgradeClusterTaskRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取指定集群升级引导任务详情
+     *
+     * 该API用于通过升级引导任务ID获取任务的详细信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotUpgradeWorkFlowAsync($request)
+    {
+        return $this->showAutopilotUpgradeWorkFlowAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotUpgradeWorkFlowAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows/{upgrade_workflow_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['upgradeWorkflowId'] !== null) {
+            $pathParams['upgrade_workflow_id'] = $localVarParams['upgradeWorkflowId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotUpgradeWorkFlowResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotUpgradeWorkFlowRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取用户模板配额
+     *
+     * 获取用户模板配额
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAutopilotUserChartsQuotasAsync($request)
+    {
+        return $this->showAutopilotUserChartsQuotasAsyncWithHttpInfo($request);
+    }
+    
+    public function showAutopilotUserChartsQuotasAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts/{project_id}/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotUserChartsQuotasResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowAutopilotUserChartsQuotasRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新AddonInstance
+     *
+     * 更新插件实例的功能。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAutopilotAddonInstanceAsync($request)
+    {
+        return $this->updateAutopilotAddonInstanceAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAutopilotAddonInstanceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/addons/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotAddonInstanceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotAddonInstanceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新模板
+     *
+     * 更新模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAutopilotChartAsync($request)
+    {
+        return $this->updateAutopilotChartAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAutopilotChartAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts/{chart_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['chartId'] !== null) {
+            $pathParams['chart_id'] = $localVarParams['chartId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotChartResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotChartRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新指定的集群
+     *
+     * 该API用于更新指定的集群。
+     * &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAutopilotClusterAsync($request)
+    {
+        return $this->updateAutopilotClusterAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAutopilotClusterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotClusterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新指定模板实例
+     *
+     * 更新指定模板实例
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAutopilotReleaseAsync($request)
+    {
+        return $this->updateAutopilotReleaseAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAutopilotReleaseAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/cam/v3/clusters/{cluster_id}/namespace/{namespace}/releases/{name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['name'] !== null) {
+            $pathParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['namespace'] !== null) {
+            $pathParams['namespace'] = $localVarParams['namespace'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotReleaseResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpdateAutopilotReleaseRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 集群升级
+     *
+     * 集群升级。
+     * &gt; - 集群升级涉及多维度的组件升级操作，强烈建议统一通过CCE控制台执行交互式升级，降低集群升级过程的业务意外受损风险；
+     * &gt; - 当前集群升级相关接口受限开放。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeAutopilotClusterAsync($request)
+    {
+        return $this->upgradeAutopilotClusterAsyncWithHttpInfo($request);
+    }
+    
+    public function upgradeAutopilotClusterAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeAutopilotClusterResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeAutopilotClusterRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 更新指定集群升级引导任务状态
+     *
+     * 该API用于更新指定集群升级引导任务状态，当前仅适用于取消升级流程
+     * 调用该API时升级流程引导任务状态不能为进行中(running) 已完成(success) 已取消(cancel),升级子任务状态不能为running(进行中) init(已初始化) pause(任务被暂停) queue(队列中)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function upgradeAutopilotWorkFlowUpdateAsync($request)
+    {
+        return $this->upgradeAutopilotWorkFlowUpdateAsyncWithHttpInfo($request);
+    }
+    
+    public function upgradeAutopilotWorkFlowUpdateAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v3/projects/{project_id}/clusters/{cluster_id}/operation/upgradeworkflows/{upgrade_workflow_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['upgradeWorkflowId'] !== null) {
+            $pathParams['upgrade_workflow_id'] = $localVarParams['upgradeWorkflowId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PATCH',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeAutopilotWorkFlowUpdateResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UpgradeAutopilotWorkFlowUpdateRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 上传模板
+     *
+     * 上传模板
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadAutopilotChartAsync($request)
+    {
+        return $this->uploadAutopilotChartAsyncWithHttpInfo($request);
+    }
+    
+    public function uploadAutopilotChartAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/autopilot/v2/charts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\UploadAutopilotChartResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\UploadAutopilotChartRequest',
+            $asyncRequest = true);
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

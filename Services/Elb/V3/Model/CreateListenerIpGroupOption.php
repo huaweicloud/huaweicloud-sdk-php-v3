@@ -198,8 +198,8 @@ class CreateListenerIpGroupOption implements ModelInterface, ArrayAccess
         if ($this->container['ipgroupId'] === null) {
             $invalidProperties[] = "'ipgroupId' can't be null";
         }
-            if ((mb_strlen($this->container['ipgroupId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ipgroupId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['ipgroupId']) > 3600)) {
+                $invalidProperties[] = "invalid value for 'ipgroupId', the character length must be smaller than or equal to 3600.";
             }
             if ((mb_strlen($this->container['ipgroupId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'ipgroupId', the character length must be bigger than or equal to 1.";

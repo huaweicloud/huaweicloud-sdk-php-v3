@@ -41,6 +41,8 @@ class Traces implements ModelInterface, ArrayAccess
     * locationInfo  记录本次请求出错后，问题定位所需要的辅助信息。
     * endpoint  云资源的详情页面
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
+    * enterpriseProjectId  标识资源所在的企业项目ID。
+    * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
     *
     * @var string[]
     */
@@ -65,7 +67,9 @@ class Traces implements ModelInterface, ArrayAccess
             'requestId' => 'string',
             'locationInfo' => 'string',
             'endpoint' => 'string',
-            'resourceUrl' => 'string'
+            'resourceUrl' => 'string',
+            'enterpriseProjectId' => 'string',
+            'resourceAccountId' => 'string'
     ];
 
     /**
@@ -91,6 +95,8 @@ class Traces implements ModelInterface, ArrayAccess
     * locationInfo  记录本次请求出错后，问题定位所需要的辅助信息。
     * endpoint  云资源的详情页面
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
+    * enterpriseProjectId  标识资源所在的企业项目ID。
+    * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
     *
     * @var string[]
     */
@@ -115,7 +121,9 @@ class Traces implements ModelInterface, ArrayAccess
         'requestId' => null,
         'locationInfo' => null,
         'endpoint' => null,
-        'resourceUrl' => null
+        'resourceUrl' => null,
+        'enterpriseProjectId' => null,
+        'resourceAccountId' => null
     ];
 
     /**
@@ -162,6 +170,8 @@ class Traces implements ModelInterface, ArrayAccess
     * locationInfo  记录本次请求出错后，问题定位所需要的辅助信息。
     * endpoint  云资源的详情页面
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
+    * enterpriseProjectId  标识资源所在的企业项目ID。
+    * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
     *
     * @var string[]
     */
@@ -186,7 +196,9 @@ class Traces implements ModelInterface, ArrayAccess
             'requestId' => 'request_id',
             'locationInfo' => 'location_info',
             'endpoint' => 'endpoint',
-            'resourceUrl' => 'resource_url'
+            'resourceUrl' => 'resource_url',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'resourceAccountId' => 'resource_account_id'
     ];
 
     /**
@@ -212,6 +224,8 @@ class Traces implements ModelInterface, ArrayAccess
     * locationInfo  记录本次请求出错后，问题定位所需要的辅助信息。
     * endpoint  云资源的详情页面
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
+    * enterpriseProjectId  标识资源所在的企业项目ID。
+    * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
     *
     * @var string[]
     */
@@ -236,7 +250,9 @@ class Traces implements ModelInterface, ArrayAccess
             'requestId' => 'setRequestId',
             'locationInfo' => 'setLocationInfo',
             'endpoint' => 'setEndpoint',
-            'resourceUrl' => 'setResourceUrl'
+            'resourceUrl' => 'setResourceUrl',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'resourceAccountId' => 'setResourceAccountId'
     ];
 
     /**
@@ -262,6 +278,8 @@ class Traces implements ModelInterface, ArrayAccess
     * locationInfo  记录本次请求出错后，问题定位所需要的辅助信息。
     * endpoint  云资源的详情页面
     * resourceUrl  云资源的详情页面的访问链接（不含endpoint）
+    * enterpriseProjectId  标识资源所在的企业项目ID。
+    * resourceAccountId  标识资源所在的账号ID。仅在跨租户操作资源时有值。
     *
     * @var string[]
     */
@@ -286,7 +304,9 @@ class Traces implements ModelInterface, ArrayAccess
             'requestId' => 'getRequestId',
             'locationInfo' => 'getLocationInfo',
             'endpoint' => 'getEndpoint',
-            'resourceUrl' => 'getResourceUrl'
+            'resourceUrl' => 'getResourceUrl',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'resourceAccountId' => 'getResourceAccountId'
     ];
 
     /**
@@ -385,6 +405,8 @@ class Traces implements ModelInterface, ArrayAccess
         $this->container['locationInfo'] = isset($data['locationInfo']) ? $data['locationInfo'] : null;
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
         $this->container['resourceUrl'] = isset($data['resourceUrl']) ? $data['resourceUrl'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['resourceAccountId'] = isset($data['resourceAccountId']) ? $data['resourceAccountId'] : null;
     }
 
     /**
@@ -516,6 +538,18 @@ class Traces implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resourceUrl']) && (mb_strlen($this->container['resourceUrl']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resourceUrl', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['resourceAccountId']) && (mb_strlen($this->container['resourceAccountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'resourceAccountId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['resourceAccountId']) && (mb_strlen($this->container['resourceAccountId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceAccountId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1032,6 +1066,54 @@ class Traces implements ModelInterface, ArrayAccess
     public function setResourceUrl($resourceUrl)
     {
         $this->container['resourceUrl'] = $resourceUrl;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  标识资源所在的企业项目ID。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 标识资源所在的企业项目ID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets resourceAccountId
+    *  标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    *
+    * @return string|null
+    */
+    public function getResourceAccountId()
+    {
+        return $this->container['resourceAccountId'];
+    }
+
+    /**
+    * Sets resourceAccountId
+    *
+    * @param string|null $resourceAccountId 标识资源所在的账号ID。仅在跨租户操作资源时有值。
+    *
+    * @return $this
+    */
+    public function setResourceAccountId($resourceAccountId)
+    {
+        $this->container['resourceAccountId'] = $resourceAccountId;
         return $this;
     }
 

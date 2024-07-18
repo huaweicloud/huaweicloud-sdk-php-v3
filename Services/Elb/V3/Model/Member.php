@@ -23,21 +23,16 @@ class Member implements ModelInterface, ArrayAccess
     * id  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
-    * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
     * adminStateUp  后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
-    * subnetCidrId  后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    * subnetCidrId  后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     * protocolPort  后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     * weight  后端云服务器的权重，请求将根据pool配置的负载均衡算法和后端云服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP，该字段无效。
-    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * ipVersion  当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。取值：v4、v6。
-    * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端云服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     * status  后端云服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
-    * loadbalancers  后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     * memberType  后端云服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -47,19 +42,14 @@ class Member implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'projectId' => 'string',
-            'poolId' => 'string',
             'adminStateUp' => 'bool',
             'subnetCidrId' => 'string',
             'protocolPort' => 'int',
             'weight' => 'int',
             'address' => 'string',
             'ipVersion' => 'string',
-            'deviceOwner' => 'string',
-            'deviceId' => 'string',
             'operatingStatus' => 'string',
             'status' => '\HuaweiCloud\SDK\Elb\V3\Model\MemberStatus[]',
-            'loadbalancerId' => 'string',
-            'loadbalancers' => '\HuaweiCloud\SDK\Elb\V3\Model\ResourceID[]',
             'createdAt' => 'string',
             'updatedAt' => 'string',
             'memberType' => 'string',
@@ -71,21 +61,16 @@ class Member implements ModelInterface, ArrayAccess
     * id  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
-    * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
     * adminStateUp  后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
-    * subnetCidrId  后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    * subnetCidrId  后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     * protocolPort  后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     * weight  后端云服务器的权重，请求将根据pool配置的负载均衡算法和后端云服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP，该字段无效。
-    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * ipVersion  当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。取值：v4、v6。
-    * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端云服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     * status  后端云服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
-    * loadbalancers  后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     * memberType  后端云服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -95,19 +80,14 @@ class Member implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'projectId' => null,
-        'poolId' => null,
         'adminStateUp' => null,
         'subnetCidrId' => null,
         'protocolPort' => 'int32',
         'weight' => 'int32',
         'address' => null,
         'ipVersion' => null,
-        'deviceOwner' => null,
-        'deviceId' => null,
         'operatingStatus' => null,
         'status' => null,
-        'loadbalancerId' => null,
-        'loadbalancers' => null,
         'createdAt' => null,
         'updatedAt' => null,
         'memberType' => null,
@@ -140,21 +120,16 @@ class Member implements ModelInterface, ArrayAccess
     * id  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
-    * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
     * adminStateUp  后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
-    * subnetCidrId  后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    * subnetCidrId  后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     * protocolPort  后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     * weight  后端云服务器的权重，请求将根据pool配置的负载均衡算法和后端云服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP，该字段无效。
-    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * ipVersion  当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。取值：v4、v6。
-    * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端云服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     * status  后端云服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
-    * loadbalancers  后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     * memberType  后端云服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -164,19 +139,14 @@ class Member implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'projectId' => 'project_id',
-            'poolId' => 'pool_id',
             'adminStateUp' => 'admin_state_up',
             'subnetCidrId' => 'subnet_cidr_id',
             'protocolPort' => 'protocol_port',
             'weight' => 'weight',
             'address' => 'address',
             'ipVersion' => 'ip_version',
-            'deviceOwner' => 'device_owner',
-            'deviceId' => 'device_id',
             'operatingStatus' => 'operating_status',
             'status' => 'status',
-            'loadbalancerId' => 'loadbalancer_id',
-            'loadbalancers' => 'loadbalancers',
             'createdAt' => 'created_at',
             'updatedAt' => 'updated_at',
             'memberType' => 'member_type',
@@ -188,21 +158,16 @@ class Member implements ModelInterface, ArrayAccess
     * id  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
-    * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
     * adminStateUp  后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
-    * subnetCidrId  后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    * subnetCidrId  后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     * protocolPort  后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     * weight  后端云服务器的权重，请求将根据pool配置的负载均衡算法和后端云服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP，该字段无效。
-    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * ipVersion  当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。取值：v4、v6。
-    * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端云服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     * status  后端云服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
-    * loadbalancers  后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     * memberType  后端云服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -212,19 +177,14 @@ class Member implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'projectId' => 'setProjectId',
-            'poolId' => 'setPoolId',
             'adminStateUp' => 'setAdminStateUp',
             'subnetCidrId' => 'setSubnetCidrId',
             'protocolPort' => 'setProtocolPort',
             'weight' => 'setWeight',
             'address' => 'setAddress',
             'ipVersion' => 'setIpVersion',
-            'deviceOwner' => 'setDeviceOwner',
-            'deviceId' => 'setDeviceId',
             'operatingStatus' => 'setOperatingStatus',
             'status' => 'setStatus',
-            'loadbalancerId' => 'setLoadbalancerId',
-            'loadbalancers' => 'setLoadbalancers',
             'createdAt' => 'setCreatedAt',
             'updatedAt' => 'setUpdatedAt',
             'memberType' => 'setMemberType',
@@ -236,21 +196,16 @@ class Member implements ModelInterface, ArrayAccess
     * id  后端服务器ID。 >说明： 此处并非ECS服务器的ID，而是ELB为绑定的后端服务器自动生成的member ID。
     * name  后端服务器名称。注意：该名称并非ECS名称。
     * projectId  后端服务器所在的项目ID。
-    * poolId  所在后端服务器组ID。  不支持该字段，请勿使用。
     * adminStateUp  后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
-    * subnetCidrId  后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    * subnetCidrId  后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     * protocolPort  后端服务器业务端口。 >在开启端口透传的pool下创建member传该字段不生效，可不传该字段。
     * weight  后端云服务器的权重，请求将根据pool配置的负载均衡算法和后端云服务器的权重进行负载分发。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值：0-100，默认1。  使用说明：若所在pool的lb_algorithm取值为SOURCE_IP，该字段无效。
-    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * address  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     * ipVersion  当前后端服务器的IP地址版本，由后端系统自动根据传入的address字段确定。取值：v4、v6。
-    * deviceOwner  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    * deviceId  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
     * operatingStatus  后端云服务器的健康状态。当status非空时，以status字段中监听器粒度的健康检查状态优先。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     * status  后端云服务器监听器粒度的的健康状态。 若绑定的监听器在该字段中，则以该字段中监听器对应的operating_stauts为准。 若绑定的监听器不在该字段中，则以外层的operating_status为准。
-    * loadbalancerId  所属负载均衡器ID。  不支持该字段，请勿使用。
-    * loadbalancers  后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
-    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * createdAt  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
+    * updatedAt  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     * memberType  后端云服务器的类型。  取值： - ip：跨VPC的member。 - instance：关联到ECS的member。
     * instanceId  member关联的实例ID。空表示member关联的实例为非真实设备 （如：跨VPC场景）
     *
@@ -260,19 +215,14 @@ class Member implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'projectId' => 'getProjectId',
-            'poolId' => 'getPoolId',
             'adminStateUp' => 'getAdminStateUp',
             'subnetCidrId' => 'getSubnetCidrId',
             'protocolPort' => 'getProtocolPort',
             'weight' => 'getWeight',
             'address' => 'getAddress',
             'ipVersion' => 'getIpVersion',
-            'deviceOwner' => 'getDeviceOwner',
-            'deviceId' => 'getDeviceId',
             'operatingStatus' => 'getOperatingStatus',
             'status' => 'getStatus',
-            'loadbalancerId' => 'getLoadbalancerId',
-            'loadbalancers' => 'getLoadbalancers',
             'createdAt' => 'getCreatedAt',
             'updatedAt' => 'getUpdatedAt',
             'memberType' => 'getMemberType',
@@ -340,19 +290,14 @@ class Member implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['subnetCidrId'] = isset($data['subnetCidrId']) ? $data['subnetCidrId'] : null;
         $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
-        $this->container['deviceOwner'] = isset($data['deviceOwner']) ? $data['deviceOwner'] : null;
-        $this->container['deviceId'] = isset($data['deviceId']) ? $data['deviceId'] : null;
         $this->container['operatingStatus'] = isset($data['operatingStatus']) ? $data['operatingStatus'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
-        $this->container['loadbalancers'] = isset($data['loadbalancers']) ? $data['loadbalancers'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['memberType'] = isset($data['memberType']) ? $data['memberType'] : null;
@@ -496,30 +441,6 @@ class Member implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets poolId
-    *  所在后端服务器组ID。  不支持该字段，请勿使用。
-    *
-    * @return string|null
-    */
-    public function getPoolId()
-    {
-        return $this->container['poolId'];
-    }
-
-    /**
-    * Sets poolId
-    *
-    * @param string|null $poolId 所在后端服务器组ID。  不支持该字段，请勿使用。
-    *
-    * @return $this
-    */
-    public function setPoolId($poolId)
-    {
-        $this->container['poolId'] = $poolId;
-        return $this;
-    }
-
-    /**
     * Gets adminStateUp
     *  后端云服务器的管理状态。  取值：true、false。  虽然创建、更新请求支持该字段，但实际取值决定于后端云服务器对应的弹性云服务器是否存在。若存在，该值为true，否则，该值为false。
     *
@@ -545,7 +466,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetCidrId
-    *  后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    *  后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     *
     * @return string|null
     */
@@ -557,7 +478,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets subnetCidrId
     *
-    * @param string|null $subnetCidrId 后端云服务器所在子网的IPv4子网ID或IPv6子网ID。  若所属的LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  使用说明：该子网和关联的负载均衡器的子网必须在同一VPC下。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
+    * @param string|null $subnetCidrId 后端云服务器所在的子网，可以是IPv4或IPv6子网。若是IPv4子网，使用对应子网的子网ID（neutron_subnet_id）；若是IPv6子网，使用对应子网的网络ID（neutron_network_id）。  ipv4子网的子网ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_subnet_id得到  ipv6子网的网络ID可以通过GET https://{VPC_Endpoint}/v1/{project_id}/subnets 响应参数中的neutron_network_id得到  使用说明： - 该子网和关联的负载均衡器的子网必须在同一VPC下。 - 若所属LB的跨VPC后端转发特性已开启，则该字段可以不传，表示添加跨VPC的后端服务器。 此时address必须为IPv4地址，所在的pool的协议必须为TCP/HTTP/HTTPS。  [不支持IPv6，请勿设置为IPv6子网ID。](tag:dt,dt_test)
     *
     * @return $this
     */
@@ -617,7 +538,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    *  后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     *
     * @return string
     */
@@ -629,7 +550,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string $address 后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
+    * @param string $address 后端服务器对应的IP地址。  使用说明： - 若subnet_cidr_id为空，表示添加跨VPC后端，此时address必须为IPv4地址。 - 若subnet_cidr_id不为空，表示是一个关联到ECS的后端服务器。该IP地址可以是私网IPv4或IPv6。 但必须在subnet_cidr_id对应的子网网段中。且只能指定为关联ECS的主网卡内网IP。  [不支持IPv6，请勿设置为IPv6地址。](tag:dt,dt_test)
     *
     * @return $this
     */
@@ -660,54 +581,6 @@ class Member implements ModelInterface, ArrayAccess
     public function setIpVersion($ipVersion)
     {
         $this->container['ipVersion'] = $ipVersion;
-        return $this;
-    }
-
-    /**
-    * Gets deviceOwner
-    *  设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    *
-    * @return string|null
-    */
-    public function getDeviceOwner()
-    {
-        return $this->container['deviceOwner'];
-    }
-
-    /**
-    * Sets deviceOwner
-    *
-    * @param string|null $deviceOwner 设备所有者。  取值： - 空，表示后端服务器未关联到ECS。 - compute:{az_name}，表示关联到ECS，其中{az_name}表示ECS所在可用区名。  不支持该字段，请勿使用。
-    *
-    * @return $this
-    */
-    public function setDeviceOwner($deviceOwner)
-    {
-        $this->container['deviceOwner'] = $deviceOwner;
-        return $this;
-    }
-
-    /**
-    * Gets deviceId
-    *  关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
-    *
-    * @return string|null
-    */
-    public function getDeviceId()
-    {
-        return $this->container['deviceId'];
-    }
-
-    /**
-    * Sets deviceId
-    *
-    * @param string|null $deviceId 关联的ECS ID，为空表示后端服务器未关联到ECS。  不支持该字段，请勿使用。
-    *
-    * @return $this
-    */
-    public function setDeviceId($deviceId)
-    {
-        $this->container['deviceId'] = $deviceId;
         return $this;
     }
 
@@ -760,56 +633,8 @@ class Member implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets loadbalancerId
-    *  所属负载均衡器ID。  不支持该字段，请勿使用。
-    *
-    * @return string|null
-    */
-    public function getLoadbalancerId()
-    {
-        return $this->container['loadbalancerId'];
-    }
-
-    /**
-    * Sets loadbalancerId
-    *
-    * @param string|null $loadbalancerId 所属负载均衡器ID。  不支持该字段，请勿使用。
-    *
-    * @return $this
-    */
-    public function setLoadbalancerId($loadbalancerId)
-    {
-        $this->container['loadbalancerId'] = $loadbalancerId;
-        return $this;
-    }
-
-    /**
-    * Gets loadbalancers
-    *  后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    *
-    * @return \HuaweiCloud\SDK\Elb\V3\Model\ResourceID[]|null
-    */
-    public function getLoadbalancers()
-    {
-        return $this->container['loadbalancers'];
-    }
-
-    /**
-    * Sets loadbalancers
-    *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\ResourceID[]|null $loadbalancers 后端云服务器关联的负载均衡器ID列表。  不支持该字段，请勿使用。
-    *
-    * @return $this
-    */
-    public function setLoadbalancers($loadbalancers)
-    {
-        $this->container['loadbalancers'] = $loadbalancers;
-        return $this;
-    }
-
-    /**
     * Gets createdAt
-    *  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    *  创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     *
     * @return string|null
     */
@@ -821,7 +646,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param string|null $createdAt 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * @param string|null $createdAt 创建时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     *
     * @return $this
     */
@@ -833,7 +658,7 @@ class Member implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    *  更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     *
     * @return string|null
     */
@@ -845,7 +670,7 @@ class Member implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param string|null $updatedAt 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,fcs,dt,hk_tm)
+    * @param string|null $updatedAt 更新时间。格式：yyyy-MM-dd'T'HH:mm:ss'Z'，UTC时区。  [注意：独享型实例的历史数据以及共享型实例下的资源，不返回该字段。 ](tag:hws,hws_hk,ocb,ctc,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt,hk_tm)
     *
     * @return $this
     */
