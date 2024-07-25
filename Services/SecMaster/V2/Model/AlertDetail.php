@@ -25,6 +25,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
+    * type  数据类型
     * projectId  当前项目的id
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * version  版本
@@ -38,6 +39,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
             'dataclassRef' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertDetailDataclassRef',
             'formatVersion' => 'int',
             'id' => 'string',
+            'type' => 'string',
             'projectId' => 'string',
             'updateTime' => 'string',
             'version' => 'int',
@@ -51,6 +53,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
+    * type  数据类型
     * projectId  当前项目的id
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * version  版本
@@ -64,6 +67,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
         'dataclassRef' => null,
         'formatVersion' => null,
         'id' => null,
+        'type' => null,
         'projectId' => null,
         'updateTime' => null,
         'version' => null,
@@ -98,6 +102,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
+    * type  数据类型
     * projectId  当前项目的id
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * version  版本
@@ -111,6 +116,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
             'dataclassRef' => 'dataclass_ref',
             'formatVersion' => 'format_version',
             'id' => 'id',
+            'type' => 'type',
             'projectId' => 'project_id',
             'updateTime' => 'update_time',
             'version' => 'version',
@@ -124,6 +130,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
+    * type  数据类型
     * projectId  当前项目的id
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * version  版本
@@ -137,6 +144,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
             'dataclassRef' => 'setDataclassRef',
             'formatVersion' => 'setFormatVersion',
             'id' => 'setId',
+            'type' => 'setType',
             'projectId' => 'setProjectId',
             'updateTime' => 'setUpdateTime',
             'version' => 'setVersion',
@@ -150,6 +158,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
     * dataclassRef  dataclassRef
     * formatVersion  格式版本
     * id  事件唯一标识，UUID格式，最大36个字符
+    * type  数据类型
     * projectId  当前项目的id
     * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     * version  版本
@@ -163,6 +172,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
             'dataclassRef' => 'getDataclassRef',
             'formatVersion' => 'getFormatVersion',
             'id' => 'getId',
+            'type' => 'getType',
             'projectId' => 'getProjectId',
             'updateTime' => 'getUpdateTime',
             'version' => 'getVersion',
@@ -232,6 +242,7 @@ class AlertDetail implements ModelInterface, ArrayAccess
         $this->container['dataclassRef'] = isset($data['dataclassRef']) ? $data['dataclassRef'] : null;
         $this->container['formatVersion'] = isset($data['formatVersion']) ? $data['formatVersion'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
@@ -263,6 +274,12 @@ class AlertDetail implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) > 64)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['type']) && (mb_strlen($this->container['type']) < 0)) {
+                $invalidProperties[] = "invalid value for 'type', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 64.";
@@ -419,6 +436,30 @@ class AlertDetail implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  数据类型
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 数据类型
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

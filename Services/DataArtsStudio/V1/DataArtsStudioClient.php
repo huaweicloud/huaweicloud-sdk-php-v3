@@ -638,6 +638,71 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 批量删除动态脱敏策略
+     *
+     * 批量删除动态脱敏策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchDeleteSecurityDynamicMaskingPolicies($request)
+    {
+        return $this->batchDeleteSecurityDynamicMaskingPoliciesWithHttpInfo($request);
+    }
+
+    public function batchDeleteSecurityDynamicMaskingPoliciesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/masking/dynamic/policies/batch-delete';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchDeleteSecurityDynamicMaskingPoliciesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\BatchDeleteSecurityDynamicMaskingPoliciesRequest');
+    }
+
+    /**
      * 批量删除权限集成员
      *
      * 批量删除权限集成员
@@ -3164,6 +3229,71 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityDataClassificationRuleResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityDataClassificationRuleRequest');
+    }
+
+    /**
+     * 创建数据脱敏策略
+     *
+     * 创建动态数据脱敏策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createSecurityDynamicMaskingPolicy($request)
+    {
+        return $this->createSecurityDynamicMaskingPolicyWithHttpInfo($request);
+    }
+
+    public function createSecurityDynamicMaskingPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/masking/dynamic/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityDynamicMaskingPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\CreateSecurityDynamicMaskingPolicyRequest');
     }
 
     /**
@@ -11533,6 +11663,92 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询动态数据脱敏策略列表
+     *
+     * 查询动态数据脱敏策略列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSecurityDynamicMaskingPolicies($request)
+    {
+        return $this->listSecurityDynamicMaskingPoliciesWithHttpInfo($request);
+    }
+
+    public function listSecurityDynamicMaskingPoliciesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/masking/dynamic/policies';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['clusterName'] !== null) {
+            $queryParams['cluster_name'] = $localVarParams['clusterName'];
+        }
+        if ($localVarParams['databaseName'] !== null) {
+            $queryParams['database_name'] = $localVarParams['databaseName'];
+        }
+        if ($localVarParams['tableName'] !== null) {
+            $queryParams['table_name'] = $localVarParams['tableName'];
+        }
+        if ($localVarParams['orderBy'] !== null) {
+            $queryParams['order_by'] = $localVarParams['orderBy'];
+        }
+        if ($localVarParams['orderByAsc'] !== null) {
+            $queryParams['order_by_asc'] = $localVarParams['orderByAsc'];
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityDynamicMaskingPoliciesResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListSecurityDynamicMaskingPoliciesRequest');
+    }
+
+    /**
      * 查询用户同步列表
      *
      * 查询用户同步列表。
@@ -18502,6 +18718,71 @@ class DataArtsStudioClient extends Client
     }
 
     /**
+     * 查询某个脱敏策略的详细信息
+     *
+     * 查询某个脱敏策略的详细信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSecurityDynamicMaskingPolicy($request)
+    {
+        return $this->showSecurityDynamicMaskingPolicyWithHttpInfo($request);
+    }
+
+    public function showSecurityDynamicMaskingPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/masking/dynamic/policies/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowSecurityDynamicMaskingPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ShowSecurityDynamicMaskingPolicyRequest');
+    }
+
+    /**
      * 查询单个用户同步任务
      *
      * 查询单个用户同步任务。
@@ -20445,6 +20726,74 @@ class DataArtsStudioClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDataClassificationRuleResponse',
             $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDataClassificationRuleRequest');
+    }
+
+    /**
+     * 更新动态数据脱敏策略
+     *
+     * 更新动态数据脱敏策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSecurityDynamicMaskingPolicy($request)
+    {
+        return $this->updateSecurityDynamicMaskingPolicyWithHttpInfo($request);
+    }
+
+    public function updateSecurityDynamicMaskingPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/security/masking/dynamic/policies/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['workspace'] !== null) {
+            $headerParams[$arr['workspace']] = $localVarParams['workspace'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $pathParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDynamicMaskingPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\UpdateSecurityDynamicMaskingPolicyRequest');
     }
 
     /**

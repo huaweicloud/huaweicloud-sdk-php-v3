@@ -21,29 +21,29 @@ class EnableAlertRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ruleId' => 'string',
-            'status' => 'string',
+            'failList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]',
+            'successList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ruleId' => null,
-        'status' => null,
+        'failList' => null,
+        'successList' => null,
         'xRequestId' => null
     ];
 
@@ -70,43 +70,43 @@ class EnableAlertRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'ruleId' => 'rule_id',
-            'status' => 'status',
+            'failList' => 'fail_list',
+            'successList' => 'success_list',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'ruleId' => 'setRuleId',
-            'status' => 'setStatus',
+            'failList' => 'setFailList',
+            'successList' => 'setSuccessList',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  告警规则 ID。Alert rule ID.
-    * status  启用状态，启用、停用。Status, enabled, disabled.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'ruleId' => 'getRuleId',
-            'status' => 'getStatus',
+            'failList' => 'getFailList',
+            'successList' => 'getSuccessList',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -150,22 +150,7 @@ class EnableAlertRuleResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const STATUS_ENABLED = 'ENABLED';
-    const STATUS_DISABLED = 'DISABLED';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_ENABLED,
-            self::STATUS_DISABLED,
-        ];
-    }
 
 
     /**
@@ -183,8 +168,8 @@ class EnableAlertRuleResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['failList'] = isset($data['failList']) ? $data['failList'] : null;
+        $this->container['successList'] = isset($data['successList']) ? $data['successList'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -196,26 +181,6 @@ class EnableAlertRuleResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ruleId']) && (mb_strlen($this->container['ruleId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['ruleId']) && (mb_strlen($this->container['ruleId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be bigger than or equal to 36.";
-            }
-            $allowedValues = $this->getStatusAllowableValues();
-                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 255)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 1)) {
-                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -231,50 +196,50 @@ class EnableAlertRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ruleId
-    *  告警规则 ID。Alert rule ID.
+    * Gets failList
+    *  Alert rule ID.
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null
     */
-    public function getRuleId()
+    public function getFailList()
     {
-        return $this->container['ruleId'];
+        return $this->container['failList'];
     }
 
     /**
-    * Sets ruleId
+    * Sets failList
     *
-    * @param string|null $ruleId 告警规则 ID。Alert rule ID.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null $failList Alert rule ID.
     *
     * @return $this
     */
-    public function setRuleId($ruleId)
+    public function setFailList($failList)
     {
-        $this->container['ruleId'] = $ruleId;
+        $this->container['failList'] = $failList;
         return $this;
     }
 
     /**
-    * Gets status
-    *  启用状态，启用、停用。Status, enabled, disabled.
+    * Gets successList
+    *  Alert rule ID.
     *
-    * @return string|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null
     */
-    public function getStatus()
+    public function getSuccessList()
     {
-        return $this->container['status'];
+        return $this->container['successList'];
     }
 
     /**
-    * Sets status
+    * Sets successList
     *
-    * @param string|null $status 启用状态，启用、停用。Status, enabled, disabled.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null $successList Alert rule ID.
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setSuccessList($successList)
     {
-        $this->container['status'] = $status;
+        $this->container['successList'] = $successList;
         return $this;
     }
 

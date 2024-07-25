@@ -189,7 +189,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ENGINE_TYPE_TRINO = 'trino';
+    const ENGINE_TYPE_HETU_ENGINE = 'hetuEngine';
     const ENGINE_TYPE_SPARK = 'spark';
     
 
@@ -201,7 +201,7 @@ class CreateSqlJobRequestBody implements ModelInterface, ArrayAccess
     public function getEngineTypeAllowableValues()
     {
         return [
-            self::ENGINE_TYPE_TRINO,
+            self::ENGINE_TYPE_HETU_ENGINE,
             self::ENGINE_TYPE_SPARK,
         ];
     }

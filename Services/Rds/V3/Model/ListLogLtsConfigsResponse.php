@@ -21,20 +21,26 @@ class ListLogLtsConfigsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * instanceLtsConfigs  实例的LTS配置
+    * totalCount  结果集大小
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'instanceLtsConfigs' => '\HuaweiCloud\SDK\Rds\V3\Model\InstanceLtsConfigResp[]',
+            'totalCount' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * instanceLtsConfigs  实例的LTS配置
+    * totalCount  结果集大小
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'instanceLtsConfigs' => null,
+        'totalCount' => 'int32'
     ];
 
     /**
@@ -60,29 +66,38 @@ class ListLogLtsConfigsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * instanceLtsConfigs  实例的LTS配置
+    * totalCount  结果集大小
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'instanceLtsConfigs' => 'instance_lts_configs',
+            'totalCount' => 'total_count'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * instanceLtsConfigs  实例的LTS配置
+    * totalCount  结果集大小
     *
     * @var string[]
     */
     protected static $setters = [
+            'instanceLtsConfigs' => 'setInstanceLtsConfigs',
+            'totalCount' => 'setTotalCount'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * instanceLtsConfigs  实例的LTS配置
+    * totalCount  结果集大小
     *
     * @var string[]
     */
     protected static $getters = [
+            'instanceLtsConfigs' => 'getInstanceLtsConfigs',
+            'totalCount' => 'getTotalCount'
     ];
 
     /**
@@ -143,6 +158,8 @@ class ListLogLtsConfigsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['instanceLtsConfigs'] = isset($data['instanceLtsConfigs']) ? $data['instanceLtsConfigs'] : null;
+        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
     }
 
     /**
@@ -165,6 +182,54 @@ class ListLogLtsConfigsResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets instanceLtsConfigs
+    *  实例的LTS配置
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\InstanceLtsConfigResp[]|null
+    */
+    public function getInstanceLtsConfigs()
+    {
+        return $this->container['instanceLtsConfigs'];
+    }
+
+    /**
+    * Sets instanceLtsConfigs
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\InstanceLtsConfigResp[]|null $instanceLtsConfigs 实例的LTS配置
+    *
+    * @return $this
+    */
+    public function setInstanceLtsConfigs($instanceLtsConfigs)
+    {
+        $this->container['instanceLtsConfigs'] = $instanceLtsConfigs;
+        return $this;
+    }
+
+    /**
+    * Gets totalCount
+    *  结果集大小
+    *
+    * @return int|null
+    */
+    public function getTotalCount()
+    {
+        return $this->container['totalCount'];
+    }
+
+    /**
+    * Sets totalCount
+    *
+    * @param int|null $totalCount 结果集大小
+    *
+    * @return $this
+    */
+    public function setTotalCount($totalCount)
+    {
+        $this->container['totalCount'] = $totalCount;
+        return $this;
     }
 
     /**

@@ -34,6 +34,11 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     * simulation  模拟告警。Simulation.
     * schedule  schedule
     * triggers  告警触发规则。Alert triggers.
+    * pipeName  管道名称
+    * alertName  告警名称
+    * alertDescription  告警描述
+    * alertRemediation  修复建议
+    * accumulatedTimes  执行次数
     *
     * @var string[]
     */
@@ -51,7 +56,12 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
             'suspression' => 'bool',
             'simulation' => 'bool',
             'schedule' => '\HuaweiCloud\SDK\SecMaster\V2\Model\Schedule',
-            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]'
+            'triggers' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRuleTrigger[]',
+            'pipeName' => 'string',
+            'alertName' => 'string',
+            'alertDescription' => 'string',
+            'alertRemediation' => 'string',
+            'accumulatedTimes' => 'int'
     ];
 
     /**
@@ -70,6 +80,11 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     * simulation  模拟告警。Simulation.
     * schedule  schedule
     * triggers  告警触发规则。Alert triggers.
+    * pipeName  管道名称
+    * alertName  告警名称
+    * alertDescription  告警描述
+    * alertRemediation  修复建议
+    * accumulatedTimes  执行次数
     *
     * @var string[]
     */
@@ -87,7 +102,12 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
         'suspression' => null,
         'simulation' => null,
         'schedule' => null,
-        'triggers' => null
+        'triggers' => null,
+        'pipeName' => null,
+        'alertName' => null,
+        'alertDescription' => null,
+        'alertRemediation' => null,
+        'accumulatedTimes' => 'int32'
     ];
 
     /**
@@ -127,6 +147,11 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     * simulation  模拟告警。Simulation.
     * schedule  schedule
     * triggers  告警触发规则。Alert triggers.
+    * pipeName  管道名称
+    * alertName  告警名称
+    * alertDescription  告警描述
+    * alertRemediation  修复建议
+    * accumulatedTimes  执行次数
     *
     * @var string[]
     */
@@ -144,7 +169,12 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
             'suspression' => 'suspression',
             'simulation' => 'simulation',
             'schedule' => 'schedule',
-            'triggers' => 'triggers'
+            'triggers' => 'triggers',
+            'pipeName' => 'pipe_name',
+            'alertName' => 'alert_name',
+            'alertDescription' => 'alert_description',
+            'alertRemediation' => 'alert_remediation',
+            'accumulatedTimes' => 'accumulated_times'
     ];
 
     /**
@@ -163,6 +193,11 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     * simulation  模拟告警。Simulation.
     * schedule  schedule
     * triggers  告警触发规则。Alert triggers.
+    * pipeName  管道名称
+    * alertName  告警名称
+    * alertDescription  告警描述
+    * alertRemediation  修复建议
+    * accumulatedTimes  执行次数
     *
     * @var string[]
     */
@@ -180,7 +215,12 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
             'suspression' => 'setSuspression',
             'simulation' => 'setSimulation',
             'schedule' => 'setSchedule',
-            'triggers' => 'setTriggers'
+            'triggers' => 'setTriggers',
+            'pipeName' => 'setPipeName',
+            'alertName' => 'setAlertName',
+            'alertDescription' => 'setAlertDescription',
+            'alertRemediation' => 'setAlertRemediation',
+            'accumulatedTimes' => 'setAccumulatedTimes'
     ];
 
     /**
@@ -199,6 +239,11 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     * simulation  模拟告警。Simulation.
     * schedule  schedule
     * triggers  告警触发规则。Alert triggers.
+    * pipeName  管道名称
+    * alertName  告警名称
+    * alertDescription  告警描述
+    * alertRemediation  修复建议
+    * accumulatedTimes  执行次数
     *
     * @var string[]
     */
@@ -216,7 +261,12 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
             'suspression' => 'getSuspression',
             'simulation' => 'getSimulation',
             'schedule' => 'getSchedule',
-            'triggers' => 'getTriggers'
+            'triggers' => 'getTriggers',
+            'pipeName' => 'getPipeName',
+            'alertName' => 'getAlertName',
+            'alertDescription' => 'getAlertDescription',
+            'alertRemediation' => 'getAlertRemediation',
+            'accumulatedTimes' => 'getAccumulatedTimes'
     ];
 
     /**
@@ -340,6 +390,11 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['simulation'] = isset($data['simulation']) ? $data['simulation'] : null;
         $this->container['schedule'] = isset($data['schedule']) ? $data['schedule'] : null;
         $this->container['triggers'] = isset($data['triggers']) ? $data['triggers'] : null;
+        $this->container['pipeName'] = isset($data['pipeName']) ? $data['pipeName'] : null;
+        $this->container['alertName'] = isset($data['alertName']) ? $data['alertName'] : null;
+        $this->container['alertDescription'] = isset($data['alertDescription']) ? $data['alertDescription'] : null;
+        $this->container['alertRemediation'] = isset($data['alertRemediation']) ? $data['alertRemediation'] : null;
+        $this->container['accumulatedTimes'] = isset($data['accumulatedTimes']) ? $data['accumulatedTimes'] : null;
     }
 
     /**
@@ -430,6 +485,12 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
         }
         if ($this->container['triggers'] === null) {
             $invalidProperties[] = "'triggers' can't be null";
+        }
+        if ($this->container['pipeName'] === null) {
+            $invalidProperties[] = "'pipeName' can't be null";
+        }
+        if ($this->container['alertName'] === null) {
+            $invalidProperties[] = "'alertName' can't be null";
         }
         return $invalidProperties;
     }
@@ -778,6 +839,126 @@ class CreateAlertRuleRequestBody implements ModelInterface, ArrayAccess
     public function setTriggers($triggers)
     {
         $this->container['triggers'] = $triggers;
+        return $this;
+    }
+
+    /**
+    * Gets pipeName
+    *  管道名称
+    *
+    * @return string
+    */
+    public function getPipeName()
+    {
+        return $this->container['pipeName'];
+    }
+
+    /**
+    * Sets pipeName
+    *
+    * @param string $pipeName 管道名称
+    *
+    * @return $this
+    */
+    public function setPipeName($pipeName)
+    {
+        $this->container['pipeName'] = $pipeName;
+        return $this;
+    }
+
+    /**
+    * Gets alertName
+    *  告警名称
+    *
+    * @return string
+    */
+    public function getAlertName()
+    {
+        return $this->container['alertName'];
+    }
+
+    /**
+    * Sets alertName
+    *
+    * @param string $alertName 告警名称
+    *
+    * @return $this
+    */
+    public function setAlertName($alertName)
+    {
+        $this->container['alertName'] = $alertName;
+        return $this;
+    }
+
+    /**
+    * Gets alertDescription
+    *  告警描述
+    *
+    * @return string|null
+    */
+    public function getAlertDescription()
+    {
+        return $this->container['alertDescription'];
+    }
+
+    /**
+    * Sets alertDescription
+    *
+    * @param string|null $alertDescription 告警描述
+    *
+    * @return $this
+    */
+    public function setAlertDescription($alertDescription)
+    {
+        $this->container['alertDescription'] = $alertDescription;
+        return $this;
+    }
+
+    /**
+    * Gets alertRemediation
+    *  修复建议
+    *
+    * @return string|null
+    */
+    public function getAlertRemediation()
+    {
+        return $this->container['alertRemediation'];
+    }
+
+    /**
+    * Sets alertRemediation
+    *
+    * @param string|null $alertRemediation 修复建议
+    *
+    * @return $this
+    */
+    public function setAlertRemediation($alertRemediation)
+    {
+        $this->container['alertRemediation'] = $alertRemediation;
+        return $this;
+    }
+
+    /**
+    * Gets accumulatedTimes
+    *  执行次数
+    *
+    * @return int|null
+    */
+    public function getAccumulatedTimes()
+    {
+        return $this->container['accumulatedTimes'];
+    }
+
+    /**
+    * Sets accumulatedTimes
+    *
+    * @param int|null $accumulatedTimes 执行次数
+    *
+    * @return $this
+    */
+    public function setAccumulatedTimes($accumulatedTimes)
+    {
+        $this->container['accumulatedTimes'] = $accumulatedTimes;
         return $this;
     }
 

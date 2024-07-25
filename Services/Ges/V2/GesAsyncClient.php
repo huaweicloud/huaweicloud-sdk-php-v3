@@ -93,6 +93,74 @@ class GesAsyncClient extends Client
     }
 
     /**
+     * 切换安全组
+     *
+     * 该接口可以在图创建成功后，修改图的安全组。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function changeSecurityGroupAsync($request)
+    {
+        return $this->changeSecurityGroupAsyncWithHttpInfo($request);
+    }
+    
+    public function changeSecurityGroupAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/graphs/{graph_id}/sg/change';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['graphId'] !== null) {
+            $pathParams['graph_id'] = $localVarParams['graphId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ges\V2\Model\ChangeSecurityGroupResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ges\V2\Model\ChangeSecurityGroupRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 清空图
      *
      * 清空图中所有数据。
@@ -1519,6 +1587,74 @@ class GesAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Ges\V2\Model\RestartGraph2Response',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Ges\V2\Model\RestartGraph2Request',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 获取备份下载链接
+     *
+     * 获取备份下载链接
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBackupDownloadLinkAsync($request)
+    {
+        return $this->showBackupDownloadLinkAsyncWithHttpInfo($request);
+    }
+    
+    public function showBackupDownloadLinkAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/graphs/{graph_id}/backup-files';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['backupId'] !== null) {
+            $queryParams['backup_id'] = $localVarParams['backupId'];
+        }
+        if ($localVarParams['graphId'] !== null) {
+            $pathParams['graph_id'] = $localVarParams['graphId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ges\V2\Model\ShowBackupDownloadLinkResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Ges\V2\Model\ShowBackupDownloadLinkRequest',
             $asyncRequest = true);
     }
 

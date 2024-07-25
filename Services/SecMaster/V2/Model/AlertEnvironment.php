@@ -22,7 +22,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
     * domainId  租户id
-    * regionId  区域od，全局服务global
+    * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
@@ -40,7 +40,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
     * domainId  租户id
-    * regionId  区域od，全局服务global
+    * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
@@ -79,7 +79,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * and the value is the original name
     * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
     * domainId  租户id
-    * regionId  区域od，全局服务global
+    * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
@@ -97,7 +97,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
     * domainId  租户id
-    * regionId  区域od，全局服务global
+    * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
@@ -115,7 +115,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * vendorType  环境供应商：HWCP/HWC/AWS/Azure/GCP
     * domainId  租户id
-    * regionId  区域od，全局服务global
+    * regionId  区域id，全局服务global
     * crossWorkspaceId  数据投递前的源工作空间id，在源空间下值为null，投递后为被委托用户的id
     * projectId  项目id， 全局服务默认null
     *
@@ -296,7 +296,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域od，全局服务global
+    *  区域id，全局服务global
     *
     * @return string|null
     */
@@ -308,7 +308,7 @@ class AlertEnvironment implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 区域od，全局服务global
+    * @param string|null $regionId 区域id，全局服务global
     *
     * @return $this
     */

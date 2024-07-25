@@ -20,8 +20,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  指标ID列表
-    * name  指标名称
+    * ids  威胁情报ID列表
     * dataclassId  数据类ID
     * condition  condition
     * offset  request offset, from 0
@@ -34,7 +33,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'ids' => 'string[]',
-            'name' => 'string',
             'dataclassId' => 'string',
             'condition' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DataobjectSearchCondition',
             'offset' => 'int',
@@ -46,8 +44,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  指标ID列表
-    * name  指标名称
+    * ids  威胁情报ID列表
     * dataclassId  数据类ID
     * condition  condition
     * offset  request offset, from 0
@@ -60,7 +57,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'ids' => null,
-        'name' => null,
         'dataclassId' => null,
         'condition' => null,
         'offset' => 'int32',
@@ -93,8 +89,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  指标ID列表
-    * name  指标名称
+    * ids  威胁情报ID列表
     * dataclassId  数据类ID
     * condition  condition
     * offset  request offset, from 0
@@ -107,7 +102,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'ids' => 'ids',
-            'name' => 'name',
             'dataclassId' => 'dataclass_id',
             'condition' => 'condition',
             'offset' => 'offset',
@@ -119,8 +113,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  指标ID列表
-    * name  指标名称
+    * ids  威胁情报ID列表
     * dataclassId  数据类ID
     * condition  condition
     * offset  request offset, from 0
@@ -133,7 +126,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'ids' => 'setIds',
-            'name' => 'setName',
             'dataclassId' => 'setDataclassId',
             'condition' => 'setCondition',
             'offset' => 'setOffset',
@@ -145,8 +137,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  指标ID列表
-    * name  指标名称
+    * ids  威胁情报ID列表
     * dataclassId  数据类ID
     * condition  condition
     * offset  request offset, from 0
@@ -159,7 +150,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'ids' => 'getIds',
-            'name' => 'getName',
             'dataclassId' => 'getDataclassId',
             'condition' => 'getCondition',
             'offset' => 'getOffset',
@@ -228,7 +218,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['dataclassId'] = isset($data['dataclassId']) ? $data['dataclassId'] : null;
         $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
@@ -246,12 +235,6 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 0)) {
-                $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['dataclassId']) && (mb_strlen($this->container['dataclassId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'dataclassId', the character length must be smaller than or equal to 64.";
             }
@@ -313,7 +296,7 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  指标ID列表
+    *  威胁情报ID列表
     *
     * @return string[]|null
     */
@@ -325,37 +308,13 @@ class IndicatorListSearchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string[]|null $ids 指标ID列表
+    * @param string[]|null $ids 威胁情报ID列表
     *
     * @return $this
     */
     public function setIds($ids)
     {
         $this->container['ids'] = $ids;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  指标名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 指标名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
         return $this;
     }
 

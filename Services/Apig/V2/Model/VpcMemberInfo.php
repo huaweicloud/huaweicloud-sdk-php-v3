@@ -22,7 +22,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -32,6 +32,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * vpcChannelId  VPC通道的编号
     * createTime  后端实例增加到VPC通道的时间
     * memberGroupId  后端服务器组编号
+    * healthStatus  负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
     *
     * @var string[]
     */
@@ -47,14 +48,15 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'vpcChannelId' => 'string',
             'createTime' => '\DateTime',
-            'memberGroupId' => 'string'
+            'memberGroupId' => 'string',
+            'healthStatus' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -64,6 +66,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * vpcChannelId  VPC通道的编号
     * createTime  后端实例增加到VPC通道的时间
     * memberGroupId  后端服务器组编号
+    * healthStatus  负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'vpcChannelId' => null,
         'createTime' => 'date-time',
-        'memberGroupId' => null
+        'memberGroupId' => null,
+        'healthStatus' => null
     ];
 
     /**
@@ -107,7 +111,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -117,6 +121,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * vpcChannelId  VPC通道的编号
     * createTime  后端实例增加到VPC通道的时间
     * memberGroupId  后端服务器组编号
+    * healthStatus  负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
     *
     * @var string[]
     */
@@ -132,14 +137,15 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'vpcChannelId' => 'vpc_channel_id',
             'createTime' => 'create_time',
-            'memberGroupId' => 'member_group_id'
+            'memberGroupId' => 'member_group_id',
+            'healthStatus' => 'health_status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -149,6 +155,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * vpcChannelId  VPC通道的编号
     * createTime  后端实例增加到VPC通道的时间
     * memberGroupId  后端服务器组编号
+    * healthStatus  负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
     *
     * @var string[]
     */
@@ -164,14 +171,15 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'vpcChannelId' => 'setVpcChannelId',
             'createTime' => 'setCreateTime',
-            'memberGroupId' => 'setMemberGroupId'
+            'memberGroupId' => 'setMemberGroupId',
+            'healthStatus' => 'setHealthStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -181,6 +189,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     * vpcChannelId  VPC通道的编号
     * createTime  后端实例增加到VPC通道的时间
     * memberGroupId  后端服务器组编号
+    * healthStatus  负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'vpcChannelId' => 'getVpcChannelId',
             'createTime' => 'getCreateTime',
-            'memberGroupId' => 'getMemberGroupId'
+            'memberGroupId' => 'getMemberGroupId',
+            'healthStatus' => 'getHealthStatus'
     ];
 
     /**
@@ -241,6 +251,9 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     }
     const STATUS_1 = 1;
     const STATUS_2 = 2;
+    const HEALTH_STATUS_HEALTHY = 'healthy';
+    const HEALTH_STATUS_UNHEALTHY = 'unhealthy';
+    const HEALTH_STATUS_UNKNOWN = 'unknown';
     
 
     /**
@@ -253,6 +266,20 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
         return [
             self::STATUS_1,
             self::STATUS_2,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHealthStatusAllowableValues()
+    {
+        return [
+            self::HEALTH_STATUS_HEALTHY,
+            self::HEALTH_STATUS_UNHEALTHY,
+            self::HEALTH_STATUS_UNKNOWN,
         ];
     }
 
@@ -284,6 +311,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
         $this->container['vpcChannelId'] = isset($data['vpcChannelId']) ? $data['vpcChannelId'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['memberGroupId'] = isset($data['memberGroupId']) ? $data['memberGroupId'] : null;
+        $this->container['healthStatus'] = isset($data['healthStatus']) ? $data['healthStatus'] : null;
     }
 
     /**
@@ -294,8 +322,8 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) > 64)) {
-                $invalidProperties[] = "invalid value for 'host', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) > 255)) {
+                $invalidProperties[] = "invalid value for 'host', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['weight']) && ($this->container['weight'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 10000.";
@@ -323,6 +351,14 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['ecsName']) && (mb_strlen($this->container['ecsName']) > 64)) {
                 $invalidProperties[] = "invalid value for 'ecsName', the character length must be smaller than or equal to 64.";
             }
+            $allowedValues = $this->getHealthStatusAllowableValues();
+                if (!is_null($this->container['healthStatus']) && !in_array($this->container['healthStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'healthStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -387,7 +423,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isBackup
-    *  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    *  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     *
     * @return bool|null
     */
@@ -399,7 +435,7 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isBackup
     *
-    * @param bool|null $isBackup 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * @param bool|null $isBackup 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     *
     * @return $this
     */
@@ -622,6 +658,30 @@ class VpcMemberInfo implements ModelInterface, ArrayAccess
     public function setMemberGroupId($memberGroupId)
     {
         $this->container['memberGroupId'] = $memberGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets healthStatus
+    *  负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
+    *
+    * @return string|null
+    */
+    public function getHealthStatus()
+    {
+        return $this->container['healthStatus'];
+    }
+
+    /**
+    * Sets healthStatus
+    *
+    * @param string|null $healthStatus 负载通道后端实例健康状态，unknown、healthy、unhealthy分别标识未做健康检查、健康、不健康。
+    *
+    * @return $this
+    */
+    public function setHealthStatus($healthStatus)
+    {
+        $this->container['healthStatus'] = $healthStatus;
         return $this;
     }
 

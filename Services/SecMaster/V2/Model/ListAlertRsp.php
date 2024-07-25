@@ -20,53 +20,61 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  版本
+    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * id  事件唯一标识，UUID格式，最大36个字符
+    * domainId  数据投递后，被委托用户的domain_id
+    * regionId  数据投递后，被委托用户的region_id
+    * workspaceId  当前的工作空间id
+    * labels  标签，仅展示
     * environment  environment
     * dataSource  dataSource
-    * firstObservedTime  Update time
-    * lastObservedTime  Update time
-    * createTime  Create time
-    * arriveTime  Update time
-    * title  The name, display only
-    * description  The description, display only
-    * sourceUrl  事件URL链接
+    * firstObservedTime  首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * lastObservedTime  最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * arriveTime  接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * title  告警标题
+    * description  告警描述信息
+    * sourceUrl  告警URL链接，指向数据源产品中有关当前事件说明的页面
     * count  事件发生次数
-    * confidence  置信度
-    * severity  严重性等级
-    * criticality  关键性，是指事件涉及的资源的重要性级别。
-    * alertType  事件分类
-    * networkList  network_list
-    * resourceList  network_list
+    * confidence  事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
+    * severity  严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
+    * criticality  关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
+    * alertType  alertType
+    * networkList  网络信息
+    * resourceList  受影响资源
     * remediation  remediation
-    * verificationState  验证状态
-    * handleStatus  事件处理状态
-    * sla  sla
-    * updateTime  Create time
-    * closeTime  Create time
-    * chopPhase  周期/处置阶段编号
-    * ipdrrPhase  周期/处置阶段编号
-    * ppdrPhase  周期/处置阶段编号
-    * simulation  是否为调试事件.
-    * actor  委托人
-    * owner  The name, display only
-    * creator  The name, display only
-    * closeReason  关闭原因
-    * closeComment  关闭原因
+    * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
+    * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
+    * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * simulation  调试字段
+    * actor  告警调查员
+    * owner  责任人、服务责任人
+    * creator  创建人
+    * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
+    * closeComment  关闭评论
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
-    * systemAlertTable  系统信息
-    * id  Id value
-    * workspaceId  workspace id
+    * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'version' => 'string',
-            'environment' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspEnvironment',
-            'dataSource' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource',
+            'id' => 'string',
+            'domainId' => 'string',
+            'regionId' => 'string',
+            'workspaceId' => 'string',
+            'labels' => 'string',
+            'environment' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertEnvironment',
+            'dataSource' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertDataSource',
             'firstObservedTime' => 'string',
             'lastObservedTime' => 'string',
             'createTime' => 'string',
@@ -78,17 +86,17 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'confidence' => 'int',
             'severity' => 'string',
             'criticality' => 'int',
-            'alertType' => 'object',
-            'networkList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspNetworkList[]',
-            'resourceList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspResourceList[]',
-            'remediation' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspRemediation',
+            'alertType' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertAlertType',
+            'networkList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertNetworkList[]',
+            'resourceList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertResourceList[]',
+            'remediation' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRemediation',
             'verificationState' => 'string',
             'handleStatus' => 'string',
             'sla' => 'string',
             'updateTime' => 'string',
             'closeTime' => 'string',
-            'chopPhase' => 'string',
             'ipdrrPhase' => 'string',
+            'chopPhase' => 'string',
             'ppdrPhase' => 'string',
             'simulation' => 'string',
             'actor' => 'string',
@@ -98,61 +106,67 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'closeComment' => 'string',
             'malware' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspMalware',
             'systemInfo' => 'object',
-            'process' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspProcess[]',
-            'userInfo' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspUserInfo[]',
-            'fileInfo' => '\HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspFileInfo[]',
-            'systemAlertTable' => 'object',
-            'id' => 'string',
-            'workspaceId' => 'string'
+            'process' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertProcess[]',
+            'userInfo' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertUserInfo[]',
+            'fileInfo' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertFileInfo[]',
+            'systemAlertTable' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  版本
+    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * id  事件唯一标识，UUID格式，最大36个字符
+    * domainId  数据投递后，被委托用户的domain_id
+    * regionId  数据投递后，被委托用户的region_id
+    * workspaceId  当前的工作空间id
+    * labels  标签，仅展示
     * environment  environment
     * dataSource  dataSource
-    * firstObservedTime  Update time
-    * lastObservedTime  Update time
-    * createTime  Create time
-    * arriveTime  Update time
-    * title  The name, display only
-    * description  The description, display only
-    * sourceUrl  事件URL链接
+    * firstObservedTime  首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * lastObservedTime  最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * arriveTime  接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * title  告警标题
+    * description  告警描述信息
+    * sourceUrl  告警URL链接，指向数据源产品中有关当前事件说明的页面
     * count  事件发生次数
-    * confidence  置信度
-    * severity  严重性等级
-    * criticality  关键性，是指事件涉及的资源的重要性级别。
-    * alertType  事件分类
-    * networkList  network_list
-    * resourceList  network_list
+    * confidence  事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
+    * severity  严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
+    * criticality  关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
+    * alertType  alertType
+    * networkList  网络信息
+    * resourceList  受影响资源
     * remediation  remediation
-    * verificationState  验证状态
-    * handleStatus  事件处理状态
-    * sla  sla
-    * updateTime  Create time
-    * closeTime  Create time
-    * chopPhase  周期/处置阶段编号
-    * ipdrrPhase  周期/处置阶段编号
-    * ppdrPhase  周期/处置阶段编号
-    * simulation  是否为调试事件.
-    * actor  委托人
-    * owner  The name, display only
-    * creator  The name, display only
-    * closeReason  关闭原因
-    * closeComment  关闭原因
+    * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
+    * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
+    * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * simulation  调试字段
+    * actor  告警调查员
+    * owner  责任人、服务责任人
+    * creator  创建人
+    * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
+    * closeComment  关闭评论
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
-    * systemAlertTable  系统信息
-    * id  Id value
-    * workspaceId  workspace id
+    * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'version' => null,
+        'id' => null,
+        'domainId' => null,
+        'regionId' => null,
+        'workspaceId' => null,
+        'labels' => null,
         'environment' => null,
         'dataSource' => null,
         'firstObservedTime' => null,
@@ -175,8 +189,8 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         'sla' => null,
         'updateTime' => null,
         'closeTime' => null,
-        'chopPhase' => null,
         'ipdrrPhase' => null,
+        'chopPhase' => null,
         'ppdrPhase' => null,
         'simulation' => null,
         'actor' => null,
@@ -189,9 +203,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         'process' => null,
         'userInfo' => null,
         'fileInfo' => null,
-        'systemAlertTable' => null,
-        'id' => null,
-        'workspaceId' => null
+        'systemAlertTable' => null
     ];
 
     /**
@@ -217,51 +229,59 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  版本
+    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * id  事件唯一标识，UUID格式，最大36个字符
+    * domainId  数据投递后，被委托用户的domain_id
+    * regionId  数据投递后，被委托用户的region_id
+    * workspaceId  当前的工作空间id
+    * labels  标签，仅展示
     * environment  environment
     * dataSource  dataSource
-    * firstObservedTime  Update time
-    * lastObservedTime  Update time
-    * createTime  Create time
-    * arriveTime  Update time
-    * title  The name, display only
-    * description  The description, display only
-    * sourceUrl  事件URL链接
+    * firstObservedTime  首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * lastObservedTime  最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * arriveTime  接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * title  告警标题
+    * description  告警描述信息
+    * sourceUrl  告警URL链接，指向数据源产品中有关当前事件说明的页面
     * count  事件发生次数
-    * confidence  置信度
-    * severity  严重性等级
-    * criticality  关键性，是指事件涉及的资源的重要性级别。
-    * alertType  事件分类
-    * networkList  network_list
-    * resourceList  network_list
+    * confidence  事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
+    * severity  严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
+    * criticality  关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
+    * alertType  alertType
+    * networkList  网络信息
+    * resourceList  受影响资源
     * remediation  remediation
-    * verificationState  验证状态
-    * handleStatus  事件处理状态
-    * sla  sla
-    * updateTime  Create time
-    * closeTime  Create time
-    * chopPhase  周期/处置阶段编号
-    * ipdrrPhase  周期/处置阶段编号
-    * ppdrPhase  周期/处置阶段编号
-    * simulation  是否为调试事件.
-    * actor  委托人
-    * owner  The name, display only
-    * creator  The name, display only
-    * closeReason  关闭原因
-    * closeComment  关闭原因
+    * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
+    * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
+    * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * simulation  调试字段
+    * actor  告警调查员
+    * owner  责任人、服务责任人
+    * creator  创建人
+    * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
+    * closeComment  关闭评论
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
-    * systemAlertTable  系统信息
-    * id  Id value
-    * workspaceId  workspace id
+    * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'version' => 'version',
+            'id' => 'id',
+            'domainId' => 'domain_id',
+            'regionId' => 'region_id',
+            'workspaceId' => 'workspace_id',
+            'labels' => 'labels',
             'environment' => 'environment',
             'dataSource' => 'data_source',
             'firstObservedTime' => 'first_observed_time',
@@ -284,8 +304,8 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sla' => 'sla',
             'updateTime' => 'update_time',
             'closeTime' => 'close_time',
-            'chopPhase' => 'chop_phase',
             'ipdrrPhase' => 'ipdrr_phase',
+            'chopPhase' => 'chop_phase',
             'ppdrPhase' => 'ppdr_phase',
             'simulation' => 'simulation',
             'actor' => 'actor',
@@ -298,58 +318,64 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'process' => 'process',
             'userInfo' => 'user_info',
             'fileInfo' => 'file_info',
-            'systemAlertTable' => 'system_alert_table',
-            'id' => 'id',
-            'workspaceId' => 'workspace_id'
+            'systemAlertTable' => 'system_alert_table'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  版本
+    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * id  事件唯一标识，UUID格式，最大36个字符
+    * domainId  数据投递后，被委托用户的domain_id
+    * regionId  数据投递后，被委托用户的region_id
+    * workspaceId  当前的工作空间id
+    * labels  标签，仅展示
     * environment  environment
     * dataSource  dataSource
-    * firstObservedTime  Update time
-    * lastObservedTime  Update time
-    * createTime  Create time
-    * arriveTime  Update time
-    * title  The name, display only
-    * description  The description, display only
-    * sourceUrl  事件URL链接
+    * firstObservedTime  首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * lastObservedTime  最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * arriveTime  接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * title  告警标题
+    * description  告警描述信息
+    * sourceUrl  告警URL链接，指向数据源产品中有关当前事件说明的页面
     * count  事件发生次数
-    * confidence  置信度
-    * severity  严重性等级
-    * criticality  关键性，是指事件涉及的资源的重要性级别。
-    * alertType  事件分类
-    * networkList  network_list
-    * resourceList  network_list
+    * confidence  事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
+    * severity  严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
+    * criticality  关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
+    * alertType  alertType
+    * networkList  网络信息
+    * resourceList  受影响资源
     * remediation  remediation
-    * verificationState  验证状态
-    * handleStatus  事件处理状态
-    * sla  sla
-    * updateTime  Create time
-    * closeTime  Create time
-    * chopPhase  周期/处置阶段编号
-    * ipdrrPhase  周期/处置阶段编号
-    * ppdrPhase  周期/处置阶段编号
-    * simulation  是否为调试事件.
-    * actor  委托人
-    * owner  The name, display only
-    * creator  The name, display only
-    * closeReason  关闭原因
-    * closeComment  关闭原因
+    * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
+    * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
+    * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * simulation  调试字段
+    * actor  告警调查员
+    * owner  责任人、服务责任人
+    * creator  创建人
+    * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
+    * closeComment  关闭评论
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
-    * systemAlertTable  系统信息
-    * id  Id value
-    * workspaceId  workspace id
+    * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
     */
     protected static $setters = [
             'version' => 'setVersion',
+            'id' => 'setId',
+            'domainId' => 'setDomainId',
+            'regionId' => 'setRegionId',
+            'workspaceId' => 'setWorkspaceId',
+            'labels' => 'setLabels',
             'environment' => 'setEnvironment',
             'dataSource' => 'setDataSource',
             'firstObservedTime' => 'setFirstObservedTime',
@@ -372,8 +398,8 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sla' => 'setSla',
             'updateTime' => 'setUpdateTime',
             'closeTime' => 'setCloseTime',
-            'chopPhase' => 'setChopPhase',
             'ipdrrPhase' => 'setIpdrrPhase',
+            'chopPhase' => 'setChopPhase',
             'ppdrPhase' => 'setPpdrPhase',
             'simulation' => 'setSimulation',
             'actor' => 'setActor',
@@ -386,58 +412,64 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'process' => 'setProcess',
             'userInfo' => 'setUserInfo',
             'fileInfo' => 'setFileInfo',
-            'systemAlertTable' => 'setSystemAlertTable',
-            'id' => 'setId',
-            'workspaceId' => 'setWorkspaceId'
+            'systemAlertTable' => 'setSystemAlertTable'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  版本
+    * version  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
+    * id  事件唯一标识，UUID格式，最大36个字符
+    * domainId  数据投递后，被委托用户的domain_id
+    * regionId  数据投递后，被委托用户的region_id
+    * workspaceId  当前的工作空间id
+    * labels  标签，仅展示
     * environment  environment
     * dataSource  dataSource
-    * firstObservedTime  Update time
-    * lastObservedTime  Update time
-    * createTime  Create time
-    * arriveTime  Update time
-    * title  The name, display only
-    * description  The description, display only
-    * sourceUrl  事件URL链接
+    * firstObservedTime  首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * lastObservedTime  最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * createTime  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * arriveTime  接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * title  告警标题
+    * description  告警描述信息
+    * sourceUrl  告警URL链接，指向数据源产品中有关当前事件说明的页面
     * count  事件发生次数
-    * confidence  置信度
-    * severity  严重性等级
-    * criticality  关键性，是指事件涉及的资源的重要性级别。
-    * alertType  事件分类
-    * networkList  network_list
-    * resourceList  network_list
+    * confidence  事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
+    * severity  严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
+    * criticality  关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
+    * alertType  alertType
+    * networkList  网络信息
+    * resourceList  受影响资源
     * remediation  remediation
-    * verificationState  验证状态
-    * handleStatus  事件处理状态
-    * sla  sla
-    * updateTime  Create time
-    * closeTime  Create time
-    * chopPhase  周期/处置阶段编号
-    * ipdrrPhase  周期/处置阶段编号
-    * ppdrPhase  周期/处置阶段编号
-    * simulation  是否为调试事件.
-    * actor  委托人
-    * owner  The name, display only
-    * creator  The name, display only
-    * closeReason  关闭原因
-    * closeComment  关闭原因
+    * verificationState  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
+    * handleStatus  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
+    * sla  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * updateTime  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * closeTime  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
+    * ipdrrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * chopPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * ppdrPhase  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    * simulation  调试字段
+    * actor  告警调查员
+    * owner  责任人、服务责任人
+    * creator  创建人
+    * closeReason  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
+    * closeComment  关闭评论
     * malware  malware
     * systemInfo  系统信息
     * process  进程信息
     * userInfo  用户信息
     * fileInfo  文件信息
-    * systemAlertTable  系统信息
-    * id  Id value
-    * workspaceId  workspace id
+    * systemAlertTable  告警管理列表的布局字段
     *
     * @var string[]
     */
     protected static $getters = [
             'version' => 'getVersion',
+            'id' => 'getId',
+            'domainId' => 'getDomainId',
+            'regionId' => 'getRegionId',
+            'workspaceId' => 'getWorkspaceId',
+            'labels' => 'getLabels',
             'environment' => 'getEnvironment',
             'dataSource' => 'getDataSource',
             'firstObservedTime' => 'getFirstObservedTime',
@@ -460,8 +492,8 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'sla' => 'getSla',
             'updateTime' => 'getUpdateTime',
             'closeTime' => 'getCloseTime',
-            'chopPhase' => 'getChopPhase',
             'ipdrrPhase' => 'getIpdrrPhase',
+            'chopPhase' => 'getChopPhase',
             'ppdrPhase' => 'getPpdrPhase',
             'simulation' => 'getSimulation',
             'actor' => 'getActor',
@@ -474,9 +506,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             'process' => 'getProcess',
             'userInfo' => 'getUserInfo',
             'fileInfo' => 'getFileInfo',
-            'systemAlertTable' => 'getSystemAlertTable',
-            'id' => 'getId',
-            'workspaceId' => 'getWorkspaceId'
+            'systemAlertTable' => 'getSystemAlertTable'
     ];
 
     /**
@@ -519,7 +549,138 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const SEVERITY_TIPS = 'Tips';
+    const SEVERITY_LOW = 'Low';
+    const SEVERITY_MEDIUM = 'Medium';
+    const SEVERITY_HIGH = 'High';
+    const SEVERITY_FATAL = 'Fatal';
+    const VERIFICATION_STATE_UNKNOWN = 'Unknown';
+    const VERIFICATION_STATE_TRUE_POSITIVE = 'True_Positive';
+    const VERIFICATION_STATE_FALSE_POSITIVE = 'False_Positive';
+    const HANDLE_STATUS_OPEN = 'Open';
+    const HANDLE_STATUS_BLOCK = 'Block';
+    const HANDLE_STATUS_CLOSED = 'Closed';
+    const IPDRR_PHASE_PREPARTION = 'Prepartion';
+    const IPDRR_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
+    const IPDRR_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const IPDRR_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
+    const CHOP_PHASE_PREPARTION = 'Prepartion';
+    const CHOP_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
+    const CHOP_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const CHOP_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
+    const PPDR_PHASE_PREPARTION = 'Prepartion';
+    const PPDR_PHASE_DETECTION_AND_ANALYSIS = 'Detection and Analysis';
+    const PPDR_PHASE_CONTAINMERADICATION_RECOVERY = 'Containm，Eradication& Recovery';
+    const PPDR_PHASE_POST_INCIDENT_ACTIVITY = 'Post-Incident-Activity';
+    const CLOSE_REASON_FALSE_DETECTION = 'False detection';
+    const CLOSE_REASON_RESOLVED = 'Resolved';
+    const CLOSE_REASON_REPEATED = 'Repeated';
+    const CLOSE_REASON_OTHER = 'Other';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSeverityAllowableValues()
+    {
+        return [
+            self::SEVERITY_TIPS,
+            self::SEVERITY_LOW,
+            self::SEVERITY_MEDIUM,
+            self::SEVERITY_HIGH,
+            self::SEVERITY_FATAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getVerificationStateAllowableValues()
+    {
+        return [
+            self::VERIFICATION_STATE_UNKNOWN,
+            self::VERIFICATION_STATE_TRUE_POSITIVE,
+            self::VERIFICATION_STATE_FALSE_POSITIVE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getHandleStatusAllowableValues()
+    {
+        return [
+            self::HANDLE_STATUS_OPEN,
+            self::HANDLE_STATUS_BLOCK,
+            self::HANDLE_STATUS_CLOSED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getIpdrrPhaseAllowableValues()
+    {
+        return [
+            self::IPDRR_PHASE_PREPARTION,
+            self::IPDRR_PHASE_DETECTION_AND_ANALYSIS,
+            self::IPDRR_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::IPDRR_PHASE_POST_INCIDENT_ACTIVITY,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getChopPhaseAllowableValues()
+    {
+        return [
+            self::CHOP_PHASE_PREPARTION,
+            self::CHOP_PHASE_DETECTION_AND_ANALYSIS,
+            self::CHOP_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::CHOP_PHASE_POST_INCIDENT_ACTIVITY,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPpdrPhaseAllowableValues()
+    {
+        return [
+            self::PPDR_PHASE_PREPARTION,
+            self::PPDR_PHASE_DETECTION_AND_ANALYSIS,
+            self::PPDR_PHASE_CONTAINMERADICATION_RECOVERY,
+            self::PPDR_PHASE_POST_INCIDENT_ACTIVITY,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getCloseReasonAllowableValues()
+    {
+        return [
+            self::CLOSE_REASON_FALSE_DETECTION,
+            self::CLOSE_REASON_RESOLVED,
+            self::CLOSE_REASON_REPEATED,
+            self::CLOSE_REASON_OTHER,
+        ];
+    }
 
 
     /**
@@ -538,6 +699,11 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
+        $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
+        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
+        $this->container['labels'] = isset($data['labels']) ? $data['labels'] : null;
         $this->container['environment'] = isset($data['environment']) ? $data['environment'] : null;
         $this->container['dataSource'] = isset($data['dataSource']) ? $data['dataSource'] : null;
         $this->container['firstObservedTime'] = isset($data['firstObservedTime']) ? $data['firstObservedTime'] : null;
@@ -560,8 +726,8 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         $this->container['sla'] = isset($data['sla']) ? $data['sla'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['closeTime'] = isset($data['closeTime']) ? $data['closeTime'] : null;
-        $this->container['chopPhase'] = isset($data['chopPhase']) ? $data['chopPhase'] : null;
         $this->container['ipdrrPhase'] = isset($data['ipdrrPhase']) ? $data['ipdrrPhase'] : null;
+        $this->container['chopPhase'] = isset($data['chopPhase']) ? $data['chopPhase'] : null;
         $this->container['ppdrPhase'] = isset($data['ppdrPhase']) ? $data['ppdrPhase'] : null;
         $this->container['simulation'] = isset($data['simulation']) ? $data['simulation'] : null;
         $this->container['actor'] = isset($data['actor']) ? $data['actor'] : null;
@@ -575,8 +741,6 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
         $this->container['userInfo'] = isset($data['userInfo']) ? $data['userInfo'] : null;
         $this->container['fileInfo'] = isset($data['fileInfo']) ? $data['fileInfo'] : null;
         $this->container['systemAlertTable'] = isset($data['systemAlertTable']) ? $data['systemAlertTable'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
     }
 
     /**
@@ -590,35 +754,65 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 64)) {
                 $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 1)) {
-                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['firstObservedTime']) && (mb_strlen($this->container['firstObservedTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'firstObservedTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 0)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'domainId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'regionId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['labels']) && (mb_strlen($this->container['labels']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'labels', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['labels']) && (mb_strlen($this->container['labels']) < 0)) {
+                $invalidProperties[] = "invalid value for 'labels', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['firstObservedTime']) && (mb_strlen($this->container['firstObservedTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'firstObservedTime', the character length must be smaller than or equal to 30.";
             }
             if (!is_null($this->container['firstObservedTime']) && (mb_strlen($this->container['firstObservedTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'firstObservedTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['lastObservedTime']) && (mb_strlen($this->container['lastObservedTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'lastObservedTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['lastObservedTime']) && (mb_strlen($this->container['lastObservedTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'lastObservedTime', the character length must be smaller than or equal to 30.";
             }
             if (!is_null($this->container['lastObservedTime']) && (mb_strlen($this->container['lastObservedTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'lastObservedTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'createTime', the character length must be smaller than or equal to 30.";
             }
             if (!is_null($this->container['createTime']) && (mb_strlen($this->container['createTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'createTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['arriveTime']) && (mb_strlen($this->container['arriveTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'arriveTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['arriveTime']) && (mb_strlen($this->container['arriveTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'arriveTime', the character length must be smaller than or equal to 30.";
             }
             if (!is_null($this->container['arriveTime']) && (mb_strlen($this->container['arriveTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'arriveTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'title', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) > 255)) {
+                $invalidProperties[] = "invalid value for 'title', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['title']) && (mb_strlen($this->container['title']) < 0)) {
                 $invalidProperties[] = "invalid value for 'title', the character length must be bigger than or equal to 0.";
@@ -629,83 +823,131 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['sourceUrl']) && (mb_strlen($this->container['sourceUrl']) > 64)) {
-                $invalidProperties[] = "invalid value for 'sourceUrl', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['sourceUrl']) && (mb_strlen($this->container['sourceUrl']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'sourceUrl', the character length must be smaller than or equal to 1024.";
             }
-            if (!is_null($this->container['sourceUrl']) && (mb_strlen($this->container['sourceUrl']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sourceUrl', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['sourceUrl']) && (mb_strlen($this->container['sourceUrl']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sourceUrl', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['count']) && ($this->container['count'] > 5)) {
-                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 5.";
+            if (!is_null($this->container['count']) && ($this->container['count'] > 999)) {
+                $invalidProperties[] = "invalid value for 'count', must be smaller than or equal to 999.";
             }
             if (!is_null($this->container['count']) && ($this->container['count'] < 0)) {
                 $invalidProperties[] = "invalid value for 'count', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['confidence']) && ($this->container['confidence'] > 5)) {
-                $invalidProperties[] = "invalid value for 'confidence', must be smaller than or equal to 5.";
+            if (!is_null($this->container['confidence']) && ($this->container['confidence'] > 100)) {
+                $invalidProperties[] = "invalid value for 'confidence', must be smaller than or equal to 100.";
             }
             if (!is_null($this->container['confidence']) && ($this->container['confidence'] < 0)) {
                 $invalidProperties[] = "invalid value for 'confidence', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 64)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 64.";
+            $allowedValues = $this->getSeverityAllowableValues();
+                if (!is_null($this->container['severity']) && !in_array($this->container['severity'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'severity', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 1)) {
-                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 1.";
+
+            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) > 6)) {
+                $invalidProperties[] = "invalid value for 'severity', the character length must be smaller than or equal to 6.";
             }
-            if (!is_null($this->container['criticality']) && ($this->container['criticality'] > 5)) {
-                $invalidProperties[] = "invalid value for 'criticality', must be smaller than or equal to 5.";
+            if (!is_null($this->container['severity']) && (mb_strlen($this->container['severity']) < 3)) {
+                $invalidProperties[] = "invalid value for 'severity', the character length must be bigger than or equal to 3.";
+            }
+            if (!is_null($this->container['criticality']) && ($this->container['criticality'] > 100)) {
+                $invalidProperties[] = "invalid value for 'criticality', must be smaller than or equal to 100.";
             }
             if (!is_null($this->container['criticality']) && ($this->container['criticality'] < 0)) {
                 $invalidProperties[] = "invalid value for 'criticality', must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getVerificationStateAllowableValues();
+                if (!is_null($this->container['verificationState']) && !in_array($this->container['verificationState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'verificationState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['verificationState']) && (mb_strlen($this->container['verificationState']) > 64)) {
                 $invalidProperties[] = "invalid value for 'verificationState', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['verificationState']) && (mb_strlen($this->container['verificationState']) < 1)) {
-                $invalidProperties[] = "invalid value for 'verificationState', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['verificationState']) && (mb_strlen($this->container['verificationState']) < 32)) {
+                $invalidProperties[] = "invalid value for 'verificationState', the character length must be bigger than or equal to 32.";
             }
-            if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 64)) {
-                $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 64.";
+            $allowedValues = $this->getHandleStatusAllowableValues();
+                if (!is_null($this->container['handleStatus']) && !in_array($this->container['handleStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'handleStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 1)) {
-                $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 1.";
+
+            if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) > 5)) {
+                $invalidProperties[] = "invalid value for 'handleStatus', the character length must be smaller than or equal to 5.";
             }
-            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) > 64)) {
-                $invalidProperties[] = "invalid value for 'sla', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['handleStatus']) && (mb_strlen($this->container['handleStatus']) < 4)) {
+                $invalidProperties[] = "invalid value for 'handleStatus', the character length must be bigger than or equal to 4.";
             }
-            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) < 1)) {
-                $invalidProperties[] = "invalid value for 'sla', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) > 30)) {
+                $invalidProperties[] = "invalid value for 'sla', the character length must be smaller than or equal to 30.";
             }
-            if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'updateTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['sla']) && (mb_strlen($this->container['sla']) < 0)) {
+                $invalidProperties[] = "invalid value for 'sla', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'updateTime', the character length must be smaller than or equal to 30.";
             }
             if (!is_null($this->container['updateTime']) && (mb_strlen($this->container['updateTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'updateTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['closeTime']) && (mb_strlen($this->container['closeTime']) > 64)) {
-                $invalidProperties[] = "invalid value for 'closeTime', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['closeTime']) && (mb_strlen($this->container['closeTime']) > 30)) {
+                $invalidProperties[] = "invalid value for 'closeTime', the character length must be smaller than or equal to 30.";
             }
             if (!is_null($this->container['closeTime']) && (mb_strlen($this->container['closeTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'closeTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['chopPhase']) && (mb_strlen($this->container['chopPhase']) > 64)) {
-                $invalidProperties[] = "invalid value for 'chopPhase', the character length must be smaller than or equal to 64.";
+            $allowedValues = $this->getIpdrrPhaseAllowableValues();
+                if (!is_null($this->container['ipdrrPhase']) && !in_array($this->container['ipdrrPhase'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ipdrrPhase', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if (!is_null($this->container['chopPhase']) && (mb_strlen($this->container['chopPhase']) < 4)) {
-                $invalidProperties[] = "invalid value for 'chopPhase', the character length must be bigger than or equal to 4.";
-            }
+
             if (!is_null($this->container['ipdrrPhase']) && (mb_strlen($this->container['ipdrrPhase']) > 64)) {
                 $invalidProperties[] = "invalid value for 'ipdrrPhase', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['ipdrrPhase']) && (mb_strlen($this->container['ipdrrPhase']) < 4)) {
-                $invalidProperties[] = "invalid value for 'ipdrrPhase', the character length must be bigger than or equal to 4.";
+            if (!is_null($this->container['ipdrrPhase']) && (mb_strlen($this->container['ipdrrPhase']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ipdrrPhase', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getChopPhaseAllowableValues();
+                if (!is_null($this->container['chopPhase']) && !in_array($this->container['chopPhase'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'chopPhase', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['chopPhase']) && (mb_strlen($this->container['chopPhase']) > 64)) {
+                $invalidProperties[] = "invalid value for 'chopPhase', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['chopPhase']) && (mb_strlen($this->container['chopPhase']) < 0)) {
+                $invalidProperties[] = "invalid value for 'chopPhase', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getPpdrPhaseAllowableValues();
+                if (!is_null($this->container['ppdrPhase']) && !in_array($this->container['ppdrPhase'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ppdrPhase', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['ppdrPhase']) && (mb_strlen($this->container['ppdrPhase']) > 64)) {
                 $invalidProperties[] = "invalid value for 'ppdrPhase', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['ppdrPhase']) && (mb_strlen($this->container['ppdrPhase']) < 4)) {
-                $invalidProperties[] = "invalid value for 'ppdrPhase', the character length must be bigger than or equal to 4.";
+            if (!is_null($this->container['ppdrPhase']) && (mb_strlen($this->container['ppdrPhase']) < 0)) {
+                $invalidProperties[] = "invalid value for 'ppdrPhase', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['simulation']) && (mb_strlen($this->container['simulation']) > 64)) {
                 $invalidProperties[] = "invalid value for 'simulation', the character length must be smaller than or equal to 64.";
@@ -719,41 +961,37 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['actor']) && (mb_strlen($this->container['actor']) < 0)) {
                 $invalidProperties[] = "invalid value for 'actor', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'owner', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) > 64)) {
+                $invalidProperties[] = "invalid value for 'owner', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['owner']) && (mb_strlen($this->container['owner']) < 0)) {
                 $invalidProperties[] = "invalid value for 'owner', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['creator']) && (mb_strlen($this->container['creator']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'creator', the character length must be smaller than or equal to 1024.";
+            if (!is_null($this->container['creator']) && (mb_strlen($this->container['creator']) > 64)) {
+                $invalidProperties[] = "invalid value for 'creator', the character length must be smaller than or equal to 64.";
             }
             if (!is_null($this->container['creator']) && (mb_strlen($this->container['creator']) < 0)) {
                 $invalidProperties[] = "invalid value for 'creator', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getCloseReasonAllowableValues();
+                if (!is_null($this->container['closeReason']) && !in_array($this->container['closeReason'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'closeReason', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['closeReason']) && (mb_strlen($this->container['closeReason']) > 64)) {
                 $invalidProperties[] = "invalid value for 'closeReason', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['closeReason']) && (mb_strlen($this->container['closeReason']) < 32)) {
-                $invalidProperties[] = "invalid value for 'closeReason', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['closeReason']) && (mb_strlen($this->container['closeReason']) < 0)) {
+                $invalidProperties[] = "invalid value for 'closeReason', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['closeComment']) && (mb_strlen($this->container['closeComment']) > 64)) {
-                $invalidProperties[] = "invalid value for 'closeComment', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['closeComment']) && (mb_strlen($this->container['closeComment']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'closeComment', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['closeComment']) && (mb_strlen($this->container['closeComment']) < 0)) {
                 $invalidProperties[] = "invalid value for 'closeComment', the character length must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 64)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
-            }
-            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['workspaceId']) && (mb_strlen($this->container['workspaceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'workspaceId', the character length must be bigger than or equal to 32.";
             }
         return $invalidProperties;
     }
@@ -771,7 +1009,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  版本
+    *  告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
     *
     * @return string|null
     */
@@ -783,7 +1021,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 版本
+    * @param string|null $version 告警对象的版本，该字段的值必须为华为云SSA服务确定的官方发布版本之一
     *
     * @return $this
     */
@@ -794,10 +1032,130 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets id
+    *  事件唯一标识，UUID格式，最大36个字符
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 事件唯一标识，UUID格式，最大36个字符
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets domainId
+    *  数据投递后，被委托用户的domain_id
+    *
+    * @return string|null
+    */
+    public function getDomainId()
+    {
+        return $this->container['domainId'];
+    }
+
+    /**
+    * Sets domainId
+    *
+    * @param string|null $domainId 数据投递后，被委托用户的domain_id
+    *
+    * @return $this
+    */
+    public function setDomainId($domainId)
+    {
+        $this->container['domainId'] = $domainId;
+        return $this;
+    }
+
+    /**
+    * Gets regionId
+    *  数据投递后，被委托用户的region_id
+    *
+    * @return string|null
+    */
+    public function getRegionId()
+    {
+        return $this->container['regionId'];
+    }
+
+    /**
+    * Sets regionId
+    *
+    * @param string|null $regionId 数据投递后，被委托用户的region_id
+    *
+    * @return $this
+    */
+    public function setRegionId($regionId)
+    {
+        $this->container['regionId'] = $regionId;
+        return $this;
+    }
+
+    /**
+    * Gets workspaceId
+    *  当前的工作空间id
+    *
+    * @return string|null
+    */
+    public function getWorkspaceId()
+    {
+        return $this->container['workspaceId'];
+    }
+
+    /**
+    * Sets workspaceId
+    *
+    * @param string|null $workspaceId 当前的工作空间id
+    *
+    * @return $this
+    */
+    public function setWorkspaceId($workspaceId)
+    {
+        $this->container['workspaceId'] = $workspaceId;
+        return $this;
+    }
+
+    /**
+    * Gets labels
+    *  标签，仅展示
+    *
+    * @return string|null
+    */
+    public function getLabels()
+    {
+        return $this->container['labels'];
+    }
+
+    /**
+    * Sets labels
+    *
+    * @param string|null $labels 标签，仅展示
+    *
+    * @return $this
+    */
+    public function setLabels($labels)
+    {
+        $this->container['labels'] = $labels;
+        return $this;
+    }
+
+    /**
     * Gets environment
     *  environment
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspEnvironment|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertEnvironment|null
     */
     public function getEnvironment()
     {
@@ -807,7 +1165,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets environment
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspEnvironment|null $environment environment
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertEnvironment|null $environment environment
     *
     * @return $this
     */
@@ -821,7 +1179,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Gets dataSource
     *  dataSource
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertDataSource|null
     */
     public function getDataSource()
     {
@@ -831,7 +1189,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets dataSource
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspDatasource|null $dataSource dataSource
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertDataSource|null $dataSource dataSource
     *
     * @return $this
     */
@@ -843,7 +1201,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets firstObservedTime
-    *  Update time
+    *  首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -855,7 +1213,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets firstObservedTime
     *
-    * @param string|null $firstObservedTime Update time
+    * @param string|null $firstObservedTime 首次发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -867,7 +1225,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastObservedTime
-    *  Update time
+    *  最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -879,7 +1237,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets lastObservedTime
     *
-    * @param string|null $lastObservedTime Update time
+    * @param string|null $lastObservedTime 最近发现时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -891,7 +1249,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  Create time
+    *  记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -903,7 +1261,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime Create time
+    * @param string|null $createTime 记录时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -915,7 +1273,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets arriveTime
-    *  Update time
+    *  接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -927,7 +1285,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets arriveTime
     *
-    * @param string|null $arriveTime Update time
+    * @param string|null $arriveTime 接收时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -939,7 +1297,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  The name, display only
+    *  告警标题
     *
     * @return string|null
     */
@@ -951,7 +1309,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title The name, display only
+    * @param string|null $title 告警标题
     *
     * @return $this
     */
@@ -963,7 +1321,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  The description, display only
+    *  告警描述信息
     *
     * @return string|null
     */
@@ -975,7 +1333,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description The description, display only
+    * @param string|null $description 告警描述信息
     *
     * @return $this
     */
@@ -987,7 +1345,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceUrl
-    *  事件URL链接
+    *  告警URL链接，指向数据源产品中有关当前事件说明的页面
     *
     * @return string|null
     */
@@ -999,7 +1357,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets sourceUrl
     *
-    * @param string|null $sourceUrl 事件URL链接
+    * @param string|null $sourceUrl 告警URL链接，指向数据源产品中有关当前事件说明的页面
     *
     * @return $this
     */
@@ -1035,7 +1393,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets confidence
-    *  置信度
+    *  事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
     *
     * @return int|null
     */
@@ -1047,7 +1405,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets confidence
     *
-    * @param int|null $confidence 置信度
+    * @param int|null $confidence 事件的置信度。置信度的定义旨在说明识别的行为或问题的可能性。 取值范围：0-100，0表示置信度为0%，100表示置信度为100%
     *
     * @return $this
     */
@@ -1059,7 +1417,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets severity
-    *  严重性等级
+    *  严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
     *
     * @return string|null
     */
@@ -1071,7 +1429,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets severity
     *
-    * @param string|null $severity 严重性等级
+    * @param string|null $severity 严重性等级，取值范围：Tips | Low | Medium | High | Fatal 说明： 0: Tips – 未发现任何问题。 1: Low – 无需针对问题执行任何操作。 2: Medium – 问题需要处理，但不紧急。 3: High – 问题必须优先处理。 4: Fatal – 问题必须立即处理，以防止产生进一步的损害
     *
     * @return $this
     */
@@ -1083,7 +1441,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets criticality
-    *  关键性，是指事件涉及的资源的重要性级别。
+    *  关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
     *
     * @return int|null
     */
@@ -1095,7 +1453,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets criticality
     *
-    * @param int|null $criticality 关键性，是指事件涉及的资源的重要性级别。
+    * @param int|null $criticality 关键性，是指事件涉及的资源的重要性级别。 取值范围：0-100，0表示资源不关键，100表示最关键资源
     *
     * @return $this
     */
@@ -1107,9 +1465,9 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets alertType
-    *  事件分类
+    *  alertType
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertAlertType|null
     */
     public function getAlertType()
     {
@@ -1119,7 +1477,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets alertType
     *
-    * @param object|null $alertType 事件分类
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertAlertType|null $alertType alertType
     *
     * @return $this
     */
@@ -1131,9 +1489,9 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkList
-    *  network_list
+    *  网络信息
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspNetworkList[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertNetworkList[]|null
     */
     public function getNetworkList()
     {
@@ -1143,7 +1501,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets networkList
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspNetworkList[]|null $networkList network_list
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertNetworkList[]|null $networkList 网络信息
     *
     * @return $this
     */
@@ -1155,9 +1513,9 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceList
-    *  network_list
+    *  受影响资源
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspResourceList[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertResourceList[]|null
     */
     public function getResourceList()
     {
@@ -1167,7 +1525,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets resourceList
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspResourceList[]|null $resourceList network_list
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertResourceList[]|null $resourceList 受影响资源
     *
     * @return $this
     */
@@ -1181,7 +1539,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Gets remediation
     *  remediation
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspRemediation|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRemediation|null
     */
     public function getRemediation()
     {
@@ -1191,7 +1549,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets remediation
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspRemediation|null $remediation remediation
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRemediation|null $remediation remediation
     *
     * @return $this
     */
@@ -1203,7 +1561,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets verificationState
-    *  验证状态
+    *  验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     *
     * @return string|null
     */
@@ -1215,7 +1573,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets verificationState
     *
-    * @param string|null $verificationState 验证状态
+    * @param string|null $verificationState 验证状态，标识事件的准确性。可选类型如下： Unknown – 未知 True_Positive – 确认 False_Positive – 误报 默认填写Unknown
     *
     * @return $this
     */
@@ -1227,7 +1585,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets handleStatus
-    *  事件处理状态
+    *  事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
     *
     * @return string|null
     */
@@ -1239,7 +1597,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets handleStatus
     *
-    * @param string|null $handleStatus 事件处理状态
+    * @param string|null $handleStatus 事件处理状态，可选类型如下： Open – 打开，默认 Block – 阻塞 Closed – 关闭 默认填写Open
     *
     * @return $this
     */
@@ -1251,7 +1609,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets sla
-    *  sla
+    *  约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -1263,7 +1621,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets sla
     *
-    * @param string|null $sla sla
+    * @param string|null $sla 约束闭环时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -1275,7 +1633,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  Create time
+    *  更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -1287,7 +1645,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime Create time
+    * @param string|null $updateTime 更新时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -1299,7 +1657,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets closeTime
-    *  Create time
+    *  关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return string|null
     */
@@ -1311,7 +1669,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets closeTime
     *
-    * @param string|null $closeTime Create time
+    * @param string|null $closeTime 关闭时间，格式ISO8601：YYYY-MM-DDTHH:mm:ss.ms+timezone。时区信息为事件发生时区，无法解析时区的时间，默认时区填东八区
     *
     * @return $this
     */
@@ -1322,32 +1680,8 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets chopPhase
-    *  周期/处置阶段编号
-    *
-    * @return string|null
-    */
-    public function getChopPhase()
-    {
-        return $this->container['chopPhase'];
-    }
-
-    /**
-    * Sets chopPhase
-    *
-    * @param string|null $chopPhase 周期/处置阶段编号
-    *
-    * @return $this
-    */
-    public function setChopPhase($chopPhase)
-    {
-        $this->container['chopPhase'] = $chopPhase;
-        return $this;
-    }
-
-    /**
     * Gets ipdrrPhase
-    *  周期/处置阶段编号
+    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
     *
     * @return string|null
     */
@@ -1359,7 +1693,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets ipdrrPhase
     *
-    * @param string|null $ipdrrPhase 周期/处置阶段编号
+    * @param string|null $ipdrrPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
     *
     * @return $this
     */
@@ -1370,8 +1704,32 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets chopPhase
+    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    *
+    * @return string|null
+    */
+    public function getChopPhase()
+    {
+        return $this->container['chopPhase'];
+    }
+
+    /**
+    * Sets chopPhase
+    *
+    * @param string|null $chopPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
+    *
+    * @return $this
+    */
+    public function setChopPhase($chopPhase)
+    {
+        $this->container['chopPhase'] = $chopPhase;
+        return $this;
+    }
+
+    /**
     * Gets ppdrPhase
-    *  周期/处置阶段编号
+    *  周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
     *
     * @return string|null
     */
@@ -1383,7 +1741,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets ppdrPhase
     *
-    * @param string|null $ppdrPhase 周期/处置阶段编号
+    * @param string|null $ppdrPhase 周期/处置阶段编号 Prepartion|Detection and Analysis|Containm，Eradication& Recovery|Post-Incident-Activity
     *
     * @return $this
     */
@@ -1395,7 +1753,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets simulation
-    *  是否为调试事件.
+    *  调试字段
     *
     * @return string|null
     */
@@ -1407,7 +1765,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets simulation
     *
-    * @param string|null $simulation 是否为调试事件.
+    * @param string|null $simulation 调试字段
     *
     * @return $this
     */
@@ -1419,7 +1777,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets actor
-    *  委托人
+    *  告警调查员
     *
     * @return string|null
     */
@@ -1431,7 +1789,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets actor
     *
-    * @param string|null $actor 委托人
+    * @param string|null $actor 告警调查员
     *
     * @return $this
     */
@@ -1443,7 +1801,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets owner
-    *  The name, display only
+    *  责任人、服务责任人
     *
     * @return string|null
     */
@@ -1455,7 +1813,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets owner
     *
-    * @param string|null $owner The name, display only
+    * @param string|null $owner 责任人、服务责任人
     *
     * @return $this
     */
@@ -1467,7 +1825,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets creator
-    *  The name, display only
+    *  创建人
     *
     * @return string|null
     */
@@ -1479,7 +1837,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets creator
     *
-    * @param string|null $creator The name, display only
+    * @param string|null $creator 创建人
     *
     * @return $this
     */
@@ -1491,7 +1849,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets closeReason
-    *  关闭原因
+    *  关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     *
     * @return string|null
     */
@@ -1503,7 +1861,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets closeReason
     *
-    * @param string|null $closeReason 关闭原因
+    * @param string|null $closeReason 关闭原因: 误检 - False detection 已解决 - Resolved 重复 - Repeated 其他 - Other
     *
     * @return $this
     */
@@ -1515,7 +1873,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets closeComment
-    *  关闭原因
+    *  关闭评论
     *
     * @return string|null
     */
@@ -1527,7 +1885,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets closeComment
     *
-    * @param string|null $closeComment 关闭原因
+    * @param string|null $closeComment 关闭评论
     *
     * @return $this
     */
@@ -1589,7 +1947,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Gets process
     *  进程信息
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspProcess[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertProcess[]|null
     */
     public function getProcess()
     {
@@ -1599,7 +1957,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets process
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ListAlertRspProcess[]|null $process 进程信息
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertProcess[]|null $process 进程信息
     *
     * @return $this
     */
@@ -1613,7 +1971,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Gets userInfo
     *  用户信息
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspUserInfo[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertUserInfo[]|null
     */
     public function getUserInfo()
     {
@@ -1623,7 +1981,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets userInfo
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspUserInfo[]|null $userInfo 用户信息
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertUserInfo[]|null $userInfo 用户信息
     *
     * @return $this
     */
@@ -1637,7 +1995,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     * Gets fileInfo
     *  文件信息
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspFileInfo[]|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertFileInfo[]|null
     */
     public function getFileInfo()
     {
@@ -1647,7 +2005,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets fileInfo
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\ShowAlertRspFileInfo[]|null $fileInfo 文件信息
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertFileInfo[]|null $fileInfo 文件信息
     *
     * @return $this
     */
@@ -1659,7 +2017,7 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets systemAlertTable
-    *  系统信息
+    *  告警管理列表的布局字段
     *
     * @return object|null
     */
@@ -1671,61 +2029,13 @@ class ListAlertRsp implements ModelInterface, ArrayAccess
     /**
     * Sets systemAlertTable
     *
-    * @param object|null $systemAlertTable 系统信息
+    * @param object|null $systemAlertTable 告警管理列表的布局字段
     *
     * @return $this
     */
     public function setSystemAlertTable($systemAlertTable)
     {
         $this->container['systemAlertTable'] = $systemAlertTable;
-        return $this;
-    }
-
-    /**
-    * Gets id
-    *  Id value
-    *
-    * @return string|null
-    */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-    * Sets id
-    *
-    * @param string|null $id Id value
-    *
-    * @return $this
-    */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets workspaceId
-    *  workspace id
-    *
-    * @return string|null
-    */
-    public function getWorkspaceId()
-    {
-        return $this->container['workspaceId'];
-    }
-
-    /**
-    * Sets workspaceId
-    *
-    * @param string|null $workspaceId workspace id
-    *
-    * @return $this
-    */
-    public function setWorkspaceId($workspaceId)
-    {
-        $this->container['workspaceId'] = $workspaceId;
         return $this;
     }
 

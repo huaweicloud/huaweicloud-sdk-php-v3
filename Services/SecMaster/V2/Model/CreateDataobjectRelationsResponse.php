@@ -21,13 +21,13 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * code  Id value
-    * message  Error message
-    * requestId  Error message
-    * success  Error message
-    * total  tatal count
-    * limit  current page count
-    * offset  current page size
+    * code  错误码
+    * message  错误信息
+    * requestId  请求ID
+    * total  总数
+    * limit  分页大小
+    * offset  偏移量
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -37,23 +37,23 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'string',
             'message' => 'string',
             'requestId' => 'string',
-            'success' => 'bool',
             'total' => 'int',
             'limit' => 'int',
             'offset' => 'int',
-            'data' => '\HuaweiCloud\SDK\SecMaster\V2\Model\DataResponse',
+            'success' => 'bool',
+            'data' => '\HuaweiCloud\SDK\SecMaster\V2\Model\BatchOperateDataobjectResult',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * code  Id value
-    * message  Error message
-    * requestId  Error message
-    * success  Error message
-    * total  tatal count
-    * limit  current page count
-    * offset  current page size
+    * code  错误码
+    * message  错误信息
+    * requestId  请求ID
+    * total  总数
+    * limit  分页大小
+    * offset  偏移量
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -63,10 +63,10 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
         'code' => null,
         'message' => null,
         'requestId' => null,
-        'success' => null,
         'total' => null,
         'limit' => null,
         'offset' => null,
+        'success' => null,
         'data' => null,
         'xRequestId' => null
     ];
@@ -94,13 +94,13 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * code  Id value
-    * message  Error message
-    * requestId  Error message
-    * success  Error message
-    * total  tatal count
-    * limit  current page count
-    * offset  current page size
+    * code  错误码
+    * message  错误信息
+    * requestId  请求ID
+    * total  总数
+    * limit  分页大小
+    * offset  偏移量
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -110,23 +110,23 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'code',
             'message' => 'message',
             'requestId' => 'request_id',
-            'success' => 'success',
             'total' => 'total',
             'limit' => 'limit',
             'offset' => 'offset',
+            'success' => 'success',
             'data' => 'data',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * code  Id value
-    * message  Error message
-    * requestId  Error message
-    * success  Error message
-    * total  tatal count
-    * limit  current page count
-    * offset  current page size
+    * code  错误码
+    * message  错误信息
+    * requestId  请求ID
+    * total  总数
+    * limit  分页大小
+    * offset  偏移量
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -136,23 +136,23 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'setCode',
             'message' => 'setMessage',
             'requestId' => 'setRequestId',
-            'success' => 'setSuccess',
             'total' => 'setTotal',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
+            'success' => 'setSuccess',
             'data' => 'setData',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * code  Id value
-    * message  Error message
-    * requestId  Error message
-    * success  Error message
-    * total  tatal count
-    * limit  current page count
-    * offset  current page size
+    * code  错误码
+    * message  错误信息
+    * requestId  请求ID
+    * total  总数
+    * limit  分页大小
+    * offset  偏移量
+    * success  是否成功
     * data  data
     * xRequestId  xRequestId
     *
@@ -162,10 +162,10 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             'code' => 'getCode',
             'message' => 'getMessage',
             'requestId' => 'getRequestId',
-            'success' => 'getSuccess',
             'total' => 'getTotal',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
+            'success' => 'getSuccess',
             'data' => 'getData',
             'xRequestId' => 'getXRequestId'
     ];
@@ -231,10 +231,10 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
-        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
@@ -253,32 +253,32 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['code']) && (mb_strlen($this->container['code']) < 0)) {
                 $invalidProperties[] = "invalid value for 'code', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 32)) {
-                $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'message', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['message']) && (mb_strlen($this->container['message']) < 0)) {
                 $invalidProperties[] = "invalid value for 'message', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 32.";
+            if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'requestId', the character length must be smaller than or equal to 1024.";
             }
             if (!is_null($this->container['requestId']) && (mb_strlen($this->container['requestId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'requestId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['total']) && ($this->container['total'] > 99999)) {
-                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 99999.";
+            if (!is_null($this->container['total']) && ($this->container['total'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'total', must be smaller than or equal to 10000.";
             }
             if (!is_null($this->container['total']) && ($this->container['total'] < 0)) {
                 $invalidProperties[] = "invalid value for 'total', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['limit']) && ($this->container['limit'] > 9999)) {
-                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 9999.";
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 10000.";
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['offset']) && ($this->container['offset'] > 100)) {
-                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 100.";
+            if (!is_null($this->container['offset']) && ($this->container['offset'] > 10000)) {
+                $invalidProperties[] = "invalid value for 'offset', must be smaller than or equal to 10000.";
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
@@ -299,7 +299,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets code
-    *  Id value
+    *  错误码
     *
     * @return string|null
     */
@@ -311,7 +311,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets code
     *
-    * @param string|null $code Id value
+    * @param string|null $code 错误码
     *
     * @return $this
     */
@@ -323,7 +323,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets message
-    *  Error message
+    *  错误信息
     *
     * @return string|null
     */
@@ -335,7 +335,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets message
     *
-    * @param string|null $message Error message
+    * @param string|null $message 错误信息
     *
     * @return $this
     */
@@ -347,7 +347,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  Error message
+    *  请求ID
     *
     * @return string|null
     */
@@ -359,7 +359,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId Error message
+    * @param string|null $requestId 请求ID
     *
     * @return $this
     */
@@ -370,32 +370,8 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets success
-    *  Error message
-    *
-    * @return bool|null
-    */
-    public function getSuccess()
-    {
-        return $this->container['success'];
-    }
-
-    /**
-    * Sets success
-    *
-    * @param bool|null $success Error message
-    *
-    * @return $this
-    */
-    public function setSuccess($success)
-    {
-        $this->container['success'] = $success;
-        return $this;
-    }
-
-    /**
     * Gets total
-    *  tatal count
+    *  总数
     *
     * @return int|null
     */
@@ -407,7 +383,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total tatal count
+    * @param int|null $total 总数
     *
     * @return $this
     */
@@ -419,7 +395,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  current page count
+    *  分页大小
     *
     * @return int|null
     */
@@ -431,7 +407,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit current page count
+    * @param int|null $limit 分页大小
     *
     * @return $this
     */
@@ -443,7 +419,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  current page size
+    *  偏移量
     *
     * @return int|null
     */
@@ -455,7 +431,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset current page size
+    * @param int|null $offset 偏移量
     *
     * @return $this
     */
@@ -466,10 +442,34 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets success
+    *  是否成功
+    *
+    * @return bool|null
+    */
+    public function getSuccess()
+    {
+        return $this->container['success'];
+    }
+
+    /**
+    * Sets success
+    *
+    * @param bool|null $success 是否成功
+    *
+    * @return $this
+    */
+    public function setSuccess($success)
+    {
+        $this->container['success'] = $success;
+        return $this;
+    }
+
+    /**
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\DataResponse|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\BatchOperateDataobjectResult|null
     */
     public function getData()
     {
@@ -479,7 +479,7 @@ class CreateDataobjectRelationsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\DataResponse|null $data data
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\BatchOperateDataobjectResult|null $data data
     *
     * @return $this
     */

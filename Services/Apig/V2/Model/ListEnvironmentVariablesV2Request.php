@@ -26,7 +26,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
     * groupId  API分组编号
     * envId  环境编号
     * variableName  变量名
-    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
     * groupId  API分组编号
     * envId  环境编号
     * variableName  变量名
-    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
     * groupId  API分组编号
     * envId  环境编号
     * variableName  变量名
-    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
     * groupId  API分组编号
     * envId  环境编号
     * variableName  变量名
-    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
     * groupId  API分组编号
     * envId  环境编号
     * variableName  变量名
-    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name
+    * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @var string[]
     */
@@ -396,7 +396,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
 
     /**
     * Gets preciseSearch
-    *  指定需要精确匹配查找的参数名称，目前仅支持name
+    *  指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @return string|null
     */
@@ -408,7 +408,7 @@ class ListEnvironmentVariablesV2Request implements ModelInterface, ArrayAccess
     /**
     * Sets preciseSearch
     *
-    * @param string|null $preciseSearch 指定需要精确匹配查找的参数名称，目前仅支持name
+    * @param string|null $preciseSearch 指定需要精确匹配查找的参数名称，目前仅支持variable_name
     *
     * @return $this
     */

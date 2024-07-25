@@ -31,7 +31,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * lastReportTime  最近发生时间
     * granularMarking  粒度（保密等级），由高到低：1（首次发现）、2（自产数据）、3（需购买）、4（外网直接查询）
     * name  名称
-    * id  情报ID
+    * id  威胁情报ID
     * projectId  项目ID
     * revoked  是否作废
     * status  状态， Open--打开，Closed--关闭, Revoked--作废
@@ -75,7 +75,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * lastReportTime  最近发生时间
     * granularMarking  粒度（保密等级），由高到低：1（首次发现）、2（自产数据）、3（需购买）、4（外网直接查询）
     * name  名称
-    * id  情报ID
+    * id  威胁情报ID
     * projectId  项目ID
     * revoked  是否作废
     * status  状态， Open--打开，Closed--关闭, Revoked--作废
@@ -140,7 +140,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * lastReportTime  最近发生时间
     * granularMarking  粒度（保密等级），由高到低：1（首次发现）、2（自产数据）、3（需购买）、4（外网直接查询）
     * name  名称
-    * id  情报ID
+    * id  威胁情报ID
     * projectId  项目ID
     * revoked  是否作废
     * status  状态， Open--打开，Closed--关闭, Revoked--作废
@@ -184,7 +184,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * lastReportTime  最近发生时间
     * granularMarking  粒度（保密等级），由高到低：1（首次发现）、2（自产数据）、3（需购买）、4（外网直接查询）
     * name  名称
-    * id  情报ID
+    * id  威胁情报ID
     * projectId  项目ID
     * revoked  是否作废
     * status  状态， Open--打开，Closed--关闭, Revoked--作废
@@ -228,7 +228,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     * lastReportTime  最近发生时间
     * granularMarking  粒度（保密等级），由高到低：1（首次发现）、2（自产数据）、3（需购买）、4（外网直接查询）
     * name  名称
-    * id  情报ID
+    * id  威胁情报ID
     * projectId  项目ID
     * revoked  是否作废
     * status  状态， Open--打开，Closed--关闭, Revoked--作废
@@ -703,7 +703,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  情报ID
+    *  威胁情报ID
     *
     * @return string|null
     */
@@ -715,7 +715,7 @@ class IndicatorDataObjectDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 情报ID
+    * @param string|null $id 威胁情报ID
     *
     * @return $this
     */

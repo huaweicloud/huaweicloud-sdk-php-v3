@@ -21,29 +21,33 @@ class DeleteAlertRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleId  告警规则 ID。Alert rule ID.
-    * deleteTime  删除时间。Delete time.
+    * deleted  是否删除.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'ruleId' => 'string',
-            'deleteTime' => 'int',
+            'deleted' => 'bool',
+            'failList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]',
+            'successList' => '\HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleId  告警规则 ID。Alert rule ID.
-    * deleteTime  删除时间。Delete time.
+    * deleted  是否删除.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'ruleId' => null,
-        'deleteTime' => 'int64',
+        'deleted' => null,
+        'failList' => null,
+        'successList' => null,
         'xRequestId' => null
     ];
 
@@ -70,43 +74,49 @@ class DeleteAlertRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleId  告警规则 ID。Alert rule ID.
-    * deleteTime  删除时间。Delete time.
+    * deleted  是否删除.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'ruleId' => 'rule_id',
-            'deleteTime' => 'delete_time',
+            'deleted' => 'deleted',
+            'failList' => 'fail_list',
+            'successList' => 'success_list',
             'xRequestId' => 'X-request-id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleId  告警规则 ID。Alert rule ID.
-    * deleteTime  删除时间。Delete time.
+    * deleted  是否删除.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $setters = [
-            'ruleId' => 'setRuleId',
-            'deleteTime' => 'setDeleteTime',
+            'deleted' => 'setDeleted',
+            'failList' => 'setFailList',
+            'successList' => 'setSuccessList',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleId  告警规则 ID。Alert rule ID.
-    * deleteTime  删除时间。Delete time.
+    * deleted  是否删除.
+    * failList  Alert rule ID.
+    * successList  Alert rule ID.
     * xRequestId  xRequestId
     *
     * @var string[]
     */
     protected static $getters = [
-            'ruleId' => 'getRuleId',
-            'deleteTime' => 'getDeleteTime',
+            'deleted' => 'getDeleted',
+            'failList' => 'getFailList',
+            'successList' => 'getSuccessList',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -168,8 +178,9 @@ class DeleteAlertRuleResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['ruleId'] = isset($data['ruleId']) ? $data['ruleId'] : null;
-        $this->container['deleteTime'] = isset($data['deleteTime']) ? $data['deleteTime'] : null;
+        $this->container['deleted'] = isset($data['deleted']) ? $data['deleted'] : null;
+        $this->container['failList'] = isset($data['failList']) ? $data['failList'] : null;
+        $this->container['successList'] = isset($data['successList']) ? $data['successList'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -181,18 +192,6 @@ class DeleteAlertRuleResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['ruleId']) && (mb_strlen($this->container['ruleId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['ruleId']) && (mb_strlen($this->container['ruleId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'ruleId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['deleteTime']) && ($this->container['deleteTime'] > 9223372036854775807)) {
-                $invalidProperties[] = "invalid value for 'deleteTime', must be smaller than or equal to 9223372036854775807.";
-            }
-            if (!is_null($this->container['deleteTime']) && ($this->container['deleteTime'] < 0)) {
-                $invalidProperties[] = "invalid value for 'deleteTime', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -208,50 +207,74 @@ class DeleteAlertRuleResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets ruleId
-    *  告警规则 ID。Alert rule ID.
+    * Gets deleted
+    *  是否删除.
     *
-    * @return string|null
+    * @return bool|null
     */
-    public function getRuleId()
+    public function getDeleted()
     {
-        return $this->container['ruleId'];
+        return $this->container['deleted'];
     }
 
     /**
-    * Sets ruleId
+    * Sets deleted
     *
-    * @param string|null $ruleId 告警规则 ID。Alert rule ID.
+    * @param bool|null $deleted 是否删除.
     *
     * @return $this
     */
-    public function setRuleId($ruleId)
+    public function setDeleted($deleted)
     {
-        $this->container['ruleId'] = $ruleId;
+        $this->container['deleted'] = $deleted;
         return $this;
     }
 
     /**
-    * Gets deleteTime
-    *  删除时间。Delete time.
+    * Gets failList
+    *  Alert rule ID.
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null
     */
-    public function getDeleteTime()
+    public function getFailList()
     {
-        return $this->container['deleteTime'];
+        return $this->container['failList'];
     }
 
     /**
-    * Sets deleteTime
+    * Sets failList
     *
-    * @param int|null $deleteTime 删除时间。Delete time.
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null $failList Alert rule ID.
     *
     * @return $this
     */
-    public function setDeleteTime($deleteTime)
+    public function setFailList($failList)
     {
-        $this->container['deleteTime'] = $deleteTime;
+        $this->container['failList'] = $failList;
+        return $this;
+    }
+
+    /**
+    * Gets successList
+    *  Alert rule ID.
+    *
+    * @return \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null
+    */
+    public function getSuccessList()
+    {
+        return $this->container['successList'];
+    }
+
+    /**
+    * Sets successList
+    *
+    * @param \HuaweiCloud\SDK\SecMaster\V2\Model\AlertRule[]|null $successList Alert rule ID.
+    *
+    * @return $this
+    */
+    public function setSuccessList($successList)
+    {
+        $this->container['successList'] = $successList;
         return $this;
     }
 

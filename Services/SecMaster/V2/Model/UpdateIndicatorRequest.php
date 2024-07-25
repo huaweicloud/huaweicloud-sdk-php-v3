@@ -22,7 +22,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
-    * indicatorId  情报ID
+    * indicatorId  威胁情报ID
     * body  body
     *
     * @var string[]
@@ -38,7 +38,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
-    * indicatorId  情报ID
+    * indicatorId  威胁情报ID
     * body  body
     *
     * @var string[]
@@ -75,7 +75,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
-    * indicatorId  情报ID
+    * indicatorId  威胁情报ID
     * body  body
     *
     * @var string[]
@@ -91,7 +91,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
-    * indicatorId  情报ID
+    * indicatorId  威胁情报ID
     * body  body
     *
     * @var string[]
@@ -107,7 +107,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * contentType  application/json;charset=UTF-8
     * workspaceId  工作空间ID
-    * indicatorId  情报ID
+    * indicatorId  威胁情报ID
     * body  body
     *
     * @var string[]
@@ -282,7 +282,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets indicatorId
-    *  情报ID
+    *  威胁情报ID
     *
     * @return string
     */
@@ -294,7 +294,7 @@ class UpdateIndicatorRequest implements ModelInterface, ArrayAccess
     /**
     * Sets indicatorId
     *
-    * @param string $indicatorId 情报ID
+    * @param string $indicatorId 威胁情报ID
     *
     * @return $this
     */

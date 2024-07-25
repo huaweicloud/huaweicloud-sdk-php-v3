@@ -23,15 +23,13 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'serviceType' => 'string',
             'cseInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCSEBase',
-            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEBase',
-            'cceServiceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceBase'
+            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEBase'
     ];
 
     /**
@@ -39,15 +37,13 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'serviceType' => null,
         'cseInfo' => null,
-        'cceInfo' => null,
-        'cceServiceInfo' => null
+        'cceInfo' => null
     ];
 
     /**
@@ -76,15 +72,13 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'serviceType' => 'service_type',
             'cseInfo' => 'cse_info',
-            'cceInfo' => 'cce_info',
-            'cceServiceInfo' => 'cce_service_info'
+            'cceInfo' => 'cce_info'
     ];
 
     /**
@@ -92,15 +86,13 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'serviceType' => 'setServiceType',
             'cseInfo' => 'setCseInfo',
-            'cceInfo' => 'setCceInfo',
-            'cceServiceInfo' => 'setCceServiceInfo'
+            'cceInfo' => 'setCceInfo'
     ];
 
     /**
@@ -108,15 +100,13 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'serviceType' => 'getServiceType',
             'cseInfo' => 'getCseInfo',
-            'cceInfo' => 'getCceInfo',
-            'cceServiceInfo' => 'getCceServiceInfo'
+            'cceInfo' => 'getCceInfo'
     ];
 
     /**
@@ -197,7 +187,6 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['cseInfo'] = isset($data['cseInfo']) ? $data['cseInfo'] : null;
         $this->container['cceInfo'] = isset($data['cceInfo']) ? $data['cceInfo'] : null;
-        $this->container['cceServiceInfo'] = isset($data['cceServiceInfo']) ? $data['cceServiceInfo'] : null;
     }
 
     /**
@@ -299,30 +288,6 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     public function setCceInfo($cceInfo)
     {
         $this->container['cceInfo'] = $cceInfo;
-        return $this;
-    }
-
-    /**
-    * Gets cceServiceInfo
-    *  cceServiceInfo
-    *
-    * @return \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceBase|null
-    */
-    public function getCceServiceInfo()
-    {
-        return $this->container['cceServiceInfo'];
-    }
-
-    /**
-    * Sets cceServiceInfo
-    *
-    * @param \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceBase|null $cceServiceInfo cceServiceInfo
-    *
-    * @return $this
-    */
-    public function setCceServiceInfo($cceServiceInfo)
-    {
-        $this->container['cceServiceInfo'] = $cceServiceInfo;
         return $this;
     }
 

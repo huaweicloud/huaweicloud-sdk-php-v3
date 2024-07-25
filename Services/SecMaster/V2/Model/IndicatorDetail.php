@@ -20,8 +20,8 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  指标ID
-    * name  指标名称
+    * id  威胁情报ID
+    * name  威胁情报名称
     * dataObject  dataObject
     * workspaceId  工作空间ID
     * projectId  项目ID
@@ -44,8 +44,8 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  指标ID
-    * name  指标名称
+    * id  威胁情报ID
+    * name  威胁情报名称
     * dataObject  dataObject
     * workspaceId  工作空间ID
     * projectId  项目ID
@@ -89,8 +89,8 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  指标ID
-    * name  指标名称
+    * id  威胁情报ID
+    * name  威胁情报名称
     * dataObject  dataObject
     * workspaceId  工作空间ID
     * projectId  项目ID
@@ -113,8 +113,8 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  指标ID
-    * name  指标名称
+    * id  威胁情报ID
+    * name  威胁情报名称
     * dataObject  dataObject
     * workspaceId  工作空间ID
     * projectId  项目ID
@@ -137,8 +137,8 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  指标ID
-    * name  指标名称
+    * id  威胁情报ID
+    * name  威胁情报名称
     * dataObject  dataObject
     * workspaceId  工作空间ID
     * projectId  项目ID
@@ -290,7 +290,7 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  指标ID
+    *  威胁情报ID
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 指标ID
+    * @param string|null $id 威胁情报ID
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  指标名称
+    *  威胁情报名称
     *
     * @return string
     */
@@ -326,7 +326,7 @@ class IndicatorDetail implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 指标名称
+    * @param string $name 威胁情报名称
     *
     * @return $this
     */

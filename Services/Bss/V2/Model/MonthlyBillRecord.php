@@ -34,6 +34,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。 该字段为预留字段。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
@@ -67,6 +68,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'tradeTime' => 'string',
             'providerType' => 'int',
             'tradeId' => 'string',
+            'id' => 'string',
             'billType' => 'int',
             'status' => 'int',
             'officialAmount' => 'float',
@@ -100,6 +102,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。 该字段为预留字段。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
@@ -133,6 +136,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         'tradeTime' => null,
         'providerType' => 'int32',
         'tradeId' => null,
+        'id' => null,
         'billType' => 'int32',
         'status' => 'int32',
         'officialAmount' => 'bigdecimal',
@@ -187,6 +191,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。 该字段为预留字段。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
@@ -220,6 +225,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'tradeTime' => 'trade_time',
             'providerType' => 'provider_type',
             'tradeId' => 'trade_id',
+            'id' => 'id',
             'billType' => 'bill_type',
             'status' => 'status',
             'officialAmount' => 'official_amount',
@@ -253,6 +259,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。 该字段为预留字段。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
@@ -286,6 +293,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'tradeTime' => 'setTradeTime',
             'providerType' => 'setProviderType',
             'tradeId' => 'setTradeId',
+            'id' => 'setId',
             'billType' => 'setBillType',
             'status' => 'setStatus',
             'officialAmount' => 'setOfficialAmount',
@@ -319,6 +327,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     * tradeTime  交易时间，某条消费记录对应的扣费时间。
     * providerType  服务商。 1：华为云2：云商店
     * tradeId  订单ID或交易ID，扣费维度的唯一标识。
+    * id  唯一标识。 该字段为预留字段。
     * billType  账单类型。 1：消费-新购2：消费-续订3：消费-变更4：退款-退订5：消费-使用8：消费-自动续订9：调账-补偿14：消费-服务支持计划月末扣费16：调账-扣费18：消费-按月付费20：退款-变更23：消费-节省计划抵扣24：退款-包年/包月转按需
     * status  支付状态。 1：已支付2：未结清3：未结算
     * officialAmount  官网价。单位：元。  说明： official_amount = official_discount_amount + erase_amount + consume_amount
@@ -352,6 +361,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
             'tradeTime' => 'getTradeTime',
             'providerType' => 'getProviderType',
             'tradeId' => 'getTradeId',
+            'id' => 'getId',
             'billType' => 'getBillType',
             'status' => 'getStatus',
             'officialAmount' => 'getOfficialAmount',
@@ -441,6 +451,7 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
         $this->container['tradeTime'] = isset($data['tradeTime']) ? $data['tradeTime'] : null;
         $this->container['providerType'] = isset($data['providerType']) ? $data['providerType'] : null;
         $this->container['tradeId'] = isset($data['tradeId']) ? $data['tradeId'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['billType'] = isset($data['billType']) ? $data['billType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['officialAmount'] = isset($data['officialAmount']) ? $data['officialAmount'] : null;
@@ -813,6 +824,30 @@ class MonthlyBillRecord implements ModelInterface, ArrayAccess
     public function setTradeId($tradeId)
     {
         $this->container['tradeId'] = $tradeId;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  唯一标识。 该字段为预留字段。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 唯一标识。 该字段为预留字段。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

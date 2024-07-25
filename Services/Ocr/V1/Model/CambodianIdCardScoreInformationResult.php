@@ -26,6 +26,7 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
     * blurScore  告警分数，字段取值范围[0, 99]值大于50表示身份证模糊，小于50表示身份证清晰，值越靠近99，表示身份证模糊的可能性越大，值越靠近0，表示身份证清晰的可能性越大。 仅在传入参数detect_blur为true时，返回该字段。
     * glareScore  告警分数，字段取值范围[0, 99]值大于50表示身份证反光，小于50表示身份证不反光，值越靠近99，表示身份证反光的可能性越大，值越靠近0，表示身份证不反光的可能性越大。 仅在传入参数detect_glare为true时，返回该字段。
     * tamperingScore  告警分数，字段取值范围[0, 99]值大于50表示身份证人像被其他非身份证人像篡改过，小于50表示身份证人像未被篡改，值越靠近99，表示身份证人像被篡改的可能性越大，值越靠近0，表示身份证未人像被篡改的可能性越大。 仅在传入参数detect_tampering为true时，返回该字段。
+    * reproduceScore  告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
             'blockingWithinBorderScore' => 'int',
             'blurScore' => 'int',
             'glareScore' => 'int',
-            'tamperingScore' => 'int'
+            'tamperingScore' => 'int',
+            'reproduceScore' => 'int'
     ];
 
     /**
@@ -46,6 +48,7 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
     * blurScore  告警分数，字段取值范围[0, 99]值大于50表示身份证模糊，小于50表示身份证清晰，值越靠近99，表示身份证模糊的可能性越大，值越靠近0，表示身份证清晰的可能性越大。 仅在传入参数detect_blur为true时，返回该字段。
     * glareScore  告警分数，字段取值范围[0, 99]值大于50表示身份证反光，小于50表示身份证不反光，值越靠近99，表示身份证反光的可能性越大，值越靠近0，表示身份证不反光的可能性越大。 仅在传入参数detect_glare为true时，返回该字段。
     * tamperingScore  告警分数，字段取值范围[0, 99]值大于50表示身份证人像被其他非身份证人像篡改过，小于50表示身份证人像未被篡改，值越靠近99，表示身份证人像被篡改的可能性越大，值越靠近0，表示身份证未人像被篡改的可能性越大。 仅在传入参数detect_tampering为true时，返回该字段。
+    * reproduceScore  告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
         'blockingWithinBorderScore' => 'int32',
         'blurScore' => 'int32',
         'glareScore' => 'int32',
-        'tamperingScore' => 'int32'
+        'tamperingScore' => 'int32',
+        'reproduceScore' => 'int32'
     ];
 
     /**
@@ -87,6 +91,7 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
     * blurScore  告警分数，字段取值范围[0, 99]值大于50表示身份证模糊，小于50表示身份证清晰，值越靠近99，表示身份证模糊的可能性越大，值越靠近0，表示身份证清晰的可能性越大。 仅在传入参数detect_blur为true时，返回该字段。
     * glareScore  告警分数，字段取值范围[0, 99]值大于50表示身份证反光，小于50表示身份证不反光，值越靠近99，表示身份证反光的可能性越大，值越靠近0，表示身份证不反光的可能性越大。 仅在传入参数detect_glare为true时，返回该字段。
     * tamperingScore  告警分数，字段取值范围[0, 99]值大于50表示身份证人像被其他非身份证人像篡改过，小于50表示身份证人像未被篡改，值越靠近99，表示身份证人像被篡改的可能性越大，值越靠近0，表示身份证未人像被篡改的可能性越大。 仅在传入参数detect_tampering为true时，返回该字段。
+    * reproduceScore  告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
             'blockingWithinBorderScore' => 'blocking_within_border_score',
             'blurScore' => 'blur_score',
             'glareScore' => 'glare_score',
-            'tamperingScore' => 'tampering_score'
+            'tamperingScore' => 'tampering_score',
+            'reproduceScore' => 'reproduce_score'
     ];
 
     /**
@@ -107,6 +113,7 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
     * blurScore  告警分数，字段取值范围[0, 99]值大于50表示身份证模糊，小于50表示身份证清晰，值越靠近99，表示身份证模糊的可能性越大，值越靠近0，表示身份证清晰的可能性越大。 仅在传入参数detect_blur为true时，返回该字段。
     * glareScore  告警分数，字段取值范围[0, 99]值大于50表示身份证反光，小于50表示身份证不反光，值越靠近99，表示身份证反光的可能性越大，值越靠近0，表示身份证不反光的可能性越大。 仅在传入参数detect_glare为true时，返回该字段。
     * tamperingScore  告警分数，字段取值范围[0, 99]值大于50表示身份证人像被其他非身份证人像篡改过，小于50表示身份证人像未被篡改，值越靠近99，表示身份证人像被篡改的可能性越大，值越靠近0，表示身份证未人像被篡改的可能性越大。 仅在传入参数detect_tampering为true时，返回该字段。
+    * reproduceScore  告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
             'blockingWithinBorderScore' => 'setBlockingWithinBorderScore',
             'blurScore' => 'setBlurScore',
             'glareScore' => 'setGlareScore',
-            'tamperingScore' => 'setTamperingScore'
+            'tamperingScore' => 'setTamperingScore',
+            'reproduceScore' => 'setReproduceScore'
     ];
 
     /**
@@ -127,6 +135,7 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
     * blurScore  告警分数，字段取值范围[0, 99]值大于50表示身份证模糊，小于50表示身份证清晰，值越靠近99，表示身份证模糊的可能性越大，值越靠近0，表示身份证清晰的可能性越大。 仅在传入参数detect_blur为true时，返回该字段。
     * glareScore  告警分数，字段取值范围[0, 99]值大于50表示身份证反光，小于50表示身份证不反光，值越靠近99，表示身份证反光的可能性越大，值越靠近0，表示身份证不反光的可能性越大。 仅在传入参数detect_glare为true时，返回该字段。
     * tamperingScore  告警分数，字段取值范围[0, 99]值大于50表示身份证人像被其他非身份证人像篡改过，小于50表示身份证人像未被篡改，值越靠近99，表示身份证人像被篡改的可能性越大，值越靠近0，表示身份证未人像被篡改的可能性越大。 仅在传入参数detect_tampering为true时，返回该字段。
+    * reproduceScore  告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
             'blockingWithinBorderScore' => 'getBlockingWithinBorderScore',
             'blurScore' => 'getBlurScore',
             'glareScore' => 'getGlareScore',
-            'tamperingScore' => 'getTamperingScore'
+            'tamperingScore' => 'getTamperingScore',
+            'reproduceScore' => 'getReproduceScore'
     ];
 
     /**
@@ -203,6 +213,7 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
         $this->container['blurScore'] = isset($data['blurScore']) ? $data['blurScore'] : null;
         $this->container['glareScore'] = isset($data['glareScore']) ? $data['glareScore'] : null;
         $this->container['tamperingScore'] = isset($data['tamperingScore']) ? $data['tamperingScore'] : null;
+        $this->container['reproduceScore'] = isset($data['reproduceScore']) ? $data['reproduceScore'] : null;
     }
 
     /**
@@ -368,6 +379,30 @@ class CambodianIdCardScoreInformationResult implements ModelInterface, ArrayAcce
     public function setTamperingScore($tamperingScore)
     {
         $this->container['tamperingScore'] = $tamperingScore;
+        return $this;
+    }
+
+    /**
+    * Gets reproduceScore
+    *  告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
+    *
+    * @return int|null
+    */
+    public function getReproduceScore()
+    {
+        return $this->container['reproduceScore'];
+    }
+
+    /**
+    * Sets reproduceScore
+    *
+    * @param int|null $reproduceScore 告警分数，字段取值范围[0, 99]值大于50表示身份证经过翻拍，小于50表示身份证未经过翻拍，值越靠近99，表示身份证图像被翻拍过的可能性越大，值越靠近0，表示身份证图像未被翻拍的可能性越大。 仅在传入参数detect_reproduce为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setReproduceScore($reproduceScore)
+    {
+        $this->container['reproduceScore'] = $reproduceScore;
         return $this;
     }
 

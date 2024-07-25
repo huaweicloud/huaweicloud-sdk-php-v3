@@ -43,6 +43,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
     * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
     * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * detectReproduceResult  身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
@@ -72,6 +73,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'detectBlurResult' => 'bool',
             'detectGlareResult' => 'bool',
             'detectTamperingResult' => 'bool',
+            'detectReproduceResult' => 'bool',
             'scoreInfo' => '\HuaweiCloud\SDK\Ocr\V1\Model\CambodianIdCardScoreInformationResult',
             'confidence' => 'object'
     ];
@@ -101,6 +103,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
     * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
     * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * detectReproduceResult  身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
@@ -130,6 +133,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
         'detectBlurResult' => null,
         'detectGlareResult' => null,
         'detectTamperingResult' => null,
+        'detectReproduceResult' => null,
         'scoreInfo' => null,
         'confidence' => null
     ];
@@ -180,6 +184,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
     * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
     * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * detectReproduceResult  身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
@@ -209,6 +214,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'detectBlurResult' => 'detect_blur_result',
             'detectGlareResult' => 'detect_glare_result',
             'detectTamperingResult' => 'detect_tampering_result',
+            'detectReproduceResult' => 'detect_reproduce_result',
             'scoreInfo' => 'score_info',
             'confidence' => 'confidence'
     ];
@@ -238,6 +244,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
     * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
     * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * detectReproduceResult  身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
@@ -267,6 +274,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'detectBlurResult' => 'setDetectBlurResult',
             'detectGlareResult' => 'setDetectGlareResult',
             'detectTamperingResult' => 'setDetectTamperingResult',
+            'detectReproduceResult' => 'setDetectReproduceResult',
             'scoreInfo' => 'setScoreInfo',
             'confidence' => 'setConfidence'
     ];
@@ -296,6 +304,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     * detectBlurResult  身份证模糊告警结果，\"true\"表示图片模糊，\"false\"表示身份证清晰。仅在输入参数detect_blur为true时，返回该字段。
     * detectGlareResult  身份证反光告警结果，\"true\"表示身份证反光，\"false\"表示是身份证无反光。仅在输入参数detect_glare为true时，返回该字段。
     * detectTamperingResult  身份证人像被篡改的告警结果，\"true\"表示身份证人像被篡改，\"false\"表示是身份证人像未被篡改。仅在输入参数detect_tampering为true时，返回该字段。
+    * detectReproduceResult  身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
     * scoreInfo  scoreInfo
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
@@ -325,6 +334,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
             'detectBlurResult' => 'getDetectBlurResult',
             'detectGlareResult' => 'getDetectGlareResult',
             'detectTamperingResult' => 'getDetectTamperingResult',
+            'detectReproduceResult' => 'getDetectReproduceResult',
             'scoreInfo' => 'getScoreInfo',
             'confidence' => 'getConfidence'
     ];
@@ -410,6 +420,7 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
         $this->container['detectBlurResult'] = isset($data['detectBlurResult']) ? $data['detectBlurResult'] : null;
         $this->container['detectGlareResult'] = isset($data['detectGlareResult']) ? $data['detectGlareResult'] : null;
         $this->container['detectTamperingResult'] = isset($data['detectTamperingResult']) ? $data['detectTamperingResult'] : null;
+        $this->container['detectReproduceResult'] = isset($data['detectReproduceResult']) ? $data['detectReproduceResult'] : null;
         $this->container['scoreInfo'] = isset($data['scoreInfo']) ? $data['scoreInfo'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
@@ -985,6 +996,30 @@ class CambodianIdCardResult implements ModelInterface, ArrayAccess
     public function setDetectTamperingResult($detectTamperingResult)
     {
         $this->container['detectTamperingResult'] = $detectTamperingResult;
+        return $this;
+    }
+
+    /**
+    * Gets detectReproduceResult
+    *  身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    *
+    * @return bool|null
+    */
+    public function getDetectReproduceResult()
+    {
+        return $this->container['detectReproduceResult'];
+    }
+
+    /**
+    * Sets detectReproduceResult
+    *
+    * @param bool|null $detectReproduceResult 身份证是否经过翻拍的告警结果，“true”表示身份证经过翻拍，“false”表示身份证未经过翻拍。仅在输入参数detect_reproduce为true时，返回该字段。
+    *
+    * @return $this
+    */
+    public function setDetectReproduceResult($detectReproduceResult)
+    {
+        $this->container['detectReproduceResult'] = $detectReproduceResult;
         return $this;
     }
 

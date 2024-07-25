@@ -36,13 +36,14 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * bodyRemark  API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
     * resultNormalSample  正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
     * resultFailureSample  失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
-    * authorizerId  前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    * authorizerId  前端自定义认证对象的ID
     * tags  标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
     * responseId  分组自定义响应ID
     * romaAppId  集成应用ID  暂不支持
     * domainName  API绑定的自定义域名  暂不支持
     * tag  标签  待废弃，优先使用tags字段
-    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain
+    * isSendFgBodyBase64  是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
     * mockInfo  mockInfo
     * funcInfo  funcInfo
     * reqParams  API的请求参数列表，API请求协议为GRPC类型时不支持配置
@@ -76,6 +77,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'domainName' => 'string',
             'tag' => 'string',
             'contentType' => 'string',
+            'isSendFgBodyBase64' => 'bool',
             'mockInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\ApiMockCreate',
             'funcInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\ApiFuncCreate',
             'reqParams' => '\HuaweiCloud\SDK\Apig\V2\Model\ReqParamBase[]',
@@ -102,13 +104,14 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * bodyRemark  API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
     * resultNormalSample  正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
     * resultFailureSample  失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
-    * authorizerId  前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    * authorizerId  前端自定义认证对象的ID
     * tags  标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
     * responseId  分组自定义响应ID
     * romaAppId  集成应用ID  暂不支持
     * domainName  API绑定的自定义域名  暂不支持
     * tag  标签  待废弃，优先使用tags字段
-    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain
+    * isSendFgBodyBase64  是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
     * mockInfo  mockInfo
     * funcInfo  funcInfo
     * reqParams  API的请求参数列表，API请求协议为GRPC类型时不支持配置
@@ -142,6 +145,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
         'domainName' => null,
         'tag' => null,
         'contentType' => null,
+        'isSendFgBodyBase64' => null,
         'mockInfo' => null,
         'funcInfo' => null,
         'reqParams' => null,
@@ -189,13 +193,14 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * bodyRemark  API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
     * resultNormalSample  正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
     * resultFailureSample  失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
-    * authorizerId  前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    * authorizerId  前端自定义认证对象的ID
     * tags  标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
     * responseId  分组自定义响应ID
     * romaAppId  集成应用ID  暂不支持
     * domainName  API绑定的自定义域名  暂不支持
     * tag  标签  待废弃，优先使用tags字段
-    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain
+    * isSendFgBodyBase64  是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
     * mockInfo  mockInfo
     * funcInfo  funcInfo
     * reqParams  API的请求参数列表，API请求协议为GRPC类型时不支持配置
@@ -229,6 +234,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'domainName' => 'domain_name',
             'tag' => 'tag',
             'contentType' => 'content_type',
+            'isSendFgBodyBase64' => 'is_send_fg_body_base64',
             'mockInfo' => 'mock_info',
             'funcInfo' => 'func_info',
             'reqParams' => 'req_params',
@@ -255,13 +261,14 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * bodyRemark  API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
     * resultNormalSample  正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
     * resultFailureSample  失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
-    * authorizerId  前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    * authorizerId  前端自定义认证对象的ID
     * tags  标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
     * responseId  分组自定义响应ID
     * romaAppId  集成应用ID  暂不支持
     * domainName  API绑定的自定义域名  暂不支持
     * tag  标签  待废弃，优先使用tags字段
-    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain
+    * isSendFgBodyBase64  是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
     * mockInfo  mockInfo
     * funcInfo  funcInfo
     * reqParams  API的请求参数列表，API请求协议为GRPC类型时不支持配置
@@ -295,6 +302,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'domainName' => 'setDomainName',
             'tag' => 'setTag',
             'contentType' => 'setContentType',
+            'isSendFgBodyBase64' => 'setIsSendFgBodyBase64',
             'mockInfo' => 'setMockInfo',
             'funcInfo' => 'setFuncInfo',
             'reqParams' => 'setReqParams',
@@ -321,13 +329,14 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     * bodyRemark  API请求体描述，可以是请求体示例、媒体类型、参数等信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。
     * resultNormalSample  正常响应示例，描述API的正常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
     * resultFailureSample  失败返回示例，描述API的异常返回信息。字符长度不超过20480 > 中文字符必须为UTF-8或者unicode编码。  当API的请求协议为GRPC类型时不支持配置。
-    * authorizerId  前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    * authorizerId  前端自定义认证对象的ID
     * tags  标签。  支持英文，数字，中文，特殊符号（-*#%.:_），且只能以中文或英文开头。  默认支持10个标签，如需扩大配额请联系技术工程师修改API_TAG_NUM_LIMIT配置。
     * responseId  分组自定义响应ID
     * romaAppId  集成应用ID  暂不支持
     * domainName  API绑定的自定义域名  暂不支持
     * tag  标签  待废弃，优先使用tags字段
-    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    * contentType  请求内容格式类型：  application/json application/xml multipart/form-data text/plain
+    * isSendFgBodyBase64  是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
     * mockInfo  mockInfo
     * funcInfo  funcInfo
     * reqParams  API的请求参数列表，API请求协议为GRPC类型时不支持配置
@@ -361,6 +370,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
             'domainName' => 'getDomainName',
             'tag' => 'getTag',
             'contentType' => 'getContentType',
+            'isSendFgBodyBase64' => 'getIsSendFgBodyBase64',
             'mockInfo' => 'getMockInfo',
             'funcInfo' => 'getFuncInfo',
             'reqParams' => 'getReqParams',
@@ -583,6 +593,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['isSendFgBodyBase64'] = isset($data['isSendFgBodyBase64']) ? $data['isSendFgBodyBase64'] : null;
         $this->container['mockInfo'] = isset($data['mockInfo']) ? $data['mockInfo'] : null;
         $this->container['funcInfo'] = isset($data['funcInfo']) ? $data['funcInfo'] : null;
         $this->container['reqParams'] = isset($data['reqParams']) ? $data['reqParams'] : null;
@@ -1082,7 +1093,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets authorizerId
-    *  前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    *  前端自定义认证对象的ID
     *
     * @return string|null
     */
@@ -1094,7 +1105,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     /**
     * Sets authorizerId
     *
-    * @param string|null $authorizerId 前端自定义认证对象的ID，API请求协议为GRPC类型时不支持前端自定义认证
+    * @param string|null $authorizerId 前端自定义认证对象的ID
     *
     * @return $this
     */
@@ -1226,7 +1237,7 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    *  请求内容格式类型：  application/json application/xml multipart/form-data text/plain
     *
     * @return string|null
     */
@@ -1238,13 +1249,37 @@ class ApiCreateBase implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string|null $contentType 请求内容格式类型：  application/json application/xml multipart/form-data text/plain  暂不支持
+    * @param string|null $contentType 请求内容格式类型：  application/json application/xml multipart/form-data text/plain
     *
     * @return $this
     */
     public function setContentType($contentType)
     {
         $this->container['contentType'] = $contentType;
+        return $this;
+    }
+
+    /**
+    * Gets isSendFgBodyBase64
+    *  是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
+    *
+    * @return bool|null
+    */
+    public function getIsSendFgBodyBase64()
+    {
+        return $this->container['isSendFgBodyBase64'];
+    }
+
+    /**
+    * Sets isSendFgBodyBase64
+    *
+    * @param bool|null $isSendFgBodyBase64 是否对与FunctionGraph交互场景的body进行Base64编码。仅当content_type为application/json时，可以不对body进行Base64编码。 应用场景： - 自定义认证 - 绑定断路器插件，且断路器后端降级策略为函数后端 - API后端类型为函数工作流
+    *
+    * @return $this
+    */
+    public function setIsSendFgBodyBase64($isSendFgBodyBase64)
+    {
+        $this->container['isSendFgBodyBase64'] = $isSendFgBodyBase64;
         return $this;
     }
 

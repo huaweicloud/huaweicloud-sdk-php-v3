@@ -265,6 +265,12 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['assetIds'] === null) {
+            $invalidProperties[] = "'assetIds' can't be null";
+        }
+        if ($this->container['cycle'] === null) {
+            $invalidProperties[] = "'cycle' can't be null";
+        }
             $allowedValues = $this->getCycleAllowableValues();
                 if (!is_null($this->container['cycle']) && !in_array($this->container['cycle'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -273,6 +279,12 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['ruleGroupIds'] === null) {
+            $invalidProperties[] = "'ruleGroupIds' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -291,7 +303,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     * Gets assetIds
     *  资产ID列表
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getAssetIds()
     {
@@ -301,7 +313,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets assetIds
     *
-    * @param string[]|null $assetIds 资产ID列表
+    * @param string[] $assetIds 资产ID列表
     *
     * @return $this
     */
@@ -315,7 +327,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     * Gets cycle
     *  扫描周期，日(DAY)，周(WEEK)，月(MONTH)，单次扫描(ONCE)
     *
-    * @return string|null
+    * @return string
     */
     public function getCycle()
     {
@@ -325,7 +337,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cycle
     *
-    * @param string|null $cycle 扫描周期，日(DAY)，周(WEEK)，月(MONTH)，单次扫描(ONCE)
+    * @param string $cycle 扫描周期，日(DAY)，周(WEEK)，月(MONTH)，单次扫描(ONCE)
     *
     * @return $this
     */
@@ -339,7 +351,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     * Gets name
     *  扫描任务名
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -349,7 +361,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 扫描任务名
+    * @param string $name 扫描任务名
     *
     * @return $this
     */
@@ -387,7 +399,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     * Gets ruleGroupIds
     *  规则组ID列表
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getRuleGroupIds()
     {
@@ -397,7 +409,7 @@ class ScanJobRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ruleGroupIds
     *
-    * @param string[]|null $ruleGroupIds 规则组ID列表
+    * @param string[] $ruleGroupIds 规则组ID列表
     *
     * @return $this
     */

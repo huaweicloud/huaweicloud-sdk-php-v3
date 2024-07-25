@@ -22,32 +22,24 @@ class IndicatorDataObjectDetailIndicatorType implements ModelInterface, ArrayAcc
     * Array of property to type mappings. Used for (de)serialization
     * indicatorType  情报类型
     * id  情报类型ID
-    * category  目录
-    * layoutId  布局ID
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'indicatorType' => 'string',
-            'id' => 'string',
-            'category' => 'string',
-            'layoutId' => 'string'
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * indicatorType  情报类型
     * id  情报类型ID
-    * category  目录
-    * layoutId  布局ID
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'indicatorType' => null,
-        'id' => null,
-        'category' => null,
-        'layoutId' => null
+        'id' => null
     ];
 
     /**
@@ -75,48 +67,36 @@ class IndicatorDataObjectDetailIndicatorType implements ModelInterface, ArrayAcc
     * and the value is the original name
     * indicatorType  情报类型
     * id  情报类型ID
-    * category  目录
-    * layoutId  布局ID
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'indicatorType' => 'indicator_type',
-            'id' => 'id',
-            'category' => 'category',
-            'layoutId' => 'layout_id'
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * indicatorType  情报类型
     * id  情报类型ID
-    * category  目录
-    * layoutId  布局ID
     *
     * @var string[]
     */
     protected static $setters = [
             'indicatorType' => 'setIndicatorType',
-            'id' => 'setId',
-            'category' => 'setCategory',
-            'layoutId' => 'setLayoutId'
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * indicatorType  情报类型
     * id  情报类型ID
-    * category  目录
-    * layoutId  布局ID
     *
     * @var string[]
     */
     protected static $getters = [
             'indicatorType' => 'getIndicatorType',
-            'id' => 'getId',
-            'category' => 'getCategory',
-            'layoutId' => 'getLayoutId'
+            'id' => 'getId'
     ];
 
     /**
@@ -179,8 +159,6 @@ class IndicatorDataObjectDetailIndicatorType implements ModelInterface, ArrayAcc
     {
         $this->container['indicatorType'] = isset($data['indicatorType']) ? $data['indicatorType'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
-        $this->container['layoutId'] = isset($data['layoutId']) ? $data['layoutId'] : null;
     }
 
     /**
@@ -202,18 +180,6 @@ class IndicatorDataObjectDetailIndicatorType implements ModelInterface, ArrayAcc
             }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 1)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) > 64)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['category']) && (mb_strlen($this->container['category']) < 1)) {
-                $invalidProperties[] = "invalid value for 'category', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['layoutId']) && (mb_strlen($this->container['layoutId']) > 64)) {
-                $invalidProperties[] = "invalid value for 'layoutId', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['layoutId']) && (mb_strlen($this->container['layoutId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'layoutId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -274,54 +240,6 @@ class IndicatorDataObjectDetailIndicatorType implements ModelInterface, ArrayAcc
     public function setId($id)
     {
         $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets category
-    *  目录
-    *
-    * @return string|null
-    */
-    public function getCategory()
-    {
-        return $this->container['category'];
-    }
-
-    /**
-    * Sets category
-    *
-    * @param string|null $category 目录
-    *
-    * @return $this
-    */
-    public function setCategory($category)
-    {
-        $this->container['category'] = $category;
-        return $this;
-    }
-
-    /**
-    * Gets layoutId
-    *  布局ID
-    *
-    * @return string|null
-    */
-    public function getLayoutId()
-    {
-        return $this->container['layoutId'];
-    }
-
-    /**
-    * Sets layoutId
-    *
-    * @param string|null $layoutId 布局ID
-    *
-    * @return $this
-    */
-    public function setLayoutId($layoutId)
-    {
-        $this->container['layoutId'] = $layoutId;
         return $this;
     }
 

@@ -23,15 +23,13 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
     * name  剧本名称
     * description  描述
     * workspaceId  工作空间ID
-    * enabled  是否启用，默认传false
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'name' => 'string',
             'description' => 'string',
-            'workspaceId' => 'string',
-            'enabled' => 'bool'
+            'workspaceId' => 'string'
     ];
 
     /**
@@ -39,15 +37,13 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
     * name  剧本名称
     * description  描述
     * workspaceId  工作空间ID
-    * enabled  是否启用，默认传false
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'name' => null,
         'description' => null,
-        'workspaceId' => null,
-        'enabled' => null
+        'workspaceId' => null
     ];
 
     /**
@@ -76,15 +72,13 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
     * name  剧本名称
     * description  描述
     * workspaceId  工作空间ID
-    * enabled  是否启用，默认传false
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'name' => 'name',
             'description' => 'description',
-            'workspaceId' => 'workspace_id',
-            'enabled' => 'enabled'
+            'workspaceId' => 'workspace_id'
     ];
 
     /**
@@ -92,15 +86,13 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
     * name  剧本名称
     * description  描述
     * workspaceId  工作空间ID
-    * enabled  是否启用，默认传false
     *
     * @var string[]
     */
     protected static $setters = [
             'name' => 'setName',
             'description' => 'setDescription',
-            'workspaceId' => 'setWorkspaceId',
-            'enabled' => 'setEnabled'
+            'workspaceId' => 'setWorkspaceId'
     ];
 
     /**
@@ -108,15 +100,13 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
     * name  剧本名称
     * description  描述
     * workspaceId  工作空间ID
-    * enabled  是否启用，默认传false
     *
     * @var string[]
     */
     protected static $getters = [
             'name' => 'getName',
             'description' => 'getDescription',
-            'workspaceId' => 'getWorkspaceId',
-            'enabled' => 'getEnabled'
+            'workspaceId' => 'getWorkspaceId'
     ];
 
     /**
@@ -180,7 +170,6 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['workspaceId'] = isset($data['workspaceId']) ? $data['workspaceId'] : null;
-        $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
     }
 
     /**
@@ -298,30 +287,6 @@ class CreatePlaybookInfo implements ModelInterface, ArrayAccess
     public function setWorkspaceId($workspaceId)
     {
         $this->container['workspaceId'] = $workspaceId;
-        return $this;
-    }
-
-    /**
-    * Gets enabled
-    *  是否启用，默认传false
-    *
-    * @return bool|null
-    */
-    public function getEnabled()
-    {
-        return $this->container['enabled'];
-    }
-
-    /**
-    * Sets enabled
-    *
-    * @param bool|null $enabled 是否启用，默认传false
-    *
-    * @return $this
-    */
-    public function setEnabled($enabled)
-    {
-        $this->container['enabled'] = $enabled;
         return $this;
     }
 

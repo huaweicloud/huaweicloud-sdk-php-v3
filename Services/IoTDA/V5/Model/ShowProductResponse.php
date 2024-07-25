@@ -26,7 +26,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
     * name  产品名称。
     * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     * dataFormat  设备上报数据的格式，取值范围：json，binary。
     * manufacturerName  厂商名称。
     * industry  设备所属行业。
@@ -58,7 +58,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
     * name  产品名称。
     * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     * dataFormat  设备上报数据的格式，取值范围：json，binary。
     * manufacturerName  厂商名称。
     * industry  设备所属行业。
@@ -111,7 +111,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
     * name  产品名称。
     * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     * dataFormat  设备上报数据的格式，取值范围：json，binary。
     * manufacturerName  厂商名称。
     * industry  设备所属行业。
@@ -143,7 +143,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
     * name  产品名称。
     * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     * dataFormat  设备上报数据的格式，取值范围：json，binary。
     * manufacturerName  厂商名称。
     * industry  设备所属行业。
@@ -175,7 +175,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     * productId  产品ID，用于唯一标识一个产品，在物联网平台创建产品后由平台分配获得。
     * name  产品名称。
     * deviceType  设备类型。
-    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    * protocolType  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     * dataFormat  设备上报数据的格式，取值范围：json，binary。
     * manufacturerName  厂商名称。
     * industry  设备所属行业。
@@ -416,7 +416,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocolType
-    *  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    *  设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class ShowProductResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocolType
     *
-    * @param string|null $protocolType 设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other。
+    * @param string|null $protocolType 设备使用的协议类型。取值范围：MQTT，CoAP，HTTP，HTTPS，Modbus，ONVIF， OPC-UA，OPC-DA，Other，TCP，UDP。
     *
     * @return $this
     */

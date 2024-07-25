@@ -20,7 +20,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * batchIds  指标ID列表
+    * batchIds  威胁情报ID列表
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * batchIds  指标ID列表
+    * batchIds  威胁情报ID列表
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * batchIds  指标ID列表
+    * batchIds  威胁情报ID列表
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * batchIds  指标ID列表
+    * batchIds  威胁情报ID列表
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * batchIds  指标ID列表
+    * batchIds  威胁情报ID列表
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets batchIds
-    *  指标ID列表
+    *  威胁情报ID列表
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class DeleteIndicatorRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets batchIds
     *
-    * @param string[]|null $batchIds 指标ID列表
+    * @param string[]|null $batchIds 威胁情报ID列表
     *
     * @return $this
     */

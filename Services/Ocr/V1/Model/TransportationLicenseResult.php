@@ -27,11 +27,11 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  签发日期（非必有，依赖对应运输证板式）。
+    * issueDate  发证日期（非必有，依赖对应运输证板式）。
     * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
     * economicType  经济类型（非必有，依赖对应运输证板式）。
     * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  道路普通货物运输（非必有，依赖对应运输证板式）。
+    * businessScope  经营范围（非必有，依赖对应运输证板式）。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -61,11 +61,11 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  签发日期（非必有，依赖对应运输证板式）。
+    * issueDate  发证日期（非必有，依赖对应运输证板式）。
     * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
     * economicType  经济类型（非必有，依赖对应运输证板式）。
     * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  道路普通货物运输（非必有，依赖对应运输证板式）。
+    * businessScope  经营范围（非必有，依赖对应运输证板式）。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -116,11 +116,11 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  签发日期（非必有，依赖对应运输证板式）。
+    * issueDate  发证日期（非必有，依赖对应运输证板式）。
     * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
     * economicType  经济类型（非必有，依赖对应运输证板式）。
     * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  道路普通货物运输（非必有，依赖对应运输证板式）。
+    * businessScope  经营范围（非必有，依赖对应运输证板式）。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -150,11 +150,11 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  签发日期（非必有，依赖对应运输证板式）。
+    * issueDate  发证日期（非必有，依赖对应运输证板式）。
     * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
     * economicType  经济类型（非必有，依赖对应运输证板式）。
     * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  道路普通货物运输（非必有，依赖对应运输证板式）。
+    * businessScope  经营范围（非必有，依赖对应运输证板式）。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -184,11 +184,11 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
     * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  签发日期（非必有，依赖对应运输证板式）。
+    * issueDate  发证日期（非必有，依赖对应运输证板式）。
     * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
     * economicType  经济类型（非必有，依赖对应运输证板式）。
     * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  道路普通货物运输（非必有，依赖对应运输证板式）。
+    * businessScope  经营范围（非必有，依赖对应运输证板式）。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -474,7 +474,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets issueDate
-    *  签发日期（非必有，依赖对应运输证板式）。
+    *  发证日期（非必有，依赖对应运输证板式）。
     *
     * @return string|null
     */
@@ -486,7 +486,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets issueDate
     *
-    * @param string|null $issueDate 签发日期（非必有，依赖对应运输证板式）。
+    * @param string|null $issueDate 发证日期（非必有，依赖对应运输证板式）。
     *
     * @return $this
     */
@@ -570,7 +570,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessScope
-    *  道路普通货物运输（非必有，依赖对应运输证板式）。
+    *  经营范围（非必有，依赖对应运输证板式）。
     *
     * @return string|null
     */
@@ -582,7 +582,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets businessScope
     *
-    * @param string|null $businessScope 道路普通货物运输（非必有，依赖对应运输证板式）。
+    * @param string|null $businessScope 经营范围（非必有，依赖对应运输证板式）。
     *
     * @return $this
     */

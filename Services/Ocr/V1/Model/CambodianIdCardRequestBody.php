@@ -31,6 +31,7 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
     * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
     * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    * detectReproduce  返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'detectBlur' => 'bool',
             'detectGlare' => 'bool',
             'returnAdjustedImage' => 'bool',
-            'detectTampering' => 'bool'
+            'detectTampering' => 'bool',
+            'detectReproduce' => 'bool'
     ];
 
     /**
@@ -61,6 +63,7 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
     * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
     * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    * detectReproduce  返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
         'detectBlur' => null,
         'detectGlare' => null,
         'returnAdjustedImage' => null,
-        'detectTampering' => null
+        'detectTampering' => null,
+        'detectReproduce' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
     * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
     * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    * detectReproduce  返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'detectBlur' => 'detect_blur',
             'detectGlare' => 'detect_glare',
             'returnAdjustedImage' => 'return_adjusted_image',
-            'detectTampering' => 'detect_tampering'
+            'detectTampering' => 'detect_tampering',
+            'detectReproduce' => 'detect_reproduce'
     ];
 
     /**
@@ -142,6 +148,7 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
     * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
     * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    * detectReproduce  返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'detectBlur' => 'setDetectBlur',
             'detectGlare' => 'setDetectGlare',
             'returnAdjustedImage' => 'setReturnAdjustedImage',
-            'detectTampering' => 'setDetectTampering'
+            'detectTampering' => 'setDetectTampering',
+            'detectReproduce' => 'setDetectReproduce'
     ];
 
     /**
@@ -172,6 +180,7 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     * detectGlare  返回身份证是否反光的告警结果的开关，可选值如下所示 - true：打开身份证是否反光的告警功能  - false：关闭身份证是否反光的告警功能
     * returnAdjustedImage  返回身份证四点原图的base64编码 - true: 返回身份证原图的base64编码  - false：不返回身份证原图的base64编码
     * detectTampering  返回身份证人像是否被篡改的告警结果的开关，可选值如下所示 - true:  打开身份证人像是否被篡改的告警功能  - false：关闭身份证人像被篡改的告警功能 不支持精细化的P图
+    * detectReproduce  返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
             'detectBlur' => 'getDetectBlur',
             'detectGlare' => 'getDetectGlare',
             'returnAdjustedImage' => 'getReturnAdjustedImage',
-            'detectTampering' => 'getDetectTampering'
+            'detectTampering' => 'getDetectTampering',
+            'detectReproduce' => 'getDetectReproduce'
     ];
 
     /**
@@ -258,6 +268,7 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
         $this->container['detectGlare'] = isset($data['detectGlare']) ? $data['detectGlare'] : null;
         $this->container['returnAdjustedImage'] = isset($data['returnAdjustedImage']) ? $data['returnAdjustedImage'] : null;
         $this->container['detectTampering'] = isset($data['detectTampering']) ? $data['detectTampering'] : null;
+        $this->container['detectReproduce'] = isset($data['detectReproduce']) ? $data['detectReproduce'] : null;
     }
 
     /**
@@ -543,6 +554,30 @@ class CambodianIdCardRequestBody implements ModelInterface, ArrayAccess
     public function setDetectTampering($detectTampering)
     {
         $this->container['detectTampering'] = $detectTampering;
+        return $this;
+    }
+
+    /**
+    * Gets detectReproduce
+    *  返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
+    *
+    * @return bool|null
+    */
+    public function getDetectReproduce()
+    {
+        return $this->container['detectReproduce'];
+    }
+
+    /**
+    * Sets detectReproduce
+    *
+    * @param bool|null $detectReproduce 返回判断身份证图像是否经过翻拍告警的开关，可选值如下所示 - true:打开判断身份证图像是否经过翻拍告警的功能  - false:关闭判断身份证图像是否经过翻拍告警的功能
+    *
+    * @return $this
+    */
+    public function setDetectReproduce($detectReproduce)
+    {
+        $this->container['detectReproduce'] = $detectReproduce;
         return $this;
     }
 

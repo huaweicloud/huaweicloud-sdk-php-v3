@@ -22,7 +22,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -46,7 +46,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -91,7 +91,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -115,7 +115,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -139,7 +139,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * host  后端服务器地址  后端实例类型为ip时必填
     * weight  权重值。  允许您对后端服务进行评级，权重值越大，转发到该云服务的请求数量越多。
-    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * isBackup  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     * memberGroupName  后端服务器组名称。为后端服务地址选择服务器组，便于统一修改对应服务器组的后端地址。
     * status  后端服务器状态   - 1：可用   - 2：不可用
     * port  后端服务器端口
@@ -250,8 +250,8 @@ class MemberInfo implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) > 64)) {
-                $invalidProperties[] = "invalid value for 'host', the character length must be smaller than or equal to 64.";
+            if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) > 255)) {
+                $invalidProperties[] = "invalid value for 'host', the character length must be smaller than or equal to 255.";
             }
             if (!is_null($this->container['weight']) && ($this->container['weight'] > 10000)) {
                 $invalidProperties[] = "invalid value for 'weight', must be smaller than or equal to 10000.";
@@ -343,7 +343,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets isBackup
-    *  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    *  是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     *
     * @return bool|null
     */
@@ -355,7 +355,7 @@ class MemberInfo implements ModelInterface, ArrayAccess
     /**
     * Sets isBackup
     *
-    * @param bool|null $isBackup 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，若不支持请联系技术支持。
+    * @param bool|null $isBackup 是否备用节点。  开启后对应后端服务为备用节点，仅当非备用节点全部故障时工作。  实例需要升级到对应版本才支持此功能，如果不支持请联系技术支持。
     *
     * @return $this
     */

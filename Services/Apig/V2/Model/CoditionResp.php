@@ -26,7 +26,9 @@ class CoditionResp implements ModelInterface, ArrayAccess
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
     * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    * conditionValue  策略值。
+    * mappedParamName  参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    * mappedParamLocation  参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
     * id  编号
     * reqParamId  关联的请求参数对象编号
     * reqParamLocation  关联的请求参数对象位置
@@ -41,6 +43,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
             'conditionType' => 'string',
             'conditionOrigin' => 'string',
             'conditionValue' => 'string',
+            'mappedParamName' => 'string',
+            'mappedParamLocation' => 'string',
             'id' => 'string',
             'reqParamId' => 'string',
             'reqParamLocation' => 'string'
@@ -54,7 +58,9 @@ class CoditionResp implements ModelInterface, ArrayAccess
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
     * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    * conditionValue  策略值。
+    * mappedParamName  参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    * mappedParamLocation  参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
     * id  编号
     * reqParamId  关联的请求参数对象编号
     * reqParamLocation  关联的请求参数对象位置
@@ -69,6 +75,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
         'conditionType' => null,
         'conditionOrigin' => null,
         'conditionValue' => null,
+        'mappedParamName' => null,
+        'mappedParamLocation' => null,
         'id' => null,
         'reqParamId' => null,
         'reqParamLocation' => null
@@ -103,7 +111,9 @@ class CoditionResp implements ModelInterface, ArrayAccess
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
     * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    * conditionValue  策略值。
+    * mappedParamName  参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    * mappedParamLocation  参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
     * id  编号
     * reqParamId  关联的请求参数对象编号
     * reqParamLocation  关联的请求参数对象位置
@@ -118,6 +128,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
             'conditionType' => 'condition_type',
             'conditionOrigin' => 'condition_origin',
             'conditionValue' => 'condition_value',
+            'mappedParamName' => 'mapped_param_name',
+            'mappedParamLocation' => 'mapped_param_location',
             'id' => 'id',
             'reqParamId' => 'req_param_id',
             'reqParamLocation' => 'req_param_location'
@@ -131,7 +143,9 @@ class CoditionResp implements ModelInterface, ArrayAccess
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
     * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    * conditionValue  策略值。
+    * mappedParamName  参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    * mappedParamLocation  参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
     * id  编号
     * reqParamId  关联的请求参数对象编号
     * reqParamLocation  关联的请求参数对象位置
@@ -146,6 +160,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
             'conditionType' => 'setConditionType',
             'conditionOrigin' => 'setConditionOrigin',
             'conditionValue' => 'setConditionValue',
+            'mappedParamName' => 'setMappedParamName',
+            'mappedParamLocation' => 'setMappedParamLocation',
             'id' => 'setId',
             'reqParamId' => 'setReqParamId',
             'reqParamLocation' => 'setReqParamLocation'
@@ -159,7 +175,9 @@ class CoditionResp implements ModelInterface, ArrayAccess
     * frontendAuthorizerParamName  系统参数-前端认证参数名称。策略类型为frontend_authorizer时必选，前端认证参数名称以\"$context.authorizer.frontend.\"字符串为前缀。例如，前端认证参数名称为user_name，加上前缀为$context.authorizer.frontend.user_name。
     * conditionType  策略条件 - exact：绝对匹配 - enum：枚举 - pattern：正则  策略类型为param，system，cookie，frontend_authorizer时必选
     * conditionOrigin  策略类型 - param：参数 - source：源IP - system: 系统参数-网关内置参数 - cookie: COOKIE参数 - frontend_authorizer: 系统参数-前端认证参数
-    * conditionValue  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    * conditionValue  策略值。
+    * mappedParamName  参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    * mappedParamLocation  参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
     * id  编号
     * reqParamId  关联的请求参数对象编号
     * reqParamLocation  关联的请求参数对象位置
@@ -174,6 +192,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
             'conditionType' => 'getConditionType',
             'conditionOrigin' => 'getConditionOrigin',
             'conditionValue' => 'getConditionValue',
+            'mappedParamName' => 'getMappedParamName',
+            'mappedParamLocation' => 'getMappedParamLocation',
             'id' => 'getId',
             'reqParamId' => 'getReqParamId',
             'reqParamLocation' => 'getReqParamLocation'
@@ -229,6 +249,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
     const CONDITION_ORIGIN_SYSTEM = 'system';
     const CONDITION_ORIGIN_COOKIE = 'cookie';
     const CONDITION_ORIGIN_FRONTEND_AUTHORIZER = 'frontend_authorizer';
+    const MAPPED_PARAM_LOCATION_HEADER = 'header';
+    const MAPPED_PARAM_LOCATION_QUERY = 'query';
     
 
     /**
@@ -274,6 +296,19 @@ class CoditionResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getMappedParamLocationAllowableValues()
+    {
+        return [
+            self::MAPPED_PARAM_LOCATION_HEADER,
+            self::MAPPED_PARAM_LOCATION_QUERY,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -297,6 +332,8 @@ class CoditionResp implements ModelInterface, ArrayAccess
         $this->container['conditionType'] = isset($data['conditionType']) ? $data['conditionType'] : null;
         $this->container['conditionOrigin'] = isset($data['conditionOrigin']) ? $data['conditionOrigin'] : null;
         $this->container['conditionValue'] = isset($data['conditionValue']) ? $data['conditionValue'] : null;
+        $this->container['mappedParamName'] = isset($data['mappedParamName']) ? $data['mappedParamName'] : null;
+        $this->container['mappedParamLocation'] = isset($data['mappedParamLocation']) ? $data['mappedParamLocation'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['reqParamId'] = isset($data['reqParamId']) ? $data['reqParamId'] : null;
         $this->container['reqParamLocation'] = isset($data['reqParamLocation']) ? $data['reqParamLocation'] : null;
@@ -352,6 +389,20 @@ class CoditionResp implements ModelInterface, ArrayAccess
         if ($this->container['conditionValue'] === null) {
             $invalidProperties[] = "'conditionValue' can't be null";
         }
+            if ((mb_strlen($this->container['conditionValue']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'conditionValue', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['mappedParamName']) && !preg_match("/^[a-zA-Z][a-zA-Z0-9-]{0,127}$/", $this->container['mappedParamName'])) {
+                $invalidProperties[] = "invalid value for 'mappedParamName', must be conform to the pattern /^[a-zA-Z][a-zA-Z0-9-]{0,127}$/.";
+            }
+            $allowedValues = $this->getMappedParamLocationAllowableValues();
+                if (!is_null($this->container['mappedParamLocation']) && !in_array($this->container['mappedParamLocation'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'mappedParamLocation', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -512,7 +563,7 @@ class CoditionResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets conditionValue
-    *  策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    *  策略值。
     *
     * @return string
     */
@@ -524,13 +575,61 @@ class CoditionResp implements ModelInterface, ArrayAccess
     /**
     * Sets conditionValue
     *
-    * @param string $conditionValue 策略值。策略类型为param，source，cookie，frontend_authorizer时必填
+    * @param string $conditionValue 策略值。
     *
     * @return $this
     */
     public function setConditionValue($conditionValue)
     {
         $this->container['conditionValue'] = $conditionValue;
+        return $this;
+    }
+
+    /**
+    * Gets mappedParamName
+    *  参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    *
+    * @return string|null
+    */
+    public function getMappedParamName()
+    {
+        return $this->container['mappedParamName'];
+    }
+
+    /**
+    * Sets mappedParamName
+    *
+    * @param string|null $mappedParamName 参数编排规则编排后生成的参数名称，当condition_origin为orchestration的时候必填，并且生成的参数名称必须在api绑定的编排规则中存在
+    *
+    * @return $this
+    */
+    public function setMappedParamName($mappedParamName)
+    {
+        $this->container['mappedParamName'] = $mappedParamName;
+        return $this;
+    }
+
+    /**
+    * Gets mappedParamLocation
+    *  参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
+    *
+    * @return string|null
+    */
+    public function getMappedParamLocation()
+    {
+        return $this->container['mappedParamLocation'];
+    }
+
+    /**
+    * Sets mappedParamLocation
+    *
+    * @param string|null $mappedParamLocation 参数编排规则编排后生成的参数所在的位置，当condition_origin为orchestration的时候必填，并且生成的参数所在的位置必须在api绑定的编排规则中存在
+    *
+    * @return $this
+    */
+    public function setMappedParamLocation($mappedParamLocation)
+    {
+        $this->container['mappedParamLocation'] = $mappedParamLocation;
         return $this;
     }
 

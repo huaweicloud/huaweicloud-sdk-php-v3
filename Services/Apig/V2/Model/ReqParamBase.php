@@ -36,6 +36,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     * regular  正则校验规则  暂不支持
     * jsonSchema  JSON校验规则  暂不支持
     * passThrough  是否透传 - 1：是 - 2：否
+    * orchestrations  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class ReqParamBase implements ModelInterface, ArrayAccess
             'maxSize' => 'int',
             'regular' => 'string',
             'jsonSchema' => 'string',
-            'passThrough' => 'int'
+            'passThrough' => 'int',
+            'orchestrations' => 'string[]'
     ];
 
     /**
@@ -76,6 +78,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     * regular  正则校验规则  暂不支持
     * jsonSchema  JSON校验规则  暂不支持
     * passThrough  是否透传 - 1：是 - 2：否
+    * orchestrations  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class ReqParamBase implements ModelInterface, ArrayAccess
         'maxSize' => 'int32',
         'regular' => null,
         'jsonSchema' => null,
-        'passThrough' => 'int32'
+        'passThrough' => 'int32',
+        'orchestrations' => null
     ];
 
     /**
@@ -137,6 +141,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     * regular  正则校验规则  暂不支持
     * jsonSchema  JSON校验规则  暂不支持
     * passThrough  是否透传 - 1：是 - 2：否
+    * orchestrations  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class ReqParamBase implements ModelInterface, ArrayAccess
             'maxSize' => 'max_size',
             'regular' => 'regular',
             'jsonSchema' => 'json_schema',
-            'passThrough' => 'pass_through'
+            'passThrough' => 'pass_through',
+            'orchestrations' => 'orchestrations'
     ];
 
     /**
@@ -177,6 +183,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     * regular  正则校验规则  暂不支持
     * jsonSchema  JSON校验规则  暂不支持
     * passThrough  是否透传 - 1：是 - 2：否
+    * orchestrations  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class ReqParamBase implements ModelInterface, ArrayAccess
             'maxSize' => 'setMaxSize',
             'regular' => 'setRegular',
             'jsonSchema' => 'setJsonSchema',
-            'passThrough' => 'setPassThrough'
+            'passThrough' => 'setPassThrough',
+            'orchestrations' => 'setOrchestrations'
     ];
 
     /**
@@ -217,6 +225,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     * regular  正则校验规则  暂不支持
     * jsonSchema  JSON校验规则  暂不支持
     * passThrough  是否透传 - 1：是 - 2：否
+    * orchestrations  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class ReqParamBase implements ModelInterface, ArrayAccess
             'maxSize' => 'getMaxSize',
             'regular' => 'getRegular',
             'jsonSchema' => 'getJsonSchema',
-            'passThrough' => 'getPassThrough'
+            'passThrough' => 'getPassThrough',
+            'orchestrations' => 'getOrchestrations'
     ];
 
     /**
@@ -284,6 +294,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     const LOCATION_PATH = 'PATH';
     const LOCATION_QUERY = 'QUERY';
     const LOCATION_HEADER = 'HEADER';
+    const LOCATION_COOKIE = 'COOKIE';
     const REQUIRED_1 = 1;
     const REQUIRED_2 = 2;
     const VALID_ENABLE_1 = 1;
@@ -316,6 +327,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
             self::LOCATION_PATH,
             self::LOCATION_QUERY,
             self::LOCATION_HEADER,
+            self::LOCATION_COOKIE,
         ];
     }
 
@@ -390,6 +402,7 @@ class ReqParamBase implements ModelInterface, ArrayAccess
         $this->container['regular'] = isset($data['regular']) ? $data['regular'] : null;
         $this->container['jsonSchema'] = isset($data['jsonSchema']) ? $data['jsonSchema'] : null;
         $this->container['passThrough'] = isset($data['passThrough']) ? $data['passThrough'] : null;
+        $this->container['orchestrations'] = isset($data['orchestrations']) ? $data['orchestrations'] : null;
     }
 
     /**
@@ -847,6 +860,30 @@ class ReqParamBase implements ModelInterface, ArrayAccess
     public function setPassThrough($passThrough)
     {
         $this->container['passThrough'] = $passThrough;
+        return $this;
+    }
+
+    /**
+    * Gets orchestrations
+    *  请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
+    *
+    * @return string[]|null
+    */
+    public function getOrchestrations()
+    {
+        return $this->container['orchestrations'];
+    }
+
+    /**
+    * Sets orchestrations
+    *
+    * @param string[]|null $orchestrations 请求参数匹配编排规则的生效优先级与列表顺序保持一致，列表中靠前的配置匹配优先级较高； 如果编配规则列表中包含none_value类型的规则，则none_value类型的规则优先级最高，至多绑定一个none_value类型的规则； 如果编排规则列表中包含default类型的规则，则default类型的规则优先级最低，至多绑定一个default类型的规则； 当编排规则为预处理策略时，该规则不能作为除default以外的最后一个编排规则； 每个API仅允许选择一个参数绑定编排规则，且编排规则不能重复，支持绑定的编排规则数量有配额限制，具体请参见产品介绍的“配额说明”章节。
+    *
+    * @return $this
+    */
+    public function setOrchestrations($orchestrations)
+    {
+        $this->container['orchestrations'] = $orchestrations;
         return $this;
     }
 

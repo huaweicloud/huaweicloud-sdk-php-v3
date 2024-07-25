@@ -158,7 +158,7 @@ class ApigClient extends Client
     /**
      * 实例更新或绑定EIP
      *
-     * 实例更新或绑定EIP
+     * 实例更新或绑定EIP(仅当实例为LVS类型时支持)
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1646,6 +1646,71 @@ class ApigClient extends Client
     }
 
     /**
+     * 创建编排规则
+     *
+     * 创建编排规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createOrchestration($request)
+    {
+        return $this->createOrchestrationWithHttpInfo($request);
+    }
+
+    public function createOrchestrationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/orchestrations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1', 'application/json-2']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json', 'application/json-1', 'application/json-2'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\CreateOrchestrationResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\CreateOrchestrationRequest');
+    }
+
+    /**
      * 创建专享版实例（包周期）
      *
      * 创建包周期专享版实例。
@@ -1748,11 +1813,11 @@ class ApigClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json-1', 'application/json-2', 'application/json-3', 'application/json-4', 'application/json-5', 'application/json-6']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json-1', 'application/json-2', 'application/json-3', 'application/json-4', 'application/json-5', 'application/json-6'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -2908,6 +2973,71 @@ class ApigClient extends Client
     }
 
     /**
+     * 删除编排规则
+     *
+     * 删除编排规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteOrchestration($request)
+    {
+        return $this->deleteOrchestrationWithHttpInfo($request);
+    }
+
+    public function deleteOrchestrationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/orchestrations/{orchestration_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['orchestrationId'] !== null) {
+            $pathParams['orchestration_id'] = $localVarParams['orchestrationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\DeleteOrchestrationResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\DeleteOrchestrationRequest');
+    }
+
+    /**
      * 删除插件
      *
      * 删除插件。
@@ -3584,7 +3714,7 @@ class ApigClient extends Client
     /**
      * 异步导出API
      *
-     * 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+     * 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关用户指南》的“导入导出API：扩展定义”章节。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3652,7 +3782,7 @@ class ApigClient extends Client
     /**
      * 异步导入API
      *
-     * 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+     * 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关用户指南》的“导入导出API：扩展定义”章节。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -5606,6 +5736,74 @@ class ApigClient extends Client
     }
 
     /**
+     * 通过标签查询实例列表
+     *
+     * 通过标签查询实例列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listInstancesByTags($request)
+    {
+        return $this->listInstancesByTagsWithHttpInfo($request);
+    }
+
+    public function listInstancesByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/resource-instances/filter';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListInstancesByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListInstancesByTagsRequest');
+    }
+
+    /**
      * 查询专享版实例列表
      *
      * 查询专享版实例列表
@@ -5892,6 +6090,163 @@ class ApigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListMetricDataResponse',
             $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListMetricDataRequest');
+    }
+
+    /**
+     * 查询编排规则绑定的API
+     *
+     * 查询指定插件下绑定的API信息
+     * - 用于查询指定插件下已经绑定的API列表信息
+     * - 支持分页返回
+     * - 支持API名称模糊查询
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOrchestrationAttachedApis($request)
+    {
+        return $this->listOrchestrationAttachedApisWithHttpInfo($request);
+    }
+
+    public function listOrchestrationAttachedApisWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/orchestrations/{orchestration_id}/attached-apis';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['apiName'] !== null) {
+            $queryParams['api_name'] = $localVarParams['apiName'];
+        }
+        if ($localVarParams['apiId'] !== null) {
+            $queryParams['api_id'] = $localVarParams['apiId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['orchestrationId'] !== null) {
+            $pathParams['orchestration_id'] = $localVarParams['orchestrationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListOrchestrationAttachedApisResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListOrchestrationAttachedApisRequest');
+    }
+
+    /**
+     * 查看编排规则列表
+     *
+     * 查看编排规则列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listOrchestrations($request)
+    {
+        return $this->listOrchestrationsWithHttpInfo($request);
+    }
+
+    public function listOrchestrationsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/orchestrations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['orchestrationName'] !== null) {
+            $queryParams['orchestration_name'] = $localVarParams['orchestrationName'];
+        }
+        if ($localVarParams['preciseSearch'] !== null) {
+            $queryParams['precise_search'] = $localVarParams['preciseSearch'];
+        }
+        if ($localVarParams['orchestrationId'] !== null) {
+            $queryParams['orchestration_id'] = $localVarParams['orchestrationId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ListOrchestrationsResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ListOrchestrationsRequest');
     }
 
     /**
@@ -7788,6 +8143,71 @@ class ApigClient extends Client
     }
 
     /**
+     * 查询编排规则详情
+     *
+     * 查询编排规则详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDetailsOfOrchestration($request)
+    {
+        return $this->showDetailsOfOrchestrationWithHttpInfo($request);
+    }
+
+    public function showDetailsOfOrchestrationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/orchestrations/{orchestration_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['orchestrationId'] !== null) {
+            $pathParams['orchestration_id'] = $localVarParams['orchestrationId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ShowDetailsOfOrchestrationResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ShowDetailsOfOrchestrationRequest');
+    }
+
+    /**
      * 查看流控策略详情
      *
      * 查看指定流控策略的详细信息。
@@ -7850,6 +8270,68 @@ class ApigClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ShowDetailsOfRequestThrottlingPolicyV2Response',
             $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ShowDetailsOfRequestThrottlingPolicyV2Request');
+    }
+
+    /**
+     * 查询包含指定标签的实例数量
+     *
+     * 查询包含指定标签的实例数量。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInstancesNumByTags($request)
+    {
+        return $this->showInstancesNumByTagsWithHttpInfo($request);
+    }
+
+    public function showInstancesNumByTagsWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/resource-instances/count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\ShowInstancesNumByTagsResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\ShowInstancesNumByTagsRequest');
     }
 
     /**
@@ -8799,6 +9281,74 @@ class ApigClient extends Client
     }
 
     /**
+     * 更新编排规则
+     *
+     * 更新编排规则
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateOrchestration($request)
+    {
+        return $this->updateOrchestrationWithHttpInfo($request);
+    }
+
+    public function updateOrchestrationWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/{project_id}/apigw/instances/{instance_id}/orchestrations/{orchestration_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['orchestrationId'] !== null) {
+            $pathParams['orchestration_id'] = $localVarParams['orchestrationId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Apig\V2\Model\UpdateOrchestrationResponse',
+            $requestType='\HuaweiCloud\SDK\Apig\V2\Model\UpdateOrchestrationRequest');
+    }
+
+    /**
      * 修改插件
      *
      * 修改插件信息。
@@ -8842,11 +9392,11 @@ class ApigClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8', 'application/json-1', 'application/json-2', 'application/json-3', 'application/json-4', 'application/json-5', 'application/json-6']
+                ['application/json;charset=UTF-8']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8', 'application/json-1', 'application/json-2', 'application/json-3', 'application/json-4', 'application/json-5', 'application/json-6'],
+                ['application/json;charset=UTF-8'],
                 ['application/json;charset=UTF-8']
             );
         }
@@ -12244,7 +12794,7 @@ class ApigClient extends Client
     /**
      * 导出API
      *
-     * 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+     * 导出分组下API的定义信息。导出文件内容符合swagger标准规范，API网关自定义扩展字段请参考《API网关用户指南》的“导入导出API：扩展定义”章节。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -12312,7 +12862,7 @@ class ApigClient extends Client
     /**
      * 导入API
      *
-     * 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关开发指南》的“导入导出API：扩展定义”章节。
+     * 导入API。导入文件内容需要符合swagger标准规范，API网关自定义扩展字段请参考《API网关用户指南》的“导入导出API：扩展定义”章节。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13058,7 +13608,7 @@ class ApigClient extends Client
      *
      * 为指定的VPC通道添加后端实例
      * 
-     * 若指定地址的后端实例已存在，则更新对应后端实例信息。若请求体中包含多个重复地址的后端实例定义，则使用第一个定义。
+     * 如果指定地址的后端实例已存在，则更新对应后端实例信息。如果请求体中包含多个重复地址的后端实例定义，则使用第一个定义。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13264,7 +13814,7 @@ class ApigClient extends Client
      *
      * 在APIG中创建VPC通道后端服务器组，VPC通道后端实例可以选择是否关联后端实例服务器组，以便管理后端服务器节点。
      * 
-     * 若指定名称的后端服务器组已存在，则更新对应后端服务器组信息。若请求体中包含多个重复名称的后端服务器定义，则使用第一个定义。
+     * 如果指定名称的后端服务器组已存在，则更新对应后端服务器组信息。如果请求体中包含多个重复名称的后端服务器定义，则使用第一个定义。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -13987,7 +14537,7 @@ class ApigClient extends Client
     /**
      * 更新后端实例
      *
-     * 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。若未指定修改的云服务器组，则进行全量覆盖。
+     * 更新指定的VPC通道的后端实例。更新时，使用传入的请求参数对对应云服务组的后端实例进行全量覆盖修改。如果未指定修改的云服务器组，则进行全量覆盖。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -14196,9 +14746,9 @@ class ApigClient extends Client
      *
      * 更新指定VPC通道的参数
      * 
-     * 使用传入的后端实例列表对VPC通道进行全量覆盖，若后端实例列表为空，则会全量删除已有的后端实例；
+     * 使用传入的后端实例列表对VPC通道进行全量覆盖，如果后端实例列表为空，则会全量删除已有的后端实例；
      * 
-     * 使用传入的后端服务器组列表对VPC通道进行全量覆盖，若后端服务器组列表为空，则会全量删除已有的服务器组；
+     * 使用传入的后端服务器组列表对VPC通道进行全量覆盖，如果后端服务器组列表为空，则会全量删除已有的服务器组；
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

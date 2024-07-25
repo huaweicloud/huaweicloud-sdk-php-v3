@@ -601,6 +601,76 @@ class LiveAsyncClient extends Client
     }
 
     /**
+     * 查询播放域名下的流数据
+     *
+     * 查询播放域名下的监控数据，根据输入时间点，返回查询该时间点所有流的带宽、在线人数、协议。
+     * 返回的数据粒度为1分钟。
+     * 最大查询周期7天，数据延迟5分钟。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listPlayDomainStreamInfoAsync($request)
+    {
+        return $this->listPlayDomainStreamInfoAsyncWithHttpInfo($request);
+    }
+    
+    public function listPlayDomainStreamInfoAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/stats/stream/play-info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['playDomains'] !== null) {
+            $queryParams['play_domains'] = $localVarParams['playDomains'];
+        }
+        if ($localVarParams['time'] !== null) {
+            $queryParams['time'] = $localVarParams['time'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListPlayDomainStreamInfoResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListPlayDomainStreamInfoRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询直播拉流HTTP状态码接口
      *
      * 查询直播拉流HTTP状态码接口。  获取加速域名1分钟粒度的HTTP返回码  最大查询跨度不能超过24小时，最大查询周期7天。
@@ -1220,78 +1290,6 @@ class LiveAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Live\V2\Model\ShowUpBandwidthResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Live\V2\Model\ShowUpBandwidthRequest',
-            $asyncRequest = true);
-    }
-
-    /**
-     * 查询播放域名下的流数据
-     *
-     * 查询播放域名下的监控数据，根据输入时间点，返回查询该时间点所有流的带宽、在线人数、协议。
-     * 
-     * 返回的数据粒度为1分钟。
-     * 
-     * 最大查询周期7天，数据延迟5分钟。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function listPlayDomainStreamInfoAsync($request)
-    {
-        return $this->listPlayDomainStreamInfoAsyncWithHttpInfo($request);
-    }
-    
-    public function listPlayDomainStreamInfoAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v2/{project_id}/stats/stream/play-info';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['playDomains'] !== null) {
-            $queryParams['play_domains'] = $localVarParams['playDomains'];
-        }
-        if ($localVarParams['time'] !== null) {
-            $queryParams['time'] = $localVarParams['time'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=utf-8', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=utf-8', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Live\V2\Model\ListPlayDomainStreamInfoResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Live\V2\Model\ListPlayDomainStreamInfoRequest',
             $asyncRequest = true);
     }
 

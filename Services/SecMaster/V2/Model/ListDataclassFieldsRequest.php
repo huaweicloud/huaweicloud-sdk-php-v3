@@ -35,8 +35,8 @@ class ListDataclassFieldsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'contentType' => 'string',
             'workspaceId' => 'string',
-            'offset' => 'float',
-            'limit' => 'float',
+            'offset' => 'int',
+            'limit' => 'int',
             'name' => 'string',
             'isBuiltIn' => 'bool',
             'dataclassId' => 'string',
@@ -363,7 +363,7 @@ class ListDataclassFieldsRequest implements ModelInterface, ArrayAccess
     * Gets offset
     *  偏移量
     *
-    * @return float|null
+    * @return int|null
     */
     public function getOffset()
     {
@@ -373,7 +373,7 @@ class ListDataclassFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param float|null $offset 偏移量
+    * @param int|null $offset 偏移量
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class ListDataclassFieldsRequest implements ModelInterface, ArrayAccess
     * Gets limit
     *  数据量
     *
-    * @return float|null
+    * @return int|null
     */
     public function getLimit()
     {
@@ -397,7 +397,7 @@ class ListDataclassFieldsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param float|null $limit 数据量
+    * @param int|null $limit 数据量
     *
     * @return $this
     */

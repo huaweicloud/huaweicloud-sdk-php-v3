@@ -25,6 +25,80 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
+     * 批量查询指标结果
+     *
+     * 批量查询指标结果
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchSearchMetricHitsAsync($request)
+    {
+        return $this->batchSearchMetricHitsAsyncWithHttpInfo($request);
+    }
+    
+    public function batchSearchMetricHitsAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/workspaces/{workspace_id}/sa/metrics/hits';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['timespan'] !== null) {
+            $queryParams['timespan'] = $localVarParams['timespan'];
+        }
+        if ($localVarParams['cache'] !== null) {
+            $queryParams['cache'] = $localVarParams['cache'];
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $pathParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SecMaster\V2\Model\BatchSearchMetricHitsResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SecMaster\V2\Model\BatchSearchMetricHitsRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 更新告警
      *
      * 编辑告警，根据实际修改的属性更新，未修改的列不更新
@@ -679,9 +753,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * create dataspace (创建数据空间)
+     * 创建数据空间
      *
-     * create dataspace
+     * 创建数据空间
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -818,9 +892,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * 创建指标
+     * 创建威胁情报
      *
-     * 创建指标
+     * 创建威胁情报
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -889,9 +963,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * create pipe (创建数据管道)
+     * 创建数据管道
      *
-     * create pipe
+     * 创建数据管道
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1324,6 +1398,142 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
+     * 安全云脑按需订购
+     *
+     * 开通安全云脑按需服务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createPostPaidOrderAsync($request)
+    {
+        return $this->createPostPaidOrderAsyncWithHttpInfo($request);
+    }
+    
+    public function createPostPaidOrderAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/subscriptions/orders';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SecMaster\V2\Model\CreatePostPaidOrderResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SecMaster\V2\Model\CreatePostPaidOrderRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 新建工作空间
+     *
+     * 在使用安全云脑的基线检查、告警管理、安全分析、安全编排等功能前，需要创建工作空间，它可以将资源划分为各个不同的工作场景，避免资源冗余查找不便，影响日常使用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createWorkspaceAsync($request)
+    {
+        return $this->createWorkspaceAsyncWithHttpInfo($request);
+    }
+    
+    public function createWorkspaceAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/workspaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SecMaster\V2\Model\CreateWorkspaceRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 删除告警
      *
      * 删除告警
@@ -1614,9 +1824,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * 删除指标
+     * 删除威胁情报
      *
-     * 删除指标
+     * 删除威胁情报
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2745,9 +2955,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * 查询指标列表
+     * 查询威胁情报列表
      *
-     * 查询指标列表
+     * 查询威胁情报列表
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -3424,6 +3634,184 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
+     * 工作空间列表查询
+     *
+     * 工作空间列表查询:可通过工作空间名称、工作空间描述、创建时间等条件对租户的工作空间进行筛选。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listWorkspacesAsync($request)
+    {
+        return $this->listWorkspacesAsyncWithHttpInfo($request);
+    }
+    
+    public function listWorkspacesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/workspaces';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['description'] !== null) {
+            $queryParams['description'] = $localVarParams['description'];
+        }
+        if ($localVarParams['viewBindId'] !== null) {
+            $queryParams['view_bind_id'] = $localVarParams['viewBindId'];
+        }
+        if ($localVarParams['viewBindName'] !== null) {
+            $queryParams['view_bind_name'] = $localVarParams['viewBindName'];
+        }
+        if ($localVarParams['createTimeStart'] !== null) {
+            $queryParams['create_time_start'] = $localVarParams['createTimeStart'];
+        }
+        if ($localVarParams['createTimeEnd'] !== null) {
+            $queryParams['create_time_end'] = $localVarParams['createTimeEnd'];
+        }
+        if ($localVarParams['isView'] !== null) {
+            $queryParams['is_view'] = $localVarParams['isView'];
+        }
+        if ($localVarParams['ids'] !== null) {
+            $queryParams['ids'] = $localVarParams['ids'];
+        }
+        if ($localVarParams['normalProjectId'] !== null) {
+            $queryParams['normal_project_id'] = $localVarParams['normalProjectId'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SecMaster\V2\Model\ListWorkspacesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SecMaster\V2\Model\ListWorkspacesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 搜索基线检查结果列表
+     *
+     * 搜索基线检查结果列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function searchBaselineAsync($request)
+    {
+        return $this->searchBaselineAsyncWithHttpInfo($request);
+    }
+    
+    public function searchBaselineAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/workspaces/{workspace_id}/sa/baseline/search';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams['x_language'] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['contentType'] !== null) {
+            $headerParams['content_type'] = $localVarParams['contentType'];
+        }
+        if ($localVarParams['workspaceId'] !== null) {
+            $pathParams['workspace_id'] = $localVarParams['workspaceId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SecMaster\V2\Model\SearchBaselineResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\SecMaster\V2\Model\SearchBaselineRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取告警详情
      *
      * 获取告警详情
@@ -3702,9 +4090,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * 查询指标详情
+     * 查询威胁情报详情
      *
-     * 查询指标详情
+     * 查询威胁情报详情
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -4350,9 +4738,9 @@ class SecMasterAsyncClient extends Client
     }
 
     /**
-     * 更新指标
+     * 更新威胁情报
      *
-     * 更新指标
+     * 更新威胁情报
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

@@ -25,11 +25,10 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
-    * authType  API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    * authType  API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
@@ -42,8 +41,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'string',
             'cors' => 'bool',
             'cseInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCSECreate',
-            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCECreate',
-            'cceServiceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceCreate'
+            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCECreate'
     ];
 
     /**
@@ -53,11 +51,10 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
-    * authType  API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    * authType  API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
@@ -70,8 +67,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
         'authType' => null,
         'cors' => null,
         'cseInfo' => null,
-        'cceInfo' => null,
-        'cceServiceInfo' => null
+        'cceInfo' => null
     ];
 
     /**
@@ -102,11 +98,10 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
-    * authType  API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    * authType  API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
@@ -119,8 +114,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'auth_type',
             'cors' => 'cors',
             'cseInfo' => 'cse_info',
-            'cceInfo' => 'cce_info',
-            'cceServiceInfo' => 'cce_service_info'
+            'cceInfo' => 'cce_info'
     ];
 
     /**
@@ -130,11 +124,10 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
-    * authType  API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    * authType  API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
@@ -147,8 +140,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'setAuthType',
             'cors' => 'setCors',
             'cseInfo' => 'setCseInfo',
-            'cceInfo' => 'setCceInfo',
-            'cceServiceInfo' => 'setCceServiceInfo'
+            'cceInfo' => 'setCceInfo'
     ];
 
     /**
@@ -158,11 +150,10 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
-    * authType  API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    * authType  API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
-    * cceServiceInfo  cceServiceInfo
     *
     * @var string[]
     */
@@ -175,8 +166,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'getAuthType',
             'cors' => 'getCors',
             'cseInfo' => 'getCseInfo',
-            'cceInfo' => 'getCceInfo',
-            'cceServiceInfo' => 'getCceServiceInfo'
+            'cceInfo' => 'getCceInfo'
     ];
 
     /**
@@ -295,7 +285,6 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
         $this->container['cors'] = isset($data['cors']) ? $data['cors'] : null;
         $this->container['cseInfo'] = isset($data['cseInfo']) ? $data['cseInfo'] : null;
         $this->container['cceInfo'] = isset($data['cceInfo']) ? $data['cceInfo'] : null;
-        $this->container['cceServiceInfo'] = isset($data['cceServiceInfo']) ? $data['cceServiceInfo'] : null;
     }
 
     /**
@@ -478,7 +467,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets authType
-    *  API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    *  API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     *
     * @return string|null
     */
@@ -490,7 +479,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Sets authType
     *
-    * @param string|null $authType API的认证方式，默认无认证[，site暂不支持IAM认证。](tag:Site) - NONE：无认证 - APP：APP认证 - IAM：IAM认证
+    * @param string|null $authType API的认证方式，默认无认证。 - NONE：无认证 - APP：APP认证 - IAM：IAM认证
     *
     * @return $this
     */
@@ -569,30 +558,6 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     public function setCceInfo($cceInfo)
     {
         $this->container['cceInfo'] = $cceInfo;
-        return $this;
-    }
-
-    /**
-    * Gets cceServiceInfo
-    *  cceServiceInfo
-    *
-    * @return \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceCreate|null
-    */
-    public function getCceServiceInfo()
-    {
-        return $this->container['cceServiceInfo'];
-    }
-
-    /**
-    * Sets cceServiceInfo
-    *
-    * @param \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEServiceCreate|null $cceServiceInfo cceServiceInfo
-    *
-    * @return $this
-    */
-    public function setCceServiceInfo($cceServiceInfo)
-    {
-        $this->container['cceServiceInfo'] = $cceServiceInfo;
         return $this;
     }
 
