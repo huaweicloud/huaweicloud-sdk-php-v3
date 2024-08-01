@@ -28,6 +28,7 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -38,7 +39,8 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
             'bucket' => 'string',
             'basePath' => 'string',
             'agency' => 'string',
-            'enable' => 'string'
+            'enable' => 'string',
+            'frequency' => 'string'
     ];
 
     /**
@@ -50,6 +52,7 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -60,7 +63,8 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
         'bucket' => null,
         'basePath' => null,
         'agency' => null,
-        'enable' => null
+        'enable' => null,
+        'frequency' => null
     ];
 
     /**
@@ -93,6 +97,7 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -103,7 +108,8 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
             'bucket' => 'bucket',
             'basePath' => 'basePath',
             'agency' => 'agency',
-            'enable' => 'enable'
+            'enable' => 'enable',
+            'frequency' => 'frequency'
     ];
 
     /**
@@ -115,6 +121,7 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -125,7 +132,8 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
             'bucket' => 'setBucket',
             'basePath' => 'setBasePath',
             'agency' => 'setAgency',
-            'enable' => 'setEnable'
+            'enable' => 'setEnable',
+            'frequency' => 'setFrequency'
     ];
 
     /**
@@ -137,6 +145,7 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     * basePath  快照在OBS桶中的存放路径。
     * agency  访问OBS桶用到的委托。
     * enable  是否开启自动创建快照策略。 - true：表示开启自动创建快照策略。 - false：表示关闭自动创建快照策略。
+    * frequency  自动创建快照的执行频次。
     *
     * @var string[]
     */
@@ -147,7 +156,8 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
             'bucket' => 'getBucket',
             'basePath' => 'getBasePath',
             'agency' => 'getAgency',
-            'enable' => 'getEnable'
+            'enable' => 'getEnable',
+            'frequency' => 'getFrequency'
     ];
 
     /**
@@ -215,6 +225,7 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
         $this->container['basePath'] = isset($data['basePath']) ? $data['basePath'] : null;
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['enable'] = isset($data['enable']) ? $data['enable'] : null;
+        $this->container['frequency'] = isset($data['frequency']) ? $data['frequency'] : null;
     }
 
     /**
@@ -404,6 +415,30 @@ class ShowAutoCreatePolicyResponse implements ModelInterface, ArrayAccess
     public function setEnable($enable)
     {
         $this->container['enable'] = $enable;
+        return $this;
+    }
+
+    /**
+    * Gets frequency
+    *  自动创建快照的执行频次。
+    *
+    * @return string|null
+    */
+    public function getFrequency()
+    {
+        return $this->container['frequency'];
+    }
+
+    /**
+    * Sets frequency
+    *
+    * @param string|null $frequency 自动创建快照的执行频次。
+    *
+    * @return $this
+    */
+    public function setFrequency($frequency)
+    {
+        $this->container['frequency'] = $frequency;
         return $this;
     }
 

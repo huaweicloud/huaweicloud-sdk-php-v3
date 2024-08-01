@@ -21,21 +21,25 @@ class StatusReason implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * code  分析器当前状态的原因。
+    * details  分析器当前状态的详细原因。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'code' => 'string'
+            'code' => 'string',
+            'details' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * code  分析器当前状态的原因。
+    * details  分析器当前状态的详细原因。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'code' => null
+        'code' => null,
+        'details' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class StatusReason implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * code  分析器当前状态的原因。
+    * details  分析器当前状态的详细原因。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'code' => 'code'
+            'code' => 'code',
+            'details' => 'details'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * code  分析器当前状态的原因。
+    * details  分析器当前状态的详细原因。
     *
     * @var string[]
     */
     protected static $setters = [
-            'code' => 'setCode'
+            'code' => 'setCode',
+            'details' => 'setDetails'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * code  分析器当前状态的原因。
+    * details  分析器当前状态的详细原因。
     *
     * @var string[]
     */
     protected static $getters = [
-            'code' => 'getCode'
+            'code' => 'getCode',
+            'details' => 'getDetails'
     ];
 
     /**
@@ -169,6 +179,7 @@ class StatusReason implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
     }
 
     /**
@@ -225,6 +236,30 @@ class StatusReason implements ModelInterface, ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
+        return $this;
+    }
+
+    /**
+    * Gets details
+    *  分析器当前状态的详细原因。
+    *
+    * @return string|null
+    */
+    public function getDetails()
+    {
+        return $this->container['details'];
+    }
+
+    /**
+    * Sets details
+    *
+    * @param string|null $details 分析器当前状态的详细原因。
+    *
+    * @return $this
+    */
+    public function setDetails($details)
+    {
+        $this->container['details'] = $details;
         return $this;
     }
 

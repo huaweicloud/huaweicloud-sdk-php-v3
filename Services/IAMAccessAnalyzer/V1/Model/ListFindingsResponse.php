@@ -27,7 +27,7 @@ class ListFindingsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'findings' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Finding[]',
+            'findings' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSummary[]',
             'pageInfo' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\PageInfo'
     ];
 
@@ -188,7 +188,7 @@ class ListFindingsResponse implements ModelInterface, ArrayAccess
     * Gets findings
     *  访问分析结果列表。
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Finding[]|null
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSummary[]|null
     */
     public function getFindings()
     {
@@ -198,7 +198,7 @@ class ListFindingsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets findings
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Finding[]|null $findings 访问分析结果列表。
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingSummary[]|null $findings 访问分析结果列表。
     *
     * @return $this
     */

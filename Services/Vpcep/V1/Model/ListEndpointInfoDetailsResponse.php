@@ -45,9 +45,10 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -76,6 +77,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'routetables' => 'string[]',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
+            'policyDocument' => 'object',
             'endpointPoolId' => 'string',
             'publicBorderGroup' => 'string',
             'ipv6Address' => 'string'
@@ -107,9 +109,10 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -138,6 +141,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
         'routetables' => null,
         'description' => null,
         'policyStatement' => null,
+        'policyDocument' => null,
         'endpointPoolId' => null,
         'publicBorderGroup' => null,
         'ipv6Address' => 'ipv6'
@@ -190,9 +194,10 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -221,6 +226,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'routetables' => 'routetables',
             'description' => 'description',
             'policyStatement' => 'policy_statement',
+            'policyDocument' => 'policy_document',
             'endpointPoolId' => 'endpoint_pool_id',
             'publicBorderGroup' => 'public_border_group',
             'ipv6Address' => 'ipv6_address'
@@ -252,9 +258,10 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -283,6 +290,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'routetables' => 'setRoutetables',
             'description' => 'setDescription',
             'policyStatement' => 'setPolicyStatement',
+            'policyDocument' => 'setPolicyDocument',
             'endpointPoolId' => 'setEndpointPoolId',
             'publicBorderGroup' => 'setPublicBorderGroup',
             'ipv6Address' => 'setIpv6Address'
@@ -314,9 +322,10 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -345,6 +354,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'routetables' => 'getRoutetables',
             'description' => 'getDescription',
             'policyStatement' => 'getPolicyStatement',
+            'policyDocument' => 'getPolicyDocument',
             'endpointPoolId' => 'getEndpointPoolId',
             'publicBorderGroup' => 'getPublicBorderGroup',
             'ipv6Address' => 'getIpv6Address'
@@ -432,6 +442,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['routetables'] = isset($data['routetables']) ? $data['routetables'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
+        $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
         $this->container['endpointPoolId'] = isset($data['endpointPoolId']) ? $data['endpointPoolId'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
         $this->container['ipv6Address'] = isset($data['ipv6Address']) ? $data['ipv6Address'] : null;
@@ -1084,6 +1095,30 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets policyDocument
+    *  iam 5.0 策略
+    *
+    * @return object|null
+    */
+    public function getPolicyDocument()
+    {
+        return $this->container['policyDocument'];
+    }
+
+    /**
+    * Sets policyDocument
+    *
+    * @param object|null $policyDocument iam 5.0 策略
+    *
+    * @return $this
+    */
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->container['policyDocument'] = $policyDocument;
+        return $this;
+    }
+
+    /**
     * Gets endpointPoolId
     *  待废弃，实例相关联的集群ID
     *
@@ -1133,7 +1168,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Address
-    *  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    *  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @return string|null
     */
@@ -1145,7 +1180,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Address
     *
-    * @param string|null $ipv6Address 访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * @param string|null $ipv6Address 访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @return $this
     */

@@ -24,6 +24,8 @@ class Finding implements ModelInterface, ArrayAccess
     * analyzedAt  分析资源的时间。
     * condition  分析的策略语句中导致访问分析结果的条件。
     * createdAt  生成访问分析结果的时间。
+    * findingDetails  访问分析结果的详细信息。
+    * findingType  findingType
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -33,7 +35,7 @@ class Finding implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  结果的当前状态。
+    * status  访问分析结果当前状态。
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -43,6 +45,8 @@ class Finding implements ModelInterface, ArrayAccess
             'analyzedAt' => '\DateTime',
             'condition' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[]',
             'createdAt' => '\DateTime',
+            'findingDetails' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingDetails[]',
+            'findingType' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingType',
             'id' => 'string',
             'isPublic' => 'bool',
             'principal' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingPrincipal',
@@ -62,6 +66,8 @@ class Finding implements ModelInterface, ArrayAccess
     * analyzedAt  分析资源的时间。
     * condition  分析的策略语句中导致访问分析结果的条件。
     * createdAt  生成访问分析结果的时间。
+    * findingDetails  访问分析结果的详细信息。
+    * findingType  findingType
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -71,7 +77,7 @@ class Finding implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  结果的当前状态。
+    * status  访问分析结果当前状态。
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -81,6 +87,8 @@ class Finding implements ModelInterface, ArrayAccess
         'analyzedAt' => 'date-time',
         'condition' => null,
         'createdAt' => 'date-time',
+        'findingDetails' => null,
+        'findingType' => null,
         'id' => null,
         'isPublic' => null,
         'principal' => null,
@@ -121,6 +129,8 @@ class Finding implements ModelInterface, ArrayAccess
     * analyzedAt  分析资源的时间。
     * condition  分析的策略语句中导致访问分析结果的条件。
     * createdAt  生成访问分析结果的时间。
+    * findingDetails  访问分析结果的详细信息。
+    * findingType  findingType
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -130,7 +140,7 @@ class Finding implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  结果的当前状态。
+    * status  访问分析结果当前状态。
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -140,6 +150,8 @@ class Finding implements ModelInterface, ArrayAccess
             'analyzedAt' => 'analyzed_at',
             'condition' => 'condition',
             'createdAt' => 'created_at',
+            'findingDetails' => 'finding_details',
+            'findingType' => 'finding_type',
             'id' => 'id',
             'isPublic' => 'is_public',
             'principal' => 'principal',
@@ -159,6 +171,8 @@ class Finding implements ModelInterface, ArrayAccess
     * analyzedAt  分析资源的时间。
     * condition  分析的策略语句中导致访问分析结果的条件。
     * createdAt  生成访问分析结果的时间。
+    * findingDetails  访问分析结果的详细信息。
+    * findingType  findingType
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -168,7 +182,7 @@ class Finding implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  结果的当前状态。
+    * status  访问分析结果当前状态。
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -178,6 +192,8 @@ class Finding implements ModelInterface, ArrayAccess
             'analyzedAt' => 'setAnalyzedAt',
             'condition' => 'setCondition',
             'createdAt' => 'setCreatedAt',
+            'findingDetails' => 'setFindingDetails',
+            'findingType' => 'setFindingType',
             'id' => 'setId',
             'isPublic' => 'setIsPublic',
             'principal' => 'setPrincipal',
@@ -197,6 +213,8 @@ class Finding implements ModelInterface, ArrayAccess
     * analyzedAt  分析资源的时间。
     * condition  分析的策略语句中导致访问分析结果的条件。
     * createdAt  生成访问分析结果的时间。
+    * findingDetails  访问分析结果的详细信息。
+    * findingType  findingType
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -206,7 +224,7 @@ class Finding implements ModelInterface, ArrayAccess
     * resourceProjectId  资源所属的项目标识符
     * resourceType  resourceType
     * sources  访问分析结果的来源，这指示如何授予生成访问分析结果的访问权限。
-    * status  结果的当前状态。
+    * status  访问分析结果当前状态。
     * updatedAt  更新访问分析结果的时间。
     *
     * @var string[]
@@ -216,6 +234,8 @@ class Finding implements ModelInterface, ArrayAccess
             'analyzedAt' => 'getAnalyzedAt',
             'condition' => 'getCondition',
             'createdAt' => 'getCreatedAt',
+            'findingDetails' => 'getFindingDetails',
+            'findingType' => 'getFindingType',
             'id' => 'getId',
             'isPublic' => 'getIsPublic',
             'principal' => 'getPrincipal',
@@ -308,6 +328,8 @@ class Finding implements ModelInterface, ArrayAccess
         $this->container['analyzedAt'] = isset($data['analyzedAt']) ? $data['analyzedAt'] : null;
         $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['findingDetails'] = isset($data['findingDetails']) ? $data['findingDetails'] : null;
+        $this->container['findingType'] = isset($data['findingType']) ? $data['findingType'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['isPublic'] = isset($data['isPublic']) ? $data['isPublic'] : null;
         $this->container['principal'] = isset($data['principal']) ? $data['principal'] : null;
@@ -329,17 +351,17 @@ class Finding implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['action'] === null) {
-            $invalidProperties[] = "'action' can't be null";
-        }
         if ($this->container['analyzedAt'] === null) {
             $invalidProperties[] = "'analyzedAt' can't be null";
         }
-        if ($this->container['condition'] === null) {
-            $invalidProperties[] = "'condition' can't be null";
-        }
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['findingDetails'] === null) {
+            $invalidProperties[] = "'findingDetails' can't be null";
+        }
+        if ($this->container['findingType'] === null) {
+            $invalidProperties[] = "'findingType' can't be null";
         }
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
@@ -353,12 +375,6 @@ class Finding implements ModelInterface, ArrayAccess
             if (!preg_match("/^[\\w-]+$/", $this->container['id'])) {
                 $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[\\w-]+$/.";
             }
-        if ($this->container['isPublic'] === null) {
-            $invalidProperties[] = "'isPublic' can't be null";
-        }
-        if ($this->container['principal'] === null) {
-            $invalidProperties[] = "'principal' can't be null";
-        }
         if ($this->container['resource'] === null) {
             $invalidProperties[] = "'resource' can't be null";
         }
@@ -427,7 +443,7 @@ class Finding implements ModelInterface, ArrayAccess
     * Gets action
     *  允许外部主体使用的操作。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getAction()
     {
@@ -437,7 +453,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string[] $action 允许外部主体使用的操作。
+    * @param string[]|null $action 允许外部主体使用的操作。
     *
     * @return $this
     */
@@ -475,7 +491,7 @@ class Finding implements ModelInterface, ArrayAccess
     * Gets condition
     *  分析的策略语句中导致访问分析结果的条件。
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[]
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[]|null
     */
     public function getCondition()
     {
@@ -485,7 +501,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets condition
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[] $condition 分析的策略语句中导致访问分析结果的条件。
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingCondition[]|null $condition 分析的策略语句中导致访问分析结果的条件。
     *
     * @return $this
     */
@@ -520,6 +536,54 @@ class Finding implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets findingDetails
+    *  访问分析结果的详细信息。
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingDetails[]
+    */
+    public function getFindingDetails()
+    {
+        return $this->container['findingDetails'];
+    }
+
+    /**
+    * Sets findingDetails
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingDetails[] $findingDetails 访问分析结果的详细信息。
+    *
+    * @return $this
+    */
+    public function setFindingDetails($findingDetails)
+    {
+        $this->container['findingDetails'] = $findingDetails;
+        return $this;
+    }
+
+    /**
+    * Gets findingType
+    *  findingType
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingType
+    */
+    public function getFindingType()
+    {
+        return $this->container['findingType'];
+    }
+
+    /**
+    * Sets findingType
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingType $findingType findingType
+    *
+    * @return $this
+    */
+    public function setFindingType($findingType)
+    {
+        $this->container['findingType'] = $findingType;
+        return $this;
+    }
+
+    /**
     * Gets id
     *  访问分析结果的唯一标识符。
     *
@@ -547,7 +611,7 @@ class Finding implements ModelInterface, ArrayAccess
     * Gets isPublic
     *  表示生成访问分析结果的策略是否允许公共访问资源。
     *
-    * @return bool
+    * @return bool|null
     */
     public function getIsPublic()
     {
@@ -557,7 +621,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets isPublic
     *
-    * @param bool $isPublic 表示生成访问分析结果的策略是否允许公共访问资源。
+    * @param bool|null $isPublic 表示生成访问分析结果的策略是否允许公共访问资源。
     *
     * @return $this
     */
@@ -571,7 +635,7 @@ class Finding implements ModelInterface, ArrayAccess
     * Gets principal
     *  principal
     *
-    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingPrincipal
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingPrincipal|null
     */
     public function getPrincipal()
     {
@@ -581,7 +645,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets principal
     *
-    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingPrincipal $principal principal
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\FindingPrincipal|null $principal principal
     *
     * @return $this
     */
@@ -737,7 +801,7 @@ class Finding implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  结果的当前状态。
+    *  访问分析结果当前状态。
     *
     * @return string
     */
@@ -749,7 +813,7 @@ class Finding implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 结果的当前状态。
+    * @param string $status 访问分析结果当前状态。
     *
     * @return $this
     */

@@ -21,21 +21,25 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]'
+            'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
+            'policyDocument' => 'object'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'policyStatement' => null
+        'policyStatement' => null,
+        'policyDocument' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'policyStatement' => 'policy_statement'
+            'policyStatement' => 'policy_statement',
+            'policyDocument' => 'policy_document'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
     protected static $setters = [
-            'policyStatement' => 'setPolicyStatement'
+            'policyStatement' => 'setPolicyStatement',
+            'policyDocument' => 'setPolicyDocument'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
     protected static $getters = [
-            'policyStatement' => 'getPolicyStatement'
+            'policyStatement' => 'getPolicyStatement',
+            'policyDocument' => 'getPolicyDocument'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
+        $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
     }
 
     /**
@@ -158,9 +169,6 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['policyStatement'] === null) {
-            $invalidProperties[] = "'policyStatement' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -179,7 +187,7 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     * Gets policyStatement
     *  终端节点策略信息
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
     public function getPolicyStatement()
     {
@@ -189,13 +197,37 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[] $policyStatement 终端节点策略信息
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
     *
     * @return $this
     */
     public function setPolicyStatement($policyStatement)
     {
         $this->container['policyStatement'] = $policyStatement;
+        return $this;
+    }
+
+    /**
+    * Gets policyDocument
+    *  iam 5.0 策略
+    *
+    * @return object|null
+    */
+    public function getPolicyDocument()
+    {
+        return $this->container['policyDocument'];
+    }
+
+    /**
+    * Sets policyDocument
+    *
+    * @param object|null $policyDocument iam 5.0 策略
+    *
+    * @return $this
+    */
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->container['policyDocument'] = $policyDocument;
         return $this;
     }
 

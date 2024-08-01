@@ -2836,6 +2836,65 @@ class BssintlClient extends Client
     }
 
     /**
+     * 查询消费配额
+     *
+     * 功能描述：合作伙伴可以查询消费配额。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showPartnerConsumptionQuota($request)
+    {
+        return $this->showPartnerConsumptionQuotaWithHttpInfo($request);
+    }
+
+    public function showPartnerConsumptionQuotaWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/partners/credit/consumption-quota';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowPartnerConsumptionQuotaResponse',
+            $requestType='\HuaweiCloud\SDK\Bssintl\V2\Model\ShowPartnerConsumptionQuotaRequest');
+    }
+
+    /**
      * 查询实名认证审核结果
      *
      * 功能描述：如果实名认证申请或实名认证变更申请的响应中，显示需要人工审核，使用该接口查询审核结果。

@@ -20,6 +20,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * configuration  configuration
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
@@ -35,6 +36,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'configuration' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerConfiguration',
             'createdAt' => '\DateTime',
             'id' => 'string',
             'lastAnalyzedResource' => 'string',
@@ -50,6 +52,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * configuration  configuration
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
@@ -65,6 +68,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'configuration' => null,
         'createdAt' => 'date-time',
         'id' => null,
         'lastAnalyzedResource' => null,
@@ -101,6 +105,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * configuration  configuration
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
@@ -116,6 +121,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'configuration' => 'configuration',
             'createdAt' => 'created_at',
             'id' => 'id',
             'lastAnalyzedResource' => 'last_analyzed_resource',
@@ -131,6 +137,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * configuration  configuration
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
@@ -146,6 +153,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'configuration' => 'setConfiguration',
             'createdAt' => 'setCreatedAt',
             'id' => 'setId',
             'lastAnalyzedResource' => 'setLastAnalyzedResource',
@@ -161,6 +169,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * configuration  configuration
     * createdAt  分析器创建的时间。
     * id  分析器的唯一标识符。
     * lastAnalyzedResource  最近分析的资源的唯一资源标识符。
@@ -176,6 +185,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'configuration' => 'getConfiguration',
             'createdAt' => 'getCreatedAt',
             'id' => 'getId',
             'lastAnalyzedResource' => 'getLastAnalyzedResource',
@@ -266,6 +276,7 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['configuration'] = isset($data['configuration']) ? $data['configuration'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['lastAnalyzedResource'] = isset($data['lastAnalyzedResource']) ? $data['lastAnalyzedResource'] : null;
@@ -358,6 +369,30 @@ class AnalyzerSummary implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets configuration
+    *  configuration
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerConfiguration|null
+    */
+    public function getConfiguration()
+    {
+        return $this->container['configuration'];
+    }
+
+    /**
+    * Sets configuration
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerConfiguration|null $configuration configuration
+    *
+    * @return $this
+    */
+    public function setConfiguration($configuration)
+    {
+        $this->container['configuration'] = $configuration;
+        return $this;
     }
 
     /**

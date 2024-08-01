@@ -20,6 +20,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * configuration  configuration
     * name  分析器的名称。
     * tags  自定义标签列表。
     * type  type
@@ -27,6 +28,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'configuration' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerConfiguration',
             'name' => 'string',
             'tags' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\Tag[]',
             'type' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerType'
@@ -34,6 +36,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * configuration  configuration
     * name  分析器的名称。
     * tags  自定义标签列表。
     * type  type
@@ -41,6 +44,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'configuration' => null,
         'name' => null,
         'tags' => null,
         'type' => null
@@ -69,6 +73,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * configuration  configuration
     * name  分析器的名称。
     * tags  自定义标签列表。
     * type  type
@@ -76,6 +81,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'configuration' => 'configuration',
             'name' => 'name',
             'tags' => 'tags',
             'type' => 'type'
@@ -83,6 +89,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * configuration  configuration
     * name  分析器的名称。
     * tags  自定义标签列表。
     * type  type
@@ -90,6 +97,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'configuration' => 'setConfiguration',
             'name' => 'setName',
             'tags' => 'setTags',
             'type' => 'setType'
@@ -97,6 +105,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * configuration  configuration
     * name  分析器的名称。
     * tags  自定义标签列表。
     * type  type
@@ -104,6 +113,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'configuration' => 'getConfiguration',
             'name' => 'getName',
             'tags' => 'getTags',
             'type' => 'getType'
@@ -167,6 +177,7 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['configuration'] = isset($data['configuration']) ? $data['configuration'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
@@ -207,6 +218,30 @@ class CreateAnalyzerReqBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets configuration
+    *  configuration
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerConfiguration|null
+    */
+    public function getConfiguration()
+    {
+        return $this->container['configuration'];
+    }
+
+    /**
+    * Sets configuration
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\AnalyzerConfiguration|null $configuration configuration
+    *
+    * @return $this
+    */
+    public function setConfiguration($configuration)
+    {
+        $this->container['configuration'] = $configuration;
+        return $this;
     }
 
     /**

@@ -25,7 +25,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  分析结果的当前状态。
+    * existingFindingStatus  访问分析结果当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -61,7 +61,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  分析结果的当前状态。
+    * existingFindingStatus  访问分析结果当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -118,7 +118,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  分析结果的当前状态。
+    * existingFindingStatus  访问分析结果当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -154,7 +154,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  分析结果的当前状态。
+    * existingFindingStatus  访问分析结果当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -190,7 +190,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     * condition  分析的策略语句中导致访问预览分析结果的条件。
     * createdAt  生成访问预览分析结果的时间。
     * existingFindingId  访问分析结果的唯一标识符。
-    * existingFindingStatus  分析结果的当前状态。
+    * existingFindingStatus  访问分析结果当前状态。
     * id  访问分析结果的唯一标识符。
     * isPublic  表示生成访问分析结果的策略是否允许公共访问资源。
     * principal  principal
@@ -575,7 +575,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
 
     /**
     * Gets existingFindingStatus
-    *  分析结果的当前状态。
+    *  访问分析结果当前状态。
     *
     * @return string|null
     */
@@ -587,7 +587,7 @@ class PreviewFinding implements ModelInterface, ArrayAccess
     /**
     * Sets existingFindingStatus
     *
-    * @param string|null $existingFindingStatus 分析结果的当前状态。
+    * @param string|null $existingFindingStatus 访问分析结果当前状态。
     *
     * @return $this
     */

@@ -1338,6 +1338,68 @@ class IAMAccessAnalyzerClient extends Client
     }
 
     /**
+     * 校验策略是否有新访问权限
+     *
+     * 校验策略是否有新访问权限。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkNoNewAccess($request)
+    {
+        return $this->checkNoNewAccessWithHttpInfo($request);
+    }
+
+    public function checkNoNewAccessWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/policies/check-no-new-access';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\CheckNoNewAccessResponse',
+            $requestType='\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\CheckNoNewAccessRequest');
+    }
+
+    /**
      * 校验策略
      *
      * 校验策略并返回结果列表。

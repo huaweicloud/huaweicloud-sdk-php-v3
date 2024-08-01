@@ -42,8 +42,9 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
-    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @var string[]
     */
@@ -70,6 +71,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
             'routetables' => 'string[]',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
+            'policyDocument' => 'object',
             'endpointPoolId' => 'string',
             'publicBorderGroup' => 'string'
     ];
@@ -98,8 +100,9 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
-    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @var string[]
     */
@@ -126,6 +129,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
         'routetables' => null,
         'description' => null,
         'policyStatement' => null,
+        'policyDocument' => null,
         'endpointPoolId' => null,
         'publicBorderGroup' => null
     ];
@@ -175,8 +179,9 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
-    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @var string[]
     */
@@ -203,6 +208,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
             'routetables' => 'routetables',
             'description' => 'description',
             'policyStatement' => 'policy_statement',
+            'policyDocument' => 'policy_document',
             'endpointPoolId' => 'endpoint_pool_id',
             'publicBorderGroup' => 'public_border_group'
     ];
@@ -231,8 +237,9 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
-    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @var string[]
     */
@@ -259,6 +266,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
             'routetables' => 'setRoutetables',
             'description' => 'setDescription',
             'policyStatement' => 'setPolicyStatement',
+            'policyDocument' => 'setPolicyDocument',
             'endpointPoolId' => 'setEndpointPoolId',
             'publicBorderGroup' => 'setPublicBorderGroup'
     ];
@@ -287,8 +295,9 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * endpointPoolId  待废弃，实例相关联的集群ID
-    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @var string[]
     */
@@ -315,6 +324,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
             'routetables' => 'getRoutetables',
             'description' => 'getDescription',
             'policyStatement' => 'getPolicyStatement',
+            'policyDocument' => 'getPolicyDocument',
             'endpointPoolId' => 'getEndpointPoolId',
             'publicBorderGroup' => 'getPublicBorderGroup'
     ];
@@ -399,6 +409,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
         $this->container['routetables'] = isset($data['routetables']) ? $data['routetables'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
+        $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
         $this->container['endpointPoolId'] = isset($data['endpointPoolId']) ? $data['endpointPoolId'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
     }
@@ -1002,6 +1013,30 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets policyDocument
+    *  iam 5.0 策略
+    *
+    * @return object|null
+    */
+    public function getPolicyDocument()
+    {
+        return $this->container['policyDocument'];
+    }
+
+    /**
+    * Sets policyDocument
+    *
+    * @param object|null $policyDocument iam 5.0 策略
+    *
+    * @return $this
+    */
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->container['policyDocument'] = $policyDocument;
+        return $this;
+    }
+
+    /**
     * Gets endpointPoolId
     *  待废弃，实例相关联的集群ID
     *
@@ -1027,7 +1062,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    *  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @return string|null
     */
@@ -1039,7 +1074,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回改字段
+    * @param string|null $publicBorderGroup 终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
     * @return $this
     */

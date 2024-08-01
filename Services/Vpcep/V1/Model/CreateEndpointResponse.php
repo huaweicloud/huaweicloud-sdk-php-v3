@@ -42,6 +42,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * specificationName  规格名称
     * description  描述
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -71,6 +72,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'string',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
+            'policyDocument' => 'object',
             'enableStatus' => 'string',
             'endpointPoolId' => 'string',
             'publicBorderGroup' => 'string',
@@ -100,6 +102,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * specificationName  规格名称
     * description  描述
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -129,6 +132,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         'specificationName' => null,
         'description' => null,
         'policyStatement' => null,
+        'policyDocument' => null,
         'enableStatus' => null,
         'endpointPoolId' => null,
         'publicBorderGroup' => null,
@@ -179,6 +183,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * specificationName  规格名称
     * description  描述
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -208,6 +213,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'specification_name',
             'description' => 'description',
             'policyStatement' => 'policy_statement',
+            'policyDocument' => 'policy_document',
             'enableStatus' => 'enable_status',
             'endpointPoolId' => 'endpoint_pool_id',
             'publicBorderGroup' => 'public_border_group',
@@ -237,6 +243,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * specificationName  规格名称
     * description  描述
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -266,6 +273,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'setSpecificationName',
             'description' => 'setDescription',
             'policyStatement' => 'setPolicyStatement',
+            'policyDocument' => 'setPolicyDocument',
             'enableStatus' => 'setEnableStatus',
             'endpointPoolId' => 'setEndpointPoolId',
             'publicBorderGroup' => 'setPublicBorderGroup',
@@ -295,6 +303,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * specificationName  规格名称
     * description  描述
     * policyStatement  终端节点策略信息
+    * policyDocument  iam 5.0 策略
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -324,6 +333,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'getSpecificationName',
             'description' => 'getDescription',
             'policyStatement' => 'getPolicyStatement',
+            'policyDocument' => 'getPolicyDocument',
             'enableStatus' => 'getEnableStatus',
             'endpointPoolId' => 'getEndpointPoolId',
             'publicBorderGroup' => 'getPublicBorderGroup',
@@ -409,6 +419,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
         $this->container['specificationName'] = isset($data['specificationName']) ? $data['specificationName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
+        $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
         $this->container['enableStatus'] = isset($data['enableStatus']) ? $data['enableStatus'] : null;
         $this->container['endpointPoolId'] = isset($data['endpointPoolId']) ? $data['endpointPoolId'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
@@ -986,6 +997,30 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     public function setPolicyStatement($policyStatement)
     {
         $this->container['policyStatement'] = $policyStatement;
+        return $this;
+    }
+
+    /**
+    * Gets policyDocument
+    *  iam 5.0 策略
+    *
+    * @return object|null
+    */
+    public function getPolicyDocument()
+    {
+        return $this->container['policyDocument'];
+    }
+
+    /**
+    * Sets policyDocument
+    *
+    * @param object|null $policyDocument iam 5.0 策略
+    *
+    * @return $this
+    */
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->container['policyDocument'] = $policyDocument;
         return $this;
     }
 

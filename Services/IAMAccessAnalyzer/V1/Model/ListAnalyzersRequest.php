@@ -151,6 +151,8 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
     }
     const TYPE_ACCOUNT = 'account';
     const TYPE_ORGANIZATION = 'organization';
+    const TYPE_ACCOUNT_UNUSED_ACCESS = 'account_unused_access';
+    const TYPE_ORGANIZATION_UNUSED_ACCESS = 'organization_unused_access';
     
 
     /**
@@ -163,6 +165,8 @@ class ListAnalyzersRequest implements ModelInterface, ArrayAccess
         return [
             self::TYPE_ACCOUNT,
             self::TYPE_ORGANIZATION,
+            self::TYPE_ACCOUNT_UNUSED_ACCESS,
+            self::TYPE_ORGANIZATION_UNUSED_ACCESS,
         ];
     }
 

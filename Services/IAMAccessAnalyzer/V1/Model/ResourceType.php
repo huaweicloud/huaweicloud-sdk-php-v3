@@ -11,8 +11,9 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      * Possible values of this enum
      */
     const IAMAGENCY = 'iam:agency';
-    const OBSBUCKET = 'obs:bucket';
+    const IAMUSER = 'iam:user';
     const KMSCMK = 'kms:cmk';
+    const OBSBUCKET = 'obs:bucket';
     
     /**
      * Gets allowable values of the enum
@@ -22,8 +23,9 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     {
         return [
             self::IAMAGENCY,
-            self::OBSBUCKET,
+            self::IAMUSER,
             self::KMSCMK,
+            self::OBSBUCKET,
         ];
     }
 }

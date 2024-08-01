@@ -22,8 +22,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
     * markerId  终端节点的报文标识。
-    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
@@ -46,8 +46,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  终端节点的ID，唯一标识。
     * markerId  终端节点的报文标识。
-    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
@@ -91,8 +91,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  终端节点的ID，唯一标识。
     * markerId  终端节点的报文标识。
-    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
@@ -115,8 +115,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  终端节点的ID，唯一标识。
     * markerId  终端节点的报文标识。
-    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
@@ -139,8 +139,8 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  终端节点的ID，唯一标识。
     * markerId  终端节点的报文标识。
-    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
-    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * createdAt  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
+    * updatedAt  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * domainId  用户的Domain ID。
     * error  错误信息。  当终端节点服务状态异常，即“status”的值为“failed”时，会返回该字段。
     * status  终端节点的连接状态。  - pendingAcceptance：待接受  - creating：创建中  - accepted：已接受  - rejected：已拒绝  - failed：失败  - deleting：删除中
@@ -317,7 +317,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdAt
-    *  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    *  终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
     * @return \DateTime|null
     */
@@ -329,7 +329,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets createdAt
     *
-    * @param \DateTime|null $createdAt 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * @param \DateTime|null $createdAt 终端节点的创建时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
     * @return $this
     */
@@ -341,7 +341,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
 
     /**
     * Gets updatedAt
-    *  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    *  终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
     * @return \DateTime|null
     */
@@ -353,7 +353,7 @@ class ConnectionEndpoints implements ModelInterface, ArrayAccess
     /**
     * Sets updatedAt
     *
-    * @param \DateTime|null $updatedAt 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MMDDTHH:MM:SSZ
+    * @param \DateTime|null $updatedAt 终端节点的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     *
     * @return $this
     */

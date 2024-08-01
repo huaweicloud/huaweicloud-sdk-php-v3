@@ -158,6 +158,8 @@ class FindingFilter implements ModelInterface, ArrayAccess
     const KEY_CONDITION_GPRINCIPAL_ORG_MANAGEMENT_ACCOUNT_ID = 'condition.g:PrincipalOrgManagementAccountId';
     const KEY_CONDITION_GSOURCE_IP = 'condition.g:SourceIp';
     const KEY_CONDITION_GSOURCE_VPC = 'condition.g:SourceVpc';
+    const KEY_CONDITION_GSOURCE_VPCE = 'condition.g:SourceVpce';
+    const KEY_FINDING_TYPE = 'finding_type';
     
 
     /**
@@ -187,6 +189,8 @@ class FindingFilter implements ModelInterface, ArrayAccess
             self::KEY_CONDITION_GPRINCIPAL_ORG_MANAGEMENT_ACCOUNT_ID,
             self::KEY_CONDITION_GSOURCE_IP,
             self::KEY_CONDITION_GSOURCE_VPC,
+            self::KEY_CONDITION_GSOURCE_VPCE,
+            self::KEY_FINDING_TYPE,
         ];
     }
 

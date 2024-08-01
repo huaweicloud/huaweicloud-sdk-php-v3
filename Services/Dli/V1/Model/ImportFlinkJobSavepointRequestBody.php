@@ -21,7 +21,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  Flink作业的id
-    * savepointPath  Savepoint路径
+    * savepointPath  Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  Flink作业的id
-    * savepointPath  Savepoint路径
+    * savepointPath  Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  Flink作业的id
-    * savepointPath  Savepoint路径
+    * savepointPath  Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  Flink作业的id
-    * savepointPath  Savepoint路径
+    * savepointPath  Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  Flink作业的id
-    * savepointPath  Savepoint路径
+    * savepointPath  Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets savepointPath
-    *  Savepoint路径
+    *  Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ImportFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets savepointPath
     *
-    * @param string $savepointPath Savepoint路径
+    * @param string $savepointPath Savepoint路径。需指定到_metaData文件的上级目录 例：\"obs://bucket_name/file_name/\"
     *
     * @return $this
     */

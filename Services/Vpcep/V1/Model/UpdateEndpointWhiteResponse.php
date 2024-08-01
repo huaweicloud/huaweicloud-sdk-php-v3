@@ -39,6 +39,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
@@ -60,7 +61,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
             'whitelist' => 'string[]',
-            'enableWhitelist' => 'bool'
+            'enableWhitelist' => 'bool',
+            'policyDocument' => 'object'
     ];
 
     /**
@@ -83,6 +85,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
@@ -104,7 +107,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
         'projectId' => null,
         'tags' => null,
         'whitelist' => null,
-        'enableWhitelist' => null
+        'enableWhitelist' => null,
+        'policyDocument' => null
     ];
 
     /**
@@ -148,6 +152,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
@@ -169,7 +174,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'tags' => 'tags',
             'whitelist' => 'whitelist',
-            'enableWhitelist' => 'enable_whitelist'
+            'enableWhitelist' => 'enable_whitelist',
+            'policyDocument' => 'policy_document'
     ];
 
     /**
@@ -192,6 +198,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
@@ -213,7 +220,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'tags' => 'setTags',
             'whitelist' => 'setWhitelist',
-            'enableWhitelist' => 'setEnableWhitelist'
+            'enableWhitelist' => 'setEnableWhitelist',
+            'policyDocument' => 'setPolicyDocument'
     ];
 
     /**
@@ -236,6 +244,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
+    * policyDocument  iam 5.0 策略
     *
     * @var string[]
     */
@@ -257,7 +266,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'tags' => 'getTags',
             'whitelist' => 'getWhitelist',
-            'enableWhitelist' => 'getEnableWhitelist'
+            'enableWhitelist' => 'getEnableWhitelist',
+            'policyDocument' => 'getPolicyDocument'
     ];
 
     /**
@@ -336,6 +346,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['whitelist'] = isset($data['whitelist']) ? $data['whitelist'] : null;
         $this->container['enableWhitelist'] = isset($data['enableWhitelist']) ? $data['enableWhitelist'] : null;
+        $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
     }
 
     /**
@@ -825,6 +836,30 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     public function setEnableWhitelist($enableWhitelist)
     {
         $this->container['enableWhitelist'] = $enableWhitelist;
+        return $this;
+    }
+
+    /**
+    * Gets policyDocument
+    *  iam 5.0 策略
+    *
+    * @return object|null
+    */
+    public function getPolicyDocument()
+    {
+        return $this->container['policyDocument'];
+    }
+
+    /**
+    * Sets policyDocument
+    *
+    * @param object|null $policyDocument iam 5.0 策略
+    *
+    * @return $this
+    */
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->container['policyDocument'] = $policyDocument;
         return $this;
     }
 

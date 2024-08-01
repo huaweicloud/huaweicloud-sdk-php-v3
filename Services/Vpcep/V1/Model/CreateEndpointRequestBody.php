@@ -31,8 +31,9 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
-    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * policyDocument  iam 5.0 策略
+    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -48,6 +49,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'bool',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
+            'policyDocument' => 'object',
             'ipVersion' => 'string',
             'ipv6Address' => 'string'
     ];
@@ -65,8 +67,9 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
-    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * policyDocument  iam 5.0 策略
+    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -82,6 +85,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
         'enableWhitelist' => null,
         'description' => null,
         'policyStatement' => null,
+        'policyDocument' => null,
         'ipVersion' => null,
         'ipv6Address' => 'ipv6'
     ];
@@ -120,8 +124,9 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
-    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * policyDocument  iam 5.0 策略
+    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -137,6 +142,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'enable_whitelist',
             'description' => 'description',
             'policyStatement' => 'policy_statement',
+            'policyDocument' => 'policy_document',
             'ipVersion' => 'ip_version',
             'ipv6Address' => 'ipv6_address'
     ];
@@ -154,8 +160,9 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
-    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * policyDocument  iam 5.0 策略
+    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -171,6 +178,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'setEnableWhitelist',
             'description' => 'setDescription',
             'policyStatement' => 'setPolicyStatement',
+            'policyDocument' => 'setPolicyDocument',
             'ipVersion' => 'setIpVersion',
             'ipv6Address' => 'setIpv6Address'
     ];
@@ -188,8 +196,9 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * policyStatement  终端节点策略信息
-    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
-    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * policyDocument  iam 5.0 策略
+    * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
+    * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @var string[]
     */
@@ -205,6 +214,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'getEnableWhitelist',
             'description' => 'getDescription',
             'policyStatement' => 'getPolicyStatement',
+            'policyDocument' => 'getPolicyDocument',
             'ipVersion' => 'getIpVersion',
             'ipv6Address' => 'getIpv6Address'
     ];
@@ -293,6 +303,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
         $this->container['enableWhitelist'] = isset($data['enableWhitelist']) ? $data['enableWhitelist'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
+        $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
         $this->container['ipv6Address'] = isset($data['ipv6Address']) ? $data['ipv6Address'] : null;
     }
@@ -628,8 +639,32 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets policyDocument
+    *  iam 5.0 策略
+    *
+    * @return object|null
+    */
+    public function getPolicyDocument()
+    {
+        return $this->container['policyDocument'];
+    }
+
+    /**
+    * Sets policyDocument
+    *
+    * @param object|null $policyDocument iam 5.0 策略
+    *
+    * @return $this
+    */
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->container['policyDocument'] = $policyDocument;
+        return $this;
+    }
+
+    /**
     * Gets ipVersion
-    *  指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
+    *  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     *
     * @return string|null
     */
@@ -641,7 +676,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param string|null $ipVersion 指定终端节点的IP版本，仅专业型终端节点支持此参数。 ● ipv4,  IPv4 ● dualstack, 双栈
+    * @param string|null $ipVersion 指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     *
     * @return $this
     */
@@ -653,7 +688,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipv6Address
-    *  访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    *  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @return string|null
     */
@@ -665,7 +700,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets ipv6Address
     *
-    * @param string|null $ipv6Address 访问所连接的终端节点服务的IPv6的地址。 创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。 仅专业型终端节点支持此参数。
+    * @param string|null $ipv6Address 访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
     * @return $this
     */

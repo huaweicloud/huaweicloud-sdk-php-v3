@@ -12,6 +12,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
      */
     const ACCOUNT = 'account';
     const ORGANIZATION = 'organization';
+    const ACCOUNT_UNUSED_ACCESS = 'account_unused_access';
+    const ORGANIZATION_UNUSED_ACCESS = 'organization_unused_access';
     
     /**
      * Gets allowable values of the enum
@@ -22,6 +24,8 @@ use HuaweiCloud\SDK\Core\SdkResponse;
         return [
             self::ACCOUNT,
             self::ORGANIZATION,
+            self::ACCOUNT_UNUSED_ACCESS,
+            self::ORGANIZATION_UNUSED_ACCESS,
         ];
     }
 }

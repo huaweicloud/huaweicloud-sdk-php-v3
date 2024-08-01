@@ -4923,6 +4923,630 @@ class LtsClient extends Client
     }
 
     /**
+     * 消费者发送心跳到服务端
+     *
+     * 消费者发送心跳到服务端
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function consumerGroupHeartBeat($request)
+    {
+        return $this->consumerGroupHeartBeatWithHttpInfo($request);
+    }
+
+    public function consumerGroupHeartBeatWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/consumer-groups/{consumer_group_name}/heartbeat';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['consumerName'] !== null) {
+            $queryParams['consumer_name'] = $localVarParams['consumerName'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['consumerGroupName'] !== null) {
+            $pathParams['consumer_group_name'] = $localVarParams['consumerGroupName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ConsumerGroupHeartBeatResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ConsumerGroupHeartBeatRequest');
+    }
+
+    /**
+     * 创建消费组
+     *
+     * 创建消费组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createConsumerGroup($request)
+    {
+        return $this->createConsumerGroupWithHttpInfo($request);
+    }
+
+    public function createConsumerGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/consumer-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\CreateConsumerGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\CreateConsumerGroupRequest');
+    }
+
+    /**
+     * 删除消费组
+     *
+     * 删除消费组
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteConsumerGroup($request)
+    {
+        return $this->deleteConsumerGroupWithHttpInfo($request);
+    }
+
+    public function deleteConsumerGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/consumer-groups/{consumer_group_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['consumerGroupName'] !== null) {
+            $pathParams['consumer_group_name'] = $localVarParams['consumerGroupName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\DeleteConsumerGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\DeleteConsumerGroupRequest');
+    }
+
+    /**
+     * 查询消费组列表
+     *
+     * 查询消费组列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listConsumerGroup($request)
+    {
+        return $this->listConsumerGroupWithHttpInfo($request);
+    }
+
+    public function listConsumerGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/consumer-groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ListConsumerGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ListConsumerGroupRequest');
+    }
+
+    /**
+     * 查询消费组详情
+     *
+     * 查询消费组详情
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listDetailsConsumerGroup($request)
+    {
+        return $this->listDetailsConsumerGroupWithHttpInfo($request);
+    }
+
+    public function listDetailsConsumerGroupWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/consumer-groups/{consumer_group_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['consumerGroupName'] !== null) {
+            $pathParams['consumer_group_name'] = $localVarParams['consumerGroupName'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ListDetailsConsumerGroupResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ListDetailsConsumerGroupRequest');
+    }
+
+    /**
+     * 通过时间获取消费游标
+     *
+     * 通过时间查询cursor
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCursorByTime($request)
+    {
+        return $this->showCursorByTimeWithHttpInfo($request);
+    }
+
+    public function showCursorByTimeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/shards/{shard_id}/cursor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['from'] !== null) {
+            $queryParams['from'] = $localVarParams['from'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['shardId'] !== null) {
+            $pathParams['shard_id'] = $localVarParams['shardId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowCursorByTimeResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowCursorByTimeRequest');
+    }
+
+    /**
+     * 通过消费游标获取时间
+     *
+     * 通过cursor查询服务端时间
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showCursorTime($request)
+    {
+        return $this->showCursorTimeWithHttpInfo($request);
+    }
+
+    public function showCursorTimeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/shards/{shard_id}/time';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['cursor'] !== null) {
+            $queryParams['cursor'] = $localVarParams['cursor'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['shardId'] !== null) {
+            $pathParams['shard_id'] = $localVarParams['shardId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowCursorTimeResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowCursorTimeRequest');
+    }
+
+    /**
+     * 流消费获取Shards
+     *
+     * 流消费获取所有的query shards
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showLogStreamShards($request)
+    {
+        return $this->showLogStreamShardsWithHttpInfo($request);
+    }
+
+    public function showLogStreamShardsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/shards';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\ShowLogStreamShardsResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\ShowLogStreamShardsRequest');
+    }
+
+    /**
+     * 更新消费组位点
+     *
+     * 更新消费组位点
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateCheckPoint($request)
+    {
+        return $this->updateCheckPointWithHttpInfo($request);
+    }
+
+    public function updateCheckPointWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/groups/{group_id}/streams/{stream_id}/consumer-groups/{consumer_group_name}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['consumerName'] !== null) {
+            $queryParams['consumer_name'] = $localVarParams['consumerName'];
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['streamId'] !== null) {
+            $pathParams['stream_id'] = $localVarParams['streamId'];
+        }
+        if ($localVarParams['consumerGroupName'] !== null) {
+            $pathParams['consumer_group_name'] = $localVarParams['consumerGroupName'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateCheckPointResponse',
+            $requestType='\HuaweiCloud\SDK\Lts\V2\Model\UpdateCheckPointRequest');
+    }
+
+    /**
      * 创建SQL告警规则
      *
      * 该接口用于创建SQL告警，目前每个帐户最多可以创建共200个关键词告警与SQL告警

@@ -21,7 +21,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * action  操作类型
-    * savepointPath  Savepoint路径
+    * savepointPath  obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * action  操作类型
-    * savepointPath  Savepoint路径
+    * savepointPath  obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * action  操作类型
-    * savepointPath  Savepoint路径
+    * savepointPath  obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * action  操作类型
-    * savepointPath  Savepoint路径
+    * savepointPath  obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * action  操作类型
-    * savepointPath  Savepoint路径
+    * savepointPath  obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @var string[]
     */
@@ -236,7 +236,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets savepointPath
-    *  Savepoint路径
+    *  obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @return string
     */
@@ -248,7 +248,7 @@ class ExecuteFlinkJobSavepointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets savepointPath
     *
-    * @param string $savepointPath Savepoint路径
+    * @param string $savepointPath obs桶路径.例 \"bucket_name/file_name/\"
     *
     * @return $this
     */
