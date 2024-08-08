@@ -21,7 +21,8 @@ class MetaStudioClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new MetaStudioClient());
+        $client = new ClientBuilder(new MetaStudioClient());
+        return $client;
     }
 
 

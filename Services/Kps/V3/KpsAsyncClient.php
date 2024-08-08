@@ -21,7 +21,8 @@ class KpsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new KpsAsyncClient());
+       $client = new ClientBuilder(new KpsAsyncClient());
+       return $client;
     }
 
     /**

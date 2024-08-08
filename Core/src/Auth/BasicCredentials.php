@@ -59,6 +59,24 @@ class BasicCredentials extends Credentials
         $this->iamEndpoint = isset($iamEndpoint) ? $iamEndpoint : null;
     }
 
+    public function withDerivedPredicate($derivedPredicate) {
+        $this->derivedPredicate = $derivedPredicate;
+
+        return $this;
+    }
+
+    public function processDerivedAuthParams($derivedAuthServiceName, $regionId)
+    {
+        if (empty($this->derivedAuthServiceName)) {
+            $this->derivedAuthServiceName = $derivedAuthServiceName;
+        }
+
+        if (empty($this->regionId)) {
+            $this->regionId = $regionId;
+        }
+    }
+
+
     public function withAk($ak)
     {
         $this->setAk($ak);
@@ -165,6 +183,22 @@ class BasicCredentials extends Credentials
     /**
      * @return string
      */
+    public function getRegion()
+    {
+        return $this->regionId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDerivedAuthServiceName()
+    {
+        return $this->derivedAuthServiceName;
+    }
+
+    /**
+     * @return string
+     */
     public function getSecurityToken()
     {
         return $this->securityToken;
@@ -242,8 +276,11 @@ class BasicCredentials extends Credentials
             $request->headerParams['X-Sdk-Content-Sha256'] = 'UNSIGNED-PAYLOAD';
         }
 
+        if ($this->isDerivedAuth($request)) {
+            $signer = new DerivedAKSKSigner($this);
+            return $signer->sign($request);
+        }
         $signer = new Signer($this);
-
         return $signer->sign($request);
     }
 

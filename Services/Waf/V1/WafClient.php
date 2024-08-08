@@ -21,7 +21,8 @@ class WafClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new WafClient());
+        $client = new ClientBuilder(new WafClient());
+        return $client;
     }
 
 

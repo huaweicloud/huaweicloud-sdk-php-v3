@@ -21,7 +21,8 @@ class DbssClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DbssClient());
+        $client = new ClientBuilder(new DbssClient());
+        return $client;
     }
 
 

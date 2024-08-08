@@ -21,7 +21,8 @@ class KafkaAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new KafkaAsyncClient());
+       $client = new ClientBuilder(new KafkaAsyncClient());
+       return $client;
     }
 
     /**

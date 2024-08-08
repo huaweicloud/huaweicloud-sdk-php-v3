@@ -21,7 +21,8 @@ class IamAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new IamAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new IamAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**
@@ -244,7 +245,7 @@ class IamAsyncClient extends Client
     }
 
     /**
-     * application/json
+     * 基于委托为企业项目授权
      *
      * 该接口可以基于委托为企业项目授权
      * 
@@ -3729,73 +3730,6 @@ class IamAsyncClient extends Client
     }
 
     /**
-     * 管理员查询用户组所包含的IAM用户
-     *
-     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组中所包含的IAM用户。
-     * 
-     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function keystoneListUsersForGroupByAdminAsync($request)
-    {
-        return $this->keystoneListUsersForGroupByAdminAsyncWithHttpInfo($request);
-    }
-    
-    public function keystoneListUsersForGroupByAdminAsyncWithHttpInfo($request){
-        $collection_formats = [];
-        $resourcePath = '/v3/groups/{group_id}/users';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['groupId'] !== null) {
-            $pathParams['group_id'] = $localVarParams['groupId'];
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*', 'application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*', 'application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminResponse',
-            $collectionFormats=$collection_formats,
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminRequest',
-            $asyncRequest = true);
-    }
-
-    /**
      * 查询版本信息列表
      *
      * 该接口用于查询Keystone API的版本信息。
@@ -6278,7 +6212,7 @@ class IamAsyncClient extends Client
     }
 
     /**
-     * 
+     * 删除企业项目关联委托的权限
      *
      * 该接口可以删除企业项目委托上的授权
      * 
@@ -9261,6 +9195,73 @@ class IamAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 管理员查询用户组所包含的IAM用户
+     *
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询用户组中所包含的IAM用户。
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function keystoneListUsersForGroupByAdminAsync($request)
+    {
+        return $this->keystoneListUsersForGroupByAdminAsyncWithHttpInfo($request);
+    }
+    
+    public function keystoneListUsersForGroupByAdminAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v3/groups/{group_id}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['groupId'] !== null) {
+            $pathParams['group_id'] = $localVarParams['groupId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\KeystoneListUsersForGroupByAdminRequest',
             $asyncRequest = true);
     }
 

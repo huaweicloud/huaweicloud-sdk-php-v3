@@ -41,8 +41,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -72,7 +72,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
             'specificationName' => 'string',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
-            'policyDocument' => 'object',
+            'policyDocument' => 'string',
             'enableStatus' => 'string',
             'endpointPoolId' => 'string',
             'publicBorderGroup' => 'string',
@@ -101,8 +101,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -182,8 +182,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -242,8 +242,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -302,8 +302,8 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * specificationName  规格名称
     * description  描述
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * enableStatus  终端节点是否可用。  - enable：启用  - disable：不启用
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点对应Pool的Public Border Group信息
@@ -978,7 +978,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatement
-    *  终端节点策略信息
+    *  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
@@ -990,7 +990,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return $this
     */
@@ -1002,9 +1002,9 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyDocument
-    *  iam 5.0 策略
+    *  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
-    * @return object|null
+    * @return string|null
     */
     public function getPolicyDocument()
     {
@@ -1014,7 +1014,7 @@ class CreateEndpointResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param object|null $policyDocument iam 5.0 策略
+    * @param string|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @return $this
     */

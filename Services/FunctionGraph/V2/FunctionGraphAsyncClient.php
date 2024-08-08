@@ -21,7 +21,8 @@ class FunctionGraphAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new FunctionGraphAsyncClient());
+       $client = new ClientBuilder(new FunctionGraphAsyncClient());
+       return $client;
     }
 
     /**

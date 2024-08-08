@@ -21,7 +21,8 @@ class RamClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new RamClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new RamClient(), "GlobalCredentials");
+        return $client;
     }
 
 

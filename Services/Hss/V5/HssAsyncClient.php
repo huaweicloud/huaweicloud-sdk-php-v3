@@ -21,7 +21,8 @@ class HssAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new HssAsyncClient());
+       $client = new ClientBuilder(new HssAsyncClient());
+       return $client;
     }
 
     /**

@@ -24,7 +24,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * resourceId  资源ID
-    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -32,8 +31,7 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'string',
             'limit' => 'int',
             'marker' => 'string',
-            'resourceId' => 'string',
-            'resourceName' => 'string'
+            'resourceId' => 'string'
     ];
 
     /**
@@ -42,7 +40,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * resourceId  资源ID
-    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -50,8 +47,7 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
         'policyAssignmentId' => null,
         'limit' => 'int32',
         'marker' => null,
-        'resourceId' => null,
-        'resourceName' => null
+        'resourceId' => null
     ];
 
     /**
@@ -81,7 +77,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * resourceId  资源ID
-    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -89,8 +84,7 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'policy_assignment_id',
             'limit' => 'limit',
             'marker' => 'marker',
-            'resourceId' => 'resource_id',
-            'resourceName' => 'resource_name'
+            'resourceId' => 'resource_id'
     ];
 
     /**
@@ -99,7 +93,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * resourceId  资源ID
-    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -107,8 +100,7 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'setPolicyAssignmentId',
             'limit' => 'setLimit',
             'marker' => 'setMarker',
-            'resourceId' => 'setResourceId',
-            'resourceName' => 'setResourceName'
+            'resourceId' => 'setResourceId'
     ];
 
     /**
@@ -117,7 +109,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
     * limit  最大的返回数量
     * marker  分页参数，通过上一个请求中返回的marker信息作为输入，获取当前页
     * resourceId  资源ID
-    * resourceName  资源名称
     *
     * @var string[]
     */
@@ -125,8 +116,7 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
             'policyAssignmentId' => 'getPolicyAssignmentId',
             'limit' => 'getLimit',
             'marker' => 'getMarker',
-            'resourceId' => 'getResourceId',
-            'resourceName' => 'getResourceName'
+            'resourceId' => 'getResourceId'
     ];
 
     /**
@@ -191,7 +181,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
-        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
     }
 
     /**
@@ -231,12 +220,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resourceId']) && !preg_match("/[_.:\\w-]+/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /[_.:\\w-]+/.";
-            }
-            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 256)) {
-                $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 256.";
-            }
-            if (!is_null($this->container['resourceName']) && !preg_match("/[^']+/", $this->container['resourceName'])) {
-                $invalidProperties[] = "invalid value for 'resourceName', must be conform to the pattern /[^']+/.";
             }
         return $invalidProperties;
     }
@@ -345,30 +328,6 @@ class ListRemediationExceptionsRequest implements ModelInterface, ArrayAccess
     public function setResourceId($resourceId)
     {
         $this->container['resourceId'] = $resourceId;
-        return $this;
-    }
-
-    /**
-    * Gets resourceName
-    *  资源名称
-    *
-    * @return string|null
-    */
-    public function getResourceName()
-    {
-        return $this->container['resourceName'];
-    }
-
-    /**
-    * Sets resourceName
-    *
-    * @param string|null $resourceName 资源名称
-    *
-    * @return $this
-    */
-    public function setResourceName($resourceName)
-    {
-        $this->container['resourceName'] = $resourceName;
         return $this;
     }
 

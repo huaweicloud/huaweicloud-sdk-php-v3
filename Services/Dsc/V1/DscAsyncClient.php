@@ -21,7 +21,8 @@ class DscAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DscAsyncClient());
+       $client = new ClientBuilder(new DscAsyncClient());
+       return $client;
     }
 
     /**

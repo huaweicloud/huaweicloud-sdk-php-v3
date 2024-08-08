@@ -21,7 +21,8 @@ class CtsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CtsAsyncClient());
+       $client = new ClientBuilder(new CtsAsyncClient());
+       return $client;
     }
 
     /**

@@ -21,7 +21,8 @@ class SisClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SisClient());
+        $client = new ClientBuilder(new SisClient());
+        return $client;
     }
 
 

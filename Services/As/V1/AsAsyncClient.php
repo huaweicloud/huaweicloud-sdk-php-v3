@@ -21,7 +21,8 @@ class AsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new AsAsyncClient());
+       $client = new ClientBuilder(new AsAsyncClient());
+       return $client;
     }
 
     /**

@@ -21,7 +21,8 @@ class OcrClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new OcrClient());
+        $client = new ClientBuilder(new OcrClient());
+        return $client;
     }
 
 

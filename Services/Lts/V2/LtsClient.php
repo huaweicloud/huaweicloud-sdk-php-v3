@@ -21,7 +21,8 @@ class LtsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new LtsClient());
+        $client = new ClientBuilder(new LtsClient());
+        return $client;
     }
 
 

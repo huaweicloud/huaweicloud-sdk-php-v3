@@ -36,6 +36,10 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * containerNum  关联容器数
     * componentNum  关联组件数
     * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    * hostName  服务器名称
+    * hostId  主机ID
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -55,7 +59,11 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'hostNum' => 'int',
             'containerNum' => 'int',
             'componentNum' => 'int',
-            'scanFailedDesc' => 'string'
+            'scanFailedDesc' => 'string',
+            'severityLevel' => 'string',
+            'hostName' => 'string',
+            'hostId' => 'string',
+            'agentId' => 'string'
     ];
 
     /**
@@ -76,6 +84,10 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * containerNum  关联容器数
     * componentNum  关联组件数
     * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    * hostName  服务器名称
+    * hostId  主机ID
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -95,7 +107,11 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
         'hostNum' => 'int64',
         'containerNum' => 'int64',
         'componentNum' => 'int64',
-        'scanFailedDesc' => null
+        'scanFailedDesc' => null,
+        'severityLevel' => null,
+        'hostName' => null,
+        'hostId' => null,
+        'agentId' => null
     ];
 
     /**
@@ -137,6 +153,10 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * containerNum  关联容器数
     * componentNum  关联组件数
     * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    * hostName  服务器名称
+    * hostId  主机ID
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -156,7 +176,11 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'hostNum' => 'host_num',
             'containerNum' => 'container_num',
             'componentNum' => 'component_num',
-            'scanFailedDesc' => 'scan_failed_desc'
+            'scanFailedDesc' => 'scan_failed_desc',
+            'severityLevel' => 'severity_level',
+            'hostName' => 'host_name',
+            'hostId' => 'host_id',
+            'agentId' => 'agent_id'
     ];
 
     /**
@@ -177,6 +201,10 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * containerNum  关联容器数
     * componentNum  关联组件数
     * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    * hostName  服务器名称
+    * hostId  主机ID
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -196,7 +224,11 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'hostNum' => 'setHostNum',
             'containerNum' => 'setContainerNum',
             'componentNum' => 'setComponentNum',
-            'scanFailedDesc' => 'setScanFailedDesc'
+            'scanFailedDesc' => 'setScanFailedDesc',
+            'severityLevel' => 'setSeverityLevel',
+            'hostName' => 'setHostName',
+            'hostId' => 'setHostId',
+            'agentId' => 'setAgentId'
     ];
 
     /**
@@ -217,6 +249,10 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     * containerNum  关联容器数
     * componentNum  关联组件数
     * scanFailedDesc  扫描失败原因，包含如下10种。   - \"unknown_error\":未知错误   - \"failed_to_match_agent\":对应主机未开启容器版防护或agent离线   - \"create_container_failed\":创建容器失败        - \"get_container_info_failed\":获取容器信息失败   - \"docker_offline\":docker引擎不在线   - \"get_docker_root_failed\":获取容器根文件系统失败   - \"image_not_exist_or_docker_api_fault\":镜像不存在或docker接口错误   - \"huge_image\":超大镜像   - \"docker_root_in_nfs\":容器根目录位于网络挂载   - \"response_timed_out\":响应超时
+    * severityLevel  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    * hostName  服务器名称
+    * hostId  主机ID
+    * agentId  Agent ID
     *
     * @var string[]
     */
@@ -236,7 +272,11 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             'hostNum' => 'getHostNum',
             'containerNum' => 'getContainerNum',
             'componentNum' => 'getComponentNum',
-            'scanFailedDesc' => 'getScanFailedDesc'
+            'scanFailedDesc' => 'getScanFailedDesc',
+            'severityLevel' => 'getSeverityLevel',
+            'hostName' => 'getHostName',
+            'hostId' => 'getHostId',
+            'agentId' => 'getAgentId'
     ];
 
     /**
@@ -313,6 +353,10 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
         $this->container['containerNum'] = isset($data['containerNum']) ? $data['containerNum'] : null;
         $this->container['componentNum'] = isset($data['componentNum']) ? $data['componentNum'] : null;
         $this->container['scanFailedDesc'] = isset($data['scanFailedDesc']) ? $data['scanFailedDesc'] : null;
+        $this->container['severityLevel'] = isset($data['severityLevel']) ? $data['severityLevel'] : null;
+        $this->container['hostName'] = isset($data['hostName']) ? $data['hostName'] : null;
+        $this->container['hostId'] = isset($data['hostId']) ? $data['hostId'] : null;
+        $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
     }
 
     /**
@@ -418,6 +462,30 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['scanFailedDesc']) && (mb_strlen($this->container['scanFailedDesc']) < 0)) {
                 $invalidProperties[] = "invalid value for 'scanFailedDesc', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) > 256)) {
+                $invalidProperties[] = "invalid value for 'severityLevel', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['severityLevel']) && (mb_strlen($this->container['severityLevel']) < 0)) {
+                $invalidProperties[] = "invalid value for 'severityLevel', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) < 0)) {
+                $invalidProperties[] = "invalid value for 'hostName', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['agentId']) && (mb_strlen($this->container['agentId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'agentId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -814,6 +882,102 @@ class ImageLocalInfo implements ModelInterface, ArrayAccess
     public function setScanFailedDesc($scanFailedDesc)
     {
         $this->container['scanFailedDesc'] = $scanFailedDesc;
+        return $this;
+    }
+
+    /**
+    * Gets severityLevel
+    *  镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    *
+    * @return string|null
+    */
+    public function getSeverityLevel()
+    {
+        return $this->container['severityLevel'];
+    }
+
+    /**
+    * Sets severityLevel
+    *
+    * @param string|null $severityLevel 镜像风险程度，在镜像扫描完成后展示，包含如下：   - Security：安全   - Low：低危   - Medium：中危   - High：高危
+    *
+    * @return $this
+    */
+    public function setSeverityLevel($severityLevel)
+    {
+        $this->container['severityLevel'] = $severityLevel;
+        return $this;
+    }
+
+    /**
+    * Gets hostName
+    *  服务器名称
+    *
+    * @return string|null
+    */
+    public function getHostName()
+    {
+        return $this->container['hostName'];
+    }
+
+    /**
+    * Sets hostName
+    *
+    * @param string|null $hostName 服务器名称
+    *
+    * @return $this
+    */
+    public function setHostName($hostName)
+    {
+        $this->container['hostName'] = $hostName;
+        return $this;
+    }
+
+    /**
+    * Gets hostId
+    *  主机ID
+    *
+    * @return string|null
+    */
+    public function getHostId()
+    {
+        return $this->container['hostId'];
+    }
+
+    /**
+    * Sets hostId
+    *
+    * @param string|null $hostId 主机ID
+    *
+    * @return $this
+    */
+    public function setHostId($hostId)
+    {
+        $this->container['hostId'] = $hostId;
+        return $this;
+    }
+
+    /**
+    * Gets agentId
+    *  Agent ID
+    *
+    * @return string|null
+    */
+    public function getAgentId()
+    {
+        return $this->container['agentId'];
+    }
+
+    /**
+    * Sets agentId
+    *
+    * @param string|null $agentId Agent ID
+    *
+    * @return $this
+    */
+    public function setAgentId($agentId)
+    {
+        $this->container['agentId'] = $agentId;
         return $this;
     }
 

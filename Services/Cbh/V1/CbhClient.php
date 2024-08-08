@@ -21,7 +21,8 @@ class CbhClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CbhClient());
+        $client = new ClientBuilder(new CbhClient());
+        return $client;
     }
 
 

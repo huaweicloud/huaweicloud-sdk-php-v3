@@ -21,7 +21,8 @@ class DdsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DdsAsyncClient());
+       $client = new ClientBuilder(new DdsAsyncClient());
+       return $client;
     }
 
     /**

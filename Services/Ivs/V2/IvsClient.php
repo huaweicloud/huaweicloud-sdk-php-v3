@@ -21,7 +21,8 @@ class IvsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new IvsClient());
+        $client = new ClientBuilder(new IvsClient());
+        return $client;
     }
 
 

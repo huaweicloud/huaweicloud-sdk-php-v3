@@ -21,7 +21,8 @@ class VodClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new VodClient());
+        $client = new ClientBuilder(new VodClient());
+        return $client;
     }
 
 

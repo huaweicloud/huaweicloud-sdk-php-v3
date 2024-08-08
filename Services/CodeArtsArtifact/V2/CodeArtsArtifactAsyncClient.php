@@ -21,7 +21,8 @@ class CodeArtsArtifactAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CodeArtsArtifactAsyncClient());
+       $client = new ClientBuilder(new CodeArtsArtifactAsyncClient());
+       return $client;
     }
 
     /**

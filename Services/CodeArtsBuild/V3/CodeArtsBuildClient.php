@@ -21,7 +21,8 @@ class CodeArtsBuildClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CodeArtsBuildClient());
+        $client = new ClientBuilder(new CodeArtsBuildClient());
+        return $client;
     }
 
 

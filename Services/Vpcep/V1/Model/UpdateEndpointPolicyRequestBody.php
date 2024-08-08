@@ -20,20 +20,20 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
-            'policyDocument' => 'object'
+            'policyDocument' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatement
-    *  终端节点策略信息
+    *  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
@@ -197,7 +197,7 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return $this
     */
@@ -209,9 +209,9 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyDocument
-    *  iam 5.0 策略
+    *  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
-    * @return object|null
+    * @return string|null
     */
     public function getPolicyDocument()
     {
@@ -221,7 +221,7 @@ class UpdateEndpointPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param object|null $policyDocument iam 5.0 策略
+    * @param string|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @return $this
     */

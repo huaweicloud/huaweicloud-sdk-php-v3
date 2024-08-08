@@ -21,7 +21,8 @@ class SmnClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SmnClient());
+        $client = new ClientBuilder(new SmnClient());
+        return $client;
     }
 
 

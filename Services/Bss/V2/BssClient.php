@@ -21,7 +21,8 @@ class BssClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new BssClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new BssClient(), "GlobalCredentials");
+        return $client;
     }
 
 

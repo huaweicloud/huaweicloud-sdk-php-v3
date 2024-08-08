@@ -21,7 +21,8 @@ class OrganizationsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new OrganizationsClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new OrganizationsClient(), "GlobalCredentials");
+        return $client;
     }
 
 

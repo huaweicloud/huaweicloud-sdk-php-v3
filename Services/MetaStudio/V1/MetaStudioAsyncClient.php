@@ -21,7 +21,8 @@ class MetaStudioAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new MetaStudioAsyncClient());
+       $client = new ClientBuilder(new MetaStudioAsyncClient());
+       return $client;
     }
 
     /**

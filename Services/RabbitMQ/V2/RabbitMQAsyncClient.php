@@ -21,7 +21,8 @@ class RabbitMQAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new RabbitMQAsyncClient());
+       $client = new ClientBuilder(new RabbitMQAsyncClient());
+       return $client;
     }
 
     /**

@@ -21,7 +21,8 @@ class NatClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new NatClient());
+        $client = new ClientBuilder(new NatClient());
+        return $client;
     }
 
 

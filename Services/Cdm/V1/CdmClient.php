@@ -21,7 +21,8 @@ class CdmClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CdmClient());
+        $client = new ClientBuilder(new CdmClient());
+        return $client;
     }
 
 

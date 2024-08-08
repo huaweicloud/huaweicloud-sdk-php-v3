@@ -21,7 +21,8 @@ class SmsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SmsAsyncClient());
+       $client = new ClientBuilder(new SmsAsyncClient());
+       return $client;
     }
 
     /**

@@ -30,8 +30,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * whitelist  添加用于控制访问终端节点的白名单。 创建终端节点时，支持访问控制，使用此参数可以添加IPv4或CIDR，默认空列表。 仅当创建连接Interface类型终端节点服务的终端节点时，支持设置此参数。
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
@@ -49,7 +49,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
             'enableWhitelist' => 'bool',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
-            'policyDocument' => 'object',
+            'policyDocument' => 'string',
             'ipVersion' => 'string',
             'ipv6Address' => 'string'
     ];
@@ -66,8 +66,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * whitelist  添加用于控制访问终端节点的白名单。 创建终端节点时，支持访问控制，使用此参数可以添加IPv4或CIDR，默认空列表。 仅当创建连接Interface类型终端节点服务的终端节点时，支持设置此参数。
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
@@ -123,8 +123,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * whitelist  添加用于控制访问终端节点的白名单。 创建终端节点时，支持访问控制，使用此参数可以添加IPv4或CIDR，默认空列表。 仅当创建连接Interface类型终端节点服务的终端节点时，支持设置此参数。
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
@@ -159,8 +159,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * whitelist  添加用于控制访问终端节点的白名单。 创建终端节点时，支持访问控制，使用此参数可以添加IPv4或CIDR，默认空列表。 仅当创建连接Interface类型终端节点服务的终端节点时，支持设置此参数。
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
@@ -195,8 +195,8 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     * whitelist  添加用于控制访问终端节点的白名单。 创建终端节点时，支持访问控制，使用此参数可以添加IPv4或CIDR，默认空列表。 仅当创建连接Interface类型终端节点服务的终端节点时，支持设置此参数。
     * enableWhitelist  是否开启网络ACL隔离。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * ipVersion  指定终端节点的IP版本，仅专业型终端节点支持此参数。  - ipv4,  IPv4 - dualstack, 双栈
     * ipv6Address  访问所连接的终端节点服务的IPv6的地址。  创建终端节点时，可以指定访问所连接的终端节点服务的IP，不指定的情况下，会使用系统生成的一个地址。  仅专业型终端节点支持此参数。
     *
@@ -616,7 +616,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatement
-    *  终端节点策略信息
+    *  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
@@ -628,7 +628,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return $this
     */
@@ -640,9 +640,9 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyDocument
-    *  iam 5.0 策略
+    *  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
-    * @return object|null
+    * @return string|null
     */
     public function getPolicyDocument()
     {
@@ -652,7 +652,7 @@ class CreateEndpointRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param object|null $policyDocument iam 5.0 策略
+    * @param string|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @return $this
     */

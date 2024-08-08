@@ -21,7 +21,8 @@ class MeetingClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new MeetingClient(), "MeetingCredentials");
+        $client = new ClientBuilder(new MeetingClient(), "MeetingCredentials");
+        return $client;
     }
 
 

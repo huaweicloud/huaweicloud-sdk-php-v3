@@ -41,8 +41,8 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
@@ -71,7 +71,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
             'routetables' => 'string[]',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
-            'policyDocument' => 'object',
+            'policyDocument' => 'string',
             'endpointPoolId' => 'string',
             'publicBorderGroup' => 'string'
     ];
@@ -99,8 +99,8 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
@@ -178,8 +178,8 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
@@ -236,8 +236,8 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
@@ -294,8 +294,8 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * routetables  路由表ID列表。 若未指定，返回默认VPC下路由表ID。 创建gateway类型终端节点服务的终端节点时，显示此参数。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
-    * policyStatement  终端节点策略信息
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     * endpointPoolId  待废弃，实例相关联的集群ID
     * publicBorderGroup  终端节点关联的Public Border Group信息，只有当终端节点和边缘Pool相关联时才会返回该字段
     *
@@ -990,7 +990,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyStatement
-    *  终端节点策略信息
+    *  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
     */
@@ -1002,7 +1002,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyStatement
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement 终端节点策略信息
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
     * @return $this
     */
@@ -1014,9 +1014,9 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyDocument
-    *  iam 5.0 策略
+    *  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
-    * @return object|null
+    * @return string|null
     */
     public function getPolicyDocument()
     {
@@ -1026,7 +1026,7 @@ class EndpointResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param object|null $policyDocument iam 5.0 策略
+    * @param string|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @return $this
     */

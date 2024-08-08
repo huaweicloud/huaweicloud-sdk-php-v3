@@ -26,7 +26,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
-    * maximumAttempts  指定时间内自动修正的最大尝试次数。
+    * maximumAttempts  指定时间内修正的最大尝试次数。
     * retryAttemptSeconds  用于防止循环修正的时间窗口，如果在指定时间内进行了自动修正的最大尝试次数，则将资源添加至修正例外。
     * authType  合规规则修正配置的权限方式。
     * authValue  合规规则修正配置的权限信息。
@@ -58,7 +58,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
-    * maximumAttempts  指定时间内自动修正的最大尝试次数。
+    * maximumAttempts  指定时间内修正的最大尝试次数。
     * retryAttemptSeconds  用于防止循环修正的时间窗口，如果在指定时间内进行了自动修正的最大尝试次数，则将资源添加至修正例外。
     * authType  合规规则修正配置的权限方式。
     * authValue  合规规则修正配置的权限信息。
@@ -111,7 +111,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
-    * maximumAttempts  指定时间内自动修正的最大尝试次数。
+    * maximumAttempts  指定时间内修正的最大尝试次数。
     * retryAttemptSeconds  用于防止循环修正的时间窗口，如果在指定时间内进行了自动修正的最大尝试次数，则将资源添加至修正例外。
     * authType  合规规则修正配置的权限方式。
     * authValue  合规规则修正配置的权限信息。
@@ -143,7 +143,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
-    * maximumAttempts  指定时间内自动修正的最大尝试次数。
+    * maximumAttempts  指定时间内修正的最大尝试次数。
     * retryAttemptSeconds  用于防止循环修正的时间窗口，如果在指定时间内进行了自动修正的最大尝试次数，则将资源添加至修正例外。
     * authType  合规规则修正配置的权限方式。
     * authValue  合规规则修正配置的权限信息。
@@ -175,7 +175,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
     * targetId  修正执行的目标ID。如果修正方式为fgs，则该值为函数工作流的函数urn；如果修正方式为rfs，则该值为资源编排服务的模板name与版本号，两者以/分割，如果没有指定默认V1。
     * staticParameter  修正执行的参数。
     * resourceParameter  resourceParameter
-    * maximumAttempts  指定时间内自动修正的最大尝试次数。
+    * maximumAttempts  指定时间内修正的最大尝试次数。
     * retryAttemptSeconds  用于防止循环修正的时间窗口，如果在指定时间内进行了自动修正的最大尝试次数，则将资源添加至修正例外。
     * authType  合规规则修正配置的权限方式。
     * authValue  合规规则修正配置的权限信息。
@@ -434,7 +434,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
 
     /**
     * Gets maximumAttempts
-    *  指定时间内自动修正的最大尝试次数。
+    *  指定时间内修正的最大尝试次数。
     *
     * @return int|null
     */
@@ -446,7 +446,7 @@ class CreateOrUpdateRemediationConfigurationResponse implements ModelInterface, 
     /**
     * Sets maximumAttempts
     *
-    * @param int|null $maximumAttempts 指定时间内自动修正的最大尝试次数。
+    * @param int|null $maximumAttempts 指定时间内修正的最大尝试次数。
     *
     * @return $this
     */

@@ -21,7 +21,8 @@ class DliClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DliClient());
+        $client = new ClientBuilder(new DliClient());
+        return $client;
     }
 
 

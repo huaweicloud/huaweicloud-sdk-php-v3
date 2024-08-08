@@ -21,7 +21,8 @@ class IAMAccessAnalyzerClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new IAMAccessAnalyzerClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new IAMAccessAnalyzerClient());
+        return $client;
     }
 
 

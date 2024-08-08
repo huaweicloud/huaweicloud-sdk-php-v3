@@ -28,6 +28,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    * mode  添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    * loadbalancerId  负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
     *
     * @var string[]
@@ -41,6 +45,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'server' => '\HuaweiCloud\SDK\Waf\V1\Model\PremiumWafServer[]',
             'blockPage' => '\HuaweiCloud\SDK\Waf\V1\Model\BlockPage',
             'forwardHeaderMap' => 'map[string,string]',
+            'mode' => 'string',
+            'loadbalancerId' => 'string',
+            'listenerId' => 'string',
+            'protocolPort' => 'int',
             'description' => 'string'
     ];
 
@@ -54,6 +62,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    * mode  添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    * loadbalancerId  负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
     *
     * @var string[]
@@ -67,6 +79,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         'server' => null,
         'blockPage' => null,
         'forwardHeaderMap' => null,
+        'mode' => null,
+        'loadbalancerId' => null,
+        'listenerId' => null,
+        'protocolPort' => null,
         'description' => null
     ];
 
@@ -101,6 +117,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    * mode  添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    * loadbalancerId  负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
     *
     * @var string[]
@@ -114,6 +134,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'server' => 'server',
             'blockPage' => 'block_page',
             'forwardHeaderMap' => 'forward_header_map',
+            'mode' => 'mode',
+            'loadbalancerId' => 'loadbalancer_id',
+            'listenerId' => 'listener_id',
+            'protocolPort' => 'protocol_port',
             'description' => 'description'
     ];
 
@@ -127,6 +151,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    * mode  添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    * loadbalancerId  负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
     *
     * @var string[]
@@ -140,6 +168,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'server' => 'setServer',
             'blockPage' => 'setBlockPage',
             'forwardHeaderMap' => 'setForwardHeaderMap',
+            'mode' => 'setMode',
+            'loadbalancerId' => 'setLoadbalancerId',
+            'listenerId' => 'setListenerId',
+            'protocolPort' => 'setProtocolPort',
             'description' => 'setDescription'
     ];
 
@@ -153,6 +185,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     * server  防护域名的源站服务器配置信息
     * blockPage  blockPage
     * forwardHeaderMap  字段转发配置，WAF会将添加的字段插到header中，转给源站；Key不能跟nginx原生字段重复。Value支持的值包括:   - $time_local   - $request_id   - $connection_requests   - $tenant_id   - $project_id   - $remote_addr   - $remote_port   - $scheme   - $request_method   - $http_host   -$origin_uri   - $request_length   - $ssl_server_name   - $ssl_protocol   - $ssl_curves   - $ssl_session_reused
+    * mode  添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    * loadbalancerId  负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    * listenerId  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    * protocolPort  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
     * description  防护域名备注
     *
     * @var string[]
@@ -166,6 +202,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
             'server' => 'getServer',
             'blockPage' => 'getBlockPage',
             'forwardHeaderMap' => 'getForwardHeaderMap',
+            'mode' => 'getMode',
+            'loadbalancerId' => 'getLoadbalancerId',
+            'listenerId' => 'getListenerId',
+            'protocolPort' => 'getProtocolPort',
             'description' => 'getDescription'
     ];
 
@@ -235,6 +275,10 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
         $this->container['server'] = isset($data['server']) ? $data['server'] : null;
         $this->container['blockPage'] = isset($data['blockPage']) ? $data['blockPage'] : null;
         $this->container['forwardHeaderMap'] = isset($data['forwardHeaderMap']) ? $data['forwardHeaderMap'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
+        $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
+        $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -458,6 +502,102 @@ class CreatePremiumHostRequestBody implements ModelInterface, ArrayAccess
     public function setForwardHeaderMap($forwardHeaderMap)
     {
         $this->container['forwardHeaderMap'] = $forwardHeaderMap;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 添加云模式elb接入域名时，请输入elb-shared，否则不输入
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets loadbalancerId
+    *  负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    *
+    * @return string|null
+    */
+    public function getLoadbalancerId()
+    {
+        return $this->container['loadbalancerId'];
+    }
+
+    /**
+    * Sets loadbalancerId
+    *
+    * @param string|null $loadbalancerId 负载均衡器（ELB）id,可以在ELB侧查询其id，添加云模式elb接入域名时，此为必须输入的值
+    *
+    * @return $this
+    */
+    public function setLoadbalancerId($loadbalancerId)
+    {
+        $this->container['loadbalancerId'] = $loadbalancerId;
+        return $this;
+    }
+
+    /**
+    * Gets listenerId
+    *  监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    *
+    * @return string|null
+    */
+    public function getListenerId()
+    {
+        return $this->container['listenerId'];
+    }
+
+    /**
+    * Sets listenerId
+    *
+    * @param string|null $listenerId 监听器id，可在ELB侧监听器页签下查询其id；不输入时，负载均衡器（ELB）下的所有监听器都将接入WAF防护，包括该ELB下未来新增的符合条件的监听器，添加云模式elb接入域名时，可考虑输入此项id
+    *
+    * @return $this
+    */
+    public function setListenerId($listenerId)
+    {
+        $this->container['listenerId'] = $listenerId;
+        return $this;
+    }
+
+    /**
+    * Gets protocolPort
+    *  业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
+    *
+    * @return int|null
+    */
+    public function getProtocolPort()
+    {
+        return $this->container['protocolPort'];
+    }
+
+    /**
+    * Sets protocolPort
+    *
+    * @param int|null $protocolPort 业务端口，添加云模式elb接入域名时，此为必须输入的值（0 - 65535）
+    *
+    * @return $this
+    */
+    public function setProtocolPort($protocolPort)
+    {
+        $this->container['protocolPort'] = $protocolPort;
         return $this;
     }
 

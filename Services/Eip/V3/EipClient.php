@@ -21,7 +21,8 @@ class EipClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new EipClient());
+        $client = new ClientBuilder(new EipClient());
+        return $client;
     }
 
 

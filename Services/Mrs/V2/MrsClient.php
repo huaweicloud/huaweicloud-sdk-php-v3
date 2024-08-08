@@ -21,7 +21,8 @@ class MrsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new MrsClient());
+        $client = new ClientBuilder(new MrsClient());
+        return $client;
     }
 
 

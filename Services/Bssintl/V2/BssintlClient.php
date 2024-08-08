@@ -21,7 +21,8 @@ class BssintlClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new BssintlClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new BssintlClient(), "GlobalCredentials");
+        return $client;
     }
 
 

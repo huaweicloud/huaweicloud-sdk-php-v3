@@ -21,7 +21,8 @@ class MpcClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new MpcClient());
+        $client = new ClientBuilder(new MpcClient());
+        return $client;
     }
 
 

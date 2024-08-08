@@ -21,7 +21,8 @@ class GesAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GesAsyncClient());
+       $client = new ClientBuilder(new GesAsyncClient());
+       return $client;
     }
 
     /**

@@ -21,7 +21,8 @@ class SecMasterClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SecMasterClient());
+        $client = new ClientBuilder(new SecMasterClient());
+        return $client;
     }
 
 

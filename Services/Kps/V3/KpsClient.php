@@ -21,7 +21,8 @@ class KpsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new KpsClient());
+        $client = new ClientBuilder(new KpsClient());
+        return $client;
     }
 
 

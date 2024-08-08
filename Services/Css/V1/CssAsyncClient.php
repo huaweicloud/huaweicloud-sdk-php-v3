@@ -21,7 +21,8 @@ class CssAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CssAsyncClient());
+       $client = new ClientBuilder(new CssAsyncClient());
+       return $client;
     }
 
     /**

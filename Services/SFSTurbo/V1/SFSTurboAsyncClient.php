@@ -21,7 +21,8 @@ class SFSTurboAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SFSTurboAsyncClient());
+       $client = new ClientBuilder(new SFSTurboAsyncClient());
+       return $client;
     }
 
     /**

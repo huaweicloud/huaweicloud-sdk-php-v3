@@ -21,7 +21,8 @@ class RmsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new RmsAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new RmsAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**

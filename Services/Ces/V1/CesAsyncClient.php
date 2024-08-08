@@ -21,7 +21,8 @@ class CesAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CesAsyncClient());
+       $client = new ClientBuilder(new CesAsyncClient());
+       return $client;
     }
 
     /**

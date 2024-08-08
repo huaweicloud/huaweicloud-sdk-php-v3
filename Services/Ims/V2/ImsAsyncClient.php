@@ -21,7 +21,8 @@ class ImsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ImsAsyncClient());
+       $client = new ClientBuilder(new ImsAsyncClient());
+       return $client;
     }
 
     /**

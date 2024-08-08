@@ -21,7 +21,8 @@ class DrsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DrsAsyncClient());
+       $client = new ClientBuilder(new DrsAsyncClient());
+       return $client;
     }
 
     /**

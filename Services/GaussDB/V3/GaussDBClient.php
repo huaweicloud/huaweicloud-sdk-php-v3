@@ -21,7 +21,8 @@ class GaussDBClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GaussDBClient());
+        $client = new ClientBuilder(new GaussDBClient());
+        return $client;
     }
 
 

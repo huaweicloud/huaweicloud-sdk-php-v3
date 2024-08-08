@@ -21,7 +21,8 @@ class AsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new AsClient());
+        $client = new ClientBuilder(new AsClient());
+        return $client;
     }
 
 

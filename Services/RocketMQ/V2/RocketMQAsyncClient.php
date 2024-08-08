@@ -21,7 +21,8 @@ class RocketMQAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new RocketMQAsyncClient());
+       $client = new ClientBuilder(new RocketMQAsyncClient());
+       return $client;
     }
 
     /**

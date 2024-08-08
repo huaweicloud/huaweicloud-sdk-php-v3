@@ -21,7 +21,8 @@ class NatAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new NatAsyncClient());
+       $client = new ClientBuilder(new NatAsyncClient());
+       return $client;
     }
 
     /**

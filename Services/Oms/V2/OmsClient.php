@@ -21,7 +21,8 @@ class OmsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new OmsClient());
+        $client = new ClientBuilder(new OmsClient());
+        return $client;
     }
 
 

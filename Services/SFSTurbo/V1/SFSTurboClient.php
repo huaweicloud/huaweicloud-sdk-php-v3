@@ -21,7 +21,8 @@ class SFSTurboClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SFSTurboClient());
+        $client = new ClientBuilder(new SFSTurboClient());
+        return $client;
     }
 
 

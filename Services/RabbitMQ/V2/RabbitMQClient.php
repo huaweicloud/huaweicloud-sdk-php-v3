@@ -21,7 +21,8 @@ class RabbitMQClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new RabbitMQClient());
+        $client = new ClientBuilder(new RabbitMQClient());
+        return $client;
     }
 
 

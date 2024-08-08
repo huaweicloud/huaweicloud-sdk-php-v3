@@ -21,7 +21,8 @@ class BssAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new BssAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new BssAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**

@@ -21,7 +21,8 @@ class CdnAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CdnAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new CdnAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**

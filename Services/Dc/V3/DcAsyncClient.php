@@ -21,7 +21,8 @@ class DcAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DcAsyncClient());
+       $client = new ClientBuilder(new DcAsyncClient());
+       return $client;
     }
 
     /**

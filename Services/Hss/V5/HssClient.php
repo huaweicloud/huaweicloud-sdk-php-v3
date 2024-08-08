@@ -21,7 +21,8 @@ class HssClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new HssClient());
+        $client = new ClientBuilder(new HssClient());
+        return $client;
     }
 
 

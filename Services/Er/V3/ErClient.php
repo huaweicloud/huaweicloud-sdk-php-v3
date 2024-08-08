@@ -21,7 +21,8 @@ class ErClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ErClient());
+        $client = new ClientBuilder(new ErClient());
+        return $client;
     }
 
 

@@ -21,7 +21,8 @@ class DcClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DcClient());
+        $client = new ClientBuilder(new DcClient());
+        return $client;
     }
 
 

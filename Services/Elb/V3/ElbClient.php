@@ -21,7 +21,8 @@ class ElbClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ElbClient());
+        $client = new ClientBuilder(new ElbClient());
+        return $client;
     }
 
 

@@ -21,7 +21,8 @@ class CfwAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CfwAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new CfwAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**

@@ -21,7 +21,8 @@ class IvsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new IvsAsyncClient());
+       $client = new ClientBuilder(new IvsAsyncClient());
+       return $client;
     }
 
     /**

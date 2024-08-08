@@ -39,6 +39,8 @@ class ClientBuilder
     private $streamLoggerHandler = null;
     private $region = null;
 
+    private $derivedAuthServiceName = null;
+
     /**
      * ClientBuilder constructor.
      *
@@ -76,6 +78,12 @@ class ClientBuilder
     public function withCredentials($credentials)
     {
         $this->credentials = $credentials;
+
+        return $this;
+    }
+
+    public function withDerivedAuthServiceName($derivedAuthServiceName) {
+        $this->derivedAuthServiceName = $derivedAuthServiceName;
 
         return $this;
     }
@@ -203,6 +211,9 @@ class ClientBuilder
         if (!empty($region)) {
             $this->endpoint = $region->getEndpoint();
             $credentials->processAuthParams($client, $region->getId());
+            if ($this->credentials instanceof Credentials) {
+                $this->credentials->processDerivedAuthParams($this->derivedAuthServiceName, $region->getId());
+            }
         }
         if (!strpos($this->endpoint, "http") === 0) {
             $this->endPoint = "https://" . $this->endPoint;

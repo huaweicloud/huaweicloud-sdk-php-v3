@@ -29,7 +29,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     * packetLength  功能说明：最大传输单元MTU 取值范围：1~1460
     * priority  功能说明：会话优先级 取值范围：1~32766
     * enabled  功能说明：是否开启会话 取值范围：true、false
-    * type  功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
     *
     * @var string[]
     */
@@ -42,8 +41,7 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
             'virtualNetworkId' => 'int',
             'packetLength' => 'int',
             'priority' => 'int',
-            'enabled' => 'string',
-            'type' => 'string'
+            'enabled' => 'string'
     ];
 
     /**
@@ -57,7 +55,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     * packetLength  功能说明：最大传输单元MTU 取值范围：1~1460
     * priority  功能说明：会话优先级 取值范围：1~32766
     * enabled  功能说明：是否开启会话 取值范围：true、false
-    * type  功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
     *
     * @var string[]
     */
@@ -70,8 +67,7 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
         'virtualNetworkId' => 'int32',
         'packetLength' => 'int32',
         'priority' => 'int32',
-        'enabled' => null,
-        'type' => null
+        'enabled' => null
     ];
 
     /**
@@ -106,7 +102,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     * packetLength  功能说明：最大传输单元MTU 取值范围：1~1460
     * priority  功能说明：会话优先级 取值范围：1~32766
     * enabled  功能说明：是否开启会话 取值范围：true、false
-    * type  功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
     *
     * @var string[]
     */
@@ -119,8 +114,7 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
             'virtualNetworkId' => 'virtual_network_id',
             'packetLength' => 'packet_length',
             'priority' => 'priority',
-            'enabled' => 'enabled',
-            'type' => 'type'
+            'enabled' => 'enabled'
     ];
 
     /**
@@ -134,7 +128,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     * packetLength  功能说明：最大传输单元MTU 取值范围：1~1460
     * priority  功能说明：会话优先级 取值范围：1~32766
     * enabled  功能说明：是否开启会话 取值范围：true、false
-    * type  功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
     *
     * @var string[]
     */
@@ -147,8 +140,7 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
             'virtualNetworkId' => 'setVirtualNetworkId',
             'packetLength' => 'setPacketLength',
             'priority' => 'setPriority',
-            'enabled' => 'setEnabled',
-            'type' => 'setType'
+            'enabled' => 'setEnabled'
     ];
 
     /**
@@ -162,7 +154,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     * packetLength  功能说明：最大传输单元MTU 取值范围：1~1460
     * priority  功能说明：会话优先级 取值范围：1~32766
     * enabled  功能说明：是否开启会话 取值范围：true、false
-    * type  功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
     *
     * @var string[]
     */
@@ -175,8 +166,7 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
             'virtualNetworkId' => 'getVirtualNetworkId',
             'packetLength' => 'getPacketLength',
             'priority' => 'getPriority',
-            'enabled' => 'getEnabled',
-            'type' => 'getType'
+            'enabled' => 'getEnabled'
     ];
 
     /**
@@ -246,7 +236,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
         $this->container['packetLength'] = isset($data['packetLength']) ? $data['packetLength'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['enabled'] = isset($data['enabled']) ? $data['enabled'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -484,30 +473,6 @@ class UpdateTrafficMirrorSessionOption implements ModelInterface, ArrayAccess
     public function setEnabled($enabled)
     {
         $this->container['enabled'] = $enabled;
-        return $this;
-    }
-
-    /**
-    * Gets type
-    *  功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
-    *
-    * @return string|null
-    */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-    * Sets type
-    *
-    * @param string|null $type 功能说明：支持的镜像源类型 取值范围：     eni：弹性网卡
-    *
-    * @return $this
-    */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
         return $this;
     }
 

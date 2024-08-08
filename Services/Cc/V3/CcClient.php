@@ -21,7 +21,8 @@ class CcClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CcClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new CcClient(), "GlobalCredentials");
+        return $client;
     }
 
 

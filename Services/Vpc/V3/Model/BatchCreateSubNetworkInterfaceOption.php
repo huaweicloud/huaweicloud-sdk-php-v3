@@ -26,6 +26,10 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -35,7 +39,11 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
             'securityGroups' => 'string[]',
             'description' => 'string',
             'ipv6Enable' => 'bool',
-            'projectId' => 'string'
+            'projectId' => 'string',
+            'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]',
+            'instanceId' => 'string',
+            'instanceType' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]'
     ];
 
     /**
@@ -46,6 +54,10 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
         'securityGroups' => null,
         'description' => null,
         'ipv6Enable' => null,
-        'projectId' => null
+        'projectId' => null,
+        'allowedAddressPairs' => null,
+        'instanceId' => null,
+        'instanceType' => null,
+        'tags' => null
     ];
 
     /**
@@ -87,6 +103,10 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -96,7 +116,11 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
             'securityGroups' => 'security_groups',
             'description' => 'description',
             'ipv6Enable' => 'ipv6_enable',
-            'projectId' => 'project_id'
+            'projectId' => 'project_id',
+            'allowedAddressPairs' => 'allowed_address_pairs',
+            'instanceId' => 'instance_id',
+            'instanceType' => 'instance_type',
+            'tags' => 'tags'
     ];
 
     /**
@@ -107,6 +131,10 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -116,7 +144,11 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
             'securityGroups' => 'setSecurityGroups',
             'description' => 'setDescription',
             'ipv6Enable' => 'setIpv6Enable',
-            'projectId' => 'setProjectId'
+            'projectId' => 'setProjectId',
+            'allowedAddressPairs' => 'setAllowedAddressPairs',
+            'instanceId' => 'setInstanceId',
+            'instanceType' => 'setInstanceType',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -127,6 +159,10 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     * description  功能说明：辅助弹性网卡的描述信息 取值范围：0-255个字符，不能包含“<”和“>”
     * ipv6Enable  功能说明：辅助弹性网卡是否启用ipv6地址 取值范围：true（开启)，false（关闭） 默认值：false
     * projectId  功能说明：辅助弹性网卡所属的项目ID 取值范围：标准UUID 约束：只有管理员有权限指定
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    * tags  辅助弹性网卡资源标签
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
             'securityGroups' => 'getSecurityGroups',
             'description' => 'getDescription',
             'ipv6Enable' => 'getIpv6Enable',
-            'projectId' => 'getProjectId'
+            'projectId' => 'getProjectId',
+            'allowedAddressPairs' => 'getAllowedAddressPairs',
+            'instanceId' => 'getInstanceId',
+            'instanceType' => 'getInstanceType',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -203,6 +243,10 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['ipv6Enable'] = isset($data['ipv6Enable']) ? $data['ipv6Enable'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
+        $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -374,6 +418,102 @@ class BatchCreateSubNetworkInterfaceOption implements ModelInterface, ArrayAcces
     public function setProjectId($projectId)
     {
         $this->container['projectId'] = $projectId;
+        return $this;
+    }
+
+    /**
+    * Gets allowedAddressPairs
+    *  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]|null
+    */
+    public function getAllowedAddressPairs()
+    {
+        return $this->container['allowedAddressPairs'];
+    }
+
+    /**
+    * Sets allowedAddressPairs
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]|null $allowedAddressPairs 1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR格式。
+    *
+    * @return $this
+    */
+    public function setAllowedAddressPairs($allowedAddressPairs)
+    {
+        $this->container['allowedAddressPairs'] = $allowedAddressPairs;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID 约束： 1-64个字符
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceType
+    *  功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    *
+    * @return string|null
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string|null $instanceType 功能说明：辅助弹性网卡所属实例类型，例如“RDS” 约束：1-64个字符
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  辅助弹性网卡资源标签
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]|null $tags 辅助弹性网卡资源标签
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

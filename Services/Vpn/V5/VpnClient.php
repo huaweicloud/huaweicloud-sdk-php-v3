@@ -21,7 +21,8 @@ class VpnClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new VpnClient());
+        $client = new ClientBuilder(new VpnClient());
+        return $client;
     }
 
 

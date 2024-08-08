@@ -21,7 +21,8 @@ class OcrAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new OcrAsyncClient());
+       $client = new ClientBuilder(new OcrAsyncClient());
+       return $client;
     }
 
     /**

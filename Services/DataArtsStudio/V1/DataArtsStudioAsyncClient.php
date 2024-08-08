@@ -21,7 +21,8 @@ class DataArtsStudioAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DataArtsStudioAsyncClient());
+       $client = new ClientBuilder(new DataArtsStudioAsyncClient());
+       return $client;
     }
 
     /**

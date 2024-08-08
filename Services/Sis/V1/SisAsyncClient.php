@@ -21,7 +21,8 @@ class SisAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new SisAsyncClient());
+       $client = new ClientBuilder(new SisAsyncClient());
+       return $client;
     }
 
     /**

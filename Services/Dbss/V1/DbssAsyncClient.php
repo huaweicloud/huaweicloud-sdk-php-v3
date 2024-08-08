@@ -21,7 +21,8 @@ class DbssAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DbssAsyncClient());
+       $client = new ClientBuilder(new DbssAsyncClient());
+       return $client;
     }
 
     /**

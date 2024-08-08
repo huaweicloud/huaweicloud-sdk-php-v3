@@ -21,7 +21,8 @@ class KmsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new KmsAsyncClient());
+       $client = new ClientBuilder(new KmsAsyncClient());
+       return $client;
     }
 
     /**

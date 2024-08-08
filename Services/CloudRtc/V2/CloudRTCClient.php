@@ -21,7 +21,8 @@ class CloudRTCClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CloudRTCClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new CloudRTCClient(), "GlobalCredentials");
+        return $client;
     }
 
 

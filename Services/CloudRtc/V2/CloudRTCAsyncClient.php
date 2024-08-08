@@ -21,7 +21,8 @@ class CloudRTCAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CloudRTCAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new CloudRTCAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**

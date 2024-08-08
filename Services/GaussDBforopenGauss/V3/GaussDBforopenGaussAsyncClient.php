@@ -21,7 +21,8 @@ class GaussDBforopenGaussAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GaussDBforopenGaussAsyncClient());
+       $client = new ClientBuilder(new GaussDBforopenGaussAsyncClient());
+       return $client;
     }
 
     /**

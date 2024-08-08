@@ -21,7 +21,8 @@ class FrsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new FrsClient());
+        $client = new ClientBuilder(new FrsClient());
+        return $client;
     }
 
 

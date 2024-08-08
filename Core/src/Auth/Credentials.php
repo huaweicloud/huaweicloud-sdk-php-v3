@@ -27,10 +27,33 @@ use HuaweiCloud\SDK\Iam\V3\IamClient;
 
 class Credentials implements ICredentials
 {
+    public const DEFAULT_ENDPOINT_REG = "^[a-z][a-z0-9-]+(\\.[a-z]{2,}-[a-z]+-\\d{1,2})?\\.(my)?(huaweicloud|myhwclouds).(com|cn)";
     protected $ak;
     protected $sk;
     protected $securityToken;
     protected $iamEndpoint;
+
+    protected $regionId;
+
+    protected $derivedAuthServiceName;
+
+    protected $derivedPredicate = null;
+
+
+    public static function getDefaultDerivedPredicate() {
+        return function($request) {
+            return !preg_match(self::DEFAULT_ENDPOINT_REG, $request->host);
+        };
+    }
+
+    protected function isDerivedAuth($httpRequest)
+    {
+        if ($this->derivedPredicate == null) {
+            return false;
+        }
+
+        return call_user_func($this->derivedPredicate, $httpRequest);
+    }
 
     private static function getCredentialsClass($clientType, $credentialType)
     {

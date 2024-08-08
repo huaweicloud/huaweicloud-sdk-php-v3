@@ -21,7 +21,8 @@ class LiveAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new LiveAsyncClient());
+       $client = new ClientBuilder(new LiveAsyncClient());
+       return $client;
     }
 
     /**

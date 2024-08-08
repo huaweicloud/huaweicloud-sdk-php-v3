@@ -21,7 +21,8 @@ class CfwClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CfwClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new CfwClient(), "GlobalCredentials");
+        return $client;
     }
 
 

@@ -21,6 +21,7 @@
 namespace HuaweiCloud\SDK\Core;
 
 use GuzzleHttp\Psr7\MultipartStream;
+use GuzzleHttp\Utils;
 use HuaweiCloud\SDK\Core\Http\HttpClient;
 use HuaweiCloud\SDK\Core\Http\HttpHandler;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
@@ -293,7 +294,7 @@ class Client
         if (isset($body)&&!$multipart) {
             // $_tempBody is the method argument, if present
             if ('application/json' === $headerParams['Content-Type'] && !is_string($body)) {
-                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($body));
+                $httpBody = Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body), 0, 512);
             } else {
                 $httpBody = $body;
             }

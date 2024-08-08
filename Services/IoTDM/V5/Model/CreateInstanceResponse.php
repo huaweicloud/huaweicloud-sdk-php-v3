@@ -1,0 +1,643 @@
+<?php
+
+namespace HuaweiCloud\SDK\IoTDM\V5\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class CreateInstanceResponse implements ModelInterface, ArrayAccess
+{
+    use SdkResponse;
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'CreateInstanceResponse';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * flavor  flavor
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * chargeInfo  chargeInfo
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    * enterpriseProjectId  **参数说明**：企业项目Id。
+    * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    * orderId  **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    * additionalParams  additionalParams
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'instanceType' => 'string',
+            'instanceId' => 'string',
+            'name' => 'string',
+            'flavor' => '\HuaweiCloud\SDK\IoTDM\V5\Model\Flavor',
+            'status' => 'string',
+            'chargeInfo' => '\HuaweiCloud\SDK\IoTDM\V5\Model\ChargeInfo',
+            'description' => 'string',
+            'enterpriseProjectId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\IoTDM\V5\Model\Tag[]',
+            'orderId' => 'string',
+            'additionalParams' => '\HuaweiCloud\SDK\IoTDM\V5\Model\AdditionalParams'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * flavor  flavor
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * chargeInfo  chargeInfo
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    * enterpriseProjectId  **参数说明**：企业项目Id。
+    * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    * orderId  **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    * additionalParams  additionalParams
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'instanceType' => null,
+        'instanceId' => null,
+        'name' => null,
+        'flavor' => null,
+        'status' => null,
+        'chargeInfo' => null,
+        'description' => null,
+        'enterpriseProjectId' => null,
+        'tags' => null,
+        'orderId' => null,
+        'additionalParams' => null
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * flavor  flavor
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * chargeInfo  chargeInfo
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    * enterpriseProjectId  **参数说明**：企业项目Id。
+    * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    * orderId  **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    * additionalParams  additionalParams
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'instanceType' => 'instance_type',
+            'instanceId' => 'instance_id',
+            'name' => 'name',
+            'flavor' => 'flavor',
+            'status' => 'status',
+            'chargeInfo' => 'charge_info',
+            'description' => 'description',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'tags' => 'tags',
+            'orderId' => 'order_id',
+            'additionalParams' => 'additional_params'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * flavor  flavor
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * chargeInfo  chargeInfo
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    * enterpriseProjectId  **参数说明**：企业项目Id。
+    * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    * orderId  **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    * additionalParams  additionalParams
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'instanceType' => 'setInstanceType',
+            'instanceId' => 'setInstanceId',
+            'name' => 'setName',
+            'flavor' => 'setFlavor',
+            'status' => 'setStatus',
+            'chargeInfo' => 'setChargeInfo',
+            'description' => 'setDescription',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'tags' => 'setTags',
+            'orderId' => 'setOrderId',
+            'additionalParams' => 'setAdditionalParams'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * instanceType  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    * instanceId  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    * name  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    * flavor  flavor
+    * status  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    * chargeInfo  chargeInfo
+    * description  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    * enterpriseProjectId  **参数说明**：企业项目Id。
+    * tags  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    * orderId  **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    * additionalParams  additionalParams
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'instanceType' => 'getInstanceType',
+            'instanceId' => 'getInstanceId',
+            'name' => 'getName',
+            'flavor' => 'getFlavor',
+            'status' => 'getStatus',
+            'chargeInfo' => 'getChargeInfo',
+            'description' => 'getDescription',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'tags' => 'getTags',
+            'orderId' => 'getOrderId',
+            'additionalParams' => 'getAdditionalParams'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['chargeInfo'] = isset($data['chargeInfo']) ? $data['chargeInfo'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
+        $this->container['additionalParams'] = isset($data['additionalParams']) ? $data['additionalParams'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+            if (!is_null($this->container['instanceType']) && !preg_match("/(standard|basic|enterprise|valueaddedservice)/", $this->container['instanceType'])) {
+                $invalidProperties[] = "invalid value for 'instanceType', must be conform to the pattern /(standard|basic|enterprise|valueaddedservice)/.";
+            }
+            if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
+            }
+            if (!is_null($this->container['name']) && !preg_match("/^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/", $this->container['name'])) {
+                $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[A-Za-z0-9_\\-\\u4e00-\\u9fa5]{1,64}$/.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) > 64)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['status']) && (mb_strlen($this->container['status']) < 0)) {
+                $invalidProperties[] = "invalid value for 'status', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['description']) && !preg_match("/^[A-Za-z0-9_，,.。\\-\\s\\u4e00-\\u9fa5]{1,256}$/", $this->container['description'])) {
+                $invalidProperties[] = "invalid value for 'description', must be conform to the pattern /^[A-Za-z0-9_，,.。\\-\\s\\u4e00-\\u9fa5]{1,256}$/.";
+            }
+            if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['enterpriseProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
+            }
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['orderId']) && (mb_strlen($this->container['orderId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'orderId', the character length must be bigger than or equal to 0.";
+            }
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets instanceType
+    *  **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    *
+    * @return string|null
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string|null $instanceType **参数说明**：实例类型。 **取值范围**： - standard：标准版实例 - enterprise：企业版实例
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId **参数说明**：实例ID。 **取值范围**：长度不超过36，由小写字母[a-f]、数字、连接符（-）的组成。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name **参数说明**：实例名称 **取值范围**：由中文字符，英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets flavor
+    *  flavor
+    *
+    * @return \HuaweiCloud\SDK\IoTDM\V5\Model\Flavor|null
+    */
+    public function getFlavor()
+    {
+        return $this->container['flavor'];
+    }
+
+    /**
+    * Sets flavor
+    *
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\Flavor|null $flavor flavor
+    *
+    * @return $this
+    */
+    public function setFlavor($flavor)
+    {
+        $this->container['flavor'] = $flavor;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status **参数说明**：实例状态。 **取值范围**： - CREATING：实例正在创建 - ACTIVE：实例正常 - FROZEN：实例冻结 - MODIFYING：实例正在变更规格 - FAILED：实例创建失败
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets chargeInfo
+    *  chargeInfo
+    *
+    * @return \HuaweiCloud\SDK\IoTDM\V5\Model\ChargeInfo|null
+    */
+    public function getChargeInfo()
+    {
+        return $this->container['chargeInfo'];
+    }
+
+    /**
+    * Sets chargeInfo
+    *
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\ChargeInfo|null $chargeInfo chargeInfo
+    *
+    * @return $this
+    */
+    public function setChargeInfo($chargeInfo)
+    {
+        $this->container['chargeInfo'] = $chargeInfo;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description **参数说明**：设备接入实例的描述信息。 **取值范围**：由中文，字母，数字，句号，逗号，下划线（“_”），中划线（“-”），空格组成，且长度为[0-256]个字符。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  **参数说明**：企业项目Id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId **参数说明**：企业项目Id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    *
+    * @return \HuaweiCloud\SDK\IoTDM\V5\Model\Tag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\Tag[]|null $tags **参数说明**: 设备接入实例的标签信息。如果实例有标签，则会有该字段，否则该字段为空。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets orderId
+    *  **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    *
+    * @return string|null
+    */
+    public function getOrderId()
+    {
+        return $this->container['orderId'];
+    }
+
+    /**
+    * Sets orderId
+    *
+    * @param string|null $orderId **参数说明**：订单号，创建包年包月实例时返回该参数。[查看订单详情请参考[查询订单详情](https://support.huaweicloud.com/api-bpconsole/zh-cn_topic_0075746564.html)。](tag:hws)\"
+    *
+    * @return $this
+    */
+    public function setOrderId($orderId)
+    {
+        $this->container['orderId'] = $orderId;
+        return $this;
+    }
+
+    /**
+    * Gets additionalParams
+    *  additionalParams
+    *
+    * @return \HuaweiCloud\SDK\IoTDM\V5\Model\AdditionalParams|null
+    */
+    public function getAdditionalParams()
+    {
+        return $this->container['additionalParams'];
+    }
+
+    /**
+    * Sets additionalParams
+    *
+    * @param \HuaweiCloud\SDK\IoTDM\V5\Model\AdditionalParams|null $additionalParams additionalParams
+    *
+    * @return $this
+    */
+    public function setAdditionalParams($additionalParams)
+    {
+        $this->container['additionalParams'] = $additionalParams;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

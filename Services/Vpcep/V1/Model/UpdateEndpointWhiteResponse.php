@@ -39,7 +39,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -62,7 +63,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
             'whitelist' => 'string[]',
             'enableWhitelist' => 'bool',
-            'policyDocument' => 'object'
+            'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
+            'policyDocument' => 'string'
     ];
 
     /**
@@ -85,7 +87,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -108,6 +111,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
         'tags' => null,
         'whitelist' => null,
         'enableWhitelist' => null,
+        'policyStatement' => null,
         'policyDocument' => null
     ];
 
@@ -152,7 +156,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -175,6 +180,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'whitelist' => 'whitelist',
             'enableWhitelist' => 'enable_whitelist',
+            'policyStatement' => 'policy_statement',
             'policyDocument' => 'policy_document'
     ];
 
@@ -198,7 +204,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -221,6 +228,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'whitelist' => 'setWhitelist',
             'enableWhitelist' => 'setEnableWhitelist',
+            'policyStatement' => 'setPolicyStatement',
             'policyDocument' => 'setPolicyDocument'
     ];
 
@@ -244,7 +252,8 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     * tags  标签列表，没有标签默认为空数组。
     * whitelist  控制访问终端节点的白名单。 若未创建，则返回空列表。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
     * enableWhitelist  是否开启网络ACL隔离。  - true：开启网络ACL隔离  - false：不开启网络ACL隔离 若未指定，则返回false。 创建连接Interface类型终端节点服务的终端节点时，显示此参数。
-    * policyDocument  iam 5.0 策略
+    * policyStatement  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    * policyDocument  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @var string[]
     */
@@ -267,6 +276,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'whitelist' => 'getWhitelist',
             'enableWhitelist' => 'getEnableWhitelist',
+            'policyStatement' => 'getPolicyStatement',
             'policyDocument' => 'getPolicyDocument'
     ];
 
@@ -346,6 +356,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['whitelist'] = isset($data['whitelist']) ? $data['whitelist'] : null;
         $this->container['enableWhitelist'] = isset($data['enableWhitelist']) ? $data['enableWhitelist'] : null;
+        $this->container['policyStatement'] = isset($data['policyStatement']) ? $data['policyStatement'] : null;
         $this->container['policyDocument'] = isset($data['policyDocument']) ? $data['policyDocument'] : null;
     }
 
@@ -840,10 +851,34 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets policyDocument
-    *  iam 5.0 策略
+    * Gets policyStatement
+    *  Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null
+    */
+    public function getPolicyStatement()
+    {
+        return $this->container['policyStatement'];
+    }
+
+    /**
+    * Sets policyStatement
+    *
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]|null $policyStatement Gateway类型终端节点策略信息，仅限OBS、SFS的终端节点服务的enable_policy值为true时支持该参数。
+    *
+    * @return $this
+    */
+    public function setPolicyStatement($policyStatement)
+    {
+        $this->container['policyStatement'] = $policyStatement;
+        return $this;
+    }
+
+    /**
+    * Gets policyDocument
+    *  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
+    *
+    * @return string|null
     */
     public function getPolicyDocument()
     {
@@ -853,7 +888,7 @@ class UpdateEndpointWhiteResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param object|null $policyDocument iam 5.0 策略
+    * @param string|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @return $this
     */

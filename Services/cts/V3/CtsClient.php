@@ -21,7 +21,8 @@ class CtsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CtsClient());
+        $client = new ClientBuilder(new CtsClient());
+        return $client;
     }
 
 

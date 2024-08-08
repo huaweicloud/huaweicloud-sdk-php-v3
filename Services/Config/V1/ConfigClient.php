@@ -21,7 +21,8 @@ class ConfigClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ConfigClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new ConfigClient(), "GlobalCredentials");
+        return $client;
     }
 
 
@@ -3658,9 +3659,6 @@ class ConfigClient extends Client
         }
         if ($localVarParams['resourceId'] !== null) {
             $queryParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($localVarParams['resourceName'] !== null) {
-            $queryParams['resource_name'] = $localVarParams['resourceName'];
         }
         if ($localVarParams['policyAssignmentId'] !== null) {
             $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];

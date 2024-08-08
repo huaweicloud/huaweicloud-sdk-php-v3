@@ -21,7 +21,8 @@ class FunctionGraphClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new FunctionGraphClient());
+        $client = new ClientBuilder(new FunctionGraphClient());
+        return $client;
     }
 
 

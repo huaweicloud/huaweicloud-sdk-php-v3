@@ -21,7 +21,8 @@ class DliAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DliAsyncClient());
+       $client = new ClientBuilder(new DliAsyncClient());
+       return $client;
     }
 
     /**

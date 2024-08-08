@@ -21,7 +21,8 @@ class DscClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new DscClient());
+        $client = new ClientBuilder(new DscClient());
+        return $client;
     }
 
 

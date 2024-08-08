@@ -21,7 +21,8 @@ class CloudTableClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CloudTableClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new CloudTableClient(), "GlobalCredentials");
+        return $client;
     }
 
 

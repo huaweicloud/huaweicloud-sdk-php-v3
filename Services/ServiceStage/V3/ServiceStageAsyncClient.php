@@ -21,7 +21,8 @@ class ServiceStageAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ServiceStageAsyncClient());
+       $client = new ClientBuilder(new ServiceStageAsyncClient());
+       return $client;
     }
 
     /**

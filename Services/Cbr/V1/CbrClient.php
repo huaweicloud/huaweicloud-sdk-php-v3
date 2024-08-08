@@ -21,7 +21,8 @@ class CbrClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CbrClient());
+        $client = new ClientBuilder(new CbrClient());
+        return $client;
     }
 
 

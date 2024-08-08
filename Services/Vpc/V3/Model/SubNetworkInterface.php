@@ -34,6 +34,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    * state  功能说明：辅助弹性网卡当前状态
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
     * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
@@ -50,9 +55,14 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'vpcId' => 'string',
             'vlanId' => 'int',
             'securityGroups' => 'string[]',
-            'tags' => 'string[]',
+            'tags' => '\HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]',
             'projectId' => 'string',
             'createdAt' => '\DateTime',
+            'allowedAddressPairs' => '\HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]',
+            'state' => 'string',
+            'instanceId' => 'string',
+            'instanceType' => 'string',
+            'scope' => 'string',
             'securityEnabled' => 'bool'
     ];
 
@@ -72,6 +82,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    * state  功能说明：辅助弹性网卡当前状态
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
     * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
@@ -91,6 +106,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         'tags' => null,
         'projectId' => null,
         'createdAt' => 'date-time',
+        'allowedAddressPairs' => null,
+        'state' => null,
+        'instanceId' => null,
+        'instanceType' => null,
+        'scope' => null,
         'securityEnabled' => null
     ];
 
@@ -131,6 +151,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    * state  功能说明：辅助弹性网卡当前状态
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
     * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
@@ -150,6 +175,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'projectId' => 'project_id',
             'createdAt' => 'created_at',
+            'allowedAddressPairs' => 'allowed_address_pairs',
+            'state' => 'state',
+            'instanceId' => 'instance_id',
+            'instanceType' => 'instance_type',
+            'scope' => 'scope',
             'securityEnabled' => 'security_enabled'
     ];
 
@@ -169,6 +199,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    * state  功能说明：辅助弹性网卡当前状态
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
     * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
@@ -188,6 +223,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'projectId' => 'setProjectId',
             'createdAt' => 'setCreatedAt',
+            'allowedAddressPairs' => 'setAllowedAddressPairs',
+            'state' => 'setState',
+            'instanceId' => 'setInstanceId',
+            'instanceType' => 'setInstanceType',
+            'scope' => 'setScope',
             'securityEnabled' => 'setSecurityEnabled'
     ];
 
@@ -207,6 +247,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * tags  功能说明：辅助弹性网卡的标签列表
     * projectId  功能说明：辅助弹性网卡所属项目ID
     * createdAt  功能说明：辅助弹性网卡的创建时间 取值范围：UTC时间格式：yyyy-MM-ddTHH:mm:ss
+    * allowedAddressPairs  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    * state  功能说明：辅助弹性网卡当前状态
+    * instanceId  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    * instanceType  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    * scope  功能说明：辅助弹性网卡所在站点的公网出口信息
     * securityEnabled  功能说明：辅助弹性网卡安全使能标记，如果不使能则安全组不生效。 取值范围：true（使能），false（不使能）
     *
     * @var string[]
@@ -226,6 +271,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'projectId' => 'getProjectId',
             'createdAt' => 'getCreatedAt',
+            'allowedAddressPairs' => 'getAllowedAddressPairs',
+            'state' => 'getState',
+            'instanceId' => 'getInstanceId',
+            'instanceType' => 'getInstanceType',
+            'scope' => 'getScope',
             'securityEnabled' => 'getSecurityEnabled'
     ];
 
@@ -301,6 +351,11 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['allowedAddressPairs'] = isset($data['allowedAddressPairs']) ? $data['allowedAddressPairs'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['securityEnabled'] = isset($data['securityEnabled']) ? $data['securityEnabled'] : null;
     }
 
@@ -353,6 +408,21 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
         }
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
+        }
+        if ($this->container['allowedAddressPairs'] === null) {
+            $invalidProperties[] = "'allowedAddressPairs' can't be null";
+        }
+        if ($this->container['state'] === null) {
+            $invalidProperties[] = "'state' can't be null";
+        }
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
+        }
+        if ($this->container['instanceType'] === null) {
+            $invalidProperties[] = "'instanceType' can't be null";
+        }
+        if ($this->container['scope'] === null) {
+            $invalidProperties[] = "'scope' can't be null";
         }
         if ($this->container['securityEnabled'] === null) {
             $invalidProperties[] = "'securityEnabled' can't be null";
@@ -639,7 +709,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     * Gets tags
     *  功能说明：辅助弹性网卡的标签列表
     *
-    * @return string[]
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[]
     */
     public function getTags()
     {
@@ -649,7 +719,7 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[] $tags 功能说明：辅助弹性网卡的标签列表
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ResourceTag[] $tags 功能说明：辅助弹性网卡的标签列表
     *
     * @return $this
     */
@@ -704,6 +774,126 @@ class SubNetworkInterface implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets allowedAddressPairs
+    *  1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    *
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[]
+    */
+    public function getAllowedAddressPairs()
+    {
+        return $this->container['allowedAddressPairs'];
+    }
+
+    /**
+    * Sets allowedAddressPairs
+    *
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\AllowedAddressPair[] $allowedAddressPairs 1. 扩展属性：IP/Mac对列表，allowed_address_pair参见“allowed_address_pair对象” 2. 使用说明: IP地址不允许为 “0.0.0.0”如果allowed_address_pairs配置地址池较大的CIDR（掩码小于24位），建议为该port配置一个单独的安全组硬件SDN环境不支持ip_address属性配置为CIDR
+    *
+    * @return $this
+    */
+    public function setAllowedAddressPairs($allowedAddressPairs)
+    {
+        $this->container['allowedAddressPairs'] = $allowedAddressPairs;
+        return $this;
+    }
+
+    /**
+    * Gets state
+    *  功能说明：辅助弹性网卡当前状态
+    *
+    * @return string
+    */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+    * Sets state
+    *
+    * @param string $state 功能说明：辅助弹性网卡当前状态
+    *
+    * @return $this
+    */
+    public function setState($state)
+    {
+        $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    *
+    * @return string
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string $instanceId 功能说明：辅助弹性网卡所属实例ID，例如RDS实例ID
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceType
+    *  功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    *
+    * @return string
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string $instanceType 功能说明：辅助弹性网卡所属实例类型，例如“RDS”
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
+    * Gets scope
+    *  功能说明：辅助弹性网卡所在站点的公网出口信息
+    *
+    * @return string
+    */
+    public function getScope()
+    {
+        return $this->container['scope'];
+    }
+
+    /**
+    * Sets scope
+    *
+    * @param string $scope 功能说明：辅助弹性网卡所在站点的公网出口信息
+    *
+    * @return $this
+    */
+    public function setScope($scope)
+    {
+        $this->container['scope'] = $scope;
         return $this;
     }
 

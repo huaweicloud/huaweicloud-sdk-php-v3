@@ -21,7 +21,8 @@ class AntiDDoSClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new AntiDDoSClient());
+        $client = new ClientBuilder(new AntiDDoSClient());
+        return $client;
     }
 
 

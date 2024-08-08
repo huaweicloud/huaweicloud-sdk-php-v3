@@ -21,7 +21,8 @@ class GeipClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GeipClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new GeipClient(), "GlobalCredentials");
+        return $client;
     }
 
 

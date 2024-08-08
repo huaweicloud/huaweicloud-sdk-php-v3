@@ -21,7 +21,9 @@ class IoTDAClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new IoTDAClient());
+        $client = new ClientBuilder(new IoTDAClient());
+        $client->withDerivedAuthServiceName("iotdm");
+        return $client;
     }
 
 

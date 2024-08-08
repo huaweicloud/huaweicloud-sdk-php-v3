@@ -21,7 +21,8 @@ class EcsAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new EcsAsyncClient());
+       $client = new ClientBuilder(new EcsAsyncClient());
+       return $client;
     }
 
     /**

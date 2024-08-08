@@ -21,7 +21,8 @@ class GaussDBforNoSQLClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GaussDBforNoSQLClient());
+        $client = new ClientBuilder(new GaussDBforNoSQLClient());
+        return $client;
     }
 
 

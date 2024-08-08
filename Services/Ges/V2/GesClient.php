@@ -21,7 +21,8 @@ class GesClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GesClient());
+        $client = new ClientBuilder(new GesClient());
+        return $client;
     }
 
 

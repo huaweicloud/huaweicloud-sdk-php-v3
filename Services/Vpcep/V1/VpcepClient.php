@@ -21,7 +21,8 @@ class VpcepClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new VpcepClient());
+        $client = new ClientBuilder(new VpcepClient());
+        return $client;
     }
 
 
@@ -501,9 +502,9 @@ class VpcepClient extends Client
     }
 
     /**
-     * 删除网关型终端节点policy
+     * 删除网关型终端节点策略（待下线）
      *
-     * 删除网关型终端节点policy。
+     * 删除网关型终端节点策略，该接口待下线，不建议使用。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1501,9 +1502,9 @@ class VpcepClient extends Client
     }
 
     /**
-     * 修改网关型终端节点policy
+     * 修改终端节点策略
      *
-     * 修改网关型终端节点policy。
+     * 修改终端节点策略。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

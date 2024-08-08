@@ -21,7 +21,8 @@ class GaClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new GaClient());
+        $client = new ClientBuilder(new GaClient());
+        return $client;
     }
 
 

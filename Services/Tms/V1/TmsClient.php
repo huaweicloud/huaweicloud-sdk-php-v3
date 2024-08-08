@@ -21,7 +21,8 @@ class TmsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new TmsClient(), "GlobalCredentials");
+        $client = new ClientBuilder(new TmsClient(), "GlobalCredentials");
+        return $client;
     }
 
 

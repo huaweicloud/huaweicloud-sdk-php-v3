@@ -21,7 +21,8 @@ class CodeArtsPipelineClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CodeArtsPipelineClient());
+        $client = new ClientBuilder(new CodeArtsPipelineClient());
+        return $client;
     }
 
 

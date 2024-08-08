@@ -21,7 +21,8 @@ class RocketMQClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new RocketMQClient());
+        $client = new ClientBuilder(new RocketMQClient());
+        return $client;
     }
 
 

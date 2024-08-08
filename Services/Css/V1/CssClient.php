@@ -21,7 +21,8 @@ class CssClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new CssClient());
+        $client = new ClientBuilder(new CssClient());
+        return $client;
     }
 
 

@@ -21,7 +21,8 @@ class EvsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new EvsClient());
+        $client = new ClientBuilder(new EvsClient());
+        return $client;
     }
 
 

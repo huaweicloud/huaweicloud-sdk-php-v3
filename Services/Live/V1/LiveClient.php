@@ -21,7 +21,8 @@ class LiveClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new LiveClient());
+        $client = new ClientBuilder(new LiveClient());
+        return $client;
     }
 
 

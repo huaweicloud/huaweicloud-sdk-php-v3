@@ -21,7 +21,8 @@ class ImsClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ImsClient());
+        $client = new ClientBuilder(new ImsClient());
+        return $client;
     }
 
 

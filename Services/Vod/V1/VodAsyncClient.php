@@ -21,7 +21,8 @@ class VodAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new VodAsyncClient());
+       $client = new ClientBuilder(new VodAsyncClient());
+       return $client;
     }
 
     /**

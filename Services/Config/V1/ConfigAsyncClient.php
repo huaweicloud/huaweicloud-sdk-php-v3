@@ -21,7 +21,8 @@ class ConfigAsyncClient extends Client
 
     public static function newBuilder()
     {
-        return new ClientBuilder(new ConfigAsyncClient(), "GlobalCredentials");
+       $client = new ClientBuilder(new ConfigAsyncClient(), "GlobalCredentials");
+       return $client;
     }
 
     /**
@@ -3819,9 +3820,6 @@ class ConfigAsyncClient extends Client
         }
         if ($localVarParams['resourceId'] !== null) {
             $queryParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($localVarParams['resourceName'] !== null) {
-            $queryParams['resource_name'] = $localVarParams['resourceName'];
         }
         if ($localVarParams['policyAssignmentId'] !== null) {
             $pathParams['policy_assignment_id'] = $localVarParams['policyAssignmentId'];
