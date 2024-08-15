@@ -222,9 +222,6 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['resource'] === null) {
-            $invalidProperties[] = "'resource' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -291,7 +288,7 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
     * Gets resource
     *  resource
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyPolicyResource
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\AgencyPolicyResource|null
     */
     public function getResource()
     {
@@ -301,7 +298,7 @@ class AgencyPolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\AgencyPolicyResource $resource resource
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\AgencyPolicyResource|null $resource resource
     *
     * @return $this
     */

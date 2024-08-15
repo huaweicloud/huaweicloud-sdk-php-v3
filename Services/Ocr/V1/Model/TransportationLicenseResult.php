@@ -26,12 +26,15 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * vehicleType  车辆类型。
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
-    * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  发证日期（非必有，依赖对应运输证板式）。
-    * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
-    * economicType  经济类型（非必有，依赖对应运输证板式）。
-    * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  经营范围（非必有，依赖对应运输证板式）。
+    * issuingAuthority  核发机关。
+    * issueDate  发证日期。
+    * ownerAddress  业户地址。
+    * economicType  经济类型。
+    * businessCertificate  经营许可证号。
+    * businessScope  经营范围。
+    * expiryDate  有效期。
+    * reviewExpiryDate  审验有效期。
+    * assessedTechnicalLevel  技术等级评定。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -49,6 +52,9 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'economicType' => 'string',
             'businessCertificate' => 'string',
             'businessScope' => 'string',
+            'expiryDate' => 'string',
+            'reviewExpiryDate' => 'string',
+            'assessedTechnicalLevel' => 'string',
             'confidence' => 'object'
     ];
 
@@ -60,12 +66,15 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * vehicleType  车辆类型。
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
-    * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  发证日期（非必有，依赖对应运输证板式）。
-    * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
-    * economicType  经济类型（非必有，依赖对应运输证板式）。
-    * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  经营范围（非必有，依赖对应运输证板式）。
+    * issuingAuthority  核发机关。
+    * issueDate  发证日期。
+    * ownerAddress  业户地址。
+    * economicType  经济类型。
+    * businessCertificate  经营许可证号。
+    * businessScope  经营范围。
+    * expiryDate  有效期。
+    * reviewExpiryDate  审验有效期。
+    * assessedTechnicalLevel  技术等级评定。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -83,6 +92,9 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         'economicType' => null,
         'businessCertificate' => null,
         'businessScope' => null,
+        'expiryDate' => null,
+        'reviewExpiryDate' => null,
+        'assessedTechnicalLevel' => null,
         'confidence' => null
     ];
 
@@ -115,12 +127,15 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * vehicleType  车辆类型。
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
-    * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  发证日期（非必有，依赖对应运输证板式）。
-    * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
-    * economicType  经济类型（非必有，依赖对应运输证板式）。
-    * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  经营范围（非必有，依赖对应运输证板式）。
+    * issuingAuthority  核发机关。
+    * issueDate  发证日期。
+    * ownerAddress  业户地址。
+    * economicType  经济类型。
+    * businessCertificate  经营许可证号。
+    * businessScope  经营范围。
+    * expiryDate  有效期。
+    * reviewExpiryDate  审验有效期。
+    * assessedTechnicalLevel  技术等级评定。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -138,6 +153,9 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'economicType' => 'economic_type',
             'businessCertificate' => 'business_certificate',
             'businessScope' => 'business_scope',
+            'expiryDate' => 'expiry_date',
+            'reviewExpiryDate' => 'review_expiry_date',
+            'assessedTechnicalLevel' => 'assessed_technical_level',
             'confidence' => 'confidence'
     ];
 
@@ -149,12 +167,15 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * vehicleType  车辆类型。
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
-    * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  发证日期（非必有，依赖对应运输证板式）。
-    * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
-    * economicType  经济类型（非必有，依赖对应运输证板式）。
-    * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  经营范围（非必有，依赖对应运输证板式）。
+    * issuingAuthority  核发机关。
+    * issueDate  发证日期。
+    * ownerAddress  业户地址。
+    * economicType  经济类型。
+    * businessCertificate  经营许可证号。
+    * businessScope  经营范围。
+    * expiryDate  有效期。
+    * reviewExpiryDate  审验有效期。
+    * assessedTechnicalLevel  技术等级评定。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -172,6 +193,9 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'economicType' => 'setEconomicType',
             'businessCertificate' => 'setBusinessCertificate',
             'businessScope' => 'setBusinessScope',
+            'expiryDate' => 'setExpiryDate',
+            'reviewExpiryDate' => 'setReviewExpiryDate',
+            'assessedTechnicalLevel' => 'setAssessedTechnicalLevel',
             'confidence' => 'setConfidence'
     ];
 
@@ -183,12 +207,15 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     * vehicleType  车辆类型。
     * maximumCapacity  吨(座)位。
     * vehicleSize  车辆尺寸。
-    * issuingAuthority  核发机关（非必有，依赖对应运输证板式）。
-    * issueDate  发证日期（非必有，依赖对应运输证板式）。
-    * ownerAddress  业户地址（非必有，依赖对应运输证板式）。
-    * economicType  经济类型（非必有，依赖对应运输证板式）。
-    * businessCertificate  经营许可证号（非必有，依赖对应运输证板式）。
-    * businessScope  经营范围（非必有，依赖对应运输证板式）。
+    * issuingAuthority  核发机关。
+    * issueDate  发证日期。
+    * ownerAddress  业户地址。
+    * economicType  经济类型。
+    * businessCertificate  经营许可证号。
+    * businessScope  经营范围。
+    * expiryDate  有效期。
+    * reviewExpiryDate  审验有效期。
+    * assessedTechnicalLevel  技术等级评定。
     * confidence  相关字段的置信度信息，置信度越大，表示本次识别的对应字段的可靠性越高，在统计意义上，置信度越大，准确率越高。 置信度由算法给出，不直接等价于对应字段的准确率。
     *
     * @var string[]
@@ -206,6 +233,9 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
             'economicType' => 'getEconomicType',
             'businessCertificate' => 'getBusinessCertificate',
             'businessScope' => 'getBusinessScope',
+            'expiryDate' => 'getExpiryDate',
+            'reviewExpiryDate' => 'getReviewExpiryDate',
+            'assessedTechnicalLevel' => 'getAssessedTechnicalLevel',
             'confidence' => 'getConfidence'
     ];
 
@@ -279,6 +309,9 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
         $this->container['economicType'] = isset($data['economicType']) ? $data['economicType'] : null;
         $this->container['businessCertificate'] = isset($data['businessCertificate']) ? $data['businessCertificate'] : null;
         $this->container['businessScope'] = isset($data['businessScope']) ? $data['businessScope'] : null;
+        $this->container['expiryDate'] = isset($data['expiryDate']) ? $data['expiryDate'] : null;
+        $this->container['reviewExpiryDate'] = isset($data['reviewExpiryDate']) ? $data['reviewExpiryDate'] : null;
+        $this->container['assessedTechnicalLevel'] = isset($data['assessedTechnicalLevel']) ? $data['assessedTechnicalLevel'] : null;
         $this->container['confidence'] = isset($data['confidence']) ? $data['confidence'] : null;
     }
 
@@ -450,7 +483,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets issuingAuthority
-    *  核发机关（非必有，依赖对应运输证板式）。
+    *  核发机关。
     *
     * @return string|null
     */
@@ -462,7 +495,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets issuingAuthority
     *
-    * @param string|null $issuingAuthority 核发机关（非必有，依赖对应运输证板式）。
+    * @param string|null $issuingAuthority 核发机关。
     *
     * @return $this
     */
@@ -474,7 +507,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets issueDate
-    *  发证日期（非必有，依赖对应运输证板式）。
+    *  发证日期。
     *
     * @return string|null
     */
@@ -486,7 +519,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets issueDate
     *
-    * @param string|null $issueDate 发证日期（非必有，依赖对应运输证板式）。
+    * @param string|null $issueDate 发证日期。
     *
     * @return $this
     */
@@ -498,7 +531,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets ownerAddress
-    *  业户地址（非必有，依赖对应运输证板式）。
+    *  业户地址。
     *
     * @return string|null
     */
@@ -510,7 +543,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets ownerAddress
     *
-    * @param string|null $ownerAddress 业户地址（非必有，依赖对应运输证板式）。
+    * @param string|null $ownerAddress 业户地址。
     *
     * @return $this
     */
@@ -522,7 +555,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets economicType
-    *  经济类型（非必有，依赖对应运输证板式）。
+    *  经济类型。
     *
     * @return string|null
     */
@@ -534,7 +567,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets economicType
     *
-    * @param string|null $economicType 经济类型（非必有，依赖对应运输证板式）。
+    * @param string|null $economicType 经济类型。
     *
     * @return $this
     */
@@ -546,7 +579,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessCertificate
-    *  经营许可证号（非必有，依赖对应运输证板式）。
+    *  经营许可证号。
     *
     * @return string|null
     */
@@ -558,7 +591,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets businessCertificate
     *
-    * @param string|null $businessCertificate 经营许可证号（非必有，依赖对应运输证板式）。
+    * @param string|null $businessCertificate 经营许可证号。
     *
     * @return $this
     */
@@ -570,7 +603,7 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
 
     /**
     * Gets businessScope
-    *  经营范围（非必有，依赖对应运输证板式）。
+    *  经营范围。
     *
     * @return string|null
     */
@@ -582,13 +615,85 @@ class TransportationLicenseResult implements ModelInterface, ArrayAccess
     /**
     * Sets businessScope
     *
-    * @param string|null $businessScope 经营范围（非必有，依赖对应运输证板式）。
+    * @param string|null $businessScope 经营范围。
     *
     * @return $this
     */
     public function setBusinessScope($businessScope)
     {
         $this->container['businessScope'] = $businessScope;
+        return $this;
+    }
+
+    /**
+    * Gets expiryDate
+    *  有效期。
+    *
+    * @return string|null
+    */
+    public function getExpiryDate()
+    {
+        return $this->container['expiryDate'];
+    }
+
+    /**
+    * Sets expiryDate
+    *
+    * @param string|null $expiryDate 有效期。
+    *
+    * @return $this
+    */
+    public function setExpiryDate($expiryDate)
+    {
+        $this->container['expiryDate'] = $expiryDate;
+        return $this;
+    }
+
+    /**
+    * Gets reviewExpiryDate
+    *  审验有效期。
+    *
+    * @return string|null
+    */
+    public function getReviewExpiryDate()
+    {
+        return $this->container['reviewExpiryDate'];
+    }
+
+    /**
+    * Sets reviewExpiryDate
+    *
+    * @param string|null $reviewExpiryDate 审验有效期。
+    *
+    * @return $this
+    */
+    public function setReviewExpiryDate($reviewExpiryDate)
+    {
+        $this->container['reviewExpiryDate'] = $reviewExpiryDate;
+        return $this;
+    }
+
+    /**
+    * Gets assessedTechnicalLevel
+    *  技术等级评定。
+    *
+    * @return string|null
+    */
+    public function getAssessedTechnicalLevel()
+    {
+        return $this->container['assessedTechnicalLevel'];
+    }
+
+    /**
+    * Sets assessedTechnicalLevel
+    *
+    * @param string|null $assessedTechnicalLevel 技术等级评定。
+    *
+    * @return $this
+    */
+    public function setAssessedTechnicalLevel($assessedTechnicalLevel)
+    {
+        $this->container['assessedTechnicalLevel'] = $assessedTechnicalLevel;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * eipId  eip_id
-    * eipAddress  eip_address
-    * ipVersion  IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * eipId  参数解释：弹性IP的ID。
+    * eipAddress  参数解释：弹性IP的IP地址。
+    * ipVersion  参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * eipId  eip_id
-    * eipAddress  eip_address
-    * ipVersion  IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * eipId  参数解释：弹性IP的ID。
+    * eipAddress  参数解释：弹性IP的IP地址。
+    * ipVersion  参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class EipInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * eipId  eip_id
-    * eipAddress  eip_address
-    * ipVersion  IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * eipId  参数解释：弹性IP的ID。
+    * eipAddress  参数解释：弹性IP的IP地址。
+    * ipVersion  参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * eipId  eip_id
-    * eipAddress  eip_address
-    * ipVersion  IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * eipId  参数解释：弹性IP的ID。
+    * eipAddress  参数解释：弹性IP的IP地址。
+    * ipVersion  参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * eipId  eip_id
-    * eipAddress  eip_address
-    * ipVersion  IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * eipId  参数解释：弹性IP的ID。
+    * eipAddress  参数解释：弹性IP的IP地址。
+    * ipVersion  参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipId
-    *  eip_id
+    *  参数解释：弹性IP的ID。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class EipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eipId
     *
-    * @param string|null $eipId eip_id
+    * @param string|null $eipId 参数解释：弹性IP的ID。
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipAddress
-    *  eip_address
+    *  参数解释：弹性IP的IP地址。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class EipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eipAddress
     *
-    * @param string|null $eipAddress eip_address
+    * @param string|null $eipAddress 参数解释：弹性IP的IP地址。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class EipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    *  参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class EipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion IP版本号。  取值：4表示IPv4,6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * @param int|null $ipVersion 参数解释：IP版本号。  取值范围： - 4表示IPv4。 - 6表示IPv6。  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class MemberStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * listenerId  监听器ID
-    * operatingStatus  后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    * listenerId  参数解释：监听器ID
+    * operatingStatus  参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class MemberStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * listenerId  监听器ID
-    * operatingStatus  后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    * listenerId  参数解释：监听器ID
+    * operatingStatus  参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class MemberStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * listenerId  监听器ID
-    * operatingStatus  后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    * listenerId  参数解释：监听器ID
+    * operatingStatus  参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class MemberStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * listenerId  监听器ID
-    * operatingStatus  后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    * listenerId  参数解释：监听器ID
+    * operatingStatus  参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class MemberStatus implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * listenerId  监听器ID
-    * operatingStatus  后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    * listenerId  参数解释：监听器ID
+    * operatingStatus  参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class MemberStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets listenerId
-    *  监听器ID
+    *  参数解释：监听器ID
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class MemberStatus implements ModelInterface, ArrayAccess
     /**
     * Sets listenerId
     *
-    * @param string $listenerId 监听器ID
+    * @param string $listenerId 参数解释：监听器ID
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class MemberStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets operatingStatus
-    *  后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    *  参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class MemberStatus implements ModelInterface, ArrayAccess
     /**
     * Sets operatingStatus
     *
-    * @param string $operatingStatus 后端云服务器的健康状态。  取值： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
+    * @param string $operatingStatus 参数解释：后端云服务器的健康状态。  取值范围： - ONLINE：后端云服务器正常。 - NO_MONITOR：后端云服务器所在的服务器组没有健康检查器。 - OFFLINE：后端云服务器关联的ECS服务器不存在或已关机。
     *
     * @return $this
     */

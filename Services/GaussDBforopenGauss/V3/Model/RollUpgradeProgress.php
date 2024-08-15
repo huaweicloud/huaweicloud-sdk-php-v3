@@ -20,11 +20,11 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null
-    * totalDnGroupNumbers  总分片数，非独立部署返回null
-    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null
-    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null
-    * azDescriptionMap  az描述键值对Map<String,String>
+    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null。
+    * totalDnGroupNumbers  总分片数，非独立部署返回null。
+    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null。
+    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null。
+    * azDescriptionMap  az描述键值对Map<String,String>。
     *
     * @var string[]
     */
@@ -38,11 +38,11 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null
-    * totalDnGroupNumbers  总分片数，非独立部署返回null
-    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null
-    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null
-    * azDescriptionMap  az描述键值对Map<String,String>
+    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null。
+    * totalDnGroupNumbers  总分片数，非独立部署返回null。
+    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null。
+    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null。
+    * azDescriptionMap  az描述键值对Map<String,String>。
     *
     * @var string[]
     */
@@ -77,11 +77,11 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null
-    * totalDnGroupNumbers  总分片数，非独立部署返回null
-    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null
-    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null
-    * azDescriptionMap  az描述键值对Map<String,String>
+    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null。
+    * totalDnGroupNumbers  总分片数，非独立部署返回null。
+    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null。
+    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null。
+    * azDescriptionMap  az描述键值对Map<String,String>。
     *
     * @var string[]
     */
@@ -95,11 +95,11 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null
-    * totalDnGroupNumbers  总分片数，非独立部署返回null
-    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null
-    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null
-    * azDescriptionMap  az描述键值对Map<String,String>
+    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null。
+    * totalDnGroupNumbers  总分片数，非独立部署返回null。
+    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null。
+    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null。
+    * azDescriptionMap  az描述键值对Map<String,String>。
     *
     * @var string[]
     */
@@ -113,11 +113,11 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null
-    * totalDnGroupNumbers  总分片数，非独立部署返回null
-    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null
-    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null
-    * azDescriptionMap  az描述键值对Map<String,String>
+    * upgradedDnGroupNumbers  已升级分片数，非独立部署返回null。
+    * totalDnGroupNumbers  总分片数，非独立部署返回null。
+    * notFullyUpgradedAz  未完成升级的az，以“,”隔开，独立部署返回null。
+    * alreadyUpgradedAz  已升级az，以“,”隔开，独立部署返回null。
+    * azDescriptionMap  az描述键值对Map<String,String>。
     *
     * @var string[]
     */
@@ -242,7 +242,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradedDnGroupNumbers
-    *  已升级分片数，非独立部署返回null
+    *  已升级分片数，非独立部署返回null。
     *
     * @return string|null
     */
@@ -254,7 +254,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
     /**
     * Sets upgradedDnGroupNumbers
     *
-    * @param string|null $upgradedDnGroupNumbers 已升级分片数，非独立部署返回null
+    * @param string|null $upgradedDnGroupNumbers 已升级分片数，非独立部署返回null。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets totalDnGroupNumbers
-    *  总分片数，非独立部署返回null
+    *  总分片数，非独立部署返回null。
     *
     * @return string|null
     */
@@ -278,7 +278,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
     /**
     * Sets totalDnGroupNumbers
     *
-    * @param string|null $totalDnGroupNumbers 总分片数，非独立部署返回null
+    * @param string|null $totalDnGroupNumbers 总分片数，非独立部署返回null。
     *
     * @return $this
     */
@@ -290,7 +290,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets notFullyUpgradedAz
-    *  未完成升级的az，以“,”隔开，独立部署返回null
+    *  未完成升级的az，以“,”隔开，独立部署返回null。
     *
     * @return string|null
     */
@@ -302,7 +302,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
     /**
     * Sets notFullyUpgradedAz
     *
-    * @param string|null $notFullyUpgradedAz 未完成升级的az，以“,”隔开，独立部署返回null
+    * @param string|null $notFullyUpgradedAz 未完成升级的az，以“,”隔开，独立部署返回null。
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets alreadyUpgradedAz
-    *  已升级az，以“,”隔开，独立部署返回null
+    *  已升级az，以“,”隔开，独立部署返回null。
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
     /**
     * Sets alreadyUpgradedAz
     *
-    * @param string|null $alreadyUpgradedAz 已升级az，以“,”隔开，独立部署返回null
+    * @param string|null $alreadyUpgradedAz 已升级az，以“,”隔开，独立部署返回null。
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
 
     /**
     * Gets azDescriptionMap
-    *  az描述键值对Map<String,String>
+    *  az描述键值对Map<String,String>。
     *
     * @return map[string,string]|null
     */
@@ -350,7 +350,7 @@ class RollUpgradeProgress implements ModelInterface, ArrayAccess
     /**
     * Sets azDescriptionMap
     *
-    * @param map[string,string]|null $azDescriptionMap az描述键值对Map<String,String>
+    * @param map[string,string]|null $azDescriptionMap az描述键值对Map<String,String>。
     *
     * @return $this
     */

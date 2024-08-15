@@ -21,9 +21,9 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  参数解释：请求ID。  注：自动生成 。
     * pageInfo  pageInfo
-    * l7policies  转发策略对象列表。
+    * l7policies  参数解释：转发策略对象列表。
     *
     * @var string[]
     */
@@ -35,9 +35,9 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  参数解释：请求ID。  注：自动生成 。
     * pageInfo  pageInfo
-    * l7policies  转发策略对象列表。
+    * l7policies  参数解释：转发策略对象列表。
     *
     * @var string[]
     */
@@ -70,9 +70,9 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  参数解释：请求ID。  注：自动生成 。
     * pageInfo  pageInfo
-    * l7policies  转发策略对象列表。
+    * l7policies  参数解释：转发策略对象列表。
     *
     * @var string[]
     */
@@ -84,9 +84,9 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  参数解释：请求ID。  注：自动生成 。
     * pageInfo  pageInfo
-    * l7policies  转发策略对象列表。
+    * l7policies  参数解释：转发策略对象列表。
     *
     * @var string[]
     */
@@ -98,9 +98,9 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  请求ID。  注：自动生成 。
+    * requestId  参数解释：请求ID。  注：自动生成 。
     * pageInfo  pageInfo
-    * l7policies  转发策略对象列表。
+    * l7policies  参数解释：转发策略对象列表。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。  注：自动生成 。
+    *  参数解释：请求ID。  注：自动生成 。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。  注：自动生成 。
+    * @param string|null $requestId 参数解释：请求ID。  注：自动生成 。
     *
     * @return $this
     */
@@ -245,7 +245,7 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7policies
-    *  转发策略对象列表。
+    *  参数解释：转发策略对象列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\L7Policy[]|null
     */
@@ -257,7 +257,7 @@ class ListL7PoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets l7policies
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\L7Policy[]|null $l7policies 转发策略对象列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\L7Policy[]|null $l7policies 参数解释：转发策略对象列表。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * effect  Allow允许或Refuse拒绝，控制访问权限
+    * effect  Allow允许或Deny拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -34,7 +34,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * effect  Allow允许或Refuse拒绝，控制访问权限
+    * effect  Allow允许或Deny拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -69,7 +69,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * effect  Allow允许或Refuse拒绝，控制访问权限
+    * effect  Allow允许或Deny拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -83,7 +83,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * effect  Allow允许或Refuse拒绝，控制访问权限
+    * effect  Allow允许或Deny拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -97,7 +97,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * effect  Allow允许或Refuse拒绝，控制访问权限
+    * effect  Allow允许或Deny拒绝，控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -150,7 +150,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
     const EFFECT_ALLOW = 'Allow';
-    const EFFECT_REFUSE = 'Refuse';
+    const EFFECT_DENY = 'Deny';
     
 
     /**
@@ -162,7 +162,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     {
         return [
             self::EFFECT_ALLOW,
-            self::EFFECT_REFUSE,
+            self::EFFECT_DENY,
         ];
     }
 
@@ -228,7 +228,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Gets effect
-    *  Allow允许或Refuse拒绝，控制访问权限
+    *  Allow允许或Deny拒绝，控制访问权限
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Sets effect
     *
-    * @param string $effect Allow允许或Refuse拒绝，控制访问权限
+    * @param string $effect Allow允许或Deny拒绝，控制访问权限
     *
     * @return $this
     */

@@ -22,10 +22,10 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobIds  任务id。
-    * succeededNum  下发成功的实例数量
-    * failedNum  下发失败的实例数量
-    * failedInstanceIds  下发失败的实例ID列表
-    * errorMessages  下发失败错误信息列表
+    * succeededNum  下发成功的实例数量。
+    * failedNum  下发失败的实例数量。
+    * failedInstanceIds  下发失败的实例ID列表。
+    * errorMessages  下发失败错误信息列表。
     *
     * @var string[]
     */
@@ -40,10 +40,10 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobIds  任务id。
-    * succeededNum  下发成功的实例数量
-    * failedNum  下发失败的实例数量
-    * failedInstanceIds  下发失败的实例ID列表
-    * errorMessages  下发失败错误信息列表
+    * succeededNum  下发成功的实例数量。
+    * failedNum  下发失败的实例数量。
+    * failedInstanceIds  下发失败的实例ID列表。
+    * errorMessages  下发失败错误信息列表。
     *
     * @var string[]
     */
@@ -79,10 +79,10 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobIds  任务id。
-    * succeededNum  下发成功的实例数量
-    * failedNum  下发失败的实例数量
-    * failedInstanceIds  下发失败的实例ID列表
-    * errorMessages  下发失败错误信息列表
+    * succeededNum  下发成功的实例数量。
+    * failedNum  下发失败的实例数量。
+    * failedInstanceIds  下发失败的实例ID列表。
+    * errorMessages  下发失败错误信息列表。
     *
     * @var string[]
     */
@@ -97,10 +97,10 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobIds  任务id。
-    * succeededNum  下发成功的实例数量
-    * failedNum  下发失败的实例数量
-    * failedInstanceIds  下发失败的实例ID列表
-    * errorMessages  下发失败错误信息列表
+    * succeededNum  下发成功的实例数量。
+    * failedNum  下发失败的实例数量。
+    * failedInstanceIds  下发失败的实例ID列表。
+    * errorMessages  下发失败错误信息列表。
     *
     * @var string[]
     */
@@ -115,10 +115,10 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobIds  任务id。
-    * succeededNum  下发成功的实例数量
-    * failedNum  下发失败的实例数量
-    * failedInstanceIds  下发失败的实例ID列表
-    * errorMessages  下发失败错误信息列表
+    * succeededNum  下发成功的实例数量。
+    * failedNum  下发失败的实例数量。
+    * failedInstanceIds  下发失败的实例ID列表。
+    * errorMessages  下发失败错误信息列表。
     *
     * @var string[]
     */
@@ -243,7 +243,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets succeededNum
-    *  下发成功的实例数量
+    *  下发成功的实例数量。
     *
     * @return int|null
     */
@@ -255,7 +255,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets succeededNum
     *
-    * @param int|null $succeededNum 下发成功的实例数量
+    * @param int|null $succeededNum 下发成功的实例数量。
     *
     * @return $this
     */
@@ -267,7 +267,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedNum
-    *  下发失败的实例数量
+    *  下发失败的实例数量。
     *
     * @return int|null
     */
@@ -279,7 +279,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failedNum
     *
-    * @param int|null $failedNum 下发失败的实例数量
+    * @param int|null $failedNum 下发失败的实例数量。
     *
     * @return $this
     */
@@ -291,7 +291,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets failedInstanceIds
-    *  下发失败的实例ID列表
+    *  下发失败的实例ID列表。
     *
     * @return string[]|null
     */
@@ -303,7 +303,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets failedInstanceIds
     *
-    * @param string[]|null $failedInstanceIds 下发失败的实例ID列表
+    * @param string[]|null $failedInstanceIds 下发失败的实例ID列表。
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorMessages
-    *  下发失败错误信息列表
+    *  下发失败错误信息列表。
     *
     * @return string[]|null
     */
@@ -327,7 +327,7 @@ class UpgradeInstancesVersionResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorMessages
     *
-    * @param string[]|null $errorMessages 下发失败错误信息列表
+    * @param string[]|null $errorMessages 下发失败错误信息列表。
     *
     * @return $this
     */

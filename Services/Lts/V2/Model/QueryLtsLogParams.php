@@ -32,6 +32,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+    * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
     *
     * @var string[]
     */
@@ -47,7 +49,9 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'searchType' => 'string',
             'limit' => 'int',
             'highlight' => 'bool',
-            'isIterative' => 'bool'
+            'isIterative' => 'bool',
+            'query' => 'string',
+            'isAnalysisQuery' => 'bool'
     ];
 
     /**
@@ -64,6 +68,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+    * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
     *
     * @var string[]
     */
@@ -79,7 +85,9 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         'searchType' => null,
         'limit' => 'int32',
         'highlight' => null,
-        'isIterative' => null
+        'isIterative' => null,
+        'query' => null,
+        'isAnalysisQuery' => null
     ];
 
     /**
@@ -117,6 +125,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+    * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
     *
     * @var string[]
     */
@@ -132,7 +142,9 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'searchType' => 'search_type',
             'limit' => 'limit',
             'highlight' => 'highlight',
-            'isIterative' => 'is_iterative'
+            'isIterative' => 'is_iterative',
+            'query' => 'query',
+            'isAnalysisQuery' => 'is_analysis_query'
     ];
 
     /**
@@ -149,6 +161,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+    * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
     *
     * @var string[]
     */
@@ -164,7 +178,9 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'searchType' => 'setSearchType',
             'limit' => 'setLimit',
             'highlight' => 'setHighlight',
-            'isIterative' => 'setIsIterative'
+            'isIterative' => 'setIsIterative',
+            'query' => 'setQuery',
+            'isAnalysisQuery' => 'setIsAnalysisQuery'
     ];
 
     /**
@@ -181,6 +197,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     * limit  表示每次查询的日志条数，不填时默认为50，建议您设置为100。
     * highlight  日志关键词高亮显示，默认为true（高亮显示），false为取消高亮显示。
     * isIterative  日志迭代查询，默认为false（不开启迭代），true为开启迭代。
+    * query  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    * isAnalysisQuery  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
     *
     * @var string[]
     */
@@ -196,7 +214,9 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
             'searchType' => 'getSearchType',
             'limit' => 'getLimit',
             'highlight' => 'getHighlight',
-            'isIterative' => 'getIsIterative'
+            'isIterative' => 'getIsIterative',
+            'query' => 'getQuery',
+            'isAnalysisQuery' => 'getIsAnalysisQuery'
     ];
 
     /**
@@ -284,6 +304,8 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['highlight'] = isset($data['highlight']) ? $data['highlight'] : null;
         $this->container['isIterative'] = isset($data['isIterative']) ? $data['isIterative'] : null;
+        $this->container['query'] = isset($data['query']) ? $data['query'] : null;
+        $this->container['isAnalysisQuery'] = isset($data['isAnalysisQuery']) ? $data['isAnalysisQuery'] : null;
     }
 
     /**
@@ -631,6 +653,54 @@ class QueryLtsLogParams implements ModelInterface, ArrayAccess
     public function setIsIterative($isIterative)
     {
         $this->container['isIterative'] = $isIterative;
+        return $this;
+    }
+
+    /**
+    * Gets query
+    *  使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    *
+    * @return string|null
+    */
+    public function getQuery()
+    {
+        return $this->container['query'];
+    }
+
+    /**
+    * Sets query
+    *
+    * @param string|null $query 使用带管道符的sql分析语句进行查询，需要query参数is_analysis_query为true时生效。
+    *
+    * @return $this
+    */
+    public function setQuery($query)
+    {
+        $this->container['query'] = $query;
+        return $this;
+    }
+
+    /**
+    * Gets isAnalysisQuery
+    *  是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    *
+    * @return bool|null
+    */
+    public function getIsAnalysisQuery()
+    {
+        return $this->container['isAnalysisQuery'];
+    }
+
+    /**
+    * Sets isAnalysisQuery
+    *
+    * @param bool|null $isAnalysisQuery 是否为带管道符的sql分析语句。当该参数为true时，将依照body体中的query参数内容进行查询，且body体中除start_time与end_time以外的参数失效，分页、排序、查询结果条数等功能请依照sql语法规则实现。查询结果的响应体不同于未启用时的查询方式，将以默认列存的形式返回查询结果。当前仅对内测用户开放。响应示例：{\"analysisLogs\":[{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"},{\"field1\":\"1\",\"field2\":\"2\",\"field3\":\"3\"}]}
+    *
+    * @return $this
+    */
+    public function setIsAnalysisQuery($isAnalysisQuery)
+    {
+        $this->container['isAnalysisQuery'] = $isAnalysisQuery;
         return $this;
     }
 

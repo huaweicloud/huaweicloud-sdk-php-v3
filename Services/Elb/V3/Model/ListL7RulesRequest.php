@@ -28,7 +28,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * compareType  转发匹配方式。  取值： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。
     * provisioningStatus  转发规则的配置状态。  取值：ACTIVE 表示正常。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * invert  是否反向匹配。使用说明：固定为false。该字段能更新但不会生效。
-    * adminStateUp  转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    * adminStateUp  转发规则的管理状态。  不支持该字段，请勿使用。
     * value  匹配内容的值。  支持多值查询，查询条件格式：*value=xxx&value=xxx*。
     * key  匹配内容的键值，用于标识规则。  支持多值查询，查询条件格式：*key=xxx&key=xxx*。  不支持该字段，请勿使用。
     * type  匹配类别，可以为HOST_NAME，PATH。  一个l7policy下创建的l7rule的type不能重复。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
@@ -62,7 +62,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * compareType  转发匹配方式。  取值： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。
     * provisioningStatus  转发规则的配置状态。  取值：ACTIVE 表示正常。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * invert  是否反向匹配。使用说明：固定为false。该字段能更新但不会生效。
-    * adminStateUp  转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    * adminStateUp  转发规则的管理状态。  不支持该字段，请勿使用。
     * value  匹配内容的值。  支持多值查询，查询条件格式：*value=xxx&value=xxx*。
     * key  匹配内容的键值，用于标识规则。  支持多值查询，查询条件格式：*key=xxx&key=xxx*。  不支持该字段，请勿使用。
     * type  匹配类别，可以为HOST_NAME，PATH。  一个l7policy下创建的l7rule的type不能重复。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
@@ -117,7 +117,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * compareType  转发匹配方式。  取值： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。
     * provisioningStatus  转发规则的配置状态。  取值：ACTIVE 表示正常。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * invert  是否反向匹配。使用说明：固定为false。该字段能更新但不会生效。
-    * adminStateUp  转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    * adminStateUp  转发规则的管理状态。  不支持该字段，请勿使用。
     * value  匹配内容的值。  支持多值查询，查询条件格式：*value=xxx&value=xxx*。
     * key  匹配内容的键值，用于标识规则。  支持多值查询，查询条件格式：*key=xxx&key=xxx*。  不支持该字段，请勿使用。
     * type  匹配类别，可以为HOST_NAME，PATH。  一个l7policy下创建的l7rule的type不能重复。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
@@ -151,7 +151,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * compareType  转发匹配方式。  取值： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。
     * provisioningStatus  转发规则的配置状态。  取值：ACTIVE 表示正常。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * invert  是否反向匹配。使用说明：固定为false。该字段能更新但不会生效。
-    * adminStateUp  转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    * adminStateUp  转发规则的管理状态。  不支持该字段，请勿使用。
     * value  匹配内容的值。  支持多值查询，查询条件格式：*value=xxx&value=xxx*。
     * key  匹配内容的键值，用于标识规则。  支持多值查询，查询条件格式：*key=xxx&key=xxx*。  不支持该字段，请勿使用。
     * type  匹配类别，可以为HOST_NAME，PATH。  一个l7policy下创建的l7rule的type不能重复。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
@@ -185,7 +185,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     * compareType  转发匹配方式。  取值： - EQUAL_TO 表示精确匹配。 - REGEX 表示正则匹配。 - STARTS_WITH 表示前缀匹配。  支持多值查询，查询条件格式：*compare_type=xxx&compare_type=xxx*。
     * provisioningStatus  转发规则的配置状态。  取值：ACTIVE 表示正常。  支持多值查询，查询条件格式：*provisioning_status=xxx&provisioning_status=xxx*。
     * invert  是否反向匹配。使用说明：固定为false。该字段能更新但不会生效。
-    * adminStateUp  转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    * adminStateUp  转发规则的管理状态。  不支持该字段，请勿使用。
     * value  匹配内容的值。  支持多值查询，查询条件格式：*value=xxx&value=xxx*。
     * key  匹配内容的键值，用于标识规则。  支持多值查询，查询条件格式：*key=xxx&key=xxx*。  不支持该字段，请勿使用。
     * type  匹配类别，可以为HOST_NAME，PATH。  一个l7policy下创建的l7rule的type不能重复。  支持多值查询，查询条件格式：*type=xxx&type=xxx*。
@@ -507,7 +507,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets adminStateUp
-    *  转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    *  转发规则的管理状态。  不支持该字段，请勿使用。
     *
     * @return bool|null
     */
@@ -519,7 +519,7 @@ class ListL7RulesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets adminStateUp
     *
-    * @param bool|null $adminStateUp 转发规则的管理状态，默认为true。  不支持该字段，请勿使用。
+    * @param bool|null $adminStateUp 转发规则的管理状态。  不支持该字段，请勿使用。
     *
     * @return $this
     */

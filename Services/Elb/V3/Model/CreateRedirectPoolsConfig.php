@@ -20,8 +20,8 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * poolId  所在后端服务器组ID。
-    * weight  转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    * poolId  参数解释：所在后端服务器组ID。
+    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * poolId  所在后端服务器组ID。
-    * weight  转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    * poolId  参数解释：所在后端服务器组ID。
+    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * poolId  所在后端服务器组ID。
-    * weight  转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    * poolId  参数解释：所在后端服务器组ID。
+    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * poolId  所在后端服务器组ID。
-    * weight  转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    * poolId  参数解释：所在后端服务器组ID。
+    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * poolId  所在后端服务器组ID。
-    * weight  转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    * poolId  参数解释：所在后端服务器组ID。
+    * weight  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolId
-    *  所在后端服务器组ID。
+    *  参数解释：所在后端服务器组ID。
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets poolId
     *
-    * @param string $poolId 所在后端服务器组ID。
+    * @param string $poolId 参数解释：所在后端服务器组ID。
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets weight
-    *  转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    *  参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class CreateRedirectPoolsConfig implements ModelInterface, ArrayAccess
     /**
     * Sets weight
     *
-    * @param string|null $weight 转发策略主机组的权重，取值范围为[1,100]，默认为1。请求将根据该权重进行负载分发到不同的主机组。 权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。
+    * @param string|null $weight 参数解释：转发策略主机组的权重。请求将根据该权重进行负载分发到不同的主机组。权重值越大，分发的请求越多。权重为0的后端不再接受新的请求。  取值范围：1-100  默认取值：1
     *
     * @return $this
     */

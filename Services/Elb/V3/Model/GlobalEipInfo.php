@@ -20,9 +20,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalEipId  global eip的id
-    * globalEipAddress  global eip的ip地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * globalEipId  参数解释：global eip的id
+    * globalEipAddress  参数解释：global eip的ip地址
+    * ipVersion  参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalEipId  global eip的id
-    * globalEipAddress  global eip的ip地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * globalEipId  参数解释：global eip的id
+    * globalEipAddress  参数解释：global eip的ip地址
+    * ipVersion  参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalEipId  global eip的id
-    * globalEipAddress  global eip的ip地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * globalEipId  参数解释：global eip的id
+    * globalEipAddress  参数解释：global eip的ip地址
+    * ipVersion  参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalEipId  global eip的id
-    * globalEipAddress  global eip的ip地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * globalEipId  参数解释：global eip的id
+    * globalEipAddress  参数解释：global eip的ip地址
+    * ipVersion  参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalEipId  global eip的id
-    * globalEipAddress  global eip的ip地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * globalEipId  参数解释：global eip的id
+    * globalEipAddress  参数解释：global eip的ip地址
+    * ipVersion  参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipId
-    *  global eip的id
+    *  参数解释：global eip的id
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipId
     *
-    * @param string|null $globalEipId global eip的id
+    * @param string|null $globalEipId 参数解释：global eip的id
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalEipAddress
-    *  global eip的ip地址
+    *  参数解释：global eip的ip地址
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets globalEipAddress
     *
-    * @param string|null $globalEipAddress global eip的ip地址
+    * @param string|null $globalEipAddress 参数解释：global eip的ip地址
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    *  参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class GlobalEipInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int|null $ipVersion IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * @param int|null $ipVersion 参数解释：IP版本信息。  取值范围： - 4，表示IPv4 - 6，表示IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @return $this
     */

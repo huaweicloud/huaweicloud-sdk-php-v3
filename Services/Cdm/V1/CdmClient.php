@@ -568,6 +568,77 @@ class CdmClient extends Client
     }
 
     /**
+     * 修改集群
+     *
+     * 修改CDM集群配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyCluster($request)
+    {
+        return $this->modifyClusterWithHttpInfo($request);
+    }
+
+    public function modifyClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/cluster/modify/{cluster_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ModifyClusterResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ModifyClusterRequest');
+    }
+
+    /**
      * 重启集群
      *
      * 重启集群接口。
@@ -636,6 +707,71 @@ class CdmClient extends Client
     }
 
     /**
+     * 查询所有可用区
+     *
+     * 查询CDM集群的所有可用区。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showAvailabilityZones($request)
+    {
+        return $this->showAvailabilityZonesWithHttpInfo($request);
+    }
+
+    public function showAvailabilityZonesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/regions/{region_id}/availability_zones';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $pathParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowAvailabilityZonesResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowAvailabilityZonesRequest');
+    }
+
+    /**
      * 查询集群详情
      *
      * 查询集群详情接口。
@@ -698,6 +834,390 @@ class CdmClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowClusterDetailResponse',
             $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowClusterDetailRequest');
+    }
+
+    /**
+     * 查询集群的企业项目ID
+     *
+     * 查询指定集群的企业项目ID。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showClusterEnterpriseProjects($request)
+    {
+        return $this->showClusterEnterpriseProjectsWithHttpInfo($request);
+    }
+
+    public function showClusterEnterpriseProjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/clusters/{cluster_id}/enterprise-projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowClusterEnterpriseProjectsResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowClusterEnterpriseProjectsRequest');
+    }
+
+    /**
+     * 查询支持的版本
+     *
+     * 查询CDM集群支持的版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showDatastores($request)
+    {
+        return $this->showDatastoresWithHttpInfo($request);
+    }
+
+    public function showDatastoresWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/datastores';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowDatastoresResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowDatastoresRequest');
+    }
+
+    /**
+     * 查询所有集群的企业项目ID
+     *
+     * 查询当前项目下的所有集群的企业项目ID。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showEnterpriseProjects($request)
+    {
+        return $this->showEnterpriseProjectsWithHttpInfo($request);
+    }
+
+    public function showEnterpriseProjectsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/enterprise-projects';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowEnterpriseProjectsResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowEnterpriseProjectsRequest');
+    }
+
+    /**
+     * 查询规格详情
+     *
+     * 查询指定规格ID的规格详请。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlavorDetail($request)
+    {
+        return $this->showFlavorDetailWithHttpInfo($request);
+    }
+
+    public function showFlavorDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/flavors/{flavor_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['flavorId'] !== null) {
+            $pathParams['flavor_id'] = $localVarParams['flavorId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowFlavorDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowFlavorDetailRequest');
+    }
+
+    /**
+     * 查询版本规格
+     *
+     * 按版本ID查询所有兼容规格。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showFlavors($request)
+    {
+        return $this->showFlavorsWithHttpInfo($request);
+    }
+
+    public function showFlavorsWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/datastores/{datastore_id}/flavors';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['datastoreId'] !== null) {
+            $pathParams['datastore_id'] = $localVarParams['datastoreId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowFlavorsResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowFlavorsRequest');
+    }
+
+    /**
+     * 查询集群实例信息
+     *
+     * 查询集群实例信息。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showInstanceDetail($request)
+    {
+        return $this->showInstanceDetailWithHttpInfo($request);
+    }
+
+    public function showInstanceDetailWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/instances/{instance_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['projectId'] !== null) {
+            $pathParams['project_id'] = $localVarParams['projectId'];
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowInstanceDetailResponse',
+            $requestType='\HuaweiCloud\SDK\Cdm\V1\Model\ShowInstanceDetailRequest');
     }
 
     /**

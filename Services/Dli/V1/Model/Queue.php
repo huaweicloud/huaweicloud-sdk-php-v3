@@ -43,6 +43,14 @@ class Queue implements ModelInterface, ArrayAccess
     * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
     * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
     * elasticResourcePoolName  弹性资源池名称。
+    * supportSparkVersions  队列支持的Spark版本。
+    * defaultSparkVersion  队列默认的Spark版本。
+    * supportHetuEngineVersions  队列支持的HetuEngine版本。
+    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
+    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
+    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
+    * supportFlinkJarVersions  队列支持的Flink JAR版本。
+    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
     *
     * @var string[]
     */
@@ -69,7 +77,15 @@ class Queue implements ModelInterface, ArrayAccess
             'cuSpec' => 'int',
             'cuScaleOutLimit' => 'int',
             'cuScaleInLimit' => 'int',
-            'elasticResourcePoolName' => 'string'
+            'elasticResourcePoolName' => 'string',
+            'supportSparkVersions' => 'string[]',
+            'defaultSparkVersion' => 'string',
+            'supportHetuEngineVersions' => 'string[]',
+            'defaultHetuEngineVersion' => 'string',
+            'supportFlinkSqlVersions' => 'string[]',
+            'defaultFlinkSqlVersion' => 'string',
+            'supportFlinkJarVersions' => 'string[]',
+            'defaultFlinkJarVersion' => 'string'
     ];
 
     /**
@@ -97,6 +113,14 @@ class Queue implements ModelInterface, ArrayAccess
     * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
     * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
     * elasticResourcePoolName  弹性资源池名称。
+    * supportSparkVersions  队列支持的Spark版本。
+    * defaultSparkVersion  队列默认的Spark版本。
+    * supportHetuEngineVersions  队列支持的HetuEngine版本。
+    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
+    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
+    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
+    * supportFlinkJarVersions  队列支持的Flink JAR版本。
+    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
     *
     * @var string[]
     */
@@ -123,7 +147,15 @@ class Queue implements ModelInterface, ArrayAccess
         'cuSpec' => 'int32',
         'cuScaleOutLimit' => 'int32',
         'cuScaleInLimit' => 'int32',
-        'elasticResourcePoolName' => null
+        'elasticResourcePoolName' => null,
+        'supportSparkVersions' => null,
+        'defaultSparkVersion' => null,
+        'supportHetuEngineVersions' => null,
+        'defaultHetuEngineVersion' => null,
+        'supportFlinkSqlVersions' => null,
+        'defaultFlinkSqlVersion' => null,
+        'supportFlinkJarVersions' => null,
+        'defaultFlinkJarVersion' => null
     ];
 
     /**
@@ -172,6 +204,14 @@ class Queue implements ModelInterface, ArrayAccess
     * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
     * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
     * elasticResourcePoolName  弹性资源池名称。
+    * supportSparkVersions  队列支持的Spark版本。
+    * defaultSparkVersion  队列默认的Spark版本。
+    * supportHetuEngineVersions  队列支持的HetuEngine版本。
+    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
+    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
+    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
+    * supportFlinkJarVersions  队列支持的Flink JAR版本。
+    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
     *
     * @var string[]
     */
@@ -198,7 +238,15 @@ class Queue implements ModelInterface, ArrayAccess
             'cuSpec' => 'cu_spec',
             'cuScaleOutLimit' => 'cu_scale_out_limit',
             'cuScaleInLimit' => 'cu_scale_in_limit',
-            'elasticResourcePoolName' => 'elastic_resource_pool_name'
+            'elasticResourcePoolName' => 'elastic_resource_pool_name',
+            'supportSparkVersions' => 'support_spark_versions',
+            'defaultSparkVersion' => 'default_spark_version',
+            'supportHetuEngineVersions' => 'support_hetu_engine_versions',
+            'defaultHetuEngineVersion' => 'default_hetu_engine_version',
+            'supportFlinkSqlVersions' => 'support_flink_sql_versions',
+            'defaultFlinkSqlVersion' => 'default_flink_sql_version',
+            'supportFlinkJarVersions' => 'support_flink_jar_versions',
+            'defaultFlinkJarVersion' => 'default_flink_jar_version'
     ];
 
     /**
@@ -226,6 +274,14 @@ class Queue implements ModelInterface, ArrayAccess
     * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
     * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
     * elasticResourcePoolName  弹性资源池名称。
+    * supportSparkVersions  队列支持的Spark版本。
+    * defaultSparkVersion  队列默认的Spark版本。
+    * supportHetuEngineVersions  队列支持的HetuEngine版本。
+    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
+    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
+    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
+    * supportFlinkJarVersions  队列支持的Flink JAR版本。
+    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
     *
     * @var string[]
     */
@@ -252,7 +308,15 @@ class Queue implements ModelInterface, ArrayAccess
             'cuSpec' => 'setCuSpec',
             'cuScaleOutLimit' => 'setCuScaleOutLimit',
             'cuScaleInLimit' => 'setCuScaleInLimit',
-            'elasticResourcePoolName' => 'setElasticResourcePoolName'
+            'elasticResourcePoolName' => 'setElasticResourcePoolName',
+            'supportSparkVersions' => 'setSupportSparkVersions',
+            'defaultSparkVersion' => 'setDefaultSparkVersion',
+            'supportHetuEngineVersions' => 'setSupportHetuEngineVersions',
+            'defaultHetuEngineVersion' => 'setDefaultHetuEngineVersion',
+            'supportFlinkSqlVersions' => 'setSupportFlinkSqlVersions',
+            'defaultFlinkSqlVersion' => 'setDefaultFlinkSqlVersion',
+            'supportFlinkJarVersions' => 'setSupportFlinkJarVersions',
+            'defaultFlinkJarVersion' => 'setDefaultFlinkJarVersion'
     ];
 
     /**
@@ -280,6 +344,14 @@ class Queue implements ModelInterface, ArrayAccess
     * cuScaleOutLimit  当前队列弹性扩缩容的CU值上限。
     * cuScaleInLimit  当前队列弹性扩缩容的CU值下限。
     * elasticResourcePoolName  弹性资源池名称。
+    * supportSparkVersions  队列支持的Spark版本。
+    * defaultSparkVersion  队列默认的Spark版本。
+    * supportHetuEngineVersions  队列支持的HetuEngine版本。
+    * defaultHetuEngineVersion  队列默认的HetuEngine版本。
+    * supportFlinkSqlVersions  队列支持的Flink SQL版本。
+    * defaultFlinkSqlVersion  队列默认的Flink SQL版本。
+    * supportFlinkJarVersions  队列支持的Flink JAR版本。
+    * defaultFlinkJarVersion  队列默认的Flink JAR版本。
     *
     * @var string[]
     */
@@ -306,7 +378,15 @@ class Queue implements ModelInterface, ArrayAccess
             'cuSpec' => 'getCuSpec',
             'cuScaleOutLimit' => 'getCuScaleOutLimit',
             'cuScaleInLimit' => 'getCuScaleInLimit',
-            'elasticResourcePoolName' => 'getElasticResourcePoolName'
+            'elasticResourcePoolName' => 'getElasticResourcePoolName',
+            'supportSparkVersions' => 'getSupportSparkVersions',
+            'defaultSparkVersion' => 'getDefaultSparkVersion',
+            'supportHetuEngineVersions' => 'getSupportHetuEngineVersions',
+            'defaultHetuEngineVersion' => 'getDefaultHetuEngineVersion',
+            'supportFlinkSqlVersions' => 'getSupportFlinkSqlVersions',
+            'defaultFlinkSqlVersion' => 'getDefaultFlinkSqlVersion',
+            'supportFlinkJarVersions' => 'getSupportFlinkJarVersions',
+            'defaultFlinkJarVersion' => 'getDefaultFlinkJarVersion'
     ];
 
     /**
@@ -390,6 +470,14 @@ class Queue implements ModelInterface, ArrayAccess
         $this->container['cuScaleOutLimit'] = isset($data['cuScaleOutLimit']) ? $data['cuScaleOutLimit'] : null;
         $this->container['cuScaleInLimit'] = isset($data['cuScaleInLimit']) ? $data['cuScaleInLimit'] : null;
         $this->container['elasticResourcePoolName'] = isset($data['elasticResourcePoolName']) ? $data['elasticResourcePoolName'] : null;
+        $this->container['supportSparkVersions'] = isset($data['supportSparkVersions']) ? $data['supportSparkVersions'] : null;
+        $this->container['defaultSparkVersion'] = isset($data['defaultSparkVersion']) ? $data['defaultSparkVersion'] : null;
+        $this->container['supportHetuEngineVersions'] = isset($data['supportHetuEngineVersions']) ? $data['supportHetuEngineVersions'] : null;
+        $this->container['defaultHetuEngineVersion'] = isset($data['defaultHetuEngineVersion']) ? $data['defaultHetuEngineVersion'] : null;
+        $this->container['supportFlinkSqlVersions'] = isset($data['supportFlinkSqlVersions']) ? $data['supportFlinkSqlVersions'] : null;
+        $this->container['defaultFlinkSqlVersion'] = isset($data['defaultFlinkSqlVersion']) ? $data['defaultFlinkSqlVersion'] : null;
+        $this->container['supportFlinkJarVersions'] = isset($data['supportFlinkJarVersions']) ? $data['supportFlinkJarVersions'] : null;
+        $this->container['defaultFlinkJarVersion'] = isset($data['defaultFlinkJarVersion']) ? $data['defaultFlinkJarVersion'] : null;
     }
 
     /**
@@ -963,6 +1051,198 @@ class Queue implements ModelInterface, ArrayAccess
     public function setElasticResourcePoolName($elasticResourcePoolName)
     {
         $this->container['elasticResourcePoolName'] = $elasticResourcePoolName;
+        return $this;
+    }
+
+    /**
+    * Gets supportSparkVersions
+    *  队列支持的Spark版本。
+    *
+    * @return string[]|null
+    */
+    public function getSupportSparkVersions()
+    {
+        return $this->container['supportSparkVersions'];
+    }
+
+    /**
+    * Sets supportSparkVersions
+    *
+    * @param string[]|null $supportSparkVersions 队列支持的Spark版本。
+    *
+    * @return $this
+    */
+    public function setSupportSparkVersions($supportSparkVersions)
+    {
+        $this->container['supportSparkVersions'] = $supportSparkVersions;
+        return $this;
+    }
+
+    /**
+    * Gets defaultSparkVersion
+    *  队列默认的Spark版本。
+    *
+    * @return string|null
+    */
+    public function getDefaultSparkVersion()
+    {
+        return $this->container['defaultSparkVersion'];
+    }
+
+    /**
+    * Sets defaultSparkVersion
+    *
+    * @param string|null $defaultSparkVersion 队列默认的Spark版本。
+    *
+    * @return $this
+    */
+    public function setDefaultSparkVersion($defaultSparkVersion)
+    {
+        $this->container['defaultSparkVersion'] = $defaultSparkVersion;
+        return $this;
+    }
+
+    /**
+    * Gets supportHetuEngineVersions
+    *  队列支持的HetuEngine版本。
+    *
+    * @return string[]|null
+    */
+    public function getSupportHetuEngineVersions()
+    {
+        return $this->container['supportHetuEngineVersions'];
+    }
+
+    /**
+    * Sets supportHetuEngineVersions
+    *
+    * @param string[]|null $supportHetuEngineVersions 队列支持的HetuEngine版本。
+    *
+    * @return $this
+    */
+    public function setSupportHetuEngineVersions($supportHetuEngineVersions)
+    {
+        $this->container['supportHetuEngineVersions'] = $supportHetuEngineVersions;
+        return $this;
+    }
+
+    /**
+    * Gets defaultHetuEngineVersion
+    *  队列默认的HetuEngine版本。
+    *
+    * @return string|null
+    */
+    public function getDefaultHetuEngineVersion()
+    {
+        return $this->container['defaultHetuEngineVersion'];
+    }
+
+    /**
+    * Sets defaultHetuEngineVersion
+    *
+    * @param string|null $defaultHetuEngineVersion 队列默认的HetuEngine版本。
+    *
+    * @return $this
+    */
+    public function setDefaultHetuEngineVersion($defaultHetuEngineVersion)
+    {
+        $this->container['defaultHetuEngineVersion'] = $defaultHetuEngineVersion;
+        return $this;
+    }
+
+    /**
+    * Gets supportFlinkSqlVersions
+    *  队列支持的Flink SQL版本。
+    *
+    * @return string[]|null
+    */
+    public function getSupportFlinkSqlVersions()
+    {
+        return $this->container['supportFlinkSqlVersions'];
+    }
+
+    /**
+    * Sets supportFlinkSqlVersions
+    *
+    * @param string[]|null $supportFlinkSqlVersions 队列支持的Flink SQL版本。
+    *
+    * @return $this
+    */
+    public function setSupportFlinkSqlVersions($supportFlinkSqlVersions)
+    {
+        $this->container['supportFlinkSqlVersions'] = $supportFlinkSqlVersions;
+        return $this;
+    }
+
+    /**
+    * Gets defaultFlinkSqlVersion
+    *  队列默认的Flink SQL版本。
+    *
+    * @return string|null
+    */
+    public function getDefaultFlinkSqlVersion()
+    {
+        return $this->container['defaultFlinkSqlVersion'];
+    }
+
+    /**
+    * Sets defaultFlinkSqlVersion
+    *
+    * @param string|null $defaultFlinkSqlVersion 队列默认的Flink SQL版本。
+    *
+    * @return $this
+    */
+    public function setDefaultFlinkSqlVersion($defaultFlinkSqlVersion)
+    {
+        $this->container['defaultFlinkSqlVersion'] = $defaultFlinkSqlVersion;
+        return $this;
+    }
+
+    /**
+    * Gets supportFlinkJarVersions
+    *  队列支持的Flink JAR版本。
+    *
+    * @return string[]|null
+    */
+    public function getSupportFlinkJarVersions()
+    {
+        return $this->container['supportFlinkJarVersions'];
+    }
+
+    /**
+    * Sets supportFlinkJarVersions
+    *
+    * @param string[]|null $supportFlinkJarVersions 队列支持的Flink JAR版本。
+    *
+    * @return $this
+    */
+    public function setSupportFlinkJarVersions($supportFlinkJarVersions)
+    {
+        $this->container['supportFlinkJarVersions'] = $supportFlinkJarVersions;
+        return $this;
+    }
+
+    /**
+    * Gets defaultFlinkJarVersion
+    *  队列默认的Flink JAR版本。
+    *
+    * @return string|null
+    */
+    public function getDefaultFlinkJarVersion()
+    {
+        return $this->container['defaultFlinkJarVersion'];
+    }
+
+    /**
+    * Sets defaultFlinkJarVersion
+    *
+    * @param string|null $defaultFlinkJarVersion 队列默认的Flink JAR版本。
+    *
+    * @return $this
+    */
+    public function setDefaultFlinkJarVersion($defaultFlinkJarVersion)
+    {
+        $this->container['defaultFlinkJarVersion'] = $defaultFlinkJarVersion;
         return $this;
     }
 

@@ -23,7 +23,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
-    * extensionScaleGroups  extensionScaleGroups
+    * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
             'nodeTemplate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdate',
             'initialNodeCount' => 'int',
             'autoscaling' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolNodeAutoscaling',
-            'extensionScaleGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup'
+            'extensionScaleGroups' => '\HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup[]'
     ];
 
     /**
@@ -39,7 +39,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
-    * extensionScaleGroups  extensionScaleGroups
+    * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
-    * extensionScaleGroups  extensionScaleGroups
+    * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
-    * extensionScaleGroups  extensionScaleGroups
+    * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     * nodeTemplate  nodeTemplate
     * initialNodeCount  节点池初始化节点个数。查询时为节点池目标节点数量。默认值为0。
     * autoscaling  autoscaling
-    * extensionScaleGroups  extensionScaleGroups
+    * extensionScaleGroups  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
     * @var string[]
     */
@@ -288,9 +288,9 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
 
     /**
     * Gets extensionScaleGroups
-    *  extensionScaleGroups
+    *  节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup|null
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup[]|null
     */
     public function getExtensionScaleGroups()
     {
@@ -300,7 +300,7 @@ class NodePoolSpecUpdate implements ModelInterface, ArrayAccess
     /**
     * Sets extensionScaleGroups
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup|null $extensionScaleGroups extensionScaleGroups
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ExtensionScaleGroup[]|null $extensionScaleGroups 节点池扩展伸缩组配置列表，详情参见ExtensionScaleGroup类型定义
     *
     * @return $this
     */

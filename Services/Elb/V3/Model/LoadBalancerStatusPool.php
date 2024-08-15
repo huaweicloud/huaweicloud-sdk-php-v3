@@ -24,7 +24,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
     * name  后端服务器组名。
     * healthmonitor  healthmonitor
     * members  后端服务器状态信息。
-    * id  后端服务器组ID。
+    * id  参数解释：后端服务器组ID。
     * operatingStatus  后端服务器组的操作状态。  取值： - ONLINE：创建时默认状态，表后端服务器组正常。 - DEGRADED：该后端服务器组下存在member为的operating_status=OFFLINE。 - DISABLED：负载均衡器或后端服务器组的admin_state_up=false。  说明： DEGRADED和DISABLED仅在当前接口返回， 查询后端服务器组详情等其他接口返回的operating_status字段不存在这两个状态值。
     *
     * @var string[]
@@ -44,7 +44,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
     * name  后端服务器组名。
     * healthmonitor  healthmonitor
     * members  后端服务器状态信息。
-    * id  后端服务器组ID。
+    * id  参数解释：后端服务器组ID。
     * operatingStatus  后端服务器组的操作状态。  取值： - ONLINE：创建时默认状态，表后端服务器组正常。 - DEGRADED：该后端服务器组下存在member为的operating_status=OFFLINE。 - DISABLED：负载均衡器或后端服务器组的admin_state_up=false。  说明： DEGRADED和DISABLED仅在当前接口返回， 查询后端服务器组详情等其他接口返回的operating_status字段不存在这两个状态值。
     *
     * @var string[]
@@ -85,7 +85,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
     * name  后端服务器组名。
     * healthmonitor  healthmonitor
     * members  后端服务器状态信息。
-    * id  后端服务器组ID。
+    * id  参数解释：后端服务器组ID。
     * operatingStatus  后端服务器组的操作状态。  取值： - ONLINE：创建时默认状态，表后端服务器组正常。 - DEGRADED：该后端服务器组下存在member为的operating_status=OFFLINE。 - DISABLED：负载均衡器或后端服务器组的admin_state_up=false。  说明： DEGRADED和DISABLED仅在当前接口返回， 查询后端服务器组详情等其他接口返回的operating_status字段不存在这两个状态值。
     *
     * @var string[]
@@ -105,7 +105,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
     * name  后端服务器组名。
     * healthmonitor  healthmonitor
     * members  后端服务器状态信息。
-    * id  后端服务器组ID。
+    * id  参数解释：后端服务器组ID。
     * operatingStatus  后端服务器组的操作状态。  取值： - ONLINE：创建时默认状态，表后端服务器组正常。 - DEGRADED：该后端服务器组下存在member为的operating_status=OFFLINE。 - DISABLED：负载均衡器或后端服务器组的admin_state_up=false。  说明： DEGRADED和DISABLED仅在当前接口返回， 查询后端服务器组详情等其他接口返回的operating_status字段不存在这两个状态值。
     *
     * @var string[]
@@ -125,7 +125,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
     * name  后端服务器组名。
     * healthmonitor  healthmonitor
     * members  后端服务器状态信息。
-    * id  后端服务器组ID。
+    * id  参数解释：后端服务器组ID。
     * operatingStatus  后端服务器组的操作状态。  取值： - ONLINE：创建时默认状态，表后端服务器组正常。 - DEGRADED：该后端服务器组下存在member为的operating_status=OFFLINE。 - DISABLED：负载均衡器或后端服务器组的admin_state_up=false。  说明： DEGRADED和DISABLED仅在当前接口返回， 查询后端服务器组详情等其他接口返回的operating_status字段不存在这两个状态值。
     *
     * @var string[]
@@ -331,7 +331,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  后端服务器组ID。
+    *  参数解释：后端服务器组ID。
     *
     * @return string|null
     */
@@ -343,7 +343,7 @@ class LoadBalancerStatusPool implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 后端服务器组ID。
+    * @param string|null $id 参数解释：后端服务器组ID。
     *
     * @return $this
     */

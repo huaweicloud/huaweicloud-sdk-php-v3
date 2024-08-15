@@ -20,7 +20,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    * enable  参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     * minL7FlavorId  参数解释：实例弹性扩缩容的最小七层规格ID。  约束限制： 该字段已经废弃，建议不要使用该字段。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    * enable  参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     * minL7FlavorId  参数解释：实例弹性扩缩容的最小七层规格ID。  约束限制： 该字段已经废弃，建议不要使用该字段。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    * enable  参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     * minL7FlavorId  参数解释：实例弹性扩缩容的最小七层规格ID。  约束限制： 该字段已经废弃，建议不要使用该字段。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    * enable  参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     * minL7FlavorId  参数解释：实例弹性扩缩容的最小七层规格ID。  约束限制： 该字段已经废弃，建议不要使用该字段。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    * enable  参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     * minL7FlavorId  参数解释：实例弹性扩缩容的最小七层规格ID。  约束限制： 该字段已经废弃，建议不要使用该字段。
     *
     * @var string[]
@@ -194,7 +194,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    *  参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     *
     * @return bool
     */
@@ -206,7 +206,7 @@ class CreateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool $enable 参数解释：负载均衡器实例弹性扩缩容开关。  取值范围：  - true：开启。  - false：关闭。
+    * @param bool $enable 参数解释：负载均衡器实例弹性扩缩容开关。 [网关型LB不支持该字段。](tag:hws_eu)  取值范围：  - true：开启。  - false：关闭。
     *
     * @return $this
     */

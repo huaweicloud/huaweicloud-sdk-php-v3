@@ -20,9 +20,9 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ipgroupId  监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
-    * enableIpgroup  访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
-    * type  访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    * ipgroupId  参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    * enableIpgroup  参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
+    * type  参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ipgroupId  监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
-    * enableIpgroup  访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
-    * type  访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    * ipgroupId  参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    * enableIpgroup  参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
+    * type  参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ipgroupId  监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
-    * enableIpgroup  访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
-    * type  访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    * ipgroupId  参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    * enableIpgroup  参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
+    * type  参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ipgroupId  监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
-    * enableIpgroup  访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
-    * type  访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    * ipgroupId  参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    * enableIpgroup  参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
+    * type  参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ipgroupId  监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
-    * enableIpgroup  访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
-    * type  访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    * ipgroupId  参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    * enableIpgroup  参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
+    * type  参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipgroupId
-    *  监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    *  参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets ipgroupId
     *
-    * @param string $ipgroupId 监听器关联的访问控制组的id。 创建时必选，更新时非必选。 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
+    * @param string $ipgroupId 参数解释：监听器关联的访问控制组的id。 创建时必选，更新时非必选。  约束限制： 指定的ipgroup必须已存在，不能指定为null，否则与enable_ipgroup冲突。
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets enableIpgroup
-    *  访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
+    *  参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
     *
     * @return bool
     */
@@ -241,7 +241,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets enableIpgroup
     *
-    * @param bool $enableIpgroup 访问控制组的状态。 True:开启访问控制； Flase：关闭访问控制； 开启访问控制的监听器，允许直接删除。
+    * @param bool $enableIpgroup 参数解释：访问控制组的状态。 开启访问控制的监听器，允许直接删除。  取值范围： - true:开启访问控制。 - flase：关闭访问控制。
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    *  参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @return string
     */
@@ -265,7 +265,7 @@ class ListenerIpGroup implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 访问控制组的类型。 white:白名单，只允许指定ip访问； black:黑名单，不允许指定ip访问；
+    * @param string $type 参数解释：访问控制组的类型。  取值范围： - white:白名单，只允许指定ip访问。 - black:黑名单，不允许指定ip访问。
     *
     * @return $this
     */

@@ -33,6 +33,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
     * requestMemory  单位为GiB
     * replica  replica
     * version  version
+    * swimlaneId  泳道id
     * envs  envs
     * storages  storages
     * deployStrategy  deployStrategy
@@ -68,6 +69,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
             'requestMemory' => 'float',
             'replica' => 'int',
             'version' => 'string',
+            'swimlaneId' => 'string',
             'envs' => '\HuaweiCloud\SDK\ServiceStage\V3\Model\ComponentEnvironment[]',
             'storages' => '\HuaweiCloud\SDK\ServiceStage\V3\Model\ComponentStorage[]',
             'deployStrategy' => '\HuaweiCloud\SDK\ServiceStage\V3\Model\DeployStrategy',
@@ -103,6 +105,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
     * requestMemory  单位为GiB
     * replica  replica
     * version  version
+    * swimlaneId  泳道id
     * envs  envs
     * storages  storages
     * deployStrategy  deployStrategy
@@ -138,6 +141,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
         'requestMemory' => null,
         'replica' => null,
         'version' => null,
+        'swimlaneId' => null,
         'envs' => null,
         'storages' => null,
         'deployStrategy' => null,
@@ -194,6 +198,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
     * requestMemory  单位为GiB
     * replica  replica
     * version  version
+    * swimlaneId  泳道id
     * envs  envs
     * storages  storages
     * deployStrategy  deployStrategy
@@ -229,6 +234,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
             'requestMemory' => 'request_memory',
             'replica' => 'replica',
             'version' => 'version',
+            'swimlaneId' => 'swimlane_id',
             'envs' => 'envs',
             'storages' => 'storages',
             'deployStrategy' => 'deploy_strategy',
@@ -264,6 +270,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
     * requestMemory  单位为GiB
     * replica  replica
     * version  version
+    * swimlaneId  泳道id
     * envs  envs
     * storages  storages
     * deployStrategy  deployStrategy
@@ -299,6 +306,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
             'requestMemory' => 'setRequestMemory',
             'replica' => 'setReplica',
             'version' => 'setVersion',
+            'swimlaneId' => 'setSwimlaneId',
             'envs' => 'setEnvs',
             'storages' => 'setStorages',
             'deployStrategy' => 'setDeployStrategy',
@@ -334,6 +342,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
     * requestMemory  单位为GiB
     * replica  replica
     * version  version
+    * swimlaneId  泳道id
     * envs  envs
     * storages  storages
     * deployStrategy  deployStrategy
@@ -369,6 +378,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
             'requestMemory' => 'getRequestMemory',
             'replica' => 'getReplica',
             'version' => 'getVersion',
+            'swimlaneId' => 'getSwimlaneId',
             'envs' => 'getEnvs',
             'storages' => 'getStorages',
             'deployStrategy' => 'getDeployStrategy',
@@ -460,6 +470,7 @@ class ComponentCreate implements ModelInterface, ArrayAccess
         $this->container['requestMemory'] = isset($data['requestMemory']) ? $data['requestMemory'] : null;
         $this->container['replica'] = isset($data['replica']) ? $data['replica'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['swimlaneId'] = isset($data['swimlaneId']) ? $data['swimlaneId'] : null;
         $this->container['envs'] = isset($data['envs']) ? $data['envs'] : null;
         $this->container['storages'] = isset($data['storages']) ? $data['storages'] : null;
         $this->container['deployStrategy'] = isset($data['deployStrategy']) ? $data['deployStrategy'] : null;
@@ -520,6 +531,9 @@ class ComponentCreate implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^([0-9]+)(.[0-9]+){2,3}$/", $this->container['version'])) {
                 $invalidProperties[] = "invalid value for 'version', must be conform to the pattern /^([0-9]+)(.[0-9]+){2,3}$/.";
+            }
+            if (!is_null($this->container['swimlaneId']) && (mb_strlen($this->container['swimlaneId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'swimlaneId', the character length must be smaller than or equal to 64.";
             }
         if ($this->container['referResources'] === null) {
             $invalidProperties[] = "'referResources' can't be null";
@@ -847,6 +861,30 @@ class ComponentCreate implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets swimlaneId
+    *  泳道id
+    *
+    * @return string|null
+    */
+    public function getSwimlaneId()
+    {
+        return $this->container['swimlaneId'];
+    }
+
+    /**
+    * Sets swimlaneId
+    *
+    * @param string|null $swimlaneId 泳道id
+    *
+    * @return $this
+    */
+    public function setSwimlaneId($swimlaneId)
+    {
+        $this->container['swimlaneId'] = $swimlaneId;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    * enable  参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
+    * minL7FlavorId  参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    * enable  参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
+    * minL7FlavorId  参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    * enable  参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
+    * minL7FlavorId  参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    * enable  参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
+    * minL7FlavorId  参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
-    * minL7FlavorId  弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    * enable  参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
+    * minL7FlavorId  参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
+    *  参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
     *
     * @return bool
     */
@@ -206,7 +206,7 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool $enable 当前负载均衡器是否开启弹性扩缩容。  取值： - true：开启。 - false：不开启。
+    * @param bool $enable 参数解释：当前负载均衡器是否开启弹性扩缩容。  取值范围： - true：开启。 - false：不开启。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets minL7FlavorId
-    *  弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    *  参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class UpdateLoadbalancerAutoscalingOption implements ModelInterface, ArrayAccess
     /**
     * Sets minL7FlavorId
     *
-    * @param string|null $minL7FlavorId 弹性扩缩容的最小七层规格ID（规格类型L7_elastic），有七层监听器时，该字段不能为空。  该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
+    * @param string|null $minL7FlavorId 参数解释：弹性扩缩容的最小七层规格ID（规格类型L7_elastic）。  约束限制：有七层监听器时，该字段不能为空。   该字段已经废弃，但仍然保留兼容性支持，建议不要使用该字段。如果传入该字段，创建的弹性实例将会有保底规格并产生对应保底规格的费用。
     *
     * @return $this
     */

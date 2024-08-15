@@ -64,7 +64,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。格式为UTC时间
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
-    * visibility  是否被其他租户可见，取值为private或public
+    * visibility  是否被其他租户可见，取值为private、public或shared
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -192,7 +192,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。格式为UTC时间
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
-    * visibility  是否被其他租户可见，取值为private或public
+    * visibility  是否被其他租户可见，取值为private、public或shared
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -341,7 +341,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。格式为UTC时间
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
-    * visibility  是否被其他租户可见，取值为private或public
+    * visibility  是否被其他租户可见，取值为private、public或shared
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -469,7 +469,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。格式为UTC时间
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
-    * visibility  是否被其他租户可见，取值为private或public
+    * visibility  是否被其他租户可见，取值为private、public或shared
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -597,7 +597,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。格式为UTC时间
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取Dat            aImage，如果是裸金属服务器镜像，则取值是Ironic
     * virtualSize  目前暂时不使用
-    * visibility  是否被其他租户可见，取值为private或public
+    * visibility  是否被其他租户可见，取值为private、public或shared
     * supportFcInject  表示当前镜像支持CloudInit密码/密钥注入方式，建议设置为\"true\"或者\"false\"。 如果取值为\"true\"，表示该镜像不支持CloudInit注入密码/密钥，其他取值时表示支持CloudInit注入密钥/密码。
     * hwFirmwareType  云服务器的启动方式。目前支持： bios：表示bios引导启动。 uefi：表示uefi引导启动。
     * supportArm  是否是ARM架构类型的镜像，取值为“true”或者“false”。
@@ -754,6 +754,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     const VIRTUAL_ENV_TYPE_DATA_IMAGE = 'DataImage';
     const VISIBILITY__PRIVATE = 'private';
     const VISIBILITY__PUBLIC = 'public';
+    const VISIBILITY_SHARED = 'shared';
     const SUPPORT_FC_INJECT_TRUE = 'true';
     const SUPPORT_FC_INJECT_FALSE = 'false';
     const HW_FIRMWARE_TYPE_BIOS = 'bios';
@@ -892,6 +893,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
         return [
             self::VISIBILITY__PRIVATE,
             self::VISIBILITY__PUBLIC,
+            self::VISIBILITY_SHARED,
         ];
     }
 
@@ -2182,7 +2184,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibility
-    *  是否被其他租户可见，取值为private或public
+    *  是否被其他租户可见，取值为private、public或shared
     *
     * @return string|null
     */
@@ -2194,7 +2196,7 @@ class UpdateImageResponse implements ModelInterface, ArrayAccess
     /**
     * Sets visibility
     *
-    * @param string|null $visibility 是否被其他租户可见，取值为private或public
+    * @param string|null $visibility 是否被其他租户可见，取值为private、public或shared
     *
     * @return $this
     */

@@ -21,10 +21,11 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * upgradeTypeList  升级类型信息列表
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本
-    * hotfixUpgradeInfos  可以升级的热补丁信息
+    * upgradeTypeList  升级类型信息列表。
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本。
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -32,15 +33,17 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
             'upgradeTypeList' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeTypeInfo[]',
             'targetVersion' => 'string',
             'upgradeCandidateVersions' => 'string[]',
-            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]'
+            'hotfixUpgradeInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]',
+            'hotfixRollbackInfos' => '\HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * upgradeTypeList  升级类型信息列表
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本
-    * hotfixUpgradeInfos  可以升级的热补丁信息
+    * upgradeTypeList  升级类型信息列表。
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本。
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -48,7 +51,8 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
         'upgradeTypeList' => null,
         'targetVersion' => null,
         'upgradeCandidateVersions' => null,
-        'hotfixUpgradeInfos' => null
+        'hotfixUpgradeInfos' => null,
+        'hotfixRollbackInfos' => null
     ];
 
     /**
@@ -74,10 +78,11 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * upgradeTypeList  升级类型信息列表
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本
-    * hotfixUpgradeInfos  可以升级的热补丁信息
+    * upgradeTypeList  升级类型信息列表。
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本。
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -85,15 +90,17 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
             'upgradeTypeList' => 'upgrade_type_list',
             'targetVersion' => 'target_version',
             'upgradeCandidateVersions' => 'upgrade_candidate_versions',
-            'hotfixUpgradeInfos' => 'hotfix_upgrade_infos'
+            'hotfixUpgradeInfos' => 'hotfix_upgrade_infos',
+            'hotfixRollbackInfos' => 'hotfix_rollback_infos'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * upgradeTypeList  升级类型信息列表
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本
-    * hotfixUpgradeInfos  可以升级的热补丁信息
+    * upgradeTypeList  升级类型信息列表。
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本。
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -101,15 +108,17 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
             'upgradeTypeList' => 'setUpgradeTypeList',
             'targetVersion' => 'setTargetVersion',
             'upgradeCandidateVersions' => 'setUpgradeCandidateVersions',
-            'hotfixUpgradeInfos' => 'setHotfixUpgradeInfos'
+            'hotfixUpgradeInfos' => 'setHotfixUpgradeInfos',
+            'hotfixRollbackInfos' => 'setHotfixRollbackInfos'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * upgradeTypeList  升级类型信息列表
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本
-    * hotfixUpgradeInfos  可以升级的热补丁信息
+    * upgradeTypeList  升级类型信息列表。
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本。
+    * hotfixUpgradeInfos  可以升级的热补丁信息。
+    * hotfixRollbackInfos  可以回滚的热补丁信息。
     *
     * @var string[]
     */
@@ -117,7 +126,8 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
             'upgradeTypeList' => 'getUpgradeTypeList',
             'targetVersion' => 'getTargetVersion',
             'upgradeCandidateVersions' => 'getUpgradeCandidateVersions',
-            'hotfixUpgradeInfos' => 'getHotfixUpgradeInfos'
+            'hotfixUpgradeInfos' => 'getHotfixUpgradeInfos',
+            'hotfixRollbackInfos' => 'getHotfixRollbackInfos'
     ];
 
     /**
@@ -182,6 +192,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
         $this->container['targetVersion'] = isset($data['targetVersion']) ? $data['targetVersion'] : null;
         $this->container['upgradeCandidateVersions'] = isset($data['upgradeCandidateVersions']) ? $data['upgradeCandidateVersions'] : null;
         $this->container['hotfixUpgradeInfos'] = isset($data['hotfixUpgradeInfos']) ? $data['hotfixUpgradeInfos'] : null;
+        $this->container['hotfixRollbackInfos'] = isset($data['hotfixRollbackInfos']) ? $data['hotfixRollbackInfos'] : null;
     }
 
     /**
@@ -214,7 +225,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
 
     /**
     * Gets upgradeTypeList
-    *  升级类型信息列表
+    *  升级类型信息列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeTypeInfo[]|null
     */
@@ -226,7 +237,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Sets upgradeTypeList
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeTypeInfo[]|null $upgradeTypeList 升级类型信息列表
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeTypeInfo[]|null $upgradeTypeList 升级类型信息列表。
     *
     * @return $this
     */
@@ -238,7 +249,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
 
     /**
     * Gets targetVersion
-    *  升级目标版本，没有在滚动升级中返回null
+    *  升级目标版本，没有在滚动升级中返回null。
     *
     * @return string|null
     */
@@ -250,7 +261,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Sets targetVersion
     *
-    * @param string|null $targetVersion 升级目标版本，没有在滚动升级中返回null
+    * @param string|null $targetVersion 升级目标版本，没有在滚动升级中返回null。
     *
     * @return $this
     */
@@ -262,7 +273,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
 
     /**
     * Gets upgradeCandidateVersions
-    *  可以升级的版本，包括大小版本
+    *  可以升级的版本，包括大小版本。
     *
     * @return string[]|null
     */
@@ -274,7 +285,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Sets upgradeCandidateVersions
     *
-    * @param string[]|null $upgradeCandidateVersions 可以升级的版本，包括大小版本
+    * @param string[]|null $upgradeCandidateVersions 可以升级的版本，包括大小版本。
     *
     * @return $this
     */
@@ -286,7 +297,7 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
 
     /**
     * Gets hotfixUpgradeInfos
-    *  可以升级的热补丁信息
+    *  可以升级的热补丁信息。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null
     */
@@ -298,13 +309,37 @@ class ShowBatchUpgradeCandidateVersionsResponse implements ModelInterface, Array
     /**
     * Sets hotfixUpgradeInfos
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null $hotfixUpgradeInfos 可以升级的热补丁信息
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null $hotfixUpgradeInfos 可以升级的热补丁信息。
     *
     * @return $this
     */
     public function setHotfixUpgradeInfos($hotfixUpgradeInfos)
     {
         $this->container['hotfixUpgradeInfos'] = $hotfixUpgradeInfos;
+        return $this;
+    }
+
+    /**
+    * Gets hotfixRollbackInfos
+    *  可以回滚的热补丁信息。
+    *
+    * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null
+    */
+    public function getHotfixRollbackInfos()
+    {
+        return $this->container['hotfixRollbackInfos'];
+    }
+
+    /**
+    * Sets hotfixRollbackInfos
+    *
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\HotfixInfo[]|null $hotfixRollbackInfos 可以回滚的热补丁信息。
+    *
+    * @return $this
+    */
+    public function setHotfixRollbackInfos($hotfixRollbackInfos)
+    {
+        $this->container['hotfixRollbackInfos'] = $hotfixRollbackInfos;
         return $this;
     }
 

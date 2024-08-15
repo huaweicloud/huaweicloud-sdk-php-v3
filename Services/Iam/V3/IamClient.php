@@ -776,6 +776,70 @@ class IamClient extends Client
     }
 
     /**
+     * 绑定MFA设备
+     *
+     * 该接口可以用于绑定MFA设备。
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createBindingDevice($request)
+    {
+        return $this->createBindingDeviceWithHttpInfo($request);
+    }
+
+    public function createBindingDeviceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3.0/OS-MFA/mfa-devices/bind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceRequest');
+    }
+
+    /**
      * 创建云服务自定义策略
      *
      * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建云服务自定义策略。
@@ -975,6 +1039,70 @@ class IamClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMetadataResponse',
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMetadataRequest');
+    }
+
+    /**
+     * 创建MFA设备
+     *
+     * 该接口可以用于创建MFA设备。
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createMfaDevice($request)
+    {
+        return $this->createMfaDeviceWithHttpInfo($request);
+    }
+
+    public function createMfaDeviceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRequest');
     }
 
     /**
@@ -1240,6 +1368,70 @@ class IamClient extends Client
     }
 
     /**
+     * 解绑MFA设备
+     *
+     * 该接口可以用于解绑MFA设备
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteBindingDevice($request)
+    {
+        return $this->deleteBindingDeviceWithHttpInfo($request);
+    }
+
+    public function deleteBindingDeviceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3.0/OS-MFA/mfa-devices/unbind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceRequest');
+    }
+
+    /**
      * 删除自定义策略
      *
      * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除自定义策略。
@@ -1371,6 +1563,73 @@ class IamClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleResponse',
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteDomainGroupInheritedRoleRequest');
+    }
+
+    /**
+     * 删除MFA设备
+     *
+     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除MFA设备。
+     * 
+     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteMfaDevice($request)
+    {
+        return $this->deleteMfaDeviceWithHttpInfo($request);
+    }
+
+    public function deleteMfaDeviceWithHttpInfo($request)
+    {
+        $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['userId'] !== null) {
+            $queryParams['user_id'] = $localVarParams['userId'];
+        }
+        if ($localVarParams['serialNumber'] !== null) {
+            $queryParams['serial_number'] = $localVarParams['serialNumber'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceResponse',
+            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceRequest');
     }
 
     /**
@@ -5345,7 +5604,7 @@ class IamClient extends Client
     }
 
     /**
-     * 查询用户关联的企业项目
+     * 查询用户直接关联的企业项目
      *
      * 该接口可用于查询用户所关联的企业项目。
      * 
@@ -5540,7 +5799,7 @@ class IamClient extends Client
     }
 
     /**
-     * 查询企业项目已关联用户组的权限
+     * 查询企业项目关联用户组的权限
      *
      * 该接口可用于查询企业项目已关联用户组的权限。
      * 
@@ -8216,134 +8475,6 @@ class IamClient extends Client
     }
 
     /**
-     * 绑定MFA设备
-     *
-     * 该接口可以用于绑定MFA设备。
-     * 
-     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createBindingDevice($request)
-    {
-        return $this->createBindingDeviceWithHttpInfo($request);
-    }
-
-    public function createBindingDeviceWithHttpInfo($request)
-    {
-        $resourcePath = '/v3.0/OS-MFA/mfa-devices/bind';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json;charset=UTF-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceResponse',
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateBindingDeviceRequest');
-    }
-
-    /**
-     * 创建MFA设备
-     *
-     * 该接口可以用于创建MFA设备。
-     * 
-     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createMfaDevice($request)
-    {
-        return $this->createMfaDeviceWithHttpInfo($request);
-    }
-
-    public function createMfaDeviceWithHttpInfo($request)
-    {
-        $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json;charset=UTF-8']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json;charset=UTF-8'],
-                ['application/json;charset=UTF-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceResponse',
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateMfaDeviceRequest');
-    }
-
-    /**
      * 管理员创建IAM用户（推荐）
      *
      * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)创建IAM用户。
@@ -8405,137 +8536,6 @@ class IamClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUserResponse',
             $requestType='\HuaweiCloud\SDK\Iam\V3\Model\CreateUserRequest');
-    }
-
-    /**
-     * 解绑MFA设备
-     *
-     * 该接口可以用于解绑MFA设备
-     * 
-     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteBindingDevice($request)
-    {
-        return $this->deleteBindingDeviceWithHttpInfo($request);
-    }
-
-    public function deleteBindingDeviceWithHttpInfo($request)
-    {
-        $resourcePath = '/v3.0/OS-MFA/mfa-devices/unbind';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json;charset=UTF-8']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='PUT',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceResponse',
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteBindingDeviceRequest');
-    }
-
-    /**
-     * 删除MFA设备
-     *
-     * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)删除MFA设备。
-     * 
-     * 该接口可以使用全局区域的Endpoint和其他区域的Endpoint调用。IAM的Endpoint请参见：[地区和终端节点](https://developer.huaweicloud.com/endpoint?IAM)。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteMfaDevice($request)
-    {
-        return $this->deleteMfaDeviceWithHttpInfo($request);
-    }
-
-    public function deleteMfaDeviceWithHttpInfo($request)
-    {
-        $resourcePath = '/v3.0/OS-MFA/virtual-mfa-devices';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['userId'] !== null) {
-            $queryParams['user_id'] = $localVarParams['userId'];
-        }
-        if ($localVarParams['serialNumber'] !== null) {
-            $queryParams['serial_number'] = $localVarParams['serialNumber'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceResponse',
-            $requestType='\HuaweiCloud\SDK\Iam\V3\Model\DeleteMfaDeviceRequest');
     }
 
     /**
@@ -9127,7 +9127,7 @@ class IamClient extends Client
     }
 
     /**
-     * 该接口可以用于获取MFA设备。
+     * 查询IAM用户的MFA绑定信息列表
      *
      * 该接口可以用于[管理员](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)查询IAM用户的MFA绑定信息列表。
      * 

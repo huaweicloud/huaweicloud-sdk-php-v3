@@ -20,8 +20,8 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceIds  批量实例ID
-    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    * instanceIds  批量实例ID。
+    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。
     * targetVersion  批量实例升级目标版本，非必填。如果未传值灰度升级和就地升级默认升级到当前实例的优选版本，热补丁升级无需传该值，默认升级实例所有可升级热补丁。
     *
@@ -36,8 +36,8 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceIds  批量实例ID
-    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    * instanceIds  批量实例ID。
+    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。
     * targetVersion  批量实例升级目标版本，非必填。如果未传值灰度升级和就地升级默认升级到当前实例的优选版本，热补丁升级无需传该值，默认升级实例所有可升级热补丁。
     *
@@ -73,8 +73,8 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceIds  批量实例ID
-    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    * instanceIds  批量实例ID。
+    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。
     * targetVersion  批量实例升级目标版本，非必填。如果未传值灰度升级和就地升级默认升级到当前实例的优选版本，热补丁升级无需传该值，默认升级实例所有可升级热补丁。
     *
@@ -89,8 +89,8 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceIds  批量实例ID
-    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    * instanceIds  批量实例ID。
+    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。
     * targetVersion  批量实例升级目标版本，非必填。如果未传值灰度升级和就地升级默认升级到当前实例的优选版本，热补丁升级无需传该值，默认升级实例所有可升级热补丁。
     *
@@ -105,8 +105,8 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceIds  批量实例ID
-    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    * instanceIds  批量实例ID。
+    * upgradeType  实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     * upgradeAction  实例升级操作，就地升级无需传值。灰度升级包括升级自动提交，升级待观察，提交升级，升级回退四种。
     * targetVersion  批量实例升级目标版本，非必填。如果未传值灰度升级和就地升级默认升级到当前实例的优选版本，热补丁升级无需传该值，默认升级实例所有可升级热补丁。
     *
@@ -262,7 +262,7 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets instanceIds
-    *  批量实例ID
+    *  批量实例ID。
     *
     * @return string[]|null
     */
@@ -274,7 +274,7 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
     /**
     * Sets instanceIds
     *
-    * @param string[]|null $instanceIds 批量实例ID
+    * @param string[]|null $instanceIds 批量实例ID。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
 
     /**
     * Gets upgradeType
-    *  实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    *  实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     *
     * @return string
     */
@@ -298,7 +298,7 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
     /**
     * Sets upgradeType
     *
-    * @param string $upgradeType 实例升级类型，包括就地升级，灰度升级、热补丁升级三种
+    * @param string $upgradeType 实例升级类型，包括就地升级，灰度升级、热补丁升级三种。
     *
     * @return $this
     */

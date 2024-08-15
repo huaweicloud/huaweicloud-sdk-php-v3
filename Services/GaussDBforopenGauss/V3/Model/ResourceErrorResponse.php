@@ -20,7 +20,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码
+    * errorCode  错误码。
     * errorMsg  错误消息。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码
+    * errorCode  错误码。
     * errorMsg  错误消息。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码
+    * errorCode  错误码。
     * errorMsg  错误消息。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码
+    * errorCode  错误码。
     * errorMsg  错误消息。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码
+    * errorCode  错误码。
     * errorMsg  错误消息。
     *
     * @var string[]
@@ -191,7 +191,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets errorCode
-    *  错误码
+    *  错误码。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ResourceErrorResponse implements ModelInterface, ArrayAccess
     /**
     * Sets errorCode
     *
-    * @param string $errorCode 错误码
+    * @param string $errorCode 错误码。
     *
     * @return $this
     */

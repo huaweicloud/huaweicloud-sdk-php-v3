@@ -22,9 +22,9 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
-    * loadbalancerId  负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * orderId  订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * requestId  请求ID。  注：自动生成 。
+    * loadbalancerId  参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * orderId  参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * requestId  参数解释：请求ID。  注：自动生成 。
     *
     * @var string[]
     */
@@ -38,9 +38,9 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * loadbalancer  loadbalancer
-    * loadbalancerId  负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * orderId  订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * requestId  请求ID。  注：自动生成 。
+    * loadbalancerId  参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * orderId  参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * requestId  参数解释：请求ID。  注：自动生成 。
     *
     * @var string[]
     */
@@ -75,9 +75,9 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * loadbalancer  loadbalancer
-    * loadbalancerId  负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * orderId  订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * requestId  请求ID。  注：自动生成 。
+    * loadbalancerId  参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * orderId  参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * requestId  参数解释：请求ID。  注：自动生成 。
     *
     * @var string[]
     */
@@ -91,9 +91,9 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * loadbalancer  loadbalancer
-    * loadbalancerId  负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * orderId  订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * requestId  请求ID。  注：自动生成 。
+    * loadbalancerId  参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * orderId  参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * requestId  参数解释：请求ID。  注：自动生成 。
     *
     * @var string[]
     */
@@ -107,9 +107,9 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * loadbalancer  loadbalancer
-    * loadbalancerId  负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * orderId  订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
-    * requestId  请求ID。  注：自动生成 。
+    * loadbalancerId  参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * orderId  参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * requestId  参数解释：请求ID。  注：自动生成 。
     *
     * @var string[]
     */
@@ -250,7 +250,7 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadbalancerId
-    *  负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    *  参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
     *
     * @return string|null
     */
@@ -262,7 +262,7 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets loadbalancerId
     *
-    * @param string|null $loadbalancerId 负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * @param string|null $loadbalancerId 参数解释：负载均衡器的id[（包周期场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
     *
     * @return $this
     */
@@ -274,7 +274,7 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets orderId
-    *  订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    *  参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
     *
     * @return string|null
     */
@@ -286,7 +286,7 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets orderId
     *
-    * @param string|null $orderId 订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
+    * @param string|null $orderId 参数解释：订单号[（包周期规格变更场景返回该字段）  不支持该字段，请勿使用](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hk_vdf,fcs,ctc,cmcc)
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  请求ID。  注：自动生成 。
+    *  参数解释：请求ID。  注：自动生成 。
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class UpdateLoadBalancerResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string|null $requestId 请求ID。  注：自动生成 。
+    * @param string|null $requestId 参数解释：请求ID。  注：自动生成 。
     *
     * @return $this
     */

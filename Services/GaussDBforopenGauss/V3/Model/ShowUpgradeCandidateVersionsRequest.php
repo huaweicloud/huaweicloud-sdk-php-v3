@@ -21,7 +21,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  实例ID。
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  实例ID。
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  实例ID。
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  实例ID。
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets xLanguage
-    *  语言[zh-cn, en-us]
+    *  语言[zh-cn, en-us]。
     *
     * @return string|null
     */
@@ -253,7 +253,7 @@ class ShowUpgradeCandidateVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言[zh-cn, en-us]
+    * @param string|null $xLanguage 语言[zh-cn, en-us]。
     *
     * @return $this
     */

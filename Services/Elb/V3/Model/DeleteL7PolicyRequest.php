@@ -20,7 +20,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * l7policyId  转发策略ID。
+    * l7policyId  参数解释：转发策略ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * l7policyId  转发策略ID。
+    * l7policyId  参数解释：转发策略ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * l7policyId  转发策略ID。
+    * l7policyId  参数解释：转发策略ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * l7policyId  转发策略ID。
+    * l7policyId  参数解释：转发策略ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * l7policyId  转发策略ID。
+    * l7policyId  参数解释：转发策略ID。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets l7policyId
-    *  转发策略ID。
+    *  参数解释：转发策略ID。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class DeleteL7PolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets l7policyId
     *
-    * @param string $l7policyId 转发策略ID。
+    * @param string $l7policyId 参数解释：转发策略ID。
     *
     * @return $this
     */

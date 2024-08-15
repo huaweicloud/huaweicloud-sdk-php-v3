@@ -1,0 +1,30 @@
+{
+  "name": "huaweicloud/huaweicloud-sdk-coc",
+  "description": "HUAWEICLOUD SDK COC",
+  "keywords": [
+    "php",
+    "sdk",
+    "rest",
+    "api",
+    "coc"
+  ],
+  "version": "3.1.106",
+   "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "HUAWEICloud_SDK",
+      "email": "hwcloudsdk@huawei.com",
+      "homepage": "https://github.com/huaweicloud-sdk/huaweicloud-sdk-php"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "huaweicloud/huaweicloud-sdk-core": "3.1.106"
+  },
+  "autoload": {
+    "psr-4": {
+      "HuaweiCloud\\SDK\\Coc\\V3\\": "V3/"
+    }
+  }
+}

@@ -20,7 +20,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
@@ -60,7 +60,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
@@ -121,7 +121,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
@@ -161,7 +161,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
@@ -201,7 +201,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancer  负载均衡器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * certificate  证书配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
     * listener  监听器配额。  取值： - 大于等于0：表示当前配额数量。 - -1：表示无配额限制。
@@ -387,7 +387,7 @@ class Quota implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID。
+    *  参数解释：项目ID。
     *
     * @return string
     */
@@ -399,7 +399,7 @@ class Quota implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID。
+    * @param string $projectId 参数解释：项目ID。
     *
     * @return $this
     */

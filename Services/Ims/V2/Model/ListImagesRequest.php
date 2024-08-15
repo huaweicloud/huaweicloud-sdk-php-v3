@@ -51,7 +51,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询。
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取值是DataImage，如果是裸金属服务器镜像，则取值是Ironic。
-    * visibility  是否被其他租户可见，取值为public或private
+    * visibility  是否被其他租户可见，取值为public、private或shared
     * xSdkDate  请求的发生时间,格式为YYYYMMDDTHHMMSSZ。取值为当前系统的GMT时间。使用AK/SK认证时该字段必选
     * flavorId  用于通过云服务器规格过滤出可用公共镜像，取值为规格ID。 当前仅支持通过单个规格进行过滤。
     * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
@@ -133,7 +133,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询。
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取值是DataImage，如果是裸金属服务器镜像，则取值是Ironic。
-    * visibility  是否被其他租户可见，取值为public或private
+    * visibility  是否被其他租户可见，取值为public、private或shared
     * xSdkDate  请求的发生时间,格式为YYYYMMDDTHHMMSSZ。取值为当前系统的GMT时间。使用AK/SK认证时该字段必选
     * flavorId  用于通过云服务器规格过滤出可用公共镜像，取值为规格ID。 当前仅支持通过单个规格进行过滤。
     * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
@@ -236,7 +236,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询。
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取值是DataImage，如果是裸金属服务器镜像，则取值是Ironic。
-    * visibility  是否被其他租户可见，取值为public或private
+    * visibility  是否被其他租户可见，取值为public、private或shared
     * xSdkDate  请求的发生时间,格式为YYYYMMDDTHHMMSSZ。取值为当前系统的GMT时间。使用AK/SK认证时该字段必选
     * flavorId  用于通过云服务器规格过滤出可用公共镜像，取值为规格ID。 当前仅支持通过单个规格进行过滤。
     * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
@@ -318,7 +318,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询。
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取值是DataImage，如果是裸金属服务器镜像，则取值是Ironic。
-    * visibility  是否被其他租户可见，取值为public或private
+    * visibility  是否被其他租户可见，取值为public、private或shared
     * xSdkDate  请求的发生时间,格式为YYYYMMDDTHHMMSSZ。取值为当前系统的GMT时间。使用AK/SK认证时该字段必选
     * flavorId  用于通过云服务器规格过滤出可用公共镜像，取值为规格ID。 当前仅支持通过单个规格进行过滤。
     * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
@@ -400,7 +400,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     * status  镜像状态。取值如下： queued：表示镜像元数据已经创建成功，等待上传镜像文件。 saving：表示镜像正在上传文件到后端存储。 deleted：表示镜像已经删除。 killed：表示镜像上传错误。 active：表示镜像可以正常使用。
     * tag  标签，用户为镜像增加自定义标签后可以通过该参数过滤查询。
     * virtualEnvType  镜像使用环境类型：FusionCompute，Ironic，DataImage。如果弹性云服务器镜像，则取值为FusionCompute，如果是数据卷镜像则取值是DataImage，如果是裸金属服务器镜像，则取值是Ironic。
-    * visibility  是否被其他租户可见，取值为public或private
+    * visibility  是否被其他租户可见，取值为public、private或shared
     * xSdkDate  请求的发生时间,格式为YYYYMMDDTHHMMSSZ。取值为当前系统的GMT时间。使用AK/SK认证时该字段必选
     * flavorId  用于通过云服务器规格过滤出可用公共镜像，取值为规格ID。 当前仅支持通过单个规格进行过滤。
     * createdAt  镜像创建时间。支持按照时间点过滤查询，取值格式为“操作符:UTC时间”。 其中操作符支持如下几种： gt：大于 gte：大于等于 lt：小于 lte：小于等于 eq：等于 neq：不等于 时间格式支持：yyyy-MM-ddThh:mm:ssZ或者yyyy-MM-dd hh:mm:ss 例如，查询创建时间在2018-10-28 10:00:00之前的镜像，可以通过如下条件过滤： created_at=gt:2018-10-28T10:00:00Z
@@ -540,6 +540,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     const VIRTUAL_ENV_TYPE_DATA_IMAGE = 'DataImage';
     const VISIBILITY__PUBLIC = 'public';
     const VISIBILITY__PRIVATE = 'private';
+    const VISIBILITY_SHARED = 'shared';
     const ARCHITECTURE_X86 = 'x86';
     const ARCHITECTURE_ARM = 'arm';
     
@@ -724,6 +725,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
         return [
             self::VISIBILITY__PUBLIC,
             self::VISIBILITY__PRIVATE,
+            self::VISIBILITY_SHARED,
         ];
     }
 
@@ -1673,7 +1675,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets visibility
-    *  是否被其他租户可见，取值为public或private
+    *  是否被其他租户可见，取值为public、private或shared
     *
     * @return string|null
     */
@@ -1685,7 +1687,7 @@ class ListImagesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets visibility
     *
-    * @param string|null $visibility 是否被其他租户可见，取值为public或private
+    * @param string|null $visibility 是否被其他租户可见，取值为public、private或shared
     *
     * @return $this
     */

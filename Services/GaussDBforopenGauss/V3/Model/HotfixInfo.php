@@ -20,10 +20,10 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * version  热补丁版本
-    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
-    * backupSensitive  是否和备份相关
-    * descripition  补丁的描述信息
+    * version  热补丁版本。
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁。
+    * backupSensitive  是否和备份相关。
+    * descripition  补丁的描述信息。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * version  热补丁版本
-    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
-    * backupSensitive  是否和备份相关
-    * descripition  补丁的描述信息
+    * version  热补丁版本。
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁。
+    * backupSensitive  是否和备份相关。
+    * descripition  补丁的描述信息。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class HotfixInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * version  热补丁版本
-    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
-    * backupSensitive  是否和备份相关
-    * descripition  补丁的描述信息
+    * version  热补丁版本。
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁。
+    * backupSensitive  是否和备份相关。
+    * descripition  补丁的描述信息。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * version  热补丁版本
-    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
-    * backupSensitive  是否和备份相关
-    * descripition  补丁的描述信息
+    * version  热补丁版本。
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁。
+    * backupSensitive  是否和备份相关。
+    * descripition  补丁的描述信息。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * version  热补丁版本
-    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁
-    * backupSensitive  是否和备份相关
-    * descripition  补丁的描述信息
+    * version  热补丁版本。
+    * commonPatch  通用非通用信息,common=通用补丁,certain=定制补丁。
+    * backupSensitive  是否和备份相关。
+    * descripition  补丁的描述信息。
     *
     * @var string[]
     */
@@ -230,7 +230,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  热补丁版本
+    *  热补丁版本。
     *
     * @return string|null
     */
@@ -242,7 +242,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string|null $version 热补丁版本
+    * @param string|null $version 热补丁版本。
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets commonPatch
-    *  通用非通用信息,common=通用补丁,certain=定制补丁
+    *  通用非通用信息,common=通用补丁,certain=定制补丁。
     *
     * @return string|null
     */
@@ -266,7 +266,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
     /**
     * Sets commonPatch
     *
-    * @param string|null $commonPatch 通用非通用信息,common=通用补丁,certain=定制补丁
+    * @param string|null $commonPatch 通用非通用信息,common=通用补丁,certain=定制补丁。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupSensitive
-    *  是否和备份相关
+    *  是否和备份相关。
     *
     * @return bool|null
     */
@@ -290,7 +290,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupSensitive
     *
-    * @param bool|null $backupSensitive 是否和备份相关
+    * @param bool|null $backupSensitive 是否和备份相关。
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets descripition
-    *  补丁的描述信息
+    *  补丁的描述信息。
     *
     * @return string|null
     */
@@ -314,7 +314,7 @@ class HotfixInfo implements ModelInterface, ArrayAccess
     /**
     * Sets descripition
     *
-    * @param string|null $descripition 补丁的描述信息
+    * @param string|null $descripition 补丁的描述信息。
     *
     * @return $this
     */

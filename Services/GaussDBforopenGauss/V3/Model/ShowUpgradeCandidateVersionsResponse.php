@@ -22,13 +22,13 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * upgradeTypeList  升级类型信息列表
-    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚
+    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚。
     * sourceVersion  原版本
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
     * rollUpgradeProgress  rollUpgradeProgress
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
-    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
-    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
+    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
+    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
     * hotfixUpgradeInfos  hotfixUpgradeInfos
     * hotfixRollbackInfos  hotfixRollbackInfos
     *
@@ -50,13 +50,13 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * upgradeTypeList  升级类型信息列表
-    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚
+    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚。
     * sourceVersion  原版本
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
     * rollUpgradeProgress  rollUpgradeProgress
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
-    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
-    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
+    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
+    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
     * hotfixUpgradeInfos  hotfixUpgradeInfos
     * hotfixRollbackInfos  hotfixRollbackInfos
     *
@@ -99,13 +99,13 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * upgradeTypeList  升级类型信息列表
-    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚
+    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚。
     * sourceVersion  原版本
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
     * rollUpgradeProgress  rollUpgradeProgress
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
-    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
-    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
+    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
+    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
     * hotfixUpgradeInfos  hotfixUpgradeInfos
     * hotfixRollbackInfos  hotfixRollbackInfos
     *
@@ -127,13 +127,13 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * upgradeTypeList  升级类型信息列表
-    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚
+    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚。
     * sourceVersion  原版本
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
     * rollUpgradeProgress  rollUpgradeProgress
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
-    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
-    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
+    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
+    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
     * hotfixUpgradeInfos  hotfixUpgradeInfos
     * hotfixRollbackInfos  hotfixRollbackInfos
     *
@@ -155,13 +155,13 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * upgradeTypeList  升级类型信息列表
-    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚
+    * rollbackEnabled  是否可以回滚，true可以回滚，false不可以回滚。
     * sourceVersion  原版本
-    * targetVersion  升级目标版本，没有在滚动升级中返回null
+    * targetVersion  升级目标版本，没有在滚动升级中返回null。
     * rollUpgradeProgress  rollUpgradeProgress
-    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组
-    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组
-    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组
+    * upgradeCandidateVersions  可以升级的版本，包括大小版本，滚动升级中返回空数组。
+    * hotfixUpgradeCandidateVersions  可以升级的热补丁版本，滚动升级中返回空数组。
+    * hotfixRollbackCandidateVersions  可以回滚的热补丁版本，滚动升级中返回空数组。
     * hotfixUpgradeInfos  hotfixUpgradeInfos
     * hotfixRollbackInfos  hotfixRollbackInfos
     *
@@ -310,7 +310,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets rollbackEnabled
-    *  是否可以回滚，true可以回滚，false不可以回滚
+    *  是否可以回滚，true可以回滚，false不可以回滚。
     *
     * @return bool|null
     */
@@ -322,7 +322,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets rollbackEnabled
     *
-    * @param bool|null $rollbackEnabled 是否可以回滚，true可以回滚，false不可以回滚
+    * @param bool|null $rollbackEnabled 是否可以回滚，true可以回滚，false不可以回滚。
     *
     * @return $this
     */
@@ -358,7 +358,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets targetVersion
-    *  升级目标版本，没有在滚动升级中返回null
+    *  升级目标版本，没有在滚动升级中返回null。
     *
     * @return string|null
     */
@@ -370,7 +370,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets targetVersion
     *
-    * @param string|null $targetVersion 升级目标版本，没有在滚动升级中返回null
+    * @param string|null $targetVersion 升级目标版本，没有在滚动升级中返回null。
     *
     * @return $this
     */
@@ -406,7 +406,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets upgradeCandidateVersions
-    *  可以升级的版本，包括大小版本，滚动升级中返回空数组
+    *  可以升级的版本，包括大小版本，滚动升级中返回空数组。
     *
     * @return string[]|null
     */
@@ -418,7 +418,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets upgradeCandidateVersions
     *
-    * @param string[]|null $upgradeCandidateVersions 可以升级的版本，包括大小版本，滚动升级中返回空数组
+    * @param string[]|null $upgradeCandidateVersions 可以升级的版本，包括大小版本，滚动升级中返回空数组。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets hotfixUpgradeCandidateVersions
-    *  可以升级的热补丁版本，滚动升级中返回空数组
+    *  可以升级的热补丁版本，滚动升级中返回空数组。
     *
     * @return string[]|null
     */
@@ -442,7 +442,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets hotfixUpgradeCandidateVersions
     *
-    * @param string[]|null $hotfixUpgradeCandidateVersions 可以升级的热补丁版本，滚动升级中返回空数组
+    * @param string[]|null $hotfixUpgradeCandidateVersions 可以升级的热补丁版本，滚动升级中返回空数组。
     *
     * @return $this
     */
@@ -454,7 +454,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets hotfixRollbackCandidateVersions
-    *  可以回滚的热补丁版本，滚动升级中返回空数组
+    *  可以回滚的热补丁版本，滚动升级中返回空数组。
     *
     * @return string[]|null
     */
@@ -466,7 +466,7 @@ class ShowUpgradeCandidateVersionsResponse implements ModelInterface, ArrayAcces
     /**
     * Sets hotfixRollbackCandidateVersions
     *
-    * @param string[]|null $hotfixRollbackCandidateVersions 可以回滚的热补丁版本，滚动升级中返回空数组
+    * @param string[]|null $hotfixRollbackCandidateVersions 可以回滚的热补丁版本，滚动升级中返回空数组。
     *
     * @return $this
     */

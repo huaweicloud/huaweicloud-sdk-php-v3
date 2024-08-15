@@ -20,9 +20,9 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicipId  弹性公网ip配置id
-    * publicipAddress  IP地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * publicipId  参数解释：弹性公网ip配置id
+    * publicipAddress  参数解释：IP地址
+    * ipVersion  参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicipId  弹性公网ip配置id
-    * publicipAddress  IP地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * publicipId  参数解释：弹性公网ip配置id
+    * publicipAddress  参数解释：IP地址
+    * ipVersion  参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicipId  弹性公网ip配置id
-    * publicipAddress  IP地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * publicipId  参数解释：弹性公网ip配置id
+    * publicipAddress  参数解释：IP地址
+    * ipVersion  参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicipId  弹性公网ip配置id
-    * publicipAddress  IP地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * publicipId  参数解释：弹性公网ip配置id
+    * publicipAddress  参数解释：IP地址
+    * ipVersion  参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicipId  弹性公网ip配置id
-    * publicipAddress  IP地址
-    * ipVersion  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * publicipId  参数解释：弹性公网ip配置id
+    * publicipAddress  参数解释：IP地址
+    * ipVersion  参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @var string[]
     */
@@ -205,7 +205,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipId
-    *  弹性公网ip配置id
+    *  参数解释：弹性公网ip配置id
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicipId
     *
-    * @param string $publicipId 弹性公网ip配置id
+    * @param string $publicipId 参数解释：弹性公网ip配置id
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicipAddress
-    *  IP地址
+    *  参数解释：IP地址
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     /**
     * Sets publicipAddress
     *
-    * @param string $publicipAddress IP地址
+    * @param string $publicipAddress 参数解释：IP地址
     *
     * @return $this
     */
@@ -253,7 +253,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipVersion
-    *  IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    *  参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @return int
     */
@@ -265,7 +265,7 @@ class PublicIpInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ipVersion
     *
-    * @param int $ipVersion IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
+    * @param int $ipVersion 参数解释：IP版本信息。  取值范围：4和6 4：IPv4 6：IPv6  [不支持IPv6，请勿设置为6。](tag:dt,dt_test)
     *
     * @return $this
     */

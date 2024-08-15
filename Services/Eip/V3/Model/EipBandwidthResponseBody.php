@@ -100,7 +100,7 @@ class EipBandwidthResponseBody implements ModelInterface, ArrayAccess
         'publicipInfo' => null,
         'type' => null,
         'size' => 'int32',
-        'tenantId' => 'uuid',
+        'tenantId' => null,
         'tags' => null,
         'createdAt' => 'date-time',
         'updatedAt' => 'date-time'
@@ -397,6 +397,12 @@ class EipBandwidthResponseBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['size']) && ($this->container['size'] < 5)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 5.";
+            }
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['tenantId']) && (mb_strlen($this->container['tenantId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tenantId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }

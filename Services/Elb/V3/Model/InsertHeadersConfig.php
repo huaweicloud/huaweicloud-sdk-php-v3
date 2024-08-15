@@ -20,7 +20,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * configs  要添加请求头参数列表。
+    * configs  参数解释：要添加请求头参数列表。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * configs  要添加请求头参数列表。
+    * configs  参数解释：要添加请求头参数列表。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * configs  要添加请求头参数列表。
+    * configs  参数解释：要添加请求头参数列表。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * configs  要添加请求头参数列表。
+    * configs  参数解释：要添加请求头参数列表。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * configs  要添加请求头参数列表。
+    * configs  参数解释：要添加请求头参数列表。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets configs
-    *  要添加请求头参数列表。
+    *  参数解释：要添加请求头参数列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\InsertHeaderConfig[]
     */
@@ -189,7 +189,7 @@ class InsertHeadersConfig implements ModelInterface, ArrayAccess
     /**
     * Sets configs
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\InsertHeaderConfig[] $configs 要添加请求头参数列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\InsertHeaderConfig[] $configs 参数解释：要添加请求头参数列表。
     *
     * @return $this
     */

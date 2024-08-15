@@ -2615,6 +2615,71 @@ class VpnClient extends Client
     }
 
     /**
+     * 修改网关规格
+     *
+     * 对单个网关规格进行修改，可以升配或降配
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updatePostpaidVgwSpecification($request)
+    {
+        return $this->updatePostpaidVgwSpecificationWithHttpInfo($request);
+    }
+
+    public function updatePostpaidVgwSpecificationWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/vpn-gateways/{vgw_id}/update-specification';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['vgwId'] !== null) {
+            $pathParams['vgw_id'] = $localVarParams['vgwId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdatePostpaidVgwSpecificationResponse',
+            $requestType='\HuaweiCloud\SDK\Vpn\V5\Model\UpdatePostpaidVgwSpecificationRequest');
+    }
+
+    /**
      * 更新VPN网关
      *
      * 根据VPN网关ID，更新指定的VPN网关

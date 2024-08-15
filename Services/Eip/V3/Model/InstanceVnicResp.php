@@ -42,7 +42,7 @@ class InstanceVnicResp implements ModelInterface, ArrayAccess
             'portId' => 'string',
             'mac' => 'string',
             'vtep' => 'string',
-            'vni' => 'int',
+            'vni' => 'string',
             'instanceId' => 'string',
             'instanceType' => 'string',
             'portProfile' => 'string'
@@ -310,11 +310,11 @@ class InstanceVnicResp implements ModelInterface, ArrayAccess
             if (!is_null($this->container['vtep']) && (mb_strlen($this->container['vtep']) < 0)) {
                 $invalidProperties[] = "invalid value for 'vtep', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['vni']) && ($this->container['vni'] > 999999)) {
-                $invalidProperties[] = "invalid value for 'vni', must be smaller than or equal to 999999.";
+            if (!is_null($this->container['vni']) && (mb_strlen($this->container['vni']) > 64)) {
+                $invalidProperties[] = "invalid value for 'vni', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['vni']) && ($this->container['vni'] < 0)) {
-                $invalidProperties[] = "invalid value for 'vni', must be bigger than or equal to 0.";
+            if (!is_null($this->container['vni']) && (mb_strlen($this->container['vni']) < 0)) {
+                $invalidProperties[] = "invalid value for 'vni', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
@@ -520,7 +520,7 @@ class InstanceVnicResp implements ModelInterface, ArrayAccess
     * Gets vni
     *  port的vni
     *
-    * @return int|null
+    * @return string|null
     */
     public function getVni()
     {
@@ -530,7 +530,7 @@ class InstanceVnicResp implements ModelInterface, ArrayAccess
     /**
     * Sets vni
     *
-    * @param int|null $vni port的vni
+    * @param string|null $vni port的vni
     *
     * @return $this
     */

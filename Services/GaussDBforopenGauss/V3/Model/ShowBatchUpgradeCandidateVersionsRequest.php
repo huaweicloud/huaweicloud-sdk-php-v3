@@ -20,7 +20,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xLanguage  语言[zh-cn, en-us]
+    * xLanguage  语言[zh-cn, en-us]。
     * body  body
     *
     * @var string[]
@@ -208,7 +208,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
 
     /**
     * Gets xLanguage
-    *  语言[zh-cn, en-us]
+    *  语言[zh-cn, en-us]。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class ShowBatchUpgradeCandidateVersionsRequest implements ModelInterface, ArrayA
     /**
     * Sets xLanguage
     *
-    * @param string|null $xLanguage 语言[zh-cn, en-us]
+    * @param string|null $xLanguage 语言[zh-cn, en-us]。
     *
     * @return $this
     */

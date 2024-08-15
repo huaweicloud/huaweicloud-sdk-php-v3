@@ -25,6 +25,7 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
     * deletingNode  当前节点池中删除中的节点数量。
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * conditions  节点池当前详细状态列表，详情参见Condition类型定义。
+    * scaleGroupStatuses  伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'int',
             'deletingNode' => 'int',
             'phase' => 'string',
-            'conditions' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolCondition[]'
+            'conditions' => '\HuaweiCloud\SDK\Cce\V3\Model\NodePoolCondition[]',
+            'scaleGroupStatuses' => '\HuaweiCloud\SDK\Cce\V3\Model\ScaleGroupStatus[]'
     ];
 
     /**
@@ -43,6 +45,7 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
     * deletingNode  当前节点池中删除中的节点数量。
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * conditions  节点池当前详细状态列表，详情参见Condition类型定义。
+    * scaleGroupStatuses  伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
         'creatingNode' => 'int32',
         'deletingNode' => 'int32',
         'phase' => null,
-        'conditions' => null
+        'conditions' => null,
+        'scaleGroupStatuses' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
     * deletingNode  当前节点池中删除中的节点数量。
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * conditions  节点池当前详细状态列表，详情参见Condition类型定义。
+    * scaleGroupStatuses  伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'creatingNode',
             'deletingNode' => 'deletingNode',
             'phase' => 'phase',
-            'conditions' => 'conditions'
+            'conditions' => 'conditions',
+            'scaleGroupStatuses' => 'scaleGroupStatuses'
     ];
 
     /**
@@ -100,6 +106,7 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
     * deletingNode  当前节点池中删除中的节点数量。
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * conditions  节点池当前详细状态列表，详情参见Condition类型定义。
+    * scaleGroupStatuses  伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'setCreatingNode',
             'deletingNode' => 'setDeletingNode',
             'phase' => 'setPhase',
-            'conditions' => 'setConditions'
+            'conditions' => 'setConditions',
+            'scaleGroupStatuses' => 'setScaleGroupStatuses'
     ];
 
     /**
@@ -118,6 +126,7 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
     * deletingNode  当前节点池中删除中的节点数量。
     * phase  节点池状态。 - 空值：可用（节点池当前节点数已达到预期，且无伸缩中的节点） - Synchronizing：伸缩中（节点池当前节点数未达到预期，且无伸缩中的节点） - Synchronized：伸缩等待中（节点池当前节点数未达到预期，或者存在伸缩中的节点） - SoldOut：节点池当前不可扩容（兼容字段，标记节点池资源售罄、资源配额不足等不可扩容状态） > 上述节点池状态已废弃，仅兼容保留，不建议使用，替代感知方式如下： > - 节点池扩缩状态：可通过currentNode/creatingNode/deletingNode节点状态统计信息，精确感知当前节点池扩缩状态。 > - 节点池可扩容状态：可通过conditions感知节点池详细状态，其中\"Scalable\"可替代SoldOut语义。 - Deleting：删除中 - Error：错误
     * conditions  节点池当前详细状态列表，详情参见Condition类型定义。
+    * scaleGroupStatuses  伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
             'creatingNode' => 'getCreatingNode',
             'deletingNode' => 'getDeletingNode',
             'phase' => 'getPhase',
-            'conditions' => 'getConditions'
+            'conditions' => 'getConditions',
+            'scaleGroupStatuses' => 'getScaleGroupStatuses'
     ];
 
     /**
@@ -213,6 +223,7 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
         $this->container['deletingNode'] = isset($data['deletingNode']) ? $data['deletingNode'] : null;
         $this->container['phase'] = isset($data['phase']) ? $data['phase'] : null;
         $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
+        $this->container['scaleGroupStatuses'] = isset($data['scaleGroupStatuses']) ? $data['scaleGroupStatuses'] : null;
     }
 
     /**
@@ -362,6 +373,30 @@ class UpdateNodePoolStatus implements ModelInterface, ArrayAccess
     public function setConditions($conditions)
     {
         $this->container['conditions'] = $conditions;
+        return $this;
+    }
+
+    /**
+    * Gets scaleGroupStatuses
+    *  伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\ScaleGroupStatus[]|null
+    */
+    public function getScaleGroupStatuses()
+    {
+        return $this->container['scaleGroupStatuses'];
+    }
+
+    /**
+    * Sets scaleGroupStatuses
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\ScaleGroupStatus[]|null $scaleGroupStatuses 伸缩组当前详细状态信息，详情参见ScaleGroupStatus类型定义
+    *
+    * @return $this
+    */
+    public function setScaleGroupStatuses($scaleGroupStatuses)
+    {
+        $this->container['scaleGroupStatuses'] = $scaleGroupStatuses;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * statusCode  返回码。支持200~299,400~499,500~599。
-    * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
-    * messageBody  返回消息内容。
+    * statusCode  参数解释：返回码。  取值范围：200-299，400-499，500-599。
+    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
+    * messageBody  参数解释：返回消息内容。
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -40,9 +40,9 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * statusCode  返回码。支持200~299,400~499,500~599。
-    * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
-    * messageBody  返回消息内容。
+    * statusCode  参数解释：返回码。  取值范围：200-299，400-499，500-599。
+    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
+    * messageBody  参数解释：返回消息内容。
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -81,9 +81,9 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * statusCode  返回码。支持200~299,400~499,500~599。
-    * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
-    * messageBody  返回消息内容。
+    * statusCode  参数解释：返回码。  取值范围：200-299，400-499，500-599。
+    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
+    * messageBody  参数解释：返回消息内容。
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -101,9 +101,9 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * statusCode  返回码。支持200~299,400~499,500~599。
-    * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
-    * messageBody  返回消息内容。
+    * statusCode  参数解释：返回码。  取值范围：200-299，400-499，500-599。
+    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
+    * messageBody  参数解释：返回消息内容。
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -121,9 +121,9 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * statusCode  返回码。支持200~299,400~499,500~599。
-    * contentType  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
-    * messageBody  返回消息内容。
+    * statusCode  参数解释：返回码。  取值范围：200-299，400-499，500-599。
+    * contentType  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
+    * messageBody  参数解释：返回消息内容。
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     * trafficLimitConfig  trafficLimitConfig
@@ -254,12 +254,6 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 32)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 32.";
-            }
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['messageBody']) && (mb_strlen($this->container['messageBody']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'messageBody', the character length must be smaller than or equal to 1024.";
             }
@@ -285,7 +279,7 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets statusCode
-    *  返回码。支持200~299,400~499,500~599。
+    *  参数解释：返回码。  取值范围：200-299，400-499，500-599。
     *
     * @return string
     */
@@ -297,7 +291,7 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Sets statusCode
     *
-    * @param string $statusCode 返回码。支持200~299,400~499,500~599。
+    * @param string $statusCode 参数解释：返回码。  取值范围：200-299，400-499，500-599。
     *
     * @return $this
     */
@@ -309,7 +303,7 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets contentType
-    *  返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
+    *  参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
     *
     * @return string|null
     */
@@ -321,7 +315,7 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Sets contentType
     *
-    * @param string|null $contentType 返回body的格式。  取值范围： - text/plain，默认值 - text/css - text/html - application/javascript - application/json
+    * @param string|null $contentType 参数解释：返回body的格式。  取值范围： - text/plain - text/css - text/html - application/javascript - application/json  默认取值：text/plain
     *
     * @return $this
     */
@@ -333,7 +327,7 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets messageBody
-    *  返回消息内容。
+    *  参数解释：返回消息内容。
     *
     * @return string|null
     */
@@ -345,7 +339,7 @@ class CreateFixtedResponseConfig implements ModelInterface, ArrayAccess
     /**
     * Sets messageBody
     *
-    * @param string|null $messageBody 返回消息内容。
+    * @param string|null $messageBody 参数解释：返回消息内容。
     *
     * @return $this
     */

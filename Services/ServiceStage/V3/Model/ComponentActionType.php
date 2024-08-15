@@ -18,6 +18,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const CONTINUE_DEPLOY = 'continue_deploy';
     const CHECK_GRAY_RELEASE = 'check_gray_release';
     const MODIFY_GRAY_RULE = 'modify_gray_rule';
+    const ROLLBACK_CURRENT = 'rollback_current';
     
     /**
      * Gets allowable values of the enum
@@ -34,6 +35,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::CONTINUE_DEPLOY,
             self::CHECK_GRAY_RELEASE,
             self::MODIFY_GRAY_RULE,
+            self::ROLLBACK_CURRENT,
         ];
     }
 }

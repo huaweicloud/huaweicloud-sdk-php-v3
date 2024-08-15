@@ -22,24 +22,32 @@ class StopMigrationTaskResult implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * result  下发停止迁移任务操作结果。
     * taskId  数据迁移任务ID。
+    * errorMsg  错误信息
+    * errorCode  错误码
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'result' => 'string',
-            'taskId' => 'string'
+            'taskId' => 'string',
+            'errorMsg' => 'string',
+            'errorCode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * result  下发停止迁移任务操作结果。
     * taskId  数据迁移任务ID。
+    * errorMsg  错误信息
+    * errorCode  错误码
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'result' => null,
-        'taskId' => null
+        'taskId' => null,
+        'errorMsg' => null,
+        'errorCode' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class StopMigrationTaskResult implements ModelInterface, ArrayAccess
     * and the value is the original name
     * result  下发停止迁移任务操作结果。
     * taskId  数据迁移任务ID。
+    * errorMsg  错误信息
+    * errorCode  错误码
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'result' => 'result',
-            'taskId' => 'task_id'
+            'taskId' => 'task_id',
+            'errorMsg' => 'error_msg',
+            'errorCode' => 'error_code'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * result  下发停止迁移任务操作结果。
     * taskId  数据迁移任务ID。
+    * errorMsg  错误信息
+    * errorCode  错误码
     *
     * @var string[]
     */
     protected static $setters = [
             'result' => 'setResult',
-            'taskId' => 'setTaskId'
+            'taskId' => 'setTaskId',
+            'errorMsg' => 'setErrorMsg',
+            'errorCode' => 'setErrorCode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * result  下发停止迁移任务操作结果。
     * taskId  数据迁移任务ID。
+    * errorMsg  错误信息
+    * errorCode  错误码
     *
     * @var string[]
     */
     protected static $getters = [
             'result' => 'getResult',
-            'taskId' => 'getTaskId'
+            'taskId' => 'getTaskId',
+            'errorMsg' => 'getErrorMsg',
+            'errorCode' => 'getErrorCode'
     ];
 
     /**
@@ -174,6 +194,8 @@ class StopMigrationTaskResult implements ModelInterface, ArrayAccess
     {
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['taskId'] = isset($data['taskId']) ? $data['taskId'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
     }
 
     /**
@@ -192,6 +214,12 @@ class StopMigrationTaskResult implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['errorMsg']) && (mb_strlen($this->container['errorMsg']) > 1024)) {
+                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 1024.";
+            }
+            if (!is_null($this->container['errorCode']) && (mb_strlen($this->container['errorCode']) > 9)) {
+                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 9.";
+            }
         return $invalidProperties;
     }
 
@@ -251,6 +279,54 @@ class StopMigrationTaskResult implements ModelInterface, ArrayAccess
     public function setTaskId($taskId)
     {
         $this->container['taskId'] = $taskId;
+        return $this;
+    }
+
+    /**
+    * Gets errorMsg
+    *  错误信息
+    *
+    * @return string|null
+    */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+    * Sets errorMsg
+    *
+    * @param string|null $errorMsg 错误信息
+    *
+    * @return $this
+    */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
+        return $this;
+    }
+
+    /**
+    * Gets errorCode
+    *  错误码
+    *
+    * @return string|null
+    */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+    * Sets errorCode
+    *
+    * @param string|null $errorCode 错误码
+    *
+    * @return $this
+    */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
         return $this;
     }
 

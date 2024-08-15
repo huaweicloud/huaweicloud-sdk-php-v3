@@ -20,32 +20,48 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  type
-    * firstBatchWeight  only used for weight type
-    * firstBatchReplica  firstBatchReplica
-    * remainingBatch  remainingBatch
+    * type  灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
+    * replicaSurgeMode  灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    * deploymentMode  类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
+    * firstBatchWeight  灰度流量比例(type为WEIGHT时配置)
+    * ruleMatchMode  all满足所有条件，any满足任意条件(type为CONTENT时配置)
+    * rules  灰度匹配规则(type为CONTENT时配置)
+    * firstBatchReplica  首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
+    * remainingBatch  剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
+            'replicaSurgeMode' => 'string',
+            'deploymentMode' => 'int',
             'firstBatchWeight' => 'int',
+            'ruleMatchMode' => 'string',
+            'rules' => '\HuaweiCloud\SDK\ServiceStage\V3\Model\DeployStrategyGrayReleaseRules[]',
             'firstBatchReplica' => 'int',
             'remainingBatch' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  type
-    * firstBatchWeight  only used for weight type
-    * firstBatchReplica  firstBatchReplica
-    * remainingBatch  remainingBatch
+    * type  灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
+    * replicaSurgeMode  灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    * deploymentMode  类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
+    * firstBatchWeight  灰度流量比例(type为WEIGHT时配置)
+    * ruleMatchMode  all满足所有条件，any满足任意条件(type为CONTENT时配置)
+    * rules  灰度匹配规则(type为CONTENT时配置)
+    * firstBatchReplica  首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
+    * remainingBatch  剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
+        'replicaSurgeMode' => null,
+        'deploymentMode' => null,
         'firstBatchWeight' => null,
+        'ruleMatchMode' => null,
+        'rules' => null,
         'firstBatchReplica' => null,
         'remainingBatch' => null
     ];
@@ -73,48 +89,72 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  type
-    * firstBatchWeight  only used for weight type
-    * firstBatchReplica  firstBatchReplica
-    * remainingBatch  remainingBatch
+    * type  灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
+    * replicaSurgeMode  灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    * deploymentMode  类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
+    * firstBatchWeight  灰度流量比例(type为WEIGHT时配置)
+    * ruleMatchMode  all满足所有条件，any满足任意条件(type为CONTENT时配置)
+    * rules  灰度匹配规则(type为CONTENT时配置)
+    * firstBatchReplica  首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
+    * remainingBatch  剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
+            'replicaSurgeMode' => 'replica_surge_mode',
+            'deploymentMode' => 'deployment_mode',
             'firstBatchWeight' => 'first_batch_weight',
+            'ruleMatchMode' => 'rule_match_mode',
+            'rules' => 'rules',
             'firstBatchReplica' => 'first_batch_replica',
             'remainingBatch' => 'remaining_batch'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  type
-    * firstBatchWeight  only used for weight type
-    * firstBatchReplica  firstBatchReplica
-    * remainingBatch  remainingBatch
+    * type  灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
+    * replicaSurgeMode  灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    * deploymentMode  类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
+    * firstBatchWeight  灰度流量比例(type为WEIGHT时配置)
+    * ruleMatchMode  all满足所有条件，any满足任意条件(type为CONTENT时配置)
+    * rules  灰度匹配规则(type为CONTENT时配置)
+    * firstBatchReplica  首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
+    * remainingBatch  剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
+            'replicaSurgeMode' => 'setReplicaSurgeMode',
+            'deploymentMode' => 'setDeploymentMode',
             'firstBatchWeight' => 'setFirstBatchWeight',
+            'ruleMatchMode' => 'setRuleMatchMode',
+            'rules' => 'setRules',
             'firstBatchReplica' => 'setFirstBatchReplica',
             'remainingBatch' => 'setRemainingBatch'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  type
-    * firstBatchWeight  only used for weight type
-    * firstBatchReplica  firstBatchReplica
-    * remainingBatch  remainingBatch
+    * type  灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
+    * replicaSurgeMode  灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    * deploymentMode  类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
+    * firstBatchWeight  灰度流量比例(type为WEIGHT时配置)
+    * ruleMatchMode  all满足所有条件，any满足任意条件(type为CONTENT时配置)
+    * rules  灰度匹配规则(type为CONTENT时配置)
+    * firstBatchReplica  首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
+    * remainingBatch  剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
+            'replicaSurgeMode' => 'getReplicaSurgeMode',
+            'deploymentMode' => 'getDeploymentMode',
             'firstBatchWeight' => 'getFirstBatchWeight',
+            'ruleMatchMode' => 'getRuleMatchMode',
+            'rules' => 'getRules',
             'firstBatchReplica' => 'getFirstBatchReplica',
             'remainingBatch' => 'getRemainingBatch'
     ];
@@ -159,8 +199,17 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const TYPE_WEIGHT = 'weight';
-    const TYPE_CONTENT = 'content';
+    const TYPE_WEIGHT = 'WEIGHT';
+    const TYPE_CONTENT = 'CONTENT';
+    const REPLICA_SURGE_MODE_MIRROR = 'MIRROR';
+    const REPLICA_SURGE_MODE_EXTRA = 'EXTRA';
+    const REPLICA_SURGE_MODE_NOSURGE = 'NOSURGE';
+    const DEPLOYMENT_MODE_1 = 1;
+    const DEPLOYMENT_MODE_3 = 3;
+    const DEPLOYMENT_MODE_4 = 4;
+    const DEPLOYMENT_MODE_6 = 6;
+    const RULE_MATCH_MODE_ALL = 'all';
+    const RULE_MATCH_MODE_ANY = 'any';
     
 
     /**
@@ -173,6 +222,48 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
         return [
             self::TYPE_WEIGHT,
             self::TYPE_CONTENT,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getReplicaSurgeModeAllowableValues()
+    {
+        return [
+            self::REPLICA_SURGE_MODE_MIRROR,
+            self::REPLICA_SURGE_MODE_EXTRA,
+            self::REPLICA_SURGE_MODE_NOSURGE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getDeploymentModeAllowableValues()
+    {
+        return [
+            self::DEPLOYMENT_MODE_1,
+            self::DEPLOYMENT_MODE_3,
+            self::DEPLOYMENT_MODE_4,
+            self::DEPLOYMENT_MODE_6,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRuleMatchModeAllowableValues()
+    {
+        return [
+            self::RULE_MATCH_MODE_ALL,
+            self::RULE_MATCH_MODE_ANY,
         ];
     }
 
@@ -193,7 +284,11 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['replicaSurgeMode'] = isset($data['replicaSurgeMode']) ? $data['replicaSurgeMode'] : null;
+        $this->container['deploymentMode'] = isset($data['deploymentMode']) ? $data['deploymentMode'] : null;
         $this->container['firstBatchWeight'] = isset($data['firstBatchWeight']) ? $data['firstBatchWeight'] : null;
+        $this->container['ruleMatchMode'] = isset($data['ruleMatchMode']) ? $data['ruleMatchMode'] : null;
+        $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
         $this->container['firstBatchReplica'] = isset($data['firstBatchReplica']) ? $data['firstBatchReplica'] : null;
         $this->container['remainingBatch'] = isset($data['remainingBatch']) ? $data['remainingBatch'] : null;
     }
@@ -217,15 +312,36 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['firstBatchWeight'] === null) {
-            $invalidProperties[] = "'firstBatchWeight' can't be null";
+        if ($this->container['replicaSurgeMode'] === null) {
+            $invalidProperties[] = "'replicaSurgeMode' can't be null";
         }
-        if ($this->container['firstBatchReplica'] === null) {
-            $invalidProperties[] = "'firstBatchReplica' can't be null";
+            $allowedValues = $this->getReplicaSurgeModeAllowableValues();
+                if (!is_null($this->container['replicaSurgeMode']) && !in_array($this->container['replicaSurgeMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'replicaSurgeMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+        if ($this->container['deploymentMode'] === null) {
+            $invalidProperties[] = "'deploymentMode' can't be null";
         }
-        if ($this->container['remainingBatch'] === null) {
-            $invalidProperties[] = "'remainingBatch' can't be null";
-        }
+            $allowedValues = $this->getDeploymentModeAllowableValues();
+                if (!is_null($this->container['deploymentMode']) && !in_array($this->container['deploymentMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'deploymentMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getRuleMatchModeAllowableValues();
+                if (!is_null($this->container['ruleMatchMode']) && !in_array($this->container['ruleMatchMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'ruleMatchMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -242,7 +358,7 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  type
+    *  灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
     *
     * @return string
     */
@@ -254,7 +370,7 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type type
+    * @param string $type 灰度策略:WEIGHT为基于流量比例，CONTENT为基于内容
     *
     * @return $this
     */
@@ -265,10 +381,58 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets firstBatchWeight
-    *  only used for weight type
+    * Gets replicaSurgeMode
+    *  灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    *
+    * @return string
+    */
+    public function getReplicaSurgeMode()
+    {
+        return $this->container['replicaSurgeMode'];
+    }
+
+    /**
+    * Sets replicaSurgeMode
+    *
+    * @param string $replicaSurgeMode 灰度实例新增模式:MIRROR为蓝绿，EXTRA为金丝雀（先增后减），NOSURGE为金丝雀（先减后增）
+    *
+    * @return $this
+    */
+    public function setReplicaSurgeMode($replicaSurgeMode)
+    {
+        $this->container['replicaSurgeMode'] = $replicaSurgeMode;
+        return $this;
+    }
+
+    /**
+    * Gets deploymentMode
+    *  类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
     *
     * @return int
+    */
+    public function getDeploymentMode()
+    {
+        return $this->container['deploymentMode'];
+    }
+
+    /**
+    * Sets deploymentMode
+    *
+    * @param int $deploymentMode 类型1（使用应用网关、微服务引擎）、类型3（注册到微服务中心）、类型4（对接ELB独享型）、类型6（对接ELB共享型）
+    *
+    * @return $this
+    */
+    public function setDeploymentMode($deploymentMode)
+    {
+        $this->container['deploymentMode'] = $deploymentMode;
+        return $this;
+    }
+
+    /**
+    * Gets firstBatchWeight
+    *  灰度流量比例(type为WEIGHT时配置)
+    *
+    * @return int|null
     */
     public function getFirstBatchWeight()
     {
@@ -278,7 +442,7 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     /**
     * Sets firstBatchWeight
     *
-    * @param int $firstBatchWeight only used for weight type
+    * @param int|null $firstBatchWeight 灰度流量比例(type为WEIGHT时配置)
     *
     * @return $this
     */
@@ -289,10 +453,58 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets firstBatchReplica
-    *  firstBatchReplica
+    * Gets ruleMatchMode
+    *  all满足所有条件，any满足任意条件(type为CONTENT时配置)
     *
-    * @return int
+    * @return string|null
+    */
+    public function getRuleMatchMode()
+    {
+        return $this->container['ruleMatchMode'];
+    }
+
+    /**
+    * Sets ruleMatchMode
+    *
+    * @param string|null $ruleMatchMode all满足所有条件，any满足任意条件(type为CONTENT时配置)
+    *
+    * @return $this
+    */
+    public function setRuleMatchMode($ruleMatchMode)
+    {
+        $this->container['ruleMatchMode'] = $ruleMatchMode;
+        return $this;
+    }
+
+    /**
+    * Gets rules
+    *  灰度匹配规则(type为CONTENT时配置)
+    *
+    * @return \HuaweiCloud\SDK\ServiceStage\V3\Model\DeployStrategyGrayReleaseRules[]|null
+    */
+    public function getRules()
+    {
+        return $this->container['rules'];
+    }
+
+    /**
+    * Sets rules
+    *
+    * @param \HuaweiCloud\SDK\ServiceStage\V3\Model\DeployStrategyGrayReleaseRules[]|null $rules 灰度匹配规则(type为CONTENT时配置)
+    *
+    * @return $this
+    */
+    public function setRules($rules)
+    {
+        $this->container['rules'] = $rules;
+        return $this;
+    }
+
+    /**
+    * Gets firstBatchReplica
+    *  首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
+    *
+    * @return int|null
     */
     public function getFirstBatchReplica()
     {
@@ -302,7 +514,7 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     /**
     * Sets firstBatchReplica
     *
-    * @param int $firstBatchReplica firstBatchReplica
+    * @param int|null $firstBatchReplica 首批灰度实例数量(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @return $this
     */
@@ -314,9 +526,9 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
 
     /**
     * Gets remainingBatch
-    *  remainingBatch
+    *  剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
-    * @return int
+    * @return int|null
     */
     public function getRemainingBatch()
     {
@@ -326,7 +538,7 @@ class DeployStrategyGrayRelease implements ModelInterface, ArrayAccess
     /**
     * Sets remainingBatch
     *
-    * @param int $remainingBatch remainingBatch
+    * @param int|null $remainingBatch 剩余实例部署批次(replica_surge_mode为金丝雀类型时需要配置)
     *
     * @return $this
     */

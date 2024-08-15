@@ -20,9 +20,9 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
-    * enable  可用，不可用
-    * upgradeActionList  升级操作列表
+    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
+    * enable  可用，不可用。
+    * upgradeActionList  升级操作列表。
     * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
@@ -36,9 +36,9 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
-    * enable  可用，不可用
-    * upgradeActionList  升级操作列表
+    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
+    * enable  可用，不可用。
+    * upgradeActionList  升级操作列表。
     * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
-    * enable  可用，不可用
-    * upgradeActionList  升级操作列表
+    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
+    * enable  可用，不可用。
+    * upgradeActionList  升级操作列表。
     * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
-    * enable  可用，不可用
-    * upgradeActionList  升级操作列表
+    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
+    * enable  可用，不可用。
+    * upgradeActionList  升级操作列表。
     * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
-    * enable  可用，不可用
-    * upgradeActionList  升级操作列表
+    * upgradeType  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
+    * enable  可用，不可用。
+    * upgradeActionList  升级操作列表。
     * isParallelUpgrade  是否正在进行AZ内并行升级。 -true：当前实例处于灰度升级的升级待观察升级方式中，已选择了AZ内并行升级方式，后续无法更改。 -false：当前实例处于升级流程中，未选择AZ内并行升级的方式，后续无法更改。null：当前实例尚未处于升级流程中。
     *
     * @var string[]
@@ -238,7 +238,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeType
-    *  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
+    *  升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeType
     *
-    * @param string|null $upgradeType 升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级
+    * @param string|null $upgradeType 升级类型,grey=灰度升级,inplace=就地升级,hotfix=热补丁升级。
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  可用，不可用
+    *  可用，不可用。
     *
     * @return bool|null
     */
@@ -274,7 +274,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 可用，不可用
+    * @param bool|null $enable 可用，不可用。
     *
     * @return $this
     */
@@ -286,7 +286,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeActionList
-    *  升级操作列表
+    *  升级操作列表。
     *
     * @return \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeActionInfo[]|null
     */
@@ -298,7 +298,7 @@ class UpgradeTypeInfo implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeActionList
     *
-    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeActionInfo[]|null $upgradeActionList 升级操作列表
+    * @param \HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model\UpgradeActionInfo[]|null $upgradeActionList 升级操作列表。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  云日志ID。
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancerId  负载均衡器ID。
     * logGroupId  云日志分组ID。
     * logTopicId  云日志主题ID。
@@ -39,7 +39,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  云日志ID。
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancerId  负载均衡器ID。
     * logGroupId  云日志分组ID。
     * logTopicId  云日志主题ID。
@@ -78,7 +78,7 @@ class Logtank implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  云日志ID。
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancerId  负载均衡器ID。
     * logGroupId  云日志分组ID。
     * logTopicId  云日志主题ID。
@@ -96,7 +96,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  云日志ID。
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancerId  负载均衡器ID。
     * logGroupId  云日志分组ID。
     * logTopicId  云日志主题ID。
@@ -114,7 +114,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  云日志ID。
-    * projectId  项目ID。
+    * projectId  参数解释：项目ID。
     * loadbalancerId  负载均衡器ID。
     * logGroupId  云日志分组ID。
     * logTopicId  云日志主题ID。
@@ -257,7 +257,7 @@ class Logtank implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目ID。
+    *  参数解释：项目ID。
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class Logtank implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目ID。
+    * @param string $projectId 参数解释：项目ID。
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
-    * enable  可用，不可用
+    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
+    * enable  可用，不可用。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
-    * enable  可用，不可用
+    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
+    * enable  可用，不可用。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
-    * enable  可用，不可用
+    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
+    * enable  可用，不可用。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
-    * enable  可用，不可用
+    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
+    * enable  可用，不可用。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
-    * enable  可用，不可用
+    * upgradeAction  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
+    * enable  可用，不可用。
     *
     * @var string[]
     */
@@ -218,7 +218,7 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets upgradeAction
-    *  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
+    *  升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets upgradeAction
     *
-    * @param string|null $upgradeAction 升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚
+    * @param string|null $upgradeAction 升级操作,upgrade=升级,upgradeAutoCommit=升级自动提交,commit=提交,rollback=回滚。
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  可用，不可用
+    *  可用，不可用。
     *
     * @return bool|null
     */
@@ -254,7 +254,7 @@ class UpgradeActionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 可用，不可用
+    * @param bool|null $enable 可用，不可用。
     *
     * @return $this
     */

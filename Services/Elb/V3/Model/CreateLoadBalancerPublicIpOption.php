@@ -21,7 +21,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ipVersion  参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
-    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     * billingInfo  参数解释：计费订单信息。  约束限制： - 空：按需计费。 [ - 非空：包周期计费。格式：order_id:product_id:region_id:project_id ](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,hk_vdf,fcs,fcs_dt,dt)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     * description  参数解释：弹性公网IP的描述信息。
     * bandwidth  bandwidth
@@ -39,7 +39,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ipVersion  参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
-    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     * billingInfo  参数解释：计费订单信息。  约束限制： - 空：按需计费。 [ - 非空：包周期计费。格式：order_id:product_id:region_id:project_id ](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,hk_vdf,fcs,fcs_dt,dt)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     * description  参数解释：弹性公网IP的描述信息。
     * bandwidth  bandwidth
@@ -78,7 +78,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ipVersion  参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
-    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     * billingInfo  参数解释：计费订单信息。  约束限制： - 空：按需计费。 [ - 非空：包周期计费。格式：order_id:product_id:region_id:project_id ](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,hk_vdf,fcs,fcs_dt,dt)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     * description  参数解释：弹性公网IP的描述信息。
     * bandwidth  bandwidth
@@ -96,7 +96,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ipVersion  参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
-    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     * billingInfo  参数解释：计费订单信息。  约束限制： - 空：按需计费。 [ - 非空：包周期计费。格式：order_id:product_id:region_id:project_id ](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,hk_vdf,fcs,fcs_dt,dt)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     * description  参数解释：弹性公网IP的描述信息。
     * bandwidth  bandwidth
@@ -114,7 +114,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ipVersion  参数解释：IP版本。  约束限制：取值只有4和6。4：IPv4, 6: IPv6。 [不支持IPv6，请勿设置为6。](tag:dt,dt_test)  取值范围：  - 4：表示IPv4。  - 6：表示IPv6。  默认取值：4
-    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    * networkType  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     * billingInfo  参数解释：计费订单信息。  约束限制： - 空：按需计费。 [ - 非空：包周期计费。格式：order_id:product_id:region_id:project_id ](tag:hws,hk,hws_eu,otc,tlf,ctc,hcso,sbc,g42,cmcc,hk_g42,dt_test,hcso_dt,mix,hk_sbc,hws_ocb,hk_vdf,fcs,fcs_dt,dt)  [不支持该字段，请勿使用。](tag:hws_eu,g42,hk_g42,dt,dt_test,hcso_dt,hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)
     * description  参数解释：弹性公网IP的描述信息。
     * bandwidth  bandwidth
@@ -266,7 +266,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets networkType
-    *  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    *  参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     *
     * @return string
     */
@@ -278,7 +278,7 @@ class CreateLoadBalancerPublicIpOption implements ModelInterface, ArrayAccess
     /**
     * Sets networkType
     *
-    * @param string $networkType 参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  约束限制： [华南-深圳局点该参数取值只能为5_gray。](tag:hws) [只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
+    * @param string $networkType 参数解释：弹性公网IP的网络类型，默认5_bgp，更多请参考弹性公网ip创建。  [约束限制：华南-深圳局点该参数取值只能为5_gray。](tag:hws) [约束限制：只支持设置为5_gray。](tag:dt)  取值范围：5_bgp。  默认取值：5_bgp。
     *
     * @return $this
     */

@@ -5159,9 +5159,9 @@ class GaussDBforopenGaussClient extends Client
     }
 
     /**
-     * 查询批量实例可升级的版本和升级类型
+     * 查询批量实例可升级的版本和升级类型。
      *
-     * 查询批量实例可升级的版本和升级类型
+     * 查询批量实例可升级的版本和升级类型。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -6008,7 +6008,7 @@ class GaussDBforopenGaussClient extends Client
     /**
      * 查询实例可升级版本
      *
-     * 查询实例可升级版本
+     * 查询实例可升级版本。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

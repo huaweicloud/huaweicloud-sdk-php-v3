@@ -20,12 +20,12 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protocol  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
-    * host  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
-    * port  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
-    * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
-    * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
-    * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * protocol  参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
+    * host  参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
+    * port  参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
+    * path  参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
+    * query  参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
+    * statusCode  参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     *
@@ -44,12 +44,12 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protocol  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
-    * host  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
-    * port  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
-    * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
-    * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
-    * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * protocol  参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
+    * host  参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
+    * port  参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
+    * path  参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
+    * query  参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
+    * statusCode  参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     *
@@ -89,12 +89,12 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protocol  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
-    * host  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
-    * port  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
-    * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
-    * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
-    * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * protocol  参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
+    * host  参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
+    * port  参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
+    * path  参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
+    * query  参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
+    * statusCode  参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     *
@@ -113,12 +113,12 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protocol  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
-    * host  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
-    * port  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
-    * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
-    * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
-    * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * protocol  参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
+    * host  参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
+    * port  参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
+    * path  参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
+    * query  参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
+    * statusCode  参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     *
@@ -137,12 +137,12 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protocol  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
-    * host  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
-    * port  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
-    * path  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
-    * query  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
-    * statusCode  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * protocol  参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
+    * host  参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
+    * port  参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
+    * path  参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
+    * query  参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
+    * statusCode  参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     * insertHeadersConfig  insertHeadersConfig
     * removeHeadersConfig  removeHeadersConfig
     *
@@ -281,12 +281,6 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) > 36)) {
-                $invalidProperties[] = "invalid value for 'protocol', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['protocol']) && (mb_strlen($this->container['protocol']) < 1)) {
-                $invalidProperties[] = "invalid value for 'protocol', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['host']) && (mb_strlen($this->container['host']) > 128)) {
                 $invalidProperties[] = "invalid value for 'host', the character length must be smaller than or equal to 128.";
             }
@@ -319,12 +313,6 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['statusCode']) && (mb_strlen($this->container['statusCode']) > 16)) {
-                $invalidProperties[] = "invalid value for 'statusCode', the character length must be smaller than or equal to 16.";
-            }
-            if (!is_null($this->container['statusCode']) && (mb_strlen($this->container['statusCode']) < 1)) {
-                $invalidProperties[] = "invalid value for 'statusCode', the character length must be bigger than or equal to 1.";
-            }
         return $invalidProperties;
     }
 
@@ -341,7 +329,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
+    *  参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
     *
     * @return string|null
     */
@@ -353,7 +341,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 重定向的协议。默认值${protocol}表示继承原值（即与被转发请求保持一致）。  取值范围： - HTTP - HTTPS - ${protocol}
+    * @param string|null $protocol 参数解释：重定向的协议。  取值范围： - HTTP - HTTPS - ${protocol}，表示继承原值（即与被转发请求保持一致）。
     *
     * @return $this
     */
@@ -365,7 +353,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets host
-    *  重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
+    *  参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
     *
     * @return string|null
     */
@@ -377,7 +365,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets host
     *
-    * @param string|null $host 重定向的主机名。字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。 默认值${host}表示继承原值（即与被转发请求保持一致）。
+    * @param string|null $host 参数解释：重定向的主机名。  取值范围：字符串只能包含英文字母、数字、“-”、“.”，必须以字母、数字开头。  默认取值：${host}，表示继承原值（即与被转发请求保持一致）。
     *
     * @return $this
     */
@@ -389,7 +377,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets port
-    *  重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
+    *  参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
     *
     * @return string|null
     */
@@ -401,7 +389,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets port
     *
-    * @param string|null $port 重定向到的端口。默认值${port}表示继承原值（即与被转发请求保持一致）。
+    * @param string|null $port 参数解释：重定向到的端口。  默认取值：${port}表示继承原值（即与被转发请求保持一致）。
     *
     * @return $this
     */
@@ -413,7 +401,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets path
-    *  重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
+    *  参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
     *
     * @return string|null
     */
@@ -425,7 +413,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets path
     *
-    * @param string|null $path 重定向的路径。默认值${path}表示继承原值（即与被转发请求保持一致）。  只能包含英文字母、数字、_~';@^-%#&$.*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头
+    * @param string|null $path 参数解释：重定向的路径。  取值范围：只能包含英文字母、数字、_~';@^-%#&$.\\*+?,=!:|\\/()\\[\\]{}，且必须以\"/\"开头。  默认取值：${path}，表示继承原值（即与被转发请求保持一致）。
     *
     * @return $this
     */
@@ -437,7 +425,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets query
-    *  重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
+    *  参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
     *
     * @return string|null
     */
@@ -449,7 +437,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets query
     *
-    * @param string|null $query 重定向的查询字符串。默认${query}表示继承原值（即与被转发请求保持一致）。举例如下：  若该字段被设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer， 此时${query}表示type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。其中$1，$2会匹配请求url通配符星号（*）。  只能包含英文字母、数字和特殊字符：!$&'()*+,-./:;=?@^_`。字母区分大小写。
+    * @param string|null $query 参数解释：重定向的查询字符串。举例如下：  将query设置为：${query}&name=my_name，则在转发符合条件的URL （如https://www.example.com:8080/elb?type=loadbalancer）时，将会重定向到 https://www.example.com:8080/elb?type=loadbalancer&name=my_name。在例子中${query}表示type=loadbalancer。  取值范围：只能包含英文字母、数字和特殊字符：!$&'()\\*+,-./:;=?@^_`。字母区分大小写。其中$1，$2会匹配请求url通配符星号（\\*）  默认取值：${query}表示继承原值（即与被转发请求保持一致）
     *
     * @return $this
     */
@@ -461,7 +449,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets statusCode
-    *  重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    *  参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     *
     * @return string|null
     */
@@ -473,7 +461,7 @@ class UpdateRedirectUrlConfig implements ModelInterface, ArrayAccess
     /**
     * Sets statusCode
     *
-    * @param string|null $statusCode 重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
+    * @param string|null $statusCode 参数解释：重定向后的返回码。  取值范围： - 301 - 302 - 303 - 307 - 308
     *
     * @return $this
     */

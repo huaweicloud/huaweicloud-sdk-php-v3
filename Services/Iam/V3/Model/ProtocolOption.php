@@ -158,6 +158,9 @@ class ProtocolOption implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['mappingId'] === null) {
+            $invalidProperties[] = "'mappingId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
     * Gets mappingId
     *  映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
-    * @return string|null
+    * @return string
     */
     public function getMappingId()
     {
@@ -186,7 +189,7 @@ class ProtocolOption implements ModelInterface, ArrayAccess
     /**
     * Sets mappingId
     *
-    * @param string|null $mappingId 映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
+    * @param string $mappingId 映射ID。身份提供商类型为iam_user_sso时，不需要绑定映射ID，无需传入此字段；否则此字段必填。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceIds  批量实例ID
+    * instanceIds  批量实例ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceIds  批量实例ID
+    * instanceIds  批量实例ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceIds  批量实例ID
+    * instanceIds  批量实例ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceIds  批量实例ID
+    * instanceIds  批量实例ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceIds  批量实例ID
+    * instanceIds  批量实例ID。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceIds
-    *  批量实例ID
+    *  批量实例ID。
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class UpgradeInstancesRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets instanceIds
     *
-    * @param string[]|null $instanceIds 批量实例ID
+    * @param string[]|null $instanceIds 批量实例ID。
     *
     * @return $this
     */

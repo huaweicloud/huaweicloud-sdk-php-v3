@@ -20,12 +20,12 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * connection  并发数。单位：个
-    * cps  新建数。单位：个
-    * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Kbit/s。
-    * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
-    * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
+    * connection  参数解释：并发数。单位：个。
+    * cps  参数解释：新建数。单位：个。
+    * qps  参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
+    * bandwidth  参数解释：带宽。单位：Kbit/s。
+    * lcu  参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
+    * httpsCps  参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * connection  并发数。单位：个
-    * cps  新建数。单位：个
-    * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Kbit/s。
-    * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
-    * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
+    * connection  参数解释：并发数。单位：个。
+    * cps  参数解释：新建数。单位：个。
+    * qps  参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
+    * bandwidth  参数解释：带宽。单位：Kbit/s。
+    * lcu  参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
+    * httpsCps  参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * connection  并发数。单位：个
-    * cps  新建数。单位：个
-    * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Kbit/s。
-    * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
-    * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
+    * connection  参数解释：并发数。单位：个。
+    * cps  参数解释：新建数。单位：个。
+    * qps  参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
+    * bandwidth  参数解释：带宽。单位：Kbit/s。
+    * lcu  参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
+    * httpsCps  参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * connection  并发数。单位：个
-    * cps  新建数。单位：个
-    * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Kbit/s。
-    * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
-    * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
+    * connection  参数解释：并发数。单位：个。
+    * cps  参数解释：新建数。单位：个。
+    * qps  参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
+    * bandwidth  参数解释：带宽。单位：Kbit/s。
+    * lcu  参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
+    * httpsCps  参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * connection  并发数。单位：个
-    * cps  新建数。单位：个
-    * qps  每秒查询数。单位：个。仅7层LB有该指标。
-    * bandwidth  带宽。单位：Kbit/s。
-    * lcu  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
-    * httpsCps  https新建连接数。单位：个。仅7层LB有该指标。
+    * connection  参数解释：并发数。单位：个。
+    * cps  参数解释：新建数。单位：个。
+    * qps  参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
+    * bandwidth  参数解释：带宽。单位：Kbit/s。
+    * lcu  参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
+    * httpsCps  参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @var string[]
     */
@@ -235,7 +235,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets connection
-    *  并发数。单位：个
+    *  参数解释：并发数。单位：个。
     *
     * @return int
     */
@@ -247,7 +247,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets connection
     *
-    * @param int $connection 并发数。单位：个
+    * @param int $connection 参数解释：并发数。单位：个。
     *
     * @return $this
     */
@@ -259,7 +259,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets cps
-    *  新建数。单位：个
+    *  参数解释：新建数。单位：个。
     *
     * @return int
     */
@@ -271,7 +271,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets cps
     *
-    * @param int $cps 新建数。单位：个
+    * @param int $cps 参数解释：新建数。单位：个。
     *
     * @return $this
     */
@@ -283,7 +283,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets qps
-    *  每秒查询数。单位：个。仅7层LB有该指标。
+    *  参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @return int|null
     */
@@ -295,7 +295,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets qps
     *
-    * @param int|null $qps 每秒查询数。单位：个。仅7层LB有该指标。
+    * @param int|null $qps 参数解释：每秒查询数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  带宽。单位：Kbit/s。
+    *  参数解释：带宽。单位：Kbit/s。
     *
     * @return int|null
     */
@@ -319,7 +319,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 带宽。单位：Kbit/s。
+    * @param int|null $bandwidth 参数解释：带宽。单位：Kbit/s。
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets lcu
-    *  当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
+    *  参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
     *
     * @return int|null
     */
@@ -343,7 +343,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets lcu
     *
-    * @param int|null $lcu 当前flavor对应的lcu数量。 LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。单位：个
+    * @param int|null $lcu 参数解释：当前flavor对应的lcu数量。单位：个。  > LCU是用来衡量独享型ELB处理性能综合指标，LCU值越大，性能越好。
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets httpsCps
-    *  https新建连接数。单位：个。仅7层LB有该指标。
+    *  参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @return int|null
     */
@@ -367,7 +367,7 @@ class FlavorInfo implements ModelInterface, ArrayAccess
     /**
     * Sets httpsCps
     *
-    * @param int|null $httpsCps https新建连接数。单位：个。仅7层LB有该指标。
+    * @param int|null $httpsCps 参数解释：https新建连接数。单位：个。  约束限制：仅7层LB有该指标。
     *
     * @return $this
     */

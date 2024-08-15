@@ -20,9 +20,9 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * qps  转发策略整体限速。取值： 0-100000s。0表示不限速
-    * perSourceIpQps  对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
-    * burst  对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    * qps  参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * perSourceIpQps  参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * burst  参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * qps  转发策略整体限速。取值： 0-100000s。0表示不限速
-    * perSourceIpQps  对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
-    * burst  对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    * qps  参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * perSourceIpQps  参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * burst  参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * qps  转发策略整体限速。取值： 0-100000s。0表示不限速
-    * perSourceIpQps  对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
-    * burst  对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    * qps  参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * perSourceIpQps  参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * burst  参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * qps  转发策略整体限速。取值： 0-100000s。0表示不限速
-    * perSourceIpQps  对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
-    * burst  对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    * qps  参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * perSourceIpQps  参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * burst  参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * qps  转发策略整体限速。取值： 0-100000s。0表示不限速
-    * perSourceIpQps  对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
-    * burst  对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    * qps  参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * perSourceIpQps  参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
+    * burst  参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets qps
-    *  转发策略整体限速。取值： 0-100000s。0表示不限速
+    *  参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
     /**
     * Sets qps
     *
-    * @param int|null $qps 转发策略整体限速。取值： 0-100000s。0表示不限速
+    * @param int|null $qps 参数解释：转发策略qps限速。  取值范围：0-100000，单位：个/秒。0表示不限速。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets perSourceIpQps
-    *  对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
+    *  参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
     *
     * @return int|null
     */
@@ -250,7 +250,7 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
     /**
     * Sets perSourceIpQps
     *
-    * @param int|null $perSourceIpQps 对转发策略单源进行限速。 quic监听器下转发策略不支持配置单源限速，指定该字段时，赋值可以为0或者为null 取值： 0-100000s。0表示不限速，如果qps不为0，per_ip_qps需要小于qps。
+    * @param int|null $perSourceIpQps 参数解释：对转发策略单源(单个客户端IP)进行限速。  约束限制： - quic监听器下转发策略不支持配置单源限速。 - 指定该字段时，赋值可以为0或者为null。 - 如果qps不为0，per_source_ip_qps需要小于qps。  取值范围：0-100000，单位：个/秒。0表示不限速。
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets burst
-    *  对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    *  参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class TrafficLimitConfig implements ModelInterface, ArrayAccess
     /**
     * Sets burst
     *
-    * @param int|null $burst 对转发策略单源进行限速。取值： 0-100000s。当qps超限的时候，不返回503，支持允许局部突增burst大小的请求。
+    * @param int|null $burst 参数解释：设置当单源qps超限时，允许的局部突增请求数量。超出该限制的请求将返回503。  取值范围：0-100000，单位：个/秒。
     *
     * @return $this
     */

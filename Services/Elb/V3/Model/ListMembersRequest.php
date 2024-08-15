@@ -20,7 +20,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * poolId  后端服务器组ID。
+    * poolId  参数解释：后端服务器组ID。
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
@@ -60,7 +60,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * poolId  后端服务器组ID。
+    * poolId  参数解释：后端服务器组ID。
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
@@ -121,7 +121,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * poolId  后端服务器组ID。
+    * poolId  参数解释：后端服务器组ID。
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
@@ -161,7 +161,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * poolId  后端服务器组ID。
+    * poolId  参数解释：后端服务器组ID。
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
@@ -201,7 +201,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * poolId  后端服务器组ID。
+    * poolId  参数解释：后端服务器组ID。
     * marker  上一页最后一条记录的ID。  使用说明： - 必须与limit一起使用。 - 不指定时表示查询第一页。 - 该字段不允许为空或无效的ID。
     * limit  参数解释：每页返回的个数。  取值范围：0-2000  默认取值：2000
     * pageReverse  是否反向查询。  取值： - true：查询上一页。 - false：查询下一页，默认。  使用说明： - 必须与limit一起使用。 - 当page_reverse=true时，若要查询上一页，marker取值为当前页返回值的previous_marker。
@@ -348,7 +348,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets poolId
-    *  后端服务器组ID。
+    *  参数解释：后端服务器组ID。
     *
     * @return string
     */
@@ -360,7 +360,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets poolId
     *
-    * @param string $poolId 后端服务器组ID。
+    * @param string $poolId 参数解释：后端服务器组ID。
     *
     * @return $this
     */
