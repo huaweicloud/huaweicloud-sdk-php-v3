@@ -21,22 +21,38 @@ class CreateJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * job  job
+    * id  任务ID。
+    * name  任务名称。
+    * status  任务状态。
+    * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'job' => '\HuaweiCloud\SDK\Drs\V5\Model\CreateJobResp'
+            'id' => 'string',
+            'name' => 'string',
+            'status' => 'string',
+            'createTime' => 'string',
+            'isCloneJob' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * job  job
+    * id  任务ID。
+    * name  任务名称。
+    * status  任务状态。
+    * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'job' => null
+        'id' => null,
+        'name' => null,
+        'status' => null,
+        'createTime' => null,
+        'isCloneJob' => null
     ];
 
     /**
@@ -62,32 +78,56 @@ class CreateJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * job  job
+    * id  任务ID。
+    * name  任务名称。
+    * status  任务状态。
+    * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'job' => 'job'
+            'id' => 'id',
+            'name' => 'name',
+            'status' => 'status',
+            'createTime' => 'create_time',
+            'isCloneJob' => 'is_clone_job'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * job  job
+    * id  任务ID。
+    * name  任务名称。
+    * status  任务状态。
+    * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
     protected static $setters = [
-            'job' => 'setJob'
+            'id' => 'setId',
+            'name' => 'setName',
+            'status' => 'setStatus',
+            'createTime' => 'setCreateTime',
+            'isCloneJob' => 'setIsCloneJob'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * job  job
+    * id  任务ID。
+    * name  任务名称。
+    * status  任务状态。
+    * createTime  任务创建时间。
+    * isCloneJob  是否为克隆任务。
     *
     * @var string[]
     */
     protected static $getters = [
-            'job' => 'getJob'
+            'id' => 'getId',
+            'name' => 'getName',
+            'status' => 'getStatus',
+            'createTime' => 'getCreateTime',
+            'isCloneJob' => 'getIsCloneJob'
     ];
 
     /**
@@ -148,7 +188,11 @@ class CreateJobResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['job'] = isset($data['job']) ? $data['job'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
+        $this->container['isCloneJob'] = isset($data['isCloneJob']) ? $data['isCloneJob'] : null;
     }
 
     /**
@@ -174,26 +218,122 @@ class CreateJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets job
-    *  job
+    * Gets id
+    *  任务ID。
     *
-    * @return \HuaweiCloud\SDK\Drs\V5\Model\CreateJobResp|null
+    * @return string|null
     */
-    public function getJob()
+    public function getId()
     {
-        return $this->container['job'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets job
+    * Sets id
     *
-    * @param \HuaweiCloud\SDK\Drs\V5\Model\CreateJobResp|null $job job
+    * @param string|null $id 任务ID。
     *
     * @return $this
     */
-    public function setJob($job)
+    public function setId($id)
     {
-        $this->container['job'] = $job;
+        $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  任务名称。
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 任务名称。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  任务状态。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 任务状态。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets createTime
+    *  任务创建时间。
+    *
+    * @return string|null
+    */
+    public function getCreateTime()
+    {
+        return $this->container['createTime'];
+    }
+
+    /**
+    * Sets createTime
+    *
+    * @param string|null $createTime 任务创建时间。
+    *
+    * @return $this
+    */
+    public function setCreateTime($createTime)
+    {
+        $this->container['createTime'] = $createTime;
+        return $this;
+    }
+
+    /**
+    * Gets isCloneJob
+    *  是否为克隆任务。
+    *
+    * @return string|null
+    */
+    public function getIsCloneJob()
+    {
+        return $this->container['isCloneJob'];
+    }
+
+    /**
+    * Sets isCloneJob
+    *
+    * @param string|null $isCloneJob 是否为克隆任务。
+    *
+    * @return $this
+    */
+    public function setIsCloneJob($isCloneJob)
+    {
+        $this->container['isCloneJob'] = $isCloneJob;
         return $this;
     }
 

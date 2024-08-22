@@ -26,6 +26,74 @@ class MeetingAsyncClient extends Client
     }
 
     /**
+     * 添加企业应用
+     *
+     * 企业默认管理员添加应用，添加应用后，记录返回信息，后续可通过[[执行App ID鉴权](https://support.huaweicloud.com/api-meeting/meeting_21_0311.html)](tag:hws) [[执行App ID鉴权](https://support.huaweicloud.com/intl/zh-cn/api-meeting/meeting_21_0311.html)](tag:hk)获取accessToken
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addAppIdAsync($request)
+    {
+        return $this->addAppIdAsyncWithHttpInfo($request);
+    }
+    
+    public function addAppIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/usg/acs/corp/app';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams['x_request_id'] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\AddAppIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\AddAppIdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * SP管理员创建企业
      *
      * 创建企业，默认管理员及分配资源。
@@ -1545,6 +1613,80 @@ class MeetingAsyncClient extends Client
     }
 
     /**
+     * 分页查询企业应用
+     *
+     * 企业默认管理员分页查询企业应用
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchSearchAppIdAsync($request)
+    {
+        return $this->batchSearchAppIdAsyncWithHttpInfo($request);
+    }
+    
+    public function batchSearchAppIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/usg/acs/corp/apps';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams['x_request_id'] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['acceptLanguage'] !== null) {
+            $headerParams['accept_language'] = $localVarParams['acceptLanguage'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\BatchSearchAppIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\BatchSearchAppIdRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 批量查询用户详情
      *
      * 批量查询用户详情，支持指定第三方账号查询详情。
@@ -2994,6 +3136,77 @@ class MeetingAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateWebinarResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateWebinarRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 删除企业应用
+     *
+     * 企业管理员删除企业应用
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteAppIdAsync($request)
+    {
+        return $this->deleteAppIdAsyncWithHttpInfo($request);
+    }
+    
+    public function deleteAppIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/usg/acs/corp/app/{app_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams['x_request_id'] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['acceptLanguage'] !== null) {
+            $headerParams['accept_language'] = $localVarParams['acceptLanguage'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $pathParams['app_id'] = $localVarParams['appId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\DeleteAppIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\DeleteAppIdRequest',
             $asyncRequest = true);
     }
 
@@ -5399,6 +5612,77 @@ class MeetingAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ResetActivecodeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ResetActivecodeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 重置企业应用appkey
+     *
+     * 企业默认管理员重置企业应用appkey
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function resetAppKeyAsync($request)
+    {
+        return $this->resetAppKeyAsyncWithHttpInfo($request);
+    }
+    
+    public function resetAppKeyAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/usg/acs/corp/app/{app_id}/reset';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams['x_request_id'] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['acceptLanguage'] !== null) {
+            $headerParams['accept_language'] = $localVarParams['acceptLanguage'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $pathParams['app_id'] = $localVarParams['appId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ResetAppKeyResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ResetAppKeyRequest',
             $asyncRequest = true);
     }
 
@@ -11289,6 +11573,80 @@ class MeetingAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\SwitchModeResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\SwitchModeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 修改企业应用
+     *
+     * 企业默认管理员修改企业应用
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateAppIdAsync($request)
+    {
+        return $this->updateAppIdAsyncWithHttpInfo($request);
+    }
+    
+    public function updateAppIdAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/usg/acs/corp/app/{app_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xRequestId'] !== null) {
+            $headerParams['x_request_id'] = $localVarParams['xRequestId'];
+        }
+        if ($localVarParams['acceptLanguage'] !== null) {
+            $headerParams['accept_language'] = $localVarParams['acceptLanguage'];
+        }
+        if ($localVarParams['appId'] !== null) {
+            $pathParams['app_id'] = $localVarParams['appId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=utf-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=utf-8', 'application/json'],
+                ['application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\UpdateAppIdResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\UpdateAppIdRequest',
             $asyncRequest = true);
     }
 

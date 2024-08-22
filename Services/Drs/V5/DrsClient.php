@@ -1251,6 +1251,71 @@ class DrsClient extends Client
     }
 
     /**
+     * 删除驱动文件
+     *
+     * 删除驱动文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteUserJdbcDriver($request)
+    {
+        return $this->deleteUserJdbcDriverWithHttpInfo($request);
+    }
+
+    public function deleteUserJdbcDriverWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/drivers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\DeleteUserJdbcDriverResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\DeleteUserJdbcDriverRequest');
+    }
+
+    /**
      * 下载批量导入任务模板
      *
      * 下载批量导入任务模板
@@ -2480,6 +2545,77 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ListTagsResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ListTagsRequest');
+    }
+
+    /**
+     * 查询驱动文件列表
+     *
+     * 查询驱动文件列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listUserJdbcDrivers($request)
+    {
+        return $this->listUserJdbcDriversWithHttpInfo($request);
+    }
+
+    public function listUserJdbcDriversWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/drivers';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['driverType'] !== null) {
+            $queryParams['driver_type'] = $localVarParams['driverType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\ListUserJdbcDriversResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\ListUserJdbcDriversRequest');
     }
 
     /**
@@ -4551,6 +4687,74 @@ class DrsClient extends Client
     }
 
     /**
+     * 同步驱动文件
+     *
+     * 同步驱动文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function syncUserJdbcDriver($request)
+    {
+        return $this->syncUserJdbcDriverWithHttpInfo($request);
+    }
+
+    public function syncUserJdbcDriverWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/jobs/{job_id}/update-driver';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\SyncUserJdbcDriverResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\SyncUserJdbcDriverRequest');
+    }
+
+    /**
      * 更新指定ID批量异步任务详情
      *
      * 更新租户指定ID批量异步任务详情。
@@ -5105,6 +5309,79 @@ class DrsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Drs\V5\Model\UploadJdbcDriverResponse',
             $requestType='\HuaweiCloud\SDK\Drs\V5\Model\UploadJdbcDriverRequest');
+    }
+
+    /**
+     * 上传驱动文件
+     *
+     * 上传驱动文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function uploadUserJdbcDriver($request)
+    {
+        return $this->uploadUserJdbcDriverWithHttpInfo($request);
+    }
+
+    public function uploadUserJdbcDriverWithHttpInfo($request)
+    {
+        $resourcePath = '/v5/{project_id}/driver';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = true;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['driverType'] !== null) {
+            $queryParams['driver_type'] = $localVarParams['driverType'];
+        }
+        if ($localVarParams['xLanguage'] !== null) {
+            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        foreach ($httpBody::attributeMap() as $k => $v) {
+            $getter = $httpBody::getters()[$k];
+            $value = $httpBody->$getter();
+            $formParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['multipart/form-data']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Drs\V5\Model\UploadUserJdbcDriverResponse',
+            $requestType='\HuaweiCloud\SDK\Drs\V5\Model\UploadUserJdbcDriverRequest');
     }
 
     /**

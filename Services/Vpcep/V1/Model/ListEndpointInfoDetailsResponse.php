@@ -77,7 +77,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'routetables' => 'string[]',
             'description' => 'string',
             'policyStatement' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PolicyStatement[]',
-            'policyDocument' => 'string',
+            'policyDocument' => 'object',
             'endpointPoolId' => 'string',
             'publicBorderGroup' => 'string',
             'ipv6Address' => 'string'
@@ -1098,7 +1098,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * Gets policyDocument
     *  终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
-    * @return string|null
+    * @return object|null
     */
     public function getPolicyDocument()
     {
@@ -1108,7 +1108,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyDocument
     *
-    * @param string|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
+    * @param object|null $policyDocument 终端节点策略信息，仅当终端节点服务的enable_policy值为true时支持该参数，默认值为完全访问权限。（OBS、SFS的终端节点服务暂不支持该参数）
     *
     * @return $this
     */

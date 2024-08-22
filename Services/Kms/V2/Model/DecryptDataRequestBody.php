@@ -23,6 +23,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
     * cipherText  被加密数据密文。取值为加密数据结果中的cipher_text的值，满足正则匹配“^[0-9a-zA-Z+/=]{128,5648}$”。
     * encryptionAlgorithm  数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$”。仅当密文使用非对称密钥加密时才需要此参数。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -31,6 +32,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
             'cipherText' => 'string',
             'encryptionAlgorithm' => 'string',
             'keyId' => 'string',
+            'additionalAuthenticatedData' => 'string',
             'sequence' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
     * cipherText  被加密数据密文。取值为加密数据结果中的cipher_text的值，满足正则匹配“^[0-9a-zA-Z+/=]{128,5648}$”。
     * encryptionAlgorithm  数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$”。仅当密文使用非对称密钥加密时才需要此参数。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -47,6 +50,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
         'cipherText' => null,
         'encryptionAlgorithm' => null,
         'keyId' => null,
+        'additionalAuthenticatedData' => null,
         'sequence' => null
     ];
 
@@ -76,6 +80,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
     * cipherText  被加密数据密文。取值为加密数据结果中的cipher_text的值，满足正则匹配“^[0-9a-zA-Z+/=]{128,5648}$”。
     * encryptionAlgorithm  数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$”。仅当密文使用非对称密钥加密时才需要此参数。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -84,6 +89,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
             'cipherText' => 'cipher_text',
             'encryptionAlgorithm' => 'encryption_algorithm',
             'keyId' => 'key_id',
+            'additionalAuthenticatedData' => 'additional_authenticated_data',
             'sequence' => 'sequence'
     ];
 
@@ -92,6 +98,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
     * cipherText  被加密数据密文。取值为加密数据结果中的cipher_text的值，满足正则匹配“^[0-9a-zA-Z+/=]{128,5648}$”。
     * encryptionAlgorithm  数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$”。仅当密文使用非对称密钥加密时才需要此参数。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -100,6 +107,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
             'cipherText' => 'setCipherText',
             'encryptionAlgorithm' => 'setEncryptionAlgorithm',
             'keyId' => 'setKeyId',
+            'additionalAuthenticatedData' => 'setAdditionalAuthenticatedData',
             'sequence' => 'setSequence'
     ];
 
@@ -108,6 +116,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
     * cipherText  被加密数据密文。取值为加密数据结果中的cipher_text的值，满足正则匹配“^[0-9a-zA-Z+/=]{128,5648}$”。
     * encryptionAlgorithm  数据加密算法，仅使用非对称密钥需要指定该参数，默认值为“SYMMETRIC_DEFAULT”，合法枚举值如下：  - SYMMETRIC_DEFAULT  - RSAES_OAEP_SHA_256  - SM2_ENCRYPT
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$”。仅当密文使用非对称密钥加密时才需要此参数。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -116,6 +125,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
             'cipherText' => 'getCipherText',
             'encryptionAlgorithm' => 'getEncryptionAlgorithm',
             'keyId' => 'getKeyId',
+            'additionalAuthenticatedData' => 'getAdditionalAuthenticatedData',
             'sequence' => 'getSequence'
     ];
 
@@ -197,6 +207,7 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
         $this->container['cipherText'] = isset($data['cipherText']) ? $data['cipherText'] : null;
         $this->container['encryptionAlgorithm'] = isset($data['encryptionAlgorithm']) ? $data['encryptionAlgorithm'] : null;
         $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
+        $this->container['additionalAuthenticatedData'] = isset($data['additionalAuthenticatedData']) ? $data['additionalAuthenticatedData'] : null;
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
     }
 
@@ -227,6 +238,12 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['keyId']) && (mb_strlen($this->container['keyId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'keyId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['additionalAuthenticatedData']) && (mb_strlen($this->container['additionalAuthenticatedData']) > 128)) {
+                $invalidProperties[] = "invalid value for 'additionalAuthenticatedData', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['additionalAuthenticatedData']) && (mb_strlen($this->container['additionalAuthenticatedData']) < 1)) {
+                $invalidProperties[] = "invalid value for 'additionalAuthenticatedData', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['sequence']) && (mb_strlen($this->container['sequence']) > 36)) {
                 $invalidProperties[] = "invalid value for 'sequence', the character length must be smaller than or equal to 36.";
@@ -317,6 +334,30 @@ class DecryptDataRequestBody implements ModelInterface, ArrayAccess
     public function setKeyId($keyId)
     {
         $this->container['keyId'] = $keyId;
+        return $this;
+    }
+
+    /**
+    * Gets additionalAuthenticatedData
+    *  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+    *
+    * @return string|null
+    */
+    public function getAdditionalAuthenticatedData()
+    {
+        return $this->container['additionalAuthenticatedData'];
+    }
+
+    /**
+    * Sets additionalAuthenticatedData
+    *
+    * @param string|null $additionalAuthenticatedData 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+    *
+    * @return $this
+    */
+    public function setAdditionalAuthenticatedData($additionalAuthenticatedData)
+    {
+        $this->container['additionalAuthenticatedData'] = $additionalAuthenticatedData;
         return $this;
     }
 

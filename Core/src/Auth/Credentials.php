@@ -25,9 +25,9 @@ use HuaweiCloud\SDK\Core\Http\HttpConfig;
 use HuaweiCloud\SDK\Core\SdkRequest;
 use HuaweiCloud\SDK\Iam\V3\IamClient;
 
+define('DEFAULT_ENDPOINT_REG', '/^[a-z][a-z0-9-]+(\\.[a-z]{2,}-[a-z]+-\\d{1,2})?\\.(my)?(huaweicloud|myhwclouds).(com|cn)$/');
 class Credentials implements ICredentials
 {
-    public const DEFAULT_ENDPOINT_REG = "^[a-z][a-z0-9-]+(\\.[a-z]{2,}-[a-z]+-\\d{1,2})?\\.(my)?(huaweicloud|myhwclouds).(com|cn)";
     protected $ak;
     protected $sk;
     protected $securityToken;
@@ -42,7 +42,7 @@ class Credentials implements ICredentials
 
     public static function getDefaultDerivedPredicate() {
         return function($request) {
-            return !preg_match(self::DEFAULT_ENDPOINT_REG, $request->host);
+            return !preg_match(DEFAULT_ENDPOINT_REG, $request->host);
         };
     }
 

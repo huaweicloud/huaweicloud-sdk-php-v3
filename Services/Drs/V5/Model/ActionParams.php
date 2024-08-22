@@ -27,6 +27,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
@@ -41,6 +42,7 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'string',
             'compareTaskParam' => '\HuaweiCloud\SDK\Drs\V5\Model\CompareTaskParams',
             'isSyncReEdit' => 'bool',
+            'isOnlyInitTask' => 'bool',
             'forceDelete' => 'bool',
             'publicIpConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\PublicIpConfig',
             'replayConfig' => '\HuaweiCloud\SDK\Drs\V5\Model\ReplayConfigInfo'
@@ -55,6 +57,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
@@ -69,6 +72,7 @@ class ActionParams implements ModelInterface, ArrayAccess
         'startTime' => null,
         'compareTaskParam' => null,
         'isSyncReEdit' => null,
+        'isOnlyInitTask' => null,
         'forceDelete' => null,
         'publicIpConfig' => null,
         'replayConfig' => null
@@ -104,6 +108,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
@@ -118,6 +123,7 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'start_time',
             'compareTaskParam' => 'compare_task_param',
             'isSyncReEdit' => 'is_sync_re_edit',
+            'isOnlyInitTask' => 'is_only_init_task',
             'forceDelete' => 'force_delete',
             'publicIpConfig' => 'public_ip_config',
             'replayConfig' => 'replay_config'
@@ -132,6 +138,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
@@ -146,6 +153,7 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'setStartTime',
             'compareTaskParam' => 'setCompareTaskParam',
             'isSyncReEdit' => 'setIsSyncReEdit',
+            'isOnlyInitTask' => 'setIsOnlyInitTask',
             'forceDelete' => 'setForceDelete',
             'publicIpConfig' => 'setPublicIpConfig',
             'replayConfig' => 'setReplayConfig'
@@ -160,6 +168,7 @@ class ActionParams implements ModelInterface, ArrayAccess
     * startTime  任务定时启动时间。
     * compareTaskParam  compareTaskParam
     * isSyncReEdit  再编辑任务启动时取值true。
+    * isOnlyInitTask  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
     * forceDelete  强制结束时取值为true。
     * publicIpConfig  publicIpConfig
     * replayConfig  replayConfig
@@ -174,6 +183,7 @@ class ActionParams implements ModelInterface, ArrayAccess
             'startTime' => 'getStartTime',
             'compareTaskParam' => 'getCompareTaskParam',
             'isSyncReEdit' => 'getIsSyncReEdit',
+            'isOnlyInitTask' => 'getIsOnlyInitTask',
             'forceDelete' => 'getForceDelete',
             'publicIpConfig' => 'getPublicIpConfig',
             'replayConfig' => 'getReplayConfig'
@@ -244,6 +254,7 @@ class ActionParams implements ModelInterface, ArrayAccess
         $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
         $this->container['compareTaskParam'] = isset($data['compareTaskParam']) ? $data['compareTaskParam'] : null;
         $this->container['isSyncReEdit'] = isset($data['isSyncReEdit']) ? $data['isSyncReEdit'] : null;
+        $this->container['isOnlyInitTask'] = isset($data['isOnlyInitTask']) ? $data['isOnlyInitTask'] : null;
         $this->container['forceDelete'] = isset($data['forceDelete']) ? $data['forceDelete'] : null;
         $this->container['publicIpConfig'] = isset($data['publicIpConfig']) ? $data['publicIpConfig'] : null;
         $this->container['replayConfig'] = isset($data['replayConfig']) ? $data['replayConfig'] : null;
@@ -436,6 +447,30 @@ class ActionParams implements ModelInterface, ArrayAccess
     public function setIsSyncReEdit($isSyncReEdit)
     {
         $this->container['isSyncReEdit'] = $isSyncReEdit;
+        return $this;
+    }
+
+    /**
+    * Gets isOnlyInitTask
+    *  是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    *
+    * @return bool|null
+    */
+    public function getIsOnlyInitTask()
+    {
+        return $this->container['isOnlyInitTask'];
+    }
+
+    /**
+    * Sets isOnlyInitTask
+    *
+    * @param bool|null $isOnlyInitTask 是否支持只初始化任务。仅支持白名单用户使用，需要提交工单申请才能使用。
+    *
+    * @return $this
+    */
+    public function setIsOnlyInitTask($isOnlyInitTask)
+    {
+        $this->container['isOnlyInitTask'] = $isOnlyInitTask;
         return $this;
     }
 

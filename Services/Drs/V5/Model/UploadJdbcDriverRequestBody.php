@@ -20,7 +20,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    * file  驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets file
-    *  驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    *  驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @return \SplFileObject
     */
@@ -189,7 +189,7 @@ class UploadJdbcDriverRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets file
     *
-    * @param \SplFileObject $file 驱动文件，驱动文件名称长度5-64，以jar结尾，name相同会替换远程驱动文件
+    * @param \SplFileObject $file 驱动文件，驱动文件名称长度5-64，以jar结尾，文件名相同会替换远程驱动文件
     *
     * @return $this
     */

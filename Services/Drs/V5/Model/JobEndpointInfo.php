@@ -20,7 +20,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -46,7 +46,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -93,7 +93,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -119,7 +119,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -145,7 +145,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    * dbType  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     * endpointType  数据库实例类型。取值：  - offline：自建数据库。 - ecs：华为云ECS自建数据库。 - cloud：华为云数据库。
     * endpointRole  数据库实例角色。取值： - so：源库。 - ta：目标库。
     * endpoint  endpoint
@@ -214,6 +214,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     const DB_TYPE_REDIS = 'redis';
     const DB_TYPE_REDISCLUSTER = 'rediscluster';
     const DB_TYPE_GAUSSREDIS = 'gaussredis';
+    const DB_TYPE_MYSQL = 'mysql';
     const ENDPOINT_TYPE_OFFLINE = 'offline';
     const ENDPOINT_TYPE_ECS = 'ecs';
     const ENDPOINT_TYPE_CLOUD = 'cloud';
@@ -234,6 +235,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
             self::DB_TYPE_REDIS,
             self::DB_TYPE_REDISCLUSTER,
             self::DB_TYPE_GAUSSREDIS,
+            self::DB_TYPE_MYSQL,
         ];
     }
 
@@ -351,7 +353,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbType
-    *  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    *  数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     *
     * @return string
     */
@@ -363,7 +365,7 @@ class JobEndpointInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dbType
     *
-    * @param string $dbType 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。
+    * @param string $dbType 数据库类型。取值：  - oracle：Oracle。 - gaussdbv5：GaussDB分布式版。 - redis：Redis。 - rediscluster：Redis集群版。 - gaussredis: GeminiDB Redis。 - mysql：MySQL。
     *
     * @return $this
     */

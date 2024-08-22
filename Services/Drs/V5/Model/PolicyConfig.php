@@ -29,6 +29,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
     * dmlTypes  DML同步类型。
+    * isCreateTableWithIndex  索引与表结构是否同时建立。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'supportDdlInfo' => 'string',
             'syncTypePolicy' => 'string',
             'incrementReadMode' => 'string',
-            'dmlTypes' => 'string'
+            'dmlTypes' => 'string',
+            'isCreateTableWithIndex' => 'bool'
     ];
 
     /**
@@ -55,6 +57,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
     * dmlTypes  DML同步类型。
+    * isCreateTableWithIndex  索引与表结构是否同时建立。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
         'supportDdlInfo' => null,
         'syncTypePolicy' => null,
         'incrementReadMode' => null,
-        'dmlTypes' => null
+        'dmlTypes' => null,
+        'isCreateTableWithIndex' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
     * dmlTypes  DML同步类型。
+    * isCreateTableWithIndex  索引与表结构是否同时建立。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'supportDdlInfo' => 'support_ddl_info',
             'syncTypePolicy' => 'sync_type_policy',
             'incrementReadMode' => 'increment_read_mode',
-            'dmlTypes' => 'dml_types'
+            'dmlTypes' => 'dml_types',
+            'isCreateTableWithIndex' => 'is_create_table_with_index'
     ];
 
     /**
@@ -128,6 +134,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
     * dmlTypes  DML同步类型。
+    * isCreateTableWithIndex  索引与表结构是否同时建立。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'supportDdlInfo' => 'setSupportDdlInfo',
             'syncTypePolicy' => 'setSyncTypePolicy',
             'incrementReadMode' => 'setIncrementReadMode',
-            'dmlTypes' => 'setDmlTypes'
+            'dmlTypes' => 'setDmlTypes',
+            'isCreateTableWithIndex' => 'setIsCreateTableWithIndex'
     ];
 
     /**
@@ -154,6 +162,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     * syncTypePolicy  同步数据类型。取值：supportAllType（同步所有类型），tableData（同步数据），tableStructure（同步表结构），constraintData（索引同步）。 说明：除supportAllType以外，其他类型可组合填写，例如：\"tableData,tableStructure\" 。
     * incrementReadMode  oracle-gausssdb增量读取方式：logminer，xstream
     * dmlTypes  DML同步类型。
+    * isCreateTableWithIndex  索引与表结构是否同时建立。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class PolicyConfig implements ModelInterface, ArrayAccess
             'supportDdlInfo' => 'getSupportDdlInfo',
             'syncTypePolicy' => 'getSyncTypePolicy',
             'incrementReadMode' => 'getIncrementReadMode',
-            'dmlTypes' => 'getDmlTypes'
+            'dmlTypes' => 'getDmlTypes',
+            'isCreateTableWithIndex' => 'getIsCreateTableWithIndex'
     ];
 
     /**
@@ -310,6 +320,7 @@ class PolicyConfig implements ModelInterface, ArrayAccess
         $this->container['syncTypePolicy'] = isset($data['syncTypePolicy']) ? $data['syncTypePolicy'] : null;
         $this->container['incrementReadMode'] = isset($data['incrementReadMode']) ? $data['incrementReadMode'] : null;
         $this->container['dmlTypes'] = isset($data['dmlTypes']) ? $data['dmlTypes'] : null;
+        $this->container['isCreateTableWithIndex'] = isset($data['isCreateTableWithIndex']) ? $data['isCreateTableWithIndex'] : null;
     }
 
     /**
@@ -579,6 +590,30 @@ class PolicyConfig implements ModelInterface, ArrayAccess
     public function setDmlTypes($dmlTypes)
     {
         $this->container['dmlTypes'] = $dmlTypes;
+        return $this;
+    }
+
+    /**
+    * Gets isCreateTableWithIndex
+    *  索引与表结构是否同时建立。
+    *
+    * @return bool|null
+    */
+    public function getIsCreateTableWithIndex()
+    {
+        return $this->container['isCreateTableWithIndex'];
+    }
+
+    /**
+    * Sets isCreateTableWithIndex
+    *
+    * @param bool|null $isCreateTableWithIndex 索引与表结构是否同时建立。
+    *
+    * @return $this
+    */
+    public function setIsCreateTableWithIndex($isCreateTableWithIndex)
+    {
+        $this->container['isCreateTableWithIndex'] = $isCreateTableWithIndex;
         return $this;
     }
 

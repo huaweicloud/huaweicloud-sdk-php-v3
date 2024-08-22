@@ -58,6 +58,7 @@ class TaskResp implements ModelInterface, ArrayAccess
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
+    * taskPriority  HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
     *
     * @var string[]
     */
@@ -99,7 +100,8 @@ class TaskResp implements ModelInterface, ArrayAccess
             'objectOverwriteMode' => 'string',
             'dstStoragePolicy' => 'string',
             'consistencyCheck' => 'string',
-            'enableRequesterPays' => 'bool'
+            'enableRequesterPays' => 'bool',
+            'taskPriority' => 'string'
     ];
 
     /**
@@ -142,6 +144,7 @@ class TaskResp implements ModelInterface, ArrayAccess
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
+    * taskPriority  HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
     *
     * @var string[]
     */
@@ -183,7 +186,8 @@ class TaskResp implements ModelInterface, ArrayAccess
         'objectOverwriteMode' => null,
         'dstStoragePolicy' => null,
         'consistencyCheck' => null,
-        'enableRequesterPays' => null
+        'enableRequesterPays' => null,
+        'taskPriority' => null
     ];
 
     /**
@@ -247,6 +251,7 @@ class TaskResp implements ModelInterface, ArrayAccess
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
+    * taskPriority  HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
     *
     * @var string[]
     */
@@ -288,7 +293,8 @@ class TaskResp implements ModelInterface, ArrayAccess
             'objectOverwriteMode' => 'object_overwrite_mode',
             'dstStoragePolicy' => 'dst_storage_policy',
             'consistencyCheck' => 'consistency_check',
-            'enableRequesterPays' => 'enable_requester_pays'
+            'enableRequesterPays' => 'enable_requester_pays',
+            'taskPriority' => 'task_priority'
     ];
 
     /**
@@ -331,6 +337,7 @@ class TaskResp implements ModelInterface, ArrayAccess
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
+    * taskPriority  HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
     *
     * @var string[]
     */
@@ -372,7 +379,8 @@ class TaskResp implements ModelInterface, ArrayAccess
             'objectOverwriteMode' => 'setObjectOverwriteMode',
             'dstStoragePolicy' => 'setDstStoragePolicy',
             'consistencyCheck' => 'setConsistencyCheck',
-            'enableRequesterPays' => 'setEnableRequesterPays'
+            'enableRequesterPays' => 'setEnableRequesterPays',
+            'taskPriority' => 'setTaskPriority'
     ];
 
     /**
@@ -415,6 +423,7 @@ class TaskResp implements ModelInterface, ArrayAccess
     * dstStoragePolicy  目的端存储类型设置，当且仅当目的端为华为云OBS时需要，默认为标准存储 STANDARD：华为云OBS标准存储 IA：华为云OBS低频存储 ARCHIVE：华为云OBS归档存储 DEEP_ARCHIVE：华为云OBS深度归档存储 SRC_STORAGE_MAPPING：保留源端存储类型，将源端存储类型映射为华为云OBS存储类型
     * consistencyCheck  一致性校验方式，用于迁移前/后校验对象是否一致，所有校验方式需满足源端/目的端对象的加密状态一致，具体校验方式和校验结果可通过对象列表查看。默认size_last_modified。 size_last_modified：默认配置。迁移前后，通过对比源端和目的端对象大小+最后修改时间，判断对象是否已存在或迁移后数据是否完整。源端与目的端同名对象大小相同，且目的端对象的最后修改时间不早于源端对象的最后修改时间，则代表该对象已存在/迁移成功。 crc64：目前仅支持华为/阿里/腾讯。迁移前后，通过对比源端和目的端对象元数据中CRC64值是否相同，判断对象是否已存在/迁移完成。如果源端与目的端对象元数据中不存在CRC64值，则系统会默认使用大小/最后修改时间校验方式来校验。 no_check：目前仅支持HTTP/HTTPS数据源。当源端对象无法通过标准http协议中content-length字段获取数据大小时，默认数据下载成功即迁移成功，不对数据做额外校验，且迁移时源端对象默认覆盖目的端同名对象。当源端对象能正常通过标准http协议中content-length字段获取数据大小时，则采用大小/最后修改时间校验方式来校验。
     * enableRequesterPays  是否开启请求者付款，在启用后，请求者支付请求和数据传输费用。
+    * taskPriority  HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
     *
     * @var string[]
     */
@@ -456,7 +465,8 @@ class TaskResp implements ModelInterface, ArrayAccess
             'objectOverwriteMode' => 'getObjectOverwriteMode',
             'dstStoragePolicy' => 'getDstStoragePolicy',
             'consistencyCheck' => 'getConsistencyCheck',
-            'enableRequesterPays' => 'getEnableRequesterPays'
+            'enableRequesterPays' => 'getEnableRequesterPays',
+            'taskPriority' => 'getTaskPriority'
     ];
 
     /**
@@ -518,6 +528,9 @@ class TaskResp implements ModelInterface, ArrayAccess
     const CONSISTENCY_CHECK_SIZE_LAST_MODIFIED = 'size_last_modified';
     const CONSISTENCY_CHECK_CRC64 = 'crc64';
     const CONSISTENCY_CHECK_NO_CHECK = 'no_check';
+    const TASK_PRIORITY_HIGH = 'HIGH';
+    const TASK_PRIORITY_MEDIUM = 'MEDIUM';
+    const TASK_PRIORITY_LOW = 'LOW';
     
 
     /**
@@ -594,6 +607,20 @@ class TaskResp implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTaskPriorityAllowableValues()
+    {
+        return [
+            self::TASK_PRIORITY_HIGH,
+            self::TASK_PRIORITY_MEDIUM,
+            self::TASK_PRIORITY_LOW,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -648,6 +675,7 @@ class TaskResp implements ModelInterface, ArrayAccess
         $this->container['dstStoragePolicy'] = isset($data['dstStoragePolicy']) ? $data['dstStoragePolicy'] : null;
         $this->container['consistencyCheck'] = isset($data['consistencyCheck']) ? $data['consistencyCheck'] : null;
         $this->container['enableRequesterPays'] = isset($data['enableRequesterPays']) ? $data['enableRequesterPays'] : null;
+        $this->container['taskPriority'] = isset($data['taskPriority']) ? $data['taskPriority'] : null;
     }
 
     /**
@@ -820,6 +848,14 @@ class TaskResp implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['consistencyCheck']) && !in_array($this->container['consistencyCheck'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'consistencyCheck', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getTaskPriorityAllowableValues();
+                if (!is_null($this->container['taskPriority']) && !in_array($this->container['taskPriority'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'taskPriority', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -1747,6 +1783,30 @@ class TaskResp implements ModelInterface, ArrayAccess
     public function setEnableRequesterPays($enableRequesterPays)
     {
         $this->container['enableRequesterPays'] = $enableRequesterPays;
+        return $this;
+    }
+
+    /**
+    * Gets taskPriority
+    *  HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
+    *
+    * @return string|null
+    */
+    public function getTaskPriority()
+    {
+        return $this->container['taskPriority'];
+    }
+
+    /**
+    * Sets taskPriority
+    *
+    * @param string|null $taskPriority HIGH：高优先级 MEDIUM：中优先级 LOW：低优先级
+    *
+    * @return $this
+    */
+    public function setTaskPriority($taskPriority)
+    {
+        $this->container['taskPriority'] = $taskPriority;
         return $this;
     }
 

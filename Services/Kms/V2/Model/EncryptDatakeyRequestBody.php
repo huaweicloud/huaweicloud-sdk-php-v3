@@ -23,6 +23,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * plainText  CMK为AES时，DEK明文和DEK明文的SHA256（32字节）；CMK为SM4时，DEK明文和DEK明文的SM3（32字节），均为16进制字符串表示。
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -31,6 +32,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'string',
             'plainText' => 'string',
             'datakeyPlainLength' => 'string',
+            'additionalAuthenticatedData' => 'string',
             'sequence' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * plainText  CMK为AES时，DEK明文和DEK明文的SHA256（32字节）；CMK为SM4时，DEK明文和DEK明文的SM3（32字节），均为16进制字符串表示。
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -47,6 +50,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
         'keyId' => null,
         'plainText' => null,
         'datakeyPlainLength' => null,
+        'additionalAuthenticatedData' => null,
         'sequence' => null
     ];
 
@@ -76,6 +80,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * plainText  CMK为AES时，DEK明文和DEK明文的SHA256（32字节）；CMK为SM4时，DEK明文和DEK明文的SM3（32字节），均为16进制字符串表示。
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -84,6 +89,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'key_id',
             'plainText' => 'plain_text',
             'datakeyPlainLength' => 'datakey_plain_length',
+            'additionalAuthenticatedData' => 'additional_authenticated_data',
             'sequence' => 'sequence'
     ];
 
@@ -92,6 +98,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * plainText  CMK为AES时，DEK明文和DEK明文的SHA256（32字节）；CMK为SM4时，DEK明文和DEK明文的SM3（32字节），均为16进制字符串表示。
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -100,6 +107,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'setKeyId',
             'plainText' => 'setPlainText',
             'datakeyPlainLength' => 'setDatakeyPlainLength',
+            'additionalAuthenticatedData' => 'setAdditionalAuthenticatedData',
             'sequence' => 'setSequence'
     ];
 
@@ -108,6 +116,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * plainText  CMK为AES时，DEK明文和DEK明文的SHA256（32字节）；CMK为SM4时，DEK明文和DEK明文的SM3（32字节），均为16进制字符串表示。
     * datakeyPlainLength  DEK明文字节长度，取值范围为1~1024。 DEK明文字节长度，取值为“64”。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -116,6 +125,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'getKeyId',
             'plainText' => 'getPlainText',
             'datakeyPlainLength' => 'getDatakeyPlainLength',
+            'additionalAuthenticatedData' => 'getAdditionalAuthenticatedData',
             'sequence' => 'getSequence'
     ];
 
@@ -180,6 +190,7 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
         $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
         $this->container['plainText'] = isset($data['plainText']) ? $data['plainText'] : null;
         $this->container['datakeyPlainLength'] = isset($data['datakeyPlainLength']) ? $data['datakeyPlainLength'] : null;
+        $this->container['additionalAuthenticatedData'] = isset($data['additionalAuthenticatedData']) ? $data['additionalAuthenticatedData'] : null;
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
     }
 
@@ -217,6 +228,12 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['datakeyPlainLength']) < 0)) {
                 $invalidProperties[] = "invalid value for 'datakeyPlainLength', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['additionalAuthenticatedData']) && (mb_strlen($this->container['additionalAuthenticatedData']) > 128)) {
+                $invalidProperties[] = "invalid value for 'additionalAuthenticatedData', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['additionalAuthenticatedData']) && (mb_strlen($this->container['additionalAuthenticatedData']) < 1)) {
+                $invalidProperties[] = "invalid value for 'additionalAuthenticatedData', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['sequence']) && (mb_strlen($this->container['sequence']) > 36)) {
                 $invalidProperties[] = "invalid value for 'sequence', the character length must be smaller than or equal to 36.";
@@ -307,6 +324,30 @@ class EncryptDatakeyRequestBody implements ModelInterface, ArrayAccess
     public function setDatakeyPlainLength($datakeyPlainLength)
     {
         $this->container['datakeyPlainLength'] = $datakeyPlainLength;
+        return $this;
+    }
+
+    /**
+    * Gets additionalAuthenticatedData
+    *  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+    *
+    * @return string|null
+    */
+    public function getAdditionalAuthenticatedData()
+    {
+        return $this->container['additionalAuthenticatedData'];
+    }
+
+    /**
+    * Sets additionalAuthenticatedData
+    *
+    * @param string|null $additionalAuthenticatedData 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+    *
+    * @return $this
+    */
+    public function setAdditionalAuthenticatedData($additionalAuthenticatedData)
+    {
+        $this->container['additionalAuthenticatedData'] = $additionalAuthenticatedData;
         return $this;
     }
 

@@ -23,13 +23,15 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     * mode  GaussDB为分布式时，取值：enterprise；为集中式时，取值：centralization_standard。不区分大小写。
     * consistency  指定实例一致性类型，当创建分布式模式实例时，该字段值必传，当创建主备模式实例时，该字段值不传。取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
     * replicationMode  备机同步参数。  取值：  GaussDB为“sync\"  说明： - “sync”为同步模式。
+    * instanceMode  指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'mode' => 'string',
             'consistency' => 'string',
-            'replicationMode' => 'string'
+            'replicationMode' => 'string',
+            'instanceMode' => 'string'
     ];
 
     /**
@@ -37,13 +39,15 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     * mode  GaussDB为分布式时，取值：enterprise；为集中式时，取值：centralization_standard。不区分大小写。
     * consistency  指定实例一致性类型，当创建分布式模式实例时，该字段值必传，当创建主备模式实例时，该字段值不传。取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
     * replicationMode  备机同步参数。  取值：  GaussDB为“sync\"  说明： - “sync”为同步模式。
+    * instanceMode  指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'mode' => null,
         'consistency' => null,
-        'replicationMode' => null
+        'replicationMode' => null,
+        'instanceMode' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     * mode  GaussDB为分布式时，取值：enterprise；为集中式时，取值：centralization_standard。不区分大小写。
     * consistency  指定实例一致性类型，当创建分布式模式实例时，该字段值必传，当创建主备模式实例时，该字段值不传。取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
     * replicationMode  备机同步参数。  取值：  GaussDB为“sync\"  说明： - “sync”为同步模式。
+    * instanceMode  指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'mode' => 'mode',
             'consistency' => 'consistency',
-            'replicationMode' => 'replication_mode'
+            'replicationMode' => 'replication_mode',
+            'instanceMode' => 'instance_mode'
     ];
 
     /**
@@ -86,13 +92,15 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     * mode  GaussDB为分布式时，取值：enterprise；为集中式时，取值：centralization_standard。不区分大小写。
     * consistency  指定实例一致性类型，当创建分布式模式实例时，该字段值必传，当创建主备模式实例时，该字段值不传。取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
     * replicationMode  备机同步参数。  取值：  GaussDB为“sync\"  说明： - “sync”为同步模式。
+    * instanceMode  指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
     *
     * @var string[]
     */
     protected static $setters = [
             'mode' => 'setMode',
             'consistency' => 'setConsistency',
-            'replicationMode' => 'setReplicationMode'
+            'replicationMode' => 'setReplicationMode',
+            'instanceMode' => 'setInstanceMode'
     ];
 
     /**
@@ -100,13 +108,15 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     * mode  GaussDB为分布式时，取值：enterprise；为集中式时，取值：centralization_standard。不区分大小写。
     * consistency  指定实例一致性类型，当创建分布式模式实例时，该字段值必传，当创建主备模式实例时，该字段值不传。取值范围：strong（强一致性） | eventual(最终一致性)，不分区大小写。
     * replicationMode  备机同步参数。  取值：  GaussDB为“sync\"  说明： - “sync”为同步模式。
+    * instanceMode  指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
     *
     * @var string[]
     */
     protected static $getters = [
             'mode' => 'getMode',
             'consistency' => 'getConsistency',
-            'replicationMode' => 'getReplicationMode'
+            'replicationMode' => 'getReplicationMode',
+            'instanceMode' => 'getInstanceMode'
     ];
 
     /**
@@ -154,6 +164,9 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     const CONSISTENCY_STRONG = 'strong';
     const CONSISTENCY_EVENTUAL = 'eventual';
     const REPLICATION_MODE_SYNC = 'sync';
+    const INSTANCE_MODE_ENTERPRISE = 'enterprise';
+    const INSTANCE_MODE_BASIC = 'basic';
+    const INSTANCE_MODE_ECOLOGY = 'ecology';
     
 
     /**
@@ -194,6 +207,20 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getInstanceModeAllowableValues()
+    {
+        return [
+            self::INSTANCE_MODE_ENTERPRISE,
+            self::INSTANCE_MODE_BASIC,
+            self::INSTANCE_MODE_ECOLOGY,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -213,6 +240,7 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
         $this->container['consistency'] = isset($data['consistency']) ? $data['consistency'] : null;
         $this->container['replicationMode'] = isset($data['replicationMode']) ? $data['replicationMode'] : null;
+        $this->container['instanceMode'] = isset($data['instanceMode']) ? $data['instanceMode'] : null;
     }
 
     /**
@@ -252,6 +280,14 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
                 if (!is_null($this->container['replicationMode']) && !in_array($this->container['replicationMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
                 "invalid value for 'replicationMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getInstanceModeAllowableValues();
+                if (!is_null($this->container['instanceMode']) && !in_array($this->container['instanceMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'instanceMode', must be one of '%s'",
                 implode("', '", $allowedValues)
                 );
             }
@@ -339,6 +375,30 @@ class OpenGaussHaOption implements ModelInterface, ArrayAccess
     public function setReplicationMode($replicationMode)
     {
         $this->container['replicationMode'] = $replicationMode;
+        return $this;
+    }
+
+    /**
+    * Gets instanceMode
+    *  指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
+    *
+    * @return string|null
+    */
+    public function getInstanceMode()
+    {
+        return $this->container['instanceMode'];
+    }
+
+    /**
+    * Sets instanceMode
+    *
+    * @param string|null $instanceMode 指定创建实例的产品类型，创建企业版实例时传空值或者enterprise，创建基础版实例时需要指定instance_mode的值为basic，创建生态版实例时需要指定instance_mode的值为ecology。
+    *
+    * @return $this
+    */
+    public function setInstanceMode($instanceMode)
+    {
+        $this->container['instanceMode'] = $instanceMode;
         return $this;
     }
 

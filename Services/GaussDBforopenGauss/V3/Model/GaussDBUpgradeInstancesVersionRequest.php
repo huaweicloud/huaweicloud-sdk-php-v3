@@ -227,6 +227,9 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['instanceIds'] === null) {
+            $invalidProperties[] = "'instanceIds' can't be null";
+        }
         if ($this->container['upgradeType'] === null) {
             $invalidProperties[] = "'upgradeType' can't be null";
         }
@@ -264,7 +267,7 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
     * Gets instanceIds
     *  批量实例ID。
     *
-    * @return string[]|null
+    * @return string[]
     */
     public function getInstanceIds()
     {
@@ -274,7 +277,7 @@ class GaussDBUpgradeInstancesVersionRequest implements ModelInterface, ArrayAcce
     /**
     * Sets instanceIds
     *
-    * @param string[]|null $instanceIds 批量实例ID。
+    * @param string[] $instanceIds 批量实例ID。
     *
     * @return $this
     */

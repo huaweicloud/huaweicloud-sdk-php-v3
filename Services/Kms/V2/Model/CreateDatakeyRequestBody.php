@@ -23,6 +23,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * keySpec  指定生成的密钥bit位长度。有效值：AES_256、AES_128。  - AES_256：表示256比特的对称密钥。  - AES_128：表示128比特的对称密钥。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
     * datakeyLength  密钥bit位长度。取值为8的倍数，取值范围为8~8192。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -31,6 +32,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'string',
             'keySpec' => 'string',
             'datakeyLength' => 'string',
+            'additionalAuthenticatedData' => 'string',
             'sequence' => 'string'
     ];
 
@@ -39,6 +41,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * keySpec  指定生成的密钥bit位长度。有效值：AES_256、AES_128。  - AES_256：表示256比特的对称密钥。  - AES_128：表示128比特的对称密钥。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
     * datakeyLength  密钥bit位长度。取值为8的倍数，取值范围为8~8192。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -47,6 +50,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
         'keyId' => null,
         'keySpec' => null,
         'datakeyLength' => null,
+        'additionalAuthenticatedData' => null,
         'sequence' => null
     ];
 
@@ -76,6 +80,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * keySpec  指定生成的密钥bit位长度。有效值：AES_256、AES_128。  - AES_256：表示256比特的对称密钥。  - AES_128：表示128比特的对称密钥。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
     * datakeyLength  密钥bit位长度。取值为8的倍数，取值范围为8~8192。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -84,6 +89,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'key_id',
             'keySpec' => 'key_spec',
             'datakeyLength' => 'datakey_length',
+            'additionalAuthenticatedData' => 'additional_authenticated_data',
             'sequence' => 'sequence'
     ];
 
@@ -92,6 +98,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * keySpec  指定生成的密钥bit位长度。有效值：AES_256、AES_128。  - AES_256：表示256比特的对称密钥。  - AES_128：表示128比特的对称密钥。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
     * datakeyLength  密钥bit位长度。取值为8的倍数，取值范围为8~8192。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -100,6 +107,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'setKeyId',
             'keySpec' => 'setKeySpec',
             'datakeyLength' => 'setDatakeyLength',
+            'additionalAuthenticatedData' => 'setAdditionalAuthenticatedData',
             'sequence' => 'setSequence'
     ];
 
@@ -108,6 +116,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
     * keyId  密钥ID，36字节，满足正则匹配“^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$”。 例如：0d0466b0-e727-4d9c-b35d-f84bb474a37f。
     * keySpec  指定生成的密钥bit位长度。有效值：AES_256、AES_128。  - AES_256：表示256比特的对称密钥。  - AES_128：表示128比特的对称密钥。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
     * datakeyLength  密钥bit位长度。取值为8的倍数，取值范围为8~8192。 说明：  datakey_length和key_spec二选一。   - 若datakey_length和key_spec都为空，默认生成256bit的密钥。   - 若datakey_length和key_spec都指定了值，仅datakey_length生效。
+    * additionalAuthenticatedData  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
     * sequence  请求消息序列号，36字节序列号。 例如：919c82d4-8046-4722-9094-35c3c6524cff
     *
     * @var string[]
@@ -116,6 +125,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
             'keyId' => 'getKeyId',
             'keySpec' => 'getKeySpec',
             'datakeyLength' => 'getDatakeyLength',
+            'additionalAuthenticatedData' => 'getAdditionalAuthenticatedData',
             'sequence' => 'getSequence'
     ];
 
@@ -195,6 +205,7 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
         $this->container['keyId'] = isset($data['keyId']) ? $data['keyId'] : null;
         $this->container['keySpec'] = isset($data['keySpec']) ? $data['keySpec'] : null;
         $this->container['datakeyLength'] = isset($data['datakeyLength']) ? $data['datakeyLength'] : null;
+        $this->container['additionalAuthenticatedData'] = isset($data['additionalAuthenticatedData']) ? $data['additionalAuthenticatedData'] : null;
         $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
     }
 
@@ -228,6 +239,12 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['datakeyLength']) && (mb_strlen($this->container['datakeyLength']) < 1)) {
                 $invalidProperties[] = "invalid value for 'datakeyLength', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['additionalAuthenticatedData']) && (mb_strlen($this->container['additionalAuthenticatedData']) > 128)) {
+                $invalidProperties[] = "invalid value for 'additionalAuthenticatedData', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['additionalAuthenticatedData']) && (mb_strlen($this->container['additionalAuthenticatedData']) < 1)) {
+                $invalidProperties[] = "invalid value for 'additionalAuthenticatedData', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['sequence']) && (mb_strlen($this->container['sequence']) > 36)) {
                 $invalidProperties[] = "invalid value for 'sequence', the character length must be smaller than or equal to 36.";
@@ -318,6 +335,30 @@ class CreateDatakeyRequestBody implements ModelInterface, ArrayAccess
     public function setDatakeyLength($datakeyLength)
     {
         $this->container['datakeyLength'] = $datakeyLength;
+        return $this;
+    }
+
+    /**
+    * Gets additionalAuthenticatedData
+    *  身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+    *
+    * @return string|null
+    */
+    public function getAdditionalAuthenticatedData()
+    {
+        return $this->container['additionalAuthenticatedData'];
+    }
+
+    /**
+    * Sets additionalAuthenticatedData
+    *
+    * @param string|null $additionalAuthenticatedData 身份验证的非敏感额外数据。任意字符串，长度不超过128字节。
+    *
+    * @return $this
+    */
+    public function setAdditionalAuthenticatedData($additionalAuthenticatedData)
+    {
+        $this->container['additionalAuthenticatedData'] = $additionalAuthenticatedData;
         return $this;
     }
 

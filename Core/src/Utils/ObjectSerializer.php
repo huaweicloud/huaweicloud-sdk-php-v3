@@ -170,9 +170,8 @@ class ObjectSerializer
 
     /**
      * @param $dateStr
-     * @return \DateTime|null
      */
-    private static function getDateTime($dateStr): ?\DateTime
+    private static function getDateTime($dateStr)
     {
         if (empty($dateStr)) {
             return null;

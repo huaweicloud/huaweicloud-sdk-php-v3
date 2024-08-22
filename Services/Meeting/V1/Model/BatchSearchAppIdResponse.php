@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Drs\V5\Model;
+namespace HuaweiCloud\SDK\Meeting\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class CreateJobResp implements ModelInterface, ArrayAccess
+class BatchSearchAppIdResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,42 +17,38 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'CreateJobResp';
+    protected static $openAPIModelName = 'BatchSearchAppIdResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  任务ID。
-    * name  任务名称。
-    * status  任务状态。
-    * createTime  任务创建时间。
-    * isCloneJob  是否为克隆任务。
+    * offset  页面起始页，从0开始。
+    * limit  每页显示的条目数量。 默认值：10。
+    * count  总数量。
+    * data  企业应用信息
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'name' => 'string',
-            'status' => 'string',
-            'createTime' => 'string',
-            'isCloneJob' => 'string'
+            'offset' => 'int',
+            'limit' => 'int',
+            'count' => 'int',
+            'data' => '\HuaweiCloud\SDK\Meeting\V1\Model\AppIdInfoDTO[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  任务ID。
-    * name  任务名称。
-    * status  任务状态。
-    * createTime  任务创建时间。
-    * isCloneJob  是否为克隆任务。
+    * offset  页面起始页，从0开始。
+    * limit  每页显示的条目数量。 默认值：10。
+    * count  总数量。
+    * data  企业应用信息
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null,
-        'status' => null,
-        'createTime' => null,
-        'isCloneJob' => null
+        'offset' => null,
+        'limit' => null,
+        'count' => null,
+        'data' => null
     ];
 
     /**
@@ -77,56 +74,50 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  任务ID。
-    * name  任务名称。
-    * status  任务状态。
-    * createTime  任务创建时间。
-    * isCloneJob  是否为克隆任务。
+    * offset  页面起始页，从0开始。
+    * limit  每页显示的条目数量。 默认值：10。
+    * count  总数量。
+    * data  企业应用信息
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'name' => 'name',
-            'status' => 'status',
-            'createTime' => 'create_time',
-            'isCloneJob' => 'is_clone_job'
+            'offset' => 'offset',
+            'limit' => 'limit',
+            'count' => 'count',
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  任务ID。
-    * name  任务名称。
-    * status  任务状态。
-    * createTime  任务创建时间。
-    * isCloneJob  是否为克隆任务。
+    * offset  页面起始页，从0开始。
+    * limit  每页显示的条目数量。 默认值：10。
+    * count  总数量。
+    * data  企业应用信息
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'name' => 'setName',
-            'status' => 'setStatus',
-            'createTime' => 'setCreateTime',
-            'isCloneJob' => 'setIsCloneJob'
+            'offset' => 'setOffset',
+            'limit' => 'setLimit',
+            'count' => 'setCount',
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  任务ID。
-    * name  任务名称。
-    * status  任务状态。
-    * createTime  任务创建时间。
-    * isCloneJob  是否为克隆任务。
+    * offset  页面起始页，从0开始。
+    * limit  每页显示的条目数量。 默认值：10。
+    * count  总数量。
+    * data  企业应用信息
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'name' => 'getName',
-            'status' => 'getStatus',
-            'createTime' => 'getCreateTime',
-            'isCloneJob' => 'getIsCloneJob'
+            'offset' => 'getOffset',
+            'limit' => 'getLimit',
+            'count' => 'getCount',
+            'data' => 'getData'
     ];
 
     /**
@@ -187,11 +178,10 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
-        $this->container['isCloneJob'] = isset($data['isCloneJob']) ? $data['isCloneJob'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -202,18 +192,6 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        if ($this->container['createTime'] === null) {
-            $invalidProperties[] = "'createTime' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -229,122 +207,98 @@ class CreateJobResp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  任务ID。
+    * Gets offset
+    *  页面起始页，从0开始。
     *
-    * @return string
+    * @return int|null
     */
-    public function getId()
+    public function getOffset()
     {
-        return $this->container['id'];
+        return $this->container['offset'];
     }
 
     /**
-    * Sets id
+    * Sets offset
     *
-    * @param string $id 任务ID。
+    * @param int|null $offset 页面起始页，从0开始。
     *
     * @return $this
     */
-    public function setId($id)
+    public function setOffset($offset)
     {
-        $this->container['id'] = $id;
+        $this->container['offset'] = $offset;
         return $this;
     }
 
     /**
-    * Gets name
-    *  任务名称。
+    * Gets limit
+    *  每页显示的条目数量。 默认值：10。
     *
-    * @return string
+    * @return int|null
     */
-    public function getName()
+    public function getLimit()
     {
-        return $this->container['name'];
+        return $this->container['limit'];
     }
 
     /**
-    * Sets name
+    * Sets limit
     *
-    * @param string $name 任务名称。
+    * @param int|null $limit 每页显示的条目数量。 默认值：10。
     *
     * @return $this
     */
-    public function setName($name)
+    public function setLimit($limit)
     {
-        $this->container['name'] = $name;
+        $this->container['limit'] = $limit;
         return $this;
     }
 
     /**
-    * Gets status
-    *  任务状态。
+    * Gets count
+    *  总数量。
     *
-    * @return string
+    * @return int|null
     */
-    public function getStatus()
+    public function getCount()
     {
-        return $this->container['status'];
+        return $this->container['count'];
     }
 
     /**
-    * Sets status
+    * Sets count
     *
-    * @param string $status 任务状态。
+    * @param int|null $count 总数量。
     *
     * @return $this
     */
-    public function setStatus($status)
+    public function setCount($count)
     {
-        $this->container['status'] = $status;
+        $this->container['count'] = $count;
         return $this;
     }
 
     /**
-    * Gets createTime
-    *  任务创建时间。
+    * Gets data
+    *  企业应用信息
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Meeting\V1\Model\AppIdInfoDTO[]|null
     */
-    public function getCreateTime()
+    public function getData()
     {
-        return $this->container['createTime'];
+        return $this->container['data'];
     }
 
     /**
-    * Sets createTime
+    * Sets data
     *
-    * @param string $createTime 任务创建时间。
+    * @param \HuaweiCloud\SDK\Meeting\V1\Model\AppIdInfoDTO[]|null $data 企业应用信息
     *
     * @return $this
     */
-    public function setCreateTime($createTime)
+    public function setData($data)
     {
-        $this->container['createTime'] = $createTime;
-        return $this;
-    }
-
-    /**
-    * Gets isCloneJob
-    *  是否为克隆任务。
-    *
-    * @return string|null
-    */
-    public function getIsCloneJob()
-    {
-        return $this->container['isCloneJob'];
-    }
-
-    /**
-    * Sets isCloneJob
-    *
-    * @param string|null $isCloneJob 是否为克隆任务。
-    *
-    * @return $this
-    */
-    public function setIsCloneJob($isCloneJob)
-    {
-        $this->container['isCloneJob'] = $isCloneJob;
+        $this->container['data'] = $data;
         return $this;
     }
 
