@@ -23,13 +23,19 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
+    * keepDays  日志保存时间。action等于real_time_log_collect时必选
+    * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'agency' => 'string',
             'logBasePath' => 'string',
-            'logBucket' => 'string'
+            'logBucket' => 'string',
+            'indexPrefix' => 'string',
+            'keepDays' => 'int',
+            'targetClusterId' => 'string'
     ];
 
     /**
@@ -37,13 +43,19 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
+    * keepDays  日志保存时间。action等于real_time_log_collect时必选
+    * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'agency' => null,
         'logBasePath' => null,
-        'logBucket' => null
+        'logBucket' => null,
+        'indexPrefix' => null,
+        'keepDays' => 'int32',
+        'targetClusterId' => null
     ];
 
     /**
@@ -72,13 +84,19 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
+    * keepDays  日志保存时间。action等于real_time_log_collect时必选
+    * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'agency' => 'agency',
             'logBasePath' => 'logBasePath',
-            'logBucket' => 'logBucket'
+            'logBucket' => 'logBucket',
+            'indexPrefix' => 'index_prefix',
+            'keepDays' => 'keep_days',
+            'targetClusterId' => 'target_cluster_id'
     ];
 
     /**
@@ -86,13 +104,19 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
+    * keepDays  日志保存时间。action等于real_time_log_collect时必选
+    * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
     *
     * @var string[]
     */
     protected static $setters = [
             'agency' => 'setAgency',
             'logBasePath' => 'setLogBasePath',
-            'logBucket' => 'setLogBucket'
+            'logBucket' => 'setLogBucket',
+            'indexPrefix' => 'setIndexPrefix',
+            'keepDays' => 'setKeepDays',
+            'targetClusterId' => 'setTargetClusterId'
     ];
 
     /**
@@ -100,13 +124,19 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     * agency  委托名称，委托给CSS，允许CSS调用您的其他云服务。
     * logBasePath  日志在OBS桶中的备份路径。
     * logBucket  用于存储日志的OBS桶的桶名。
+    * indexPrefix  保存日志的索引前缀。action等于real_time_log_collect时必选
+    * keepDays  日志保存时间。action等于real_time_log_collect时必选
+    * targetClusterId  保存日志的目标集群。action等于real_time_log_collect时必选
     *
     * @var string[]
     */
     protected static $getters = [
             'agency' => 'getAgency',
             'logBasePath' => 'getLogBasePath',
-            'logBucket' => 'getLogBucket'
+            'logBucket' => 'getLogBucket',
+            'indexPrefix' => 'getIndexPrefix',
+            'keepDays' => 'getKeepDays',
+            'targetClusterId' => 'getTargetClusterId'
     ];
 
     /**
@@ -170,6 +200,9 @@ class StartLogsReq implements ModelInterface, ArrayAccess
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['logBasePath'] = isset($data['logBasePath']) ? $data['logBasePath'] : null;
         $this->container['logBucket'] = isset($data['logBucket']) ? $data['logBucket'] : null;
+        $this->container['indexPrefix'] = isset($data['indexPrefix']) ? $data['indexPrefix'] : null;
+        $this->container['keepDays'] = isset($data['keepDays']) ? $data['keepDays'] : null;
+        $this->container['targetClusterId'] = isset($data['targetClusterId']) ? $data['targetClusterId'] : null;
     }
 
     /**
@@ -189,6 +222,12 @@ class StartLogsReq implements ModelInterface, ArrayAccess
         if ($this->container['logBucket'] === null) {
             $invalidProperties[] = "'logBucket' can't be null";
         }
+            if (!is_null($this->container['keepDays']) && ($this->container['keepDays'] > 3650)) {
+                $invalidProperties[] = "invalid value for 'keepDays', must be smaller than or equal to 3650.";
+            }
+            if (!is_null($this->container['keepDays']) && ($this->container['keepDays'] < 1)) {
+                $invalidProperties[] = "invalid value for 'keepDays', must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -272,6 +311,78 @@ class StartLogsReq implements ModelInterface, ArrayAccess
     public function setLogBucket($logBucket)
     {
         $this->container['logBucket'] = $logBucket;
+        return $this;
+    }
+
+    /**
+    * Gets indexPrefix
+    *  保存日志的索引前缀。action等于real_time_log_collect时必选
+    *
+    * @return string|null
+    */
+    public function getIndexPrefix()
+    {
+        return $this->container['indexPrefix'];
+    }
+
+    /**
+    * Sets indexPrefix
+    *
+    * @param string|null $indexPrefix 保存日志的索引前缀。action等于real_time_log_collect时必选
+    *
+    * @return $this
+    */
+    public function setIndexPrefix($indexPrefix)
+    {
+        $this->container['indexPrefix'] = $indexPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets keepDays
+    *  日志保存时间。action等于real_time_log_collect时必选
+    *
+    * @return int|null
+    */
+    public function getKeepDays()
+    {
+        return $this->container['keepDays'];
+    }
+
+    /**
+    * Sets keepDays
+    *
+    * @param int|null $keepDays 日志保存时间。action等于real_time_log_collect时必选
+    *
+    * @return $this
+    */
+    public function setKeepDays($keepDays)
+    {
+        $this->container['keepDays'] = $keepDays;
+        return $this;
+    }
+
+    /**
+    * Gets targetClusterId
+    *  保存日志的目标集群。action等于real_time_log_collect时必选
+    *
+    * @return string|null
+    */
+    public function getTargetClusterId()
+    {
+        return $this->container['targetClusterId'];
+    }
+
+    /**
+    * Sets targetClusterId
+    *
+    * @param string|null $targetClusterId 保存日志的目标集群。action等于real_time_log_collect时必选
+    *
+    * @return $this
+    */
+    public function setTargetClusterId($targetClusterId)
+    {
+        $this->container['targetClusterId'] = $targetClusterId;
         return $this;
     }
 

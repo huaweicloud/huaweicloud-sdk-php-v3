@@ -24,6 +24,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
             'instanceId' => 'string',
             'name' => 'string',
             'description' => 'string',
-            'databases' => '\HuaweiCloud\SDK\Rds\V3\Model\BackupDatabase[]'
+            'databases' => '\HuaweiCloud\SDK\Rds\V3\Model\BackupDatabase[]',
+            'backupDatabaseIndividually' => 'bool'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
         'instanceId' => null,
         'name' => null,
         'description' => null,
-        'databases' => null
+        'databases' => null,
+        'backupDatabaseIndividually' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
             'instanceId' => 'instance_id',
             'name' => 'name',
             'description' => 'description',
-            'databases' => 'databases'
+            'databases' => 'databases',
+            'backupDatabaseIndividually' => 'backup_database_individually'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
             'instanceId' => 'setInstanceId',
             'name' => 'setName',
             'description' => 'setDescription',
-            'databases' => 'setDatabases'
+            'databases' => 'setDatabases',
+            'backupDatabaseIndividually' => 'setBackupDatabaseIndividually'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     * name  备份名称，4~64个字符，必须以英文字母开头，区分大小写，可以包含英文字母、数字、中划线或者下划线，不能包含其他特殊字符。
     * description  备份描述，不能包含>!<\"&'=特殊字符，不大于256个字符。
     * databases  只支持Microsoft SQL Server，局部备份的用户自建数据库名列表，当有此参数时以局部备份为准。
+    * backupDatabaseIndividually  是否分库备份，只适用于SQLServer，默认为false
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
             'instanceId' => 'getInstanceId',
             'name' => 'getName',
             'description' => 'getDescription',
-            'databases' => 'getDatabases'
+            'databases' => 'getDatabases',
+            'backupDatabaseIndividually' => 'getBackupDatabaseIndividually'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
+        $this->container['backupDatabaseIndividually'] = isset($data['backupDatabaseIndividually']) ? $data['backupDatabaseIndividually'] : null;
     }
 
     /**
@@ -313,6 +324,30 @@ class CreateManualBackupRequestBody implements ModelInterface, ArrayAccess
     public function setDatabases($databases)
     {
         $this->container['databases'] = $databases;
+        return $this;
+    }
+
+    /**
+    * Gets backupDatabaseIndividually
+    *  是否分库备份，只适用于SQLServer，默认为false
+    *
+    * @return bool|null
+    */
+    public function getBackupDatabaseIndividually()
+    {
+        return $this->container['backupDatabaseIndividually'];
+    }
+
+    /**
+    * Sets backupDatabaseIndividually
+    *
+    * @param bool|null $backupDatabaseIndividually 是否分库备份，只适用于SQLServer，默认为false
+    *
+    * @return $this
+    */
+    public function setBackupDatabaseIndividually($backupDatabaseIndividually)
+    {
+        $this->container['backupDatabaseIndividually'] = $backupDatabaseIndividually;
         return $this;
     }
 

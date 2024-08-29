@@ -39,6 +39,8 @@ After installing, you need to require Composer's autoloader:
 require 'path/to/vendor/autoload.php';
 ```
 
+You can get the SDK version information through [SDK center](https://console-intl.huaweicloud.com/apiexplorer/#/sdkcenter?language=PHP) or [Packagist](https://packagist.org/packages/huaweicloud/huaweicloud-sdk-php).
+
 ## Code example
 
 - The following example shows how to query a list of IAM in a specific region, you need to substitute your real `{Service}Client` for `IamClient` in actual use.
@@ -102,8 +104,7 @@ listPermanentAccessKeys($iamClient);
 
 ## Online Debugging
 
-[API Explorer](https://apiexplorer.developer.intl.huaweicloud.com/apiexplorer/overview) provides api retrieval and online debugging, supports full fast retrieval, visual debugging, help document viewing, and online consultation.
-
+[API Explorer](https://apiexplorer.developer.intl.huaweicloud.com/apiexplorer/overview) provides api retrieval, SDK samples and online debugging, supports full fast retrieval, visual debugging, help document viewing, and online consultation.
 ## Changelog
 
 Detailed changes for each released version are documented in

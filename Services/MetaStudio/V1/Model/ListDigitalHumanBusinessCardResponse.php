@@ -21,7 +21,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  数字人名片制作任总数。
+    * count  数字人名片制作任务总数。
     * jobs  数字人名片制作任务列表。
     * xRequestId  xRequestId
     *
@@ -35,7 +35,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  数字人名片制作任总数。
+    * count  数字人名片制作任务总数。
     * jobs  数字人名片制作任务列表。
     * xRequestId  xRequestId
     *
@@ -70,7 +70,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  数字人名片制作任总数。
+    * count  数字人名片制作任务总数。
     * jobs  数字人名片制作任务列表。
     * xRequestId  xRequestId
     *
@@ -84,7 +84,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  数字人名片制作任总数。
+    * count  数字人名片制作任务总数。
     * jobs  数字人名片制作任务列表。
     * xRequestId  xRequestId
     *
@@ -98,7 +98,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  数字人名片制作任总数。
+    * count  数字人名片制作任务总数。
     * jobs  数字人名片制作任务列表。
     * xRequestId  xRequestId
     *
@@ -203,7 +203,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets count
-    *  数字人名片制作任总数。
+    *  数字人名片制作任务总数。
     *
     * @return int|null
     */
@@ -215,7 +215,7 @@ class ListDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Sets count
     *
-    * @param int|null $count 数字人名片制作任总数。
+    * @param int|null $count 数字人名片制作任务总数。
     *
     * @return $this
     */

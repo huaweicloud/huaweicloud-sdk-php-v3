@@ -26,10 +26,12 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
-            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig'
+            'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig',
+            'assetOrder' => 'int',
+            'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]'
     ];
 
     /**
@@ -54,10 +58,12 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'tags' => null,
         'assetExtraMeta' => null,
         'systemProperties' => null,
-        'sharedConfig' => null
+        'sharedConfig' => null,
+        'assetOrder' => null,
+        'supportedService' => null
     ];
 
     /**
@@ -103,10 +111,12 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
-            'sharedConfig' => 'shared_config'
+            'sharedConfig' => 'shared_config',
+            'assetOrder' => 'asset_order',
+            'supportedService' => 'supported_service'
     ];
 
     /**
@@ -131,10 +143,12 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
-            'sharedConfig' => 'setSharedConfig'
+            'sharedConfig' => 'setSharedConfig',
+            'assetOrder' => 'setAssetOrder',
+            'supportedService' => 'setSupportedService'
     ];
 
     /**
@@ -159,10 +175,12 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * UNACTIVED：取消激活。未激活的资产不可用于其他业务 * ACTIVED：激活。激活后的资产可用于其他业务
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
-            'sharedConfig' => 'getSharedConfig'
+            'sharedConfig' => 'getSharedConfig',
+            'assetOrder' => 'getAssetOrder',
+            'supportedService' => 'getSupportedService'
     ];
 
     /**
@@ -301,6 +321,8 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
+        $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
+        $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
     }
 
     /**
@@ -344,6 +366,12 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['assetOwner']) && (mb_strlen($this->container['assetOwner']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetOwner', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] > 32767)) {
+                $invalidProperties[] = "invalid value for 'assetOrder', must be smaller than or equal to 32767.";
+            }
+            if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] < 0)) {
+                $invalidProperties[] = "invalid value for 'assetOrder', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -505,7 +533,7 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。
+    *  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     *
     * @return string[]|null
     */
@@ -517,7 +545,7 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 标签列表。
+    * @param string[]|null $tags 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     *
     * @return $this
     */
@@ -596,6 +624,54 @@ class UpdateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     public function setSharedConfig($sharedConfig)
     {
         $this->container['sharedConfig'] = $sharedConfig;
+        return $this;
+    }
+
+    /**
+    * Gets assetOrder
+    *  展示顺序
+    *
+    * @return int|null
+    */
+    public function getAssetOrder()
+    {
+        return $this->container['assetOrder'];
+    }
+
+    /**
+    * Sets assetOrder
+    *
+    * @param int|null $assetOrder 展示顺序
+    *
+    * @return $this
+    */
+    public function setAssetOrder($assetOrder)
+    {
+        $this->container['assetOrder'] = $assetOrder;
+        return $this;
+    }
+
+    /**
+    * Gets supportedService
+    *  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
+    */
+    public function getSupportedService()
+    {
+        return $this->container['supportedService'];
+    }
+
+    /**
+    * Sets supportedService
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return $this
+    */
+    public function setSupportedService($supportedService)
+    {
+        $this->container['supportedService'] = $supportedService;
         return $this;
     }
 

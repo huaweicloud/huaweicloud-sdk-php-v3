@@ -7442,6 +7442,9 @@ class WafClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['action'] !== null) {
+            $queryParams['action'] = $localVarParams['action'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }

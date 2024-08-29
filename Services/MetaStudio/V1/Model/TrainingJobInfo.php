@@ -37,6 +37,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * createType  createType
     * tag  tag
     * phone  手机号
+    * dhtmsJobId  形象制作任务id
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'voiceAuthorizationUrl' => 'string',
             'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType',
             'tag' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobTag',
-            'phone' => 'string'
+            'phone' => 'string',
+            'dhtmsJobId' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * createType  createType
     * tag  tag
     * phone  手机号
+    * dhtmsJobId  形象制作任务id
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         'voiceAuthorizationUrl' => null,
         'createType' => null,
         'tag' => null,
-        'phone' => null
+        'phone' => null,
+        'dhtmsJobId' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * createType  createType
     * tag  tag
     * phone  手机号
+    * dhtmsJobId  形象制作任务id
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'voiceAuthorizationUrl' => 'voice_authorization_url',
             'createType' => 'create_type',
             'tag' => 'tag',
-            'phone' => 'phone'
+            'phone' => 'phone',
+            'dhtmsJobId' => 'dhtms_job_id'
     ];
 
     /**
@@ -184,6 +190,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * createType  createType
     * tag  tag
     * phone  手机号
+    * dhtmsJobId  形象制作任务id
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'voiceAuthorizationUrl' => 'setVoiceAuthorizationUrl',
             'createType' => 'setCreateType',
             'tag' => 'setTag',
-            'phone' => 'setPhone'
+            'phone' => 'setPhone',
+            'dhtmsJobId' => 'setDhtmsJobId'
     ];
 
     /**
@@ -226,6 +234,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * createType  createType
     * tag  tag
     * phone  手机号
+    * dhtmsJobId  形象制作任务id
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'voiceAuthorizationUrl' => 'getVoiceAuthorizationUrl',
             'createType' => 'getCreateType',
             'tag' => 'getTag',
-            'phone' => 'getPhone'
+            'phone' => 'getPhone',
+            'dhtmsJobId' => 'getDhtmsJobId'
     ];
 
     /**
@@ -324,6 +334,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         $this->container['createType'] = isset($data['createType']) ? $data['createType'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
+        $this->container['dhtmsJobId'] = isset($data['dhtmsJobId']) ? $data['dhtmsJobId'] : null;
     }
 
     /**
@@ -411,6 +422,12 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['phone']) && (mb_strlen($this->container['phone']) < 1)) {
                 $invalidProperties[] = "invalid value for 'phone', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['dhtmsJobId']) && (mb_strlen($this->container['dhtmsJobId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'dhtmsJobId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['dhtmsJobId']) && (mb_strlen($this->container['dhtmsJobId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'dhtmsJobId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -831,6 +848,30 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     public function setPhone($phone)
     {
         $this->container['phone'] = $phone;
+        return $this;
+    }
+
+    /**
+    * Gets dhtmsJobId
+    *  形象制作任务id
+    *
+    * @return string|null
+    */
+    public function getDhtmsJobId()
+    {
+        return $this->container['dhtmsJobId'];
+    }
+
+    /**
+    * Sets dhtmsJobId
+    *
+    * @param string|null $dhtmsJobId 形象制作任务id
+    *
+    * @return $this
+    */
+    public function setDhtmsJobId($dhtmsJobId)
+    {
+        $this->container['dhtmsJobId'] = $dhtmsJobId;
         return $this;
     }
 

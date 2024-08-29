@@ -22,13 +22,13 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobInfo  jobInfo
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -50,13 +50,13 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobInfo  jobInfo
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -99,13 +99,13 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobInfo  jobInfo
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -127,13 +127,13 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobInfo  jobInfo
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -155,13 +155,13 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobInfo  jobInfo
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageUrl  cardImageUrl
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动，需要在资产库中先上传语音资产
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * xRequestId  xRequestId
     *
@@ -368,7 +368,7 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets cardTempletAssetId
-    *  数字人名片模板资产ID。
+    *  数字人名片模板资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Sets cardTempletAssetId
     *
-    * @param string|null $cardTempletAssetId 数字人名片模板资产ID。
+    * @param string|null $cardTempletAssetId 数字人名片模板资产ID，可以从资产库中查询。
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets voiceAssetId
-    *  音色资产ID。
+    *  音色资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -500,7 +500,7 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Sets voiceAssetId
     *
-    * @param string|null $voiceAssetId 音色资产ID。
+    * @param string|null $voiceAssetId 音色资产ID，可以从资产库中查询。
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
 
     /**
     * Gets introductionAudioAssetId
-    *  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    *  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     *
     * @return string|null
     */
@@ -524,7 +524,7 @@ class ShowDigitalHumanBusinessCardResponse implements ModelInterface, ArrayAcces
     /**
     * Sets introductionAudioAssetId
     *
-    * @param string|null $introductionAudioAssetId 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * @param string|null $introductionAudioAssetId 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     *
     * @return $this
     */

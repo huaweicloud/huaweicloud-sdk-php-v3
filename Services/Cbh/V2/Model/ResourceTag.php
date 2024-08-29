@@ -20,8 +20,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
-    * value  值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * value  值。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
-    * value  值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * value  值。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
-    * value  值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * value  值。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
-    * value  值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * value  值。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
-    * value  值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * value  值。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
+    *  键。最大长度128个字符。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。最大长度128个字符。  key需要满足3.1 KEY字符集规范。
+    * @param string $key 键。最大长度128个字符。
     *
     * @return $this
     */
@@ -233,7 +233,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    *  值。每个值最大长度255个字符。
     *
     * @return string
     */
@@ -245,7 +245,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值。每个值最大长度255个字符， value需要满足3.2 VALUE字符集规范。
+    * @param string $value 值。每个值最大长度255个字符。
     *
     * @return $this
     */

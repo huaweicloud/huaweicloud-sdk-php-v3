@@ -20,6 +20,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * isSupportPhonemeEn  支持英文音标。
     * isSupportPhoneme  是否支持多音字。
     * isSupportBreakTime  是否支持停顿。
     * isSupportBreakStrength  是否支持韵律。
@@ -32,6 +33,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'isSupportPhonemeEn' => 'bool',
             'isSupportPhoneme' => 'bool',
             'isSupportBreakTime' => 'bool',
             'isSupportBreakStrength' => 'bool',
@@ -44,6 +46,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * isSupportPhonemeEn  支持英文音标。
     * isSupportPhoneme  是否支持多音字。
     * isSupportBreakTime  是否支持停顿。
     * isSupportBreakStrength  是否支持韵律。
@@ -56,6 +59,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'isSupportPhonemeEn' => null,
         'isSupportPhoneme' => null,
         'isSupportBreakTime' => null,
         'isSupportBreakStrength' => null,
@@ -89,6 +93,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * isSupportPhonemeEn  支持英文音标。
     * isSupportPhoneme  是否支持多音字。
     * isSupportBreakTime  是否支持停顿。
     * isSupportBreakStrength  是否支持韵律。
@@ -101,6 +106,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'isSupportPhonemeEn' => 'is_support_phoneme_en',
             'isSupportPhoneme' => 'is_support_phoneme',
             'isSupportBreakTime' => 'is_support_break_time',
             'isSupportBreakStrength' => 'is_support_break_strength',
@@ -113,6 +119,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * isSupportPhonemeEn  支持英文音标。
     * isSupportPhoneme  是否支持多音字。
     * isSupportBreakTime  是否支持停顿。
     * isSupportBreakStrength  是否支持韵律。
@@ -125,6 +132,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'isSupportPhonemeEn' => 'setIsSupportPhonemeEn',
             'isSupportPhoneme' => 'setIsSupportPhoneme',
             'isSupportBreakTime' => 'setIsSupportBreakTime',
             'isSupportBreakStrength' => 'setIsSupportBreakStrength',
@@ -137,6 +145,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * isSupportPhonemeEn  支持英文音标。
     * isSupportPhoneme  是否支持多音字。
     * isSupportBreakTime  是否支持停顿。
     * isSupportBreakStrength  是否支持韵律。
@@ -149,6 +158,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'isSupportPhonemeEn' => 'getIsSupportPhonemeEn',
             'isSupportPhoneme' => 'getIsSupportPhoneme',
             'isSupportBreakTime' => 'getIsSupportBreakTime',
             'isSupportBreakStrength' => 'getIsSupportBreakStrength',
@@ -217,6 +227,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['isSupportPhonemeEn'] = isset($data['isSupportPhonemeEn']) ? $data['isSupportPhonemeEn'] : null;
         $this->container['isSupportPhoneme'] = isset($data['isSupportPhoneme']) ? $data['isSupportPhoneme'] : null;
         $this->container['isSupportBreakTime'] = isset($data['isSupportBreakTime']) ? $data['isSupportBreakTime'] : null;
         $this->container['isSupportBreakStrength'] = isset($data['isSupportBreakStrength']) ? $data['isSupportBreakStrength'] : null;
@@ -247,6 +258,30 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets isSupportPhonemeEn
+    *  支持英文音标。
+    *
+    * @return bool|null
+    */
+    public function getIsSupportPhonemeEn()
+    {
+        return $this->container['isSupportPhonemeEn'];
+    }
+
+    /**
+    * Sets isSupportPhonemeEn
+    *
+    * @param bool|null $isSupportPhonemeEn 支持英文音标。
+    *
+    * @return $this
+    */
+    public function setIsSupportPhonemeEn($isSupportPhonemeEn)
+    {
+        $this->container['isSupportPhonemeEn'] = $isSupportPhonemeEn;
+        return $this;
     }
 
     /**

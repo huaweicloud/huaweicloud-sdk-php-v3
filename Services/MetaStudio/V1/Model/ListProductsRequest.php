@@ -26,7 +26,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
@@ -60,7 +60,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
@@ -115,7 +115,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
@@ -149,7 +149,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
@@ -183,7 +183,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
@@ -528,7 +528,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段，目前只支持create_time。
+    *  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     *
     * @return string|null
     */
@@ -540,7 +540,7 @@ class ListProductsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段，目前只支持create_time。
+    * @param string|null $sortKey 排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     *
     * @return $this
     */

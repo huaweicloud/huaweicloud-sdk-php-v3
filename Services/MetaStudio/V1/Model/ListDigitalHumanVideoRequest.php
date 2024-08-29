@@ -27,10 +27,11 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * fuzzyQueryField  使用模糊查询的字段
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
@@ -50,6 +51,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'string',
             'createUntil' => 'string',
             'createSince' => 'string',
+            'fuzzyQueryField' => 'string[]',
             'scriptId' => 'string',
             'assetName' => 'string',
             'jobType' => 'string',
@@ -65,10 +67,11 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * fuzzyQueryField  使用模糊查询的字段
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
@@ -88,6 +91,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         'sortDir' => null,
         'createUntil' => null,
         'createSince' => null,
+        'fuzzyQueryField' => null,
         'scriptId' => null,
         'assetName' => null,
         'jobType' => null,
@@ -124,10 +128,11 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * fuzzyQueryField  使用模糊查询的字段
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
@@ -147,6 +152,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'sort_dir',
             'createUntil' => 'create_until',
             'createSince' => 'create_since',
+            'fuzzyQueryField' => 'fuzzy_query_field',
             'scriptId' => 'script_id',
             'assetName' => 'asset_name',
             'jobType' => 'job_type',
@@ -162,10 +168,11 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * fuzzyQueryField  使用模糊查询的字段
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
@@ -185,6 +192,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'setSortDir',
             'createUntil' => 'setCreateUntil',
             'createSince' => 'setCreateSince',
+            'fuzzyQueryField' => 'setFuzzyQueryField',
             'scriptId' => 'setScriptId',
             'assetName' => 'setAssetName',
             'jobType' => 'setJobType',
@@ -200,10 +208,11 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * state  任务状态，默认所有状态。  可多个状态查询，使用英文逗号分隔。  如state=CREATING,PUBLISHED
-    * sortKey  排序字段，目前只支持create_time。
+    * sortKey  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     * sortDir  排序方式。 * asc：升序 * desc：降序  默认asc升序。
     * createUntil  过滤创建时间<=输入时间的记录。
     * createSince  过滤创建时间>=输入时间的记录。
+    * fuzzyQueryField  使用模糊查询的字段
     * scriptId  剧本ID。
     * assetName  输出视频资产名称。
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
@@ -223,6 +232,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'getSortDir',
             'createUntil' => 'getCreateUntil',
             'createSince' => 'getCreateSince',
+            'fuzzyQueryField' => 'getFuzzyQueryField',
             'scriptId' => 'getScriptId',
             'assetName' => 'getAssetName',
             'jobType' => 'getJobType',
@@ -298,6 +308,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
         $this->container['sortDir'] = isset($data['sortDir']) ? $data['sortDir'] : null;
         $this->container['createUntil'] = isset($data['createUntil']) ? $data['createUntil'] : null;
         $this->container['createSince'] = isset($data['createSince']) ? $data['createSince'] : null;
+        $this->container['fuzzyQueryField'] = isset($data['fuzzyQueryField']) ? $data['fuzzyQueryField'] : null;
         $this->container['scriptId'] = isset($data['scriptId']) ? $data['scriptId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
@@ -586,7 +597,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets sortKey
-    *  排序字段，目前只支持create_time。
+    *  排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     *
     * @return string|null
     */
@@ -598,7 +609,7 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sortKey
     *
-    * @param string|null $sortKey 排序字段，目前只支持create_time。
+    * @param string|null $sortKey 排序字段，支持的排序方式有： - 按创建时间排序：create_time - 按更新时间排序：update_time - 按资产排序：asset_order
     *
     * @return $this
     */
@@ -677,6 +688,30 @@ class ListDigitalHumanVideoRequest implements ModelInterface, ArrayAccess
     public function setCreateSince($createSince)
     {
         $this->container['createSince'] = $createSince;
+        return $this;
+    }
+
+    /**
+    * Gets fuzzyQueryField
+    *  使用模糊查询的字段
+    *
+    * @return string[]|null
+    */
+    public function getFuzzyQueryField()
+    {
+        return $this->container['fuzzyQueryField'];
+    }
+
+    /**
+    * Sets fuzzyQueryField
+    *
+    * @param string[]|null $fuzzyQueryField 使用模糊查询的字段
+    *
+    * @return $this
+    */
+    public function setFuzzyQueryField($fuzzyQueryField)
+    {
+        $this->container['fuzzyQueryField'] = $fuzzyQueryField;
         return $this;
     }
 

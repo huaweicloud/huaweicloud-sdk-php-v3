@@ -21,7 +21,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
-    * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    * autoPlayScript  是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     * needIndependentCaptureClient  是否需要独立采集端
@@ -39,7 +39,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
-    * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    * autoPlayScript  是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     * needIndependentCaptureClient  是否需要独立采集端
@@ -78,7 +78,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
-    * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    * autoPlayScript  是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     * needIndependentCaptureClient  是否需要独立采集端
@@ -96,7 +96,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
-    * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    * autoPlayScript  是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     * needIndependentCaptureClient  是否需要独立采集端
@@ -114,7 +114,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * repeatCount  剧本重复播放次数。 -1表示持续重复，直至人工停止 0 表示不重复，仅执行一次 其他值n，实际运行次数为n+1次
-    * autoPlayScript  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    * autoPlayScript  是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     * playMode  驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动 * NO_PRESET: 无预置剧本。人工控制模式。
     * randomPlayMode  随机播报模式。 * NONE: 不启动随机播报。 * SCENE: 按场景随机播报。场景内段落按顺序播报。 * SCRIPT_ITEM：按段落随机播报。场景按顺序播报。 * SCENE_AND_SCRIPT_ITEM： 场景和段落都随机播报。
     * needIndependentCaptureClient  是否需要独立采集端
@@ -312,7 +312,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoPlayScript
-    *  是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    *  是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     *
     * @return bool|null
     */
@@ -324,7 +324,7 @@ class PlayPolicy implements ModelInterface, ArrayAccess
     /**
     * Sets autoPlayScript
     *
-    * @param bool|null $autoPlayScript 是否自动播放剧本。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
+    * @param bool|null $autoPlayScript 是否启动推理，自动播放剧本。 如果不启动推理，数字人为静默状态。 true: 服务完成任务初始化后，自动播放剧本 false: 服务完成任务初始化后，等待信号后再开始播放剧本
     *
     * @return $this
     */

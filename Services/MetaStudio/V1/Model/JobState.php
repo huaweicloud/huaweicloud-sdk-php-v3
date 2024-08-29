@@ -13,6 +13,10 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const CREATING = 'CREATING';
     const SYSTEM_AUDITING = 'SYSTEM_AUDITING';
     const AUDITING = 'AUDITING';
+    const WAITING_SPLIT = 'WAITING_SPLIT';
+    const SPLITTING = 'SPLITTING';
+    const SPLIT_FAILED = 'SPLIT_FAILED';
+    const ANNOTATING = 'ANNOTATING';
     const WAITING = 'WAITING';
     const PROCESSING = 'PROCESSING';
     const RESULT_REVIEW = 'RESULT_REVIEW';
@@ -32,6 +36,10 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::CREATING,
             self::SYSTEM_AUDITING,
             self::AUDITING,
+            self::WAITING_SPLIT,
+            self::SPLITTING,
+            self::SPLIT_FAILED,
+            self::ANNOTATING,
             self::WAITING,
             self::PROCESSING,
             self::RESULT_REVIEW,

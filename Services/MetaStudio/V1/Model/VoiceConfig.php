@@ -20,7 +20,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * voiceAssetId  音色资产ID。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
     * speed  语速。  默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。  默认值100，最小值50，最大值200。
     * volume  音量。  默认值140，最小值90，最大值240。
@@ -36,7 +36,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * voiceAssetId  音色资产ID。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
     * speed  语速。  默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。  默认值100，最小值50，最大值200。
     * volume  音量。  默认值140，最小值90，最大值240。
@@ -73,7 +73,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * voiceAssetId  音色资产ID。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
     * speed  语速。  默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。  默认值100，最小值50，最大值200。
     * volume  音量。  默认值140，最小值90，最大值240。
@@ -89,7 +89,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * voiceAssetId  音色资产ID。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
     * speed  语速。  默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。  默认值100，最小值50，最大值200。
     * volume  音量。  默认值140，最小值90，最大值240。
@@ -105,7 +105,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * voiceAssetId  音色资产ID。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
     * speed  语速。  默认值100，最小值50，最大值200。 > * 当取值为“100”时，表示一个成年人正常的语速，约为250字/分钟。 > * 50表示0.5倍语速，100表示正常语速，200表示2倍语速。
     * pitch  音高。  默认值100，最小值50，最大值200。
     * volume  音量。  默认值140，最小值90，最大值240。
@@ -234,7 +234,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets voiceAssetId
-    *  音色资产ID。
+    *  音色资产ID，可以从资产库中查询。
     *
     * @return string
     */
@@ -246,7 +246,7 @@ class VoiceConfig implements ModelInterface, ArrayAccess
     /**
     * Sets voiceAssetId
     *
-    * @param string $voiceAssetId 音色资产ID。
+    * @param string $voiceAssetId 音色资产ID，可以从资产库中查询。
     *
     * @return $this
     */

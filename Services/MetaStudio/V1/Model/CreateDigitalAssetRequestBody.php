@@ -25,11 +25,13 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  是否需要生成封面。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig',
-            'isNeedGenerateCover' => 'bool'
+            'isNeedGenerateCover' => 'bool',
+            'assetOrder' => 'int',
+            'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]'
     ];
 
     /**
@@ -53,11 +57,13 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  是否需要生成封面。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'assetExtraMeta' => null,
         'systemProperties' => null,
         'sharedConfig' => null,
-        'isNeedGenerateCover' => null
+        'isNeedGenerateCover' => null,
+        'assetOrder' => 'int32',
+        'supportedService' => null
     ];
 
     /**
@@ -102,11 +110,13 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  是否需要生成封面。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
             'sharedConfig' => 'shared_config',
-            'isNeedGenerateCover' => 'is_need_generate_cover'
+            'isNeedGenerateCover' => 'is_need_generate_cover',
+            'assetOrder' => 'asset_order',
+            'supportedService' => 'supported_service'
     ];
 
     /**
@@ -130,11 +142,13 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  是否需要生成封面。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
             'sharedConfig' => 'setSharedConfig',
-            'isNeedGenerateCover' => 'setIsNeedGenerateCover'
+            'isNeedGenerateCover' => 'setIsNeedGenerateCover',
+            'assetOrder' => 'setAssetOrder',
+            'supportedService' => 'setSupportedService'
     ];
 
     /**
@@ -158,11 +174,13 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
     * reviewConfig  reviewConfig
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  是否需要生成封面。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
             'sharedConfig' => 'getSharedConfig',
-            'isNeedGenerateCover' => 'getIsNeedGenerateCover'
+            'isNeedGenerateCover' => 'getIsNeedGenerateCover',
+            'assetOrder' => 'getAssetOrder',
+            'supportedService' => 'getSupportedService'
     ];
 
     /**
@@ -286,6 +306,8 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
+        $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
+        $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
     }
 
     /**
@@ -327,6 +349,12 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['assetOwner']) && (mb_strlen($this->container['assetOwner']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetOwner', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] > 32767)) {
+                $invalidProperties[] = "invalid value for 'assetOrder', must be smaller than or equal to 32767.";
+            }
+            if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] < 0)) {
+                $invalidProperties[] = "invalid value for 'assetOrder', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -464,7 +492,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。
+    *  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     *
     * @return string[]|null
     */
@@ -476,7 +504,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 标签列表。
+    * @param string[]|null $tags 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     *
     * @return $this
     */
@@ -579,6 +607,54 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     public function setIsNeedGenerateCover($isNeedGenerateCover)
     {
         $this->container['isNeedGenerateCover'] = $isNeedGenerateCover;
+        return $this;
+    }
+
+    /**
+    * Gets assetOrder
+    *  展示顺序
+    *
+    * @return int|null
+    */
+    public function getAssetOrder()
+    {
+        return $this->container['assetOrder'];
+    }
+
+    /**
+    * Sets assetOrder
+    *
+    * @param int|null $assetOrder 展示顺序
+    *
+    * @return $this
+    */
+    public function setAssetOrder($assetOrder)
+    {
+        $this->container['assetOrder'] = $assetOrder;
+        return $this;
+    }
+
+    /**
+    * Gets supportedService
+    *  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
+    */
+    public function getSupportedService()
+    {
+        return $this->container['supportedService'];
+    }
+
+    /**
+    * Sets supportedService
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return $this
+    */
+    public function setSupportedService($supportedService)
+    {
+        $this->container['supportedService'] = $supportedService;
         return $this;
     }
 

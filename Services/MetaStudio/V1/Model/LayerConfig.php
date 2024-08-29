@@ -21,7 +21,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
-    * assetId  图层所需资产的资产id，外部资产信息无需填写
+    * assetId  图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
@@ -45,7 +45,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
-    * assetId  图层所需资产的资产id，外部资产信息无需填写
+    * assetId  图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
@@ -90,7 +90,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
-    * assetId  图层所需资产的资产id，外部资产信息无需填写
+    * assetId  图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
@@ -114,7 +114,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
-    * assetId  图层所需资产的资产id，外部资产信息无需填写
+    * assetId  图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
@@ -138,7 +138,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * layerType  图层类型。 - HUMAN:  人物图层 - IMAGE： 素材图片图层 - VIDEO： 素材视频图层 - TEXT: 素材文字图层
-    * assetId  图层所需资产的资产id，外部资产信息无需填写
+    * assetId  图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     * groupId  多场景素材编组。同一group_id的素材，在应用全局时共享位置信息。
     * position  position
     * size  size
@@ -317,7 +317,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetId
-    *  图层所需资产的资产id，外部资产信息无需填写
+    *  图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -329,7 +329,7 @@ class LayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets assetId
     *
-    * @param string|null $assetId 图层所需资产的资产id，外部资产信息无需填写
+    * @param string|null $assetId 图层所需资产的资产id，外部资产信息无需填写。 若填写，可以从资产库中查询。
     *
     * @return $this
     */

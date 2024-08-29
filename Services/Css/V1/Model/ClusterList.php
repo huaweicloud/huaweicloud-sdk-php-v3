@@ -46,6 +46,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
     * bandwidthResourceId  es公网访问的资源id。
+    * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     *
     * @var string[]
     */
@@ -75,7 +76,8 @@ class ClusterList implements ModelInterface, ArrayAccess
             'tags' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterListTags[]',
             'failedReason' => '\HuaweiCloud\SDK\Css\V1\Model\ClusterListFailedReasons',
             'period' => 'bool',
-            'bandwidthResourceId' => 'string'
+            'bandwidthResourceId' => 'string',
+            'ipv6Endpoint' => 'string'
     ];
 
     /**
@@ -106,6 +108,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
     * bandwidthResourceId  es公网访问的资源id。
+    * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     *
     * @var string[]
     */
@@ -135,7 +138,8 @@ class ClusterList implements ModelInterface, ArrayAccess
         'tags' => null,
         'failedReason' => null,
         'period' => null,
-        'bandwidthResourceId' => null
+        'bandwidthResourceId' => null,
+        'ipv6Endpoint' => null
     ];
 
     /**
@@ -187,6 +191,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
     * bandwidthResourceId  es公网访问的资源id。
+    * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     *
     * @var string[]
     */
@@ -216,7 +221,8 @@ class ClusterList implements ModelInterface, ArrayAccess
             'tags' => 'tags',
             'failedReason' => 'failedReason',
             'period' => 'period',
-            'bandwidthResourceId' => 'bandwidthResourceId'
+            'bandwidthResourceId' => 'bandwidthResourceId',
+            'ipv6Endpoint' => 'ipv6Endpoint'
     ];
 
     /**
@@ -247,6 +253,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
     * bandwidthResourceId  es公网访问的资源id。
+    * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     *
     * @var string[]
     */
@@ -276,7 +283,8 @@ class ClusterList implements ModelInterface, ArrayAccess
             'tags' => 'setTags',
             'failedReason' => 'setFailedReason',
             'period' => 'setPeriod',
-            'bandwidthResourceId' => 'setBandwidthResourceId'
+            'bandwidthResourceId' => 'setBandwidthResourceId',
+            'ipv6Endpoint' => 'setIpv6Endpoint'
     ];
 
     /**
@@ -307,6 +315,7 @@ class ClusterList implements ModelInterface, ArrayAccess
     * failedReason  failedReason
     * period  是否为包周期集群。 - \"true\" 表示是包周期计费的集群。 - \"false\" 表示是按需计费的集群。
     * bandwidthResourceId  es公网访问的资源id。
+    * ipv6Endpoint  集群内网访问IPv6地址和端口号。
     *
     * @var string[]
     */
@@ -336,7 +345,8 @@ class ClusterList implements ModelInterface, ArrayAccess
             'tags' => 'getTags',
             'failedReason' => 'getFailedReason',
             'period' => 'getPeriod',
-            'bandwidthResourceId' => 'getBandwidthResourceId'
+            'bandwidthResourceId' => 'getBandwidthResourceId',
+            'ipv6Endpoint' => 'getIpv6Endpoint'
     ];
 
     /**
@@ -423,6 +433,7 @@ class ClusterList implements ModelInterface, ArrayAccess
         $this->container['failedReason'] = isset($data['failedReason']) ? $data['failedReason'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
         $this->container['bandwidthResourceId'] = isset($data['bandwidthResourceId']) ? $data['bandwidthResourceId'] : null;
+        $this->container['ipv6Endpoint'] = isset($data['ipv6Endpoint']) ? $data['ipv6Endpoint'] : null;
     }
 
     /**
@@ -1068,6 +1079,30 @@ class ClusterList implements ModelInterface, ArrayAccess
     public function setBandwidthResourceId($bandwidthResourceId)
     {
         $this->container['bandwidthResourceId'] = $bandwidthResourceId;
+        return $this;
+    }
+
+    /**
+    * Gets ipv6Endpoint
+    *  集群内网访问IPv6地址和端口号。
+    *
+    * @return string|null
+    */
+    public function getIpv6Endpoint()
+    {
+        return $this->container['ipv6Endpoint'];
+    }
+
+    /**
+    * Sets ipv6Endpoint
+    *
+    * @param string|null $ipv6Endpoint 集群内网访问IPv6地址和端口号。
+    *
+    * @return $this
+    */
+    public function setIpv6Endpoint($ipv6Endpoint)
+    {
+        $this->container['ipv6Endpoint'] = $ipv6Endpoint;
         return $this;
     }
 

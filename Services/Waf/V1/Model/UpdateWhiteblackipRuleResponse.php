@@ -27,6 +27,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单Ip/IP段
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -38,6 +39,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'string',
             'description' => 'string',
             'white' => 'int',
+            'timeMode' => 'string',
             'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup'
     ];
 
@@ -49,6 +51,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单Ip/IP段
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -60,6 +63,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
         'addr' => null,
         'description' => null,
         'white' => null,
+        'timeMode' => null,
         'ipGroup' => null
     ];
 
@@ -92,6 +96,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单Ip/IP段
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -103,6 +108,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'addr',
             'description' => 'description',
             'white' => 'white',
+            'timeMode' => 'time_mode',
             'ipGroup' => 'ip_group'
     ];
 
@@ -114,6 +120,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单Ip/IP段
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -125,6 +132,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'setAddr',
             'description' => 'setDescription',
             'white' => 'setWhite',
+            'timeMode' => 'setTimeMode',
             'ipGroup' => 'setIpGroup'
     ];
 
@@ -136,6 +144,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单Ip/IP段
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -147,6 +156,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'getAddr',
             'description' => 'getDescription',
             'white' => 'getWhite',
+            'timeMode' => 'getTimeMode',
             'ipGroup' => 'getIpGroup'
     ];
 
@@ -214,6 +224,7 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
+        $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
         $this->container['ipGroup'] = isset($data['ipGroup']) ? $data['ipGroup'] : null;
     }
 
@@ -380,6 +391,30 @@ class UpdateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     public function setWhite($white)
     {
         $this->container['white'] = $white;
+        return $this;
+    }
+
+    /**
+    * Gets timeMode
+    *  生效模式，默认为permanent（立即生效）
+    *
+    * @return string|null
+    */
+    public function getTimeMode()
+    {
+        return $this->container['timeMode'];
+    }
+
+    /**
+    * Sets timeMode
+    *
+    * @param string|null $timeMode 生效模式，默认为permanent（立即生效）
+    *
+    * @return $this
+    */
+    public function setTimeMode($timeMode)
+    {
+        $this->container['timeMode'] = $timeMode;
         return $this;
     }
 

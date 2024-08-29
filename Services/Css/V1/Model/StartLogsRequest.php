@@ -21,24 +21,28 @@ class StartLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * clusterId  指定开启日志的集群ID。
+    * action  action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'clusterId' => 'string',
+            'action' => 'string',
             'body' => '\HuaweiCloud\SDK\Css\V1\Model\StartLogsReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * clusterId  指定开启日志的集群ID。
+    * action  action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'clusterId' => null,
+        'action' => null,
         'body' => null
     ];
 
@@ -66,36 +70,42 @@ class StartLogsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * clusterId  指定开启日志的集群ID。
+    * action  action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'clusterId' => 'cluster_id',
+            'action' => 'action',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * clusterId  指定开启日志的集群ID。
+    * action  action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'clusterId' => 'setClusterId',
+            'action' => 'setAction',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * clusterId  指定开启日志的集群ID。
+    * action  action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'clusterId' => 'getClusterId',
+            'action' => 'getAction',
             'body' => 'getBody'
     ];
 
@@ -139,7 +149,22 @@ class StartLogsRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACTION_BASE_LOG_COLLECT = 'base_log_collect';
+    const ACTION_REAL_TIME_LOG_COLLECT = 'real_time_log_collect';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_BASE_LOG_COLLECT,
+            self::ACTION_REAL_TIME_LOG_COLLECT,
+        ];
+    }
 
 
     /**
@@ -158,6 +183,7 @@ class StartLogsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -172,6 +198,14 @@ class StartLogsRequest implements ModelInterface, ArrayAccess
         if ($this->container['clusterId'] === null) {
             $invalidProperties[] = "'clusterId' can't be null";
         }
+            $allowedValues = $this->getActionAllowableValues();
+                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'action', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -207,6 +241,30 @@ class StartLogsRequest implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
+    *
+    * @return string|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string|null $action action支持base_log_collect和real_time_log_collect两种，base就是之前历史的能力，real_time为实时采集能力，默认不传就是base，兼容之前的逻辑
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

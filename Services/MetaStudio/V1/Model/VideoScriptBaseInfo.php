@@ -23,7 +23,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * scriptCoverUrl  剧本封面下载url。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
@@ -51,7 +51,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * scriptCoverUrl  剧本封面下载url。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
@@ -100,7 +100,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * scriptCoverUrl  剧本封面下载url。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
@@ -128,7 +128,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * scriptCoverUrl  剧本封面下载url。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
@@ -156,7 +156,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * scriptName  剧本名称。
     * scriptDescription  剧本描述。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * scriptCoverUrl  剧本封面下载url。
     * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
@@ -428,7 +428,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  数字人模型资产ID。
+    *  数字人模型资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -440,7 +440,7 @@ class VideoScriptBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 数字人模型资产ID。
+    * @param string|null $modelAssetId 数字人模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */

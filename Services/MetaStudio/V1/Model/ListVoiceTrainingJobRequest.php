@@ -29,6 +29,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
+    * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'state' => 'string',
             'jobId' => 'string',
             'voiceName' => 'string',
-            'tag' => 'string'
+            'tag' => 'string',
+            'jobType' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
+    * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         'state' => null,
         'jobId' => null,
         'voiceName' => null,
-        'tag' => null
+        'tag' => null,
+        'jobType' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
+    * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'state' => 'state',
             'jobId' => 'job_id',
             'voiceName' => 'voice_name',
-            'tag' => 'tag'
+            'tag' => 'tag',
+            'jobType' => 'job_type'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
+    * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'state' => 'setState',
             'jobId' => 'setJobId',
             'voiceName' => 'setVoiceName',
-            'tag' => 'setTag'
+            'tag' => 'setTag',
+            'jobType' => 'setJobType'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务id。
     * voiceName  声音名称。
     * tag  任务标签。
+    * jobType  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             'state' => 'getState',
             'jobId' => 'getJobId',
             'voiceName' => 'getVoiceName',
-            'tag' => 'getTag'
+            'tag' => 'getTag',
+            'jobType' => 'getJobType'
     ];
 
     /**
@@ -236,6 +246,7 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['voiceName'] = isset($data['voiceName']) ? $data['voiceName'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
+        $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
     }
 
     /**
@@ -299,6 +310,12 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['tag']) && (mb_strlen($this->container['tag']) < 1)) {
                 $invalidProperties[] = "invalid value for 'tag', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['jobType']) && (mb_strlen($this->container['jobType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'jobType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -527,6 +544,30 @@ class ListVoiceTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setTag($tag)
     {
         $this->container['tag'] = $tag;
+        return $this;
+    }
+
+    /**
+    * Gets jobType
+    *  训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    *
+    * @return string|null
+    */
+    public function getJobType()
+    {
+        return $this->container['jobType'];
+    }
+
+    /**
+    * Sets jobType
+    *
+    * @param string|null $jobType 训练类型。 * BASIC: 基础版(20句话) * MIDDLE: 进阶版(100句话) * ADVANCE: 高级版 * THIRD_PARTY: 第三方出门问问训练版 * THIRD_PARTY_LJZN: 第三方逻辑智能训练版 * FLEXUS: Flexus版---用的是大模型特征提取
+    *
+    * @return $this
+    */
+    public function setJobType($jobType)
+    {
+        $this->container['jobType'] = $jobType;
         return $this;
     }
 

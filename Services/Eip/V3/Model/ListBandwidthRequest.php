@@ -23,6 +23,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
     * limit  - 功能说明：每页返回的个数 - 取值范围：取值范围：1~[2000]，其中2000为局点差异项，具体取值由局点决定
     * marker  - 功能说明：分页查询起始的资源ID，为空时为查询第一页
     * id  - 功能说明：带宽唯一标识
+    * fields  display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
     * bandwidthType  - 功能说明：带宽类型，共享带宽默认为share。 - 取值范围：share，bgp，telcom，sbgp等。   - share：共享带宽   - bgp：动态bgp   - telcom ：联通   - sbgp：静态bgp
     * name  - 功能说明：宽带名称，按照宽带名称过滤
     * nameLike  - 功能说明：根据宽带名称模糊查询过滤
@@ -43,6 +44,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
             'limit' => 'string',
             'marker' => 'string',
             'id' => 'string',
+            'fields' => 'string[]',
             'bandwidthType' => 'string',
             'name' => 'string',
             'nameLike' => 'string',
@@ -63,6 +65,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
     * limit  - 功能说明：每页返回的个数 - 取值范围：取值范围：1~[2000]，其中2000为局点差异项，具体取值由局点决定
     * marker  - 功能说明：分页查询起始的资源ID，为空时为查询第一页
     * id  - 功能说明：带宽唯一标识
+    * fields  display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
     * bandwidthType  - 功能说明：带宽类型，共享带宽默认为share。 - 取值范围：share，bgp，telcom，sbgp等。   - share：共享带宽   - bgp：动态bgp   - telcom ：联通   - sbgp：静态bgp
     * name  - 功能说明：宽带名称，按照宽带名称过滤
     * nameLike  - 功能说明：根据宽带名称模糊查询过滤
@@ -83,6 +86,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
         'limit' => null,
         'marker' => null,
         'id' => null,
+        'fields' => null,
         'bandwidthType' => null,
         'name' => null,
         'nameLike' => null,
@@ -124,6 +128,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
     * limit  - 功能说明：每页返回的个数 - 取值范围：取值范围：1~[2000]，其中2000为局点差异项，具体取值由局点决定
     * marker  - 功能说明：分页查询起始的资源ID，为空时为查询第一页
     * id  - 功能说明：带宽唯一标识
+    * fields  display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
     * bandwidthType  - 功能说明：带宽类型，共享带宽默认为share。 - 取值范围：share，bgp，telcom，sbgp等。   - share：共享带宽   - bgp：动态bgp   - telcom ：联通   - sbgp：静态bgp
     * name  - 功能说明：宽带名称，按照宽带名称过滤
     * nameLike  - 功能说明：根据宽带名称模糊查询过滤
@@ -144,6 +149,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
             'limit' => 'limit',
             'marker' => 'marker',
             'id' => 'id',
+            'fields' => 'fields',
             'bandwidthType' => 'bandwidth_type',
             'name' => 'name',
             'nameLike' => 'name_like',
@@ -164,6 +170,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
     * limit  - 功能说明：每页返回的个数 - 取值范围：取值范围：1~[2000]，其中2000为局点差异项，具体取值由局点决定
     * marker  - 功能说明：分页查询起始的资源ID，为空时为查询第一页
     * id  - 功能说明：带宽唯一标识
+    * fields  display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
     * bandwidthType  - 功能说明：带宽类型，共享带宽默认为share。 - 取值范围：share，bgp，telcom，sbgp等。   - share：共享带宽   - bgp：动态bgp   - telcom ：联通   - sbgp：静态bgp
     * name  - 功能说明：宽带名称，按照宽带名称过滤
     * nameLike  - 功能说明：根据宽带名称模糊查询过滤
@@ -184,6 +191,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
             'limit' => 'setLimit',
             'marker' => 'setMarker',
             'id' => 'setId',
+            'fields' => 'setFields',
             'bandwidthType' => 'setBandwidthType',
             'name' => 'setName',
             'nameLike' => 'setNameLike',
@@ -204,6 +212,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
     * limit  - 功能说明：每页返回的个数 - 取值范围：取值范围：1~[2000]，其中2000为局点差异项，具体取值由局点决定
     * marker  - 功能说明：分页查询起始的资源ID，为空时为查询第一页
     * id  - 功能说明：带宽唯一标识
+    * fields  display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
     * bandwidthType  - 功能说明：带宽类型，共享带宽默认为share。 - 取值范围：share，bgp，telcom，sbgp等。   - share：共享带宽   - bgp：动态bgp   - telcom ：联通   - sbgp：静态bgp
     * name  - 功能说明：宽带名称，按照宽带名称过滤
     * nameLike  - 功能说明：根据宽带名称模糊查询过滤
@@ -224,6 +233,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
             'limit' => 'getLimit',
             'marker' => 'getMarker',
             'id' => 'getId',
+            'fields' => 'getFields',
             'bandwidthType' => 'getBandwidthType',
             'name' => 'getName',
             'nameLike' => 'getNameLike',
@@ -300,6 +310,7 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
         $this->container['bandwidthType'] = isset($data['bandwidthType']) ? $data['bandwidthType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['nameLike'] = isset($data['nameLike']) ? $data['nameLike'] : null;
@@ -412,6 +423,30 @@ class ListBandwidthRequest implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets fields
+    *  display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
+    *
+    * @return string[]|null
+    */
+    public function getFields()
+    {
+        return $this->container['fields'];
+    }
+
+    /**
+    * Sets fields
+    *
+    * @param string[]|null $fields display in the form \"fields=id&fields=name&...\"  Supported fields：id/name/tenant_id/size/ratio_95peak_plus/ingress_size/bandwidth_type/admin_state/billing_info/charge_mode/type/publicip_info/enable_bandwidth_rules/rule_quota/bandwidth_rules/public_border_group/created_at/updated_at/lock_infos
+    *
+    * @return $this
+    */
+    public function setFields($fields)
+    {
+        $this->container['fields'] = $fields;
         return $this;
     }
 

@@ -37,6 +37,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'updateTime' => 'string',
             'lastJobStartTime' => 'string',
             'lastJobEndTime' => 'string',
-            'lastJobStatus' => 'string'
+            'lastJobStatus' => 'string',
+            'privData' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         'updateTime' => null,
         'lastJobStartTime' => null,
         'lastJobEndTime' => null,
-        'lastJobStatus' => null
+        'lastJobStatus' => null,
+        'privData' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'updateTime' => 'update_time',
             'lastJobStartTime' => 'last_job_start_time',
             'lastJobEndTime' => 'last_job_end_time',
-            'lastJobStatus' => 'last_job_status'
+            'lastJobStatus' => 'last_job_status',
+            'privData' => 'priv_data'
     ];
 
     /**
@@ -184,6 +190,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'updateTime' => 'setUpdateTime',
             'lastJobStartTime' => 'setLastJobStartTime',
             'lastJobEndTime' => 'setLastJobEndTime',
-            'lastJobStatus' => 'setLastJobStatus'
+            'lastJobStatus' => 'setLastJobStatus',
+            'privData' => 'setPrivData'
     ];
 
     /**
@@ -226,6 +234,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     * lastJobStartTime  开始直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobEndTime  结束直播时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * lastJobStatus  当前直播状态 - WAITING：任务等待执行 - PROCESSING：任务执行中 - SUCCEED：任务处理成功 - FAILED：任务处理时变 - CANCELED：任务取消 - BLOCKED：任务被冻结
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
             'updateTime' => 'getUpdateTime',
             'lastJobStartTime' => 'getLastJobStartTime',
             'lastJobEndTime' => 'getLastJobEndTime',
-            'lastJobStatus' => 'getLastJobStatus'
+            'lastJobStatus' => 'getLastJobStatus',
+            'privData' => 'getPrivData'
     ];
 
     /**
@@ -396,6 +406,7 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
         $this->container['lastJobStartTime'] = isset($data['lastJobStartTime']) ? $data['lastJobStartTime'] : null;
         $this->container['lastJobEndTime'] = isset($data['lastJobEndTime']) ? $data['lastJobEndTime'] : null;
         $this->container['lastJobStatus'] = isset($data['lastJobStatus']) ? $data['lastJobStatus'] : null;
+        $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
     }
 
     /**
@@ -510,6 +521,12 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['privData']) && (mb_strlen($this->container['privData']) > 8192)) {
+                $invalidProperties[] = "invalid value for 'privData', the character length must be smaller than or equal to 8192.";
+            }
+            if (!is_null($this->container['privData']) && (mb_strlen($this->container['privData']) < 0)) {
+                $invalidProperties[] = "invalid value for 'privData', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -929,6 +946,30 @@ class SmartLiveRoomBaseInfo implements ModelInterface, ArrayAccess
     public function setLastJobStatus($lastJobStatus)
     {
         $this->container['lastJobStatus'] = $lastJobStatus;
+        return $this;
+    }
+
+    /**
+    * Gets privData
+    *  私有数据，用户填写，原样带回。
+    *
+    * @return string|null
+    */
+    public function getPrivData()
+    {
+        return $this->container['privData'];
+    }
+
+    /**
+    * Sets privData
+    *
+    * @param string|null $privData 私有数据，用户填写，原样带回。
+    *
+    * @return $this
+    */
+    public function setPrivData($privData)
+    {
+        $this->container['privData'] = $privData;
         return $this;
     }
 

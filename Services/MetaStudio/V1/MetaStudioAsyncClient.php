@@ -308,6 +308,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['activeCodeId'] !== null) {
             $pathParams['active_code_id'] = $localVarParams['activeCodeId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -316,7 +319,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -897,6 +900,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['roomId'] !== null) {
             $pathParams['room_id'] = $localVarParams['roomId'];
         }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -905,7 +911,7 @@ class MetaStudioAsyncClient extends Client
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
         $headers = array_merge(
@@ -1427,6 +1433,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['tag'] !== null) {
             $queryParams['tag'] = $localVarParams['tag'];
         }
+        if ($localVarParams['tagCombinationType'] !== null) {
+            $queryParams['tag_combination_type'] = $localVarParams['tagCombinationType'];
+        }
         if ($localVarParams['startTime'] !== null) {
             $queryParams['start_time'] = $localVarParams['startTime'];
         }
@@ -1451,6 +1460,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['styleId'] !== null) {
             $queryParams['style_id'] = $localVarParams['styleId'];
         }
+        if ($localVarParams['accurateQueryField'] !== null) {
+            $queryParams['accurate_query_field'] = $localVarParams['accurateQueryField'];
+        }
         if ($localVarParams['renderEngine'] !== null) {
             $queryParams['render_engine'] = $localVarParams['renderEngine'];
         }
@@ -1468,6 +1480,9 @@ class MetaStudioAsyncClient extends Client
         }
         if ($localVarParams['actionEditable'] !== null) {
             $queryParams['action_editable'] = $localVarParams['actionEditable'];
+        }
+        if ($localVarParams['isWithActionLibrary'] !== null) {
+            $queryParams['is_with_action_library'] = $localVarParams['isWithActionLibrary'];
         }
         if ($localVarParams['isMovable'] !== null) {
             $queryParams['is_movable'] = $localVarParams['isMovable'];
@@ -1489,6 +1504,9 @@ class MetaStudioAsyncClient extends Client
         }
         if ($localVarParams['excludeDeviceName'] !== null) {
             $queryParams['exclude_device_name'] = $localVarParams['excludeDeviceName'];
+        }
+        if ($localVarParams['supportedService'] !== null) {
+            $queryParams['supported_service'] = $localVarParams['supportedService'];
         }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
@@ -2289,6 +2307,9 @@ class MetaStudioAsyncClient extends Client
         }
         if ($localVarParams['createSince'] !== null) {
             $queryParams['create_since'] = $localVarParams['createSince'];
+        }
+        if ($localVarParams['fuzzyQueryField'] !== null) {
+            $queryParams['fuzzy_query_field'] = $localVarParams['fuzzyQueryField'];
         }
         if ($localVarParams['scriptId'] !== null) {
             $queryParams['script_id'] = $localVarParams['scriptId'];
@@ -6799,6 +6820,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['roomId'] !== null) {
             $queryParams['room_id'] = $localVarParams['roomId'];
         }
+        if ($localVarParams['robotType'] !== null) {
+            $queryParams['robot_type'] = $localVarParams['robotType'];
+        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
         }
@@ -9310,6 +9334,77 @@ class MetaStudioAsyncClient extends Client
     }
 
     /**
+     * 查询任务操作日志
+     *
+     * 查询任务操作日志
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listJobOperationLogAsync($request)
+    {
+        return $this->listJobOperationLogAsyncWithHttpInfo($request);
+    }
+    
+    public function listJobOperationLogAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/voice-training-manage/user/jobs/{job_id}/op-logs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListJobOperationLogResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListJobOperationLogRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 查询语音训练任务列表
      *
      * 查询语音训练任务列表
@@ -9363,6 +9458,9 @@ class MetaStudioAsyncClient extends Client
         }
         if ($localVarParams['tag'] !== null) {
             $queryParams['tag'] = $localVarParams['tag'];
+        }
+        if ($localVarParams['jobType'] !== null) {
+            $queryParams['job_type'] = $localVarParams['jobType'];
         }
         if ($localVarParams['xAppUserId'] !== null) {
             $headerParams['x_app_user_id'] = $localVarParams['xAppUserId'];

@@ -38,7 +38,7 @@ class ListPublicipPoolRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'marker' => 'string',
             'limit' => 'int',
-            'fields' => 'string',
+            'fields' => 'string[]',
             'sortKey' => 'string',
             'sortDir' => 'string',
             'id' => 'string',
@@ -294,12 +294,6 @@ class ListPublicipPoolRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['sortKey']) && (mb_strlen($this->container['sortKey']) > 36)) {
                 $invalidProperties[] = "invalid value for 'sortKey', the character length must be smaller than or equal to 36.";
             }
@@ -423,7 +417,7 @@ class ListPublicipPoolRequest implements ModelInterface, ArrayAccess
     * Gets fields
     *  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFields()
     {
@@ -433,7 +427,7 @@ class ListPublicipPoolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string|null $fields 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
+    * @param string[]|null $fields 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
     *
     * @return $this
     */

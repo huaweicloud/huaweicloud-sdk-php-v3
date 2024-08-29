@@ -10,12 +10,12 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     /**
      * Possible values of this enum
      */
-    const LLM_MAJOR = 'LLM_MAJOR';
-    const LLM_MINOR = 'LLM_MINOR';
     const BASIC = 'BASIC';
     const MIDDLE = 'MIDDLE';
     const ADVANCE = 'ADVANCE';
     const THIRD_PARTY = 'THIRD_PARTY';
+    const THIRD_PARTY_LJZN = 'THIRD_PARTY_LJZN';
+    const FLEXUS = 'FLEXUS';
     
     /**
      * Gets allowable values of the enum
@@ -24,12 +24,12 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     public static function getAllowableEnumValues()
     {
         return [
-            self::LLM_MAJOR,
-            self::LLM_MINOR,
             self::BASIC,
             self::MIDDLE,
             self::ADVANCE,
             self::THIRD_PARTY,
+            self::THIRD_PARTY_LJZN,
+            self::FLEXUS,
         ];
     }
 }

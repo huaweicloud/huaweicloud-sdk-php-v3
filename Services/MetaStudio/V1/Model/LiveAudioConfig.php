@@ -20,7 +20,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * assetId  插入音频资产的资产id，外部资产信息无需填写
+    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
@@ -34,7 +34,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * assetId  插入音频资产的资产id，外部资产信息无需填写
+    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
@@ -69,7 +69,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * assetId  插入音频资产的资产id，外部资产信息无需填写
+    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
@@ -83,7 +83,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * assetId  插入音频资产的资产id，外部资产信息无需填写
+    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
@@ -97,7 +97,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * assetId  插入音频资产的资产id，外部资产信息无需填写
+    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
     * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
     *
@@ -214,7 +214,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetId
-    *  插入音频资产的资产id，外部资产信息无需填写
+    *  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Sets assetId
     *
-    * @param string|null $assetId 插入音频资产的资产id，外部资产信息无需填写
+    * @param string|null $assetId 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
     *
     * @return $this
     */

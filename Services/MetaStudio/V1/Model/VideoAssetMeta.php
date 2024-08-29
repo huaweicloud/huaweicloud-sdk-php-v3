@@ -31,6 +31,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     * audioChannels  音频声道数
     * sample  采样率,HZ
     * mode  Horizontal=横向；Vertical=纵向
+    * videoTranscodingStatus  视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -47,6 +48,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
             'audioChannels' => 'int',
             'sample' => 'int',
             'mode' => 'string',
+            'videoTranscodingStatus' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse'
     ];
 
@@ -63,6 +65,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     * audioChannels  音频声道数
     * sample  采样率,HZ
     * mode  Horizontal=横向；Vertical=纵向
+    * videoTranscodingStatus  视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -79,6 +82,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
         'audioChannels' => 'int32',
         'sample' => null,
         'mode' => null,
+        'videoTranscodingStatus' => null,
         'errorInfo' => null
     ];
 
@@ -116,6 +120,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     * audioChannels  音频声道数
     * sample  采样率,HZ
     * mode  Horizontal=横向；Vertical=纵向
+    * videoTranscodingStatus  视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -132,6 +137,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
             'audioChannels' => 'audio_channels',
             'sample' => 'sample',
             'mode' => 'mode',
+            'videoTranscodingStatus' => 'video_transcoding_status',
             'errorInfo' => 'error_info'
     ];
 
@@ -148,6 +154,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     * audioChannels  音频声道数
     * sample  采样率,HZ
     * mode  Horizontal=横向；Vertical=纵向
+    * videoTranscodingStatus  视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -164,6 +171,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
             'audioChannels' => 'setAudioChannels',
             'sample' => 'setSample',
             'mode' => 'setMode',
+            'videoTranscodingStatus' => 'setVideoTranscodingStatus',
             'errorInfo' => 'setErrorInfo'
     ];
 
@@ -180,6 +188,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     * audioChannels  音频声道数
     * sample  采样率,HZ
     * mode  Horizontal=横向；Vertical=纵向
+    * videoTranscodingStatus  视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -196,6 +205,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
             'audioChannels' => 'getAudioChannels',
             'sample' => 'getSample',
             'mode' => 'getMode',
+            'videoTranscodingStatus' => 'getVideoTranscodingStatus',
             'errorInfo' => 'getErrorInfo'
     ];
 
@@ -241,6 +251,10 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     }
     const MODE_HORIZONTAL = 'Horizontal';
     const MODE_VERTICAL = 'Vertical';
+    const VIDEO_TRANSCODING_STATUS_WAITING = 'WAITING';
+    const VIDEO_TRANSCODING_STATUS_TRANSCODING = 'TRANSCODING';
+    const VIDEO_TRANSCODING_STATUS_FAILED = 'FAILED';
+    const VIDEO_TRANSCODING_STATUS_SUCCEEDED = 'SUCCEEDED';
     
 
     /**
@@ -253,6 +267,21 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
         return [
             self::MODE_HORIZONTAL,
             self::MODE_VERTICAL,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getVideoTranscodingStatusAllowableValues()
+    {
+        return [
+            self::VIDEO_TRANSCODING_STATUS_WAITING,
+            self::VIDEO_TRANSCODING_STATUS_TRANSCODING,
+            self::VIDEO_TRANSCODING_STATUS_FAILED,
+            self::VIDEO_TRANSCODING_STATUS_SUCCEEDED,
         ];
     }
 
@@ -283,6 +312,7 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
         $this->container['audioChannels'] = isset($data['audioChannels']) ? $data['audioChannels'] : null;
         $this->container['sample'] = isset($data['sample']) ? $data['sample'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['videoTranscodingStatus'] = isset($data['videoTranscodingStatus']) ? $data['videoTranscodingStatus'] : null;
         $this->container['errorInfo'] = isset($data['errorInfo']) ? $data['errorInfo'] : null;
     }
 
@@ -362,6 +392,20 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
                 );
             }
 
+            $allowedValues = $this->getVideoTranscodingStatusAllowableValues();
+                if (!is_null($this->container['videoTranscodingStatus']) && !in_array($this->container['videoTranscodingStatus'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'videoTranscodingStatus', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['videoTranscodingStatus']) && (mb_strlen($this->container['videoTranscodingStatus']) > 128)) {
+                $invalidProperties[] = "invalid value for 'videoTranscodingStatus', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['videoTranscodingStatus']) && (mb_strlen($this->container['videoTranscodingStatus']) < 0)) {
+                $invalidProperties[] = "invalid value for 'videoTranscodingStatus', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -637,6 +681,30 @@ class VideoAssetMeta implements ModelInterface, ArrayAccess
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets videoTranscodingStatus
+    *  视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
+    *
+    * @return string|null
+    */
+    public function getVideoTranscodingStatus()
+    {
+        return $this->container['videoTranscodingStatus'];
+    }
+
+    /**
+    * Sets videoTranscodingStatus
+    *
+    * @param string|null $videoTranscodingStatus 视频转码状态。 * WAITING：等待 * TRANSCODING：转码中 * FAILED：失败 * SUCCEEDED：成功
+    *
+    * @return $this
+    */
+    public function setVideoTranscodingStatus($videoTranscodingStatus)
+    {
+        $this->container['videoTranscodingStatus'] = $videoTranscodingStatus;
         return $this;
     }
 

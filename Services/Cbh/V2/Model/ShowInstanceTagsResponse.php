@@ -26,7 +26,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Cbh\V2\Model\Tags[]'
+            'tags' => '\HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表。
     *
-    * @return \HuaweiCloud\SDK\Cbh\V2\Model\Tags[]|null
+    * @return \HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]|null
     */
     public function getTags()
     {
@@ -187,7 +187,7 @@ class ShowInstanceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cbh\V2\Model\Tags[]|null $tags 标签列表。
+    * @param \HuaweiCloud\SDK\Cbh\V2\Model\ResourceTag[]|null $tags 标签列表。
     *
     * @return $this
     */

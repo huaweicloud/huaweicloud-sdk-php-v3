@@ -29,6 +29,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
+    * isSupportVcProcess  是否支持vc。
+    * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
     */
@@ -41,7 +43,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'volumeRatio' => 'float',
             'isRealtimeVoice' => 'bool',
             'voiceCapability' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceCapability',
-            'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta'
+            'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta',
+            'isSupportVcProcess' => 'bool',
+            'isFlexus' => 'bool'
     ];
 
     /**
@@ -55,6 +59,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
+    * isSupportVcProcess  是否支持vc。
+    * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
     */
@@ -67,7 +73,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         'volumeRatio' => 'float',
         'isRealtimeVoice' => null,
         'voiceCapability' => null,
-        'externalVoiceMeta' => null
+        'externalVoiceMeta' => null,
+        'isSupportVcProcess' => null,
+        'isFlexus' => null
     ];
 
     /**
@@ -102,6 +110,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
+    * isSupportVcProcess  是否支持vc。
+    * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
     */
@@ -114,7 +124,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'volumeRatio' => 'volume_ratio',
             'isRealtimeVoice' => 'is_realtime_voice',
             'voiceCapability' => 'voice_capability',
-            'externalVoiceMeta' => 'external_voice_meta'
+            'externalVoiceMeta' => 'external_voice_meta',
+            'isSupportVcProcess' => 'is_support_vc_process',
+            'isFlexus' => 'is_flexus'
     ];
 
     /**
@@ -128,6 +140,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
+    * isSupportVcProcess  是否支持vc。
+    * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
     */
@@ -140,7 +154,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'volumeRatio' => 'setVolumeRatio',
             'isRealtimeVoice' => 'setIsRealtimeVoice',
             'voiceCapability' => 'setVoiceCapability',
-            'externalVoiceMeta' => 'setExternalVoiceMeta'
+            'externalVoiceMeta' => 'setExternalVoiceMeta',
+            'isSupportVcProcess' => 'setIsSupportVcProcess',
+            'isFlexus' => 'setIsFlexus'
     ];
 
     /**
@@ -154,6 +170,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
+    * isSupportVcProcess  是否支持vc。
+    * isFlexus  是否是Flexus版本声音。
     *
     * @var string[]
     */
@@ -166,7 +184,9 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'volumeRatio' => 'getVolumeRatio',
             'isRealtimeVoice' => 'getIsRealtimeVoice',
             'voiceCapability' => 'getVoiceCapability',
-            'externalVoiceMeta' => 'getExternalVoiceMeta'
+            'externalVoiceMeta' => 'getExternalVoiceMeta',
+            'isSupportVcProcess' => 'getIsSupportVcProcess',
+            'isFlexus' => 'getIsFlexus'
     ];
 
     /**
@@ -333,6 +353,8 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         $this->container['isRealtimeVoice'] = isset($data['isRealtimeVoice']) ? $data['isRealtimeVoice'] : null;
         $this->container['voiceCapability'] = isset($data['voiceCapability']) ? $data['voiceCapability'] : null;
         $this->container['externalVoiceMeta'] = isset($data['externalVoiceMeta']) ? $data['externalVoiceMeta'] : null;
+        $this->container['isSupportVcProcess'] = isset($data['isSupportVcProcess']) ? $data['isSupportVcProcess'] : null;
+        $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
     }
 
     /**
@@ -630,6 +652,54 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     public function setExternalVoiceMeta($externalVoiceMeta)
     {
         $this->container['externalVoiceMeta'] = $externalVoiceMeta;
+        return $this;
+    }
+
+    /**
+    * Gets isSupportVcProcess
+    *  是否支持vc。
+    *
+    * @return bool|null
+    */
+    public function getIsSupportVcProcess()
+    {
+        return $this->container['isSupportVcProcess'];
+    }
+
+    /**
+    * Sets isSupportVcProcess
+    *
+    * @param bool|null $isSupportVcProcess 是否支持vc。
+    *
+    * @return $this
+    */
+    public function setIsSupportVcProcess($isSupportVcProcess)
+    {
+        $this->container['isSupportVcProcess'] = $isSupportVcProcess;
+        return $this;
+    }
+
+    /**
+    * Gets isFlexus
+    *  是否是Flexus版本声音。
+    *
+    * @return bool|null
+    */
+    public function getIsFlexus()
+    {
+        return $this->container['isFlexus'];
+    }
+
+    /**
+    * Sets isFlexus
+    *
+    * @param bool|null $isFlexus 是否是Flexus版本声音。
+    *
+    * @return $this
+    */
+    public function setIsFlexus($isFlexus)
+    {
+        $this->container['isFlexus'] = $isFlexus;
         return $this;
     }
 

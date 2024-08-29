@@ -63,6 +63,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     *
     * @var string[]
     */
@@ -109,7 +110,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceId' => 'string',
             'subResourceName' => 'string',
             'preOrderId' => 'string',
-            'azCodeInfos' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]'
+            'azCodeInfos' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]',
+            'payerAccountId' => 'string'
     ];
 
     /**
@@ -157,6 +159,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     *
     * @var string[]
     */
@@ -203,7 +206,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'subResourceId' => null,
         'subResourceName' => null,
         'preOrderId' => null,
-        'azCodeInfos' => null
+        'azCodeInfos' => null,
+        'payerAccountId' => null
     ];
 
     /**
@@ -272,6 +276,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     *
     * @var string[]
     */
@@ -318,7 +323,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceId' => 'sub_resource_id',
             'subResourceName' => 'sub_resource_name',
             'preOrderId' => 'pre_order_id',
-            'azCodeInfos' => 'az_code_infos'
+            'azCodeInfos' => 'az_code_infos',
+            'payerAccountId' => 'payer_account_id'
     ];
 
     /**
@@ -366,6 +372,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     *
     * @var string[]
     */
@@ -412,7 +419,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceId' => 'setSubResourceId',
             'subResourceName' => 'setSubResourceName',
             'preOrderId' => 'setPreOrderId',
-            'azCodeInfos' => 'setAzCodeInfos'
+            'azCodeInfos' => 'setAzCodeInfos',
+            'payerAccountId' => 'setPayerAccountId'
     ];
 
     /**
@@ -460,6 +468,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * subResourceName  该字段为预留字段。
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
     *
     * @var string[]
     */
@@ -506,7 +515,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceId' => 'getSubResourceId',
             'subResourceName' => 'getSubResourceName',
             'preOrderId' => 'getPreOrderId',
-            'azCodeInfos' => 'getAzCodeInfos'
+            'azCodeInfos' => 'getAzCodeInfos',
+            'payerAccountId' => 'getPayerAccountId'
     ];
 
     /**
@@ -610,6 +620,7 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['subResourceName'] = isset($data['subResourceName']) ? $data['subResourceName'] : null;
         $this->container['preOrderId'] = isset($data['preOrderId']) ? $data['preOrderId'] : null;
         $this->container['azCodeInfos'] = isset($data['azCodeInfos']) ? $data['azCodeInfos'] : null;
+        $this->container['payerAccountId'] = isset($data['payerAccountId']) ? $data['payerAccountId'] : null;
     }
 
     /**
@@ -643,6 +654,12 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['resInstanceId']) && (mb_strlen($this->container['resInstanceId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'resInstanceId', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['payerAccountId']) && (mb_strlen($this->container['payerAccountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'payerAccountId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['payerAccountId']) && (mb_strlen($this->container['payerAccountId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'payerAccountId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -1687,6 +1704,30 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setAzCodeInfos($azCodeInfos)
     {
         $this->container['azCodeInfos'] = $azCodeInfos;
+        return $this;
+    }
+
+    /**
+    * Gets payerAccountId
+    *  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    *
+    * @return string|null
+    */
+    public function getPayerAccountId()
+    {
+        return $this->container['payerAccountId'];
+    }
+
+    /**
+    * Sets payerAccountId
+    *
+    * @param string|null $payerAccountId |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    *
+    * @return $this
+    */
+    public function setPayerAccountId($payerAccountId)
+    {
+        $this->container['payerAccountId'] = $payerAccountId;
         return $this;
     }
 

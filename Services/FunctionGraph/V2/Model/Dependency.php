@@ -31,7 +31,7 @@ class Dependency implements ModelInterface, ArrayAccess
     * fileName  依赖包文件名，如果创建方式为zip时。
     * version  依赖包版本编号。
     * depId  依赖包ID
-    * lastModified  函数最后一次更新时间。
+    * lastModified  依赖包最后一次更新时间。
     *
     * @var string[]
     */
@@ -47,7 +47,7 @@ class Dependency implements ModelInterface, ArrayAccess
             'fileName' => 'string',
             'version' => 'int',
             'depId' => 'string',
-            'lastModified' => '\DateTime'
+            'lastModified' => 'int'
     ];
 
     /**
@@ -63,7 +63,7 @@ class Dependency implements ModelInterface, ArrayAccess
     * fileName  依赖包文件名，如果创建方式为zip时。
     * version  依赖包版本编号。
     * depId  依赖包ID
-    * lastModified  函数最后一次更新时间。
+    * lastModified  依赖包最后一次更新时间。
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class Dependency implements ModelInterface, ArrayAccess
         'fileName' => null,
         'version' => 'int64',
         'depId' => null,
-        'lastModified' => 'date-time'
+        'lastModified' => 'int64'
     ];
 
     /**
@@ -116,7 +116,7 @@ class Dependency implements ModelInterface, ArrayAccess
     * fileName  依赖包文件名，如果创建方式为zip时。
     * version  依赖包版本编号。
     * depId  依赖包ID
-    * lastModified  函数最后一次更新时间。
+    * lastModified  依赖包最后一次更新时间。
     *
     * @var string[]
     */
@@ -148,7 +148,7 @@ class Dependency implements ModelInterface, ArrayAccess
     * fileName  依赖包文件名，如果创建方式为zip时。
     * version  依赖包版本编号。
     * depId  依赖包ID
-    * lastModified  函数最后一次更新时间。
+    * lastModified  依赖包最后一次更新时间。
     *
     * @var string[]
     */
@@ -180,7 +180,7 @@ class Dependency implements ModelInterface, ArrayAccess
     * fileName  依赖包文件名，如果创建方式为zip时。
     * version  依赖包版本编号。
     * depId  依赖包ID
-    * lastModified  函数最后一次更新时间。
+    * lastModified  依赖包最后一次更新时间。
     *
     * @var string[]
     */
@@ -649,9 +649,9 @@ class Dependency implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastModified
-    *  函数最后一次更新时间。
+    *  依赖包最后一次更新时间。
     *
-    * @return \DateTime|null
+    * @return int|null
     */
     public function getLastModified()
     {
@@ -661,7 +661,7 @@ class Dependency implements ModelInterface, ArrayAccess
     /**
     * Sets lastModified
     *
-    * @param \DateTime|null $lastModified 函数最后一次更新时间。
+    * @param int|null $lastModified 依赖包最后一次更新时间。
     *
     * @return $this
     */

@@ -26,7 +26,7 @@ class CreateTenantVpcIgwRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'fields' => 'string',
+            'fields' => 'string[]',
             'body' => '\HuaweiCloud\SDK\Eip\V3\Model\CreateTenantVpcIgwRequestBody'
     ];
 
@@ -169,12 +169,6 @@ class CreateTenantVpcIgwRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -193,7 +187,7 @@ class CreateTenantVpcIgwRequest implements ModelInterface, ArrayAccess
     * Gets fields
     *  形式为\\\"fields=id&fields=project_id&...\\\"，支持字段：id/project_id/vpc_id/created_at/updated_at/name
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFields()
     {
@@ -203,7 +197,7 @@ class CreateTenantVpcIgwRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string|null $fields 形式为\\\"fields=id&fields=project_id&...\\\"，支持字段：id/project_id/vpc_id/created_at/updated_at/name
+    * @param string[]|null $fields 形式为\\\"fields=id&fields=project_id&...\\\"，支持字段：id/project_id/vpc_id/created_at/updated_at/name
     *
     * @return $this
     */

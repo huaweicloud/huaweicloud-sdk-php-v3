@@ -69,6 +69,13 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
+    * keyEncode  EG obs触发器是否对对象加密。
+    * agency  使用的代理
+    * channelName  通道名称
+    * sourceName  事件源名称
+    * createdTime  创建时间
+    * status  触发器状态
+    * triggerName  触发器名称
     *
     * @var string[]
     */
@@ -121,7 +128,14 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'connectAddress' => 'string',
             'exchangeName' => 'string',
             'vhost' => 'string',
-            'sslEnable' => 'bool'
+            'sslEnable' => 'bool',
+            'keyEncode' => 'bool',
+            'agency' => 'string',
+            'channelName' => 'string',
+            'sourceName' => 'string',
+            'createdTime' => '\DateTime',
+            'status' => 'string',
+            'triggerName' => 'string'
     ];
 
     /**
@@ -175,6 +189,13 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
+    * keyEncode  EG obs触发器是否对对象加密。
+    * agency  使用的代理
+    * channelName  通道名称
+    * sourceName  事件源名称
+    * createdTime  创建时间
+    * status  触发器状态
+    * triggerName  触发器名称
     *
     * @var string[]
     */
@@ -227,7 +248,14 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
         'connectAddress' => null,
         'exchangeName' => null,
         'vhost' => null,
-        'sslEnable' => null
+        'sslEnable' => null,
+        'keyEncode' => null,
+        'agency' => null,
+        'channelName' => null,
+        'sourceName' => null,
+        'createdTime' => 'date-time',
+        'status' => null,
+        'triggerName' => null
     ];
 
     /**
@@ -302,6 +330,13 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
+    * keyEncode  EG obs触发器是否对对象加密。
+    * agency  使用的代理
+    * channelName  通道名称
+    * sourceName  事件源名称
+    * createdTime  创建时间
+    * status  触发器状态
+    * triggerName  触发器名称
     *
     * @var string[]
     */
@@ -354,7 +389,14 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'connectAddress' => 'connect_address',
             'exchangeName' => 'exchange_name',
             'vhost' => 'vhost',
-            'sslEnable' => 'ssl_enable'
+            'sslEnable' => 'ssl_enable',
+            'keyEncode' => 'Key_encode',
+            'agency' => 'agency',
+            'channelName' => 'channel_name',
+            'sourceName' => 'source_name',
+            'createdTime' => 'created_time',
+            'status' => 'status',
+            'triggerName' => 'trigger_name'
     ];
 
     /**
@@ -408,6 +450,13 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
+    * keyEncode  EG obs触发器是否对对象加密。
+    * agency  使用的代理
+    * channelName  通道名称
+    * sourceName  事件源名称
+    * createdTime  创建时间
+    * status  触发器状态
+    * triggerName  触发器名称
     *
     * @var string[]
     */
@@ -460,7 +509,14 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'connectAddress' => 'setConnectAddress',
             'exchangeName' => 'setExchangeName',
             'vhost' => 'setVhost',
-            'sslEnable' => 'setSslEnable'
+            'sslEnable' => 'setSslEnable',
+            'keyEncode' => 'setKeyEncode',
+            'agency' => 'setAgency',
+            'channelName' => 'setChannelName',
+            'sourceName' => 'setSourceName',
+            'createdTime' => 'setCreatedTime',
+            'status' => 'setStatus',
+            'triggerName' => 'setTriggerName'
     ];
 
     /**
@@ -514,6 +570,13 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
+    * keyEncode  EG obs触发器是否对对象加密。
+    * agency  使用的代理
+    * channelName  通道名称
+    * sourceName  事件源名称
+    * createdTime  创建时间
+    * status  触发器状态
+    * triggerName  触发器名称
     *
     * @var string[]
     */
@@ -566,7 +629,14 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'connectAddress' => 'getConnectAddress',
             'exchangeName' => 'getExchangeName',
             'vhost' => 'getVhost',
-            'sslEnable' => 'getSslEnable'
+            'sslEnable' => 'getSslEnable',
+            'keyEncode' => 'getKeyEncode',
+            'agency' => 'getAgency',
+            'channelName' => 'getChannelName',
+            'sourceName' => 'getSourceName',
+            'createdTime' => 'getCreatedTime',
+            'status' => 'getStatus',
+            'triggerName' => 'getTriggerName'
     ];
 
     /**
@@ -823,6 +893,13 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
         $this->container['exchangeName'] = isset($data['exchangeName']) ? $data['exchangeName'] : null;
         $this->container['vhost'] = isset($data['vhost']) ? $data['vhost'] : null;
         $this->container['sslEnable'] = isset($data['sslEnable']) ? $data['sslEnable'] : null;
+        $this->container['keyEncode'] = isset($data['keyEncode']) ? $data['keyEncode'] : null;
+        $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
+        $this->container['channelName'] = isset($data['channelName']) ? $data['channelName'] : null;
+        $this->container['sourceName'] = isset($data['sourceName']) ? $data['sourceName'] : null;
+        $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['triggerName'] = isset($data['triggerName']) ? $data['triggerName'] : null;
     }
 
     /**
@@ -2128,6 +2205,174 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     public function setSslEnable($sslEnable)
     {
         $this->container['sslEnable'] = $sslEnable;
+        return $this;
+    }
+
+    /**
+    * Gets keyEncode
+    *  EG obs触发器是否对对象加密。
+    *
+    * @return bool|null
+    */
+    public function getKeyEncode()
+    {
+        return $this->container['keyEncode'];
+    }
+
+    /**
+    * Sets keyEncode
+    *
+    * @param bool|null $keyEncode EG obs触发器是否对对象加密。
+    *
+    * @return $this
+    */
+    public function setKeyEncode($keyEncode)
+    {
+        $this->container['keyEncode'] = $keyEncode;
+        return $this;
+    }
+
+    /**
+    * Gets agency
+    *  使用的代理
+    *
+    * @return string|null
+    */
+    public function getAgency()
+    {
+        return $this->container['agency'];
+    }
+
+    /**
+    * Sets agency
+    *
+    * @param string|null $agency 使用的代理
+    *
+    * @return $this
+    */
+    public function setAgency($agency)
+    {
+        $this->container['agency'] = $agency;
+        return $this;
+    }
+
+    /**
+    * Gets channelName
+    *  通道名称
+    *
+    * @return string|null
+    */
+    public function getChannelName()
+    {
+        return $this->container['channelName'];
+    }
+
+    /**
+    * Sets channelName
+    *
+    * @param string|null $channelName 通道名称
+    *
+    * @return $this
+    */
+    public function setChannelName($channelName)
+    {
+        $this->container['channelName'] = $channelName;
+        return $this;
+    }
+
+    /**
+    * Gets sourceName
+    *  事件源名称
+    *
+    * @return string|null
+    */
+    public function getSourceName()
+    {
+        return $this->container['sourceName'];
+    }
+
+    /**
+    * Sets sourceName
+    *
+    * @param string|null $sourceName 事件源名称
+    *
+    * @return $this
+    */
+    public function setSourceName($sourceName)
+    {
+        $this->container['sourceName'] = $sourceName;
+        return $this;
+    }
+
+    /**
+    * Gets createdTime
+    *  创建时间
+    *
+    * @return \DateTime|null
+    */
+    public function getCreatedTime()
+    {
+        return $this->container['createdTime'];
+    }
+
+    /**
+    * Sets createdTime
+    *
+    * @param \DateTime|null $createdTime 创建时间
+    *
+    * @return $this
+    */
+    public function setCreatedTime($createdTime)
+    {
+        $this->container['createdTime'] = $createdTime;
+        return $this;
+    }
+
+    /**
+    * Gets status
+    *  触发器状态
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 触发器状态
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
+    }
+
+    /**
+    * Gets triggerName
+    *  触发器名称
+    *
+    * @return string|null
+    */
+    public function getTriggerName()
+    {
+        return $this->container['triggerName'];
+    }
+
+    /**
+    * Sets triggerName
+    *
+    * @param string|null $triggerName 触发器名称
+    *
+    * @return $this
+    */
+    public function setTriggerName($triggerName)
+    {
+        $this->container['triggerName'] = $triggerName;
         return $this;
     }
 

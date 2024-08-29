@@ -26,6 +26,9 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     * deviceNames  已执行编译任务
+    * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    * actionTagMap  动作标签映射。
+    * isFlexus  是否是Flexus版本分身数字人。
     *
     * @var string[]
     */
@@ -35,7 +38,10 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'supportLive' => 'bool',
             'modelVersion' => 'string',
             'modelResolution' => 'string',
-            'deviceNames' => 'string[]'
+            'deviceNames' => 'string[]',
+            'isWithActionLibrary' => 'bool',
+            'actionTagMap' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ActionTagInfo[]',
+            'isFlexus' => 'bool'
     ];
 
     /**
@@ -46,6 +52,9 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     * deviceNames  已执行编译任务
+    * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    * actionTagMap  动作标签映射。
+    * isFlexus  是否是Flexus版本分身数字人。
     *
     * @var string[]
     */
@@ -55,7 +64,10 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
         'supportLive' => null,
         'modelVersion' => null,
         'modelResolution' => null,
-        'deviceNames' => null
+        'deviceNames' => null,
+        'isWithActionLibrary' => null,
+        'actionTagMap' => null,
+        'isFlexus' => null
     ];
 
     /**
@@ -87,6 +99,9 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     * deviceNames  已执行编译任务
+    * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    * actionTagMap  动作标签映射。
+    * isFlexus  是否是Flexus版本分身数字人。
     *
     * @var string[]
     */
@@ -96,7 +111,10 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'supportLive' => 'support_live',
             'modelVersion' => 'model_version',
             'modelResolution' => 'model_resolution',
-            'deviceNames' => 'device_names'
+            'deviceNames' => 'device_names',
+            'isWithActionLibrary' => 'is_with_action_library',
+            'actionTagMap' => 'action_tag_map',
+            'isFlexus' => 'is_flexus'
     ];
 
     /**
@@ -107,6 +125,9 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     * deviceNames  已执行编译任务
+    * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    * actionTagMap  动作标签映射。
+    * isFlexus  是否是Flexus版本分身数字人。
     *
     * @var string[]
     */
@@ -116,7 +137,10 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'supportLive' => 'setSupportLive',
             'modelVersion' => 'setModelVersion',
             'modelResolution' => 'setModelResolution',
-            'deviceNames' => 'setDeviceNames'
+            'deviceNames' => 'setDeviceNames',
+            'isWithActionLibrary' => 'setIsWithActionLibrary',
+            'actionTagMap' => 'setActionTagMap',
+            'isFlexus' => 'setIsFlexus'
     ];
 
     /**
@@ -127,6 +151,9 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     * deviceNames  已执行编译任务
+    * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    * actionTagMap  动作标签映射。
+    * isFlexus  是否是Flexus版本分身数字人。
     *
     * @var string[]
     */
@@ -136,7 +163,10 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
             'supportLive' => 'getSupportLive',
             'modelVersion' => 'getModelVersion',
             'modelResolution' => 'getModelResolution',
-            'deviceNames' => 'getDeviceNames'
+            'deviceNames' => 'getDeviceNames',
+            'isWithActionLibrary' => 'getIsWithActionLibrary',
+            'actionTagMap' => 'getActionTagMap',
+            'isFlexus' => 'getIsFlexus'
     ];
 
     /**
@@ -220,6 +250,9 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
         $this->container['modelVersion'] = isset($data['modelVersion']) ? $data['modelVersion'] : null;
         $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
         $this->container['deviceNames'] = isset($data['deviceNames']) ? $data['deviceNames'] : null;
+        $this->container['isWithActionLibrary'] = isset($data['isWithActionLibrary']) ? $data['isWithActionLibrary'] : null;
+        $this->container['actionTagMap'] = isset($data['actionTagMap']) ? $data['actionTagMap'] : null;
+        $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
     }
 
     /**
@@ -399,6 +432,78 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     public function setDeviceNames($deviceNames)
     {
         $this->container['deviceNames'] = $deviceNames;
+        return $this;
+    }
+
+    /**
+    * Gets isWithActionLibrary
+    *  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    *
+    * @return bool|null
+    */
+    public function getIsWithActionLibrary()
+    {
+        return $this->container['isWithActionLibrary'];
+    }
+
+    /**
+    * Sets isWithActionLibrary
+    *
+    * @param bool|null $isWithActionLibrary 分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
+    *
+    * @return $this
+    */
+    public function setIsWithActionLibrary($isWithActionLibrary)
+    {
+        $this->container['isWithActionLibrary'] = $isWithActionLibrary;
+        return $this;
+    }
+
+    /**
+    * Gets actionTagMap
+    *  动作标签映射。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionTagInfo[]|null
+    */
+    public function getActionTagMap()
+    {
+        return $this->container['actionTagMap'];
+    }
+
+    /**
+    * Sets actionTagMap
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ActionTagInfo[]|null $actionTagMap 动作标签映射。
+    *
+    * @return $this
+    */
+    public function setActionTagMap($actionTagMap)
+    {
+        $this->container['actionTagMap'] = $actionTagMap;
+        return $this;
+    }
+
+    /**
+    * Gets isFlexus
+    *  是否是Flexus版本分身数字人。
+    *
+    * @return bool|null
+    */
+    public function getIsFlexus()
+    {
+        return $this->container['isFlexus'];
+    }
+
+    /**
+    * Sets isFlexus
+    *
+    * @param bool|null $isFlexus 是否是Flexus版本分身数字人。
+    *
+    * @return $this
+    */
+    public function setIsFlexus($isFlexus)
+    {
+        $this->container['isFlexus'] = $isFlexus;
         return $this;
     }
 

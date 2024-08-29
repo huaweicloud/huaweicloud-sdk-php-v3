@@ -26,6 +26,7 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * roomId  智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
     * robotId  应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
+    * body  body
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
             'roomId' => 'string',
-            'robotId' => 'string'
+            'robotId' => 'string',
+            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatJobsReq'
     ];
 
     /**
@@ -46,6 +48,7 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * roomId  智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
     * robotId  应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
+    * body  body
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
         'xProjectId' => null,
         'xAppUserId' => null,
         'roomId' => null,
-        'robotId' => null
+        'robotId' => null,
+        'body' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * roomId  智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
     * robotId  应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
+    * body  body
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
             'roomId' => 'room_id',
-            'robotId' => 'robot_id'
+            'robotId' => 'robot_id',
+            'body' => 'body'
     ];
 
     /**
@@ -107,6 +113,7 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * roomId  智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
     * robotId  应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
+    * body  body
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
             'roomId' => 'setRoomId',
-            'robotId' => 'setRobotId'
+            'robotId' => 'setRobotId',
+            'body' => 'setBody'
     ];
 
     /**
@@ -127,6 +135,7 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
     * xAppUserId  第三方用户ID。不允许输入中文。
     * roomId  智能交互对话ID，获取方法请参考[[创建智能交互对话直播间](https://support.huaweicloud.com/api-metastudio/CreateSmartChatRoom.html)](tag:hc,hk)[“创建智能交互对话直播间”](tag:cmcc)。
     * robotId  应用ID，获取方法请参考[[创建应用](https://support.huaweicloud.com/api-metastudio/CreateRobot.html)](tag:hc,hk)[“创建应用”](tag:cmcc)。
+    * body  body
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
             'roomId' => 'getRoomId',
-            'robotId' => 'getRobotId'
+            'robotId' => 'getRobotId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -203,6 +213,7 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -410,6 +421,30 @@ class StartSmartChatJobRequest implements ModelInterface, ArrayAccess
     public function setRobotId($robotId)
     {
         $this->container['robotId'] = $robotId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatJobsReq|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatJobsReq|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

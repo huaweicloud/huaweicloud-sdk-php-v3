@@ -21,7 +21,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * fileName  文件名，不区分大小写，最大长度256，最小长度1。
-    * fileSize  文件总的大小，最小1，最大5368709120。
+    * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
@@ -41,7 +41,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * fileName  文件名，不区分大小写，最大长度256，最小长度1。
-    * fileSize  文件总的大小，最小1，最大5368709120。
+    * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
@@ -82,7 +82,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * fileName  文件名，不区分大小写，最大长度256，最小长度1。
-    * fileSize  文件总的大小，最小1，最大5368709120。
+    * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
@@ -102,7 +102,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * fileName  文件名，不区分大小写，最大长度256，最小长度1。
-    * fileSize  文件总的大小，最小1，最大5368709120。
+    * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
@@ -122,7 +122,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * fileName  文件名，不区分大小写，最大长度256，最小长度1。
-    * fileSize  文件总的大小，最小1，最大5368709120。
+    * fileSize  文件总的大小，最小1，最大536870912000。
     * fileType  文件类型（默认提取文件后缀）。
     * assetId  资产ID。
     * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * OTHER：其他文件
@@ -301,7 +301,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileSize
-    *  文件总的大小，最小1，最大5368709120。
+    *  文件总的大小，最小1，最大536870912000。
     *
     * @return int|null
     */
@@ -313,7 +313,7 @@ class LargeFilesCreateReq implements ModelInterface, ArrayAccess
     /**
     * Sets fileSize
     *
-    * @param int|null $fileSize 文件总的大小，最小1，最大5368709120。
+    * @param int|null $fileSize 文件总的大小，最小1，最大536870912000。
     *
     * @return $this
     */

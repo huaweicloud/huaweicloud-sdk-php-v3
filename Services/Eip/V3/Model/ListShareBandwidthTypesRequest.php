@@ -35,7 +35,7 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'fields' => 'string',
+            'fields' => 'string[]',
             'id' => 'string',
             'bandwidthType' => 'string',
             'nameEn' => 'string',
@@ -268,12 +268,6 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
@@ -352,7 +346,7 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     * Gets fields
     *  形式为\\\"fields=id&fields=bandwidth_type&...\\\"，支持字段：id/bandwidth_type/name_en/name_zh/created_at/update_at/public_border_group/description
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFields()
     {
@@ -362,7 +356,7 @@ class ListShareBandwidthTypesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string|null $fields 形式为\\\"fields=id&fields=bandwidth_type&...\\\"，支持字段：id/bandwidth_type/name_en/name_zh/created_at/update_at/public_border_group/description
+    * @param string[]|null $fields 形式为\\\"fields=id&fields=bandwidth_type&...\\\"，支持字段：id/bandwidth_type/name_en/name_zh/created_at/update_at/public_border_group/description
     *
     * @return $this
     */

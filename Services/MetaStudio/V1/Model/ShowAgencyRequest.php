@@ -20,7 +20,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roleType  委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    * roleType  委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roleType  委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    * roleType  委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roleType  委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    * roleType  委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roleType  委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    * roleType  委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roleType  委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    * roleType  委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets roleType
-    *  委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    *  委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class ShowAgencyRequest implements ModelInterface, ArrayAccess
     /**
     * Sets roleType
     *
-    * @param string|null $roleType 委托授权类型 * CBS:对话机器人服务（CBS）访客 * SIS:语音交互服务(SIS)调用
+    * @param string|null $roleType 委托授权类型 * CBS:对话机器人服务(CBS)访客 * SIS:语音交互服务(SIS)调用
     *
     * @return $this
     */

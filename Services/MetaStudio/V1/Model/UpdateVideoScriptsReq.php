@@ -23,11 +23,11 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -55,11 +55,11 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -108,11 +108,11 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -140,11 +140,11 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -172,11 +172,11 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     * privData  私有数据，用户填写，原样带回。
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
@@ -443,7 +443,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  数字人模型资产ID。
+    *  数字人模型资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -455,7 +455,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 数字人模型资产ID。
+    * @param string|null $modelAssetId 数字人模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */
@@ -539,7 +539,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets sceneAssetId
-    *  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    *  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -551,7 +551,7 @@ class UpdateVideoScriptsReq implements ModelInterface, ArrayAccess
     /**
     * Sets sceneAssetId
     *
-    * @param string|null $sceneAssetId 场景资产ID。 > * 分身数字人视频制作不需要填写该参数。
+    * @param string|null $sceneAssetId 场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
     *
     * @return $this
     */

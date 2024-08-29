@@ -29,6 +29,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * status  规则状态，0：关闭，1：开启
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -42,6 +43,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'int',
             'addr' => 'string',
             'white' => 'int',
+            'timeMode' => 'string',
             'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup'
     ];
 
@@ -55,6 +57,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * status  规则状态，0：关闭，1：开启
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -68,6 +71,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
         'status' => null,
         'addr' => null,
         'white' => null,
+        'timeMode' => null,
         'ipGroup' => null
     ];
 
@@ -102,6 +106,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * status  规则状态，0：关闭，1：开启
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -115,6 +120,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'status',
             'addr' => 'addr',
             'white' => 'white',
+            'timeMode' => 'time_mode',
             'ipGroup' => 'ip_group'
     ];
 
@@ -128,6 +134,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * status  规则状态，0：关闭，1：开启
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -141,6 +148,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'addr' => 'setAddr',
             'white' => 'setWhite',
+            'timeMode' => 'setTimeMode',
             'ipGroup' => 'setIpGroup'
     ];
 
@@ -154,6 +162,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * status  规则状态，0：关闭，1：开启
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -167,6 +176,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'addr' => 'getAddr',
             'white' => 'getWhite',
+            'timeMode' => 'getTimeMode',
             'ipGroup' => 'getIpGroup'
     ];
 
@@ -236,6 +246,7 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
+        $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
         $this->container['ipGroup'] = isset($data['ipGroup']) ? $data['ipGroup'] : null;
     }
 
@@ -450,6 +461,30 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     public function setWhite($white)
     {
         $this->container['white'] = $white;
+        return $this;
+    }
+
+    /**
+    * Gets timeMode
+    *  生效模式，默认为permanent（立即生效）
+    *
+    * @return string|null
+    */
+    public function getTimeMode()
+    {
+        return $this->container['timeMode'];
+    }
+
+    /**
+    * Sets timeMode
+    *
+    * @param string|null $timeMode 生效模式，默认为permanent（立即生效）
+    *
+    * @return $this
+    */
+    public function setTimeMode($timeMode)
+    {
+        $this->container['timeMode'] = $timeMode;
         return $this;
     }
 

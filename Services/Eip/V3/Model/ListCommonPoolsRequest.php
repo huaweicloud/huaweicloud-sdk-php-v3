@@ -20,7 +20,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
     * offset  分页查询起始的资源序号
     * name  公共池名称
@@ -29,7 +29,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'fields' => 'string',
+            'fields' => 'string[]',
             'limit' => 'int',
             'offset' => 'int',
             'name' => 'string',
@@ -38,7 +38,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
     * offset  分页查询起始的资源序号
     * name  公共池名称
@@ -77,7 +77,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
     * offset  分页查询起始的资源序号
     * name  公共池名称
@@ -95,7 +95,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
     * offset  分页查询起始的资源序号
     * name  公共池名称
@@ -113,7 +113,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * fields  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     * limit  每页返回的个数取值范围：0~[2000]，其中2000为局点差异项，具体取值由局点决定
     * offset  分页查询起始的资源序号
     * name  公共池名称
@@ -202,12 +202,6 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['limit']) && ($this->container['limit'] > 2000)) {
                 $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 2000.";
             }
@@ -248,9 +242,9 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fields
-    *  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    *  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFields()
     {
@@ -260,7 +254,7 @@ class ListCommonPoolsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string|null $fields 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group
+    * @param string[]|null $fields 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/status/type/used/allow_share_bandwidth_types/public_border_group/description
     *
     * @return $this
     */

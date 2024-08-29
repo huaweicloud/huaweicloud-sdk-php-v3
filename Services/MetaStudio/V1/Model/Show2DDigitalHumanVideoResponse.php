@@ -34,7 +34,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -80,7 +80,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -147,7 +147,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -193,7 +193,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -239,7 +239,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * scriptId  剧本ID。
     * videoMakingType  视频生成类型。该参数取值是MODEL时，model_asset_id必填；取值是PICTURE时，human_image必填。 * MODEL：通过分身数字人模型生成视频 * PICTURE： 通过单张照片生成视频 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
     * humanImage  人物照片，需要Base64编码。 > * 该参数已废弃，照片数字人视频制作使用“创建照片分身数字人视频制作任务”接口。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -834,7 +834,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  分身数字人模型资产ID。
+    *  分身数字人模型资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -846,7 +846,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 分身数字人模型资产ID。
+    * @param string|null $modelAssetId 分身数字人模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */

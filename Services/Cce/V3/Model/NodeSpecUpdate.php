@@ -26,6 +26,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  默认值为空。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * nodeNicSpecUpdate  nodeNicSpecUpdate
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'userTags' => '\HuaweiCloud\SDK\Cce\V3\Model\UserTag[]',
             'initializedConditions' => 'string[]',
             'login' => '\HuaweiCloud\SDK\Cce\V3\Model\Login',
-            'serverEnterpriseProjectId' => 'string'
+            'serverEnterpriseProjectId' => 'string',
+            'nodeNicSpecUpdate' => '\HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdateNodeNicSpecUpdate'
     ];
 
     /**
@@ -46,6 +48,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  默认值为空。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * nodeNicSpecUpdate  nodeNicSpecUpdate
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         'userTags' => null,
         'initializedConditions' => null,
         'login' => null,
-        'serverEnterpriseProjectId' => null
+        'serverEnterpriseProjectId' => null,
+        'nodeNicSpecUpdate' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  默认值为空。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * nodeNicSpecUpdate  nodeNicSpecUpdate
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'userTags' => 'userTags',
             'initializedConditions' => 'initializedConditions',
             'login' => 'login',
-            'serverEnterpriseProjectId' => 'serverEnterpriseProjectID'
+            'serverEnterpriseProjectId' => 'serverEnterpriseProjectID',
+            'nodeNicSpecUpdate' => 'nodeNicSpecUpdate'
     ];
 
     /**
@@ -107,6 +113,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  默认值为空。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * nodeNicSpecUpdate  nodeNicSpecUpdate
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'userTags' => 'setUserTags',
             'initializedConditions' => 'setInitializedConditions',
             'login' => 'setLogin',
-            'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId'
+            'serverEnterpriseProjectId' => 'setServerEnterpriseProjectId',
+            'nodeNicSpecUpdate' => 'setNodeNicSpecUpdate'
     ];
 
     /**
@@ -127,6 +135,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     * initializedConditions  自定义初始化标记。  CCE节点在初始化完成之前，会打上初始化未完成污点（node.cloudprovider.kubernetes.io/uninitialized）防止pod调度到节点上。  cce支持自定义初始化标记，在接收到initializedConditions参数后，会将参数值转换成节点标签，随节点下发，例如：cloudprovider.openvessel.io/inject-initialized-conditions=CCEInitial_CustomedInitial。  当节点上设置了此标签，会轮询节点的status.Conditions，查看conditions的type是否存在标记名，如CCEInitial、CustomedInitial标记，如果存在所有传入的标记，且状态为True，认为节点初始化完成，则移除初始化污点。  默认值为空。  - 必须以字母、数字组成，长度范围1-20位。 - 标记数量不超过2个
     * login  login
     * serverEnterpriseProjectId  服务器企业项目ID。CCE服务不实现EPS相关特性，该字段仅用于同步服务器企业项目ID。 创建节点/节点池场景：可指定已存在企业项目，当取值为空时，该字段继承集群企业项目属性。 更新节点池场景：配置修改后仅会对新增节点的服务器生效，存量节点需前往EPS界面迁移。 如果更新时不指定值，不会更新该字段。 当该字段为空时，返回集群企业项目。
+    * nodeNicSpecUpdate  nodeNicSpecUpdate
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
             'userTags' => 'getUserTags',
             'initializedConditions' => 'getInitializedConditions',
             'login' => 'getLogin',
-            'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId'
+            'serverEnterpriseProjectId' => 'getServerEnterpriseProjectId',
+            'nodeNicSpecUpdate' => 'getNodeNicSpecUpdate'
     ];
 
     /**
@@ -203,6 +213,7 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
         $this->container['initializedConditions'] = isset($data['initializedConditions']) ? $data['initializedConditions'] : null;
         $this->container['login'] = isset($data['login']) ? $data['login'] : null;
         $this->container['serverEnterpriseProjectId'] = isset($data['serverEnterpriseProjectId']) ? $data['serverEnterpriseProjectId'] : null;
+        $this->container['nodeNicSpecUpdate'] = isset($data['nodeNicSpecUpdate']) ? $data['nodeNicSpecUpdate'] : null;
     }
 
     /**
@@ -377,6 +388,30 @@ class NodeSpecUpdate implements ModelInterface, ArrayAccess
     public function setServerEnterpriseProjectId($serverEnterpriseProjectId)
     {
         $this->container['serverEnterpriseProjectId'] = $serverEnterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets nodeNicSpecUpdate
+    *  nodeNicSpecUpdate
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdateNodeNicSpecUpdate|null
+    */
+    public function getNodeNicSpecUpdate()
+    {
+        return $this->container['nodeNicSpecUpdate'];
+    }
+
+    /**
+    * Sets nodeNicSpecUpdate
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\NodeSpecUpdateNodeNicSpecUpdate|null $nodeNicSpecUpdate nodeNicSpecUpdate
+    *
+    * @return $this
+    */
+    public function setNodeNicSpecUpdate($nodeNicSpecUpdate)
+    {
+        $this->container['nodeNicSpecUpdate'] = $nodeNicSpecUpdate;
         return $this;
     }
 

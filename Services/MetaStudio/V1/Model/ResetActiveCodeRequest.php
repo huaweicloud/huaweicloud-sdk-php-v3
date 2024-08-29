@@ -25,6 +25,7 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * activeCodeId  激活码ID。
+    * body  body
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'string',
             'xProjectId' => 'string',
             'xAppUserId' => 'string',
-            'activeCodeId' => 'string'
+            'activeCodeId' => 'string',
+            'body' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ResetActiveCodeReq'
     ];
 
     /**
@@ -43,6 +45,7 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * activeCodeId  激活码ID。
+    * body  body
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
         'xSdkDate' => null,
         'xProjectId' => null,
         'xAppUserId' => null,
-        'activeCodeId' => null
+        'activeCodeId' => null,
+        'body' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * activeCodeId  激活码ID。
+    * body  body
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'X-Sdk-Date',
             'xProjectId' => 'X-Project-Id',
             'xAppUserId' => 'X-App-UserId',
-            'activeCodeId' => 'active_code_id'
+            'activeCodeId' => 'active_code_id',
+            'body' => 'body'
     ];
 
     /**
@@ -100,6 +106,7 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * activeCodeId  激活码ID。
+    * body  body
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'setXSdkDate',
             'xProjectId' => 'setXProjectId',
             'xAppUserId' => 'setXAppUserId',
-            'activeCodeId' => 'setActiveCodeId'
+            'activeCodeId' => 'setActiveCodeId',
+            'body' => 'setBody'
     ];
 
     /**
@@ -118,6 +126,7 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * activeCodeId  激活码ID。
+    * body  body
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
             'xSdkDate' => 'getXSdkDate',
             'xProjectId' => 'getXProjectId',
             'xAppUserId' => 'getXAppUserId',
-            'activeCodeId' => 'getActiveCodeId'
+            'activeCodeId' => 'getActiveCodeId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -192,6 +202,7 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
         $this->container['xProjectId'] = isset($data['xProjectId']) ? $data['xProjectId'] : null;
         $this->container['xAppUserId'] = isset($data['xAppUserId']) ? $data['xAppUserId'] : null;
         $this->container['activeCodeId'] = isset($data['activeCodeId']) ? $data['activeCodeId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -366,6 +377,30 @@ class ResetActiveCodeRequest implements ModelInterface, ArrayAccess
     public function setActiveCodeId($activeCodeId)
     {
         $this->container['activeCodeId'] = $activeCodeId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ResetActiveCodeReq|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ResetActiveCodeReq|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

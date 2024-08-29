@@ -23,7 +23,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     * customerIds  需要解冻的客户账号ID列表。 您可以调用查询客户列表接口获取customer_id。
     * reason  解冻原因。
     * indirectPartnerId  云经销商ID。获取方法请参见查询云经销商列表。如果需要查询云经销商的子客户列表，必须携带该字段。除此之外，此参数不做处理。
-    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    * unfreezeType  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @var string[]
     */
@@ -320,7 +320,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets unfreezeType
-    *  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    *  |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @return string|null
     */
@@ -332,7 +332,7 @@ class UnfreezeSubCustomersReq implements ModelInterface, ArrayAccess
     /**
     * Sets unfreezeType
     *
-    * @param string|null $unfreezeType |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：冻结账户，ACCOUNT_AND_RESOURCE：冻结账户与资源|
+    * @param string|null $unfreezeType |参数名称：解冻类型| |参数的约束及描述：该参数非必填，解冻类型，支持枚举| |ACCOUNT：解冻账号，ACCOUNT_AND_RESOURCE：解冻账号与资源|
     *
     * @return $this
     */

@@ -21,13 +21,13 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * businessCardType  数字人名片类型。 * 2D_DIGITAL_HUMAN_CARD：分身数字人名片。
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageConfig  cardImageConfig
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音。文本驱动需要填写introduction_text和voice_asset_id参数。 * AUDIO: 语音驱动，需要在资产库中先上传语音资产。语音驱动需要填写introduction_audio_asset_id参数。
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
@@ -53,13 +53,13 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * businessCardType  数字人名片类型。 * 2D_DIGITAL_HUMAN_CARD：分身数字人名片。
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageConfig  cardImageConfig
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音。文本驱动需要填写introduction_text和voice_asset_id参数。 * AUDIO: 语音驱动，需要在资产库中先上传语音资产。语音驱动需要填写introduction_audio_asset_id参数。
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
@@ -106,13 +106,13 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * businessCardType  数字人名片类型。 * 2D_DIGITAL_HUMAN_CARD：分身数字人名片。
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageConfig  cardImageConfig
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音。文本驱动需要填写introduction_text和voice_asset_id参数。 * AUDIO: 语音驱动，需要在资产库中先上传语音资产。语音驱动需要填写introduction_audio_asset_id参数。
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
@@ -138,13 +138,13 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * businessCardType  数字人名片类型。 * 2D_DIGITAL_HUMAN_CARD：分身数字人名片。
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageConfig  cardImageConfig
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音。文本驱动需要填写introduction_text和voice_asset_id参数。 * AUDIO: 语音驱动，需要在资产库中先上传语音资产。语音驱动需要填写introduction_audio_asset_id参数。
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
@@ -170,13 +170,13 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * businessCardType  数字人名片类型。 * 2D_DIGITAL_HUMAN_CARD：分身数字人名片。
-    * cardTempletAssetId  数字人名片模板资产ID。
+    * cardTempletAssetId  数字人名片模板资产ID，可以从资产库中查询。
     * cardTextConfig  cardTextConfig
     * cardImageConfig  cardImageConfig
     * introductionType  自我介绍驱动方式。 * TEXT: 文本驱动，即通过TTS合成语音。文本驱动需要填写introduction_text和voice_asset_id参数。 * AUDIO: 语音驱动，需要在资产库中先上传语音资产。语音驱动需要填写introduction_audio_asset_id参数。
     * introductionText  自我介绍文本，用于驱动数字人口型。
-    * voiceAssetId  音色资产ID。
-    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * voiceAssetId  音色资产ID，可以从资产库中查询。
+    * introductionAudioAssetId  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     * videoAssetName  输出名片视频资产名称。默认取card_name的值
     * gender  性别。 * MALE：男性 * FEMALE：女性
     * reviewConfig  reviewConfig
@@ -428,7 +428,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets cardTempletAssetId
-    *  数字人名片模板资产ID。
+    *  数字人名片模板资产ID，可以从资产库中查询。
     *
     * @return string
     */
@@ -440,7 +440,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Sets cardTempletAssetId
     *
-    * @param string $cardTempletAssetId 数字人名片模板资产ID。
+    * @param string $cardTempletAssetId 数字人名片模板资产ID，可以从资产库中查询。
     *
     * @return $this
     */
@@ -548,7 +548,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets voiceAssetId
-    *  音色资产ID。
+    *  音色资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -560,7 +560,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Sets voiceAssetId
     *
-    * @param string|null $voiceAssetId 音色资产ID。
+    * @param string|null $voiceAssetId 音色资产ID，可以从资产库中查询。
     *
     * @return $this
     */
@@ -572,7 +572,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets introductionAudioAssetId
-    *  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    *  自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     *
     * @return string|null
     */
@@ -584,7 +584,7 @@ class CreateDigitalHumanBusinessCardReq implements ModelInterface, ArrayAccess
     /**
     * Sets introductionAudioAssetId
     *
-    * @param string|null $introductionAudioAssetId 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。
+    * @param string|null $introductionAudioAssetId 自我介绍语音资产ID，用于驱动数字人口型。 > * 介绍语音需要作为asset_type=AUDIO资产先上传至资产库。 > * 使用时从资产库中查询。
     *
     * @return $this
     */

@@ -205,8 +205,8 @@ class CreateTtsAuditionRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['text'] === null) {
             $invalidProperties[] = "'text' can't be null";
         }
-            if ((mb_strlen($this->container['text']) > 32768)) {
-                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 32768.";
+            if ((mb_strlen($this->container['text']) > 100000)) {
+                $invalidProperties[] = "invalid value for 'text', the character length must be smaller than or equal to 100000.";
             }
             if ((mb_strlen($this->container['text']) < 0)) {
                 $invalidProperties[] = "invalid value for 'text', the character length must be bigger than or equal to 0.";

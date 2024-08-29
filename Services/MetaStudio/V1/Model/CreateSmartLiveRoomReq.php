@@ -29,13 +29,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * outputUrls  RTMP视频推流第三方直播平台地址。
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -55,7 +56,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'viewMode' => 'string',
-            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig'
+            'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
+            'privData' => 'string'
     ];
 
     /**
@@ -69,13 +71,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * outputUrls  RTMP视频推流第三方直播平台地址。
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -95,7 +98,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         'reviewConfig' => null,
         'sharedConfig' => null,
         'viewMode' => null,
-        'coStreamerConfig' => null
+        'coStreamerConfig' => null,
+        'privData' => null
     ];
 
     /**
@@ -130,13 +134,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * outputUrls  RTMP视频推流第三方直播平台地址。
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -156,7 +161,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'reviewConfig' => 'review_config',
             'sharedConfig' => 'shared_config',
             'viewMode' => 'view_mode',
-            'coStreamerConfig' => 'co_streamer_config'
+            'coStreamerConfig' => 'co_streamer_config',
+            'privData' => 'priv_data'
     ];
 
     /**
@@ -170,13 +176,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * outputUrls  RTMP视频推流第三方直播平台地址。
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -196,7 +203,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'reviewConfig' => 'setReviewConfig',
             'sharedConfig' => 'setSharedConfig',
             'viewMode' => 'setViewMode',
-            'coStreamerConfig' => 'setCoStreamerConfig'
+            'coStreamerConfig' => 'setCoStreamerConfig',
+            'privData' => 'setPrivData'
     ];
 
     /**
@@ -210,13 +218,14 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * videoConfig  videoConfig
     * outputUrls  RTMP视频推流第三方直播平台地址。
     * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
     * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
+    * privData  私有数据，用户填写，原样带回。
     *
     * @var string[]
     */
@@ -236,7 +245,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'reviewConfig' => 'getReviewConfig',
             'sharedConfig' => 'getSharedConfig',
             'viewMode' => 'getViewMode',
-            'coStreamerConfig' => 'getCoStreamerConfig'
+            'coStreamerConfig' => 'getCoStreamerConfig',
+            'privData' => 'getPrivData'
     ];
 
     /**
@@ -345,6 +355,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
+        $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
     }
 
     /**
@@ -392,6 +403,12 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['privData']) && (mb_strlen($this->container['privData']) > 8192)) {
+                $invalidProperties[] = "invalid value for 'privData', the character length must be smaller than or equal to 8192.";
+            }
+            if (!is_null($this->container['privData']) && (mb_strlen($this->container['privData']) < 0)) {
+                $invalidProperties[] = "invalid value for 'privData', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -624,7 +641,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupModelAssetIds
-    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @return string[]|null
     */
@@ -636,7 +653,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets backupModelAssetIds
     *
-    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @return $this
     */
@@ -787,6 +804,30 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function setCoStreamerConfig($coStreamerConfig)
     {
         $this->container['coStreamerConfig'] = $coStreamerConfig;
+        return $this;
+    }
+
+    /**
+    * Gets privData
+    *  私有数据，用户填写，原样带回。
+    *
+    * @return string|null
+    */
+    public function getPrivData()
+    {
+        return $this->container['privData'];
+    }
+
+    /**
+    * Sets privData
+    *
+    * @param string|null $privData 私有数据，用户填写，原样带回。
+    *
+    * @return $this
+    */
+    public function setPrivData($privData)
+    {
+        $this->container['privData'] = $privData;
         return $this;
     }
 

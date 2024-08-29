@@ -21,7 +21,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -47,7 +47,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -94,7 +94,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -120,7 +120,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -146,7 +146,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * scriptId  剧本ID。 > * 如果填写了script_id，model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts可以不填，以脚本中的配置为准。 > * 如果填写了script_id，并且同时也填写了model_asset_id、voice_config、scene_asset_id、video_config、shoot_scripts则以本接口中的配置为准。
-    * modelAssetId  分身数字人模型资产ID。
+    * modelAssetId  分身数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
     * shootScripts  拍摄脚本列表。
@@ -298,7 +298,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  分身数字人模型资产ID。
+    *  分身数字人模型资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class Create2DDigitalHumanVideoReq implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 分身数字人模型资产ID。
+    * @param string|null $modelAssetId 分身数字人模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */

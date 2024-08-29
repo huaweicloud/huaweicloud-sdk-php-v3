@@ -20,9 +20,9 @@ class ModelInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * modelAssetId  模型资产ID
+    * modelAssetId  模型资产ID，可以从资产库中查询。
     * assetName  资产名称
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ModelInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * modelAssetId  模型资产ID
+    * modelAssetId  模型资产ID，可以从资产库中查询。
     * assetName  资产名称
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ModelInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * modelAssetId  模型资产ID
+    * modelAssetId  模型资产ID，可以从资产库中查询。
     * assetName  资产名称
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ModelInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * modelAssetId  模型资产ID
+    * modelAssetId  模型资产ID，可以从资产库中查询。
     * assetName  资产名称
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ModelInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * modelAssetId  模型资产ID
+    * modelAssetId  模型资产ID，可以从资产库中查询。
     * assetName  资产名称
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class ModelInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  模型资产ID
+    *  模型资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class ModelInfo implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 模型资产ID
+    * @param string|null $modelAssetId 模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */
@@ -256,7 +256,7 @@ class ModelInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupModelAssetIds
-    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @return string[]|null
     */
@@ -268,7 +268,7 @@ class ModelInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backupModelAssetIds
     *
-    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色）。
+    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
     *
     * @return $this
     */

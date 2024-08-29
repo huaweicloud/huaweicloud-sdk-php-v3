@@ -27,6 +27,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * appKey  应用的AccessKey或帐号。
+    * robotType  robotType
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -53,6 +54,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'string',
             'appType' => 'int',
             'appKey' => 'string',
+            'robotType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RobotTypeEnum',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'createTime' => 'string',
             'updateTime' => 'string',
@@ -79,6 +81,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * appKey  应用的AccessKey或帐号。
+    * robotType  robotType
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -105,6 +108,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         'appId' => null,
         'appType' => null,
         'appKey' => null,
+        'robotType' => null,
         'language' => null,
         'createTime' => null,
         'updateTime' => null,
@@ -152,6 +156,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * appKey  应用的AccessKey或帐号。
+    * robotType  robotType
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -178,6 +183,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'app_id',
             'appType' => 'app_type',
             'appKey' => 'app_key',
+            'robotType' => 'robot_type',
             'language' => 'language',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
@@ -204,6 +210,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * appKey  应用的AccessKey或帐号。
+    * robotType  robotType
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -230,6 +237,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'setAppId',
             'appType' => 'setAppType',
             'appKey' => 'setAppKey',
+            'robotType' => 'setRobotType',
             'language' => 'setLanguage',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
@@ -256,6 +264,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     * appId  第三方应用ID。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * appKey  应用的AccessKey或帐号。
+    * robotType  robotType
     * language  language
     * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
     * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
@@ -282,6 +291,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
             'appId' => 'getAppId',
             'appType' => 'getAppType',
             'appKey' => 'getAppKey',
+            'robotType' => 'getRobotType',
             'language' => 'getLanguage',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
@@ -364,6 +374,7 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['appKey'] = isset($data['appKey']) ? $data['appKey'] : null;
+        $this->container['robotType'] = isset($data['robotType']) ? $data['robotType'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
@@ -641,6 +652,30 @@ class ShowRobotResponse implements ModelInterface, ArrayAccess
     public function setAppKey($appKey)
     {
         $this->container['appKey'] = $appKey;
+        return $this;
+    }
+
+    /**
+    * Gets robotType
+    *  robotType
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RobotTypeEnum|null
+    */
+    public function getRobotType()
+    {
+        return $this->container['robotType'];
+    }
+
+    /**
+    * Sets robotType
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RobotTypeEnum|null $robotType robotType
+    *
+    * @return $this
+    */
+    public function setRobotType($robotType)
+    {
+        $this->container['robotType'] = $robotType;
         return $this;
     }
 

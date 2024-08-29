@@ -23,7 +23,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
     * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
-    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
     * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
-    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
     * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
-    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
     * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
-    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     * backgroundType  背景类型。 - IMAGE：图片背景，指定图片用作分身数字人背景。 - COLOR：纯色背景，指定颜色RGB值作为分身数字人背景。
     * backgroundConfig  背景文件的URL。 > * 仅直播支持外部URL，其他业务通过资产库查询获取，不支持外部URL。 > * background_type=IMAGE时需要填写。
     * backgroundColorConfig  纯色背景的RGB颜色值。 > * background_type=COLOR时需要填写。
-    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    * backgroundAssetId  背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @var string[]
     */
@@ -338,7 +338,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets backgroundAssetId
-    *  背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    *  背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -350,7 +350,7 @@ class BackgroundConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets backgroundAssetId
     *
-    * @param string|null $backgroundAssetId 背景资产ID。 > * 背景是背景图片时，填图片资产ID。
+    * @param string|null $backgroundAssetId 背景资产ID。 > * 背景是背景图片时，填图片资产ID，可以从资产库中查询。
     *
     * @return $this
     */

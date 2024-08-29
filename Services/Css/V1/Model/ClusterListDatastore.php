@@ -22,24 +22,28 @@ class ClusterListDatastore implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * supportSecuritymode  是否支持安全模式
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'type' => 'string',
-            'version' => 'string'
+            'version' => 'string',
+            'supportSecuritymode' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * supportSecuritymode  是否支持安全模式
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'type' => null,
-        'version' => null
+        'version' => null,
+        'supportSecuritymode' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ClusterListDatastore implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * supportSecuritymode  是否支持安全模式
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'type' => 'type',
-            'version' => 'version'
+            'version' => 'version',
+            'supportSecuritymode' => 'supportSecuritymode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * supportSecuritymode  是否支持安全模式
     *
     * @var string[]
     */
     protected static $setters = [
             'type' => 'setType',
-            'version' => 'setVersion'
+            'version' => 'setVersion',
+            'supportSecuritymode' => 'setSupportSecuritymode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  引擎类型，目前只支持elasticsearch。
     * version  CSS集群引擎版本号。详细请参考CSS[支持的集群版本](css_03_0056.xml)。
+    * supportSecuritymode  是否支持安全模式
     *
     * @var string[]
     */
     protected static $getters = [
             'type' => 'getType',
-            'version' => 'getVersion'
+            'version' => 'getVersion',
+            'supportSecuritymode' => 'getSupportSecuritymode'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ClusterListDatastore implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : null;
+        $this->container['supportSecuritymode'] = isset($data['supportSecuritymode']) ? $data['supportSecuritymode'] : null;
     }
 
     /**
@@ -228,6 +239,30 @@ class ClusterListDatastore implements ModelInterface, ArrayAccess
     public function setVersion($version)
     {
         $this->container['version'] = $version;
+        return $this;
+    }
+
+    /**
+    * Gets supportSecuritymode
+    *  是否支持安全模式
+    *
+    * @return bool|null
+    */
+    public function getSupportSecuritymode()
+    {
+        return $this->container['supportSecuritymode'];
+    }
+
+    /**
+    * Sets supportSecuritymode
+    *
+    * @param bool|null $supportSecuritymode 是否支持安全模式
+    *
+    * @return $this
+    */
+    public function setSupportSecuritymode($supportSecuritymode)
+    {
+        $this->container['supportSecuritymode'] = $supportSecuritymode;
         return $this;
     }
 

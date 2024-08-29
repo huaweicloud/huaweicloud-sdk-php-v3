@@ -23,6 +23,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
+    * robotType  robotType
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
     * enableQuestionAudit  提问文本审核开关
@@ -38,6 +39,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'string',
             'appType' => 'int',
             'roomId' => 'string',
+            'robotType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RobotTypeEnum',
             'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'tailSilenceTime' => 'int',
             'enableQuestionAudit' => 'bool',
@@ -53,6 +55,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
+    * robotType  robotType
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
     * enableQuestionAudit  提问文本审核开关
@@ -68,6 +71,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
         'name' => null,
         'appType' => null,
         'roomId' => null,
+        'robotType' => null,
         'language' => null,
         'tailSilenceTime' => null,
         'enableQuestionAudit' => null,
@@ -104,6 +108,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
+    * robotType  robotType
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
     * enableQuestionAudit  提问文本审核开关
@@ -119,6 +124,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'name',
             'appType' => 'app_type',
             'roomId' => 'room_id',
+            'robotType' => 'robot_type',
             'language' => 'language',
             'tailSilenceTime' => 'tail_silence_time',
             'enableQuestionAudit' => 'enable_question_audit',
@@ -134,6 +140,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
+    * robotType  robotType
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
     * enableQuestionAudit  提问文本审核开关
@@ -149,6 +156,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'appType' => 'setAppType',
             'roomId' => 'setRoomId',
+            'robotType' => 'setRobotType',
             'language' => 'setLanguage',
             'tailSilenceTime' => 'setTailSilenceTime',
             'enableQuestionAudit' => 'setEnableQuestionAudit',
@@ -164,6 +172,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     * name  应用名称。
     * appType  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；5：第三方驱动；6：第三方语言模型；8：奇妙问
     * roomId  智能交互对话房间ID。
+    * robotType  robotType
     * language  language
     * tailSilenceTime  语音识别后端点静音时长默认500ms
     * enableQuestionAudit  提问文本审核开关
@@ -179,6 +188,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'appType' => 'getAppType',
             'roomId' => 'getRoomId',
+            'robotType' => 'getRobotType',
             'language' => 'getLanguage',
             'tailSilenceTime' => 'getTailSilenceTime',
             'enableQuestionAudit' => 'getEnableQuestionAudit',
@@ -250,6 +260,7 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['appType'] = isset($data['appType']) ? $data['appType'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
+        $this->container['robotType'] = isset($data['robotType']) ? $data['robotType'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['tailSilenceTime'] = isset($data['tailSilenceTime']) ? $data['tailSilenceTime'] : null;
         $this->container['enableQuestionAudit'] = isset($data['enableQuestionAudit']) ? $data['enableQuestionAudit'] : null;
@@ -381,6 +392,30 @@ class CreateRobotReq implements ModelInterface, ArrayAccess
     public function setRoomId($roomId)
     {
         $this->container['roomId'] = $roomId;
+        return $this;
+    }
+
+    /**
+    * Gets robotType
+    *  robotType
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RobotTypeEnum|null
+    */
+    public function getRobotType()
+    {
+        return $this->container['robotType'];
+    }
+
+    /**
+    * Sets robotType
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RobotTypeEnum|null $robotType robotType
+    *
+    * @return $this
+    */
+    public function setRobotType($robotType)
+    {
+        $this->container['robotType'] = $robotType;
         return $this;
     }
 

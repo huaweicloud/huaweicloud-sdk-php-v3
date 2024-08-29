@@ -24,7 +24,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -50,7 +50,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -97,7 +97,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -123,7 +123,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -149,7 +149,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     * scriptName  剧本名称
     * scriptDescription  剧本描述。
     * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID。
+    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -394,7 +394,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  数字人模型资产ID。
+    *  数字人模型资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 数字人模型资产ID。
+    * @param string|null $modelAssetId 数字人模型资产ID，可以从资产库中查询。
     *
     * @return $this
     */

@@ -22,24 +22,28 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * sequenceNo  剧本序号。
     * shootScript  shootScript
+    * subtitleFileInfo  subtitleFileInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sequenceNo' => 'int',
-            'shootScript' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptDetail'
+            'shootScript' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptDetail',
+            'subtitleFileInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFileInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * sequenceNo  剧本序号。
     * shootScript  shootScript
+    * subtitleFileInfo  subtitleFileInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sequenceNo' => 'int32',
-        'shootScript' => null
+        'shootScript' => null,
+        'subtitleFileInfo' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * and the value is the original name
     * sequenceNo  剧本序号。
     * shootScript  shootScript
+    * subtitleFileInfo  subtitleFileInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sequenceNo' => 'sequence_no',
-            'shootScript' => 'shoot_script'
+            'shootScript' => 'shoot_script',
+            'subtitleFileInfo' => 'subtitle_file_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * sequenceNo  剧本序号。
     * shootScript  shootScript
+    * subtitleFileInfo  subtitleFileInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'sequenceNo' => 'setSequenceNo',
-            'shootScript' => 'setShootScript'
+            'shootScript' => 'setShootScript',
+            'subtitleFileInfo' => 'setSubtitleFileInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * sequenceNo  剧本序号。
     * shootScript  shootScript
+    * subtitleFileInfo  subtitleFileInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'sequenceNo' => 'getSequenceNo',
-            'shootScript' => 'getShootScript'
+            'shootScript' => 'getShootScript',
+            'subtitleFileInfo' => 'getSubtitleFileInfo'
     ];
 
     /**
@@ -159,6 +169,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     {
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
         $this->container['shootScript'] = isset($data['shootScript']) ? $data['shootScript'] : null;
+        $this->container['subtitleFileInfo'] = isset($data['subtitleFileInfo']) ? $data['subtitleFileInfo'] : null;
     }
 
     /**
@@ -234,6 +245,30 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     public function setShootScript($shootScript)
     {
         $this->container['shootScript'] = $shootScript;
+        return $this;
+    }
+
+    /**
+    * Gets subtitleFileInfo
+    *  subtitleFileInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFileInfo|null
+    */
+    public function getSubtitleFileInfo()
+    {
+        return $this->container['subtitleFileInfo'];
+    }
+
+    /**
+    * Sets subtitleFileInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFileInfo|null $subtitleFileInfo subtitleFileInfo
+    *
+    * @return $this
+    */
+    public function setSubtitleFileInfo($subtitleFileInfo)
+    {
+        $this->container['subtitleFileInfo'] = $subtitleFileInfo;
         return $this;
     }
 

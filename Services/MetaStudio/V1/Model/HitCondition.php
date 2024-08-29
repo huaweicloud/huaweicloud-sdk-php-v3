@@ -20,7 +20,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * relation  条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
     * tags  匹配关系配置
     *
@@ -34,7 +34,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * relation  条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
     * tags  匹配关系配置
     *
@@ -69,7 +69,7 @@ class HitCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * relation  条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
     * tags  匹配关系配置
     *
@@ -83,7 +83,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * relation  条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
     * tags  匹配关系配置
     *
@@ -97,7 +97,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * relation  条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
     * tags  匹配关系配置
     *
@@ -233,7 +233,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets relation
-    *  条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    *  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     *
     * @return string|null
     */
@@ -245,7 +245,7 @@ class HitCondition implements ModelInterface, ArrayAccess
     /**
     * Sets relation
     *
-    * @param string|null $relation 条件关系；取值And或者Or RESERVED 为兜底回复不会去判断其他命中条件
+    * @param string|null $relation 条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
     *
     * @return $this
     */

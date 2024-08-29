@@ -20,7 +20,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * musicAssetId  音乐资产ID。
+    * musicAssetId  音乐资产ID，可以从资产库中查询。
     * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * musicAssetId  音乐资产ID。
+    * musicAssetId  音乐资产ID，可以从资产库中查询。
     * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * musicAssetId  音乐资产ID。
+    * musicAssetId  音乐资产ID，可以从资产库中查询。
     * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * musicAssetId  音乐资产ID。
+    * musicAssetId  音乐资产ID，可以从资产库中查询。
     * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * musicAssetId  音乐资产ID。
+    * musicAssetId  音乐资产ID，可以从资产库中查询。
     * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
     *
     * @var string[]
@@ -197,7 +197,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets musicAssetId
-    *  音乐资产ID。
+    *  音乐资产ID，可以从资产库中查询。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets musicAssetId
     *
-    * @param string|null $musicAssetId 音乐资产ID。
+    * @param string|null $musicAssetId 音乐资产ID，可以从资产库中查询。
     *
     * @return $this
     */

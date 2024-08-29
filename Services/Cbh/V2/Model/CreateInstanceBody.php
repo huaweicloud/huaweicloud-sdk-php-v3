@@ -20,12 +20,12 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     * instanceName  云堡垒机实例名称，取值范围：  只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。  例如：CBH-6b8e
-    * password  堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
-    * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * password  堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
+    * region  创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
+    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
+    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
@@ -60,12 +60,12 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     * instanceName  云堡垒机实例名称，取值范围：  只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。  例如：CBH-6b8e
-    * password  堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
-    * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * password  堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
+    * region  创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
+    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
+    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
@@ -121,12 +121,12 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     * instanceName  云堡垒机实例名称，取值范围：  只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。  例如：CBH-6b8e
-    * password  堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
-    * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * password  堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
+    * region  创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
+    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
+    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
@@ -161,12 +161,12 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     * instanceName  云堡垒机实例名称，取值范围：  只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。  例如：CBH-6b8e
-    * password  堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
-    * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * password  堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
+    * region  创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
+    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
+    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
@@ -201,12 +201,12 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    * specification  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     * instanceName  云堡垒机实例名称，取值范围：  只能由中文字符、英文字母、数字及“_”、“-”组成，且长度为[1-64]个字符。  例如：CBH-6b8e
-    * password  堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
-    * region  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
-    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * password  堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
+    * region  创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
+    * availabilityZone  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
+    * slaveAvailabilityZone  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     * chargingMode  计费模式。 - 0 包周期计费。
     * periodType  订购周期类型。（包周期模式必传） - 2：月 - 3：年
     * periodNum  订购周期数。（包周期模式必传） - period_type=2（周期类型为月），取值范围[1，9] - periodType=3（周期类型为年），取值范围[1，10]
@@ -438,7 +438,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets specification
-    *  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    *  待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     *
     * @return string
     */
@@ -450,7 +450,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets specification
     *
-    * @param string $specification 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  已上线的规格请参见《云堡垒机产品介绍》的[服务版本差异](https://support.huaweicloud.com/productdesc-cbh/cbh_01_0010.html)章节。
+    * @param string $specification 待创建云堡垒机规格ID，例如： - cbh.basic.50 - cbh.enhance.50  可参考接口\"查询云堡垒机规格信息\"获取。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets password
-    *  堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
+    *  堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
     *
     * @return string
     */
@@ -498,7 +498,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets password
     *
-    * @param string $password 堡垒机实例前端登录密码。  密码规则：8-32位,不能包含amdin或nidma及其大写形式,必须包含大小写数字特殊字符四种类型中的三种。
+    * @param string $password 堡垒机实例前端登录密码。  密码规则：8-32位、不能包含amdin或nidma及其大写形式、必须包含大小写数字特殊字符（!@$%^-_=+[{}]:,./?~#*）四种类型中的三种、不能包含超过2个连续的相同字符（区分大小写）。
     *
     * @return $this
     */
@@ -510,7 +510,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    *  创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
     *
     * @return string
     */
@@ -522,7 +522,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string $region 创建云堡垒机实例所在局点ID。   可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * @param string $region 创建云堡垒机实例所在局点ID。   可参考接口\"查询云堡垒机规格信息\"获取
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    *  创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
     *
     * @return string
     */
@@ -546,7 +546,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string $availabilityZone 创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * @param string $availabilityZone 创建云堡垒机所在的可用分区，需要指定可用分区名称。(主备模式是作为主机可用区)  可参考接口\"获取服务可用区\"获取
     *
     * @return $this
     */
@@ -558,7 +558,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets slaveAvailabilityZone
-    *  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    *  创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     *
     * @return string|null
     */
@@ -570,7 +570,7 @@ class CreateInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Sets slaveAvailabilityZone
     *
-    * @param string|null $slaveAvailabilityZone 创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。
+    * @param string|null $slaveAvailabilityZone 创建云堡垒机备机所在的可用分区，需要指定可用分区名称。(只创建单机时不传此字段)。  可参考接口\"获取服务可用区\"获取
     *
     * @return $this
     */

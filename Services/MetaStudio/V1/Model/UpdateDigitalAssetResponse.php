@@ -32,10 +32,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -56,6 +58,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
             'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
             'files' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetFileInfo[]',
+            'assetOrder' => 'int',
+            'supportedService' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]',
             'xRequestId' => 'string'
     ];
 
@@ -72,10 +76,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -96,6 +102,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         'assetExtraMeta' => null,
         'systemProperties' => null,
         'files' => null,
+        'assetOrder' => null,
+        'supportedService' => null,
         'xRequestId' => null
     ];
 
@@ -133,10 +141,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -157,6 +167,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetExtraMeta' => 'asset_extra_meta',
             'systemProperties' => 'system_properties',
             'files' => 'files',
+            'assetOrder' => 'asset_order',
+            'supportedService' => 'supported_service',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -173,10 +185,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -197,6 +211,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetExtraMeta' => 'setAssetExtraMeta',
             'systemProperties' => 'setSystemProperties',
             'files' => 'setFiles',
+            'assetOrder' => 'setAssetOrder',
+            'supportedService' => 'setSupportedService',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -213,10 +229,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。
     * failType  失败原因。 * AUTOMATIC_REVIEW_REJECT：自动审核失败 * MANUAL_REVIEW_REJECT：人工审核失败
     * reason  冻结/解冻/失败 原因。
-    * tags  标签列表。
+    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     * assetExtraMeta  assetExtraMeta
     * systemProperties  设置系统属性。
     * files  资产下的文件。
+    * assetOrder  展示顺序
+    * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -237,6 +255,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             'assetExtraMeta' => 'getAssetExtraMeta',
             'systemProperties' => 'getSystemProperties',
             'files' => 'getFiles',
+            'assetOrder' => 'getAssetOrder',
+            'supportedService' => 'getSupportedService',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -392,6 +412,8 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
         $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['files'] = isset($data['files']) ? $data['files'] : null;
+        $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
+        $this->container['supportedService'] = isset($data['supportedService']) ? $data['supportedService'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -474,6 +496,12 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) < 0)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] > 32767)) {
+                $invalidProperties[] = "invalid value for 'assetOrder', must be smaller than or equal to 32767.";
+            }
+            if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] < 0)) {
+                $invalidProperties[] = "invalid value for 'assetOrder', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -755,7 +783,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。
+    *  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     *
     * @return string[]|null
     */
@@ -767,7 +795,7 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 标签列表。
+    * @param string[]|null $tags 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
     *
     * @return $this
     */
@@ -846,6 +874,54 @@ class UpdateDigitalAssetResponse implements ModelInterface, ArrayAccess
     public function setFiles($files)
     {
         $this->container['files'] = $files;
+        return $this;
+    }
+
+    /**
+    * Gets assetOrder
+    *  展示顺序
+    *
+    * @return int|null
+    */
+    public function getAssetOrder()
+    {
+        return $this->container['assetOrder'];
+    }
+
+    /**
+    * Sets assetOrder
+    *
+    * @param int|null $assetOrder 展示顺序
+    *
+    * @return $this
+    */
+    public function setAssetOrder($assetOrder)
+    {
+        $this->container['assetOrder'] = $assetOrder;
+        return $this;
+    }
+
+    /**
+    * Gets supportedService
+    *  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null
+    */
+    public function getSupportedService()
+    {
+        return $this->container['supportedService'];
+    }
+
+    /**
+    * Sets supportedService
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SupportedServiceEnum[]|null $supportedService 支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
+    *
+    * @return $this
+    */
+    public function setSupportedService($supportedService)
+    {
+        $this->container['supportedService'] = $supportedService;
         return $this;
     }
 

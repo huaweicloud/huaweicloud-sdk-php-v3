@@ -27,7 +27,7 @@ class ShowPublicipPoolRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'publicipPoolId' => 'string',
-            'fields' => 'string'
+            'fields' => 'string[]'
     ];
 
     /**
@@ -181,12 +181,6 @@ class ShowPublicipPoolRequest implements ModelInterface, ArrayAccess
             if (!preg_match("/[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/", $this->container['publicipPoolId'])) {
                 $invalidProperties[] = "invalid value for 'publicipPoolId', must be conform to the pattern /[A-Za-z0-9]{8}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{4}-[A-Za-z0-9]{12}/.";
             }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -229,7 +223,7 @@ class ShowPublicipPoolRequest implements ModelInterface, ArrayAccess
     * Gets fields
     *  显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFields()
     {
@@ -239,7 +233,7 @@ class ShowPublicipPoolRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string|null $fields 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
+    * @param string[]|null $fields 显示，形式为\"fields=id&fields=name&...\"  支持字段：id/name/size/used/project_id/status/billing_info/created_at/updated_at/type/shared/is_common/description/tags/enterprise_project_id/allow_share_bandwidth_types/public_border_group
     *
     * @return $this
     */

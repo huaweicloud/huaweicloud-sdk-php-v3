@@ -32,7 +32,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * chatAccessAddress  智能交互接入地址。
+    * isTransparent  是否透明背景
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -47,9 +51,13 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'createTime' => 'string',
             'lastupdateTime' => 'string',
             'rtcRoomInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RTCRoomInfoList',
-            'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig',
-            'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVideoConfigRsp',
+            'chatSubtitleConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatSubtitleConfig',
+            'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVideoConfig',
+            'chatState' => 'int',
+            'language' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum',
             'chatVideoType' => 'string',
+            'chatAccessAddress' => 'string',
+            'isTransparent' => 'bool',
             'xRequestId' => 'string'
     ];
 
@@ -66,7 +74,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * chatAccessAddress  智能交互接入地址。
+    * isTransparent  是否透明背景
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -83,7 +95,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         'rtcRoomInfo' => null,
         'chatSubtitleConfig' => null,
         'videoConfig' => null,
+        'chatState' => null,
+        'language' => null,
         'chatVideoType' => null,
+        'chatAccessAddress' => null,
+        'isTransparent' => null,
         'xRequestId' => null
     ];
 
@@ -121,7 +137,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * chatAccessAddress  智能交互接入地址。
+    * isTransparent  是否透明背景
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -138,7 +158,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'rtc_room_info',
             'chatSubtitleConfig' => 'chat_subtitle_config',
             'videoConfig' => 'video_config',
+            'chatState' => 'chat_state',
+            'language' => 'language',
             'chatVideoType' => 'chat_video_type',
+            'chatAccessAddress' => 'chat_access_address',
+            'isTransparent' => 'is_transparent',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -155,7 +179,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * chatAccessAddress  智能交互接入地址。
+    * isTransparent  是否透明背景
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -172,7 +200,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'setRtcRoomInfo',
             'chatSubtitleConfig' => 'setChatSubtitleConfig',
             'videoConfig' => 'setVideoConfig',
+            'chatState' => 'setChatState',
+            'language' => 'setLanguage',
             'chatVideoType' => 'setChatVideoType',
+            'chatAccessAddress' => 'setChatAccessAddress',
+            'isTransparent' => 'setIsTransparent',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -189,7 +221,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * rtcRoomInfo  rtcRoomInfo
     * chatSubtitleConfig  chatSubtitleConfig
     * videoConfig  videoConfig
+    * chatState  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    * language  language
     * chatVideoType  智能交互对话端配置。 * COMPUTER: 电脑端 * MOBILE: 手机端 * HUB: 大屏
+    * chatAccessAddress  智能交互接入地址。
+    * isTransparent  是否透明背景
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -206,7 +242,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             'rtcRoomInfo' => 'getRtcRoomInfo',
             'chatSubtitleConfig' => 'getChatSubtitleConfig',
             'videoConfig' => 'getVideoConfig',
+            'chatState' => 'getChatState',
+            'language' => 'getLanguage',
             'chatVideoType' => 'getChatVideoType',
+            'chatAccessAddress' => 'getChatAccessAddress',
+            'isTransparent' => 'getIsTransparent',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -319,7 +359,11 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
         $this->container['rtcRoomInfo'] = isset($data['rtcRoomInfo']) ? $data['rtcRoomInfo'] : null;
         $this->container['chatSubtitleConfig'] = isset($data['chatSubtitleConfig']) ? $data['chatSubtitleConfig'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
+        $this->container['chatState'] = isset($data['chatState']) ? $data['chatState'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['chatVideoType'] = isset($data['chatVideoType']) ? $data['chatVideoType'] : null;
+        $this->container['chatAccessAddress'] = isset($data['chatAccessAddress']) ? $data['chatAccessAddress'] : null;
+        $this->container['isTransparent'] = isset($data['isTransparent']) ? $data['isTransparent'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -381,6 +425,12 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['lastupdateTime']) && (mb_strlen($this->container['lastupdateTime']) < 20)) {
                 $invalidProperties[] = "invalid value for 'lastupdateTime', the character length must be bigger than or equal to 20.";
             }
+            if (!is_null($this->container['chatState']) && ($this->container['chatState'] > 32)) {
+                $invalidProperties[] = "invalid value for 'chatState', must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['chatState']) && ($this->container['chatState'] < 0)) {
+                $invalidProperties[] = "invalid value for 'chatState', must be bigger than or equal to 0.";
+            }
             $allowedValues = $this->getChatVideoTypeAllowableValues();
                 if (!is_null($this->container['chatVideoType']) && !in_array($this->container['chatVideoType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -394,6 +444,12 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['chatVideoType']) && (mb_strlen($this->container['chatVideoType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'chatVideoType', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) > 128)) {
+                $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['chatAccessAddress']) && (mb_strlen($this->container['chatAccessAddress']) < 1)) {
+                $invalidProperties[] = "invalid value for 'chatAccessAddress', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -629,7 +685,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * Gets chatSubtitleConfig
     *  chatSubtitleConfig
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatSubtitleConfig|null
     */
     public function getChatSubtitleConfig()
     {
@@ -639,7 +695,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets chatSubtitleConfig
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatSubtitleConfig|null $chatSubtitleConfig chatSubtitleConfig
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatSubtitleConfig|null $chatSubtitleConfig chatSubtitleConfig
     *
     * @return $this
     */
@@ -653,7 +709,7 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     * Gets videoConfig
     *  videoConfig
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVideoConfigRsp|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVideoConfig|null
     */
     public function getVideoConfig()
     {
@@ -663,13 +719,61 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets videoConfig
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ChatVideoConfigRsp|null $videoConfig videoConfig
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SmartChatVideoConfig|null $videoConfig videoConfig
     *
     * @return $this
     */
     public function setVideoConfig($videoConfig)
     {
         $this->container['videoConfig'] = $videoConfig;
+        return $this;
+    }
+
+    /**
+    * Gets chatState
+    *  数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    *
+    * @return int|null
+    */
+    public function getChatState()
+    {
+        return $this->container['chatState'];
+    }
+
+    /**
+    * Sets chatState
+    *
+    * @param int|null $chatState 数字人智能交互对话的状态。 0: 等待建链 1: 等待关闭链路 2: 建链成功 3: 进入休眠 4: 等待休眠
+    *
+    * @return $this
+    */
+    public function setChatState($chatState)
+    {
+        $this->container['chatState'] = $chatState;
+        return $this;
+    }
+
+    /**
+    * Gets language
+    *  language
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null
+    */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+    * Sets language
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LanguageEnum|null $language language
+    *
+    * @return $this
+    */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
         return $this;
     }
 
@@ -694,6 +798,54 @@ class ShowSmartChatJobResponse implements ModelInterface, ArrayAccess
     public function setChatVideoType($chatVideoType)
     {
         $this->container['chatVideoType'] = $chatVideoType;
+        return $this;
+    }
+
+    /**
+    * Gets chatAccessAddress
+    *  智能交互接入地址。
+    *
+    * @return string|null
+    */
+    public function getChatAccessAddress()
+    {
+        return $this->container['chatAccessAddress'];
+    }
+
+    /**
+    * Sets chatAccessAddress
+    *
+    * @param string|null $chatAccessAddress 智能交互接入地址。
+    *
+    * @return $this
+    */
+    public function setChatAccessAddress($chatAccessAddress)
+    {
+        $this->container['chatAccessAddress'] = $chatAccessAddress;
+        return $this;
+    }
+
+    /**
+    * Gets isTransparent
+    *  是否透明背景
+    *
+    * @return bool|null
+    */
+    public function getIsTransparent()
+    {
+        return $this->container['isTransparent'];
+    }
+
+    /**
+    * Sets isTransparent
+    *
+    * @param bool|null $isTransparent 是否透明背景
+    *
+    * @return $this
+    */
+    public function setIsTransparent($isTransparent)
+    {
+        $this->container['isTransparent'] = $isTransparent;
         return $this;
     }
 

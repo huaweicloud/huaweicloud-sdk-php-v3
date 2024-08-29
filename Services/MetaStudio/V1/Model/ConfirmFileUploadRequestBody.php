@@ -21,21 +21,25 @@ class ConfirmFileUploadRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * state  文件上传状态。 - CREATED：上传完成 - FAILED：上传失败 - CANCELLED：取消上传
+    * autoMetaAnalysis  元数据自动解析,仅支持图片，视频，音频主文件
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'state' => 'string'
+            'state' => 'string',
+            'autoMetaAnalysis' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * state  文件上传状态。 - CREATED：上传完成 - FAILED：上传失败 - CANCELLED：取消上传
+    * autoMetaAnalysis  元数据自动解析,仅支持图片，视频，音频主文件
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'state' => null
+        'state' => null,
+        'autoMetaAnalysis' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class ConfirmFileUploadRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * state  文件上传状态。 - CREATED：上传完成 - FAILED：上传失败 - CANCELLED：取消上传
+    * autoMetaAnalysis  元数据自动解析,仅支持图片，视频，音频主文件
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'state' => 'state'
+            'state' => 'state',
+            'autoMetaAnalysis' => 'auto_meta_analysis'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * state  文件上传状态。 - CREATED：上传完成 - FAILED：上传失败 - CANCELLED：取消上传
+    * autoMetaAnalysis  元数据自动解析,仅支持图片，视频，音频主文件
     *
     * @var string[]
     */
     protected static $setters = [
-            'state' => 'setState'
+            'state' => 'setState',
+            'autoMetaAnalysis' => 'setAutoMetaAnalysis'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * state  文件上传状态。 - CREATED：上传完成 - FAILED：上传失败 - CANCELLED：取消上传
+    * autoMetaAnalysis  元数据自动解析,仅支持图片，视频，音频主文件
     *
     * @var string[]
     */
     protected static $getters = [
-            'state' => 'getState'
+            'state' => 'getState',
+            'autoMetaAnalysis' => 'getAutoMetaAnalysis'
     ];
 
     /**
@@ -165,6 +175,7 @@ class ConfirmFileUploadRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['autoMetaAnalysis'] = isset($data['autoMetaAnalysis']) ? $data['autoMetaAnalysis'] : null;
     }
 
     /**
@@ -221,6 +232,30 @@ class ConfirmFileUploadRequestBody implements ModelInterface, ArrayAccess
     public function setState($state)
     {
         $this->container['state'] = $state;
+        return $this;
+    }
+
+    /**
+    * Gets autoMetaAnalysis
+    *  元数据自动解析,仅支持图片，视频，音频主文件
+    *
+    * @return bool|null
+    */
+    public function getAutoMetaAnalysis()
+    {
+        return $this->container['autoMetaAnalysis'];
+    }
+
+    /**
+    * Sets autoMetaAnalysis
+    *
+    * @param bool|null $autoMetaAnalysis 元数据自动解析,仅支持图片，视频，音频主文件
+    *
+    * @return $this
+    */
+    public function setAutoMetaAnalysis($autoMetaAnalysis)
+    {
+        $this->container['autoMetaAnalysis'] = $autoMetaAnalysis;
         return $this;
     }
 

@@ -23,6 +23,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * id  ip地址组id
+    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
     * body  body
     *
     * @var string[]
@@ -31,6 +32,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
             'contentType' => 'string',
             'enterpriseProjectId' => 'string',
             'id' => 'string',
+            'action' => 'string',
             'body' => '\HuaweiCloud\SDK\Waf\V1\Model\UpdateIpGroupRequestBody'
     ];
 
@@ -39,6 +41,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * id  ip地址组id
+    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
     * body  body
     *
     * @var string[]
@@ -47,6 +50,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
         'contentType' => null,
         'enterpriseProjectId' => null,
         'id' => null,
+        'action' => null,
         'body' => null
     ];
 
@@ -76,6 +80,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * id  ip地址组id
+    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
     * body  body
     *
     * @var string[]
@@ -84,6 +89,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
             'contentType' => 'Content-Type',
             'enterpriseProjectId' => 'enterprise_project_id',
             'id' => 'id',
+            'action' => 'action',
             'body' => 'body'
     ];
 
@@ -92,6 +98,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * id  ip地址组id
+    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
     * body  body
     *
     * @var string[]
@@ -100,6 +107,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
             'contentType' => 'setContentType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'id' => 'setId',
+            'action' => 'setAction',
             'body' => 'setBody'
     ];
 
@@ -108,6 +116,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     * contentType  内容类型
     * enterpriseProjectId  您可以通过调用企业项目管理服务（EPS）的查询企业项目列表接口（ListEnterpriseProject）查询企业项目id
     * id  ip地址组id
+    * action  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
     * body  body
     *
     * @var string[]
@@ -116,6 +125,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
             'contentType' => 'getContentType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'id' => 'getId',
+            'action' => 'getAction',
             'body' => 'getBody'
     ];
 
@@ -180,6 +190,7 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
         $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -280,6 +291,30 @@ class UpdateIpGroupRequest implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    *
+    * @return string|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string|null $action 增量修改ip地址组时，此为必传字段，传入“add”;删除一个或者多个ip时传入“delete”
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 

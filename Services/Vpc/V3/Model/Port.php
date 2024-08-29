@@ -51,7 +51,7 @@ class Port implements ModelInterface, ArrayAccess
     * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
     * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -91,7 +91,7 @@ class Port implements ModelInterface, ArrayAccess
             'scope' => 'string',
             'zoneId' => 'string',
             'bindingmigrationInfo' => 'object',
-            'extraDhcpOpts' => 'object[]',
+            'extraDhcpOpts' => '\HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[]',
             'positionType' => 'string',
             'instanceInfo' => 'object',
             'tags' => 'string[]',
@@ -131,7 +131,7 @@ class Port implements ModelInterface, ArrayAccess
     * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
     * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -232,7 +232,7 @@ class Port implements ModelInterface, ArrayAccess
     * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
     * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -312,7 +312,7 @@ class Port implements ModelInterface, ArrayAccess
     * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
     * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -392,7 +392,7 @@ class Port implements ModelInterface, ArrayAccess
     * scope  1、功能描述：作用域 2、取值范围：center，表示作用域为中心；{azId}，表示作用域为具体的可用区 3、约束：N/A 4、默认值：center 5、权限：N/A
     * zoneId  1、功能描述：端口所属的可用分区 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * bindingmigrationInfo  1、功能描述：迁移目的节点信息，包括目的节点的binding:vif_details和binding:vif_type 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
-    * extraDhcpOpts  1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * extraDhcpOpts  功能说明：DHCP的扩展属性
     * positionType  1、功能描述：边缘场景位置类型 2、取值范围：N/A 3、约束：N/A 4、默认值：center 5、权限：N/A
     * instanceInfo  1、功能描述：端口绑定实例信息 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
     * tags  1、功能描述：端口标签 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
@@ -1411,9 +1411,9 @@ class Port implements ModelInterface, ArrayAccess
 
     /**
     * Gets extraDhcpOpts
-    *  1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    *  功能说明：DHCP的扩展属性
     *
-    * @return object[]
+    * @return \HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[]
     */
     public function getExtraDhcpOpts()
     {
@@ -1423,7 +1423,7 @@ class Port implements ModelInterface, ArrayAccess
     /**
     * Sets extraDhcpOpts
     *
-    * @param object[] $extraDhcpOpts 1、功能描述：DHCP的扩展属性 2、取值范围：N/A 3、约束：N/A 4、默认值：N/A 5、权限：N/A
+    * @param \HuaweiCloud\SDK\Vpc\V3\Model\ExtraDhcpOpt[] $extraDhcpOpts 功能说明：DHCP的扩展属性
     *
     * @return $this
     */

@@ -1881,6 +1881,122 @@ class EcsClient extends Client
     }
 
     /**
+     * 查询云服务器列表接口
+     *
+     * 查询云服务器列表接口。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listCloudServers($request)
+    {
+        return $this->listCloudServersWithHttpInfo($request);
+    }
+
+    public function listCloudServersWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.1/{project_id}/cloudservers/detail';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['status'] !== null) {
+            $queryParams['status'] = $localVarParams['status'];
+        }
+        if ($localVarParams['inRecycleBin'] !== null) {
+            $queryParams['in_recycle_bin'] = $localVarParams['inRecycleBin'];
+        }
+        if ($localVarParams['spodId'] !== null) {
+            $queryParams['spod_id'] = $localVarParams['spodId'];
+        }
+        if ($localVarParams['flavorName'] !== null) {
+            $queryParams['flavor_name'] = $localVarParams['flavorName'];
+        }
+        if ($localVarParams['imageId'] !== null) {
+            $queryParams['image_id'] = $localVarParams['imageId'];
+        }
+        if ($localVarParams['metadata'] !== null) {
+            $queryParams['metadata'] = $localVarParams['metadata'];
+        }
+        if ($localVarParams['metadataKey'] !== null) {
+            $queryParams['metadata-key'] = $localVarParams['metadataKey'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
+        if ($localVarParams['notTags'] !== null) {
+            $queryParams['not-tags'] = $localVarParams['notTags'];
+        }
+        if ($localVarParams['availabilityZone'] !== null) {
+            $queryParams['availability_zone'] = $localVarParams['availabilityZone'];
+        }
+        if ($localVarParams['availabilityZoneEq'] !== null) {
+            $queryParams['availability_zone_eq'] = $localVarParams['availabilityZoneEq'];
+        }
+        if ($localVarParams['chargingMode'] !== null) {
+            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
+        }
+        if ($localVarParams['keyName'] !== null) {
+            $queryParams['key_name'] = $localVarParams['keyName'];
+        }
+        if ($localVarParams['launchedSince'] !== null) {
+            $queryParams['launched_since'] = $localVarParams['launchedSince'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['expectFields'] !== null) {
+            $queryParams['expect-fields'] = $localVarParams['expectFields'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Ecs\V2\Model\ListCloudServersResponse',
+            $requestType='\HuaweiCloud\SDK\Ecs\V2\Model\ListCloudServersRequest');
+    }
+
+    /**
      * 查询规格销售策略
      *
      * 查询规格销售策略。

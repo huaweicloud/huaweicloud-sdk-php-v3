@@ -37,6 +37,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
     * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'statisticType' => 'int',
             'queryType' => 'string',
             'billCycleBegin' => 'string',
-            'billCycleEnd' => 'string'
+            'billCycleEnd' => 'string',
+            'payerAccountId' => 'string'
     ];
 
     /**
@@ -79,6 +81,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
     * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
         'statisticType' => 'int32',
         'queryType' => null,
         'billCycleBegin' => null,
-        'billCycleEnd' => null
+        'billCycleEnd' => null,
+        'payerAccountId' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
     * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'statisticType' => 'statistic_type',
             'queryType' => 'query_type',
             'billCycleBegin' => 'bill_cycle_begin',
-            'billCycleEnd' => 'bill_cycle_end'
+            'billCycleEnd' => 'bill_cycle_end',
+            'payerAccountId' => 'payer_account_id'
     ];
 
     /**
@@ -184,6 +190,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
     * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'statisticType' => 'setStatisticType',
             'queryType' => 'setQueryType',
             'billCycleBegin' => 'setBillCycleBegin',
-            'billCycleEnd' => 'setBillCycleEnd'
+            'billCycleEnd' => 'setBillCycleEnd',
+            'payerAccountId' => 'setPayerAccountId'
     ];
 
     /**
@@ -226,6 +234,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * queryType  |参数名称：查询类型。默认值为BILLCYCLE。| |参数的约束及描述：默认值为BILLCYCLE。BILLCYCLE：按月 DAILY：按天 仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。|
     * billCycleBegin  |账期开始时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
     * billCycleEnd  |参数名称：账期结束时间。格式为YYYY-MM-DD。| |参数的约束及描述：仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。|
+    * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             'statisticType' => 'getStatisticType',
             'queryType' => 'getQueryType',
             'billCycleBegin' => 'getBillCycleBegin',
-            'billCycleEnd' => 'getBillCycleEnd'
+            'billCycleEnd' => 'getBillCycleEnd',
+            'payerAccountId' => 'getPayerAccountId'
     ];
 
     /**
@@ -324,6 +334,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
         $this->container['queryType'] = isset($data['queryType']) ? $data['queryType'] : null;
         $this->container['billCycleBegin'] = isset($data['billCycleBegin']) ? $data['billCycleBegin'] : null;
         $this->container['billCycleEnd'] = isset($data['billCycleEnd']) ? $data['billCycleEnd'] : null;
+        $this->container['payerAccountId'] = isset($data['payerAccountId']) ? $data['payerAccountId'] : null;
     }
 
     /**
@@ -432,6 +443,12 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['billCycleEnd']) && (mb_strlen($this->container['billCycleEnd']) < 0)) {
                 $invalidProperties[] = "invalid value for 'billCycleEnd', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['payerAccountId']) && (mb_strlen($this->container['payerAccountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'payerAccountId', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['payerAccountId']) && (mb_strlen($this->container['payerAccountId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'payerAccountId', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -852,6 +869,30 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     public function setBillCycleEnd($billCycleEnd)
     {
         $this->container['billCycleEnd'] = $billCycleEnd;
+        return $this;
+    }
+
+    /**
+    * Gets payerAccountId
+    *  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
+    *
+    * @return string|null
+    */
+    public function getPayerAccountId()
+    {
+        return $this->container['payerAccountId'];
+    }
+
+    /**
+    * Sets payerAccountId
+    *
+    * @param string|null $payerAccountId |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
+    *
+    * @return $this
+    */
+    public function setPayerAccountId($payerAccountId)
+    {
+        $this->container['payerAccountId'] = $payerAccountId;
         return $this;
     }
 

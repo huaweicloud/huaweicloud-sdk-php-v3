@@ -49,7 +49,7 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'fields' => 'string',
+            'fields' => 'string[]',
             'geipId' => 'string',
             'geipIpAddress' => 'string',
             'publicBorderGroup' => 'string',
@@ -422,12 +422,6 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be smaller than or equal to 1024.";
-            }
-            if (!is_null($this->container['fields']) && (mb_strlen($this->container['fields']) < 0)) {
-                $invalidProperties[] = "invalid value for 'fields', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['geipId']) && (mb_strlen($this->container['geipId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'geipId', the character length must be smaller than or equal to 36.";
             }
@@ -587,7 +581,7 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     * Gets fields
     *  形式为\\\"fields=geip_id&fields=geip_ip_address&...\\\"，支持字段：geip_id/geip_ip_address/instance_type/instance_id/vnic/vn_list/public_border_group/gcbandwidth/version/created_at/updated_at/instance_vpc_id
     *
-    * @return string|null
+    * @return string[]|null
     */
     public function getFields()
     {
@@ -597,7 +591,7 @@ class ListProjectGeipBindingsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fields
     *
-    * @param string|null $fields 形式为\\\"fields=geip_id&fields=geip_ip_address&...\\\"，支持字段：geip_id/geip_ip_address/instance_type/instance_id/vnic/vn_list/public_border_group/gcbandwidth/version/created_at/updated_at/instance_vpc_id
+    * @param string[]|null $fields 形式为\\\"fields=geip_id&fields=geip_ip_address&...\\\"，支持字段：geip_id/geip_ip_address/instance_type/instance_id/vnic/vn_list/public_border_group/gcbandwidth/version/created_at/updated_at/instance_vpc_id
     *
     * @return $this
     */

@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\MetaStudio\V1\Model;
+namespace HuaweiCloud\SDK\Cce\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ChatVideoConfigRsp implements ModelInterface, ArrayAccess
+class NodeSpecUpdateNodeNicSpecUpdatePrimaryNic implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class ChatVideoConfigRsp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ChatVideoConfigRsp';
+    protected static $openAPIModelName = 'NodeSpecUpdate_nodeNicSpecUpdate_primaryNic';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * width  视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
-    * height  视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'width' => 'int',
-            'height' => 'int'
+            'subnetId' => 'string',
+            'subnetList' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * width  视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
-    * height  视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'width' => null,
-        'height' => null
+        'subnetId' => null,
+        'subnetList' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ChatVideoConfigRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * width  视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
-    * height  视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'width' => 'width',
-            'height' => 'height'
+            'subnetId' => 'subnetId',
+            'subnetList' => 'subnetList'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * width  视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
-    * height  视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
     */
     protected static $setters = [
-            'width' => 'setWidth',
-            'height' => 'setHeight'
+            'subnetId' => 'setSubnetId',
+            'subnetList' => 'setSubnetList'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * width  视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
-    * height  视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * subnetId  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
+    * subnetList  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @var string[]
     */
     protected static $getters = [
-            'width' => 'getWidth',
-            'height' => 'getHeight'
+            'subnetId' => 'getSubnetId',
+            'subnetList' => 'getSubnetList'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ChatVideoConfigRsp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['width'] = isset($data['width']) ? $data['width'] : null;
-        $this->container['height'] = isset($data['height']) ? $data['height'] : null;
+        $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
+        $this->container['subnetList'] = isset($data['subnetList']) ? $data['subnetList'] : null;
     }
 
     /**
@@ -169,17 +169,8 @@ class ChatVideoConfigRsp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['width']) && ($this->container['width'] > 3840)) {
-                $invalidProperties[] = "invalid value for 'width', must be smaller than or equal to 3840.";
-            }
-            if (!is_null($this->container['width']) && ($this->container['width'] < 0)) {
-                $invalidProperties[] = "invalid value for 'width', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['height']) && ($this->container['height'] > 3840)) {
-                $invalidProperties[] = "invalid value for 'height', must be smaller than or equal to 3840.";
-            }
-            if (!is_null($this->container['height']) && ($this->container['height'] < 0)) {
-                $invalidProperties[] = "invalid value for 'height', must be bigger than or equal to 0.";
+            if (!is_null($this->container['subnetId']) && !preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['subnetId'])) {
+                $invalidProperties[] = "invalid value for 'subnetId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
             }
         return $invalidProperties;
     }
@@ -196,50 +187,50 @@ class ChatVideoConfigRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets width
-    *  视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * Gets subnetId
+    *  网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
     *
-    * @return int|null
+    * @return string|null
     */
-    public function getWidth()
+    public function getSubnetId()
     {
-        return $this->container['width'];
+        return $this->container['subnetId'];
     }
 
     /**
-    * Sets width
+    * Sets subnetId
     *
-    * @param int|null $width 视频宽度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * @param string|null $subnetId 网卡所在子网的网络ID。主网卡创建时若未指定subnetId,将使用集群子网。若节点池同时配置了subnetList，则节点池扩容子网以subnetList字段为准。扩展网卡创建时必须指定subnetId。
     *
     * @return $this
     */
-    public function setWidth($width)
+    public function setSubnetId($subnetId)
     {
-        $this->container['width'] = $width;
+        $this->container['subnetId'] = $subnetId;
         return $this;
     }
 
     /**
-    * Gets height
-    *  视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * Gets subnetList
+    *  网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
-    * @return int|null
+    * @return string[]|null
     */
-    public function getHeight()
+    public function getSubnetList()
     {
-        return $this->container['height'];
+        return $this->container['subnetList'];
     }
 
     /**
-    * Sets height
+    * Sets subnetList
     *
-    * @param int|null $height 视频高度。  单位：像素。  最小值320，最大值2560。 > * clip_mode=RESIZE时，当前支持1920x1080、1080x1920、1280x720、720x1280四种分辨率。
+    * @param string[]|null $subnetList 网卡所在子网的网络ID列表，支持节点池配置多个子网，最多支持配置20个子网。
     *
     * @return $this
     */
-    public function setHeight($height)
+    public function setSubnetList($subnetList)
     {
-        $this->container['height'] = $height;
+        $this->container['subnetList'] = $subnetList;
         return $this;
     }
 

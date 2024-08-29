@@ -26,6 +26,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
@@ -39,6 +40,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'policyid' => 'string',
             'addr' => 'string',
             'white' => 'int',
+            'timeMode' => 'string',
             'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup',
             'status' => 'int',
             'description' => 'string',
@@ -52,6 +54,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
@@ -65,6 +68,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
         'policyid' => null,
         'addr' => null,
         'white' => 'int32',
+        'timeMode' => null,
         'ipGroup' => null,
         'status' => null,
         'description' => null,
@@ -99,6 +103,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
@@ -112,6 +117,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'policyid' => 'policyid',
             'addr' => 'addr',
             'white' => 'white',
+            'timeMode' => 'time_mode',
             'ipGroup' => 'ip_group',
             'status' => 'status',
             'description' => 'description',
@@ -125,6 +131,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
@@ -138,6 +145,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'policyid' => 'setPolicyid',
             'addr' => 'setAddr',
             'white' => 'setWhite',
+            'timeMode' => 'setTimeMode',
             'ipGroup' => 'setIpGroup',
             'status' => 'setStatus',
             'description' => 'setDescription',
@@ -151,6 +159,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * policyid  策略id
     * addr  黑白名单ip地址，需要输入标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
+    * timeMode  生效模式，默认为permanent（立即生效）
     * ipGroup  ipGroup
     * status  规则状态，0：关闭，1：开启
     * description  规则描述
@@ -164,6 +173,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
             'policyid' => 'getPolicyid',
             'addr' => 'getAddr',
             'white' => 'getWhite',
+            'timeMode' => 'getTimeMode',
             'ipGroup' => 'getIpGroup',
             'status' => 'getStatus',
             'description' => 'getDescription',
@@ -233,6 +243,7 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
+        $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
         $this->container['ipGroup'] = isset($data['ipGroup']) ? $data['ipGroup'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -378,6 +389,30 @@ class CreateWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     public function setWhite($white)
     {
         $this->container['white'] = $white;
+        return $this;
+    }
+
+    /**
+    * Gets timeMode
+    *  生效模式，默认为permanent（立即生效）
+    *
+    * @return string|null
+    */
+    public function getTimeMode()
+    {
+        return $this->container['timeMode'];
+    }
+
+    /**
+    * Sets timeMode
+    *
+    * @param string|null $timeMode 生效模式，默认为permanent（立即生效）
+    *
+    * @return $this
+    */
+    public function setTimeMode($timeMode)
+    {
+        $this->container['timeMode'] = $timeMode;
         return $this;
     }
 

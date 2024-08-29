@@ -7750,6 +7750,9 @@ class WafAsyncClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['action'] !== null) {
+            $queryParams['action'] = $localVarParams['action'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams['content_type'] = $localVarParams['contentType'];
         }

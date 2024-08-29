@@ -29,6 +29,7 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * addr  Ip/Ip段
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
+    * timeMode  生效模式，默认为permanent（立即生效）
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'status' => 'int',
             'addr' => 'string',
             'white' => 'int',
-            'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup'
+            'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup',
+            'timeMode' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * addr  Ip/Ip段
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
+    * timeMode  生效模式，默认为permanent（立即生效）
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
         'status' => null,
         'addr' => null,
         'white' => null,
-        'ipGroup' => null
+        'ipGroup' => null,
+        'timeMode' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * addr  Ip/Ip段
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
+    * timeMode  生效模式，默认为permanent（立即生效）
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'status' => 'status',
             'addr' => 'addr',
             'white' => 'white',
-            'ipGroup' => 'ip_group'
+            'ipGroup' => 'ip_group',
+            'timeMode' => 'time_mode'
     ];
 
     /**
@@ -128,6 +134,7 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * addr  Ip/Ip段
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
+    * timeMode  生效模式，默认为permanent（立即生效）
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'addr' => 'setAddr',
             'white' => 'setWhite',
-            'ipGroup' => 'setIpGroup'
+            'ipGroup' => 'setIpGroup',
+            'timeMode' => 'setTimeMode'
     ];
 
     /**
@@ -154,6 +162,7 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * addr  Ip/Ip段
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
+    * timeMode  生效模式，默认为permanent（立即生效）
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'addr' => 'getAddr',
             'white' => 'getWhite',
-            'ipGroup' => 'getIpGroup'
+            'ipGroup' => 'getIpGroup',
+            'timeMode' => 'getTimeMode'
     ];
 
     /**
@@ -236,6 +246,7 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
         $this->container['ipGroup'] = isset($data['ipGroup']) ? $data['ipGroup'] : null;
+        $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
     }
 
     /**
@@ -473,6 +484,30 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     public function setIpGroup($ipGroup)
     {
         $this->container['ipGroup'] = $ipGroup;
+        return $this;
+    }
+
+    /**
+    * Gets timeMode
+    *  生效模式，默认为permanent（立即生效）
+    *
+    * @return string|null
+    */
+    public function getTimeMode()
+    {
+        return $this->container['timeMode'];
+    }
+
+    /**
+    * Sets timeMode
+    *
+    * @param string|null $timeMode 生效模式，默认为permanent（立即生效）
+    *
+    * @return $this
+    */
+    public function setTimeMode($timeMode)
+    {
+        $this->container['timeMode'] = $timeMode;
         return $this;
     }
 

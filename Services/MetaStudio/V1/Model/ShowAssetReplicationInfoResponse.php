@@ -24,6 +24,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetInfo  加密后的资产信息。
     * encryptionInfo  encryptionInfo
+    * expireTime  过期时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -32,6 +33,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
             'assetId' => 'string',
             'assetInfo' => 'string',
             'encryptionInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplicationEncInfo',
+            'expireTime' => 'int',
             'xRequestId' => 'string'
     ];
 
@@ -40,6 +42,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetInfo  加密后的资产信息。
     * encryptionInfo  encryptionInfo
+    * expireTime  过期时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -48,6 +51,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
         'assetId' => null,
         'assetInfo' => null,
         'encryptionInfo' => null,
+        'expireTime' => 'int64',
         'xRequestId' => null
     ];
 
@@ -77,6 +81,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetInfo  加密后的资产信息。
     * encryptionInfo  encryptionInfo
+    * expireTime  过期时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,6 +90,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
             'assetId' => 'asset_id',
             'assetInfo' => 'asset_info',
             'encryptionInfo' => 'encryption_info',
+            'expireTime' => 'expire_time',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -93,6 +99,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetInfo  加密后的资产信息。
     * encryptionInfo  encryptionInfo
+    * expireTime  过期时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -101,6 +108,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
             'assetId' => 'setAssetId',
             'assetInfo' => 'setAssetInfo',
             'encryptionInfo' => 'setEncryptionInfo',
+            'expireTime' => 'setExpireTime',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -109,6 +117,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
     * assetId  资产ID。
     * assetInfo  加密后的资产信息。
     * encryptionInfo  encryptionInfo
+    * expireTime  过期时间
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -117,6 +126,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
             'assetId' => 'getAssetId',
             'assetInfo' => 'getAssetInfo',
             'encryptionInfo' => 'getEncryptionInfo',
+            'expireTime' => 'getExpireTime',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -181,6 +191,7 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['assetInfo'] = isset($data['assetInfo']) ? $data['assetInfo'] : null;
         $this->container['encryptionInfo'] = isset($data['encryptionInfo']) ? $data['encryptionInfo'] : null;
+        $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -198,11 +209,17 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['assetId']) && (mb_strlen($this->container['assetId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['assetInfo']) && (mb_strlen($this->container['assetInfo']) > 40960)) {
-                $invalidProperties[] = "invalid value for 'assetInfo', the character length must be smaller than or equal to 40960.";
+            if (!is_null($this->container['assetInfo']) && (mb_strlen($this->container['assetInfo']) > 100000)) {
+                $invalidProperties[] = "invalid value for 'assetInfo', the character length must be smaller than or equal to 100000.";
             }
             if (!is_null($this->container['assetInfo']) && (mb_strlen($this->container['assetInfo']) < 1)) {
                 $invalidProperties[] = "invalid value for 'assetInfo', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['expireTime']) && ($this->container['expireTime'] < 0)) {
+                $invalidProperties[] = "invalid value for 'expireTime', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -287,6 +304,30 @@ class ShowAssetReplicationInfoResponse implements ModelInterface, ArrayAccess
     public function setEncryptionInfo($encryptionInfo)
     {
         $this->container['encryptionInfo'] = $encryptionInfo;
+        return $this;
+    }
+
+    /**
+    * Gets expireTime
+    *  过期时间
+    *
+    * @return int|null
+    */
+    public function getExpireTime()
+    {
+        return $this->container['expireTime'];
+    }
+
+    /**
+    * Sets expireTime
+    *
+    * @param int|null $expireTime 过期时间
+    *
+    * @return $this
+    */
+    public function setExpireTime($expireTime)
+    {
+        $this->container['expireTime'] = $expireTime;
         return $this;
     }
 

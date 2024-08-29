@@ -41,6 +41,8 @@ composer require huaweicloud/huaweicloud-sdk-php
 require 'path/to/vendor/autoload.php';
 ```
 
+您可以通过 [SDK中心](https://console.huaweicloud.com/apiexplorer/#/sdkcenter?language=PHP) 或 [Packagist](https://packagist.org/packages/huaweicloud/huaweicloud-sdk-php) 查询SDK版本信息。
+
 ## 代码示例
 
 - 使用如下代码同步查询当前账号下已创建的永久 AK 信息，实际使用中请将 `IamClient` 替换为您使用的产品/服务相应的 `{Service}Client` 。
@@ -103,6 +105,11 @@ function listPermanentAccessKeys($iamClient)
 
 listPermanentAccessKeys($iamClient);
 ```
+
+## 在线调试
+
+[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/overview)
+提供API检索、SDK示例及平台调试，支持全量快速检索、可视化调试、帮助文档查看、在线咨询。
 
 ## 变更日志
 

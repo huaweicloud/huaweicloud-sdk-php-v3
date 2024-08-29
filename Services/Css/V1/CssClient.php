@@ -2960,6 +2960,9 @@ class CssClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['action'] !== null) {
+            $queryParams['action'] = $localVarParams['action'];
+        }
         if ($localVarParams['clusterId'] !== null) {
             $pathParams['cluster_id'] = $localVarParams['clusterId'];
         }
@@ -3057,6 +3060,71 @@ class CssClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Css\V1\Model\StartPublicWhitelistResponse',
             $requestType='\HuaweiCloud\SDK\Css\V1\Model\StartPublicWhitelistRequest');
+    }
+
+    /**
+     * 连通性测试。
+     *
+     * 该接口用于连通性测试。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startTargetClusterConnectivityTest($request)
+    {
+        return $this->startTargetClusterConnectivityTestWithHttpInfo($request);
+    }
+
+    public function startTargetClusterConnectivityTestWithHttpInfo($request)
+    {
+        $resourcePath = '/v1.0/{project_id}/clusters/{cluster_id}/logs/connectivity';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Css\V1\Model\StartTargetClusterConnectivityTestResponse',
+            $requestType='\HuaweiCloud\SDK\Css\V1\Model\StartTargetClusterConnectivityTestRequest');
     }
 
     /**

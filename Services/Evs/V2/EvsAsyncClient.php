@@ -1498,6 +1498,79 @@ class EvsAsyncClient extends Client
     }
 
     /**
+     * 磁盘类型变更
+     *
+     * 对按需或者包周期云硬盘进行磁盘类型变更。
+     * [在磁盘类型变更包周期云硬盘的场景下：](tag:hws)
+     * - [如果您需要查看订单可用的优惠券，请参考\&quot;[查询订单可用优惠券](https://support.huaweicloud.com/api-oce/zh-cn_topic_0092953630.html)\&quot;。](tag:hws)
+     * - [如果您需要支付订单，请参考\&quot;[支付包周期产品订单](https://support.huaweicloud.com/api-oce/api_order_00030.html)\&quot;。](tag:hws)
+     * - [如果您需要查询订单的资源开通详情，请参考\&quot;[查询订单的资源开通详情](https://support.huaweicloud.com/api-oce/api_order_00001.html)\&quot;。](tag:hws)
+     * - [如果您需要退订该包周期资源，请参考“[退订包周期资源](https://support.huaweicloud.com/api-oce/zh-cn_topic_0082522030.html)”。](tag:hws)
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function retypeVolumeAsync($request)
+    {
+        return $this->retypeVolumeAsyncWithHttpInfo($request);
+    }
+    
+    public function retypeVolumeAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v2/{project_id}/volumes/{volume_id}/retype';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['volumeId'] !== null) {
+            $pathParams['volume_id'] = $localVarParams['volumeId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json', 'application/json-1']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json', 'application/json-1'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Evs\V2\Model\RetypeVolumeResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\Evs\V2\Model\RetypeVolumeRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 回滚快照到云硬盘
      *
      * 将快照数据回滚到云硬盘。支持企业项目授权功能。

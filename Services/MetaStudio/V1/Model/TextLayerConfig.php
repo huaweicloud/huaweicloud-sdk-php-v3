@@ -21,7 +21,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     * fontSize  字体大小（像素）。  取值范围：[4, 120]
     * fontColor  字体颜色。RGB颜色值。
     *
@@ -37,7 +37,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     * fontSize  字体大小（像素）。  取值范围：[4, 120]
     * fontColor  字体颜色。RGB颜色值。
     *
@@ -74,7 +74,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     * fontSize  字体大小（像素）。  取值范围：[4, 120]
     * fontColor  字体颜色。RGB颜色值。
     *
@@ -90,7 +90,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     * fontSize  字体大小（像素）。  取值范围：[4, 120]
     * fontColor  字体颜色。RGB颜色值。
     *
@@ -106,7 +106,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     * fontSize  字体大小（像素）。  取值范围：[4, 120]
     * fontColor  字体颜色。RGB颜色值。
     *
@@ -255,7 +255,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontName
-    *  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    *  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontName
     *
-    * @param string|null $fontName 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * @param string|null $fontName 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
     *
     * @return $this
     */

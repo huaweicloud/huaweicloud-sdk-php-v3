@@ -66,6 +66,9 @@ class EipClient extends Client
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];
         }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
+        }
         if ($localVarParams['bandwidthType'] !== null) {
             $queryParams['bandwidth_type'] = $localVarParams['bandwidthType'];
         }
@@ -320,6 +323,9 @@ class EipClient extends Client
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['fields'] !== null) {
+            $queryParams['fields'] = $localVarParams['fields'];
         }
         if ($localVarParams['id'] !== null) {
             $queryParams['id'] = $localVarParams['id'];

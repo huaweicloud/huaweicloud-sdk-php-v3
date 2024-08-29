@@ -27,6 +27,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomId  智能交互对话房间ID。
+    * robotType  交互对接类型  * LIVE:直播交互  * CHAT:智能交互
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'string',
             'offset' => 'int',
             'limit' => 'int',
-            'roomId' => 'string'
+            'roomId' => 'string',
+            'robotType' => 'string'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomId  智能交互对话房间ID。
+    * robotType  交互对接类型  * LIVE:直播交互  * CHAT:智能交互
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
         'xAppUserId' => null,
         'offset' => 'uint32',
         'limit' => 'uint32',
-        'roomId' => null
+        'roomId' => null,
+        'robotType' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomId  智能交互对话房间ID。
+    * robotType  交互对接类型  * LIVE:直播交互  * CHAT:智能交互
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'X-App-UserId',
             'offset' => 'offset',
             'limit' => 'limit',
-            'roomId' => 'room_id'
+            'roomId' => 'room_id',
+            'robotType' => 'robot_type'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomId  智能交互对话房间ID。
+    * robotType  交互对接类型  * LIVE:直播交互  * CHAT:智能交互
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'setXAppUserId',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'roomId' => 'setRoomId'
+            'roomId' => 'setRoomId',
+            'robotType' => 'setRobotType'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     * offset  偏移量，表示从此偏移量开始查询。
     * limit  每页显示的条目数量。
     * roomId  智能交互对话房间ID。
+    * robotType  交互对接类型  * LIVE:直播交互  * CHAT:智能交互
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             'xAppUserId' => 'getXAppUserId',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'roomId' => 'getRoomId'
+            'roomId' => 'getRoomId',
+            'robotType' => 'getRobotType'
     ];
 
     /**
@@ -189,7 +199,22 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ROBOT_TYPE_LIVE = 'LIVE';
+    const ROBOT_TYPE_CHAT = 'CHAT';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRobotTypeAllowableValues()
+    {
+        return [
+            self::ROBOT_TYPE_LIVE,
+            self::ROBOT_TYPE_CHAT,
+        ];
+    }
 
 
     /**
@@ -214,6 +239,7 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
+        $this->container['robotType'] = isset($data['robotType']) ? $data['robotType'] : null;
     }
 
     /**
@@ -266,6 +292,14 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
             if (!is_null($this->container['roomId']) && (mb_strlen($this->container['roomId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'roomId', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getRobotTypeAllowableValues();
+                if (!is_null($this->container['robotType']) && !in_array($this->container['robotType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'robotType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -445,6 +479,30 @@ class ListRobotRequest implements ModelInterface, ArrayAccess
     public function setRoomId($roomId)
     {
         $this->container['roomId'] = $roomId;
+        return $this;
+    }
+
+    /**
+    * Gets robotType
+    *  交互对接类型  * LIVE:直播交互  * CHAT:智能交互
+    *
+    * @return string|null
+    */
+    public function getRobotType()
+    {
+        return $this->container['robotType'];
+    }
+
+    /**
+    * Sets robotType
+    *
+    * @param string|null $robotType 交互对接类型  * LIVE:直播交互  * CHAT:智能交互
+    *
+    * @return $this
+    */
+    public function setRobotType($robotType)
+    {
+        $this->container['robotType'] = $robotType;
         return $this;
     }
 

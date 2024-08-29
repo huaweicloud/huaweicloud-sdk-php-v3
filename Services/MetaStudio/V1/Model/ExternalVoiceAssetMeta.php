@@ -20,7 +20,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    * provider  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     const PROVIDER_MOBVOI = 'MOBVOI';
     const PROVIDER_AUDIOX = 'AUDIOX';
     const PROVIDER_SINOVOICE = 'SINOVOICE';
-    const PROVIDER_DATABACK = 'DATABACK';
+    const PROVIDER_DATABAKER = 'DATABAKER';
     const PROVIDER_AISPEECH = 'AISPEECH';
     
 
@@ -151,7 +151,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
             self::PROVIDER_MOBVOI,
             self::PROVIDER_AUDIOX,
             self::PROVIDER_SINOVOICE,
-            self::PROVIDER_DATABACK,
+            self::PROVIDER_DATABAKER,
             self::PROVIDER_AISPEECH,
         ];
     }
@@ -216,7 +216,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets provider
-    *  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    *  第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @return string
     */
@@ -228,7 +228,7 @@ class ExternalVoiceAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets provider
     *
-    * @param string $provider 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI: 华为云EI TTS * MOBVOI: 出门问问 TTSS * AUDIOX: 逻辑智能 TTSS * SINOVOICE: 捷通华声 TTSS * DATABACK: 标贝 TTSS * AISPEECH: 思必驰 TTSS
+    * @param string $provider 第三方TTS供应商类型。 * XIMALAYA：喜马拉雅TTS * HUAWEI_EI：华为云EI TTS * MOBVOI：出门问问 TTS * AUDIOX：逻辑智能 TTS * SINOVOICE：捷通华声 TTS * DATABAKER：标贝 TTS * AISPEECH：思必驰 TTS
     *
     * @return $this
     */
