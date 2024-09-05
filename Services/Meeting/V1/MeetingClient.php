@@ -12728,6 +12728,74 @@ class MeetingClient extends Client
     }
 
     /**
+     * 获取会议鉴权随机数
+     *
+     * 根据会议ID + 密码鉴权返回鉴权随机数，如果是小程序调用时，需要企业支持小程序功能
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAuthRandom($request)
+    {
+        return $this->createAuthRandomWithHttpInfo($request);
+    }
+
+    public function createAuthRandomWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/mms/ncms/conferences/auth/random';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['confId'] !== null) {
+            $queryParams['conf_id'] = $localVarParams['confId'];
+        }
+        if ($localVarParams['guestWaiting'] !== null) {
+            $queryParams['guest_waiting'] = $localVarParams['guestWaiting'];
+        }
+        if ($localVarParams['xPassword'] !== null) {
+            $headerParams[$arr['xPassword']] = $localVarParams['xPassword'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateAuthRandomResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateAuthRandomRequest');
+    }
+
+    /**
      * 查询QoS历史会议列表
      *
      * 该接口用于查询企业内历史会议的QoS告警。仅旗舰版企业/标准版企业的企业管理员有权限查询。可以查询最近3个月内的数据。

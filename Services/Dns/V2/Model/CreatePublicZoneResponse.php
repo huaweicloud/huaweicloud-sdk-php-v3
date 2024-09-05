@@ -36,7 +36,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @var string[]
     */
@@ -137,7 +137,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @var string[]
     */
@@ -217,7 +217,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符。
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @var string[]
     */
@@ -700,7 +700,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    *  主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @return string[]|null
     */
@@ -712,7 +712,7 @@ class CreatePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息。  目前暂未使用。
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。  目前暂未使用。
     *
     * @return $this
     */

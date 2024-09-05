@@ -35,7 +35,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
@@ -75,7 +75,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
@@ -136,7 +136,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
@@ -176,7 +176,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
@@ -216,7 +216,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
@@ -676,7 +676,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息。
+    *  主从模式中，从DNS服务器获取DNS信息。
     *
     * @return string[]|null
     */
@@ -688,7 +688,7 @@ class DeletePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息。
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。
     *
     * @return $this
     */

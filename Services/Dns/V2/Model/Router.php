@@ -20,8 +20,8 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     * status  资源状态。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     * status  资源状态。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class Router implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     * status  资源状态。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     * status  资源状态。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     * status  资源状态。
     *
     * @var string[]
@@ -199,7 +199,7 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Gets routerId
-    *  Router(VPC)所属VPC的ID。
+    *  关联VPC的ID。
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class Router implements ModelInterface, ArrayAccess
     /**
     * Sets routerId
     *
-    * @param string $routerId Router(VPC)所属VPC的ID。
+    * @param string $routerId 关联VPC的ID。
     *
     * @return $this
     */
@@ -223,7 +223,7 @@ class Router implements ModelInterface, ArrayAccess
 
     /**
     * Gets routerRegion
-    *  Router(VPC)所在的region。
+    *  关联VPC所在的region。
     *
     * @return string|null
     */
@@ -235,7 +235,7 @@ class Router implements ModelInterface, ArrayAccess
     /**
     * Sets routerRegion
     *
-    * @param string|null $routerRegion Router(VPC)所在的region。
+    * @param string|null $routerRegion 关联VPC所在的region。
     *
     * @return $this
     */

@@ -34,6 +34,8 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * parameters  规则参数
     * tags  tags
     * createdBy  规则的创建者
+    * targetType  合规规则修正方式。
+    * targetId  修正执行的目标id。
     *
     * @var string[]
     */
@@ -51,7 +53,9 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'customPolicy' => '\HuaweiCloud\SDK\Config\V1\Model\CustomPolicy',
             'parameters' => 'map[string,\HuaweiCloud\SDK\Config\V1\Model\PolicyParameterValue]',
             'tags' => '\HuaweiCloud\SDK\Config\V1\Model\ResourceTag[]',
-            'createdBy' => 'string'
+            'createdBy' => 'string',
+            'targetType' => 'string',
+            'targetId' => 'string'
     ];
 
     /**
@@ -70,6 +74,8 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * parameters  规则参数
     * tags  tags
     * createdBy  规则的创建者
+    * targetType  合规规则修正方式。
+    * targetId  修正执行的目标id。
     *
     * @var string[]
     */
@@ -87,7 +93,9 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
         'customPolicy' => null,
         'parameters' => null,
         'tags' => null,
-        'createdBy' => null
+        'createdBy' => null,
+        'targetType' => null,
+        'targetId' => null
     ];
 
     /**
@@ -127,6 +135,8 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * parameters  规则参数
     * tags  tags
     * createdBy  规则的创建者
+    * targetType  合规规则修正方式。
+    * targetId  修正执行的目标id。
     *
     * @var string[]
     */
@@ -144,7 +154,9 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'customPolicy' => 'custom_policy',
             'parameters' => 'parameters',
             'tags' => 'tags',
-            'createdBy' => 'created_by'
+            'createdBy' => 'created_by',
+            'targetType' => 'target_type',
+            'targetId' => 'target_id'
     ];
 
     /**
@@ -163,6 +175,8 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * parameters  规则参数
     * tags  tags
     * createdBy  规则的创建者
+    * targetType  合规规则修正方式。
+    * targetId  修正执行的目标id。
     *
     * @var string[]
     */
@@ -180,7 +194,9 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'customPolicy' => 'setCustomPolicy',
             'parameters' => 'setParameters',
             'tags' => 'setTags',
-            'createdBy' => 'setCreatedBy'
+            'createdBy' => 'setCreatedBy',
+            'targetType' => 'setTargetType',
+            'targetId' => 'setTargetId'
     ];
 
     /**
@@ -199,6 +215,8 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     * parameters  规则参数
     * tags  tags
     * createdBy  规则的创建者
+    * targetType  合规规则修正方式。
+    * targetId  修正执行的目标id。
     *
     * @var string[]
     */
@@ -216,7 +234,9 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
             'customPolicy' => 'getCustomPolicy',
             'parameters' => 'getParameters',
             'tags' => 'getTags',
-            'createdBy' => 'getCreatedBy'
+            'createdBy' => 'getCreatedBy',
+            'targetType' => 'getTargetType',
+            'targetId' => 'getTargetId'
     ];
 
     /**
@@ -306,6 +326,8 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
         $this->container['parameters'] = isset($data['parameters']) ? $data['parameters'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['createdBy'] = isset($data['createdBy']) ? $data['createdBy'] : null;
+        $this->container['targetType'] = isset($data['targetType']) ? $data['targetType'] : null;
+        $this->container['targetId'] = isset($data['targetId']) ? $data['targetId'] : null;
     }
 
     /**
@@ -671,6 +693,54 @@ class PolicyAssignment implements ModelInterface, ArrayAccess
     public function setCreatedBy($createdBy)
     {
         $this->container['createdBy'] = $createdBy;
+        return $this;
+    }
+
+    /**
+    * Gets targetType
+    *  合规规则修正方式。
+    *
+    * @return string|null
+    */
+    public function getTargetType()
+    {
+        return $this->container['targetType'];
+    }
+
+    /**
+    * Sets targetType
+    *
+    * @param string|null $targetType 合规规则修正方式。
+    *
+    * @return $this
+    */
+    public function setTargetType($targetType)
+    {
+        $this->container['targetType'] = $targetType;
+        return $this;
+    }
+
+    /**
+    * Gets targetId
+    *  修正执行的目标id。
+    *
+    * @return string|null
+    */
+    public function getTargetId()
+    {
+        return $this->container['targetId'];
+    }
+
+    /**
+    * Sets targetId
+    *
+    * @param string|null $targetId 修正执行的目标id。
+    *
+    * @return $this
+    */
+    public function setTargetId($targetId)
+    {
+        $this->container['targetId'] = $targetId;
         return $this;
     }
 

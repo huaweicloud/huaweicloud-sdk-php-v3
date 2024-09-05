@@ -202,12 +202,6 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,7 +220,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * Gets name
     *  域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     *
-    * @return string
+    * @return string|null
     */
     public function getName()
     {
@@ -236,7 +230,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
+    * @param string|null $name 域名，后缀需以zone name结束且为FQDN（即以“.”号结束的完整主机名）。
     *
     * @return $this
     */
@@ -274,7 +268,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     * Gets type
     *  Record Set的类型。
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -284,7 +278,7 @@ class UpdateRecordSetReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type Record Set的类型。
+    * @param string|null $type Record Set的类型。
     *
     * @return $this
     */

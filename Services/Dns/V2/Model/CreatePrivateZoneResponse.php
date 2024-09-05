@@ -30,13 +30,13 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * router  router
     *
     * @var string[]
@@ -72,13 +72,13 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * router  router
     *
     * @var string[]
@@ -135,13 +135,13 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * router  router
     *
     * @var string[]
@@ -177,13 +177,13 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * router  router
     *
     * @var string[]
@@ -219,13 +219,13 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * serial  该zone下SOA记录中用于标识zone文件变更的序列值，用于主从节点同步。  该参数暂未使用。
     * status  资源状态。
     * recordNum  该zone下的recordset个数。
-    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * proxyPattern  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     * poolId  托管该zone的pool，由系统分配。
     * projectId  zone所属的项目ID。
     * createdAt  创建时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * updatedAt  更新时间。  采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
+    * masters  主从模式中，从DNS服务器获取DNS信息。
     * router  router
     *
     * @var string[]
@@ -567,7 +567,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxyPattern
-    *  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    *  内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     *
     * @return string|null
     */
@@ -579,7 +579,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets proxyPattern
     *
-    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone不进行递归解析 RECURSIVE：开启递归解析代理
+    * @param string|null $proxyPattern 内网Zone的子域名递归解析代理模式。  取值范围：  AUTHORITY：当前Zone未开启递归解析代理 RECURSIVE：当前Zone已开启递归解析代理
     *
     * @return $this
     */
@@ -711,7 +711,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息。
+    *  主从模式中，从DNS服务器获取DNS信息。
     *
     * @return string[]|null
     */
@@ -723,7 +723,7 @@ class CreatePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息。
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。
     *
     * @return $this
     */

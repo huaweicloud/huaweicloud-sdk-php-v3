@@ -34,7 +34,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     * projectId  zone所属的项目ID。
     *
@@ -74,7 +74,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     * projectId  zone所属的项目ID。
     *
@@ -135,7 +135,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     * projectId  zone所属的项目ID。
     *
@@ -175,7 +175,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     * projectId  zone所属的项目ID。
     *
@@ -215,7 +215,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间
     * updatedAt  更新时间
     * enterpriseProjectId  域名关联的企业项目ID，长度不超过36个字符
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     * projectId  zone所属的项目ID。
     *
@@ -652,7 +652,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息
+    *  主从模式中，从DNS服务器获取DNS信息
     *
     * @return string[]|null
     */
@@ -664,7 +664,7 @@ class ShowPublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息
     *
     * @return $this
     */

@@ -25,6 +25,7 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
     * osExtIpSportId  IP地址对应的端口ID。
     * osExtIpsMaCmacAddr  扩展属性，MAC地址。
     * osExtIpStype  扩展属性，分配IP地址方式。  fixed：代表私有IP地址。 floating：代表浮动IP地址。
+    * primary  是否是主网卡。  true：主网卡。 false：辅助网卡。
     *
     * @var string[]
     */
@@ -33,7 +34,8 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
             'version' => 'int',
             'osExtIpSportId' => 'string',
             'osExtIpsMaCmacAddr' => 'string',
-            'osExtIpStype' => 'string'
+            'osExtIpStype' => 'string',
+            'primary' => 'bool'
     ];
 
     /**
@@ -43,6 +45,7 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
     * osExtIpSportId  IP地址对应的端口ID。
     * osExtIpsMaCmacAddr  扩展属性，MAC地址。
     * osExtIpStype  扩展属性，分配IP地址方式。  fixed：代表私有IP地址。 floating：代表浮动IP地址。
+    * primary  是否是主网卡。  true：主网卡。 false：辅助网卡。
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
         'version' => 'int32',
         'osExtIpSportId' => null,
         'osExtIpsMaCmacAddr' => null,
-        'osExtIpStype' => null
+        'osExtIpStype' => null,
+        'primary' => null
     ];
 
     /**
@@ -82,6 +86,7 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
     * osExtIpSportId  IP地址对应的端口ID。
     * osExtIpsMaCmacAddr  扩展属性，MAC地址。
     * osExtIpStype  扩展属性，分配IP地址方式。  fixed：代表私有IP地址。 floating：代表浮动IP地址。
+    * primary  是否是主网卡。  true：主网卡。 false：辅助网卡。
     *
     * @var string[]
     */
@@ -90,7 +95,8 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
             'version' => 'version',
             'osExtIpSportId' => 'OS-EXT-IPS:port_id',
             'osExtIpsMaCmacAddr' => 'OS-EXT-IPS-MAC:mac_addr',
-            'osExtIpStype' => 'OS-EXT-IPS:type'
+            'osExtIpStype' => 'OS-EXT-IPS:type',
+            'primary' => 'primary'
     ];
 
     /**
@@ -100,6 +106,7 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
     * osExtIpSportId  IP地址对应的端口ID。
     * osExtIpsMaCmacAddr  扩展属性，MAC地址。
     * osExtIpStype  扩展属性，分配IP地址方式。  fixed：代表私有IP地址。 floating：代表浮动IP地址。
+    * primary  是否是主网卡。  true：主网卡。 false：辅助网卡。
     *
     * @var string[]
     */
@@ -108,7 +115,8 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
             'version' => 'setVersion',
             'osExtIpSportId' => 'setOsExtIpSportId',
             'osExtIpsMaCmacAddr' => 'setOsExtIpsMaCmacAddr',
-            'osExtIpStype' => 'setOsExtIpStype'
+            'osExtIpStype' => 'setOsExtIpStype',
+            'primary' => 'setPrimary'
     ];
 
     /**
@@ -118,6 +126,7 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
     * osExtIpSportId  IP地址对应的端口ID。
     * osExtIpsMaCmacAddr  扩展属性，MAC地址。
     * osExtIpStype  扩展属性，分配IP地址方式。  fixed：代表私有IP地址。 floating：代表浮动IP地址。
+    * primary  是否是主网卡。  true：主网卡。 false：辅助网卡。
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
             'version' => 'getVersion',
             'osExtIpSportId' => 'getOsExtIpSportId',
             'osExtIpsMaCmacAddr' => 'getOsExtIpsMaCmacAddr',
-            'osExtIpStype' => 'getOsExtIpStype'
+            'osExtIpStype' => 'getOsExtIpStype',
+            'primary' => 'getPrimary'
     ];
 
     /**
@@ -207,6 +217,7 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
         $this->container['osExtIpSportId'] = isset($data['osExtIpSportId']) ? $data['osExtIpSportId'] : null;
         $this->container['osExtIpsMaCmacAddr'] = isset($data['osExtIpsMaCmacAddr']) ? $data['osExtIpsMaCmacAddr'] : null;
         $this->container['osExtIpStype'] = isset($data['osExtIpStype']) ? $data['osExtIpStype'] : null;
+        $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
     }
 
     /**
@@ -371,6 +382,30 @@ class NetworkAddresses implements ModelInterface, ArrayAccess
     public function setOsExtIpStype($osExtIpStype)
     {
         $this->container['osExtIpStype'] = $osExtIpStype;
+        return $this;
+    }
+
+    /**
+    * Gets primary
+    *  是否是主网卡。  true：主网卡。 false：辅助网卡。
+    *
+    * @return bool|null
+    */
+    public function getPrimary()
+    {
+        return $this->container['primary'];
+    }
+
+    /**
+    * Sets primary
+    *
+    * @param bool|null $primary 是否是主网卡。  true：主网卡。 false：辅助网卡。
+    *
+    * @return $this
+    */
+    public function setPrimary($primary)
+    {
+        $this->container['primary'] = $primary;
         return $this;
     }
 

@@ -34,7 +34,7 @@ class CloudServer implements ModelInterface, ArrayAccess
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创ID
     * updated  云服务器上一次更新时间。时间格式例如：2020-05-22T07:48:53Z
-    * launched  云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * launchedAt  云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     * description  云服务器的描述信息。
     * keyName  云服务器使用的密钥对名称。
     * locked  云服务器是否为锁定状态。  true：锁定 false：未锁定
@@ -69,7 +69,7 @@ class CloudServer implements ModelInterface, ArrayAccess
             'inRecycleBin' => 'bool',
             'spodId' => 'string',
             'updated' => 'string',
-            'launched' => 'string',
+            'launchedAt' => 'string',
             'description' => 'string',
             'keyName' => 'string',
             'locked' => 'bool',
@@ -104,7 +104,7 @@ class CloudServer implements ModelInterface, ArrayAccess
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创ID
     * updated  云服务器上一次更新时间。时间格式例如：2020-05-22T07:48:53Z
-    * launched  云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * launchedAt  云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     * description  云服务器的描述信息。
     * keyName  云服务器使用的密钥对名称。
     * locked  云服务器是否为锁定状态。  true：锁定 false：未锁定
@@ -139,7 +139,7 @@ class CloudServer implements ModelInterface, ArrayAccess
         'inRecycleBin' => null,
         'spodId' => null,
         'updated' => null,
-        'launched' => null,
+        'launchedAt' => null,
         'description' => null,
         'keyName' => null,
         'locked' => null,
@@ -195,7 +195,7 @@ class CloudServer implements ModelInterface, ArrayAccess
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创ID
     * updated  云服务器上一次更新时间。时间格式例如：2020-05-22T07:48:53Z
-    * launched  云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * launchedAt  云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     * description  云服务器的描述信息。
     * keyName  云服务器使用的密钥对名称。
     * locked  云服务器是否为锁定状态。  true：锁定 false：未锁定
@@ -230,7 +230,7 @@ class CloudServer implements ModelInterface, ArrayAccess
             'inRecycleBin' => 'in_recycle_bin',
             'spodId' => 'spod_id',
             'updated' => 'updated',
-            'launched' => 'launched',
+            'launchedAt' => 'launched_at',
             'description' => 'description',
             'keyName' => 'key_name',
             'locked' => 'locked',
@@ -265,7 +265,7 @@ class CloudServer implements ModelInterface, ArrayAccess
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创ID
     * updated  云服务器上一次更新时间。时间格式例如：2020-05-22T07:48:53Z
-    * launched  云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * launchedAt  云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     * description  云服务器的描述信息。
     * keyName  云服务器使用的密钥对名称。
     * locked  云服务器是否为锁定状态。  true：锁定 false：未锁定
@@ -300,7 +300,7 @@ class CloudServer implements ModelInterface, ArrayAccess
             'inRecycleBin' => 'setInRecycleBin',
             'spodId' => 'setSpodId',
             'updated' => 'setUpdated',
-            'launched' => 'setLaunched',
+            'launchedAt' => 'setLaunchedAt',
             'description' => 'setDescription',
             'keyName' => 'setKeyName',
             'locked' => 'setLocked',
@@ -335,7 +335,7 @@ class CloudServer implements ModelInterface, ArrayAccess
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创ID
     * updated  云服务器上一次更新时间。时间格式例如：2020-05-22T07:48:53Z
-    * launched  云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * launchedAt  云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     * description  云服务器的描述信息。
     * keyName  云服务器使用的密钥对名称。
     * locked  云服务器是否为锁定状态。  true：锁定 false：未锁定
@@ -370,7 +370,7 @@ class CloudServer implements ModelInterface, ArrayAccess
             'inRecycleBin' => 'getInRecycleBin',
             'spodId' => 'getSpodId',
             'updated' => 'getUpdated',
-            'launched' => 'getLaunched',
+            'launchedAt' => 'getLaunchedAt',
             'description' => 'getDescription',
             'keyName' => 'getKeyName',
             'locked' => 'getLocked',
@@ -461,7 +461,7 @@ class CloudServer implements ModelInterface, ArrayAccess
         $this->container['inRecycleBin'] = isset($data['inRecycleBin']) ? $data['inRecycleBin'] : null;
         $this->container['spodId'] = isset($data['spodId']) ? $data['spodId'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
-        $this->container['launched'] = isset($data['launched']) ? $data['launched'] : null;
+        $this->container['launchedAt'] = isset($data['launchedAt']) ? $data['launchedAt'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['keyName'] = isset($data['keyName']) ? $data['keyName'] : null;
         $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
@@ -881,26 +881,26 @@ class CloudServer implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets launched
-    *  云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * Gets launchedAt
+    *  云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     *
     * @return string|null
     */
-    public function getLaunched()
+    public function getLaunchedAt()
     {
-        return $this->container['launched'];
+        return $this->container['launchedAt'];
     }
 
     /**
-    * Sets launched
+    * Sets launchedAt
     *
-    * @param string|null $launched 云服务器启动时间。时间格式例如：2020-05-22T07:48:53Z。
+    * @param string|null $launchedAt 云服务器启动时间。时间格式例如：2020-05-22T07:48:53.000000。
     *
     * @return $this
     */
-    public function setLaunched($launched)
+    public function setLaunchedAt($launchedAt)
     {
-        $this->container['launched'] = $launched;
+        $this->container['launchedAt'] = $launchedAt;
         return $this;
     }
 

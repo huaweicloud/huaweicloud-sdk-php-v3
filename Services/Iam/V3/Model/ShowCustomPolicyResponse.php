@@ -26,7 +26,7 @@ class ShowCustomPolicyResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'role' => '\HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult'
+            'role' => '\HuaweiCloud\SDK\Iam\V3\Model\ShowPolicyRoleResult'
     ];
 
     /**
@@ -177,7 +177,7 @@ class ShowCustomPolicyResponse implements ModelInterface, ArrayAccess
     * Gets role
     *  role
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\ShowPolicyRoleResult|null
     */
     public function getRole()
     {
@@ -187,7 +187,7 @@ class ShowCustomPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Sets role
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult|null $role role
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\ShowPolicyRoleResult|null $role role
     *
     * @return $this
     */

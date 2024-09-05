@@ -21,24 +21,28 @@ class AsyncInvokeFunctionRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'functionUrn' => 'string',
+            'xCffInstanceMemory' => 'string',
             'body' => 'map[string,object]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'functionUrn' => null,
+        'xCffInstanceMemory' => null,
         'body' => null
     ];
 
@@ -66,36 +70,42 @@ class AsyncInvokeFunctionRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'functionUrn' => 'function_urn',
+            'xCffInstanceMemory' => 'X-Cff-Instance-Memory',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
     */
     protected static $setters = [
             'functionUrn' => 'setFunctionUrn',
+            'xCffInstanceMemory' => 'setXCffInstanceMemory',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
     */
     protected static $getters = [
             'functionUrn' => 'getFunctionUrn',
+            'xCffInstanceMemory' => 'getXCffInstanceMemory',
             'body' => 'getBody'
     ];
 
@@ -158,6 +168,7 @@ class AsyncInvokeFunctionRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['functionUrn'] = isset($data['functionUrn']) ? $data['functionUrn'] : null;
+        $this->container['xCffInstanceMemory'] = isset($data['xCffInstanceMemory']) ? $data['xCffInstanceMemory'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -207,6 +218,30 @@ class AsyncInvokeFunctionRequest implements ModelInterface, ArrayAccess
     public function setFunctionUrn($functionUrn)
     {
         $this->container['functionUrn'] = $functionUrn;
+        return $this;
+    }
+
+    /**
+    * Gets xCffInstanceMemory
+    *  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
+    *
+    * @return string|null
+    */
+    public function getXCffInstanceMemory()
+    {
+        return $this->container['xCffInstanceMemory'];
+    }
+
+    /**
+    * Sets xCffInstanceMemory
+    *
+    * @param string|null $xCffInstanceMemory 设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
+    *
+    * @return $this
+    */
+    public function setXCffInstanceMemory($xCffInstanceMemory)
+    {
+        $this->container['xCffInstanceMemory'] = $xCffInstanceMemory;
         return $this;
     }
 

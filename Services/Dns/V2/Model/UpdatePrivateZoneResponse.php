@@ -35,8 +35,8 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  内网Zone关联的Router(VPC)信息
+    * masters  主从模式中，从DNS服务器获取DNS信息。
+    * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  内网Zone关联的Router(VPC)信息
+    * masters  主从模式中，从DNS服务器获取DNS信息。
+    * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
     */
@@ -136,8 +136,8 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  内网Zone关联的Router(VPC)信息
+    * masters  主从模式中，从DNS服务器获取DNS信息。
+    * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
     */
@@ -176,8 +176,8 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  内网Zone关联的Router(VPC)信息
+    * masters  主从模式中，从DNS服务器获取DNS信息。
+    * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
     */
@@ -216,8 +216,8 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。
-    * routers  内网Zone关联的Router(VPC)信息
+    * masters  主从模式中，从DNS服务器获取DNS信息。
+    * routers  与该zone关联的Router(VPC)列表。
     *
     * @var string[]
     */
@@ -676,7 +676,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息。
+    *  主从模式中，从DNS服务器获取DNS信息。
     *
     * @return string[]|null
     */
@@ -688,7 +688,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息。
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。
     *
     * @return $this
     */
@@ -700,7 +700,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets routers
-    *  内网Zone关联的Router(VPC)信息
+    *  与该zone关联的Router(VPC)列表。
     *
     * @return \HuaweiCloud\SDK\Dns\V2\Model\RouterWithStatus[]|null
     */
@@ -712,7 +712,7 @@ class UpdatePrivateZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets routers
     *
-    * @param \HuaweiCloud\SDK\Dns\V2\Model\RouterWithStatus[]|null $routers 内网Zone关联的Router(VPC)信息
+    * @param \HuaweiCloud\SDK\Dns\V2\Model\RouterWithStatus[]|null $routers 与该zone关联的Router(VPC)列表。
     *
     * @return $this
     */

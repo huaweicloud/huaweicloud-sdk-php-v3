@@ -35,7 +35,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @var string[]
     */
@@ -73,7 +73,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @var string[]
     */
@@ -132,7 +132,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @var string[]
     */
@@ -170,7 +170,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
     * createdAt  创建时间。
     * updatedAt  更新时间。
     * links  links
-    * masters  主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    * masters  主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @var string[]
     */
@@ -665,7 +665,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    *  主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @return string[]|null
     */
@@ -677,7 +677,7 @@ class UpdatePublicZoneStatusResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息。目前暂未使用。
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息。目前暂未使用。
     *
     * @return $this
     */

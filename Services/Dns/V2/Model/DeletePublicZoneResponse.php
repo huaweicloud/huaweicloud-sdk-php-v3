@@ -34,7 +34,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     * projectId  zone所属的项目ID
     * createdAt  创建时间
     * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     *
     * @var string[]
@@ -72,7 +72,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     * projectId  zone所属的项目ID
     * createdAt  创建时间
     * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     *
     * @var string[]
@@ -131,7 +131,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     * projectId  zone所属的项目ID
     * createdAt  创建时间
     * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     *
     * @var string[]
@@ -169,7 +169,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     * projectId  zone所属的项目ID
     * createdAt  创建时间
     * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     *
     * @var string[]
@@ -207,7 +207,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     * projectId  zone所属的项目ID
     * createdAt  创建时间
     * updatedAt  更新时间
-    * masters  主从模式中，从DNS服务器用以获取DNS信息
+    * masters  主从模式中，从DNS服务器获取DNS信息
     * links  links
     *
     * @var string[]
@@ -641,7 +641,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets masters
-    *  主从模式中，从DNS服务器用以获取DNS信息
+    *  主从模式中，从DNS服务器获取DNS信息
     *
     * @return string[]|null
     */
@@ -653,7 +653,7 @@ class DeletePublicZoneResponse implements ModelInterface, ArrayAccess
     /**
     * Sets masters
     *
-    * @param string[]|null $masters 主从模式中，从DNS服务器用以获取DNS信息
+    * @param string[]|null $masters 主从模式中，从DNS服务器获取DNS信息
     *
     * @return $this
     */

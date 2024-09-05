@@ -21,21 +21,25 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  安全组名称。
+    * id  安全组ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string'
+            'name' => 'string',
+            'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  安全组名称。
+    * id  安全组ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null
+        'name' => null,
+        'id' => null
     ];
 
     /**
@@ -62,31 +66,37 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  安全组名称。
+    * id  安全组ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name'
+            'name' => 'name',
+            'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  安全组名称。
+    * id  安全组ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName'
+            'name' => 'setName',
+            'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  安全组名称。
+    * id  安全组ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName'
+            'name' => 'getName',
+            'id' => 'getId'
     ];
 
     /**
@@ -148,6 +158,7 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
     /**
@@ -193,6 +204,30 @@ class SecurityGroup implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets id
+    *  安全组ID。
+    *
+    * @return string|null
+    */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+    * Sets id
+    *
+    * @param string|null $id 安全组ID。
+    *
+    * @return $this
+    */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
         return $this;
     }
 

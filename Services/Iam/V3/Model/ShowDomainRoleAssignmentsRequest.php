@@ -50,8 +50,8 @@ class ShowDomainRoleAssignmentsRequest implements ModelInterface, ArrayAccess
             'scopeEnterpriseProjectsId' => 'string',
             'isInherited' => 'bool',
             'includeGroup' => 'bool',
-            'page' => 'string',
-            'perPage' => 'string'
+            'page' => 'int',
+            'perPage' => 'int'
     ];
 
     /**
@@ -86,8 +86,8 @@ class ShowDomainRoleAssignmentsRequest implements ModelInterface, ArrayAccess
         'scopeEnterpriseProjectsId' => null,
         'isInherited' => null,
         'includeGroup' => null,
-        'page' => null,
-        'perPage' => null
+        'page' => 'int32',
+        'perPage' => 'int32'
     ];
 
     /**
@@ -610,7 +610,7 @@ class ShowDomainRoleAssignmentsRequest implements ModelInterface, ArrayAccess
     * Gets page
     *  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPage()
     {
@@ -620,7 +620,7 @@ class ShowDomainRoleAssignmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets page
     *
-    * @param string|null $page 分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * @param int|null $page 分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
     *
     * @return $this
     */
@@ -634,7 +634,7 @@ class ShowDomainRoleAssignmentsRequest implements ModelInterface, ArrayAccess
     * Gets perPage
     *  分页查询时每页的数据个数，取值范围为[1,50]。需要与page同时存在。
     *
-    * @return string|null
+    * @return int|null
     */
     public function getPerPage()
     {
@@ -644,7 +644,7 @@ class ShowDomainRoleAssignmentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets perPage
     *
-    * @param string|null $perPage 分页查询时每页的数据个数，取值范围为[1,50]。需要与page同时存在。
+    * @param int|null $perPage 分页查询时每页的数据个数，取值范围为[1,50]。需要与page同时存在。
     *
     * @return $this
     */

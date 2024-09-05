@@ -24,6 +24,8 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * certificate  证书内容
     * certificateKey  私钥内容
     * forceRedirect  是否开启重定向，默认false
+    * gmCertificate  gmCertificate
+    * tlsCertificate  tlsCertificate
     *
     * @var string[]
     */
@@ -31,7 +33,9 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
             'certificateFormat' => 'string',
             'certificate' => 'string',
             'certificateKey' => 'string',
-            'forceRedirect' => 'bool'
+            'forceRedirect' => 'bool',
+            'gmCertificate' => '\HuaweiCloud\SDK\Live\V1\Model\GmCertificateInfo',
+            'tlsCertificate' => '\HuaweiCloud\SDK\Live\V1\Model\TlsCertificateInfo'
     ];
 
     /**
@@ -40,6 +44,8 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * certificate  证书内容
     * certificateKey  私钥内容
     * forceRedirect  是否开启重定向，默认false
+    * gmCertificate  gmCertificate
+    * tlsCertificate  tlsCertificate
     *
     * @var string[]
     */
@@ -47,7 +53,9 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
         'certificateFormat' => null,
         'certificate' => null,
         'certificateKey' => null,
-        'forceRedirect' => null
+        'forceRedirect' => null,
+        'gmCertificate' => null,
+        'tlsCertificate' => null
     ];
 
     /**
@@ -77,6 +85,8 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * certificate  证书内容
     * certificateKey  私钥内容
     * forceRedirect  是否开启重定向，默认false
+    * gmCertificate  gmCertificate
+    * tlsCertificate  tlsCertificate
     *
     * @var string[]
     */
@@ -84,7 +94,9 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
             'certificateFormat' => 'certificate_format',
             'certificate' => 'certificate',
             'certificateKey' => 'certificate_key',
-            'forceRedirect' => 'force_redirect'
+            'forceRedirect' => 'force_redirect',
+            'gmCertificate' => 'gm_certificate',
+            'tlsCertificate' => 'tls_certificate'
     ];
 
     /**
@@ -93,6 +105,8 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * certificate  证书内容
     * certificateKey  私钥内容
     * forceRedirect  是否开启重定向，默认false
+    * gmCertificate  gmCertificate
+    * tlsCertificate  tlsCertificate
     *
     * @var string[]
     */
@@ -100,7 +114,9 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
             'certificateFormat' => 'setCertificateFormat',
             'certificate' => 'setCertificate',
             'certificateKey' => 'setCertificateKey',
-            'forceRedirect' => 'setForceRedirect'
+            'forceRedirect' => 'setForceRedirect',
+            'gmCertificate' => 'setGmCertificate',
+            'tlsCertificate' => 'setTlsCertificate'
     ];
 
     /**
@@ -109,6 +125,8 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * certificate  证书内容
     * certificateKey  私钥内容
     * forceRedirect  是否开启重定向，默认false
+    * gmCertificate  gmCertificate
+    * tlsCertificate  tlsCertificate
     *
     * @var string[]
     */
@@ -116,7 +134,9 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
             'certificateFormat' => 'getCertificateFormat',
             'certificate' => 'getCertificate',
             'certificateKey' => 'getCertificateKey',
-            'forceRedirect' => 'getForceRedirect'
+            'forceRedirect' => 'getForceRedirect',
+            'gmCertificate' => 'getGmCertificate',
+            'tlsCertificate' => 'getTlsCertificate'
     ];
 
     /**
@@ -194,6 +214,8 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['certificateKey'] = isset($data['certificateKey']) ? $data['certificateKey'] : null;
         $this->container['forceRedirect'] = isset($data['forceRedirect']) ? $data['forceRedirect'] : null;
+        $this->container['gmCertificate'] = isset($data['gmCertificate']) ? $data['gmCertificate'] : null;
+        $this->container['tlsCertificate'] = isset($data['tlsCertificate']) ? $data['tlsCertificate'] : null;
     }
 
     /**
@@ -212,12 +234,6 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
                 );
             }
 
-        if ($this->container['certificate'] === null) {
-            $invalidProperties[] = "'certificate' can't be null";
-        }
-        if ($this->container['certificateKey'] === null) {
-            $invalidProperties[] = "'certificateKey' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -260,7 +276,7 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * Gets certificate
     *  证书内容
     *
-    * @return string
+    * @return string|null
     */
     public function getCertificate()
     {
@@ -270,7 +286,7 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     /**
     * Sets certificate
     *
-    * @param string $certificate 证书内容
+    * @param string|null $certificate 证书内容
     *
     * @return $this
     */
@@ -284,7 +300,7 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     * Gets certificateKey
     *  私钥内容
     *
-    * @return string
+    * @return string|null
     */
     public function getCertificateKey()
     {
@@ -294,7 +310,7 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     /**
     * Sets certificateKey
     *
-    * @param string $certificateKey 私钥内容
+    * @param string|null $certificateKey 私钥内容
     *
     * @return $this
     */
@@ -325,6 +341,54 @@ class DomainHttpsCertInfo implements ModelInterface, ArrayAccess
     public function setForceRedirect($forceRedirect)
     {
         $this->container['forceRedirect'] = $forceRedirect;
+        return $this;
+    }
+
+    /**
+    * Gets gmCertificate
+    *  gmCertificate
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\GmCertificateInfo|null
+    */
+    public function getGmCertificate()
+    {
+        return $this->container['gmCertificate'];
+    }
+
+    /**
+    * Sets gmCertificate
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\GmCertificateInfo|null $gmCertificate gmCertificate
+    *
+    * @return $this
+    */
+    public function setGmCertificate($gmCertificate)
+    {
+        $this->container['gmCertificate'] = $gmCertificate;
+        return $this;
+    }
+
+    /**
+    * Gets tlsCertificate
+    *  tlsCertificate
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\TlsCertificateInfo|null
+    */
+    public function getTlsCertificate()
+    {
+        return $this->container['tlsCertificate'];
+    }
+
+    /**
+    * Sets tlsCertificate
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\TlsCertificateInfo|null $tlsCertificate tlsCertificate
+    *
+    * @return $this
+    */
+    public function setTlsCertificate($tlsCertificate)
+    {
+        $this->container['tlsCertificate'] = $tlsCertificate;
         return $this;
     }
 

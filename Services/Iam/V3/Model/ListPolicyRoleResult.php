@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class PolicyRoleResult implements ModelInterface, ArrayAccess
+class ListPolicyRoleResult implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,12 +16,11 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'PolicyRoleResult';
+    protected static $openAPIModelName = 'ListPolicyRoleResult';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainId  自定义策略所属账号ID。
-    * references  自定义策略的引用次数。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
     * descriptionCn  自定义策略的中文描述信息。
@@ -38,7 +37,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'domainId' => 'string',
-            'references' => 'int',
             'updatedTime' => 'string',
             'createdTime' => 'string',
             'descriptionCn' => 'string',
@@ -55,7 +53,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainId  自定义策略所属账号ID。
-    * references  自定义策略的引用次数。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
     * descriptionCn  自定义策略的中文描述信息。
@@ -72,7 +69,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'domainId' => null,
-        'references' => 'int32',
         'updatedTime' => null,
         'createdTime' => null,
         'descriptionCn' => null,
@@ -110,7 +106,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainId  自定义策略所属账号ID。
-    * references  自定义策略的引用次数。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
     * descriptionCn  自定义策略的中文描述信息。
@@ -127,7 +122,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'domainId' => 'domain_id',
-            'references' => 'references',
             'updatedTime' => 'updated_time',
             'createdTime' => 'created_time',
             'descriptionCn' => 'description_cn',
@@ -144,7 +138,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainId  自定义策略所属账号ID。
-    * references  自定义策略的引用次数。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
     * descriptionCn  自定义策略的中文描述信息。
@@ -161,7 +154,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'domainId' => 'setDomainId',
-            'references' => 'setReferences',
             'updatedTime' => 'setUpdatedTime',
             'createdTime' => 'setCreatedTime',
             'descriptionCn' => 'setDescriptionCn',
@@ -178,7 +170,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainId  自定义策略所属账号ID。
-    * references  自定义策略的引用次数。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
     * descriptionCn  自定义策略的中文描述信息。
@@ -195,7 +186,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'domainId' => 'getDomainId',
-            'references' => 'getReferences',
             'updatedTime' => 'getUpdatedTime',
             'createdTime' => 'getCreatedTime',
             'descriptionCn' => 'getDescriptionCn',
@@ -268,7 +258,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['references'] = isset($data['references']) ? $data['references'] : null;
         $this->container['updatedTime'] = isset($data['updatedTime']) ? $data['updatedTime'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
         $this->container['descriptionCn'] = isset($data['descriptionCn']) ? $data['descriptionCn'] : null;
@@ -352,30 +341,6 @@ class PolicyRoleResult implements ModelInterface, ArrayAccess
     public function setDomainId($domainId)
     {
         $this->container['domainId'] = $domainId;
-        return $this;
-    }
-
-    /**
-    * Gets references
-    *  自定义策略的引用次数。
-    *
-    * @return int|null
-    */
-    public function getReferences()
-    {
-        return $this->container['references'];
-    }
-
-    /**
-    * Sets references
-    *
-    * @param int|null $references 自定义策略的引用次数。
-    *
-    * @return $this
-    */
-    public function setReferences($references)
-    {
-        $this->container['references'] = $references;
         return $this;
     }
 

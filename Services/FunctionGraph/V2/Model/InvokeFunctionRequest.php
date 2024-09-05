@@ -23,6 +23,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * xCffLogType  取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
     * xCffRequestVersion  返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
@@ -31,6 +32,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
             'functionUrn' => 'string',
             'xCffLogType' => 'string',
             'xCffRequestVersion' => 'string',
+            'xCffInstanceMemory' => 'string',
             'body' => 'map[string,object]'
     ];
 
@@ -39,6 +41,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * xCffLogType  取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
     * xCffRequestVersion  返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
@@ -47,6 +50,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
         'functionUrn' => null,
         'xCffLogType' => null,
         'xCffRequestVersion' => null,
+        'xCffInstanceMemory' => null,
         'body' => null
     ];
 
@@ -76,6 +80,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * xCffLogType  取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
     * xCffRequestVersion  返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
@@ -84,6 +89,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
             'functionUrn' => 'function_urn',
             'xCffLogType' => 'X-Cff-Log-Type',
             'xCffRequestVersion' => 'X-CFF-Request-Version',
+            'xCffInstanceMemory' => 'X-Cff-Instance-Memory',
             'body' => 'body'
     ];
 
@@ -92,6 +98,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * xCffLogType  取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
     * xCffRequestVersion  返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
@@ -100,6 +107,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
             'functionUrn' => 'setFunctionUrn',
             'xCffLogType' => 'setXCffLogType',
             'xCffRequestVersion' => 'setXCffRequestVersion',
+            'xCffInstanceMemory' => 'setXCffInstanceMemory',
             'body' => 'setBody'
     ];
 
@@ -108,6 +116,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
     * functionUrn  函数的URN，详细解释见FunctionGraph函数模型的描述。
     * xCffLogType  取值为：tail（返回函数执行后的4K日志），或者为空（不返回日志）。
     * xCffRequestVersion  返回体格式，取值v0,v1。 v0:默认返回文本格式 v1:默认返回json格式，sdk需要使用此值。
+    * xCffInstanceMemory  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
     * body  执行函数请求体，为json格式。
     *
     * @var string[]
@@ -116,6 +125,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
             'functionUrn' => 'getFunctionUrn',
             'xCffLogType' => 'getXCffLogType',
             'xCffRequestVersion' => 'getXCffRequestVersion',
+            'xCffInstanceMemory' => 'getXCffInstanceMemory',
             'body' => 'getBody'
     ];
 
@@ -180,6 +190,7 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
         $this->container['functionUrn'] = isset($data['functionUrn']) ? $data['functionUrn'] : null;
         $this->container['xCffLogType'] = isset($data['xCffLogType']) ? $data['xCffLogType'] : null;
         $this->container['xCffRequestVersion'] = isset($data['xCffRequestVersion']) ? $data['xCffRequestVersion'] : null;
+        $this->container['xCffInstanceMemory'] = isset($data['xCffInstanceMemory']) ? $data['xCffInstanceMemory'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -277,6 +288,30 @@ class InvokeFunctionRequest implements ModelInterface, ArrayAccess
     public function setXCffRequestVersion($xCffRequestVersion)
     {
         $this->container['xCffRequestVersion'] = $xCffRequestVersion;
+        return $this;
+    }
+
+    /**
+    * Gets xCffInstanceMemory
+    *  设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
+    *
+    * @return string|null
+    */
+    public function getXCffInstanceMemory()
+    {
+        return $this->container['xCffInstanceMemory'];
+    }
+
+    /**
+    * Sets xCffInstanceMemory
+    *
+    * @param string|null $xCffInstanceMemory 设置本次执行函数使用的内存规格,取值： 128、256、512、768、1024、1280、1536、1792、2048、2560、3072、3584、4096、8192、10240
+    *
+    * @return $this
+    */
+    public function setXCffInstanceMemory($xCffInstanceMemory)
+    {
+        $this->container['xCffInstanceMemory'] = $xCffInstanceMemory;
         return $this;
     }
 

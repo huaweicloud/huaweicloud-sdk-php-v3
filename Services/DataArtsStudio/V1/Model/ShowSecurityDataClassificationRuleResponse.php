@@ -28,10 +28,11 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     * name  规则名称
     * guid  guid
     * enable  规则是否开启
-    * method  规则方式, REGULAR, NONE, DEFAULT
+    * method  规则方式, REGULAR, NONE, DEFAULT, COMBINE
     * contentExpression  内容表达式
     * columnExpression  列表达式
     * commitExpression  备注表达式
+    * combineExpression  条件表达式
     * projectId  项目ID
     * description  规则描述
     * createdBy  策略创建人
@@ -57,6 +58,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
             'contentExpression' => 'string',
             'columnExpression' => 'string',
             'commitExpression' => 'string',
+            'combineExpression' => 'string',
             'projectId' => 'string',
             'description' => 'string',
             'createdBy' => 'string',
@@ -78,10 +80,11 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     * name  规则名称
     * guid  guid
     * enable  规则是否开启
-    * method  规则方式, REGULAR, NONE, DEFAULT
+    * method  规则方式, REGULAR, NONE, DEFAULT, COMBINE
     * contentExpression  内容表达式
     * columnExpression  列表达式
     * commitExpression  备注表达式
+    * combineExpression  条件表达式
     * projectId  项目ID
     * description  规则描述
     * createdBy  策略创建人
@@ -107,6 +110,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
         'contentExpression' => null,
         'columnExpression' => null,
         'commitExpression' => null,
+        'combineExpression' => null,
         'projectId' => null,
         'description' => null,
         'createdBy' => null,
@@ -149,10 +153,11 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     * name  规则名称
     * guid  guid
     * enable  规则是否开启
-    * method  规则方式, REGULAR, NONE, DEFAULT
+    * method  规则方式, REGULAR, NONE, DEFAULT, COMBINE
     * contentExpression  内容表达式
     * columnExpression  列表达式
     * commitExpression  备注表达式
+    * combineExpression  条件表达式
     * projectId  项目ID
     * description  规则描述
     * createdBy  策略创建人
@@ -178,6 +183,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
             'contentExpression' => 'content_expression',
             'columnExpression' => 'column_expression',
             'commitExpression' => 'commit_expression',
+            'combineExpression' => 'combine_expression',
             'projectId' => 'project_id',
             'description' => 'description',
             'createdBy' => 'created_by',
@@ -199,10 +205,11 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     * name  规则名称
     * guid  guid
     * enable  规则是否开启
-    * method  规则方式, REGULAR, NONE, DEFAULT
+    * method  规则方式, REGULAR, NONE, DEFAULT, COMBINE
     * contentExpression  内容表达式
     * columnExpression  列表达式
     * commitExpression  备注表达式
+    * combineExpression  条件表达式
     * projectId  项目ID
     * description  规则描述
     * createdBy  策略创建人
@@ -228,6 +235,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
             'contentExpression' => 'setContentExpression',
             'columnExpression' => 'setColumnExpression',
             'commitExpression' => 'setCommitExpression',
+            'combineExpression' => 'setCombineExpression',
             'projectId' => 'setProjectId',
             'description' => 'setDescription',
             'createdBy' => 'setCreatedBy',
@@ -249,10 +257,11 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     * name  规则名称
     * guid  guid
     * enable  规则是否开启
-    * method  规则方式, REGULAR, NONE, DEFAULT
+    * method  规则方式, REGULAR, NONE, DEFAULT, COMBINE
     * contentExpression  内容表达式
     * columnExpression  列表达式
     * commitExpression  备注表达式
+    * combineExpression  条件表达式
     * projectId  项目ID
     * description  规则描述
     * createdBy  策略创建人
@@ -278,6 +287,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
             'contentExpression' => 'getContentExpression',
             'columnExpression' => 'getColumnExpression',
             'commitExpression' => 'getCommitExpression',
+            'combineExpression' => 'getCombineExpression',
             'projectId' => 'getProjectId',
             'description' => 'getDescription',
             'createdBy' => 'getCreatedBy',
@@ -335,6 +345,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     const METHOD_REGULAR = 'REGULAR';
     const METHOD_NONE = 'NONE';
     const METHOD__DEFAULT = 'DEFAULT';
+    const METHOD_COMBINE = 'COMBINE';
     
 
     /**
@@ -361,6 +372,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
             self::METHOD_REGULAR,
             self::METHOD_NONE,
             self::METHOD__DEFAULT,
+            self::METHOD_COMBINE,
         ];
     }
 
@@ -391,6 +403,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
         $this->container['contentExpression'] = isset($data['contentExpression']) ? $data['contentExpression'] : null;
         $this->container['columnExpression'] = isset($data['columnExpression']) ? $data['columnExpression'] : null;
         $this->container['commitExpression'] = isset($data['commitExpression']) ? $data['commitExpression'] : null;
+        $this->container['combineExpression'] = isset($data['combineExpression']) ? $data['combineExpression'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['createdBy'] = isset($data['createdBy']) ? $data['createdBy'] : null;
@@ -474,6 +487,12 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
             }
             if (!is_null($this->container['commitExpression']) && (mb_strlen($this->container['commitExpression']) < 1)) {
                 $invalidProperties[] = "invalid value for 'commitExpression', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['combineExpression']) && (mb_strlen($this->container['combineExpression']) > 4096)) {
+                $invalidProperties[] = "invalid value for 'combineExpression', the character length must be smaller than or equal to 4096.";
+            }
+            if (!is_null($this->container['combineExpression']) && (mb_strlen($this->container['combineExpression']) < 1)) {
+                $invalidProperties[] = "invalid value for 'combineExpression', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 128.";
@@ -719,7 +738,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
 
     /**
     * Gets method
-    *  规则方式, REGULAR, NONE, DEFAULT
+    *  规则方式, REGULAR, NONE, DEFAULT, COMBINE
     *
     * @return string|null
     */
@@ -731,7 +750,7 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     /**
     * Sets method
     *
-    * @param string|null $method 规则方式, REGULAR, NONE, DEFAULT
+    * @param string|null $method 规则方式, REGULAR, NONE, DEFAULT, COMBINE
     *
     * @return $this
     */
@@ -810,6 +829,30 @@ class ShowSecurityDataClassificationRuleResponse implements ModelInterface, Arra
     public function setCommitExpression($commitExpression)
     {
         $this->container['commitExpression'] = $commitExpression;
+        return $this;
+    }
+
+    /**
+    * Gets combineExpression
+    *  条件表达式
+    *
+    * @return string|null
+    */
+    public function getCombineExpression()
+    {
+        return $this->container['combineExpression'];
+    }
+
+    /**
+    * Sets combineExpression
+    *
+    * @param string|null $combineExpression 条件表达式
+    *
+    * @return $this
+    */
+    public function setCombineExpression($combineExpression)
+    {
+        $this->container['combineExpression'] = $combineExpression;
         return $this;
     }
 

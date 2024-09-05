@@ -21,7 +21,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * region  租户的区域信息。
-    * floatingipId  弹性IP的ID。
+    * floatingipId  弹性公网IP（EIP）的ID。
     * body  body
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * region  租户的区域信息。
-    * floatingipId  弹性IP的ID。
+    * floatingipId  弹性公网IP（EIP）的ID。
     * body  body
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * region  租户的区域信息。
-    * floatingipId  弹性IP的ID。
+    * floatingipId  弹性公网IP（EIP）的ID。
     * body  body
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * region  租户的区域信息。
-    * floatingipId  弹性IP的ID。
+    * floatingipId  弹性公网IP（EIP）的ID。
     * body  body
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * region  租户的区域信息。
-    * floatingipId  弹性IP的ID。
+    * floatingipId  弹性公网IP（EIP）的ID。
     * body  body
     *
     * @var string[]
@@ -226,7 +226,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets floatingipId
-    *  弹性IP的ID。
+    *  弹性公网IP（EIP）的ID。
     *
     * @return string
     */
@@ -238,7 +238,7 @@ class CreateEipRecordSetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets floatingipId
     *
-    * @param string $floatingipId 弹性IP的ID。
+    * @param string $floatingipId 弹性公网IP（EIP）的ID。
     *
     * @return $this
     */

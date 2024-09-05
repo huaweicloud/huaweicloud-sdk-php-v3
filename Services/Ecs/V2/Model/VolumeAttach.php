@@ -24,6 +24,7 @@ class VolumeAttach implements ModelInterface, ArrayAccess
     * deleteOnTermination  一个标志，指示在删除服务器时是否删除附加的卷。 默认情况下，这是False
     * device  挂载点
     * bootIndex  盘在云服务器上的挂载顺序，0表示启动盘。
+    * size  云盘大小（单位：GB）。
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class VolumeAttach implements ModelInterface, ArrayAccess
             'id' => 'string',
             'deleteOnTermination' => 'bool',
             'device' => 'string',
-            'bootIndex' => 'string'
+            'bootIndex' => 'string',
+            'size' => 'int'
     ];
 
     /**
@@ -40,6 +42,7 @@ class VolumeAttach implements ModelInterface, ArrayAccess
     * deleteOnTermination  一个标志，指示在删除服务器时是否删除附加的卷。 默认情况下，这是False
     * device  挂载点
     * bootIndex  盘在云服务器上的挂载顺序，0表示启动盘。
+    * size  云盘大小（单位：GB）。
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class VolumeAttach implements ModelInterface, ArrayAccess
         'id' => null,
         'deleteOnTermination' => null,
         'device' => null,
-        'bootIndex' => null
+        'bootIndex' => null,
+        'size' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class VolumeAttach implements ModelInterface, ArrayAccess
     * deleteOnTermination  一个标志，指示在删除服务器时是否删除附加的卷。 默认情况下，这是False
     * device  挂载点
     * bootIndex  盘在云服务器上的挂载顺序，0表示启动盘。
+    * size  云盘大小（单位：GB）。
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class VolumeAttach implements ModelInterface, ArrayAccess
             'id' => 'id',
             'deleteOnTermination' => 'delete_on_termination',
             'device' => 'device',
-            'bootIndex' => 'bootIndex'
+            'bootIndex' => 'bootIndex',
+            'size' => 'size'
     ];
 
     /**
@@ -93,6 +99,7 @@ class VolumeAttach implements ModelInterface, ArrayAccess
     * deleteOnTermination  一个标志，指示在删除服务器时是否删除附加的卷。 默认情况下，这是False
     * device  挂载点
     * bootIndex  盘在云服务器上的挂载顺序，0表示启动盘。
+    * size  云盘大小（单位：GB）。
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class VolumeAttach implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'deleteOnTermination' => 'setDeleteOnTermination',
             'device' => 'setDevice',
-            'bootIndex' => 'setBootIndex'
+            'bootIndex' => 'setBootIndex',
+            'size' => 'setSize'
     ];
 
     /**
@@ -109,6 +117,7 @@ class VolumeAttach implements ModelInterface, ArrayAccess
     * deleteOnTermination  一个标志，指示在删除服务器时是否删除附加的卷。 默认情况下，这是False
     * device  挂载点
     * bootIndex  盘在云服务器上的挂载顺序，0表示启动盘。
+    * size  云盘大小（单位：GB）。
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class VolumeAttach implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'deleteOnTermination' => 'getDeleteOnTermination',
             'device' => 'getDevice',
-            'bootIndex' => 'getBootIndex'
+            'bootIndex' => 'getBootIndex',
+            'size' => 'getSize'
     ];
 
     /**
@@ -181,6 +191,7 @@ class VolumeAttach implements ModelInterface, ArrayAccess
         $this->container['deleteOnTermination'] = isset($data['deleteOnTermination']) ? $data['deleteOnTermination'] : null;
         $this->container['device'] = isset($data['device']) ? $data['device'] : null;
         $this->container['bootIndex'] = isset($data['bootIndex']) ? $data['bootIndex'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -301,6 +312,30 @@ class VolumeAttach implements ModelInterface, ArrayAccess
     public function setBootIndex($bootIndex)
     {
         $this->container['bootIndex'] = $bootIndex;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  云盘大小（单位：GB）。
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size 云盘大小（单位：GB）。
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
         return $this;
     }
 

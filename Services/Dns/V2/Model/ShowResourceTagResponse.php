@@ -22,25 +22,21 @@ class ShowResourceTagResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * tags  指定实例的标签列表。
-    * enterpriseProjectOrDefault  企业项目或默认项目
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Dns\V2\Model\Tag[]',
-            'enterpriseProjectOrDefault' => 'string'
+            'tags' => '\HuaweiCloud\SDK\Dns\V2\Model\Tag[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * tags  指定实例的标签列表。
-    * enterpriseProjectOrDefault  企业项目或默认项目
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'enterpriseProjectOrDefault' => null
+        'tags' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class ShowResourceTagResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * tags  指定实例的标签列表。
-    * enterpriseProjectOrDefault  企业项目或默认项目
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'enterpriseProjectOrDefault' => 'enterpriseProjectOrDefault'
+            'tags' => 'tags'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * tags  指定实例的标签列表。
-    * enterpriseProjectOrDefault  企业项目或默认项目
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'enterpriseProjectOrDefault' => 'setEnterpriseProjectOrDefault'
+            'tags' => 'setTags'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * tags  指定实例的标签列表。
-    * enterpriseProjectOrDefault  企业项目或默认项目
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'enterpriseProjectOrDefault' => 'getEnterpriseProjectOrDefault'
+            'tags' => 'getTags'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ShowResourceTagResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['enterpriseProjectOrDefault'] = isset($data['enterpriseProjectOrDefault']) ? $data['enterpriseProjectOrDefault'] : null;
     }
 
     /**
@@ -205,30 +194,6 @@ class ShowResourceTagResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseProjectOrDefault
-    *  企业项目或默认项目
-    *
-    * @return string|null
-    */
-    public function getEnterpriseProjectOrDefault()
-    {
-        return $this->container['enterpriseProjectOrDefault'];
-    }
-
-    /**
-    * Sets enterpriseProjectOrDefault
-    *
-    * @param string|null $enterpriseProjectOrDefault 企业项目或默认项目
-    *
-    * @return $this
-    */
-    public function setEnterpriseProjectOrDefault($enterpriseProjectOrDefault)
-    {
-        $this->container['enterpriseProjectOrDefault'] = $enterpriseProjectOrDefault;
         return $this;
     }
 

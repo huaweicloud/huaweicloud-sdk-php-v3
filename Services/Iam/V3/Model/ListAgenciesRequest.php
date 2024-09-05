@@ -23,13 +23,17 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
     * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * trustDomainId  被委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * name  委托名，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'domainId' => 'string',
             'trustDomainId' => 'string',
-            'name' => 'string'
+            'name' => 'string',
+            'page' => 'int',
+            'perPage' => 'int'
     ];
 
     /**
@@ -37,13 +41,17 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
     * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * trustDomainId  被委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * name  委托名，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'domainId' => null,
         'trustDomainId' => null,
-        'name' => null
+        'name' => null,
+        'page' => 'int32',
+        'perPage' => 'int32'
     ];
 
     /**
@@ -72,13 +80,17 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
     * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * trustDomainId  被委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * name  委托名，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'domainId' => 'domain_id',
             'trustDomainId' => 'trust_domain_id',
-            'name' => 'name'
+            'name' => 'name',
+            'page' => 'page',
+            'perPage' => 'per_page'
     ];
 
     /**
@@ -86,13 +98,17 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
     * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * trustDomainId  被委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * name  委托名，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
     *
     * @var string[]
     */
     protected static $setters = [
             'domainId' => 'setDomainId',
             'trustDomainId' => 'setTrustDomainId',
-            'name' => 'setName'
+            'name' => 'setName',
+            'page' => 'setPage',
+            'perPage' => 'setPerPage'
     ];
 
     /**
@@ -100,13 +116,17 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
     * domainId  委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * trustDomainId  被委托方账号ID，获取方式请参见：[获取账号ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
     * name  委托名，获取方式请参见：[获取委托名、委托ID](https://support.huaweicloud.com/api-iam/iam_17_0002.html)。
+    * page  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    * perPage  分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
     *
     * @var string[]
     */
     protected static $getters = [
             'domainId' => 'getDomainId',
             'trustDomainId' => 'getTrustDomainId',
-            'name' => 'getName'
+            'name' => 'getName',
+            'page' => 'getPage',
+            'perPage' => 'getPerPage'
     ];
 
     /**
@@ -170,6 +190,8 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['trustDomainId'] = isset($data['trustDomainId']) ? $data['trustDomainId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['page'] = isset($data['page']) ? $data['page'] : null;
+        $this->container['perPage'] = isset($data['perPage']) ? $data['perPage'] : null;
     }
 
     /**
@@ -266,6 +288,54 @@ class ListAgenciesRequest implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets page
+    *  分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    *
+    * @return int|null
+    */
+    public function getPage()
+    {
+        return $this->container['page'];
+    }
+
+    /**
+    * Sets page
+    *
+    * @param int|null $page 分页查询时数据的页数，查询值最小为1。需要与per_page同时存在。
+    *
+    * @return $this
+    */
+    public function setPage($page)
+    {
+        $this->container['page'] = $page;
+        return $this;
+    }
+
+    /**
+    * Gets perPage
+    *  分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
+    *
+    * @return int|null
+    */
+    public function getPerPage()
+    {
+        return $this->container['perPage'];
+    }
+
+    /**
+    * Sets perPage
+    *
+    * @param int|null $perPage 分页查询时每页的数据个数，取值范围为[1,500]。需要与page同时存在。
+    *
+    * @return $this
+    */
+    public function setPerPage($perPage)
+    {
+        $this->container['perPage'] = $perPage;
         return $this;
     }
 

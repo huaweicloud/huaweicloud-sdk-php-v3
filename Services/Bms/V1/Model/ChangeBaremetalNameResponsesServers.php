@@ -178,7 +178,7 @@ class ChangeBaremetalNameResponsesServers implements ModelInterface, ArrayAccess
         'keyName' => null,
         'userId' => 'uuid',
         'metadata' => null,
-        'hostId' => 'uuid',
+        'hostId' => null,
         'addresses' => null,
         'securityGroups' => null,
         'links' => null,

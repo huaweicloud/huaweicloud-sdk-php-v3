@@ -23,6 +23,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  ResourceQL ID
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     * created  ResourceQL 创建时间
@@ -33,6 +34,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
+            'type' => 'string',
             'description' => 'string',
             'expression' => 'string',
             'created' => 'string',
@@ -43,6 +45,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  ResourceQL ID
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     * created  ResourceQL 创建时间
@@ -53,6 +56,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'type' => null,
         'description' => null,
         'expression' => null,
         'created' => null,
@@ -84,6 +88,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  ResourceQL ID
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     * created  ResourceQL 创建时间
@@ -94,6 +99,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
+            'type' => 'type',
             'description' => 'description',
             'expression' => 'expression',
             'created' => 'created',
@@ -104,6 +110,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  ResourceQL ID
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     * created  ResourceQL 创建时间
@@ -114,6 +121,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
+            'type' => 'setType',
             'description' => 'setDescription',
             'expression' => 'setExpression',
             'created' => 'setCreated',
@@ -124,6 +132,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  ResourceQL ID
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     * created  ResourceQL 创建时间
@@ -134,6 +143,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
+            'type' => 'getType',
             'description' => 'getDescription',
             'expression' => 'getExpression',
             'created' => 'getCreated',
@@ -180,7 +190,22 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_ACCOUNT = 'account';
+    const TYPE_AGGREGATOR = 'aggregator';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_ACCOUNT,
+            self::TYPE_AGGREGATOR,
+        ];
+    }
 
 
     /**
@@ -200,6 +225,7 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
         $this->container['created'] = isset($data['created']) ? $data['created'] : null;
@@ -214,6 +240,14 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -273,6 +307,30 @@ class ShowStoredQueryResponse implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 

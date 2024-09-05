@@ -21,7 +21,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  查询云服务器个数。
     * servers  查询云服务器信息列表。
     * serversLinks  分页查询时，查询下一页数据链接。
     * requestId  requestId
@@ -29,7 +28,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'count' => 'int',
             'servers' => '\HuaweiCloud\SDK\Ecs\V2\Model\CloudServer[]',
             'serversLinks' => '\HuaweiCloud\SDK\Ecs\V2\Model\PageLink[]',
             'requestId' => 'string'
@@ -37,7 +35,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  查询云服务器个数。
     * servers  查询云服务器信息列表。
     * serversLinks  分页查询时，查询下一页数据链接。
     * requestId  requestId
@@ -45,7 +42,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'count' => 'int32',
         'servers' => null,
         'serversLinks' => null,
         'requestId' => null
@@ -74,7 +70,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  查询云服务器个数。
     * servers  查询云服务器信息列表。
     * serversLinks  分页查询时，查询下一页数据链接。
     * requestId  requestId
@@ -82,7 +77,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
-            'count' => 'count',
             'servers' => 'servers',
             'serversLinks' => 'servers_links',
             'requestId' => 'request_id'
@@ -90,7 +84,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  查询云服务器个数。
     * servers  查询云服务器信息列表。
     * serversLinks  分页查询时，查询下一页数据链接。
     * requestId  requestId
@@ -98,7 +91,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
-            'count' => 'setCount',
             'servers' => 'setServers',
             'serversLinks' => 'setServersLinks',
             'requestId' => 'setRequestId'
@@ -106,7 +98,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  查询云服务器个数。
     * servers  查询云服务器信息列表。
     * serversLinks  分页查询时，查询下一页数据链接。
     * requestId  requestId
@@ -114,7 +105,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
-            'count' => 'getCount',
             'servers' => 'getServers',
             'serversLinks' => 'getServersLinks',
             'requestId' => 'getRequestId'
@@ -178,7 +168,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['count'] = isset($data['count']) ? $data['count'] : null;
         $this->container['servers'] = isset($data['servers']) ? $data['servers'] : null;
         $this->container['serversLinks'] = isset($data['serversLinks']) ? $data['serversLinks'] : null;
         $this->container['requestId'] = isset($data['requestId']) ? $data['requestId'] : null;
@@ -204,30 +193,6 @@ class ListCloudServersResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
-    }
-
-    /**
-    * Gets count
-    *  查询云服务器个数。
-    *
-    * @return int|null
-    */
-    public function getCount()
-    {
-        return $this->container['count'];
-    }
-
-    /**
-    * Sets count
-    *
-    * @param int|null $count 查询云服务器个数。
-    *
-    * @return $this
-    */
-    public function setCount($count)
-    {
-        $this->container['count'] = $count;
-        return $this;
     }
 
     /**

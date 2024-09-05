@@ -22,7 +22,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  云服务器ID，格式为UUID，匹配规则为精确匹配。
     * name  云服务器名称，匹配规则为模糊匹配。
-    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创id。
     * flavorName  云服务器规格名称。
@@ -37,8 +37,9 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * keyName  云服务器使用的密钥对名称。
     * launchedSince  过滤在launched_since时间之后启动的云服务器。格式为ISO8601时间格式，例如：2013-06-09T06:42:18Z。
     * enterpriseProjectId  过滤绑定某个企业项目的云服务器。 若需要查询当前用户所有企业项目绑定的云服务，请传参all_granted_eps。
-    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     * limit  查询返回VM数量限制。 limit 默认为10，最大为100。
+    * marker  以单页最后一条server的ID作为分页标记。
     *
     * @var string[]
     */
@@ -61,14 +62,15 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
             'launchedSince' => 'string',
             'enterpriseProjectId' => 'string',
             'expectFields' => 'string[]',
-            'limit' => 'int'
+            'limit' => 'int',
+            'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  云服务器ID，格式为UUID，匹配规则为精确匹配。
     * name  云服务器名称，匹配规则为模糊匹配。
-    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创id。
     * flavorName  云服务器规格名称。
@@ -83,8 +85,9 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * keyName  云服务器使用的密钥对名称。
     * launchedSince  过滤在launched_since时间之后启动的云服务器。格式为ISO8601时间格式，例如：2013-06-09T06:42:18Z。
     * enterpriseProjectId  过滤绑定某个企业项目的云服务器。 若需要查询当前用户所有企业项目绑定的云服务，请传参all_granted_eps。
-    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     * limit  查询返回VM数量限制。 limit 默认为10，最大为100。
+    * marker  以单页最后一条server的ID作为分页标记。
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
         'launchedSince' => null,
         'enterpriseProjectId' => null,
         'expectFields' => null,
-        'limit' => null
+        'limit' => null,
+        'marker' => null
     ];
 
     /**
@@ -135,7 +139,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  云服务器ID，格式为UUID，匹配规则为精确匹配。
     * name  云服务器名称，匹配规则为模糊匹配。
-    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创id。
     * flavorName  云服务器规格名称。
@@ -150,8 +154,9 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * keyName  云服务器使用的密钥对名称。
     * launchedSince  过滤在launched_since时间之后启动的云服务器。格式为ISO8601时间格式，例如：2013-06-09T06:42:18Z。
     * enterpriseProjectId  过滤绑定某个企业项目的云服务器。 若需要查询当前用户所有企业项目绑定的云服务，请传参all_granted_eps。
-    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     * limit  查询返回VM数量限制。 limit 默认为10，最大为100。
+    * marker  以单页最后一条server的ID作为分页标记。
     *
     * @var string[]
     */
@@ -174,14 +179,15 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
             'launchedSince' => 'launched_since',
             'enterpriseProjectId' => 'enterprise_project_id',
             'expectFields' => 'expect-fields',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  云服务器ID，格式为UUID，匹配规则为精确匹配。
     * name  云服务器名称，匹配规则为模糊匹配。
-    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创id。
     * flavorName  云服务器规格名称。
@@ -196,8 +202,9 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * keyName  云服务器使用的密钥对名称。
     * launchedSince  过滤在launched_since时间之后启动的云服务器。格式为ISO8601时间格式，例如：2013-06-09T06:42:18Z。
     * enterpriseProjectId  过滤绑定某个企业项目的云服务器。 若需要查询当前用户所有企业项目绑定的云服务，请传参all_granted_eps。
-    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     * limit  查询返回VM数量限制。 limit 默认为10，最大为100。
+    * marker  以单页最后一条server的ID作为分页标记。
     *
     * @var string[]
     */
@@ -220,14 +227,15 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
             'launchedSince' => 'setLaunchedSince',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'expectFields' => 'setExpectFields',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  云服务器ID，格式为UUID，匹配规则为精确匹配。
     * name  云服务器名称，匹配规则为模糊匹配。
-    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * status  云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     * inRecycleBin  云服务器是否处于回收站中
     * spodId  共池裸机按整机柜发放的同一批次的批创id。
     * flavorName  云服务器规格名称。
@@ -242,8 +250,9 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     * keyName  云服务器使用的密钥对名称。
     * launchedSince  过滤在launched_since时间之后启动的云服务器。格式为ISO8601时间格式，例如：2013-06-09T06:42:18Z。
     * enterpriseProjectId  过滤绑定某个企业项目的云服务器。 若需要查询当前用户所有企业项目绑定的云服务，请传参all_granted_eps。
-    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    * expectFields  控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     * limit  查询返回VM数量限制。 limit 默认为10，最大为100。
+    * marker  以单页最后一条server的ID作为分页标记。
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
             'launchedSince' => 'getLaunchedSince',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'expectFields' => 'getExpectFields',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -346,6 +356,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['expectFields'] = isset($data['expectFields']) ? $data['expectFields'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -361,6 +372,9 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['marker']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['marker'])) {
+                $invalidProperties[] = "invalid value for 'marker', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -426,7 +440,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    *  云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     *
     * @return string|null
     */
@@ -438,7 +452,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 云服务器状态。  取值范围：  ACTIVE， BUILD，DELETED，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
+    * @param string|null $status 云服务器状态。  取值范围：  ACTIVE， BUILD，ERROR，HARD_REBOOT，MIGRATING，REBOOT，RESIZE，REVERT_RESIZE，SHELVED，SHELVED_OFFLOADED，SHUTOFF，UNKNOWN，VERIFY_RESIZE  弹性云服务器状态说明请参考[云服务器状态](https://support.huaweicloud.com/api-ecs/ecs_08_0002.html)
     *
     * @return $this
     */
@@ -786,7 +800,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets expectFields
-    *  控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    *  控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     *
     * @return string[]|null
     */
@@ -798,7 +812,7 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets expectFields
     *
-    * @param string[]|null $expectFields 控制查询输出的字段。在默认字段的基础上选择是否查询，有管理员字段。
+    * @param string[]|null $expectFields 控制查询输出的字段。在默认字段的基础上选择是否查询。   launched_at：云服务器启动时间。   key_name：云服务器使用的密钥对名称。   locked：云服务器是否为锁定状态。   root_device_name：云服务器系统盘的设备名称。   tenancy：在专属主机或共享池中创建云服务器。   dedicated_host_id：专属主机ID。   enterprise_project_id：查询绑定某个企业项目的云服务器。   tags：云服务器的标签列表。   metadata：云服务器元数据。   addresses：云服务器对应的网络地址信息。   security_groups：云服务器的安全组信息。   volumes_attached：云服务器挂载磁盘信息。   image：云服务器镜像信息。   power_state：云服务器电源状态。   cpu_options：自定义CPU选项。   market_info：云服务器计费信息，包含计费类型、到期时间等字段。
     *
     * @return $this
     */
@@ -829,6 +843,30 @@ class ListCloudServersRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  以单页最后一条server的ID作为分页标记。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 以单页最后一条server的ID作为分页标记。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

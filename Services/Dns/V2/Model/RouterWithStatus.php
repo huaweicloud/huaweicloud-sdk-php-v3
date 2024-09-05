@@ -21,8 +21,8 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * status  资源状态。
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * status  资源状态。
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * status  资源状态。
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * status  资源状态。
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * status  资源状态。
-    * routerId  Router(VPC)所属VPC的ID。
-    * routerRegion  Router(VPC)所在的region。
+    * routerId  关联VPC的ID。
+    * routerRegion  关联VPC所在的region。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets routerId
-    *  Router(VPC)所属VPC的ID。
+    *  关联VPC的ID。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     /**
     * Sets routerId
     *
-    * @param string|null $routerId Router(VPC)所属VPC的ID。
+    * @param string|null $routerId 关联VPC的ID。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets routerRegion
-    *  Router(VPC)所在的region。
+    *  关联VPC所在的region。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class RouterWithStatus implements ModelInterface, ArrayAccess
     /**
     * Sets routerRegion
     *
-    * @param string|null $routerRegion Router(VPC)所在的region。
+    * @param string|null $routerRegion 关联VPC所在的region。
     *
     * @return $this
     */

@@ -25,9 +25,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
     * vcpus  该云服务器规格对应的CPU核数。
     * ram  该云服务器规格对应的内存大小，单位为MB.
     * disk  该云服务器规格对应要求系统盘大小，0为不限制。
-    * rootGb  rootGb
-    * ephemeralGb  ephemeralGb
-    * extraSpecs  flavor扩展字段。
+    * gpus  gpus
+    * asicAccelerators  asicAccelerators
     *
     * @var string[]
     */
@@ -37,9 +36,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
             'vcpus' => 'int',
             'ram' => 'int',
             'disk' => 'int',
-            'rootGb' => 'int',
-            'ephemeralGb' => 'int',
-            'extraSpecs' => 'map[string,string]'
+            'gpus' => '\HuaweiCloud\SDK\Ecs\V2\Model\GpuInfo[]',
+            'asicAccelerators' => '\HuaweiCloud\SDK\Ecs\V2\Model\ASICAcceleratorInfo[]'
     ];
 
     /**
@@ -49,9 +47,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
     * vcpus  该云服务器规格对应的CPU核数。
     * ram  该云服务器规格对应的内存大小，单位为MB.
     * disk  该云服务器规格对应要求系统盘大小，0为不限制。
-    * rootGb  rootGb
-    * ephemeralGb  ephemeralGb
-    * extraSpecs  flavor扩展字段。
+    * gpus  gpus
+    * asicAccelerators  asicAccelerators
     *
     * @var string[]
     */
@@ -61,9 +58,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
         'vcpus' => null,
         'ram' => null,
         'disk' => null,
-        'rootGb' => null,
-        'ephemeralGb' => null,
-        'extraSpecs' => null
+        'gpus' => null,
+        'asicAccelerators' => null
     ];
 
     /**
@@ -94,9 +90,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
     * vcpus  该云服务器规格对应的CPU核数。
     * ram  该云服务器规格对应的内存大小，单位为MB.
     * disk  该云服务器规格对应要求系统盘大小，0为不限制。
-    * rootGb  rootGb
-    * ephemeralGb  ephemeralGb
-    * extraSpecs  flavor扩展字段。
+    * gpus  gpus
+    * asicAccelerators  asicAccelerators
     *
     * @var string[]
     */
@@ -106,9 +101,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
             'vcpus' => 'vcpus',
             'ram' => 'ram',
             'disk' => 'disk',
-            'rootGb' => 'root_gb',
-            'ephemeralGb' => 'ephemeral_gb',
-            'extraSpecs' => 'extra_specs'
+            'gpus' => 'gpus',
+            'asicAccelerators' => 'asic_accelerators'
     ];
 
     /**
@@ -118,9 +112,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
     * vcpus  该云服务器规格对应的CPU核数。
     * ram  该云服务器规格对应的内存大小，单位为MB.
     * disk  该云服务器规格对应要求系统盘大小，0为不限制。
-    * rootGb  rootGb
-    * ephemeralGb  ephemeralGb
-    * extraSpecs  flavor扩展字段。
+    * gpus  gpus
+    * asicAccelerators  asicAccelerators
     *
     * @var string[]
     */
@@ -130,9 +123,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
             'vcpus' => 'setVcpus',
             'ram' => 'setRam',
             'disk' => 'setDisk',
-            'rootGb' => 'setRootGb',
-            'ephemeralGb' => 'setEphemeralGb',
-            'extraSpecs' => 'setExtraSpecs'
+            'gpus' => 'setGpus',
+            'asicAccelerators' => 'setAsicAccelerators'
     ];
 
     /**
@@ -142,9 +134,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
     * vcpus  该云服务器规格对应的CPU核数。
     * ram  该云服务器规格对应的内存大小，单位为MB.
     * disk  该云服务器规格对应要求系统盘大小，0为不限制。
-    * rootGb  rootGb
-    * ephemeralGb  ephemeralGb
-    * extraSpecs  flavor扩展字段。
+    * gpus  gpus
+    * asicAccelerators  asicAccelerators
     *
     * @var string[]
     */
@@ -154,9 +145,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
             'vcpus' => 'getVcpus',
             'ram' => 'getRam',
             'disk' => 'getDisk',
-            'rootGb' => 'getRootGb',
-            'ephemeralGb' => 'getEphemeralGb',
-            'extraSpecs' => 'getExtraSpecs'
+            'gpus' => 'getGpus',
+            'asicAccelerators' => 'getAsicAccelerators'
     ];
 
     /**
@@ -222,9 +212,8 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
         $this->container['disk'] = isset($data['disk']) ? $data['disk'] : null;
-        $this->container['rootGb'] = isset($data['rootGb']) ? $data['rootGb'] : null;
-        $this->container['ephemeralGb'] = isset($data['ephemeralGb']) ? $data['ephemeralGb'] : null;
-        $this->container['extraSpecs'] = isset($data['extraSpecs']) ? $data['extraSpecs'] : null;
+        $this->container['gpus'] = isset($data['gpus']) ? $data['gpus'] : null;
+        $this->container['asicAccelerators'] = isset($data['asicAccelerators']) ? $data['asicAccelerators'] : null;
     }
 
     /**
@@ -370,74 +359,50 @@ class FlavorQuasar implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets rootGb
-    *  rootGb
+    * Gets gpus
+    *  gpus
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\GpuInfo[]|null
     */
-    public function getRootGb()
+    public function getGpus()
     {
-        return $this->container['rootGb'];
+        return $this->container['gpus'];
     }
 
     /**
-    * Sets rootGb
+    * Sets gpus
     *
-    * @param int|null $rootGb rootGb
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\GpuInfo[]|null $gpus gpus
     *
     * @return $this
     */
-    public function setRootGb($rootGb)
+    public function setGpus($gpus)
     {
-        $this->container['rootGb'] = $rootGb;
+        $this->container['gpus'] = $gpus;
         return $this;
     }
 
     /**
-    * Gets ephemeralGb
-    *  ephemeralGb
+    * Gets asicAccelerators
+    *  asicAccelerators
     *
-    * @return int|null
+    * @return \HuaweiCloud\SDK\Ecs\V2\Model\ASICAcceleratorInfo[]|null
     */
-    public function getEphemeralGb()
+    public function getAsicAccelerators()
     {
-        return $this->container['ephemeralGb'];
+        return $this->container['asicAccelerators'];
     }
 
     /**
-    * Sets ephemeralGb
+    * Sets asicAccelerators
     *
-    * @param int|null $ephemeralGb ephemeralGb
+    * @param \HuaweiCloud\SDK\Ecs\V2\Model\ASICAcceleratorInfo[]|null $asicAccelerators asicAccelerators
     *
     * @return $this
     */
-    public function setEphemeralGb($ephemeralGb)
+    public function setAsicAccelerators($asicAccelerators)
     {
-        $this->container['ephemeralGb'] = $ephemeralGb;
-        return $this;
-    }
-
-    /**
-    * Gets extraSpecs
-    *  flavor扩展字段。
-    *
-    * @return map[string,string]|null
-    */
-    public function getExtraSpecs()
-    {
-        return $this->container['extraSpecs'];
-    }
-
-    /**
-    * Sets extraSpecs
-    *
-    * @param map[string,string]|null $extraSpecs flavor扩展字段。
-    *
-    * @return $this
-    */
-    public function setExtraSpecs($extraSpecs)
-    {
-        $this->container['extraSpecs'] = $extraSpecs;
+        $this->container['asicAccelerators'] = $asicAccelerators;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceId  资源ID。
-    * resourceProvider  云服务名称。
-    * resourceType  资源类型。
+    * resourceProvider  云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
+    * resourceType  资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceId  资源ID。
-    * resourceProvider  云服务名称。
-    * resourceType  资源类型。
+    * resourceProvider  云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
+    * resourceType  资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceId  资源ID。
-    * resourceProvider  云服务名称。
-    * resourceType  资源类型。
+    * resourceProvider  云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
+    * resourceType  资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceId  资源ID。
-    * resourceProvider  云服务名称。
-    * resourceType  资源类型。
+    * resourceProvider  云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
+    * resourceType  资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceId  资源ID。
-    * resourceProvider  云服务名称。
-    * resourceType  资源类型。
+    * resourceProvider  云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
+    * resourceType  资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceProvider
-    *  云服务名称。
+    *  云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
     *
     * @return string
     */
@@ -268,7 +268,7 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     /**
     * Sets resourceProvider
     *
-    * @param string $resourceProvider 云服务名称。
+    * @param string $resourceProvider 云服务名称，为兼容部分合规结果中云服务名称为空的场景，可为空字符串。
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。
+    *  资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @return string
     */
@@ -292,7 +292,7 @@ class RemediationResourceKey implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。
+    * @param string $resourceType 资源类型，为兼容部分合规结果中资源类型为空的场景，可为空字符串。
     *
     * @return $this
     */

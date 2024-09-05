@@ -32,7 +32,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
-    * references  自定义策略的引用次数。
     *
     * @var string[]
     */
@@ -48,8 +47,7 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'updatedTime' => 'string',
-            'createdTime' => 'string',
-            'references' => 'string'
+            'createdTime' => 'string'
     ];
 
     /**
@@ -66,7 +64,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
-    * references  自定义策略的引用次数。
     *
     * @var string[]
     */
@@ -82,8 +79,7 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'updatedTime' => null,
-        'createdTime' => null,
-        'references' => null
+        'createdTime' => null
     ];
 
     /**
@@ -121,7 +117,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
-    * references  自定义策略的引用次数。
     *
     * @var string[]
     */
@@ -137,8 +132,7 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'updatedTime' => 'updated_time',
-            'createdTime' => 'created_time',
-            'references' => 'references'
+            'createdTime' => 'created_time'
     ];
 
     /**
@@ -155,7 +149,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
-    * references  自定义策略的引用次数。
     *
     * @var string[]
     */
@@ -171,8 +164,7 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'updatedTime' => 'setUpdatedTime',
-            'createdTime' => 'setCreatedTime',
-            'references' => 'setReferences'
+            'createdTime' => 'setCreatedTime'
     ];
 
     /**
@@ -189,7 +181,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
     * name  自定义策略名。
     * updatedTime  自定义策略更新时间。
     * createdTime  自定义策略创建时间。
-    * references  自定义策略的引用次数。
     *
     * @var string[]
     */
@@ -205,8 +196,7 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'updatedTime' => 'getUpdatedTime',
-            'createdTime' => 'getCreatedTime',
-            'references' => 'getReferences'
+            'createdTime' => 'getCreatedTime'
     ];
 
     /**
@@ -279,7 +269,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['updatedTime'] = isset($data['updatedTime']) ? $data['updatedTime'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
-        $this->container['references'] = isset($data['references']) ? $data['references'] : null;
     }
 
     /**
@@ -616,30 +605,6 @@ class AgencyPolicyRoleResult implements ModelInterface, ArrayAccess
     public function setCreatedTime($createdTime)
     {
         $this->container['createdTime'] = $createdTime;
-        return $this;
-    }
-
-    /**
-    * Gets references
-    *  自定义策略的引用次数。
-    *
-    * @return string|null
-    */
-    public function getReferences()
-    {
-        return $this->container['references'];
-    }
-
-    /**
-    * Sets references
-    *
-    * @param string|null $references 自定义策略的引用次数。
-    *
-    * @return $this
-    */
-    public function setReferences($references)
-    {
-        $this->container['references'] = $references;
         return $this;
     }
 

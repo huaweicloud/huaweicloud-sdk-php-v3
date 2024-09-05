@@ -56,6 +56,9 @@ class FunctionGraphAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xCffInstanceMemory'] !== null) {
+            $headerParams['x_cff_instance_memory'] = $localVarParams['xCffInstanceMemory'];
+        }
         if ($localVarParams['functionUrn'] !== null) {
             $pathParams['function_urn'] = $localVarParams['functionUrn'];
         }
@@ -1952,6 +1955,9 @@ class FunctionGraphAsyncClient extends Client
         }
         if ($localVarParams['xCffRequestVersion'] !== null) {
             $headerParams['x_cff_request_version'] = $localVarParams['xCffRequestVersion'];
+        }
+        if ($localVarParams['xCffInstanceMemory'] !== null) {
+            $headerParams['x_cff_instance_memory'] = $localVarParams['xCffInstanceMemory'];
         }
         if ($localVarParams['functionUrn'] !== null) {
             $pathParams['function_urn'] = $localVarParams['functionUrn'];

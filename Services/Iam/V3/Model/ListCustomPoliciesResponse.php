@@ -29,7 +29,7 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'links' => '\HuaweiCloud\SDK\Iam\V3\Model\Links',
-            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult[]',
+            'roles' => '\HuaweiCloud\SDK\Iam\V3\Model\ListPolicyRoleResult[]',
             'totalNumber' => 'int'
     ];
 
@@ -223,7 +223,7 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
     * Gets roles
     *  自定义策略信息列表。
     *
-    * @return \HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult[]|null
+    * @return \HuaweiCloud\SDK\Iam\V3\Model\ListPolicyRoleResult[]|null
     */
     public function getRoles()
     {
@@ -233,7 +233,7 @@ class ListCustomPoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roles
     *
-    * @param \HuaweiCloud\SDK\Iam\V3\Model\PolicyRoleResult[]|null $roles 自定义策略信息列表。
+    * @param \HuaweiCloud\SDK\Iam\V3\Model\ListPolicyRoleResult[]|null $roles 自定义策略信息列表。
     *
     * @return $this
     */

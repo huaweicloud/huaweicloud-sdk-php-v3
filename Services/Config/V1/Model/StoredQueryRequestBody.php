@@ -21,6 +21,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     *
@@ -28,6 +29,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'name' => 'string',
+            'type' => 'string',
             'description' => 'string',
             'expression' => 'string'
     ];
@@ -35,6 +37,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     *
@@ -42,6 +45,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'name' => null,
+        'type' => null,
         'description' => null,
         'expression' => null
     ];
@@ -70,6 +74,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     *
@@ -77,6 +82,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'name' => 'name',
+            'type' => 'type',
             'description' => 'description',
             'expression' => 'expression'
     ];
@@ -84,6 +90,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     *
@@ -91,6 +98,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'name' => 'setName',
+            'type' => 'setType',
             'description' => 'setDescription',
             'expression' => 'setExpression'
     ];
@@ -98,6 +106,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  ResourceQL 名字
+    * type  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
     * description  ResourceQL 描述
     * expression  ResourceQL 表达式
     *
@@ -105,6 +114,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'name' => 'getName',
+            'type' => 'getType',
             'description' => 'getDescription',
             'expression' => 'getExpression'
     ];
@@ -149,7 +159,22 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TYPE_ACCOUNT = 'account';
+    const TYPE_AGGREGATOR = 'aggregator';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_ACCOUNT,
+            self::TYPE_AGGREGATOR,
+        ];
+    }
 
 
     /**
@@ -168,6 +193,7 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['expression'] = isset($data['expression']) ? $data['expression'] : null;
     }
@@ -192,6 +218,14 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
             if (!preg_match("/^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa5a-zA-Z0-9_\\-]+/.";
             }
+            $allowedValues = $this->getTypeAllowableValues();
+                if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 512)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 512.";
             }
@@ -242,6 +276,30 @@ class StoredQueryRequestBody implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets type
+    *  自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
+    *
+    * @return string|null
+    */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+    * Sets type
+    *
+    * @param string|null $type 自定义查询类型，枚举值为“account”和“aggregator”。若取值为“account”，表示单帐号的自定义查询语句；若取值为“aggregator”，表示聚合器的自定义查询语句。默认值为“account”。
+    *
+    * @return $this
+    */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
         return $this;
     }
 
