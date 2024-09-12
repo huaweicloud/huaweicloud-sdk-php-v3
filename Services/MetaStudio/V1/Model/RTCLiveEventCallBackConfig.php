@@ -20,7 +20,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    * rtcCallbackEventType  RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets rtcCallbackEventType
-    *  RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    *  RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @return string[]|null
     */
@@ -186,7 +186,7 @@ class RTCLiveEventCallBackConfig implements ModelInterface, ArrayAccess
     /**
     * Sets rtcCallbackEventType
     *
-    * @param string[]|null $rtcCallbackEventType RTC回调的直播事件类型列表。  当前仅支持取值：   LIVE_PROGRESS，直播剧本进度通知。    REPLY_COMMAND_FINISH，回复播放完成通知。 回调事件结构体定义： * message_type: 消息类型。 * data: 消息描述。 LIVE_PROGRESS事件回调定义如下： ```json {     \"message_type\": \"live_progress_notify\",     \"data\": {         \"script_name\": \"场景一\",         \"shoot_script_sequence_no\": 2,         \"shoot_script_title\": \"引导语\",         \"offset\": \"247\",         \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"     } } ``` REPLY_COMMAND_FINISH回调定义如下： ```json {   \"message_type\": \"reply_command_finish_notify\",   \"data\":\"{     \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"   }\" } ```
+    * @param string[]|null $rtcCallbackEventType RTC回调的直播事件类型列表。  当前仅支持如下取值： * LIVE_PROGRESS：直播剧本进度通知。  * REPLY_COMMAND_FINISH：回复播放完成通知。  回调事件结构体定义： * message_type：消息类型。 * data：消息描述。   - LIVE_PROGRESS事件回调定义如下：     ```json     {         \"message_type\": \"live_progress_notify\",         \"data\": {             \"script_name\": \"场景一\",             \"shoot_script_sequence_no\": 2,             \"shoot_script_title\": \"引导语\",             \"offset\": \"247\",             \"reply_id\": \"e87104f76d7546ce8a46ac6b04c49c3c\"         }     }     ```   - REPLY_COMMAND_FINISH回调定义如下：     ```json     {       \"message_type\": \"reply_command_finish_notify\",       \"data\":\"{         \"reply_id\":\"e87104f76d7546ce8a46ac6b04c49c3c\"       }\"     }     ```
     *
     * @return $this
     */

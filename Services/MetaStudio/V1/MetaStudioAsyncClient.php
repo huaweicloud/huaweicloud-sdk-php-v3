@@ -10073,6 +10073,9 @@ class MetaStudioAsyncClient extends Client
         if ($localVarParams['modelResolution'] !== null) {
             $queryParams['model_resolution'] = $localVarParams['modelResolution'];
         }
+        if ($localVarParams['isFlexus'] !== null) {
+            $queryParams['is_flexus'] = $localVarParams['isFlexus'];
+        }
         if ($localVarParams['authorization'] !== null) {
             $headerParams['authorization'] = $localVarParams['authorization'];
         }

@@ -33,6 +33,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * projectId  项目ID，获取方法请参见获取项目ID。
     * domainId  Domain ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
@@ -57,6 +58,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'projectId' => 'string',
             'domainId' => 'string',
             'ports' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PortList[]',
+            'ip' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
             'connectionCount' => 'int',
             'tcpProxy' => 'string',
@@ -81,6 +83,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * projectId  项目ID，获取方法请参见获取项目ID。
     * domainId  Domain ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
@@ -105,6 +108,7 @@ class ServiceList implements ModelInterface, ArrayAccess
         'projectId' => null,
         'domainId' => null,
         'ports' => null,
+        'ip' => null,
         'tags' => null,
         'connectionCount' => 'int32',
         'tcpProxy' => null,
@@ -150,6 +154,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * projectId  项目ID，获取方法请参见获取项目ID。
     * domainId  Domain ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
@@ -174,6 +179,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'projectId' => 'project_id',
             'domainId' => 'domain_id',
             'ports' => 'ports',
+            'ip' => 'ip',
             'tags' => 'tags',
             'connectionCount' => 'connection_count',
             'tcpProxy' => 'tcp_proxy',
@@ -198,6 +204,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * projectId  项目ID，获取方法请参见获取项目ID。
     * domainId  Domain ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
@@ -222,6 +229,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'projectId' => 'setProjectId',
             'domainId' => 'setDomainId',
             'ports' => 'setPorts',
+            'ip' => 'setIp',
             'tags' => 'setTags',
             'connectionCount' => 'setConnectionCount',
             'tcpProxy' => 'setTcpProxy',
@@ -246,6 +254,7 @@ class ServiceList implements ModelInterface, ArrayAccess
     * projectId  项目ID，获取方法请参见获取项目ID。
     * domainId  Domain ID
     * ports  服务开放的端口映射列表 同一个终端节点服务下，不允许重复的端口映射。 若多个终端节点服务共用一个port_id， 则终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * tags  资源标签列表
     * connectionCount  终端节点服务下连接的状态为“创建中”或“已接受”的终端节点的个数。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
@@ -270,6 +279,7 @@ class ServiceList implements ModelInterface, ArrayAccess
             'projectId' => 'getProjectId',
             'domainId' => 'getDomainId',
             'ports' => 'getPorts',
+            'ip' => 'getIp',
             'tags' => 'getTags',
             'connectionCount' => 'getConnectionCount',
             'tcpProxy' => 'getTcpProxy',
@@ -350,6 +360,7 @@ class ServiceList implements ModelInterface, ArrayAccess
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['connectionCount'] = isset($data['connectionCount']) ? $data['connectionCount'] : null;
         $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : null;
@@ -726,6 +737,30 @@ class ServiceList implements ModelInterface, ArrayAccess
     public function setPorts($ports)
     {
         $this->container['ports'] = $ports;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  接口型VLAN场景服务端IPv4地址或域名
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 接口型VLAN场景服务端IPv4地址或域名
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

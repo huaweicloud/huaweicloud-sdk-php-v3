@@ -20,8 +20,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sequenceNo  剧本序号。
-    * title  段落标题。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 不涉及
+    * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
     *
@@ -36,8 +36,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sequenceNo  剧本序号。
-    * title  段落标题。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 不涉及
+    * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
     *
@@ -73,8 +73,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sequenceNo  剧本序号。
-    * title  段落标题。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 不涉及
+    * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
     *
@@ -89,8 +89,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sequenceNo  剧本序号。
-    * title  段落标题。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 不涉及
+    * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
     *
@@ -105,8 +105,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sequenceNo  剧本序号。
-    * title  段落标题。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 不涉及
+    * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
     *
@@ -219,7 +219,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequenceNo
-    *  剧本序号。
+    *  **参数解释**： 剧本序号。 **约束限制**： 不涉及
     *
     * @return int|null
     */
@@ -231,7 +231,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     /**
     * Sets sequenceNo
     *
-    * @param int|null $sequenceNo 剧本序号。
+    * @param int|null $sequenceNo **参数解释**： 剧本序号。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -243,7 +243,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets title
-    *  段落标题。
+    *  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -255,7 +255,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     /**
     * Sets title
     *
-    * @param string|null $title 段落标题。
+    * @param string|null $title **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */

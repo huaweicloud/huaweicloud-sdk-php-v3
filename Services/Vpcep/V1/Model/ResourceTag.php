@@ -20,8 +20,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。最大长度36个unicode字符。 key需要满足标签字符集规范。
-    * value  值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    * key  键。最大长度128个unicode字符。 key需要满足标签字符集规范。
+    * value  值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。最大长度36个unicode字符。 key需要满足标签字符集规范。
-    * value  值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    * key  键。最大长度128个unicode字符。 key需要满足标签字符集规范。
+    * value  值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。最大长度36个unicode字符。 key需要满足标签字符集规范。
-    * value  值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    * key  键。最大长度128个unicode字符。 key需要满足标签字符集规范。
+    * value  值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。最大长度36个unicode字符。 key需要满足标签字符集规范。
-    * value  值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    * key  键。最大长度128个unicode字符。 key需要满足标签字符集规范。
+    * value  值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。最大长度36个unicode字符。 key需要满足标签字符集规范。
-    * value  值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    * key  键。最大长度128个unicode字符。 key需要满足标签字符集规范。
+    * value  值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @var string[]
     */
@@ -172,17 +172,14 @@ class ResourceTag implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
-            if ((mb_strlen($this->container['key']) > 36)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['key']) > 128)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 43)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
-            }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
             }
         return $invalidProperties;
     }
@@ -200,7 +197,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。最大长度36个unicode字符。 key需要满足标签字符集规范。
+    *  键。最大长度128个unicode字符。 key需要满足标签字符集规范。
     *
     * @return string
     */
@@ -212,7 +209,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。最大长度36个unicode字符。 key需要满足标签字符集规范。
+    * @param string $key 键。最大长度128个unicode字符。 key需要满足标签字符集规范。
     *
     * @return $this
     */
@@ -224,7 +221,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    *  值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @return string|null
     */
@@ -236,7 +233,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值。action为create时必选，每个值最大长度43个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
+    * @param string|null $value 值。action为create时必选，每个值最大长度255个unicode字符， 删除时如果value有值按照key/value删除， 如果value没值，则按照key删除。 value需要满足标签字符集规范。
     *
     * @return $this
     */

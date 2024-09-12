@@ -20,8 +20,8 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
-    * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    * relation  **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
+    * priority  **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     * tags  匹配关系配置
     *
     * @var string[]
@@ -34,8 +34,8 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
-    * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    * relation  **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
+    * priority  **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     * tags  匹配关系配置
     *
     * @var string[]
@@ -69,8 +69,8 @@ class HitCondition implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
-    * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    * relation  **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
+    * priority  **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     * tags  匹配关系配置
     *
     * @var string[]
@@ -83,8 +83,8 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
-    * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    * relation  **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
+    * priority  **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     * tags  匹配关系配置
     *
     * @var string[]
@@ -97,8 +97,8 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * relation  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
-    * priority  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    * relation  **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
+    * priority  **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     * tags  匹配关系配置
     *
     * @var string[]
@@ -233,7 +233,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets relation
-    *  条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
+    *  **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -245,7 +245,7 @@ class HitCondition implements ModelInterface, ArrayAccess
     /**
     * Sets relation
     *
-    * @param string|null $relation 条件关系 * AND ：表示多个条件同时满足 * OR：表示多个条件满足其一即可 * RESERVED: 兜底回复不会去判断其他命中条件
+    * @param string|null $relation **参数解释**： 条件关系。对于多个条件的逻辑运算关系。 **约束限制**： 不涉及。 **取值范围**： * AND：表示多个条件同时满足。 * OR：表示多个条件满足其一即可。 * RESERVED：兜底回复不会去判断其他命中条件。  **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -257,7 +257,7 @@ class HitCondition implements ModelInterface, ArrayAccess
 
     /**
     * Gets priority
-    *  优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    *  **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     *
     * @return int|null
     */
@@ -269,7 +269,7 @@ class HitCondition implements ModelInterface, ArrayAccess
     /**
     * Sets priority
     *
-    * @param int|null $priority 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值
+    * @param int|null $priority **参数解释**： 优先级，数值越低优先级越高；取值0-999，默认值为500，为可选值 **约束限制**： 不涉及
     *
     * @return $this
     */

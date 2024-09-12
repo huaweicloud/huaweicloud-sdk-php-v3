@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\PanguLargeModels\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowResourceInstancesRequest implements ModelInterface, ArrayAccess
+class ExecuteChatCompletionResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,38 @@ class ShowResourceInstancesRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowResourceInstancesRequest';
+    protected static $openAPIModelName = 'ExecuteChatCompletionResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * id  响应ID
+    * created  响应时间
+    * choices  模型回复
+    * usage  usage
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceType' => 'string',
-            'body' => '\HuaweiCloud\SDK\Cce\V3\Model\ShowResourceInstances'
+            'id' => 'string',
+            'created' => 'int',
+            'choices' => '\HuaweiCloud\SDK\PanguLargeModels\V2\Model\ChatChoice[]',
+            'usage' => '\HuaweiCloud\SDK\PanguLargeModels\V2\Model\CompletionUsage'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * id  响应ID
+    * created  响应时间
+    * choices  模型回复
+    * usage  usage
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceType' => null,
-        'body' => null
+        'id' => null,
+        'created' => null,
+        'choices' => null,
+        'usage' => null
     ];
 
     /**
@@ -65,38 +74,50 @@ class ShowResourceInstancesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * id  响应ID
+    * created  响应时间
+    * choices  模型回复
+    * usage  usage
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceType' => 'resource_type',
-            'body' => 'body'
+            'id' => 'id',
+            'created' => 'created',
+            'choices' => 'choices',
+            'usage' => 'usage'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * id  响应ID
+    * created  响应时间
+    * choices  模型回复
+    * usage  usage
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceType' => 'setResourceType',
-            'body' => 'setBody'
+            'id' => 'setId',
+            'created' => 'setCreated',
+            'choices' => 'setChoices',
+            'usage' => 'setUsage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * id  响应ID
+    * created  响应时间
+    * choices  模型回复
+    * usage  usage
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceType' => 'getResourceType',
-            'body' => 'getBody'
+            'id' => 'getId',
+            'created' => 'getCreated',
+            'choices' => 'getChoices',
+            'usage' => 'getUsage'
     ];
 
     /**
@@ -157,8 +178,10 @@ class ShowResourceInstancesRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['choices'] = isset($data['choices']) ? $data['choices'] : null;
+        $this->container['usage'] = isset($data['usage']) ? $data['usage'] : null;
     }
 
     /**
@@ -169,9 +192,6 @@ class ShowResourceInstancesRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceType'] === null) {
-            $invalidProperties[] = "'resourceType' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -187,50 +207,98 @@ class ShowResourceInstancesRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceType
-    *  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * Gets id
+    *  响应ID
     *
-    * @return string
+    * @return string|null
     */
-    public function getResourceType()
+    public function getId()
     {
-        return $this->container['resourceType'];
+        return $this->container['id'];
     }
 
     /**
-    * Sets resourceType
+    * Sets id
     *
-    * @param string $resourceType 资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string|null $id 响应ID
     *
     * @return $this
     */
-    public function setResourceType($resourceType)
+    public function setId($id)
     {
-        $this->container['resourceType'] = $resourceType;
+        $this->container['id'] = $id;
         return $this;
     }
 
     /**
-    * Gets body
-    *  body
+    * Gets created
+    *  响应时间
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ShowResourceInstances|null
+    * @return int|null
     */
-    public function getBody()
+    public function getCreated()
     {
-        return $this->container['body'];
+        return $this->container['created'];
     }
 
     /**
-    * Sets body
+    * Sets created
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ShowResourceInstances|null $body body
+    * @param int|null $created 响应时间
     *
     * @return $this
     */
-    public function setBody($body)
+    public function setCreated($created)
     {
-        $this->container['body'] = $body;
+        $this->container['created'] = $created;
+        return $this;
+    }
+
+    /**
+    * Gets choices
+    *  模型回复
+    *
+    * @return \HuaweiCloud\SDK\PanguLargeModels\V2\Model\ChatChoice[]|null
+    */
+    public function getChoices()
+    {
+        return $this->container['choices'];
+    }
+
+    /**
+    * Sets choices
+    *
+    * @param \HuaweiCloud\SDK\PanguLargeModels\V2\Model\ChatChoice[]|null $choices 模型回复
+    *
+    * @return $this
+    */
+    public function setChoices($choices)
+    {
+        $this->container['choices'] = $choices;
+        return $this;
+    }
+
+    /**
+    * Gets usage
+    *  usage
+    *
+    * @return \HuaweiCloud\SDK\PanguLargeModels\V2\Model\CompletionUsage|null
+    */
+    public function getUsage()
+    {
+        return $this->container['usage'];
+    }
+
+    /**
+    * Sets usage
+    *
+    * @param \HuaweiCloud\SDK\PanguLargeModels\V2\Model\CompletionUsage|null $usage usage
+    *
+    * @return $this
+    */
+    public function setUsage($usage)
+    {
+        $this->container['usage'] = $usage;
         return $this;
     }
 

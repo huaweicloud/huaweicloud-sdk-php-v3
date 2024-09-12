@@ -20,7 +20,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  事件条目数。
+    * total  **参数解释**： 事件条目数。
     * events  事件内容。
     * reviewConfig  reviewConfig
     *
@@ -34,7 +34,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  事件条目数。
+    * total  **参数解释**： 事件条目数。
     * events  事件内容。
     * reviewConfig  reviewConfig
     *
@@ -69,7 +69,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  事件条目数。
+    * total  **参数解释**： 事件条目数。
     * events  事件内容。
     * reviewConfig  reviewConfig
     *
@@ -83,7 +83,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  事件条目数。
+    * total  **参数解释**： 事件条目数。
     * events  事件内容。
     * reviewConfig  reviewConfig
     *
@@ -97,7 +97,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  事件条目数。
+    * total  **参数解释**： 事件条目数。
     * events  事件内容。
     * reviewConfig  reviewConfig
     *
@@ -205,7 +205,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  事件条目数。
+    *  **参数解释**： 事件条目数。
     *
     * @return int
     */
@@ -217,7 +217,7 @@ class ReportLiveEventReq implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int $total 事件条目数。
+    * @param int $total **参数解释**： 事件条目数。
     *
     * @return $this
     */

@@ -20,12 +20,12 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * textType  文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    * textType  **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     * textContext  文本。
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
-    * displayDuration  文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    * fontName  **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。
+    * displayDuration  **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -40,12 +40,12 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * textType  文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    * textType  **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     * textContext  文本。
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
-    * displayDuration  文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    * fontName  **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。
+    * displayDuration  **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -81,12 +81,12 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * textType  文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    * textType  **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     * textContext  文本。
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
-    * displayDuration  文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    * fontName  **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。
+    * displayDuration  **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -101,12 +101,12 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * textType  文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    * textType  **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     * textContext  文本。
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
-    * displayDuration  文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    * fontName  **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。
+    * displayDuration  **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -121,12 +121,12 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * textType  文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    * textType  **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     * textContext  文本。
-    * fontName  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
-    * displayDuration  文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    * fontName  **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * fontSize  **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。
+    * displayDuration  **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -288,7 +288,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets textType
-    *  文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    *  **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     *
     * @return string|null
     */
@@ -300,7 +300,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets textType
     *
-    * @param string|null $textType 文本类型。 * DYNAMIC: 动态文本，需要进行关键字替换。 * STATIC: 静态文本。
+    * @param string|null $textType **参数解释**： 文本类型。 * DYNAMIC：动态文本，需要进行关键字替换。 * STATIC：静态文本。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontName
-    *  字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    *  **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontName
     *
-    * @param string|null $fontName 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
+    * @param string|null $fontName **参数解释**： 字体。当前支持的字体： * HarmonyOS_Sans_SC_Black：鸿蒙粗体 * HarmonyOS_Sans_SC_Regular：鸿蒙常规 * HarmonyOS_Sans_SC_Thin：鸿蒙细体 * fzyouh：方正瘦体
     *
     * @return $this
     */
@@ -360,7 +360,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontSize
-    *  字体大小（像素）。  取值范围：[4, 120]
+    *  **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontSize
     *
-    * @param int|null $fontSize 字体大小（像素）。  取值范围：[4, 120]
+    * @param int|null $fontSize **参数解释**： 字体大小（像素）。  业务取值范围：[4, 120]，请以业务取值范围为准。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontColor
-    *  字体颜色。RGB颜色值。
+    *  **参数解释**： 字体颜色。RGB颜色值。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontColor
     *
-    * @param string|null $fontColor 字体颜色。RGB颜色值。
+    * @param string|null $fontColor **参数解释**： 字体颜色。RGB颜色值。
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayDuration
-    *  文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    *  **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @return int|null
     */
@@ -420,7 +420,7 @@ class SmartTextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets displayDuration
     *
-    * @param int|null $displayDuration 文本显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致
+    * @param int|null $displayDuration **参数解释**： 文本显示时长，单位s。 显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致；若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @return $this
     */

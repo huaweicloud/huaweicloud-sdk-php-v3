@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\PanguLargeModels\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchCreateDeleteResourceTagsRequest implements ModelInterface, ArrayAccess
+class TextChoice implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,30 @@ class BatchCreateDeleteResourceTagsRequest implements ModelInterface, ArrayAcces
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchCreateDeleteResourceTagsRequest';
+    protected static $openAPIModelName = 'TextChoice';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * index  回复的索引
+    * text  模型响应
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceType' => 'string',
-            'resourceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateDeleteResourceTags'
+            'index' => 'int',
+            'text' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * index  回复的索引
+    * text  模型响应
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceType' => null,
-        'resourceId' => null,
-        'body' => null
+        'index' => null,
+        'text' => null
     ];
 
     /**
@@ -69,44 +65,38 @@ class BatchCreateDeleteResourceTagsRequest implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * index  回复的索引
+    * text  模型响应
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceType' => 'resource_type',
-            'resourceId' => 'resource_id',
-            'body' => 'body'
+            'index' => 'index',
+            'text' => 'text'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * index  回复的索引
+    * text  模型响应
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceType' => 'setResourceType',
-            'resourceId' => 'setResourceId',
-            'body' => 'setBody'
+            'index' => 'setIndex',
+            'text' => 'setText'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * body  body
+    * index  回复的索引
+    * text  模型响应
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceType' => 'getResourceType',
-            'resourceId' => 'getResourceId',
-            'body' => 'getBody'
+            'index' => 'getIndex',
+            'text' => 'getText'
     ];
 
     /**
@@ -167,9 +157,8 @@ class BatchCreateDeleteResourceTagsRequest implements ModelInterface, ArrayAcces
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
-        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
+        $this->container['index'] = isset($data['index']) ? $data['index'] : null;
+        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
     }
 
     /**
@@ -180,15 +169,12 @@ class BatchCreateDeleteResourceTagsRequest implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceType'] === null) {
-            $invalidProperties[] = "'resourceType' can't be null";
+        if ($this->container['index'] === null) {
+            $invalidProperties[] = "'index' can't be null";
         }
-        if ($this->container['resourceId'] === null) {
-            $invalidProperties[] = "'resourceId' can't be null";
+        if ($this->container['text'] === null) {
+            $invalidProperties[] = "'text' can't be null";
         }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['resourceId'])) {
-                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
-            }
         return $invalidProperties;
     }
 
@@ -204,74 +190,50 @@ class BatchCreateDeleteResourceTagsRequest implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets resourceType
-    *  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * Gets index
+    *  回复的索引
     *
-    * @return string
+    * @return int
     */
-    public function getResourceType()
+    public function getIndex()
     {
-        return $this->container['resourceType'];
+        return $this->container['index'];
     }
 
     /**
-    * Sets resourceType
+    * Sets index
     *
-    * @param string $resourceType 资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param int $index 回复的索引
     *
     * @return $this
     */
-    public function setResourceType($resourceType)
+    public function setIndex($index)
     {
-        $this->container['resourceType'] = $resourceType;
+        $this->container['index'] = $index;
         return $this;
     }
 
     /**
-    * Gets resourceId
-    *  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * Gets text
+    *  模型响应
     *
     * @return string
     */
-    public function getResourceId()
+    public function getText()
     {
-        return $this->container['resourceId'];
+        return $this->container['text'];
     }
 
     /**
-    * Sets resourceId
+    * Sets text
     *
-    * @param string $resourceId 资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param string $text 模型响应
     *
     * @return $this
     */
-    public function setResourceId($resourceId)
+    public function setText($text)
     {
-        $this->container['resourceId'] = $resourceId;
-        return $this;
-    }
-
-    /**
-    * Gets body
-    *  body
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\BatchCreateDeleteResourceTags|null
-    */
-    public function getBody()
-    {
-        return $this->container['body'];
-    }
-
-    /**
-    * Sets body
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\BatchCreateDeleteResourceTags|null $body body
-    *
-    * @return $this
-    */
-    public function setBody($body)
-    {
-        $this->container['body'] = $body;
+        $this->container['text'] = $text;
         return $this;
     }
 

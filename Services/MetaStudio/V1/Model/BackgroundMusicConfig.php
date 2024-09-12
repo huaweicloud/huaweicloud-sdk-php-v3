@@ -20,8 +20,8 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * musicAssetId  音乐资产ID，可以从资产库中查询。
-    * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    * musicAssetId  **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * volume  **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * musicAssetId  音乐资产ID，可以从资产库中查询。
-    * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    * musicAssetId  **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * volume  **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * musicAssetId  音乐资产ID，可以从资产库中查询。
-    * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    * musicAssetId  **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * volume  **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * musicAssetId  音乐资产ID，可以从资产库中查询。
-    * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    * musicAssetId  **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * volume  **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * musicAssetId  音乐资产ID，可以从资产库中查询。
-    * volume  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    * musicAssetId  **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * volume  **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets musicAssetId
-    *  音乐资产ID，可以从资产库中查询。
+    *  **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets musicAssetId
     *
-    * @param string|null $musicAssetId 音乐资产ID，可以从资产库中查询。
+    * @param string|null $musicAssetId **参数解释**： 音乐资产ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets volume
-    *  音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    *  **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @return int|null
     */
@@ -233,7 +233,7 @@ class BackgroundMusicConfig implements ModelInterface, ArrayAccess
     /**
     * Sets volume
     *
-    * @param int|null $volume 音乐音量。如100，表示音量100%，50表示音量50%。  默认值100，最小值0，最大值100。
+    * @param int|null $volume **参数解释**： 音乐音量。如100，表示音量100%，50表示音量50%。 **约束限制**： 不涉及。
     *
     * @return $this
     */

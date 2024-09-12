@@ -7,8 +7,9 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResInstanceBody implements ModelInterface, ArrayAccess
+class AddNodesToNodePoolResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,42 +17,26 @@ class ResInstanceBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResInstanceBody';
+    protected static $openAPIModelName = 'AddNodesToNodePoolResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源id
-    * resourceDetail  资源详情
-    * tags  资源标签
-    * sysTags  系统标签
-    * resourceName  资源名称
+    * jobid  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceId' => 'string',
-            'resourceDetail' => 'object',
-            'tags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'sysTags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'resourceName' => 'string'
+            'jobid' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源id
-    * resourceDetail  资源详情
-    * tags  资源标签
-    * sysTags  系统标签
-    * resourceName  资源名称
+    * jobid  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceId' => null,
-        'resourceDetail' => null,
-        'tags' => null,
-        'sysTags' => null,
-        'resourceName' => null
+        'jobid' => 'uuid'
     ];
 
     /**
@@ -77,56 +62,32 @@ class ResInstanceBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源id
-    * resourceDetail  资源详情
-    * tags  资源标签
-    * sysTags  系统标签
-    * resourceName  资源名称
+    * jobid  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceId' => 'resource_id',
-            'resourceDetail' => 'resource_detail',
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags',
-            'resourceName' => 'resource_name'
+            'jobid' => 'jobid'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源id
-    * resourceDetail  资源详情
-    * tags  资源标签
-    * sysTags  系统标签
-    * resourceName  资源名称
+    * jobid  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceId' => 'setResourceId',
-            'resourceDetail' => 'setResourceDetail',
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags',
-            'resourceName' => 'setResourceName'
+            'jobid' => 'setJobid'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源id
-    * resourceDetail  资源详情
-    * tags  资源标签
-    * sysTags  系统标签
-    * resourceName  资源名称
+    * jobid  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceId' => 'getResourceId',
-            'resourceDetail' => 'getResourceDetail',
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags',
-            'resourceName' => 'getResourceName'
+            'jobid' => 'getJobid'
     ];
 
     /**
@@ -187,11 +148,7 @@ class ResInstanceBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
-        $this->container['resourceDetail'] = isset($data['resourceDetail']) ? $data['resourceDetail'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
-        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
+        $this->container['jobid'] = isset($data['jobid']) ? $data['jobid'] : null;
     }
 
     /**
@@ -217,122 +174,26 @@ class ResInstanceBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceId
-    *  资源id
+    * Gets jobid
+    *  提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @return string|null
     */
-    public function getResourceId()
+    public function getJobid()
     {
-        return $this->container['resourceId'];
+        return $this->container['jobid'];
     }
 
     /**
-    * Sets resourceId
+    * Sets jobid
     *
-    * @param string|null $resourceId 资源id
+    * @param string|null $jobid 提交任务成功后返回的任务ID，用户可以使用该ID对任务执行情况进行查询。
     *
     * @return $this
     */
-    public function setResourceId($resourceId)
+    public function setJobid($jobid)
     {
-        $this->container['resourceId'] = $resourceId;
-        return $this;
-    }
-
-    /**
-    * Gets resourceDetail
-    *  资源详情
-    *
-    * @return object|null
-    */
-    public function getResourceDetail()
-    {
-        return $this->container['resourceDetail'];
-    }
-
-    /**
-    * Sets resourceDetail
-    *
-    * @param object|null $resourceDetail 资源详情
-    *
-    * @return $this
-    */
-    public function setResourceDetail($resourceDetail)
-    {
-        $this->container['resourceDetail'] = $resourceDetail;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  资源标签
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $tags 资源标签
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  系统标签
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $sysTags 系统标签
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
-        return $this;
-    }
-
-    /**
-    * Gets resourceName
-    *  资源名称
-    *
-    * @return string|null
-    */
-    public function getResourceName()
-    {
-        return $this->container['resourceName'];
-    }
-
-    /**
-    * Sets resourceName
-    *
-    * @param string|null $resourceName 资源名称
-    *
-    * @return $this
-    */
-    public function setResourceName($resourceName)
-    {
-        $this->container['resourceName'] = $resourceName;
+        $this->container['jobid'] = $jobid;
         return $this;
     }
 

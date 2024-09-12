@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\Aom\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowResourceInstancesResponse implements ModelInterface, ArrayAccess
+class PageInfo implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,30 +16,34 @@ class ShowResourceInstancesResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowResourceInstancesResponse';
+    protected static $openAPIModelName = 'PageInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * totalCount  数量
-    * resources  资源
+    * currentCount  当前页事件、告警总数
+    * previousMarker  前一个marker
+    * nextMarker  下一个marker
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'totalCount' => 'int',
-            'resources' => '\HuaweiCloud\SDK\Cce\V3\Model\ResInstanceBody[]'
+            'currentCount' => 'string',
+            'previousMarker' => 'string',
+            'nextMarker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * totalCount  数量
-    * resources  资源
+    * currentCount  当前页事件、告警总数
+    * previousMarker  前一个marker
+    * nextMarker  下一个marker
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'totalCount' => null,
-        'resources' => null
+        'currentCount' => null,
+        'previousMarker' => null,
+        'nextMarker' => null
     ];
 
     /**
@@ -66,38 +69,44 @@ class ShowResourceInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * totalCount  数量
-    * resources  资源
+    * currentCount  当前页事件、告警总数
+    * previousMarker  前一个marker
+    * nextMarker  下一个marker
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'totalCount' => 'total_count',
-            'resources' => 'resources'
+            'currentCount' => 'current_count',
+            'previousMarker' => 'previous_marker',
+            'nextMarker' => 'next_marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * totalCount  数量
-    * resources  资源
+    * currentCount  当前页事件、告警总数
+    * previousMarker  前一个marker
+    * nextMarker  下一个marker
     *
     * @var string[]
     */
     protected static $setters = [
-            'totalCount' => 'setTotalCount',
-            'resources' => 'setResources'
+            'currentCount' => 'setCurrentCount',
+            'previousMarker' => 'setPreviousMarker',
+            'nextMarker' => 'setNextMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * totalCount  数量
-    * resources  资源
+    * currentCount  当前页事件、告警总数
+    * previousMarker  前一个marker
+    * nextMarker  下一个marker
     *
     * @var string[]
     */
     protected static $getters = [
-            'totalCount' => 'getTotalCount',
-            'resources' => 'getResources'
+            'currentCount' => 'getCurrentCount',
+            'previousMarker' => 'getPreviousMarker',
+            'nextMarker' => 'getNextMarker'
     ];
 
     /**
@@ -158,8 +167,9 @@ class ShowResourceInstancesResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
-        $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
+        $this->container['currentCount'] = isset($data['currentCount']) ? $data['currentCount'] : null;
+        $this->container['previousMarker'] = isset($data['previousMarker']) ? $data['previousMarker'] : null;
+        $this->container['nextMarker'] = isset($data['nextMarker']) ? $data['nextMarker'] : null;
     }
 
     /**
@@ -170,6 +180,15 @@ class ShowResourceInstancesResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['currentCount'] === null) {
+            $invalidProperties[] = "'currentCount' can't be null";
+        }
+        if ($this->container['previousMarker'] === null) {
+            $invalidProperties[] = "'previousMarker' can't be null";
+        }
+        if ($this->container['nextMarker'] === null) {
+            $invalidProperties[] = "'nextMarker' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -185,50 +204,74 @@ class ShowResourceInstancesResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets totalCount
-    *  数量
+    * Gets currentCount
+    *  当前页事件、告警总数
     *
-    * @return int|null
+    * @return string
     */
-    public function getTotalCount()
+    public function getCurrentCount()
     {
-        return $this->container['totalCount'];
+        return $this->container['currentCount'];
     }
 
     /**
-    * Sets totalCount
+    * Sets currentCount
     *
-    * @param int|null $totalCount 数量
+    * @param string $currentCount 当前页事件、告警总数
     *
     * @return $this
     */
-    public function setTotalCount($totalCount)
+    public function setCurrentCount($currentCount)
     {
-        $this->container['totalCount'] = $totalCount;
+        $this->container['currentCount'] = $currentCount;
         return $this;
     }
 
     /**
-    * Gets resources
-    *  资源
+    * Gets previousMarker
+    *  前一个marker
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResInstanceBody[]|null
+    * @return string
     */
-    public function getResources()
+    public function getPreviousMarker()
     {
-        return $this->container['resources'];
+        return $this->container['previousMarker'];
     }
 
     /**
-    * Sets resources
+    * Sets previousMarker
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResInstanceBody[]|null $resources 资源
+    * @param string $previousMarker 前一个marker
     *
     * @return $this
     */
-    public function setResources($resources)
+    public function setPreviousMarker($previousMarker)
     {
-        $this->container['resources'] = $resources;
+        $this->container['previousMarker'] = $previousMarker;
+        return $this;
+    }
+
+    /**
+    * Gets nextMarker
+    *  下一个marker
+    *
+    * @return string
+    */
+    public function getNextMarker()
+    {
+        return $this->container['nextMarker'];
+    }
+
+    /**
+    * Sets nextMarker
+    *
+    * @param string $nextMarker 下一个marker
+    *
+    * @return $this
+    */
+    public function setNextMarker($nextMarker)
+    {
+        $this->container['nextMarker'] = $nextMarker;
         return $this;
     }
 

@@ -22,12 +22,12 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * interactionCallbackUrl  **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
@@ -48,12 +48,12 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * interactionCallbackUrl  **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
@@ -95,12 +95,12 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * interactionCallbackUrl  **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
@@ -121,12 +121,12 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * interactionCallbackUrl  **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
@@ -147,12 +147,12 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * videoConfig  videoConfig
     * playPolicy  playPolicy
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * interactionCallbackUrl  互动回调URL，含鉴权信息。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * interactionCallbackUrl  **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     *
     * @var string[]
@@ -339,7 +339,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputUrls
-    *  RTMP视频推流第三方直播平台地址。
+    *  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -351,7 +351,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     /**
     * Sets outputUrls
     *
-    * @param string[]|null $outputUrls RTMP视频推流第三方直播平台地址。
+    * @param string[]|null $outputUrls **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -363,7 +363,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamKeys
-    *  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -375,7 +375,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     /**
     * Sets streamKeys
     *
-    * @param string[]|null $streamKeys RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * @param string[]|null $streamKeys **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -387,7 +387,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets interactionCallbackUrl
-    *  互动回调URL，含鉴权信息。
+    *  **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -399,7 +399,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     /**
     * Sets interactionCallbackUrl
     *
-    * @param string|null $interactionCallbackUrl 互动回调URL，含鉴权信息。
+    * @param string|null $interactionCallbackUrl **参数解释**： 互动回调URL，含鉴权信息。 互动规则trigger.reply_mode配置为CALLBACK时填写 **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -459,7 +459,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewMode
-    *  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @return string|null
     */
@@ -471,7 +471,7 @@ class StartSmartLiveReq implements ModelInterface, ArrayAccess
     /**
     * Sets viewMode
     *
-    * @param string|null $viewMode 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * @param string|null $viewMode **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @return $this
     */

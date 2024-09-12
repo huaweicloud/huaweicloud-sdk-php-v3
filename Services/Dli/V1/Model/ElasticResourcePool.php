@@ -39,7 +39,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * prepayCu  预付费cu数量
     * chargingMode  计费类型
     * manager  弹性资源池类型
-    * label  标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -87,7 +87,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * prepayCu  预付费cu数量
     * chargingMode  计费类型
     * manager  弹性资源池类型
-    * label  标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -156,7 +156,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * prepayCu  预付费cu数量
     * chargingMode  计费类型
     * manager  弹性资源池类型
-    * label  标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -204,7 +204,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * prepayCu  预付费cu数量
     * chargingMode  计费类型
     * manager  弹性资源池类型
-    * label  标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -252,7 +252,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     * prepayCu  预付费cu数量
     * chargingMode  计费类型
     * manager  弹性资源池类型
-    * label  标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -839,7 +839,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
 
     /**
     * Gets label
-    *  标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    *  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @return map[string,string]|null
     */
@@ -851,7 +851,7 @@ class ElasticResourcePool implements ModelInterface, ArrayAccess
     /**
     * Sets label
     *
-    * @param map[string,string]|null $label 标识弹性资源池，目前只支持 开发者标签，\"label\": {\"billing_spec_code\":\"developer\"}
+    * @param map[string,string]|null $label 弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @return $this
     */

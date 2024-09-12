@@ -37,6 +37,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
+    * isFlexus  是否是flexus任务
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'tag' => 'string',
             'jobId' => 'string',
             'name' => 'string',
-            'modelResolution' => 'string'
+            'modelResolution' => 'string',
+            'isFlexus' => 'bool'
     ];
 
     /**
@@ -79,6 +81,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
+    * isFlexus  是否是flexus任务
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
         'tag' => null,
         'jobId' => null,
         'name' => null,
-        'modelResolution' => null
+        'modelResolution' => null,
+        'isFlexus' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
+    * isFlexus  是否是flexus任务
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'tag' => 'tag',
             'jobId' => 'job_id',
             'name' => 'name',
-            'modelResolution' => 'model_resolution'
+            'modelResolution' => 'model_resolution',
+            'isFlexus' => 'is_flexus'
     ];
 
     /**
@@ -184,6 +190,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
+    * isFlexus  是否是flexus任务
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'tag' => 'setTag',
             'jobId' => 'setJobId',
             'name' => 'setName',
-            'modelResolution' => 'setModelResolution'
+            'modelResolution' => 'setModelResolution',
+            'isFlexus' => 'setIsFlexus'
     ];
 
     /**
@@ -226,6 +234,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     * jobId  任务ID。
     * name  分身数字人模型名称
     * modelResolution  模型分辨率
+    * isFlexus  是否是flexus任务
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
             'tag' => 'getTag',
             'jobId' => 'getJobId',
             'name' => 'getName',
-            'modelResolution' => 'getModelResolution'
+            'modelResolution' => 'getModelResolution',
+            'isFlexus' => 'getIsFlexus'
     ];
 
     /**
@@ -324,6 +334,7 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['modelResolution'] = isset($data['modelResolution']) ? $data['modelResolution'] : null;
+        $this->container['isFlexus'] = isset($data['isFlexus']) ? $data['isFlexus'] : null;
     }
 
     /**
@@ -855,6 +866,30 @@ class List2dModelTrainingJobRequest implements ModelInterface, ArrayAccess
     public function setModelResolution($modelResolution)
     {
         $this->container['modelResolution'] = $modelResolution;
+        return $this;
+    }
+
+    /**
+    * Gets isFlexus
+    *  是否是flexus任务
+    *
+    * @return bool|null
+    */
+    public function getIsFlexus()
+    {
+        return $this->container['isFlexus'];
+    }
+
+    /**
+    * Sets isFlexus
+    *
+    * @param bool|null $isFlexus 是否是flexus任务
+    *
+    * @return $this
+    */
+    public function setIsFlexus($isFlexus)
+    {
+        $this->container['isFlexus'] = $isFlexus;
         return $this;
     }
 

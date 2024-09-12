@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\PanguLargeModels\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowCustomizeClusterTagsByProjectIdRequest implements ModelInterface, ArrayAccess
+class ChatChoice implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class ShowCustomizeClusterTagsByProjectIdRequest implements ModelInterface, Arra
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowCustomizeClusterTagsByProjectIdRequest';
+    protected static $openAPIModelName = 'ChatChoice';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceType' => 'string'
+            'index' => 'int',
+            'message' => '\HuaweiCloud\SDK\PanguLargeModels\V1\Model\MessageItem'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceType' => null
+        'index' => null,
+        'message' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class ShowCustomizeClusterTagsByProjectIdRequest implements ModelInterface, Arra
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceType' => 'resource_type'
+            'index' => 'index',
+            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceType' => 'setResourceType'
+            'index' => 'setIndex',
+            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceType' => 'getResourceType'
+            'index' => 'getIndex',
+            'message' => 'getMessage'
     ];
 
     /**
@@ -147,7 +157,8 @@ class ShowCustomizeClusterTagsByProjectIdRequest implements ModelInterface, Arra
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
+        $this->container['index'] = isset($data['index']) ? $data['index'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -158,8 +169,11 @@ class ShowCustomizeClusterTagsByProjectIdRequest implements ModelInterface, Arra
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceType'] === null) {
-            $invalidProperties[] = "'resourceType' can't be null";
+        if ($this->container['index'] === null) {
+            $invalidProperties[] = "'index' can't be null";
+        }
+        if ($this->container['message'] === null) {
+            $invalidProperties[] = "'message' can't be null";
         }
         return $invalidProperties;
     }
@@ -176,26 +190,50 @@ class ShowCustomizeClusterTagsByProjectIdRequest implements ModelInterface, Arra
     }
 
     /**
-    * Gets resourceType
-    *  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * Gets index
+    *  回复的索引
     *
-    * @return string
+    * @return int
     */
-    public function getResourceType()
+    public function getIndex()
     {
-        return $this->container['resourceType'];
+        return $this->container['index'];
     }
 
     /**
-    * Sets resourceType
+    * Sets index
     *
-    * @param string $resourceType 资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param int $index 回复的索引
     *
     * @return $this
     */
-    public function setResourceType($resourceType)
+    public function setIndex($index)
     {
-        $this->container['resourceType'] = $resourceType;
+        $this->container['index'] = $index;
+        return $this;
+    }
+
+    /**
+    * Gets message
+    *  message
+    *
+    * @return \HuaweiCloud\SDK\PanguLargeModels\V1\Model\MessageItem
+    */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+    * Sets message
+    *
+    * @param \HuaweiCloud\SDK\PanguLargeModels\V1\Model\MessageItem $message message
+    *
+    * @return $this
+    */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
         return $this;
     }
 

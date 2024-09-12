@@ -24,6 +24,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * commondResult  命令执行结果。 * EXCUTE_SUCCESS: 命令提交成功 * EXCUTE_FAILED: 命令提交失败
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
+    * excuteFailedMsg  命令执行失败原因描述
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -32,6 +33,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'commondResult' => 'string',
             'attachmentUploadUrl' => 'string[]',
             'multipartData' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\MultipartUploadInfo[]',
+            'excuteFailedMsg' => 'string',
             'xRequestId' => 'string'
     ];
 
@@ -40,6 +42,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * commondResult  命令执行结果。 * EXCUTE_SUCCESS: 命令提交成功 * EXCUTE_FAILED: 命令提交失败
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
+    * excuteFailedMsg  命令执行失败原因描述
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -48,6 +51,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
         'commondResult' => null,
         'attachmentUploadUrl' => null,
         'multipartData' => null,
+        'excuteFailedMsg' => null,
         'xRequestId' => null
     ];
 
@@ -77,6 +81,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * commondResult  命令执行结果。 * EXCUTE_SUCCESS: 命令提交成功 * EXCUTE_FAILED: 命令提交失败
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
+    * excuteFailedMsg  命令执行失败原因描述
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,6 +90,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'commondResult' => 'commond_result',
             'attachmentUploadUrl' => 'attachment_upload_url',
             'multipartData' => 'multipart_data',
+            'excuteFailedMsg' => 'excute_failed_msg',
             'xRequestId' => 'X-Request-Id'
     ];
 
@@ -93,6 +99,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * commondResult  命令执行结果。 * EXCUTE_SUCCESS: 命令提交成功 * EXCUTE_FAILED: 命令提交失败
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
+    * excuteFailedMsg  命令执行失败原因描述
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -101,6 +108,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'commondResult' => 'setCommondResult',
             'attachmentUploadUrl' => 'setAttachmentUploadUrl',
             'multipartData' => 'setMultipartData',
+            'excuteFailedMsg' => 'setExcuteFailedMsg',
             'xRequestId' => 'setXRequestId'
     ];
 
@@ -109,6 +117,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     * commondResult  命令执行结果。 * EXCUTE_SUCCESS: 命令提交成功 * EXCUTE_FAILED: 命令提交失败
     * attachmentUploadUrl  附件上传地址
     * multipartData  训练视频已上传分片信息
+    * excuteFailedMsg  命令执行失败原因描述
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -117,6 +126,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
             'commondResult' => 'getCommondResult',
             'attachmentUploadUrl' => 'getAttachmentUploadUrl',
             'multipartData' => 'getMultipartData',
+            'excuteFailedMsg' => 'getExcuteFailedMsg',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -196,6 +206,7 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
         $this->container['commondResult'] = isset($data['commondResult']) ? $data['commondResult'] : null;
         $this->container['attachmentUploadUrl'] = isset($data['attachmentUploadUrl']) ? $data['attachmentUploadUrl'] : null;
         $this->container['multipartData'] = isset($data['multipartData']) ? $data['multipartData'] : null;
+        $this->container['excuteFailedMsg'] = isset($data['excuteFailedMsg']) ? $data['excuteFailedMsg'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -215,6 +226,12 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
                 );
             }
 
+            if (!is_null($this->container['excuteFailedMsg']) && (mb_strlen($this->container['excuteFailedMsg']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'excuteFailedMsg', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['excuteFailedMsg']) && (mb_strlen($this->container['excuteFailedMsg']) < 0)) {
+                $invalidProperties[] = "invalid value for 'excuteFailedMsg', the character length must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -298,6 +315,30 @@ class Execute2dModelTrainingCommandByUserResponse implements ModelInterface, Arr
     public function setMultipartData($multipartData)
     {
         $this->container['multipartData'] = $multipartData;
+        return $this;
+    }
+
+    /**
+    * Gets excuteFailedMsg
+    *  命令执行失败原因描述
+    *
+    * @return string|null
+    */
+    public function getExcuteFailedMsg()
+    {
+        return $this->container['excuteFailedMsg'];
+    }
+
+    /**
+    * Sets excuteFailedMsg
+    *
+    * @param string|null $excuteFailedMsg 命令执行失败原因描述
+    *
+    * @return $this
+    */
+    public function setExcuteFailedMsg($excuteFailedMsg)
+    {
+        $this->container['excuteFailedMsg'] = $excuteFailedMsg;
         return $this;
     }
 

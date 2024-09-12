@@ -20,8 +20,8 @@ class TagList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
-    * value  值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * key  键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
+    * value  值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TagList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
-    * value  值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * key  键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
+    * value  值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TagList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
-    * value  值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * key  键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
+    * value  值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TagList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
-    * value  值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * key  键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
+    * value  值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TagList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
-    * value  值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * key  键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
+    * value  值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @var string[]
     */
@@ -169,17 +169,14 @@ class TagList implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 36)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) > 128)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['key']) && (mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 43)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
-            }
-            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) < 1)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['value']) && (mb_strlen($this->container['value']) > 255)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
             }
         return $invalidProperties;
     }
@@ -197,7 +194,7 @@ class TagList implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    *  键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
     *
     * @return string|null
     */
@@ -209,7 +206,7 @@ class TagList implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键。 最大长度36个unicode字符。  key不能为空。不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * @param string|null $key 键。 key不能为空，长度1~128个字符（中文也可以输入128个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : = + - @。 _sys_开头属于系统标签，租户不能输入。 key两头不能有空格字符。
     *
     * @return $this
     */
@@ -221,7 +218,7 @@ class TagList implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    *  值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @return string|null
     */
@@ -233,7 +230,7 @@ class TagList implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值。 每个值最大长度43个unicode字符，可以为空字符串。  不能包含“=”、“*”、“<”、“>”、“\\”、“,”、“|”和“/”，且首尾字符不能为空格。
+    * @param string|null $value 值。 长度0~255个字符（中文也可以输入255个字符）。  可用 UTF-8 格式表示的字母(包含中文、西班牙语、葡语等)、数字和空格，以及以下字符： _ . : / = + - @。 资源标签值可以为空字符串。
     *
     * @return $this
     */

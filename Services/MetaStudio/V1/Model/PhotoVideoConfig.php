@@ -20,8 +20,8 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
-    * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    * codec  视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
+    * bitrate  **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
     *
     * @var string[]
@@ -34,8 +34,8 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
-    * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    * codec  视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
+    * bitrate  **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
     *
     * @var string[]
@@ -69,8 +69,8 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
-    * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    * codec  视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
+    * bitrate  **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
     *
     * @var string[]
@@ -83,8 +83,8 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
-    * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    * codec  视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
+    * bitrate  **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
     *
     * @var string[]
@@ -97,8 +97,8 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * codec  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
-    * bitrate  输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    * codec  视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
+    * bitrate  **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     * frameRate  帧率。  单位：FPS。
     *
     * @var string[]
@@ -257,7 +257,7 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets codec
-    *  视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
+    *  视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
     *
     * @return string
     */
@@ -269,7 +269,7 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     /**
     * Sets codec
     *
-    * @param string $codec 视频编码格式及视频文件格式。 * H264: h264编码，输出mp4文件
+    * @param string $codec 视频编码格式及视频文件格式。 * H264：h264编码，输出mp4文件
     *
     * @return $this
     */
@@ -281,7 +281,7 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets bitrate
-    *  输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    *  **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     *
     * @return int|null
     */
@@ -293,7 +293,7 @@ class PhotoVideoConfig implements ModelInterface, ArrayAccess
     /**
     * Sets bitrate
     *
-    * @param int|null $bitrate 输出平均码率。  单位：kbps。  最小值40，最大值30000。
+    * @param int|null $bitrate **参数解释**： 输出平均码率。  单位：kbps。  最小值40，最大值30000。
     *
     * @return $this
     */

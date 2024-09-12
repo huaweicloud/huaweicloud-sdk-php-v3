@@ -21,8 +21,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  智能交互对话总数。
-    * countConcurrency  智能交互对话总并发路数。
+    * count  **参数解释**： 智能交互对话总数。
+    * countConcurrency  **参数解释**： 智能交互对话总并发路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -37,8 +37,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  智能交互对话总数。
-    * countConcurrency  智能交互对话总并发路数。
+    * count  **参数解释**： 智能交互对话总数。
+    * countConcurrency  **参数解释**： 智能交互对话总并发路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -74,8 +74,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  智能交互对话总数。
-    * countConcurrency  智能交互对话总并发路数。
+    * count  **参数解释**： 智能交互对话总数。
+    * countConcurrency  **参数解释**： 智能交互对话总并发路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -90,8 +90,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  智能交互对话总数。
-    * countConcurrency  智能交互对话总并发路数。
+    * count  **参数解释**： 智能交互对话总数。
+    * countConcurrency  **参数解释**： 智能交互对话总并发路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -106,8 +106,8 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  智能交互对话总数。
-    * countConcurrency  智能交互对话总并发路数。
+    * count  **参数解释**： 智能交互对话总数。
+    * countConcurrency  **参数解释**： 智能交互对话总并发路数。
     * smartChatRooms  智能交互对话列表。
     * xRequestId  xRequestId
     *
@@ -220,7 +220,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  智能交互对话总数。
+    *  **参数解释**： 智能交互对话总数。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 智能交互对话总数。
+    * @param int|null $count **参数解释**： 智能交互对话总数。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets countConcurrency
-    *  智能交互对话总并发路数。
+    *  **参数解释**： 智能交互对话总并发路数。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class ListSmartChatRoomsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets countConcurrency
     *
-    * @param int|null $countConcurrency 智能交互对话总并发路数。
+    * @param int|null $countConcurrency **参数解释**： 智能交互对话总并发路数。
     *
     * @return $this
     */

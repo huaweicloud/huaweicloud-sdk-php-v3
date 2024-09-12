@@ -27,9 +27,9 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
-    * concurrency  并发路数。
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * concurrency  **参数解释**： 并发路数。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @var string[]
     */
@@ -55,9 +55,9 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
-    * concurrency  并发路数。
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * concurrency  **参数解释**： 并发路数。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @var string[]
     */
@@ -104,9 +104,9 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
-    * concurrency  并发路数。
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * concurrency  **参数解释**： 并发路数。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @var string[]
     */
@@ -132,9 +132,9 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
-    * concurrency  并发路数。
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * concurrency  **参数解释**： 并发路数。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @var string[]
     */
@@ -160,9 +160,9 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     * coverUrl  对话封面图URL
     * modelInfos  modelInfos
     * voiceConfig  voiceConfig
-    * concurrency  并发路数。
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * concurrency  **参数解释**： 并发路数。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @var string[]
     */
@@ -489,7 +489,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets concurrency
-    *  并发路数。
+    *  **参数解释**： 并发路数。
     *
     * @return int|null
     */
@@ -501,7 +501,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets concurrency
     *
-    * @param int|null $concurrency 并发路数。
+    * @param int|null $concurrency **参数解释**： 并发路数。
     *
     * @return $this
     */
@@ -513,7 +513,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -525,7 +525,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $createTime 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -537,7 +537,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -549,7 +549,7 @@ class SmartChatRoomBaseInfo implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $updateTime 更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */

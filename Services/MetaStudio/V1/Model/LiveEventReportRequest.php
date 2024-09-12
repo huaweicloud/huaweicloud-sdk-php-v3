@@ -27,7 +27,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -55,7 +55,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -104,7 +104,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -132,7 +132,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -160,7 +160,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * xAppUserId  第三方用户ID。不允许输入中文。
     * authKey  鉴权Key。通过HmacSHA256生成的鉴权key
-    * expiresTime  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * expiresTime  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     * refreshUrl  是否刷新URL
     * body  body
     *
@@ -495,7 +495,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets expiresTime
-    *  鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    *  **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     *
     * @return int|null
     */
@@ -507,7 +507,7 @@ class LiveEventReportRequest implements ModelInterface, ArrayAccess
     /**
     * Sets expiresTime
     *
-    * @param int|null $expiresTime 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
+    * @param int|null $expiresTime **参数解释**： 鉴权key过期时间。从1970年1月1日（UTC/GMT的午夜）开始所经过的豪秒数。
     *
     * @return $this
     */

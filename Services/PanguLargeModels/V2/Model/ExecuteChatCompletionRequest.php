@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\PanguLargeModels\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ResourceTagBody implements ModelInterface, ArrayAccess
+class ExecuteChatCompletionRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,38 +16,38 @@ class ResourceTagBody implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ResourceTagBody';
+    protected static $openAPIModelName = 'ExecuteChatCompletionRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  资源标签key
-    * value  资源标签value
-    * resourceId  资源id
-    * values  资源值列表
+    * contentType  发送的实体的MIME类型。
+    * poolId  资源池ID
+    * deploymentId  模型的部署ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'value' => 'string',
-            'resourceId' => 'string',
-            'values' => 'string[]'
+            'contentType' => 'string',
+            'poolId' => 'string',
+            'deploymentId' => 'string',
+            'body' => '\HuaweiCloud\SDK\PanguLargeModels\V2\Model\ChatCompletionReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  资源标签key
-    * value  资源标签value
-    * resourceId  资源id
-    * values  资源值列表
+    * contentType  发送的实体的MIME类型。
+    * poolId  资源池ID
+    * deploymentId  模型的部署ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'value' => null,
-        'resourceId' => null,
-        'values' => null
+        'contentType' => null,
+        'poolId' => null,
+        'deploymentId' => null,
+        'body' => null
     ];
 
     /**
@@ -73,50 +73,50 @@ class ResourceTagBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  资源标签key
-    * value  资源标签value
-    * resourceId  资源id
-    * values  资源值列表
+    * contentType  发送的实体的MIME类型。
+    * poolId  资源池ID
+    * deploymentId  模型的部署ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'value' => 'value',
-            'resourceId' => 'resourceId',
-            'values' => 'values'
+            'contentType' => 'Content-Type',
+            'poolId' => 'pool_id',
+            'deploymentId' => 'deployment_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  资源标签key
-    * value  资源标签value
-    * resourceId  资源id
-    * values  资源值列表
+    * contentType  发送的实体的MIME类型。
+    * poolId  资源池ID
+    * deploymentId  模型的部署ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'value' => 'setValue',
-            'resourceId' => 'setResourceId',
-            'values' => 'setValues'
+            'contentType' => 'setContentType',
+            'poolId' => 'setPoolId',
+            'deploymentId' => 'setDeploymentId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  资源标签key
-    * value  资源标签value
-    * resourceId  资源id
-    * values  资源值列表
+    * contentType  发送的实体的MIME类型。
+    * poolId  资源池ID
+    * deploymentId  模型的部署ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'value' => 'getValue',
-            'resourceId' => 'getResourceId',
-            'values' => 'getValues'
+            'contentType' => 'getContentType',
+            'poolId' => 'getPoolId',
+            'deploymentId' => 'getDeploymentId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -177,10 +177,10 @@ class ResourceTagBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
-        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
-        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['contentType'] = isset($data['contentType']) ? $data['contentType'] : null;
+        $this->container['poolId'] = isset($data['poolId']) ? $data['poolId'] : null;
+        $this->container['deploymentId'] = isset($data['deploymentId']) ? $data['deploymentId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -191,6 +191,30 @@ class ResourceTagBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 255)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 255.";
+            }
+            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['poolId'] === null) {
+            $invalidProperties[] = "'poolId' can't be null";
+        }
+            if ((mb_strlen($this->container['poolId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'poolId', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['poolId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'poolId', the character length must be bigger than or equal to 1.";
+            }
+        if ($this->container['deploymentId'] === null) {
+            $invalidProperties[] = "'deploymentId' can't be null";
+        }
+            if ((mb_strlen($this->container['deploymentId']) > 255)) {
+                $invalidProperties[] = "invalid value for 'deploymentId', the character length must be smaller than or equal to 255.";
+            }
+            if ((mb_strlen($this->container['deploymentId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'deploymentId', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -206,98 +230,98 @@ class ResourceTagBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  资源标签key
+    * Gets contentType
+    *  发送的实体的MIME类型。
     *
     * @return string|null
     */
-    public function getKey()
+    public function getContentType()
     {
-        return $this->container['key'];
+        return $this->container['contentType'];
     }
 
     /**
-    * Sets key
+    * Sets contentType
     *
-    * @param string|null $key 资源标签key
+    * @param string|null $contentType 发送的实体的MIME类型。
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setContentType($contentType)
     {
-        $this->container['key'] = $key;
+        $this->container['contentType'] = $contentType;
         return $this;
     }
 
     /**
-    * Gets value
-    *  资源标签value
+    * Gets poolId
+    *  资源池ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getValue()
+    public function getPoolId()
     {
-        return $this->container['value'];
+        return $this->container['poolId'];
     }
 
     /**
-    * Sets value
+    * Sets poolId
     *
-    * @param string|null $value 资源标签value
+    * @param string $poolId 资源池ID
     *
     * @return $this
     */
-    public function setValue($value)
+    public function setPoolId($poolId)
     {
-        $this->container['value'] = $value;
+        $this->container['poolId'] = $poolId;
         return $this;
     }
 
     /**
-    * Gets resourceId
-    *  资源id
+    * Gets deploymentId
+    *  模型的部署ID
     *
-    * @return string|null
+    * @return string
     */
-    public function getResourceId()
+    public function getDeploymentId()
     {
-        return $this->container['resourceId'];
+        return $this->container['deploymentId'];
     }
 
     /**
-    * Sets resourceId
+    * Sets deploymentId
     *
-    * @param string|null $resourceId 资源id
+    * @param string $deploymentId 模型的部署ID
     *
     * @return $this
     */
-    public function setResourceId($resourceId)
+    public function setDeploymentId($deploymentId)
     {
-        $this->container['resourceId'] = $resourceId;
+        $this->container['deploymentId'] = $deploymentId;
         return $this;
     }
 
     /**
-    * Gets values
-    *  资源值列表
+    * Gets body
+    *  body
     *
-    * @return string[]|null
+    * @return \HuaweiCloud\SDK\PanguLargeModels\V2\Model\ChatCompletionReq|null
     */
-    public function getValues()
+    public function getBody()
     {
-        return $this->container['values'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets values
+    * Sets body
     *
-    * @param string[]|null $values 资源值列表
+    * @param \HuaweiCloud\SDK\PanguLargeModels\V2\Model\ChatCompletionReq|null $body body
     *
     * @return $this
     */
-    public function setValues($values)
+    public function setBody($body)
     {
-        $this->container['values'] = $values;
+        $this->container['body'] = $body;
         return $this;
     }
 

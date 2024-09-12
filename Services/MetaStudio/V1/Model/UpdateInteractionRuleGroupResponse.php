@@ -24,8 +24,8 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     * groupId  互动规则库ID
     * groupName  互动规则库名称
     * interactionRules  互动规则列表
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -44,8 +44,8 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     * groupId  互动规则库ID
     * groupName  互动规则库名称
     * interactionRules  互动规则列表
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -85,8 +85,8 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     * groupId  互动规则库ID
     * groupName  互动规则库名称
     * interactionRules  互动规则列表
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -105,8 +105,8 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     * groupId  互动规则库ID
     * groupName  互动规则库名称
     * interactionRules  互动规则列表
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -125,8 +125,8 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     * groupId  互动规则库ID
     * groupName  互动规则库名称
     * interactionRules  互动规则列表
-    * createTime  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -326,7 +326,7 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -338,7 +338,7 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $createTime 创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -350,7 +350,7 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class UpdateInteractionRuleGroupResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $updateTime 更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */

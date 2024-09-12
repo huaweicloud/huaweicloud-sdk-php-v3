@@ -20,7 +20,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    * key  键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     * values  值列表。 每个值最大长度255个unicode字符，校验和使用之前先trim前后半角空格。 value可为空数组但不可缺省。如果values为空列表，则表示any_value（查询任意value）。 value之间为或的关系。(搜索时不对此参数做字符集校验，只做长度校验)。
     *
     * @var string[]
@@ -32,7 +32,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    * key  键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     * values  值列表。 每个值最大长度255个unicode字符，校验和使用之前先trim前后半角空格。 value可为空数组但不可缺省。如果values为空列表，则表示any_value（查询任意value）。 value之间为或的关系。(搜索时不对此参数做字符集校验，只做长度校验)。
     *
     * @var string[]
@@ -65,7 +65,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    * key  键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     * values  值列表。 每个值最大长度255个unicode字符，校验和使用之前先trim前后半角空格。 value可为空数组但不可缺省。如果values为空列表，则表示any_value（查询任意value）。 value之间为或的关系。(搜索时不对此参数做字符集校验，只做长度校验)。
     *
     * @var string[]
@@ -77,7 +77,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    * key  键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     * values  值列表。 每个值最大长度255个unicode字符，校验和使用之前先trim前后半角空格。 value可为空数组但不可缺省。如果values为空列表，则表示any_value（查询任意value）。 value之间为或的关系。(搜索时不对此参数做字符集校验，只做长度校验)。
     *
     * @var string[]
@@ -89,7 +89,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    * key  键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     * values  值列表。 每个值最大长度255个unicode字符，校验和使用之前先trim前后半角空格。 value可为空数组但不可缺省。如果values为空列表，则表示any_value（查询任意value）。 value之间为或的关系。(搜索时不对此参数做字符集校验，只做长度校验)。
     *
     * @var string[]
@@ -172,8 +172,8 @@ class TagValuesList implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
-            if ((mb_strlen($this->container['key']) > 127)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 127.";
+            if ((mb_strlen($this->container['key']) > 128)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
@@ -197,7 +197,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    *  键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     *
     * @return string
     */
@@ -209,7 +209,7 @@ class TagValuesList implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。 最大长度127个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
+    * @param string $key 键。 最大长度128个unicode字符。key不能为空。(搜索时不对此参数做字符集校)， key不能为空或者空字符串，不能为空格，校验和使用之前先trim前后半角空格。
     *
     * @return $this
     */

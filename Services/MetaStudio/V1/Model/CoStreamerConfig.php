@@ -21,7 +21,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * voiceConfig  voiceConfig
-    * streamerAction  助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    * streamerAction  **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * voiceConfig  voiceConfig
-    * streamerAction  助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    * streamerAction  **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * voiceConfig  voiceConfig
-    * streamerAction  助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    * streamerAction  **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * voiceConfig  voiceConfig
-    * streamerAction  助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    * streamerAction  **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * voiceConfig  voiceConfig
-    * streamerAction  助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    * streamerAction  **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -232,7 +232,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamerAction
-    *  助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    *  **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class CoStreamerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets streamerAction
     *
-    * @param string|null $streamerAction 助播出声时主播行为。 * SILENCE：静默 * VOLUME_DOWN：音量降低
+    * @param string|null $streamerAction **参数解释**： 助播出声时主播行为设置。 **约束限制**： 不涉及 **取值范围**： * SILENCE：静默 * VOLUME_DOWN：音量降低  **默认取值**： 不涉及。
     *
     * @return $this
     */

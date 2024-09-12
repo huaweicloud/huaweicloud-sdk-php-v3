@@ -2530,6 +2530,74 @@ class MeetingClient extends Client
     }
 
     /**
+     * 获取会议鉴权随机数
+     *
+     * 根据会议ID + 密码鉴权返回鉴权随机数，如果是小程序调用时，需要企业支持小程序功能
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createAuthRandom($request)
+    {
+        return $this->createAuthRandomWithHttpInfo($request);
+    }
+
+    public function createAuthRandomWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/mms/ncms/conferences/auth/random';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['confId'] !== null) {
+            $queryParams['conf_id'] = $localVarParams['confId'];
+        }
+        if ($localVarParams['guestWaiting'] !== null) {
+            $queryParams['guest_waiting'] = $localVarParams['guestWaiting'];
+        }
+        if ($localVarParams['xPassword'] !== null) {
+            $headerParams[$arr['xPassword']] = $localVarParams['xPassword'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateAuthRandomResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateAuthRandomRequest');
+    }
+
+    /**
      * 获取会控Token
      *
      * 该接口用于获取正在召开会议的会控Token（未开始的会议调用该接口返回失败）。Token有效期是半个小时。
@@ -10239,6 +10307,68 @@ class MeetingClient extends Client
     }
 
     /**
+     * 查询单会议录制文件信息
+     *
+     * 查询单会议录制文件信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showRecordInfo($request)
+    {
+        return $this->showRecordInfoWithHttpInfo($request);
+    }
+
+    public function showRecordInfoWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/mmc/rlm/record/info';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\ShowRecordInfoResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\ShowRecordInfoRequest');
+    }
+
+    /**
      * 查询录制详情
      *
      * 改接口用于查询某个会议录制的详情。
@@ -12725,74 +12855,6 @@ class MeetingClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\UploadFileResponse',
             $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\UploadFileRequest');
-    }
-
-    /**
-     * 获取会议鉴权随机数
-     *
-     * 根据会议ID + 密码鉴权返回鉴权随机数，如果是小程序调用时，需要企业支持小程序功能
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function createAuthRandom($request)
-    {
-        return $this->createAuthRandomWithHttpInfo($request);
-    }
-
-    public function createAuthRandomWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/mms/ncms/conferences/auth/random';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['confId'] !== null) {
-            $queryParams['conf_id'] = $localVarParams['confId'];
-        }
-        if ($localVarParams['guestWaiting'] !== null) {
-            $queryParams['guest_waiting'] = $localVarParams['guestWaiting'];
-        }
-        if ($localVarParams['xPassword'] !== null) {
-            $headerParams[$arr['xPassword']] = $localVarParams['xPassword'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateAuthRandomResponse',
-            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\CreateAuthRandomRequest');
     }
 
     /**

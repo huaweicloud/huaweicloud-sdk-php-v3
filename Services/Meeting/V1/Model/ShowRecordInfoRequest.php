@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\Meeting\V1\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowResourceTagsRequest implements ModelInterface, ArrayAccess
+class ShowRecordInfoRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,26 @@ class ShowResourceTagsRequest implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowResourceTagsRequest';
+    protected static $openAPIModelName = 'ShowRecordInfoRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceType' => 'string',
-            'resourceId' => 'string'
+            'body' => '\HuaweiCloud\SDK\Meeting\V1\Model\RecordInfoReq'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceType' => null,
-        'resourceId' => null
+        'body' => null
     ];
 
     /**
@@ -65,38 +61,32 @@ class ShowResourceTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceType' => 'resource_type',
-            'resourceId' => 'resource_id'
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceType' => 'setResourceType',
-            'resourceId' => 'setResourceId'
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    * resourceId  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceType' => 'getResourceType',
-            'resourceId' => 'getResourceId'
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +147,7 @@ class ShowResourceTagsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceType'] = isset($data['resourceType']) ? $data['resourceType'] : null;
-        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,15 +158,6 @@ class ShowResourceTagsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceType'] === null) {
-            $invalidProperties[] = "'resourceType' can't be null";
-        }
-        if ($this->container['resourceId'] === null) {
-            $invalidProperties[] = "'resourceId' can't be null";
-        }
-            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['resourceId'])) {
-                $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
-            }
         return $invalidProperties;
     }
 
@@ -193,50 +173,26 @@ class ShowResourceTagsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceType
-    *  资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * Gets body
+    *  body
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Meeting\V1\Model\RecordInfoReq|null
     */
-    public function getResourceType()
+    public function getBody()
     {
-        return $this->container['resourceType'];
+        return $this->container['body'];
     }
 
     /**
-    * Sets resourceType
+    * Sets body
     *
-    * @param string $resourceType 资源类型，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * @param \HuaweiCloud\SDK\Meeting\V1\Model\RecordInfoReq|null $body body
     *
     * @return $this
     */
-    public function setResourceType($resourceType)
+    public function setBody($body)
     {
-        $this->container['resourceType'] = $resourceType;
-        return $this;
-    }
-
-    /**
-    * Gets resourceId
-    *  资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    *
-    * @return string
-    */
-    public function getResourceId()
-    {
-        return $this->container['resourceId'];
-    }
-
-    /**
-    * Sets resourceId
-    *
-    * @param string $resourceId 资源id，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
-    *
-    * @return $this
-    */
-    public function setResourceId($resourceId)
-    {
-        $this->container['resourceId'] = $resourceId;
+        $this->container['body'] = $body;
         return $this;
     }
 

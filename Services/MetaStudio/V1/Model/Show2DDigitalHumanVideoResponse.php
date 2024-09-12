@@ -26,7 +26,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
-    * duration  数字人视频内容时长。
+    * duration  **参数解释**： 数字人视频内容时长。
     * outputAssetConfig  outputAssetConfig
     * errorInfo  errorInfo
     * createTime  任务创建时间。
@@ -72,7 +72,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
-    * duration  数字人视频内容时长。
+    * duration  **参数解释**： 数字人视频内容时长。
     * outputAssetConfig  outputAssetConfig
     * errorInfo  errorInfo
     * createTime  任务创建时间。
@@ -139,7 +139,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
-    * duration  数字人视频内容时长。
+    * duration  **参数解释**： 数字人视频内容时长。
     * outputAssetConfig  outputAssetConfig
     * errorInfo  errorInfo
     * createTime  任务创建时间。
@@ -185,7 +185,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
-    * duration  数字人视频内容时长。
+    * duration  **参数解释**： 数字人视频内容时长。
     * outputAssetConfig  outputAssetConfig
     * errorInfo  errorInfo
     * createTime  任务创建时间。
@@ -231,7 +231,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     * jobType  任务类型。 * 2D_DIGITAL_HUMAN_VIDEO: 分身数字人视频制作任务 * PHOTO_DIGITAL_HUMAN_VIDEO: 照片数字人视频制作任务
     * startTime  数字人视频制作开始时间。
     * endTime  数字人视频制作结束时间。
-    * duration  数字人视频内容时长。
+    * duration  **参数解释**： 数字人视频内容时长。
     * outputAssetConfig  outputAssetConfig
     * errorInfo  errorInfo
     * createTime  任务创建时间。
@@ -642,7 +642,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  数字人视频内容时长。
+    *  **参数解释**： 数字人视频内容时长。
     *
     * @return float|null
     */
@@ -654,7 +654,7 @@ class Show2DDigitalHumanVideoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param float|null $duration 数字人视频内容时长。
+    * @param float|null $duration **参数解释**： 数字人视频内容时长。
     *
     * @return $this
     */

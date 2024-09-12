@@ -26,7 +26,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
-    * concurrency  并发路数。
+    * concurrency  **参数解释**： 并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -58,7 +58,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
-    * concurrency  并发路数。
+    * concurrency  **参数解释**： 并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -111,7 +111,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
-    * concurrency  并发路数。
+    * concurrency  **参数解释**： 并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -143,7 +143,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
-    * concurrency  并发路数。
+    * concurrency  **参数解释**： 并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -175,7 +175,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     * modelAssetId  数字人模型资产ID。
     * voiceConfig  voiceConfig
     * robotId  机器人ID。获取方法请参考[创建应用](CreateRobot.xml)。
-    * concurrency  并发路数。
+    * concurrency  **参数解释**： 并发路数。
     * backgroundConfig  backgroundConfig
     * layerConfig  图层配置。
     * reviewConfig  reviewConfig
@@ -503,7 +503,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets concurrency
-    *  并发路数。
+    *  **参数解释**： 并发路数。
     *
     * @return int|null
     */
@@ -515,7 +515,7 @@ class CreateSmartChatRoomReq implements ModelInterface, ArrayAccess
     /**
     * Sets concurrency
     *
-    * @param int|null $concurrency 并发路数。
+    * @param int|null $concurrency **参数解释**： 并发路数。
     *
     * @return $this
     */

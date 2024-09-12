@@ -23,6 +23,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
     * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
     * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
     * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
     * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
@@ -34,6 +36,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'jobId' => 'string',
             'trainingVideoUploadUrl' => 'string[]',
+            'actionVideoUploadUrl' => 'string[]',
+            'audioUploadUrl' => 'string',
             'coverUploadUrl' => 'string',
             'idCardImage1UploadUrl' => 'string',
             'idCardImage2UploadUrl' => 'string',
@@ -45,6 +49,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
     * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
     * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
     * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
     * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
@@ -56,6 +62,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'jobId' => null,
         'trainingVideoUploadUrl' => null,
+        'actionVideoUploadUrl' => null,
+        'audioUploadUrl' => null,
         'coverUploadUrl' => null,
         'idCardImage1UploadUrl' => null,
         'idCardImage2UploadUrl' => null,
@@ -88,6 +96,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * jobId  任务ID。
     * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
     * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
     * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
     * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
@@ -99,6 +109,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'jobId' => 'job_id',
             'trainingVideoUploadUrl' => 'training_video_upload_url',
+            'actionVideoUploadUrl' => 'action_video_upload_url',
+            'audioUploadUrl' => 'audio_upload_url',
             'coverUploadUrl' => 'cover_upload_url',
             'idCardImage1UploadUrl' => 'id_card_image1_upload_url',
             'idCardImage2UploadUrl' => 'id_card_image2_upload_url',
@@ -110,6 +122,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
     * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
     * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
     * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
     * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
@@ -121,6 +135,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
             'jobId' => 'setJobId',
             'trainingVideoUploadUrl' => 'setTrainingVideoUploadUrl',
+            'actionVideoUploadUrl' => 'setActionVideoUploadUrl',
+            'audioUploadUrl' => 'setAudioUploadUrl',
             'coverUploadUrl' => 'setCoverUploadUrl',
             'idCardImage1UploadUrl' => 'setIdCardImage1UploadUrl',
             'idCardImage2UploadUrl' => 'setIdCardImage2UploadUrl',
@@ -132,6 +148,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
     * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
     * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
     * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
     * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
@@ -143,6 +161,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
             'jobId' => 'getJobId',
             'trainingVideoUploadUrl' => 'getTrainingVideoUploadUrl',
+            'actionVideoUploadUrl' => 'getActionVideoUploadUrl',
+            'audioUploadUrl' => 'getAudioUploadUrl',
             'coverUploadUrl' => 'getCoverUploadUrl',
             'idCardImage1UploadUrl' => 'getIdCardImage1UploadUrl',
             'idCardImage2UploadUrl' => 'getIdCardImage2UploadUrl',
@@ -210,6 +230,8 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     {
         $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
         $this->container['trainingVideoUploadUrl'] = isset($data['trainingVideoUploadUrl']) ? $data['trainingVideoUploadUrl'] : null;
+        $this->container['actionVideoUploadUrl'] = isset($data['actionVideoUploadUrl']) ? $data['actionVideoUploadUrl'] : null;
+        $this->container['audioUploadUrl'] = isset($data['audioUploadUrl']) ? $data['audioUploadUrl'] : null;
         $this->container['coverUploadUrl'] = isset($data['coverUploadUrl']) ? $data['coverUploadUrl'] : null;
         $this->container['idCardImage1UploadUrl'] = isset($data['idCardImage1UploadUrl']) ? $data['idCardImage1UploadUrl'] : null;
         $this->container['idCardImage2UploadUrl'] = isset($data['idCardImage2UploadUrl']) ? $data['idCardImage2UploadUrl'] : null;
@@ -230,6 +252,12 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['jobId']) && (mb_strlen($this->container['jobId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'jobId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['audioUploadUrl']) && (mb_strlen($this->container['audioUploadUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'audioUploadUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['audioUploadUrl']) && (mb_strlen($this->container['audioUploadUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'audioUploadUrl', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['coverUploadUrl']) && (mb_strlen($this->container['coverUploadUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'coverUploadUrl', the character length must be smaller than or equal to 2048.";
@@ -314,6 +342,54 @@ class Create2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     public function setTrainingVideoUploadUrl($trainingVideoUploadUrl)
     {
         $this->container['trainingVideoUploadUrl'] = $trainingVideoUploadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets actionVideoUploadUrl
+    *  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    *
+    * @return string[]|null
+    */
+    public function getActionVideoUploadUrl()
+    {
+        return $this->container['actionVideoUploadUrl'];
+    }
+
+    /**
+    * Sets actionVideoUploadUrl
+    *
+    * @param string[]|null $actionVideoUploadUrl 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    *
+    * @return $this
+    */
+    public function setActionVideoUploadUrl($actionVideoUploadUrl)
+    {
+        $this->container['actionVideoUploadUrl'] = $actionVideoUploadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets audioUploadUrl
+    *  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
+    *
+    * @return string|null
+    */
+    public function getAudioUploadUrl()
+    {
+        return $this->container['audioUploadUrl'];
+    }
+
+    /**
+    * Sets audioUploadUrl
+    *
+    * @param string|null $audioUploadUrl 音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
+    *
+    * @return $this
+    */
+    public function setAudioUploadUrl($audioUploadUrl)
+    {
+        $this->container['audioUploadUrl'] = $audioUploadUrl;
         return $this;
     }
 

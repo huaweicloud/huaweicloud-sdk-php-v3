@@ -20,15 +20,15 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
-    * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
+    * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
-    * privData  私有数据，用户填写，原样带回。
+    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     *
@@ -50,15 +50,15 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
-    * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
+    * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
-    * privData  私有数据，用户填写，原样带回。
+    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     *
@@ -101,15 +101,15 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
-    * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
+    * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
-    * privData  私有数据，用户填写，原样带回。
+    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     *
@@ -131,15 +131,15 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
-    * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
+    * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
-    * privData  私有数据，用户填写，原样带回。
+    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     *
@@ -161,15 +161,15 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * viewMode  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
-    * modelAssetType  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
+    * modelAssetId  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * modelAssetType  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * videoConfig  videoConfig
-    * sceneAssetId  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
-    * privData  私有数据，用户填写，原样带回。
+    * sceneAssetId  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
+    * privData  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     * backgroundMusicConfig  backgroundMusicConfig
     * reviewConfig  reviewConfig
     *
@@ -360,7 +360,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptName
-    *  剧本名称
+    *  **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -372,7 +372,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scriptName
     *
-    * @param string|null $scriptName 剧本名称
+    * @param string|null $scriptName **参数解释**： 剧本名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -384,7 +384,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptDescription
-    *  剧本描述。
+    *  **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -396,7 +396,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scriptDescription
     *
-    * @param string|null $scriptDescription 剧本描述。
+    * @param string|null $scriptDescription **参数解释**： 剧本描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -408,7 +408,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewMode
-    *  横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *  **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @return string|null
     */
@@ -420,7 +420,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets viewMode
     *
-    * @param string|null $viewMode 横竖屏类型。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * @param string|null $viewMode **参数解释**： 横竖屏类型。 **约束限制**： 不涉及。 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @return $this
     */
@@ -432,7 +432,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  数字人模型资产ID，可以从资产库中查询。
+    *  **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -444,7 +444,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 数字人模型资产ID，可以从资产库中查询。
+    * @param string|null $modelAssetId **参数解释**： 数字人模型资产ID。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -456,7 +456,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetType
-    *  数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    *  **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -468,7 +468,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetType
     *
-    * @param string|null $modelAssetType 数字人模型类型。  * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人
+    * @param string|null $modelAssetType **参数解释**： 数字人模型类型。 **约束限制**： 不涉及 **取值范围**： * HUMAN_MODEL_2D：分身数字人 * HUMAN_MODEL_3D：3D数字人  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -528,7 +528,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets sceneAssetId
-    *  场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
+    *  **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -540,7 +540,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets sceneAssetId
     *
-    * @param string|null $sceneAssetId 场景资产ID。 > * 分身数字人视频制作不需要填写该参数。 > * 若填写，可以从资产库中查询。
+    * @param string|null $sceneAssetId **参数解释**： 场景资产ID。 **约束限制**： 分身数字人视频制作不需要填写该参数。 **取值范围**： 字符长度0-64位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -552,7 +552,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets privData
-    *  私有数据，用户填写，原样带回。
+    *  **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -564,7 +564,7 @@ class VideoScriptsSimpleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets privData
     *
-    * @param string|null $privData 私有数据，用户填写，原样带回。
+    * @param string|null $privData **参数解释**： 私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192位 **默认取值**： 不涉及
     *
     * @return $this
     */

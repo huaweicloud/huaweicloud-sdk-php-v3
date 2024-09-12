@@ -22,6 +22,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
     * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * limit  不填默认值为1000
+    * marker  分页标记，初始为0，后续值为返回体中的next_marker
     * body  body
     *
     * @var string[]
@@ -29,6 +31,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'type' => 'string',
             'enterpriseProjectId' => 'string',
+            'limit' => 'int',
+            'marker' => 'string',
             'body' => '\HuaweiCloud\SDK\Aom\V2\Model\EventQueryParam2'
     ];
 
@@ -36,6 +40,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
     * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * limit  不填默认值为1000
+    * marker  分页标记，初始为0，后续值为返回体中的next_marker
     * body  body
     *
     * @var string[]
@@ -43,6 +49,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'type' => null,
         'enterpriseProjectId' => null,
+        'limit' => 'int32',
+        'marker' => null,
         'body' => null
     ];
 
@@ -71,6 +79,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
     * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * limit  不填默认值为1000
+    * marker  分页标记，初始为0，后续值为返回体中的next_marker
     * body  body
     *
     * @var string[]
@@ -78,6 +88,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'type' => 'type',
             'enterpriseProjectId' => 'Enterprise-Project-Id',
+            'limit' => 'limit',
+            'marker' => 'marker',
             'body' => 'body'
     ];
 
@@ -85,6 +97,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
     * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * limit  不填默认值为1000
+    * marker  分页标记，初始为0，后续值为返回体中的next_marker
     * body  body
     *
     * @var string[]
@@ -92,6 +106,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'type' => 'setType',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'limit' => 'setLimit',
+            'marker' => 'setMarker',
             'body' => 'setBody'
     ];
 
@@ -99,6 +115,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * type  查询类型。type=active_alert代表查询活动告警，type=history_alert代表查询历史告警。不传或者传其他值则返回指定查询条件的所有信息。
     * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * limit  不填默认值为1000
+    * marker  分页标记，初始为0，后续值为返回体中的next_marker
     * body  body
     *
     * @var string[]
@@ -106,6 +124,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'type' => 'getType',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'limit' => 'getLimit',
+            'marker' => 'getMarker',
             'body' => 'getBody'
     ];
 
@@ -184,6 +204,8 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -262,6 +284,54 @@ class ListEventsRequest implements ModelInterface, ArrayAccess
     public function setEnterpriseProjectId($enterpriseProjectId)
     {
         $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  不填默认值为1000
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 不填默认值为1000
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  分页标记，初始为0，后续值为返回体中的next_marker
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 分页标记，初始为0，后续值为返回体中的next_marker
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

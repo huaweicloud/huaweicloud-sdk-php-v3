@@ -195,14 +195,14 @@ class ActionMarkItem implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['actionStartTime']) && (mb_strlen($this->container['actionStartTime']) > 12)) {
-                $invalidProperties[] = "invalid value for 'actionStartTime', the character length must be smaller than or equal to 12.";
+            if (!is_null($this->container['actionStartTime']) && (mb_strlen($this->container['actionStartTime']) > 128)) {
+                $invalidProperties[] = "invalid value for 'actionStartTime', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['actionStartTime']) && (mb_strlen($this->container['actionStartTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'actionStartTime', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['actionEndTime']) && (mb_strlen($this->container['actionEndTime']) > 12)) {
-                $invalidProperties[] = "invalid value for 'actionEndTime', the character length must be smaller than or equal to 12.";
+            if (!is_null($this->container['actionEndTime']) && (mb_strlen($this->container['actionEndTime']) > 128)) {
+                $invalidProperties[] = "invalid value for 'actionEndTime', the character length must be smaller than or equal to 128.";
             }
             if (!is_null($this->container['actionEndTime']) && (mb_strlen($this->container['actionEndTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'actionEndTime', the character length must be bigger than or equal to 0.";

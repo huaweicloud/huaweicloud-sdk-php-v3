@@ -20,17 +20,19 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDriveActionConfig  语音驱动时的动作配置。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
-    * thumbnailUrl  剧本场景缩略图url。
+    * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'scriptType' => 'string',
             'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TextConfig',
+            'audioDriveActionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AudioDriveActionConfig[]',
             'backgroundConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\BackgroundConfigInfo[]',
             'layerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LayerConfig[]',
             'thumbnailUrl' => 'string'
@@ -38,17 +40,19 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDriveActionConfig  语音驱动时的动作配置。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
-    * thumbnailUrl  剧本场景缩略图url。
+    * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'scriptType' => null,
         'textConfig' => null,
+        'audioDriveActionConfig' => null,
         'backgroundConfig' => null,
         'layerConfig' => null,
         'thumbnailUrl' => null
@@ -77,17 +81,19 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDriveActionConfig  语音驱动时的动作配置。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
-    * thumbnailUrl  剧本场景缩略图url。
+    * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'scriptType' => 'script_type',
             'textConfig' => 'text_config',
+            'audioDriveActionConfig' => 'audio_drive_action_config',
             'backgroundConfig' => 'background_config',
             'layerConfig' => 'layer_config',
             'thumbnailUrl' => 'thumbnail_url'
@@ -95,17 +101,19 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDriveActionConfig  语音驱动时的动作配置。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
-    * thumbnailUrl  剧本场景缩略图url。
+    * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $setters = [
             'scriptType' => 'setScriptType',
             'textConfig' => 'setTextConfig',
+            'audioDriveActionConfig' => 'setAudioDriveActionConfig',
             'backgroundConfig' => 'setBackgroundConfig',
             'layerConfig' => 'setLayerConfig',
             'thumbnailUrl' => 'setThumbnailUrl'
@@ -113,17 +121,19 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scriptType  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * scriptType  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     * textConfig  textConfig
+    * audioDriveActionConfig  语音驱动时的动作配置。
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
-    * thumbnailUrl  剧本场景缩略图url。
+    * thumbnailUrl  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
     protected static $getters = [
             'scriptType' => 'getScriptType',
             'textConfig' => 'getTextConfig',
+            'audioDriveActionConfig' => 'getAudioDriveActionConfig',
             'backgroundConfig' => 'getBackgroundConfig',
             'layerConfig' => 'getLayerConfig',
             'thumbnailUrl' => 'getThumbnailUrl'
@@ -204,6 +214,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     {
         $this->container['scriptType'] = isset($data['scriptType']) ? $data['scriptType'] : null;
         $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
+        $this->container['audioDriveActionConfig'] = isset($data['audioDriveActionConfig']) ? $data['audioDriveActionConfig'] : null;
         $this->container['backgroundConfig'] = isset($data['backgroundConfig']) ? $data['backgroundConfig'] : null;
         $this->container['layerConfig'] = isset($data['layerConfig']) ? $data['layerConfig'] : null;
         $this->container['thumbnailUrl'] = isset($data['thumbnailUrl']) ? $data['thumbnailUrl'] : null;
@@ -247,7 +258,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptType
-    *  脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    *  **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     *
     * @return string|null
     */
@@ -259,7 +270,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     /**
     * Sets scriptType
     *
-    * @param string|null $scriptType 脚本类型，即视频制作的驱动方式。默认TEXT * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
+    * @param string|null $scriptType **参数解释**： 脚本类型，即视频制作的驱动方式 **约束限制**： 不涉及 **取值范围** * TEXT: 文本驱动，即通过TTS合成语音 * AUDIO: 语音驱动
     *
     * @return $this
     */
@@ -290,6 +301,30 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     public function setTextConfig($textConfig)
     {
         $this->container['textConfig'] = $textConfig;
+        return $this;
+    }
+
+    /**
+    * Gets audioDriveActionConfig
+    *  语音驱动时的动作配置。
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioDriveActionConfig[]|null
+    */
+    public function getAudioDriveActionConfig()
+    {
+        return $this->container['audioDriveActionConfig'];
+    }
+
+    /**
+    * Sets audioDriveActionConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\AudioDriveActionConfig[]|null $audioDriveActionConfig 语音驱动时的动作配置。
+    *
+    * @return $this
+    */
+    public function setAudioDriveActionConfig($audioDriveActionConfig)
+    {
+        $this->container['audioDriveActionConfig'] = $audioDriveActionConfig;
         return $this;
     }
 
@@ -343,7 +378,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets thumbnailUrl
-    *  剧本场景缩略图url。
+    *  **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -355,7 +390,7 @@ class ShootScriptDetail implements ModelInterface, ArrayAccess
     /**
     * Sets thumbnailUrl
     *
-    * @param string|null $thumbnailUrl 剧本场景缩略图url。
+    * @param string|null $thumbnailUrl **参数解释**： 剧本场景缩略图url。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-2048位。 **默认取值**： 不涉及。
     *
     * @return $this
     */

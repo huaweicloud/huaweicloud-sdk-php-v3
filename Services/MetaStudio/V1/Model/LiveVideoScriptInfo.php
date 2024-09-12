@@ -20,11 +20,11 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * scriptId  剧本ID。
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * scriptId  **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * dhId  **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * modelAssetId  **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -46,11 +46,11 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * scriptId  剧本ID。
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * scriptId  **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * dhId  **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * modelAssetId  **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -93,11 +93,11 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * scriptId  剧本ID。
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * scriptId  **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * dhId  **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * modelAssetId  **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -119,11 +119,11 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * scriptId  剧本ID。
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * scriptId  **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * dhId  **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * modelAssetId  **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -145,11 +145,11 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * scriptId  剧本ID。
-    * scriptName  剧本名称
-    * scriptDescription  剧本描述。
-    * dhId  数字人ID。对应形象和音色组合。
-    * modelAssetId  数字人模型资产ID，可以从资产库中查询。
+    * scriptId  **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * scriptName  **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * scriptDescription  **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * dhId  **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * modelAssetId  **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     * voiceConfig  voiceConfig
     * backgroundConfig  背景配置。
     * layerConfig  图层配置。
@@ -298,7 +298,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptId
-    *  剧本ID。
+    *  **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -310,7 +310,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scriptId
     *
-    * @param string|null $scriptId 剧本ID。
+    * @param string|null $scriptId **参数解释**： 剧本ID。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -322,7 +322,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptName
-    *  剧本名称
+    *  **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -334,7 +334,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scriptName
     *
-    * @param string $scriptName 剧本名称
+    * @param string $scriptName **参数解释**： 剧本名称。 **约束限制**： 该字段必须填写。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -346,7 +346,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets scriptDescription
-    *  剧本描述。
+    *  **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -358,7 +358,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets scriptDescription
     *
-    * @param string|null $scriptDescription 剧本描述。
+    * @param string|null $scriptDescription **参数解释**： 剧本描述。 **约束限制**： 该字段无需填写。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -370,7 +370,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets dhId
-    *  数字人ID。对应形象和音色组合。
+    *  **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -382,7 +382,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets dhId
     *
-    * @param string|null $dhId 数字人ID。对应形象和音色组合。
+    * @param string|null $dhId **参数解释**： 数字人ID。对应形象和音色组合。 **约束限制**： 该字段暂未启用，无需填写。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -394,7 +394,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelAssetId
-    *  数字人模型资产ID，可以从资产库中查询。
+    *  **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -406,7 +406,7 @@ class LiveVideoScriptInfo implements ModelInterface, ArrayAccess
     /**
     * Sets modelAssetId
     *
-    * @param string|null $modelAssetId 数字人模型资产ID，可以从资产库中查询。
+    * @param string|null $modelAssetId **参数解释**： 数字人模型资产ID，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return $this
     */

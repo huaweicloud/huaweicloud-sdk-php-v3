@@ -20,10 +20,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
+    * textContext  **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * fontName  **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
+    * fontSize  **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
+    * textContext  **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * fontName  **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
+    * fontSize  **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
+    * textContext  **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * fontName  **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
+    * fontSize  **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
+    * textContext  **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * fontName  **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
+    * fontSize  **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * textContext  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
-    * fontName  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
-    * fontSize  字体大小（像素）。  取值范围：[4, 120]
-    * fontColor  字体颜色。RGB颜色值。
+    * textContext  **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * fontName  **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
+    * fontSize  **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
+    * fontColor  **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets textContext
-    *  文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    *  **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets textContext
     *
-    * @param string|null $textContext 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w
+    * @param string|null $textContext **参数解释**： 文字图层的文本，内容需做Base64编码。  示例：若想添加文字水印“测试文字水印”，那么text_context的值为：5rWL6K+V5paH5a2X5rC05Y2w **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontName
-    *  字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
+    *  **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontName
     *
-    * @param string|null $fontName 字体。当前支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)。
+    * @param string|null $fontName **参数解释**： 字体。当前支持的字体： **约束限制**： 不涉及。 **取值范围**： 支持的字体请参考[服务支持的字体](metastudio_02_0041.xml)
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontSize
-    *  字体大小（像素）。  取值范围：[4, 120]
+    *  **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontSize
     *
-    * @param int|null $fontSize 字体大小（像素）。  取值范围：[4, 120]
+    * @param int|null $fontSize **参数解释**： 字体大小（像素）。接口的取值范围为0-120，实际业务使用的取值范围要求为4-120，请以业务实际使用要求为准。  **约束限制**： 不涉及。
     *
     * @return $this
     */
@@ -303,7 +303,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets fontColor
-    *  字体颜色。RGB颜色值。
+    *  **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class TextLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets fontColor
     *
-    * @param string|null $fontColor 字体颜色。RGB颜色值。
+    * @param string|null $fontColor **参数解释**： 字体颜色。RGB颜色值。  **约束限制**： 不涉及。 **取值范围**： 字符长度0-16位
     *
     * @return $this
     */

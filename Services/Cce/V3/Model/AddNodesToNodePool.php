@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
+class AddNodesToNodePool implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,34 +16,26 @@ class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'BatchCreateDeleteResourceTags';
+    protected static $openAPIModelName = 'AddNodesToNodePool';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  action类型，\"create\"或者\"delete\"。
-    * tags  资源标签
-    * sysTags  系统标签
+    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'action' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'sysTags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]'
+            'serverId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  action类型，\"create\"或者\"delete\"。
-    * tags  资源标签
-    * sysTags  系统标签
+    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'action' => null,
-        'tags' => null,
-        'sysTags' => null
+        'serverId' => 'uuid'
     ];
 
     /**
@@ -69,44 +61,32 @@ class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  action类型，\"create\"或者\"delete\"。
-    * tags  资源标签
-    * sysTags  系统标签
+    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'action' => 'action',
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags'
+            'serverId' => 'serverID'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  action类型，\"create\"或者\"delete\"。
-    * tags  资源标签
-    * sysTags  系统标签
+    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @var string[]
     */
     protected static $setters = [
-            'action' => 'setAction',
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags'
+            'serverId' => 'setServerId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  action类型，\"create\"或者\"delete\"。
-    * tags  资源标签
-    * sysTags  系统标签
+    * serverId  服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @var string[]
     */
     protected static $getters = [
-            'action' => 'getAction',
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags'
+            'serverId' => 'getServerId'
     ];
 
     /**
@@ -149,22 +129,7 @@ class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ACTION_CREATE = 'create';
-    const ACTION_DELETE = 'delete';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getActionAllowableValues()
-    {
-        return [
-            self::ACTION_CREATE,
-            self::ACTION_DELETE,
-        ];
-    }
 
 
     /**
@@ -182,9 +147,7 @@ class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
+        $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
     }
 
     /**
@@ -195,17 +158,9 @@ class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['action'] === null) {
-            $invalidProperties[] = "'action' can't be null";
+        if ($this->container['serverId'] === null) {
+            $invalidProperties[] = "'serverId' can't be null";
         }
-            $allowedValues = $this->getActionAllowableValues();
-                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'action', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -221,74 +176,26 @@ class BatchCreateDeleteResourceTags implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets action
-    *  action类型，\"create\"或者\"delete\"。
+    * Gets serverId
+    *  服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @return string
     */
-    public function getAction()
+    public function getServerId()
     {
-        return $this->container['action'];
+        return $this->container['serverId'];
     }
 
     /**
-    * Sets action
+    * Sets serverId
     *
-    * @param string $action action类型，\"create\"或者\"delete\"。
+    * @param string $serverId 服务器ID，获取方式请参见ECS/BMS相关资料。
     *
     * @return $this
     */
-    public function setAction($action)
+    public function setServerId($serverId)
     {
-        $this->container['action'] = $action;
-        return $this;
-    }
-
-    /**
-    * Gets tags
-    *  资源标签
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
-    */
-    public function getTags()
-    {
-        return $this->container['tags'];
-    }
-
-    /**
-    * Sets tags
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $tags 资源标签
-    *
-    * @return $this
-    */
-    public function setTags($tags)
-    {
-        $this->container['tags'] = $tags;
-        return $this;
-    }
-
-    /**
-    * Gets sysTags
-    *  系统标签
-    *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
-    */
-    public function getSysTags()
-    {
-        return $this->container['sysTags'];
-    }
-
-    /**
-    * Sets sysTags
-    *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $sysTags 系统标签
-    *
-    * @return $this
-    */
-    public function setSysTags($sysTags)
-    {
-        $this->container['sysTags'] = $sysTags;
+        $this->container['serverId'] = $serverId;
         return $this;
     }
 

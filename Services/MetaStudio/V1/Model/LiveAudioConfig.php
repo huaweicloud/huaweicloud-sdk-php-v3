@@ -20,9 +20,9 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
-    * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
-    * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    * assetId  **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * audioUrl  **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
+    * subtitleUrl  **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
-    * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
-    * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    * assetId  **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * audioUrl  **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
+    * subtitleUrl  **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
-    * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
-    * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    * assetId  **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * audioUrl  **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
+    * subtitleUrl  **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
-    * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
-    * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    * assetId  **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * audioUrl  **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
+    * subtitleUrl  **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * assetId  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
-    * audioUrl  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
-    * subtitleUrl  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    * assetId  **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * audioUrl  **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
+    * subtitleUrl  **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetId
-    *  插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
+    *  **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -226,7 +226,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Sets assetId
     *
-    * @param string|null $assetId 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。
+    * @param string|null $assetId **参数解释**： 插入音频资产的资产id，外部资产信息无需填写。若填写，可以从资产库中查询。 **约束限制**： 不涉及 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioUrl
-    *  音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
+    *  **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Sets audioUrl
     *
-    * @param string|null $audioUrl 音频URL。仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。
+    * @param string|null $audioUrl **参数解释**： 音频URL。 **约束限制**： 仅支持MP3格式，大小<100MB。输出会自动转化为单声道16KHZ采样。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets subtitleUrl
-    *  音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    *  **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class LiveAudioConfig implements ModelInterface, ArrayAccess
     /**
     * Sets subtitleUrl
     *
-    * @param string|null $subtitleUrl 音频对应的字幕文件URL。仅SRT格式，大小<1MB。
+    * @param string|null $subtitleUrl **参数解释**： 音频对应的字幕文件URL。 **约束限制**： 仅SRT格式，大小<1MB。 **取值范围**： 字符长度0-2048位。 **默认取值**： 不涉及。
     *
     * @return $this
     */

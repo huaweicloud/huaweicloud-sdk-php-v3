@@ -33,6 +33,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
     * cidrType  网段类型。 public：公网网段 internal：内网网段 默认值为internal。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * ports  服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
@@ -55,6 +56,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'updatedAt' => '\DateTime',
             'projectId' => 'string',
             'cidrType' => 'string',
+            'ip' => 'string',
             'ports' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PortList[]',
             'tcpProxy' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
@@ -77,6 +79,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
     * cidrType  网段类型。 public：公网网段 internal：内网网段 默认值为internal。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * ports  服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
@@ -99,6 +102,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
         'updatedAt' => 'date-time',
         'projectId' => null,
         'cidrType' => null,
+        'ip' => null,
         'ports' => null,
         'tcpProxy' => null,
         'tags' => null,
@@ -142,6 +146,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
     * cidrType  网段类型。 public：公网网段 internal：内网网段 默认值为internal。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * ports  服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
@@ -164,6 +169,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'updated_at',
             'projectId' => 'project_id',
             'cidrType' => 'cidr_type',
+            'ip' => 'ip',
             'ports' => 'ports',
             'tcpProxy' => 'tcp_proxy',
             'tags' => 'tags',
@@ -186,6 +192,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
     * cidrType  网段类型。 public：公网网段 internal：内网网段 默认值为internal。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * ports  服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
@@ -208,6 +215,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'setUpdatedAt',
             'projectId' => 'setProjectId',
             'cidrType' => 'setCidrType',
+            'ip' => 'setIp',
             'ports' => 'setPorts',
             'tcpProxy' => 'setTcpProxy',
             'tags' => 'setTags',
@@ -230,6 +238,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     * updatedAt  终端节点服务的更新时间。 采用UTC时间格式，格式为：YYYY-MM-DDTHH:MM:SSZ
     * projectId  项目ID，获取方法请参见获取项目ID。
     * cidrType  网段类型。 public：公网网段 internal：内网网段 默认值为internal。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     * ports  服务开放的端口映射列表，详细内容请参见表4-17 同一个终端节点服务下，不允许重复的端口映射。若多个终端节点服务共用一个port_id，则 终端节点服务之间的所有端口映射的server_port和protocol的组合不能重复。
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * tags  资源标签列表
@@ -252,6 +261,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
             'updatedAt' => 'getUpdatedAt',
             'projectId' => 'getProjectId',
             'cidrType' => 'getCidrType',
+            'ip' => 'getIp',
             'ports' => 'getPorts',
             'tcpProxy' => 'getTcpProxy',
             'tags' => 'getTags',
@@ -330,6 +340,7 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['cidrType'] = isset($data['cidrType']) ? $data['cidrType'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
         $this->container['ports'] = isset($data['ports']) ? $data['ports'] : null;
         $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -669,6 +680,30 @@ class ListServiceDetailsResponse implements ModelInterface, ArrayAccess
     public function setCidrType($cidrType)
     {
         $this->container['cidrType'] = $cidrType;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  接口型VLAN场景服务端IPv4地址或域名
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 接口型VLAN场景服务端IPv4地址或域名
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

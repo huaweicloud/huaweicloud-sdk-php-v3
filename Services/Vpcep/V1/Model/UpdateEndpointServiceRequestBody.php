@@ -26,6 +26,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * portId  弹性云服务器IP地址对应的网卡ID
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'ports' => '\HuaweiCloud\SDK\Vpcep\V1\Model\PortList[]',
             'portId' => 'string',
             'tcpProxy' => 'string',
-            'description' => 'string'
+            'description' => 'string',
+            'ip' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * portId  弹性云服务器IP地址对应的网卡ID
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
         'ports' => null,
         'portId' => null,
         'tcpProxy' => null,
-        'description' => null
+        'description' => null,
+        'ip' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * portId  弹性云服务器IP地址对应的网卡ID
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'ports' => 'ports',
             'portId' => 'port_id',
             'tcpProxy' => 'tcp_proxy',
-            'description' => 'description'
+            'description' => 'description',
+            'ip' => 'ip'
     ];
 
     /**
@@ -107,6 +113,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * portId  弹性云服务器IP地址对应的网卡ID
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'ports' => 'setPorts',
             'portId' => 'setPortId',
             'tcpProxy' => 'setTcpProxy',
-            'description' => 'setDescription'
+            'description' => 'setDescription',
+            'ip' => 'setIp'
     ];
 
     /**
@@ -127,6 +135,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * portId  弹性云服务器IP地址对应的网卡ID
     * tcpProxy  用于控制将哪些信息（如客户端的源IP、源端口、marker_id等）携带到服务端。 支持携带的客户端信息包括如下两种类型：  - TCP TOA：表示将客户端信息插入到tcp option字段中携带至服务端。 说明：仅当后端资源为OBS时，支持TCP TOA类型信息携带方式。  - Proxy Protocol：表示将客户端信息插入到tcp payload字段中携带至服务端。 仅当服务端支持解析上述字段时，该参数设置才有效。 该参数的取值包括：  - close：表示关闭代理协议。  - toa_open：表示开启代理协议“tcp_toa”。  - proxy_open：表示开启代理协议“proxy_protocol”。  - open：表示同时开启代理协议“tcp_toa”和“proxy_protocol”。 默认值为“close”。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
+    * ip  接口型VLAN场景服务端IPv4地址或域名
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'ports' => 'getPorts',
             'portId' => 'getPortId',
             'tcpProxy' => 'getTcpProxy',
-            'description' => 'getDescription'
+            'description' => 'getDescription',
+            'ip' => 'getIp'
     ];
 
     /**
@@ -224,6 +234,7 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
         $this->container['portId'] = isset($data['portId']) ? $data['portId'] : null;
         $this->container['tcpProxy'] = isset($data['tcpProxy']) ? $data['tcpProxy'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['ip'] = isset($data['ip']) ? $data['ip'] : null;
     }
 
     /**
@@ -418,6 +429,30 @@ class UpdateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets ip
+    *  接口型VLAN场景服务端IPv4地址或域名
+    *
+    * @return string|null
+    */
+    public function getIp()
+    {
+        return $this->container['ip'];
+    }
+
+    /**
+    * Sets ip
+    *
+    * @param string|null $ip 接口型VLAN场景服务端IPv4地址或域名
+    *
+    * @return $this
+    */
+    public function setIp($ip)
+    {
+        $this->container['ip'] = $ip;
         return $this;
     }
 

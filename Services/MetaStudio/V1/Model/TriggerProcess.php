@@ -20,15 +20,15 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    * timeWindow  **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
+    * replyMode  **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
-    * replyTexts  回复话术集
-    * replyAudios  回复音频集。填写audio_url。
-    * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
-    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
-    * robotId  机器人ID。
+    * replyTexts  **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
+    * replyAudios  **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
+    * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
+    * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
+    * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    * timeWindow  **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
+    * replyMode  **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
-    * replyTexts  回复话术集
-    * replyAudios  回复音频集。填写audio_url。
-    * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
-    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
-    * robotId  机器人ID。
+    * replyTexts  **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
+    * replyAudios  **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
+    * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
+    * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
+    * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    * timeWindow  **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
+    * replyMode  **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
-    * replyTexts  回复话术集
-    * replyAudios  回复音频集。填写audio_url。
-    * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
-    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
-    * robotId  机器人ID。
+    * replyTexts  **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
+    * replyAudios  **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
+    * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
+    * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
+    * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    * timeWindow  **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
+    * replyMode  **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
-    * replyTexts  回复话术集
-    * replyAudios  回复音频集。填写audio_url。
-    * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
-    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
-    * robotId  机器人ID。
+    * replyTexts  **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
+    * replyAudios  **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
+    * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
+    * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
+    * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * timeWindow  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
-    * replyMode  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    * timeWindow  **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
+    * replyMode  **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     * layerConfig  layerConfig
     * extraLayerConfig  extraLayerConfig
-    * replyTexts  回复话术集
-    * replyAudios  回复音频集。填写audio_url。
-    * replyOrder  回复次序 - RANDOM：随机 - ORDER：顺序循环
-    * replyRole  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
-    * robotId  机器人ID。
+    * replyTexts  **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
+    * replyAudios  **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
+    * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
+    * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
+    * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @var string[]
     */
@@ -346,8 +346,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) > 64)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 0)) {
+                $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -365,7 +365,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeWindow
-    *  处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    *  **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -377,7 +377,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets timeWindow
     *
-    * @param int|null $timeWindow 处理抑制时长。单位秒。 -1 表示整场直播 0 表示无抑制，每次都触发
+    * @param int|null $timeWindow **参数解释**： 处理抑制时长。单位秒。 - -1：表示整场直播仅触发一次。 - 0：表示无抑制，每次都触发。 - 其他值n：表示n秒内仅触发一次。  **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -389,7 +389,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyMode
-    *  回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    *  **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -401,7 +401,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyMode
     *
-    * @param string|null $replyMode 回复类型。 * SYSTEM_REPLY：系统自动回复设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER: 显示叠加图层，不影响话术。 * INTELLIGENT_REPLY: 智能交互回复话术。
+    * @param string|null $replyMode **参数解释**： 回复类型。 **约束限制**： 不涉及 **取值范围**： * SYSTEM_REPLY：系统自动回复预先设置的话术。 * CALLBACK：回调给其他服务，携带设置的话术。 * SHOW_LAYER：仅显示叠加图层，不影响话术。 * INTELLIGENT_REPLY：使用配置的大模型生成回复话术。  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -461,7 +461,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyTexts
-    *  回复话术集
+    *  **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -473,7 +473,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyTexts
     *
-    * @param string[]|null $replyTexts 回复话术集
+    * @param string[]|null $replyTexts **参数解释**： 回复话术集。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置话术。 单条话术字符长度0-1024位。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -485,7 +485,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyAudios
-    *  回复音频集。填写audio_url。
+    *  **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
     *
     * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]|null
     */
@@ -497,7 +497,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyAudios
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]|null $replyAudios 回复音频集。填写audio_url。
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]|null $replyAudios **参数解释**： 回复音频集。填写audio_url。 **约束限制**： 不涉及 **取值范围**： 最大支持5条预置音频。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyOrder
-    *  回复次序 - RANDOM：随机 - ORDER：顺序循环
+    *  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -521,7 +521,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyOrder
     *
-    * @param string|null $replyOrder 回复次序 - RANDOM：随机 - ORDER：顺序循环
+    * @param string|null $replyOrder **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -533,7 +533,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets replyRole
-    *  回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    *  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     *
     * @return string|null
     */
@@ -545,7 +545,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets replyRole
     *
-    * @param string|null $replyRole 回复角色。默认为主播 * STREAMER：主播 * CO_STREAMER：助播
+    * @param string|null $replyRole **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     *
     * @return $this
     */
@@ -557,7 +557,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
 
     /**
     * Gets robotId
-    *  机器人ID。
+    *  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -569,7 +569,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     /**
     * Sets robotId
     *
-    * @param string|null $robotId 机器人ID。
+    * @param string|null $robotId **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * sequenceNo  剧本序号。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
     *
@@ -34,7 +34,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * sequenceNo  剧本序号。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
     *
@@ -69,7 +69,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * sequenceNo  剧本序号。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
     *
@@ -83,7 +83,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * sequenceNo  剧本序号。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
     *
@@ -97,7 +97,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * sequenceNo  剧本序号。
+    * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
     *
@@ -202,7 +202,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets sequenceNo
-    *  剧本序号。
+    *  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -214,7 +214,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     /**
     * Sets sequenceNo
     *
-    * @param int|null $sequenceNo 剧本序号。
+    * @param int|null $sequenceNo **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -21,26 +21,26 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * roomName  **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * backupModelAssetIds  **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
-    * privData  私有数据，用户填写，原样带回。
+    * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
-    * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
@@ -79,26 +79,26 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * roomName  **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * backupModelAssetIds  **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
-    * privData  私有数据，用户填写，原样带回。
+    * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
-    * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
@@ -158,26 +158,26 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * roomName  **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * backupModelAssetIds  **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
-    * privData  私有数据，用户填写，原样带回。
+    * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
-    * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
@@ -216,26 +216,26 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * roomName  **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * backupModelAssetIds  **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
-    * privData  私有数据，用户填写，原样带回。
+    * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
-    * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
@@ -274,26 +274,26 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * roomName  直播间名称
-    * roomDescription  直播间描述。
-    * roomType  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * roomName  **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
+    * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
-    * outputUrls  RTMP视频推流第三方直播平台地址。
-    * streamKeys  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
-    * backupModelAssetIds  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    * outputUrls  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * streamKeys  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
+    * backupModelAssetIds  **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
     * reviewConfig  reviewConfig
     * sharedConfig  sharedConfig
-    * viewMode  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
-    * privData  私有数据，用户填写，原样带回。
+    * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
-    * createTime  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * updateTime  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
     * thumbnail  直播间封面图新URL
     * roomState  直播间配置状态。 - ENABLE: 直播间正常可用。 - DISABLE： 直播间不可用。不可用原因在error_info中说明。 - BLOCKED：直播间被冻结。冻结原因在error_info中说明。
@@ -575,7 +575,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomName
-    *  直播间名称
+    *  **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -587,7 +587,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomName
     *
-    * @param string $roomName 直播间名称
+    * @param string $roomName **参数解释**： 直播间名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -599,7 +599,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomDescription
-    *  直播间描述。
+    *  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -611,7 +611,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomDescription
     *
-    * @param string|null $roomDescription 直播间描述。
+    * @param string|null $roomDescription **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -623,7 +623,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets roomType
-    *  直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    *  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     *
     * @return string|null
     */
@@ -635,7 +635,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets roomType
     *
-    * @param string|null $roomType 直播间类型。 * NORMAL: 普通直播间，直播间一直存在，可以反复开播 * TEMP: 临时直播间,直播任务结束后自动清理直播间。 * TEMPLATE: 直播间模板。
+    * @param string|null $roomType **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     *
     * @return $this
     */
@@ -743,7 +743,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets outputUrls
-    *  RTMP视频推流第三方直播平台地址。
+    *  **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -755,7 +755,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets outputUrls
     *
-    * @param string[]|null $outputUrls RTMP视频推流第三方直播平台地址。
+    * @param string[]|null $outputUrls **参数解释**： RTMP视频推流第三方直播平台地址。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -767,7 +767,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamKeys
-    *  RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    *  **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -779,7 +779,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets streamKeys
     *
-    * @param string[]|null $streamKeys RTMP视频推流第三方直播平台流秘钥，与推流地址对应。
+    * @param string[]|null $streamKeys **参数解释**： RTMP视频推流第三方直播平台流密钥，与推流地址对应。 > 直播过程中刷新地址，需要调用COMMAND命令REFRESH_OUTPUT_URL。  **约束限制**： 不涉及 **取值范围**： 当前仅支持一条RTMP出流地址。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -791,7 +791,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets backupModelAssetIds
-    *  主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    *  **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -803,7 +803,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets backupModelAssetIds
     *
-    * @param string[]|null $backupModelAssetIds 主播轮换时备选主播数字人资产ID（仅形象资产，不包含音色），可以从资产库中查询。
+    * @param string[]|null $backupModelAssetIds **参数解释**： 主播轮换时备选主播数字人资产ID（仅形象资产，不包含声音）。  **约束限制**： 不涉及 **取值范围**： 当前最大支持5个备选主播。 数字人资产ID，字符长度0-64位。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -911,7 +911,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewMode
-    *  横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @return string|null
     */
@@ -923,7 +923,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets viewMode
     *
-    * @param string|null $viewMode 横竖屏类型。默认值为：VERTICAL。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * @param string|null $viewMode **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     *
     * @return $this
     */
@@ -959,7 +959,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets privData
-    *  私有数据，用户填写，原样带回。
+    *  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -971,7 +971,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets privData
     *
-    * @param string|null $privData 私有数据，用户填写，原样带回。
+    * @param string|null $privData **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -1007,7 +1007,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -1019,7 +1019,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 直播间创建时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $createTime 直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -1031,7 +1031,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -1043,7 +1043,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 直播间更新时间，格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $updateTime 直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */

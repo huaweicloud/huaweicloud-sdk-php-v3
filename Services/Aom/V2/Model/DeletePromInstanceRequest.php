@@ -21,7 +21,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * promId  Prometheus实例id。
-    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * promId  Prometheus实例id。
-    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * promId  Prometheus实例id。
-    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * promId  Prometheus实例id。
-    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * promId  Prometheus实例id。
-    * enterpriseProjectId  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * enterpriseProjectId  企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
     * @var string[]
     */
@@ -172,6 +172,9 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
         if ($this->container['promId'] === null) {
             $invalidProperties[] = "'promId' can't be null";
         }
+        if ($this->container['enterpriseProjectId'] === null) {
+            $invalidProperties[] = "'enterpriseProjectId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -212,9 +215,9 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    *  企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
-    * @return string|null
+    * @return string
     */
     public function getEnterpriseProjectId()
     {
@@ -224,7 +227,7 @@ class DeletePromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * @param string $enterpriseProjectId 企业项目id。 - 删除单个企业项目下实例，填写企业项目id。
     *
     * @return $this
     */

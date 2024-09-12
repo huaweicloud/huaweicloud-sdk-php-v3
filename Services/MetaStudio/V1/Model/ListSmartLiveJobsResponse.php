@@ -21,7 +21,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * count  数字人直播任务总数。
+    * count  **参数解释**： 数字人直播任务总数。
     * smartLiveJobs  数字人直播任务列表。
     * xRequestId  xRequestId
     *
@@ -35,7 +35,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * count  数字人直播任务总数。
+    * count  **参数解释**： 数字人直播任务总数。
     * smartLiveJobs  数字人直播任务列表。
     * xRequestId  xRequestId
     *
@@ -70,7 +70,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * count  数字人直播任务总数。
+    * count  **参数解释**： 数字人直播任务总数。
     * smartLiveJobs  数字人直播任务列表。
     * xRequestId  xRequestId
     *
@@ -84,7 +84,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * count  数字人直播任务总数。
+    * count  **参数解释**： 数字人直播任务总数。
     * smartLiveJobs  数字人直播任务列表。
     * xRequestId  xRequestId
     *
@@ -98,7 +98,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * count  数字人直播任务总数。
+    * count  **参数解释**： 数字人直播任务总数。
     * smartLiveJobs  数字人直播任务列表。
     * xRequestId  xRequestId
     *
@@ -203,7 +203,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets count
-    *  数字人直播任务总数。
+    *  **参数解释**： 数字人直播任务总数。
     *
     * @return int|null
     */
@@ -215,7 +215,7 @@ class ListSmartLiveJobsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets count
     *
-    * @param int|null $count 数字人直播任务总数。
+    * @param int|null $count **参数解释**： 数字人直播任务总数。
     *
     * @return $this
     */

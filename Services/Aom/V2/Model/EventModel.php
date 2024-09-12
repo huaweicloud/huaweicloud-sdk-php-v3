@@ -27,6 +27,10 @@ class EventModel implements ModelInterface, ArrayAccess
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
+    * eventSn  告警流水号。
+    * arrivesAt  事件到达系统时间，CST毫秒级时间戳。
+    * enterpriseProjectId  事件或告警所属企业项目id。
+    * policy  开放告警策略
     *
     * @var string[]
     */
@@ -37,7 +41,11 @@ class EventModel implements ModelInterface, ArrayAccess
             'metadata' => 'map[string,string]',
             'annotations' => 'map[string,object]',
             'attachRule' => 'map[string,object]',
-            'id' => 'string'
+            'id' => 'string',
+            'eventSn' => 'string',
+            'arrivesAt' => 'int',
+            'enterpriseProjectId' => 'string',
+            'policy' => 'map[string,object]'
     ];
 
     /**
@@ -49,6 +57,10 @@ class EventModel implements ModelInterface, ArrayAccess
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
+    * eventSn  告警流水号。
+    * arrivesAt  事件到达系统时间，CST毫秒级时间戳。
+    * enterpriseProjectId  事件或告警所属企业项目id。
+    * policy  开放告警策略
     *
     * @var string[]
     */
@@ -59,7 +71,11 @@ class EventModel implements ModelInterface, ArrayAccess
         'metadata' => null,
         'annotations' => null,
         'attachRule' => null,
-        'id' => null
+        'id' => null,
+        'eventSn' => null,
+        'arrivesAt' => 'int64',
+        'enterpriseProjectId' => null,
+        'policy' => null
     ];
 
     /**
@@ -92,6 +108,10 @@ class EventModel implements ModelInterface, ArrayAccess
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
+    * eventSn  告警流水号。
+    * arrivesAt  事件到达系统时间，CST毫秒级时间戳。
+    * enterpriseProjectId  事件或告警所属企业项目id。
+    * policy  开放告警策略
     *
     * @var string[]
     */
@@ -102,7 +122,11 @@ class EventModel implements ModelInterface, ArrayAccess
             'metadata' => 'metadata',
             'annotations' => 'annotations',
             'attachRule' => 'attach_rule',
-            'id' => 'id'
+            'id' => 'id',
+            'eventSn' => 'event_sn',
+            'arrivesAt' => 'arrives_at',
+            'enterpriseProjectId' => 'enterprise_project_id',
+            'policy' => 'policy'
     ];
 
     /**
@@ -114,6 +138,10 @@ class EventModel implements ModelInterface, ArrayAccess
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
+    * eventSn  告警流水号。
+    * arrivesAt  事件到达系统时间，CST毫秒级时间戳。
+    * enterpriseProjectId  事件或告警所属企业项目id。
+    * policy  开放告警策略
     *
     * @var string[]
     */
@@ -124,7 +152,11 @@ class EventModel implements ModelInterface, ArrayAccess
             'metadata' => 'setMetadata',
             'annotations' => 'setAnnotations',
             'attachRule' => 'setAttachRule',
-            'id' => 'setId'
+            'id' => 'setId',
+            'eventSn' => 'setEventSn',
+            'arrivesAt' => 'setArrivesAt',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'policy' => 'setPolicy'
     ];
 
     /**
@@ -136,6 +168,10 @@ class EventModel implements ModelInterface, ArrayAccess
     * annotations  事件或者告警附加字段，可以为空。
     * attachRule  事件或者告警预留字段，为空。
     * id  事件或者告警id，系统会自动生成，上报无须填写该字段。
+    * eventSn  告警流水号。
+    * arrivesAt  事件到达系统时间，CST毫秒级时间戳。
+    * enterpriseProjectId  事件或告警所属企业项目id。
+    * policy  开放告警策略
     *
     * @var string[]
     */
@@ -146,7 +182,11 @@ class EventModel implements ModelInterface, ArrayAccess
             'metadata' => 'getMetadata',
             'annotations' => 'getAnnotations',
             'attachRule' => 'getAttachRule',
-            'id' => 'getId'
+            'id' => 'getId',
+            'eventSn' => 'getEventSn',
+            'arrivesAt' => 'getArrivesAt',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'policy' => 'getPolicy'
     ];
 
     /**
@@ -214,6 +254,10 @@ class EventModel implements ModelInterface, ArrayAccess
         $this->container['annotations'] = isset($data['annotations']) ? $data['annotations'] : null;
         $this->container['attachRule'] = isset($data['attachRule']) ? $data['attachRule'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['eventSn'] = isset($data['eventSn']) ? $data['eventSn'] : null;
+        $this->container['arrivesAt'] = isset($data['arrivesAt']) ? $data['arrivesAt'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['policy'] = isset($data['policy']) ? $data['policy'] : null;
     }
 
     /**
@@ -403,6 +447,102 @@ class EventModel implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets eventSn
+    *  告警流水号。
+    *
+    * @return string|null
+    */
+    public function getEventSn()
+    {
+        return $this->container['eventSn'];
+    }
+
+    /**
+    * Sets eventSn
+    *
+    * @param string|null $eventSn 告警流水号。
+    *
+    * @return $this
+    */
+    public function setEventSn($eventSn)
+    {
+        $this->container['eventSn'] = $eventSn;
+        return $this;
+    }
+
+    /**
+    * Gets arrivesAt
+    *  事件到达系统时间，CST毫秒级时间戳。
+    *
+    * @return int|null
+    */
+    public function getArrivesAt()
+    {
+        return $this->container['arrivesAt'];
+    }
+
+    /**
+    * Sets arrivesAt
+    *
+    * @param int|null $arrivesAt 事件到达系统时间，CST毫秒级时间戳。
+    *
+    * @return $this
+    */
+    public function setArrivesAt($arrivesAt)
+    {
+        $this->container['arrivesAt'] = $arrivesAt;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  事件或告警所属企业项目id。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 事件或告警所属企业项目id。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets policy
+    *  开放告警策略
+    *
+    * @return map[string,object]|null
+    */
+    public function getPolicy()
+    {
+        return $this->container['policy'];
+    }
+
+    /**
+    * Sets policy
+    *
+    * @param map[string,object]|null $policy 开放告警策略
+    *
+    * @return $this
+    */
+    public function setPolicy($policy)
+    {
+        $this->container['policy'] = $policy;
         return $this;
     }
 

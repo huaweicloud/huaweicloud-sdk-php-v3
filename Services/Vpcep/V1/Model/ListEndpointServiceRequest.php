@@ -29,6 +29,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
+    * netType  后端类型
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'string',
             'limit' => 'int',
             'offset' => 'int',
-            'publicBorderGroup' => 'string'
+            'publicBorderGroup' => 'string',
+            'netType' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
+    * netType  后端类型
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
         'sortDir' => null,
         'limit' => null,
         'offset' => null,
-        'publicBorderGroup' => null
+        'publicBorderGroup' => null,
+        'netType' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
+    * netType  后端类型
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'sort_dir',
             'limit' => 'limit',
             'offset' => 'offset',
-            'publicBorderGroup' => 'public_border_group'
+            'publicBorderGroup' => 'public_border_group',
+            'netType' => 'net_type'
     ];
 
     /**
@@ -128,6 +134,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
+    * netType  后端类型
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'setSortDir',
             'limit' => 'setLimit',
             'offset' => 'setOffset',
-            'publicBorderGroup' => 'setPublicBorderGroup'
+            'publicBorderGroup' => 'setPublicBorderGroup',
+            'netType' => 'setNetType'
     ];
 
     /**
@@ -154,6 +162,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     * limit  查询返回的终端节点服务数量限制，即每页返回的终端节点服务的个数。 取值范围：0~1000，取值一般为10，20或者50，默认为10。
     * offset  偏移量。 偏移量为一个大于0小于终端节点服务总个数的整数， 表示从偏移量后面的终端节点服务开始查询。
     * publicBorderGroup  筛选结果中匹配边缘属性的EPS
+    * netType  后端类型
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
             'sortDir' => 'getSortDir',
             'limit' => 'getLimit',
             'offset' => 'getOffset',
-            'publicBorderGroup' => 'getPublicBorderGroup'
+            'publicBorderGroup' => 'getPublicBorderGroup',
+            'netType' => 'getNetType'
     ];
 
     /**
@@ -217,6 +227,9 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     const SORT_KEY_UPDATE_AT = 'update_at';
     const SORT_DIR_ASC = 'asc';
     const SORT_DIR_DESC = 'desc';
+    const NET_TYPE_VLAN = 'vlan';
+    const NET_TYPE_VXLAN = 'vxlan';
+    const NET_TYPE_ALL = 'all';
     
 
     /**
@@ -260,6 +273,20 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getNetTypeAllowableValues()
+    {
+        return [
+            self::NET_TYPE_VLAN,
+            self::NET_TYPE_VXLAN,
+            self::NET_TYPE_ALL,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -285,6 +312,7 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['publicBorderGroup'] = isset($data['publicBorderGroup']) ? $data['publicBorderGroup'] : null;
+        $this->container['netType'] = isset($data['netType']) ? $data['netType'] : null;
     }
 
     /**
@@ -342,6 +370,20 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
                 $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getNetTypeAllowableValues();
+                if (!is_null($this->container['netType']) && !in_array($this->container['netType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'netType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['netType']) && (mb_strlen($this->container['netType']) > 5)) {
+                $invalidProperties[] = "invalid value for 'netType', the character length must be smaller than or equal to 5.";
+            }
+            if (!is_null($this->container['netType']) && (mb_strlen($this->container['netType']) < 1)) {
+                $invalidProperties[] = "invalid value for 'netType', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -570,6 +612,30 @@ class ListEndpointServiceRequest implements ModelInterface, ArrayAccess
     public function setPublicBorderGroup($publicBorderGroup)
     {
         $this->container['publicBorderGroup'] = $publicBorderGroup;
+        return $this;
+    }
+
+    /**
+    * Gets netType
+    *  后端类型
+    *
+    * @return string|null
+    */
+    public function getNetType()
+    {
+        return $this->container['netType'];
+    }
+
+    /**
+    * Sets netType
+    *
+    * @param string|null $netType 后端类型
+    *
+    * @return $this
+    */
+    public function setNetType($netType)
+    {
+        $this->container['netType'] = $netType;
         return $this;
     }
 

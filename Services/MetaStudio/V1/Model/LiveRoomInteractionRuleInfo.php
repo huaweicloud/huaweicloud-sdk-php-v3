@@ -20,16 +20,16 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ruleIndex  规则索引
-    * ruleName  规则名称
-    * enabled  是否启用
-    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    * ruleIndex  **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
+    * ruleName  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
+    * eventType  **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     * hitCondition  hitCondition
     * trigger  trigger
     * reviewConfig  reviewConfig
-    * groupId  互动规则库ID。从互动库导入时携带互动库ID。
-    * groupName  互动规则库名称。从互动库导入时携带互动库名称。
-    * enabledScenes  规则启用场景。部分场景启用时填写。不填写为全部。
+    * groupId  **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * enabledScenes  **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -48,16 +48,16 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ruleIndex  规则索引
-    * ruleName  规则名称
-    * enabled  是否启用
-    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    * ruleIndex  **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
+    * ruleName  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
+    * eventType  **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     * hitCondition  hitCondition
     * trigger  trigger
     * reviewConfig  reviewConfig
-    * groupId  互动规则库ID。从互动库导入时携带互动库ID。
-    * groupName  互动规则库名称。从互动库导入时携带互动库名称。
-    * enabledScenes  规则启用场景。部分场景启用时填写。不填写为全部。
+    * groupId  **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * enabledScenes  **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,16 +97,16 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ruleIndex  规则索引
-    * ruleName  规则名称
-    * enabled  是否启用
-    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    * ruleIndex  **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
+    * ruleName  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
+    * eventType  **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     * hitCondition  hitCondition
     * trigger  trigger
     * reviewConfig  reviewConfig
-    * groupId  互动规则库ID。从互动库导入时携带互动库ID。
-    * groupName  互动规则库名称。从互动库导入时携带互动库名称。
-    * enabledScenes  规则启用场景。部分场景启用时填写。不填写为全部。
+    * groupId  **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * enabledScenes  **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -125,16 +125,16 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ruleIndex  规则索引
-    * ruleName  规则名称
-    * enabled  是否启用
-    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    * ruleIndex  **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
+    * ruleName  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
+    * eventType  **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     * hitCondition  hitCondition
     * trigger  trigger
     * reviewConfig  reviewConfig
-    * groupId  互动规则库ID。从互动库导入时携带互动库ID。
-    * groupName  互动规则库名称。从互动库导入时携带互动库名称。
-    * enabledScenes  规则启用场景。部分场景启用时填写。不填写为全部。
+    * groupId  **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * enabledScenes  **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -153,16 +153,16 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ruleIndex  规则索引
-    * ruleName  规则名称
-    * enabled  是否启用
-    * eventType  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    * ruleIndex  **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
+    * ruleName  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
+    * enabled  **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
+    * eventType  **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     * hitCondition  hitCondition
     * trigger  trigger
     * reviewConfig  reviewConfig
-    * groupId  互动规则库ID。从互动库导入时携带互动库ID。
-    * groupName  互动规则库名称。从互动库导入时携带互动库名称。
-    * enabledScenes  规则启用场景。部分场景启用时填写。不填写为全部。
+    * groupId  **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
+    * groupName  **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * enabledScenes  **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -303,7 +303,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleIndex
-    *  规则索引
+    *  **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -315,7 +315,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleIndex
     *
-    * @param string|null $ruleIndex 规则索引
+    * @param string|null $ruleIndex **参数解释**： 规则索引。用于触发规则时索引具体规则。 **约束限制**： 无需用户填写。 **取值范围**： 字符0-64位 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -327,7 +327,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleName
-    *  规则名称
+    *  **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -339,7 +339,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets ruleName
     *
-    * @param string|null $ruleName 规则名称
+    * @param string|null $ruleName **参数解释**： 规则名称。 **约束限制**： 不涉及。 **取值范围**： 字符0-256位 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -351,7 +351,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabled
-    *  是否启用
+    *  **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
     *
     * @return bool|null
     */
@@ -363,7 +363,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enabled
     *
-    * @param bool|null $enabled 是否启用
+    * @param bool|null $enabled **参数解释**： 是否启用。 **约束限制**： 不涉及。 **取值范围**： * true：启用 * fasle：不启用  **默认取值**： true
     *
     * @return $this
     */
@@ -375,7 +375,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets eventType
-    *  事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    *  **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -387,7 +387,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets eventType
     *
-    * @param int|null $eventType 事件类型。 * 1：弹幕事件 * 2：用户入场事件 * 3：用户点赞事件 * 4：用户送礼事件 * 10: 预置话术事件
+    * @param int|null $eventType **参数解释**： 规则匹配直播事件类型。接口的取值范围[0,100]，实际业务取值如下所示： * 1：弹幕事件  * 2：用户入场事件  * 3：用户点赞事件 * 4：用户送礼事件  * 10: 预置话术事件  请以实际业务取值为准。 > * 1,2,3,4：与LiveEventReport中的event.type对应。 > * 10：匹配预置剧本  **约束限制**： 不涉及。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -471,7 +471,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupId
-    *  互动规则库ID。从互动库导入时携带互动库ID。
+    *  **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -483,7 +483,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupId
     *
-    * @param string|null $groupId 互动规则库ID。从互动库导入时携带互动库ID。
+    * @param string|null $groupId **参数解释**： 互动规则库ID。从互动库导入时携带互动库ID。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets groupName
-    *  互动规则库名称。从互动库导入时携带互动库名称。
+    *  **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -507,7 +507,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets groupName
     *
-    * @param string|null $groupName 互动规则库名称。从互动库导入时携带互动库名称。
+    * @param string|null $groupName **参数解释**： 互动规则库名称。从互动库导入时携带互动库名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets enabledScenes
-    *  规则启用场景。部分场景启用时填写。不填写为全部。
+    *  **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @return string[]|null
     */
@@ -531,7 +531,7 @@ class LiveRoomInteractionRuleInfo implements ModelInterface, ArrayAccess
     /**
     * Sets enabledScenes
     *
-    * @param string[]|null $enabledScenes 规则启用场景。部分场景启用时填写。不填写为全部。
+    * @param string[]|null $enabledScenes **参数解释**： 规则启用场景。启用部分场景时填写。如果不填写则适用所有场景。 **约束限制**： 不涉及。 **取值范围**： 对应直播间场景列表，最大100个场景，这边也对应100个。 条目填写场景名称，字符长度1-256。 **默认取值**： 不涉及。
     *
     * @return $this
     */

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class TagFilter implements ModelInterface, ArrayAccess
+class AddNodesToNodePoolRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,34 @@ class TagFilter implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'TagFilter';
+    protected static $openAPIModelName = 'AddNodesToNodePoolRequest';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  需要过滤的标签key。
-    * values  values
+    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * nodepoolId  节点池ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'key' => 'string',
-            'values' => 'string[]'
+            'clusterId' => 'string',
+            'nodepoolId' => 'string',
+            'body' => '\HuaweiCloud\SDK\Cce\V3\Model\AddNodesToNodePoolList'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  需要过滤的标签key。
-    * values  values
+    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * nodepoolId  节点池ID
+    * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'key' => null,
-        'values' => null
+        'clusterId' => null,
+        'nodepoolId' => null,
+        'body' => null
     ];
 
     /**
@@ -65,38 +69,44 @@ class TagFilter implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  需要过滤的标签key。
-    * values  values
+    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * nodepoolId  节点池ID
+    * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'key' => 'key',
-            'values' => 'values'
+            'clusterId' => 'cluster_id',
+            'nodepoolId' => 'nodepool_id',
+            'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  需要过滤的标签key。
-    * values  values
+    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * nodepoolId  节点池ID
+    * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'key' => 'setKey',
-            'values' => 'setValues'
+            'clusterId' => 'setClusterId',
+            'nodepoolId' => 'setNodepoolId',
+            'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  需要过滤的标签key。
-    * values  values
+    * clusterId  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
+    * nodepoolId  节点池ID
+    * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'key' => 'getKey',
-            'values' => 'getValues'
+            'clusterId' => 'getClusterId',
+            'nodepoolId' => 'getNodepoolId',
+            'body' => 'getBody'
     ];
 
     /**
@@ -157,8 +167,9 @@ class TagFilter implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['values'] = isset($data['values']) ? $data['values'] : null;
+        $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['nodepoolId'] = isset($data['nodepoolId']) ? $data['nodepoolId'] : null;
+        $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
     /**
@@ -169,6 +180,18 @@ class TagFilter implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['clusterId'] === null) {
+            $invalidProperties[] = "'clusterId' can't be null";
+        }
+            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['clusterId'])) {
+                $invalidProperties[] = "invalid value for 'clusterId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            }
+        if ($this->container['nodepoolId'] === null) {
+            $invalidProperties[] = "'nodepoolId' can't be null";
+        }
+            if (!preg_match("/^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/", $this->container['nodepoolId'])) {
+                $invalidProperties[] = "invalid value for 'nodepoolId', must be conform to the pattern /^[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -184,50 +207,74 @@ class TagFilter implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets key
-    *  需要过滤的标签key。
+    * Gets clusterId
+    *  集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
-    * @return string|null
+    * @return string
     */
-    public function getKey()
+    public function getClusterId()
     {
-        return $this->container['key'];
+        return $this->container['clusterId'];
     }
 
     /**
-    * Sets key
+    * Sets clusterId
     *
-    * @param string|null $key 需要过滤的标签key。
+    * @param string $clusterId 集群ID，获取方式请参见[如何获取接口URI中参数](cce_02_0271.xml)。
     *
     * @return $this
     */
-    public function setKey($key)
+    public function setClusterId($clusterId)
     {
-        $this->container['key'] = $key;
+        $this->container['clusterId'] = $clusterId;
         return $this;
     }
 
     /**
-    * Gets values
-    *  values
+    * Gets nodepoolId
+    *  节点池ID
     *
-    * @return string[]|null
+    * @return string
     */
-    public function getValues()
+    public function getNodepoolId()
     {
-        return $this->container['values'];
+        return $this->container['nodepoolId'];
     }
 
     /**
-    * Sets values
+    * Sets nodepoolId
     *
-    * @param string[]|null $values values
+    * @param string $nodepoolId 节点池ID
     *
     * @return $this
     */
-    public function setValues($values)
+    public function setNodepoolId($nodepoolId)
     {
-        $this->container['values'] = $values;
+        $this->container['nodepoolId'] = $nodepoolId;
+        return $this;
+    }
+
+    /**
+    * Gets body
+    *  body
+    *
+    * @return \HuaweiCloud\SDK\Cce\V3\Model\AddNodesToNodePoolList|null
+    */
+    public function getBody()
+    {
+        return $this->container['body'];
+    }
+
+    /**
+    * Sets body
+    *
+    * @param \HuaweiCloud\SDK\Cce\V3\Model\AddNodesToNodePoolList|null $body body
+    *
+    * @return $this
+    */
+    public function setBody($body)
+    {
+        $this->container['body'] = $body;
         return $this;
     }
 

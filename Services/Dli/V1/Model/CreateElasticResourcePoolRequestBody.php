@@ -23,11 +23,12 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * description  描述信息。长度限制：256个字符以内。
     * cidrInVpc  虚拟集群关联的vpc cidr.如果不填，默认值为172.16.0.0//12
-    * maxCu  最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * chargingMode  计费类型 1、按需计费
-    * minCu  最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'chargingMode' => 'int',
             'minCu' => 'int',
             'enterpriseProjectId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]'
+            'tags' => '\HuaweiCloud\SDK\Dli\V1\Model\Tag[]',
+            'label' => 'map[string,string]'
     ];
 
     /**
@@ -47,11 +49,12 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * description  描述信息。长度限制：256个字符以内。
     * cidrInVpc  虚拟集群关联的vpc cidr.如果不填，默认值为172.16.0.0//12
-    * maxCu  最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * chargingMode  计费类型 1、按需计费
-    * minCu  最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
         'chargingMode' => 'int32',
         'minCu' => 'int32',
         'enterpriseProjectId' => null,
-        'tags' => null
+        'tags' => null,
+        'label' => null
     ];
 
     /**
@@ -92,11 +96,12 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * description  描述信息。长度限制：256个字符以内。
     * cidrInVpc  虚拟集群关联的vpc cidr.如果不填，默认值为172.16.0.0//12
-    * maxCu  最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * chargingMode  计费类型 1、按需计费
-    * minCu  最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'chargingMode' => 'charging_mode',
             'minCu' => 'min_cu',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'label' => 'label'
     ];
 
     /**
@@ -116,11 +122,12 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * description  描述信息。长度限制：256个字符以内。
     * cidrInVpc  虚拟集群关联的vpc cidr.如果不填，默认值为172.16.0.0//12
-    * maxCu  最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * chargingMode  计费类型 1、按需计费
-    * minCu  最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'chargingMode' => 'setChargingMode',
             'minCu' => 'setMinCu',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'label' => 'setLabel'
     ];
 
     /**
@@ -140,11 +148,12 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * elasticResourcePoolName  新建的弹性资源池名称，名称只能包含数字、小写英文字母和下划线，但不能是纯数字，且不能以下划线开头。长度限制：1~128个字符。
     * description  描述信息。长度限制：256个字符以内。
     * cidrInVpc  虚拟集群关联的vpc cidr.如果不填，默认值为172.16.0.0//12
-    * maxCu  最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * chargingMode  计费类型 1、按需计费
-    * minCu  最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     * enterpriseProjectId  企业ID，不填默认为“0”
     * tags  标签
+    * label  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             'chargingMode' => 'getChargingMode',
             'minCu' => 'getMinCu',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'label' => 'getLabel'
     ];
 
     /**
@@ -225,6 +235,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
         $this->container['minCu'] = isset($data['minCu']) ? $data['minCu'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
     }
 
     /**
@@ -259,8 +270,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             if (($this->container['maxCu'] > 32000)) {
                 $invalidProperties[] = "invalid value for 'maxCu', must be smaller than or equal to 32000.";
             }
-            if (($this->container['maxCu'] < 64)) {
-                $invalidProperties[] = "invalid value for 'maxCu', must be bigger than or equal to 64.";
+            if (($this->container['maxCu'] < 16)) {
+                $invalidProperties[] = "invalid value for 'maxCu', must be bigger than or equal to 16.";
             }
             if (!is_null($this->container['chargingMode']) && ($this->container['chargingMode'] > 1)) {
                 $invalidProperties[] = "invalid value for 'chargingMode', must be smaller than or equal to 1.";
@@ -274,8 +285,8 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
             if (($this->container['minCu'] > 32000)) {
                 $invalidProperties[] = "invalid value for 'minCu', must be smaller than or equal to 32000.";
             }
-            if (($this->container['minCu'] < 64)) {
-                $invalidProperties[] = "invalid value for 'minCu', must be bigger than or equal to 64.";
+            if (($this->container['minCu'] < 16)) {
+                $invalidProperties[] = "invalid value for 'minCu', must be bigger than or equal to 16.";
             }
             if (!is_null($this->container['enterpriseProjectId']) && (mb_strlen($this->container['enterpriseProjectId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', the character length must be smaller than or equal to 128.";
@@ -371,7 +382,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets maxCu
-    *  最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    *  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return int
     */
@@ -383,7 +394,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets maxCu
     *
-    * @param int $maxCu 最大CU大于等于该资源池下任意一个队列的最大CU之和且大于min_cu。最小值为64
+    * @param int $maxCu max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return $this
     */
@@ -419,7 +430,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets minCu
-    *  最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    *  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return int
     */
@@ -431,7 +442,7 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets minCu
     *
-    * @param int $minCu 最小CU大于等于该资源池下所有队列最小CU之和,最小值为64
+    * @param int $minCu min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return $this
     */
@@ -486,6 +497,30 @@ class CreateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets label
+    *  弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    *
+    * @return map[string,string]|null
+    */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+    * Sets label
+    *
+    * @param map[string,string]|null $label 弹性资源池属性字段。默认为标准版弹性资源池；{\"spec\":\"basic\"}标识基础版弹性资源池；{\"billing_spec_code\":\"developer\"}标识开发者弹性资源池。目前不支持其它属性设置。
+    *
+    * @return $this
+    */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
-    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
+    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
-    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
+    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
-    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
+    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
-    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
+    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
-    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    * clusterId  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
+    * namespace  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets clusterId
-    *  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
+    *  - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets clusterId
     *
-    * @param string $clusterId - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“apm”。
+    * @param string $clusterId - 查询集群主机时，填写集群id。 - 查询用户自定义主机时，填写“APM”。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets namespace
-    *  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    *  - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ListAgentsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets namespace
     *
-    * @param string $namespace - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“apm”。
+    * @param string $namespace - 查询集群主机时，填写命名空间。 - 查询用户自定义主机时，填写“APM”。
     *
     * @return $this
     */

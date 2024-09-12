@@ -22,21 +22,25 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * events  事件或者告警详情。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'events' => '\HuaweiCloud\SDK\Aom\V2\Model\EventModel[]'
+            'events' => '\HuaweiCloud\SDK\Aom\V2\Model\EventModel[]',
+            'pageInfo' => '\HuaweiCloud\SDK\Aom\V2\Model\PageInfo'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * events  事件或者告警详情。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'events' => null
+        'events' => null,
+        'pageInfo' => null
     ];
 
     /**
@@ -63,31 +67,37 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * events  事件或者告警详情。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'events' => 'events'
+            'events' => 'events',
+            'pageInfo' => 'page_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * events  事件或者告警详情。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $setters = [
-            'events' => 'setEvents'
+            'events' => 'setEvents',
+            'pageInfo' => 'setPageInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * events  事件或者告警详情。
+    * pageInfo  pageInfo
     *
     * @var string[]
     */
     protected static $getters = [
-            'events' => 'getEvents'
+            'events' => 'getEvents',
+            'pageInfo' => 'getPageInfo'
     ];
 
     /**
@@ -149,6 +159,7 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['events'] = isset($data['events']) ? $data['events'] : null;
+        $this->container['pageInfo'] = isset($data['pageInfo']) ? $data['pageInfo'] : null;
     }
 
     /**
@@ -194,6 +205,30 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     public function setEvents($events)
     {
         $this->container['events'] = $events;
+        return $this;
+    }
+
+    /**
+    * Gets pageInfo
+    *  pageInfo
+    *
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\PageInfo|null
+    */
+    public function getPageInfo()
+    {
+        return $this->container['pageInfo'];
+    }
+
+    /**
+    * Sets pageInfo
+    *
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\PageInfo|null $pageInfo pageInfo
+    *
+    * @return $this
+    */
+    public function setPageInfo($pageInfo)
+    {
+        $this->container['pageInfo'] = $pageInfo;
         return $this;
     }
 

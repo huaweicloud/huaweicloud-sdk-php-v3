@@ -21,7 +21,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * imageUrl  图片文件的URL。
-    * displayDuration  图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    * displayDuration  **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * imageUrl  图片文件的URL。
-    * displayDuration  图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    * displayDuration  **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * imageUrl  图片文件的URL。
-    * displayDuration  图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    * displayDuration  **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * imageUrl  图片文件的URL。
-    * displayDuration  图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    * displayDuration  **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * imageUrl  图片文件的URL。
-    * displayDuration  图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    * displayDuration  **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @var string[]
     */
@@ -224,7 +224,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
 
     /**
     * Gets displayDuration
-    *  图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    *  **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @return int|null
     */
@@ -236,7 +236,7 @@ class SmartImageLayerConfig implements ModelInterface, ArrayAccess
     /**
     * Sets displayDuration
     *
-    * @param int|null $displayDuration 图片显示时长。单位s * 0 显示时长规则：若携带reply_texts，reply_audios，与播放语音内容时长保持一致； 未携带场景，与匹配的关键词语音内容时长保持一致。
+    * @param int|null $displayDuration **参数解释**： 图片显示时长，单位s。  显示时长规则为，若携带reply_texts、reply_audios，则与播放语音内容时长保持一致。若未携带，则与匹配的关键词语音内容时长保持一致。
     *
     * @return $this
     */

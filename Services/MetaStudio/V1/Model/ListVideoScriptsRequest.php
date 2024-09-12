@@ -28,7 +28,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * name  按名称模糊查询。
     * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
-    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @var string[]
     */
@@ -54,7 +54,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * name  按名称模糊查询。
     * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
-    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @var string[]
     */
@@ -101,7 +101,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * name  按名称模糊查询。
     * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
-    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @var string[]
     */
@@ -127,7 +127,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * name  按名称模糊查询。
     * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
-    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @var string[]
     */
@@ -153,7 +153,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     * limit  每页显示的条目数量。
     * name  按名称模糊查询。
     * scriptCatalog  剧本类型。默认查询VIDEO_DRAFT。 * VIDEO_DRAFT：视频草稿。 * SYSTEM_VIDEO_TEMPLET： 系统视频模板。
-    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * viewMode  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @var string[]
     */
@@ -542,7 +542,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets viewMode
-    *  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    *  横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class ListVideoScriptsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets viewMode
     *
-    * @param string|null $viewMode 横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
+    * @param string|null $viewMode 横竖屏类型（内部参数，不对外开放）。默认值是LANDSCAPE。 * LANDSCAPE：横屏。 * VERTICAL：竖屏。
     *
     * @return $this
     */

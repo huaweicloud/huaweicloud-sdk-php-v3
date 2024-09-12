@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\PanguLargeModels\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowResourceTagsResponse implements ModelInterface, ArrayAccess
+class ChatChoice implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,34 +16,30 @@ class ShowResourceTagsResponse implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowResourceTagsResponse';
+    protected static $openAPIModelName = 'ChatChoice';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'sysTags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'action' => 'string'
+            'index' => 'int',
+            'message' => '\HuaweiCloud\SDK\PanguLargeModels\V2\Model\MessageItem'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'sysTags' => null,
-        'action' => null
+        'index' => null,
+        'message' => null
     ];
 
     /**
@@ -70,44 +65,38 @@ class ShowResourceTagsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags',
-            'action' => 'action'
+            'index' => 'index',
+            'message' => 'message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags',
-            'action' => 'setAction'
+            'index' => 'setIndex',
+            'message' => 'setMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * index  回复的索引
+    * message  message
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags',
-            'action' => 'getAction'
+            'index' => 'getIndex',
+            'message' => 'getMessage'
     ];
 
     /**
@@ -168,9 +157,8 @@ class ShowResourceTagsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['index'] = isset($data['index']) ? $data['index'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
     }
 
     /**
@@ -181,6 +169,12 @@ class ShowResourceTagsResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['index'] === null) {
+            $invalidProperties[] = "'index' can't be null";
+        }
+        if ($this->container['message'] === null) {
+            $invalidProperties[] = "'message' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,74 +190,50 @@ class ShowResourceTagsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets tags
-    *  资源标签
+    * Gets index
+    *  回复的索引
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
+    * @return int
     */
-    public function getTags()
+    public function getIndex()
     {
-        return $this->container['tags'];
+        return $this->container['index'];
     }
 
     /**
-    * Sets tags
+    * Sets index
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $tags 资源标签
+    * @param int $index 回复的索引
     *
     * @return $this
     */
-    public function setTags($tags)
+    public function setIndex($index)
     {
-        $this->container['tags'] = $tags;
+        $this->container['index'] = $index;
         return $this;
     }
 
     /**
-    * Gets sysTags
-    *  系统标签
+    * Gets message
+    *  message
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
+    * @return \HuaweiCloud\SDK\PanguLargeModels\V2\Model\MessageItem
     */
-    public function getSysTags()
+    public function getMessage()
     {
-        return $this->container['sysTags'];
+        return $this->container['message'];
     }
 
     /**
-    * Sets sysTags
+    * Sets message
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $sysTags 系统标签
+    * @param \HuaweiCloud\SDK\PanguLargeModels\V2\Model\MessageItem $message message
     *
     * @return $this
     */
-    public function setSysTags($sysTags)
+    public function setMessage($message)
     {
-        $this->container['sysTags'] = $sysTags;
-        return $this;
-    }
-
-    /**
-    * Gets action
-    *  执行动作
-    *
-    * @return string|null
-    */
-    public function getAction()
-    {
-        return $this->container['action'];
-    }
-
-    /**
-    * Sets action
-    *
-    * @param string|null $action 执行动作
-    *
-    * @return $this
-    */
-    public function setAction($action)
-    {
-        $this->container['action'] = $action;
+        $this->container['message'] = $message;
         return $this;
     }
 

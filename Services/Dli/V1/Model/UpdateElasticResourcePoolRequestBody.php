@@ -21,8 +21,8 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * description  描述信息。长度限制：256个字符以内。
-    * maxCu  弹性资源池的最大CU数
-    * minCu  弹性资源池的最小CU数
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of property to format mappings. Used for (de)serialization
     * description  描述信息。长度限制：256个字符以内。
-    * maxCu  弹性资源池的最大CU数
-    * minCu  弹性资源池的最小CU数
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * description  描述信息。长度限制：256个字符以内。
-    * maxCu  弹性资源池的最大CU数
-    * minCu  弹性资源池的最小CU数
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * description  描述信息。长度限制：256个字符以内。
-    * maxCu  弹性资源池的最大CU数
-    * minCu  弹性资源池的最小CU数
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * description  描述信息。长度限制：256个字符以内。
-    * maxCu  弹性资源池的最大CU数
-    * minCu  弹性资源池的最小CU数
+    * maxCu  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
+    * minCu  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets maxCu
-    *  弹性资源池的最大CU数
+    *  max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets maxCu
     *
-    * @param int|null $maxCu 弹性资源池的最大CU数
+    * @param int|null $maxCu max_cu大于等于该弹性资源池下任意一个队列的最大CU。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
 
     /**
     * Gets minCu
-    *  弹性资源池的最小CU数
+    *  min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class UpdateElasticResourcePoolRequestBody implements ModelInterface, ArrayAcces
     /**
     * Sets minCu
     *
-    * @param int|null $minCu 弹性资源池的最小CU数
+    * @param int|null $minCu min_cu大于等于该弹性资源池下所有队列最小CU之和，且小于等于max_cu。标准版弹性资源池最小值为64，最大值为32000；基础版弹性资源池最小值为16，最大值为64。
     *
     * @return $this
     */

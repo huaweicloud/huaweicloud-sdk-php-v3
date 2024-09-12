@@ -25,17 +25,17 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
-    * duration  数字人直播时长，单位秒。
-    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * duration  **参数解释**： 数字人直播时长，单位秒。
+    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * errorInfo  errorInfo
-    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * streamDuration  数字人直播推流时长，单位秒
+    * streamDuration  **参数解释**： 数字人直播推流时长，单位秒。
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
@@ -73,17 +73,17 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
-    * duration  数字人直播时长，单位秒。
-    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * duration  **参数解释**： 数字人直播时长，单位秒。
+    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * errorInfo  errorInfo
-    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * streamDuration  数字人直播推流时长，单位秒
+    * streamDuration  **参数解释**： 数字人直播推流时长，单位秒。
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
@@ -142,17 +142,17 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
-    * duration  数字人直播时长，单位秒。
-    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * duration  **参数解释**： 数字人直播时长，单位秒。
+    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * errorInfo  errorInfo
-    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * streamDuration  数字人直播推流时长，单位秒
+    * streamDuration  **参数解释**： 数字人直播推流时长，单位秒。
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
@@ -190,17 +190,17 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
-    * duration  数字人直播时长，单位秒。
-    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * duration  **参数解释**： 数字人直播时长，单位秒。
+    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * errorInfo  errorInfo
-    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * streamDuration  数字人直播推流时长，单位秒
+    * streamDuration  **参数解释**： 数字人直播推流时长，单位秒。
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
@@ -238,17 +238,17 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     * roomId  直播间ID
     * roomName  直播间名称
     * state  数字人直播任务的状态。 * WAITING: 等待 * PROCESSING: 处理中 * SUCCEED: 成功 * FAILED: 失败 * BLOCKED: 封禁
-    * duration  数字人直播时长，单位秒。
-    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * duration  **参数解释**： 数字人直播时长，单位秒。
+    * startTime  数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * endTime  数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * errorInfo  errorInfo
-    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
-    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * createTime  数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
+    * lastupdateTime  数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * rtcRoomInfo  rtcRoomInfo
     * liveEventReportUrl  直播事件上报地址。用户将自行获取的直播间事件上报到此地址，用于触发智能互动，自动回复话术。
     * liveEventCallbackConfig  liveEventCallbackConfig
     * rtcCallbackConfig  rtcCallbackConfig
-    * streamDuration  数字人直播推流时长，单位秒
+    * streamDuration  **参数解释**： 数字人直播推流时长，单位秒。
     * blockReason  封禁信息
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
@@ -587,7 +587,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  数字人直播时长，单位秒。
+    *  **参数解释**： 数字人直播时长，单位秒。
     *
     * @return float|null
     */
@@ -599,7 +599,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param float|null $duration 数字人直播时长，单位秒。
+    * @param float|null $duration **参数解释**： 数字人直播时长，单位秒。
     *
     * @return $this
     */
@@ -611,7 +611,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -623,7 +623,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param string|null $startTime 数字人直播任务开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $startTime 数字人直播任务开始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -635,7 +635,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -647,7 +647,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 数字人直播任务结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $endTime 数字人直播任务结束时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -683,7 +683,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets createTime
-    *  数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -695,7 +695,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets createTime
     *
-    * @param string|null $createTime 数字人直播任务创建时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $createTime 数字人直播任务创建时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -707,7 +707,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastupdateTime
-    *  数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    *  数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return string|null
     */
@@ -719,7 +719,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lastupdateTime
     *
-    * @param string|null $lastupdateTime 数字人直播任务最后更新时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"。
+    * @param string|null $lastupdateTime 数字人直播任务最后更新时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     *
     * @return $this
     */
@@ -827,7 +827,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamDuration
-    *  数字人直播推流时长，单位秒
+    *  **参数解释**： 数字人直播推流时长，单位秒。
     *
     * @return float|null
     */
@@ -839,7 +839,7 @@ class ShowSmartLiveResponse implements ModelInterface, ArrayAccess
     /**
     * Sets streamDuration
     *
-    * @param float|null $streamDuration 数字人直播推流时长，单位秒
+    * @param float|null $streamDuration **参数解释**： 数字人直播推流时长，单位秒。
     *
     * @return $this
     */

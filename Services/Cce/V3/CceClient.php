@@ -93,6 +93,75 @@ class CceClient extends Client
     }
 
     /**
+     * 自定义节点池纳管节点
+     *
+     * 该API用于在指定集群自定义节点池下纳管节点。竞价实例不支持纳管。
+     * &gt;集群管理的URL格式为：https://Endpoint/uri。其中uri为资源路径，也即API访问的路径。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function addNodesToNodePool($request)
+    {
+        return $this->addNodesToNodePoolWithHttpInfo($request);
+    }
+
+    public function addNodesToNodePoolWithHttpInfo($request)
+    {
+        $resourcePath = '/api/v3/projects/{project_id}/clusters/{cluster_id}/nodepools/{nodepool_id}/nodes/add';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($localVarParams['nodepoolId'] !== null) {
+            $pathParams['nodepool_id'] = $localVarParams['nodepoolId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\AddNodesToNodePoolResponse',
+            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\AddNodesToNodePoolRequest');
+    }
+
+    /**
      * 集群唤醒
      *
      * 集群唤醒用于唤醒已休眠的集群，唤醒后，将继续收取控制节点资源费用。
@@ -219,74 +288,6 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateClusterTagsResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateClusterTagsRequest');
-    }
-
-    /**
-     * 绑定、删除资源标签，创建集群时供EPS调用；EPS页面迁移集群企业项目时调用
-     *
-     * 该API用于绑定、删除资源标签，创建集群时供EPS调用；EPS页面迁移集群企业项目时调用
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function batchCreateDeleteResourceTags($request)
-    {
-        return $this->batchCreateDeleteResourceTagsWithHttpInfo($request);
-    }
-
-    public function batchCreateDeleteResourceTagsWithHttpInfo($request)
-    {
-        $resourcePath = '/cce/v1/{project_id}/{resource_type}/{resource_id}/tags/action';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['resourceId'] !== null) {
-            $pathParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                []
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                [],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateDeleteResourceTagsResponse',
-            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\BatchCreateDeleteResourceTagsRequest');
     }
 
     /**
@@ -3959,68 +3960,6 @@ class CceClient extends Client
     }
 
     /**
-     * 查询集群的标签
-     *
-     * 该API用于查询集群的标签
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showCustomizeClusterTagsByProjectId($request)
-    {
-        return $this->showCustomizeClusterTagsByProjectIdWithHttpInfo($request);
-    }
-
-    public function showCustomizeClusterTagsByProjectIdWithHttpInfo($request)
-    {
-        $resourcePath = '/cce/v1/{project_id}/{resource_type}/tags';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowCustomizeClusterTagsByProjectIdResponse',
-            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowCustomizeClusterTagsByProjectIdRequest');
-    }
-
-    /**
      * 获取任务信息
      *
      * 该API用于获取任务信息。通过某一任务请求下发后返回的jobID来查询指定任务的进度。
@@ -4671,136 +4610,6 @@ class CceClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowReleaseHistoryResponse',
             $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowReleaseHistoryRequest');
-    }
-
-    /**
-     * 查询资源实例，EPS页面查询CCE集群资源时调用
-     *
-     * 该API用于查询资源实例，EPS页面查询CCE集群资源时调用。
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showResourceInstances($request)
-    {
-        return $this->showResourceInstancesWithHttpInfo($request);
-    }
-
-    public function showResourceInstancesWithHttpInfo($request)
-    {
-        $resourcePath = '/cce/v1/{project_id}/{resource_type}/resource_instances/action';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='POST',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowResourceInstancesResponse',
-            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowResourceInstancesRequest');
-    }
-
-    /**
-     * 查询资源标签（用于企业项目场景，企业项目是一种系统标签）
-     *
-     * 该API用于查询资源标签（用于企业项目场景，企业项目是一种系统标签）
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function showResourceTags($request)
-    {
-        return $this->showResourceTagsWithHttpInfo($request);
-    }
-
-    public function showResourceTagsWithHttpInfo($request)
-    {
-        $resourcePath = '/cce/v1/{project_id}/{resource_type}/{resource_id}/tags';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['resourceType'] !== null) {
-            $pathParams['resource_type'] = $localVarParams['resourceType'];
-        }
-        if ($localVarParams['resourceId'] !== null) {
-            $pathParams['resource_id'] = $localVarParams['resourceId'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                []
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='GET',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Cce\V3\Model\ShowResourceTagsResponse',
-            $requestType='\HuaweiCloud\SDK\Cce\V3\Model\ShowResourceTagsRequest');
     }
 
     /**

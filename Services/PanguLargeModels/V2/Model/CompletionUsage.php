@@ -1,15 +1,14 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cce\V3\Model;
+namespace HuaweiCloud\SDK\PanguLargeModels\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ShowCustomizeClusterTagsByProjectIdResponse implements ModelInterface, ArrayAccess
+class CompletionUsage implements ModelInterface, ArrayAccess
 {
-    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -17,34 +16,34 @@ class ShowCustomizeClusterTagsByProjectIdResponse implements ModelInterface, Arr
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ShowCustomizeClusterTagsByProjectIdResponse';
+    protected static $openAPIModelName = 'CompletionUsage';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * completionTokens  表示模型生成的答案中包含的tokens的数量。
+    * promptTokens  表示生成结果时使用的提示文本的tokens的数量。
+    * totalTokens  对话过程中使用的tokens总数。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'sysTags' => '\HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]',
-            'action' => 'string'
+            'completionTokens' => 'float',
+            'promptTokens' => 'float',
+            'totalTokens' => 'float'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * completionTokens  表示模型生成的答案中包含的tokens的数量。
+    * promptTokens  表示生成结果时使用的提示文本的tokens的数量。
+    * totalTokens  对话过程中使用的tokens总数。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'tags' => null,
-        'sysTags' => null,
-        'action' => null
+        'completionTokens' => 'int32',
+        'promptTokens' => 'int32',
+        'totalTokens' => 'int32'
     ];
 
     /**
@@ -70,44 +69,44 @@ class ShowCustomizeClusterTagsByProjectIdResponse implements ModelInterface, Arr
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * completionTokens  表示模型生成的答案中包含的tokens的数量。
+    * promptTokens  表示生成结果时使用的提示文本的tokens的数量。
+    * totalTokens  对话过程中使用的tokens总数。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'tags' => 'tags',
-            'sysTags' => 'sys_tags',
-            'action' => 'action'
+            'completionTokens' => 'completion_tokens',
+            'promptTokens' => 'prompt_tokens',
+            'totalTokens' => 'total_tokens'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * completionTokens  表示模型生成的答案中包含的tokens的数量。
+    * promptTokens  表示生成结果时使用的提示文本的tokens的数量。
+    * totalTokens  对话过程中使用的tokens总数。
     *
     * @var string[]
     */
     protected static $setters = [
-            'tags' => 'setTags',
-            'sysTags' => 'setSysTags',
-            'action' => 'setAction'
+            'completionTokens' => 'setCompletionTokens',
+            'promptTokens' => 'setPromptTokens',
+            'totalTokens' => 'setTotalTokens'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * tags  资源标签
-    * sysTags  系统标签
-    * action  执行动作
+    * completionTokens  表示模型生成的答案中包含的tokens的数量。
+    * promptTokens  表示生成结果时使用的提示文本的tokens的数量。
+    * totalTokens  对话过程中使用的tokens总数。
     *
     * @var string[]
     */
     protected static $getters = [
-            'tags' => 'getTags',
-            'sysTags' => 'getSysTags',
-            'action' => 'getAction'
+            'completionTokens' => 'getCompletionTokens',
+            'promptTokens' => 'getPromptTokens',
+            'totalTokens' => 'getTotalTokens'
     ];
 
     /**
@@ -168,9 +167,9 @@ class ShowCustomizeClusterTagsByProjectIdResponse implements ModelInterface, Arr
     */
     public function __construct(array $data = null)
     {
-        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
-        $this->container['sysTags'] = isset($data['sysTags']) ? $data['sysTags'] : null;
-        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['completionTokens'] = isset($data['completionTokens']) ? $data['completionTokens'] : null;
+        $this->container['promptTokens'] = isset($data['promptTokens']) ? $data['promptTokens'] : null;
+        $this->container['totalTokens'] = isset($data['totalTokens']) ? $data['totalTokens'] : null;
     }
 
     /**
@@ -181,6 +180,15 @@ class ShowCustomizeClusterTagsByProjectIdResponse implements ModelInterface, Arr
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['completionTokens'] === null) {
+            $invalidProperties[] = "'completionTokens' can't be null";
+        }
+        if ($this->container['promptTokens'] === null) {
+            $invalidProperties[] = "'promptTokens' can't be null";
+        }
+        if ($this->container['totalTokens'] === null) {
+            $invalidProperties[] = "'totalTokens' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,74 +204,74 @@ class ShowCustomizeClusterTagsByProjectIdResponse implements ModelInterface, Arr
     }
 
     /**
-    * Gets tags
-    *  资源标签
+    * Gets completionTokens
+    *  表示模型生成的答案中包含的tokens的数量。
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
+    * @return float
     */
-    public function getTags()
+    public function getCompletionTokens()
     {
-        return $this->container['tags'];
+        return $this->container['completionTokens'];
     }
 
     /**
-    * Sets tags
+    * Sets completionTokens
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $tags 资源标签
+    * @param float $completionTokens 表示模型生成的答案中包含的tokens的数量。
     *
     * @return $this
     */
-    public function setTags($tags)
+    public function setCompletionTokens($completionTokens)
     {
-        $this->container['tags'] = $tags;
+        $this->container['completionTokens'] = $completionTokens;
         return $this;
     }
 
     /**
-    * Gets sysTags
-    *  系统标签
+    * Gets promptTokens
+    *  表示生成结果时使用的提示文本的tokens的数量。
     *
-    * @return \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null
+    * @return float
     */
-    public function getSysTags()
+    public function getPromptTokens()
     {
-        return $this->container['sysTags'];
+        return $this->container['promptTokens'];
     }
 
     /**
-    * Sets sysTags
+    * Sets promptTokens
     *
-    * @param \HuaweiCloud\SDK\Cce\V3\Model\ResourceTagBody[]|null $sysTags 系统标签
+    * @param float $promptTokens 表示生成结果时使用的提示文本的tokens的数量。
     *
     * @return $this
     */
-    public function setSysTags($sysTags)
+    public function setPromptTokens($promptTokens)
     {
-        $this->container['sysTags'] = $sysTags;
+        $this->container['promptTokens'] = $promptTokens;
         return $this;
     }
 
     /**
-    * Gets action
-    *  执行动作
+    * Gets totalTokens
+    *  对话过程中使用的tokens总数。
     *
-    * @return string|null
+    * @return float
     */
-    public function getAction()
+    public function getTotalTokens()
     {
-        return $this->container['action'];
+        return $this->container['totalTokens'];
     }
 
     /**
-    * Sets action
+    * Sets totalTokens
     *
-    * @param string|null $action 执行动作
+    * @param float $totalTokens 对话过程中使用的tokens总数。
     *
     * @return $this
     */
-    public function setAction($action)
+    public function setTotalTokens($totalTokens)
     {
-        $this->container['action'] = $action;
+        $this->container['totalTokens'] = $totalTokens;
         return $this;
     }
 
