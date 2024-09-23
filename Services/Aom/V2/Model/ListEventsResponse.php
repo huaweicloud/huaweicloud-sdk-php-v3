@@ -27,7 +27,7 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'events' => '\HuaweiCloud\SDK\Aom\V2\Model\EventModel[]',
+            'events' => '\HuaweiCloud\SDK\Aom\V2\Model\ListEventModel[]',
             'pageInfo' => '\HuaweiCloud\SDK\Aom\V2\Model\PageInfo'
     ];
 
@@ -188,7 +188,7 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     * Gets events
     *  事件或者告警详情。
     *
-    * @return \HuaweiCloud\SDK\Aom\V2\Model\EventModel[]|null
+    * @return \HuaweiCloud\SDK\Aom\V2\Model\ListEventModel[]|null
     */
     public function getEvents()
     {
@@ -198,7 +198,7 @@ class ListEventsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets events
     *
-    * @param \HuaweiCloud\SDK\Aom\V2\Model\EventModel[]|null $events 事件或者告警详情。
+    * @param \HuaweiCloud\SDK\Aom\V2\Model\ListEventModel[]|null $events 事件或者告警详情。
     *
     * @return $this
     */

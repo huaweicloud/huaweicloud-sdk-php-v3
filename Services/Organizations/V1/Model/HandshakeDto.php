@@ -24,6 +24,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
     * urn  邀请（握手）的统一资源名称。
     * updatedAt  邀请（握手）请求被接受、取消、拒绝或到期的日期和时间。
     * createdAt  提出邀请（握手）请求的日期和时间。
+    * expiredAt  邀请（握手）过期的日期和时间。
     * managementAccountId  组织管理账号的唯一标识符（ID）。
     * managementAccountName  组织管理账号的名称。
     * organizationId  组织的唯一标识符（ID）。
@@ -38,6 +39,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
             'urn' => 'string',
             'updatedAt' => '\DateTime',
             'createdAt' => '\DateTime',
+            'expiredAt' => '\DateTime',
             'managementAccountId' => 'string',
             'managementAccountName' => 'string',
             'organizationId' => 'string',
@@ -52,6 +54,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
     * urn  邀请（握手）的统一资源名称。
     * updatedAt  邀请（握手）请求被接受、取消、拒绝或到期的日期和时间。
     * createdAt  提出邀请（握手）请求的日期和时间。
+    * expiredAt  邀请（握手）过期的日期和时间。
     * managementAccountId  组织管理账号的唯一标识符（ID）。
     * managementAccountName  组织管理账号的名称。
     * organizationId  组织的唯一标识符（ID）。
@@ -66,6 +69,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
         'urn' => null,
         'updatedAt' => 'date-time',
         'createdAt' => 'date-time',
+        'expiredAt' => 'date-time',
         'managementAccountId' => null,
         'managementAccountName' => null,
         'organizationId' => null,
@@ -101,6 +105,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
     * urn  邀请（握手）的统一资源名称。
     * updatedAt  邀请（握手）请求被接受、取消、拒绝或到期的日期和时间。
     * createdAt  提出邀请（握手）请求的日期和时间。
+    * expiredAt  邀请（握手）过期的日期和时间。
     * managementAccountId  组织管理账号的唯一标识符（ID）。
     * managementAccountName  组织管理账号的名称。
     * organizationId  组织的唯一标识符（ID）。
@@ -115,6 +120,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
             'urn' => 'urn',
             'updatedAt' => 'updated_at',
             'createdAt' => 'created_at',
+            'expiredAt' => 'expired_at',
             'managementAccountId' => 'management_account_id',
             'managementAccountName' => 'management_account_name',
             'organizationId' => 'organization_id',
@@ -129,6 +135,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
     * urn  邀请（握手）的统一资源名称。
     * updatedAt  邀请（握手）请求被接受、取消、拒绝或到期的日期和时间。
     * createdAt  提出邀请（握手）请求的日期和时间。
+    * expiredAt  邀请（握手）过期的日期和时间。
     * managementAccountId  组织管理账号的唯一标识符（ID）。
     * managementAccountName  组织管理账号的名称。
     * organizationId  组织的唯一标识符（ID）。
@@ -143,6 +150,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
             'urn' => 'setUrn',
             'updatedAt' => 'setUpdatedAt',
             'createdAt' => 'setCreatedAt',
+            'expiredAt' => 'setExpiredAt',
             'managementAccountId' => 'setManagementAccountId',
             'managementAccountName' => 'setManagementAccountName',
             'organizationId' => 'setOrganizationId',
@@ -157,6 +165,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
     * urn  邀请（握手）的统一资源名称。
     * updatedAt  邀请（握手）请求被接受、取消、拒绝或到期的日期和时间。
     * createdAt  提出邀请（握手）请求的日期和时间。
+    * expiredAt  邀请（握手）过期的日期和时间。
     * managementAccountId  组织管理账号的唯一标识符（ID）。
     * managementAccountName  组织管理账号的名称。
     * organizationId  组织的唯一标识符（ID）。
@@ -171,6 +180,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
             'urn' => 'getUrn',
             'updatedAt' => 'getUpdatedAt',
             'createdAt' => 'getCreatedAt',
+            'expiredAt' => 'getExpiredAt',
             'managementAccountId' => 'getManagementAccountId',
             'managementAccountName' => 'getManagementAccountName',
             'organizationId' => 'getOrganizationId',
@@ -241,6 +251,7 @@ class HandshakeDto implements ModelInterface, ArrayAccess
         $this->container['urn'] = isset($data['urn']) ? $data['urn'] : null;
         $this->container['updatedAt'] = isset($data['updatedAt']) ? $data['updatedAt'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
+        $this->container['expiredAt'] = isset($data['expiredAt']) ? $data['expiredAt'] : null;
         $this->container['managementAccountId'] = isset($data['managementAccountId']) ? $data['managementAccountId'] : null;
         $this->container['managementAccountName'] = isset($data['managementAccountName']) ? $data['managementAccountName'] : null;
         $this->container['organizationId'] = isset($data['organizationId']) ? $data['organizationId'] : null;
@@ -281,11 +292,14 @@ class HandshakeDto implements ModelInterface, ArrayAccess
         if ($this->container['createdAt'] === null) {
             $invalidProperties[] = "'createdAt' can't be null";
         }
+        if ($this->container['expiredAt'] === null) {
+            $invalidProperties[] = "'expiredAt' can't be null";
+        }
         if ($this->container['managementAccountId'] === null) {
             $invalidProperties[] = "'managementAccountId' can't be null";
         }
-            if ((mb_strlen($this->container['managementAccountId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'managementAccountId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['managementAccountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'managementAccountId', the character length must be smaller than or equal to 64.";
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['managementAccountId'])) {
                 $invalidProperties[] = "invalid value for 'managementAccountId', must be conform to the pattern /^[\\w-]+$/.";
@@ -436,6 +450,30 @@ class HandshakeDto implements ModelInterface, ArrayAccess
     public function setCreatedAt($createdAt)
     {
         $this->container['createdAt'] = $createdAt;
+        return $this;
+    }
+
+    /**
+    * Gets expiredAt
+    *  邀请（握手）过期的日期和时间。
+    *
+    * @return \DateTime
+    */
+    public function getExpiredAt()
+    {
+        return $this->container['expiredAt'];
+    }
+
+    /**
+    * Sets expiredAt
+    *
+    * @param \DateTime $expiredAt 邀请（握手）过期的日期和时间。
+    *
+    * @return $this
+    */
+    public function setExpiredAt($expiredAt)
+    {
+        $this->container['expiredAt'] = $expiredAt;
         return $this;
     }
 

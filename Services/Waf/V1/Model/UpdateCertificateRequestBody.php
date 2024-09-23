@@ -20,7 +20,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     * content  证书文件，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     * key  证书私钥，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     *
@@ -34,7 +34,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     * content  证书文件，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     * key  证书私钥，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     *
@@ -69,7 +69,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     * content  证书文件，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     * key  证书私钥，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     *
@@ -83,7 +83,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     * content  证书文件，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     * key  证书私钥，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     *
@@ -97,7 +97,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    * name  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     * content  证书文件，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     * key  证书私钥，仅支持PEM格式的证书和私钥文件，且文件中的换行符应以\\n替换
     *
@@ -199,7 +199,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    *  证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class UpdateCertificateRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过64位字符
+    * @param string $name 证书名称，证书名称只能由数字、字母、中划线、下划线和英文句点组成，长度不能超过256位字符
     *
     * @return $this
     */

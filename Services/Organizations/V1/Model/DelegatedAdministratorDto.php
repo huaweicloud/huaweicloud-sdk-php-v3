@@ -219,8 +219,8 @@ class DelegatedAdministratorDto implements ModelInterface, ArrayAccess
         if ($this->container['accountId'] === null) {
             $invalidProperties[] = "'accountId' can't be null";
         }
-            if ((mb_strlen($this->container['accountId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['accountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 64.";
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['accountId'])) {
                 $invalidProperties[] = "invalid value for 'accountId', must be conform to the pattern /^[\\w-]+$/.";

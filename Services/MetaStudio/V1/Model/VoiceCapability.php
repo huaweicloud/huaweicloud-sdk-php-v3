@@ -20,15 +20,16 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isSupportPhonemeEn  支持英文音标。
-    * isSupportPhoneme  是否支持多音字。
-    * isSupportBreakTime  是否支持停顿。
-    * isSupportBreakStrength  是否支持韵律。
-    * isSupportSpeed  是否支持全局语速。
-    * isSupportProsody  是否支持局部语速。
-    * isSupportSsmlSayAs  是否支持SSML的say-as标签。
-    * isSupportSsmlSub  是否支持SSML的sub标签。
-    * isSupportWord  是否支持连读。
+    * isSupportPhonemeEn  **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
+    * isSupportPhoneme  **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
+    * isSupportBreakTime  **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
+    * isSupportBreakStrength  **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
+    * isSupportSpeed  **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
+    * isSupportProsody  **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
+    * isSupportSsmlSayAs  **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
+    * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
+    * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
+    * isSupportVoiceCache  是否支持缓存。
     *
     * @var string[]
     */
@@ -41,20 +42,22 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportProsody' => 'bool',
             'isSupportSsmlSayAs' => 'bool',
             'isSupportSsmlSub' => 'bool',
-            'isSupportWord' => 'bool'
+            'isSupportWord' => 'bool',
+            'isSupportVoiceCache' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isSupportPhonemeEn  支持英文音标。
-    * isSupportPhoneme  是否支持多音字。
-    * isSupportBreakTime  是否支持停顿。
-    * isSupportBreakStrength  是否支持韵律。
-    * isSupportSpeed  是否支持全局语速。
-    * isSupportProsody  是否支持局部语速。
-    * isSupportSsmlSayAs  是否支持SSML的say-as标签。
-    * isSupportSsmlSub  是否支持SSML的sub标签。
-    * isSupportWord  是否支持连读。
+    * isSupportPhonemeEn  **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
+    * isSupportPhoneme  **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
+    * isSupportBreakTime  **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
+    * isSupportBreakStrength  **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
+    * isSupportSpeed  **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
+    * isSupportProsody  **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
+    * isSupportSsmlSayAs  **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
+    * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
+    * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
+    * isSupportVoiceCache  是否支持缓存。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
         'isSupportProsody' => null,
         'isSupportSsmlSayAs' => null,
         'isSupportSsmlSub' => null,
-        'isSupportWord' => null
+        'isSupportWord' => null,
+        'isSupportVoiceCache' => null
     ];
 
     /**
@@ -93,15 +97,16 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isSupportPhonemeEn  支持英文音标。
-    * isSupportPhoneme  是否支持多音字。
-    * isSupportBreakTime  是否支持停顿。
-    * isSupportBreakStrength  是否支持韵律。
-    * isSupportSpeed  是否支持全局语速。
-    * isSupportProsody  是否支持局部语速。
-    * isSupportSsmlSayAs  是否支持SSML的say-as标签。
-    * isSupportSsmlSub  是否支持SSML的sub标签。
-    * isSupportWord  是否支持连读。
+    * isSupportPhonemeEn  **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
+    * isSupportPhoneme  **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
+    * isSupportBreakTime  **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
+    * isSupportBreakStrength  **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
+    * isSupportSpeed  **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
+    * isSupportProsody  **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
+    * isSupportSsmlSayAs  **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
+    * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
+    * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
+    * isSupportVoiceCache  是否支持缓存。
     *
     * @var string[]
     */
@@ -114,20 +119,22 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportProsody' => 'is_support_prosody',
             'isSupportSsmlSayAs' => 'is_support_ssml_say_as',
             'isSupportSsmlSub' => 'is_support_ssml_sub',
-            'isSupportWord' => 'is_support_word'
+            'isSupportWord' => 'is_support_word',
+            'isSupportVoiceCache' => 'is_support_voice_cache'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isSupportPhonemeEn  支持英文音标。
-    * isSupportPhoneme  是否支持多音字。
-    * isSupportBreakTime  是否支持停顿。
-    * isSupportBreakStrength  是否支持韵律。
-    * isSupportSpeed  是否支持全局语速。
-    * isSupportProsody  是否支持局部语速。
-    * isSupportSsmlSayAs  是否支持SSML的say-as标签。
-    * isSupportSsmlSub  是否支持SSML的sub标签。
-    * isSupportWord  是否支持连读。
+    * isSupportPhonemeEn  **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
+    * isSupportPhoneme  **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
+    * isSupportBreakTime  **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
+    * isSupportBreakStrength  **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
+    * isSupportSpeed  **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
+    * isSupportProsody  **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
+    * isSupportSsmlSayAs  **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
+    * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
+    * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
+    * isSupportVoiceCache  是否支持缓存。
     *
     * @var string[]
     */
@@ -140,20 +147,22 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportProsody' => 'setIsSupportProsody',
             'isSupportSsmlSayAs' => 'setIsSupportSsmlSayAs',
             'isSupportSsmlSub' => 'setIsSupportSsmlSub',
-            'isSupportWord' => 'setIsSupportWord'
+            'isSupportWord' => 'setIsSupportWord',
+            'isSupportVoiceCache' => 'setIsSupportVoiceCache'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isSupportPhonemeEn  支持英文音标。
-    * isSupportPhoneme  是否支持多音字。
-    * isSupportBreakTime  是否支持停顿。
-    * isSupportBreakStrength  是否支持韵律。
-    * isSupportSpeed  是否支持全局语速。
-    * isSupportProsody  是否支持局部语速。
-    * isSupportSsmlSayAs  是否支持SSML的say-as标签。
-    * isSupportSsmlSub  是否支持SSML的sub标签。
-    * isSupportWord  是否支持连读。
+    * isSupportPhonemeEn  **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
+    * isSupportPhoneme  **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
+    * isSupportBreakTime  **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
+    * isSupportBreakStrength  **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
+    * isSupportSpeed  **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
+    * isSupportProsody  **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
+    * isSupportSsmlSayAs  **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
+    * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
+    * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
+    * isSupportVoiceCache  是否支持缓存。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportProsody' => 'getIsSupportProsody',
             'isSupportSsmlSayAs' => 'getIsSupportSsmlSayAs',
             'isSupportSsmlSub' => 'getIsSupportSsmlSub',
-            'isSupportWord' => 'getIsSupportWord'
+            'isSupportWord' => 'getIsSupportWord',
+            'isSupportVoiceCache' => 'getIsSupportVoiceCache'
     ];
 
     /**
@@ -236,6 +246,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
         $this->container['isSupportSsmlSayAs'] = isset($data['isSupportSsmlSayAs']) ? $data['isSupportSsmlSayAs'] : null;
         $this->container['isSupportSsmlSub'] = isset($data['isSupportSsmlSub']) ? $data['isSupportSsmlSub'] : null;
         $this->container['isSupportWord'] = isset($data['isSupportWord']) ? $data['isSupportWord'] : null;
+        $this->container['isSupportVoiceCache'] = isset($data['isSupportVoiceCache']) ? $data['isSupportVoiceCache'] : null;
     }
 
     /**
@@ -262,7 +273,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportPhonemeEn
-    *  支持英文音标。
+    *  **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
     *
     * @return bool|null
     */
@@ -274,7 +285,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportPhonemeEn
     *
-    * @param bool|null $isSupportPhonemeEn 支持英文音标。
+    * @param bool|null $isSupportPhonemeEn **参数解释**： 该声音是否支持英文音标。 **约束限制**： 不涉及 **取值范围**： * true: 支持英文音标 * false: 不支持英文音标
     *
     * @return $this
     */
@@ -286,7 +297,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportPhoneme
-    *  是否支持多音字。
+    *  **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
     *
     * @return bool|null
     */
@@ -298,7 +309,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportPhoneme
     *
-    * @param bool|null $isSupportPhoneme 是否支持多音字。
+    * @param bool|null $isSupportPhoneme **参数解释**： 该声音是否支持中文多音字。 **约束限制**： 不涉及 **取值范围**： * true: 支持中文多音字 * false: 不支持中文多音字
     *
     * @return $this
     */
@@ -310,7 +321,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportBreakTime
-    *  是否支持停顿。
+    *  **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
     *
     * @return bool|null
     */
@@ -322,7 +333,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportBreakTime
     *
-    * @param bool|null $isSupportBreakTime 是否支持停顿。
+    * @param bool|null $isSupportBreakTime **参数解释**： 该声音是否支持停顿。 **约束限制**： 不涉及 **取值范围**： * true: 支持停顿 * false: 不支持停顿
     *
     * @return $this
     */
@@ -334,7 +345,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportBreakStrength
-    *  是否支持韵律。
+    *  **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
     *
     * @return bool|null
     */
@@ -346,7 +357,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportBreakStrength
     *
-    * @param bool|null $isSupportBreakStrength 是否支持韵律。
+    * @param bool|null $isSupportBreakStrength **参数解释**： 该声音是否支持韵律。 **约束限制**： 不涉及 **取值范围**： * true: 支持韵律 * false: 不支持韵律
     *
     * @return $this
     */
@@ -358,7 +369,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportSpeed
-    *  是否支持全局语速。
+    *  **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
     *
     * @return bool|null
     */
@@ -370,7 +381,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportSpeed
     *
-    * @param bool|null $isSupportSpeed 是否支持全局语速。
+    * @param bool|null $isSupportSpeed **参数解释**： 该声音是否支持全局语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持全局语速 * false: 不支持全局语速
     *
     * @return $this
     */
@@ -382,7 +393,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportProsody
-    *  是否支持局部语速。
+    *  **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
     *
     * @return bool|null
     */
@@ -394,7 +405,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportProsody
     *
-    * @param bool|null $isSupportProsody 是否支持局部语速。
+    * @param bool|null $isSupportProsody **参数解释**： 该声音是否支持局部语速。 **约束限制**： 不涉及 **取值范围**： * true: 支持局部语速 * false: 不支持局部语速
     *
     * @return $this
     */
@@ -406,7 +417,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportSsmlSayAs
-    *  是否支持SSML的say-as标签。
+    *  **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
     *
     * @return bool|null
     */
@@ -418,7 +429,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportSsmlSayAs
     *
-    * @param bool|null $isSupportSsmlSayAs 是否支持SSML的say-as标签。
+    * @param bool|null $isSupportSsmlSayAs **参数解释**： 该声音是否支持SSML的say-as标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的say-as标签 * false: 不支持SSML的say-as标签
     *
     * @return $this
     */
@@ -430,7 +441,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportSsmlSub
-    *  是否支持SSML的sub标签。
+    *  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     *
     * @return bool|null
     */
@@ -442,7 +453,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportSsmlSub
     *
-    * @param bool|null $isSupportSsmlSub 是否支持SSML的sub标签。
+    * @param bool|null $isSupportSsmlSub **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     *
     * @return $this
     */
@@ -454,7 +465,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportWord
-    *  是否支持连读。
+    *  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     *
     * @return bool|null
     */
@@ -466,13 +477,37 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportWord
     *
-    * @param bool|null $isSupportWord 是否支持连读。
+    * @param bool|null $isSupportWord **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     *
     * @return $this
     */
     public function setIsSupportWord($isSupportWord)
     {
         $this->container['isSupportWord'] = $isSupportWord;
+        return $this;
+    }
+
+    /**
+    * Gets isSupportVoiceCache
+    *  是否支持缓存。
+    *
+    * @return bool|null
+    */
+    public function getIsSupportVoiceCache()
+    {
+        return $this->container['isSupportVoiceCache'];
+    }
+
+    /**
+    * Sets isSupportVoiceCache
+    *
+    * @param bool|null $isSupportVoiceCache 是否支持缓存。
+    *
+    * @return $this
+    */
+    public function setIsSupportVoiceCache($isSupportVoiceCache)
+    {
+        $this->container['isSupportVoiceCache'] = $isSupportVoiceCache;
         return $this;
     }
 

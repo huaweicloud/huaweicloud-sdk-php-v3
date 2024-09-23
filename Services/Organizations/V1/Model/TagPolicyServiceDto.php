@@ -20,8 +20,8 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceName  The service name of the service.
-    * resourceTypes  resourceTypes
+    * serviceName  服务名称。
+    * resourceTypes  资源类型。
     * supportAll  resource_type是否支持全量选择，即*
     *
     * @var string[]
@@ -34,8 +34,8 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceName  The service name of the service.
-    * resourceTypes  resourceTypes
+    * serviceName  服务名称。
+    * resourceTypes  资源类型。
     * supportAll  resource_type是否支持全量选择，即*
     *
     * @var string[]
@@ -69,8 +69,8 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceName  The service name of the service.
-    * resourceTypes  resourceTypes
+    * serviceName  服务名称。
+    * resourceTypes  资源类型。
     * supportAll  resource_type是否支持全量选择，即*
     *
     * @var string[]
@@ -83,8 +83,8 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceName  The service name of the service.
-    * resourceTypes  resourceTypes
+    * serviceName  服务名称。
+    * resourceTypes  资源类型。
     * supportAll  resource_type是否支持全量选择，即*
     *
     * @var string[]
@@ -97,8 +97,8 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceName  The service name of the service.
-    * resourceTypes  resourceTypes
+    * serviceName  服务名称。
+    * resourceTypes  资源类型。
     * supportAll  resource_type是否支持全量选择，即*
     *
     * @var string[]
@@ -214,7 +214,7 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceName
-    *  The service name of the service.
+    *  服务名称。
     *
     * @return string
     */
@@ -226,7 +226,7 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceName
     *
-    * @param string $serviceName The service name of the service.
+    * @param string $serviceName 服务名称。
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceTypes
-    *  resourceTypes
+    *  资源类型。
     *
     * @return string[]
     */
@@ -250,7 +250,7 @@ class TagPolicyServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets resourceTypes
     *
-    * @param string[] $resourceTypes resourceTypes
+    * @param string[] $resourceTypes 资源类型。
     *
     * @return $this
     */

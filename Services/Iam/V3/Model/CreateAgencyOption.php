@@ -25,7 +25,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * description  委托描述信息，长度不大于255位。
-    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    * duration  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @var string[]
     */
@@ -45,7 +45,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * description  委托描述信息，长度不大于255位。
-    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    * duration  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * description  委托描述信息，长度不大于255位。
-    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    * duration  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * description  委托描述信息，长度不大于255位。
-    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    * duration  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @var string[]
     */
@@ -126,7 +126,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     * trustDomainId  被委托方账号ID。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * trustDomainName  被委托方账号名。trust_domain_id和trust_domain_name至少填写一个，若都填写优先校验trust_domain_name。
     * description  委托描述信息，长度不大于255位。
-    * duration  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    * duration  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @var string[]
     */
@@ -179,22 +179,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const DURATION_FOREVER = 'FOREVER';
-    const DURATION_ONEDAY = 'ONEDAY';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getDurationAllowableValues()
-    {
-        return [
-            self::DURATION_FOREVER,
-            self::DURATION_ONEDAY,
-        ];
-    }
 
 
     /**
@@ -234,14 +219,6 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
         }
-            $allowedValues = $this->getDurationAllowableValues();
-                if (!is_null($this->container['duration']) && !in_array($this->container['duration'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'duration', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -378,7 +355,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    *  description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @return string|null
     */
@@ -390,7 +367,7 @@ class CreateAgencyOption implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param string|null $duration 委托的期限。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天。不填写该参数则默认为\"null\"也表示委托的期限为永久。
+    * @param string|null $duration description: 委托的期限，单位为“天”。默认为FOREVER。取值为“FOREVER\"表示委托的期限为永久，取值为\"ONEDAY\"表示委托的期限为一天,取值为自定义天数表示委托的期限为有限天数，如20。四个参数至少填写一个。
     *
     * @return $this
     */

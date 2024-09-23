@@ -29,7 +29,6 @@ class Server implements ModelInterface, ArrayAccess
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  源端服务器的磁盘信息
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -55,7 +54,6 @@ class Server implements ModelInterface, ArrayAccess
             'firmware' => 'string',
             'cpuQuantity' => 'int',
             'memory' => 'int',
-            'disks' => '\HuaweiCloud\SDK\Sms\V3\Model\Disk[]',
             'btrfsList' => '\HuaweiCloud\SDK\Sms\V3\Model\BtrfsFileSystem[]',
             'networks' => '\HuaweiCloud\SDK\Sms\V3\Model\NetWork[]',
             'domainId' => 'string',
@@ -81,7 +79,6 @@ class Server implements ModelInterface, ArrayAccess
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  源端服务器的磁盘信息
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -107,7 +104,6 @@ class Server implements ModelInterface, ArrayAccess
         'firmware' => null,
         'cpuQuantity' => 'int32',
         'memory' => 'int64',
-        'disks' => null,
         'btrfsList' => null,
         'networks' => null,
         'domainId' => null,
@@ -154,7 +150,6 @@ class Server implements ModelInterface, ArrayAccess
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  源端服务器的磁盘信息
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -180,7 +175,6 @@ class Server implements ModelInterface, ArrayAccess
             'firmware' => 'firmware',
             'cpuQuantity' => 'cpu_quantity',
             'memory' => 'memory',
-            'disks' => 'disks',
             'btrfsList' => 'btrfs_list',
             'networks' => 'networks',
             'domainId' => 'domain_id',
@@ -206,7 +200,6 @@ class Server implements ModelInterface, ArrayAccess
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  源端服务器的磁盘信息
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -232,7 +225,6 @@ class Server implements ModelInterface, ArrayAccess
             'firmware' => 'setFirmware',
             'cpuQuantity' => 'setCpuQuantity',
             'memory' => 'setMemory',
-            'disks' => 'setDisks',
             'btrfsList' => 'setBtrfsList',
             'networks' => 'setNetworks',
             'domainId' => 'setDomainId',
@@ -258,7 +250,6 @@ class Server implements ModelInterface, ArrayAccess
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  源端服务器的磁盘信息
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -284,7 +275,6 @@ class Server implements ModelInterface, ArrayAccess
             'firmware' => 'getFirmware',
             'cpuQuantity' => 'getCpuQuantity',
             'memory' => 'getMemory',
-            'disks' => 'getDisks',
             'btrfsList' => 'getBtrfsList',
             'networks' => 'getNetworks',
             'domainId' => 'getDomainId',
@@ -411,7 +401,6 @@ class Server implements ModelInterface, ArrayAccess
         $this->container['firmware'] = isset($data['firmware']) ? $data['firmware'] : null;
         $this->container['cpuQuantity'] = isset($data['cpuQuantity']) ? $data['cpuQuantity'] : null;
         $this->container['memory'] = isset($data['memory']) ? $data['memory'] : null;
-        $this->container['disks'] = isset($data['disks']) ? $data['disks'] : null;
         $this->container['btrfsList'] = isset($data['btrfsList']) ? $data['btrfsList'] : null;
         $this->container['networks'] = isset($data['networks']) ? $data['networks'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
@@ -766,30 +755,6 @@ class Server implements ModelInterface, ArrayAccess
     public function setMemory($memory)
     {
         $this->container['memory'] = $memory;
-        return $this;
-    }
-
-    /**
-    * Gets disks
-    *  源端服务器的磁盘信息
-    *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\Disk[]|null
-    */
-    public function getDisks()
-    {
-        return $this->container['disks'];
-    }
-
-    /**
-    * Sets disks
-    *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\Disk[]|null $disks 源端服务器的磁盘信息
-    *
-    * @return $this
-    */
-    public function setDisks($disks)
-    {
-        $this->container['disks'] = $disks;
         return $this;
     }
 

@@ -223,8 +223,8 @@ class OrganizationDto implements ModelInterface, ArrayAccess
         if ($this->container['managementAccountId'] === null) {
             $invalidProperties[] = "'managementAccountId' can't be null";
         }
-            if ((mb_strlen($this->container['managementAccountId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'managementAccountId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['managementAccountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'managementAccountId', the character length must be smaller than or equal to 64.";
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['managementAccountId'])) {
                 $invalidProperties[] = "invalid value for 'managementAccountId', must be conform to the pattern /^[\\w-]+$/.";

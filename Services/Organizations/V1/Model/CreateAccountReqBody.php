@@ -24,6 +24,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
     * email  邮箱
     * phone  手机号码
     * agencyName  委托名称
+    * description  描述信息。
     * tags  要绑定到新创建的账号的标签列表。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
             'email' => 'string',
             'phone' => 'string',
             'agencyName' => 'string',
+            'description' => 'string',
             'tags' => '\HuaweiCloud\SDK\Organizations\V1\Model\TagDto[]'
     ];
 
@@ -42,6 +44,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
     * email  邮箱
     * phone  手机号码
     * agencyName  委托名称
+    * description  描述信息。
     * tags  要绑定到新创建的账号的标签列表。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
         'email' => null,
         'phone' => null,
         'agencyName' => null,
+        'description' => null,
         'tags' => null
     ];
 
@@ -81,6 +85,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
     * email  邮箱
     * phone  手机号码
     * agencyName  委托名称
+    * description  描述信息。
     * tags  要绑定到新创建的账号的标签列表。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
             'email' => 'email',
             'phone' => 'phone',
             'agencyName' => 'agency_name',
+            'description' => 'description',
             'tags' => 'tags'
     ];
 
@@ -99,6 +105,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
     * email  邮箱
     * phone  手机号码
     * agencyName  委托名称
+    * description  描述信息。
     * tags  要绑定到新创建的账号的标签列表。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
             'email' => 'setEmail',
             'phone' => 'setPhone',
             'agencyName' => 'setAgencyName',
+            'description' => 'setDescription',
             'tags' => 'setTags'
     ];
 
@@ -117,6 +125,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
     * email  邮箱
     * phone  手机号码
     * agencyName  委托名称
+    * description  描述信息。
     * tags  要绑定到新创建的账号的标签列表。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
             'email' => 'getEmail',
             'phone' => 'getPhone',
             'agencyName' => 'getAgencyName',
+            'description' => 'getDescription',
             'tags' => 'getTags'
     ];
 
@@ -191,6 +201,7 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['agencyName'] = isset($data['agencyName']) ? $data['agencyName'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
@@ -237,6 +248,12 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['agencyName']) && !preg_match("/^[\\w-]+$/", $this->container['agencyName'])) {
                 $invalidProperties[] = "invalid value for 'agencyName', must be conform to the pattern /^[\\w-]+$/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 128)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -345,6 +362,30 @@ class CreateAccountReqBody implements ModelInterface, ArrayAccess
     public function setAgencyName($agencyName)
     {
         $this->container['agencyName'] = $agencyName;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述信息。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述信息。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

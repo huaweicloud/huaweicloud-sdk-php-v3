@@ -26,7 +26,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
     * cover  cover
     * textList  文本列表
     * assetList  素材资产列表
-    * autoActive  自动激活商品
+    * autoActive  **参数解释**： 自动激活商品
     *
     * @var string[]
     */
@@ -48,7 +48,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
     * cover  cover
     * textList  文本列表
     * assetList  素材资产列表
-    * autoActive  自动激活商品
+    * autoActive  **参数解释**： 自动激活商品
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
     * cover  cover
     * textList  文本列表
     * assetList  素材资产列表
-    * autoActive  自动激活商品
+    * autoActive  **参数解释**： 自动激活商品
     *
     * @var string[]
     */
@@ -113,7 +113,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
     * cover  cover
     * textList  文本列表
     * assetList  素材资产列表
-    * autoActive  自动激活商品
+    * autoActive  **参数解释**： 自动激活商品
     *
     * @var string[]
     */
@@ -135,7 +135,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
     * cover  cover
     * textList  文本列表
     * assetList  素材资产列表
-    * autoActive  自动激活商品
+    * autoActive  **参数解释**： 自动激活商品
     *
     * @var string[]
     */
@@ -399,7 +399,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoActive
-    *  自动激活商品
+    *  **参数解释**： 自动激活商品
     *
     * @return bool|null
     */
@@ -411,7 +411,7 @@ class CreateProductRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets autoActive
     *
-    * @param bool|null $autoActive 自动激活商品
+    * @param bool|null $autoActive **参数解释**： 自动激活商品
     *
     * @return $this
     */

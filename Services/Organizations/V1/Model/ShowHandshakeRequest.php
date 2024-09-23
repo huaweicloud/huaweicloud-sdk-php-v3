@@ -20,21 +20,25 @@ class ShowHandshakeRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * handshakeId  邀请的唯一标识符（ID）。账号在发起邀请时创建ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSecurityToken' => 'string',
             'handshakeId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * handshakeId  邀请的唯一标识符（ID）。账号在发起邀请时创建ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSecurityToken' => null,
         'handshakeId' => null
     ];
 
@@ -61,31 +65,37 @@ class ShowHandshakeRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * handshakeId  邀请的唯一标识符（ID）。账号在发起邀请时创建ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSecurityToken' => 'X-Security-Token',
             'handshakeId' => 'handshake_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * handshakeId  邀请的唯一标识符（ID）。账号在发起邀请时创建ID。
     *
     * @var string[]
     */
     protected static $setters = [
+            'xSecurityToken' => 'setXSecurityToken',
             'handshakeId' => 'setHandshakeId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * handshakeId  邀请的唯一标识符（ID）。账号在发起邀请时创建ID。
     *
     * @var string[]
     */
     protected static $getters = [
+            'xSecurityToken' => 'getXSecurityToken',
             'handshakeId' => 'getHandshakeId'
     ];
 
@@ -147,6 +157,7 @@ class ShowHandshakeRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['handshakeId'] = isset($data['handshakeId']) ? $data['handshakeId'] : null;
     }
 
@@ -179,6 +190,30 @@ class ShowHandshakeRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
+        return $this;
     }
 
     /**

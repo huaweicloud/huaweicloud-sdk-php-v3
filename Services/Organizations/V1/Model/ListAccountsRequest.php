@@ -20,28 +20,36 @@ class ListAccountsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * parentId  父节点（根或组织单元）的唯一标识符（ID）。
+    * withRegisterContactInfo  是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
     * limit  页面中最大结果数量。
     * marker  分页标记。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSecurityToken' => 'string',
             'parentId' => 'string',
+            'withRegisterContactInfo' => 'bool',
             'limit' => 'int',
             'marker' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * parentId  父节点（根或组织单元）的唯一标识符（ID）。
+    * withRegisterContactInfo  是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
     * limit  页面中最大结果数量。
     * marker  分页标记。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSecurityToken' => null,
         'parentId' => null,
+        'withRegisterContactInfo' => null,
         'limit' => 'int32',
         'marker' => null
     ];
@@ -69,42 +77,54 @@ class ListAccountsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * parentId  父节点（根或组织单元）的唯一标识符（ID）。
+    * withRegisterContactInfo  是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
     * limit  页面中最大结果数量。
     * marker  分页标记。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSecurityToken' => 'X-Security-Token',
             'parentId' => 'parent_id',
+            'withRegisterContactInfo' => 'with_register_contact_info',
             'limit' => 'limit',
             'marker' => 'marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * parentId  父节点（根或组织单元）的唯一标识符（ID）。
+    * withRegisterContactInfo  是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
     * limit  页面中最大结果数量。
     * marker  分页标记。
     *
     * @var string[]
     */
     protected static $setters = [
+            'xSecurityToken' => 'setXSecurityToken',
             'parentId' => 'setParentId',
+            'withRegisterContactInfo' => 'setWithRegisterContactInfo',
             'limit' => 'setLimit',
             'marker' => 'setMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * parentId  父节点（根或组织单元）的唯一标识符（ID）。
+    * withRegisterContactInfo  是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
     * limit  页面中最大结果数量。
     * marker  分页标记。
     *
     * @var string[]
     */
     protected static $getters = [
+            'xSecurityToken' => 'getXSecurityToken',
             'parentId' => 'getParentId',
+            'withRegisterContactInfo' => 'getWithRegisterContactInfo',
             'limit' => 'getLimit',
             'marker' => 'getMarker'
     ];
@@ -167,7 +187,9 @@ class ListAccountsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['parentId'] = isset($data['parentId']) ? $data['parentId'] : null;
+        $this->container['withRegisterContactInfo'] = isset($data['withRegisterContactInfo']) ? $data['withRegisterContactInfo'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
@@ -216,6 +238,30 @@ class ListAccountsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
+        return $this;
+    }
+
+    /**
     * Gets parentId
     *  父节点（根或组织单元）的唯一标识符（ID）。
     *
@@ -236,6 +282,30 @@ class ListAccountsRequest implements ModelInterface, ArrayAccess
     public function setParentId($parentId)
     {
         $this->container['parentId'] = $parentId;
+        return $this;
+    }
+
+    /**
+    * Gets withRegisterContactInfo
+    *  是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
+    *
+    * @return bool|null
+    */
+    public function getWithRegisterContactInfo()
+    {
+        return $this->container['withRegisterContactInfo'];
+    }
+
+    /**
+    * Sets withRegisterContactInfo
+    *
+    * @param bool|null $withRegisterContactInfo 是否返回账号邮箱、手机号信息。若此参数为True，Limit最多200。
+    *
+    * @return $this
+    */
+    public function setWithRegisterContactInfo($withRegisterContactInfo)
+    {
+        $this->container['withRegisterContactInfo'] = $withRegisterContactInfo;
         return $this;
     }
 

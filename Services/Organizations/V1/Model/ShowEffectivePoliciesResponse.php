@@ -23,7 +23,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * lastUpdatedAt  有效策略最后更新时间。
     * policyContent  有效策略文本内容。
-    * policyType  策略类型的名称，tag_policy标签策略。
+    * policyType  策略类型的名称。tag_policy标签策略。
     * entityId  根、组织单元或账号的唯一标识符（ID）。
     *
     * @var string[]
@@ -39,7 +39,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * lastUpdatedAt  有效策略最后更新时间。
     * policyContent  有效策略文本内容。
-    * policyType  策略类型的名称，tag_policy标签策略。
+    * policyType  策略类型的名称。tag_policy标签策略。
     * entityId  根、组织单元或账号的唯一标识符（ID）。
     *
     * @var string[]
@@ -76,7 +76,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * lastUpdatedAt  有效策略最后更新时间。
     * policyContent  有效策略文本内容。
-    * policyType  策略类型的名称，tag_policy标签策略。
+    * policyType  策略类型的名称。tag_policy标签策略。
     * entityId  根、组织单元或账号的唯一标识符（ID）。
     *
     * @var string[]
@@ -92,7 +92,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * lastUpdatedAt  有效策略最后更新时间。
     * policyContent  有效策略文本内容。
-    * policyType  策略类型的名称，tag_policy标签策略。
+    * policyType  策略类型的名称。tag_policy标签策略。
     * entityId  根、组织单元或账号的唯一标识符（ID）。
     *
     * @var string[]
@@ -108,7 +108,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * lastUpdatedAt  有效策略最后更新时间。
     * policyContent  有效策略文本内容。
-    * policyType  策略类型的名称，tag_policy标签策略。
+    * policyType  策略类型的名称。tag_policy标签策略。
     * entityId  根、组织单元或账号的唯一标识符（ID）。
     *
     * @var string[]
@@ -292,7 +292,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets policyType
-    *  策略类型的名称，tag_policy标签策略。
+    *  策略类型的名称。tag_policy标签策略。
     *
     * @return string|null
     */
@@ -304,7 +304,7 @@ class ShowEffectivePoliciesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets policyType
     *
-    * @param string|null $policyType 策略类型的名称，tag_policy标签策略。
+    * @param string|null $policyType 策略类型的名称。tag_policy标签策略。
     *
     * @return $this
     */

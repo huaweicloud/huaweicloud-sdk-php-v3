@@ -20,10 +20,10 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * autoAnalysis  PPT是否需要自动解析。
-    * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * autoAnalysis  **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
+    * pptAnalysisStatus  **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     * errorInfo  errorInfo
-    * pageCount  PPT页面总数。
+    * pageCount  **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     * pages  PPT页面图片。
     *
     * @var string[]
@@ -38,10 +38,10 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * autoAnalysis  PPT是否需要自动解析。
-    * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * autoAnalysis  **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
+    * pptAnalysisStatus  **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     * errorInfo  errorInfo
-    * pageCount  PPT页面总数。
+    * pageCount  **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     * pages  PPT页面图片。
     *
     * @var string[]
@@ -77,10 +77,10 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * autoAnalysis  PPT是否需要自动解析。
-    * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * autoAnalysis  **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
+    * pptAnalysisStatus  **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     * errorInfo  errorInfo
-    * pageCount  PPT页面总数。
+    * pageCount  **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     * pages  PPT页面图片。
     *
     * @var string[]
@@ -95,10 +95,10 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * autoAnalysis  PPT是否需要自动解析。
-    * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * autoAnalysis  **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
+    * pptAnalysisStatus  **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     * errorInfo  errorInfo
-    * pageCount  PPT页面总数。
+    * pageCount  **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     * pages  PPT页面图片。
     *
     * @var string[]
@@ -113,10 +113,10 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * autoAnalysis  PPT是否需要自动解析。
-    * pptAnalysisStatus  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * autoAnalysis  **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
+    * pptAnalysisStatus  **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     * errorInfo  errorInfo
-    * pageCount  PPT页面总数。
+    * pageCount  **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     * pages  PPT页面图片。
     *
     * @var string[]
@@ -261,7 +261,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets autoAnalysis
-    *  PPT是否需要自动解析。
+    *  **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
     *
     * @return bool|null
     */
@@ -273,7 +273,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets autoAnalysis
     *
-    * @param bool|null $autoAnalysis PPT是否需要自动解析。
+    * @param bool|null $autoAnalysis **参数解释**： PPT是否需要自动解析。 **约束限制**： 部分过于复杂的PPT或压缩比过高的PPT可能无法解析。 超过50页PPT仅转换50页 转换的图片无法保证完全还原，需要自行确认。 **取值范围**： * true: 自动解析 * false: 无需解析
     *
     * @return $this
     */
@@ -285,7 +285,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets pptAnalysisStatus
-    *  PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    *  **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -297,7 +297,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets pptAnalysisStatus
     *
-    * @param string|null $pptAnalysisStatus PPT解析状态。 * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消
+    * @param string|null $pptAnalysisStatus **参数解释**： PPT解析状态。 **约束限制**： 不涉及 **取值范围**： * INITIALIZE：初始 * WAITING：等待 * CONVERTING：解析中 * FAILED：失败 * SUCCEEDED：成功 * CANCELED：取消  **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -333,7 +333,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageCount
-    *  PPT页面总数。
+    *  **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     *
     * @return int|null
     */
@@ -345,7 +345,7 @@ class PPTAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets pageCount
     *
-    * @param int|null $pageCount PPT页面总数。
+    * @param int|null $pageCount **参数解释**： PPT页面总数。 **约束限制**： 不涉及
     *
     * @return $this
     */

@@ -2616,6 +2616,9 @@ class EcsClient extends Client
         if ($localVarParams['serverId'] !== null) {
             $queryParams['server_id'] = $localVarParams['serverId'];
         }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
                 ['*/*', 'application/json']

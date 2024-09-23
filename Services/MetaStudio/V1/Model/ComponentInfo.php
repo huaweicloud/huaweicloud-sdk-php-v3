@@ -20,9 +20,9 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * componentName  组件名称。
-    * componentType  组件类型。
-    * componentDesc  组件描述。
+    * componentName  **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentDesc  **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * componentName  组件名称。
-    * componentType  组件类型。
-    * componentDesc  组件描述。
+    * componentName  **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentDesc  **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ComponentInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * componentName  组件名称。
-    * componentType  组件类型。
-    * componentDesc  组件描述。
+    * componentName  **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentDesc  **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * componentName  组件名称。
-    * componentType  组件类型。
-    * componentDesc  组件描述。
+    * componentName  **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentDesc  **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * componentName  组件名称。
-    * componentType  组件类型。
-    * componentDesc  组件描述。
+    * componentName  **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentType  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
+    * componentDesc  **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -201,8 +201,8 @@ class ComponentInfo implements ModelInterface, ArrayAccess
             if (!is_null($this->container['componentDesc']) && (mb_strlen($this->container['componentDesc']) > 512)) {
                 $invalidProperties[] = "invalid value for 'componentDesc', the character length must be smaller than or equal to 512.";
             }
-            if (!is_null($this->container['componentDesc']) && (mb_strlen($this->container['componentDesc']) < 1)) {
-                $invalidProperties[] = "invalid value for 'componentDesc', the character length must be bigger than or equal to 1.";
+            if (!is_null($this->container['componentDesc']) && (mb_strlen($this->container['componentDesc']) < 0)) {
+                $invalidProperties[] = "invalid value for 'componentDesc', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -220,7 +220,7 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentName
-    *  组件名称。
+    *  **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -232,7 +232,7 @@ class ComponentInfo implements ModelInterface, ArrayAccess
     /**
     * Sets componentName
     *
-    * @param string $componentName 组件名称。
+    * @param string $componentName **参数解释**： 组件名称。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentType
-    *  组件类型。
+    *  **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -256,7 +256,7 @@ class ComponentInfo implements ModelInterface, ArrayAccess
     /**
     * Sets componentType
     *
-    * @param string $componentType 组件类型。
+    * @param string $componentType **参数解释**： 组件类型。 **约束限制**： 不涉及。 **取值范围**： 字符长度1-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -268,7 +268,7 @@ class ComponentInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets componentDesc
-    *  组件描述。
+    *  **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -280,7 +280,7 @@ class ComponentInfo implements ModelInterface, ArrayAccess
     /**
     * Sets componentDesc
     *
-    * @param string|null $componentDesc 组件描述。
+    * @param string|null $componentDesc **参数解释**： 组件描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-512位。 **默认取值**： 不涉及。
     *
     * @return $this
     */

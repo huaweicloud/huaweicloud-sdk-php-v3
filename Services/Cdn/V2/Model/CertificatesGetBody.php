@@ -20,6 +20,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * certificateSource  证书来源,0：自有证书。2：SCM证书。
+    * scmCertificateId  SCM证书id
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
@@ -29,6 +31,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'certificateSource' => 'int',
+            'scmCertificateId' => 'string',
             'certificateType' => 'string',
             'certificateName' => 'string',
             'certificateValue' => 'string',
@@ -38,6 +42,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * certificateSource  证书来源,0：自有证书。2：SCM证书。
+    * scmCertificateId  SCM证书id
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
@@ -47,6 +53,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'certificateSource' => 'int32',
+        'scmCertificateId' => null,
         'certificateType' => null,
         'certificateName' => null,
         'certificateValue' => null,
@@ -77,6 +85,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * certificateSource  证书来源,0：自有证书。2：SCM证书。
+    * scmCertificateId  SCM证书id
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
@@ -86,6 +96,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'certificateSource' => 'certificate_source',
+            'scmCertificateId' => 'scm_certificate_id',
             'certificateType' => 'certificate_type',
             'certificateName' => 'certificate_name',
             'certificateValue' => 'certificate_value',
@@ -95,6 +107,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * certificateSource  证书来源,0：自有证书。2：SCM证书。
+    * scmCertificateId  SCM证书id
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
@@ -104,6 +118,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'certificateSource' => 'setCertificateSource',
+            'scmCertificateId' => 'setScmCertificateId',
             'certificateType' => 'setCertificateType',
             'certificateName' => 'setCertificateName',
             'certificateValue' => 'setCertificateValue',
@@ -113,6 +129,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * certificateSource  证书来源,0：自有证书。2：SCM证书。
+    * scmCertificateId  SCM证书id
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
     * certificateName  证书名字。
     * certificateValue  HTTPS协议使用的证书内容，PEM编码格式。
@@ -122,6 +140,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'certificateSource' => 'getCertificateSource',
+            'scmCertificateId' => 'getScmCertificateId',
             'certificateType' => 'getCertificateType',
             'certificateName' => 'getCertificateName',
             'certificateValue' => 'getCertificateValue',
@@ -187,6 +207,8 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
+        $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
         $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
         $this->container['certificateName'] = isset($data['certificateName']) ? $data['certificateName'] : null;
         $this->container['certificateValue'] = isset($data['certificateValue']) ? $data['certificateValue'] : null;
@@ -214,6 +236,54 @@ class CertificatesGetBody implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets certificateSource
+    *  证书来源,0：自有证书。2：SCM证书。
+    *
+    * @return int|null
+    */
+    public function getCertificateSource()
+    {
+        return $this->container['certificateSource'];
+    }
+
+    /**
+    * Sets certificateSource
+    *
+    * @param int|null $certificateSource 证书来源,0：自有证书。2：SCM证书。
+    *
+    * @return $this
+    */
+    public function setCertificateSource($certificateSource)
+    {
+        $this->container['certificateSource'] = $certificateSource;
+        return $this;
+    }
+
+    /**
+    * Gets scmCertificateId
+    *  SCM证书id
+    *
+    * @return string|null
+    */
+    public function getScmCertificateId()
+    {
+        return $this->container['scmCertificateId'];
+    }
+
+    /**
+    * Sets scmCertificateId
+    *
+    * @param string|null $scmCertificateId SCM证书id
+    *
+    * @return $this
+    */
+    public function setScmCertificateId($scmCertificateId)
+    {
+        $this->container['scmCertificateId'] = $scmCertificateId;
+        return $this;
     }
 
     /**

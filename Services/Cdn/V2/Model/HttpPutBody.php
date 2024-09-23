@@ -22,7 +22,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
-    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    * certificateSource  证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
+    * scmCertificateId  SCM证书id
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
@@ -39,6 +40,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'httpsStatus' => 'string',
             'certificateType' => 'string',
             'certificateSource' => 'int',
+            'scmCertificateId' => 'string',
             'certificateName' => 'string',
             'certificateValue' => 'string',
             'privateKey' => 'string',
@@ -54,7 +56,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
-    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    * certificateSource  证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
+    * scmCertificateId  SCM证书id
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
@@ -71,6 +74,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
         'httpsStatus' => null,
         'certificateType' => null,
         'certificateSource' => 'int32',
+        'scmCertificateId' => null,
         'certificateName' => null,
         'certificateValue' => null,
         'privateKey' => null,
@@ -107,7 +111,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
-    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    * certificateSource  证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
+    * scmCertificateId  SCM证书id
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
@@ -124,6 +129,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'httpsStatus' => 'https_status',
             'certificateType' => 'certificate_type',
             'certificateSource' => 'certificate_source',
+            'scmCertificateId' => 'scm_certificate_id',
             'certificateName' => 'certificate_name',
             'certificateValue' => 'certificate_value',
             'privateKey' => 'private_key',
@@ -139,7 +145,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
-    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    * certificateSource  证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
+    * scmCertificateId  SCM证书id
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
@@ -156,6 +163,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'httpsStatus' => 'setHttpsStatus',
             'certificateType' => 'setCertificateType',
             'certificateSource' => 'setCertificateSource',
+            'scmCertificateId' => 'setScmCertificateId',
             'certificateName' => 'setCertificateName',
             'certificateValue' => 'setCertificateValue',
             'privateKey' => 'setPrivateKey',
@@ -171,7 +179,8 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * httpsStatus  HTTPS证书是否启用，on：开启，off：关闭。
     * certificateType  证书类型，server：国际证书；server_sm：国密证书。
-    * certificateSource  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    * certificateSource  证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
+    * scmCertificateId  SCM证书id
     * certificateName  证书名字，长度限制为3-64字符。  > 当证书开启时必传。
     * certificateValue  HTTPS协议使用的证书内容，当证书开启时必传。  > PEM编码格式。
     * privateKey  HTTPS协议使用的私钥，当证书开启时必传。  > PEM编码格式。
@@ -188,6 +197,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
             'httpsStatus' => 'getHttpsStatus',
             'certificateType' => 'getCertificateType',
             'certificateSource' => 'getCertificateSource',
+            'scmCertificateId' => 'getScmCertificateId',
             'certificateName' => 'getCertificateName',
             'certificateValue' => 'getCertificateValue',
             'privateKey' => 'getPrivateKey',
@@ -260,6 +270,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
         $this->container['httpsStatus'] = isset($data['httpsStatus']) ? $data['httpsStatus'] : null;
         $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
         $this->container['certificateSource'] = isset($data['certificateSource']) ? $data['certificateSource'] : null;
+        $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
         $this->container['certificateName'] = isset($data['certificateName']) ? $data['certificateName'] : null;
         $this->container['certificateValue'] = isset($data['certificateValue']) ? $data['certificateValue'] : null;
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
@@ -343,7 +354,7 @@ class HttpPutBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets certificateSource
-    *  证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    *  证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
     *
     * @return int|null
     */
@@ -355,13 +366,37 @@ class HttpPutBody implements ModelInterface, ArrayAccess
     /**
     * Sets certificateSource
     *
-    * @param int|null $certificateSource 证书来源，0：自有证书，默认值0。  > 证书开启时必传
+    * @param int|null $certificateSource 证书来源，0：自有证书。2：SCM证书。  > 证书开启时必传
     *
     * @return $this
     */
     public function setCertificateSource($certificateSource)
     {
         $this->container['certificateSource'] = $certificateSource;
+        return $this;
+    }
+
+    /**
+    * Gets scmCertificateId
+    *  SCM证书id
+    *
+    * @return string|null
+    */
+    public function getScmCertificateId()
+    {
+        return $this->container['scmCertificateId'];
+    }
+
+    /**
+    * Sets scmCertificateId
+    *
+    * @param string|null $scmCertificateId SCM证书id
+    *
+    * @return $this
+    */
+    public function setScmCertificateId($scmCertificateId)
+    {
+        $this->container['scmCertificateId'] = $scmCertificateId;
         return $this;
     }
 

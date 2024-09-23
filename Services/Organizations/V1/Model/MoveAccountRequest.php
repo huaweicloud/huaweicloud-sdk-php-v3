@@ -20,24 +20,28 @@ class MoveAccountRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * accountId  账号的唯一标识符（ID）。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSecurityToken' => 'string',
             'accountId' => 'string',
             'body' => '\HuaweiCloud\SDK\Organizations\V1\Model\MoveAccountReqBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * accountId  账号的唯一标识符（ID）。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSecurityToken' => null,
         'accountId' => null,
         'body' => null
     ];
@@ -65,36 +69,42 @@ class MoveAccountRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * accountId  账号的唯一标识符（ID）。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSecurityToken' => 'X-Security-Token',
             'accountId' => 'account_id',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * accountId  账号的唯一标识符（ID）。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
+            'xSecurityToken' => 'setXSecurityToken',
             'accountId' => 'setAccountId',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * accountId  账号的唯一标识符（ID）。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
+            'xSecurityToken' => 'getXSecurityToken',
             'accountId' => 'getAccountId',
             'body' => 'getBody'
     ];
@@ -157,6 +167,7 @@ class MoveAccountRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -172,8 +183,8 @@ class MoveAccountRequest implements ModelInterface, ArrayAccess
         if ($this->container['accountId'] === null) {
             $invalidProperties[] = "'accountId' can't be null";
         }
-            if ((mb_strlen($this->container['accountId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['accountId']) > 64)) {
+                $invalidProperties[] = "invalid value for 'accountId', the character length must be smaller than or equal to 64.";
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['accountId'])) {
                 $invalidProperties[] = "invalid value for 'accountId', must be conform to the pattern /^[\\w-]+$/.";
@@ -190,6 +201,30 @@ class MoveAccountRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
+        return $this;
     }
 
     /**

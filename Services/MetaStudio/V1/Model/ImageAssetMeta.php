@@ -20,11 +20,11 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * codec  图片编码格式，自动提取。
-    * width  图片宽度，自动提取
-    * height  图片高度，自动提取
-    * size  大小
-    * mode  Horizontal=横向；Vertical=纵向
+    * codec  **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
+    * width  **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -40,11 +40,11 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * codec  图片编码格式，自动提取。
-    * width  图片宽度，自动提取
-    * height  图片高度，自动提取
-    * size  大小
-    * mode  Horizontal=横向；Vertical=纵向
+    * codec  **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
+    * width  **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -81,11 +81,11 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * codec  图片编码格式，自动提取。
-    * width  图片宽度，自动提取
-    * height  图片高度，自动提取
-    * size  大小
-    * mode  Horizontal=横向；Vertical=纵向
+    * codec  **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
+    * width  **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -101,11 +101,11 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * codec  图片编码格式，自动提取。
-    * width  图片宽度，自动提取
-    * height  图片高度，自动提取
-    * size  大小
-    * mode  Horizontal=横向；Vertical=纵向
+    * codec  **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
+    * width  **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -121,11 +121,11 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * codec  图片编码格式，自动提取。
-    * width  图片宽度，自动提取
-    * height  图片高度，自动提取
-    * size  大小
-    * mode  Horizontal=横向；Vertical=纵向
+    * codec  **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
+    * width  **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * height  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * size  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * mode  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -276,7 +276,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets codec
-    *  图片编码格式，自动提取。
+    *  **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -288,7 +288,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets codec
     *
-    * @param string|null $codec 图片编码格式，自动提取。
+    * @param string|null $codec **参数解释**： 图片编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets width
-    *  图片宽度，自动提取
+    *  **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -312,7 +312,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets width
     *
-    * @param int|null $width 图片宽度，自动提取
+    * @param int|null $width **参数解释**： 图片宽度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets height
-    *  图片高度，自动提取
+    *  **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return int|null
     */
@@ -336,7 +336,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets height
     *
-    * @param int|null $height 图片高度，自动提取
+    * @param int|null $height **参数解释**： 图片高度。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -348,7 +348,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets size
-    *  大小
+    *  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return float|null
     */
@@ -360,7 +360,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param float|null $size 大小
+    * @param float|null $size **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -372,7 +372,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  Horizontal=横向；Vertical=纵向
+    *  **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -384,7 +384,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode Horizontal=横向；Vertical=纵向
+    * @param string|null $mode **参数解释**： 图片形态。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： * Horizontal：横向 * Vertical：纵向  **默认取值**： 不涉及。
     *
     * @return $this
     */

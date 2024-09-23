@@ -20,7 +20,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  配额类型，account账户，organizational_unit组织单元，policy策略。
+    * type  配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     * quota  配额数量。
     * min  最小配额。
     * max  最大配额。
@@ -38,7 +38,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  配额类型，account账户，organizational_unit组织单元，policy策略。
+    * type  配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     * quota  配额数量。
     * min  最小配额。
     * max  最大配额。
@@ -77,7 +77,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  配额类型，account账户，organizational_unit组织单元，policy策略。
+    * type  配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     * quota  配额数量。
     * min  最小配额。
     * max  最大配额。
@@ -95,7 +95,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  配额类型，account账户，organizational_unit组织单元，policy策略。
+    * type  配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     * quota  配额数量。
     * min  最小配额。
     * max  最大配额。
@@ -113,7 +113,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  配额类型，account账户，organizational_unit组织单元，policy策略。
+    * type  配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     * quota  配额数量。
     * min  最小配额。
     * max  最大配额。
@@ -239,7 +239,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  配额类型，account账户，organizational_unit组织单元，policy策略。
+    *  配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     *
     * @return string
     */
@@ -251,7 +251,7 @@ class QuotaDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 配额类型，account账户，organizational_unit组织单元，policy策略。
+    * @param string $type 配额类型。account：账号；organizational_unit：组织单元；policy：策略。
     *
     * @return $this
     */

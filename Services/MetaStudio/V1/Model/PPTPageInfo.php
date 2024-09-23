@@ -20,9 +20,9 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * pageNo  页面编号。
-    * fileId  页面对应图片文件ID。
-    * pageContent  讲解词（从备注中提取）。
+    * pageNo  **参数解释**： 页面编号。 **约束限制**： 不涉及
+    * fileId  **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * pageContent  **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * pageNo  页面编号。
-    * fileId  页面对应图片文件ID。
-    * pageContent  讲解词（从备注中提取）。
+    * pageNo  **参数解释**： 页面编号。 **约束限制**： 不涉及
+    * fileId  **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * pageContent  **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * pageNo  页面编号。
-    * fileId  页面对应图片文件ID。
-    * pageContent  讲解词（从备注中提取）。
+    * pageNo  **参数解释**： 页面编号。 **约束限制**： 不涉及
+    * fileId  **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * pageContent  **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * pageNo  页面编号。
-    * fileId  页面对应图片文件ID。
-    * pageContent  讲解词（从备注中提取）。
+    * pageNo  **参数解释**： 页面编号。 **约束限制**： 不涉及
+    * fileId  **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * pageContent  **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * pageNo  页面编号。
-    * fileId  页面对应图片文件ID。
-    * pageContent  讲解词（从备注中提取）。
+    * pageNo  **参数解释**： 页面编号。 **约束限制**： 不涉及
+    * fileId  **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
+    * pageContent  **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -214,7 +214,7 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageNo
-    *  页面编号。
+    *  **参数解释**： 页面编号。 **约束限制**： 不涉及
     *
     * @return int|null
     */
@@ -226,7 +226,7 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pageNo
     *
-    * @param int|null $pageNo 页面编号。
+    * @param int|null $pageNo **参数解释**： 页面编号。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -238,7 +238,7 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileId
-    *  页面对应图片文件ID。
+    *  **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets fileId
     *
-    * @param string|null $fileId 页面对应图片文件ID。
+    * @param string|null $fileId **参数解释**： 页面对应图片文件ID。 **约束限制**： 不涉及 **取值范围**： 字符长度1-64位 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -262,7 +262,7 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageContent
-    *  讲解词（从备注中提取）。
+    *  **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -274,7 +274,7 @@ class PPTPageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets pageContent
     *
-    * @param string|null $pageContent 讲解词（从备注中提取）。
+    * @param string|null $pageContent **参数解释**： 页面对应图片文件ID **约束限制**： 不涉及 **取值范围**： 字符长度0-2048位 **默认取值**： 不涉及。
     *
     * @return $this
     */

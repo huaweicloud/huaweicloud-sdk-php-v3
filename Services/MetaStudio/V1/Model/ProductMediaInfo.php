@@ -22,7 +22,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * assetId  资产ID
     * assetType  资产类型 * IMAGE：图片 * VIDEO：视频 * AUDIO：音频
-    * order  资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    * order  **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * assetId  资产ID
     * assetType  资产类型 * IMAGE：图片 * VIDEO：视频 * AUDIO：音频
-    * order  资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    * order  **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * assetId  资产ID
     * assetType  资产类型 * IMAGE：图片 * VIDEO：视频 * AUDIO：音频
-    * order  资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    * order  **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  资产ID
     * assetType  资产类型 * IMAGE：图片 * VIDEO：视频 * AUDIO：音频
-    * order  资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    * order  **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  资产ID
     * assetType  资产类型 * IMAGE：图片 * VIDEO：视频 * AUDIO：音频
-    * order  资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    * order  **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @var string[]
     */
@@ -287,7 +287,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    *  **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @return int|null
     */
@@ -299,7 +299,7 @@ class ProductMediaInfo implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param int|null $order 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
+    * @param int|null $order **参数解释**： 资产次序。不设置或者0表示按照加入时间先后排序。业务上将次序最靠前的图片设置为商品封面。
     *
     * @return $this
     */

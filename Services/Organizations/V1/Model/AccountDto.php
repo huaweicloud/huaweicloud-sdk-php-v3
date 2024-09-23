@@ -22,10 +22,14 @@ class AccountDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  账号的唯一标识符（ID）。
     * urn  账号的统一资源名称。
-    * joinMethod  账号加入组织的方式,invited：邀请加入，created：创建加入。
-    * status  账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    * joinMethod  账号加入组织的方式。invited：邀请加入，created：创建加入。
+    * status  账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     * joinedAt  账号加入组织的日期。
     * name  账号名称
+    * mobilePhone  手机号码
+    * intlNumberPrefix  手机号前缀。
+    * email  与此账号关联的电子邮件地址。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -35,17 +39,25 @@ class AccountDto implements ModelInterface, ArrayAccess
             'joinMethod' => 'string',
             'status' => 'string',
             'joinedAt' => '\DateTime',
-            'name' => 'string'
+            'name' => 'string',
+            'mobilePhone' => 'string',
+            'intlNumberPrefix' => 'string',
+            'email' => 'string',
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  账号的唯一标识符（ID）。
     * urn  账号的统一资源名称。
-    * joinMethod  账号加入组织的方式,invited：邀请加入，created：创建加入。
-    * status  账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    * joinMethod  账号加入组织的方式。invited：邀请加入，created：创建加入。
+    * status  账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     * joinedAt  账号加入组织的日期。
     * name  账号名称
+    * mobilePhone  手机号码
+    * intlNumberPrefix  手机号前缀。
+    * email  与此账号关联的电子邮件地址。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -55,7 +67,11 @@ class AccountDto implements ModelInterface, ArrayAccess
         'joinMethod' => null,
         'status' => null,
         'joinedAt' => 'date-time',
-        'name' => null
+        'name' => null,
+        'mobilePhone' => null,
+        'intlNumberPrefix' => null,
+        'email' => null,
+        'description' => null
     ];
 
     /**
@@ -83,10 +99,14 @@ class AccountDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  账号的唯一标识符（ID）。
     * urn  账号的统一资源名称。
-    * joinMethod  账号加入组织的方式,invited：邀请加入，created：创建加入。
-    * status  账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    * joinMethod  账号加入组织的方式。invited：邀请加入，created：创建加入。
+    * status  账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     * joinedAt  账号加入组织的日期。
     * name  账号名称
+    * mobilePhone  手机号码
+    * intlNumberPrefix  手机号前缀。
+    * email  与此账号关联的电子邮件地址。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -96,17 +116,25 @@ class AccountDto implements ModelInterface, ArrayAccess
             'joinMethod' => 'join_method',
             'status' => 'status',
             'joinedAt' => 'joined_at',
-            'name' => 'name'
+            'name' => 'name',
+            'mobilePhone' => 'mobile_phone',
+            'intlNumberPrefix' => 'intl_number_prefix',
+            'email' => 'email',
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  账号的唯一标识符（ID）。
     * urn  账号的统一资源名称。
-    * joinMethod  账号加入组织的方式,invited：邀请加入，created：创建加入。
-    * status  账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    * joinMethod  账号加入组织的方式。invited：邀请加入，created：创建加入。
+    * status  账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     * joinedAt  账号加入组织的日期。
     * name  账号名称
+    * mobilePhone  手机号码
+    * intlNumberPrefix  手机号前缀。
+    * email  与此账号关联的电子邮件地址。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -116,17 +144,25 @@ class AccountDto implements ModelInterface, ArrayAccess
             'joinMethod' => 'setJoinMethod',
             'status' => 'setStatus',
             'joinedAt' => 'setJoinedAt',
-            'name' => 'setName'
+            'name' => 'setName',
+            'mobilePhone' => 'setMobilePhone',
+            'intlNumberPrefix' => 'setIntlNumberPrefix',
+            'email' => 'setEmail',
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  账号的唯一标识符（ID）。
     * urn  账号的统一资源名称。
-    * joinMethod  账号加入组织的方式,invited：邀请加入，created：创建加入。
-    * status  账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    * joinMethod  账号加入组织的方式。invited：邀请加入，created：创建加入。
+    * status  账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     * joinedAt  账号加入组织的日期。
     * name  账号名称
+    * mobilePhone  手机号码
+    * intlNumberPrefix  手机号前缀。
+    * email  与此账号关联的电子邮件地址。
+    * description  描述信息。
     *
     * @var string[]
     */
@@ -136,7 +172,11 @@ class AccountDto implements ModelInterface, ArrayAccess
             'joinMethod' => 'getJoinMethod',
             'status' => 'getStatus',
             'joinedAt' => 'getJoinedAt',
-            'name' => 'getName'
+            'name' => 'getName',
+            'mobilePhone' => 'getMobilePhone',
+            'intlNumberPrefix' => 'getIntlNumberPrefix',
+            'email' => 'getEmail',
+            'description' => 'getDescription'
     ];
 
     /**
@@ -203,6 +243,10 @@ class AccountDto implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['joinedAt'] = isset($data['joinedAt']) ? $data['joinedAt'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['mobilePhone'] = isset($data['mobilePhone']) ? $data['mobilePhone'] : null;
+        $this->container['intlNumberPrefix'] = isset($data['intlNumberPrefix']) ? $data['intlNumberPrefix'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -216,8 +260,8 @@ class AccountDto implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 36)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['id']) > 64)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 64.";
             }
             if (!preg_match("/^[\\w-]+$/", $this->container['id'])) {
                 $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[\\w-]+$/.";
@@ -260,6 +304,33 @@ class AccountDto implements ModelInterface, ArrayAccess
             }
             if (!preg_match("/^[a-zA-Z][0-9a-zA-Z_-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[a-zA-Z][0-9a-zA-Z_-]+$/.";
+            }
+            if (!is_null($this->container['mobilePhone']) && (mb_strlen($this->container['mobilePhone']) > 32)) {
+                $invalidProperties[] = "invalid value for 'mobilePhone', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['mobilePhone']) && (mb_strlen($this->container['mobilePhone']) < 1)) {
+                $invalidProperties[] = "invalid value for 'mobilePhone', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['mobilePhone']) && !preg_match("/^1[3456789]\\d{9}$/", $this->container['mobilePhone'])) {
+                $invalidProperties[] = "invalid value for 'mobilePhone', must be conform to the pattern /^1[3456789]\\d{9}$/.";
+            }
+            if (!is_null($this->container['intlNumberPrefix']) && (mb_strlen($this->container['intlNumberPrefix']) > 10)) {
+                $invalidProperties[] = "invalid value for 'intlNumberPrefix', the character length must be smaller than or equal to 10.";
+            }
+            if (!is_null($this->container['intlNumberPrefix']) && (mb_strlen($this->container['intlNumberPrefix']) < 1)) {
+                $invalidProperties[] = "invalid value for 'intlNumberPrefix', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['email']) && (mb_strlen($this->container['email']) > 64)) {
+                $invalidProperties[] = "invalid value for 'email', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['email']) && !preg_match("/^[\\s]*[\\w+=.#|!&-]+@[\\w.-]+\\.[\\w]+[\\s]*$/", $this->container['email'])) {
+                $invalidProperties[] = "invalid value for 'email', must be conform to the pattern /^[\\s]*[\\w+=.#|!&-]+@[\\w.-]+\\.[\\w]+[\\s]*$/.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 128)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) < 0)) {
+                $invalidProperties[] = "invalid value for 'description', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -325,7 +396,7 @@ class AccountDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets joinMethod
-    *  账号加入组织的方式,invited：邀请加入，created：创建加入。
+    *  账号加入组织的方式。invited：邀请加入，created：创建加入。
     *
     * @return string
     */
@@ -337,7 +408,7 @@ class AccountDto implements ModelInterface, ArrayAccess
     /**
     * Sets joinMethod
     *
-    * @param string $joinMethod 账号加入组织的方式,invited：邀请加入，created：创建加入。
+    * @param string $joinMethod 账号加入组织的方式。invited：邀请加入，created：创建加入。
     *
     * @return $this
     */
@@ -349,7 +420,7 @@ class AccountDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    *  账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     *
     * @return string
     */
@@ -361,7 +432,7 @@ class AccountDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 账号当前的状态,ACTIVE 有效| SUSPENDED 静默| PENDING_CLOSURE 关闭中
+    * @param string $status 账号当前的状态。active：有效； suspended：已关闭； pending_closure：关闭中。
     *
     * @return $this
     */
@@ -416,6 +487,102 @@ class AccountDto implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets mobilePhone
+    *  手机号码
+    *
+    * @return string|null
+    */
+    public function getMobilePhone()
+    {
+        return $this->container['mobilePhone'];
+    }
+
+    /**
+    * Sets mobilePhone
+    *
+    * @param string|null $mobilePhone 手机号码
+    *
+    * @return $this
+    */
+    public function setMobilePhone($mobilePhone)
+    {
+        $this->container['mobilePhone'] = $mobilePhone;
+        return $this;
+    }
+
+    /**
+    * Gets intlNumberPrefix
+    *  手机号前缀。
+    *
+    * @return string|null
+    */
+    public function getIntlNumberPrefix()
+    {
+        return $this->container['intlNumberPrefix'];
+    }
+
+    /**
+    * Sets intlNumberPrefix
+    *
+    * @param string|null $intlNumberPrefix 手机号前缀。
+    *
+    * @return $this
+    */
+    public function setIntlNumberPrefix($intlNumberPrefix)
+    {
+        $this->container['intlNumberPrefix'] = $intlNumberPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets email
+    *  与此账号关联的电子邮件地址。
+    *
+    * @return string|null
+    */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+    * Sets email
+    *
+    * @param string|null $email 与此账号关联的电子邮件地址。
+    *
+    * @return $this
+    */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+        return $this;
+    }
+
+    /**
+    * Gets description
+    *  描述信息。
+    *
+    * @return string|null
+    */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+    * Sets description
+    *
+    * @param string|null $description 描述信息。
+    *
+    * @return $this
+    */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
         return $this;
     }
 

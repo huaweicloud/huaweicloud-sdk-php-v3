@@ -56,6 +56,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     * iops  iops
     * throughput  throughput
+    * snapshotPolicyId  云硬盘关联的自动快照策略ID
     *
     * @var string[]
     */
@@ -95,7 +96,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'string',
             'serialNumber' => 'string',
             'iops' => '\HuaweiCloud\SDK\Evs\V2\Model\Iops',
-            'throughput' => '\HuaweiCloud\SDK\Evs\V2\Model\Throughput'
+            'throughput' => '\HuaweiCloud\SDK\Evs\V2\Model\Throughput',
+            'snapshotPolicyId' => 'string'
     ];
 
     /**
@@ -136,6 +138,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     * iops  iops
     * throughput  throughput
+    * snapshotPolicyId  云硬盘关联的自动快照策略ID
     *
     * @var string[]
     */
@@ -175,7 +178,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
         'enterpriseProjectId' => null,
         'serialNumber' => null,
         'iops' => null,
-        'throughput' => null
+        'throughput' => null,
+        'snapshotPolicyId' => null
     ];
 
     /**
@@ -237,6 +241,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     * iops  iops
     * throughput  throughput
+    * snapshotPolicyId  云硬盘关联的自动快照策略ID
     *
     * @var string[]
     */
@@ -276,7 +281,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'enterprise_project_id',
             'serialNumber' => 'serial_number',
             'iops' => 'iops',
-            'throughput' => 'throughput'
+            'throughput' => 'throughput',
+            'snapshotPolicyId' => 'snapshot_policy_id'
     ];
 
     /**
@@ -317,6 +323,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     * iops  iops
     * throughput  throughput
+    * snapshotPolicyId  云硬盘关联的自动快照策略ID
     *
     * @var string[]
     */
@@ -356,7 +363,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'setEnterpriseProjectId',
             'serialNumber' => 'setSerialNumber',
             'iops' => 'setIops',
-            'throughput' => 'setThroughput'
+            'throughput' => 'setThroughput',
+            'snapshotPolicyId' => 'setSnapshotPolicyId'
     ];
 
     /**
@@ -397,6 +405,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     * serialNumber  云硬盘序列号。 只有SCSI类型的非双活卷才会返回该字段，用于与虚拟机中的盘做对应关系。
     * iops  iops
     * throughput  throughput
+    * snapshotPolicyId  云硬盘关联的自动快照策略ID
     *
     * @var string[]
     */
@@ -436,7 +445,8 @@ class VolumeDetail implements ModelInterface, ArrayAccess
             'enterpriseProjectId' => 'getEnterpriseProjectId',
             'serialNumber' => 'getSerialNumber',
             'iops' => 'getIops',
-            'throughput' => 'getThroughput'
+            'throughput' => 'getThroughput',
+            'snapshotPolicyId' => 'getSnapshotPolicyId'
     ];
 
     /**
@@ -533,6 +543,7 @@ class VolumeDetail implements ModelInterface, ArrayAccess
         $this->container['serialNumber'] = isset($data['serialNumber']) ? $data['serialNumber'] : null;
         $this->container['iops'] = isset($data['iops']) ? $data['iops'] : null;
         $this->container['throughput'] = isset($data['throughput']) ? $data['throughput'] : null;
+        $this->container['snapshotPolicyId'] = isset($data['snapshotPolicyId']) ? $data['snapshotPolicyId'] : null;
     }
 
     /**
@@ -1496,6 +1507,30 @@ class VolumeDetail implements ModelInterface, ArrayAccess
     public function setThroughput($throughput)
     {
         $this->container['throughput'] = $throughput;
+        return $this;
+    }
+
+    /**
+    * Gets snapshotPolicyId
+    *  云硬盘关联的自动快照策略ID
+    *
+    * @return string|null
+    */
+    public function getSnapshotPolicyId()
+    {
+        return $this->container['snapshotPolicyId'];
+    }
+
+    /**
+    * Sets snapshotPolicyId
+    *
+    * @param string|null $snapshotPolicyId 云硬盘关联的自动快照策略ID
+    *
+    * @return $this
+    */
+    public function setSnapshotPolicyId($snapshotPolicyId)
+    {
+        $this->container['snapshotPolicyId'] = $snapshotPolicyId;
         return $this;
     }
 

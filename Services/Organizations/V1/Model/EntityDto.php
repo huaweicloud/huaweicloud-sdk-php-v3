@@ -22,7 +22,7 @@ class EntityDto implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实体的名称。
     * id  实体的唯一标识符（ID）。
-    * type  实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    * type  实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class EntityDto implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实体的名称。
     * id  实体的唯一标识符（ID）。
-    * type  实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    * type  实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EntityDto implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实体的名称。
     * id  实体的唯一标识符（ID）。
-    * type  实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    * type  实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class EntityDto implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实体的名称。
     * id  实体的唯一标识符（ID）。
-    * type  实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    * type  实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class EntityDto implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实体的名称。
     * id  实体的唯一标识符（ID）。
-    * type  实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    * type  实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @var string[]
     */
@@ -274,7 +274,7 @@ class EntityDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    *  实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @return string
     */
@@ -286,7 +286,7 @@ class EntityDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 实体的类型，account:账户，organizational_unit:组织单元，root:根。
+    * @param string $type 实体的类型。account：账号；organizational_unit：组织单元；root：根。
     *
     * @return $this
     */

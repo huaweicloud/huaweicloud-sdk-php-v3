@@ -29,7 +29,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
-    * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
-    * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @var string[]
     */
@@ -106,7 +106,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
-    * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
-    * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     * roomName  按智能交互对话名称模糊查询。
     * modelName  按形象名称模糊查询。
     * startTime  最近智能交互对话任务起始时间。格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
-    * endTime  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    * endTime  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @var string[]
     */
@@ -549,7 +549,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    *  结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @return string|null
     */
@@ -561,7 +561,7 @@ class ListSmartChatRoomsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param string|null $endTime 最近智能交互对话任务结束时间。格式遵循：RFC 3339 如“2021-01-10T10:43:17Z”。
+    * @param string|null $endTime 结束时间。格式遵循：RFC 3339 如\"2021-01-10T10:43:17Z\"。
     *
     * @return $this
     */

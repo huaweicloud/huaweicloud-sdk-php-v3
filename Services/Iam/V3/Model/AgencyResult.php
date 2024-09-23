@@ -28,6 +28,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * name  委托名。
     * trustDomainId  被委托方账号ID。
     * trustDomainName  被委托方账号名。
+    * agencyUrn  委托URN。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'id' => 'string',
             'name' => 'string',
             'trustDomainId' => 'string',
-            'trustDomainName' => 'string'
+            'trustDomainName' => 'string',
+            'agencyUrn' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * name  委托名。
     * trustDomainId  被委托方账号ID。
     * trustDomainName  被委托方账号名。
+    * agencyUrn  委托URN。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class AgencyResult implements ModelInterface, ArrayAccess
         'id' => null,
         'name' => null,
         'trustDomainId' => null,
-        'trustDomainName' => null
+        'trustDomainName' => null,
+        'agencyUrn' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * name  委托名。
     * trustDomainId  被委托方账号ID。
     * trustDomainName  被委托方账号名。
+    * agencyUrn  委托URN。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'id' => 'id',
             'name' => 'name',
             'trustDomainId' => 'trust_domain_id',
-            'trustDomainName' => 'trust_domain_name'
+            'trustDomainName' => 'trust_domain_name',
+            'agencyUrn' => 'agency_urn'
     ];
 
     /**
@@ -121,6 +127,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * name  委托名。
     * trustDomainId  被委托方账号ID。
     * trustDomainName  被委托方账号名。
+    * agencyUrn  委托URN。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'name' => 'setName',
             'trustDomainId' => 'setTrustDomainId',
-            'trustDomainName' => 'setTrustDomainName'
+            'trustDomainName' => 'setTrustDomainName',
+            'agencyUrn' => 'setAgencyUrn'
     ];
 
     /**
@@ -145,6 +153,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
     * name  委托名。
     * trustDomainId  被委托方账号ID。
     * trustDomainName  被委托方账号名。
+    * agencyUrn  委托URN。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class AgencyResult implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'name' => 'getName',
             'trustDomainId' => 'getTrustDomainId',
-            'trustDomainName' => 'getTrustDomainName'
+            'trustDomainName' => 'getTrustDomainName',
+            'agencyUrn' => 'getAgencyUrn'
     ];
 
     /**
@@ -225,6 +235,7 @@ class AgencyResult implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['trustDomainId'] = isset($data['trustDomainId']) ? $data['trustDomainId'] : null;
         $this->container['trustDomainName'] = isset($data['trustDomainName']) ? $data['trustDomainName'] : null;
+        $this->container['agencyUrn'] = isset($data['agencyUrn']) ? $data['agencyUrn'] : null;
     }
 
     /**
@@ -453,6 +464,30 @@ class AgencyResult implements ModelInterface, ArrayAccess
     public function setTrustDomainName($trustDomainName)
     {
         $this->container['trustDomainName'] = $trustDomainName;
+        return $this;
+    }
+
+    /**
+    * Gets agencyUrn
+    *  委托URN。
+    *
+    * @return string|null
+    */
+    public function getAgencyUrn()
+    {
+        return $this->container['agencyUrn'];
+    }
+
+    /**
+    * Sets agencyUrn
+    *
+    * @param string|null $agencyUrn 委托URN。
+    *
+    * @return $this
+    */
+    public function setAgencyUrn($agencyUrn)
+    {
+        $this->container['agencyUrn'] = $agencyUrn;
         return $this;
     }
 

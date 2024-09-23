@@ -29,7 +29,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
     * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    * scmCertificateId  SCM证书id
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certName' => 'string',
             'certificate' => 'string',
             'privateKey' => 'string',
-            'certificateType' => 'int'
+            'certificateType' => 'int',
+            'scmCertificateId' => 'string'
     ];
 
     /**
@@ -57,7 +59,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
     * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    * scmCertificateId  SCM证书id
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
         'certName' => null,
         'certificate' => null,
         'privateKey' => null,
-        'certificateType' => 'int32'
+        'certificateType' => 'int32',
+        'scmCertificateId' => null
     ];
 
     /**
@@ -106,7 +110,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
     * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    * scmCertificateId  SCM证书id
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certName' => 'cert_name',
             'certificate' => 'certificate',
             'privateKey' => 'private_key',
-            'certificateType' => 'certificate_type'
+            'certificateType' => 'certificate_type',
+            'scmCertificateId' => 'scm_certificate_id'
     ];
 
     /**
@@ -134,7 +140,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
     * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    * scmCertificateId  SCM证书id
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certName' => 'setCertName',
             'certificate' => 'setCertificate',
             'privateKey' => 'setPrivateKey',
-            'certificateType' => 'setCertificateType'
+            'certificateType' => 'setCertificateType',
+            'scmCertificateId' => 'setScmCertificateId'
     ];
 
     /**
@@ -162,7 +170,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     * certName  证书名称（设置证书必填）（长度限制为3-64字符）。
     * certificate  HTTPS协议使用的SSL证书内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
     * privateKey  HTTPS协议使用的SSL证书私钥内容，仅支持PEM编码格式。不启用证书则无需输入。初次配置证书时必传。
-    * certificateType  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    * certificateType  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
+    * scmCertificateId  SCM证书id
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
             'certName' => 'getCertName',
             'certificate' => 'getCertificate',
             'privateKey' => 'getPrivateKey',
-            'certificateType' => 'getCertificateType'
+            'certificateType' => 'getCertificateType',
+            'scmCertificateId' => 'getScmCertificateId'
     ];
 
     /**
@@ -247,6 +257,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
         $this->container['certificate'] = isset($data['certificate']) ? $data['certificate'] : null;
         $this->container['privateKey'] = isset($data['privateKey']) ? $data['privateKey'] : null;
         $this->container['certificateType'] = isset($data['certificateType']) ? $data['certificateType'] : null;
+        $this->container['scmCertificateId'] = isset($data['scmCertificateId']) ? $data['scmCertificateId'] : null;
     }
 
     /**
@@ -495,7 +506,7 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
 
     /**
     * Gets certificateType
-    *  证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    *  证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
     *
     * @return int|null
     */
@@ -507,13 +518,37 @@ class UpdateDomainMultiCertificatesRequestBodyContent implements ModelInterface,
     /**
     * Sets certificateType
     *
-    * @param int|null $certificateType 证书类型（0为自有证书 ；1为托管证书，此时不必不传入证书内容和私钥，自动根据证书名称匹配；不传默认为自有证书）
+    * @param int|null $certificateType 证书类型（0为自有证书；2为SCM证书；不传默认为自有证书）
     *
     * @return $this
     */
     public function setCertificateType($certificateType)
     {
         $this->container['certificateType'] = $certificateType;
+        return $this;
+    }
+
+    /**
+    * Gets scmCertificateId
+    *  SCM证书id
+    *
+    * @return string|null
+    */
+    public function getScmCertificateId()
+    {
+        return $this->container['scmCertificateId'];
+    }
+
+    /**
+    * Sets scmCertificateId
+    *
+    * @param string|null $scmCertificateId SCM证书id
+    *
+    * @return $this
+    */
+    public function setScmCertificateId($scmCertificateId)
+    {
+        $this->container['scmCertificateId'] = $scmCertificateId;
         return $this;
     }
 

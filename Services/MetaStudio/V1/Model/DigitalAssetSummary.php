@@ -22,6 +22,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * assetId  资产ID。
     * assetName  资产名称。
+    * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
@@ -31,6 +32,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'assetId' => 'string',
             'assetName' => 'string',
+            'assetState' => 'string',
             'assetType' => 'string',
             'coverUrl' => 'string',
             'thumbnailUrl' => 'string'
@@ -40,6 +42,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * assetId  资产ID。
     * assetName  资产名称。
+    * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
@@ -49,6 +52,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'assetId' => null,
         'assetName' => null,
+        'assetState' => null,
         'assetType' => null,
         'coverUrl' => null,
         'thumbnailUrl' => null
@@ -79,6 +83,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * and the value is the original name
     * assetId  资产ID。
     * assetName  资产名称。
+    * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
@@ -88,6 +93,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'assetId' => 'asset_id',
             'assetName' => 'asset_name',
+            'assetState' => 'asset_state',
             'assetType' => 'asset_type',
             'coverUrl' => 'cover_url',
             'thumbnailUrl' => 'thumbnail_url'
@@ -97,6 +103,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * assetId  资产ID。
     * assetName  资产名称。
+    * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
@@ -106,6 +113,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     protected static $setters = [
             'assetId' => 'setAssetId',
             'assetName' => 'setAssetName',
+            'assetState' => 'setAssetState',
             'assetType' => 'setAssetType',
             'coverUrl' => 'setCoverUrl',
             'thumbnailUrl' => 'setThumbnailUrl'
@@ -115,6 +123,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * assetId  资产ID。
     * assetName  资产名称。
+    * assetState  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
     * assetType  资产类型。 公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
     * coverUrl  封面图片路径。
     * thumbnailUrl  缩略图路径。
@@ -124,6 +133,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     protected static $getters = [
             'assetId' => 'getAssetId',
             'assetName' => 'getAssetName',
+            'assetState' => 'getAssetState',
             'assetType' => 'getAssetType',
             'coverUrl' => 'getCoverUrl',
             'thumbnailUrl' => 'getThumbnailUrl'
@@ -169,6 +179,14 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ASSET_STATE_CREATING = 'CREATING';
+    const ASSET_STATE_FAILED = 'FAILED';
+    const ASSET_STATE_UNACTIVED = 'UNACTIVED';
+    const ASSET_STATE_ACTIVED = 'ACTIVED';
+    const ASSET_STATE_DELETING = 'DELETING';
+    const ASSET_STATE_DELETED = 'DELETED';
+    const ASSET_STATE_BLOCK = 'BLOCK';
+    const ASSET_STATE_WAITING_DELETE = 'WAITING_DELETE';
     const ASSET_TYPE_HUMAN_MODEL = 'HUMAN_MODEL';
     const ASSET_TYPE_MODEL = 'MODEL';
     const ASSET_TYPE_ANIMATION = 'ANIMATION';
@@ -183,6 +201,25 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     const ASSET_TYPE_MUSIC = 'MUSIC';
     const ASSET_TYPE_AUDIO = 'AUDIO';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getAssetStateAllowableValues()
+    {
+        return [
+            self::ASSET_STATE_CREATING,
+            self::ASSET_STATE_FAILED,
+            self::ASSET_STATE_UNACTIVED,
+            self::ASSET_STATE_ACTIVED,
+            self::ASSET_STATE_DELETING,
+            self::ASSET_STATE_DELETED,
+            self::ASSET_STATE_BLOCK,
+            self::ASSET_STATE_WAITING_DELETE,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -226,6 +263,7 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     {
         $this->container['assetId'] = isset($data['assetId']) ? $data['assetId'] : null;
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
+        $this->container['assetState'] = isset($data['assetState']) ? $data['assetState'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['thumbnailUrl'] = isset($data['thumbnailUrl']) ? $data['thumbnailUrl'] : null;
@@ -251,6 +289,14 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
             if (!is_null($this->container['assetName']) && (mb_strlen($this->container['assetName']) < 0)) {
                 $invalidProperties[] = "invalid value for 'assetName', the character length must be bigger than or equal to 0.";
             }
+            $allowedValues = $this->getAssetStateAllowableValues();
+                if (!is_null($this->container['assetState']) && !in_array($this->container['assetState'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'assetState', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
             $allowedValues = $this->getAssetTypeAllowableValues();
                 if (!is_null($this->container['assetType']) && !in_array($this->container['assetType'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -330,6 +376,30 @@ class DigitalAssetSummary implements ModelInterface, ArrayAccess
     public function setAssetName($assetName)
     {
         $this->container['assetName'] = $assetName;
+        return $this;
+    }
+
+    /**
+    * Gets assetState
+    *  资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
+    *
+    * @return string|null
+    */
+    public function getAssetState()
+    {
+        return $this->container['assetState'];
+    }
+
+    /**
+    * Sets assetState
+    *
+    * @param string|null $assetState 资产状态。 * CREATING：资产创建中，主文件尚未上传 * FAILED：主文件上传失败 * UNACTIVED：主文件上传成功，资产未激活，资产不可用于其他业务（用户可更新状态） * ACTIVED：主文件上传成功，资产激活，资产可用于其他业务（用户可更新状态） * DELETING：资产删除中，资产不可用，资产可恢复 * DELETED：资产文件已删除，资产不可用，资产不可恢复 * BLOCK: 资产被冻结，资产不可用，不可查看文件。 * WAITING_DELETE：资产将被下线
+    *
+    * @return $this
+    */
+    public function setAssetState($assetState)
+    {
+        $this->container['assetState'] = $assetState;
         return $this;
     }
 

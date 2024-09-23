@@ -22,14 +22,13 @@ class TargetServer implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  源端在SMS数据库中的ID
     * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  目的端服务器名称
+    * name  用来区分不同源端服务器的名称
     * hostname  源端主机名，注册源端必选，更新非必选
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  目的端磁盘信息，一般和源端保持一致
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -41,9 +40,10 @@ class TargetServer implements ModelInterface, ArrayAccess
     * accountRights  Windows必选，权限是否满足要求
     * bootLoader  Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
     * systemDir  Windows必选，系统目录
-    * volumeGroups  lvm信息，一般和源端保持一致
+    * volumeGroups  Linux必选，如果没有卷组，输入[]
     * vmId  目的端服务器ID，自动创建虚拟机不需要这个参数
     * flavor  目的端服务器的规格
+    * disks  目的端磁盘信息，一般和源端保持一致
     * imageDiskId  目的端代理镜像磁盘ID
     * snapshotIds  目的端快照ID
     * cutoveredSnapshotIds  目的端回滚快照ID
@@ -60,7 +60,6 @@ class TargetServer implements ModelInterface, ArrayAccess
             'firmware' => 'string',
             'cpuQuantity' => 'int',
             'memory' => 'int',
-            'disks' => '\HuaweiCloud\SDK\Sms\V3\Model\TargetDisk[]',
             'btrfsList' => 'string[]',
             'networks' => '\HuaweiCloud\SDK\Sms\V3\Model\NetWork[]',
             'domainId' => 'string',
@@ -75,6 +74,7 @@ class TargetServer implements ModelInterface, ArrayAccess
             'volumeGroups' => '\HuaweiCloud\SDK\Sms\V3\Model\VolumeGroups[]',
             'vmId' => 'string',
             'flavor' => 'string',
+            'disks' => '\HuaweiCloud\SDK\Sms\V3\Model\TargetDisk[]',
             'imageDiskId' => 'string',
             'snapshotIds' => 'string',
             'cutoveredSnapshotIds' => 'string'
@@ -84,14 +84,13 @@ class TargetServer implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  源端在SMS数据库中的ID
     * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  目的端服务器名称
+    * name  用来区分不同源端服务器的名称
     * hostname  源端主机名，注册源端必选，更新非必选
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  目的端磁盘信息，一般和源端保持一致
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -103,9 +102,10 @@ class TargetServer implements ModelInterface, ArrayAccess
     * accountRights  Windows必选，权限是否满足要求
     * bootLoader  Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
     * systemDir  Windows必选，系统目录
-    * volumeGroups  lvm信息，一般和源端保持一致
+    * volumeGroups  Linux必选，如果没有卷组，输入[]
     * vmId  目的端服务器ID，自动创建虚拟机不需要这个参数
     * flavor  目的端服务器的规格
+    * disks  目的端磁盘信息，一般和源端保持一致
     * imageDiskId  目的端代理镜像磁盘ID
     * snapshotIds  目的端快照ID
     * cutoveredSnapshotIds  目的端回滚快照ID
@@ -122,7 +122,6 @@ class TargetServer implements ModelInterface, ArrayAccess
         'firmware' => null,
         'cpuQuantity' => 'int32',
         'memory' => 'int64',
-        'disks' => null,
         'btrfsList' => null,
         'networks' => null,
         'domainId' => null,
@@ -137,6 +136,7 @@ class TargetServer implements ModelInterface, ArrayAccess
         'volumeGroups' => null,
         'vmId' => null,
         'flavor' => null,
+        'disks' => null,
         'imageDiskId' => null,
         'snapshotIds' => null,
         'cutoveredSnapshotIds' => null
@@ -167,14 +167,13 @@ class TargetServer implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  源端在SMS数据库中的ID
     * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  目的端服务器名称
+    * name  用来区分不同源端服务器的名称
     * hostname  源端主机名，注册源端必选，更新非必选
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  目的端磁盘信息，一般和源端保持一致
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -186,9 +185,10 @@ class TargetServer implements ModelInterface, ArrayAccess
     * accountRights  Windows必选，权限是否满足要求
     * bootLoader  Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
     * systemDir  Windows必选，系统目录
-    * volumeGroups  lvm信息，一般和源端保持一致
+    * volumeGroups  Linux必选，如果没有卷组，输入[]
     * vmId  目的端服务器ID，自动创建虚拟机不需要这个参数
     * flavor  目的端服务器的规格
+    * disks  目的端磁盘信息，一般和源端保持一致
     * imageDiskId  目的端代理镜像磁盘ID
     * snapshotIds  目的端快照ID
     * cutoveredSnapshotIds  目的端回滚快照ID
@@ -205,7 +205,6 @@ class TargetServer implements ModelInterface, ArrayAccess
             'firmware' => 'firmware',
             'cpuQuantity' => 'cpu_quantity',
             'memory' => 'memory',
-            'disks' => 'disks',
             'btrfsList' => 'btrfs_list',
             'networks' => 'networks',
             'domainId' => 'domain_id',
@@ -220,6 +219,7 @@ class TargetServer implements ModelInterface, ArrayAccess
             'volumeGroups' => 'volume_groups',
             'vmId' => 'vm_id',
             'flavor' => 'flavor',
+            'disks' => 'disks',
             'imageDiskId' => 'image_disk_id',
             'snapshotIds' => 'snapshot_ids',
             'cutoveredSnapshotIds' => 'cutovered_snapshot_ids'
@@ -229,14 +229,13 @@ class TargetServer implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  源端在SMS数据库中的ID
     * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  目的端服务器名称
+    * name  用来区分不同源端服务器的名称
     * hostname  源端主机名，注册源端必选，更新非必选
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  目的端磁盘信息，一般和源端保持一致
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -248,9 +247,10 @@ class TargetServer implements ModelInterface, ArrayAccess
     * accountRights  Windows必选，权限是否满足要求
     * bootLoader  Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
     * systemDir  Windows必选，系统目录
-    * volumeGroups  lvm信息，一般和源端保持一致
+    * volumeGroups  Linux必选，如果没有卷组，输入[]
     * vmId  目的端服务器ID，自动创建虚拟机不需要这个参数
     * flavor  目的端服务器的规格
+    * disks  目的端磁盘信息，一般和源端保持一致
     * imageDiskId  目的端代理镜像磁盘ID
     * snapshotIds  目的端快照ID
     * cutoveredSnapshotIds  目的端回滚快照ID
@@ -267,7 +267,6 @@ class TargetServer implements ModelInterface, ArrayAccess
             'firmware' => 'setFirmware',
             'cpuQuantity' => 'setCpuQuantity',
             'memory' => 'setMemory',
-            'disks' => 'setDisks',
             'btrfsList' => 'setBtrfsList',
             'networks' => 'setNetworks',
             'domainId' => 'setDomainId',
@@ -282,6 +281,7 @@ class TargetServer implements ModelInterface, ArrayAccess
             'volumeGroups' => 'setVolumeGroups',
             'vmId' => 'setVmId',
             'flavor' => 'setFlavor',
+            'disks' => 'setDisks',
             'imageDiskId' => 'setImageDiskId',
             'snapshotIds' => 'setSnapshotIds',
             'cutoveredSnapshotIds' => 'setCutoveredSnapshotIds'
@@ -291,14 +291,13 @@ class TargetServer implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  源端在SMS数据库中的ID
     * ip  源端服务器IP，注册源端时必选，更新非必选
-    * name  目的端服务器名称
+    * name  用来区分不同源端服务器的名称
     * hostname  源端主机名，注册源端必选，更新非必选
     * osType  源端服务器的OS类型，分为Windows和Linux，注册必选，更新非必选
     * osVersion  操作系统版本，注册必选，更新非必选
     * firmware  源端服务器启动类型，如BIOS或者UEFI
     * cpuQuantity  CPU个数，单位vCPU
     * memory  内存大小，单位MB
-    * disks  目的端磁盘信息，一般和源端保持一致
     * btrfsList  Linux 必选，源端的Btrfs信息。如果源端不存在Btrfs，则为[]
     * networks  源端服务器的网卡信息
     * domainId  租户的domainId
@@ -310,9 +309,10 @@ class TargetServer implements ModelInterface, ArrayAccess
     * accountRights  Windows必选，权限是否满足要求
     * bootLoader  Linux必选，系统引导类型，BOOT_LOADER(GRUB/LILO)
     * systemDir  Windows必选，系统目录
-    * volumeGroups  lvm信息，一般和源端保持一致
+    * volumeGroups  Linux必选，如果没有卷组，输入[]
     * vmId  目的端服务器ID，自动创建虚拟机不需要这个参数
     * flavor  目的端服务器的规格
+    * disks  目的端磁盘信息，一般和源端保持一致
     * imageDiskId  目的端代理镜像磁盘ID
     * snapshotIds  目的端快照ID
     * cutoveredSnapshotIds  目的端回滚快照ID
@@ -329,7 +329,6 @@ class TargetServer implements ModelInterface, ArrayAccess
             'firmware' => 'getFirmware',
             'cpuQuantity' => 'getCpuQuantity',
             'memory' => 'getMemory',
-            'disks' => 'getDisks',
             'btrfsList' => 'getBtrfsList',
             'networks' => 'getNetworks',
             'domainId' => 'getDomainId',
@@ -344,6 +343,7 @@ class TargetServer implements ModelInterface, ArrayAccess
             'volumeGroups' => 'getVolumeGroups',
             'vmId' => 'getVmId',
             'flavor' => 'getFlavor',
+            'disks' => 'getDisks',
             'imageDiskId' => 'getImageDiskId',
             'snapshotIds' => 'getSnapshotIds',
             'cutoveredSnapshotIds' => 'getCutoveredSnapshotIds'
@@ -461,7 +461,6 @@ class TargetServer implements ModelInterface, ArrayAccess
         $this->container['firmware'] = isset($data['firmware']) ? $data['firmware'] : null;
         $this->container['cpuQuantity'] = isset($data['cpuQuantity']) ? $data['cpuQuantity'] : null;
         $this->container['memory'] = isset($data['memory']) ? $data['memory'] : null;
-        $this->container['disks'] = isset($data['disks']) ? $data['disks'] : null;
         $this->container['btrfsList'] = isset($data['btrfsList']) ? $data['btrfsList'] : null;
         $this->container['networks'] = isset($data['networks']) ? $data['networks'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
@@ -476,6 +475,7 @@ class TargetServer implements ModelInterface, ArrayAccess
         $this->container['volumeGroups'] = isset($data['volumeGroups']) ? $data['volumeGroups'] : null;
         $this->container['vmId'] = isset($data['vmId']) ? $data['vmId'] : null;
         $this->container['flavor'] = isset($data['flavor']) ? $data['flavor'] : null;
+        $this->container['disks'] = isset($data['disks']) ? $data['disks'] : null;
         $this->container['imageDiskId'] = isset($data['imageDiskId']) ? $data['imageDiskId'] : null;
         $this->container['snapshotIds'] = isset($data['snapshotIds']) ? $data['snapshotIds'] : null;
         $this->container['cutoveredSnapshotIds'] = isset($data['cutoveredSnapshotIds']) ? $data['cutoveredSnapshotIds'] : null;
@@ -568,9 +568,6 @@ class TargetServer implements ModelInterface, ArrayAccess
             if (!is_null($this->container['memory']) && ($this->container['memory'] < 0)) {
                 $invalidProperties[] = "invalid value for 'memory', must be bigger than or equal to 0.";
             }
-        if ($this->container['disks'] === null) {
-            $invalidProperties[] = "'disks' can't be null";
-        }
             if (!is_null($this->container['domainId']) && (mb_strlen($this->container['domainId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'domainId', the character length must be smaller than or equal to 255.";
             }
@@ -609,6 +606,9 @@ class TargetServer implements ModelInterface, ArrayAccess
             if (!is_null($this->container['flavor']) && (mb_strlen($this->container['flavor']) < 0)) {
                 $invalidProperties[] = "invalid value for 'flavor', the character length must be bigger than or equal to 0.";
             }
+        if ($this->container['disks'] === null) {
+            $invalidProperties[] = "'disks' can't be null";
+        }
             if (!is_null($this->container['imageDiskId']) && (mb_strlen($this->container['imageDiskId']) > 255)) {
                 $invalidProperties[] = "invalid value for 'imageDiskId', the character length must be smaller than or equal to 255.";
             }
@@ -691,7 +691,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  目的端服务器名称
+    *  用来区分不同源端服务器的名称
     *
     * @return string
     */
@@ -703,7 +703,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 目的端服务器名称
+    * @param string $name 用来区分不同源端服务器的名称
     *
     * @return $this
     */
@@ -854,30 +854,6 @@ class TargetServer implements ModelInterface, ArrayAccess
     public function setMemory($memory)
     {
         $this->container['memory'] = $memory;
-        return $this;
-    }
-
-    /**
-    * Gets disks
-    *  目的端磁盘信息，一般和源端保持一致
-    *
-    * @return \HuaweiCloud\SDK\Sms\V3\Model\TargetDisk[]
-    */
-    public function getDisks()
-    {
-        return $this->container['disks'];
-    }
-
-    /**
-    * Sets disks
-    *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\TargetDisk[] $disks 目的端磁盘信息，一般和源端保持一致
-    *
-    * @return $this
-    */
-    public function setDisks($disks)
-    {
-        $this->container['disks'] = $disks;
         return $this;
     }
 
@@ -1147,7 +1123,7 @@ class TargetServer implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeGroups
-    *  lvm信息，一般和源端保持一致
+    *  Linux必选，如果没有卷组，输入[]
     *
     * @return \HuaweiCloud\SDK\Sms\V3\Model\VolumeGroups[]|null
     */
@@ -1159,7 +1135,7 @@ class TargetServer implements ModelInterface, ArrayAccess
     /**
     * Sets volumeGroups
     *
-    * @param \HuaweiCloud\SDK\Sms\V3\Model\VolumeGroups[]|null $volumeGroups lvm信息，一般和源端保持一致
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\VolumeGroups[]|null $volumeGroups Linux必选，如果没有卷组，输入[]
     *
     * @return $this
     */
@@ -1214,6 +1190,30 @@ class TargetServer implements ModelInterface, ArrayAccess
     public function setFlavor($flavor)
     {
         $this->container['flavor'] = $flavor;
+        return $this;
+    }
+
+    /**
+    * Gets disks
+    *  目的端磁盘信息，一般和源端保持一致
+    *
+    * @return \HuaweiCloud\SDK\Sms\V3\Model\TargetDisk[]
+    */
+    public function getDisks()
+    {
+        return $this->container['disks'];
+    }
+
+    /**
+    * Sets disks
+    *
+    * @param \HuaweiCloud\SDK\Sms\V3\Model\TargetDisk[] $disks 目的端磁盘信息，一般和源端保持一致
+    *
+    * @return $this
+    */
+    public function setDisks($disks)
+    {
+        $this->container['disks'] = $disks;
         return $this;
     }
 

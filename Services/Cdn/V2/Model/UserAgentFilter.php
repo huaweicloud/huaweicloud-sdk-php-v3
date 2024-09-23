@@ -22,6 +22,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
@@ -29,6 +30,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'type' => 'string',
             'value' => 'string',
+            'includeEmpty' => 'bool',
             'uaList' => 'string[]'
     ];
 
@@ -36,6 +38,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
@@ -43,6 +46,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'type' => null,
         'value' => null,
+        'includeEmpty' => null,
         'uaList' => null
     ];
 
@@ -71,6 +75,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * and the value is the original name
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
@@ -78,6 +83,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'type' => 'type',
             'value' => 'value',
+            'includeEmpty' => 'include_empty',
             'uaList' => 'ua_list'
     ];
 
@@ -85,6 +91,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
@@ -92,6 +99,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     protected static $setters = [
             'type' => 'setType',
             'value' => 'setValue',
+            'includeEmpty' => 'setIncludeEmpty',
             'uaList' => 'setUaList'
     ];
 
@@ -99,6 +107,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * type  UA黑白名单类型 off：关闭UA黑白名单; black：UA黑名单; white：UA白名单;
     * value  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符，多条规则用“,”分割。
+    * includeEmpty  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
     * uaList  配置UA黑白名单，当type=off时，非必传。最多配置10条规则，单条规则不超过100个字符,同时配置value和ua_list时，ua_list生效。
     *
     * @var string[]
@@ -106,6 +115,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     protected static $getters = [
             'type' => 'getType',
             'value' => 'getValue',
+            'includeEmpty' => 'getIncludeEmpty',
             'uaList' => 'getUaList'
     ];
 
@@ -169,6 +179,7 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['includeEmpty'] = isset($data['includeEmpty']) ? $data['includeEmpty'] : null;
         $this->container['uaList'] = isset($data['uaList']) ? $data['uaList'] : null;
     }
 
@@ -242,6 +253,30 @@ class UserAgentFilter implements ModelInterface, ArrayAccess
     public function setValue($value)
     {
         $this->container['value'] = $value;
+        return $this;
+    }
+
+    /**
+    * Gets includeEmpty
+    *  是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
+    *
+    * @return bool|null
+    */
+    public function getIncludeEmpty()
+    {
+        return $this->container['includeEmpty'];
+    }
+
+    /**
+    * Sets includeEmpty
+    *
+    * @param bool|null $includeEmpty 是否包含空User-Agent，true:包含，false：不包含。空User-Agent是指没有User-Agent字段或者该字段的值为空。如果黑名单且该字段值为true，则表示空User-Agent不允许访问，如果是白名单且该字段值为true，则表示空User-Agent允许访问。设置User-Agent黑名单时，默认值为false，设置User-Agent白名单时，默认值为true。
+    *
+    * @return $this
+    */
+    public function setIncludeEmpty($includeEmpty)
+    {
+        $this->container['includeEmpty'] = $includeEmpty;
         return $this;
     }
 

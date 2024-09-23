@@ -20,17 +20,15 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * assetName  资产名称。
-    * assetDescription  资产描述。
-    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
-    * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
+    * assetName  **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
+    * assetDescription  **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
+    * assetType  **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     * reviewConfig  reviewConfig
-    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
-    * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
-    * isNeedGenerateCover  是否需要生成封面。
-    * assetOrder  展示顺序
+    * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
+    * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
@@ -39,11 +37,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetName' => 'string',
             'assetDescription' => 'string',
             'assetType' => 'string',
-            'assetOwner' => 'string',
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
-            'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig',
             'isNeedGenerateCover' => 'bool',
             'assetOrder' => 'int',
@@ -52,17 +48,15 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * assetName  资产名称。
-    * assetDescription  资产描述。
-    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
-    * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
+    * assetName  **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
+    * assetDescription  **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
+    * assetType  **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     * reviewConfig  reviewConfig
-    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
-    * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
-    * isNeedGenerateCover  是否需要生成封面。
-    * assetOrder  展示顺序
+    * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
+    * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
@@ -71,11 +65,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'assetName' => null,
         'assetDescription' => null,
         'assetType' => null,
-        'assetOwner' => null,
         'reviewConfig' => null,
         'tags' => null,
         'assetExtraMeta' => null,
-        'systemProperties' => null,
         'sharedConfig' => null,
         'isNeedGenerateCover' => null,
         'assetOrder' => 'int32',
@@ -105,17 +97,15 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * assetName  资产名称。
-    * assetDescription  资产描述。
-    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
-    * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
+    * assetName  **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
+    * assetDescription  **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
+    * assetType  **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     * reviewConfig  reviewConfig
-    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
-    * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
-    * isNeedGenerateCover  是否需要生成封面。
-    * assetOrder  展示顺序
+    * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
+    * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
@@ -124,11 +114,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetName' => 'asset_name',
             'assetDescription' => 'asset_description',
             'assetType' => 'asset_type',
-            'assetOwner' => 'asset_owner',
             'reviewConfig' => 'review_config',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
-            'systemProperties' => 'system_properties',
             'sharedConfig' => 'shared_config',
             'isNeedGenerateCover' => 'is_need_generate_cover',
             'assetOrder' => 'asset_order',
@@ -137,17 +125,15 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * assetName  资产名称。
-    * assetDescription  资产描述。
-    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
-    * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
+    * assetName  **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
+    * assetDescription  **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
+    * assetType  **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     * reviewConfig  reviewConfig
-    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
-    * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
-    * isNeedGenerateCover  是否需要生成封面。
-    * assetOrder  展示顺序
+    * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
+    * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
@@ -156,11 +142,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetName' => 'setAssetName',
             'assetDescription' => 'setAssetDescription',
             'assetType' => 'setAssetType',
-            'assetOwner' => 'setAssetOwner',
             'reviewConfig' => 'setReviewConfig',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
-            'systemProperties' => 'setSystemProperties',
             'sharedConfig' => 'setSharedConfig',
             'isNeedGenerateCover' => 'setIsNeedGenerateCover',
             'assetOrder' => 'setAssetOrder',
@@ -169,17 +153,15 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * assetName  资产名称。
-    * assetDescription  资产描述。
-    * assetType  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
-    * assetOwner  项目ID。 > * 仅管理员账号可设置此参数。
+    * assetName  **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
+    * assetDescription  **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
+    * assetType  **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     * reviewConfig  reviewConfig
-    * tags  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
-    * systemProperties  设置系统属性。
     * sharedConfig  sharedConfig
-    * isNeedGenerateCover  是否需要生成封面。
-    * assetOrder  展示顺序
+    * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
+    * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     * supportedService  支持的业务类型。： * VIDEO_2D：分身数字人视频制作 * LIVE_2D：分身数字人直播 * CHAT_2D：分身数字人智能交互
     *
     * @var string[]
@@ -188,11 +170,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'assetName' => 'getAssetName',
             'assetDescription' => 'getAssetDescription',
             'assetType' => 'getAssetType',
-            'assetOwner' => 'getAssetOwner',
             'reviewConfig' => 'getReviewConfig',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
-            'systemProperties' => 'getSystemProperties',
             'sharedConfig' => 'getSharedConfig',
             'isNeedGenerateCover' => 'getIsNeedGenerateCover',
             'assetOrder' => 'getAssetOrder',
@@ -299,11 +279,9 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['assetName'] = isset($data['assetName']) ? $data['assetName'] : null;
         $this->container['assetDescription'] = isset($data['assetDescription']) ? $data['assetDescription'] : null;
         $this->container['assetType'] = isset($data['assetType']) ? $data['assetType'] : null;
-        $this->container['assetOwner'] = isset($data['assetOwner']) ? $data['assetOwner'] : null;
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
-        $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
         $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
@@ -344,12 +322,6 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['assetOwner']) && (mb_strlen($this->container['assetOwner']) > 64)) {
-                $invalidProperties[] = "invalid value for 'assetOwner', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['assetOwner']) && (mb_strlen($this->container['assetOwner']) < 1)) {
-                $invalidProperties[] = "invalid value for 'assetOwner', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['assetOrder']) && ($this->container['assetOrder'] > 32767)) {
                 $invalidProperties[] = "invalid value for 'assetOrder', must be smaller than or equal to 32767.";
             }
@@ -372,7 +344,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetName
-    *  资产名称。
+    *  **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -384,7 +356,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetName
     *
-    * @param string $assetName 资产名称。
+    * @param string $assetName **参数解释**： 资产名称。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-256位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -396,7 +368,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetDescription
-    *  资产描述。
+    *  **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -408,7 +380,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetDescription
     *
-    * @param string|null $assetDescription 资产描述。
+    * @param string|null $assetDescription **参数解释**： 资产描述。 **约束限制**： 不涉及。 **取值范围**： 只能使用中英文字符，字符长度0-4096位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -420,7 +392,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetType
-    *  资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    *  **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     *
     * @return string
     */
@@ -432,37 +404,13 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetType
     *
-    * @param string $assetType 资产类型。  公共资产类型： * VOICE_MODEL：音色模型（仅系统管理员可上传，普通租户仅可查询） * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型
+    * @param string $assetType **参数解释**： 资产类型。 **约束限制**： VOICE_MODEL，HUMAN_MODEL_2D 普通用户均无法上传。 **取值范围**： 公共资产类型： * VOICE_MODEL：音色模型 * VIDEO：视频文件 * IMAGE：图片文件 * PPT：幻灯片文件 * MUSIC: 音乐 * AUDIO: 音频 * COMMON_FILE：通用文件  分身数字人资产： * HUMAN_MODEL_2D: 分身数字人模型 * BUSINESS_CARD_TEMPLET: 数字人名片模板  3D数字人资产： * HUMAN_MODEL：3D数字人模型 * SCENE：场景模型 * ANIMATION：动作动画 * MATERIAL：风格化素材 * NORMAL_MODEL: 普通模型。  **默认取值**： 不涉及。
     *
     * @return $this
     */
     public function setAssetType($assetType)
     {
         $this->container['assetType'] = $assetType;
-        return $this;
-    }
-
-    /**
-    * Gets assetOwner
-    *  项目ID。 > * 仅管理员账号可设置此参数。
-    *
-    * @return string|null
-    */
-    public function getAssetOwner()
-    {
-        return $this->container['assetOwner'];
-    }
-
-    /**
-    * Sets assetOwner
-    *
-    * @param string|null $assetOwner 项目ID。 > * 仅管理员账号可设置此参数。
-    *
-    * @return $this
-    */
-    public function setAssetOwner($assetOwner)
-    {
-        $this->container['assetOwner'] = $assetOwner;
         return $this;
     }
 
@@ -492,7 +440,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    *  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     *
     * @return string[]|null
     */
@@ -504,7 +452,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param string[]|null $tags 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E-COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL-BODY,HALF-BODY,STANDING,SITTING,WALKING > - 区域：ASIAN,WESTERN,MIDDLE-EASTERNER,AFRICAN,LATINO
+    * @param string[]|null $tags **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -539,30 +487,6 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets systemProperties
-    *  设置系统属性。
-    *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]|null
-    */
-    public function getSystemProperties()
-    {
-        return $this->container['systemProperties'];
-    }
-
-    /**
-    * Sets systemProperties
-    *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]|null $systemProperties 设置系统属性。
-    *
-    * @return $this
-    */
-    public function setSystemProperties($systemProperties)
-    {
-        $this->container['systemProperties'] = $systemProperties;
-        return $this;
-    }
-
-    /**
     * Gets sharedConfig
     *  sharedConfig
     *
@@ -588,7 +512,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets isNeedGenerateCover
-    *  是否需要生成封面。
+    *  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     *
     * @return bool|null
     */
@@ -600,7 +524,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets isNeedGenerateCover
     *
-    * @param bool|null $isNeedGenerateCover 是否需要生成封面。
+    * @param bool|null $isNeedGenerateCover **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     *
     * @return $this
     */
@@ -612,7 +536,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetOrder
-    *  展示顺序
+    *  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -624,7 +548,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets assetOrder
     *
-    * @param int|null $assetOrder 展示顺序
+    * @param int|null $assetOrder **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
     *
     * @return $this
     */

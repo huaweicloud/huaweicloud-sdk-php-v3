@@ -20,24 +20,28 @@ class ShowPolicyRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * policyId  策略的唯一标识符（ID）。
     * xLanguage  选择接口返回的信息的语言
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSecurityToken' => 'string',
             'policyId' => 'string',
             'xLanguage' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * policyId  策略的唯一标识符（ID）。
     * xLanguage  选择接口返回的信息的语言
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSecurityToken' => null,
         'policyId' => null,
         'xLanguage' => null
     ];
@@ -65,36 +69,42 @@ class ShowPolicyRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * policyId  策略的唯一标识符（ID）。
     * xLanguage  选择接口返回的信息的语言
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSecurityToken' => 'X-Security-Token',
             'policyId' => 'policy_id',
             'xLanguage' => 'X-Language'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * policyId  策略的唯一标识符（ID）。
     * xLanguage  选择接口返回的信息的语言
     *
     * @var string[]
     */
     protected static $setters = [
+            'xSecurityToken' => 'setXSecurityToken',
             'policyId' => 'setPolicyId',
             'xLanguage' => 'setXLanguage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * policyId  策略的唯一标识符（ID）。
     * xLanguage  选择接口返回的信息的语言
     *
     * @var string[]
     */
     protected static $getters = [
+            'xSecurityToken' => 'getXSecurityToken',
             'policyId' => 'getPolicyId',
             'xLanguage' => 'getXLanguage'
     ];
@@ -172,6 +182,7 @@ class ShowPolicyRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['policyId'] = isset($data['policyId']) ? $data['policyId'] : null;
         $this->container['xLanguage'] = isset($data['xLanguage']) ? $data['xLanguage'] : null;
     }
@@ -213,6 +224,30 @@ class ShowPolicyRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
+        return $this;
     }
 
     /**

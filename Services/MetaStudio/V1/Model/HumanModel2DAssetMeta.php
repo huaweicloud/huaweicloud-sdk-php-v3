@@ -20,12 +20,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * isActionEditable  分身数字人的动作是否可编辑。默认不可编辑。
-    * isRealBackground  是否是实景分身数字人。实景分身数字人不做背景替换。
-    * supportLive  是否支持直播
-    * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
-    * deviceNames  已执行编译任务
+    * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
+    * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
+    * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    * modelResolution  **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
@@ -46,12 +46,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * isActionEditable  分身数字人的动作是否可编辑。默认不可编辑。
-    * isRealBackground  是否是实景分身数字人。实景分身数字人不做背景替换。
-    * supportLive  是否支持直播
-    * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
-    * deviceNames  已执行编译任务
+    * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
+    * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
+    * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    * modelResolution  **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
@@ -93,12 +93,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * isActionEditable  分身数字人的动作是否可编辑。默认不可编辑。
-    * isRealBackground  是否是实景分身数字人。实景分身数字人不做背景替换。
-    * supportLive  是否支持直播
-    * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
-    * deviceNames  已执行编译任务
+    * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
+    * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
+    * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    * modelResolution  **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
@@ -119,12 +119,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * isActionEditable  分身数字人的动作是否可编辑。默认不可编辑。
-    * isRealBackground  是否是实景分身数字人。实景分身数字人不做背景替换。
-    * supportLive  是否支持直播
-    * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
-    * deviceNames  已执行编译任务
+    * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
+    * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
+    * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    * modelResolution  **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
@@ -145,12 +145,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * isActionEditable  分身数字人的动作是否可编辑。默认不可编辑。
-    * isRealBackground  是否是实景分身数字人。实景分身数字人不做背景替换。
-    * supportLive  是否支持直播
-    * modelVersion  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
-    * modelResolution  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
-    * deviceNames  已执行编译任务
+    * isActionEditable  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
+    * isRealBackground  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
+    * supportLive  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
+    * modelVersion  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    * modelResolution  **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * deviceNames  **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     * isWithActionLibrary  分身数字人是否带原子动作库。 > * 带原子动作库的分身数字人可做动作编排。
     * actionTagMap  动作标签映射。
     * isFlexus  是否是Flexus版本分身数字人。
@@ -271,6 +271,12 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['modelVersion']) && (mb_strlen($this->container['modelVersion']) > 64)) {
+                $invalidProperties[] = "invalid value for 'modelVersion', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['modelVersion']) && (mb_strlen($this->container['modelVersion']) < 0)) {
+                $invalidProperties[] = "invalid value for 'modelVersion', the character length must be bigger than or equal to 0.";
+            }
             if (!is_null($this->container['modelResolution']) && (mb_strlen($this->container['modelResolution']) > 64)) {
                 $invalidProperties[] = "invalid value for 'modelResolution', the character length must be smaller than or equal to 64.";
             }
@@ -293,7 +299,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets isActionEditable
-    *  分身数字人的动作是否可编辑。默认不可编辑。
+    *  **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
     *
     * @return bool|null
     */
@@ -305,7 +311,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets isActionEditable
     *
-    * @param bool|null $isActionEditable 分身数字人的动作是否可编辑。默认不可编辑。
+    * @param bool|null $isActionEditable **参数解释**： 分身数字人的动作是否可编辑 **约束限制**： 不涉及 **取值范围**： * true: 动作可编辑 * false: 动作不可编辑
     *
     * @return $this
     */
@@ -317,7 +323,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRealBackground
-    *  是否是实景分身数字人。实景分身数字人不做背景替换。
+    *  **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     *
     * @return bool|null
     */
@@ -329,7 +335,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets isRealBackground
     *
-    * @param bool|null $isRealBackground 是否是实景分身数字人。实景分身数字人不做背景替换。
+    * @param bool|null $isRealBackground **参数解释**： 是否是实景分身数字人 **约束限制**： 实景分身数字人不做背景替换。 **取值范围**： * true: 实景分身数字人 * false: 普通分身数字人，不带背景。
     *
     * @return $this
     */
@@ -341,7 +347,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets supportLive
-    *  是否支持直播
+    *  **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     *
     * @return bool|null
     */
@@ -353,7 +359,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets supportLive
     *
-    * @param bool|null $supportLive 是否支持直播
+    * @param bool|null $supportLive **参数解释**： 是否支持直播 **约束限制**： 不涉及 **取值范围**： * true: 支持直播 * false: 不支持直播。
     *
     * @return $this
     */
@@ -365,7 +371,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelVersion
-    *  分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    *  **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     *
     * @return string|null
     */
@@ -377,7 +383,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets modelVersion
     *
-    * @param string|null $modelVersion 分身数字人模型版本。默认是V2版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
+    * @param string|null $modelVersion **参数解释**： 分身数字人模型版本 **约束限制**： 不涉及 **取值范围**： * V2: V2版本模型 * V3：V3版本模型 * V3_2：V3.2版本模型
     *
     * @return $this
     */
@@ -389,7 +395,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelResolution
-    *  分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    *  **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     *
     * @return string|null
     */
@@ -401,7 +407,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets modelResolution
     *
-    * @param string|null $modelResolution 分身数字人模型分辨率。默认是1080P。 * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
+    * @param string|null $modelResolution **参数解释**： 分身数字人模型分辨率。 **约束限制**： 不涉及 **取值范围**： * 1080P：1080P。支持1080P及720P的视频输出。 * 4K：4K。支持4K、1080P及720P的视频输出。
     *
     * @return $this
     */
@@ -413,7 +419,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceNames
-    *  已执行编译任务
+    *  **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     *
     * @return string[]|null
     */
@@ -425,7 +431,7 @@ class HumanModel2DAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets deviceNames
     *
-    * @param string[]|null $deviceNames 已执行编译任务
+    * @param string[]|null $deviceNames **参数解释**： 已执行编译任务设备类型列表。 **约束限制**： 支持走动的数字人，当前仅用于视频制作，不能用于直播和智能交互 **取值范围**： 设备名称列表最多16个。 设备名称字符长度1-64位。 **默认取值**： false
     *
     * @return $this
     */

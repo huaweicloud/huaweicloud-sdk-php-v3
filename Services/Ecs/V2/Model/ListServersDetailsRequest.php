@@ -32,6 +32,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * tags  查询tag字段中包含该值的云服务器。
     * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     * serverId  云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id={id1},{id2}  说明： 在使用server_id作为过滤条件时，不能同时使用其他过滤条件。如果同时指定server_id及其他过滤条件，则以server_id条件为准，其他过滤条件会被忽略 当server_id中含有不存在的云服务器ID时，返回的响应参数中该云服务器ID对应的servers结构体中除了id和fault其它字段均为null 为了避免API的URI过长，建议一次查询的server_id个数不超过100个
+    * marker  以单页最后一条server的id作为分页标记。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'status' => 'string',
             'tags' => 'string',
             'ipEq' => 'string',
-            'serverId' => 'string'
+            'serverId' => 'string',
+            'marker' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * tags  查询tag字段中包含该值的云服务器。
     * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     * serverId  云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id={id1},{id2}  说明： 在使用server_id作为过滤条件时，不能同时使用其他过滤条件。如果同时指定server_id及其他过滤条件，则以server_id条件为准，其他过滤条件会被忽略 当server_id中含有不存在的云服务器ID时，返回的响应参数中该云服务器ID对应的servers结构体中除了id和fault其它字段均为null 为了避免API的URI过长，建议一次查询的server_id个数不超过100个
+    * marker  以单页最后一条server的id作为分页标记。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
         'status' => null,
         'tags' => null,
         'ipEq' => null,
-        'serverId' => null
+        'serverId' => null,
+        'marker' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * tags  查询tag字段中包含该值的云服务器。
     * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     * serverId  云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id={id1},{id2}  说明： 在使用server_id作为过滤条件时，不能同时使用其他过滤条件。如果同时指定server_id及其他过滤条件，则以server_id条件为准，其他过滤条件会被忽略 当server_id中含有不存在的云服务器ID时，返回的响应参数中该云服务器ID对应的servers结构体中除了id和fault其它字段均为null 为了避免API的URI过长，建议一次查询的server_id个数不超过100个
+    * marker  以单页最后一条server的id作为分页标记。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'status' => 'status',
             'tags' => 'tags',
             'ipEq' => 'ip_eq',
-            'serverId' => 'server_id'
+            'serverId' => 'server_id',
+            'marker' => 'marker'
     ];
 
     /**
@@ -149,6 +155,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * tags  查询tag字段中包含该值的云服务器。
     * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     * serverId  云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id={id1},{id2}  说明： 在使用server_id作为过滤条件时，不能同时使用其他过滤条件。如果同时指定server_id及其他过滤条件，则以server_id条件为准，其他过滤条件会被忽略 当server_id中含有不存在的云服务器ID时，返回的响应参数中该云服务器ID对应的servers结构体中除了id和fault其它字段均为null 为了避免API的URI过长，建议一次查询的server_id个数不超过100个
+    * marker  以单页最后一条server的id作为分页标记。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'status' => 'setStatus',
             'tags' => 'setTags',
             'ipEq' => 'setIpEq',
-            'serverId' => 'setServerId'
+            'serverId' => 'setServerId',
+            'marker' => 'setMarker'
     ];
 
     /**
@@ -181,6 +189,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     * tags  查询tag字段中包含该值的云服务器。
     * ipEq  IPv4地址过滤结果，匹配规则为精确匹配。
     * serverId  云服务器ID，格式为UUID，匹配规则为精确匹配  示例: server_id={id1},{id2}  说明： 在使用server_id作为过滤条件时，不能同时使用其他过滤条件。如果同时指定server_id及其他过滤条件，则以server_id条件为准，其他过滤条件会被忽略 当server_id中含有不存在的云服务器ID时，返回的响应参数中该云服务器ID对应的servers结构体中除了id和fault其它字段均为null 为了避免API的URI过长，建议一次查询的server_id个数不超过100个
+    * marker  以单页最后一条server的id作为分页标记。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
             'status' => 'getStatus',
             'tags' => 'getTags',
             'ipEq' => 'getIpEq',
-            'serverId' => 'getServerId'
+            'serverId' => 'getServerId',
+            'marker' => 'getMarker'
     ];
 
     /**
@@ -269,6 +279,7 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['ipEq'] = isset($data['ipEq']) ? $data['ipEq'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
+        $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
     }
 
     /**
@@ -584,6 +595,30 @@ class ListServersDetailsRequest implements ModelInterface, ArrayAccess
     public function setServerId($serverId)
     {
         $this->container['serverId'] = $serverId;
+        return $this;
+    }
+
+    /**
+    * Gets marker
+    *  以单页最后一条server的id作为分页标记。
+    *
+    * @return string|null
+    */
+    public function getMarker()
+    {
+        return $this->container['marker'];
+    }
+
+    /**
+    * Sets marker
+    *
+    * @param string|null $marker 以单页最后一条server的id作为分页标记。
+    *
+    * @return $this
+    */
+    public function setMarker($marker)
+    {
+        $this->container['marker'] = $marker;
         return $this;
     }
 

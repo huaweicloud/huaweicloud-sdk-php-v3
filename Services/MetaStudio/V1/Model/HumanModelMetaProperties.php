@@ -20,8 +20,8 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * wholeModelBaseFileId  当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
-    * loadModelFileId  当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    * wholeModelBaseFileId  **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * loadModelFileId  **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * wholeModelBaseFileId  当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
-    * loadModelFileId  当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    * wholeModelBaseFileId  **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * loadModelFileId  **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * wholeModelBaseFileId  当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
-    * loadModelFileId  当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    * wholeModelBaseFileId  **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * loadModelFileId  **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * wholeModelBaseFileId  当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
-    * loadModelFileId  当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    * wholeModelBaseFileId  **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * loadModelFileId  **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * wholeModelBaseFileId  当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
-    * loadModelFileId  当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    * wholeModelBaseFileId  **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
+    * loadModelFileId  **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @var string[]
     */
@@ -197,7 +197,7 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets wholeModelBaseFileId
-    *  当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
+    *  **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
     /**
     * Sets wholeModelBaseFileId
     *
-    * @param string|null $wholeModelBaseFileId 当前模型中的WHOLE_MODEL是基于哪个file_id生成的，如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出
+    * @param string|null $wholeModelBaseFileId **参数解释**： 用于生成WHOLE_MODEL的模型file_id **约束限制**： 如果当前记录的信息与MAIN文件的file_id一致，那就认为已经生成过，无需再进行全模型导出 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */
@@ -221,7 +221,7 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets loadModelFileId
-    *  当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    *  **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return string|null
     */
@@ -233,7 +233,7 @@ class HumanModelMetaProperties implements ModelInterface, ArrayAccess
     /**
     * Sets loadModelFileId
     *
-    * @param string|null $loadModelFileId 当前用于加载的file_id信息，若为空或未匹配到，则使用MAIN文件
+    * @param string|null $loadModelFileId **参数解释**： 当前用于渲染加载的模型file_id **约束限制**： 若为空或未匹配到，则使用MAIN文件 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及。
     *
     * @return $this
     */

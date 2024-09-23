@@ -20,8 +20,8 @@ class TargetDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  目标类型，account：账户，email：邮箱。
-    * entity  如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    * type  目标类型，account：账户id，name：账户名称。
+    * entity  如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class TargetDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  目标类型，account：账户，email：邮箱。
-    * entity  如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    * type  目标类型，account：账户id，name：账户名称。
+    * entity  如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class TargetDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  目标类型，account：账户，email：邮箱。
-    * entity  如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    * type  目标类型，account：账户id，name：账户名称。
+    * entity  如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class TargetDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  目标类型，account：账户，email：邮箱。
-    * entity  如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    * type  目标类型，account：账户id，name：账户名称。
+    * entity  如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class TargetDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  目标类型，account：账户，email：邮箱。
-    * entity  如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    * type  目标类型，account：账户id，name：账户名称。
+    * entity  如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @var string[]
     */
@@ -184,8 +184,8 @@ class TargetDto implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['entity']) > 100)) {
                 $invalidProperties[] = "invalid value for 'entity', the character length must be smaller than or equal to 100.";
             }
-            if (!preg_match("/^[\\w-]+$|^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-_~]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-_~]{0,61}[a-zA-Z0-9])?)*$/", $this->container['entity'])) {
-                $invalidProperties[] = "invalid value for 'entity', must be conform to the pattern /^[\\w-]+$|^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-_~]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-_~]{0,61}[a-zA-Z0-9])?)*$/.";
+            if ((mb_strlen($this->container['entity']) < 1)) {
+                $invalidProperties[] = "invalid value for 'entity', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -203,7 +203,7 @@ class TargetDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  目标类型，account：账户，email：邮箱。
+    *  目标类型，account：账户id，name：账户名称。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class TargetDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 目标类型，account：账户，email：邮箱。
+    * @param string $type 目标类型，account：账户id，name：账户名称。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class TargetDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets entity
-    *  如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    *  如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class TargetDto implements ModelInterface, ArrayAccess
     /**
     * Sets entity
     *
-    * @param string $entity 如果指定 \"type:account\"，则必须提供账号ID作为实体。如果指定\"type:email\"，则必须指定与账号关联的电子邮件地址。
+    * @param string $entity 如果指定 'type:account'，则必须提供账号ID作为实体。如果指定 'type:name'，则必须指定账号名称作为实体。
     *
     * @return $this
     */

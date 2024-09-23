@@ -20,21 +20,25 @@ class ShowCreateAccountStatusRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * createAccountStatusId  指定唯一标识CreateAccount请求的ID值。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSecurityToken' => 'string',
             'createAccountStatusId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * createAccountStatusId  指定唯一标识CreateAccount请求的ID值。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSecurityToken' => null,
         'createAccountStatusId' => null
     ];
 
@@ -61,31 +65,37 @@ class ShowCreateAccountStatusRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * createAccountStatusId  指定唯一标识CreateAccount请求的ID值。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSecurityToken' => 'X-Security-Token',
             'createAccountStatusId' => 'create_account_status_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * createAccountStatusId  指定唯一标识CreateAccount请求的ID值。
     *
     * @var string[]
     */
     protected static $setters = [
+            'xSecurityToken' => 'setXSecurityToken',
             'createAccountStatusId' => 'setCreateAccountStatusId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * createAccountStatusId  指定唯一标识CreateAccount请求的ID值。
     *
     * @var string[]
     */
     protected static $getters = [
+            'xSecurityToken' => 'getXSecurityToken',
             'createAccountStatusId' => 'getCreateAccountStatusId'
     ];
 
@@ -147,6 +157,7 @@ class ShowCreateAccountStatusRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['createAccountStatusId'] = isset($data['createAccountStatusId']) ? $data['createAccountStatusId'] : null;
     }
 
@@ -179,6 +190,30 @@ class ShowCreateAccountStatusRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
+        return $this;
     }
 
     /**

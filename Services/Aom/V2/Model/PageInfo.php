@@ -27,7 +27,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'currentCount' => 'string',
+            'currentCount' => 'int',
             'previousMarker' => 'string',
             'nextMarker' => 'string'
     ];
@@ -41,7 +41,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'currentCount' => null,
+        'currentCount' => 'int32',
         'previousMarker' => null,
         'nextMarker' => null
     ];
@@ -207,7 +207,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     * Gets currentCount
     *  当前页事件、告警总数
     *
-    * @return string
+    * @return int
     */
     public function getCurrentCount()
     {
@@ -217,7 +217,7 @@ class PageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets currentCount
     *
-    * @param string $currentCount 当前页事件、告警总数
+    * @param int $currentCount 当前页事件、告警总数
     *
     * @return $this
     */

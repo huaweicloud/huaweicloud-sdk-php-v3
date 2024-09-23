@@ -20,11 +20,11 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * duration  时长,单位秒
-    * audioCodec  音频编码格式
-    * audioBitRate  音频平均码率,单位kbps
-    * audioChannels  音频声道数
-    * sample  采样率,HZ
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioCodec  **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * audioBitRate  **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioChannels  **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * sample  **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -40,11 +40,11 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * duration  时长,单位秒
-    * audioCodec  音频编码格式
-    * audioBitRate  音频平均码率,单位kbps
-    * audioChannels  音频声道数
-    * sample  采样率,HZ
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioCodec  **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * audioBitRate  **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioChannels  **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * sample  **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -81,11 +81,11 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * duration  时长,单位秒
-    * audioCodec  音频编码格式
-    * audioBitRate  音频平均码率,单位kbps
-    * audioChannels  音频声道数
-    * sample  采样率,HZ
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioCodec  **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * audioBitRate  **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioChannels  **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * sample  **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -101,11 +101,11 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * duration  时长,单位秒
-    * audioCodec  音频编码格式
-    * audioBitRate  音频平均码率,单位kbps
-    * audioChannels  音频声道数
-    * sample  采样率,HZ
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioCodec  **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * audioBitRate  **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioChannels  **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * sample  **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -121,11 +121,11 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * duration  时长,单位秒
-    * audioCodec  音频编码格式
-    * audioBitRate  音频平均码率,单位kbps
-    * audioChannels  音频声道数
-    * sample  采样率,HZ
+    * duration  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioCodec  **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
+    * audioBitRate  **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * audioChannels  **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
+    * sample  **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     * errorInfo  errorInfo
     *
     * @var string[]
@@ -259,7 +259,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  时长,单位秒
+    *  **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -271,7 +271,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 时长,单位秒
+    * @param int|null $duration **参数解释**： 时长,单位秒。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -283,7 +283,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioCodec
-    *  音频编码格式
+    *  **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
     *
     * @return string|null
     */
@@ -295,7 +295,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets audioCodec
     *
-    * @param string|null $audioCodec 音频编码格式
+    * @param string|null $audioCodec **参数解释**： 音频编码格式。 **约束限制**： 用户无需填写，系统自行提取。 **取值范围**： 字符长度0-32位。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -307,7 +307,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioBitRate
-    *  音频平均码率,单位kbps
+    *  **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -319,7 +319,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets audioBitRate
     *
-    * @param int|null $audioBitRate 音频平均码率,单位kbps
+    * @param int|null $audioBitRate **参数解释**： 音频平均码率,单位kbps。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -331,7 +331,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioChannels
-    *  音频声道数
+    *  **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -343,7 +343,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets audioChannels
     *
-    * @param int|null $audioChannels 音频声道数
+    * @param int|null $audioChannels **参数解释**： 音频声道数。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return $this
     */
@@ -355,7 +355,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets sample
-    *  采样率,HZ
+    *  **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return int|null
     */
@@ -367,7 +367,7 @@ class AudioAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets sample
     *
-    * @param int|null $sample 采样率,HZ
+    * @param int|null $sample **参数解释**： 采样率,HZ。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及
     *
     * @return $this
     */

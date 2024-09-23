@@ -20,13 +20,14 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * order  展示顺序
-    * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
-    * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
-    * speedRatio  语速缩放比例
-    * volumeRatio  音量缩放比例
-    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * order  **参数解释**： 展示顺序。 **约束限制**： 不涉及。
+    * modelType  **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
+    * sex  **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
+    * language  **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
+    * speedRatio  **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
+    * volumeRatio  **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
+    * isRealtimeVoice  **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
+    * style  风格参考
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
@@ -42,6 +43,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'speedRatio' => 'float',
             'volumeRatio' => 'float',
             'isRealtimeVoice' => 'bool',
+            'style' => 'string',
             'voiceCapability' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VoiceCapability',
             'externalVoiceMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ExternalVoiceAssetMeta',
             'isSupportVcProcess' => 'bool',
@@ -50,13 +52,14 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * order  展示顺序
-    * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
-    * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
-    * speedRatio  语速缩放比例
-    * volumeRatio  音量缩放比例
-    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * order  **参数解释**： 展示顺序。 **约束限制**： 不涉及。
+    * modelType  **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
+    * sex  **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
+    * language  **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
+    * speedRatio  **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
+    * volumeRatio  **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
+    * isRealtimeVoice  **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
+    * style  风格参考
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
@@ -72,6 +75,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         'speedRatio' => 'float',
         'volumeRatio' => 'float',
         'isRealtimeVoice' => null,
+        'style' => null,
         'voiceCapability' => null,
         'externalVoiceMeta' => null,
         'isSupportVcProcess' => null,
@@ -101,13 +105,14 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * order  展示顺序
-    * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
-    * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
-    * speedRatio  语速缩放比例
-    * volumeRatio  音量缩放比例
-    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * order  **参数解释**： 展示顺序。 **约束限制**： 不涉及。
+    * modelType  **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
+    * sex  **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
+    * language  **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
+    * speedRatio  **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
+    * volumeRatio  **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
+    * isRealtimeVoice  **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
+    * style  风格参考
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
@@ -123,6 +128,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'speedRatio' => 'speed_ratio',
             'volumeRatio' => 'volume_ratio',
             'isRealtimeVoice' => 'is_realtime_voice',
+            'style' => 'style',
             'voiceCapability' => 'voice_capability',
             'externalVoiceMeta' => 'external_voice_meta',
             'isSupportVcProcess' => 'is_support_vc_process',
@@ -131,13 +137,14 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * order  展示顺序
-    * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
-    * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
-    * speedRatio  语速缩放比例
-    * volumeRatio  音量缩放比例
-    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * order  **参数解释**： 展示顺序。 **约束限制**： 不涉及。
+    * modelType  **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
+    * sex  **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
+    * language  **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
+    * speedRatio  **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
+    * volumeRatio  **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
+    * isRealtimeVoice  **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
+    * style  风格参考
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
@@ -153,6 +160,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'speedRatio' => 'setSpeedRatio',
             'volumeRatio' => 'setVolumeRatio',
             'isRealtimeVoice' => 'setIsRealtimeVoice',
+            'style' => 'setStyle',
             'voiceCapability' => 'setVoiceCapability',
             'externalVoiceMeta' => 'setExternalVoiceMeta',
             'isSupportVcProcess' => 'setIsSupportVcProcess',
@@ -161,13 +169,14 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * order  展示顺序
-    * modelType  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
-    * sex  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
-    * language  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
-    * speedRatio  语速缩放比例
-    * volumeRatio  音量缩放比例
-    * isRealtimeVoice  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * order  **参数解释**： 展示顺序。 **约束限制**： 不涉及。
+    * modelType  **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
+    * sex  **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
+    * language  **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
+    * speedRatio  **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
+    * volumeRatio  **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
+    * isRealtimeVoice  **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
+    * style  风格参考
     * voiceCapability  voiceCapability
     * externalVoiceMeta  externalVoiceMeta
     * isSupportVcProcess  是否支持vc。
@@ -183,6 +192,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             'speedRatio' => 'getSpeedRatio',
             'volumeRatio' => 'getVolumeRatio',
             'isRealtimeVoice' => 'getIsRealtimeVoice',
+            'style' => 'getStyle',
             'voiceCapability' => 'getVoiceCapability',
             'externalVoiceMeta' => 'getExternalVoiceMeta',
             'isSupportVcProcess' => 'getIsSupportVcProcess',
@@ -351,6 +361,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
         $this->container['speedRatio'] = isset($data['speedRatio']) ? $data['speedRatio'] : null;
         $this->container['volumeRatio'] = isset($data['volumeRatio']) ? $data['volumeRatio'] : null;
         $this->container['isRealtimeVoice'] = isset($data['isRealtimeVoice']) ? $data['isRealtimeVoice'] : null;
+        $this->container['style'] = isset($data['style']) ? $data['style'] : null;
         $this->container['voiceCapability'] = isset($data['voiceCapability']) ? $data['voiceCapability'] : null;
         $this->container['externalVoiceMeta'] = isset($data['externalVoiceMeta']) ? $data['externalVoiceMeta'] : null;
         $this->container['isSupportVcProcess'] = isset($data['isSupportVcProcess']) ? $data['isSupportVcProcess'] : null;
@@ -425,6 +436,12 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
             if (!is_null($this->container['volumeRatio']) && ($this->container['volumeRatio'] < 0)) {
                 $invalidProperties[] = "invalid value for 'volumeRatio', must be bigger than or equal to 0.";
             }
+            if (!is_null($this->container['style']) && (mb_strlen($this->container['style']) > 32)) {
+                $invalidProperties[] = "invalid value for 'style', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['style']) && (mb_strlen($this->container['style']) < 1)) {
+                $invalidProperties[] = "invalid value for 'style', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -441,7 +458,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets order
-    *  展示顺序
+    *  **参数解释**： 展示顺序。 **约束限制**： 不涉及。
     *
     * @return int|null
     */
@@ -453,7 +470,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets order
     *
-    * @param int|null $order 展示顺序
+    * @param int|null $order **参数解释**： 展示顺序。 **约束限制**： 不涉及。
     *
     * @return $this
     */
@@ -465,7 +482,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelType
-    *  音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
+    *  **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
     *
     * @return string|null
     */
@@ -477,7 +494,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets modelType
     *
-    * @param string|null $modelType 音色资产类型。 * COMMON：通用情感模型 * CLONE：语音克隆模型
+    * @param string|null $modelType **参数解释**： 声音资产类型。 **约束限制**： 不涉及。 **取值范围**： * COMMON：通用情感模型 * CLONE：语音克隆模型
     *
     * @return $this
     */
@@ -489,7 +506,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets sex
-    *  音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
+    *  **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
     *
     * @return string|null
     */
@@ -501,7 +518,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets sex
     *
-    * @param string|null $sex 音色性别。 * UNKNOW：中性音色 * MALE：男性音色 * FEMALE：女性音色  默认UNKNOW。
+    * @param string|null $sex **参数解释**： 声音性别。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知性别声音 * MALE：男性声音 * FEMALE：女性声音
     *
     * @return $this
     */
@@ -513,7 +530,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    *  **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
     *
     * @return string|null
     */
@@ -525,7 +542,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string|null $language 音色语言。 * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语  默认UNKNOW。
+    * @param string|null $language **参数解释**： 声音语言。 **约束限制**： 不涉及。 **取值范围**： * UNKNOW：未知 * CN：中文 * EN：英文 * GER：德语 * fr：法语 * Kr：韩语 * por：葡萄牙语 * JPN：日语 * Ita：意大利语 * ESP：西班牙语 * DBH：东北话 * GT：港台 * GXH：广西话 * HBH：湖北话 * SXH：陕西话 * SCH：四川话 * YY：粤语 * Russian: 俄罗斯语 * Filipino: 菲律宾语 * Dutch: 荷兰语 * Indonesian: 印尼语 * Vietnamese: 越南语 * Arabic: 阿拉伯语 * Turkish: 土耳其语 * Malay: 马来语 * Thai: 泰语 * Finnish: 芬兰语
     *
     * @return $this
     */
@@ -537,7 +554,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets speedRatio
-    *  语速缩放比例
+    *  **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
     *
     * @return float|null
     */
@@ -549,7 +566,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets speedRatio
     *
-    * @param float|null $speedRatio 语速缩放比例
+    * @param float|null $speedRatio **参数解释**： 语速缩放比例。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -561,7 +578,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets volumeRatio
-    *  音量缩放比例
+    *  **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
     *
     * @return float|null
     */
@@ -573,7 +590,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets volumeRatio
     *
-    * @param float|null $volumeRatio 音量缩放比例
+    * @param float|null $volumeRatio **参数解释**： 音量缩放比例。 **约束限制**： 不涉及
     *
     * @return $this
     */
@@ -585,7 +602,7 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
 
     /**
     * Gets isRealtimeVoice
-    *  该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    *  **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
     *
     * @return bool|null
     */
@@ -597,13 +614,37 @@ class VoiceModelAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets isRealtimeVoice
     *
-    * @param bool|null $isRealtimeVoice 该音色是否支持实时合成，默认是true。 > * 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。
+    * @param bool|null $isRealtimeVoice **参数解释**： 该音色是否支持实时合成。 **约束限制**： 支持实时合成的音色，可以用于直播和智能交互场景。否则只能用于视频制作。 **取值范围**： * true: 支持实时合成 * false: 不支持实时合成
     *
     * @return $this
     */
     public function setIsRealtimeVoice($isRealtimeVoice)
     {
         $this->container['isRealtimeVoice'] = $isRealtimeVoice;
+        return $this;
+    }
+
+    /**
+    * Gets style
+    *  风格参考
+    *
+    * @return string|null
+    */
+    public function getStyle()
+    {
+        return $this->container['style'];
+    }
+
+    /**
+    * Sets style
+    *
+    * @param string|null $style 风格参考
+    *
+    * @return $this
+    */
+    public function setStyle($style)
+    {
+        $this->container['style'] = $style;
         return $this;
     }
 
