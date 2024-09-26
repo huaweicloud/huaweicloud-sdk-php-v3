@@ -158,10 +158,13 @@ class GcbSize implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['size']) && ($this->container['size'] > 300)) {
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+            if (($this->container['size'] > 300)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 300.";
             }
-            if (!is_null($this->container['size']) && ($this->container['size'] < 2)) {
+            if (($this->container['size'] < 2)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 2.";
             }
         return $invalidProperties;
@@ -182,7 +185,7 @@ class GcbSize implements ModelInterface, ArrayAccess
     * Gets size
     *  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -192,7 +195,7 @@ class GcbSize implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
+    * @param int $size 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     *
     * @return $this
     */

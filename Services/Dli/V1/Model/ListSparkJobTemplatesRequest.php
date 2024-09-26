@@ -20,9 +20,9 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  类型。
+    * type  类型，需要且必须传入spark作为值。
     * keyword  模板名过滤关键字，模糊匹配，获取模板名含有该关键字的所有模板。
-    * pageSize  每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    * pageSize  每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     * currentPage  当前页码，默认为第一页。
     *
     * @var string[]
@@ -36,9 +36,9 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  类型。
+    * type  类型，需要且必须传入spark作为值。
     * keyword  模板名过滤关键字，模糊匹配，获取模板名含有该关键字的所有模板。
-    * pageSize  每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    * pageSize  每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     * currentPage  当前页码，默认为第一页。
     *
     * @var string[]
@@ -73,9 +73,9 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  类型。
+    * type  类型，需要且必须传入spark作为值。
     * keyword  模板名过滤关键字，模糊匹配，获取模板名含有该关键字的所有模板。
-    * pageSize  每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    * pageSize  每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     * currentPage  当前页码，默认为第一页。
     *
     * @var string[]
@@ -89,9 +89,9 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  类型。
+    * type  类型，需要且必须传入spark作为值。
     * keyword  模板名过滤关键字，模糊匹配，获取模板名含有该关键字的所有模板。
-    * pageSize  每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    * pageSize  每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     * currentPage  当前页码，默认为第一页。
     *
     * @var string[]
@@ -105,9 +105,9 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  类型。
+    * type  类型，需要且必须传入spark作为值。
     * keyword  模板名过滤关键字，模糊匹配，获取模板名含有该关键字的所有模板。
-    * pageSize  每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    * pageSize  每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     * currentPage  当前页码，默认为第一页。
     *
     * @var string[]
@@ -207,7 +207,7 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  类型。
+    *  类型，需要且必须传入spark作为值。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 类型。
+    * @param string|null $type 类型，需要且必须传入spark作为值。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets pageSize
-    *  每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    *  每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class ListSparkJobTemplatesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets pageSize
     *
-    * @param int|null $pageSize 每页显示的最大结果行数，范围: [1, 100]。默认值为：50。
+    * @param int|null $pageSize 每页显示的最大结果行数，范围: [1, 1000]。默认值为：50。
     *
     * @return $this
     */

@@ -22,6 +22,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
     * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -31,6 +33,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'size' => 'string',
             'volumeType' => 'string',
+            'iops' => 'string',
+            'throughput' => 'string',
             'metadataEncrypted' => 'string',
             'metadataCmkid' => 'string',
             'count' => 'string'
@@ -40,6 +44,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
     * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -49,6 +55,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'size' => null,
         'volumeType' => null,
+        'iops' => null,
+        'throughput' => null,
         'metadataEncrypted' => null,
         'metadataCmkid' => null,
         'count' => null
@@ -79,6 +87,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * and the value is the original name
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
     * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -88,6 +98,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'size' => 'size',
             'volumeType' => 'volumeType',
+            'iops' => 'iops',
+            'throughput' => 'throughput',
             'metadataEncrypted' => 'metadataEncrypted',
             'metadataCmkid' => 'metadataCmkid',
             'count' => 'count'
@@ -97,6 +109,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
     * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -106,6 +120,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     protected static $setters = [
             'size' => 'setSize',
             'volumeType' => 'setVolumeType',
+            'iops' => 'setIops',
+            'throughput' => 'setThroughput',
             'metadataEncrypted' => 'setMetadataEncrypted',
             'metadataCmkid' => 'setMetadataCmkid',
             'count' => 'setCount'
@@ -115,6 +131,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * size  匹配的磁盘大小，不填则无磁盘大小限制。例如：100.
     * volumeType  云硬盘类型，目前支持SSD\\GPSSD\\SAS\\ESSD\\SATA等。
+    * iops  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    * throughput  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
     * metadataEncrypted  磁盘加密标识符，0代表不加密，1代表加密。
     * metadataCmkid  加密磁盘的用户主密钥ID，长度为36字节的字符串。
     * count  磁盘选择个数，不填则选择所有此类磁盘。
@@ -124,6 +142,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     protected static $getters = [
             'size' => 'getSize',
             'volumeType' => 'getVolumeType',
+            'iops' => 'getIops',
+            'throughput' => 'getThroughput',
             'metadataEncrypted' => 'getMetadataEncrypted',
             'metadataCmkid' => 'getMetadataCmkid',
             'count' => 'getCount'
@@ -189,6 +209,8 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     {
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
         $this->container['volumeType'] = isset($data['volumeType']) ? $data['volumeType'] : null;
+        $this->container['iops'] = isset($data['iops']) ? $data['iops'] : null;
+        $this->container['throughput'] = isset($data['throughput']) ? $data['throughput'] : null;
         $this->container['metadataEncrypted'] = isset($data['metadataEncrypted']) ? $data['metadataEncrypted'] : null;
         $this->container['metadataCmkid'] = isset($data['metadataCmkid']) ? $data['metadataCmkid'] : null;
         $this->container['count'] = isset($data['count']) ? $data['count'] : null;
@@ -261,6 +283,54 @@ class StorageSelectorsMatchLabels implements ModelInterface, ArrayAccess
     public function setVolumeType($volumeType)
     {
         $this->container['volumeType'] = $volumeType;
+        return $this;
+    }
+
+    /**
+    * Gets iops
+    *  匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    *
+    * @return string|null
+    */
+    public function getIops()
+    {
+        return $this->container['iops'];
+    }
+
+    /**
+    * Sets iops
+    *
+    * @param string|null $iops 匹配的磁盘iops大小，不填则无磁盘iops大小限制。当需要选择GPSSD2或ESSD2类型磁盘时，配置iops来准确选择磁盘。例如：3000.
+    *
+    * @return $this
+    */
+    public function setIops($iops)
+    {
+        $this->container['iops'] = $iops;
+        return $this;
+    }
+
+    /**
+    * Gets throughput
+    *  匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
+    *
+    * @return string|null
+    */
+    public function getThroughput()
+    {
+        return $this->container['throughput'];
+    }
+
+    /**
+    * Sets throughput
+    *
+    * @param string|null $throughput 匹配的磁盘吞吐量大小，不填则无磁盘吞吐量大小限制。当需要选择GPSSD2类型磁盘时，配置throughput来准确选择磁盘。例如：125.
+    *
+    * @return $this
+    */
+    public function setThroughput($throughput)
+    {
+        $this->container['throughput'] = $throughput;
         return $this;
     }
 

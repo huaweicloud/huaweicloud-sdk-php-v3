@@ -20,7 +20,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalDcGatewayId  资源ID标识符。
+    * globalDcGatewayId  Gdgw的ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalDcGatewayId  资源ID标识符。
+    * globalDcGatewayId  Gdgw的ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalDcGatewayId  资源ID标识符。
+    * globalDcGatewayId  Gdgw的ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalDcGatewayId  资源ID标识符。
+    * globalDcGatewayId  Gdgw的ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalDcGatewayId  资源ID标识符。
+    * globalDcGatewayId  Gdgw的ID。
     *
     * @var string[]
     */
@@ -164,11 +164,11 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['globalDcGatewayId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['globalDcGatewayId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['globalDcGatewayId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['globalDcGatewayId'])) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalDcGatewayId'])) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -186,7 +186,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayId
-    *  资源ID标识符。
+    *  Gdgw的ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class GlobalDcGatewayId implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayId
     *
-    * @param string $globalDcGatewayId 资源ID标识符。
+    * @param string $globalDcGatewayId Gdgw的ID。
     *
     * @return $this
     */

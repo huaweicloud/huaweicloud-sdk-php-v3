@@ -20,7 +20,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * globalDcGatewayPeerLinkId  资源ID标识符。
+    * globalDcGatewayPeerLinkId  GDGW的连接ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * globalDcGatewayPeerLinkId  资源ID标识符。
+    * globalDcGatewayPeerLinkId  GDGW的连接ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * globalDcGatewayPeerLinkId  资源ID标识符。
+    * globalDcGatewayPeerLinkId  GDGW的连接ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * globalDcGatewayPeerLinkId  资源ID标识符。
+    * globalDcGatewayPeerLinkId  GDGW的连接ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * globalDcGatewayPeerLinkId  资源ID标识符。
+    * globalDcGatewayPeerLinkId  GDGW的连接ID。
     *
     * @var string[]
     */
@@ -161,11 +161,11 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
             if (!is_null($this->container['globalDcGatewayPeerLinkId']) && (mb_strlen($this->container['globalDcGatewayPeerLinkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalDcGatewayPeerLinkId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['globalDcGatewayPeerLinkId']) && (mb_strlen($this->container['globalDcGatewayPeerLinkId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayPeerLinkId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['globalDcGatewayPeerLinkId']) && (mb_strlen($this->container['globalDcGatewayPeerLinkId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayPeerLinkId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['globalDcGatewayPeerLinkId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['globalDcGatewayPeerLinkId'])) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayPeerLinkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['globalDcGatewayPeerLinkId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalDcGatewayPeerLinkId'])) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayPeerLinkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -183,7 +183,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayPeerLinkId
-    *  资源ID标识符。
+    *  GDGW的连接ID。
     *
     * @return string|null
     */
@@ -195,7 +195,7 @@ class GlobalDcGatewayPeerLinkId implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayPeerLinkId
     *
-    * @param string|null $globalDcGatewayPeerLinkId 资源ID标识符。
+    * @param string|null $globalDcGatewayPeerLinkId GDGW的连接ID。
     *
     * @return $this
     */

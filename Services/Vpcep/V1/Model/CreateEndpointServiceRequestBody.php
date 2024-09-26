@@ -32,6 +32,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * tags  资源标签列表。同一个终端节点服务最多可添加20个标签。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    * snatNetworkId  接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'tcpProxy' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
             'description' => 'string',
-            'ipVersion' => 'string'
+            'ipVersion' => 'string',
+            'snatNetworkId' => 'string'
     ];
 
     /**
@@ -64,6 +66,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * tags  资源标签列表。同一个终端节点服务最多可添加20个标签。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    * snatNetworkId  接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
         'tcpProxy' => null,
         'tags' => null,
         'description' => null,
-        'ipVersion' => null
+        'ipVersion' => null,
+        'snatNetworkId' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * tags  资源标签列表。同一个终端节点服务最多可添加20个标签。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    * snatNetworkId  接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'tcpProxy' => 'tcp_proxy',
             'tags' => 'tags',
             'description' => 'description',
-            'ipVersion' => 'ip_version'
+            'ipVersion' => 'ip_version',
+            'snatNetworkId' => 'snat_network_id'
     ];
 
     /**
@@ -149,6 +155,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * tags  资源标签列表。同一个终端节点服务最多可添加20个标签。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    * snatNetworkId  接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'tcpProxy' => 'setTcpProxy',
             'tags' => 'setTags',
             'description' => 'setDescription',
-            'ipVersion' => 'setIpVersion'
+            'ipVersion' => 'setIpVersion',
+            'snatNetworkId' => 'setSnatNetworkId'
     ];
 
     /**
@@ -181,6 +189,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     * tags  资源标签列表。同一个终端节点服务最多可添加20个标签。
     * description  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。  描述字段，支持中英文字母、数字等字符，不支持“<”或“>”字符。
     * ipVersion  指定终端节点服务的IP版本，仅专业型终端节点服务支持此参数 ● ipv4,  IPv4 ● ipv6,  IPv6
+    * snatNetworkId  接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
             'tcpProxy' => 'getTcpProxy',
             'tags' => 'getTags',
             'description' => 'getDescription',
-            'ipVersion' => 'getIpVersion'
+            'ipVersion' => 'getIpVersion',
+            'snatNetworkId' => 'getSnatNetworkId'
     ];
 
     /**
@@ -337,6 +347,7 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['ipVersion'] = isset($data['ipVersion']) ? $data['ipVersion'] : null;
+        $this->container['snatNetworkId'] = isset($data['snatNetworkId']) ? $data['snatNetworkId'] : null;
     }
 
     /**
@@ -415,6 +426,9 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['snatNetworkId']) && !preg_match("/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/", $this->container['snatNetworkId'])) {
+                $invalidProperties[] = "invalid value for 'snatNetworkId', must be conform to the pattern /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/.";
+            }
         return $invalidProperties;
     }
 
@@ -714,6 +728,30 @@ class CreateEndpointServiceRequestBody implements ModelInterface, ArrayAccess
     public function setIpVersion($ipVersion)
     {
         $this->container['ipVersion'] = $ipVersion;
+        return $this;
+    }
+
+    /**
+    * Gets snatNetworkId
+    *  接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
+    *
+    * @return string|null
+    */
+    public function getSnatNetworkId()
+    {
+        return $this->container['snatNetworkId'];
+    }
+
+    /**
+    * Sets snatNetworkId
+    *
+    * @param string|null $snatNetworkId 接口型snat的地址段，ip_version为ipv6时必选。创建服务时使用的VPC内的任意一个网络ID。当服务类型为VIP、VM、ELBV2类型时使用
+    *
+    * @return $this
+    */
+    public function setSnatNetworkId($snatNetworkId)
+    {
+        $this->container['snatNetworkId'] = $snatNetworkId;
         return $this;
     }
 

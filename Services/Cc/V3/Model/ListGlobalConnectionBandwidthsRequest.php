@@ -25,9 +25,12 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     * id  根据id查询，可查询多个id。
     * name  根据名字查询，可查询多个名字。
     * enterpriseProjectId  根据企业项目ID过滤列表。
+    * instanceId  根据绑定实例id过滤全域互联带宽列表。
+    * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -37,8 +40,11 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
             'id' => 'string[]',
             'name' => 'string[]',
             'enterpriseProjectId' => 'string[]',
+            'instanceId' => 'string[]',
+            'instanceType' => 'string[]',
             'bindingService' => 'string[]',
             'type' => 'string[]',
+            'adminState' => 'string[]',
             'chargeMode' => 'string[]'
     ];
 
@@ -49,9 +55,12 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     * id  根据id查询，可查询多个id。
     * name  根据名字查询，可查询多个名字。
     * enterpriseProjectId  根据企业项目ID过滤列表。
+    * instanceId  根据绑定实例id过滤全域互联带宽列表。
+    * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -61,8 +70,11 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
         'id' => null,
         'name' => null,
         'enterpriseProjectId' => null,
+        'instanceId' => null,
+        'instanceType' => null,
         'bindingService' => null,
         'type' => null,
+        'adminState' => null,
         'chargeMode' => null
     ];
 
@@ -94,9 +106,12 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     * id  根据id查询，可查询多个id。
     * name  根据名字查询，可查询多个名字。
     * enterpriseProjectId  根据企业项目ID过滤列表。
+    * instanceId  根据绑定实例id过滤全域互联带宽列表。
+    * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -106,8 +121,11 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
             'id' => 'id',
             'name' => 'name',
             'enterpriseProjectId' => 'enterprise_project_id',
+            'instanceId' => 'instance_id',
+            'instanceType' => 'instance_type',
             'bindingService' => 'binding_service',
             'type' => 'type',
+            'adminState' => 'admin_state',
             'chargeMode' => 'charge_mode'
     ];
 
@@ -118,9 +136,12 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     * id  根据id查询，可查询多个id。
     * name  根据名字查询，可查询多个名字。
     * enterpriseProjectId  根据企业项目ID过滤列表。
+    * instanceId  根据绑定实例id过滤全域互联带宽列表。
+    * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -130,8 +151,11 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
             'id' => 'setId',
             'name' => 'setName',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
+            'instanceId' => 'setInstanceId',
+            'instanceType' => 'setInstanceType',
             'bindingService' => 'setBindingService',
             'type' => 'setType',
+            'adminState' => 'setAdminState',
             'chargeMode' => 'setChargeMode'
     ];
 
@@ -142,9 +166,12 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     * id  根据id查询，可查询多个id。
     * name  根据名字查询，可查询多个名字。
     * enterpriseProjectId  根据企业项目ID过滤列表。
+    * instanceId  根据绑定实例id过滤全域互联带宽列表。
+    * instanceType  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * bindingService  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     * type  根据带宽类型过滤全域互联带宽列表。带宽类型： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
-    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    * adminState  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    * chargeMode  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @var string[]
     */
@@ -154,8 +181,11 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
             'id' => 'getId',
             'name' => 'getName',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
+            'instanceId' => 'getInstanceId',
+            'instanceType' => 'getInstanceType',
             'bindingService' => 'getBindingService',
             'type' => 'getType',
+            'adminState' => 'getAdminState',
             'chargeMode' => 'getChargeMode'
     ];
 
@@ -199,6 +229,10 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     {
         return self::$openAPIModelName;
     }
+    const INSTANCE_TYPE_CC = 'CC';
+    const INSTANCE_TYPE_GEIP = 'GEIP';
+    const INSTANCE_TYPE_GCN = 'GCN';
+    const INSTANCE_TYPE_GSN = 'GSN';
     const BINDING_SERVICE_CC = 'CC';
     const BINDING_SERVICE_GEIP = 'GEIP';
     const BINDING_SERVICE_GCN = 'GCN';
@@ -207,9 +241,27 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     const TYPE_AREA = 'Area';
     const TYPE_SUB_AREA = 'SubArea';
     const TYPE_REGION = 'Region';
+    const ADMIN_STATE_NORMAL = 'NORMAL';
+    const ADMIN_STATE_FREEZED = 'FREEZED';
     const CHARGE_MODE_BWD = 'bwd';
     const CHARGE_MODE__95 = '95';
+    const CHARGE_MODE__95AVR = '95avr';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getInstanceTypeAllowableValues()
+    {
+        return [
+            self::INSTANCE_TYPE_CC,
+            self::INSTANCE_TYPE_GEIP,
+            self::INSTANCE_TYPE_GCN,
+            self::INSTANCE_TYPE_GSN,
+        ];
+    }
 
     /**
     * Gets allowable values of the enum
@@ -246,11 +298,25 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     *
     * @return string[]
     */
+    public function getAdminStateAllowableValues()
+    {
+        return [
+            self::ADMIN_STATE_NORMAL,
+            self::ADMIN_STATE_FREEZED,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
     public function getChargeModeAllowableValues()
     {
         return [
             self::CHARGE_MODE_BWD,
             self::CHARGE_MODE__95,
+            self::CHARGE_MODE__95AVR,
         ];
     }
 
@@ -275,8 +341,11 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
         $this->container['bindingService'] = isset($data['bindingService']) ? $data['bindingService'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['adminState'] = isset($data['adminState']) ? $data['adminState'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
     }
 
@@ -435,6 +504,54 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     }
 
     /**
+    * Gets instanceId
+    *  根据绑定实例id过滤全域互联带宽列表。
+    *
+    * @return string[]|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string[]|null $instanceId 根据绑定实例id过滤全域互联带宽列表。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceType
+    *  根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
+    *
+    * @return string[]|null
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string[]|null $instanceType 根据绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
     * Gets bindingService
     *  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     *
@@ -483,8 +600,32 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     }
 
     /**
+    * Gets adminState
+    *  根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    *
+    * @return string[]|null
+    */
+    public function getAdminState()
+    {
+        return $this->container['adminState'];
+    }
+
+    /**
+    * Sets adminState
+    *
+    * @param string[]|null $adminState 根据带宽状态过滤全域互联带宽列表： - NORMAL: 正常 - FREEZED: 冻结
+    *
+    * @return $this
+    */
+    public function setAdminState($adminState)
+    {
+        $this->container['adminState'] = $adminState;
+        return $this;
+    }
+
+    /**
     * Gets chargeMode
-    *  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    *  根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @return string[]|null
     */
@@ -496,7 +637,7 @@ class ListGlobalConnectionBandwidthsRequest implements ModelInterface, ArrayAcce
     /**
     * Sets chargeMode
     *
-    * @param string[]|null $chargeMode 根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费
+    * @param string[]|null $chargeMode 根据计费方式过滤全域互联带宽列表： - bwd: 按带宽计费 - 95: 按传统型95计费 - 95avr (日95计费)
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源的Id。
+    *  实例ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class DeleteAuthorisationRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源的Id。
+    * @param string $id 实例ID。
     *
     * @return $this
     */

@@ -20,10 +20,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
-    * cloudConnectionId  资源ID标识符。
-    * domainId  实例所属帐号ID。
-    * instanceId  资源ID标识符。
+    * id  实例ID。
+    * cloudConnectionId  云连接实例ID。
+    * domainId  实例所属账号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
@@ -44,10 +44,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
-    * cloudConnectionId  资源ID标识符。
-    * domainId  实例所属帐号ID。
-    * instanceId  资源ID标识符。
+    * id  实例ID。
+    * cloudConnectionId  云连接实例ID。
+    * domainId  实例所属账号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
@@ -89,10 +89,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
-    * cloudConnectionId  资源ID标识符。
-    * domainId  实例所属帐号ID。
-    * instanceId  资源ID标识符。
+    * id  实例ID。
+    * cloudConnectionId  云连接实例ID。
+    * domainId  实例所属账号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
@@ -113,10 +113,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
-    * cloudConnectionId  资源ID标识符。
-    * domainId  实例所属帐号ID。
-    * instanceId  资源ID标识符。
+    * id  实例ID。
+    * cloudConnectionId  云连接实例ID。
+    * domainId  实例所属账号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
@@ -137,10 +137,10 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
-    * cloudConnectionId  资源ID标识符。
-    * domainId  实例所属帐号ID。
-    * instanceId  资源ID标识符。
+    * id  实例ID。
+    * cloudConnectionId  云连接实例ID。
+    * domainId  实例所属账号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * type  路由条目下一跳指向的网络实例的类型。 - VPC：虚拟私有云。 - VGW：虚拟网关。
@@ -253,26 +253,26 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 36)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['id']) > 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['id']) < 32)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['domainId'] === null) {
             $invalidProperties[] = "'domainId' can't be null";
@@ -292,11 +292,11 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['instanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
@@ -355,7 +355,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -367,7 +367,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -379,7 +379,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudConnectionId
-    *  资源ID标识符。
+    *  云连接实例ID。
     *
     * @return string
     */
@@ -391,7 +391,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets cloudConnectionId
     *
-    * @param string $cloudConnectionId 资源ID标识符。
+    * @param string $cloudConnectionId 云连接实例ID。
     *
     * @return $this
     */
@@ -403,7 +403,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -415,7 +415,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */
@@ -427,7 +427,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  资源ID标识符。
+    *  网络实例（VPC，VGW）的ID。
     *
     * @return string
     */
@@ -439,7 +439,7 @@ class CloudConnectionRoute implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 资源ID标识符。
+    * @param string $instanceId 网络实例（VPC，VGW）的ID。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseRouterRegionId  RegionID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseRouterRegionId  RegionID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseRouterRegionId  RegionID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseRouterRegionId  RegionID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseRouterRegionId  RegionID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterRegionId
-    *  RegionID。
+    *  ER路由器的regionID。
     *
     * @return string
     */
@@ -195,7 +195,7 @@ class EnterpriseRouterRegionId implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterRegionId
     *
-    * @param string $enterpriseRouterRegionId RegionID。
+    * @param string $enterpriseRouterRegionId ER路由器的regionID。
     *
     * @return $this
     */

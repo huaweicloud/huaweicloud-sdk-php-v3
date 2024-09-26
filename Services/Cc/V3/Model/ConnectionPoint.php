@@ -20,12 +20,13 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  资源ID标识符。
+    * instanceId  实例ID。
     * type  type
+    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -35,17 +36,19 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'siteCode' => 'string',
             'instanceId' => 'string',
-            'type' => '\HuaweiCloud\SDK\Cc\V3\Model\ConnectionPointTypeEnum'
+            'type' => '\HuaweiCloud\SDK\Cc\V3\Model\ConnectionPointTypeEnum',
+            'parentInstanceId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  资源ID标识符。
+    * instanceId  实例ID。
     * type  type
+    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
         'regionId' => null,
         'siteCode' => null,
         'instanceId' => null,
-        'type' => null
+        'type' => null,
+        'parentInstanceId' => null
     ];
 
     /**
@@ -81,12 +85,13 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
+    * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  资源ID标识符。
+    * instanceId  实例ID。
     * type  type
+    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -96,17 +101,19 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'siteCode' => 'site_code',
             'instanceId' => 'instance_id',
-            'type' => 'type'
+            'type' => 'type',
+            'parentInstanceId' => 'parent_instance_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
+    * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  资源ID标识符。
+    * instanceId  实例ID。
     * type  type
+    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -116,17 +123,19 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'siteCode' => 'setSiteCode',
             'instanceId' => 'setInstanceId',
-            'type' => 'setType'
+            'type' => 'setType',
+            'parentInstanceId' => 'setParentInstanceId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
+    * id  实例ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  资源ID标识符。
+    * instanceId  实例ID。
     * type  type
+    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'siteCode' => 'getSiteCode',
             'instanceId' => 'getInstanceId',
-            'type' => 'getType'
+            'type' => 'getType',
+            'parentInstanceId' => 'getParentInstanceId'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
         $this->container['siteCode'] = isset($data['siteCode']) ? $data['siteCode'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['parentInstanceId'] = isset($data['parentInstanceId']) ? $data['parentInstanceId'] : null;
     }
 
     /**
@@ -219,11 +230,11 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
@@ -264,15 +275,24 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['instanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
+            if (!is_null($this->container['parentInstanceId']) && (mb_strlen($this->container['parentInstanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'parentInstanceId', the character length must be smaller than or equal to 36.";
+            }
+            if (!is_null($this->container['parentInstanceId']) && (mb_strlen($this->container['parentInstanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'parentInstanceId', the character length must be bigger than or equal to 36.";
+            }
+            if (!is_null($this->container['parentInstanceId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['parentInstanceId'])) {
+                $invalidProperties[] = "invalid value for 'parentInstanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
         return $invalidProperties;
     }
 
@@ -289,7 +309,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -301,7 +321,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -385,7 +405,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -397,7 +417,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 资源ID标识符。
+    * @param string $instanceId 实例ID。
     *
     * @return $this
     */
@@ -428,6 +448,30 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+        return $this;
+    }
+
+    /**
+    * Gets parentInstanceId
+    *  实例ID。
+    *
+    * @return string|null
+    */
+    public function getParentInstanceId()
+    {
+        return $this->container['parentInstanceId'];
+    }
+
+    /**
+    * Sets parentInstanceId
+    *
+    * @param string|null $parentInstanceId 实例ID。
+    *
+    * @return $this
+    */
+    public function setParentInstanceId($parentInstanceId)
+    {
+        $this->container['parentInstanceId'] = $parentInstanceId;
         return $this;
     }
 

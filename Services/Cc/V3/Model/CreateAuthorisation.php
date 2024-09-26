@@ -22,10 +22,10 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * instanceType  授权网络实例的类型: - vpc：虚拟私有云
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
     *
@@ -46,10 +46,10 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * instanceType  授权网络实例的类型: - vpc：虚拟私有云
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
     *
@@ -91,10 +91,10 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * instanceType  授权网络实例的类型: - vpc：虚拟私有云
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
     *
@@ -115,10 +115,10 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * instanceType  授权网络实例的类型: - vpc：虚拟私有云
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
     *
@@ -139,10 +139,10 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * instanceType  授权网络实例的类型: - vpc：虚拟私有云
     * cloudConnectionDomainId  被授权云连接实例所属的账户ID。
     *
@@ -272,11 +272,11 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['instanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
@@ -302,14 +302,14 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['instanceType'] === null) {
             $invalidProperties[] = "'instanceType' can't be null";
@@ -401,7 +401,7 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  资源ID标识符。
+    *  网络实例（VPC，VGW）的ID。
     *
     * @return string
     */
@@ -413,7 +413,7 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 资源ID标识符。
+    * @param string $instanceId 网络实例（VPC，VGW）的ID。
     *
     * @return $this
     */
@@ -473,7 +473,7 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudConnectionId
-    *  资源ID标识符。
+    *  云连接实例ID。
     *
     * @return string
     */
@@ -485,7 +485,7 @@ class CreateAuthorisation implements ModelInterface, ArrayAccess
     /**
     * Sets cloudConnectionId
     *
-    * @param string $cloudConnectionId 资源ID标识符。
+    * @param string $cloudConnectionId 云连接实例ID。
     *
     * @return $this
     */

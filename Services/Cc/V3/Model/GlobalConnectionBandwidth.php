@@ -20,15 +20,15 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
@@ -74,15 +74,15 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
@@ -149,15 +149,15 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
@@ -203,15 +203,15 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
@@ -257,15 +257,15 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * bordercross  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * bindingService  功能说明：绑定的服务类型。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络 - ALL: 所有实例类型
     * enterpriseProjectId  实例所属企业项目ID。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点的中英文名。通过HEADER里面的x-language控制，默认英文，zh-cn返回中文。
@@ -360,6 +360,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     const BINDING_SERVICE_ALL = 'ALL';
     const CHARGE_MODE_BWD = 'bwd';
     const CHARGE_MODE__95 = '95';
+    const CHARGE_MODE__95AVR = '95avr';
     const SLA_LEVEL_PT = 'Pt';
     const SLA_LEVEL_AU = 'Au';
     const SLA_LEVEL_AG = 'Ag';
@@ -408,6 +409,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         return [
             self::CHARGE_MODE_BWD,
             self::CHARGE_MODE__95,
+            self::CHARGE_MODE__95AVR,
         ];
     }
 
@@ -493,19 +495,22 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) > 64)) {
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+            if ((mb_strlen($this->container['name']) > 64)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be smaller than or equal to 64.";
             }
-            if (!is_null($this->container['name']) && (mb_strlen($this->container['name']) < 1)) {
+            if ((mb_strlen($this->container['name']) < 1)) {
                 $invalidProperties[] = "invalid value for 'name', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['name']) && !preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
+            if (!preg_match("/^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/", $this->container['name'])) {
                 $invalidProperties[] = "invalid value for 'name', must be conform to the pattern /^[\\u4e00-\\u9fa50-9a-zA-Z_.\\-]+$/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
@@ -529,6 +534,12 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if (!preg_match("/[a-fA-F0-9]{10,32}/", $this->container['domainId'])) {
                 $invalidProperties[] = "invalid value for 'domainId', must be conform to the pattern /[a-fA-F0-9]{10,32}/.";
             }
+        if ($this->container['bordercross'] === null) {
+            $invalidProperties[] = "'bordercross' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -554,6 +565,9 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseProjectId']) && !preg_match("/0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseProjectId'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseProjectId', must be conform to the pattern /0|[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
+        if ($this->container['chargeMode'] === null) {
+            $invalidProperties[] = "'chargeMode' can't be null";
+        }
             $allowedValues = $this->getChargeModeAllowableValues();
                 if (!is_null($this->container['chargeMode']) && !in_array($this->container['chargeMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -562,10 +576,13 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['size']) && ($this->container['size'] > 300)) {
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
+        }
+            if (($this->container['size'] > 300)) {
                 $invalidProperties[] = "invalid value for 'size', must be smaller than or equal to 300.";
             }
-            if (!is_null($this->container['size']) && ($this->container['size'] < 2)) {
+            if (($this->container['size'] < 2)) {
                 $invalidProperties[] = "invalid value for 'size', must be bigger than or equal to 2.";
             }
             $allowedValues = $this->getSlaLevelAllowableValues();
@@ -642,7 +659,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -654,7 +671,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -668,7 +685,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets name
     *  实例名字。
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -678,7 +695,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 实例名字。
+    * @param string $name 实例名字。
     *
     * @return $this
     */
@@ -714,7 +731,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -726,7 +743,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */
@@ -740,7 +757,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets bordercross
     *  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     *
-    * @return bool|null
+    * @return bool
     */
     public function getBordercross()
     {
@@ -750,7 +767,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets bordercross
     *
-    * @param bool|null $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * @param bool $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     *
     * @return $this
     */
@@ -764,7 +781,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets type
     *  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -774,7 +791,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
+    * @param string $type 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     *
     * @return $this
     */
@@ -834,9 +851,9 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
-    * @return string|null
+    * @return string
     */
     public function getChargeMode()
     {
@@ -846,7 +863,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * @param string $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @return $this
     */
@@ -860,7 +877,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * Gets size
     *  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     *
-    * @return int|null
+    * @return int
     */
     public function getSize()
     {
@@ -870,7 +887,7 @@ class GlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param int|null $size 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
+    * @param int $size 功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     *
     * @return $this
     */

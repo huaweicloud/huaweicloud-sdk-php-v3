@@ -20,8 +20,8 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  实例所属帐号ID。
-    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属账号ID。
+    * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
@@ -40,8 +40,8 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  实例所属帐号ID。
-    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属账号ID。
+    * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
@@ -81,8 +81,8 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  实例所属帐号ID。
-    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属账号ID。
+    * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
@@ -101,8 +101,8 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  实例所属帐号ID。
-    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属账号ID。
+    * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
@@ -121,8 +121,8 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  实例所属帐号ID。
-    * cloudConnectionId  资源ID标识符。
+    * domainId  实例所属账号ID。
+    * cloudConnectionId  云连接实例ID。
     * regionId  RegionID。
     * quotaType  配额类型： - cloud_connection: 可加载的云连接实例数 - cloud_connection_region: 某云连接实例下可加载的Region数 - cloud_connection_route: 某云连接实例下可加载的路由数 - region_network_instance: 某云连接实例下某个Region下可加载的网络实例数
     * quotaNumber  配额数量。
@@ -247,14 +247,14 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['regionId'] === null) {
             $invalidProperties[] = "'regionId' can't be null";
@@ -301,7 +301,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -313,7 +313,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */
@@ -325,7 +325,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudConnectionId
-    *  资源ID标识符。
+    *  云连接实例ID。
     *
     * @return string
     */
@@ -337,7 +337,7 @@ class CloudConnectionQuota implements ModelInterface, ArrayAccess
     /**
     * Sets cloudConnectionId
     *
-    * @param string $cloudConnectionId 资源ID标识符。
+    * @param string $cloudConnectionId 云连接实例ID。
     *
     * @return $this
     */

@@ -158,6 +158,9 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['bordercross'] === null) {
+            $invalidProperties[] = "'bordercross' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -176,7 +179,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
     * Gets bordercross
     *  功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     *
-    * @return bool|null
+    * @return bool
     */
     public function getBordercross()
     {
@@ -186,7 +189,7 @@ class GcbBorderCross implements ModelInterface, ArrayAccess
     /**
     * Sets bordercross
     *
-    * @param bool|null $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
+    * @param bool $bordercross 功能说明：全域互联带宽是否跨境，判断依据：带宽是否涉及从中国大陆到其他国家。 取值范围：True：跨境；False：非跨境
     *
     * @return $this
     */

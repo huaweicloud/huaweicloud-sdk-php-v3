@@ -20,7 +20,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceDomainId  实例所属帐号ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceDomainId  实例所属帐号ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceDomainId  实例所属帐号ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceDomainId  实例所属帐号ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceDomainId  实例所属帐号ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     *
     * @var string[]
     */
@@ -183,7 +183,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceDomainId
-    *  实例所属帐号ID。
+    *  网络实例（VPC，VGW）所属账号ID。
     *
     * @return string|null
     */
@@ -195,7 +195,7 @@ class InstanceDomainId implements ModelInterface, ArrayAccess
     /**
     * Sets instanceDomainId
     *
-    * @param string|null $instanceDomainId 实例所属帐号ID。
+    * @param string|null $instanceDomainId 网络实例（VPC，VGW）所属账号ID。
     *
     * @return $this
     */

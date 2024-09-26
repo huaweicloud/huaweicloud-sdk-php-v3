@@ -22,11 +22,11 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
-    * instanceDomainId  实例所属帐号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
     * cidrs  网络实例发布的网段路由列表。
     *
@@ -48,11 +48,11 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
-    * instanceDomainId  实例所属帐号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
     * cidrs  网络实例发布的网段路由列表。
     *
@@ -95,11 +95,11 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
-    * instanceDomainId  实例所属帐号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
     * cidrs  网络实例发布的网段路由列表。
     *
@@ -121,11 +121,11 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
-    * instanceDomainId  实例所属帐号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
     * cidrs  网络实例发布的网段路由列表。
     *
@@ -147,11 +147,11 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * instanceId  资源ID标识符。
-    * instanceDomainId  实例所属帐号ID。
+    * instanceId  网络实例（VPC，VGW）的ID。
+    * instanceDomainId  网络实例（VPC，VGW）所属账号ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * cloudConnectionId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
     * type  添加到云连接网络实例的类型，有效值： - vpc：虚拟私有云。 - vgw：虚拟网关。
     * cidrs  网络实例发布的网段路由列表。
     *
@@ -285,11 +285,11 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['instanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['instanceDomainId']) && (mb_strlen($this->container['instanceDomainId']) > 32)) {
                 $invalidProperties[] = "invalid value for 'instanceDomainId', the character length must be smaller than or equal to 32.";
@@ -324,14 +324,14 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -417,7 +417,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  资源ID标识符。
+    *  网络实例（VPC，VGW）的ID。
     *
     * @return string
     */
@@ -429,7 +429,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 资源ID标识符。
+    * @param string $instanceId 网络实例（VPC，VGW）的ID。
     *
     * @return $this
     */
@@ -441,7 +441,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceDomainId
-    *  实例所属帐号ID。
+    *  网络实例（VPC，VGW）所属账号ID。
     *
     * @return string|null
     */
@@ -453,7 +453,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets instanceDomainId
     *
-    * @param string|null $instanceDomainId 实例所属帐号ID。
+    * @param string|null $instanceDomainId 网络实例（VPC，VGW）所属账号ID。
     *
     * @return $this
     */
@@ -513,7 +513,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudConnectionId
-    *  资源ID标识符。
+    *  云连接实例ID。
     *
     * @return string
     */
@@ -525,7 +525,7 @@ class CreateNetworkInstance implements ModelInterface, ArrayAccess
     /**
     * Sets cloudConnectionId
     *
-    * @param string $cloudConnectionId 资源ID标识符。
+    * @param string $cloudConnectionId 云连接实例ID。
     *
     * @return $this
     */

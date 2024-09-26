@@ -20,7 +20,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @var string[]
     */
@@ -131,6 +131,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
     }
     const CHARGE_MODE_BWD = 'bwd';
     const CHARGE_MODE__95 = '95';
+    const CHARGE_MODE__95AVR = '95avr';
     
 
     /**
@@ -143,6 +144,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
         return [
             self::CHARGE_MODE_BWD,
             self::CHARGE_MODE__95,
+            self::CHARGE_MODE__95AVR,
         ];
     }
 
@@ -173,6 +175,9 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['chargeMode'] === null) {
+            $invalidProperties[] = "'chargeMode' can't be null";
+        }
             $allowedValues = $this->getChargeModeAllowableValues();
                 if (!is_null($this->container['chargeMode']) && !in_array($this->container['chargeMode'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -197,9 +202,9 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
-    * @return string|null
+    * @return string
     */
     public function getChargeMode()
     {
@@ -209,7 +214,7 @@ class GcbChargeMode implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string|null $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * @param string $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @return $this
     */

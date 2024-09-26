@@ -177,6 +177,9 @@ class GcbType implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -203,7 +206,7 @@ class GcbType implements ModelInterface, ArrayAccess
     * Gets type
     *  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -213,7 +216,7 @@ class GcbType implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
+    * @param string $type 功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     *
     * @return $this
     */

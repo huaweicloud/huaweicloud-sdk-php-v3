@@ -21,20 +21,22 @@ class SetAuditlogPolicyResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * status  设置审计日志策略的操作结果。 - COMPLETED：已完成。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'status' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * status  设置审计日志策略的操作结果。 - COMPLETED：已完成。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'status' => null
     ];
 
     /**
@@ -60,29 +62,32 @@ class SetAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * status  设置审计日志策略的操作结果。 - COMPLETED：已完成。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'status' => 'status'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * status  设置审计日志策略的操作结果。 - COMPLETED：已完成。
     *
     * @var string[]
     */
     protected static $setters = [
+            'status' => 'setStatus'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * status  设置审计日志策略的操作结果。 - COMPLETED：已完成。
     *
     * @var string[]
     */
     protected static $getters = [
+            'status' => 'getStatus'
     ];
 
     /**
@@ -143,6 +148,7 @@ class SetAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -165,6 +171,30 @@ class SetAuditlogPolicyResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets status
+    *  设置审计日志策略的操作结果。 - COMPLETED：已完成。
+    *
+    * @return string|null
+    */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+    * Sets status
+    *
+    * @param string|null $status 设置审计日志策略的操作结果。 - COMPLETED：已完成。
+    *
+    * @return $this
+    */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+        return $this;
     }
 
     /**

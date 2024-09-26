@@ -26,6 +26,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
     * alarmTemplateId  告警规则关联告警模板ID
+    * tags  租户标签列表
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
@@ -45,6 +46,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'resourceGroupId' => 'string',
             'resources' => '\HuaweiCloud\SDK\Ces\V2\Model\Dimension[][]',
             'alarmTemplateId' => 'string',
+            'tags' => '\HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]',
             'policies' => '\HuaweiCloud\SDK\Ces\V2\Model\Policy[]',
             'type' => '\HuaweiCloud\SDK\Ces\V2\Model\AlarmType',
             'alarmNotifications' => '\HuaweiCloud\SDK\Ces\V2\Model\Notification[]',
@@ -64,6 +66,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
     * alarmTemplateId  告警规则关联告警模板ID
+    * tags  租户标签列表
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
@@ -83,6 +86,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         'resourceGroupId' => null,
         'resources' => null,
         'alarmTemplateId' => null,
+        'tags' => null,
         'policies' => null,
         'type' => null,
         'alarmNotifications' => null,
@@ -123,6 +127,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
     * alarmTemplateId  告警规则关联告警模板ID
+    * tags  租户标签列表
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
@@ -142,6 +147,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'resourceGroupId' => 'resource_group_id',
             'resources' => 'resources',
             'alarmTemplateId' => 'alarm_template_id',
+            'tags' => 'tags',
             'policies' => 'policies',
             'type' => 'type',
             'alarmNotifications' => 'alarm_notifications',
@@ -161,6 +167,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
     * alarmTemplateId  告警规则关联告警模板ID
+    * tags  租户标签列表
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
@@ -180,6 +187,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'resourceGroupId' => 'setResourceGroupId',
             'resources' => 'setResources',
             'alarmTemplateId' => 'setAlarmTemplateId',
+            'tags' => 'setTags',
             'policies' => 'setPolicies',
             'type' => 'setType',
             'alarmNotifications' => 'setAlarmNotifications',
@@ -199,6 +207,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     * resourceGroupId  资源分组ID，以rg开头，后跟22位由字母或数字组成的字符串
     * resources  资源列表，监控范围为指定资源时必传
     * alarmTemplateId  告警规则关联告警模板ID
+    * tags  租户标签列表
     * policies  告警策略，当alarm_template_id字段为空时必填，不为空时不填
     * type  type
     * alarmNotifications  告警触发的动作
@@ -218,6 +227,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
             'resourceGroupId' => 'getResourceGroupId',
             'resources' => 'getResources',
             'alarmTemplateId' => 'getAlarmTemplateId',
+            'tags' => 'getTags',
             'policies' => 'getPolicies',
             'type' => 'getType',
             'alarmNotifications' => 'getAlarmNotifications',
@@ -293,6 +303,7 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
         $this->container['resourceGroupId'] = isset($data['resourceGroupId']) ? $data['resourceGroupId'] : null;
         $this->container['resources'] = isset($data['resources']) ? $data['resources'] : null;
         $this->container['alarmTemplateId'] = isset($data['alarmTemplateId']) ? $data['alarmTemplateId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['policies'] = isset($data['policies']) ? $data['policies'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['alarmNotifications'] = isset($data['alarmNotifications']) ? $data['alarmNotifications'] : null;
@@ -542,6 +553,30 @@ class PostAlarmsReqV2 implements ModelInterface, ArrayAccess
     public function setAlarmTemplateId($alarmTemplateId)
     {
         $this->container['alarmTemplateId'] = $alarmTemplateId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  租户标签列表
+    *
+    * @return \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param \HuaweiCloud\SDK\Ces\V2\Model\ResourceTag[]|null $tags 租户标签列表
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

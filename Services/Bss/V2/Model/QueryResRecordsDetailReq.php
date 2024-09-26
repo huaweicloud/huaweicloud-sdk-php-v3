@@ -33,8 +33,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * limit  页面大小。默认值为10。
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。  说明： 若需要查询财务独立企业子的账单信息，前提是子账号已经接受了企业主账号的“允许查看子账号消费信息”的申请。申请方法见“变更子账号权限”。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * statisticType  统计类型。默认值为1。 1：按账期2：按天
-    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    * statisticType  统计类型。默认值为1。 1：按账期2：按天3：按明细
+    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     * billCycleBegin  账期开始时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * billCycleEnd  账期结束时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
@@ -77,8 +77,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * limit  页面大小。默认值为10。
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。  说明： 若需要查询财务独立企业子的账单信息，前提是子账号已经接受了企业主账号的“允许查看子账号消费信息”的申请。申请方法见“变更子账号权限”。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * statisticType  统计类型。默认值为1。 1：按账期2：按天
-    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    * statisticType  统计类型。默认值为1。 1：按账期2：按天3：按明细
+    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     * billCycleBegin  账期开始时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * billCycleEnd  账期结束时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
@@ -142,8 +142,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * limit  页面大小。默认值为10。
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。  说明： 若需要查询财务独立企业子的账单信息，前提是子账号已经接受了企业主账号的“允许查看子账号消费信息”的申请。申请方法见“变更子账号权限”。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * statisticType  统计类型。默认值为1。 1：按账期2：按天
-    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    * statisticType  统计类型。默认值为1。 1：按账期2：按天3：按明细
+    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     * billCycleBegin  账期开始时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * billCycleEnd  账期结束时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
@@ -186,8 +186,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * limit  页面大小。默认值为10。
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。  说明： 若需要查询财务独立企业子的账单信息，前提是子账号已经接受了企业主账号的“允许查看子账号消费信息”的申请。申请方法见“变更子账号权限”。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * statisticType  统计类型。默认值为1。 1：按账期2：按天
-    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    * statisticType  统计类型。默认值为1。 1：按账期2：按天3：按明细
+    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     * billCycleBegin  账期开始时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * billCycleEnd  账期结束时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
@@ -230,8 +230,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     * limit  页面大小。默认值为10。
     * method  查询方式。 oneself：客户自己sub_customer：企业子客户all：客户自己和企业子客户 此参数不携带或携带值为空串或携带值为null时，默认值为“all”，如果没有企业子客户，all的时候也是查询客户自己的数据。  说明： 若需要查询财务独立企业子的账单信息，前提是子账号已经接受了企业主账号的“允许查看子账号消费信息”的申请。申请方法见“变更子账号权限”。
     * subCustomerId  企业子账号ID。  说明： 如果method取值不为sub_customer，则该参数无效。如果method取值为sub_customer，则该参数不能为空。
-    * statisticType  统计类型。默认值为1。 1：按账期2：按天
-    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    * statisticType  统计类型。默认值为1。 1：按账期2：按天3：按明细
+    * queryType  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     * billCycleBegin  账期开始时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期开始时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * billCycleEnd  账期结束时间。格式为YYYY-MM-DD。 仅当query_type=DAILY时，必须传递账期结束时间。该参数不携带或携带值为null或携带为空串时，不作为筛选条件。
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：普通客户、财务独立企业子客户查询消费记录，只能查询到客户自己的消费记录，该参数不携带或携带为自身ID时，查询的都只是自身的消费记录； 企业主客户查询消费记录，不携带时，查询的是自身的、财务托管企业子、财务独立企业子的消费记录；入参自身ID时，查询的是自身的、财务托管企业子的消费记录；也可入参其名下财务独立企业子的客户ID，只查询该财务独立企业子的消费记录； 财务托管企业子查询消费记录，入参自身ID时，查询的是未与企业主关联时的消费记录；入参企业主客户ID时，查询的是与企业主关联后的消费记录；不携带时查询以上全部消费记录|
@@ -420,8 +420,8 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
             if (!is_null($this->container['subCustomerId']) && (mb_strlen($this->container['subCustomerId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'subCustomerId', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['statisticType']) && ($this->container['statisticType'] > 2)) {
-                $invalidProperties[] = "invalid value for 'statisticType', must be smaller than or equal to 2.";
+            if (!is_null($this->container['statisticType']) && ($this->container['statisticType'] > 3)) {
+                $invalidProperties[] = "invalid value for 'statisticType', must be smaller than or equal to 3.";
             }
             if (!is_null($this->container['statisticType']) && ($this->container['statisticType'] < 1)) {
                 $invalidProperties[] = "invalid value for 'statisticType', must be bigger than or equal to 1.";
@@ -778,7 +778,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets statisticType
-    *  统计类型。默认值为1。 1：按账期2：按天
+    *  统计类型。默认值为1。 1：按账期2：按天3：按明细
     *
     * @return int|null
     */
@@ -790,7 +790,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     /**
     * Sets statisticType
     *
-    * @param int|null $statisticType 统计类型。默认值为1。 1：按账期2：按天
+    * @param int|null $statisticType 统计类型。默认值为1。 1：按账期2：按天3：按明细
     *
     * @return $this
     */
@@ -802,7 +802,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets queryType
-    *  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    *  查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     *
     * @return string|null
     */
@@ -814,7 +814,7 @@ class QueryResRecordsDetailReq implements ModelInterface, ArrayAccess
     /**
     * Sets queryType
     *
-    * @param string|null $queryType 查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
+    * @param string|null $queryType 查询类型。默认值为BILLCYCLE。 BILLCYCLE：按月DAILY：按天仅当statistic_type=2或3时，支持传递query_type=DAILY。该参数不携带或携带值为null或携带为空串时，取默认值BILLCYCLE。
     *
     * @return $this
     */

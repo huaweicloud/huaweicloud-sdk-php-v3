@@ -22,8 +22,8 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     *
     * @var string[]
     */
@@ -38,8 +38,8 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     *
     * @var string[]
     */
@@ -75,8 +75,8 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     * and the value is the original name
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     *
     * @var string[]
     */
@@ -91,8 +91,8 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     *
     * @var string[]
     */
@@ -107,8 +107,8 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * projectId  实例所属项目ID。
     * regionId  RegionID。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     *
     * @var string[]
     */
@@ -218,11 +218,11 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseRouterId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['enterpriseRouterTableId'] === null) {
             $invalidProperties[] = "'enterpriseRouterTableId' can't be null";
@@ -230,11 +230,11 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseRouterTableId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterTableId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterTableId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterTableId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterTableId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -300,7 +300,7 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterId
-    *  资源ID标识符。
+    *  企业路由器的ID。
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterId
     *
-    * @param string $enterpriseRouterId 资源ID标识符。
+    * @param string $enterpriseRouterId 企业路由器的ID。
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterTableId
-    *  资源ID标识符。
+    *  企业路由器的路由表ID。
     *
     * @return string
     */
@@ -336,7 +336,7 @@ class AssociateErTableDocument implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterTableId
     *
-    * @param string $enterpriseRouterTableId 资源ID标识符。
+    * @param string $enterpriseRouterTableId 企业路由器的路由表ID。
     *
     * @return $this
     */

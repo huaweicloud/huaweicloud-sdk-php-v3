@@ -20,7 +20,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * description  实例描述。不支持 <>。
     * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
     * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
@@ -36,7 +36,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * description  实例描述。不支持 <>。
     * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
     * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
@@ -73,7 +73,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
+    * id  实例ID。
     * description  实例描述。不支持 <>。
     * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
     * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
@@ -89,7 +89,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
+    * id  实例ID。
     * description  实例描述。不支持 <>。
     * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
     * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
@@ -105,7 +105,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
+    * id  实例ID。
     * description  实例描述。不支持 <>。
     * nameEn  功能说明：站点分组自定义的英文名字。 取值范围：1-255个字符。
     * nameCn  功能说明：站点分组自定义的中文名字。 取值范围：1-64个字符。
@@ -197,11 +197,11 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['description']) && (mb_strlen($this->container['description']) > 255)) {
                 $invalidProperties[] = "invalid value for 'description', the character length must be smaller than or equal to 255.";
@@ -240,7 +240,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -252,7 +252,7 @@ class SiteGroupReferenceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */

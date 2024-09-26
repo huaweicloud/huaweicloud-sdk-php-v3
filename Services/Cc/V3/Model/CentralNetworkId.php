@@ -20,7 +20,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * centralNetworkId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * centralNetworkId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * centralNetworkId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * centralNetworkId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * centralNetworkId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
     *
     * @var string[]
     */
@@ -164,11 +164,11 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['centralNetworkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'centralNetworkId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['centralNetworkId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'centralNetworkId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['centralNetworkId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'centralNetworkId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['centralNetworkId'])) {
-                $invalidProperties[] = "invalid value for 'centralNetworkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['centralNetworkId'])) {
+                $invalidProperties[] = "invalid value for 'centralNetworkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -186,7 +186,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
 
     /**
     * Gets centralNetworkId
-    *  资源ID标识符。
+    *  中心网络ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class CentralNetworkId implements ModelInterface, ArrayAccess
     /**
     * Sets centralNetworkId
     *
-    * @param string $centralNetworkId 资源ID标识符。
+    * @param string $centralNetworkId 中心网络ID。
     *
     * @return $this
     */

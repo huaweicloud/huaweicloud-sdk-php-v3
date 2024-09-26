@@ -64,6 +64,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     *
     * @var string[]
     */
@@ -111,7 +113,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceName' => 'string',
             'preOrderId' => 'string',
             'azCodeInfos' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AzCodeInfo[]',
-            'payerAccountId' => 'string'
+            'payerAccountId' => 'string',
+            'effectiveTime' => 'string',
+            'expireTime' => 'string'
     ];
 
     /**
@@ -160,6 +164,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     *
     * @var string[]
     */
@@ -207,7 +213,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         'subResourceName' => null,
         'preOrderId' => null,
         'azCodeInfos' => null,
-        'payerAccountId' => null
+        'payerAccountId' => null,
+        'effectiveTime' => null,
+        'expireTime' => null
     ];
 
     /**
@@ -277,6 +285,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     *
     * @var string[]
     */
@@ -324,7 +334,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceName' => 'sub_resource_name',
             'preOrderId' => 'pre_order_id',
             'azCodeInfos' => 'az_code_infos',
-            'payerAccountId' => 'payer_account_id'
+            'payerAccountId' => 'payer_account_id',
+            'effectiveTime' => 'effective_time',
+            'expireTime' => 'expire_time'
     ];
 
     /**
@@ -373,6 +385,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     *
     * @var string[]
     */
@@ -420,7 +434,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceName' => 'setSubResourceName',
             'preOrderId' => 'setPreOrderId',
             'azCodeInfos' => 'setAzCodeInfos',
-            'payerAccountId' => 'setPayerAccountId'
+            'payerAccountId' => 'setPayerAccountId',
+            'effectiveTime' => 'setEffectiveTime',
+            'expireTime' => 'setExpireTime'
     ];
 
     /**
@@ -469,6 +485,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     * preOrderId  |参数名称：原订单ID| |参数的约束及描述：该参数非必填，且只允许字符串|
     * azCodeInfos  |参数名称：可用区信息列表| |参数的约束及描述：该参数非必填，且只允许字符串|
     * payerAccountId  |参数名称：支付账号ID。| |参数的约束及描述：如果是普通客户或者财务独立企业子客户或者企业主客户查询消费记录，此处为客户自己的客户ID。如果是财务托管企业子查询消费记录，此处为企业主客户ID或自己的客户ID。|
+    * effectiveTime  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    * expireTime  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
     *
     * @var string[]
     */
@@ -516,7 +534,9 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             'subResourceName' => 'getSubResourceName',
             'preOrderId' => 'getPreOrderId',
             'azCodeInfos' => 'getAzCodeInfos',
-            'payerAccountId' => 'getPayerAccountId'
+            'payerAccountId' => 'getPayerAccountId',
+            'effectiveTime' => 'getEffectiveTime',
+            'expireTime' => 'getExpireTime'
     ];
 
     /**
@@ -621,6 +641,8 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
         $this->container['preOrderId'] = isset($data['preOrderId']) ? $data['preOrderId'] : null;
         $this->container['azCodeInfos'] = isset($data['azCodeInfos']) ? $data['azCodeInfos'] : null;
         $this->container['payerAccountId'] = isset($data['payerAccountId']) ? $data['payerAccountId'] : null;
+        $this->container['effectiveTime'] = isset($data['effectiveTime']) ? $data['effectiveTime'] : null;
+        $this->container['expireTime'] = isset($data['expireTime']) ? $data['expireTime'] : null;
     }
 
     /**
@@ -660,6 +682,18 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['payerAccountId']) && (mb_strlen($this->container['payerAccountId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'payerAccountId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['effectiveTime']) && (mb_strlen($this->container['effectiveTime']) > 32)) {
+                $invalidProperties[] = "invalid value for 'effectiveTime', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['effectiveTime']) && (mb_strlen($this->container['effectiveTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'effectiveTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['expireTime']) && (mb_strlen($this->container['expireTime']) > 32)) {
+                $invalidProperties[] = "invalid value for 'expireTime', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['expireTime']) && (mb_strlen($this->container['expireTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'expireTime', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -1728,6 +1762,54 @@ class MonthlyBillRes implements ModelInterface, ArrayAccess
     public function setPayerAccountId($payerAccountId)
     {
         $this->container['payerAccountId'] = $payerAccountId;
+        return $this;
+    }
+
+    /**
+    * Gets effectiveTime
+    *  |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    *
+    * @return string|null
+    */
+    public function getEffectiveTime()
+    {
+        return $this->container['effectiveTime'];
+    }
+
+    /**
+    * Sets effectiveTime
+    *
+    * @param string|null $effectiveTime |参数名称：费用对应的资源使用的开始时间| |参数的约束及描述：费用对应的资源使用的开始时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    *
+    * @return $this
+    */
+    public function setEffectiveTime($effectiveTime)
+    {
+        $this->container['effectiveTime'] = $effectiveTime;
+        return $this;
+    }
+
+    /**
+    * Gets expireTime
+    *  |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    *
+    * @return string|null
+    */
+    public function getExpireTime()
+    {
+        return $this->container['expireTime'];
+    }
+
+    /**
+    * Sets expireTime
+    *
+    * @param string|null $expireTime |参数名称：费用对应的资源使用的结束时间| |参数的约束及描述：费用对应的资源使用的结束时间，statistic_type=3有效，statistic_type=1或者2该字段保留。|
+    *
+    * @return $this
+    */
+    public function setExpireTime($expireTime)
+    {
+        $this->container['expireTime'] = $expireTime;
         return $this;
     }
 

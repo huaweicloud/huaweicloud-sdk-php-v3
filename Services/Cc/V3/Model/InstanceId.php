@@ -20,7 +20,7 @@ class InstanceId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class InstanceId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class InstanceId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InstanceId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class InstanceId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  资源ID标识符。
+    * instanceId  网络实例（VPC，VGW）的ID。
     *
     * @var string[]
     */
@@ -164,11 +164,11 @@ class InstanceId implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['instanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['instanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['instanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['instanceId'])) {
-                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
+                $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -186,7 +186,7 @@ class InstanceId implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  资源ID标识符。
+    *  网络实例（VPC，VGW）的ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class InstanceId implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 资源ID标识符。
+    * @param string $instanceId 网络实例（VPC，VGW）的ID。
     *
     * @return $this
     */

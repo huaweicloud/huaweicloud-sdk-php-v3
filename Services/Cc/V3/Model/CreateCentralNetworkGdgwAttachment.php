@@ -22,13 +22,13 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * globalDcGatewayId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * globalDcGatewayProjectId  实例所属项目ID。
-    * globalDcGatewayRegionId  RegionID。
-    * centralNetworkPlaneId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * globalDcGatewayId  Gdgw的ID。
+    * globalDcGatewayProjectId  Gdgw的项目ID。
+    * globalDcGatewayRegionId  Gdgw的RegionID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
     *
     * @var string[]
     */
@@ -37,10 +37,10 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             'description' => 'string',
             'enterpriseRouterId' => 'string',
             'globalDcGatewayId' => 'string',
-            'enterpriseRouterProjectId' => 'string',
-            'enterpriseRouterRegionId' => 'string',
             'globalDcGatewayProjectId' => 'string',
             'globalDcGatewayRegionId' => 'string',
+            'enterpriseRouterProjectId' => 'string',
+            'enterpriseRouterRegionId' => 'string',
             'centralNetworkPlaneId' => 'string'
     ];
 
@@ -48,13 +48,13 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * globalDcGatewayId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * globalDcGatewayProjectId  实例所属项目ID。
-    * globalDcGatewayRegionId  RegionID。
-    * centralNetworkPlaneId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * globalDcGatewayId  Gdgw的ID。
+    * globalDcGatewayProjectId  Gdgw的项目ID。
+    * globalDcGatewayRegionId  Gdgw的RegionID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
     *
     * @var string[]
     */
@@ -63,10 +63,10 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
         'description' => null,
         'enterpriseRouterId' => null,
         'globalDcGatewayId' => null,
-        'enterpriseRouterProjectId' => null,
-        'enterpriseRouterRegionId' => null,
         'globalDcGatewayProjectId' => null,
         'globalDcGatewayRegionId' => null,
+        'enterpriseRouterProjectId' => null,
+        'enterpriseRouterRegionId' => null,
         'centralNetworkPlaneId' => null
     ];
 
@@ -95,13 +95,13 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * and the value is the original name
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * globalDcGatewayId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * globalDcGatewayProjectId  实例所属项目ID。
-    * globalDcGatewayRegionId  RegionID。
-    * centralNetworkPlaneId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * globalDcGatewayId  Gdgw的ID。
+    * globalDcGatewayProjectId  Gdgw的项目ID。
+    * globalDcGatewayRegionId  Gdgw的RegionID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
     *
     * @var string[]
     */
@@ -110,10 +110,10 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             'description' => 'description',
             'enterpriseRouterId' => 'enterprise_router_id',
             'globalDcGatewayId' => 'global_dc_gateway_id',
-            'enterpriseRouterProjectId' => 'enterprise_router_project_id',
-            'enterpriseRouterRegionId' => 'enterprise_router_region_id',
             'globalDcGatewayProjectId' => 'global_dc_gateway_project_id',
             'globalDcGatewayRegionId' => 'global_dc_gateway_region_id',
+            'enterpriseRouterProjectId' => 'enterprise_router_project_id',
+            'enterpriseRouterRegionId' => 'enterprise_router_region_id',
             'centralNetworkPlaneId' => 'central_network_plane_id'
     ];
 
@@ -121,13 +121,13 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * globalDcGatewayId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * globalDcGatewayProjectId  实例所属项目ID。
-    * globalDcGatewayRegionId  RegionID。
-    * centralNetworkPlaneId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * globalDcGatewayId  Gdgw的ID。
+    * globalDcGatewayProjectId  Gdgw的项目ID。
+    * globalDcGatewayRegionId  Gdgw的RegionID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
     *
     * @var string[]
     */
@@ -136,10 +136,10 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             'description' => 'setDescription',
             'enterpriseRouterId' => 'setEnterpriseRouterId',
             'globalDcGatewayId' => 'setGlobalDcGatewayId',
-            'enterpriseRouterProjectId' => 'setEnterpriseRouterProjectId',
-            'enterpriseRouterRegionId' => 'setEnterpriseRouterRegionId',
             'globalDcGatewayProjectId' => 'setGlobalDcGatewayProjectId',
             'globalDcGatewayRegionId' => 'setGlobalDcGatewayRegionId',
+            'enterpriseRouterProjectId' => 'setEnterpriseRouterProjectId',
+            'enterpriseRouterRegionId' => 'setEnterpriseRouterRegionId',
             'centralNetworkPlaneId' => 'setCentralNetworkPlaneId'
     ];
 
@@ -147,13 +147,13 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * globalDcGatewayId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * globalDcGatewayProjectId  实例所属项目ID。
-    * globalDcGatewayRegionId  RegionID。
-    * centralNetworkPlaneId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * globalDcGatewayId  Gdgw的ID。
+    * globalDcGatewayProjectId  Gdgw的项目ID。
+    * globalDcGatewayRegionId  Gdgw的RegionID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
     *
     * @var string[]
     */
@@ -162,10 +162,10 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             'description' => 'getDescription',
             'enterpriseRouterId' => 'getEnterpriseRouterId',
             'globalDcGatewayId' => 'getGlobalDcGatewayId',
-            'enterpriseRouterProjectId' => 'getEnterpriseRouterProjectId',
-            'enterpriseRouterRegionId' => 'getEnterpriseRouterRegionId',
             'globalDcGatewayProjectId' => 'getGlobalDcGatewayProjectId',
             'globalDcGatewayRegionId' => 'getGlobalDcGatewayRegionId',
+            'enterpriseRouterProjectId' => 'getEnterpriseRouterProjectId',
+            'enterpriseRouterRegionId' => 'getEnterpriseRouterRegionId',
             'centralNetworkPlaneId' => 'getCentralNetworkPlaneId'
     ];
 
@@ -231,10 +231,10 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['enterpriseRouterId'] = isset($data['enterpriseRouterId']) ? $data['enterpriseRouterId'] : null;
         $this->container['globalDcGatewayId'] = isset($data['globalDcGatewayId']) ? $data['globalDcGatewayId'] : null;
-        $this->container['enterpriseRouterProjectId'] = isset($data['enterpriseRouterProjectId']) ? $data['enterpriseRouterProjectId'] : null;
-        $this->container['enterpriseRouterRegionId'] = isset($data['enterpriseRouterRegionId']) ? $data['enterpriseRouterRegionId'] : null;
         $this->container['globalDcGatewayProjectId'] = isset($data['globalDcGatewayProjectId']) ? $data['globalDcGatewayProjectId'] : null;
         $this->container['globalDcGatewayRegionId'] = isset($data['globalDcGatewayRegionId']) ? $data['globalDcGatewayRegionId'] : null;
+        $this->container['enterpriseRouterProjectId'] = isset($data['enterpriseRouterProjectId']) ? $data['enterpriseRouterProjectId'] : null;
+        $this->container['enterpriseRouterRegionId'] = isset($data['enterpriseRouterRegionId']) ? $data['enterpriseRouterRegionId'] : null;
         $this->container['centralNetworkPlaneId'] = isset($data['centralNetworkPlaneId']) ? $data['centralNetworkPlaneId'] : null;
     }
 
@@ -273,11 +273,11 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseRouterId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['globalDcGatewayId'] === null) {
             $invalidProperties[] = "'globalDcGatewayId' can't be null";
@@ -285,32 +285,11 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['globalDcGatewayId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['globalDcGatewayId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['globalDcGatewayId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['globalDcGatewayId'])) {
-                $invalidProperties[] = "invalid value for 'globalDcGatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
-            }
-        if ($this->container['enterpriseRouterProjectId'] === null) {
-            $invalidProperties[] = "'enterpriseRouterProjectId' can't be null";
-        }
-            if ((mb_strlen($this->container['enterpriseRouterProjectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterProjectId', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['enterpriseRouterProjectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterProjectId', the character length must be bigger than or equal to 32.";
-            }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['enterpriseRouterProjectId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterProjectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
-            }
-        if ($this->container['enterpriseRouterRegionId'] === null) {
-            $invalidProperties[] = "'enterpriseRouterRegionId' can't be null";
-        }
-            if ((mb_strlen($this->container['enterpriseRouterRegionId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterRegionId', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['enterpriseRouterRegionId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterRegionId', the character length must be bigger than or equal to 1.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalDcGatewayId'])) {
+                $invalidProperties[] = "invalid value for 'globalDcGatewayId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['globalDcGatewayProjectId'] === null) {
             $invalidProperties[] = "'globalDcGatewayProjectId' can't be null";
@@ -333,14 +312,35 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['globalDcGatewayRegionId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'globalDcGatewayRegionId', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['enterpriseRouterProjectId'] === null) {
+            $invalidProperties[] = "'enterpriseRouterProjectId' can't be null";
+        }
+            if ((mb_strlen($this->container['enterpriseRouterProjectId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterProjectId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['enterpriseRouterProjectId']) < 32)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterProjectId', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['enterpriseRouterProjectId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterProjectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            }
+        if ($this->container['enterpriseRouterRegionId'] === null) {
+            $invalidProperties[] = "'enterpriseRouterRegionId' can't be null";
+        }
+            if ((mb_strlen($this->container['enterpriseRouterRegionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterRegionId', the character length must be smaller than or equal to 32.";
+            }
+            if ((mb_strlen($this->container['enterpriseRouterRegionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterRegionId', the character length must be bigger than or equal to 1.";
+            }
             if (!is_null($this->container['centralNetworkPlaneId']) && (mb_strlen($this->container['centralNetworkPlaneId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['centralNetworkPlaneId']) && (mb_strlen($this->container['centralNetworkPlaneId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['centralNetworkPlaneId']) && (mb_strlen($this->container['centralNetworkPlaneId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['centralNetworkPlaneId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['centralNetworkPlaneId'])) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['centralNetworkPlaneId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['centralNetworkPlaneId'])) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         return $invalidProperties;
     }
@@ -406,7 +406,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterId
-    *  资源ID标识符。
+    *  企业路由器的ID。
     *
     * @return string
     */
@@ -418,7 +418,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterId
     *
-    * @param string $enterpriseRouterId 资源ID标识符。
+    * @param string $enterpriseRouterId 企业路由器的ID。
     *
     * @return $this
     */
@@ -430,7 +430,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayId
-    *  资源ID标识符。
+    *  Gdgw的ID。
     *
     * @return string
     */
@@ -442,7 +442,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayId
     *
-    * @param string $globalDcGatewayId 资源ID标识符。
+    * @param string $globalDcGatewayId Gdgw的ID。
     *
     * @return $this
     */
@@ -453,56 +453,8 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets enterpriseRouterProjectId
-    *  实例所属项目ID。
-    *
-    * @return string
-    */
-    public function getEnterpriseRouterProjectId()
-    {
-        return $this->container['enterpriseRouterProjectId'];
-    }
-
-    /**
-    * Sets enterpriseRouterProjectId
-    *
-    * @param string $enterpriseRouterProjectId 实例所属项目ID。
-    *
-    * @return $this
-    */
-    public function setEnterpriseRouterProjectId($enterpriseRouterProjectId)
-    {
-        $this->container['enterpriseRouterProjectId'] = $enterpriseRouterProjectId;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseRouterRegionId
-    *  RegionID。
-    *
-    * @return string
-    */
-    public function getEnterpriseRouterRegionId()
-    {
-        return $this->container['enterpriseRouterRegionId'];
-    }
-
-    /**
-    * Sets enterpriseRouterRegionId
-    *
-    * @param string $enterpriseRouterRegionId RegionID。
-    *
-    * @return $this
-    */
-    public function setEnterpriseRouterRegionId($enterpriseRouterRegionId)
-    {
-        $this->container['enterpriseRouterRegionId'] = $enterpriseRouterRegionId;
-        return $this;
-    }
-
-    /**
     * Gets globalDcGatewayProjectId
-    *  实例所属项目ID。
+    *  Gdgw的项目ID。
     *
     * @return string
     */
@@ -514,7 +466,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayProjectId
     *
-    * @param string $globalDcGatewayProjectId 实例所属项目ID。
+    * @param string $globalDcGatewayProjectId Gdgw的项目ID。
     *
     * @return $this
     */
@@ -526,7 +478,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalDcGatewayRegionId
-    *  RegionID。
+    *  Gdgw的RegionID。
     *
     * @return string
     */
@@ -538,7 +490,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets globalDcGatewayRegionId
     *
-    * @param string $globalDcGatewayRegionId RegionID。
+    * @param string $globalDcGatewayRegionId Gdgw的RegionID。
     *
     * @return $this
     */
@@ -549,8 +501,56 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets enterpriseRouterProjectId
+    *  企业路由器的项目ID。
+    *
+    * @return string
+    */
+    public function getEnterpriseRouterProjectId()
+    {
+        return $this->container['enterpriseRouterProjectId'];
+    }
+
+    /**
+    * Sets enterpriseRouterProjectId
+    *
+    * @param string $enterpriseRouterProjectId 企业路由器的项目ID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseRouterProjectId($enterpriseRouterProjectId)
+    {
+        $this->container['enterpriseRouterProjectId'] = $enterpriseRouterProjectId;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseRouterRegionId
+    *  ER路由器的regionID。
+    *
+    * @return string
+    */
+    public function getEnterpriseRouterRegionId()
+    {
+        return $this->container['enterpriseRouterRegionId'];
+    }
+
+    /**
+    * Sets enterpriseRouterRegionId
+    *
+    * @param string $enterpriseRouterRegionId ER路由器的regionID。
+    *
+    * @return $this
+    */
+    public function setEnterpriseRouterRegionId($enterpriseRouterRegionId)
+    {
+        $this->container['enterpriseRouterRegionId'] = $enterpriseRouterRegionId;
+        return $this;
+    }
+
+    /**
     * Gets centralNetworkPlaneId
-    *  资源ID标识符。
+    *  中心网络平面ID。
     *
     * @return string|null
     */
@@ -562,7 +562,7 @@ class CreateCentralNetworkGdgwAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets centralNetworkPlaneId
     *
-    * @param string|null $centralNetworkPlaneId 资源ID标识符。
+    * @param string|null $centralNetworkPlaneId 中心网络平面ID。
     *
     * @return $this
     */

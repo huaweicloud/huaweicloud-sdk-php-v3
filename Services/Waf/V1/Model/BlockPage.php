@@ -20,7 +20,7 @@ class BlockPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * template  模板名称
+    * template  模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     * customPage  customPage
     * redirectUrl  “重定向”页面URL
     *
@@ -34,7 +34,7 @@ class BlockPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * template  模板名称
+    * template  模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     * customPage  customPage
     * redirectUrl  “重定向”页面URL
     *
@@ -69,7 +69,7 @@ class BlockPage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * template  模板名称
+    * template  模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     * customPage  customPage
     * redirectUrl  “重定向”页面URL
     *
@@ -83,7 +83,7 @@ class BlockPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * template  模板名称
+    * template  模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     * customPage  customPage
     * redirectUrl  “重定向”页面URL
     *
@@ -97,7 +97,7 @@ class BlockPage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * template  模板名称
+    * template  模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     * customPage  customPage
     * redirectUrl  “重定向”页面URL
     *
@@ -199,7 +199,7 @@ class BlockPage implements ModelInterface, ArrayAccess
 
     /**
     * Gets template
-    *  模板名称
+    *  模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     *
     * @return string
     */
@@ -211,7 +211,7 @@ class BlockPage implements ModelInterface, ArrayAccess
     /**
     * Sets template
     *
-    * @param string $template 模板名称
+    * @param string $template 模板名称，默认页面请输入default，自定义告警页面时请输入custom，重定向请输入redirect
     *
     * @return $this
     */

@@ -158,13 +158,16 @@ class GcbResourceType implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) > 36)) {
+        if ($this->container['resourceType'] === null) {
+            $invalidProperties[] = "'resourceType' can't be null";
+        }
+            if ((mb_strlen($this->container['resourceType']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) < 1)) {
+            if ((mb_strlen($this->container['resourceType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['resourceType']) && !preg_match("/^[a-zA-Z]+$/", $this->container['resourceType'])) {
+            if (!preg_match("/^[a-zA-Z]+$/", $this->container['resourceType'])) {
                 $invalidProperties[] = "invalid value for 'resourceType', must be conform to the pattern /^[a-zA-Z]+$/.";
             }
         return $invalidProperties;
@@ -185,7 +188,7 @@ class GcbResourceType implements ModelInterface, ArrayAccess
     * Gets resourceType
     *  功能说明：实例类型。
     *
-    * @return string|null
+    * @return string
     */
     public function getResourceType()
     {
@@ -195,7 +198,7 @@ class GcbResourceType implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 功能说明：实例类型。
+    * @param string $resourceType 功能说明：实例类型。
     *
     * @return $this
     */

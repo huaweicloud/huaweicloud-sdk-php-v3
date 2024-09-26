@@ -228,22 +228,28 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 36)) {
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
+        }
+            if ((mb_strlen($this->container['resourceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 1)) {
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['resourceId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['resourceId'])) {
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
-            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) > 36)) {
+        if ($this->container['resourceType'] === null) {
+            $invalidProperties[] = "'resourceType' can't be null";
+        }
+            if ((mb_strlen($this->container['resourceType']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['resourceType']) && (mb_strlen($this->container['resourceType']) < 1)) {
+            if ((mb_strlen($this->container['resourceType']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceType', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['resourceType']) && !preg_match("/^[a-zA-Z]+$/", $this->container['resourceType'])) {
+            if (!preg_match("/^[a-zA-Z]+$/", $this->container['resourceType'])) {
                 $invalidProperties[] = "invalid value for 'resourceType', must be conform to the pattern /^[a-zA-Z]+$/.";
             }
             if (!is_null($this->container['regionId']) && (mb_strlen($this->container['regionId']) > 36)) {
@@ -255,13 +261,16 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
             if (!is_null($this->container['regionId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['regionId'])) {
                 $invalidProperties[] = "invalid value for 'regionId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+            if ((mb_strlen($this->container['projectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['projectId']) && !preg_match("/^[a-fA-F0-9]{10,32}$/", $this->container['projectId'])) {
+            if (!preg_match("/^[a-fA-F0-9]{10,32}$/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[a-fA-F0-9]{10,32}$/.";
             }
             $allowedValues = $this->getResultAllowableValues();
@@ -296,7 +305,7 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     * Gets resourceId
     *  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     *
-    * @return string|null
+    * @return string
     */
     public function getResourceId()
     {
@@ -306,7 +315,7 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
+    * @param string $resourceId 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     *
     * @return $this
     */
@@ -320,7 +329,7 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     * Gets resourceType
     *  功能说明：实例类型。
     *
-    * @return string|null
+    * @return string
     */
     public function getResourceType()
     {
@@ -330,7 +339,7 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 功能说明：实例类型。
+    * @param string $resourceType 功能说明：实例类型。
     *
     * @return $this
     */
@@ -368,7 +377,7 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     * Gets projectId
     *  功能说明：实例所在region对应的projectId。
     *
-    * @return string|null
+    * @return string
     */
     public function getProjectId()
     {
@@ -378,7 +387,7 @@ class DisassociateGlobalConnectionBandwidthInstanceResponseInfo implements Model
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 功能说明：实例所在region对应的projectId。
+    * @param string $projectId 功能说明：实例所在region对应的projectId。
     *
     * @return $this
     */

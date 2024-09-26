@@ -20,8 +20,8 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
-    * enterpriseRouterId  资源ID标识符。
+    * id  实例ID。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
@@ -40,8 +40,8 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
-    * enterpriseRouterId  资源ID标识符。
+    * id  实例ID。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
@@ -81,8 +81,8 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
-    * enterpriseRouterId  资源ID标识符。
+    * id  实例ID。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
@@ -101,8 +101,8 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
-    * enterpriseRouterId  资源ID标识符。
+    * id  实例ID。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
@@ -121,8 +121,8 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
-    * enterpriseRouterId  资源ID标识符。
+    * id  实例ID。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * asn  网络实例BGP协议的AS号。
@@ -219,11 +219,11 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['enterpriseRouterId'] === null) {
             $invalidProperties[] = "'enterpriseRouterId' can't be null";
@@ -231,11 +231,11 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseRouterId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
@@ -295,7 +295,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -307,7 +307,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -319,7 +319,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterId
-    *  资源ID标识符。
+    *  企业路由器的ID。
     *
     * @return string
     */
@@ -331,7 +331,7 @@ class CentralNetworkErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterId
     *
-    * @param string $enterpriseRouterId 资源ID标识符。
+    * @param string $enterpriseRouterId 企业路由器的ID。
     *
     * @return $this
     */

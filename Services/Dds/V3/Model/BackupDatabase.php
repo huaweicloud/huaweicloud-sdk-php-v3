@@ -21,7 +21,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  数据库引擎。 取值：DDS-Community。
-    * version  数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    * version  数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  数据库引擎。 取值：DDS-Community。
-    * version  数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    * version  数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  数据库引擎。 取值：DDS-Community。
-    * version  数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    * version  数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  数据库引擎。 取值：DDS-Community。
-    * version  数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    * version  数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  数据库引擎。 取值：DDS-Community。
-    * version  数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    * version  数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @var string[]
     */
@@ -215,7 +215,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
 
     /**
     * Gets version
-    *  数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    *  数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class BackupDatabase implements ModelInterface, ArrayAccess
     /**
     * Sets version
     *
-    * @param string $version 数据库版本。取值：“3.2”、“3.4”或“4.0”。
+    * @param string $version 数据库版本。取值：“3.4”、“4.0”、“4.2”、“4.4”、“5.0”。
     *
     * @return $this
     */

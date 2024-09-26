@@ -20,8 +20,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseRouterTableId  资源ID标识符。
-    * attachedErId  资源ID标识符。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
+    * attachmentParentInstanceId  实例ID。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建附件的原因。
@@ -30,7 +30,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     */
     protected static $openAPITypes = [
             'enterpriseRouterTableId' => 'string',
-            'attachedErId' => 'string',
+            'attachmentParentInstanceId' => 'string',
             'approvedState' => '\HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum',
             'hostedCloud' => '\HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum',
             'reason' => 'string'
@@ -38,8 +38,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseRouterTableId  资源ID标识符。
-    * attachedErId  资源ID标识符。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
+    * attachmentParentInstanceId  实例ID。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建附件的原因。
@@ -48,7 +48,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     */
     protected static $openAPIFormats = [
         'enterpriseRouterTableId' => null,
-        'attachedErId' => null,
+        'attachmentParentInstanceId' => null,
         'approvedState' => null,
         'hostedCloud' => null,
         'reason' => null
@@ -77,8 +77,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseRouterTableId  资源ID标识符。
-    * attachedErId  资源ID标识符。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
+    * attachmentParentInstanceId  实例ID。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建附件的原因。
@@ -87,7 +87,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     */
     protected static $attributeMap = [
             'enterpriseRouterTableId' => 'enterprise_router_table_id',
-            'attachedErId' => 'attached_er_id',
+            'attachmentParentInstanceId' => 'attachment_parent_instance_id',
             'approvedState' => 'approved_state',
             'hostedCloud' => 'hosted_cloud',
             'reason' => 'reason'
@@ -95,8 +95,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseRouterTableId  资源ID标识符。
-    * attachedErId  资源ID标识符。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
+    * attachmentParentInstanceId  实例ID。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建附件的原因。
@@ -105,7 +105,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     */
     protected static $setters = [
             'enterpriseRouterTableId' => 'setEnterpriseRouterTableId',
-            'attachedErId' => 'setAttachedErId',
+            'attachmentParentInstanceId' => 'setAttachmentParentInstanceId',
             'approvedState' => 'setApprovedState',
             'hostedCloud' => 'setHostedCloud',
             'reason' => 'setReason'
@@ -113,8 +113,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseRouterTableId  资源ID标识符。
-    * attachedErId  资源ID标识符。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
+    * attachmentParentInstanceId  实例ID。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建附件的原因。
@@ -123,7 +123,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     */
     protected static $getters = [
             'enterpriseRouterTableId' => 'getEnterpriseRouterTableId',
-            'attachedErId' => 'getAttachedErId',
+            'attachmentParentInstanceId' => 'getAttachmentParentInstanceId',
             'approvedState' => 'getApprovedState',
             'hostedCloud' => 'getHostedCloud',
             'reason' => 'getReason'
@@ -188,7 +188,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     public function __construct(array $data = null)
     {
         $this->container['enterpriseRouterTableId'] = isset($data['enterpriseRouterTableId']) ? $data['enterpriseRouterTableId'] : null;
-        $this->container['attachedErId'] = isset($data['attachedErId']) ? $data['attachedErId'] : null;
+        $this->container['attachmentParentInstanceId'] = isset($data['attachmentParentInstanceId']) ? $data['attachmentParentInstanceId'] : null;
         $this->container['approvedState'] = isset($data['approvedState']) ? $data['approvedState'] : null;
         $this->container['hostedCloud'] = isset($data['hostedCloud']) ? $data['hostedCloud'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
@@ -202,23 +202,26 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['enterpriseRouterTableId']) && (mb_strlen($this->container['enterpriseRouterTableId']) > 36)) {
+        if ($this->container['enterpriseRouterTableId'] === null) {
+            $invalidProperties[] = "'enterpriseRouterTableId' can't be null";
+        }
+            if ((mb_strlen($this->container['enterpriseRouterTableId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['enterpriseRouterTableId']) && (mb_strlen($this->container['enterpriseRouterTableId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterTableId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['enterpriseRouterTableId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterTableId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterTableId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-            if (!is_null($this->container['attachedErId']) && (mb_strlen($this->container['attachedErId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'attachedErId', the character length must be smaller than or equal to 36.";
+            if (!is_null($this->container['attachmentParentInstanceId']) && (mb_strlen($this->container['attachmentParentInstanceId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentParentInstanceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['attachedErId']) && (mb_strlen($this->container['attachedErId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachedErId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['attachmentParentInstanceId']) && (mb_strlen($this->container['attachmentParentInstanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentParentInstanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['attachedErId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['attachedErId'])) {
-                $invalidProperties[] = "invalid value for 'attachedErId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['attachmentParentInstanceId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachmentParentInstanceId'])) {
+                $invalidProperties[] = "invalid value for 'attachmentParentInstanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['reason']) && (mb_strlen($this->container['reason']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'reason', the character length must be smaller than or equal to 1024.";
@@ -245,9 +248,9 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
 
     /**
     * Gets enterpriseRouterTableId
-    *  资源ID标识符。
+    *  企业路由器的路由表ID。
     *
-    * @return string|null
+    * @return string
     */
     public function getEnterpriseRouterTableId()
     {
@@ -257,7 +260,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     /**
     * Sets enterpriseRouterTableId
     *
-    * @param string|null $enterpriseRouterTableId 资源ID标识符。
+    * @param string $enterpriseRouterTableId 企业路由器的路由表ID。
     *
     * @return $this
     */
@@ -268,26 +271,26 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     }
 
     /**
-    * Gets attachedErId
-    *  资源ID标识符。
+    * Gets attachmentParentInstanceId
+    *  实例ID。
     *
     * @return string|null
     */
-    public function getAttachedErId()
+    public function getAttachmentParentInstanceId()
     {
-        return $this->container['attachedErId'];
+        return $this->container['attachmentParentInstanceId'];
     }
 
     /**
-    * Sets attachedErId
+    * Sets attachmentParentInstanceId
     *
-    * @param string|null $attachedErId 资源ID标识符。
+    * @param string|null $attachmentParentInstanceId 实例ID。
     *
     * @return $this
     */
-    public function setAttachedErId($attachedErId)
+    public function setAttachmentParentInstanceId($attachmentParentInstanceId)
     {
-        $this->container['attachedErId'] = $attachedErId;
+        $this->container['attachmentParentInstanceId'] = $attachmentParentInstanceId;
         return $this;
     }
 

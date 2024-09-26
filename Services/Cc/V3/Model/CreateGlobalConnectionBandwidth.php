@@ -26,12 +26,12 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  UUID of a line specification code.
+    * specCodeId  功能说明：线路规格编码UUID。
     *
     * @var string[]
     */
@@ -58,12 +58,12 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  UUID of a line specification code.
+    * specCodeId  功能说明：线路规格编码UUID。
     *
     * @var string[]
     */
@@ -111,12 +111,12 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  UUID of a line specification code.
+    * specCodeId  功能说明：线路规格编码UUID。
     *
     * @var string[]
     */
@@ -143,12 +143,12 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  UUID of a line specification code.
+    * specCodeId  功能说明：线路规格编码UUID。
     *
     * @var string[]
     */
@@ -175,12 +175,12 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     * type  功能说明：描述带宽类型，对应地理区间的城域、区域、大区、跨区四级： - TrsArea: 跨区带宽 - Area: 大区带宽 - SubArea: 区域带宽 - Region: 城域带宽
     * enterpriseProjectId  实例所属企业项目ID。
     * tags  实例标签。
-    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * chargeMode  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     * size  功能说明：全域互联带宽实例中的带宽值大小，单位Mbit/s。 取值范围：2-300Mbit/s
     * slaLevel  功能说明：描述网络等级，从高到低分为铂金、金、银。默认金，其余租户白名单控制。 - Pt: 铂金 - Au: 金 - Ag: 银
     * localArea  功能说明：本端接入点，配合remote_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
     * remoteArea  功能说明：远端接入点，配合local_area信息描述带宽实例应用的范围。 取值范围：1-64个字符，支持数字、字母、中文、_(下划线)、-（中划线）、.（点），站点编码通过接口获取，带宽类型为Region可不传，其他类型必传
-    * specCodeId  UUID of a line specification code.
+    * specCodeId  功能说明：线路规格编码UUID。
     *
     * @var string[]
     */
@@ -245,6 +245,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     const TYPE_TRS_AREA = 'TrsArea';
     const CHARGE_MODE_BWD = 'bwd';
     const CHARGE_MODE__95 = '95';
+    const CHARGE_MODE__95AVR = '95avr';
     const SLA_LEVEL_PT = 'Pt';
     const SLA_LEVEL_AU = 'Au';
     const SLA_LEVEL_AG = 'Ag';
@@ -275,6 +276,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
         return [
             self::CHARGE_MODE_BWD,
             self::CHARGE_MODE__95,
+            self::CHARGE_MODE__95AVR,
         ];
     }
 
@@ -586,7 +588,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    *  功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @return string
     */
@@ -598,7 +600,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * @param string $chargeMode 功能说明：描述计费类型，描述可选计费类型。默认开放按带宽计费，传统95计费租户白名单控制。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr: 按传统型日95计费
     *
     * @return $this
     */
@@ -706,7 +708,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets specCodeId
-    *  UUID of a line specification code.
+    *  功能说明：线路规格编码UUID。
     *
     * @return string|null
     */
@@ -718,7 +720,7 @@ class CreateGlobalConnectionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets specCodeId
     *
-    * @param string|null $specCodeId UUID of a line specification code.
+    * @param string|null $specCodeId 功能说明：线路规格编码UUID。
     *
     * @return $this
     */

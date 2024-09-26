@@ -158,13 +158,16 @@ class GcbProjectId implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) > 36)) {
+        if ($this->container['projectId'] === null) {
+            $invalidProperties[] = "'projectId' can't be null";
+        }
+            if ((mb_strlen($this->container['projectId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['projectId']) && (mb_strlen($this->container['projectId']) < 1)) {
+            if ((mb_strlen($this->container['projectId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'projectId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['projectId']) && !preg_match("/^[a-fA-F0-9]{10,32}$/", $this->container['projectId'])) {
+            if (!preg_match("/^[a-fA-F0-9]{10,32}$/", $this->container['projectId'])) {
                 $invalidProperties[] = "invalid value for 'projectId', must be conform to the pattern /^[a-fA-F0-9]{10,32}$/.";
             }
         return $invalidProperties;
@@ -185,7 +188,7 @@ class GcbProjectId implements ModelInterface, ArrayAccess
     * Gets projectId
     *  功能说明：实例所在region对应的projectId。
     *
-    * @return string|null
+    * @return string
     */
     public function getProjectId()
     {
@@ -195,7 +198,7 @@ class GcbProjectId implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 功能说明：实例所在region对应的projectId。
+    * @param string $projectId 功能说明：实例所在region对应的projectId。
     *
     * @return $this
     */

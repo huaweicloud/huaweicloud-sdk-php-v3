@@ -251,6 +251,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     }
     const CHARGE_MODE_BWD = 'bwd';
     const CHARGE_MODE__95 = '95';
+    const CHARGE_MODE__95AVR = '95avr';
     const SERVICES_CC = 'CC';
     const SERVICES_GEIP = 'GEIP';
     const SERVICES_GCN = 'GCN';
@@ -274,6 +275,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
         return [
             self::CHARGE_MODE_BWD,
             self::CHARGE_MODE__95,
+            self::CHARGE_MODE__95AVR,
         ];
     }
 
@@ -402,6 +404,12 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
             if (($this->container['bindLimit'] < 0)) {
                 $invalidProperties[] = "invalid value for 'bindLimit', must be bigger than or equal to 0.";
             }
+        if ($this->container['enableAreaBandwidth'] === null) {
+            $invalidProperties[] = "'enableAreaBandwidth' can't be null";
+        }
+        if ($this->container['enableChange95'] === null) {
+            $invalidProperties[] = "'enableChange95' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -660,7 +668,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * Gets enableAreaBandwidth
     *  是否启用传统的大区带宽。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getEnableAreaBandwidth()
     {
@@ -670,7 +678,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     /**
     * Sets enableAreaBandwidth
     *
-    * @param bool|null $enableAreaBandwidth 是否启用传统的大区带宽。
+    * @param bool $enableAreaBandwidth 是否启用传统的大区带宽。
     *
     * @return $this
     */
@@ -684,7 +692,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     * Gets enableChange95
     *  是否支持95转按需。
     *
-    * @return bool|null
+    * @return bool
     */
     public function getEnableChange95()
     {
@@ -694,7 +702,7 @@ class ListGlobalConnectionBandwidthConfigs implements ModelInterface, ArrayAcces
     /**
     * Sets enableChange95
     *
-    * @param bool|null $enableChange95 是否支持95转按需。
+    * @param bool $enableChange95 是否支持95转按需。
     *
     * @return $this
     */

@@ -23,21 +23,21 @@ class ShowRecordInfoResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * code  结果码
     * message  结果描述
-    * data  响应体详情数据
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'code' => 'string',
             'message' => 'string',
-            'data' => 'object'
+            'data' => '\HuaweiCloud\SDK\Meeting\V1\Model\RecordInfoDO'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * code  结果码
     * message  结果描述
-    * data  响应体详情数据
+    * data  data
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ShowRecordInfoResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * code  结果码
     * message  结果描述
-    * data  响应体详情数据
+    * data  data
     *
     * @var string[]
     */
@@ -86,7 +86,7 @@ class ShowRecordInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * code  结果码
     * message  结果描述
-    * data  响应体详情数据
+    * data  data
     *
     * @var string[]
     */
@@ -100,7 +100,7 @@ class ShowRecordInfoResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * code  结果码
     * message  结果描述
-    * data  响应体详情数据
+    * data  data
     *
     * @var string[]
     */
@@ -245,9 +245,9 @@ class ShowRecordInfoResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  响应体详情数据
+    *  data
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Meeting\V1\Model\RecordInfoDO|null
     */
     public function getData()
     {
@@ -257,7 +257,7 @@ class ShowRecordInfoResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data 响应体详情数据
+    * @param \HuaweiCloud\SDK\Meeting\V1\Model\RecordInfoDO|null $data data
     *
     * @return $this
     */

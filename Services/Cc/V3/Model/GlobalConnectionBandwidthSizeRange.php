@@ -20,7 +20,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
@@ -34,7 +34,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
@@ -69,7 +69,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
@@ -83,7 +83,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
@@ -97,7 +97,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * type  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     * min  全域互联带宽最小值，单位Mbit/s。
     * max  全域互联带宽最大值，单位Mbit/s。
     *
@@ -151,6 +151,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     }
     const TYPE_BWD = 'bwd';
     const TYPE__95 = '95';
+    const TYPE__95AVR = '95avr';
     
 
     /**
@@ -163,6 +164,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
         return [
             self::TYPE_BWD,
             self::TYPE__95,
+            self::TYPE__95AVR,
         ];
     }
 
@@ -237,7 +239,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    *  描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     *
     * @return string|null
     */
@@ -249,7 +251,7 @@ class GlobalConnectionBandwidthSizeRange implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费
+    * @param string|null $type 描述计费类型，描述可选计费类型。 取值范围：     bwd: 按带宽计费     95: 按传统型95计费     95avr：日95计费
     *
     * @return $this
     */

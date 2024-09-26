@@ -20,7 +20,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * bandwidthPackageId  资源ID标识符。
+    * bandwidthPackageId  带宽包实例ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * bandwidthPackageId  资源ID标识符。
+    * bandwidthPackageId  带宽包实例ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * bandwidthPackageId  资源ID标识符。
+    * bandwidthPackageId  带宽包实例ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * bandwidthPackageId  资源ID标识符。
+    * bandwidthPackageId  带宽包实例ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * bandwidthPackageId  资源ID标识符。
+    * bandwidthPackageId  带宽包实例ID。
     *
     * @var string[]
     */
@@ -161,14 +161,14 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
         if ($this->container['bandwidthPackageId'] === null) {
             $invalidProperties[] = "'bandwidthPackageId' can't be null";
         }
-            if ((mb_strlen($this->container['bandwidthPackageId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['bandwidthPackageId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['bandwidthPackageId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['bandwidthPackageId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['bandwidthPackageId'])) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['bandwidthPackageId'])) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         return $invalidProperties;
     }
@@ -186,7 +186,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthPackageId
-    *  资源ID标识符。
+    *  带宽包实例ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class BandwidthPackageId implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthPackageId
     *
-    * @param string $bandwidthPackageId 资源ID标识符。
+    * @param string $bandwidthPackageId 带宽包实例ID。
     *
     * @return $this
     */

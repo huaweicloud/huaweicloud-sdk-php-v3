@@ -158,13 +158,16 @@ class GcbResourceId implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 36)) {
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
+        }
+            if ((mb_strlen($this->container['resourceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) < 1)) {
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['resourceId']) && !preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['resourceId'])) {
+            if (!preg_match("/^[a-zA-Z0-9_-]+$/", $this->container['resourceId'])) {
                 $invalidProperties[] = "invalid value for 'resourceId', must be conform to the pattern /^[a-zA-Z0-9_-]+$/.";
             }
         return $invalidProperties;
@@ -185,7 +188,7 @@ class GcbResourceId implements ModelInterface, ArrayAccess
     * Gets resourceId
     *  功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     *
-    * @return string|null
+    * @return string
     */
     public function getResourceId()
     {
@@ -195,7 +198,7 @@ class GcbResourceId implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string|null $resourceId 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
+    * @param string $resourceId 功能说明：实例ID。 取值范围：1-36个字符，支持数字、字母、_(下划线)、-（中划线）
     *
     * @return $this
     */

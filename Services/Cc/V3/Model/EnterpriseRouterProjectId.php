@@ -20,7 +20,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseRouterProjectId  实例所属项目ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseRouterProjectId  实例所属项目ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseRouterProjectId  实例所属项目ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseRouterProjectId  实例所属项目ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseRouterProjectId  实例所属项目ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterProjectId
-    *  实例所属项目ID。
+    *  企业路由器的项目ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class EnterpriseRouterProjectId implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterProjectId
     *
-    * @param string $enterpriseRouterProjectId 实例所属项目ID。
+    * @param string $enterpriseRouterProjectId 企业路由器的项目ID。
     *
     * @return $this
     */

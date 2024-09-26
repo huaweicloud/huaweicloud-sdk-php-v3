@@ -20,14 +20,14 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * cloudConnectionId  资源ID标识符。
-    * bandwidthPackageId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
+    * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
     * bandwidth  域间带宽的值。
     *
@@ -48,14 +48,14 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * cloudConnectionId  资源ID标识符。
-    * bandwidthPackageId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
+    * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
     * bandwidth  域间带宽的值。
     *
@@ -97,14 +97,14 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * cloudConnectionId  资源ID标识符。
-    * bandwidthPackageId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
+    * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
     * bandwidth  域间带宽的值。
     *
@@ -125,14 +125,14 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * cloudConnectionId  资源ID标识符。
-    * bandwidthPackageId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
+    * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
     * bandwidth  域间带宽的值。
     *
@@ -153,14 +153,14 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * cloudConnectionId  资源ID标识符。
-    * bandwidthPackageId  资源ID标识符。
+    * cloudConnectionId  云连接实例ID。
+    * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
     * bandwidth  域间带宽的值。
     *
@@ -260,14 +260,14 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 36)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['id']) > 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['id']) < 32)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -311,26 +311,26 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
         if ($this->container['cloudConnectionId'] === null) {
             $invalidProperties[] = "'cloudConnectionId' can't be null";
         }
-            if ((mb_strlen($this->container['cloudConnectionId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['cloudConnectionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['cloudConnectionId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['cloudConnectionId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
-                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['cloudConnectionId'])) {
+                $invalidProperties[] = "invalid value for 'cloudConnectionId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['bandwidthPackageId'] === null) {
             $invalidProperties[] = "'bandwidthPackageId' can't be null";
         }
-            if ((mb_strlen($this->container['bandwidthPackageId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['bandwidthPackageId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['bandwidthPackageId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['bandwidthPackageId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['bandwidthPackageId'])) {
-                $invalidProperties[] = "invalid value for 'bandwidthPackageId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['bandwidthPackageId'])) {
+                $invalidProperties[] = "invalid value for 'bandwidthPackageId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
             if (!is_null($this->container['bandwidth']) && ($this->container['bandwidth'] > 999999)) {
                 $invalidProperties[] = "invalid value for 'bandwidth', must be smaller than or equal to 999999.";
@@ -354,7 +354,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -366,7 +366,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -426,7 +426,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -438,7 +438,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */
@@ -498,7 +498,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudConnectionId
-    *  资源ID标识符。
+    *  云连接实例ID。
     *
     * @return string
     */
@@ -510,7 +510,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets cloudConnectionId
     *
-    * @param string $cloudConnectionId 资源ID标识符。
+    * @param string $cloudConnectionId 云连接实例ID。
     *
     * @return $this
     */
@@ -522,7 +522,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthPackageId
-    *  资源ID标识符。
+    *  带宽包实例ID。
     *
     * @return string
     */
@@ -534,7 +534,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthPackageId
     *
-    * @param string $bandwidthPackageId 资源ID标识符。
+    * @param string $bandwidthPackageId 带宽包实例ID。
     *
     * @return $this
     */

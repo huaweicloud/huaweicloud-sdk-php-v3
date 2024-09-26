@@ -19,6 +19,9 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const RECOVERING = 'RECOVERING';
     const FAILED = 'FAILED';
     const DELETED = 'DELETED';
+    const APPROVING = 'APPROVING';
+    const APPROVED = 'APPROVED';
+    const UNAPPROVED = 'UNAPPROVED';
     
     /**
      * Gets allowable values of the enum
@@ -36,6 +39,9 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::RECOVERING,
             self::FAILED,
             self::DELETED,
+            self::APPROVING,
+            self::APPROVED,
+            self::UNAPPROVED,
         ];
     }
 }

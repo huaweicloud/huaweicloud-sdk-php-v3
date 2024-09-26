@@ -3761,6 +3761,370 @@ class LiveClient extends Client
     }
 
     /**
+     * 创建Live2VOD任务
+     *
+     * 创建Live2VOD任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createHarvestTask($request)
+    {
+        return $this->createHarvestTaskWithHttpInfo($request);
+    }
+
+    public function createHarvestTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ott/harvest/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\CreateHarvestTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\CreateHarvestTaskRequest');
+    }
+
+    /**
+     * 删除Live2VOD任务
+     *
+     * 删除Live2VOD任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHarvestTask($request)
+    {
+        return $this->deleteHarvestTaskWithHttpInfo($request);
+    }
+
+    public function deleteHarvestTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ott/harvest/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $queryParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\DeleteHarvestTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\DeleteHarvestTaskRequest');
+    }
+
+    /**
+     * 查询Live2VOD任务
+     *
+     * 查询Live2VOD任务，支持批量查询。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listHarvestTask($request)
+    {
+        return $this->listHarvestTaskWithHttpInfo($request);
+    }
+
+    public function listHarvestTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ott/harvest/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['domain'] !== null) {
+            $queryParams['domain'] = $localVarParams['domain'];
+        }
+        if ($localVarParams['appName'] !== null) {
+            $queryParams['app_name'] = $localVarParams['appName'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $queryParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
+        if ($localVarParams['eventName'] !== null) {
+            $queryParams['event_name'] = $localVarParams['eventName'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ListHarvestTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ListHarvestTaskRequest');
+    }
+
+    /**
+     * 修改Live2VOD任务
+     *
+     * 修改Live2VOD任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function modifyHarvestTask($request)
+    {
+        return $this->modifyHarvestTaskWithHttpInfo($request);
+    }
+
+    public function modifyHarvestTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ott/harvest/task';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\ModifyHarvestTaskResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\ModifyHarvestTaskRequest');
+    }
+
+    /**
+     * 修改Live2VOD任务状态
+     *
+     * 修改Live2VOD任务状态。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateHarvestJobStatus($request)
+    {
+        return $this->updateHarvestJobStatusWithHttpInfo($request);
+    }
+
+    public function updateHarvestJobStatusWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/ott/harvest/task/status';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['accessControlAllowInternal'] !== null) {
+            $headerParams[$arr['accessControlAllowInternal']] = $localVarParams['accessControlAllowInternal'];
+        }
+        if ($localVarParams['accessControlAllowExternal'] !== null) {
+            $headerParams[$arr['accessControlAllowExternal']] = $localVarParams['accessControlAllowExternal'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json; charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json; charset=UTF-8', 'application/json'],
+                ['application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Live\V1\Model\UpdateHarvestJobStatusResponse',
+            $requestType='\HuaweiCloud\SDK\Live\V1\Model\UpdateHarvestJobStatusRequest');
+    }
+
+    /**
      * OBS桶授权及取消授权
      *
      * OBS桶授权及取消授权

@@ -20,7 +20,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源的Id。
+    * id  实例ID。
     *
     * @var string[]
     */
@@ -164,8 +164,11 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 9)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 9.";
+            if ((mb_strlen($this->container['id']) < 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
             }
         return $invalidProperties;
     }
@@ -183,7 +186,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源的Id。
+    *  实例ID。
     *
     * @return string
     */
@@ -195,7 +198,7 @@ class DeleteBandwidthPackageRequest implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源的Id。
+    * @param string $id 实例ID。
     *
     * @return $this
     */

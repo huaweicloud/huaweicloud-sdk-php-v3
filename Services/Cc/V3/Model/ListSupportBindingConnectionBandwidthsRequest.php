@@ -256,9 +256,6 @@ class ListSupportBindingConnectionBandwidthsRequest implements ModelInterface, A
             if (!is_null($this->container['remoteArea']) && (mb_strlen($this->container['remoteArea']) < 1)) {
                 $invalidProperties[] = "invalid value for 'remoteArea', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['bindingService'] === null) {
-            $invalidProperties[] = "'bindingService' can't be null";
-        }
             $allowedValues = $this->getBindingServiceAllowableValues();
                 if (!is_null($this->container['bindingService']) && !in_array($this->container['bindingService'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -405,7 +402,7 @@ class ListSupportBindingConnectionBandwidthsRequest implements ModelInterface, A
     * Gets bindingService
     *  根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     *
-    * @return string
+    * @return string|null
     */
     public function getBindingService()
     {
@@ -415,7 +412,7 @@ class ListSupportBindingConnectionBandwidthsRequest implements ModelInterface, A
     /**
     * Sets bindingService
     *
-    * @param string $bindingService 根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
+    * @param string|null $bindingService 根据支持绑定实例类型过滤全域互联带宽列表。实例类型： - CC: 云连接 - GEIP: 全域弹性公网IP - GCN: 中心网络 - GSN: 分支网络
     *
     * @return $this
     */

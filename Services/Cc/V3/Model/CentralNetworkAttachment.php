@@ -20,30 +20,30 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * centralNetworkId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值定义，单位Mbps。
     * isFrozen  是否冻结
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * enterpriseRouterAttachmentId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * attachmentInstanceType  attachmentInstanceType
-    * attachmentInstanceId  资源ID标识符。
-    * attachmentId  资源ID标识符。
-    * attachmentInstanceProjectId  实例所属项目ID。
-    * attachmentInstanceRegionId  RegionID。
-    * attachmentInstanceSiteCode  站点编码定义
-    * enterpriseRouterSiteCode  站点编码定义
+    * attachmentInstanceId  中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * attachmentInstanceProjectId  中心网络附件对端实例的项目ID。
+    * attachmentInstanceRegionId  中心网络附件对端实例的regionID。
+    * attachmentInstanceSiteCode  中心网络附件对端实例的站点编码。
+    * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
     * specificationValue  specificationValue
     *
     * @var string[]
@@ -78,30 +78,30 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * centralNetworkId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值定义，单位Mbps。
     * isFrozen  是否冻结
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * enterpriseRouterAttachmentId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * attachmentInstanceType  attachmentInstanceType
-    * attachmentInstanceId  资源ID标识符。
-    * attachmentId  资源ID标识符。
-    * attachmentInstanceProjectId  实例所属项目ID。
-    * attachmentInstanceRegionId  RegionID。
-    * attachmentInstanceSiteCode  站点编码定义
-    * enterpriseRouterSiteCode  站点编码定义
+    * attachmentInstanceId  中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * attachmentInstanceProjectId  中心网络附件对端实例的项目ID。
+    * attachmentInstanceRegionId  中心网络附件对端实例的regionID。
+    * attachmentInstanceSiteCode  中心网络附件对端实例的站点编码。
+    * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
     * specificationValue  specificationValue
     *
     * @var string[]
@@ -157,30 +157,30 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * centralNetworkId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值定义，单位Mbps。
     * isFrozen  是否冻结
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * enterpriseRouterAttachmentId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * attachmentInstanceType  attachmentInstanceType
-    * attachmentInstanceId  资源ID标识符。
-    * attachmentId  资源ID标识符。
-    * attachmentInstanceProjectId  实例所属项目ID。
-    * attachmentInstanceRegionId  RegionID。
-    * attachmentInstanceSiteCode  站点编码定义
-    * enterpriseRouterSiteCode  站点编码定义
+    * attachmentInstanceId  中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * attachmentInstanceProjectId  中心网络附件对端实例的项目ID。
+    * attachmentInstanceRegionId  中心网络附件对端实例的regionID。
+    * attachmentInstanceSiteCode  中心网络附件对端实例的站点编码。
+    * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
     * specificationValue  specificationValue
     *
     * @var string[]
@@ -215,30 +215,30 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * centralNetworkId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值定义，单位Mbps。
     * isFrozen  是否冻结
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * enterpriseRouterAttachmentId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * attachmentInstanceType  attachmentInstanceType
-    * attachmentInstanceId  资源ID标识符。
-    * attachmentId  资源ID标识符。
-    * attachmentInstanceProjectId  实例所属项目ID。
-    * attachmentInstanceRegionId  RegionID。
-    * attachmentInstanceSiteCode  站点编码定义
-    * enterpriseRouterSiteCode  站点编码定义
+    * attachmentInstanceId  中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * attachmentInstanceProjectId  中心网络附件对端实例的项目ID。
+    * attachmentInstanceRegionId  中心网络附件对端实例的regionID。
+    * attachmentInstanceSiteCode  中心网络附件对端实例的站点编码。
+    * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
     * specificationValue  specificationValue
     *
     * @var string[]
@@ -273,30 +273,30 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * state  state
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
     * updatedAt  实例更新时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
-    * centralNetworkId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * centralNetworkId  中心网络ID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
     * bandwidthSize  带宽值定义，单位Mbps。
     * isFrozen  是否冻结
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * enterpriseRouterAttachmentId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * attachmentInstanceType  attachmentInstanceType
-    * attachmentInstanceId  资源ID标识符。
-    * attachmentId  资源ID标识符。
-    * attachmentInstanceProjectId  实例所属项目ID。
-    * attachmentInstanceRegionId  RegionID。
-    * attachmentInstanceSiteCode  站点编码定义
-    * enterpriseRouterSiteCode  站点编码定义
+    * attachmentInstanceId  中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * attachmentInstanceProjectId  中心网络附件对端实例的项目ID。
+    * attachmentInstanceRegionId  中心网络附件对端实例的regionID。
+    * attachmentInstanceSiteCode  中心网络附件对端实例的站点编码。
+    * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
     * specificationValue  specificationValue
     *
     * @var string[]
@@ -428,11 +428,11 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -482,11 +482,11 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['centralNetworkId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'centralNetworkId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['centralNetworkId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'centralNetworkId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['centralNetworkId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'centralNetworkId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['centralNetworkId'])) {
-                $invalidProperties[] = "invalid value for 'centralNetworkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['centralNetworkId'])) {
+                $invalidProperties[] = "invalid value for 'centralNetworkId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['centralNetworkPlaneId'] === null) {
             $invalidProperties[] = "'centralNetworkPlaneId' can't be null";
@@ -494,20 +494,20 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['centralNetworkPlaneId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['centralNetworkPlaneId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['centralNetworkPlaneId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['centralNetworkPlaneId'])) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['centralNetworkPlaneId'])) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['globalConnectionBandwidthId'])) {
-                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalConnectionBandwidthId'])) {
+                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['bandwidthType'] === null) {
             $invalidProperties[] = "'bandwidthType' can't be null";
@@ -527,11 +527,11 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseRouterId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['enterpriseRouterProjectId'] === null) {
             $invalidProperties[] = "'enterpriseRouterProjectId' can't be null";
@@ -557,11 +557,11 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
             if (!is_null($this->container['enterpriseRouterAttachmentId']) && (mb_strlen($this->container['enterpriseRouterAttachmentId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterAttachmentId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['enterpriseRouterAttachmentId']) && (mb_strlen($this->container['enterpriseRouterAttachmentId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterAttachmentId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['enterpriseRouterAttachmentId']) && (mb_strlen($this->container['enterpriseRouterAttachmentId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterAttachmentId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['enterpriseRouterAttachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterAttachmentId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterAttachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['enterpriseRouterAttachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterAttachmentId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterAttachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['attachmentInstanceType'] === null) {
             $invalidProperties[] = "'attachmentInstanceType' can't be null";
@@ -572,41 +572,44 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['attachmentInstanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'attachmentInstanceId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['attachmentInstanceId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['attachmentInstanceId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['attachmentInstanceId'])) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachmentInstanceId'])) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['attachmentId']) && (mb_strlen($this->container['attachmentId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'attachmentId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['attachmentId']) && (mb_strlen($this->container['attachmentId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachmentId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['attachmentId']) && (mb_strlen($this->container['attachmentId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['attachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['attachmentId'])) {
-                $invalidProperties[] = "invalid value for 'attachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['attachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachmentId'])) {
+                $invalidProperties[] = "invalid value for 'attachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['attachmentInstanceProjectId'] === null) {
             $invalidProperties[] = "'attachmentInstanceProjectId' can't be null";
         }
-            if ((mb_strlen($this->container['attachmentInstanceProjectId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceProjectId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['attachmentInstanceProjectId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceProjectId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['attachmentInstanceProjectId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceProjectId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['attachmentInstanceProjectId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceProjectId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['attachmentInstanceProjectId'])) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceProjectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachmentInstanceProjectId'])) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceProjectId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['attachmentInstanceRegionId'] === null) {
             $invalidProperties[] = "'attachmentInstanceRegionId' can't be null";
         }
-            if ((mb_strlen($this->container['attachmentInstanceRegionId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceRegionId', the character length must be smaller than or equal to 32.";
+            if ((mb_strlen($this->container['attachmentInstanceRegionId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceRegionId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['attachmentInstanceRegionId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'attachmentInstanceRegionId', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['attachmentInstanceRegionId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceRegionId', the character length must be bigger than or equal to 36.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachmentInstanceRegionId'])) {
+                $invalidProperties[] = "invalid value for 'attachmentInstanceRegionId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['attachmentInstanceSiteCode'] === null) {
             $invalidProperties[] = "'attachmentInstanceSiteCode' can't be null";
@@ -648,7 +651,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -660,7 +663,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -720,7 +723,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -732,7 +735,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */
@@ -816,7 +819,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets centralNetworkId
-    *  资源ID标识符。
+    *  中心网络ID。
     *
     * @return string
     */
@@ -828,7 +831,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets centralNetworkId
     *
-    * @param string $centralNetworkId 资源ID标识符。
+    * @param string $centralNetworkId 中心网络ID。
     *
     * @return $this
     */
@@ -840,7 +843,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets centralNetworkPlaneId
-    *  资源ID标识符。
+    *  中心网络平面ID。
     *
     * @return string
     */
@@ -852,7 +855,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets centralNetworkPlaneId
     *
-    * @param string $centralNetworkPlaneId 资源ID标识符。
+    * @param string $centralNetworkPlaneId 中心网络平面ID。
     *
     * @return $this
     */
@@ -864,7 +867,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalConnectionBandwidthId
-    *  资源ID标识符。
+    *  全域互联带宽ID。
     *
     * @return string|null
     */
@@ -876,7 +879,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets globalConnectionBandwidthId
     *
-    * @param string|null $globalConnectionBandwidthId 资源ID标识符。
+    * @param string|null $globalConnectionBandwidthId 全域互联带宽ID。
     *
     * @return $this
     */
@@ -960,7 +963,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterId
-    *  资源ID标识符。
+    *  企业路由器的ID。
     *
     * @return string
     */
@@ -972,7 +975,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterId
     *
-    * @param string $enterpriseRouterId 资源ID标识符。
+    * @param string $enterpriseRouterId 企业路由器的ID。
     *
     * @return $this
     */
@@ -984,7 +987,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterProjectId
-    *  实例所属项目ID。
+    *  企业路由器的项目ID。
     *
     * @return string
     */
@@ -996,7 +999,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterProjectId
     *
-    * @param string $enterpriseRouterProjectId 实例所属项目ID。
+    * @param string $enterpriseRouterProjectId 企业路由器的项目ID。
     *
     * @return $this
     */
@@ -1008,7 +1011,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterRegionId
-    *  RegionID。
+    *  ER路由器的regionID。
     *
     * @return string
     */
@@ -1020,7 +1023,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterRegionId
     *
-    * @param string $enterpriseRouterRegionId RegionID。
+    * @param string $enterpriseRouterRegionId ER路由器的regionID。
     *
     * @return $this
     */
@@ -1032,7 +1035,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterAttachmentId
-    *  资源ID标识符。
+    *  企业路由器的连接ID。
     *
     * @return string|null
     */
@@ -1044,7 +1047,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterAttachmentId
     *
-    * @param string|null $enterpriseRouterAttachmentId 资源ID标识符。
+    * @param string|null $enterpriseRouterAttachmentId 企业路由器的连接ID。
     *
     * @return $this
     */
@@ -1080,7 +1083,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentInstanceId
-    *  资源ID标识符。
+    *  中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
     *
     * @return string
     */
@@ -1092,7 +1095,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentInstanceId
     *
-    * @param string $attachmentInstanceId 资源ID标识符。
+    * @param string $attachmentInstanceId 中心网络附件对端实例ID，企业路由器的路由表ID或者GDGW的ID。
     *
     * @return $this
     */
@@ -1104,7 +1107,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentId
-    *  资源ID标识符。
+    *  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     *
     * @return string|null
     */
@@ -1116,7 +1119,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentId
     *
-    * @param string|null $attachmentId 资源ID标识符。
+    * @param string|null $attachmentId 中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     *
     * @return $this
     */
@@ -1128,7 +1131,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentInstanceProjectId
-    *  实例所属项目ID。
+    *  中心网络附件对端实例的项目ID。
     *
     * @return string
     */
@@ -1140,7 +1143,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentInstanceProjectId
     *
-    * @param string $attachmentInstanceProjectId 实例所属项目ID。
+    * @param string $attachmentInstanceProjectId 中心网络附件对端实例的项目ID。
     *
     * @return $this
     */
@@ -1152,7 +1155,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentInstanceRegionId
-    *  RegionID。
+    *  中心网络附件对端实例的regionID。
     *
     * @return string
     */
@@ -1164,7 +1167,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentInstanceRegionId
     *
-    * @param string $attachmentInstanceRegionId RegionID。
+    * @param string $attachmentInstanceRegionId 中心网络附件对端实例的regionID。
     *
     * @return $this
     */
@@ -1176,7 +1179,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets attachmentInstanceSiteCode
-    *  站点编码定义
+    *  中心网络附件对端实例的站点编码。
     *
     * @return string
     */
@@ -1188,7 +1191,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentInstanceSiteCode
     *
-    * @param string $attachmentInstanceSiteCode 站点编码定义
+    * @param string $attachmentInstanceSiteCode 中心网络附件对端实例的站点编码。
     *
     * @return $this
     */
@@ -1200,7 +1203,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterSiteCode
-    *  站点编码定义
+    *  中心网络企业路由器的站点编码。
     *
     * @return string
     */
@@ -1212,7 +1215,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterSiteCode
     *
-    * @param string $enterpriseRouterSiteCode 站点编码定义
+    * @param string $enterpriseRouterSiteCode 中心网络企业路由器的站点编码。
     *
     * @return $this
     */

@@ -23,6 +23,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
     * limit  每页返回的个数。 取值范围：1~1000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     * id  根据id查询，可查询多个id。
+    * nameEn  站点信息自定义英文名称。
+    * nameCn  站点信息自定义中文名称。
     * siteCode  站点编码。
     * siteType  站点类型： - Area: 大区 - SubArea: 区域 - Region: 城域
     *
@@ -32,6 +34,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
             'limit' => 'int',
             'marker' => 'string',
             'id' => 'string[]',
+            'nameEn' => 'string',
+            'nameCn' => 'string',
             'siteCode' => 'string',
             'siteType' => 'string'
     ];
@@ -41,6 +45,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
     * limit  每页返回的个数。 取值范围：1~1000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     * id  根据id查询，可查询多个id。
+    * nameEn  站点信息自定义英文名称。
+    * nameCn  站点信息自定义中文名称。
     * siteCode  站点编码。
     * siteType  站点类型： - Area: 大区 - SubArea: 区域 - Region: 城域
     *
@@ -50,6 +56,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
         'limit' => 'int32',
         'marker' => null,
         'id' => null,
+        'nameEn' => null,
+        'nameCn' => null,
         'siteCode' => null,
         'siteType' => null
     ];
@@ -80,6 +88,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
     * limit  每页返回的个数。 取值范围：1~1000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     * id  根据id查询，可查询多个id。
+    * nameEn  站点信息自定义英文名称。
+    * nameCn  站点信息自定义中文名称。
     * siteCode  站点编码。
     * siteType  站点类型： - Area: 大区 - SubArea: 区域 - Region: 城域
     *
@@ -89,6 +99,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
             'limit' => 'limit',
             'marker' => 'marker',
             'id' => 'id',
+            'nameEn' => 'name_en',
+            'nameCn' => 'name_cn',
             'siteCode' => 'site_code',
             'siteType' => 'site_type'
     ];
@@ -98,6 +110,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
     * limit  每页返回的个数。 取值范围：1~1000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     * id  根据id查询，可查询多个id。
+    * nameEn  站点信息自定义英文名称。
+    * nameCn  站点信息自定义中文名称。
     * siteCode  站点编码。
     * siteType  站点类型： - Area: 大区 - SubArea: 区域 - Region: 城域
     *
@@ -107,6 +121,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
             'limit' => 'setLimit',
             'marker' => 'setMarker',
             'id' => 'setId',
+            'nameEn' => 'setNameEn',
+            'nameCn' => 'setNameCn',
             'siteCode' => 'setSiteCode',
             'siteType' => 'setSiteType'
     ];
@@ -116,6 +132,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
     * limit  每页返回的个数。 取值范围：1~1000。
     * marker  翻页信息，从上次API调用返回的翻页数据中获取，可填写前一页marker或者后一页marker，填入前一页previous_marker就向前翻页，后一页next_marker就向翻页。 翻页过程中，查询条件不能修改，包括过滤条件，排序条件，limit。
     * id  根据id查询，可查询多个id。
+    * nameEn  站点信息自定义英文名称。
+    * nameCn  站点信息自定义中文名称。
     * siteCode  站点编码。
     * siteType  站点类型： - Area: 大区 - SubArea: 区域 - Region: 城域
     *
@@ -125,6 +143,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
             'limit' => 'getLimit',
             'marker' => 'getMarker',
             'id' => 'getId',
+            'nameEn' => 'getNameEn',
+            'nameCn' => 'getNameCn',
             'siteCode' => 'getSiteCode',
             'siteType' => 'getSiteType'
     ];
@@ -207,6 +227,8 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
+        $this->container['nameCn'] = isset($data['nameCn']) ? $data['nameCn'] : null;
         $this->container['siteCode'] = isset($data['siteCode']) ? $data['siteCode'] : null;
         $this->container['siteType'] = isset($data['siteType']) ? $data['siteType'] : null;
     }
@@ -230,6 +252,18 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
             }
             if (!is_null($this->container['marker']) && (mb_strlen($this->container['marker']) < 1)) {
                 $invalidProperties[] = "invalid value for 'marker', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nameEn', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nameEn']) && (mb_strlen($this->container['nameEn']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nameEn', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['nameCn']) && (mb_strlen($this->container['nameCn']) > 64)) {
+                $invalidProperties[] = "invalid value for 'nameCn', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['nameCn']) && (mb_strlen($this->container['nameCn']) < 1)) {
+                $invalidProperties[] = "invalid value for 'nameCn', the character length must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['siteCode']) && (mb_strlen($this->container['siteCode']) > 64)) {
                 $invalidProperties[] = "invalid value for 'siteCode', the character length must be smaller than or equal to 64.";
@@ -328,6 +362,54 @@ class ListGlobalConnectionBandwidthSitesRequest implements ModelInterface, Array
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets nameEn
+    *  站点信息自定义英文名称。
+    *
+    * @return string|null
+    */
+    public function getNameEn()
+    {
+        return $this->container['nameEn'];
+    }
+
+    /**
+    * Sets nameEn
+    *
+    * @param string|null $nameEn 站点信息自定义英文名称。
+    *
+    * @return $this
+    */
+    public function setNameEn($nameEn)
+    {
+        $this->container['nameEn'] = $nameEn;
+        return $this;
+    }
+
+    /**
+    * Gets nameCn
+    *  站点信息自定义中文名称。
+    *
+    * @return string|null
+    */
+    public function getNameCn()
+    {
+        return $this->container['nameCn'];
+    }
+
+    /**
+    * Sets nameCn
+    *
+    * @param string|null $nameCn 站点信息自定义中文名称。
+    *
+    * @return $this
+    */
+    public function setNameCn($nameCn)
+    {
+        $this->container['nameCn'] = $nameCn;
         return $this;
     }
 

@@ -20,9 +20,9 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
-    * planeId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * id  实例ID。
+    * planeId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
@@ -42,9 +42,9 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
-    * planeId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * id  实例ID。
+    * planeId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
@@ -85,9 +85,9 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
-    * planeId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * id  实例ID。
+    * planeId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
@@ -107,9 +107,9 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
-    * planeId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * id  实例ID。
+    * planeId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
@@ -129,9 +129,9 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
-    * planeId  资源ID标识符。
-    * globalConnectionBandwidthId  资源ID标识符。
+    * id  实例ID。
+    * planeId  中心网络平面ID。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
@@ -230,11 +230,11 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['id']) > 36)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['id']) < 32)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['id']) < 36)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['planeId'] === null) {
             $invalidProperties[] = "'planeId' can't be null";
@@ -242,20 +242,20 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['planeId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'planeId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['planeId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'planeId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['planeId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'planeId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['planeId'])) {
-                $invalidProperties[] = "invalid value for 'planeId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['planeId'])) {
+                $invalidProperties[] = "invalid value for 'planeId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['globalConnectionBandwidthId'])) {
-                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalConnectionBandwidthId'])) {
+                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 999999)) {
                 $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 999999.";
@@ -288,7 +288,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -300,7 +300,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -312,7 +312,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets planeId
-    *  资源ID标识符。
+    *  中心网络平面ID。
     *
     * @return string
     */
@@ -324,7 +324,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets planeId
     *
-    * @param string $planeId 资源ID标识符。
+    * @param string $planeId 中心网络平面ID。
     *
     * @return $this
     */
@@ -336,7 +336,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalConnectionBandwidthId
-    *  资源ID标识符。
+    *  全域互联带宽ID。
     *
     * @return string|null
     */
@@ -348,7 +348,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets globalConnectionBandwidthId
     *
-    * @param string|null $globalConnectionBandwidthId 资源ID标识符。
+    * @param string|null $globalConnectionBandwidthId 全域互联带宽ID。
     *
     * @return $this
     */

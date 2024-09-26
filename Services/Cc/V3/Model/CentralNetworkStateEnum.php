@@ -16,6 +16,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const CREATING = 'CREATING';
     const DELETING = 'DELETING';
     const DELETED = 'DELETED';
+    const RESTORING = 'RESTORING';
     
     /**
      * Gets allowable values of the enum
@@ -30,6 +31,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::CREATING,
             self::DELETING,
             self::DELETED,
+            self::RESTORING,
         ];
     }
 }

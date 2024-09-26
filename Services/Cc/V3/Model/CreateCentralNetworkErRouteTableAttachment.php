@@ -22,16 +22,16 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * Array of property to type mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * attachmentId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     * attachedErTableProjectId  实例所属项目ID。
     * attachedErTableRegionId  RegionID。
-    * attachedErId  资源ID标识符。
-    * attachedErTableId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
+    * attachedErId  实例ID。
+    * attachedErTableId  实例ID。
     * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
     *
     * @var string[]
@@ -42,13 +42,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             'enterpriseRouterId' => 'string',
             'enterpriseRouterProjectId' => 'string',
             'enterpriseRouterRegionId' => 'string',
+            'centralNetworkPlaneId' => 'string',
             'attachmentId' => 'string',
             'enterpriseRouterTableId' => 'string',
             'attachedErTableProjectId' => 'string',
             'attachedErTableRegionId' => 'string',
             'attachedErId' => 'string',
             'attachedErTableId' => 'string',
-            'centralNetworkPlaneId' => 'string',
             'hostedCloud' => 'string'
     ];
 
@@ -56,16 +56,16 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * Array of property to format mappings. Used for (de)serialization
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * attachmentId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     * attachedErTableProjectId  实例所属项目ID。
     * attachedErTableRegionId  RegionID。
-    * attachedErId  资源ID标识符。
-    * attachedErTableId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
+    * attachedErId  实例ID。
+    * attachedErTableId  实例ID。
     * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
     *
     * @var string[]
@@ -76,13 +76,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
         'enterpriseRouterId' => null,
         'enterpriseRouterProjectId' => null,
         'enterpriseRouterRegionId' => null,
+        'centralNetworkPlaneId' => null,
         'attachmentId' => null,
         'enterpriseRouterTableId' => null,
         'attachedErTableProjectId' => null,
         'attachedErTableRegionId' => null,
         'attachedErId' => null,
         'attachedErTableId' => null,
-        'centralNetworkPlaneId' => null,
         'hostedCloud' => null
     ];
 
@@ -111,16 +111,16 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * and the value is the original name
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * attachmentId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     * attachedErTableProjectId  实例所属项目ID。
     * attachedErTableRegionId  RegionID。
-    * attachedErId  资源ID标识符。
-    * attachedErTableId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
+    * attachedErId  实例ID。
+    * attachedErTableId  实例ID。
     * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
     *
     * @var string[]
@@ -131,13 +131,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             'enterpriseRouterId' => 'enterprise_router_id',
             'enterpriseRouterProjectId' => 'enterprise_router_project_id',
             'enterpriseRouterRegionId' => 'enterprise_router_region_id',
+            'centralNetworkPlaneId' => 'central_network_plane_id',
             'attachmentId' => 'attachment_id',
             'enterpriseRouterTableId' => 'enterprise_router_table_id',
             'attachedErTableProjectId' => 'attached_er_table_project_id',
             'attachedErTableRegionId' => 'attached_er_table_region_id',
             'attachedErId' => 'attached_er_id',
             'attachedErTableId' => 'attached_er_table_id',
-            'centralNetworkPlaneId' => 'central_network_plane_id',
             'hostedCloud' => 'hosted_cloud'
     ];
 
@@ -145,16 +145,16 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * Array of attributes to setter functions (for deserialization of responses)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * attachmentId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     * attachedErTableProjectId  实例所属项目ID。
     * attachedErTableRegionId  RegionID。
-    * attachedErId  资源ID标识符。
-    * attachedErTableId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
+    * attachedErId  实例ID。
+    * attachedErTableId  实例ID。
     * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
     *
     * @var string[]
@@ -165,13 +165,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             'enterpriseRouterId' => 'setEnterpriseRouterId',
             'enterpriseRouterProjectId' => 'setEnterpriseRouterProjectId',
             'enterpriseRouterRegionId' => 'setEnterpriseRouterRegionId',
+            'centralNetworkPlaneId' => 'setCentralNetworkPlaneId',
             'attachmentId' => 'setAttachmentId',
             'enterpriseRouterTableId' => 'setEnterpriseRouterTableId',
             'attachedErTableProjectId' => 'setAttachedErTableProjectId',
             'attachedErTableRegionId' => 'setAttachedErTableRegionId',
             'attachedErId' => 'setAttachedErId',
             'attachedErTableId' => 'setAttachedErTableId',
-            'centralNetworkPlaneId' => 'setCentralNetworkPlaneId',
             'hostedCloud' => 'setHostedCloud'
     ];
 
@@ -179,16 +179,16 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * Array of attributes to getter functions (for serialization of requests)
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * enterpriseRouterId  资源ID标识符。
-    * enterpriseRouterProjectId  实例所属项目ID。
-    * enterpriseRouterRegionId  RegionID。
-    * attachmentId  资源ID标识符。
-    * enterpriseRouterTableId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
+    * enterpriseRouterProjectId  企业路由器的项目ID。
+    * enterpriseRouterRegionId  ER路由器的regionID。
+    * centralNetworkPlaneId  中心网络平面ID。
+    * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
+    * enterpriseRouterTableId  企业路由器的路由表ID。
     * attachedErTableProjectId  实例所属项目ID。
     * attachedErTableRegionId  RegionID。
-    * attachedErId  资源ID标识符。
-    * attachedErTableId  资源ID标识符。
-    * centralNetworkPlaneId  资源ID标识符。
+    * attachedErId  实例ID。
+    * attachedErTableId  实例ID。
     * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
     *
     * @var string[]
@@ -199,13 +199,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             'enterpriseRouterId' => 'getEnterpriseRouterId',
             'enterpriseRouterProjectId' => 'getEnterpriseRouterProjectId',
             'enterpriseRouterRegionId' => 'getEnterpriseRouterRegionId',
+            'centralNetworkPlaneId' => 'getCentralNetworkPlaneId',
             'attachmentId' => 'getAttachmentId',
             'enterpriseRouterTableId' => 'getEnterpriseRouterTableId',
             'attachedErTableProjectId' => 'getAttachedErTableProjectId',
             'attachedErTableRegionId' => 'getAttachedErTableRegionId',
             'attachedErId' => 'getAttachedErId',
             'attachedErTableId' => 'getAttachedErTableId',
-            'centralNetworkPlaneId' => 'getCentralNetworkPlaneId',
             'hostedCloud' => 'getHostedCloud'
     ];
 
@@ -287,13 +287,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
         $this->container['enterpriseRouterId'] = isset($data['enterpriseRouterId']) ? $data['enterpriseRouterId'] : null;
         $this->container['enterpriseRouterProjectId'] = isset($data['enterpriseRouterProjectId']) ? $data['enterpriseRouterProjectId'] : null;
         $this->container['enterpriseRouterRegionId'] = isset($data['enterpriseRouterRegionId']) ? $data['enterpriseRouterRegionId'] : null;
+        $this->container['centralNetworkPlaneId'] = isset($data['centralNetworkPlaneId']) ? $data['centralNetworkPlaneId'] : null;
         $this->container['attachmentId'] = isset($data['attachmentId']) ? $data['attachmentId'] : null;
         $this->container['enterpriseRouterTableId'] = isset($data['enterpriseRouterTableId']) ? $data['enterpriseRouterTableId'] : null;
         $this->container['attachedErTableProjectId'] = isset($data['attachedErTableProjectId']) ? $data['attachedErTableProjectId'] : null;
         $this->container['attachedErTableRegionId'] = isset($data['attachedErTableRegionId']) ? $data['attachedErTableRegionId'] : null;
         $this->container['attachedErId'] = isset($data['attachedErId']) ? $data['attachedErId'] : null;
         $this->container['attachedErTableId'] = isset($data['attachedErTableId']) ? $data['attachedErTableId'] : null;
-        $this->container['centralNetworkPlaneId'] = isset($data['centralNetworkPlaneId']) ? $data['centralNetworkPlaneId'] : null;
         $this->container['hostedCloud'] = isset($data['hostedCloud']) ? $data['hostedCloud'] : null;
     }
 
@@ -332,11 +332,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             if ((mb_strlen($this->container['enterpriseRouterId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['enterpriseRouterProjectId'] === null) {
             $invalidProperties[] = "'enterpriseRouterProjectId' can't be null";
@@ -359,14 +359,26 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             if ((mb_strlen($this->container['enterpriseRouterRegionId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterRegionId', the character length must be bigger than or equal to 1.";
             }
+        if ($this->container['centralNetworkPlaneId'] === null) {
+            $invalidProperties[] = "'centralNetworkPlaneId' can't be null";
+        }
+            if ((mb_strlen($this->container['centralNetworkPlaneId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['centralNetworkPlaneId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be bigger than or equal to 36.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['centralNetworkPlaneId'])) {
+                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
             if (!is_null($this->container['attachmentId']) && (mb_strlen($this->container['attachmentId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'attachmentId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['attachmentId']) && (mb_strlen($this->container['attachmentId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachmentId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['attachmentId']) && (mb_strlen($this->container['attachmentId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachmentId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['attachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['attachmentId'])) {
-                $invalidProperties[] = "invalid value for 'attachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['attachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachmentId'])) {
+                $invalidProperties[] = "invalid value for 'attachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['enterpriseRouterTableId'] === null) {
             $invalidProperties[] = "'enterpriseRouterTableId' can't be null";
@@ -374,11 +386,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             if ((mb_strlen($this->container['enterpriseRouterTableId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterTableId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterTableId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterTableId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterTableId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['attachedErTableProjectId'] === null) {
             $invalidProperties[] = "'attachedErTableProjectId' can't be null";
@@ -407,11 +419,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             if ((mb_strlen($this->container['attachedErId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'attachedErId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['attachedErId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachedErId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['attachedErId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachedErId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['attachedErId'])) {
-                $invalidProperties[] = "invalid value for 'attachedErId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachedErId'])) {
+                $invalidProperties[] = "invalid value for 'attachedErId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['attachedErTableId'] === null) {
             $invalidProperties[] = "'attachedErTableId' can't be null";
@@ -419,23 +431,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             if ((mb_strlen($this->container['attachedErTableId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['attachedErTableId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['attachedErTableId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['attachedErTableId'])) {
-                $invalidProperties[] = "invalid value for 'attachedErTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
-            }
-        if ($this->container['centralNetworkPlaneId'] === null) {
-            $invalidProperties[] = "'centralNetworkPlaneId' can't be null";
-        }
-            if ((mb_strlen($this->container['centralNetworkPlaneId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['centralNetworkPlaneId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', the character length must be bigger than or equal to 32.";
-            }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['centralNetworkPlaneId'])) {
-                $invalidProperties[] = "invalid value for 'centralNetworkPlaneId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachedErTableId'])) {
+                $invalidProperties[] = "invalid value for 'attachedErTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['hostedCloud'] === null) {
             $invalidProperties[] = "'hostedCloud' can't be null";
@@ -512,7 +512,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets enterpriseRouterId
-    *  资源ID标识符。
+    *  企业路由器的ID。
     *
     * @return string
     */
@@ -524,7 +524,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets enterpriseRouterId
     *
-    * @param string $enterpriseRouterId 资源ID标识符。
+    * @param string $enterpriseRouterId 企业路由器的ID。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets enterpriseRouterProjectId
-    *  实例所属项目ID。
+    *  企业路由器的项目ID。
     *
     * @return string
     */
@@ -548,7 +548,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets enterpriseRouterProjectId
     *
-    * @param string $enterpriseRouterProjectId 实例所属项目ID。
+    * @param string $enterpriseRouterProjectId 企业路由器的项目ID。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets enterpriseRouterRegionId
-    *  RegionID。
+    *  ER路由器的regionID。
     *
     * @return string
     */
@@ -572,7 +572,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets enterpriseRouterRegionId
     *
-    * @param string $enterpriseRouterRegionId RegionID。
+    * @param string $enterpriseRouterRegionId ER路由器的regionID。
     *
     * @return $this
     */
@@ -583,8 +583,32 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     }
 
     /**
+    * Gets centralNetworkPlaneId
+    *  中心网络平面ID。
+    *
+    * @return string
+    */
+    public function getCentralNetworkPlaneId()
+    {
+        return $this->container['centralNetworkPlaneId'];
+    }
+
+    /**
+    * Sets centralNetworkPlaneId
+    *
+    * @param string $centralNetworkPlaneId 中心网络平面ID。
+    *
+    * @return $this
+    */
+    public function setCentralNetworkPlaneId($centralNetworkPlaneId)
+    {
+        $this->container['centralNetworkPlaneId'] = $centralNetworkPlaneId;
+        return $this;
+    }
+
+    /**
     * Gets attachmentId
-    *  资源ID标识符。
+    *  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     *
     * @return string|null
     */
@@ -596,7 +620,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachmentId
     *
-    * @param string|null $attachmentId 资源ID标识符。
+    * @param string|null $attachmentId 中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     *
     * @return $this
     */
@@ -608,7 +632,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets enterpriseRouterTableId
-    *  资源ID标识符。
+    *  企业路由器的路由表ID。
     *
     * @return string
     */
@@ -620,7 +644,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets enterpriseRouterTableId
     *
-    * @param string $enterpriseRouterTableId 资源ID标识符。
+    * @param string $enterpriseRouterTableId 企业路由器的路由表ID。
     *
     * @return $this
     */
@@ -680,7 +704,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets attachedErId
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -692,7 +716,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachedErId
     *
-    * @param string $attachedErId 资源ID标识符。
+    * @param string $attachedErId 实例ID。
     *
     * @return $this
     */
@@ -704,7 +728,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets attachedErTableId
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -716,37 +740,13 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachedErTableId
     *
-    * @param string $attachedErTableId 资源ID标识符。
+    * @param string $attachedErTableId 实例ID。
     *
     * @return $this
     */
     public function setAttachedErTableId($attachedErTableId)
     {
         $this->container['attachedErTableId'] = $attachedErTableId;
-        return $this;
-    }
-
-    /**
-    * Gets centralNetworkPlaneId
-    *  资源ID标识符。
-    *
-    * @return string
-    */
-    public function getCentralNetworkPlaneId()
-    {
-        return $this->container['centralNetworkPlaneId'];
-    }
-
-    /**
-    * Sets centralNetworkPlaneId
-    *
-    * @param string $centralNetworkPlaneId 资源ID标识符。
-    *
-    * @return $this
-    */
-    public function setCentralNetworkPlaneId($centralNetworkPlaneId)
-    {
-        $this->container['centralNetworkPlaneId'] = $centralNetworkPlaneId;
         return $this;
     }
 

@@ -20,7 +20,7 @@ class DomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DomainId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DomainId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     *
     * @var string[]
     */
@@ -186,7 +186,7 @@ class DomainId implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -198,7 +198,7 @@ class DomainId implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enterpriseRouterId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     *
@@ -34,7 +34,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enterpriseRouterId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     *
@@ -69,7 +69,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enterpriseRouterId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     *
@@ -83,7 +83,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enterpriseRouterId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     *
@@ -97,7 +97,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enterpriseRouterId  资源ID标识符。
+    * enterpriseRouterId  企业路由器的ID。
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     *
@@ -186,11 +186,11 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
             if ((mb_strlen($this->container['enterpriseRouterId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be smaller than or equal to 36.";
             }
-            if ((mb_strlen($this->container['enterpriseRouterId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 32.";
+            if ((mb_strlen($this->container['enterpriseRouterId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', the character length must be bigger than or equal to 36.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['enterpriseRouterId'])) {
-                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['enterpriseRouterId'])) {
+                $invalidProperties[] = "invalid value for 'enterpriseRouterId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
         if ($this->container['projectId'] === null) {
             $invalidProperties[] = "'projectId' can't be null";
@@ -229,7 +229,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseRouterId
-    *  资源ID标识符。
+    *  企业路由器的ID。
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class AssociateErInstanceDocument implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseRouterId
     *
-    * @param string $enterpriseRouterId 资源ID标识符。
+    * @param string $enterpriseRouterId 企业路由器的ID。
     *
     * @return $this
     */

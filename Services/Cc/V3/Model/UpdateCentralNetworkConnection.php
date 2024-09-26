@@ -21,7 +21,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bandwidthType  bandwidthType
-    * globalConnectionBandwidthId  资源ID标识符。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     *
     * @var string[]
@@ -35,7 +35,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bandwidthType  bandwidthType
-    * globalConnectionBandwidthId  资源ID标识符。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     *
     * @var string[]
@@ -70,7 +70,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bandwidthType  bandwidthType
-    * globalConnectionBandwidthId  资源ID标识符。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     *
     * @var string[]
@@ -84,7 +84,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bandwidthType  bandwidthType
-    * globalConnectionBandwidthId  资源ID标识符。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     *
     * @var string[]
@@ -98,7 +98,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bandwidthType  bandwidthType
-    * globalConnectionBandwidthId  资源ID标识符。
+    * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthSize  带宽值定义，单位Mbps。
     *
     * @var string[]
@@ -186,11 +186,11 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
             if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) < 32)) {
-                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be bigger than or equal to 32.";
+            if (!is_null($this->container['globalConnectionBandwidthId']) && (mb_strlen($this->container['globalConnectionBandwidthId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', the character length must be bigger than or equal to 36.";
             }
-            if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['globalConnectionBandwidthId'])) {
-                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!is_null($this->container['globalConnectionBandwidthId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['globalConnectionBandwidthId'])) {
+                $invalidProperties[] = "invalid value for 'globalConnectionBandwidthId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
             if (!is_null($this->container['bandwidthSize']) && ($this->container['bandwidthSize'] > 999999)) {
                 $invalidProperties[] = "invalid value for 'bandwidthSize', must be smaller than or equal to 999999.";
@@ -238,7 +238,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets globalConnectionBandwidthId
-    *  资源ID标识符。
+    *  全域互联带宽ID。
     *
     * @return string|null
     */
@@ -250,7 +250,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Sets globalConnectionBandwidthId
     *
-    * @param string|null $globalConnectionBandwidthId 资源ID标识符。
+    * @param string|null $globalConnectionBandwidthId 全域互联带宽ID。
     *
     * @return $this
     */

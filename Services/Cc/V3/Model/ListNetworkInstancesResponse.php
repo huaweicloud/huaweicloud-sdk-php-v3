@@ -21,7 +21,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * requestId  资源ID标识符。
+    * requestId  请求ID。
     * pageInfo  pageInfo
     * networkInstances  网络实例列表。
     *
@@ -35,7 +35,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * requestId  资源ID标识符。
+    * requestId  请求ID。
     * pageInfo  pageInfo
     * networkInstances  网络实例列表。
     *
@@ -70,7 +70,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * requestId  资源ID标识符。
+    * requestId  请求ID。
     * pageInfo  pageInfo
     * networkInstances  网络实例列表。
     *
@@ -84,7 +84,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * requestId  资源ID标识符。
+    * requestId  请求ID。
     * pageInfo  pageInfo
     * networkInstances  网络实例列表。
     *
@@ -98,7 +98,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * requestId  资源ID标识符。
+    * requestId  请求ID。
     * pageInfo  pageInfo
     * networkInstances  网络实例列表。
     *
@@ -209,7 +209,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets requestId
-    *  资源ID标识符。
+    *  请求ID。
     *
     * @return string
     */
@@ -221,7 +221,7 @@ class ListNetworkInstancesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets requestId
     *
-    * @param string $requestId 资源ID标识符。
+    * @param string $requestId 请求ID。
     *
     * @return $this
     */

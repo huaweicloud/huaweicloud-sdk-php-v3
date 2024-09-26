@@ -20,10 +20,10 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
     * projectId  实例所属项目ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -72,10 +72,10 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
     * projectId  实例所属项目ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -145,10 +145,10 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
     * projectId  实例所属项目ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -197,10 +197,10 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
     * projectId  实例所属项目ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -249,10 +249,10 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  资源ID标识符。
+    * id  实例ID。
     * name  实例名字。
     * description  实例描述。不支持 <>。
-    * domainId  实例所属帐号ID。
+    * domainId  实例所属账号ID。
     * enterpriseProjectId  实例所属企业项目ID。
     * projectId  实例所属项目ID。
     * createdAt  实例创建时间。UTC时间格式，yyyy-MM-ddTHH:mm:ss。
@@ -446,14 +446,14 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-            if ((mb_strlen($this->container['id']) > 36)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['id']) > 32)) {
+                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 32.";
             }
             if ((mb_strlen($this->container['id']) < 32)) {
                 $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 32.";
             }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/", $this->container['id'])) {
-                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}|[a-fA-F0-9]{32}/.";
+            if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['id'])) {
+                $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
@@ -635,7 +635,7 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  资源ID标识符。
+    *  实例ID。
     *
     * @return string
     */
@@ -647,7 +647,7 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 资源ID标识符。
+    * @param string $id 实例ID。
     *
     * @return $this
     */
@@ -707,7 +707,7 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  实例所属帐号ID。
+    *  实例所属账号ID。
     *
     * @return string
     */
@@ -719,7 +719,7 @@ class BandwidthPackage implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string $domainId 实例所属帐号ID。
+    * @param string $domainId 实例所属账号ID。
     *
     * @return $this
     */

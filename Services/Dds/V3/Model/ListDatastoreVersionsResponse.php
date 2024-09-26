@@ -21,7 +21,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * versions  数据库版本。支持3.4、3.2和4.0版本。
+    * versions  数据库版本。支持3.4及以上版本。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * versions  数据库版本。支持3.4、3.2和4.0版本。
+    * versions  数据库版本。支持3.4及以上版本。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * versions  数据库版本。支持3.4、3.2和4.0版本。
+    * versions  数据库版本。支持3.4及以上版本。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * versions  数据库版本。支持3.4、3.2和4.0版本。
+    * versions  数据库版本。支持3.4及以上版本。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * versions  数据库版本。支持3.4、3.2和4.0版本。
+    * versions  数据库版本。支持3.4及以上版本。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets versions
-    *  数据库版本。支持3.4、3.2和4.0版本。
+    *  数据库版本。支持3.4及以上版本。
     *
     * @return string[]|null
     */
@@ -187,7 +187,7 @@ class ListDatastoreVersionsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets versions
     *
-    * @param string[]|null $versions 数据库版本。支持3.4、3.2和4.0版本。
+    * @param string[]|null $versions 数据库版本。支持3.4及以上版本。
     *
     * @return $this
     */

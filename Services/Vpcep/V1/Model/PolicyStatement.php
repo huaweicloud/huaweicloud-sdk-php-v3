@@ -20,7 +20,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * effect  - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -34,7 +34,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * effect  - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -69,7 +69,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * effect  - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -83,7 +83,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * effect  - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -97,7 +97,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * effect  - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    * effect  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     * action  obs访问权限
     * resource  obs对象
     *
@@ -228,7 +228,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
 
     /**
     * Gets effect
-    *  - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    *  - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     *
     * @return string
     */
@@ -240,7 +240,7 @@ class PolicyStatement implements ModelInterface, ArrayAccess
     /**
     * Sets effect
     *
-    * @param string $effect - Allow,允许控制访问权限 - Deny,拒绝控制访问权限
+    * @param string $effect - Allow，允许控制访问权限 - Deny，拒绝控制访问权限
     *
     * @return $this
     */
