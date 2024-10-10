@@ -25,6 +25,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
+    * interactionConfig  interactionConfig
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
@@ -54,6 +55,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'roomDescription' => 'string',
             'roomType' => 'string',
             'sceneScripts' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveVideoScriptInfo[]',
+            'interactionConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionConfig',
             'interactionRules' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionRuleInfo[]',
             'playPolicy' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlayPolicy',
             'videoConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\VideoConfig',
@@ -83,6 +85,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
+    * interactionConfig  interactionConfig
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
@@ -112,6 +115,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         'roomDescription' => null,
         'roomType' => null,
         'sceneScripts' => null,
+        'interactionConfig' => null,
         'interactionRules' => null,
         'playPolicy' => null,
         'videoConfig' => null,
@@ -162,6 +166,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
+    * interactionConfig  interactionConfig
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
@@ -191,6 +196,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'roomDescription' => 'room_description',
             'roomType' => 'room_type',
             'sceneScripts' => 'scene_scripts',
+            'interactionConfig' => 'interaction_config',
             'interactionRules' => 'interaction_rules',
             'playPolicy' => 'play_policy',
             'videoConfig' => 'video_config',
@@ -220,6 +226,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
+    * interactionConfig  interactionConfig
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
@@ -249,6 +256,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'roomDescription' => 'setRoomDescription',
             'roomType' => 'setRoomType',
             'sceneScripts' => 'setSceneScripts',
+            'interactionConfig' => 'setInteractionConfig',
             'interactionRules' => 'setInteractionRules',
             'playPolicy' => 'setPlayPolicy',
             'videoConfig' => 'setVideoConfig',
@@ -278,6 +286,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * roomDescription  **参数解释**： 直播间描述。 **约束限制**： 不涉及。 **取值范围**： 字符长度0-1024位。 **默认取值**： 不涉及。
     * roomType  **参数解释**： 直播间类型。 **约束限制**： 不涉及。 **取值范围**： * NORMAL：普通直播间，直播间一直存在，可以反复开播 * TEMP：临时直播间，直播任务结束后自动清理直播间。 * TEMPLATE：直播间模板。
     * sceneScripts  默认直播剧本列表。
+    * interactionConfig  interactionConfig
     * interactionRules  互动规则列表
     * playPolicy  playPolicy
     * videoConfig  videoConfig
@@ -307,6 +316,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'roomDescription' => 'getRoomDescription',
             'roomType' => 'getRoomType',
             'sceneScripts' => 'getSceneScripts',
+            'interactionConfig' => 'getInteractionConfig',
             'interactionRules' => 'getInteractionRules',
             'playPolicy' => 'getPlayPolicy',
             'videoConfig' => 'getVideoConfig',
@@ -441,6 +451,7 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         $this->container['roomDescription'] = isset($data['roomDescription']) ? $data['roomDescription'] : null;
         $this->container['roomType'] = isset($data['roomType']) ? $data['roomType'] : null;
         $this->container['sceneScripts'] = isset($data['sceneScripts']) ? $data['sceneScripts'] : null;
+        $this->container['interactionConfig'] = isset($data['interactionConfig']) ? $data['interactionConfig'] : null;
         $this->container['interactionRules'] = isset($data['interactionRules']) ? $data['interactionRules'] : null;
         $this->container['playPolicy'] = isset($data['playPolicy']) ? $data['playPolicy'] : null;
         $this->container['videoConfig'] = isset($data['videoConfig']) ? $data['videoConfig'] : null;
@@ -666,6 +677,30 @@ class UpdateSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     public function setSceneScripts($sceneScripts)
     {
         $this->container['sceneScripts'] = $sceneScripts;
+        return $this;
+    }
+
+    /**
+    * Gets interactionConfig
+    *  interactionConfig
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionConfig|null
+    */
+    public function getInteractionConfig()
+    {
+        return $this->container['interactionConfig'];
+    }
+
+    /**
+    * Sets interactionConfig
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\LiveRoomInteractionConfig|null $interactionConfig interactionConfig
+    *
+    * @return $this
+    */
+    public function setInteractionConfig($interactionConfig)
+    {
+        $this->container['interactionConfig'] = $interactionConfig;
         return $this;
     }
 

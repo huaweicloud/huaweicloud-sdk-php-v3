@@ -22,7 +22,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  查询结果id
-    * status  查询状态
+    * status  查询状态 pending：处理中 failed：失败 success：成功
     * jobId  任务ID
     *
     * @var string[]
@@ -36,7 +36,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  查询结果id
-    * status  查询状态
+    * status  查询状态 pending：处理中 failed：失败 success：成功
     * jobId  任务ID
     *
     * @var string[]
@@ -71,7 +71,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  查询结果id
-    * status  查询状态
+    * status  查询状态 pending：处理中 failed：失败 success：成功
     * jobId  任务ID
     *
     * @var string[]
@@ -85,7 +85,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  查询结果id
-    * status  查询状态
+    * status  查询状态 pending：处理中 failed：失败 success：成功
     * jobId  任务ID
     *
     * @var string[]
@@ -99,7 +99,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  查询结果id
-    * status  查询状态
+    * status  查询状态 pending：处理中 failed：失败 success：成功
     * jobId  任务ID
     *
     * @var string[]
@@ -246,7 +246,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  查询状态
+    *  查询状态 pending：处理中 failed：失败 success：成功
     *
     * @return string|null
     */
@@ -258,7 +258,7 @@ class UpdateDataProgressResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 查询状态
+    * @param string|null $status 查询状态 pending：处理中 failed：失败 success：成功
     *
     * @return $this
     */

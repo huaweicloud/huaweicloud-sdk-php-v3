@@ -26,6 +26,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
+    * systemProperties  **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
@@ -40,6 +41,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReviewConfig',
             'tags' => 'string[]',
             'assetExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetExtraMeta',
+            'systemProperties' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]',
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\AssetSharedConfig',
             'isNeedGenerateCover' => 'bool',
             'assetOrder' => 'int',
@@ -54,6 +56,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
+    * systemProperties  **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
@@ -68,6 +71,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         'reviewConfig' => null,
         'tags' => null,
         'assetExtraMeta' => null,
+        'systemProperties' => null,
         'sharedConfig' => null,
         'isNeedGenerateCover' => null,
         'assetOrder' => 'int32',
@@ -103,6 +107,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
+    * systemProperties  **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
@@ -117,6 +122,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => 'review_config',
             'tags' => 'tags',
             'assetExtraMeta' => 'asset_extra_meta',
+            'systemProperties' => 'system_properties',
             'sharedConfig' => 'shared_config',
             'isNeedGenerateCover' => 'is_need_generate_cover',
             'assetOrder' => 'asset_order',
@@ -131,6 +137,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
+    * systemProperties  **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
@@ -145,6 +152,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => 'setReviewConfig',
             'tags' => 'setTags',
             'assetExtraMeta' => 'setAssetExtraMeta',
+            'systemProperties' => 'setSystemProperties',
             'sharedConfig' => 'setSharedConfig',
             'isNeedGenerateCover' => 'setIsNeedGenerateCover',
             'assetOrder' => 'setAssetOrder',
@@ -159,6 +167,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     * reviewConfig  reviewConfig
     * tags  **参数解释**： 标签列表。 > 分身形象系统资产的tag定义如下： > - 行业：NEWS,BUSINESS,E_COMMERCE,MARKETING,KNOWLEDGE,EDUCATION,MEDICAL,SPORTS > - 性别：MALE,FEMALE > - 姿势：FULL_BODY,HALF_BODY,STANDING,SITTING,FRONT_PHOTO,SIDE_PHOTO > - 区域：ASIAN,WESTERN,MIDDLE_EASTERNER,AFRICAN,LATINO  **约束限制**： 不涉及 **取值范围**： 标签个数最大为50个。 标签内容为中英文，字符长度0-128位。 **默认取值**： 不涉及
     * assetExtraMeta  assetExtraMeta
+    * systemProperties  **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
     * sharedConfig  sharedConfig
     * isNeedGenerateCover  **参数解释**： 是否需要生成封面。 **约束限制**： 仅用于视频类资产。 **取值范围**： * true：自动生成封面。 * false：不自动生成封面。
     * assetOrder  **参数解释**： 用于console控制台展示顺序。 如果取值相同，则默认最新的排在前面。 **约束限制**： 不涉及 **默认取值**： 不涉及
@@ -173,6 +182,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
             'reviewConfig' => 'getReviewConfig',
             'tags' => 'getTags',
             'assetExtraMeta' => 'getAssetExtraMeta',
+            'systemProperties' => 'getSystemProperties',
             'sharedConfig' => 'getSharedConfig',
             'isNeedGenerateCover' => 'getIsNeedGenerateCover',
             'assetOrder' => 'getAssetOrder',
@@ -282,6 +292,7 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
         $this->container['reviewConfig'] = isset($data['reviewConfig']) ? $data['reviewConfig'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['assetExtraMeta'] = isset($data['assetExtraMeta']) ? $data['assetExtraMeta'] : null;
+        $this->container['systemProperties'] = isset($data['systemProperties']) ? $data['systemProperties'] : null;
         $this->container['sharedConfig'] = isset($data['sharedConfig']) ? $data['sharedConfig'] : null;
         $this->container['isNeedGenerateCover'] = isset($data['isNeedGenerateCover']) ? $data['isNeedGenerateCover'] : null;
         $this->container['assetOrder'] = isset($data['assetOrder']) ? $data['assetOrder'] : null;
@@ -483,6 +494,30 @@ class CreateDigitalAssetRequestBody implements ModelInterface, ArrayAccess
     public function setAssetExtraMeta($assetExtraMeta)
     {
         $this->container['assetExtraMeta'] = $assetExtraMeta;
+        return $this;
+    }
+
+    /**
+    * Gets systemProperties
+    *  **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]|null
+    */
+    public function getSystemProperties()
+    {
+        return $this->container['systemProperties'];
+    }
+
+    /**
+    * Sets systemProperties
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SystemProperty[]|null $systemProperties **参数解释**： 设置系统属性。内部参数，普通用户无需设置。 **约束限制**： 不涉及 **取值范围**： 个数最大为50个。 **默认取值**： 不涉及
+    *
+    * @return $this
+    */
+    public function setSystemProperties($systemProperties)
+    {
+        $this->container['systemProperties'] = $systemProperties;
         return $this;
     }
 

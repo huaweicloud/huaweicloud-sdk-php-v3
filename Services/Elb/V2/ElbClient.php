@@ -2379,6 +2379,9 @@ class ElbClient extends Client
         if ($localVarParams['weight'] !== null) {
             $queryParams['weight'] = $localVarParams['weight'];
         }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
         if ($localVarParams['poolId'] !== null) {
             $pathParams['pool_id'] = $localVarParams['poolId'];
         }

@@ -29,6 +29,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * playType  回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyAudios' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ReplyAudioInfo[]',
             'replyOrder' => 'string',
             'replyRole' => 'string',
-            'robotId' => 'string'
+            'robotId' => 'string',
+            'playType' => 'string'
     ];
 
     /**
@@ -55,6 +57,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * playType  回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         'replyAudios' => null,
         'replyOrder' => null,
         'replyRole' => null,
-        'robotId' => null
+        'robotId' => null,
+        'playType' => null
     ];
 
     /**
@@ -102,6 +106,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * playType  回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyAudios' => 'reply_audios',
             'replyOrder' => 'reply_order',
             'replyRole' => 'reply_role',
-            'robotId' => 'robot_id'
+            'robotId' => 'robot_id',
+            'playType' => 'play_type'
     ];
 
     /**
@@ -128,6 +134,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * playType  回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyAudios' => 'setReplyAudios',
             'replyOrder' => 'setReplyOrder',
             'replyRole' => 'setReplyRole',
-            'robotId' => 'setRobotId'
+            'robotId' => 'setRobotId',
+            'playType' => 'setPlayType'
     ];
 
     /**
@@ -154,6 +162,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     * replyOrder  **参数解释**： 回复话术选择次序。 **约束限制**： 不涉及 **取值范围**： * RANDOM：随机 * ORDER：顺序循环  **默认取值**： 不涉及
     * replyRole  **参数解释**： 回复角色。 **约束限制**： 不涉及 **取值范围**： * STREAMER：主播 * CO_STREAMER：助播，仅声音。
     * robotId  **参数解释**： 机器人ID。 **约束限制**： reply_mode为INTELLIGENT_REPLY时必填，智能交互配置的大模型机器人ID。 获取方法请参考[创建应用](CreateRobot.xml)。 **取值范围**： 字符长度0-64位。 **默认取值**： 不涉及
+    * playType  回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             'replyAudios' => 'getReplyAudios',
             'replyOrder' => 'getReplyOrder',
             'replyRole' => 'getReplyRole',
-            'robotId' => 'getRobotId'
+            'robotId' => 'getRobotId',
+            'playType' => 'getPlayType'
     ];
 
     /**
@@ -217,6 +227,9 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     const REPLY_ORDER_ORDER = 'ORDER';
     const REPLY_ROLE_STREAMER = 'STREAMER';
     const REPLY_ROLE_CO_STREAMER = 'CO_STREAMER';
+    const PLAY_TYPE_APPEND = 'APPEND';
+    const PLAY_TYPE_INSERT = 'INSERT';
+    const PLAY_TYPE_PLAY_NOW = 'PLAY_NOW';
     
 
     /**
@@ -260,6 +273,20 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getPlayTypeAllowableValues()
+    {
+        return [
+            self::PLAY_TYPE_APPEND,
+            self::PLAY_TYPE_INSERT,
+            self::PLAY_TYPE_PLAY_NOW,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -285,6 +312,7 @@ class TriggerProcess implements ModelInterface, ArrayAccess
         $this->container['replyOrder'] = isset($data['replyOrder']) ? $data['replyOrder'] : null;
         $this->container['replyRole'] = isset($data['replyRole']) ? $data['replyRole'] : null;
         $this->container['robotId'] = isset($data['robotId']) ? $data['robotId'] : null;
+        $this->container['playType'] = isset($data['playType']) ? $data['playType'] : null;
     }
 
     /**
@@ -348,6 +376,20 @@ class TriggerProcess implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['robotId']) && (mb_strlen($this->container['robotId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'robotId', the character length must be bigger than or equal to 0.";
+            }
+            $allowedValues = $this->getPlayTypeAllowableValues();
+                if (!is_null($this->container['playType']) && !in_array($this->container['playType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'playType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['playType']) && (mb_strlen($this->container['playType']) > 32)) {
+                $invalidProperties[] = "invalid value for 'playType', the character length must be smaller than or equal to 32.";
+            }
+            if (!is_null($this->container['playType']) && (mb_strlen($this->container['playType']) < 0)) {
+                $invalidProperties[] = "invalid value for 'playType', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -576,6 +618,30 @@ class TriggerProcess implements ModelInterface, ArrayAccess
     public function setRobotId($robotId)
     {
         $this->container['robotId'] = $robotId;
+        return $this;
+    }
+
+    /**
+    * Gets playType
+    *  回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
+    *
+    * @return string|null
+    */
+    public function getPlayType()
+    {
+        return $this->container['playType'];
+    }
+
+    /**
+    * Sets playType
+    *
+    * @param string|null $playType 回复播放类型。 - APPEND：追加，放置在场景播放队列尾部 - INSERT： 插入，在两个音频文件，或者文本句末添加。 - PLAY_NOW : 立即插入，收到指令后，立即播放，无需等待句末。
+    *
+    * @return $this
+    */
+    public function setPlayType($playType)
+    {
+        $this->container['playType'] = $playType;
         return $this;
     }
 

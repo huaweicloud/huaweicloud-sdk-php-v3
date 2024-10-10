@@ -29,7 +29,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * provider  参数解释：负载均衡器的生产者名称。固定为vlb，无需指定。
     * l4FlavorId  参数解释：网络型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor（默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
     * l7FlavorId  参数解释：应用型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
-    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     * vpcId  参数解释：负载均衡器所在的VPC ID。  约束限制: - 参数获取，可以通过 GET https://{VPC_Endpoint}/v1/{project_id}/vpcs 响应参数中的id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。  取值范围： 标准的UUID格式，长度为36个字符。
     * availabilityZoneList  参数解释：负载均衡器实例所在的可用区列表。  约束限制： - 可通过GET https://{ELB_Endponit}/v3/{project_id}/elb/availability-zones 接口来查询可用区集合列表。创建负载均衡器时，从查询结果选择某一个可用区集合，并从中选择一个或多个可用区。  >为了支持可用区容灾，建议选取不少于2个可用区。
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -95,7 +95,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * provider  参数解释：负载均衡器的生产者名称。固定为vlb，无需指定。
     * l4FlavorId  参数解释：网络型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor（默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
     * l7FlavorId  参数解释：应用型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
-    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     * vpcId  参数解释：负载均衡器所在的VPC ID。  约束限制: - 参数获取，可以通过 GET https://{VPC_Endpoint}/v1/{project_id}/vpcs 响应参数中的id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。  取值范围： 标准的UUID格式，长度为36个字符。
     * availabilityZoneList  参数解释：负载均衡器实例所在的可用区列表。  约束限制： - 可通过GET https://{ELB_Endponit}/v3/{project_id}/elb/availability-zones 接口来查询可用区集合列表。创建负载均衡器时，从查询结果选择某一个可用区集合，并从中选择一个或多个可用区。  >为了支持可用区容灾，建议选取不少于2个可用区。
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -182,7 +182,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * provider  参数解释：负载均衡器的生产者名称。固定为vlb，无需指定。
     * l4FlavorId  参数解释：网络型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor（默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
     * l7FlavorId  参数解释：应用型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
-    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     * vpcId  参数解释：负载均衡器所在的VPC ID。  约束限制: - 参数获取，可以通过 GET https://{VPC_Endpoint}/v1/{project_id}/vpcs 响应参数中的id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。  取值范围： 标准的UUID格式，长度为36个字符。
     * availabilityZoneList  参数解释：负载均衡器实例所在的可用区列表。  约束限制： - 可通过GET https://{ELB_Endponit}/v3/{project_id}/elb/availability-zones 接口来查询可用区集合列表。创建负载均衡器时，从查询结果选择某一个可用区集合，并从中选择一个或多个可用区。  >为了支持可用区容灾，建议选取不少于2个可用区。
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -248,7 +248,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * provider  参数解释：负载均衡器的生产者名称。固定为vlb，无需指定。
     * l4FlavorId  参数解释：网络型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor（默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
     * l7FlavorId  参数解释：应用型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
-    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     * vpcId  参数解释：负载均衡器所在的VPC ID。  约束限制: - 参数获取，可以通过 GET https://{VPC_Endpoint}/v1/{project_id}/vpcs 响应参数中的id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。  取值范围： 标准的UUID格式，长度为36个字符。
     * availabilityZoneList  参数解释：负载均衡器实例所在的可用区列表。  约束限制： - 可通过GET https://{ELB_Endponit}/v3/{project_id}/elb/availability-zones 接口来查询可用区集合列表。创建负载均衡器时，从查询结果选择某一个可用区集合，并从中选择一个或多个可用区。  >为了支持可用区容灾，建议选取不少于2个可用区。
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -314,7 +314,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     * provider  参数解释：负载均衡器的生产者名称。固定为vlb，无需指定。
     * l4FlavorId  参数解释：网络型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L4 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor（默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L4，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L4_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l4_flavor_id。](tag:hws_eu) [只支持设置为l4_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
     * l7FlavorId  参数解释：应用型规格ID。  约束限制： [- 可以通过GET https://{ELB_Endpoint}/v3/{project_id}/elb/flavors?type=L7 响应参数中的id得到。 - 当l4_flavor_id和l7_flavor_id都不传的时，会使用默认flavor （默认flavor根据不同局点有所不同，具体以实际值为准）。 - 当传入的规格类型为L7，表示该实例为固定规格实例，按规格计费。 - 当传入的规格类型为L7_elastic_max，表示该实例为弹性实例，按LCU计费。](tag:hws,hws_hk,hws_eu,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb)   [网关型LB不支持指定l7_flavor_id。](tag:hws_eu) [只支持设置为l7_flavor.elb.shared。](tag:hcso_dt) [所有LB实例共享带宽，该字段无效，请勿使用。](tag:hcso,hk_vdf,fcs,fcs_vm,mix,hcso_g42,hcso_g42_b)  取值范围： 标准的UUID格式，长度为36个字符。
-    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    * guaranteed  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     * vpcId  参数解释：负载均衡器所在的VPC ID。  约束限制: - 参数获取，可以通过 GET https://{VPC_Endpoint}/v1/{project_id}/vpcs 响应参数中的id得到。 - vpc_id，vip_subnet_cidr_id，ipv6_vip_virsubnet_id不能同时为空，且需要在同一个vpc下。  取值范围： 标准的UUID格式，长度为36个字符。
     * availabilityZoneList  参数解释：负载均衡器实例所在的可用区列表。  约束限制： - 可通过GET https://{ELB_Endponit}/v3/{project_id}/elb/availability-zones 接口来查询可用区集合列表。创建负载均衡器时，从查询结果选择某一个可用区集合，并从中选择一个或多个可用区。  >为了支持可用区容灾，建议选取不少于2个可用区。
     * enterpriseProjectId  参数解释：负载均衡器所属的企业项目ID。  约束限制：不能传入\"\"、\"0\"或不存在的企业项目ID，创建时不传则资源属于default企业项目，默认返回\"0\"。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
@@ -839,7 +839,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets guaranteed
-    *  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    *  参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     *
     * @return bool|null
     */
@@ -851,7 +851,7 @@ class CreateLoadBalancerOption implements ModelInterface, ArrayAccess
     /**
     * Sets guaranteed
     *
-    * @param bool|null $guaranteed 参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围：布尔类型。 - true：独享型。 - false：共享型。  默认取值：true。
+    * @param bool|null $guaranteed 参数解释：是否为独享型负载均衡器实例。  约束限制：当前只支持设置为true，设置为false会返回400 Bad Request。  取值范围： - true：独享型。 - false：共享型。  默认取值：true。
     *
     * @return $this
     */

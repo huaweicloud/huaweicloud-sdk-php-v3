@@ -20,7 +20,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * minimumHealthyMemberCount  当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    * minimumHealthyMemberCount  参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * minimumHealthyMemberCount  当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    * minimumHealthyMemberCount  参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * minimumHealthyMemberCount  当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    * minimumHealthyMemberCount  参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * minimumHealthyMemberCount  当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    * minimumHealthyMemberCount  参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * minimumHealthyMemberCount  当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    * minimumHealthyMemberCount  参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
 
     /**
     * Gets minimumHealthyMemberCount
-    *  当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    *  参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @return int|null
     */
@@ -186,7 +186,7 @@ class PoolHealth implements ModelInterface, ArrayAccess
     /**
     * Sets minimumHealthyMemberCount
     *
-    * @param int|null $minimumHealthyMemberCount 当健康检查在线的member个数小于该个数，判定pool的state为不健康； 取值范围：0或者1； 0：默认值，不生效； 1：全下线转发生效；
+    * @param int|null $minimumHealthyMemberCount 参数解释：当健康检查在线的member个数小于该个数，判定pool的state为不健康。  取值范围： - 0：默认值，不生效。 - 1：全下线转发生效。
     *
     * @return $this
     */

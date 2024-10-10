@@ -30,6 +30,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     * isSupportVoiceCache  是否支持缓存。
+    * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportSsmlSayAs' => 'bool',
             'isSupportSsmlSub' => 'bool',
             'isSupportWord' => 'bool',
-            'isSupportVoiceCache' => 'bool'
+            'isSupportVoiceCache' => 'bool',
+            'conversionRate' => 'float',
+            'conversionRateEn' => 'float'
     ];
 
     /**
@@ -58,6 +62,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     * isSupportVoiceCache  是否支持缓存。
+    * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class VoiceCapability implements ModelInterface, ArrayAccess
         'isSupportSsmlSayAs' => null,
         'isSupportSsmlSub' => null,
         'isSupportWord' => null,
-        'isSupportVoiceCache' => null
+        'isSupportVoiceCache' => null,
+        'conversionRate' => 'float',
+        'conversionRateEn' => 'float'
     ];
 
     /**
@@ -107,6 +115,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     * isSupportVoiceCache  是否支持缓存。
+    * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportSsmlSayAs' => 'is_support_ssml_say_as',
             'isSupportSsmlSub' => 'is_support_ssml_sub',
             'isSupportWord' => 'is_support_word',
-            'isSupportVoiceCache' => 'is_support_voice_cache'
+            'isSupportVoiceCache' => 'is_support_voice_cache',
+            'conversionRate' => 'conversion_rate',
+            'conversionRateEn' => 'conversion_rate_en'
     ];
 
     /**
@@ -135,6 +147,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     * isSupportVoiceCache  是否支持缓存。
+    * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportSsmlSayAs' => 'setIsSupportSsmlSayAs',
             'isSupportSsmlSub' => 'setIsSupportSsmlSub',
             'isSupportWord' => 'setIsSupportWord',
-            'isSupportVoiceCache' => 'setIsSupportVoiceCache'
+            'isSupportVoiceCache' => 'setIsSupportVoiceCache',
+            'conversionRate' => 'setConversionRate',
+            'conversionRateEn' => 'setConversionRateEn'
     ];
 
     /**
@@ -163,6 +179,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportSsmlSub  **参数解释**： 该声音是否支持SSML的sub标签。 **约束限制**： 不涉及 **取值范围**： * true: 支持SSML的sub标签 * false: 不支持SSML的sub标签
     * isSupportWord  **参数解释**： 该声音是否支持连读。 **约束限制**： 不涉及 **取值范围**： * true: 支持连读 * false: 不支持连读
     * isSupportVoiceCache  是否支持缓存。
+    * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportSsmlSayAs' => 'getIsSupportSsmlSayAs',
             'isSupportSsmlSub' => 'getIsSupportSsmlSub',
             'isSupportWord' => 'getIsSupportWord',
-            'isSupportVoiceCache' => 'getIsSupportVoiceCache'
+            'isSupportVoiceCache' => 'getIsSupportVoiceCache',
+            'conversionRate' => 'getConversionRate',
+            'conversionRateEn' => 'getConversionRateEn'
     ];
 
     /**
@@ -247,6 +267,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
         $this->container['isSupportSsmlSub'] = isset($data['isSupportSsmlSub']) ? $data['isSupportSsmlSub'] : null;
         $this->container['isSupportWord'] = isset($data['isSupportWord']) ? $data['isSupportWord'] : null;
         $this->container['isSupportVoiceCache'] = isset($data['isSupportVoiceCache']) ? $data['isSupportVoiceCache'] : null;
+        $this->container['conversionRate'] = isset($data['conversionRate']) ? $data['conversionRate'] : null;
+        $this->container['conversionRateEn'] = isset($data['conversionRateEn']) ? $data['conversionRateEn'] : null;
     }
 
     /**
@@ -257,6 +279,18 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['conversionRate']) && ($this->container['conversionRate'] > 5E+1)) {
+                $invalidProperties[] = "invalid value for 'conversionRate', must be smaller than or equal to 5E+1.";
+            }
+            if (!is_null($this->container['conversionRate']) && ($this->container['conversionRate'] < 0)) {
+                $invalidProperties[] = "invalid value for 'conversionRate', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['conversionRateEn']) && ($this->container['conversionRateEn'] > 5E+1)) {
+                $invalidProperties[] = "invalid value for 'conversionRateEn', must be smaller than or equal to 5E+1.";
+            }
+            if (!is_null($this->container['conversionRateEn']) && ($this->container['conversionRateEn'] < 0)) {
+                $invalidProperties[] = "invalid value for 'conversionRateEn', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -508,6 +542,54 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     public function setIsSupportVoiceCache($isSupportVoiceCache)
     {
         $this->container['isSupportVoiceCache'] = $isSupportVoiceCache;
+        return $this;
+    }
+
+    /**
+    * Gets conversionRate
+    *  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    *
+    * @return float|null
+    */
+    public function getConversionRate()
+    {
+        return $this->container['conversionRate'];
+    }
+
+    /**
+    * Sets conversionRate
+    *
+    * @param float|null $conversionRate **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    *
+    * @return $this
+    */
+    public function setConversionRate($conversionRate)
+    {
+        $this->container['conversionRate'] = $conversionRate;
+        return $this;
+    }
+
+    /**
+    * Gets conversionRateEn
+    *  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    *
+    * @return float|null
+    */
+    public function getConversionRateEn()
+    {
+        return $this->container['conversionRateEn'];
+    }
+
+    /**
+    * Sets conversionRateEn
+    *
+    * @param float|null $conversionRateEn **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    *
+    * @return $this
+    */
+    public function setConversionRateEn($conversionRateEn)
+    {
+        $this->container['conversionRateEn'] = $conversionRateEn;
         return $this;
     }
 

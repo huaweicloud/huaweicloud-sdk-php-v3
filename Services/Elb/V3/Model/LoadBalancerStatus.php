@@ -23,7 +23,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     * listeners  负载均衡器关联的监听器列表。
-    * pools  负载均衡器关联的后端云服务器组列表。
+    * pools  负载均衡器关联的后端服务器组列表。
     * id  负载均衡器ID。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：创建时默认状态，表示负载均衡器正常运行。 - FROZEN：已冻结。 - DEGRADED：负载均衡器下存在member的operating_status为OFFLINE时返回这个状态。 - DISABLED：负载均衡器的admin_state_up属性值为false。  说明：DEGRADED和DISABLED状态仅在当前接口中返回，LB详情等其他接口不返回这两个状态值。
     *
@@ -43,7 +43,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     * listeners  负载均衡器关联的监听器列表。
-    * pools  负载均衡器关联的后端云服务器组列表。
+    * pools  负载均衡器关联的后端服务器组列表。
     * id  负载均衡器ID。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：创建时默认状态，表示负载均衡器正常运行。 - FROZEN：已冻结。 - DEGRADED：负载均衡器下存在member的operating_status为OFFLINE时返回这个状态。 - DISABLED：负载均衡器的admin_state_up属性值为false。  说明：DEGRADED和DISABLED状态仅在当前接口中返回，LB详情等其他接口不返回这两个状态值。
     *
@@ -84,7 +84,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     * listeners  负载均衡器关联的监听器列表。
-    * pools  负载均衡器关联的后端云服务器组列表。
+    * pools  负载均衡器关联的后端服务器组列表。
     * id  负载均衡器ID。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：创建时默认状态，表示负载均衡器正常运行。 - FROZEN：已冻结。 - DEGRADED：负载均衡器下存在member的operating_status为OFFLINE时返回这个状态。 - DISABLED：负载均衡器的admin_state_up属性值为false。  说明：DEGRADED和DISABLED状态仅在当前接口中返回，LB详情等其他接口不返回这两个状态值。
     *
@@ -104,7 +104,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     * listeners  负载均衡器关联的监听器列表。
-    * pools  负载均衡器关联的后端云服务器组列表。
+    * pools  负载均衡器关联的后端服务器组列表。
     * id  负载均衡器ID。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：创建时默认状态，表示负载均衡器正常运行。 - FROZEN：已冻结。 - DEGRADED：负载均衡器下存在member的operating_status为OFFLINE时返回这个状态。 - DISABLED：负载均衡器的admin_state_up属性值为false。  说明：DEGRADED和DISABLED状态仅在当前接口中返回，LB详情等其他接口不返回这两个状态值。
     *
@@ -124,7 +124,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
     * name  负载均衡器名称。
     * provisioningStatus  负载均衡器的配置状态。  取值： - ACTIVE：使用中。 - PENDING_DELETE：删除中。
     * listeners  负载均衡器关联的监听器列表。
-    * pools  负载均衡器关联的后端云服务器组列表。
+    * pools  负载均衡器关联的后端服务器组列表。
     * id  负载均衡器ID。
     * operatingStatus  负载均衡器的操作状态。  取值： - ONLINE：创建时默认状态，表示负载均衡器正常运行。 - FROZEN：已冻结。 - DEGRADED：负载均衡器下存在member的operating_status为OFFLINE时返回这个状态。 - DISABLED：负载均衡器的admin_state_up属性值为false。  说明：DEGRADED和DISABLED状态仅在当前接口中返回，LB详情等其他接口不返回这两个状态值。
     *
@@ -325,7 +325,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
 
     /**
     * Gets pools
-    *  负载均衡器关联的后端云服务器组列表。
+    *  负载均衡器关联的后端服务器组列表。
     *
     * @return \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPool[]
     */
@@ -337,7 +337,7 @@ class LoadBalancerStatus implements ModelInterface, ArrayAccess
     /**
     * Sets pools
     *
-    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPool[] $pools 负载均衡器关联的后端云服务器组列表。
+    * @param \HuaweiCloud\SDK\Elb\V3\Model\LoadBalancerStatusPool[] $pools 负载均衡器关联的后端服务器组列表。
     *
     * @return $this
     */

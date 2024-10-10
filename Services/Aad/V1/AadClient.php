@@ -538,6 +538,71 @@ class AadClient extends Client
     }
 
     /**
+     * 策略和防护包绑定防护对象
+     *
+     * 策略和防护包绑定防护对象
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateIpToPolicyAndPackage($request)
+    {
+        return $this->associateIpToPolicyAndPackageWithHttpInfo($request);
+    }
+
+    public function associateIpToPolicyAndPackageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/cnad/policies/{policy_id}/bind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\AssociateIpToPolicyAndPackageResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\AssociateIpToPolicyAndPackageRequest');
+    }
+
+    /**
      * 批量创建高防实例IP的转发规则
      *
      * 批量创建高防实例IP的转发规则
@@ -1108,6 +1173,71 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V1\Model\DisassociateIpFromPolicyResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V1\Model\DisassociateIpFromPolicyRequest');
+    }
+
+    /**
+     * 策略和防护包解绑防护对象
+     *
+     * 策略和防护包解绑防护对象
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateIpFromPolicyAndPackage($request)
+    {
+        return $this->disassociateIpFromPolicyAndPackageWithHttpInfo($request);
+    }
+
+    public function disassociateIpFromPolicyAndPackageWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/cnad/policies/{policy_id}/unbind';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['policyId'] !== null) {
+            $pathParams['policy_id'] = $localVarParams['policyId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V1\Model\DisassociateIpFromPolicyAndPackageResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V1\Model\DisassociateIpFromPolicyAndPackageRequest');
     }
 
     /**

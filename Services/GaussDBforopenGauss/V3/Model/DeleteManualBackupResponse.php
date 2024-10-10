@@ -21,20 +21,26 @@ class DeleteManualBackupResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'backupId' => 'string',
+            'backupName' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'backupId' => null,
+        'backupName' => null
     ];
 
     /**
@@ -60,29 +66,38 @@ class DeleteManualBackupResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'backupId' => 'backup_id',
+            'backupName' => 'backup_name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $setters = [
+            'backupId' => 'setBackupId',
+            'backupName' => 'setBackupName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * backupId  备份ID。
+    * backupName  备份名称。
     *
     * @var string[]
     */
     protected static $getters = [
+            'backupId' => 'getBackupId',
+            'backupName' => 'getBackupName'
     ];
 
     /**
@@ -143,6 +158,8 @@ class DeleteManualBackupResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['backupId'] = isset($data['backupId']) ? $data['backupId'] : null;
+        $this->container['backupName'] = isset($data['backupName']) ? $data['backupName'] : null;
     }
 
     /**
@@ -165,6 +182,54 @@ class DeleteManualBackupResponse implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets backupId
+    *  备份ID。
+    *
+    * @return string|null
+    */
+    public function getBackupId()
+    {
+        return $this->container['backupId'];
+    }
+
+    /**
+    * Sets backupId
+    *
+    * @param string|null $backupId 备份ID。
+    *
+    * @return $this
+    */
+    public function setBackupId($backupId)
+    {
+        $this->container['backupId'] = $backupId;
+        return $this;
+    }
+
+    /**
+    * Gets backupName
+    *  备份名称。
+    *
+    * @return string|null
+    */
+    public function getBackupName()
+    {
+        return $this->container['backupName'];
+    }
+
+    /**
+    * Sets backupName
+    *
+    * @param string|null $backupName 备份名称。
+    *
+    * @return $this
+    */
+    public function setBackupName($backupName)
+    {
+        $this->container['backupName'] = $backupName;
+        return $this;
     }
 
     /**

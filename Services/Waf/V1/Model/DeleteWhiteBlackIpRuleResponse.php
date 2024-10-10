@@ -30,6 +30,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -44,6 +46,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'string',
             'white' => 'int',
             'timeMode' => 'string',
+            'start' => 'int',
+            'terminal' => 'int',
             'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup'
     ];
 
@@ -58,6 +62,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -72,6 +78,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
         'addr' => null,
         'white' => null,
         'timeMode' => null,
+        'start' => 'int64',
+        'terminal' => 'int64',
         'ipGroup' => null
     ];
 
@@ -107,6 +115,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -121,6 +131,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'addr',
             'white' => 'white',
             'timeMode' => 'time_mode',
+            'start' => 'start',
+            'terminal' => 'terminal',
             'ipGroup' => 'ip_group'
     ];
 
@@ -135,6 +147,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -149,6 +163,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'setAddr',
             'white' => 'setWhite',
             'timeMode' => 'setTimeMode',
+            'start' => 'setStart',
+            'terminal' => 'setTerminal',
             'ipGroup' => 'setIpGroup'
     ];
 
@@ -163,6 +179,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     * addr  黑白名单ip地址，标准的ip地址或地址段，例如：42.123.120.66或42.123.120.0/16
     * white  防护动作：  - 0 拦截  - 1 放行  - 2 仅记录
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效
     * ipGroup  ipGroup
     *
     * @var string[]
@@ -177,6 +195,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
             'addr' => 'getAddr',
             'white' => 'getWhite',
             'timeMode' => 'getTimeMode',
+            'start' => 'getStart',
+            'terminal' => 'getTerminal',
             'ipGroup' => 'getIpGroup'
     ];
 
@@ -247,6 +267,8 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
         $this->container['addr'] = isset($data['addr']) ? $data['addr'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
         $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
+        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['terminal'] = isset($data['terminal']) ? $data['terminal'] : null;
         $this->container['ipGroup'] = isset($data['ipGroup']) ? $data['ipGroup'] : null;
     }
 
@@ -485,6 +507,54 @@ class DeleteWhiteBlackIpRuleResponse implements ModelInterface, ArrayAccess
     public function setTimeMode($timeMode)
     {
         $this->container['timeMode'] = $timeMode;
+        return $this;
+    }
+
+    /**
+    * Gets start
+    *  规则生效开始时间，生效模式为自定义时，此字段才有效
+    *
+    * @return int|null
+    */
+    public function getStart()
+    {
+        return $this->container['start'];
+    }
+
+    /**
+    * Sets start
+    *
+    * @param int|null $start 规则生效开始时间，生效模式为自定义时，此字段才有效
+    *
+    * @return $this
+    */
+    public function setStart($start)
+    {
+        $this->container['start'] = $start;
+        return $this;
+    }
+
+    /**
+    * Gets terminal
+    *  规则生效结束时间，生效模式为自定义时，此字段才有效
+    *
+    * @return int|null
+    */
+    public function getTerminal()
+    {
+        return $this->container['terminal'];
+    }
+
+    /**
+    * Sets terminal
+    *
+    * @param int|null $terminal 规则生效结束时间，生效模式为自定义时，此字段才有效
+    *
+    * @return $this
+    */
+    public function setTerminal($terminal)
+    {
+        $this->container['terminal'] = $terminal;
         return $this;
     }
 

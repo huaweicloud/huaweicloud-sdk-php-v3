@@ -31,6 +31,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * subnetId  后端云服务器所在的子网ID。
     * adminStateUp  后端云服务器的管理状态。取值范围：true/false。
     * weight  后端云服务器的权重。
+    * enterpriseProjectId  企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'protocolPort' => 'int',
             'subnetId' => 'string',
             'adminStateUp' => 'bool',
-            'weight' => 'int'
+            'weight' => 'int',
+            'enterpriseProjectId' => 'string'
     ];
 
     /**
@@ -61,6 +63,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * subnetId  后端云服务器所在的子网ID。
     * adminStateUp  后端云服务器的管理状态。取值范围：true/false。
     * weight  后端云服务器的权重。
+    * enterpriseProjectId  企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
         'protocolPort' => 'int32',
         'subnetId' => null,
         'adminStateUp' => null,
-        'weight' => 'int32'
+        'weight' => 'int32',
+        'enterpriseProjectId' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * subnetId  后端云服务器所在的子网ID。
     * adminStateUp  后端云服务器的管理状态。取值范围：true/false。
     * weight  后端云服务器的权重。
+    * enterpriseProjectId  企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'protocolPort' => 'protocol_port',
             'subnetId' => 'subnet_id',
             'adminStateUp' => 'admin_state_up',
-            'weight' => 'weight'
+            'weight' => 'weight',
+            'enterpriseProjectId' => 'enterprise_project_id'
     ];
 
     /**
@@ -142,6 +148,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * subnetId  后端云服务器所在的子网ID。
     * adminStateUp  后端云服务器的管理状态。取值范围：true/false。
     * weight  后端云服务器的权重。
+    * enterpriseProjectId  企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'protocolPort' => 'setProtocolPort',
             'subnetId' => 'setSubnetId',
             'adminStateUp' => 'setAdminStateUp',
-            'weight' => 'setWeight'
+            'weight' => 'setWeight',
+            'enterpriseProjectId' => 'setEnterpriseProjectId'
     ];
 
     /**
@@ -172,6 +180,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     * subnetId  后端云服务器所在的子网ID。
     * adminStateUp  后端云服务器的管理状态。取值范围：true/false。
     * weight  后端云服务器的权重。
+    * enterpriseProjectId  企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
             'protocolPort' => 'getProtocolPort',
             'subnetId' => 'getSubnetId',
             'adminStateUp' => 'getAdminStateUp',
-            'weight' => 'getWeight'
+            'weight' => 'getWeight',
+            'enterpriseProjectId' => 'getEnterpriseProjectId'
     ];
 
     /**
@@ -258,6 +268,7 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
         $this->container['subnetId'] = isset($data['subnetId']) ? $data['subnetId'] : null;
         $this->container['adminStateUp'] = isset($data['adminStateUp']) ? $data['adminStateUp'] : null;
         $this->container['weight'] = isset($data['weight']) ? $data['weight'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
     }
 
     /**
@@ -561,6 +572,30 @@ class ListMembersRequest implements ModelInterface, ArrayAccess
     public function setWeight($weight)
     {
         $this->container['weight'] = $weight;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjectId
+    *  企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
+    *
+    * @return string|null
+    */
+    public function getEnterpriseProjectId()
+    {
+        return $this->container['enterpriseProjectId'];
+    }
+
+    /**
+    * Sets enterpriseProjectId
+    *
+    * @param string|null $enterpriseProjectId 企业项目ID。 不传时查询default企业项目（即enterprise_project_id=0）下的资源，鉴权按照default企业项目鉴权。 如果传值enterprise_project_id=all_granted_eps，则表示查询所有有权限的企业项目下的资源。 其他情况则传已存在的企业项目ID。此时会校验ID，若不存在或格式错误则报错。
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjectId($enterpriseProjectId)
+    {
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

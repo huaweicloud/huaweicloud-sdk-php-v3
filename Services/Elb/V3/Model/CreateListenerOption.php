@@ -21,7 +21,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * adminStateUp  参数解释：监听器的管理状态。  约束限制：只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-    * defaultPoolId  参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    * defaultPoolId  参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     * clientCaTlsContainerRef  参数解释：监听器使用的CA证书ID。  约束限制： - 当且仅当type=client时，才会使用该字段对应的证书。 - 监听器协议为QUIC时不支持该字段。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
     * defaultTlsContainerRef  参数解释：监听器使用的服务器证书ID。  约束限制：当监听器协议为HTTPS、TLS或QUIC时，该字段必传，且对应的证书的type必须是server类型。
     * description  参数解释：监听器的描述信息。
@@ -44,7 +44,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * ipgroup  ipgroup
     * transparentClientIpEnable  参数解释：是否透传客户端IP地址。开启后客户端IP地址将透传到后端服务器。  [约束限制： - 仅作用于共享型LB的TCP/UDP监听器。 - 开启特性后，ELB和后端服务器之间直接使用真实的IP访问，需要确保已正确设置服务器的安全组以及访问控制策略。 - 开启特性后，不支持同一台服务器既作为后端服务器又作为客户端的场景。 - 开启特性后，不支持变更后端服务器规格。  取值范围： - 共享型LB的TCP/UDP监听器可设置为true或false，不传默认为false。 - 共享型LB的HTTP/HTTPS监听器只支持设置为true，不传默认为true。 - 独享型负载均衡器所有协议的监听器只支持设置为true，不传默认为true。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt)  [约束限制：只设支持置为true，不传默认为true。](tag:hws_eu,hcso_dt)
     * proxyProtocolEnable  参数解释：是否开启proxy_protocol。  约束限制：仅TLS监听器可指定，其他协议的监听器该字段不生效，proxy_protocol不开启。
-    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     * quicConfig  quicConfig
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因  约束限制：仅当protection_status为consoleProtection时有效。
@@ -91,7 +91,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * adminStateUp  参数解释：监听器的管理状态。  约束限制：只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-    * defaultPoolId  参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    * defaultPoolId  参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     * clientCaTlsContainerRef  参数解释：监听器使用的CA证书ID。  约束限制： - 当且仅当type=client时，才会使用该字段对应的证书。 - 监听器协议为QUIC时不支持该字段。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
     * defaultTlsContainerRef  参数解释：监听器使用的服务器证书ID。  约束限制：当监听器协议为HTTPS、TLS或QUIC时，该字段必传，且对应的证书的type必须是server类型。
     * description  参数解释：监听器的描述信息。
@@ -114,7 +114,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * ipgroup  ipgroup
     * transparentClientIpEnable  参数解释：是否透传客户端IP地址。开启后客户端IP地址将透传到后端服务器。  [约束限制： - 仅作用于共享型LB的TCP/UDP监听器。 - 开启特性后，ELB和后端服务器之间直接使用真实的IP访问，需要确保已正确设置服务器的安全组以及访问控制策略。 - 开启特性后，不支持同一台服务器既作为后端服务器又作为客户端的场景。 - 开启特性后，不支持变更后端服务器规格。  取值范围： - 共享型LB的TCP/UDP监听器可设置为true或false，不传默认为false。 - 共享型LB的HTTP/HTTPS监听器只支持设置为true，不传默认为true。 - 独享型负载均衡器所有协议的监听器只支持设置为true，不传默认为true。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt)  [约束限制：只设支持置为true，不传默认为true。](tag:hws_eu,hcso_dt)
     * proxyProtocolEnable  参数解释：是否开启proxy_protocol。  约束限制：仅TLS监听器可指定，其他协议的监听器该字段不生效，proxy_protocol不开启。
-    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     * quicConfig  quicConfig
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因  约束限制：仅当protection_status为consoleProtection时有效。
@@ -182,7 +182,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * adminStateUp  参数解释：监听器的管理状态。  约束限制：只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-    * defaultPoolId  参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    * defaultPoolId  参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     * clientCaTlsContainerRef  参数解释：监听器使用的CA证书ID。  约束限制： - 当且仅当type=client时，才会使用该字段对应的证书。 - 监听器协议为QUIC时不支持该字段。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
     * defaultTlsContainerRef  参数解释：监听器使用的服务器证书ID。  约束限制：当监听器协议为HTTPS、TLS或QUIC时，该字段必传，且对应的证书的type必须是server类型。
     * description  参数解释：监听器的描述信息。
@@ -205,7 +205,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * ipgroup  ipgroup
     * transparentClientIpEnable  参数解释：是否透传客户端IP地址。开启后客户端IP地址将透传到后端服务器。  [约束限制： - 仅作用于共享型LB的TCP/UDP监听器。 - 开启特性后，ELB和后端服务器之间直接使用真实的IP访问，需要确保已正确设置服务器的安全组以及访问控制策略。 - 开启特性后，不支持同一台服务器既作为后端服务器又作为客户端的场景。 - 开启特性后，不支持变更后端服务器规格。  取值范围： - 共享型LB的TCP/UDP监听器可设置为true或false，不传默认为false。 - 共享型LB的HTTP/HTTPS监听器只支持设置为true，不传默认为true。 - 独享型负载均衡器所有协议的监听器只支持设置为true，不传默认为true。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt)  [约束限制：只设支持置为true，不传默认为true。](tag:hws_eu,hcso_dt)
     * proxyProtocolEnable  参数解释：是否开启proxy_protocol。  约束限制：仅TLS监听器可指定，其他协议的监听器该字段不生效，proxy_protocol不开启。
-    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     * quicConfig  quicConfig
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因  约束限制：仅当protection_status为consoleProtection时有效。
@@ -252,7 +252,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * adminStateUp  参数解释：监听器的管理状态。  约束限制：只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-    * defaultPoolId  参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    * defaultPoolId  参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     * clientCaTlsContainerRef  参数解释：监听器使用的CA证书ID。  约束限制： - 当且仅当type=client时，才会使用该字段对应的证书。 - 监听器协议为QUIC时不支持该字段。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
     * defaultTlsContainerRef  参数解释：监听器使用的服务器证书ID。  约束限制：当监听器协议为HTTPS、TLS或QUIC时，该字段必传，且对应的证书的type必须是server类型。
     * description  参数解释：监听器的描述信息。
@@ -275,7 +275,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * ipgroup  ipgroup
     * transparentClientIpEnable  参数解释：是否透传客户端IP地址。开启后客户端IP地址将透传到后端服务器。  [约束限制： - 仅作用于共享型LB的TCP/UDP监听器。 - 开启特性后，ELB和后端服务器之间直接使用真实的IP访问，需要确保已正确设置服务器的安全组以及访问控制策略。 - 开启特性后，不支持同一台服务器既作为后端服务器又作为客户端的场景。 - 开启特性后，不支持变更后端服务器规格。  取值范围： - 共享型LB的TCP/UDP监听器可设置为true或false，不传默认为false。 - 共享型LB的HTTP/HTTPS监听器只支持设置为true，不传默认为true。 - 独享型负载均衡器所有协议的监听器只支持设置为true，不传默认为true。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt)  [约束限制：只设支持置为true，不传默认为true。](tag:hws_eu,hcso_dt)
     * proxyProtocolEnable  参数解释：是否开启proxy_protocol。  约束限制：仅TLS监听器可指定，其他协议的监听器该字段不生效，proxy_protocol不开启。
-    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     * quicConfig  quicConfig
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因  约束限制：仅当protection_status为consoleProtection时有效。
@@ -322,7 +322,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * adminStateUp  参数解释：监听器的管理状态。  约束限制：只支持设置为true。  [不支持该字段，请勿使用。](tag:dt,dt_test,hcso_dt)
-    * defaultPoolId  参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    * defaultPoolId  参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     * clientCaTlsContainerRef  参数解释：监听器使用的CA证书ID。  约束限制： - 当且仅当type=client时，才会使用该字段对应的证书。 - 监听器协议为QUIC时不支持该字段。  [不支持QUIC。](tag:tm,hws_eu,g42,hk_g42,hcso_dt,dt,dt_test)
     * defaultTlsContainerRef  参数解释：监听器使用的服务器证书ID。  约束限制：当监听器协议为HTTPS、TLS或QUIC时，该字段必传，且对应的证书的type必须是server类型。
     * description  参数解释：监听器的描述信息。
@@ -345,7 +345,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     * ipgroup  ipgroup
     * transparentClientIpEnable  参数解释：是否透传客户端IP地址。开启后客户端IP地址将透传到后端服务器。  [约束限制： - 仅作用于共享型LB的TCP/UDP监听器。 - 开启特性后，ELB和后端服务器之间直接使用真实的IP访问，需要确保已正确设置服务器的安全组以及访问控制策略。 - 开启特性后，不支持同一台服务器既作为后端服务器又作为客户端的场景。 - 开启特性后，不支持变更后端服务器规格。  取值范围： - 共享型LB的TCP/UDP监听器可设置为true或false，不传默认为false。 - 共享型LB的HTTP/HTTPS监听器只支持设置为true，不传默认为true。 - 独享型负载均衡器所有协议的监听器只支持设置为true，不传默认为true。 ](tag:hws,hws_hk,ocb,ctc,hcs,g42,tm,cmcc,hk_g42,hws_ocb,hk_vdf,fcs,dt)  [约束限制：只设支持置为true，不传默认为true。](tag:hws_eu,hcso_dt)
     * proxyProtocolEnable  参数解释：是否开启proxy_protocol。  约束限制：仅TLS监听器可指定，其他协议的监听器该字段不生效，proxy_protocol不开启。
-    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    * enhanceL7policyEnable  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     * quicConfig  quicConfig
     * protectionStatus  参数解释：修改保护状态。  取值范围： - nonProtection: 不保护，默认值为nonProtection - consoleProtection: 控制台修改保护
     * protectionReason  参数解释：设置保护的原因  约束限制：仅当protection_status为consoleProtection时有效。
@@ -638,7 +638,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets defaultPoolId
-    *  参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    *  参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     *
     * @return string|null
     */
@@ -650,7 +650,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Sets defaultPoolId
     *
-    * @param string|null $defaultPoolId 参数解释：监听器默认的后端云服务器组ID。当请求没有匹配的转发策略时，转发到默认后端云服务器上处理。
+    * @param string|null $defaultPoolId 参数解释：监听器默认的后端服务器组ID。当请求没有匹配的转发策略时，转发到默认后端服务器上处理。
     *
     * @return $this
     */
@@ -1190,7 +1190,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
 
     /**
     * Gets enhanceL7policyEnable
-    *  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    *  参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @return bool|null
     */
@@ -1202,7 +1202,7 @@ class CreateListenerOption implements ModelInterface, ArrayAccess
     /**
     * Sets enhanceL7policyEnable
     *
-    * @param bool|null $enhanceL7policyEnable 参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test) > 开启后不支持关闭
+    * @param bool|null $enhanceL7policyEnable 参数解释：是否开启高级转发策略功能。开启高级转发策略后，支持更灵活的转发策略和转发规则设置。  开启后支持如下场景： - 转发策略的action字段支持指定为REDIRECT_TO_URL, FIXED_RESPONSE，即支持URL重定向和响应固定的内容给客户端。 - 转发策略支持指定priority、redirect_url_config、fixed_response_config字段。 - 转发规则rule的type可以指定METHOD, HEADER, QUERY_STRING, SOURCE_IP这几种取值。 - 转发规则rule的type为HOST_NAME时，转发规则rule的value支持通配符*。 - 转发规则支持指定conditions字段。  约束限制：开启后不支持关闭  取值范围：true开启，false不开启，默认false。  [荷兰region不支持该字段，请勿使用。](tag:dt,dt_test)
     *
     * @return $this
     */

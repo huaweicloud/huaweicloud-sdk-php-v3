@@ -21,22 +21,22 @@ class CheckStarrocksParamsResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * checkStarrocksParamsResponce  参数之间区别的集合。
+    * differences  参数之间区别的集合。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'checkStarrocksParamsResponce' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ParamGroupParameterDifferences[]'
+            'differences' => '\HuaweiCloud\SDK\GaussDB\V3\Model\ParamGroupParameterDifferences[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * checkStarrocksParamsResponce  参数之间区别的集合。
+    * differences  参数之间区别的集合。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'checkStarrocksParamsResponce' => null
+        'differences' => null
     ];
 
     /**
@@ -62,32 +62,32 @@ class CheckStarrocksParamsResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * checkStarrocksParamsResponce  参数之间区别的集合。
+    * differences  参数之间区别的集合。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'checkStarrocksParamsResponce' => 'check_starrocks_params_responce'
+            'differences' => 'differences'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * checkStarrocksParamsResponce  参数之间区别的集合。
+    * differences  参数之间区别的集合。
     *
     * @var string[]
     */
     protected static $setters = [
-            'checkStarrocksParamsResponce' => 'setCheckStarrocksParamsResponce'
+            'differences' => 'setDifferences'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * checkStarrocksParamsResponce  参数之间区别的集合。
+    * differences  参数之间区别的集合。
     *
     * @var string[]
     */
     protected static $getters = [
-            'checkStarrocksParamsResponce' => 'getCheckStarrocksParamsResponce'
+            'differences' => 'getDifferences'
     ];
 
     /**
@@ -148,7 +148,7 @@ class CheckStarrocksParamsResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['checkStarrocksParamsResponce'] = isset($data['checkStarrocksParamsResponce']) ? $data['checkStarrocksParamsResponce'] : null;
+        $this->container['differences'] = isset($data['differences']) ? $data['differences'] : null;
     }
 
     /**
@@ -174,26 +174,26 @@ class CheckStarrocksParamsResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets checkStarrocksParamsResponce
+    * Gets differences
     *  参数之间区别的集合。
     *
     * @return \HuaweiCloud\SDK\GaussDB\V3\Model\ParamGroupParameterDifferences[]|null
     */
-    public function getCheckStarrocksParamsResponce()
+    public function getDifferences()
     {
-        return $this->container['checkStarrocksParamsResponce'];
+        return $this->container['differences'];
     }
 
     /**
-    * Sets checkStarrocksParamsResponce
+    * Sets differences
     *
-    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\ParamGroupParameterDifferences[]|null $checkStarrocksParamsResponce 参数之间区别的集合。
+    * @param \HuaweiCloud\SDK\GaussDB\V3\Model\ParamGroupParameterDifferences[]|null $differences 参数之间区别的集合。
     *
     * @return $this
     */
-    public function setCheckStarrocksParamsResponce($checkStarrocksParamsResponce)
+    public function setDifferences($differences)
     {
-        $this->container['checkStarrocksParamsResponce'] = $checkStarrocksParamsResponce;
+        $this->container['differences'] = $differences;
         return $this;
     }
 

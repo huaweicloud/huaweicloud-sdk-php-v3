@@ -1,0 +1,510 @@
+<?php
+
+namespace HuaweiCloud\SDK\Aad\V2\Model;
+
+use \ArrayAccess;
+use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
+use HuaweiCloud\SDK\Core\Utils\ModelInterface;
+use HuaweiCloud\SDK\Core\SdkResponse;
+
+class ListWafAttackEventRequest implements ModelInterface, ArrayAccess
+{
+    const DISCRIMINATOR = null;
+
+    /**
+    * The original name of the model.
+    *
+    * @var string
+    */
+    protected static $openAPIModelName = 'ListWafAttackEventRequest';
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    * domains  不传时代表全部域名
+    * startTime  开始时间（毫秒时间戳）
+    * endTime  结束时间（毫秒时间戳）
+    * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    * overseasType  实例类型，0-大陆，1-海外
+    * sip  攻击源IP
+    * limit  limit
+    * offset  offset
+    *
+    * @var string[]
+    */
+    protected static $openAPITypes = [
+            'domains' => 'string',
+            'startTime' => 'string',
+            'endTime' => 'string',
+            'recent' => 'string',
+            'overseasType' => 'int',
+            'sip' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
+    ];
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    * domains  不传时代表全部域名
+    * startTime  开始时间（毫秒时间戳）
+    * endTime  结束时间（毫秒时间戳）
+    * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    * overseasType  实例类型，0-大陆，1-海外
+    * sip  攻击源IP
+    * limit  limit
+    * offset  offset
+    *
+    * @var string[]
+    */
+    protected static $openAPIFormats = [
+        'domains' => null,
+        'startTime' => 'int64',
+        'endTime' => 'int64',
+        'recent' => null,
+        'overseasType' => 'int32',
+        'sip' => null,
+        'limit' => 'int32',
+        'offset' => 'int32'
+    ];
+
+    /**
+    * Array of property to type mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPITypes()
+    {
+        return self::$openAPITypes;
+    }
+
+    /**
+    * Array of property to format mappings. Used for (de)serialization
+    *
+    * @return array
+    */
+    public static function openAPIFormats()
+    {
+        return self::$openAPIFormats;
+    }
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    * domains  不传时代表全部域名
+    * startTime  开始时间（毫秒时间戳）
+    * endTime  结束时间（毫秒时间戳）
+    * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    * overseasType  实例类型，0-大陆，1-海外
+    * sip  攻击源IP
+    * limit  limit
+    * offset  offset
+    *
+    * @var string[]
+    */
+    protected static $attributeMap = [
+            'domains' => 'domains',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time',
+            'recent' => 'recent',
+            'overseasType' => 'overseas_type',
+            'sip' => 'sip',
+            'limit' => 'limit',
+            'offset' => 'offset'
+    ];
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    * domains  不传时代表全部域名
+    * startTime  开始时间（毫秒时间戳）
+    * endTime  结束时间（毫秒时间戳）
+    * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    * overseasType  实例类型，0-大陆，1-海外
+    * sip  攻击源IP
+    * limit  limit
+    * offset  offset
+    *
+    * @var string[]
+    */
+    protected static $setters = [
+            'domains' => 'setDomains',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime',
+            'recent' => 'setRecent',
+            'overseasType' => 'setOverseasType',
+            'sip' => 'setSip',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
+    ];
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    * domains  不传时代表全部域名
+    * startTime  开始时间（毫秒时间戳）
+    * endTime  结束时间（毫秒时间戳）
+    * recent  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    * overseasType  实例类型，0-大陆，1-海外
+    * sip  攻击源IP
+    * limit  limit
+    * offset  offset
+    *
+    * @var string[]
+    */
+    protected static $getters = [
+            'domains' => 'getDomains',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime',
+            'recent' => 'getRecent',
+            'overseasType' => 'getOverseasType',
+            'sip' => 'getSip',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
+    ];
+
+    /**
+    * Array of attributes where the key is the local name,
+    * and the value is the original name
+    *
+    * @return array
+    */
+    public static function attributeMap()
+    {
+        return self::$attributeMap;
+    }
+
+    /**
+    * Array of attributes to setter functions (for deserialization of responses)
+    *
+    * @return array
+    */
+    public static function setters()
+    {
+        return self::$setters;
+    }
+
+    /**
+    * Array of attributes to getter functions (for serialization of requests)
+    *
+    * @return array
+    */
+    public static function getters()
+    {
+        return self::$getters;
+    }
+
+    /**
+    * The original name of the model.
+    *
+    * @return string
+    */
+    public function getModelName()
+    {
+        return self::$openAPIModelName;
+    }
+    
+
+
+    /**
+    * Associative array for storing property values
+    *
+    * @var mixed[]
+    */
+    protected $container = [];
+
+    /**
+    * Constructor
+    *
+    * @param mixed[] $data Associated array of property values
+    *                      initializing the model
+    */
+    public function __construct(array $data = null)
+    {
+        $this->container['domains'] = isset($data['domains']) ? $data['domains'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
+        $this->container['recent'] = isset($data['recent']) ? $data['recent'] : null;
+        $this->container['overseasType'] = isset($data['overseasType']) ? $data['overseasType'] : null;
+        $this->container['sip'] = isset($data['sip']) ? $data['sip'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+    }
+
+    /**
+    * Show all the invalid properties with reasons.
+    *
+    * @return array invalid properties with reasons
+    */
+    public function listInvalidProperties()
+    {
+        $invalidProperties = [];
+        return $invalidProperties;
+    }
+
+    /**
+    * Validate all the properties in the model
+    * return true if all passed
+    *
+    * @return bool True if all properties are valid
+    */
+    public function valid()
+    {
+        return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets domains
+    *  不传时代表全部域名
+    *
+    * @return string|null
+    */
+    public function getDomains()
+    {
+        return $this->container['domains'];
+    }
+
+    /**
+    * Sets domains
+    *
+    * @param string|null $domains 不传时代表全部域名
+    *
+    * @return $this
+    */
+    public function setDomains($domains)
+    {
+        $this->container['domains'] = $domains;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  开始时间（毫秒时间戳）
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime 开始时间（毫秒时间戳）
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  结束时间（毫秒时间戳）
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime 结束时间（毫秒时间戳）
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
+        return $this;
+    }
+
+    /**
+    * Gets recent
+    *  枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    *
+    * @return string|null
+    */
+    public function getRecent()
+    {
+        return $this->container['recent'];
+    }
+
+    /**
+    * Sets recent
+    *
+    * @param string|null $recent 枚举值：yesterday,today,3days,1week,1month 与开始结束时间不同时为空
+    *
+    * @return $this
+    */
+    public function setRecent($recent)
+    {
+        $this->container['recent'] = $recent;
+        return $this;
+    }
+
+    /**
+    * Gets overseasType
+    *  实例类型，0-大陆，1-海外
+    *
+    * @return int|null
+    */
+    public function getOverseasType()
+    {
+        return $this->container['overseasType'];
+    }
+
+    /**
+    * Sets overseasType
+    *
+    * @param int|null $overseasType 实例类型，0-大陆，1-海外
+    *
+    * @return $this
+    */
+    public function setOverseasType($overseasType)
+    {
+        $this->container['overseasType'] = $overseasType;
+        return $this;
+    }
+
+    /**
+    * Gets sip
+    *  攻击源IP
+    *
+    * @return string|null
+    */
+    public function getSip()
+    {
+        return $this->container['sip'];
+    }
+
+    /**
+    * Sets sip
+    *
+    * @param string|null $sip 攻击源IP
+    *
+    * @return $this
+    */
+    public function setSip($sip)
+    {
+        $this->container['sip'] = $sip;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  limit
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit limit
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  offset
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset offset
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Returns true if offset exists. False otherwise.
+    *
+    * @param integer $offset Offset
+    *
+    * @return boolean
+    */
+    public function offsetExists($offset)
+    {
+        return isset($this->container[$offset]);
+    }
+
+    /**
+    * Gets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return mixed
+    */
+    public function offsetGet($offset)
+    {
+        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+    }
+
+    /**
+    * Sets value based on offset.
+    *
+    * @param integer $offset Offset
+    * @param mixed   $value  Value to be set
+    *
+    * @return void
+    */
+    public function offsetSet($offset, $value)
+    {
+        if (is_null($offset)) {
+                $this->container[] = $value;
+            } else {
+                $this->container[$offset] = $value;
+        }
+    }
+
+    /**
+    * Unsets offset.
+    *
+    * @param integer $offset Offset
+    *
+    * @return void
+    */
+    public function offsetUnset($offset)
+    {
+        unset($this->container[$offset]);
+    }
+
+    /**
+    * Gets the string presentation of the object
+    *
+    * @return string
+    */
+    public function __toString()
+    {
+        return json_encode(
+            ObjectSerializer::sanitizeForSerialization($this),
+            JSON_PRETTY_PRINT
+        );
+    }
+}
+

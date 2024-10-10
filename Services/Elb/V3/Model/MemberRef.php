@@ -20,7 +20,7 @@ class MemberRef implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  后端服务器ID。
+    * id  参数解释：后端服务器ID。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class MemberRef implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  后端服务器ID。
+    * id  参数解释：后端服务器ID。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class MemberRef implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  后端服务器ID。
+    * id  参数解释：后端服务器ID。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class MemberRef implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  后端服务器ID。
+    * id  参数解释：后端服务器ID。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class MemberRef implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  后端服务器ID。
+    * id  参数解释：后端服务器ID。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class MemberRef implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  后端服务器ID。
+    *  参数解释：后端服务器ID。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class MemberRef implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 后端服务器ID。
+    * @param string $id 参数解释：后端服务器ID。
     *
     * @return $this
     */

@@ -20,7 +20,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * publicBorderGroup  参数解释：AZ组。
+    * publicBorderGroup  参数解释：可用区组。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * publicBorderGroup  参数解释：AZ组。
+    * publicBorderGroup  参数解释：可用区组。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * publicBorderGroup  参数解释：AZ组。
+    * publicBorderGroup  参数解释：可用区组。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * publicBorderGroup  参数解释：AZ组。
+    * publicBorderGroup  参数解释：可用区组。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * publicBorderGroup  参数解释：AZ组。
+    * publicBorderGroup  参数解释：可用区组。
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicBorderGroup
-    *  参数解释：AZ组。
+    *  参数解释：可用区组。
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class ListAvailabilityZonesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets publicBorderGroup
     *
-    * @param string|null $publicBorderGroup 参数解释：AZ组。
+    * @param string|null $publicBorderGroup 参数解释：可用区组。
     *
     * @return $this
     */

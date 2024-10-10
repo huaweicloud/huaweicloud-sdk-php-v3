@@ -254,12 +254,6 @@ class FixtedResponseConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if ((mb_strlen($this->container['contentType']) > 32)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['contentType']) < 0)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 0.";
-            }
         if ($this->container['messageBody'] === null) {
             $invalidProperties[] = "'messageBody' can't be null";
         }

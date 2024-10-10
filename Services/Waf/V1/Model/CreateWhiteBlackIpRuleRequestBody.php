@@ -25,6 +25,9 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
     * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
     * @var string[]
     */
@@ -33,7 +36,10 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
             'addr' => 'string',
             'description' => 'string',
             'white' => 'int',
-            'ipGroupId' => 'string'
+            'ipGroupId' => 'string',
+            'timeMode' => 'string',
+            'start' => 'int',
+            'terminal' => 'int'
     ];
 
     /**
@@ -43,6 +49,9 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
     * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
     * @var string[]
     */
@@ -51,7 +60,10 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
         'addr' => null,
         'description' => null,
         'white' => null,
-        'ipGroupId' => null
+        'ipGroupId' => null,
+        'timeMode' => null,
+        'start' => null,
+        'terminal' => null
     ];
 
     /**
@@ -82,6 +94,9 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
     * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
     * @var string[]
     */
@@ -90,7 +105,10 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
             'addr' => 'addr',
             'description' => 'description',
             'white' => 'white',
-            'ipGroupId' => 'ip_group_id'
+            'ipGroupId' => 'ip_group_id',
+            'timeMode' => 'time_mode',
+            'start' => 'start',
+            'terminal' => 'terminal'
     ];
 
     /**
@@ -100,6 +118,9 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
     * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
     * @var string[]
     */
@@ -108,7 +129,10 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
             'addr' => 'setAddr',
             'description' => 'setDescription',
             'white' => 'setWhite',
-            'ipGroupId' => 'setIpGroupId'
+            'ipGroupId' => 'setIpGroupId',
+            'timeMode' => 'setTimeMode',
+            'start' => 'setStart',
+            'terminal' => 'setTerminal'
     ];
 
     /**
@@ -118,6 +142,9 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     * description  黑白名单规则描述
     * white  防护动作：  - 0 拦截  - 1 放行   - 2 仅记录
     * ipGroupId  创建的Ip地址组id，该参数与addr参数只能使用一个；Ip地址组可在控制台中对象管理->地址组管理中添加。
+    * timeMode  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    * start  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    * terminal  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
     *
     * @var string[]
     */
@@ -126,7 +153,10 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
             'addr' => 'getAddr',
             'description' => 'getDescription',
             'white' => 'getWhite',
-            'ipGroupId' => 'getIpGroupId'
+            'ipGroupId' => 'getIpGroupId',
+            'timeMode' => 'getTimeMode',
+            'start' => 'getStart',
+            'terminal' => 'getTerminal'
     ];
 
     /**
@@ -192,6 +222,9 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
         $this->container['ipGroupId'] = isset($data['ipGroupId']) ? $data['ipGroupId'] : null;
+        $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
+        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['terminal'] = isset($data['terminal']) ? $data['terminal'] : null;
     }
 
     /**
@@ -339,6 +372,78 @@ class CreateWhiteBlackIpRuleRequestBody implements ModelInterface, ArrayAccess
     public function setIpGroupId($ipGroupId)
     {
         $this->container['ipGroupId'] = $ipGroupId;
+        return $this;
+    }
+
+    /**
+    * Gets timeMode
+    *  生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    *
+    * @return string|null
+    */
+    public function getTimeMode()
+    {
+        return $this->container['timeMode'];
+    }
+
+    /**
+    * Sets timeMode
+    *
+    * @param string|null $timeMode 生效模式，默认为permanent（立即生效）,创建自定义生效规则时请输入：customize
+    *
+    * @return $this
+    */
+    public function setTimeMode($timeMode)
+    {
+        $this->container['timeMode'] = $timeMode;
+        return $this;
+    }
+
+    /**
+    * Gets start
+    *  规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    *
+    * @return int|null
+    */
+    public function getStart()
+    {
+        return $this->container['start'];
+    }
+
+    /**
+    * Sets start
+    *
+    * @param int|null $start 规则生效开始时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    *
+    * @return $this
+    */
+    public function setStart($start)
+    {
+        $this->container['start'] = $start;
+        return $this;
+    }
+
+    /**
+    * Gets terminal
+    *  规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    *
+    * @return int|null
+    */
+    public function getTerminal()
+    {
+        return $this->container['terminal'];
+    }
+
+    /**
+    * Sets terminal
+    *
+    * @param int|null $terminal 规则生效结束时间，生效模式为自定义时，此字段才有效，请输入时间戳
+    *
+    * @return $this
+    */
+    public function setTerminal($terminal)
+    {
+        $this->container['terminal'] = $terminal;
         return $this;
     }
 

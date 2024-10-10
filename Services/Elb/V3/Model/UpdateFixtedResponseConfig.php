@@ -248,12 +248,6 @@ class UpdateFixtedResponseConfig implements ModelInterface, ArrayAccess
                 );
             }
 
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) > 64)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be smaller than or equal to 64.";
-            }
-            if (!is_null($this->container['contentType']) && (mb_strlen($this->container['contentType']) < 1)) {
-                $invalidProperties[] = "invalid value for 'contentType', the character length must be bigger than or equal to 1.";
-            }
             if (!is_null($this->container['messageBody']) && (mb_strlen($this->container['messageBody']) > 1024)) {
                 $invalidProperties[] = "invalid value for 'messageBody', the character length must be smaller than or equal to 1024.";
             }

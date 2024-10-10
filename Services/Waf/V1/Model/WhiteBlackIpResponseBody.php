@@ -30,6 +30,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效的开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效的结束时间，生效模式为自定义时，此字段才有效
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'addr' => 'string',
             'white' => 'int',
             'ipGroup' => '\HuaweiCloud\SDK\Waf\V1\Model\IpGroup',
-            'timeMode' => 'string'
+            'timeMode' => 'string',
+            'start' => 'int',
+            'terminal' => 'int'
     ];
 
     /**
@@ -58,6 +62,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效的开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效的结束时间，生效模式为自定义时，此字段才有效
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
         'addr' => null,
         'white' => null,
         'ipGroup' => null,
-        'timeMode' => null
+        'timeMode' => null,
+        'start' => 'int64',
+        'terminal' => 'int64'
     ];
 
     /**
@@ -107,6 +115,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效的开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效的结束时间，生效模式为自定义时，此字段才有效
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'addr' => 'addr',
             'white' => 'white',
             'ipGroup' => 'ip_group',
-            'timeMode' => 'time_mode'
+            'timeMode' => 'time_mode',
+            'start' => 'start',
+            'terminal' => 'terminal'
     ];
 
     /**
@@ -135,6 +147,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效的开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效的结束时间，生效模式为自定义时，此字段才有效
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'addr' => 'setAddr',
             'white' => 'setWhite',
             'ipGroup' => 'setIpGroup',
-            'timeMode' => 'setTimeMode'
+            'timeMode' => 'setTimeMode',
+            'start' => 'setStart',
+            'terminal' => 'setTerminal'
     ];
 
     /**
@@ -163,6 +179,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     * white  防护动作：  - 0拦截  - 1放行  - 2仅记录
     * ipGroup  ipGroup
     * timeMode  生效模式，默认为permanent（立即生效）
+    * start  规则生效的开始时间，生效模式为自定义时，此字段才有效
+    * terminal  规则生效的结束时间，生效模式为自定义时，此字段才有效
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
             'addr' => 'getAddr',
             'white' => 'getWhite',
             'ipGroup' => 'getIpGroup',
-            'timeMode' => 'getTimeMode'
+            'timeMode' => 'getTimeMode',
+            'start' => 'getStart',
+            'terminal' => 'getTerminal'
     ];
 
     /**
@@ -247,6 +267,8 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
         $this->container['white'] = isset($data['white']) ? $data['white'] : null;
         $this->container['ipGroup'] = isset($data['ipGroup']) ? $data['ipGroup'] : null;
         $this->container['timeMode'] = isset($data['timeMode']) ? $data['timeMode'] : null;
+        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
+        $this->container['terminal'] = isset($data['terminal']) ? $data['terminal'] : null;
     }
 
     /**
@@ -508,6 +530,54 @@ class WhiteBlackIpResponseBody implements ModelInterface, ArrayAccess
     public function setTimeMode($timeMode)
     {
         $this->container['timeMode'] = $timeMode;
+        return $this;
+    }
+
+    /**
+    * Gets start
+    *  规则生效的开始时间，生效模式为自定义时，此字段才有效
+    *
+    * @return int|null
+    */
+    public function getStart()
+    {
+        return $this->container['start'];
+    }
+
+    /**
+    * Sets start
+    *
+    * @param int|null $start 规则生效的开始时间，生效模式为自定义时，此字段才有效
+    *
+    * @return $this
+    */
+    public function setStart($start)
+    {
+        $this->container['start'] = $start;
+        return $this;
+    }
+
+    /**
+    * Gets terminal
+    *  规则生效的结束时间，生效模式为自定义时，此字段才有效
+    *
+    * @return int|null
+    */
+    public function getTerminal()
+    {
+        return $this->container['terminal'];
+    }
+
+    /**
+    * Sets terminal
+    *
+    * @param int|null $terminal 规则生效的结束时间，生效模式为自定义时，此字段才有效
+    *
+    * @return $this
+    */
+    public function setTerminal($terminal)
+    {
+        $this->container['terminal'] = $terminal;
         return $this;
     }
 

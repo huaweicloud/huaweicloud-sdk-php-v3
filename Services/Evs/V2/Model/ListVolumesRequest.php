@@ -38,7 +38,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
-    * snapshotPolicyId  自动快照策略ID
     *
     * @var string[]
     */
@@ -60,8 +59,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'string',
             'ids' => 'string',
             'enterpriseProjectId' => 'string',
-            'serverId' => 'string',
-            'snapshotPolicyId' => 'string'
+            'serverId' => 'string'
     ];
 
     /**
@@ -84,7 +82,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
-    * snapshotPolicyId  自动快照策略ID
     *
     * @var string[]
     */
@@ -106,8 +103,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
         'id' => null,
         'ids' => null,
         'enterpriseProjectId' => null,
-        'serverId' => null,
-        'snapshotPolicyId' => null
+        'serverId' => null
     ];
 
     /**
@@ -151,7 +147,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
-    * snapshotPolicyId  自动快照策略ID
     *
     * @var string[]
     */
@@ -173,8 +168,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'id',
             'ids' => 'ids',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'serverId' => 'server_id',
-            'snapshotPolicyId' => 'snapshot_policy_id'
+            'serverId' => 'server_id'
     ];
 
     /**
@@ -197,7 +191,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
-    * snapshotPolicyId  自动快照策略ID
     *
     * @var string[]
     */
@@ -219,8 +212,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'ids' => 'setIds',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'serverId' => 'setServerId',
-            'snapshotPolicyId' => 'setSnapshotPolicyId'
+            'serverId' => 'setServerId'
     ];
 
     /**
@@ -243,7 +235,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     * ids  云硬盘id列表，格式为ids=['id1','id2',...,'idx']，返回“ids”中有效id的云硬盘详情，无效的id会被忽略。 支持查询最多60个id对应的云硬盘详情。 如果“id”和“ids”查询参数同时存在，“id”会被忽略。
     * enterpriseProjectId  指定企业项目id进行过滤。 传入“all_granted_eps”，代表查询权限范围内的所有企业项目下的云硬盘。 > 说明： >  > 关于企业项目ID的获取及企业项目特性的详细信息，请参考：\"[企业管理用户指南](https://support.huaweicloud.com/usermanual-em/zh-cn_topic_0123692049.html)\"。
     * serverId  云服务器id。
-    * snapshotPolicyId  自动快照策略ID
     *
     * @var string[]
     */
@@ -265,8 +256,7 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'ids' => 'getIds',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'serverId' => 'getServerId',
-            'snapshotPolicyId' => 'getSnapshotPolicyId'
+            'serverId' => 'getServerId'
     ];
 
     /**
@@ -345,7 +335,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
         $this->container['ids'] = isset($data['ids']) ? $data['ids'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
-        $this->container['snapshotPolicyId'] = isset($data['snapshotPolicyId']) ? $data['snapshotPolicyId'] : null;
     }
 
     /**
@@ -805,30 +794,6 @@ class ListVolumesRequest implements ModelInterface, ArrayAccess
     public function setServerId($serverId)
     {
         $this->container['serverId'] = $serverId;
-        return $this;
-    }
-
-    /**
-    * Gets snapshotPolicyId
-    *  自动快照策略ID
-    *
-    * @return string|null
-    */
-    public function getSnapshotPolicyId()
-    {
-        return $this->container['snapshotPolicyId'];
-    }
-
-    /**
-    * Sets snapshotPolicyId
-    *
-    * @param string|null $snapshotPolicyId 自动快照策略ID
-    *
-    * @return $this
-    */
-    public function setSnapshotPolicyId($snapshotPolicyId)
-    {
-        $this->container['snapshotPolicyId'] = $snapshotPolicyId;
         return $this;
     }
 

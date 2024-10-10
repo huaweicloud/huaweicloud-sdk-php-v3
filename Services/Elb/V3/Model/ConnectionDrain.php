@@ -20,8 +20,8 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
-    * timeout  延迟注销时间，单位：s； 取值范围：10~4000
+    * enable  参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
+    * timeout  参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
-    * timeout  延迟注销时间，单位：s； 取值范围：10~4000
+    * enable  参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
+    * timeout  参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
-    * timeout  延迟注销时间，单位：s； 取值范围：10~4000
+    * enable  参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
+    * timeout  参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
-    * timeout  延迟注销时间，单位：s； 取值范围：10~4000
+    * enable  参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
+    * timeout  参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * enable  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
-    * timeout  延迟注销时间，单位：s； 取值范围：10~4000
+    * enable  参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
+    * timeout  参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Gets enable
-    *  延迟注销功能开关。取值：true 开启，false 关闭，默认true。
+    *  参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
     *
     * @return bool|null
     */
@@ -197,7 +197,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
     /**
     * Sets enable
     *
-    * @param bool|null $enable 延迟注销功能开关。取值：true 开启，false 关闭，默认true。
+    * @param bool|null $enable 参数解释：延迟注销功能开关。  取值范围：true 开启，false 关闭。  默认取值：true。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeout
-    *  延迟注销时间，单位：s； 取值范围：10~4000
+    *  参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class ConnectionDrain implements ModelInterface, ArrayAccess
     /**
     * Sets timeout
     *
-    * @param int|null $timeout 延迟注销时间，单位：s； 取值范围：10~4000
+    * @param int|null $timeout 参数解释：延迟注销时间。  取值范围：10~4000，单位：秒。
     *
     * @return $this
     */

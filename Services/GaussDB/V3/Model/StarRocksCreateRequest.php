@@ -34,6 +34,7 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * azCode  可用区代码。
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
+    * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
     *
     * @var string[]
     */
@@ -51,7 +52,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'beVolume' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestBeVolume',
             'azCode' => 'string',
             'timeZone' => 'string',
-            'tagsInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestTagsInfo'
+            'tagsInfo' => '\HuaweiCloud\SDK\GaussDB\V3\Model\StarRocksCreateRequestTagsInfo',
+            'securityGroupId' => 'string'
     ];
 
     /**
@@ -70,6 +72,7 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * azCode  可用区代码。
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
+    * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
     *
     * @var string[]
     */
@@ -87,7 +90,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
         'beVolume' => null,
         'azCode' => null,
         'timeZone' => null,
-        'tagsInfo' => null
+        'tagsInfo' => null,
+        'securityGroupId' => null
     ];
 
     /**
@@ -127,6 +131,7 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * azCode  可用区代码。
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
+    * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
     *
     * @var string[]
     */
@@ -144,7 +149,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'beVolume' => 'be_volume',
             'azCode' => 'az_code',
             'timeZone' => 'time_zone',
-            'tagsInfo' => 'tags_info'
+            'tagsInfo' => 'tags_info',
+            'securityGroupId' => 'security_group_id'
     ];
 
     /**
@@ -163,6 +169,7 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * azCode  可用区代码。
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
+    * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
     *
     * @var string[]
     */
@@ -180,7 +187,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'beVolume' => 'setBeVolume',
             'azCode' => 'setAzCode',
             'timeZone' => 'setTimeZone',
-            'tagsInfo' => 'setTagsInfo'
+            'tagsInfo' => 'setTagsInfo',
+            'securityGroupId' => 'setSecurityGroupId'
     ];
 
     /**
@@ -199,6 +207,7 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     * azCode  可用区代码。
     * timeZone  时区。默认时区为UTC+08:00。
     * tagsInfo  tagsInfo
+    * securityGroupId  实例安全组ID。默认与Taurus安全组ID一致。
     *
     * @var string[]
     */
@@ -216,7 +225,8 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
             'beVolume' => 'getBeVolume',
             'azCode' => 'getAzCode',
             'timeZone' => 'getTimeZone',
-            'tagsInfo' => 'getTagsInfo'
+            'tagsInfo' => 'getTagsInfo',
+            'securityGroupId' => 'getSecurityGroupId'
     ];
 
     /**
@@ -304,6 +314,7 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
         $this->container['azCode'] = isset($data['azCode']) ? $data['azCode'] : null;
         $this->container['timeZone'] = isset($data['timeZone']) ? $data['timeZone'] : null;
         $this->container['tagsInfo'] = isset($data['tagsInfo']) ? $data['tagsInfo'] : null;
+        $this->container['securityGroupId'] = isset($data['securityGroupId']) ? $data['securityGroupId'] : null;
     }
 
     /**
@@ -711,6 +722,30 @@ class StarRocksCreateRequest implements ModelInterface, ArrayAccess
     public function setTagsInfo($tagsInfo)
     {
         $this->container['tagsInfo'] = $tagsInfo;
+        return $this;
+    }
+
+    /**
+    * Gets securityGroupId
+    *  实例安全组ID。默认与Taurus安全组ID一致。
+    *
+    * @return string|null
+    */
+    public function getSecurityGroupId()
+    {
+        return $this->container['securityGroupId'];
+    }
+
+    /**
+    * Sets securityGroupId
+    *
+    * @param string|null $securityGroupId 实例安全组ID。默认与Taurus安全组ID一致。
+    *
+    * @return $this
+    */
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->container['securityGroupId'] = $securityGroupId;
         return $this;
     }
 
