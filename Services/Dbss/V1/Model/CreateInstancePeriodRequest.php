@@ -20,30 +20,30 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * name  实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
     * flavorRef  云服务器使用的规格ID
-    * name  云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    * vpcId  VPC的ID
-    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
-    * enterpriseProjectId  企业项目ID
+    * vpcId  虚拟私有云的ID
+    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
+    * enterpriseProjectId  企业项目ID。对接EPS必输。
     * nics  云服务器对应的网卡信息
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * chargingMode  计费模式： • 0：包周期计费 • 1：按需计费
-    * periodType  订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
+    * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
     * subscriptionNum  订购数量： DBSS只支持订购1套，不支持多套
     * productInfos  产品信息列表
     * tags  资源标签
     * promotionInfo  折扣信息
-    * isAutoRenew  自动续费 1表示自动续费，0表示不自动续费
+    * isAutoRenew  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'flavorRef' => 'string',
             'name' => 'string',
+            'flavorRef' => 'string',
             'vpcId' => 'string',
             'availabilityZone' => 'string',
             'enterpriseProjectId' => 'string',
@@ -64,30 +64,30 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * name  实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
     * flavorRef  云服务器使用的规格ID
-    * name  云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    * vpcId  VPC的ID
-    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
-    * enterpriseProjectId  企业项目ID
+    * vpcId  虚拟私有云的ID
+    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
+    * enterpriseProjectId  企业项目ID。对接EPS必输。
     * nics  云服务器对应的网卡信息
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * chargingMode  计费模式： • 0：包周期计费 • 1：按需计费
-    * periodType  订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
+    * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
     * subscriptionNum  订购数量： DBSS只支持订购1套，不支持多套
     * productInfos  产品信息列表
     * tags  资源标签
     * promotionInfo  折扣信息
-    * isAutoRenew  自动续费 1表示自动续费，0表示不自动续费
+    * isAutoRenew  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'flavorRef' => null,
         'name' => null,
+        'flavorRef' => null,
         'vpcId' => null,
         'availabilityZone' => null,
         'enterpriseProjectId' => null,
@@ -129,30 +129,30 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * name  实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
     * flavorRef  云服务器使用的规格ID
-    * name  云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    * vpcId  VPC的ID
-    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
-    * enterpriseProjectId  企业项目ID
+    * vpcId  虚拟私有云的ID
+    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
+    * enterpriseProjectId  企业项目ID。对接EPS必输。
     * nics  云服务器对应的网卡信息
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * chargingMode  计费模式： • 0：包周期计费 • 1：按需计费
-    * periodType  订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
+    * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
     * subscriptionNum  订购数量： DBSS只支持订购1套，不支持多套
     * productInfos  产品信息列表
     * tags  资源标签
     * promotionInfo  折扣信息
-    * isAutoRenew  自动续费 1表示自动续费，0表示不自动续费
+    * isAutoRenew  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'flavorRef' => 'flavor_ref',
             'name' => 'name',
+            'flavorRef' => 'flavor_ref',
             'vpcId' => 'vpc_id',
             'availabilityZone' => 'availability_zone',
             'enterpriseProjectId' => 'enterprise_project_id',
@@ -173,30 +173,30 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * name  实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
     * flavorRef  云服务器使用的规格ID
-    * name  云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    * vpcId  VPC的ID
-    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
-    * enterpriseProjectId  企业项目ID
+    * vpcId  虚拟私有云的ID
+    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
+    * enterpriseProjectId  企业项目ID。对接EPS必输。
     * nics  云服务器对应的网卡信息
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * chargingMode  计费模式： • 0：包周期计费 • 1：按需计费
-    * periodType  订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
+    * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
     * subscriptionNum  订购数量： DBSS只支持订购1套，不支持多套
     * productInfos  产品信息列表
     * tags  资源标签
     * promotionInfo  折扣信息
-    * isAutoRenew  自动续费 1表示自动续费，0表示不自动续费
+    * isAutoRenew  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @var string[]
     */
     protected static $setters = [
-            'flavorRef' => 'setFlavorRef',
             'name' => 'setName',
+            'flavorRef' => 'setFlavorRef',
             'vpcId' => 'setVpcId',
             'availabilityZone' => 'setAvailabilityZone',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
@@ -217,30 +217,30 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * name  实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
     * flavorRef  云服务器使用的规格ID
-    * name  云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    * vpcId  VPC的ID
-    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
-    * enterpriseProjectId  企业项目ID
+    * vpcId  虚拟私有云的ID
+    * availabilityZone  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
+    * enterpriseProjectId  企业项目ID。对接EPS必输。
     * nics  云服务器对应的网卡信息
     * securityGroups  云服务器对应安全组信息
     * comment  备注信息
     * region  云服务器所在区域ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * chargingMode  计费模式： • 0：包周期计费 • 1：按需计费
-    * periodType  订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * chargingMode  计费模式： - 0: 包周期计费 - 1: 按需计费
+    * periodType  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     * periodNum  订购周期数
     * subscriptionNum  订购数量： DBSS只支持订购1套，不支持多套
     * productInfos  产品信息列表
     * tags  资源标签
     * promotionInfo  折扣信息
-    * isAutoRenew  自动续费 1表示自动续费，0表示不自动续费
+    * isAutoRenew  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @var string[]
     */
     protected static $getters = [
-            'flavorRef' => 'getFlavorRef',
             'name' => 'getName',
+            'flavorRef' => 'getFlavorRef',
             'vpcId' => 'getVpcId',
             'availabilityZone' => 'getAvailabilityZone',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
@@ -317,8 +317,8 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['flavorRef'] = isset($data['flavorRef']) ? $data['flavorRef'] : null;
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['availabilityZone'] = isset($data['availabilityZone']) ? $data['availabilityZone'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
@@ -345,20 +345,17 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['flavorRef'] === null) {
-            $invalidProperties[] = "'flavorRef' can't be null";
-        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['flavorRef'] === null) {
+            $invalidProperties[] = "'flavorRef' can't be null";
         }
         if ($this->container['vpcId'] === null) {
             $invalidProperties[] = "'vpcId' can't be null";
         }
         if ($this->container['availabilityZone'] === null) {
             $invalidProperties[] = "'availabilityZone' can't be null";
-        }
-        if ($this->container['enterpriseProjectId'] === null) {
-            $invalidProperties[] = "'enterpriseProjectId' can't be null";
         }
         if ($this->container['nics'] === null) {
             $invalidProperties[] = "'nics' can't be null";
@@ -402,6 +399,30 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets name
+    *  实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
+    *
+    * @return string
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string $name 实例名称。取值范围： - 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
     * Gets flavorRef
     *  云服务器使用的规格ID
     *
@@ -426,32 +447,8 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    *
-    * @return string
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string $name 云服务器名称。 取值范围： • 只能由中文字符、英文字母、数字、下划线、中划线组成，且长度小于等于64个字符。 • 创建的云服务器数量大于1时，长度小于等于59个字符
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
     * Gets vpcId
-    *  VPC的ID
+    *  虚拟私有云的ID
     *
     * @return string
     */
@@ -463,7 +460,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string $vpcId VPC的ID
+    * @param string $vpcId 虚拟私有云的ID
     *
     * @return $this
     */
@@ -475,7 +472,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets availabilityZone
-    *  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
+    *  云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
     *
     * @return string
     */
@@ -487,7 +484,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets availabilityZone
     *
-    * @param string $availabilityZone 云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)
+    * @param string $availabilityZone 云服务器对应可用分区信息。(两个主备分区，中间用“,”分割，例如az1.dc1,az2.dc2)。
     *
     * @return $this
     */
@@ -499,9 +496,9 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID
+    *  企业项目ID。对接EPS必输。
     *
-    * @return string
+    * @return string|null
     */
     public function getEnterpriseProjectId()
     {
@@ -511,7 +508,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string $enterpriseProjectId 企业项目ID
+    * @param string|null $enterpriseProjectId 企业项目ID。对接EPS必输。
     *
     * @return $this
     */
@@ -619,7 +616,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets cloudServiceType
-    *  服务类型： 默认hws.service.type.dbss
+    *  服务类型： - hws.service.type.dbss
     *
     * @return string
     */
@@ -631,7 +628,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets cloudServiceType
     *
-    * @param string $cloudServiceType 服务类型： 默认hws.service.type.dbss
+    * @param string $cloudServiceType 服务类型： - hws.service.type.dbss
     *
     * @return $this
     */
@@ -643,7 +640,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式： • 0：包周期计费 • 1：按需计费
+    *  计费模式： - 0: 包周期计费 - 1: 按需计费
     *
     * @return int
     */
@@ -655,7 +652,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param int $chargingMode 计费模式： • 0：包周期计费 • 1：按需计费
+    * @param int $chargingMode 计费模式： - 0: 包周期计费 - 1: 按需计费
     *
     * @return $this
     */
@@ -667,7 +664,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets periodType
-    *  订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    *  -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     *
     * @return int
     */
@@ -679,7 +676,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets periodType
     *
-    * @param int $periodType 订购周期类型： • 0：天； • 1：周； • 2：月； • 3：年； • 4：小时； • 5：绝对时间
+    * @param int $periodType -订购周期类型 - 0: 天 - 1：周 - 2：月 - 3：年 - 4: 小时 - 5: 绝对时间
     *
     * @return $this
     */
@@ -811,7 +808,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets isAutoRenew
-    *  自动续费 1表示自动续费，0表示不自动续费
+    *  自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @return int|null
     */
@@ -823,7 +820,7 @@ class CreateInstancePeriodRequest implements ModelInterface, ArrayAccess
     /**
     * Sets isAutoRenew
     *
-    * @param int|null $isAutoRenew 自动续费 1表示自动续费，0表示不自动续费
+    * @param int|null $isAutoRenew 自动续费 - 1: 自动续费 - 0: 不自动续费
     *
     * @return $this
     */

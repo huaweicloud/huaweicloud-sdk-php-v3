@@ -21,8 +21,8 @@ class AntiDDoSAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new AntiDDoSAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new AntiDDoSAsyncClient());
+        return $client;
     }
 
     /**

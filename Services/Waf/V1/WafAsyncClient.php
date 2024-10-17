@@ -21,8 +21,8 @@ class WafAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new WafAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new WafAsyncClient());
+        return $client;
     }
 
     /**

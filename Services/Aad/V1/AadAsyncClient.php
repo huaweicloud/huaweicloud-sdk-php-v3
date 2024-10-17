@@ -21,8 +21,8 @@ class AadAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new AadAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new AadAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

@@ -31,7 +31,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * isFrozen  是否冻结
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
@@ -89,7 +89,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * isFrozen  是否冻结
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
@@ -168,7 +168,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * isFrozen  是否冻结
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
@@ -226,7 +226,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * isFrozen  是否冻结
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
@@ -284,7 +284,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * isFrozen  是否冻结
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
@@ -915,7 +915,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
-    *  带宽值定义，单位Mbps。
+    *  带宽值，单位Mbps。
     *
     * @return int|null
     */
@@ -927,7 +927,7 @@ class CentralNetworkAttachment implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param int|null $bandwidthSize 带宽值定义，单位Mbps。
+    * @param int|null $bandwidthSize 带宽值，单位Mbps。
     *
     * @return $this
     */

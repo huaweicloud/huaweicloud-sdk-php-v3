@@ -28,11 +28,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * centralNetworkPlaneId  中心网络平面ID。
     * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErId  实例ID。
-    * attachedErTableId  实例ID。
-    * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * hostedCloud  hostedCloud
     *
     * @var string[]
     */
@@ -49,7 +49,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
             'attachedErTableRegionId' => 'string',
             'attachedErId' => 'string',
             'attachedErTableId' => 'string',
-            'hostedCloud' => 'string'
+            'hostedCloud' => '\HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum'
     ];
 
     /**
@@ -62,11 +62,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * centralNetworkPlaneId  中心网络平面ID。
     * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErId  实例ID。
-    * attachedErTableId  实例ID。
-    * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * hostedCloud  hostedCloud
     *
     * @var string[]
     */
@@ -117,11 +117,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * centralNetworkPlaneId  中心网络平面ID。
     * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErId  实例ID。
-    * attachedErTableId  实例ID。
-    * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * hostedCloud  hostedCloud
     *
     * @var string[]
     */
@@ -151,11 +151,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * centralNetworkPlaneId  中心网络平面ID。
     * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErId  实例ID。
-    * attachedErTableId  实例ID。
-    * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * hostedCloud  hostedCloud
     *
     * @var string[]
     */
@@ -185,11 +185,11 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     * centralNetworkPlaneId  中心网络平面ID。
     * attachmentId  中心网络附件对端实例的连接ID，企业路由器的连接ID或者GDGW的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErId  实例ID。
-    * attachedErTableId  实例ID。
-    * hostedCloud  - HWCloud (华为云) - Ireland (爱尔兰)
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * hostedCloud  hostedCloud
     *
     * @var string[]
     */
@@ -249,22 +249,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     {
         return self::$openAPIModelName;
     }
-    const HOSTED_CLOUD_HW_CLOUD = 'HWCloud';
-    const HOSTED_CLOUD_IRELAND = 'Ireland';
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getHostedCloudAllowableValues()
-    {
-        return [
-            self::HOSTED_CLOUD_HW_CLOUD,
-            self::HOSTED_CLOUD_IRELAND,
-        ];
-    }
 
 
     /**
@@ -440,14 +425,6 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
         if ($this->container['hostedCloud'] === null) {
             $invalidProperties[] = "'hostedCloud' can't be null";
         }
-            $allowedValues = $this->getHostedCloudAllowableValues();
-                if (!is_null($this->container['hostedCloud']) && !in_array($this->container['hostedCloud'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'hostedCloud', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -656,7 +633,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets attachedErTableProjectId
-    *  实例所属项目ID。
+    *  被挂载的企业路由器的项目ID。
     *
     * @return string
     */
@@ -668,7 +645,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachedErTableProjectId
     *
-    * @param string $attachedErTableProjectId 实例所属项目ID。
+    * @param string $attachedErTableProjectId 被挂载的企业路由器的项目ID。
     *
     * @return $this
     */
@@ -680,7 +657,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets attachedErTableRegionId
-    *  RegionID。
+    *  ER路由器的regionID。
     *
     * @return string
     */
@@ -692,7 +669,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachedErTableRegionId
     *
-    * @param string $attachedErTableRegionId RegionID。
+    * @param string $attachedErTableRegionId ER路由器的regionID。
     *
     * @return $this
     */
@@ -704,7 +681,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets attachedErId
-    *  实例ID。
+    *  被挂载的企业路由器ID。
     *
     * @return string
     */
@@ -716,7 +693,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachedErId
     *
-    * @param string $attachedErId 实例ID。
+    * @param string $attachedErId 被挂载的企业路由器ID。
     *
     * @return $this
     */
@@ -728,7 +705,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets attachedErTableId
-    *  实例ID。
+    *  被挂载的企业路由器的路由表ID。
     *
     * @return string
     */
@@ -740,7 +717,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets attachedErTableId
     *
-    * @param string $attachedErTableId 实例ID。
+    * @param string $attachedErTableId 被挂载的企业路由器的路由表ID。
     *
     * @return $this
     */
@@ -752,9 +729,9 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
 
     /**
     * Gets hostedCloud
-    *  - HWCloud (华为云) - Ireland (爱尔兰)
+    *  hostedCloud
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum
     */
     public function getHostedCloud()
     {
@@ -764,7 +741,7 @@ class CreateCentralNetworkErRouteTableAttachment implements ModelInterface, Arra
     /**
     * Sets hostedCloud
     *
-    * @param string $hostedCloud - HWCloud (华为云) - Ireland (爱尔兰)
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum $hostedCloud hostedCloud
     *
     * @return $this
     */

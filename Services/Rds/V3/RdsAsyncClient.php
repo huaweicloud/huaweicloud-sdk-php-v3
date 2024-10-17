@@ -21,8 +21,8 @@ class RdsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new RdsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new RdsAsyncClient());
+        return $client;
     }
 
     /**

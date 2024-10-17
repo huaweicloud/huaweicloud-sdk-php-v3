@@ -20,7 +20,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * chargeModel  付费模式 Period：包周期 Demand：按需。
+    * chargeModel  付费模式  - Period：包周期 - Demand：按需。
     * comment  备注信息。
     * configNum  配置的数据库总数。
     * connectIp  连接地址。
@@ -28,13 +28,13 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * cpu  CPU个数
     * created  创建时间
     * databaseLimit  支持的数据库总数
-    * effect  1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    * effect  实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     * expired  过期时间
     * id  ID
     * keepDays  剩余天数
     * name  实例别名
-    * newVersion  如果有返回，则需要升级，如果没有，则为null
-    * portId  绑定弹性IP的portID
+    * newVersion  如果有返回，则需要升级，如果没有，则为null。
+    * portId  绑定弹性IP的port ID
     * ram  内存
     * region  实例所在region
     * remainDays  到期天数
@@ -43,9 +43,9 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * scene  场景
     * securityGroupId  安全组
     * specification  实例规格
-    * status  实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    * status  实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     * subnetId  子网ID
-    * task  任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    * task  任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     * version  实例的当前版本
     * vpcId  虚拟私有云
     * zone  可用区
@@ -86,7 +86,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * chargeModel  付费模式 Period：包周期 Demand：按需。
+    * chargeModel  付费模式  - Period：包周期 - Demand：按需。
     * comment  备注信息。
     * configNum  配置的数据库总数。
     * connectIp  连接地址。
@@ -94,13 +94,13 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * cpu  CPU个数
     * created  创建时间
     * databaseLimit  支持的数据库总数
-    * effect  1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    * effect  实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     * expired  过期时间
     * id  ID
     * keepDays  剩余天数
     * name  实例别名
-    * newVersion  如果有返回，则需要升级，如果没有，则为null
-    * portId  绑定弹性IP的portID
+    * newVersion  如果有返回，则需要升级，如果没有，则为null。
+    * portId  绑定弹性IP的port ID
     * ram  内存
     * region  实例所在region
     * remainDays  到期天数
@@ -109,9 +109,9 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * scene  场景
     * securityGroupId  安全组
     * specification  实例规格
-    * status  实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    * status  实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     * subnetId  子网ID
-    * task  任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    * task  任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     * version  实例的当前版本
     * vpcId  虚拟私有云
     * zone  可用区
@@ -173,7 +173,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * chargeModel  付费模式 Period：包周期 Demand：按需。
+    * chargeModel  付费模式  - Period：包周期 - Demand：按需。
     * comment  备注信息。
     * configNum  配置的数据库总数。
     * connectIp  连接地址。
@@ -181,13 +181,13 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * cpu  CPU个数
     * created  创建时间
     * databaseLimit  支持的数据库总数
-    * effect  1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    * effect  实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     * expired  过期时间
     * id  ID
     * keepDays  剩余天数
     * name  实例别名
-    * newVersion  如果有返回，则需要升级，如果没有，则为null
-    * portId  绑定弹性IP的portID
+    * newVersion  如果有返回，则需要升级，如果没有，则为null。
+    * portId  绑定弹性IP的port ID
     * ram  内存
     * region  实例所在region
     * remainDays  到期天数
@@ -196,9 +196,9 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * scene  场景
     * securityGroupId  安全组
     * specification  实例规格
-    * status  实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    * status  实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     * subnetId  子网ID
-    * task  任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    * task  任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     * version  实例的当前版本
     * vpcId  虚拟私有云
     * zone  可用区
@@ -239,7 +239,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * chargeModel  付费模式 Period：包周期 Demand：按需。
+    * chargeModel  付费模式  - Period：包周期 - Demand：按需。
     * comment  备注信息。
     * configNum  配置的数据库总数。
     * connectIp  连接地址。
@@ -247,13 +247,13 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * cpu  CPU个数
     * created  创建时间
     * databaseLimit  支持的数据库总数
-    * effect  1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    * effect  实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     * expired  过期时间
     * id  ID
     * keepDays  剩余天数
     * name  实例别名
-    * newVersion  如果有返回，则需要升级，如果没有，则为null
-    * portId  绑定弹性IP的portID
+    * newVersion  如果有返回，则需要升级，如果没有，则为null。
+    * portId  绑定弹性IP的port ID
     * ram  内存
     * region  实例所在region
     * remainDays  到期天数
@@ -262,9 +262,9 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * scene  场景
     * securityGroupId  安全组
     * specification  实例规格
-    * status  实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    * status  实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     * subnetId  子网ID
-    * task  任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    * task  任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     * version  实例的当前版本
     * vpcId  虚拟私有云
     * zone  可用区
@@ -305,7 +305,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * chargeModel  付费模式 Period：包周期 Demand：按需。
+    * chargeModel  付费模式  - Period：包周期 - Demand：按需。
     * comment  备注信息。
     * configNum  配置的数据库总数。
     * connectIp  连接地址。
@@ -313,13 +313,13 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * cpu  CPU个数
     * created  创建时间
     * databaseLimit  支持的数据库总数
-    * effect  1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    * effect  实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     * expired  过期时间
     * id  ID
     * keepDays  剩余天数
     * name  实例别名
-    * newVersion  如果有返回，则需要升级，如果没有，则为null
-    * portId  绑定弹性IP的portID
+    * newVersion  如果有返回，则需要升级，如果没有，则为null。
+    * portId  绑定弹性IP的port ID
     * ram  内存
     * region  实例所在region
     * remainDays  到期天数
@@ -328,9 +328,9 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     * scene  场景
     * securityGroupId  安全组
     * specification  实例规格
-    * status  实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    * status  实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     * subnetId  子网ID
-    * task  任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    * task  任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     * version  实例的当前版本
     * vpcId  虚拟私有云
     * zone  可用区
@@ -569,7 +569,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeModel
-    *  付费模式 Period：包周期 Demand：按需。
+    *  付费模式  - Period：包周期 - Demand：按需。
     *
     * @return string
     */
@@ -581,7 +581,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Sets chargeModel
     *
-    * @param string $chargeModel 付费模式 Period：包周期 Demand：按需。
+    * @param string $chargeModel 付费模式  - Period：包周期 - Demand：按需。
     *
     * @return $this
     */
@@ -761,7 +761,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets effect
-    *  1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    *  实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     *
     * @return int
     */
@@ -773,7 +773,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Sets effect
     *
-    * @param int $effect 1.冻结可释放  2.冻结不可释放 3.冻结后不可续费
+    * @param int $effect 实例结果状态 - 1:冻结可释放  - 2:冻结不可释放 - 3:冻结后不可续费
     *
     * @return $this
     */
@@ -881,7 +881,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets newVersion
-    *  如果有返回，则需要升级，如果没有，则为null
+    *  如果有返回，则需要升级，如果没有，则为null。
     *
     * @return string
     */
@@ -893,7 +893,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Sets newVersion
     *
-    * @param string $newVersion 如果有返回，则需要升级，如果没有，则为null
+    * @param string $newVersion 如果有返回，则需要升级，如果没有，则为null。
     *
     * @return $this
     */
@@ -905,7 +905,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets portId
-    *  绑定弹性IP的portID
+    *  绑定弹性IP的port ID
     *
     * @return string
     */
@@ -917,7 +917,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Sets portId
     *
-    * @param string $portId 绑定弹性IP的portID
+    * @param string $portId 绑定弹性IP的port ID
     *
     * @return $this
     */
@@ -1121,7 +1121,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    *  实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     *
     * @return string
     */
@@ -1133,7 +1133,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 实例状态： SHUTOFF(已关闭) ACTIVE(运行中，允许任何操作) DELETING(删除中，不允许任何操作) BUILD(创建中，不允许任何操作) DELETED(已删除，不需要展示) ERROR(故障，只允许删除) HAWAIT(等待备机创建成功，不允许任何操作) FROZEN(已冻结，只允许续费、绑定/解绑) UPGRADING(升级中，不允许升级操作)
+    * @param string $status 实例状态  - SHUTOFF :已关闭  - ACTIVE: 运行中，允许任何操作   - DELETING: 删除中，不允许任何操作  - BUILD: 创建中，不允许任何操作  - DELETED: 已删除，不需要展示  - ERROR: 故障，只允许删除  - HAWAIT: 等待备机创建成功，不允许任何操作  - FROZEN: 已冻结，只允许续费、绑定/解绑  - UPGRADING: 升级中，不允许升级操作
     *
     * @return $this
     */
@@ -1169,7 +1169,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets task
-    *  任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    *  任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     *
     * @return string
     */
@@ -1181,7 +1181,7 @@ class AuditInstanceListBean implements ModelInterface, ArrayAccess
     /**
     * Sets task
     *
-    * @param string $task 任务状态： powering-on(正在开启，实例可以绑定、解绑) powering-off(正在关闭，实例可以绑定、解绑) rebooting(正在重启，实例可以绑定、解绑) delete_wait(等待删除，集群与实例不允许任何操作) NO_TASK(不展示)
+    * @param string $task 任务状态  - powering-on: 正在开启，实例可以绑定、解绑  - powering-off: 正在关闭，实例可以绑定、解绑  - rebooting: 正在重启，实例可以绑定、解绑  - delete_wait: 等待删除，集群与实例不允许任何操作  - NO_TASK: 不展示
     *
     * @return $this
     */

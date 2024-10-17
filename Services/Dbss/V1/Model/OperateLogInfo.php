@@ -21,13 +21,13 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * id  操作日志ID
-    * user  操作日志用户
-    * time  该条记录发生的时间，格式为时间戳
+    * user  操作日志用户名
+    * time  该条记录发生的时间，格式为时间戳。
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
     * function  该条记录的功能类型
-    * action  该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果  success表示成功  fail表示失败
+    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
             'id' => 'string',
             'user' => 'string',
             'time' => 'string',
-            'function' => 'string',
             'action' => 'string',
+            'function' => 'string',
             'name' => 'string',
             'description' => 'string',
             'result' => 'string'
@@ -45,13 +45,13 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  操作日志ID
-    * user  操作日志用户
-    * time  该条记录发生的时间，格式为时间戳
+    * user  操作日志用户名
+    * time  该条记录发生的时间，格式为时间戳。
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
     * function  该条记录的功能类型
-    * action  该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果  success表示成功  fail表示失败
+    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @var string[]
     */
@@ -59,8 +59,8 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
         'id' => null,
         'user' => null,
         'time' => null,
-        'function' => null,
         'action' => null,
+        'function' => null,
         'name' => null,
         'description' => null,
         'result' => null
@@ -90,13 +90,13 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * id  操作日志ID
-    * user  操作日志用户
-    * time  该条记录发生的时间，格式为时间戳
+    * user  操作日志用户名
+    * time  该条记录发生的时间，格式为时间戳。
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
     * function  该条记录的功能类型
-    * action  该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果  success表示成功  fail表示失败
+    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @var string[]
     */
@@ -104,8 +104,8 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
             'id' => 'id',
             'user' => 'user',
             'time' => 'time',
-            'function' => 'function',
             'action' => 'action',
+            'function' => 'function',
             'name' => 'name',
             'description' => 'description',
             'result' => 'result'
@@ -114,13 +114,13 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  操作日志ID
-    * user  操作日志用户
-    * time  该条记录发生的时间，格式为时间戳
+    * user  操作日志用户名
+    * time  该条记录发生的时间，格式为时间戳。
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
     * function  该条记录的功能类型
-    * action  该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果  success表示成功  fail表示失败
+    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @var string[]
     */
@@ -128,8 +128,8 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
             'id' => 'setId',
             'user' => 'setUser',
             'time' => 'setTime',
-            'function' => 'setFunction',
             'action' => 'setAction',
+            'function' => 'setFunction',
             'name' => 'setName',
             'description' => 'setDescription',
             'result' => 'setResult'
@@ -138,13 +138,13 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  操作日志ID
-    * user  操作日志用户
-    * time  该条记录发生的时间，格式为时间戳
+    * user  操作日志用户名
+    * time  该条记录发生的时间，格式为时间戳。
+    * action  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
     * function  该条记录的功能类型
-    * action  该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
     * name  该条记录对应的用户操作对象
     * description  该条记录具体的描述
-    * result  该条记录对应用户执行的结果  success表示成功  fail表示失败
+    * result  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @var string[]
     */
@@ -152,8 +152,8 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
             'id' => 'getId',
             'user' => 'getUser',
             'time' => 'getTime',
-            'function' => 'getFunction',
             'action' => 'getAction',
+            'function' => 'getFunction',
             'name' => 'getName',
             'description' => 'getDescription',
             'result' => 'getResult'
@@ -220,8 +220,8 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['user'] = isset($data['user']) ? $data['user'] : null;
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
-        $this->container['function'] = isset($data['function']) ? $data['function'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
+        $this->container['function'] = isset($data['function']) ? $data['function'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
@@ -275,7 +275,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets user
-    *  操作日志用户
+    *  操作日志用户名
     *
     * @return string|null
     */
@@ -287,7 +287,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets user
     *
-    * @param string|null $user 操作日志用户
+    * @param string|null $user 操作日志用户名
     *
     * @return $this
     */
@@ -299,7 +299,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets time
-    *  该条记录发生的时间，格式为时间戳
+    *  该条记录发生的时间，格式为时间戳。
     *
     * @return string|null
     */
@@ -311,13 +311,37 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets time
     *
-    * @param string|null $time 该条记录发生的时间，格式为时间戳
+    * @param string|null $time 该条记录发生的时间，格式为时间戳。
     *
     * @return $this
     */
     public function setTime($time)
     {
         $this->container['time'] = $time;
+        return $this;
+    }
+
+    /**
+    * Gets action
+    *  该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    *
+    * @return string|null
+    */
+    public function getAction()
+    {
+        return $this->container['action'];
+    }
+
+    /**
+    * Sets action
+    *
+    * @param string|null $action 该条记录的操作类型 - create：创建 - update：更新 - delete：删除 - download: 下载
+    *
+    * @return $this
+    */
+    public function setAction($action)
+    {
+        $this->container['action'] = $action;
         return $this;
     }
 
@@ -342,30 +366,6 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     public function setFunction($function)
     {
         $this->container['function'] = $function;
-        return $this;
-    }
-
-    /**
-    * Gets action
-    *  该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
-    *
-    * @return string|null
-    */
-    public function getAction()
-    {
-        return $this->container['action'];
-    }
-
-    /**
-    * Sets action
-    *
-    * @param string|null $action 该条记录的操作类型  create：创建  update：更新  operate：操作（开关）  delete：删除
-    *
-    * @return $this
-    */
-    public function setAction($action)
-    {
-        $this->container['action'] = $action;
         return $this;
     }
 
@@ -419,7 +419,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets result
-    *  该条记录对应用户执行的结果  success表示成功  fail表示失败
+    *  该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @return string|null
     */
@@ -431,7 +431,7 @@ class OperateLogInfo implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 该条记录对应用户执行的结果  success表示成功  fail表示失败
+    * @param string|null $result 该条记录对应用户执行的结果 - success: 成功 - fail: 失败
     *
     * @return $this
     */

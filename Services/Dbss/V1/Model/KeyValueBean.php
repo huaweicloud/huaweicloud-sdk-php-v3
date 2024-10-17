@@ -172,9 +172,6 @@ class KeyValueBean implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
-        if ($this->container['value'] === null) {
-            $invalidProperties[] = "'value' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -217,7 +214,7 @@ class KeyValueBean implements ModelInterface, ArrayAccess
     * Gets value
     *  值
     *
-    * @return string
+    * @return string|null
     */
     public function getValue()
     {
@@ -227,7 +224,7 @@ class KeyValueBean implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 值
+    * @param string|null $value 值
     *
     * @return $this
     */

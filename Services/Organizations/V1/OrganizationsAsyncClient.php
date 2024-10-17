@@ -21,8 +21,8 @@ class OrganizationsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new OrganizationsAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new OrganizationsAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

@@ -20,7 +20,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源ID
+    * resourceId  资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源ID
+    * resourceId  资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源ID
+    * resourceId  资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源ID
+    * resourceId  资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源ID
+    * resourceId  资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源ID
+    *  资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @return string
     */
@@ -189,7 +189,7 @@ class ListAuditInstanceJobsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源ID
+    * @param string $resourceId 资源ID。可在查询实例列表接口的resource_id获取。
     *
     * @return $this
     */

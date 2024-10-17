@@ -23,16 +23,16 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  风险规则ID
     * ruleName  风险名称
-    * status  风险规则状态 枚举值：  OFF  ON
-    * action  操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    * status  风险规则状态 - OFF - ON
+    * action  操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     * schemas  Schema列表
-    * rank  风险规则优先级
+    * rank  风险规则优先级。数字越小优先级越高。
     * ignoreCase  是否忽略大小写
-    * riskLevel  风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * dbIds  数据库id，中间逗号分隔（单个id 小于256位）
-    * executionSymbol  执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * executionSymbol  执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * executionTime  设定的执行时长阈值
-    * affectSymbol  影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * affectSymbol  影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * affectRows  设定的影响行数阈值
     * clientIps  客户端IP段: IP-IP格式，或IP/XX 格式。 各个IP段使用逗号连接
     *
@@ -59,16 +59,16 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  风险规则ID
     * ruleName  风险名称
-    * status  风险规则状态 枚举值：  OFF  ON
-    * action  操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    * status  风险规则状态 - OFF - ON
+    * action  操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     * schemas  Schema列表
-    * rank  风险规则优先级
+    * rank  风险规则优先级。数字越小优先级越高。
     * ignoreCase  是否忽略大小写
-    * riskLevel  风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * dbIds  数据库id，中间逗号分隔（单个id 小于256位）
-    * executionSymbol  执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * executionSymbol  执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * executionTime  设定的执行时长阈值
-    * affectSymbol  影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * affectSymbol  影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * affectRows  设定的影响行数阈值
     * clientIps  客户端IP段: IP-IP格式，或IP/XX 格式。 各个IP段使用逗号连接
     *
@@ -116,16 +116,16 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * ruleId  风险规则ID
     * ruleName  风险名称
-    * status  风险规则状态 枚举值：  OFF  ON
-    * action  操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    * status  风险规则状态 - OFF - ON
+    * action  操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     * schemas  Schema列表
-    * rank  风险规则优先级
+    * rank  风险规则优先级。数字越小优先级越高。
     * ignoreCase  是否忽略大小写
-    * riskLevel  风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * dbIds  数据库id，中间逗号分隔（单个id 小于256位）
-    * executionSymbol  执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * executionSymbol  执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * executionTime  设定的执行时长阈值
-    * affectSymbol  影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * affectSymbol  影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * affectRows  设定的影响行数阈值
     * clientIps  客户端IP段: IP-IP格式，或IP/XX 格式。 各个IP段使用逗号连接
     *
@@ -152,16 +152,16 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  风险规则ID
     * ruleName  风险名称
-    * status  风险规则状态 枚举值：  OFF  ON
-    * action  操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    * status  风险规则状态 - OFF - ON
+    * action  操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     * schemas  Schema列表
-    * rank  风险规则优先级
+    * rank  风险规则优先级。数字越小优先级越高。
     * ignoreCase  是否忽略大小写
-    * riskLevel  风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * dbIds  数据库id，中间逗号分隔（单个id 小于256位）
-    * executionSymbol  执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * executionSymbol  执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * executionTime  设定的执行时长阈值
-    * affectSymbol  影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * affectSymbol  影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * affectRows  设定的影响行数阈值
     * clientIps  客户端IP段: IP-IP格式，或IP/XX 格式。 各个IP段使用逗号连接
     *
@@ -188,16 +188,16 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  风险规则ID
     * ruleName  风险名称
-    * status  风险规则状态 枚举值：  OFF  ON
-    * action  操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    * status  风险规则状态 - OFF - ON
+    * action  操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     * schemas  Schema列表
-    * rank  风险规则优先级
+    * rank  风险规则优先级。数字越小优先级越高。
     * ignoreCase  是否忽略大小写
-    * riskLevel  风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     * dbIds  数据库id，中间逗号分隔（单个id 小于256位）
-    * executionSymbol  执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * executionSymbol  执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * executionTime  设定的执行时长阈值
-    * affectSymbol  影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * affectSymbol  影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     * affectRows  设定的影响行数阈值
     * clientIps  客户端IP段: IP-IP格式，或IP/XX 格式。 各个IP段使用逗号连接
     *
@@ -366,7 +366,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  风险规则状态 枚举值：  OFF  ON
+    *  风险规则状态 - OFF - ON
     *
     * @return string|null
     */
@@ -378,7 +378,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 风险规则状态 枚举值：  OFF  ON
+    * @param string|null $status 风险规则状态 - OFF - ON
     *
     * @return $this
     */
@@ -390,7 +390,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets action
-    *  操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    *  操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     *
     * @return string|null
     */
@@ -402,7 +402,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets action
     *
-    * @param string|null $action 操作集合, 中间逗号分隔 LOGIN CREATE_TABLE CREATE_TABLESPACE DROP_TABLE DROP_TABLESPACE DELETE INSERT INSERT_SELECT SELECT SELECT_FOR_UPDATE UPDATE CREATE_USER DROP_USER GRANT OPERATE ALL
+    * @param string|null $action 操作集合, 中间逗号分隔。 LOGIN,CREATE_TABLE,CREATE_TABLESPACE,DROP_TABLE, DROP_TABLESPACE,DELETE,INSERT,INSERT_SELECT,SELECT,SELECT_FOR_UPDATE, UPDATE,CREATE_USER,DROP_USER,GRANT,OPERATE ALL
     *
     * @return $this
     */
@@ -438,7 +438,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets rank
-    *  风险规则优先级
+    *  风险规则优先级。数字越小优先级越高。
     *
     * @return int|null
     */
@@ -450,7 +450,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rank
     *
-    * @param int|null $rank 风险规则优先级
+    * @param int|null $rank 风险规则优先级。数字越小优先级越高。
     *
     * @return $this
     */
@@ -486,7 +486,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @return string|null
     */
@@ -498,7 +498,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string|null $riskLevel 风险级别 枚举值：  LOW  MEDIUM  HIGH  NO_RISK
+    * @param string|null $riskLevel 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @return $this
     */
@@ -534,7 +534,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets executionSymbol
-    *  执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    *  执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     *
     * @return string|null
     */
@@ -546,7 +546,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets executionSymbol
     *
-    * @param string|null $executionSymbol 执行时长对执行时长阈值的关系 枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * @param string|null $executionSymbol 执行时长对执行时长阈值的关系 - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     *
     * @return $this
     */
@@ -582,7 +582,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets affectSymbol
-    *  影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    *  影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     *
     * @return string|null
     */
@@ -594,7 +594,7 @@ class ShowAuditRuleRiskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets affectSymbol
     *
-    * @param string|null $affectSymbol 影响行数对行数阈值的关系：  枚举值：  GREATER  EQUAL  LESS  GREATER_EQUAL  LESS_EQUAL  NO_MATCH
+    * @param string|null $affectSymbol 影响行数对行数阈值的关系：  - GREATER - EQUAL - LESS - GREATER_EQUAL - LESS_EQUAL - NO_MATCH
     *
     * @return $this
     */

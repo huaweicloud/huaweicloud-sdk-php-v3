@@ -21,8 +21,8 @@ class MrsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new MrsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new MrsAsyncClient());
+        return $client;
     }
 
     /**

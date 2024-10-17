@@ -21,8 +21,8 @@ class CloudTableAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new CloudTableAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new CloudTableAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

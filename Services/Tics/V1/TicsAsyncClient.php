@@ -21,8 +21,8 @@ class TicsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new TicsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new TicsAsyncClient());
+        return $client;
     }
 
     /**

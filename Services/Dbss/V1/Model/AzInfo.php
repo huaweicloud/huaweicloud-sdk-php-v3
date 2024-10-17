@@ -23,8 +23,8 @@ class AzInfo implements ModelInterface, ArrayAccess
     * zoneName  可用区名称
     * zoneNumber  可用区编号
     * azType  可用区类型
-    * alias  可用区别名
-    * aliasUs  可用区别名英文
+    * alias  可用区中文别名
+    * aliasUs  可用区英文别名
     *
     * @var string[]
     */
@@ -41,8 +41,8 @@ class AzInfo implements ModelInterface, ArrayAccess
     * zoneName  可用区名称
     * zoneNumber  可用区编号
     * azType  可用区类型
-    * alias  可用区别名
-    * aliasUs  可用区别名英文
+    * alias  可用区中文别名
+    * aliasUs  可用区英文别名
     *
     * @var string[]
     */
@@ -80,8 +80,8 @@ class AzInfo implements ModelInterface, ArrayAccess
     * zoneName  可用区名称
     * zoneNumber  可用区编号
     * azType  可用区类型
-    * alias  可用区别名
-    * aliasUs  可用区别名英文
+    * alias  可用区中文别名
+    * aliasUs  可用区英文别名
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class AzInfo implements ModelInterface, ArrayAccess
     * zoneName  可用区名称
     * zoneNumber  可用区编号
     * azType  可用区类型
-    * alias  可用区别名
-    * aliasUs  可用区别名英文
+    * alias  可用区中文别名
+    * aliasUs  可用区英文别名
     *
     * @var string[]
     */
@@ -116,8 +116,8 @@ class AzInfo implements ModelInterface, ArrayAccess
     * zoneName  可用区名称
     * zoneNumber  可用区编号
     * azType  可用区类型
-    * alias  可用区别名
-    * aliasUs  可用区别名英文
+    * alias  可用区中文别名
+    * aliasUs  可用区英文别名
     *
     * @var string[]
     */
@@ -305,7 +305,7 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets alias
-    *  可用区别名
+    *  可用区中文别名
     *
     * @return string
     */
@@ -317,7 +317,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     /**
     * Sets alias
     *
-    * @param string $alias 可用区别名
+    * @param string $alias 可用区中文别名
     *
     * @return $this
     */
@@ -329,7 +329,7 @@ class AzInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets aliasUs
-    *  可用区别名英文
+    *  可用区英文别名
     *
     * @return string
     */
@@ -341,7 +341,7 @@ class AzInfo implements ModelInterface, ArrayAccess
     /**
     * Sets aliasUs
     *
-    * @param string $aliasUs 可用区别名英文
+    * @param string $aliasUs 可用区英文别名
     *
     * @return $this
     */

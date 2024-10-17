@@ -21,8 +21,8 @@ class CcAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new CcAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new CcAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

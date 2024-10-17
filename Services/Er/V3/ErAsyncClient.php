@@ -21,8 +21,8 @@ class ErAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new ErAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new ErAsyncClient());
+        return $client;
     }
 
     /**

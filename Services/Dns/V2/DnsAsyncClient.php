@@ -21,8 +21,8 @@ class DnsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new DnsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new DnsAsyncClient());
+        return $client;
     }
 
     /**

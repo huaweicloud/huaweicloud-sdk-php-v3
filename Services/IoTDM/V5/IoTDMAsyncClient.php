@@ -21,8 +21,8 @@ class IoTDMAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new IoTDMAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new IoTDMAsyncClient());
+        return $client;
     }
 
     /**

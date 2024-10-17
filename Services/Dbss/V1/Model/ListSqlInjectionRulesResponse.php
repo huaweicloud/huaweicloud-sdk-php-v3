@@ -22,7 +22,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * rules  SQL规则列表
-    * total  当前范围总数
+    * total  总数
     *
     * @var string[]
     */
@@ -34,7 +34,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * rules  SQL规则列表
-    * total  当前范围总数
+    * total  总数
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * rules  SQL规则列表
-    * total  当前范围总数
+    * total  总数
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * rules  SQL规则列表
-    * total  当前范围总数
+    * total  总数
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * rules  SQL规则列表
-    * total  当前范围总数
+    * total  总数
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  当前范围总数
+    *  总数
     *
     * @return int|null
     */
@@ -222,7 +222,7 @@ class ListSqlInjectionRulesResponse implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 当前范围总数
+    * @param int|null $total 总数
     *
     * @return $this
     */

@@ -20,8 +20,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * startTime  起始时间戳（毫秒），默认当天00:00。
-    * endTime  结束时间戳（毫秒），默认次日00:00。
+    * startTime  查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
+    * endTime  查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
@@ -44,8 +44,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * startTime  起始时间戳（毫秒），默认当天00:00。
-    * endTime  结束时间戳（毫秒），默认次日00:00。
+    * startTime  查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
+    * endTime  查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
@@ -89,8 +89,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * startTime  起始时间戳（毫秒），默认当天00:00。
-    * endTime  结束时间戳（毫秒），默认次日00:00。
+    * startTime  查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
+    * endTime  查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
@@ -113,8 +113,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * startTime  起始时间戳（毫秒），默认当天00:00。
-    * endTime  结束时间戳（毫秒），默认次日00:00。
+    * startTime  查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
+    * endTime  查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
@@ -137,8 +137,8 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * startTime  起始时间戳（毫秒），默认当天00:00。
-    * endTime  结束时间戳（毫秒），默认次日00:00。
+    * startTime  查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
+    * endTime  查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     * offset  偏移量：特定数据字段与起始数据字段位置的距离，默认为0。
     * limit  单次查询数据条数，上限为100，默认为10。
     * url  刷新预热url。
@@ -251,7 +251,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets startTime
-    *  起始时间戳（毫秒），默认当天00:00。
+    *  查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
     *
     * @return int|null
     */
@@ -263,7 +263,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets startTime
     *
-    * @param int|null $startTime 起始时间戳（毫秒），默认当天00:00。
+    * @param int|null $startTime 查询起始时间戳（毫秒），不传默认当天00:00，需与结束时间戳同时指定，时间跨度不能超过24小时。
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets endTime
-    *  结束时间戳（毫秒），默认次日00:00。
+    *  查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     *
     * @return int|null
     */
@@ -287,7 +287,7 @@ class ShowUrlTaskInfoRequest implements ModelInterface, ArrayAccess
     /**
     * Sets endTime
     *
-    * @param int|null $endTime 结束时间戳（毫秒），默认次日00:00。
+    * @param int|null $endTime 查询结束时间戳（毫秒），不传默认次日00:00，需与开始时间戳同时指定，时间跨度不能超过24小时。
     *
     * @return $this
     */

@@ -29,7 +29,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * state  state
     * isFrozen  是否冻结
     * connectionType  connectionType
@@ -69,7 +69,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * state  state
     * isFrozen  是否冻结
     * connectionType  connectionType
@@ -130,7 +130,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * state  state
     * isFrozen  是否冻结
     * connectionType  connectionType
@@ -170,7 +170,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * state  state
     * isFrozen  是否冻结
     * connectionType  connectionType
@@ -210,7 +210,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     * centralNetworkPlaneId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * state  state
     * isFrozen  是否冻结
     * connectionType  connectionType
@@ -669,7 +669,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
-    *  带宽值定义，单位Mbps。
+    *  带宽值，单位Mbps。
     *
     * @return int|null
     */
@@ -681,7 +681,7 @@ class CentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param int|null $bandwidthSize 带宽值定义，单位Mbps。
+    * @param int|null $bandwidthSize 带宽值，单位Mbps。
     *
     * @return $this
     */

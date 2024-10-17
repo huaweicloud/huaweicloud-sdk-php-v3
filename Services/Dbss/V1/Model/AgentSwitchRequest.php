@@ -20,8 +20,8 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * agentId  审计agent的ID
-    * status  Agent开关状态 1：开启 0：关闭
+    * agentId  审计agent的ID。可在查询数据库agent列表接口ID字段获取。
+    * status  Agent开关状态 - 1：开启 - 0：关闭
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * agentId  审计agent的ID
-    * status  Agent开关状态 1：开启 0：关闭
+    * agentId  审计agent的ID。可在查询数据库agent列表接口ID字段获取。
+    * status  Agent开关状态 - 1：开启 - 0：关闭
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * agentId  审计agent的ID
-    * status  Agent开关状态 1：开启 0：关闭
+    * agentId  审计agent的ID。可在查询数据库agent列表接口ID字段获取。
+    * status  Agent开关状态 - 1：开启 - 0：关闭
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * agentId  审计agent的ID
-    * status  Agent开关状态 1：开启 0：关闭
+    * agentId  审计agent的ID。可在查询数据库agent列表接口ID字段获取。
+    * status  Agent开关状态 - 1：开启 - 0：关闭
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * agentId  审计agent的ID
-    * status  Agent开关状态 1：开启 0：关闭
+    * agentId  审计agent的ID。可在查询数据库agent列表接口ID字段获取。
+    * status  Agent开关状态 - 1：开启 - 0：关闭
     *
     * @var string[]
     */
@@ -139,7 +139,22 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_0 = 0;
+    const STATUS_1 = 1;
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_0,
+            self::STATUS_1,
+        ];
+    }
 
 
     /**
@@ -175,6 +190,14 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -191,7 +214,7 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets agentId
-    *  审计agent的ID
+    *  审计agent的ID。可在查询数据库agent列表接口ID字段获取。
     *
     * @return string
     */
@@ -203,7 +226,7 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets agentId
     *
-    * @param string $agentId 审计agent的ID
+    * @param string $agentId 审计agent的ID。可在查询数据库agent列表接口ID字段获取。
     *
     * @return $this
     */
@@ -215,7 +238,7 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  Agent开关状态 1：开启 0：关闭
+    *  Agent开关状态 - 1：开启 - 0：关闭
     *
     * @return int
     */
@@ -227,7 +250,7 @@ class AgentSwitchRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int $status Agent开关状态 1：开启 0：关闭
+    * @param int $status Agent开关状态 - 1：开启 - 0：关闭
     *
     * @return $this
     */

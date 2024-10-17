@@ -32,19 +32,19 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * globalConnectionBandwidthId  全域互联带宽ID。
     * isFrozen  是否冻结
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
     * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * attachedErTableId  实例ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableSiteCode  站点编码定义
-    * attachedErId  实例ID。
-    * attachedErAttachmentId  实例ID。
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * attachedErAttachmentId  被挂载的企业路由器的连接ID。
+    * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建企业路由表附件的原因。
@@ -71,12 +71,12 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'enterpriseRouterAttachmentId' => 'string',
             'enterpriseRouterTableId' => 'string',
             'enterpriseRouterSiteCode' => 'string',
-            'attachedErTableId' => 'string',
-            'attachedErTableRegionId' => 'string',
             'attachedErTableProjectId' => 'string',
-            'attachedErTableSiteCode' => 'string',
+            'attachedErTableRegionId' => 'string',
             'attachedErId' => 'string',
+            'attachedErTableId' => 'string',
             'attachedErAttachmentId' => 'string',
+            'attachedErTableSiteCode' => 'string',
             'approvedState' => '\HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum',
             'hostedCloud' => '\HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum',
             'reason' => 'string'
@@ -96,19 +96,19 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * globalConnectionBandwidthId  全域互联带宽ID。
     * isFrozen  是否冻结
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
     * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * attachedErTableId  实例ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableSiteCode  站点编码定义
-    * attachedErId  实例ID。
-    * attachedErAttachmentId  实例ID。
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * attachedErAttachmentId  被挂载的企业路由器的连接ID。
+    * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建企业路由表附件的原因。
@@ -135,12 +135,12 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
         'enterpriseRouterAttachmentId' => null,
         'enterpriseRouterTableId' => null,
         'enterpriseRouterSiteCode' => null,
-        'attachedErTableId' => null,
-        'attachedErTableRegionId' => null,
         'attachedErTableProjectId' => null,
-        'attachedErTableSiteCode' => null,
+        'attachedErTableRegionId' => null,
         'attachedErId' => null,
+        'attachedErTableId' => null,
         'attachedErAttachmentId' => null,
+        'attachedErTableSiteCode' => null,
         'approvedState' => null,
         'hostedCloud' => null,
         'reason' => null
@@ -181,19 +181,19 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * globalConnectionBandwidthId  全域互联带宽ID。
     * isFrozen  是否冻结
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
     * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * attachedErTableId  实例ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableSiteCode  站点编码定义
-    * attachedErId  实例ID。
-    * attachedErAttachmentId  实例ID。
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * attachedErAttachmentId  被挂载的企业路由器的连接ID。
+    * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建企业路由表附件的原因。
@@ -220,12 +220,12 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'enterpriseRouterAttachmentId' => 'enterprise_router_attachment_id',
             'enterpriseRouterTableId' => 'enterprise_router_table_id',
             'enterpriseRouterSiteCode' => 'enterprise_router_site_code',
-            'attachedErTableId' => 'attached_er_table_id',
-            'attachedErTableRegionId' => 'attached_er_table_region_id',
             'attachedErTableProjectId' => 'attached_er_table_project_id',
-            'attachedErTableSiteCode' => 'attached_er_table_site_code',
+            'attachedErTableRegionId' => 'attached_er_table_region_id',
             'attachedErId' => 'attached_er_id',
+            'attachedErTableId' => 'attached_er_table_id',
             'attachedErAttachmentId' => 'attached_er_attachment_id',
+            'attachedErTableSiteCode' => 'attached_er_table_site_code',
             'approvedState' => 'approved_state',
             'hostedCloud' => 'hosted_cloud',
             'reason' => 'reason'
@@ -245,19 +245,19 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * globalConnectionBandwidthId  全域互联带宽ID。
     * isFrozen  是否冻结
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
     * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * attachedErTableId  实例ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableSiteCode  站点编码定义
-    * attachedErId  实例ID。
-    * attachedErAttachmentId  实例ID。
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * attachedErAttachmentId  被挂载的企业路由器的连接ID。
+    * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建企业路由表附件的原因。
@@ -284,12 +284,12 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'enterpriseRouterAttachmentId' => 'setEnterpriseRouterAttachmentId',
             'enterpriseRouterTableId' => 'setEnterpriseRouterTableId',
             'enterpriseRouterSiteCode' => 'setEnterpriseRouterSiteCode',
-            'attachedErTableId' => 'setAttachedErTableId',
-            'attachedErTableRegionId' => 'setAttachedErTableRegionId',
             'attachedErTableProjectId' => 'setAttachedErTableProjectId',
-            'attachedErTableSiteCode' => 'setAttachedErTableSiteCode',
+            'attachedErTableRegionId' => 'setAttachedErTableRegionId',
             'attachedErId' => 'setAttachedErId',
+            'attachedErTableId' => 'setAttachedErTableId',
             'attachedErAttachmentId' => 'setAttachedErAttachmentId',
+            'attachedErTableSiteCode' => 'setAttachedErTableSiteCode',
             'approvedState' => 'setApprovedState',
             'hostedCloud' => 'setHostedCloud',
             'reason' => 'setReason'
@@ -309,19 +309,19 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * globalConnectionBandwidthId  全域互联带宽ID。
     * isFrozen  是否冻结
     * bandwidthType  bandwidthType
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * enterpriseRouterId  企业路由器的ID。
     * enterpriseRouterProjectId  企业路由器的项目ID。
     * enterpriseRouterRegionId  ER路由器的regionID。
     * enterpriseRouterAttachmentId  企业路由器的连接ID。
     * enterpriseRouterTableId  企业路由器的路由表ID。
     * enterpriseRouterSiteCode  中心网络企业路由器的站点编码。
-    * attachedErTableId  实例ID。
-    * attachedErTableRegionId  RegionID。
-    * attachedErTableProjectId  实例所属项目ID。
-    * attachedErTableSiteCode  站点编码定义
-    * attachedErId  实例ID。
-    * attachedErAttachmentId  实例ID。
+    * attachedErTableProjectId  被挂载的企业路由器的项目ID。
+    * attachedErTableRegionId  ER路由器的regionID。
+    * attachedErId  被挂载的企业路由器ID。
+    * attachedErTableId  被挂载的企业路由器的路由表ID。
+    * attachedErAttachmentId  被挂载的企业路由器的连接ID。
+    * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
     * approvedState  approvedState
     * hostedCloud  hostedCloud
     * reason  审批拒绝创建企业路由表附件的原因。
@@ -348,12 +348,12 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'enterpriseRouterAttachmentId' => 'getEnterpriseRouterAttachmentId',
             'enterpriseRouterTableId' => 'getEnterpriseRouterTableId',
             'enterpriseRouterSiteCode' => 'getEnterpriseRouterSiteCode',
-            'attachedErTableId' => 'getAttachedErTableId',
-            'attachedErTableRegionId' => 'getAttachedErTableRegionId',
             'attachedErTableProjectId' => 'getAttachedErTableProjectId',
-            'attachedErTableSiteCode' => 'getAttachedErTableSiteCode',
+            'attachedErTableRegionId' => 'getAttachedErTableRegionId',
             'attachedErId' => 'getAttachedErId',
+            'attachedErTableId' => 'getAttachedErTableId',
             'attachedErAttachmentId' => 'getAttachedErAttachmentId',
+            'attachedErTableSiteCode' => 'getAttachedErTableSiteCode',
             'approvedState' => 'getApprovedState',
             'hostedCloud' => 'getHostedCloud',
             'reason' => 'getReason'
@@ -436,12 +436,12 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
         $this->container['enterpriseRouterAttachmentId'] = isset($data['enterpriseRouterAttachmentId']) ? $data['enterpriseRouterAttachmentId'] : null;
         $this->container['enterpriseRouterTableId'] = isset($data['enterpriseRouterTableId']) ? $data['enterpriseRouterTableId'] : null;
         $this->container['enterpriseRouterSiteCode'] = isset($data['enterpriseRouterSiteCode']) ? $data['enterpriseRouterSiteCode'] : null;
-        $this->container['attachedErTableId'] = isset($data['attachedErTableId']) ? $data['attachedErTableId'] : null;
-        $this->container['attachedErTableRegionId'] = isset($data['attachedErTableRegionId']) ? $data['attachedErTableRegionId'] : null;
         $this->container['attachedErTableProjectId'] = isset($data['attachedErTableProjectId']) ? $data['attachedErTableProjectId'] : null;
-        $this->container['attachedErTableSiteCode'] = isset($data['attachedErTableSiteCode']) ? $data['attachedErTableSiteCode'] : null;
+        $this->container['attachedErTableRegionId'] = isset($data['attachedErTableRegionId']) ? $data['attachedErTableRegionId'] : null;
         $this->container['attachedErId'] = isset($data['attachedErId']) ? $data['attachedErId'] : null;
+        $this->container['attachedErTableId'] = isset($data['attachedErTableId']) ? $data['attachedErTableId'] : null;
         $this->container['attachedErAttachmentId'] = isset($data['attachedErAttachmentId']) ? $data['attachedErAttachmentId'] : null;
+        $this->container['attachedErTableSiteCode'] = isset($data['attachedErTableSiteCode']) ? $data['attachedErTableSiteCode'] : null;
         $this->container['approvedState'] = isset($data['approvedState']) ? $data['approvedState'] : null;
         $this->container['hostedCloud'] = isset($data['hostedCloud']) ? $data['hostedCloud'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
@@ -620,27 +620,6 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             if (!preg_match("/^[0-9a-zA-Z_.]+(-[0-9a-zA-Z_.]+){0,2}$/", $this->container['enterpriseRouterSiteCode'])) {
                 $invalidProperties[] = "invalid value for 'enterpriseRouterSiteCode', must be conform to the pattern /^[0-9a-zA-Z_.]+(-[0-9a-zA-Z_.]+){0,2}$/.";
             }
-        if ($this->container['attachedErTableId'] === null) {
-            $invalidProperties[] = "'attachedErTableId' can't be null";
-        }
-            if ((mb_strlen($this->container['attachedErTableId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['attachedErTableId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be bigger than or equal to 36.";
-            }
-            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachedErTableId'])) {
-                $invalidProperties[] = "invalid value for 'attachedErTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
-            }
-        if ($this->container['attachedErTableRegionId'] === null) {
-            $invalidProperties[] = "'attachedErTableRegionId' can't be null";
-        }
-            if ((mb_strlen($this->container['attachedErTableRegionId']) > 32)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableRegionId', the character length must be smaller than or equal to 32.";
-            }
-            if ((mb_strlen($this->container['attachedErTableRegionId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableRegionId', the character length must be bigger than or equal to 1.";
-            }
         if ($this->container['attachedErTableProjectId'] === null) {
             $invalidProperties[] = "'attachedErTableProjectId' can't be null";
         }
@@ -653,17 +632,14 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             if (!preg_match("/[a-fA-F0-9]{32}/", $this->container['attachedErTableProjectId'])) {
                 $invalidProperties[] = "invalid value for 'attachedErTableProjectId', must be conform to the pattern /[a-fA-F0-9]{32}/.";
             }
-        if ($this->container['attachedErTableSiteCode'] === null) {
-            $invalidProperties[] = "'attachedErTableSiteCode' can't be null";
+        if ($this->container['attachedErTableRegionId'] === null) {
+            $invalidProperties[] = "'attachedErTableRegionId' can't be null";
         }
-            if ((mb_strlen($this->container['attachedErTableSiteCode']) > 64)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableSiteCode', the character length must be smaller than or equal to 64.";
+            if ((mb_strlen($this->container['attachedErTableRegionId']) > 32)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableRegionId', the character length must be smaller than or equal to 32.";
             }
-            if ((mb_strlen($this->container['attachedErTableSiteCode']) < 1)) {
-                $invalidProperties[] = "invalid value for 'attachedErTableSiteCode', the character length must be bigger than or equal to 1.";
-            }
-            if (!preg_match("/^[0-9a-zA-Z_.]+(-[0-9a-zA-Z_.]+){0,2}$/", $this->container['attachedErTableSiteCode'])) {
-                $invalidProperties[] = "invalid value for 'attachedErTableSiteCode', must be conform to the pattern /^[0-9a-zA-Z_.]+(-[0-9a-zA-Z_.]+){0,2}$/.";
+            if ((mb_strlen($this->container['attachedErTableRegionId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableRegionId', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['attachedErId'] === null) {
             $invalidProperties[] = "'attachedErId' can't be null";
@@ -677,6 +653,18 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachedErId'])) {
                 $invalidProperties[] = "invalid value for 'attachedErId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
+        if ($this->container['attachedErTableId'] === null) {
+            $invalidProperties[] = "'attachedErTableId' can't be null";
+        }
+            if ((mb_strlen($this->container['attachedErTableId']) > 36)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be smaller than or equal to 36.";
+            }
+            if ((mb_strlen($this->container['attachedErTableId']) < 36)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableId', the character length must be bigger than or equal to 36.";
+            }
+            if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachedErTableId'])) {
+                $invalidProperties[] = "invalid value for 'attachedErTableId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
             if (!is_null($this->container['attachedErAttachmentId']) && (mb_strlen($this->container['attachedErAttachmentId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'attachedErAttachmentId', the character length must be smaller than or equal to 36.";
             }
@@ -685,6 +673,18 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             }
             if (!is_null($this->container['attachedErAttachmentId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['attachedErAttachmentId'])) {
                 $invalidProperties[] = "invalid value for 'attachedErAttachmentId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
+            }
+        if ($this->container['attachedErTableSiteCode'] === null) {
+            $invalidProperties[] = "'attachedErTableSiteCode' can't be null";
+        }
+            if ((mb_strlen($this->container['attachedErTableSiteCode']) > 64)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableSiteCode', the character length must be smaller than or equal to 64.";
+            }
+            if ((mb_strlen($this->container['attachedErTableSiteCode']) < 1)) {
+                $invalidProperties[] = "invalid value for 'attachedErTableSiteCode', the character length must be bigger than or equal to 1.";
+            }
+            if (!preg_match("/^[0-9a-zA-Z_.]+(-[0-9a-zA-Z_.]+){0,2}$/", $this->container['attachedErTableSiteCode'])) {
+                $invalidProperties[] = "invalid value for 'attachedErTableSiteCode', must be conform to the pattern /^[0-9a-zA-Z_.]+(-[0-9a-zA-Z_.]+){0,2}$/.";
             }
         if ($this->container['approvedState'] === null) {
             $invalidProperties[] = "'approvedState' can't be null";
@@ -1002,7 +1002,7 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
 
     /**
     * Gets bandwidthSize
-    *  带宽值定义，单位Mbps。
+    *  带宽值，单位Mbps。
     *
     * @return int|null
     */
@@ -1014,7 +1014,7 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     /**
     * Sets bandwidthSize
     *
-    * @param int|null $bandwidthSize 带宽值定义，单位Mbps。
+    * @param int|null $bandwidthSize 带宽值，单位Mbps。
     *
     * @return $this
     */
@@ -1169,56 +1169,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets attachedErTableId
-    *  实例ID。
-    *
-    * @return string
-    */
-    public function getAttachedErTableId()
-    {
-        return $this->container['attachedErTableId'];
-    }
-
-    /**
-    * Sets attachedErTableId
-    *
-    * @param string $attachedErTableId 实例ID。
-    *
-    * @return $this
-    */
-    public function setAttachedErTableId($attachedErTableId)
-    {
-        $this->container['attachedErTableId'] = $attachedErTableId;
-        return $this;
-    }
-
-    /**
-    * Gets attachedErTableRegionId
-    *  RegionID。
-    *
-    * @return string
-    */
-    public function getAttachedErTableRegionId()
-    {
-        return $this->container['attachedErTableRegionId'];
-    }
-
-    /**
-    * Sets attachedErTableRegionId
-    *
-    * @param string $attachedErTableRegionId RegionID。
-    *
-    * @return $this
-    */
-    public function setAttachedErTableRegionId($attachedErTableRegionId)
-    {
-        $this->container['attachedErTableRegionId'] = $attachedErTableRegionId;
-        return $this;
-    }
-
-    /**
     * Gets attachedErTableProjectId
-    *  实例所属项目ID。
+    *  被挂载的企业路由器的项目ID。
     *
     * @return string
     */
@@ -1230,7 +1182,7 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     /**
     * Sets attachedErTableProjectId
     *
-    * @param string $attachedErTableProjectId 实例所属项目ID。
+    * @param string $attachedErTableProjectId 被挂载的企业路由器的项目ID。
     *
     * @return $this
     */
@@ -1241,32 +1193,32 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets attachedErTableSiteCode
-    *  站点编码定义
+    * Gets attachedErTableRegionId
+    *  ER路由器的regionID。
     *
     * @return string
     */
-    public function getAttachedErTableSiteCode()
+    public function getAttachedErTableRegionId()
     {
-        return $this->container['attachedErTableSiteCode'];
+        return $this->container['attachedErTableRegionId'];
     }
 
     /**
-    * Sets attachedErTableSiteCode
+    * Sets attachedErTableRegionId
     *
-    * @param string $attachedErTableSiteCode 站点编码定义
+    * @param string $attachedErTableRegionId ER路由器的regionID。
     *
     * @return $this
     */
-    public function setAttachedErTableSiteCode($attachedErTableSiteCode)
+    public function setAttachedErTableRegionId($attachedErTableRegionId)
     {
-        $this->container['attachedErTableSiteCode'] = $attachedErTableSiteCode;
+        $this->container['attachedErTableRegionId'] = $attachedErTableRegionId;
         return $this;
     }
 
     /**
     * Gets attachedErId
-    *  实例ID。
+    *  被挂载的企业路由器ID。
     *
     * @return string
     */
@@ -1278,7 +1230,7 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     /**
     * Sets attachedErId
     *
-    * @param string $attachedErId 实例ID。
+    * @param string $attachedErId 被挂载的企业路由器ID。
     *
     * @return $this
     */
@@ -1289,8 +1241,32 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     }
 
     /**
+    * Gets attachedErTableId
+    *  被挂载的企业路由器的路由表ID。
+    *
+    * @return string
+    */
+    public function getAttachedErTableId()
+    {
+        return $this->container['attachedErTableId'];
+    }
+
+    /**
+    * Sets attachedErTableId
+    *
+    * @param string $attachedErTableId 被挂载的企业路由器的路由表ID。
+    *
+    * @return $this
+    */
+    public function setAttachedErTableId($attachedErTableId)
+    {
+        $this->container['attachedErTableId'] = $attachedErTableId;
+        return $this;
+    }
+
+    /**
     * Gets attachedErAttachmentId
-    *  实例ID。
+    *  被挂载的企业路由器的连接ID。
     *
     * @return string|null
     */
@@ -1302,13 +1278,37 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     /**
     * Sets attachedErAttachmentId
     *
-    * @param string|null $attachedErAttachmentId 实例ID。
+    * @param string|null $attachedErAttachmentId 被挂载的企业路由器的连接ID。
     *
     * @return $this
     */
     public function setAttachedErAttachmentId($attachedErAttachmentId)
     {
         $this->container['attachedErAttachmentId'] = $attachedErAttachmentId;
+        return $this;
+    }
+
+    /**
+    * Gets attachedErTableSiteCode
+    *  被挂载的企业路由器的站点编码。
+    *
+    * @return string
+    */
+    public function getAttachedErTableSiteCode()
+    {
+        return $this->container['attachedErTableSiteCode'];
+    }
+
+    /**
+    * Sets attachedErTableSiteCode
+    *
+    * @param string $attachedErTableSiteCode 被挂载的企业路由器的站点编码。
+    *
+    * @return $this
+    */
+    public function setAttachedErTableSiteCode($attachedErTableSiteCode)
+    {
+        $this->container['attachedErTableSiteCode'] = $attachedErTableSiteCode;
         return $this;
     }
 

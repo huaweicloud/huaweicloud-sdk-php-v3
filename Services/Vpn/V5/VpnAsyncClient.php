@@ -21,8 +21,8 @@ class VpnAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new VpnAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new VpnAsyncClient());
+        return $client;
     }
 
     /**

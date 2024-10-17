@@ -21,8 +21,8 @@ class AomAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new AomAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new AomAsyncClient());
+        return $client;
     }
 
     /**

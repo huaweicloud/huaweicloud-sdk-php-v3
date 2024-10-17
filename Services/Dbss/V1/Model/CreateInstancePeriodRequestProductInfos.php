@@ -21,10 +21,10 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Array of property to type mappings. Used for (de)serialization
     * productId  产品ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * resourceType  资源类型: 默认hws.resource.type.dbss
-    * resourceSpecCode  资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
-    * productSpecDesc  产品规格描述
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * resourceType  资源类型: - hws.resource.type.dbss
+    * resourceSpecCode  资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
+    * productSpecDesc  产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
     * @var string[]
     */
@@ -39,10 +39,10 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Array of property to format mappings. Used for (de)serialization
     * productId  产品ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * resourceType  资源类型: 默认hws.resource.type.dbss
-    * resourceSpecCode  资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
-    * productSpecDesc  产品规格描述
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * resourceType  资源类型: - hws.resource.type.dbss
+    * resourceSpecCode  资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
+    * productSpecDesc  产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
     * @var string[]
     */
@@ -78,10 +78,10 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * productId  产品ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * resourceType  资源类型: 默认hws.resource.type.dbss
-    * resourceSpecCode  资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
-    * productSpecDesc  产品规格描述
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * resourceType  资源类型: - hws.resource.type.dbss
+    * resourceSpecCode  资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
+    * productSpecDesc  产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
     * @var string[]
     */
@@ -96,10 +96,10 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * productId  产品ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * resourceType  资源类型: 默认hws.resource.type.dbss
-    * resourceSpecCode  资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
-    * productSpecDesc  产品规格描述
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * resourceType  资源类型: - hws.resource.type.dbss
+    * resourceSpecCode  资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
+    * productSpecDesc  产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
     * @var string[]
     */
@@ -114,10 +114,10 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * productId  产品ID
-    * cloudServiceType  服务类型： 默认hws.service.type.dbss
-    * resourceType  资源类型: 默认hws.resource.type.dbss
-    * resourceSpecCode  资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
-    * productSpecDesc  产品规格描述
+    * cloudServiceType  服务类型： - hws.service.type.dbss
+    * resourceType  资源类型: - hws.resource.type.dbss
+    * resourceSpecCode  资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
+    * productSpecDesc  产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
     * @var string[]
     */
@@ -214,9 +214,6 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
         if ($this->container['resourceSpecCode'] === null) {
             $invalidProperties[] = "'resourceSpecCode' can't be null";
         }
-        if ($this->container['productSpecDesc'] === null) {
-            $invalidProperties[] = "'productSpecDesc' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -257,7 +254,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
 
     /**
     * Gets cloudServiceType
-    *  服务类型： 默认hws.service.type.dbss
+    *  服务类型： - hws.service.type.dbss
     *
     * @return string
     */
@@ -269,7 +266,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Sets cloudServiceType
     *
-    * @param string $cloudServiceType 服务类型： 默认hws.service.type.dbss
+    * @param string $cloudServiceType 服务类型： - hws.service.type.dbss
     *
     * @return $this
     */
@@ -281,7 +278,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
 
     /**
     * Gets resourceType
-    *  资源类型: 默认hws.resource.type.dbss
+    *  资源类型: - hws.resource.type.dbss
     *
     * @return string
     */
@@ -293,7 +290,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型: 默认hws.resource.type.dbss
+    * @param string $resourceType 资源类型: - hws.resource.type.dbss
     *
     * @return $this
     */
@@ -305,7 +302,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
 
     /**
     * Gets resourceSpecCode
-    *  资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
+    *  资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
     *
     * @return string
     */
@@ -317,7 +314,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Sets resourceSpecCode
     *
-    * @param string $resourceSpecCode 资源规格： dbss.bypassaudit.low、dbss.bypassaudit.medium、dbss.bypassaudit.high
+    * @param string $resourceSpecCode 资源规格： - dbss.bypassaudit.low - dbss.bypassaudit.medium - dbss.bypassaudit.high
     *
     * @return $this
     */
@@ -329,9 +326,9 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
 
     /**
     * Gets productSpecDesc
-    *  产品规格描述
+    *  产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
-    * @return string
+    * @return string|null
     */
     public function getProductSpecDesc()
     {
@@ -341,7 +338,7 @@ class CreateInstancePeriodRequestProductInfos implements ModelInterface, ArrayAc
     /**
     * Sets productSpecDesc
     *
-    * @param string $productSpecDesc 产品规格描述
+    * @param string|null $productSpecDesc 产品规格描述。json字符串格式 ：{\"specDesc\":{\"zh-cn\":{\"key1\":\"value1\"},\"en-us\":{\"key1\":\"value1\"}}}。key和value为用户自定义希望展示的产品描述信息。
     *
     * @return $this
     */

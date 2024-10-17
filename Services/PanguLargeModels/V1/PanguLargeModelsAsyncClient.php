@@ -21,8 +21,8 @@ class PanguLargeModelsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new PanguLargeModelsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new PanguLargeModelsAsyncClient());
+        return $client;
     }
 
     /**

@@ -23,7 +23,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * planeId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * state  state
@@ -45,7 +45,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * planeId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * state  state
@@ -88,7 +88,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * planeId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * state  state
@@ -110,7 +110,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * planeId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * state  state
@@ -132,7 +132,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     * id  实例ID。
     * planeId  中心网络平面ID。
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     * connectionType  connectionType
     * connectionPointPair  中心网络连接的两个端点定义，长度固定为2的数组。
     * state  state
@@ -360,7 +360,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
-    *  带宽值定义，单位Mbps。
+    *  带宽值，单位Mbps。
     *
     * @return int|null
     */
@@ -372,7 +372,7 @@ class CentralNetworkConnectionInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param int|null $bandwidthSize 带宽值定义，单位Mbps。
+    * @param int|null $bandwidthSize 带宽值，单位Mbps。
     *
     * @return $this
     */

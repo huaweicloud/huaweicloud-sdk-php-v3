@@ -21,8 +21,8 @@ class SwrAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new SwrAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new SwrAsyncClient());
+        return $client;
     }
 
     /**

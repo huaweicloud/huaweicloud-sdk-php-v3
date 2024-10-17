@@ -21,37 +21,33 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * auditQuota  实例当前剩余配额。
-    * cpu  Cpu当前剩余配额。
-    * projectId  项目Id。
-    * quota  配额。
-    * ram  内存当前剩余配额
+    * projectId  项目ID。
+    * auditQuota  审计实例剩余配额。
+    * cpu  CPU剩余配额。
+    * ram  内存剩余配额。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'projectId' => 'string',
             'auditQuota' => 'int',
             'cpu' => 'int',
-            'projectId' => 'string',
-            'quota' => 'int',
             'ram' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * auditQuota  实例当前剩余配额。
-    * cpu  Cpu当前剩余配额。
-    * projectId  项目Id。
-    * quota  配额。
-    * ram  内存当前剩余配额
+    * projectId  项目ID。
+    * auditQuota  审计实例剩余配额。
+    * cpu  CPU剩余配额。
+    * ram  内存剩余配额。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'projectId' => null,
         'auditQuota' => 'int64',
         'cpu' => 'int64',
-        'projectId' => null,
-        'quota' => 'int64',
         'ram' => 'int64'
     ];
 
@@ -78,55 +74,49 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * auditQuota  实例当前剩余配额。
-    * cpu  Cpu当前剩余配额。
-    * projectId  项目Id。
-    * quota  配额。
-    * ram  内存当前剩余配额
+    * projectId  项目ID。
+    * auditQuota  审计实例剩余配额。
+    * cpu  CPU剩余配额。
+    * ram  内存剩余配额。
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'projectId' => 'project_id',
             'auditQuota' => 'audit_quota',
             'cpu' => 'cpu',
-            'projectId' => 'project_id',
-            'quota' => 'quota',
             'ram' => 'ram'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * auditQuota  实例当前剩余配额。
-    * cpu  Cpu当前剩余配额。
-    * projectId  项目Id。
-    * quota  配额。
-    * ram  内存当前剩余配额
+    * projectId  项目ID。
+    * auditQuota  审计实例剩余配额。
+    * cpu  CPU剩余配额。
+    * ram  内存剩余配额。
     *
     * @var string[]
     */
     protected static $setters = [
+            'projectId' => 'setProjectId',
             'auditQuota' => 'setAuditQuota',
             'cpu' => 'setCpu',
-            'projectId' => 'setProjectId',
-            'quota' => 'setQuota',
             'ram' => 'setRam'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * auditQuota  实例当前剩余配额。
-    * cpu  Cpu当前剩余配额。
-    * projectId  项目Id。
-    * quota  配额。
-    * ram  内存当前剩余配额
+    * projectId  项目ID。
+    * auditQuota  审计实例剩余配额。
+    * cpu  CPU剩余配额。
+    * ram  内存剩余配额。
     *
     * @var string[]
     */
     protected static $getters = [
+            'projectId' => 'getProjectId',
             'auditQuota' => 'getAuditQuota',
             'cpu' => 'getCpu',
-            'projectId' => 'getProjectId',
-            'quota' => 'getQuota',
             'ram' => 'getRam'
     ];
 
@@ -188,10 +178,9 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['auditQuota'] = isset($data['auditQuota']) ? $data['auditQuota'] : null;
         $this->container['cpu'] = isset($data['cpu']) ? $data['cpu'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['quota'] = isset($data['quota']) ? $data['quota'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
     }
 
@@ -218,56 +207,8 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets auditQuota
-    *  实例当前剩余配额。
-    *
-    * @return int|null
-    */
-    public function getAuditQuota()
-    {
-        return $this->container['auditQuota'];
-    }
-
-    /**
-    * Sets auditQuota
-    *
-    * @param int|null $auditQuota 实例当前剩余配额。
-    *
-    * @return $this
-    */
-    public function setAuditQuota($auditQuota)
-    {
-        $this->container['auditQuota'] = $auditQuota;
-        return $this;
-    }
-
-    /**
-    * Gets cpu
-    *  Cpu当前剩余配额。
-    *
-    * @return int|null
-    */
-    public function getCpu()
-    {
-        return $this->container['cpu'];
-    }
-
-    /**
-    * Sets cpu
-    *
-    * @param int|null $cpu Cpu当前剩余配额。
-    *
-    * @return $this
-    */
-    public function setCpu($cpu)
-    {
-        $this->container['cpu'] = $cpu;
-        return $this;
-    }
-
-    /**
     * Gets projectId
-    *  项目Id。
+    *  项目ID。
     *
     * @return string|null
     */
@@ -279,7 +220,7 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 项目Id。
+    * @param string|null $projectId 项目ID。
     *
     * @return $this
     */
@@ -290,32 +231,56 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets quota
-    *  配额。
+    * Gets auditQuota
+    *  审计实例剩余配额。
     *
     * @return int|null
     */
-    public function getQuota()
+    public function getAuditQuota()
     {
-        return $this->container['quota'];
+        return $this->container['auditQuota'];
     }
 
     /**
-    * Sets quota
+    * Sets auditQuota
     *
-    * @param int|null $quota 配额。
+    * @param int|null $auditQuota 审计实例剩余配额。
     *
     * @return $this
     */
-    public function setQuota($quota)
+    public function setAuditQuota($auditQuota)
     {
-        $this->container['quota'] = $quota;
+        $this->container['auditQuota'] = $auditQuota;
+        return $this;
+    }
+
+    /**
+    * Gets cpu
+    *  CPU剩余配额。
+    *
+    * @return int|null
+    */
+    public function getCpu()
+    {
+        return $this->container['cpu'];
+    }
+
+    /**
+    * Sets cpu
+    *
+    * @param int|null $cpu CPU剩余配额。
+    *
+    * @return $this
+    */
+    public function setCpu($cpu)
+    {
+        $this->container['cpu'] = $cpu;
         return $this;
     }
 
     /**
     * Gets ram
-    *  内存当前剩余配额
+    *  内存剩余配额。
     *
     * @return int|null
     */
@@ -327,7 +292,7 @@ class ShowAuditQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets ram
     *
-    * @param int|null $ram 内存当前剩余配额
+    * @param int|null $ram 内存剩余配额。
     *
     * @return $this
     */

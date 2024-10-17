@@ -21,8 +21,8 @@ class ConfigAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new ConfigAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new ConfigAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

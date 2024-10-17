@@ -29,7 +29,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     * cloudConnectionId  云连接实例ID。
     * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
-    * bandwidth  域间带宽的值。
+    * bandwidth  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -57,7 +57,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     * cloudConnectionId  云连接实例ID。
     * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
-    * bandwidth  域间带宽的值。
+    * bandwidth  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
         'cloudConnectionId' => null,
         'bandwidthPackageId' => null,
         'interRegions' => null,
-        'bandwidth' => 'int32'
+        'bandwidth' => 'int64'
     ];
 
     /**
@@ -106,7 +106,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     * cloudConnectionId  云连接实例ID。
     * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
-    * bandwidth  域间带宽的值。
+    * bandwidth  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -134,7 +134,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     * cloudConnectionId  云连接实例ID。
     * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
-    * bandwidth  域间带宽的值。
+    * bandwidth  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -162,7 +162,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     * cloudConnectionId  云连接实例ID。
     * bandwidthPackageId  带宽包实例ID。
     * interRegions  域间实例信息。
-    * bandwidth  域间带宽的值。
+    * bandwidth  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -570,7 +570,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidth
-    *  域间带宽的值。
+    *  带宽值，单位Mbps。
     *
     * @return int|null
     */
@@ -582,7 +582,7 @@ class InterRegionBandwidth implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidth
     *
-    * @param int|null $bandwidth 域间带宽的值。
+    * @param int|null $bandwidth 带宽值，单位Mbps。
     *
     * @return $this
     */

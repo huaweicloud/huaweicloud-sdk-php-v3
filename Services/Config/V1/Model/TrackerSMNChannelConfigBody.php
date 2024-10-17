@@ -20,8 +20,8 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionId  区域id
-    * projectId  项目id
+    * regionId  SMN主题的区域id
+    * projectId  创建或更新资源记录器用户的项目id
     * topicUrn  SMN主题urn
     *
     * @var string[]
@@ -34,8 +34,8 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionId  区域id
-    * projectId  项目id
+    * regionId  SMN主题的区域id
+    * projectId  创建或更新资源记录器用户的项目id
     * topicUrn  SMN主题urn
     *
     * @var string[]
@@ -69,8 +69,8 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionId  区域id
-    * projectId  项目id
+    * regionId  SMN主题的区域id
+    * projectId  创建或更新资源记录器用户的项目id
     * topicUrn  SMN主题urn
     *
     * @var string[]
@@ -83,8 +83,8 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionId  区域id
-    * projectId  项目id
+    * regionId  SMN主题的区域id
+    * projectId  创建或更新资源记录器用户的项目id
     * topicUrn  SMN主题urn
     *
     * @var string[]
@@ -97,8 +97,8 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionId  区域id
-    * projectId  项目id
+    * regionId  SMN主题的区域id
+    * projectId  创建或更新资源记录器用户的项目id
     * topicUrn  SMN主题urn
     *
     * @var string[]
@@ -205,7 +205,7 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域id
+    *  SMN主题的区域id
     *
     * @return string
     */
@@ -217,7 +217,7 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string $regionId 区域id
+    * @param string $regionId SMN主题的区域id
     *
     * @return $this
     */
@@ -229,7 +229,7 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  项目id
+    *  创建或更新资源记录器用户的项目id
     *
     * @return string
     */
@@ -241,7 +241,7 @@ class TrackerSMNChannelConfigBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 项目id
+    * @param string $projectId 创建或更新资源记录器用户的项目id
     *
     * @return $this
     */

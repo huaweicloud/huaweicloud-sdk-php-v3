@@ -21,8 +21,8 @@ class IAMAccessAnalyzerAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new IAMAccessAnalyzerAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new IAMAccessAnalyzerAsyncClient());
+        return $client;
     }
 
     /**

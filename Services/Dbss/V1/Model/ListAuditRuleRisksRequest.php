@@ -20,9 +20,9 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * name  风险名称
-    * riskLevels  风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * name  风险名称
-    * riskLevels  风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * name  风险名称
-    * riskLevels  风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * name  风险名称
-    * riskLevels  风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * name  风险名称
-    * riskLevels  风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    * riskLevels  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @var string[]
     */
@@ -149,7 +149,26 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RISK_LEVELS_LOW = 'LOW';
+    const RISK_LEVELS_MEDIUM = 'MEDIUM';
+    const RISK_LEVELS_HIGH = 'HIGH';
+    const RISK_LEVELS_NO_RISK = 'NO_RISK';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRiskLevelsAllowableValues()
+    {
+        return [
+            self::RISK_LEVELS_LOW,
+            self::RISK_LEVELS_MEDIUM,
+            self::RISK_LEVELS_HIGH,
+            self::RISK_LEVELS_NO_RISK,
+        ];
+    }
 
 
     /**
@@ -183,6 +202,14 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
         if ($this->container['instanceId'] === null) {
             $invalidProperties[] = "'instanceId' can't be null";
         }
+            $allowedValues = $this->getRiskLevelsAllowableValues();
+                if (!is_null($this->container['riskLevels']) && !in_array($this->container['riskLevels'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'riskLevels', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -199,7 +226,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return string
     */
@@ -211,7 +238,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID
+    * @param string $instanceId 实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return $this
     */
@@ -247,7 +274,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevels
-    *  风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @return string|null
     */
@@ -259,7 +286,7 @@ class ListAuditRuleRisksRequest implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevels
     *
-    * @param string|null $riskLevels 风险级别[LOW,MEDIUM,HIGH,NO_RISK]
+    * @param string|null $riskLevels 风险级别 - LOW - MEDIUM - HIGH - NO_RISK
     *
     * @return $this
     */

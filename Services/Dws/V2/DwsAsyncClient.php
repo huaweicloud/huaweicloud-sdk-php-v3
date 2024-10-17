@@ -21,8 +21,8 @@ class DwsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new DwsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new DwsAsyncClient());
+        return $client;
     }
 
     /**

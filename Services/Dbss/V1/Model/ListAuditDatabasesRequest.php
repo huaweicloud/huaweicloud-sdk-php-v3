@@ -20,10 +20,10 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * status  实例状态 ON ：开启 OFF ： 关闭
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * status  实例状态 - ON :开启 - OFF : 关闭
+    * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
+    * limit  查询记录数，默认为100。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * status  实例状态 ON ：开启 OFF ： 关闭
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * status  实例状态 - ON :开启 - OFF : 关闭
+    * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
+    * limit  查询记录数，默认为100。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID
-    * status  实例状态 ON ：开启 OFF ： 关闭
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * status  实例状态 - ON :开启 - OFF : 关闭
+    * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
+    * limit  查询记录数，默认为100。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID
-    * status  实例状态 ON ：开启 OFF ： 关闭
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * status  实例状态 - ON :开启 - OFF : 关闭
+    * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
+    * limit  查询记录数，默认为100。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID
-    * status  实例状态 ON ：开启 OFF ： 关闭
-    * offset  偏移量
-    * limit  查询记录数
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * status  实例状态 - ON :开启 - OFF : 关闭
+    * offset  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
+    * limit  查询记录数，默认为100。
     *
     * @var string[]
     */
@@ -210,7 +210,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return string
     */
@@ -222,7 +222,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID
+    * @param string $instanceId 实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return $this
     */
@@ -234,7 +234,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  实例状态 ON ：开启 OFF ： 关闭
+    *  实例状态 - ON :开启 - OFF : 关闭
     *
     * @return string|null
     */
@@ -246,7 +246,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 实例状态 ON ：开启 OFF ： 关闭
+    * @param string|null $status 实例状态 - ON :开启 - OFF : 关闭
     *
     * @return $this
     */
@@ -258,7 +258,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  偏移量
+    *  偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     *
     * @return string|null
     */
@@ -270,7 +270,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 偏移量
+    * @param string|null $offset 偏移量，从第一条数据偏移offset条数据后开始查询，默认为0。
     *
     * @return $this
     */
@@ -282,7 +282,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数
+    *  查询记录数，默认为100。
     *
     * @return string|null
     */
@@ -294,7 +294,7 @@ class ListAuditDatabasesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 查询记录数
+    * @param string|null $limit 查询记录数，默认为100。
     *
     * @return $this
     */

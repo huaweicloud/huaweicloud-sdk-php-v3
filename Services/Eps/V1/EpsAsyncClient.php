@@ -21,8 +21,8 @@ class EpsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new EpsAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new EpsAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

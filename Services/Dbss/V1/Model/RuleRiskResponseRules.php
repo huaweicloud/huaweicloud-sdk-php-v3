@@ -22,11 +22,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险类型
-    * feature  风险特征
-    * status  风险规则状态
-    * rank  风险规则优先级
-    * riskLevel  风险级别
+    * type  风险规则类型
+    * feature  风险规则特征
+    * status  风险规则状态。 - ON: 开启 - OFF: 关闭
+    * rank  风险规则优先级。数字越小优先级越高。
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * ruleType  规则类型
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
             'feature' => 'string',
             'status' => 'string',
             'rank' => 'int',
-            'riskLevel' => 'string'
+            'riskLevel' => 'string',
+            'ruleType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险类型
-    * feature  风险特征
-    * status  风险规则状态
-    * rank  风险规则优先级
-    * riskLevel  风险级别
+    * type  风险规则类型
+    * feature  风险规则特征
+    * status  风险规则状态。 - ON: 开启 - OFF: 关闭
+    * rank  风险规则优先级。数字越小优先级越高。
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * ruleType  规则类型
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
         'feature' => null,
         'status' => null,
         'rank' => 'int32',
-        'riskLevel' => null
+        'riskLevel' => null,
+        'ruleType' => null
     ];
 
     /**
@@ -87,11 +91,12 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险类型
-    * feature  风险特征
-    * status  风险规则状态
-    * rank  风险规则优先级
-    * riskLevel  风险级别
+    * type  风险规则类型
+    * feature  风险规则特征
+    * status  风险规则状态。 - ON: 开启 - OFF: 关闭
+    * rank  风险规则优先级。数字越小优先级越高。
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * ruleType  规则类型
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
             'feature' => 'feature',
             'status' => 'status',
             'rank' => 'rank',
-            'riskLevel' => 'risk_level'
+            'riskLevel' => 'risk_level',
+            'ruleType' => 'rule_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险类型
-    * feature  风险特征
-    * status  风险规则状态
-    * rank  风险规则优先级
-    * riskLevel  风险级别
+    * type  风险规则类型
+    * feature  风险规则特征
+    * status  风险规则状态。 - ON: 开启 - OFF: 关闭
+    * rank  风险规则优先级。数字越小优先级越高。
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * ruleType  规则类型
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
             'feature' => 'setFeature',
             'status' => 'setStatus',
             'rank' => 'setRank',
-            'riskLevel' => 'setRiskLevel'
+            'riskLevel' => 'setRiskLevel',
+            'ruleType' => 'setRuleType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  风险规则ID
     * name  风险规则名称
-    * type  风险类型
-    * feature  风险特征
-    * status  风险规则状态
-    * rank  风险规则优先级
-    * riskLevel  风险级别
+    * type  风险规则类型
+    * feature  风险规则特征
+    * status  风险规则状态。 - ON: 开启 - OFF: 关闭
+    * rank  风险规则优先级。数字越小优先级越高。
+    * riskLevel  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
+    * ruleType  规则类型
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
             'feature' => 'getFeature',
             'status' => 'getStatus',
             'rank' => 'getRank',
-            'riskLevel' => 'getRiskLevel'
+            'riskLevel' => 'getRiskLevel',
+            'ruleType' => 'getRuleType'
     ];
 
     /**
@@ -214,6 +224,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
         $this->container['riskLevel'] = isset($data['riskLevel']) ? $data['riskLevel'] : null;
+        $this->container['ruleType'] = isset($data['ruleType']) ? $data['ruleType'] : null;
     }
 
     /**
@@ -224,6 +235,18 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -242,7 +265,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Gets id
     *  风险规则ID
     *
-    * @return string|null
+    * @return string
     */
     public function getId()
     {
@@ -252,7 +275,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 风险规则ID
+    * @param string $id 风险规则ID
     *
     * @return $this
     */
@@ -266,7 +289,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     * Gets name
     *  风险规则名称
     *
-    * @return string|null
+    * @return string
     */
     public function getName()
     {
@@ -276,7 +299,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 风险规则名称
+    * @param string $name 风险规则名称
     *
     * @return $this
     */
@@ -288,9 +311,9 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  风险类型
+    *  风险规则类型
     *
-    * @return string|null
+    * @return string
     */
     public function getType()
     {
@@ -300,7 +323,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string|null $type 风险类型
+    * @param string $type 风险规则类型
     *
     * @return $this
     */
@@ -312,7 +335,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets feature
-    *  风险特征
+    *  风险规则特征
     *
     * @return string|null
     */
@@ -324,7 +347,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets feature
     *
-    * @param string|null $feature 风险特征
+    * @param string|null $feature 风险规则特征
     *
     * @return $this
     */
@@ -336,9 +359,9 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  风险规则状态
+    *  风险规则状态。 - ON: 开启 - OFF: 关闭
     *
-    * @return string|null
+    * @return string
     */
     public function getStatus()
     {
@@ -348,7 +371,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 风险规则状态
+    * @param string $status 风险规则状态。 - ON: 开启 - OFF: 关闭
     *
     * @return $this
     */
@@ -360,7 +383,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets rank
-    *  风险规则优先级
+    *  风险规则优先级。数字越小优先级越高。
     *
     * @return int|null
     */
@@ -372,7 +395,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets rank
     *
-    * @param int|null $rank 风险规则优先级
+    * @param int|null $rank 风险规则优先级。数字越小优先级越高。
     *
     * @return $this
     */
@@ -384,7 +407,7 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevel
-    *  风险级别
+    *  风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
     *
     * @return string|null
     */
@@ -396,13 +419,37 @@ class RuleRiskResponseRules implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevel
     *
-    * @param string|null $riskLevel 风险级别
+    * @param string|null $riskLevel 风险级别 - LOW - MEDIUM - HIGH - NO_RISK]
     *
     * @return $this
     */
     public function setRiskLevel($riskLevel)
     {
         $this->container['riskLevel'] = $riskLevel;
+        return $this;
+    }
+
+    /**
+    * Gets ruleType
+    *  规则类型
+    *
+    * @return string|null
+    */
+    public function getRuleType()
+    {
+        return $this->container['ruleType'];
+    }
+
+    /**
+    * Sets ruleType
+    *
+    * @param string|null $ruleType 规则类型
+    *
+    * @return $this
+    */
+    public function setRuleType($ruleType)
+    {
+        $this->container['ruleType'] = $ruleType;
         return $this;
     }
 

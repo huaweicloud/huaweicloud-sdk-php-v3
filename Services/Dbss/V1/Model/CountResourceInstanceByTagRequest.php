@@ -20,7 +20,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。审计：auditInstance
+    * resourceType  资源类型。 - auditInstance
     * body  body
     *
     * @var string[]
@@ -32,7 +32,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。审计：auditInstance
+    * resourceType  资源类型。 - auditInstance
     * body  body
     *
     * @var string[]
@@ -65,7 +65,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。审计：auditInstance
+    * resourceType  资源类型。 - auditInstance
     * body  body
     *
     * @var string[]
@@ -77,7 +77,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。审计：auditInstance
+    * resourceType  资源类型。 - auditInstance
     * body  body
     *
     * @var string[]
@@ -89,7 +89,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。审计：auditInstance
+    * resourceType  资源类型。 - auditInstance
     * body  body
     *
     * @var string[]
@@ -139,7 +139,20 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_TYPE_AUDIT_INSTANCE = 'auditInstance';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_AUDIT_INSTANCE,
+        ];
+    }
 
 
     /**
@@ -172,6 +185,14 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            $allowedValues = $this->getResourceTypeAllowableValues();
+                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -188,7 +209,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。审计：auditInstance
+    *  资源类型。 - auditInstance
     *
     * @return string
     */
@@ -200,7 +221,7 @@ class CountResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。审计：auditInstance
+    * @param string $resourceType 资源类型。 - auditInstance
     *
     * @return $this
     */

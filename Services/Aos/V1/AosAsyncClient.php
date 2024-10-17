@@ -21,8 +21,8 @@ class AosAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new AosAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new AosAsyncClient());
+        return $client;
     }
 
     /**

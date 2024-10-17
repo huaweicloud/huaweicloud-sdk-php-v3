@@ -20,25 +20,25 @@ class SecurityGroupRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceId  资源ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * securitygroupIds  安全组ID列表(目前只支持传一个ID)
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'resourceId' => 'string',
+            'instanceId' => 'string',
             'securitygroupIds' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceId  资源ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * securitygroupIds  安全组ID列表(目前只支持传一个ID)
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'resourceId' => null,
+        'instanceId' => null,
         'securitygroupIds' => null
     ];
 
@@ -65,37 +65,37 @@ class SecurityGroupRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceId  资源ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * securitygroupIds  安全组ID列表(目前只支持传一个ID)
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'resourceId' => 'resource_id',
+            'instanceId' => 'instance_id',
             'securitygroupIds' => 'securitygroup_ids'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceId  资源ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * securitygroupIds  安全组ID列表(目前只支持传一个ID)
     *
     * @var string[]
     */
     protected static $setters = [
-            'resourceId' => 'setResourceId',
+            'instanceId' => 'setInstanceId',
             'securitygroupIds' => 'setSecuritygroupIds'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceId  资源ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
     * securitygroupIds  安全组ID列表(目前只支持传一个ID)
     *
     * @var string[]
     */
     protected static $getters = [
-            'resourceId' => 'getResourceId',
+            'instanceId' => 'getInstanceId',
             'securitygroupIds' => 'getSecuritygroupIds'
     ];
 
@@ -157,7 +157,7 @@ class SecurityGroupRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
         $this->container['securitygroupIds'] = isset($data['securitygroupIds']) ? $data['securitygroupIds'] : null;
     }
 
@@ -169,8 +169,8 @@ class SecurityGroupRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['resourceId'] === null) {
-            $invalidProperties[] = "'resourceId' can't be null";
+        if ($this->container['instanceId'] === null) {
+            $invalidProperties[] = "'instanceId' can't be null";
         }
         if ($this->container['securitygroupIds'] === null) {
             $invalidProperties[] = "'securitygroupIds' can't be null";
@@ -190,26 +190,26 @@ class SecurityGroupRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets resourceId
-    *  资源ID
+    * Gets instanceId
+    *  实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return string
     */
-    public function getResourceId()
+    public function getInstanceId()
     {
-        return $this->container['resourceId'];
+        return $this->container['instanceId'];
     }
 
     /**
-    * Sets resourceId
+    * Sets instanceId
     *
-    * @param string $resourceId 资源ID
+    * @param string $instanceId 实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return $this
     */
-    public function setResourceId($resourceId)
+    public function setInstanceId($instanceId)
     {
-        $this->container['resourceId'] = $resourceId;
+        $this->container['instanceId'] = $instanceId;
         return $this;
     }
 

@@ -21,8 +21,8 @@ class IamAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new IamAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new IamAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

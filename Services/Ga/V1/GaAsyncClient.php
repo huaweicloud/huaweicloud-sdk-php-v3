@@ -21,8 +21,8 @@ class GaAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new GaAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new GaAsyncClient());
+        return $client;
     }
 
     /**

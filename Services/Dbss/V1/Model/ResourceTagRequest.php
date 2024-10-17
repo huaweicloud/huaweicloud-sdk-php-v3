@@ -26,8 +26,8 @@ class ResourceTagRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'tags' => '\HuaweiCloud\SDK\Dbss\V1\Model\KeyValueBean[]',
-            'sysTags' => '\HuaweiCloud\SDK\Dbss\V1\Model\KeyValueBean[]'
+            'tags' => '\HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequestTags[]',
+            'sysTags' => '\HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequestTags[]'
     ];
 
     /**
@@ -187,7 +187,7 @@ class ResourceTagRequest implements ModelInterface, ArrayAccess
     * Gets tags
     *  标签列表 租户权限时该字段必选，op_service权限时和sys_tags二选一
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\KeyValueBean[]|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequestTags[]|null
     */
     public function getTags()
     {
@@ -197,7 +197,7 @@ class ResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\KeyValueBean[]|null $tags 标签列表 租户权限时该字段必选，op_service权限时和sys_tags二选一
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequestTags[]|null $tags 标签列表 租户权限时该字段必选，op_service权限时和sys_tags二选一
     *
     * @return $this
     */
@@ -211,7 +211,7 @@ class ResourceTagRequest implements ModelInterface, ArrayAccess
     * Gets sysTags
     *  系统标签列表 op_service权限可以访问，和tags二选一。 目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id value是UUID或0,value为0表示默认企业项目
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\KeyValueBean[]|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequestTags[]|null
     */
     public function getSysTags()
     {
@@ -221,7 +221,7 @@ class ResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets sysTags
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\KeyValueBean[]|null $sysTags 系统标签列表 op_service权限可以访问，和tags二选一。 目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id value是UUID或0,value为0表示默认企业项目
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequestTags[]|null $sysTags 系统标签列表 op_service权限可以访问，和tags二选一。 目前TMS调用时只包含一个resource_tag结构体 ，key固定为：_sys_enterprise_project_id value是UUID或0,value为0表示默认企业项目
     *
     * @return $this
     */

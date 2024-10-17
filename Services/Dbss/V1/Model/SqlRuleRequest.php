@@ -20,7 +20,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * riskLevels  风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * riskLevels  风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * riskLevels  风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * riskLevels  风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * riskLevels  风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    * riskLevels  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @var string[]
     */
@@ -174,7 +174,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskLevels
-    *  风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    *  风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @return string|null
     */
@@ -186,7 +186,7 @@ class SqlRuleRequest implements ModelInterface, ArrayAccess
     /**
     * Sets riskLevels
     *
-    * @param string|null $riskLevels 风险级别:(多项查询使用逗号分隔)  HIGH  MEDIUM  LOW  NO_RISK
+    * @param string|null $riskLevels 风险级别 - HIGH - MEDIUM - LOW - NO_RISK
     *
     * @return $this
     */

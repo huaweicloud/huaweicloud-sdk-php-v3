@@ -20,8 +20,8 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * riskId  风险规则ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * riskId  风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * instanceId  实例ID
-    * riskId  风险规则ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * riskId  风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * instanceId  实例ID
-    * riskId  风险规则ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * riskId  风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * instanceId  实例ID
-    * riskId  风险规则ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * riskId  风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * instanceId  实例ID
-    * riskId  风险规则ID
+    * instanceId  实例ID。可在查询实例列表接口的ID字段获取。
+    * riskId  风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID
+    *  实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID
+    * @param string $instanceId 实例ID。可在查询实例列表接口的ID字段获取。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets riskId
-    *  风险规则ID
+    *  风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class ShowAuditRuleRiskRequest implements ModelInterface, ArrayAccess
     /**
     * Sets riskId
     *
-    * @param string $riskId 风险规则ID
+    * @param string $riskId 风险规则ID。可在查询风险规则策略接口的ID字段获取。
     *
     * @return $this
     */

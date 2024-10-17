@@ -21,8 +21,8 @@ class GaussDBAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new GaussDBAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new GaussDBAsyncClient());
+        return $client;
     }
 
     /**

@@ -21,8 +21,8 @@ class ApigAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new ApigAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new ApigAsyncClient());
+        return $client;
     }
 
     /**

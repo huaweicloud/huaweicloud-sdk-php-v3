@@ -21,8 +21,8 @@ class ModerationAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new ModerationAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new ModerationAsyncClient());
+        return $client;
     }
 
     /**

@@ -22,17 +22,22 @@ class DataBase implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  数据库ID
     * name  数据库名称
-    * type  添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    * type  添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
-    * charset  数据库字符集
+    * charset  数据库字符集 - GBK - UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统
-    * status  开启状态（1：开启，0：关闭）
+    * status  实例状态 - ON :开启 - OFF : 关闭
     * instanceName  数据库实例名
-    * auditStatus  数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    * auditStatus  数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     * agentUrl  agent的唯一ID
-    * dbClassification  数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    * dbClassification  数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
+    * rdsAuditSwitchMismatch  rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    * rdsId  RDS数据库的ID。
+    * rdsObjInfo  RDS数据库信息。
+    * dwsObjInfo  DWS数据库信息。
+    * clouddbObjInfo  云数据库信息，该字段已废弃。
     *
     * @var string[]
     */
@@ -49,24 +54,34 @@ class DataBase implements ModelInterface, ArrayAccess
             'instanceName' => 'string',
             'auditStatus' => 'string',
             'agentUrl' => 'string[]',
-            'dbClassification' => 'string'
+            'dbClassification' => 'string',
+            'rdsAuditSwitchMismatch' => 'bool',
+            'rdsId' => 'string',
+            'rdsObjInfo' => 'string',
+            'dwsObjInfo' => 'string',
+            'clouddbObjInfo' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * id  数据库ID
     * name  数据库名称
-    * type  添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    * type  添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
-    * charset  数据库字符集
+    * charset  数据库字符集 - GBK - UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统
-    * status  开启状态（1：开启，0：关闭）
+    * status  实例状态 - ON :开启 - OFF : 关闭
     * instanceName  数据库实例名
-    * auditStatus  数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    * auditStatus  数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     * agentUrl  agent的唯一ID
-    * dbClassification  数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    * dbClassification  数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
+    * rdsAuditSwitchMismatch  rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    * rdsId  RDS数据库的ID。
+    * rdsObjInfo  RDS数据库信息。
+    * dwsObjInfo  DWS数据库信息。
+    * clouddbObjInfo  云数据库信息，该字段已废弃。
     *
     * @var string[]
     */
@@ -83,7 +98,12 @@ class DataBase implements ModelInterface, ArrayAccess
         'instanceName' => null,
         'auditStatus' => null,
         'agentUrl' => null,
-        'dbClassification' => null
+        'dbClassification' => null,
+        'rdsAuditSwitchMismatch' => null,
+        'rdsId' => null,
+        'rdsObjInfo' => null,
+        'dwsObjInfo' => null,
+        'clouddbObjInfo' => null
     ];
 
     /**
@@ -111,17 +131,22 @@ class DataBase implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  数据库ID
     * name  数据库名称
-    * type  添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    * type  添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
-    * charset  数据库字符集
+    * charset  数据库字符集 - GBK - UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统
-    * status  开启状态（1：开启，0：关闭）
+    * status  实例状态 - ON :开启 - OFF : 关闭
     * instanceName  数据库实例名
-    * auditStatus  数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    * auditStatus  数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     * agentUrl  agent的唯一ID
-    * dbClassification  数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    * dbClassification  数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
+    * rdsAuditSwitchMismatch  rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    * rdsId  RDS数据库的ID。
+    * rdsObjInfo  RDS数据库信息。
+    * dwsObjInfo  DWS数据库信息。
+    * clouddbObjInfo  云数据库信息，该字段已废弃。
     *
     * @var string[]
     */
@@ -138,24 +163,34 @@ class DataBase implements ModelInterface, ArrayAccess
             'instanceName' => 'instance_name',
             'auditStatus' => 'audit_status',
             'agentUrl' => 'agent_url',
-            'dbClassification' => 'db_classification'
+            'dbClassification' => 'db_classification',
+            'rdsAuditSwitchMismatch' => 'rds_audit_switch_mismatch',
+            'rdsId' => 'rds_id',
+            'rdsObjInfo' => 'rds_obj_info',
+            'dwsObjInfo' => 'dws_obj_info',
+            'clouddbObjInfo' => 'clouddb_obj_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * id  数据库ID
     * name  数据库名称
-    * type  添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    * type  添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
-    * charset  数据库字符集
+    * charset  数据库字符集 - GBK - UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统
-    * status  开启状态（1：开启，0：关闭）
+    * status  实例状态 - ON :开启 - OFF : 关闭
     * instanceName  数据库实例名
-    * auditStatus  数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    * auditStatus  数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     * agentUrl  agent的唯一ID
-    * dbClassification  数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    * dbClassification  数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
+    * rdsAuditSwitchMismatch  rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    * rdsId  RDS数据库的ID。
+    * rdsObjInfo  RDS数据库信息。
+    * dwsObjInfo  DWS数据库信息。
+    * clouddbObjInfo  云数据库信息，该字段已废弃。
     *
     * @var string[]
     */
@@ -172,24 +207,34 @@ class DataBase implements ModelInterface, ArrayAccess
             'instanceName' => 'setInstanceName',
             'auditStatus' => 'setAuditStatus',
             'agentUrl' => 'setAgentUrl',
-            'dbClassification' => 'setDbClassification'
+            'dbClassification' => 'setDbClassification',
+            'rdsAuditSwitchMismatch' => 'setRdsAuditSwitchMismatch',
+            'rdsId' => 'setRdsId',
+            'rdsObjInfo' => 'setRdsObjInfo',
+            'dwsObjInfo' => 'setDwsObjInfo',
+            'clouddbObjInfo' => 'setClouddbObjInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * id  数据库ID
     * name  数据库名称
-    * type  添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    * type  添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     * version  数据库版本
-    * charset  数据库字符集
+    * charset  数据库字符集 - GBK - UTF8
     * ip  数据库IP
     * port  数据库端口
     * os  数据库操作系统
-    * status  开启状态（1：开启，0：关闭）
+    * status  实例状态 - ON :开启 - OFF : 关闭
     * instanceName  数据库实例名
-    * auditStatus  数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    * auditStatus  数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     * agentUrl  agent的唯一ID
-    * dbClassification  数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    * dbClassification  数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
+    * rdsAuditSwitchMismatch  rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    * rdsId  RDS数据库的ID。
+    * rdsObjInfo  RDS数据库信息。
+    * dwsObjInfo  DWS数据库信息。
+    * clouddbObjInfo  云数据库信息，该字段已废弃。
     *
     * @var string[]
     */
@@ -206,7 +251,12 @@ class DataBase implements ModelInterface, ArrayAccess
             'instanceName' => 'getInstanceName',
             'auditStatus' => 'getAuditStatus',
             'agentUrl' => 'getAgentUrl',
-            'dbClassification' => 'getDbClassification'
+            'dbClassification' => 'getDbClassification',
+            'rdsAuditSwitchMismatch' => 'getRdsAuditSwitchMismatch',
+            'rdsId' => 'getRdsId',
+            'rdsObjInfo' => 'getRdsObjInfo',
+            'dwsObjInfo' => 'getDwsObjInfo',
+            'clouddbObjInfo' => 'getClouddbObjInfo'
     ];
 
     /**
@@ -280,6 +330,11 @@ class DataBase implements ModelInterface, ArrayAccess
         $this->container['auditStatus'] = isset($data['auditStatus']) ? $data['auditStatus'] : null;
         $this->container['agentUrl'] = isset($data['agentUrl']) ? $data['agentUrl'] : null;
         $this->container['dbClassification'] = isset($data['dbClassification']) ? $data['dbClassification'] : null;
+        $this->container['rdsAuditSwitchMismatch'] = isset($data['rdsAuditSwitchMismatch']) ? $data['rdsAuditSwitchMismatch'] : null;
+        $this->container['rdsId'] = isset($data['rdsId']) ? $data['rdsId'] : null;
+        $this->container['rdsObjInfo'] = isset($data['rdsObjInfo']) ? $data['rdsObjInfo'] : null;
+        $this->container['dwsObjInfo'] = isset($data['dwsObjInfo']) ? $data['dwsObjInfo'] : null;
+        $this->container['clouddbObjInfo'] = isset($data['clouddbObjInfo']) ? $data['clouddbObjInfo'] : null;
     }
 
     /**
@@ -310,6 +365,9 @@ class DataBase implements ModelInterface, ArrayAccess
         }
         if ($this->container['os'] === null) {
             $invalidProperties[] = "'os' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
         }
         if ($this->container['instanceName'] === null) {
             $invalidProperties[] = "'instanceName' can't be null";
@@ -381,7 +439,7 @@ class DataBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    *  添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     *
     * @return string
     */
@@ -393,7 +451,7 @@ class DataBase implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 添加的数据库类型： 枚举值：  MYSQL  ORACLE  POSTGRESQL  SQLSERVER  DAMENG  TAURUS  DWS  KINGBASE  GAUSSDBOPENGAUSS   GREENPLUM   HIGHGO   SHENTONG   GBASE8A   GBASE8S   GBASEXDM   MONGODB   DDS
+    * @param string $type 添加的数据库类型： - MYSQL - ORACLE - POSTGRESQL - SQLSERVER - DAMENG - TAURUS - DWS - KINGBASE - GAUSSDBOPENGAUSS - GREENPLUM - HIGHGO - SHENTONG - GBASE8A - GBASE8S - GBASEXDM - MONGODB - DDS
     *
     * @return $this
     */
@@ -429,7 +487,7 @@ class DataBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets charset
-    *  数据库字符集
+    *  数据库字符集 - GBK - UTF8
     *
     * @return string
     */
@@ -441,7 +499,7 @@ class DataBase implements ModelInterface, ArrayAccess
     /**
     * Sets charset
     *
-    * @param string $charset 数据库字符集
+    * @param string $charset 数据库字符集 - GBK - UTF8
     *
     * @return $this
     */
@@ -525,9 +583,9 @@ class DataBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  开启状态（1：开启，0：关闭）
+    *  实例状态 - ON :开启 - OFF : 关闭
     *
-    * @return string|null
+    * @return string
     */
     public function getStatus()
     {
@@ -537,7 +595,7 @@ class DataBase implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 开启状态（1：开启，0：关闭）
+    * @param string $status 实例状态 - ON :开启 - OFF : 关闭
     *
     * @return $this
     */
@@ -573,7 +631,7 @@ class DataBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets auditStatus
-    *  数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    *  数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     *
     * @return string|null
     */
@@ -585,7 +643,7 @@ class DataBase implements ModelInterface, ArrayAccess
     /**
     * Sets auditStatus
     *
-    * @param string|null $auditStatus 数据库的运行状态 枚举值：  ACTIVE  SHUTOFF  ERROR
+    * @param string|null $auditStatus 数据库的运行状态 - ACTIVE - SHUTOFF - ERROR
     *
     * @return $this
     */
@@ -621,7 +679,7 @@ class DataBase implements ModelInterface, ArrayAccess
 
     /**
     * Gets dbClassification
-    *  数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    *  数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
     *
     * @return string
     */
@@ -633,13 +691,133 @@ class DataBase implements ModelInterface, ArrayAccess
     /**
     * Sets dbClassification
     *
-    * @param string $dbClassification 数据库分类，取值范围： RDS（表示RDS数据库）和 ECS（自建数据库）
+    * @param string $dbClassification 数据库分类 - RDS: 表示RDS数据库 - ECS:自建数据库
     *
     * @return $this
     */
     public function setDbClassification($dbClassification)
     {
         $this->container['dbClassification'] = $dbClassification;
+        return $this;
+    }
+
+    /**
+    * Gets rdsAuditSwitchMismatch
+    *  rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    *
+    * @return bool|null
+    */
+    public function getRdsAuditSwitchMismatch()
+    {
+        return $this->container['rdsAuditSwitchMismatch'];
+    }
+
+    /**
+    * Sets rdsAuditSwitchMismatch
+    *
+    * @param bool|null $rdsAuditSwitchMismatch rds实例审计开关状态不匹配。当数据库审计开启且rds侧日志上传开关关闭时该字段为true。
+    *
+    * @return $this
+    */
+    public function setRdsAuditSwitchMismatch($rdsAuditSwitchMismatch)
+    {
+        $this->container['rdsAuditSwitchMismatch'] = $rdsAuditSwitchMismatch;
+        return $this;
+    }
+
+    /**
+    * Gets rdsId
+    *  RDS数据库的ID。
+    *
+    * @return string|null
+    */
+    public function getRdsId()
+    {
+        return $this->container['rdsId'];
+    }
+
+    /**
+    * Sets rdsId
+    *
+    * @param string|null $rdsId RDS数据库的ID。
+    *
+    * @return $this
+    */
+    public function setRdsId($rdsId)
+    {
+        $this->container['rdsId'] = $rdsId;
+        return $this;
+    }
+
+    /**
+    * Gets rdsObjInfo
+    *  RDS数据库信息。
+    *
+    * @return string|null
+    */
+    public function getRdsObjInfo()
+    {
+        return $this->container['rdsObjInfo'];
+    }
+
+    /**
+    * Sets rdsObjInfo
+    *
+    * @param string|null $rdsObjInfo RDS数据库信息。
+    *
+    * @return $this
+    */
+    public function setRdsObjInfo($rdsObjInfo)
+    {
+        $this->container['rdsObjInfo'] = $rdsObjInfo;
+        return $this;
+    }
+
+    /**
+    * Gets dwsObjInfo
+    *  DWS数据库信息。
+    *
+    * @return string|null
+    */
+    public function getDwsObjInfo()
+    {
+        return $this->container['dwsObjInfo'];
+    }
+
+    /**
+    * Sets dwsObjInfo
+    *
+    * @param string|null $dwsObjInfo DWS数据库信息。
+    *
+    * @return $this
+    */
+    public function setDwsObjInfo($dwsObjInfo)
+    {
+        $this->container['dwsObjInfo'] = $dwsObjInfo;
+        return $this;
+    }
+
+    /**
+    * Gets clouddbObjInfo
+    *  云数据库信息，该字段已废弃。
+    *
+    * @return string|null
+    */
+    public function getClouddbObjInfo()
+    {
+        return $this->container['clouddbObjInfo'];
+    }
+
+    /**
+    * Sets clouddbObjInfo
+    *
+    * @param string|null $clouddbObjInfo 云数据库信息，该字段已废弃。
+    *
+    * @return $this
+    */
+    public function setClouddbObjInfo($clouddbObjInfo)
+    {
+        $this->container['clouddbObjInfo'] = $clouddbObjInfo;
         return $this;
     }
 

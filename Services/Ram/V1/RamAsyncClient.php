@@ -21,8 +21,8 @@ class RamAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new RamAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new RamAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

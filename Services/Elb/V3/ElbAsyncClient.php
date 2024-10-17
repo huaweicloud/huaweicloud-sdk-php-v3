@@ -21,8 +21,8 @@ class ElbAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new ElbAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new ElbAsyncClient());
+        return $client;
     }
 
     /**

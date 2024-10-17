@@ -21,8 +21,8 @@ class MeetingAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new MeetingAsyncClient(), "MeetingCredentials");
-       return $client;
+        $client = new ClientBuilder(new MeetingAsyncClient(), "MeetingCredentials");
+        return $client;
     }
 
     /**

@@ -22,7 +22,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bandwidthType  bandwidthType
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * bandwidthType  bandwidthType
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bandwidthType  bandwidthType
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * bandwidthType  bandwidthType
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * bandwidthType  bandwidthType
     * globalConnectionBandwidthId  全域互联带宽ID。
-    * bandwidthSize  带宽值定义，单位Mbps。
+    * bandwidthSize  带宽值，单位Mbps。
     *
     * @var string[]
     */
@@ -262,7 +262,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
 
     /**
     * Gets bandwidthSize
-    *  带宽值定义，单位Mbps。
+    *  带宽值，单位Mbps。
     *
     * @return int|null
     */
@@ -274,7 +274,7 @@ class UpdateCentralNetworkConnection implements ModelInterface, ArrayAccess
     /**
     * Sets bandwidthSize
     *
-    * @param int|null $bandwidthSize 带宽值定义，单位Mbps。
+    * @param int|null $bandwidthSize 带宽值，单位Mbps。
     *
     * @return $this
     */

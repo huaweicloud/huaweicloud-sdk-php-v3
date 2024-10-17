@@ -20,9 +20,9 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。审计：auditInstance
-    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
-    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    * resourceType  资源类型。 - auditInstance
+    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
+    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * body  body
     *
     * @var string[]
@@ -36,9 +36,9 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。审计：auditInstance
-    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
-    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    * resourceType  资源类型。 - auditInstance
+    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
+    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * body  body
     *
     * @var string[]
@@ -73,9 +73,9 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。审计：auditInstance
-    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
-    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    * resourceType  资源类型。 - auditInstance
+    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
+    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * body  body
     *
     * @var string[]
@@ -89,9 +89,9 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。审计：auditInstance
-    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
-    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    * resourceType  资源类型。 - auditInstance
+    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
+    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * body  body
     *
     * @var string[]
@@ -105,9 +105,9 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。审计：auditInstance
-    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
-    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    * resourceType  资源类型。 - auditInstance
+    * limit  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
+    * offset  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     * body  body
     *
     * @var string[]
@@ -159,7 +159,20 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_TYPE_AUDIT_INSTANCE = 'auditInstance';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_AUDIT_INSTANCE,
+        ];
+    }
 
 
     /**
@@ -194,6 +207,14 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            $allowedValues = $this->getResourceTypeAllowableValues();
+                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -210,7 +231,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。审计：auditInstance
+    *  资源类型。 - auditInstance
     *
     * @return string
     */
@@ -222,7 +243,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。审计：auditInstance
+    * @param string $resourceType 资源类型。 - auditInstance
     *
     * @return $this
     */
@@ -234,7 +255,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
+    *  查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
     *
     * @return string|null
     */
@@ -246,7 +267,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param string|null $limit 查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1
+    * @param string|null $limit 查询记录数（action为count时无此参数）如果action为filter默认为1000，limit最多为1000,不能为负数，最小值为1。
     *
     * @return $this
     */
@@ -258,7 +279,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    *  索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     *
     * @return string|null
     */
@@ -270,7 +291,7 @@ class ListResourceInstanceByTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param string|null $offset 索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数
+    * @param string|null $offset 索引位置，偏移量（action为count时无此参数）从第一条数据偏移offset条数据后开始查询，如果action为filter默认为0（偏移0条数据，表示从第一条数据开始查询）,必须为数字，不能为负数。
     *
     * @return $this
     */

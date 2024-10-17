@@ -21,8 +21,8 @@ class GeipAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new GeipAsyncClient(), "GlobalCredentials");
-       return $client;
+        $client = new ClientBuilder(new GeipAsyncClient(), "GlobalCredentials");
+        return $client;
     }
 
     /**

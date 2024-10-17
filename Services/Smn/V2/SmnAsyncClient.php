@@ -21,8 +21,8 @@ class SmnAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new SmnAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new SmnAsyncClient());
+        return $client;
     }
 
     /**

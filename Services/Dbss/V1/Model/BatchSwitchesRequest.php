@@ -20,8 +20,8 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * ids  risk id, ids 中间逗号分隔
-    * status  OFF：关闭 ON：开启
+    * ids  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
+    * status  开关状态 - OFF: 关闭 - ON: 开启
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * ids  risk id, ids 中间逗号分隔
-    * status  OFF：关闭 ON：开启
+    * ids  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
+    * status  开关状态 - OFF: 关闭 - ON: 开启
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * ids  risk id, ids 中间逗号分隔
-    * status  OFF：关闭 ON：开启
+    * ids  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
+    * status  开关状态 - OFF: 关闭 - ON: 开启
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * ids  risk id, ids 中间逗号分隔
-    * status  OFF：关闭 ON：开启
+    * ids  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
+    * status  开关状态 - OFF: 关闭 - ON: 开启
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * ids  risk id, ids 中间逗号分隔
-    * status  OFF：关闭 ON：开启
+    * ids  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
+    * status  开关状态 - OFF: 关闭 - ON: 开启
     *
     * @var string[]
     */
@@ -208,7 +208,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ids
-    *  risk id, ids 中间逗号分隔
+    *  规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
     *
     * @return string|null
     */
@@ -220,7 +220,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ids
     *
-    * @param string|null $ids risk id, ids 中间逗号分隔
+    * @param string|null $ids 规则ID,多个ID中间逗号分隔。可在查询风险规则策略接口ID字段获取。
     *
     * @return $this
     */
@@ -232,7 +232,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  OFF：关闭 ON：开启
+    *  开关状态 - OFF: 关闭 - ON: 开启
     *
     * @return string|null
     */
@@ -244,7 +244,7 @@ class BatchSwitchesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status OFF：关闭 ON：开启
+    * @param string|null $status 开关状态 - OFF: 关闭 - ON: 开启
     *
     * @return $this
     */

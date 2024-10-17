@@ -20,13 +20,14 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * azs  可用区集合
-    * id  ID
-    * level  等级
-    * name  名称
-    * proxy  代理
+    * azs  ECS规格所在的可用区集合
+    * id  规格ID
+    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * name  规格名称
+    * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
+    * azType  可用区类型 - DEDICATED - DEC - EDGE
     *
     * @var string[]
     */
@@ -37,18 +38,20 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
             'name' => 'string',
             'proxy' => 'int',
             'ram' => 'int',
-            'vcpus' => 'int'
+            'vcpus' => 'int',
+            'azType' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * azs  可用区集合
-    * id  ID
-    * level  等级
-    * name  名称
-    * proxy  代理
+    * azs  ECS规格所在的可用区集合
+    * id  规格ID
+    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * name  规格名称
+    * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
+    * azType  可用区类型 - DEDICATED - DEC - EDGE
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
         'name' => null,
         'proxy' => 'int32',
         'ram' => 'int32',
-        'vcpus' => 'int32'
+        'vcpus' => 'int32',
+        'azType' => null
     ];
 
     /**
@@ -85,13 +89,14 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * azs  可用区集合
-    * id  ID
-    * level  等级
-    * name  名称
-    * proxy  代理
+    * azs  ECS规格所在的可用区集合
+    * id  规格ID
+    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * name  规格名称
+    * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
+    * azType  可用区类型 - DEDICATED - DEC - EDGE
     *
     * @var string[]
     */
@@ -102,18 +107,20 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
             'name' => 'name',
             'proxy' => 'proxy',
             'ram' => 'ram',
-            'vcpus' => 'vcpus'
+            'vcpus' => 'vcpus',
+            'azType' => 'az_type'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * azs  可用区集合
-    * id  ID
-    * level  等级
-    * name  名称
-    * proxy  代理
+    * azs  ECS规格所在的可用区集合
+    * id  规格ID
+    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * name  规格名称
+    * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
+    * azType  可用区类型 - DEDICATED - DEC - EDGE
     *
     * @var string[]
     */
@@ -124,18 +131,20 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
             'name' => 'setName',
             'proxy' => 'setProxy',
             'ram' => 'setRam',
-            'vcpus' => 'setVcpus'
+            'vcpus' => 'setVcpus',
+            'azType' => 'setAzType'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * azs  可用区集合
-    * id  ID
-    * level  等级
-    * name  名称
-    * proxy  代理
+    * azs  ECS规格所在的可用区集合
+    * id  规格ID
+    * level  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
+    * name  规格名称
+    * proxy  规格可添加的数据库数量
     * ram  内存
     * vcpus  CPU
+    * azType  可用区类型 - DEDICATED - DEC - EDGE
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
             'name' => 'getName',
             'proxy' => 'getProxy',
             'ram' => 'getRam',
-            'vcpus' => 'getVcpus'
+            'vcpus' => 'getVcpus',
+            'azType' => 'getAzType'
     ];
 
     /**
@@ -214,6 +224,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
         $this->container['proxy'] = isset($data['proxy']) ? $data['proxy'] : null;
         $this->container['ram'] = isset($data['ram']) ? $data['ram'] : null;
         $this->container['vcpus'] = isset($data['vcpus']) ? $data['vcpus'] : null;
+        $this->container['azType'] = isset($data['azType']) ? $data['azType'] : null;
     }
 
     /**
@@ -261,7 +272,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets azs
-    *  可用区集合
+    *  ECS规格所在的可用区集合
     *
     * @return string[]
     */
@@ -273,7 +284,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets azs
     *
-    * @param string[] $azs 可用区集合
+    * @param string[] $azs ECS规格所在的可用区集合
     *
     * @return $this
     */
@@ -285,7 +296,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ID
+    *  规格ID
     *
     * @return string
     */
@@ -297,7 +308,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id ID
+    * @param string $id 规格ID
     *
     * @return $this
     */
@@ -309,7 +320,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets level
-    *  等级
+    *  规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
     *
     * @return string
     */
@@ -321,7 +332,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets level
     *
-    * @param string $level 等级
+    * @param string $level 规格等级，支持的等级以局点配置为准。 - entry:入门版 - low:基础版 - medium:专业版 - high:高级版
     *
     * @return $this
     */
@@ -333,7 +344,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  规格名称
     *
     * @return string
     */
@@ -345,7 +356,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 名称
+    * @param string $name 规格名称
     *
     * @return $this
     */
@@ -357,7 +368,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets proxy
-    *  代理
+    *  规格可添加的数据库数量
     *
     * @return int
     */
@@ -369,7 +380,7 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     /**
     * Sets proxy
     *
-    * @param int $proxy 代理
+    * @param int $proxy 规格可添加的数据库数量
     *
     * @return $this
     */
@@ -424,6 +435,30 @@ class EcsSpecificationBean implements ModelInterface, ArrayAccess
     public function setVcpus($vcpus)
     {
         $this->container['vcpus'] = $vcpus;
+        return $this;
+    }
+
+    /**
+    * Gets azType
+    *  可用区类型 - DEDICATED - DEC - EDGE
+    *
+    * @return string|null
+    */
+    public function getAzType()
+    {
+        return $this->container['azType'];
+    }
+
+    /**
+    * Sets azType
+    *
+    * @param string|null $azType 可用区类型 - DEDICATED - DEC - EDGE
+    *
+    * @return $this
+    */
+    public function setAzType($azType)
+    {
+        $this->container['azType'] = $azType;
         return $this;
     }
 

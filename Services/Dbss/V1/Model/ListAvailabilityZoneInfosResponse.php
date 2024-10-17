@@ -21,7 +21,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * azs  az列表
+    * azs  可用区集合
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * azs  az列表
+    * azs  可用区集合
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * azs  az列表
+    * azs  可用区集合
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * azs  az列表
+    * azs  可用区集合
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * azs  az列表
+    * azs  可用区集合
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets azs
-    *  az列表
+    *  可用区集合
     *
     * @return \HuaweiCloud\SDK\Dbss\V1\Model\AzInfo[]|null
     */
@@ -187,7 +187,7 @@ class ListAvailabilityZoneInfosResponse implements ModelInterface, ArrayAccess
     /**
     * Sets azs
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\AzInfo[]|null $azs az列表
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\AzInfo[]|null $azs 可用区集合
     *
     * @return $this
     */

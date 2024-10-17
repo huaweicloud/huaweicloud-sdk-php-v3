@@ -21,8 +21,8 @@ class FrsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new FrsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new FrsAsyncClient());
+        return $client;
     }
 
     /**

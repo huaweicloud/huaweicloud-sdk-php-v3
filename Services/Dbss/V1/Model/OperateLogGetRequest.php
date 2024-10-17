@@ -21,9 +21,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * time  time
-    * userName  筛选角色用户获取操作日志
-    * operateName  筛选操作对象名称获取操作日志
-    * result  根据执行结果获取操作日志 [success, fail]
+    * userName  操作日志用户名
+    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    * result  执行结果 - success - fail
     * page  页数
     * size  每页条数
     *
@@ -32,7 +32,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'time' => '\HuaweiCloud\SDK\Dbss\V1\Model\TimeRangeBean',
             'userName' => 'string',
-            'operateName' => 'string',
+            'action' => 'string',
             'result' => 'string',
             'page' => 'string',
             'size' => 'string'
@@ -41,9 +41,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * time  time
-    * userName  筛选角色用户获取操作日志
-    * operateName  筛选操作对象名称获取操作日志
-    * result  根据执行结果获取操作日志 [success, fail]
+    * userName  操作日志用户名
+    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    * result  执行结果 - success - fail
     * page  页数
     * size  每页条数
     *
@@ -52,7 +52,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'time' => null,
         'userName' => null,
-        'operateName' => null,
+        'action' => null,
         'result' => null,
         'page' => null,
         'size' => null
@@ -82,9 +82,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * time  time
-    * userName  筛选角色用户获取操作日志
-    * operateName  筛选操作对象名称获取操作日志
-    * result  根据执行结果获取操作日志 [success, fail]
+    * userName  操作日志用户名
+    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    * result  执行结果 - success - fail
     * page  页数
     * size  每页条数
     *
@@ -93,7 +93,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'time' => 'time',
             'userName' => 'user_name',
-            'operateName' => 'operate_name',
+            'action' => 'action',
             'result' => 'result',
             'page' => 'page',
             'size' => 'size'
@@ -102,9 +102,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * time  time
-    * userName  筛选角色用户获取操作日志
-    * operateName  筛选操作对象名称获取操作日志
-    * result  根据执行结果获取操作日志 [success, fail]
+    * userName  操作日志用户名
+    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    * result  执行结果 - success - fail
     * page  页数
     * size  每页条数
     *
@@ -113,7 +113,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'time' => 'setTime',
             'userName' => 'setUserName',
-            'operateName' => 'setOperateName',
+            'action' => 'setAction',
             'result' => 'setResult',
             'page' => 'setPage',
             'size' => 'setSize'
@@ -122,9 +122,9 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * time  time
-    * userName  筛选角色用户获取操作日志
-    * operateName  筛选操作对象名称获取操作日志
-    * result  根据执行结果获取操作日志 [success, fail]
+    * userName  操作日志用户名
+    * action  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
+    * result  执行结果 - success - fail
     * page  页数
     * size  每页条数
     *
@@ -133,7 +133,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'time' => 'getTime',
             'userName' => 'getUserName',
-            'operateName' => 'getOperateName',
+            'action' => 'getAction',
             'result' => 'getResult',
             'page' => 'getPage',
             'size' => 'getSize'
@@ -179,7 +179,41 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const ACTION_CREATE = 'CREATE';
+    const ACTION_DELETE = 'DELETE';
+    const ACTION_DOWNLOAD = 'DOWNLOAD';
+    const ACTION_UPDATE = 'UPDATE';
+    const RESULT_SUCCESS = 'success';
+    const RESULT_FAIL = 'fail';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getActionAllowableValues()
+    {
+        return [
+            self::ACTION_CREATE,
+            self::ACTION_DELETE,
+            self::ACTION_DOWNLOAD,
+            self::ACTION_UPDATE,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResultAllowableValues()
+    {
+        return [
+            self::RESULT_SUCCESS,
+            self::RESULT_FAIL,
+        ];
+    }
 
 
     /**
@@ -199,7 +233,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     {
         $this->container['time'] = isset($data['time']) ? $data['time'] : null;
         $this->container['userName'] = isset($data['userName']) ? $data['userName'] : null;
-        $this->container['operateName'] = isset($data['operateName']) ? $data['operateName'] : null;
+        $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['result'] = isset($data['result']) ? $data['result'] : null;
         $this->container['page'] = isset($data['page']) ? $data['page'] : null;
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
@@ -213,6 +247,22 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getActionAllowableValues();
+                if (!is_null($this->container['action']) && !in_array($this->container['action'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'action', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            $allowedValues = $this->getResultAllowableValues();
+                if (!is_null($this->container['result']) && !in_array($this->container['result'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'result', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -253,7 +303,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets userName
-    *  筛选角色用户获取操作日志
+    *  操作日志用户名
     *
     * @return string|null
     */
@@ -265,7 +315,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets userName
     *
-    * @param string|null $userName 筛选角色用户获取操作日志
+    * @param string|null $userName 操作日志用户名
     *
     * @return $this
     */
@@ -276,32 +326,32 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets operateName
-    *  筛选操作对象名称获取操作日志
+    * Gets action
+    *  动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
     *
     * @return string|null
     */
-    public function getOperateName()
+    public function getAction()
     {
-        return $this->container['operateName'];
+        return $this->container['action'];
     }
 
     /**
-    * Sets operateName
+    * Sets action
     *
-    * @param string|null $operateName 筛选操作对象名称获取操作日志
+    * @param string|null $action 动作名称 - CREATE - DELETE - DOWNLOAD - UPDATE
     *
     * @return $this
     */
-    public function setOperateName($operateName)
+    public function setAction($action)
     {
-        $this->container['operateName'] = $operateName;
+        $this->container['action'] = $action;
         return $this;
     }
 
     /**
     * Gets result
-    *  根据执行结果获取操作日志 [success, fail]
+    *  执行结果 - success - fail
     *
     * @return string|null
     */
@@ -313,7 +363,7 @@ class OperateLogGetRequest implements ModelInterface, ArrayAccess
     /**
     * Sets result
     *
-    * @param string|null $result 根据执行结果获取操作日志 [success, fail]
+    * @param string|null $result 执行结果 - success - fail
     *
     * @return $this
     */

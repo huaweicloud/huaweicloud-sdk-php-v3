@@ -20,8 +20,8 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * key  键，目前仅支持：resource_name
+    * value  值，需要匹配的资源名称
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键
-    * value  值
+    * key  键，目前仅支持：resource_name
+    * value  值，需要匹配的资源名称
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键
-    * value  值
+    * key  键，目前仅支持：resource_name
+    * value  值，需要匹配的资源名称
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键
-    * value  值
+    * key  键，目前仅支持：resource_name
+    * value  值，需要匹配的资源名称
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键
-    * value  值
+    * key  键，目前仅支持：resource_name
+    * value  值，需要匹配的资源名称
     *
     * @var string[]
     */
@@ -169,6 +169,12 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['key'] === null) {
+            $invalidProperties[] = "'key' can't be null";
+        }
+        if ($this->container['value'] === null) {
+            $invalidProperties[] = "'value' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -185,9 +191,9 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键
+    *  键，目前仅支持：resource_name
     *
-    * @return string|null
+    * @return string
     */
     public function getKey()
     {
@@ -197,7 +203,7 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键
+    * @param string $key 键，目前仅支持：resource_name
     *
     * @return $this
     */
@@ -209,9 +215,9 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值
+    *  值，需要匹配的资源名称
     *
-    * @return string|null
+    * @return string
     */
     public function getValue()
     {
@@ -221,7 +227,7 @@ class ResourceInstanceTagRequestMatches implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值
+    * @param string $value 值，需要匹配的资源名称
     *
     * @return $this
     */

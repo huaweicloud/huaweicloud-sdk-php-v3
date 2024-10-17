@@ -21,8 +21,8 @@ class BmsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new BmsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new BmsAsyncClient());
+        return $client;
     }
 
     /**

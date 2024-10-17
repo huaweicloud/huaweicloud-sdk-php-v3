@@ -20,18 +20,19 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  任务ID,异步查询标识
-    * status  状态
+    * jobId  任务ID。
+    * status  任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     * jobType  类型
     * serverId  虚拟机ID
     * serverName  虚拟机名称
+    * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式
+    * chargeMode  计费模式 - Period:包周期计费 - Demand:按需计费
     * errorCode  错误码
     * failReason  失败原因
-    * haId  双机实例HA共用的id
-    * haName  HA别名
+    * haId  防护实例ID,该字段已废弃
+    * haName  防护实例名称，该字段已废弃
     *
     * @var string[]
     */
@@ -41,6 +42,7 @@ class JobBean implements ModelInterface, ArrayAccess
             'jobType' => 'string',
             'serverId' => 'string',
             'serverName' => 'string',
+            'resourceId' => 'string',
             'beginTime' => 'int',
             'endTime' => 'int',
             'chargeMode' => 'string',
@@ -52,18 +54,19 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  任务ID,异步查询标识
-    * status  状态
+    * jobId  任务ID。
+    * status  任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     * jobType  类型
     * serverId  虚拟机ID
     * serverName  虚拟机名称
+    * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式
+    * chargeMode  计费模式 - Period:包周期计费 - Demand:按需计费
     * errorCode  错误码
     * failReason  失败原因
-    * haId  双机实例HA共用的id
-    * haName  HA别名
+    * haId  防护实例ID,该字段已废弃
+    * haName  防护实例名称，该字段已废弃
     *
     * @var string[]
     */
@@ -73,6 +76,7 @@ class JobBean implements ModelInterface, ArrayAccess
         'jobType' => null,
         'serverId' => null,
         'serverName' => null,
+        'resourceId' => null,
         'beginTime' => 'int64',
         'endTime' => 'int64',
         'chargeMode' => null,
@@ -105,18 +109,19 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  任务ID,异步查询标识
-    * status  状态
+    * jobId  任务ID。
+    * status  任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     * jobType  类型
     * serverId  虚拟机ID
     * serverName  虚拟机名称
+    * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式
+    * chargeMode  计费模式 - Period:包周期计费 - Demand:按需计费
     * errorCode  错误码
     * failReason  失败原因
-    * haId  双机实例HA共用的id
-    * haName  HA别名
+    * haId  防护实例ID,该字段已废弃
+    * haName  防护实例名称，该字段已废弃
     *
     * @var string[]
     */
@@ -126,6 +131,7 @@ class JobBean implements ModelInterface, ArrayAccess
             'jobType' => 'job_type',
             'serverId' => 'server_id',
             'serverName' => 'server_name',
+            'resourceId' => 'resource_id',
             'beginTime' => 'begin_time',
             'endTime' => 'end_time',
             'chargeMode' => 'charge_mode',
@@ -137,18 +143,19 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  任务ID,异步查询标识
-    * status  状态
+    * jobId  任务ID。
+    * status  任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     * jobType  类型
     * serverId  虚拟机ID
     * serverName  虚拟机名称
+    * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式
+    * chargeMode  计费模式 - Period:包周期计费 - Demand:按需计费
     * errorCode  错误码
     * failReason  失败原因
-    * haId  双机实例HA共用的id
-    * haName  HA别名
+    * haId  防护实例ID,该字段已废弃
+    * haName  防护实例名称，该字段已废弃
     *
     * @var string[]
     */
@@ -158,6 +165,7 @@ class JobBean implements ModelInterface, ArrayAccess
             'jobType' => 'setJobType',
             'serverId' => 'setServerId',
             'serverName' => 'setServerName',
+            'resourceId' => 'setResourceId',
             'beginTime' => 'setBeginTime',
             'endTime' => 'setEndTime',
             'chargeMode' => 'setChargeMode',
@@ -169,18 +177,19 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  任务ID,异步查询标识
-    * status  状态
+    * jobId  任务ID。
+    * status  任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     * jobType  类型
     * serverId  虚拟机ID
     * serverName  虚拟机名称
+    * resourceId  资源ID
     * beginTime  开始时间
     * endTime  结束时间
-    * chargeMode  计费模式
+    * chargeMode  计费模式 - Period:包周期计费 - Demand:按需计费
     * errorCode  错误码
     * failReason  失败原因
-    * haId  双机实例HA共用的id
-    * haName  HA别名
+    * haId  防护实例ID,该字段已废弃
+    * haName  防护实例名称，该字段已废弃
     *
     * @var string[]
     */
@@ -190,6 +199,7 @@ class JobBean implements ModelInterface, ArrayAccess
             'jobType' => 'getJobType',
             'serverId' => 'getServerId',
             'serverName' => 'getServerName',
+            'resourceId' => 'getResourceId',
             'beginTime' => 'getBeginTime',
             'endTime' => 'getEndTime',
             'chargeMode' => 'getChargeMode',
@@ -262,6 +272,7 @@ class JobBean implements ModelInterface, ArrayAccess
         $this->container['jobType'] = isset($data['jobType']) ? $data['jobType'] : null;
         $this->container['serverId'] = isset($data['serverId']) ? $data['serverId'] : null;
         $this->container['serverName'] = isset($data['serverName']) ? $data['serverName'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['beginTime'] = isset($data['beginTime']) ? $data['beginTime'] : null;
         $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
         $this->container['chargeMode'] = isset($data['chargeMode']) ? $data['chargeMode'] : null;
@@ -294,6 +305,9 @@ class JobBean implements ModelInterface, ArrayAccess
         if ($this->container['serverName'] === null) {
             $invalidProperties[] = "'serverName' can't be null";
         }
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
+        }
         if ($this->container['beginTime'] === null) {
             $invalidProperties[] = "'beginTime' can't be null";
         }
@@ -319,7 +333,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  任务ID,异步查询标识
+    *  任务ID。
     *
     * @return string
     */
@@ -331,7 +345,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string $jobId 任务ID,异步查询标识
+    * @param string $jobId 任务ID。
     *
     * @return $this
     */
@@ -343,7 +357,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  状态
+    *  任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     *
     * @return string
     */
@@ -355,7 +369,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string $status 状态
+    * @param string $status 任务状态 - SUCCESS - RUNNING - FAIL - INIT - READY
     *
     * @return $this
     */
@@ -438,6 +452,30 @@ class JobBean implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets resourceId
+    *  资源ID
+    *
+    * @return string
+    */
+    public function getResourceId()
+    {
+        return $this->container['resourceId'];
+    }
+
+    /**
+    * Sets resourceId
+    *
+    * @param string $resourceId 资源ID
+    *
+    * @return $this
+    */
+    public function setResourceId($resourceId)
+    {
+        $this->container['resourceId'] = $resourceId;
+        return $this;
+    }
+
+    /**
     * Gets beginTime
     *  开始时间
     *
@@ -487,7 +525,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargeMode
-    *  计费模式
+    *  计费模式 - Period:包周期计费 - Demand:按需计费
     *
     * @return string
     */
@@ -499,7 +537,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets chargeMode
     *
-    * @param string $chargeMode 计费模式
+    * @param string $chargeMode 计费模式 - Period:包周期计费 - Demand:按需计费
     *
     * @return $this
     */
@@ -559,7 +597,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets haId
-    *  双机实例HA共用的id
+    *  防护实例ID,该字段已废弃
     *
     * @return string|null
     */
@@ -571,7 +609,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets haId
     *
-    * @param string|null $haId 双机实例HA共用的id
+    * @param string|null $haId 防护实例ID,该字段已废弃
     *
     * @return $this
     */
@@ -583,7 +621,7 @@ class JobBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets haName
-    *  HA别名
+    *  防护实例名称，该字段已废弃
     *
     * @return string|null
     */
@@ -595,7 +633,7 @@ class JobBean implements ModelInterface, ArrayAccess
     /**
     * Sets haName
     *
-    * @param string|null $haName HA别名
+    * @param string|null $haName 防护实例名称，该字段已废弃
     *
     * @return $this
     */

@@ -26,6 +26,8 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
     * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启OBS静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
+    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
+    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     *
     * @var string[]
     */
@@ -35,7 +37,9 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
             'originType' => 'string',
             'obsBucketType' => 'string',
             'activeStandby' => 'int',
-            'enableObsWebHosting' => 'int'
+            'enableObsWebHosting' => 'int',
+            'httpPort' => 'int',
+            'httpsPort' => 'int'
     ];
 
     /**
@@ -46,6 +50,8 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
     * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启OBS静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
+    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
+    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     *
     * @var string[]
     */
@@ -55,7 +61,9 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
         'originType' => null,
         'obsBucketType' => null,
         'activeStandby' => null,
-        'enableObsWebHosting' => 'int32'
+        'enableObsWebHosting' => 'int32',
+        'httpPort' => null,
+        'httpsPort' => null
     ];
 
     /**
@@ -87,6 +95,8 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
     * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启OBS静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
+    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
+    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     *
     * @var string[]
     */
@@ -96,7 +106,9 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
             'originType' => 'origin_type',
             'obsBucketType' => 'obs_bucket_type',
             'activeStandby' => 'active_standby',
-            'enableObsWebHosting' => 'enable_obs_web_hosting'
+            'enableObsWebHosting' => 'enable_obs_web_hosting',
+            'httpPort' => 'http_port',
+            'httpsPort' => 'https_port'
     ];
 
     /**
@@ -107,6 +119,8 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
     * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启OBS静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
+    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
+    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     *
     * @var string[]
     */
@@ -116,7 +130,9 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
             'originType' => 'setOriginType',
             'obsBucketType' => 'setObsBucketType',
             'activeStandby' => 'setActiveStandby',
-            'enableObsWebHosting' => 'setEnableObsWebHosting'
+            'enableObsWebHosting' => 'setEnableObsWebHosting',
+            'httpPort' => 'setHttpPort',
+            'httpsPort' => 'setHttpsPort'
     ];
 
     /**
@@ -127,6 +143,8 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
     * obsBucketType  OBS桶类型，源站类型是“OBS桶域名”时需要传该参数，不传默认为“public”。   - private: 私有桶（除桶ACL授权外的其他用户无桶的访问权限）。   - public: 公有桶（任何用户都可以对桶内对象进行读操作）。
     * activeStandby  主备状态，1代表主源站，0代表备源站。
     * enableObsWebHosting  是否开启OBS静态网站托管(0表示关闭,1表示则为开启)，源站类型为obs_bucket时传递。
+    * httpPort  HTTP端口，默认80,端口取值取值范围1-65535。
+    * httpsPort  HTTPS端口，默认443,端口取值取值范围1-65535。
     *
     * @var string[]
     */
@@ -136,7 +154,9 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
             'originType' => 'getOriginType',
             'obsBucketType' => 'getObsBucketType',
             'activeStandby' => 'getActiveStandby',
-            'enableObsWebHosting' => 'getEnableObsWebHosting'
+            'enableObsWebHosting' => 'getEnableObsWebHosting',
+            'httpPort' => 'getHttpPort',
+            'httpsPort' => 'getHttpsPort'
     ];
 
     /**
@@ -220,6 +240,8 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
         $this->container['obsBucketType'] = isset($data['obsBucketType']) ? $data['obsBucketType'] : null;
         $this->container['activeStandby'] = isset($data['activeStandby']) ? $data['activeStandby'] : null;
         $this->container['enableObsWebHosting'] = isset($data['enableObsWebHosting']) ? $data['enableObsWebHosting'] : null;
+        $this->container['httpPort'] = isset($data['httpPort']) ? $data['httpPort'] : null;
+        $this->container['httpsPort'] = isset($data['httpsPort']) ? $data['httpsPort'] : null;
     }
 
     /**
@@ -402,6 +424,54 @@ class SourcesRequestBody implements ModelInterface, ArrayAccess
     public function setEnableObsWebHosting($enableObsWebHosting)
     {
         $this->container['enableObsWebHosting'] = $enableObsWebHosting;
+        return $this;
+    }
+
+    /**
+    * Gets httpPort
+    *  HTTP端口，默认80,端口取值取值范围1-65535。
+    *
+    * @return int|null
+    */
+    public function getHttpPort()
+    {
+        return $this->container['httpPort'];
+    }
+
+    /**
+    * Sets httpPort
+    *
+    * @param int|null $httpPort HTTP端口，默认80,端口取值取值范围1-65535。
+    *
+    * @return $this
+    */
+    public function setHttpPort($httpPort)
+    {
+        $this->container['httpPort'] = $httpPort;
+        return $this;
+    }
+
+    /**
+    * Gets httpsPort
+    *  HTTPS端口，默认443,端口取值取值范围1-65535。
+    *
+    * @return int|null
+    */
+    public function getHttpsPort()
+    {
+        return $this->container['httpsPort'];
+    }
+
+    /**
+    * Sets httpsPort
+    *
+    * @param int|null $httpsPort HTTPS端口，默认443,端口取值取值范围1-65535。
+    *
+    * @return $this
+    */
+    public function setHttpsPort($httpsPort)
+    {
+        $this->container['httpsPort'] = $httpsPort;
         return $this;
     }
 

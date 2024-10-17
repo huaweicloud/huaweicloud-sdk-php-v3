@@ -20,8 +20,8 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键。最大长度128个字符。 key满足3.1 KEY字符集规范。
-    * values  值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * values  值列表。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键。最大长度128个字符。 key满足3.1 KEY字符集规范。
-    * values  值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * values  值列表。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键。最大长度128个字符。 key满足3.1 KEY字符集规范。
-    * values  值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * values  值列表。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键。最大长度128个字符。 key满足3.1 KEY字符集规范。
-    * values  值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * values  值列表。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键。最大长度128个字符。 key满足3.1 KEY字符集规范。
-    * values  值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    * key  键。最大长度128个字符。
+    * values  值列表。每个值最大长度255个字符。
     *
     * @var string[]
     */
@@ -169,12 +169,6 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['key'] === null) {
-            $invalidProperties[] = "'key' can't be null";
-        }
-        if ($this->container['values'] === null) {
-            $invalidProperties[] = "'values' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -191,9 +185,9 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键。最大长度128个字符。 key满足3.1 KEY字符集规范。
+    *  键。最大长度128个字符。
     *
-    * @return string
+    * @return string|null
     */
     public function getKey()
     {
@@ -203,7 +197,7 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 键。最大长度128个字符。 key满足3.1 KEY字符集规范。
+    * @param string|null $key 键。最大长度128个字符。
     *
     * @return $this
     */
@@ -215,9 +209,9 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
 
     /**
     * Gets values
-    *  值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    *  值列表。每个值最大长度255个字符。
     *
-    * @return string[]
+    * @return string[]|null
     */
     public function getValues()
     {
@@ -227,7 +221,7 @@ class ProjectResourceTagResponseTags implements ModelInterface, ArrayAccess
     /**
     * Sets values
     *
-    * @param string[] $values 值列表。每个值最大长度255个字符。 value满足3.2 VALUE字符集规范。
+    * @param string[]|null $values 值列表。每个值最大长度255个字符。
     *
     * @return $this
     */

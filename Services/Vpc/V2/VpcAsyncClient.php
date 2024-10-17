@@ -21,8 +21,8 @@ class VpcAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new VpcAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new VpcAsyncClient());
+        return $client;
     }
 
     /**

@@ -184,9 +184,6 @@ class OsStopBodyType implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
             $allowedValues = $this->getTypeAllowableValues();
                 if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
                 $invalidProperties[] = sprintf(
@@ -216,7 +213,7 @@ class OsStopBodyType implements ModelInterface, ArrayAccess
     * Gets type
     *  关机类型：SOFT：普通关机（不生效）。HARD：强制关机（默认）。
     *
-    * @return string
+    * @return string|null
     */
     public function getType()
     {
@@ -226,7 +223,7 @@ class OsStopBodyType implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 关机类型：SOFT：普通关机（不生效）。HARD：强制关机（默认）。
+    * @param string|null $type 关机类型：SOFT：普通关机（不生效）。HARD：强制关机（默认）。
     *
     * @return $this
     */

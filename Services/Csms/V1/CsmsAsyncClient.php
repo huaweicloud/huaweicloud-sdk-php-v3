@@ -21,8 +21,8 @@ class CsmsAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new CsmsAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new CsmsAsyncClient());
+        return $client;
     }
 
     /**

@@ -21,8 +21,8 @@ class CceAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new CceAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new CceAsyncClient());
+        return $client;
     }
 
     /**

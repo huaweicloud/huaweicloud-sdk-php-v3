@@ -21,8 +21,8 @@ class CdmAsyncClient extends Client
 
     public static function newBuilder()
     {
-       $client = new ClientBuilder(new CdmAsyncClient());
-       return $client;
+        $client = new ClientBuilder(new CdmAsyncClient());
+        return $client;
     }
 
     /**

@@ -22,7 +22,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * endTime  开始时间，必须和end_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
     * startTime  结束时间，必须和start_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
-    * timeRange  请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    * timeRange  请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @var string[]
     */
@@ -36,7 +36,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * endTime  开始时间，必须和end_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
     * startTime  结束时间，必须和start_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
-    * timeRange  请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    * timeRange  请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     * and the value is the original name
     * endTime  开始时间，必须和end_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
     * startTime  结束时间，必须和start_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
-    * timeRange  请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    * timeRange  请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @var string[]
     */
@@ -85,7 +85,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * endTime  开始时间，必须和end_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
     * startTime  结束时间，必须和start_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
-    * timeRange  请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    * timeRange  请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * endTime  开始时间，必须和end_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
     * startTime  结束时间，必须和start_time成对出现。格式必须为yyyy-MM-dd HH:mm:ss。UTC时间
-    * timeRange  请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    * timeRange  请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @var string[]
     */
@@ -149,7 +149,32 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const TIME_RANGE_HALF_HOUR = 'HALF_HOUR';
+    const TIME_RANGE_HOUR = 'HOUR';
+    const TIME_RANGE_THREE_HOUR = 'THREE_HOUR';
+    const TIME_RANGE_TWELVE_HOUR = 'TWELVE_HOUR';
+    const TIME_RANGE_DAY = 'DAY';
+    const TIME_RANGE_WEEK = 'WEEK';
+    const TIME_RANGE_MONTH = 'MONTH';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getTimeRangeAllowableValues()
+    {
+        return [
+            self::TIME_RANGE_HALF_HOUR,
+            self::TIME_RANGE_HOUR,
+            self::TIME_RANGE_THREE_HOUR,
+            self::TIME_RANGE_TWELVE_HOUR,
+            self::TIME_RANGE_DAY,
+            self::TIME_RANGE_WEEK,
+            self::TIME_RANGE_MONTH,
+        ];
+    }
 
 
     /**
@@ -180,6 +205,14 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getTimeRangeAllowableValues();
+                if (!is_null($this->container['timeRange']) && !in_array($this->container['timeRange'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'timeRange', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -244,7 +277,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
 
     /**
     * Gets timeRange
-    *  请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    *  请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @return string|null
     */
@@ -256,7 +289,7 @@ class TimeRangeBean implements ModelInterface, ArrayAccess
     /**
     * Sets timeRange
     *
-    * @param string|null $timeRange 请求查询的时间段，值为： • HALF_HOUR • HOUR • THREE_HOUR • TWELVE_HOUR • DAY（24小时） • WEEK（7天） • MONTH（30天） 枚举值：  HALF_HOUR  HOUR  THREE_HOUR  TWELVE_HOUR  DAY  WEEK  MONTH
+    * @param string|null $timeRange 请求查询的时间段，和start_time，end_time不能同时使用，同时传该参数优先级更高。 - HALF_HOUR - HOUR - THREE_HOUR - TWELVE_HOUR - DAY - WEEK - MONTH
     *
     * @return $this
     */

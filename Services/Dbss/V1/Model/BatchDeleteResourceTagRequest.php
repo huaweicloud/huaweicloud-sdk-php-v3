@@ -20,8 +20,8 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。审计：auditInstance
-    * resourceId  资源ID
+    * resourceType  资源类型。 - auditInstance
+    * resourceId  资源ID。可在查询实例列表接口的resource_id字段获取。
     * body  body
     *
     * @var string[]
@@ -29,13 +29,13 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'resourceType' => 'string',
             'resourceId' => 'string',
-            'body' => '\HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequest'
+            'body' => '\HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagDeleteRequest'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。审计：auditInstance
-    * resourceId  资源ID
+    * resourceType  资源类型。 - auditInstance
+    * resourceId  资源ID。可在查询实例列表接口的resource_id字段获取。
     * body  body
     *
     * @var string[]
@@ -69,8 +69,8 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。审计：auditInstance
-    * resourceId  资源ID
+    * resourceType  资源类型。 - auditInstance
+    * resourceId  资源ID。可在查询实例列表接口的resource_id字段获取。
     * body  body
     *
     * @var string[]
@@ -83,8 +83,8 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。审计：auditInstance
-    * resourceId  资源ID
+    * resourceType  资源类型。 - auditInstance
+    * resourceId  资源ID。可在查询实例列表接口的resource_id字段获取。
     * body  body
     *
     * @var string[]
@@ -97,8 +97,8 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。审计：auditInstance
-    * resourceId  资源ID
+    * resourceType  资源类型。 - auditInstance
+    * resourceId  资源ID。可在查询实例列表接口的resource_id字段获取。
     * body  body
     *
     * @var string[]
@@ -149,7 +149,20 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const RESOURCE_TYPE_AUDIT_INSTANCE = 'auditInstance';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getResourceTypeAllowableValues()
+    {
+        return [
+            self::RESOURCE_TYPE_AUDIT_INSTANCE,
+        ];
+    }
 
 
     /**
@@ -183,6 +196,14 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
         if ($this->container['resourceType'] === null) {
             $invalidProperties[] = "'resourceType' can't be null";
         }
+            $allowedValues = $this->getResourceTypeAllowableValues();
+                if (!is_null($this->container['resourceType']) && !in_array($this->container['resourceType'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'resourceType', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['resourceId'] === null) {
             $invalidProperties[] = "'resourceId' can't be null";
         }
@@ -202,7 +223,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。审计：auditInstance
+    *  资源类型。 - auditInstance
     *
     * @return string
     */
@@ -214,7 +235,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string $resourceType 资源类型。审计：auditInstance
+    * @param string $resourceType 资源类型。 - auditInstance
     *
     * @return $this
     */
@@ -226,7 +247,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源ID
+    *  资源ID。可在查询实例列表接口的resource_id字段获取。
     *
     * @return string
     */
@@ -238,7 +259,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源ID
+    * @param string $resourceId 资源ID。可在查询实例列表接口的resource_id字段获取。
     *
     * @return $this
     */
@@ -252,7 +273,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     * Gets body
     *  body
     *
-    * @return \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequest|null
+    * @return \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagDeleteRequest|null
     */
     public function getBody()
     {
@@ -262,7 +283,7 @@ class BatchDeleteResourceTagRequest implements ModelInterface, ArrayAccess
     /**
     * Sets body
     *
-    * @param \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagRequest|null $body body
+    * @param \HuaweiCloud\SDK\Dbss\V1\Model\ResourceTagDeleteRequest|null $body body
     *
     * @return $this
     */
