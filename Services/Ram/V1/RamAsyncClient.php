@@ -56,6 +56,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
         }
@@ -123,6 +126,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
@@ -201,6 +207,9 @@ class RamAsyncClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
         }
@@ -265,6 +274,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
 
         if ($multipart) {
@@ -334,6 +346,9 @@ class RamAsyncClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -395,6 +410,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
 
         if ($multipart) {
@@ -458,6 +476,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -519,6 +540,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
 
         if ($multipart) {
@@ -587,6 +611,9 @@ class RamAsyncClient extends Client
         }
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['permissionId'] !== null) {
             $pathParams['permission_id'] = $localVarParams['permissionId'];
@@ -665,6 +692,9 @@ class RamAsyncClient extends Client
         if ($localVarParams['permissionType'] !== null) {
             $queryParams['permission_type'] = $localVarParams['permissionType'];
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -729,6 +759,9 @@ class RamAsyncClient extends Client
         }
         if ($localVarParams['permissionVersion'] !== null) {
             $queryParams['permission_version'] = $localVarParams['permissionVersion'];
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['permissionId'] !== null) {
             $pathParams['permission_id'] = $localVarParams['permissionId'];
@@ -795,6 +828,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -859,6 +895,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
@@ -925,6 +964,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -989,6 +1031,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
@@ -1055,6 +1100,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1119,6 +1167,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
@@ -1188,6 +1239,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
         }
@@ -1226,9 +1280,9 @@ class RamAsyncClient extends Client
     }
 
     /**
-     * 移除资源使用者和共享资源
+     * 移除资源使用者或共享资源
      *
-     * 将指定的资源使用者或共享资源从指定的资源共享实例中移除。
+     * 将指定的资源使用者或共享资源从指定的资源共享实例中移除。资源使用者也可以从指定的资源共享实例中主动退出。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1255,6 +1309,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
@@ -1324,6 +1381,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1388,6 +1448,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareInvitationId'] !== null) {
             $pathParams['resource_share_invitation_id'] = $localVarParams['resourceShareInvitationId'];
@@ -1454,6 +1517,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['resourceShareInvitationId'] !== null) {
             $pathParams['resource_share_invitation_id'] = $localVarParams['resourceShareInvitationId'];
         }
@@ -1519,6 +1585,9 @@ class RamAsyncClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1583,6 +1652,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
@@ -1651,6 +1723,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['resourceShareId'] !== null) {
             $pathParams['resource_share_id'] = $localVarParams['resourceShareId'];
@@ -1726,6 +1801,9 @@ class RamAsyncClient extends Client
         if ($localVarParams['marker'] !== null) {
             $queryParams['marker'] = $localVarParams['marker'];
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1794,6 +1872,9 @@ class RamAsyncClient extends Client
         if ($localVarParams['offset'] !== null) {
             $queryParams['offset'] = $localVarParams['offset'];
         }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
+        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -1858,6 +1939,9 @@ class RamAsyncClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['xSecurityToken'] !== null) {
+            $headerParams['x_security_token'] = $localVarParams['xSecurityToken'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

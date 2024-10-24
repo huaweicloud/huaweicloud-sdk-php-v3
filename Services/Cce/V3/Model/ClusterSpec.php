@@ -42,6 +42,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
+    * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -69,6 +70,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'extendParam' => '\HuaweiCloud\SDK\Cce\V3\Model\ClusterExtendParam',
             'supportIstio' => 'bool',
             'enableMasterVolumeEncryption' => 'bool',
+            'enableDistMgt' => 'bool',
             'configurationsOverride' => '\HuaweiCloud\SDK\Cce\V3\Model\PackageConfiguration[]'
     ];
 
@@ -96,6 +98,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
+    * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -123,6 +126,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         'extendParam' => null,
         'supportIstio' => null,
         'enableMasterVolumeEncryption' => null,
+        'enableDistMgt' => null,
         'configurationsOverride' => null
     ];
 
@@ -171,6 +175,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
+    * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -198,6 +203,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'extendParam' => 'extendParam',
             'supportIstio' => 'supportIstio',
             'enableMasterVolumeEncryption' => 'enableMasterVolumeEncryption',
+            'enableDistMgt' => 'enableDistMgt',
             'configurationsOverride' => 'configurationsOverride'
     ];
 
@@ -225,6 +231,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
+    * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -252,6 +259,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'extendParam' => 'setExtendParam',
             'supportIstio' => 'setSupportIstio',
             'enableMasterVolumeEncryption' => 'setEnableMasterVolumeEncryption',
+            'enableDistMgt' => 'setEnableDistMgt',
             'configurationsOverride' => 'setConfigurationsOverride'
     ];
 
@@ -279,6 +287,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     * extendParam  extendParam
     * supportIstio  支持Istio
     * enableMasterVolumeEncryption  集群控制节点系统盘、数据盘加密。默认使用AES_256加密算法。CCE、Turbo集群1.25及以上版本开始支持。集群创建后不支持修改。开启后存在一定的磁盘读写性能损耗。
+    * enableDistMgt  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
     * configurationsOverride  覆盖集群默认组件配置  若指定了不支持的组件或组件不支持的参数，该配置项将被忽略。  当前支持的可配置组件及其参数详见 [[配置管理](https://support.huaweicloud.com/usermanual-cce/cce_10_0213.html)](tag:hws) [[配置管理](https://support.huaweicloud.com/intl/zh-cn/usermanual-cce/cce_10_0213.html)](tag:hws_hk)
     *
     * @var string[]
@@ -306,6 +315,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
             'extendParam' => 'getExtendParam',
             'supportIstio' => 'getSupportIstio',
             'enableMasterVolumeEncryption' => 'getEnableMasterVolumeEncryption',
+            'enableDistMgt' => 'getEnableDistMgt',
             'configurationsOverride' => 'getConfigurationsOverride'
     ];
 
@@ -434,6 +444,7 @@ class ClusterSpec implements ModelInterface, ArrayAccess
         $this->container['extendParam'] = isset($data['extendParam']) ? $data['extendParam'] : null;
         $this->container['supportIstio'] = isset($data['supportIstio']) ? $data['supportIstio'] : null;
         $this->container['enableMasterVolumeEncryption'] = isset($data['enableMasterVolumeEncryption']) ? $data['enableMasterVolumeEncryption'] : null;
+        $this->container['enableDistMgt'] = isset($data['enableDistMgt']) ? $data['enableDistMgt'] : null;
         $this->container['configurationsOverride'] = isset($data['configurationsOverride']) ? $data['configurationsOverride'] : null;
     }
 
@@ -1026,6 +1037,30 @@ class ClusterSpec implements ModelInterface, ArrayAccess
     public function setEnableMasterVolumeEncryption($enableMasterVolumeEncryption)
     {
         $this->container['enableMasterVolumeEncryption'] = $enableMasterVolumeEncryption;
+        return $this;
+    }
+
+    /**
+    * Gets enableDistMgt
+    *  集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
+    *
+    * @return bool|null
+    */
+    public function getEnableDistMgt()
+    {
+        return $this->container['enableDistMgt'];
+    }
+
+    /**
+    * Sets enableDistMgt
+    *
+    * @param bool|null $enableDistMgt 集群开启对分布式云支持。创建CCE Turbo集群时，可在创建集群过程中，开启对分布式云(cloudpond)支持。
+    *
+    * @return $this
+    */
+    public function setEnableDistMgt($enableDistMgt)
+    {
+        $this->container['enableDistMgt'] = $enableDistMgt;
         return $this;
     }
 

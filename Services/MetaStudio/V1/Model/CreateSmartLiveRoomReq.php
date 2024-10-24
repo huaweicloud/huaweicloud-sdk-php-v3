@@ -38,6 +38,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'sharedConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SharedConfig',
             'viewMode' => 'string',
             'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
-            'privData' => 'string'
+            'privData' => 'string',
+            'relationLivePlatformInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveInfo'
     ];
 
     /**
@@ -82,6 +84,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         'sharedConfig' => null,
         'viewMode' => null,
         'coStreamerConfig' => null,
-        'privData' => null
+        'privData' => null,
+        'relationLivePlatformInfo' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'sharedConfig' => 'shared_config',
             'viewMode' => 'view_mode',
             'coStreamerConfig' => 'co_streamer_config',
-            'privData' => 'priv_data'
+            'privData' => 'priv_data',
+            'relationLivePlatformInfo' => 'relation_live_platform_info'
     ];
 
     /**
@@ -191,6 +197,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'sharedConfig' => 'setSharedConfig',
             'viewMode' => 'setViewMode',
             'coStreamerConfig' => 'setCoStreamerConfig',
-            'privData' => 'setPrivData'
+            'privData' => 'setPrivData',
+            'relationLivePlatformInfo' => 'setRelationLivePlatformInfo'
     ];
 
     /**
@@ -235,6 +243,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     * viewMode  **参数解释**： 横竖屏类型。 **约束限制**： 用户无需填写，通过video_config中分辨率判断 **取值范围**： * LANDSCAPE：横屏。 * VERTICAL： 竖屏。
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
             'sharedConfig' => 'getSharedConfig',
             'viewMode' => 'getViewMode',
             'coStreamerConfig' => 'getCoStreamerConfig',
-            'privData' => 'getPrivData'
+            'privData' => 'getPrivData',
+            'relationLivePlatformInfo' => 'getRelationLivePlatformInfo'
     ];
 
     /**
@@ -367,6 +377,7 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
         $this->container['viewMode'] = isset($data['viewMode']) ? $data['viewMode'] : null;
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
+        $this->container['relationLivePlatformInfo'] = isset($data['relationLivePlatformInfo']) ? $data['relationLivePlatformInfo'] : null;
     }
 
     /**
@@ -863,6 +874,30 @@ class CreateSmartLiveRoomReq implements ModelInterface, ArrayAccess
     public function setPrivData($privData)
     {
         $this->container['privData'] = $privData;
+        return $this;
+    }
+
+    /**
+    * Gets relationLivePlatformInfo
+    *  relationLivePlatformInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveInfo|null
+    */
+    public function getRelationLivePlatformInfo()
+    {
+        return $this->container['relationLivePlatformInfo'];
+    }
+
+    /**
+    * Sets relationLivePlatformInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveInfo|null $relationLivePlatformInfo relationLivePlatformInfo
+    *
+    * @return $this
+    */
+    public function setRelationLivePlatformInfo($relationLivePlatformInfo)
+    {
+        $this->container['relationLivePlatformInfo'] = $relationLivePlatformInfo;
         return $this;
     }
 

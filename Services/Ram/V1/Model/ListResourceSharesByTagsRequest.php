@@ -22,6 +22,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  分页页面的最大值。
     * offset  分页标记。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
@@ -29,6 +30,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'limit' => 'int',
             'offset' => 'string',
+            'xSecurityToken' => 'string',
             'body' => '\HuaweiCloud\SDK\Ram\V1\Model\ResourceSharesByTagsReqBody'
     ];
 
@@ -36,6 +38,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  分页页面的最大值。
     * offset  分页标记。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
@@ -43,6 +46,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'limit' => 'int32',
         'offset' => null,
+        'xSecurityToken' => null,
         'body' => null
     ];
 
@@ -71,6 +75,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  分页页面的最大值。
     * offset  分页标记。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
@@ -78,6 +83,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'limit' => 'limit',
             'offset' => 'offset',
+            'xSecurityToken' => 'X-Security-Token',
             'body' => 'body'
     ];
 
@@ -85,6 +91,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  分页页面的最大值。
     * offset  分页标记。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
@@ -92,6 +99,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     protected static $setters = [
             'limit' => 'setLimit',
             'offset' => 'setOffset',
+            'xSecurityToken' => 'setXSecurityToken',
             'body' => 'setBody'
     ];
 
@@ -99,6 +107,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  分页页面的最大值。
     * offset  分页标记。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
@@ -106,6 +115,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     protected static $getters = [
             'limit' => 'getLimit',
             'offset' => 'getOffset',
+            'xSecurityToken' => 'getXSecurityToken',
             'body' => 'getBody'
     ];
 
@@ -169,6 +179,7 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     {
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -248,6 +259,30 @@ class ListResourceSharesByTagsRequest implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
+        return $this;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
         return $this;
     }
 

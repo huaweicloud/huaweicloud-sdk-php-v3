@@ -23,7 +23,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
     * jobId  任务ID
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间错，单位为秒
     * endTime  结束时间。Unix时间错，单位为秒
     * createTime  任务创建时间。Unix时间错，单位为秒
@@ -55,7 +55,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
     * jobId  任务ID
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间错，单位为秒
     * endTime  结束时间。Unix时间错，单位为秒
     * createTime  任务创建时间。Unix时间错，单位为秒
@@ -108,7 +108,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
     * jobId  任务ID
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间错，单位为秒
     * endTime  结束时间。Unix时间错，单位为秒
     * createTime  任务创建时间。Unix时间错，单位为秒
@@ -140,7 +140,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
     * jobId  任务ID
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间错，单位为秒
     * endTime  结束时间。Unix时间错，单位为秒
     * createTime  任务创建时间。Unix时间错，单位为秒
@@ -172,7 +172,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
     * jobId  任务ID
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间错，单位为秒
     * endTime  结束时间。Unix时间错，单位为秒
     * createTime  任务创建时间。Unix时间错，单位为秒
@@ -430,7 +430,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    *  频道ID。频道唯一标识，为必填项。
     *
     * @return string
     */
@@ -442,7 +442,7 @@ class HarvestTaskCreateSucRsp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * @param string $id 频道ID。频道唯一标识，为必填项。
     *
     * @return $this
     */

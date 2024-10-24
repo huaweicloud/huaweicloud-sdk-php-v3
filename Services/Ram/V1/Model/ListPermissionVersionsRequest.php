@@ -20,6 +20,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * limit  分页页面的最大值。
     * marker  页面标记。
     * permissionId  共享资源权限的ID。
@@ -27,6 +28,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
+            'xSecurityToken' => 'string',
             'limit' => 'int',
             'marker' => 'string',
             'permissionId' => 'string'
@@ -34,6 +36,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * limit  分页页面的最大值。
     * marker  页面标记。
     * permissionId  共享资源权限的ID。
@@ -41,6 +44,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'xSecurityToken' => null,
         'limit' => 'int32',
         'marker' => null,
         'permissionId' => null
@@ -69,6 +73,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * limit  分页页面的最大值。
     * marker  页面标记。
     * permissionId  共享资源权限的ID。
@@ -76,6 +81,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $attributeMap = [
+            'xSecurityToken' => 'X-Security-Token',
             'limit' => 'limit',
             'marker' => 'marker',
             'permissionId' => 'permission_id'
@@ -83,6 +89,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * limit  分页页面的最大值。
     * marker  页面标记。
     * permissionId  共享资源权限的ID。
@@ -90,6 +97,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $setters = [
+            'xSecurityToken' => 'setXSecurityToken',
             'limit' => 'setLimit',
             'marker' => 'setMarker',
             'permissionId' => 'setPermissionId'
@@ -97,6 +105,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * limit  分页页面的最大值。
     * marker  页面标记。
     * permissionId  共享资源权限的ID。
@@ -104,6 +113,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $getters = [
+            'xSecurityToken' => 'getXSecurityToken',
             'limit' => 'getLimit',
             'marker' => 'getMarker',
             'permissionId' => 'getPermissionId'
@@ -167,6 +177,7 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['marker'] = isset($data['marker']) ? $data['marker'] : null;
         $this->container['permissionId'] = isset($data['permissionId']) ? $data['permissionId'] : null;
@@ -219,6 +230,30 @@ class ListPermissionVersionsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
+        return $this;
     }
 
     /**

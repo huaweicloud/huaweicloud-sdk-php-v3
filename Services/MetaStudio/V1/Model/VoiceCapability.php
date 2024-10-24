@@ -32,6 +32,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportVoiceCache  是否支持缓存。
     * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * isSupportSrt  是否支持生成STR字幕文件。
     *
     * @var string[]
     */
@@ -47,7 +48,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportWord' => 'bool',
             'isSupportVoiceCache' => 'bool',
             'conversionRate' => 'float',
-            'conversionRateEn' => 'float'
+            'conversionRateEn' => 'float',
+            'isSupportSrt' => 'bool'
     ];
 
     /**
@@ -64,6 +66,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportVoiceCache  是否支持缓存。
     * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * isSupportSrt  是否支持生成STR字幕文件。
     *
     * @var string[]
     */
@@ -79,7 +82,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
         'isSupportWord' => null,
         'isSupportVoiceCache' => null,
         'conversionRate' => 'float',
-        'conversionRateEn' => 'float'
+        'conversionRateEn' => 'float',
+        'isSupportSrt' => null
     ];
 
     /**
@@ -117,6 +121,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportVoiceCache  是否支持缓存。
     * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * isSupportSrt  是否支持生成STR字幕文件。
     *
     * @var string[]
     */
@@ -132,7 +137,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportWord' => 'is_support_word',
             'isSupportVoiceCache' => 'is_support_voice_cache',
             'conversionRate' => 'conversion_rate',
-            'conversionRateEn' => 'conversion_rate_en'
+            'conversionRateEn' => 'conversion_rate_en',
+            'isSupportSrt' => 'is_support_srt'
     ];
 
     /**
@@ -149,6 +155,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportVoiceCache  是否支持缓存。
     * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * isSupportSrt  是否支持生成STR字幕文件。
     *
     * @var string[]
     */
@@ -164,7 +171,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportWord' => 'setIsSupportWord',
             'isSupportVoiceCache' => 'setIsSupportVoiceCache',
             'conversionRate' => 'setConversionRate',
-            'conversionRateEn' => 'setConversionRateEn'
+            'conversionRateEn' => 'setConversionRateEn',
+            'isSupportSrt' => 'setIsSupportSrt'
     ];
 
     /**
@@ -181,6 +189,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     * isSupportVoiceCache  是否支持缓存。
     * conversionRate  **参数解释**： 合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
     * conversionRateEn  **参数解释**： 英语的合成率。 **约束限制**： 不涉及 **取值范围**： * 0-50
+    * isSupportSrt  是否支持生成STR字幕文件。
     *
     * @var string[]
     */
@@ -196,7 +205,8 @@ class VoiceCapability implements ModelInterface, ArrayAccess
             'isSupportWord' => 'getIsSupportWord',
             'isSupportVoiceCache' => 'getIsSupportVoiceCache',
             'conversionRate' => 'getConversionRate',
-            'conversionRateEn' => 'getConversionRateEn'
+            'conversionRateEn' => 'getConversionRateEn',
+            'isSupportSrt' => 'getIsSupportSrt'
     ];
 
     /**
@@ -269,6 +279,7 @@ class VoiceCapability implements ModelInterface, ArrayAccess
         $this->container['isSupportVoiceCache'] = isset($data['isSupportVoiceCache']) ? $data['isSupportVoiceCache'] : null;
         $this->container['conversionRate'] = isset($data['conversionRate']) ? $data['conversionRate'] : null;
         $this->container['conversionRateEn'] = isset($data['conversionRateEn']) ? $data['conversionRateEn'] : null;
+        $this->container['isSupportSrt'] = isset($data['isSupportSrt']) ? $data['isSupportSrt'] : null;
     }
 
     /**
@@ -590,6 +601,30 @@ class VoiceCapability implements ModelInterface, ArrayAccess
     public function setConversionRateEn($conversionRateEn)
     {
         $this->container['conversionRateEn'] = $conversionRateEn;
+        return $this;
+    }
+
+    /**
+    * Gets isSupportSrt
+    *  是否支持生成STR字幕文件。
+    *
+    * @return bool|null
+    */
+    public function getIsSupportSrt()
+    {
+        return $this->container['isSupportSrt'];
+    }
+
+    /**
+    * Sets isSupportSrt
+    *
+    * @param bool|null $isSupportSrt 是否支持生成STR字幕文件。
+    *
+    * @return $this
+    */
+    public function setIsSupportSrt($isSupportSrt)
+    {
+        $this->container['isSupportSrt'] = $isSupportSrt;
         return $this;
     }
 

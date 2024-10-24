@@ -20,13 +20,16 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天
-    * encryptionMethod  加密方式
+    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
+    * encryptionMethod  加密方式。  请注意：目前为保留字段，不支持配置。
     * level  取值如下： - content：一个频道对应一个密钥 - profile：一个码率对应一个密钥  默认值：content
-    * drmContentId  客户生成的DRM内容ID
-    * systemIds  system_id枚举值
-    * authInfo  增加到请求消息体header中的鉴权信息
-    * kmUrl  获取密钥的DRM地址
+    * resourceId  客户生成的DRM内容ID
+    * systemIds  system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
+    * url  获取密钥的DRM地址
+    * spekeVersion  drm speke 版本号 当前只支持1.0
+    * requestMode  请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    * httpHeaders  需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    * urn  functiongraph_proxy请求模式需要提供functiongraph的urn。
     *
     * @var string[]
     */
@@ -34,21 +37,27 @@ class Encryption implements ModelInterface, ArrayAccess
             'keyRotationIntervalSeconds' => 'int',
             'encryptionMethod' => 'string',
             'level' => 'string',
-            'drmContentId' => 'string',
+            'resourceId' => 'string',
             'systemIds' => 'string[]',
-            'authInfo' => 'string',
-            'kmUrl' => 'string'
+            'url' => 'string',
+            'spekeVersion' => 'string',
+            'requestMode' => 'string',
+            'httpHeaders' => '\HuaweiCloud\SDK\Live\V1\Model\HttpHeader[]',
+            'urn' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天
-    * encryptionMethod  加密方式
+    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
+    * encryptionMethod  加密方式。  请注意：目前为保留字段，不支持配置。
     * level  取值如下： - content：一个频道对应一个密钥 - profile：一个码率对应一个密钥  默认值：content
-    * drmContentId  客户生成的DRM内容ID
-    * systemIds  system_id枚举值
-    * authInfo  增加到请求消息体header中的鉴权信息
-    * kmUrl  获取密钥的DRM地址
+    * resourceId  客户生成的DRM内容ID
+    * systemIds  system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
+    * url  获取密钥的DRM地址
+    * spekeVersion  drm speke 版本号 当前只支持1.0
+    * requestMode  请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    * httpHeaders  需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    * urn  functiongraph_proxy请求模式需要提供functiongraph的urn。
     *
     * @var string[]
     */
@@ -56,10 +65,13 @@ class Encryption implements ModelInterface, ArrayAccess
         'keyRotationIntervalSeconds' => 'int32',
         'encryptionMethod' => null,
         'level' => null,
-        'drmContentId' => null,
+        'resourceId' => null,
         'systemIds' => null,
-        'authInfo' => null,
-        'kmUrl' => null
+        'url' => null,
+        'spekeVersion' => null,
+        'requestMode' => null,
+        'httpHeaders' => null,
+        'urn' => null
     ];
 
     /**
@@ -85,13 +97,16 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天
-    * encryptionMethod  加密方式
+    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
+    * encryptionMethod  加密方式。  请注意：目前为保留字段，不支持配置。
     * level  取值如下： - content：一个频道对应一个密钥 - profile：一个码率对应一个密钥  默认值：content
-    * drmContentId  客户生成的DRM内容ID
-    * systemIds  system_id枚举值
-    * authInfo  增加到请求消息体header中的鉴权信息
-    * kmUrl  获取密钥的DRM地址
+    * resourceId  客户生成的DRM内容ID
+    * systemIds  system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
+    * url  获取密钥的DRM地址
+    * spekeVersion  drm speke 版本号 当前只支持1.0
+    * requestMode  请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    * httpHeaders  需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    * urn  functiongraph_proxy请求模式需要提供functiongraph的urn。
     *
     * @var string[]
     */
@@ -99,21 +114,27 @@ class Encryption implements ModelInterface, ArrayAccess
             'keyRotationIntervalSeconds' => 'key_rotation_interval_seconds',
             'encryptionMethod' => 'encryption_method',
             'level' => 'level',
-            'drmContentId' => 'drm_content_id',
+            'resourceId' => 'resource_id',
             'systemIds' => 'system_ids',
-            'authInfo' => 'auth_info',
-            'kmUrl' => 'km_url'
+            'url' => 'url',
+            'spekeVersion' => 'speke_version',
+            'requestMode' => 'request_mode',
+            'httpHeaders' => 'http_headers',
+            'urn' => 'urn'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天
-    * encryptionMethod  加密方式
+    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
+    * encryptionMethod  加密方式。  请注意：目前为保留字段，不支持配置。
     * level  取值如下： - content：一个频道对应一个密钥 - profile：一个码率对应一个密钥  默认值：content
-    * drmContentId  客户生成的DRM内容ID
-    * systemIds  system_id枚举值
-    * authInfo  增加到请求消息体header中的鉴权信息
-    * kmUrl  获取密钥的DRM地址
+    * resourceId  客户生成的DRM内容ID
+    * systemIds  system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
+    * url  获取密钥的DRM地址
+    * spekeVersion  drm speke 版本号 当前只支持1.0
+    * requestMode  请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    * httpHeaders  需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    * urn  functiongraph_proxy请求模式需要提供functiongraph的urn。
     *
     * @var string[]
     */
@@ -121,21 +142,27 @@ class Encryption implements ModelInterface, ArrayAccess
             'keyRotationIntervalSeconds' => 'setKeyRotationIntervalSeconds',
             'encryptionMethod' => 'setEncryptionMethod',
             'level' => 'setLevel',
-            'drmContentId' => 'setDrmContentId',
+            'resourceId' => 'setResourceId',
             'systemIds' => 'setSystemIds',
-            'authInfo' => 'setAuthInfo',
-            'kmUrl' => 'setKmUrl'
+            'url' => 'setUrl',
+            'spekeVersion' => 'setSpekeVersion',
+            'requestMode' => 'setRequestMode',
+            'httpHeaders' => 'setHttpHeaders',
+            'urn' => 'setUrn'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天
-    * encryptionMethod  加密方式
+    * keyRotationIntervalSeconds  密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
+    * encryptionMethod  加密方式。  请注意：目前为保留字段，不支持配置。
     * level  取值如下： - content：一个频道对应一个密钥 - profile：一个码率对应一个密钥  默认值：content
-    * drmContentId  客户生成的DRM内容ID
-    * systemIds  system_id枚举值
-    * authInfo  增加到请求消息体header中的鉴权信息
-    * kmUrl  获取密钥的DRM地址
+    * resourceId  客户生成的DRM内容ID
+    * systemIds  system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
+    * url  获取密钥的DRM地址
+    * spekeVersion  drm speke 版本号 当前只支持1.0
+    * requestMode  请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    * httpHeaders  需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    * urn  functiongraph_proxy请求模式需要提供functiongraph的urn。
     *
     * @var string[]
     */
@@ -143,10 +170,13 @@ class Encryption implements ModelInterface, ArrayAccess
             'keyRotationIntervalSeconds' => 'getKeyRotationIntervalSeconds',
             'encryptionMethod' => 'getEncryptionMethod',
             'level' => 'getLevel',
-            'drmContentId' => 'getDrmContentId',
+            'resourceId' => 'getResourceId',
             'systemIds' => 'getSystemIds',
-            'authInfo' => 'getAuthInfo',
-            'kmUrl' => 'getKmUrl'
+            'url' => 'getUrl',
+            'spekeVersion' => 'getSpekeVersion',
+            'requestMode' => 'getRequestMode',
+            'httpHeaders' => 'getHttpHeaders',
+            'urn' => 'getUrn'
     ];
 
     /**
@@ -196,6 +226,9 @@ class Encryption implements ModelInterface, ArrayAccess
     const SYSTEM_IDS_WIDEVINE = 'Widevine';
     const SYSTEM_IDS_PLAY_READY = 'PlayReady';
     const SYSTEM_IDS_FAIR_PLAY = 'FairPlay';
+    const SPEKE_VERSION__1_0 = '1.0';
+    const REQUEST_MODE_DIRECT_HTTP = 'direct_http';
+    const REQUEST_MODE_FUNCTIONGRAPH_PROXY = 'functiongraph_proxy';
     
 
     /**
@@ -238,6 +271,31 @@ class Encryption implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getSpekeVersionAllowableValues()
+    {
+        return [
+            self::SPEKE_VERSION__1_0,
+        ];
+    }
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getRequestModeAllowableValues()
+    {
+        return [
+            self::REQUEST_MODE_DIRECT_HTTP,
+            self::REQUEST_MODE_FUNCTIONGRAPH_PROXY,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -257,10 +315,13 @@ class Encryption implements ModelInterface, ArrayAccess
         $this->container['keyRotationIntervalSeconds'] = isset($data['keyRotationIntervalSeconds']) ? $data['keyRotationIntervalSeconds'] : null;
         $this->container['encryptionMethod'] = isset($data['encryptionMethod']) ? $data['encryptionMethod'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
-        $this->container['drmContentId'] = isset($data['drmContentId']) ? $data['drmContentId'] : null;
+        $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['systemIds'] = isset($data['systemIds']) ? $data['systemIds'] : null;
-        $this->container['authInfo'] = isset($data['authInfo']) ? $data['authInfo'] : null;
-        $this->container['kmUrl'] = isset($data['kmUrl']) ? $data['kmUrl'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['spekeVersion'] = isset($data['spekeVersion']) ? $data['spekeVersion'] : null;
+        $this->container['requestMode'] = isset($data['requestMode']) ? $data['requestMode'] : null;
+        $this->container['httpHeaders'] = isset($data['httpHeaders']) ? $data['httpHeaders'] : null;
+        $this->container['urn'] = isset($data['urn']) ? $data['urn'] : null;
     }
 
     /**
@@ -305,35 +366,54 @@ class Encryption implements ModelInterface, ArrayAccess
             if (!is_null($this->container['level']) && (mb_strlen($this->container['level']) < 0)) {
                 $invalidProperties[] = "invalid value for 'level', the character length must be bigger than or equal to 0.";
             }
-        if ($this->container['drmContentId'] === null) {
-            $invalidProperties[] = "'drmContentId' can't be null";
+        if ($this->container['resourceId'] === null) {
+            $invalidProperties[] = "'resourceId' can't be null";
         }
-            if ((mb_strlen($this->container['drmContentId']) > 128)) {
-                $invalidProperties[] = "invalid value for 'drmContentId', the character length must be smaller than or equal to 128.";
+            if ((mb_strlen($this->container['resourceId']) > 128)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['drmContentId']) < 1)) {
-                $invalidProperties[] = "invalid value for 'drmContentId', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['resourceId']) < 1)) {
+                $invalidProperties[] = "invalid value for 'resourceId', the character length must be bigger than or equal to 1.";
             }
         if ($this->container['systemIds'] === null) {
             $invalidProperties[] = "'systemIds' can't be null";
         }
-        if ($this->container['authInfo'] === null) {
-            $invalidProperties[] = "'authInfo' can't be null";
+        if ($this->container['url'] === null) {
+            $invalidProperties[] = "'url' can't be null";
         }
-            if ((mb_strlen($this->container['authInfo']) > 1024)) {
-                $invalidProperties[] = "invalid value for 'authInfo', the character length must be smaller than or equal to 1024.";
+            if ((mb_strlen($this->container['url']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be smaller than or equal to 2048.";
             }
-            if ((mb_strlen($this->container['authInfo']) < 1)) {
-                $invalidProperties[] = "invalid value for 'authInfo', the character length must be bigger than or equal to 1.";
+            if ((mb_strlen($this->container['url']) < 1)) {
+                $invalidProperties[] = "invalid value for 'url', the character length must be bigger than or equal to 1.";
             }
-        if ($this->container['kmUrl'] === null) {
-            $invalidProperties[] = "'kmUrl' can't be null";
+        if ($this->container['spekeVersion'] === null) {
+            $invalidProperties[] = "'spekeVersion' can't be null";
         }
-            if ((mb_strlen($this->container['kmUrl']) > 2048)) {
-                $invalidProperties[] = "invalid value for 'kmUrl', the character length must be smaller than or equal to 2048.";
+            $allowedValues = $this->getSpekeVersionAllowableValues();
+                if (!is_null($this->container['spekeVersion']) && !in_array($this->container['spekeVersion'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'spekeVersion', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
             }
-            if ((mb_strlen($this->container['kmUrl']) < 1)) {
-                $invalidProperties[] = "invalid value for 'kmUrl', the character length must be bigger than or equal to 1.";
+
+        if ($this->container['requestMode'] === null) {
+            $invalidProperties[] = "'requestMode' can't be null";
+        }
+            $allowedValues = $this->getRequestModeAllowableValues();
+                if (!is_null($this->container['requestMode']) && !in_array($this->container['requestMode'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'requestMode', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
+            if (!is_null($this->container['urn']) && (mb_strlen($this->container['urn']) > 512)) {
+                $invalidProperties[] = "invalid value for 'urn', the character length must be smaller than or equal to 512.";
+            }
+            if (!is_null($this->container['urn']) && (mb_strlen($this->container['urn']) < 1)) {
+                $invalidProperties[] = "invalid value for 'urn', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -351,7 +431,7 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyRotationIntervalSeconds
-    *  密钥缓存时间。如果密钥不变，默认缓存七天
+    *  密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
     *
     * @return int|null
     */
@@ -363,7 +443,7 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Sets keyRotationIntervalSeconds
     *
-    * @param int|null $keyRotationIntervalSeconds 密钥缓存时间。如果密钥不变，默认缓存七天
+    * @param int|null $keyRotationIntervalSeconds 密钥缓存时间。如果密钥不变，默认缓存七天。  请注意：目前为保留字段，不支持配置。
     *
     * @return $this
     */
@@ -375,7 +455,7 @@ class Encryption implements ModelInterface, ArrayAccess
 
     /**
     * Gets encryptionMethod
-    *  加密方式
+    *  加密方式。  请注意：目前为保留字段，不支持配置。
     *
     * @return string|null
     */
@@ -387,7 +467,7 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Sets encryptionMethod
     *
-    * @param string|null $encryptionMethod 加密方式
+    * @param string|null $encryptionMethod 加密方式。  请注意：目前为保留字段，不支持配置。
     *
     * @return $this
     */
@@ -422,32 +502,32 @@ class Encryption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets drmContentId
+    * Gets resourceId
     *  客户生成的DRM内容ID
     *
     * @return string
     */
-    public function getDrmContentId()
+    public function getResourceId()
     {
-        return $this->container['drmContentId'];
+        return $this->container['resourceId'];
     }
 
     /**
-    * Sets drmContentId
+    * Sets resourceId
     *
-    * @param string $drmContentId 客户生成的DRM内容ID
+    * @param string $resourceId 客户生成的DRM内容ID
     *
     * @return $this
     */
-    public function setDrmContentId($drmContentId)
+    public function setResourceId($resourceId)
     {
-        $this->container['drmContentId'] = $drmContentId;
+        $this->container['resourceId'] = $resourceId;
         return $this;
     }
 
     /**
     * Gets systemIds
-    *  system_id枚举值
+    *  system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
     *
     * @return string[]
     */
@@ -459,7 +539,7 @@ class Encryption implements ModelInterface, ArrayAccess
     /**
     * Sets systemIds
     *
-    * @param string[] $systemIds system_id枚举值
+    * @param string[] $systemIds system_id枚举值。  取值如下： * HLS：FairPlay * DASH：Widevine、PlayReady * MSS：PlayReady
     *
     * @return $this
     */
@@ -470,50 +550,122 @@ class Encryption implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets authInfo
-    *  增加到请求消息体header中的鉴权信息
-    *
-    * @return string
-    */
-    public function getAuthInfo()
-    {
-        return $this->container['authInfo'];
-    }
-
-    /**
-    * Sets authInfo
-    *
-    * @param string $authInfo 增加到请求消息体header中的鉴权信息
-    *
-    * @return $this
-    */
-    public function setAuthInfo($authInfo)
-    {
-        $this->container['authInfo'] = $authInfo;
-        return $this;
-    }
-
-    /**
-    * Gets kmUrl
+    * Gets url
     *  获取密钥的DRM地址
     *
     * @return string
     */
-    public function getKmUrl()
+    public function getUrl()
     {
-        return $this->container['kmUrl'];
+        return $this->container['url'];
     }
 
     /**
-    * Sets kmUrl
+    * Sets url
     *
-    * @param string $kmUrl 获取密钥的DRM地址
+    * @param string $url 获取密钥的DRM地址
     *
     * @return $this
     */
-    public function setKmUrl($kmUrl)
+    public function setUrl($url)
     {
-        $this->container['kmUrl'] = $kmUrl;
+        $this->container['url'] = $url;
+        return $this;
+    }
+
+    /**
+    * Gets spekeVersion
+    *  drm speke 版本号 当前只支持1.0
+    *
+    * @return string
+    */
+    public function getSpekeVersion()
+    {
+        return $this->container['spekeVersion'];
+    }
+
+    /**
+    * Sets spekeVersion
+    *
+    * @param string $spekeVersion drm speke 版本号 当前只支持1.0
+    *
+    * @return $this
+    */
+    public function setSpekeVersion($spekeVersion)
+    {
+        $this->container['spekeVersion'] = $spekeVersion;
+        return $this;
+    }
+
+    /**
+    * Gets requestMode
+    *  请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    *
+    * @return string
+    */
+    public function getRequestMode()
+    {
+        return $this->container['requestMode'];
+    }
+
+    /**
+    * Sets requestMode
+    *
+    * @param string $requestMode 请求模式。  取值如下： * direct_http：HTTP(S)直接访问DRM。 * functiongraph_proxy：FunctionGraph代理访问DRM。
+    *
+    * @return $this
+    */
+    public function setRequestMode($requestMode)
+    {
+        $this->container['requestMode'] = $requestMode;
+        return $this;
+    }
+
+    /**
+    * Gets httpHeaders
+    *  需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\HttpHeader[]|null
+    */
+    public function getHttpHeaders()
+    {
+        return $this->container['httpHeaders'];
+    }
+
+    /**
+    * Sets httpHeaders
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\HttpHeader[]|null $httpHeaders 需要添加在drm请求头中的鉴权信息。最多支持配置5个。  仅direct_http请求模式支持配置http_headers。
+    *
+    * @return $this
+    */
+    public function setHttpHeaders($httpHeaders)
+    {
+        $this->container['httpHeaders'] = $httpHeaders;
+        return $this;
+    }
+
+    /**
+    * Gets urn
+    *  functiongraph_proxy请求模式需要提供functiongraph的urn。
+    *
+    * @return string|null
+    */
+    public function getUrn()
+    {
+        return $this->container['urn'];
+    }
+
+    /**
+    * Sets urn
+    *
+    * @param string|null $urn functiongraph_proxy请求模式需要提供functiongraph的urn。
+    *
+    * @return $this
+    */
+    public function setUrn($urn)
+    {
+        $this->container['urn'] = $urn;
         return $this;
     }
 

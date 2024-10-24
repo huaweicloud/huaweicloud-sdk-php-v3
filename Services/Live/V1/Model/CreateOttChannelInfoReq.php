@@ -22,13 +22,14 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
     * endpoints  频道出流信息
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -41,20 +42,22 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'input' => '\HuaweiCloud\SDK\Live\V1\Model\InputStreamInfo',
             'encoderSettings' => '\HuaweiCloud\SDK\Live\V1\Model\ModifyOttChannelEncoderSettingsEncoderSettings[]',
             'recordSettings' => '\HuaweiCloud\SDK\Live\V1\Model\CreateOttChannelInfoReqRecordSettings',
-            'endpoints' => '\HuaweiCloud\SDK\Live\V1\Model\EndpointItem[]'
+            'endpoints' => '\HuaweiCloud\SDK\Live\V1\Model\EndpointItem[]',
+            'encoderSettingsExpand' => '\HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpand'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
     * endpoints  频道出流信息
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
         'input' => null,
         'encoderSettings' => null,
         'recordSettings' => null,
-        'endpoints' => null
+        'endpoints' => null,
+        'encoderSettingsExpand' => null
     ];
 
     /**
@@ -95,13 +99,14 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
     * endpoints  频道出流信息
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -114,20 +119,22 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'input' => 'input',
             'encoderSettings' => 'encoder_settings',
             'recordSettings' => 'record_settings',
-            'endpoints' => 'endpoints'
+            'endpoints' => 'endpoints',
+            'encoderSettingsExpand' => 'encoder_settings_expand'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
     * endpoints  频道出流信息
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -140,20 +147,22 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'input' => 'setInput',
             'encoderSettings' => 'setEncoderSettings',
             'recordSettings' => 'setRecordSettings',
-            'endpoints' => 'setEndpoints'
+            'endpoints' => 'setEndpoints',
+            'encoderSettingsExpand' => 'setEncoderSettingsExpand'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * name  频道名。可选配置
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     * input  input
     * encoderSettings  转码模板配置
     * recordSettings  recordSettings
     * endpoints  频道出流信息
+    * encoderSettingsExpand  encoderSettingsExpand
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
             'input' => 'getInput',
             'encoderSettings' => 'getEncoderSettings',
             'recordSettings' => 'getRecordSettings',
-            'endpoints' => 'getEndpoints'
+            'endpoints' => 'getEndpoints',
+            'encoderSettingsExpand' => 'getEncoderSettingsExpand'
     ];
 
     /**
@@ -251,6 +261,7 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
         $this->container['encoderSettings'] = isset($data['encoderSettings']) ? $data['encoderSettings'] : null;
         $this->container['recordSettings'] = isset($data['recordSettings']) ? $data['recordSettings'] : null;
         $this->container['endpoints'] = isset($data['endpoints']) ? $data['endpoints'] : null;
+        $this->container['encoderSettingsExpand'] = isset($data['encoderSettingsExpand']) ? $data['encoderSettingsExpand'] : null;
     }
 
     /**
@@ -384,7 +395,7 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    *  频道ID。频道唯一标识，为必填项。
     *
     * @return string
     */
@@ -396,7 +407,7 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * @param string $id 频道ID。频道唯一标识，为必填项。
     *
     * @return $this
     */
@@ -547,6 +558,30 @@ class CreateOttChannelInfoReq implements ModelInterface, ArrayAccess
     public function setEndpoints($endpoints)
     {
         $this->container['endpoints'] = $endpoints;
+        return $this;
+    }
+
+    /**
+    * Gets encoderSettingsExpand
+    *  encoderSettingsExpand
+    *
+    * @return \HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpand|null
+    */
+    public function getEncoderSettingsExpand()
+    {
+        return $this->container['encoderSettingsExpand'];
+    }
+
+    /**
+    * Sets encoderSettingsExpand
+    *
+    * @param \HuaweiCloud\SDK\Live\V1\Model\EncoderSettingsExpand|null $encoderSettingsExpand encoderSettingsExpand
+    *
+    * @return $this
+    */
+    public function setEncoderSettingsExpand($encoderSettingsExpand)
+    {
+        $this->container['encoderSettingsExpand'] = $encoderSettingsExpand;
         return $this;
     }
 

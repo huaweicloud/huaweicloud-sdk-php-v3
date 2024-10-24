@@ -2260,6 +2260,7 @@ class MetaStudioAsyncClient extends Client
      * 查询视频制作任务列表
      *
      * 该接口用于查询视频制作任务列表。可查询分身数字人视频制作列表，照片数字人视频制作列表等。
+     * &gt; - 默认查询最近一个月任务记录。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8867,6 +8868,270 @@ class MetaStudioAsyncClient extends Client
             $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListStylesResponse',
             $collectionFormats=$collection_formats,
             $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListStylesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 统计时间段内资源数量
+     *
+     * 统计时间段内资源数量
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function countTenantResourcesAsync($request)
+    {
+        return $this->countTenantResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function countTenantResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/tenants/resources-count';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['business'] !== null) {
+            $queryParams['business'] = $localVarParams['business'];
+        }
+        if ($localVarParams['resourceExpireStartTime'] !== null) {
+            $queryParams['resource_expire_start_time'] = $localVarParams['resourceExpireStartTime'];
+        }
+        if ($localVarParams['resourceExpireEndTime'] !== null) {
+            $queryParams['resource_expire_end_time'] = $localVarParams['resourceExpireEndTime'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CountTenantResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CountTenantResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看租户资源列表
+     *
+     * 查看租户资源列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listTenantResourcesAsync($request)
+    {
+        return $this->listTenantResourcesAsyncWithHttpInfo($request);
+    }
+    
+    public function listTenantResourcesAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/tenants/resources';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
+        if ($localVarParams['resource'] !== null) {
+            $queryParams['resource'] = $localVarParams['resource'];
+        }
+        if ($localVarParams['business'] !== null) {
+            $queryParams['business'] = $localVarParams['business'];
+        }
+        if ($localVarParams['resourceSource'] !== null) {
+            $queryParams['resource_source'] = $localVarParams['resourceSource'];
+        }
+        if ($localVarParams['resourceName'] !== null) {
+            $queryParams['resource_name'] = $localVarParams['resourceName'];
+        }
+        if ($localVarParams['resourceId'] !== null) {
+            $queryParams['resource_id'] = $localVarParams['resourceId'];
+        }
+        if ($localVarParams['orderId'] !== null) {
+            $queryParams['order_id'] = $localVarParams['orderId'];
+        }
+        if ($localVarParams['chargingMode'] !== null) {
+            $queryParams['charging_mode'] = $localVarParams['chargingMode'];
+        }
+        if ($localVarParams['resourceExpireStartTime'] !== null) {
+            $queryParams['resource_expire_start_time'] = $localVarParams['resourceExpireStartTime'];
+        }
+        if ($localVarParams['resourceExpireEndTime'] !== null) {
+            $queryParams['resource_expire_end_time'] = $localVarParams['resourceExpireEndTime'];
+        }
+        if ($localVarParams['subResource'] !== null) {
+            $queryParams['sub_resource'] = $localVarParams['subResource'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListTenantResourcesResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ListTenantResourcesRequest',
+            $asyncRequest = true);
+    }
+
+    /**
+     * 查看租户资源用量信息
+     *
+     * 查看租户资源用量信息
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showResourceUsageAsync($request)
+    {
+        return $this->showResourceUsageAsyncWithHttpInfo($request);
+    }
+    
+    public function showResourceUsageAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/tenants/resources-usage';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['resource'] !== null) {
+            $queryParams['resource'] = $localVarParams['resource'];
+        }
+        if ($localVarParams['business'] !== null) {
+            $queryParams['business'] = $localVarParams['business'];
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams['authorization'] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams['x_sdk_date'] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams['x_project_id'] = $localVarParams['xProjectId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowResourceUsageResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowResourceUsageRequest',
             $asyncRequest = true);
     }
 

@@ -25,10 +25,11 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileMd5  文件内容MD5值，固定24位。
     * fileSize  文件总的大小，最小1，最大5368709120。
     * fileType  文件类型（默认提取文件后缀）。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
     * reason  审核失败原因
+    * fileExtraMeta  fileExtraMeta
     *
     * @var string[]
     */
@@ -41,7 +42,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'string',
             'downloadUrl' => 'string',
             'state' => 'string',
-            'reason' => 'string'
+            'reason' => 'string',
+            'fileExtraMeta' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\FileExtraMeta'
     ];
 
     /**
@@ -51,10 +53,11 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileMd5  文件内容MD5值，固定24位。
     * fileSize  文件总的大小，最小1，最大5368709120。
     * fileType  文件类型（默认提取文件后缀）。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
     * reason  审核失败原因
+    * fileExtraMeta  fileExtraMeta
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
         'assetFileCategory' => null,
         'downloadUrl' => null,
         'state' => null,
-        'reason' => null
+        'reason' => null,
+        'fileExtraMeta' => null
     ];
 
     /**
@@ -98,10 +102,11 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileMd5  文件内容MD5值，固定24位。
     * fileSize  文件总的大小，最小1，最大5368709120。
     * fileType  文件类型（默认提取文件后缀）。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
     * reason  审核失败原因
+    * fileExtraMeta  fileExtraMeta
     *
     * @var string[]
     */
@@ -114,7 +119,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'asset_file_category',
             'downloadUrl' => 'download_url',
             'state' => 'state',
-            'reason' => 'reason'
+            'reason' => 'reason',
+            'fileExtraMeta' => 'file_extra_meta'
     ];
 
     /**
@@ -124,10 +130,11 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileMd5  文件内容MD5值，固定24位。
     * fileSize  文件总的大小，最小1，最大5368709120。
     * fileType  文件类型（默认提取文件后缀）。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
     * reason  审核失败原因
+    * fileExtraMeta  fileExtraMeta
     *
     * @var string[]
     */
@@ -140,7 +147,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'setAssetFileCategory',
             'downloadUrl' => 'setDownloadUrl',
             'state' => 'setState',
-            'reason' => 'setReason'
+            'reason' => 'setReason',
+            'fileExtraMeta' => 'setFileExtraMeta'
     ];
 
     /**
@@ -150,10 +158,11 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     * fileMd5  文件内容MD5值，固定24位。
     * fileSize  文件总的大小，最小1，最大5368709120。
     * fileType  文件类型（默认提取文件后缀）。
-    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    * assetFileCategory  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     * downloadUrl  文件下载URL，有效期为24小时。
     * state  文件状态枚举: * CREATING：文件上传中 * CREATED：文件已上传（自动审核通过） * FAILED：文件上传失败 * CANCELLED：文件上传已取消 * DELETING：文件删除中 * DELETED：文件已删除 * UPLOADED：文件已上传（尚未审核） * REVIEW：人工审核（文件已上传） * BLOCK：冻结
     * reason  审核失败原因
+    * fileExtraMeta  fileExtraMeta
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
             'assetFileCategory' => 'getAssetFileCategory',
             'downloadUrl' => 'getDownloadUrl',
             'state' => 'getState',
-            'reason' => 'getReason'
+            'reason' => 'getReason',
+            'fileExtraMeta' => 'getFileExtraMeta'
     ];
 
     /**
@@ -265,6 +275,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
         $this->container['downloadUrl'] = isset($data['downloadUrl']) ? $data['downloadUrl'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
+        $this->container['fileExtraMeta'] = isset($data['fileExtraMeta']) ? $data['fileExtraMeta'] : null;
     }
 
     /**
@@ -476,7 +487,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets assetFileCategory
-    *  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    *  文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     *
     * @return string|null
     */
@@ -488,7 +499,7 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     /**
     * Sets assetFileCategory
     *
-    * @param string|null $assetFileCategory 文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
+    * @param string|null $assetFileCategory 文件在资产中的分类。每种资产类型包含的文件分类不同。 * MAIN：主文件 * COVER：封面文件 * PAGE：内容页图片 * SAMPLE：样例音频 * OTHER：其他文件 * WHOLE_MODEL：全模型 * USER_MODIFIED_MODEL：用户上传模型 * TEMPORARY：临时文件夹（用于文件替换时上传新文件） > * 资产类型为SCENE、ANIMATION、VIDEO、IMAGE、MATERIAL时，包含MAIN、COVER和OTHER > * 资产类型为PPT时，包含MAIN、COVER、PAGE和OTHER > * 资产类型为HUMAN_MODEL时，包含MAIN、COVER和OTHER > * 资产类型为VOICE_MODEL时，包含MAIN、SAMPLE(样例音频文件)和OTHER > * 资产类型为HUMAN_MODEL_2D时，包含MAIN、COVER、SAMPLE(动作样例)和OTHER(遮罩文件) > * 资产类型为BUSINESS_CARD_TEMPLET时，包含MAIN和COVER(名片效果图)
     *
     * @return $this
     */
@@ -567,6 +578,30 @@ class AssetFileInfo implements ModelInterface, ArrayAccess
     public function setReason($reason)
     {
         $this->container['reason'] = $reason;
+        return $this;
+    }
+
+    /**
+    * Gets fileExtraMeta
+    *  fileExtraMeta
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\FileExtraMeta|null
+    */
+    public function getFileExtraMeta()
+    {
+        return $this->container['fileExtraMeta'];
+    }
+
+    /**
+    * Sets fileExtraMeta
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\FileExtraMeta|null $fileExtraMeta fileExtraMeta
+    *
+    * @return $this
+    */
+    public function setFileExtraMeta($fileExtraMeta)
+    {
+        $this->container['fileExtraMeta'] = $fileExtraMeta;
         return $this;
     }
 

@@ -29,7 +29,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * exportStatus  导出比对结果状态。
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
+    * options  对比任务选项。
     * errorMsg  失败原因。
+    * dynamicCompareDelay  动态比对时延。
     *
     * @var string[]
     */
@@ -43,7 +45,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'string',
             'reportRemainSeconds' => 'string',
             'compareJobTag' => 'map[string,string]',
-            'errorMsg' => 'string'
+            'options' => 'map[string,string]',
+            'errorMsg' => 'string',
+            'dynamicCompareDelay' => 'int'
     ];
 
     /**
@@ -57,7 +61,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * exportStatus  导出比对结果状态。
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
+    * options  对比任务选项。
     * errorMsg  失败原因。
+    * dynamicCompareDelay  动态比对时延。
     *
     * @var string[]
     */
@@ -71,7 +77,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
         'exportStatus' => null,
         'reportRemainSeconds' => null,
         'compareJobTag' => null,
-        'errorMsg' => null
+        'options' => null,
+        'errorMsg' => null,
+        'dynamicCompareDelay' => 'int64'
     ];
 
     /**
@@ -106,7 +114,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * exportStatus  导出比对结果状态。
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
+    * options  对比任务选项。
     * errorMsg  失败原因。
+    * dynamicCompareDelay  动态比对时延。
     *
     * @var string[]
     */
@@ -120,7 +130,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'export_status',
             'reportRemainSeconds' => 'report_remain_seconds',
             'compareJobTag' => 'compare_job_tag',
-            'errorMsg' => 'error_msg'
+            'options' => 'options',
+            'errorMsg' => 'error_msg',
+            'dynamicCompareDelay' => 'dynamic_compare_delay'
     ];
 
     /**
@@ -134,7 +146,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * exportStatus  导出比对结果状态。
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
+    * options  对比任务选项。
     * errorMsg  失败原因。
+    * dynamicCompareDelay  动态比对时延。
     *
     * @var string[]
     */
@@ -148,7 +162,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'setExportStatus',
             'reportRemainSeconds' => 'setReportRemainSeconds',
             'compareJobTag' => 'setCompareJobTag',
-            'errorMsg' => 'setErrorMsg'
+            'options' => 'setOptions',
+            'errorMsg' => 'setErrorMsg',
+            'dynamicCompareDelay' => 'setDynamicCompareDelay'
     ];
 
     /**
@@ -162,7 +178,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     * exportStatus  导出比对结果状态。
     * reportRemainSeconds  导出比对结果有效期剩余时间。
     * compareJobTag  对比任务的标签。
+    * options  对比任务选项。
     * errorMsg  失败原因。
+    * dynamicCompareDelay  动态比对时延。
     *
     * @var string[]
     */
@@ -176,7 +194,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
             'exportStatus' => 'getExportStatus',
             'reportRemainSeconds' => 'getReportRemainSeconds',
             'compareJobTag' => 'getCompareJobTag',
-            'errorMsg' => 'getErrorMsg'
+            'options' => 'getOptions',
+            'errorMsg' => 'getErrorMsg',
+            'dynamicCompareDelay' => 'getDynamicCompareDelay'
     ];
 
     /**
@@ -273,7 +293,9 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
         $this->container['exportStatus'] = isset($data['exportStatus']) ? $data['exportStatus'] : null;
         $this->container['reportRemainSeconds'] = isset($data['reportRemainSeconds']) ? $data['reportRemainSeconds'] : null;
         $this->container['compareJobTag'] = isset($data['compareJobTag']) ? $data['compareJobTag'] : null;
+        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['dynamicCompareDelay'] = isset($data['dynamicCompareDelay']) ? $data['dynamicCompareDelay'] : null;
     }
 
     /**
@@ -292,6 +314,12 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['dynamicCompareDelay']) && ($this->container['dynamicCompareDelay'] > 9223372036854775807)) {
+                $invalidProperties[] = "invalid value for 'dynamicCompareDelay', must be smaller than or equal to 9223372036854775807.";
+            }
+            if (!is_null($this->container['dynamicCompareDelay']) && ($this->container['dynamicCompareDelay'] < -1)) {
+                $invalidProperties[] = "invalid value for 'dynamicCompareDelay', must be bigger than or equal to -1.";
+            }
         return $invalidProperties;
     }
 
@@ -523,6 +551,30 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets options
+    *  对比任务选项。
+    *
+    * @return map[string,string]|null
+    */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+    * Sets options
+    *
+    * @param map[string,string]|null $options 对比任务选项。
+    *
+    * @return $this
+    */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
+        return $this;
+    }
+
+    /**
     * Gets errorMsg
     *  失败原因。
     *
@@ -543,6 +595,30 @@ class CompareJobInfo implements ModelInterface, ArrayAccess
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+        return $this;
+    }
+
+    /**
+    * Gets dynamicCompareDelay
+    *  动态比对时延。
+    *
+    * @return int|null
+    */
+    public function getDynamicCompareDelay()
+    {
+        return $this->container['dynamicCompareDelay'];
+    }
+
+    /**
+    * Sets dynamicCompareDelay
+    *
+    * @param int|null $dynamicCompareDelay 动态比对时延。
+    *
+    * @return $this
+    */
+    public function setDynamicCompareDelay($dynamicCompareDelay)
+    {
+        $this->container['dynamicCompareDelay'] = $dynamicCompareDelay;
         return $this;
     }
 

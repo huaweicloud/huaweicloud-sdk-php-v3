@@ -26,6 +26,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    * version  版本号
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationTarget' => 'string',
             'invocationIds' => 'string[]',
             'versionType' => 'string',
-            'origin' => 'string'
+            'origin' => 'string',
+            'version' => 'string'
     ];
 
     /**
@@ -46,6 +48,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    * version  版本号
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
         'invocationTarget' => null,
         'invocationIds' => null,
         'versionType' => null,
-        'origin' => null
+        'origin' => null,
+        'version' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    * version  版本号
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationTarget' => 'invocation_target',
             'invocationIds' => 'invocation_ids',
             'versionType' => 'version_type',
-            'origin' => 'origin'
+            'origin' => 'origin',
+            'version' => 'version'
     ];
 
     /**
@@ -107,6 +113,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    * version  版本号
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationTarget' => 'setInvocationTarget',
             'invocationIds' => 'setInvocationIds',
             'versionType' => 'setVersionType',
-            'origin' => 'setOrigin'
+            'origin' => 'setOrigin',
+            'version' => 'setVersion'
     ];
 
     /**
@@ -127,6 +135,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     * invocationIds  任务ID列表（ROLLBACK和RETRY时必须）
     * versionType  插件升级时需要选择升级“基础版本”还是“增强版本”，传值“BASIC_VERSION”表示升级成基础版本，传值“ADVANCE_VERSION”表示升级成增强版本
     * origin  Agent任务接口调用源，CES表示由Console调用，APICOM_BMS表示由裸金属服务器调用，ADMIN_SERVER表示由运维平台调用
+    * version  版本号
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
             'invocationTarget' => 'getInvocationTarget',
             'invocationIds' => 'getInvocationIds',
             'versionType' => 'getVersionType',
-            'origin' => 'getOrigin'
+            'origin' => 'getOrigin',
+            'version' => 'getVersion'
     ];
 
     /**
@@ -267,6 +277,7 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
         $this->container['invocationIds'] = isset($data['invocationIds']) ? $data['invocationIds'] : null;
         $this->container['versionType'] = isset($data['versionType']) ? $data['versionType'] : null;
         $this->container['origin'] = isset($data['origin']) ? $data['origin'] : null;
+        $this->container['version'] = isset($data['version']) ? $data['version'] : null;
     }
 
     /**
@@ -312,6 +323,15 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
                 );
             }
 
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) > 64)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['version']) && (mb_strlen($this->container['version']) < 0)) {
+                $invalidProperties[] = "invalid value for 'version', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['version']) && !preg_match("/^([0-9A-Za-z]|_|-|\\.)+$/", $this->container['version'])) {
+                $invalidProperties[] = "invalid value for 'version', must be conform to the pattern /^([0-9A-Za-z]|_|-|\\.)+$/.";
+            }
         return $invalidProperties;
     }
 
@@ -467,6 +487,30 @@ class BatchCreateInvocationRequestBody implements ModelInterface, ArrayAccess
     public function setOrigin($origin)
     {
         $this->container['origin'] = $origin;
+        return $this;
+    }
+
+    /**
+    * Gets version
+    *  版本号
+    *
+    * @return string|null
+    */
+    public function getVersion()
+    {
+        return $this->container['version'];
+    }
+
+    /**
+    * Sets version
+    *
+    * @param string|null $version 版本号
+    *
+    * @return $this
+    */
+    public function setVersion($version)
+    {
+        $this->container['version'] = $version;
         return $this;
     }
 

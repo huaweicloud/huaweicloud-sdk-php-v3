@@ -40,6 +40,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
+    * relationLivePlatformInfo  relationLivePlatformInfo
     * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
@@ -70,6 +71,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
             'privData' => 'string',
             'roomId' => 'string',
+            'relationLivePlatformInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo',
             'createTime' => 'string',
             'updateTime' => 'string',
             'coverUrl' => 'string',
@@ -100,6 +102,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
+    * relationLivePlatformInfo  relationLivePlatformInfo
     * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
@@ -130,6 +133,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         'coStreamerConfig' => null,
         'privData' => null,
         'roomId' => null,
+        'relationLivePlatformInfo' => null,
         'createTime' => null,
         'updateTime' => null,
         'coverUrl' => null,
@@ -181,6 +185,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
+    * relationLivePlatformInfo  relationLivePlatformInfo
     * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
@@ -211,6 +216,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coStreamerConfig' => 'co_streamer_config',
             'privData' => 'priv_data',
             'roomId' => 'room_id',
+            'relationLivePlatformInfo' => 'relation_live_platform_info',
             'createTime' => 'create_time',
             'updateTime' => 'update_time',
             'coverUrl' => 'cover_url',
@@ -241,6 +247,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
+    * relationLivePlatformInfo  relationLivePlatformInfo
     * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
@@ -271,6 +278,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coStreamerConfig' => 'setCoStreamerConfig',
             'privData' => 'setPrivData',
             'roomId' => 'setRoomId',
+            'relationLivePlatformInfo' => 'setRelationLivePlatformInfo',
             'createTime' => 'setCreateTime',
             'updateTime' => 'setUpdateTime',
             'coverUrl' => 'setCoverUrl',
@@ -301,6 +309,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     * coStreamerConfig  coStreamerConfig
     * privData  **参数解释**： 匹配值私有数据，用户填写，原样带回。 **约束限制**： 不涉及 **取值范围**： 字符长度0-8192 **默认取值**： 不涉及。
     * roomId  直播间ID
+    * relationLivePlatformInfo  relationLivePlatformInfo
     * createTime  直播间创建时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * updateTime  直播间更新时间，格式遵循：RFC 3339 如“2021-01-10T08:43:17Z”。
     * coverUrl  直播间封面图URL
@@ -331,6 +340,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
             'coStreamerConfig' => 'getCoStreamerConfig',
             'privData' => 'getPrivData',
             'roomId' => 'getRoomId',
+            'relationLivePlatformInfo' => 'getRelationLivePlatformInfo',
             'createTime' => 'getCreateTime',
             'updateTime' => 'getUpdateTime',
             'coverUrl' => 'getCoverUrl',
@@ -466,6 +476,7 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
         $this->container['privData'] = isset($data['privData']) ? $data['privData'] : null;
         $this->container['roomId'] = isset($data['roomId']) ? $data['roomId'] : null;
+        $this->container['relationLivePlatformInfo'] = isset($data['relationLivePlatformInfo']) ? $data['relationLivePlatformInfo'] : null;
         $this->container['createTime'] = isset($data['createTime']) ? $data['createTime'] : null;
         $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
@@ -1037,6 +1048,30 @@ class ShowSmartLiveRoomResponse implements ModelInterface, ArrayAccess
     public function setRoomId($roomId)
     {
         $this->container['roomId'] = $roomId;
+        return $this;
+    }
+
+    /**
+    * Gets relationLivePlatformInfo
+    *  relationLivePlatformInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo|null
+    */
+    public function getRelationLivePlatformInfo()
+    {
+        return $this->container['relationLivePlatformInfo'];
+    }
+
+    /**
+    * Sets relationLivePlatformInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo|null $relationLivePlatformInfo relationLivePlatformInfo
+    *
+    * @return $this
+    */
+    public function setRelationLivePlatformInfo($relationLivePlatformInfo)
+    {
+        $this->container['relationLivePlatformInfo'] = $relationLivePlatformInfo;
         return $this;
     }
 

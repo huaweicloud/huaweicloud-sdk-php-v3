@@ -21,9 +21,9 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     /**
     * Array of property to type mappings. Used for (de)serialization
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachmentParentInstanceId  实例ID。
-    * approvedState  approvedState
+    * attachmentParentInstanceId  连接的父资源ID，这里表示企业路由器ID。
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建附件的原因。
     *
     * @var string[]
@@ -31,17 +31,17 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     protected static $openAPITypes = [
             'enterpriseRouterTableId' => 'string',
             'attachmentParentInstanceId' => 'string',
-            'approvedState' => '\HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum',
             'hostedCloud' => '\HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum',
+            'approvedState' => '\HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum',
             'reason' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachmentParentInstanceId  实例ID。
-    * approvedState  approvedState
+    * attachmentParentInstanceId  连接的父资源ID，这里表示企业路由器ID。
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建附件的原因。
     *
     * @var string[]
@@ -49,8 +49,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     protected static $openAPIFormats = [
         'enterpriseRouterTableId' => null,
         'attachmentParentInstanceId' => null,
-        'approvedState' => null,
         'hostedCloud' => null,
+        'approvedState' => null,
         'reason' => null
     ];
 
@@ -78,9 +78,9 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachmentParentInstanceId  实例ID。
-    * approvedState  approvedState
+    * attachmentParentInstanceId  连接的父资源ID，这里表示企业路由器ID。
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建附件的原因。
     *
     * @var string[]
@@ -88,17 +88,17 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     protected static $attributeMap = [
             'enterpriseRouterTableId' => 'enterprise_router_table_id',
             'attachmentParentInstanceId' => 'attachment_parent_instance_id',
-            'approvedState' => 'approved_state',
             'hostedCloud' => 'hosted_cloud',
+            'approvedState' => 'approved_state',
             'reason' => 'reason'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachmentParentInstanceId  实例ID。
-    * approvedState  approvedState
+    * attachmentParentInstanceId  连接的父资源ID，这里表示企业路由器ID。
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建附件的原因。
     *
     * @var string[]
@@ -106,17 +106,17 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     protected static $setters = [
             'enterpriseRouterTableId' => 'setEnterpriseRouterTableId',
             'attachmentParentInstanceId' => 'setAttachmentParentInstanceId',
-            'approvedState' => 'setApprovedState',
             'hostedCloud' => 'setHostedCloud',
+            'approvedState' => 'setApprovedState',
             'reason' => 'setReason'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * enterpriseRouterTableId  企业路由器的路由表ID。
-    * attachmentParentInstanceId  实例ID。
-    * approvedState  approvedState
+    * attachmentParentInstanceId  连接的父资源ID，这里表示企业路由器ID。
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建附件的原因。
     *
     * @var string[]
@@ -124,8 +124,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     protected static $getters = [
             'enterpriseRouterTableId' => 'getEnterpriseRouterTableId',
             'attachmentParentInstanceId' => 'getAttachmentParentInstanceId',
-            'approvedState' => 'getApprovedState',
             'hostedCloud' => 'getHostedCloud',
+            'approvedState' => 'getApprovedState',
             'reason' => 'getReason'
     ];
 
@@ -189,8 +189,8 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     {
         $this->container['enterpriseRouterTableId'] = isset($data['enterpriseRouterTableId']) ? $data['enterpriseRouterTableId'] : null;
         $this->container['attachmentParentInstanceId'] = isset($data['attachmentParentInstanceId']) ? $data['attachmentParentInstanceId'] : null;
-        $this->container['approvedState'] = isset($data['approvedState']) ? $data['approvedState'] : null;
         $this->container['hostedCloud'] = isset($data['hostedCloud']) ? $data['hostedCloud'] : null;
+        $this->container['approvedState'] = isset($data['approvedState']) ? $data['approvedState'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
     }
 
@@ -272,7 +272,7 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
 
     /**
     * Gets attachmentParentInstanceId
-    *  实例ID。
+    *  连接的父资源ID，这里表示企业路由器ID。
     *
     * @return string|null
     */
@@ -284,37 +284,13 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     /**
     * Sets attachmentParentInstanceId
     *
-    * @param string|null $attachmentParentInstanceId 实例ID。
+    * @param string|null $attachmentParentInstanceId 连接的父资源ID，这里表示企业路由器ID。
     *
     * @return $this
     */
     public function setAttachmentParentInstanceId($attachmentParentInstanceId)
     {
         $this->container['attachmentParentInstanceId'] = $attachmentParentInstanceId;
-        return $this;
-    }
-
-    /**
-    * Gets approvedState
-    *  approvedState
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum|null
-    */
-    public function getApprovedState()
-    {
-        return $this->container['approvedState'];
-    }
-
-    /**
-    * Sets approvedState
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum|null $approvedState approvedState
-    *
-    * @return $this
-    */
-    public function setApprovedState($approvedState)
-    {
-        $this->container['approvedState'] = $approvedState;
         return $this;
     }
 
@@ -339,6 +315,30 @@ class CentralNetworkAttachmentSpecificationValueInfo implements ModelInterface, 
     public function setHostedCloud($hostedCloud)
     {
         $this->container['hostedCloud'] = $hostedCloud;
+        return $this;
+    }
+
+    /**
+    * Gets approvedState
+    *  approvedState
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum|null
+    */
+    public function getApprovedState()
+    {
+        return $this->container['approvedState'];
+    }
+
+    /**
+    * Sets approvedState
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum|null $approvedState approvedState
+    *
+    * @return $this
+    */
+    public function setApprovedState($approvedState)
+    {
+        $this->container['approvedState'] = $approvedState;
         return $this;
     }
 

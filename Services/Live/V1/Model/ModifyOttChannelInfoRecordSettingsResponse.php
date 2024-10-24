@@ -26,7 +26,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
     * domain  推流域名
     * appName  组名或应用名，为必填项
     * id  频道ID。频道唯一标识，为必填项
-    * sources  推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
     *
     * @var string[]
     */
@@ -35,8 +34,7 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
             'resultMsg' => 'string',
             'domain' => 'string',
             'appName' => 'string',
-            'id' => 'string',
-            'sources' => '\HuaweiCloud\SDK\Live\V1\Model\SourceRsp[]'
+            'id' => 'string'
     ];
 
     /**
@@ -46,7 +44,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
     * domain  推流域名
     * appName  组名或应用名，为必填项
     * id  频道ID。频道唯一标识，为必填项
-    * sources  推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
     *
     * @var string[]
     */
@@ -55,8 +52,7 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
         'resultMsg' => null,
         'domain' => null,
         'appName' => null,
-        'id' => null,
-        'sources' => null
+        'id' => null
     ];
 
     /**
@@ -87,7 +83,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
     * domain  推流域名
     * appName  组名或应用名，为必填项
     * id  频道ID。频道唯一标识，为必填项
-    * sources  推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
     *
     * @var string[]
     */
@@ -96,8 +91,7 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
             'resultMsg' => 'result_msg',
             'domain' => 'domain',
             'appName' => 'app_name',
-            'id' => 'id',
-            'sources' => 'sources'
+            'id' => 'id'
     ];
 
     /**
@@ -107,7 +101,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
     * domain  推流域名
     * appName  组名或应用名，为必填项
     * id  频道ID。频道唯一标识，为必填项
-    * sources  推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
     *
     * @var string[]
     */
@@ -116,8 +109,7 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
             'resultMsg' => 'setResultMsg',
             'domain' => 'setDomain',
             'appName' => 'setAppName',
-            'id' => 'setId',
-            'sources' => 'setSources'
+            'id' => 'setId'
     ];
 
     /**
@@ -127,7 +119,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
     * domain  推流域名
     * appName  组名或应用名，为必填项
     * id  频道ID。频道唯一标识，为必填项
-    * sources  推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
     *
     * @var string[]
     */
@@ -136,8 +127,7 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
             'resultMsg' => 'getResultMsg',
             'domain' => 'getDomain',
             'appName' => 'getAppName',
-            'id' => 'getId',
-            'sources' => 'getSources'
+            'id' => 'getId'
     ];
 
     /**
@@ -203,7 +193,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
         $this->container['domain'] = isset($data['domain']) ? $data['domain'] : null;
         $this->container['appName'] = isset($data['appName']) ? $data['appName'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
     }
 
     /**
@@ -375,30 +364,6 @@ class ModifyOttChannelInfoRecordSettingsResponse implements ModelInterface, Arra
     public function setId($id)
     {
         $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets sources
-    *  推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
-    *
-    * @return \HuaweiCloud\SDK\Live\V1\Model\SourceRsp[]|null
-    */
-    public function getSources()
-    {
-        return $this->container['sources'];
-    }
-
-    /**
-    * Sets sources
-    *
-    * @param \HuaweiCloud\SDK\Live\V1\Model\SourceRsp[]|null $sources 推流URL列表。创建频道时，只有入流协议为RTMP_PUSH时，会返回推流URL列表
-    *
-    * @return $this
-    */
-    public function setSources($sources)
-    {
-        $this->container['sources'] = $sources;
         return $this;
     }
 

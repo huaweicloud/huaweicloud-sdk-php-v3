@@ -20,15 +20,16 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * url  客户自定义的拉流地址，包括方法、域名、路径和参数
+    * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
-    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     * playlistWindowSeconds  频道直播返回分片的窗口长度，为频道输出分片的时长乘以数量后得到的值。实际返回的分片数不小于3个。  单位：秒。取值范围：0 - 86400（24小时转化成秒后的取值）
     * encryption  encryption
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
+    * adMarker  广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
     *
     * @var string[]
     */
@@ -41,20 +42,22 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'encryption' => '\HuaweiCloud\SDK\Live\V1\Model\Encryption',
             'ads' => 'object',
             'extArgs' => 'object',
-            'requestArgs' => '\HuaweiCloud\SDK\Live\V1\Model\PackageRequestArgs'
+            'requestArgs' => '\HuaweiCloud\SDK\Live\V1\Model\PackageRequestArgs',
+            'adMarker' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * url  客户自定义的拉流地址，包括方法、域名、路径和参数
+    * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
-    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     * playlistWindowSeconds  频道直播返回分片的窗口长度，为频道输出分片的时长乘以数量后得到的值。实际返回的分片数不小于3个。  单位：秒。取值范围：0 - 86400（24小时转化成秒后的取值）
     * encryption  encryption
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
+    * adMarker  广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
         'encryption' => null,
         'ads' => null,
         'extArgs' => null,
-        'requestArgs' => null
+        'requestArgs' => null,
+        'adMarker' => null
     ];
 
     /**
@@ -93,15 +97,16 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * url  客户自定义的拉流地址，包括方法、域名、路径和参数
+    * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
-    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     * playlistWindowSeconds  频道直播返回分片的窗口长度，为频道输出分片的时长乘以数量后得到的值。实际返回的分片数不小于3个。  单位：秒。取值范围：0 - 86400（24小时转化成秒后的取值）
     * encryption  encryption
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
+    * adMarker  广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
     *
     * @var string[]
     */
@@ -114,20 +119,22 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'encryption' => 'encryption',
             'ads' => 'ads',
             'extArgs' => 'ext_args',
-            'requestArgs' => 'request_args'
+            'requestArgs' => 'request_args',
+            'adMarker' => 'ad_marker'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * url  客户自定义的拉流地址，包括方法、域名、路径和参数
+    * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
-    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     * playlistWindowSeconds  频道直播返回分片的窗口长度，为频道输出分片的时长乘以数量后得到的值。实际返回的分片数不小于3个。  单位：秒。取值范围：0 - 86400（24小时转化成秒后的取值）
     * encryption  encryption
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
+    * adMarker  广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
     *
     * @var string[]
     */
@@ -140,20 +147,22 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'encryption' => 'setEncryption',
             'ads' => 'setAds',
             'extArgs' => 'setExtArgs',
-            'requestArgs' => 'setRequestArgs'
+            'requestArgs' => 'setRequestArgs',
+            'adMarker' => 'setAdMarker'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * url  客户自定义的拉流地址，包括方法、域名、路径和参数
+    * url  客户自定义的拉流地址，包括方法、域名、路径
     * streamSelection  从全量流中过滤出一个码率在[min, max]区间的流。如果不需要码率过滤可不选。
     * hlsVersion  HLS版本号
-    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    * segmentDurationSeconds  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     * playlistWindowSeconds  频道直播返回分片的窗口长度，为频道输出分片的时长乘以数量后得到的值。实际返回的分片数不小于3个。  单位：秒。取值范围：0 - 86400（24小时转化成秒后的取值）
     * encryption  encryption
     * ads  广告配置
     * extArgs  其他额外参数
     * requestArgs  requestArgs
+    * adMarker  广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             'encryption' => 'getEncryption',
             'ads' => 'getAds',
             'extArgs' => 'getExtArgs',
-            'requestArgs' => 'getRequestArgs'
+            'requestArgs' => 'getRequestArgs',
+            'adMarker' => 'getAdMarker'
     ];
 
     /**
@@ -236,6 +246,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
         $this->container['ads'] = isset($data['ads']) ? $data['ads'] : null;
         $this->container['extArgs'] = isset($data['extArgs']) ? $data['extArgs'] : null;
         $this->container['requestArgs'] = isset($data['requestArgs']) ? $data['requestArgs'] : null;
+        $this->container['adMarker'] = isset($data['adMarker']) ? $data['adMarker'] : null;
     }
 
     /**
@@ -261,10 +272,13 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
             if (!is_null($this->container['hlsVersion']) && (mb_strlen($this->container['hlsVersion']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hlsVersion', the character length must be bigger than or equal to 0.";
             }
-            if (!is_null($this->container['segmentDurationSeconds']) && ($this->container['segmentDurationSeconds'] > 10)) {
+        if ($this->container['segmentDurationSeconds'] === null) {
+            $invalidProperties[] = "'segmentDurationSeconds' can't be null";
+        }
+            if (($this->container['segmentDurationSeconds'] > 10)) {
                 $invalidProperties[] = "invalid value for 'segmentDurationSeconds', must be smaller than or equal to 10.";
             }
-            if (!is_null($this->container['segmentDurationSeconds']) && ($this->container['segmentDurationSeconds'] < 1)) {
+            if (($this->container['segmentDurationSeconds'] < 1)) {
                 $invalidProperties[] = "invalid value for 'segmentDurationSeconds', must be bigger than or equal to 1.";
             }
             if (!is_null($this->container['playlistWindowSeconds']) && ($this->container['playlistWindowSeconds'] > 86400)) {
@@ -289,7 +303,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets url
-    *  客户自定义的拉流地址，包括方法、域名、路径和参数
+    *  客户自定义的拉流地址，包括方法、域名、路径
     *
     * @return string
     */
@@ -301,7 +315,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     /**
     * Sets url
     *
-    * @param string $url 客户自定义的拉流地址，包括方法、域名、路径和参数
+    * @param string $url 客户自定义的拉流地址，包括方法、域名、路径
     *
     * @return $this
     */
@@ -361,9 +375,9 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets segmentDurationSeconds
-    *  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    *  频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     *
-    * @return int|null
+    * @return int
     */
     public function getSegmentDurationSeconds()
     {
@@ -373,7 +387,7 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     /**
     * Sets segmentDurationSeconds
     *
-    * @param int|null $segmentDurationSeconds 频道输出分片的时长，为必选项  单位：秒。取值范围：1-10
+    * @param int $segmentDurationSeconds 频道输出分片的时长，为必选项  单位：秒。取值范围：1-10 > 修改分片时长会影响已录制内容的时移和回看服务，请谨慎修改！
     *
     * @return $this
     */
@@ -500,6 +514,30 @@ class HlsPackageItem implements ModelInterface, ArrayAccess
     public function setRequestArgs($requestArgs)
     {
         $this->container['requestArgs'] = $requestArgs;
+        return $this;
+    }
+
+    /**
+    * Gets adMarker
+    *  广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
+    *
+    * @return string[]|null
+    */
+    public function getAdMarker()
+    {
+        return $this->container['adMarker'];
+    }
+
+    /**
+    * Sets adMarker
+    *
+    * @param string[]|null $adMarker 广告标识。  HLS取值：[\"ENHANCED_SCTE35\"]。
+    *
+    * @return $this
+    */
+    public function setAdMarker($adMarker)
+    {
+        $this->container['adMarker'] = $adMarker;
         return $this;
     }
 

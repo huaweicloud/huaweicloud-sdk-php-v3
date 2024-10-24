@@ -24,9 +24,9 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  实例ID。
+    * instanceId  连接点的实例ID。
+    * parentInstanceId  连接点的实例的父资源ID。
     * type  type
-    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -36,8 +36,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'string',
             'siteCode' => 'string',
             'instanceId' => 'string',
-            'type' => '\HuaweiCloud\SDK\Cc\V3\Model\ConnectionPointTypeEnum',
-            'parentInstanceId' => 'string'
+            'parentInstanceId' => 'string',
+            'type' => '\HuaweiCloud\SDK\Cc\V3\Model\ConnectionPointTypeEnum'
     ];
 
     /**
@@ -46,9 +46,9 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  实例ID。
+    * instanceId  连接点的实例ID。
+    * parentInstanceId  连接点的实例的父资源ID。
     * type  type
-    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -58,8 +58,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
         'regionId' => null,
         'siteCode' => null,
         'instanceId' => null,
-        'type' => null,
-        'parentInstanceId' => null
+        'parentInstanceId' => null,
+        'type' => null
     ];
 
     /**
@@ -89,9 +89,9 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  实例ID。
+    * instanceId  连接点的实例ID。
+    * parentInstanceId  连接点的实例的父资源ID。
     * type  type
-    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -101,8 +101,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'region_id',
             'siteCode' => 'site_code',
             'instanceId' => 'instance_id',
-            'type' => 'type',
-            'parentInstanceId' => 'parent_instance_id'
+            'parentInstanceId' => 'parent_instance_id',
+            'type' => 'type'
     ];
 
     /**
@@ -111,9 +111,9 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  实例ID。
+    * instanceId  连接点的实例ID。
+    * parentInstanceId  连接点的实例的父资源ID。
     * type  type
-    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -123,8 +123,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'setRegionId',
             'siteCode' => 'setSiteCode',
             'instanceId' => 'setInstanceId',
-            'type' => 'setType',
-            'parentInstanceId' => 'setParentInstanceId'
+            'parentInstanceId' => 'setParentInstanceId',
+            'type' => 'setType'
     ];
 
     /**
@@ -133,9 +133,9 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     * projectId  实例所属项目ID。
     * regionId  RegionID。
     * siteCode  站点编码定义
-    * instanceId  实例ID。
+    * instanceId  连接点的实例ID。
+    * parentInstanceId  连接点的实例的父资源ID。
     * type  type
-    * parentInstanceId  实例ID。
     *
     * @var string[]
     */
@@ -145,8 +145,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             'regionId' => 'getRegionId',
             'siteCode' => 'getSiteCode',
             'instanceId' => 'getInstanceId',
-            'type' => 'getType',
-            'parentInstanceId' => 'getParentInstanceId'
+            'parentInstanceId' => 'getParentInstanceId',
+            'type' => 'getType'
     ];
 
     /**
@@ -212,8 +212,8 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
         $this->container['regionId'] = isset($data['regionId']) ? $data['regionId'] : null;
         $this->container['siteCode'] = isset($data['siteCode']) ? $data['siteCode'] : null;
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['parentInstanceId'] = isset($data['parentInstanceId']) ? $data['parentInstanceId'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -281,9 +281,6 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             if (!preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
             if (!is_null($this->container['parentInstanceId']) && (mb_strlen($this->container['parentInstanceId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'parentInstanceId', the character length must be smaller than or equal to 36.";
             }
@@ -293,6 +290,9 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
             if (!is_null($this->container['parentInstanceId']) && !preg_match("/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/", $this->container['parentInstanceId'])) {
                 $invalidProperties[] = "invalid value for 'parentInstanceId', must be conform to the pattern /[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/.";
             }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -405,7 +405,7 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
 
     /**
     * Gets instanceId
-    *  实例ID。
+    *  连接点的实例ID。
     *
     * @return string
     */
@@ -417,13 +417,37 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     /**
     * Sets instanceId
     *
-    * @param string $instanceId 实例ID。
+    * @param string $instanceId 连接点的实例ID。
     *
     * @return $this
     */
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets parentInstanceId
+    *  连接点的实例的父资源ID。
+    *
+    * @return string|null
+    */
+    public function getParentInstanceId()
+    {
+        return $this->container['parentInstanceId'];
+    }
+
+    /**
+    * Sets parentInstanceId
+    *
+    * @param string|null $parentInstanceId 连接点的实例的父资源ID。
+    *
+    * @return $this
+    */
+    public function setParentInstanceId($parentInstanceId)
+    {
+        $this->container['parentInstanceId'] = $parentInstanceId;
         return $this;
     }
 
@@ -448,30 +472,6 @@ class ConnectionPoint implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
-        return $this;
-    }
-
-    /**
-    * Gets parentInstanceId
-    *  实例ID。
-    *
-    * @return string|null
-    */
-    public function getParentInstanceId()
-    {
-        return $this->container['parentInstanceId'];
-    }
-
-    /**
-    * Sets parentInstanceId
-    *
-    * @param string|null $parentInstanceId 实例ID。
-    *
-    * @return $this
-    */
-    public function setParentInstanceId($parentInstanceId)
-    {
-        $this->container['parentInstanceId'] = $parentInstanceId;
         return $this;
     }
 

@@ -124,11 +124,11 @@ class CesClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'text/plain; charset=utf-8']
+                ['application/json', 'text/plain; charset=utf-8', 'invocations']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'text/plain; charset=utf-8'],
+                ['application/json', 'text/plain; charset=utf-8', 'invocations'],
                 ['application/json', 'text/plain; charset=utf-8']
             );
         }

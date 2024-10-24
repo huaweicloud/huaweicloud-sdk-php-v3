@@ -38,6 +38,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * tag  tag
     * phone  手机号
     * dhtmsJobId  形象制作任务id
+    * batchName  批次名称
     *
     * @var string[]
     */
@@ -59,7 +60,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'createType' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateType',
             'tag' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\JobTag',
             'phone' => 'string',
-            'dhtmsJobId' => 'string'
+            'dhtmsJobId' => 'string',
+            'batchName' => 'string'
     ];
 
     /**
@@ -82,6 +84,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * tag  tag
     * phone  手机号
     * dhtmsJobId  形象制作任务id
+    * batchName  批次名称
     *
     * @var string[]
     */
@@ -103,7 +106,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         'createType' => null,
         'tag' => null,
         'phone' => null,
-        'dhtmsJobId' => null
+        'dhtmsJobId' => null,
+        'batchName' => null
     ];
 
     /**
@@ -147,6 +151,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * tag  tag
     * phone  手机号
     * dhtmsJobId  形象制作任务id
+    * batchName  批次名称
     *
     * @var string[]
     */
@@ -168,7 +173,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'createType' => 'create_type',
             'tag' => 'tag',
             'phone' => 'phone',
-            'dhtmsJobId' => 'dhtms_job_id'
+            'dhtmsJobId' => 'dhtms_job_id',
+            'batchName' => 'batch_name'
     ];
 
     /**
@@ -191,6 +197,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * tag  tag
     * phone  手机号
     * dhtmsJobId  形象制作任务id
+    * batchName  批次名称
     *
     * @var string[]
     */
@@ -212,7 +219,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'createType' => 'setCreateType',
             'tag' => 'setTag',
             'phone' => 'setPhone',
-            'dhtmsJobId' => 'setDhtmsJobId'
+            'dhtmsJobId' => 'setDhtmsJobId',
+            'batchName' => 'setBatchName'
     ];
 
     /**
@@ -235,6 +243,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     * tag  tag
     * phone  手机号
     * dhtmsJobId  形象制作任务id
+    * batchName  批次名称
     *
     * @var string[]
     */
@@ -256,7 +265,8 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             'createType' => 'getCreateType',
             'tag' => 'getTag',
             'phone' => 'getPhone',
-            'dhtmsJobId' => 'getDhtmsJobId'
+            'dhtmsJobId' => 'getDhtmsJobId',
+            'batchName' => 'getBatchName'
     ];
 
     /**
@@ -335,6 +345,7 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['dhtmsJobId'] = isset($data['dhtmsJobId']) ? $data['dhtmsJobId'] : null;
+        $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
     }
 
     /**
@@ -428,6 +439,12 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['dhtmsJobId']) && (mb_strlen($this->container['dhtmsJobId']) < 1)) {
                 $invalidProperties[] = "invalid value for 'dhtmsJobId', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) > 256)) {
+                $invalidProperties[] = "invalid value for 'batchName', the character length must be smaller than or equal to 256.";
+            }
+            if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) < 1)) {
+                $invalidProperties[] = "invalid value for 'batchName', the character length must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -872,6 +889,30 @@ class TrainingJobInfo implements ModelInterface, ArrayAccess
     public function setDhtmsJobId($dhtmsJobId)
     {
         $this->container['dhtmsJobId'] = $dhtmsJobId;
+        return $this;
+    }
+
+    /**
+    * Gets batchName
+    *  批次名称
+    *
+    * @return string|null
+    */
+    public function getBatchName()
+    {
+        return $this->container['batchName'];
+    }
+
+    /**
+    * Sets batchName
+    *
+    * @param string|null $batchName 批次名称
+    *
+    * @return $this
+    */
+    public function setBatchName($batchName)
+    {
+        $this->container['batchName'] = $batchName;
         return $this;
     }
 

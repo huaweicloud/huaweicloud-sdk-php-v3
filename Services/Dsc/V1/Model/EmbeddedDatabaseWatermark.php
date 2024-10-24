@@ -23,7 +23,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
     * watermarkContent  添加水印的内容
     * watermarkKey  水印密钥
     * columns  字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
-    * data  数据字段的内容，最大支持长度2000
+    * data  嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @var string[]
     */
@@ -39,7 +39,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
     * watermarkContent  添加水印的内容
     * watermarkKey  水印密钥
     * columns  字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
-    * data  数据字段的内容，最大支持长度2000
+    * data  嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @var string[]
     */
@@ -76,7 +76,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
     * watermarkContent  添加水印的内容
     * watermarkKey  水印密钥
     * columns  字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
-    * data  数据字段的内容，最大支持长度2000
+    * data  嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @var string[]
     */
@@ -92,7 +92,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
     * watermarkContent  添加水印的内容
     * watermarkKey  水印密钥
     * columns  字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
-    * data  数据字段的内容，最大支持长度2000
+    * data  嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @var string[]
     */
@@ -108,7 +108,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
     * watermarkContent  添加水印的内容
     * watermarkKey  水印密钥
     * columns  字段类型列表，最大长度100。使用时，至少包含两个字段，一个“primary_key”为true表示主键，一个为false用来嵌入水印
-    * data  数据字段的内容，最大支持长度2000
+    * data  嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @var string[]
     */
@@ -291,7 +291,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  数据字段的内容，最大支持长度2000
+    *  嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @return map[string,object][]
     */
@@ -303,7 +303,7 @@ class EmbeddedDatabaseWatermark implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param map[string,object][] $data 数据字段的内容，最大支持长度2000
+    * @param map[string,object][] $data 嵌入可提取水印的行数限制1500-50000行。内容建议：数据具有随机性，内容重复率低
     *
     * @return $this
     */

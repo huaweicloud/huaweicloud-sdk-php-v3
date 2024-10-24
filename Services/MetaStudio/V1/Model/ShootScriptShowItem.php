@@ -23,13 +23,15 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * previewInfo  previewInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'sequenceNo' => 'int',
             'shootScript' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ShootScriptDetail',
-            'subtitleFileInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFileInfo'
+            'subtitleFileInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFiles',
+            'previewInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PreviewInfo'
     ];
 
     /**
@@ -37,13 +39,15 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * previewInfo  previewInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'sequenceNo' => 'int32',
         'shootScript' => null,
-        'subtitleFileInfo' => null
+        'subtitleFileInfo' => null,
+        'previewInfo' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * previewInfo  previewInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'sequenceNo' => 'sequence_no',
             'shootScript' => 'shoot_script',
-            'subtitleFileInfo' => 'subtitle_file_info'
+            'subtitleFileInfo' => 'subtitle_file_info',
+            'previewInfo' => 'preview_info'
     ];
 
     /**
@@ -86,13 +92,15 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * previewInfo  previewInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'sequenceNo' => 'setSequenceNo',
             'shootScript' => 'setShootScript',
-            'subtitleFileInfo' => 'setSubtitleFileInfo'
+            'subtitleFileInfo' => 'setSubtitleFileInfo',
+            'previewInfo' => 'setPreviewInfo'
     ];
 
     /**
@@ -100,13 +108,15 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * sequenceNo  **参数解释**： 剧本序号。 **约束限制**： 同一个剧本序号不重复。 **默认取值**： 不涉及。
     * shootScript  shootScript
     * subtitleFileInfo  subtitleFileInfo
+    * previewInfo  previewInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'sequenceNo' => 'getSequenceNo',
             'shootScript' => 'getShootScript',
-            'subtitleFileInfo' => 'getSubtitleFileInfo'
+            'subtitleFileInfo' => 'getSubtitleFileInfo',
+            'previewInfo' => 'getPreviewInfo'
     ];
 
     /**
@@ -170,6 +180,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
         $this->container['sequenceNo'] = isset($data['sequenceNo']) ? $data['sequenceNo'] : null;
         $this->container['shootScript'] = isset($data['shootScript']) ? $data['shootScript'] : null;
         $this->container['subtitleFileInfo'] = isset($data['subtitleFileInfo']) ? $data['subtitleFileInfo'] : null;
+        $this->container['previewInfo'] = isset($data['previewInfo']) ? $data['previewInfo'] : null;
     }
 
     /**
@@ -252,7 +263,7 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     * Gets subtitleFileInfo
     *  subtitleFileInfo
     *
-    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFileInfo|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFiles|null
     */
     public function getSubtitleFileInfo()
     {
@@ -262,13 +273,37 @@ class ShootScriptShowItem implements ModelInterface, ArrayAccess
     /**
     * Sets subtitleFileInfo
     *
-    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFileInfo|null $subtitleFileInfo subtitleFileInfo
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\SubtitleFiles|null $subtitleFileInfo subtitleFileInfo
     *
     * @return $this
     */
     public function setSubtitleFileInfo($subtitleFileInfo)
     {
         $this->container['subtitleFileInfo'] = $subtitleFileInfo;
+        return $this;
+    }
+
+    /**
+    * Gets previewInfo
+    *  previewInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\PreviewInfo|null
+    */
+    public function getPreviewInfo()
+    {
+        return $this->container['previewInfo'];
+    }
+
+    /**
+    * Sets previewInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\PreviewInfo|null $previewInfo previewInfo
+    *
+    * @return $this
+    */
+    public function setPreviewInfo($previewInfo)
+    {
+        $this->container['previewInfo'] = $previewInfo;
         return $this;
     }
 

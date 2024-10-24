@@ -24,6 +24,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
+    * relationProduct  relationProduct
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'int',
             'title' => 'string',
             'textConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\TextConfig',
-            'audioConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveAudioConfig'
+            'audioConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveAudioConfig',
+            'relationProduct' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\RelationProductInfo'
     ];
 
     /**
@@ -40,6 +42,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
+    * relationProduct  relationProduct
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
         'sequenceNo' => 'int32',
         'title' => null,
         'textConfig' => null,
-        'audioConfig' => null
+        'audioConfig' => null,
+        'relationProduct' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
+    * relationProduct  relationProduct
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'sequence_no',
             'title' => 'title',
             'textConfig' => 'text_config',
-            'audioConfig' => 'audio_config'
+            'audioConfig' => 'audio_config',
+            'relationProduct' => 'relation_product'
     ];
 
     /**
@@ -93,6 +99,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
+    * relationProduct  relationProduct
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'setSequenceNo',
             'title' => 'setTitle',
             'textConfig' => 'setTextConfig',
-            'audioConfig' => 'setAudioConfig'
+            'audioConfig' => 'setAudioConfig',
+            'relationProduct' => 'setRelationProduct'
     ];
 
     /**
@@ -109,6 +117,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     * title  **参数解释**： 段落标题。 **约束限制**： 不涉及 **取值范围**： 字符长度0-256位。 **默认取值**： 不涉及。
     * textConfig  textConfig
     * audioConfig  audioConfig
+    * relationProduct  relationProduct
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
             'sequenceNo' => 'getSequenceNo',
             'title' => 'getTitle',
             'textConfig' => 'getTextConfig',
-            'audioConfig' => 'getAudioConfig'
+            'audioConfig' => 'getAudioConfig',
+            'relationProduct' => 'getRelationProduct'
     ];
 
     /**
@@ -181,6 +191,7 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['textConfig'] = isset($data['textConfig']) ? $data['textConfig'] : null;
         $this->container['audioConfig'] = isset($data['audioConfig']) ? $data['audioConfig'] : null;
+        $this->container['relationProduct'] = isset($data['relationProduct']) ? $data['relationProduct'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class LiveShootScriptItem implements ModelInterface, ArrayAccess
     public function setAudioConfig($audioConfig)
     {
         $this->container['audioConfig'] = $audioConfig;
+        return $this;
+    }
+
+    /**
+    * Gets relationProduct
+    *  relationProduct
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\RelationProductInfo|null
+    */
+    public function getRelationProduct()
+    {
+        return $this->container['relationProduct'];
+    }
+
+    /**
+    * Sets relationProduct
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\RelationProductInfo|null $relationProduct relationProduct
+    *
+    * @return $this
+    */
+    public function setRelationProduct($relationProduct)
+    {
+        $this->container['relationProduct'] = $relationProduct;
         return $this;
     }
 

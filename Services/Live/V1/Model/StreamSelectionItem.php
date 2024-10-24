@@ -21,8 +21,8 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * key  拉流URL中用于码率过滤的参数
-    * maxBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
-    * minBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * maxBandwidth  最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
+    * minBandwidth  最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * key  拉流URL中用于码率过滤的参数
-    * maxBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
-    * minBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * maxBandwidth  最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
+    * minBandwidth  最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * key  拉流URL中用于码率过滤的参数
-    * maxBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
-    * minBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * maxBandwidth  最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
+    * minBandwidth  最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * key  拉流URL中用于码率过滤的参数
-    * maxBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
-    * minBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * maxBandwidth  最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
+    * minBandwidth  最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * key  拉流URL中用于码率过滤的参数
-    * maxBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
-    * minBandwidth  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * maxBandwidth  最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
+    * minBandwidth  最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @var string[]
     */
@@ -226,7 +226,7 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxBandwidth
-    *  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    *  最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @return int|null
     */
@@ -238,7 +238,7 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     /**
     * Sets maxBandwidth
     *
-    * @param int|null $maxBandwidth 最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * @param int|null $maxBandwidth 最大码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @return $this
     */
@@ -250,7 +250,7 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
 
     /**
     * Gets minBandwidth
-    *  最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    *  最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @return int|null
     */
@@ -262,7 +262,7 @@ class StreamSelectionItem implements ModelInterface, ArrayAccess
     /**
     * Sets minBandwidth
     *
-    * @param int|null $minBandwidth 最小码率，单位：bps 取值范围：0 - 104,857,600（100Mbps）
+    * @param int|null $minBandwidth 最小码率，单位：bps  取值范围：0 - 104,857,600（100Mbps）
     *
     * @return $this
     */

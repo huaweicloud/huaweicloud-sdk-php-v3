@@ -21,24 +21,28 @@ class BatchCreateResourceShareTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * resourceShareId  资源共享实例的ID。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'resourceShareId' => 'string',
+            'xSecurityToken' => 'string',
             'body' => '\HuaweiCloud\SDK\Ram\V1\Model\TagResourceReqBody'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * resourceShareId  资源共享实例的ID。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'resourceShareId' => null,
+        'xSecurityToken' => null,
         'body' => null
     ];
 
@@ -66,36 +70,42 @@ class BatchCreateResourceShareTagsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * resourceShareId  资源共享实例的ID。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'resourceShareId' => 'resource_share_id',
+            'xSecurityToken' => 'X-Security-Token',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * resourceShareId  资源共享实例的ID。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
             'resourceShareId' => 'setResourceShareId',
+            'xSecurityToken' => 'setXSecurityToken',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * resourceShareId  资源共享实例的ID。
+    * xSecurityToken  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
             'resourceShareId' => 'getResourceShareId',
+            'xSecurityToken' => 'getXSecurityToken',
             'body' => 'getBody'
     ];
 
@@ -158,6 +168,7 @@ class BatchCreateResourceShareTagsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['resourceShareId'] = isset($data['resourceShareId']) ? $data['resourceShareId'] : null;
+        $this->container['xSecurityToken'] = isset($data['xSecurityToken']) ? $data['xSecurityToken'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
 
@@ -216,6 +227,30 @@ class BatchCreateResourceShareTagsRequest implements ModelInterface, ArrayAccess
     public function setResourceShareId($resourceShareId)
     {
         $this->container['resourceShareId'] = $resourceShareId;
+        return $this;
+    }
+
+    /**
+    * Gets xSecurityToken
+    *  如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return string|null
+    */
+    public function getXSecurityToken()
+    {
+        return $this->container['xSecurityToken'];
+    }
+
+    /**
+    * Sets xSecurityToken
+    *
+    * @param string|null $xSecurityToken 如果正在使用临时安全凭据，则此header是必需的，该值是临时安全凭据的安全令牌（会话令牌）。
+    *
+    * @return $this
+    */
+    public function setXSecurityToken($xSecurityToken)
+    {
+        $this->container['xSecurityToken'] = $xSecurityToken;
         return $this;
     }
 

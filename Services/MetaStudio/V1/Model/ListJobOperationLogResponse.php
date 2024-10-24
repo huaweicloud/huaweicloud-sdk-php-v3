@@ -22,19 +22,19 @@ class ListJobOperationLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * count  满足查询要求的操作日志总数
-    * operations  操作
+    * operations  操作日志列表
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'count' => 'int',
-            'operations' => 'object[]'
+            'operations' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\OperationLogItem[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * count  满足查询要求的操作日志总数
-    * operations  操作
+    * operations  操作日志列表
     *
     * @var string[]
     */
@@ -67,7 +67,7 @@ class ListJobOperationLogResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * count  满足查询要求的操作日志总数
-    * operations  操作
+    * operations  操作日志列表
     *
     * @var string[]
     */
@@ -79,7 +79,7 @@ class ListJobOperationLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * count  满足查询要求的操作日志总数
-    * operations  操作
+    * operations  操作日志列表
     *
     * @var string[]
     */
@@ -91,7 +91,7 @@ class ListJobOperationLogResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * count  满足查询要求的操作日志总数
-    * operations  操作
+    * operations  操作日志列表
     *
     * @var string[]
     */
@@ -216,9 +216,9 @@ class ListJobOperationLogResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets operations
-    *  操作
+    *  操作日志列表
     *
-    * @return object[]|null
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\OperationLogItem[]|null
     */
     public function getOperations()
     {
@@ -228,7 +228,7 @@ class ListJobOperationLogResponse implements ModelInterface, ArrayAccess
     /**
     * Sets operations
     *
-    * @param object[]|null $operations 操作
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\OperationLogItem[]|null $operations 操作日志列表
     *
     * @return $this
     */

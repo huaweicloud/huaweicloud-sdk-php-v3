@@ -39,6 +39,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -61,7 +62,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'blockReason' => 'string',
             'coverUrl' => 'string',
             'coStreamerConfig' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\CoStreamerConfig',
-            'liveJobLog' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog'
+            'liveJobLog' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\LiveJobLog',
+            'relationLivePlatformInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo'
     ];
 
     /**
@@ -85,6 +87,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -107,7 +110,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         'blockReason' => null,
         'coverUrl' => null,
         'coStreamerConfig' => null,
-        'liveJobLog' => null
+        'liveJobLog' => null,
+        'relationLivePlatformInfo' => null
     ];
 
     /**
@@ -152,6 +156,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -174,7 +179,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'blockReason' => 'block_reason',
             'coverUrl' => 'cover_url',
             'coStreamerConfig' => 'co_streamer_config',
-            'liveJobLog' => 'live_job_log'
+            'liveJobLog' => 'live_job_log',
+            'relationLivePlatformInfo' => 'relation_live_platform_info'
     ];
 
     /**
@@ -198,6 +204,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -220,7 +227,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'blockReason' => 'setBlockReason',
             'coverUrl' => 'setCoverUrl',
             'coStreamerConfig' => 'setCoStreamerConfig',
-            'liveJobLog' => 'setLiveJobLog'
+            'liveJobLog' => 'setLiveJobLog',
+            'relationLivePlatformInfo' => 'setRelationLivePlatformInfo'
     ];
 
     /**
@@ -244,6 +252,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     * coverUrl  直播间封面图URL
     * coStreamerConfig  coStreamerConfig
     * liveJobLog  liveJobLog
+    * relationLivePlatformInfo  relationLivePlatformInfo
     *
     * @var string[]
     */
@@ -266,7 +275,8 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
             'blockReason' => 'getBlockReason',
             'coverUrl' => 'getCoverUrl',
             'coStreamerConfig' => 'getCoStreamerConfig',
-            'liveJobLog' => 'getLiveJobLog'
+            'liveJobLog' => 'getLiveJobLog',
+            'relationLivePlatformInfo' => 'getRelationLivePlatformInfo'
     ];
 
     /**
@@ -367,6 +377,7 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
         $this->container['coverUrl'] = isset($data['coverUrl']) ? $data['coverUrl'] : null;
         $this->container['coStreamerConfig'] = isset($data['coStreamerConfig']) ? $data['coStreamerConfig'] : null;
         $this->container['liveJobLog'] = isset($data['liveJobLog']) ? $data['liveJobLog'] : null;
+        $this->container['relationLivePlatformInfo'] = isset($data['relationLivePlatformInfo']) ? $data['relationLivePlatformInfo'] : null;
     }
 
     /**
@@ -930,6 +941,30 @@ class SmartLiveJob implements ModelInterface, ArrayAccess
     public function setLiveJobLog($liveJobLog)
     {
         $this->container['liveJobLog'] = $liveJobLog;
+        return $this;
+    }
+
+    /**
+    * Gets relationLivePlatformInfo
+    *  relationLivePlatformInfo
+    *
+    * @return \HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo|null
+    */
+    public function getRelationLivePlatformInfo()
+    {
+        return $this->container['relationLivePlatformInfo'];
+    }
+
+    /**
+    * Sets relationLivePlatformInfo
+    *
+    * @param \HuaweiCloud\SDK\MetaStudio\V1\Model\PlatformLiveDetailInfo|null $relationLivePlatformInfo relationLivePlatformInfo
+    *
+    * @return $this
+    */
+    public function setRelationLivePlatformInfo($relationLivePlatformInfo)
+    {
+        $this->container['relationLivePlatformInfo'] = $relationLivePlatformInfo;
         return $this;
     }
 

@@ -45,8 +45,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * attachedErTableId  被挂载的企业路由器的路由表ID。
     * attachedErAttachmentId  被挂载的企业路由器的连接ID。
     * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
-    * approvedState  approvedState
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建企业路由表附件的原因。
     *
     * @var string[]
@@ -77,8 +77,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'attachedErTableId' => 'string',
             'attachedErAttachmentId' => 'string',
             'attachedErTableSiteCode' => 'string',
-            'approvedState' => '\HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum',
             'hostedCloud' => '\HuaweiCloud\SDK\Cc\V3\Model\HostedCloudEnum',
+            'approvedState' => '\HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum',
             'reason' => 'string'
     ];
 
@@ -109,8 +109,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * attachedErTableId  被挂载的企业路由器的路由表ID。
     * attachedErAttachmentId  被挂载的企业路由器的连接ID。
     * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
-    * approvedState  approvedState
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建企业路由表附件的原因。
     *
     * @var string[]
@@ -141,8 +141,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
         'attachedErTableId' => null,
         'attachedErAttachmentId' => null,
         'attachedErTableSiteCode' => null,
-        'approvedState' => null,
         'hostedCloud' => null,
+        'approvedState' => null,
         'reason' => null
     ];
 
@@ -194,8 +194,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * attachedErTableId  被挂载的企业路由器的路由表ID。
     * attachedErAttachmentId  被挂载的企业路由器的连接ID。
     * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
-    * approvedState  approvedState
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建企业路由表附件的原因。
     *
     * @var string[]
@@ -226,8 +226,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'attachedErTableId' => 'attached_er_table_id',
             'attachedErAttachmentId' => 'attached_er_attachment_id',
             'attachedErTableSiteCode' => 'attached_er_table_site_code',
-            'approvedState' => 'approved_state',
             'hostedCloud' => 'hosted_cloud',
+            'approvedState' => 'approved_state',
             'reason' => 'reason'
     ];
 
@@ -258,8 +258,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * attachedErTableId  被挂载的企业路由器的路由表ID。
     * attachedErAttachmentId  被挂载的企业路由器的连接ID。
     * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
-    * approvedState  approvedState
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建企业路由表附件的原因。
     *
     * @var string[]
@@ -290,8 +290,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'attachedErTableId' => 'setAttachedErTableId',
             'attachedErAttachmentId' => 'setAttachedErAttachmentId',
             'attachedErTableSiteCode' => 'setAttachedErTableSiteCode',
-            'approvedState' => 'setApprovedState',
             'hostedCloud' => 'setHostedCloud',
+            'approvedState' => 'setApprovedState',
             'reason' => 'setReason'
     ];
 
@@ -322,8 +322,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     * attachedErTableId  被挂载的企业路由器的路由表ID。
     * attachedErAttachmentId  被挂载的企业路由器的连接ID。
     * attachedErTableSiteCode  被挂载的企业路由器的站点编码。
-    * approvedState  approvedState
     * hostedCloud  hostedCloud
+    * approvedState  approvedState
     * reason  审批拒绝创建企业路由表附件的原因。
     *
     * @var string[]
@@ -354,8 +354,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
             'attachedErTableId' => 'getAttachedErTableId',
             'attachedErAttachmentId' => 'getAttachedErAttachmentId',
             'attachedErTableSiteCode' => 'getAttachedErTableSiteCode',
-            'approvedState' => 'getApprovedState',
             'hostedCloud' => 'getHostedCloud',
+            'approvedState' => 'getApprovedState',
             'reason' => 'getReason'
     ];
 
@@ -442,8 +442,8 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
         $this->container['attachedErTableId'] = isset($data['attachedErTableId']) ? $data['attachedErTableId'] : null;
         $this->container['attachedErAttachmentId'] = isset($data['attachedErAttachmentId']) ? $data['attachedErAttachmentId'] : null;
         $this->container['attachedErTableSiteCode'] = isset($data['attachedErTableSiteCode']) ? $data['attachedErTableSiteCode'] : null;
-        $this->container['approvedState'] = isset($data['approvedState']) ? $data['approvedState'] : null;
         $this->container['hostedCloud'] = isset($data['hostedCloud']) ? $data['hostedCloud'] : null;
+        $this->container['approvedState'] = isset($data['approvedState']) ? $data['approvedState'] : null;
         $this->container['reason'] = isset($data['reason']) ? $data['reason'] : null;
     }
 
@@ -1313,30 +1313,6 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets approvedState
-    *  approvedState
-    *
-    * @return \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum
-    */
-    public function getApprovedState()
-    {
-        return $this->container['approvedState'];
-    }
-
-    /**
-    * Sets approvedState
-    *
-    * @param \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum $approvedState approvedState
-    *
-    * @return $this
-    */
-    public function setApprovedState($approvedState)
-    {
-        $this->container['approvedState'] = $approvedState;
-        return $this;
-    }
-
-    /**
     * Gets hostedCloud
     *  hostedCloud
     *
@@ -1357,6 +1333,30 @@ class CentralNetworkErRouteTableAttachment implements ModelInterface, ArrayAcces
     public function setHostedCloud($hostedCloud)
     {
         $this->container['hostedCloud'] = $hostedCloud;
+        return $this;
+    }
+
+    /**
+    * Gets approvedState
+    *  approvedState
+    *
+    * @return \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum
+    */
+    public function getApprovedState()
+    {
+        return $this->container['approvedState'];
+    }
+
+    /**
+    * Sets approvedState
+    *
+    * @param \HuaweiCloud\SDK\Cc\V3\Model\ApprovedStateEnum $approvedState approvedState
+    *
+    * @return $this
+    */
+    public function setApprovedState($approvedState)
+    {
+        $this->container['approvedState'] = $approvedState;
         return $this;
     }
 

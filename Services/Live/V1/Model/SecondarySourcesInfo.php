@@ -21,14 +21,14 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * url  频道源流URL，用于外部拉流
-    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值，非必填项  取值范围：0 - 4096（4K）
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
     * backupUrls  备入流地址列表
-    * streamId  协议为SRT_PULL时，拉流地址的streamid
-    * latency  协议为SRT_PULL时，拉流时延
+    * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
+    * latency  频道为SRT_PULL类型时的拉流时延。
     *
     * @var string[]
     */
@@ -47,14 +47,14 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  频道源流URL，用于外部拉流
-    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值，非必填项  取值范围：0 - 4096（4K）
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
     * backupUrls  备入流地址列表
-    * streamId  协议为SRT_PULL时，拉流地址的streamid
-    * latency  协议为SRT_PULL时，拉流时延
+    * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
+    * latency  频道为SRT_PULL类型时的拉流时延。
     *
     * @var string[]
     */
@@ -94,14 +94,14 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * url  频道源流URL，用于外部拉流
-    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值，非必填项  取值范围：0 - 4096（4K）
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
     * backupUrls  备入流地址列表
-    * streamId  协议为SRT_PULL时，拉流地址的streamid
-    * latency  协议为SRT_PULL时，拉流时延
+    * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
+    * latency  频道为SRT_PULL类型时的拉流时延。
     *
     * @var string[]
     */
@@ -120,14 +120,14 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  频道源流URL，用于外部拉流
-    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值，非必填项  取值范围：0 - 4096（4K）
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
     * backupUrls  备入流地址列表
-    * streamId  协议为SRT_PULL时，拉流地址的streamid
-    * latency  协议为SRT_PULL时，拉流时延
+    * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
+    * latency  频道为SRT_PULL类型时的拉流时延。
     *
     * @var string[]
     */
@@ -146,14 +146,14 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  频道源流URL，用于外部拉流
-    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值，非必填项  取值范围：0 - 4096（4K）
     * height  分辨率对应高的值，非必填项  取值范围：0 - 2160（4K）
     * bitrateFor3u8  是否使用bitrate来固定码率。默认值：false
     * passphrase  协议为SRT_PUSH时的加密信息
     * backupUrls  备入流地址列表
-    * streamId  协议为SRT_PULL时，拉流地址的streamid
-    * latency  协议为SRT_PULL时，拉流时延
+    * streamId  频道为SRT_PULL类型时，拉流地址的Stream ID。
+    * latency  频道为SRT_PULL类型时的拉流时延。
     *
     * @var string[]
     */
@@ -316,7 +316,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets bitrate
-    *  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    *  码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     *
     * @return int|null
     */
@@ -328,7 +328,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets bitrate
     *
-    * @param int|null $bitrate 码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * @param int|null $bitrate 码率。无需直播转码时，此参数为必填项  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     *
     * @return $this
     */
@@ -460,7 +460,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets streamId
-    *  协议为SRT_PULL时，拉流地址的streamid
+    *  频道为SRT_PULL类型时，拉流地址的Stream ID。
     *
     * @return string|null
     */
@@ -472,7 +472,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets streamId
     *
-    * @param string|null $streamId 协议为SRT_PULL时，拉流地址的streamid
+    * @param string|null $streamId 频道为SRT_PULL类型时，拉流地址的Stream ID。
     *
     * @return $this
     */
@@ -484,7 +484,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets latency
-    *  协议为SRT_PULL时，拉流时延
+    *  频道为SRT_PULL类型时的拉流时延。
     *
     * @return int|null
     */
@@ -496,7 +496,7 @@ class SecondarySourcesInfo implements ModelInterface, ArrayAccess
     /**
     * Sets latency
     *
-    * @param int|null $latency 协议为SRT_PULL时，拉流时延
+    * @param int|null $latency 频道为SRT_PULL类型时的拉流时延。
     *
     * @return $this
     */

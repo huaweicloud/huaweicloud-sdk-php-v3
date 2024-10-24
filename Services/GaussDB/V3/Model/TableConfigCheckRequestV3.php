@@ -27,6 +27,8 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
     * tableReplConfig  tableReplConfig
+    * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    * isCreateTask  是否创建同步任务
     *
     * @var string[]
     */
@@ -37,7 +39,9 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
             'taskName' => 'string',
             'dbConfigs' => '\HuaweiCloud\SDK\GaussDB\V3\Model\DbConfig[]',
             'tablesConfigs' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TablesConfig[]',
-            'tableReplConfig' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TableReplConfig'
+            'tableReplConfig' => '\HuaweiCloud\SDK\GaussDB\V3\Model\TableReplConfig',
+            'targetDatabaseName' => 'string',
+            'isCreateTask' => 'string'
     ];
 
     /**
@@ -49,6 +53,8 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
     * tableReplConfig  tableReplConfig
+    * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    * isCreateTask  是否创建同步任务
     *
     * @var string[]
     */
@@ -59,7 +65,9 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
         'taskName' => null,
         'dbConfigs' => null,
         'tablesConfigs' => null,
-        'tableReplConfig' => null
+        'tableReplConfig' => null,
+        'targetDatabaseName' => null,
+        'isCreateTask' => null
     ];
 
     /**
@@ -92,6 +100,8 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
     * tableReplConfig  tableReplConfig
+    * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    * isCreateTask  是否创建同步任务
     *
     * @var string[]
     */
@@ -102,7 +112,9 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
             'taskName' => 'task_name',
             'dbConfigs' => 'db_configs',
             'tablesConfigs' => 'tables_configs',
-            'tableReplConfig' => 'table_repl_config'
+            'tableReplConfig' => 'table_repl_config',
+            'targetDatabaseName' => 'target_database_name',
+            'isCreateTask' => 'is_create_task'
     ];
 
     /**
@@ -114,6 +126,8 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
     * tableReplConfig  tableReplConfig
+    * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    * isCreateTask  是否创建同步任务
     *
     * @var string[]
     */
@@ -124,7 +138,9 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
             'taskName' => 'setTaskName',
             'dbConfigs' => 'setDbConfigs',
             'tablesConfigs' => 'setTablesConfigs',
-            'tableReplConfig' => 'setTableReplConfig'
+            'tableReplConfig' => 'setTableReplConfig',
+            'targetDatabaseName' => 'setTargetDatabaseName',
+            'isCreateTask' => 'setIsCreateTask'
     ];
 
     /**
@@ -136,6 +152,8 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     * dbConfigs  库配置列表。
     * tablesConfigs  表配置信息。
     * tableReplConfig  tableReplConfig
+    * targetDatabaseName  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    * isCreateTask  是否创建同步任务
     *
     * @var string[]
     */
@@ -146,7 +164,9 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
             'taskName' => 'getTaskName',
             'dbConfigs' => 'getDbConfigs',
             'tablesConfigs' => 'getTablesConfigs',
-            'tableReplConfig' => 'getTableReplConfig'
+            'tableReplConfig' => 'getTableReplConfig',
+            'targetDatabaseName' => 'getTargetDatabaseName',
+            'isCreateTask' => 'getIsCreateTask'
     ];
 
     /**
@@ -214,6 +234,8 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
         $this->container['dbConfigs'] = isset($data['dbConfigs']) ? $data['dbConfigs'] : null;
         $this->container['tablesConfigs'] = isset($data['tablesConfigs']) ? $data['tablesConfigs'] : null;
         $this->container['tableReplConfig'] = isset($data['tableReplConfig']) ? $data['tableReplConfig'] : null;
+        $this->container['targetDatabaseName'] = isset($data['targetDatabaseName']) ? $data['targetDatabaseName'] : null;
+        $this->container['isCreateTask'] = isset($data['isCreateTask']) ? $data['isCreateTask'] : null;
     }
 
     /**
@@ -427,6 +449,54 @@ class TableConfigCheckRequestV3 implements ModelInterface, ArrayAccess
     public function setTableReplConfig($tableReplConfig)
     {
         $this->container['tableReplConfig'] = $tableReplConfig;
+        return $this;
+    }
+
+    /**
+    * Gets targetDatabaseName
+    *  目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    *
+    * @return string|null
+    */
+    public function getTargetDatabaseName()
+    {
+        return $this->container['targetDatabaseName'];
+    }
+
+    /**
+    * Sets targetDatabaseName
+    *
+    * @param string|null $targetDatabaseName 目标数据库名。字符长度限制3~128位，仅支持英文大小写字母、数字以及下划线。
+    *
+    * @return $this
+    */
+    public function setTargetDatabaseName($targetDatabaseName)
+    {
+        $this->container['targetDatabaseName'] = $targetDatabaseName;
+        return $this;
+    }
+
+    /**
+    * Gets isCreateTask
+    *  是否创建同步任务
+    *
+    * @return string|null
+    */
+    public function getIsCreateTask()
+    {
+        return $this->container['isCreateTask'];
+    }
+
+    /**
+    * Sets isCreateTask
+    *
+    * @param string|null $isCreateTask 是否创建同步任务
+    *
+    * @return $this
+    */
+    public function setIsCreateTask($isCreateTask)
+    {
+        $this->container['isCreateTask'] = $isCreateTask;
         return $this;
     }
 

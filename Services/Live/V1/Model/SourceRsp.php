@@ -21,7 +21,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * url  RTMP推流地址
-    * bitrate  码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值。取值范围：0 - 4096（4K）
     * height  分辨率对应高的值。取值范围：0 - 2160（4K）
     * enableSnapshot  描述是否使用该流做截图
@@ -39,7 +39,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  RTMP推流地址
-    * bitrate  码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值。取值范围：0 - 4096（4K）
     * height  分辨率对应高的值。取值范围：0 - 2160（4K）
     * enableSnapshot  描述是否使用该流做截图
@@ -78,7 +78,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * url  RTMP推流地址
-    * bitrate  码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值。取值范围：0 - 4096（4K）
     * height  分辨率对应高的值。取值范围：0 - 2160（4K）
     * enableSnapshot  描述是否使用该流做截图
@@ -96,7 +96,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  RTMP推流地址
-    * bitrate  码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值。取值范围：0 - 4096（4K）
     * height  分辨率对应高的值。取值范围：0 - 2160（4K）
     * enableSnapshot  描述是否使用该流做截图
@@ -114,7 +114,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  RTMP推流地址
-    * bitrate  码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * bitrate  码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     * width  分辨率对应宽的值。取值范围：0 - 4096（4K）
     * height  分辨率对应高的值。取值范围：0 - 2160（4K）
     * enableSnapshot  描述是否使用该流做截图
@@ -266,7 +266,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
 
     /**
     * Gets bitrate
-    *  码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    *  码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class SourceRsp implements ModelInterface, ArrayAccess
     /**
     * Sets bitrate
     *
-    * @param int|null $bitrate 码率。  单位：bps。取值范围：0 - 104,857,600（100Mbps）
+    * @param int|null $bitrate 码率。  单位：bps。取值范围：(0,104,857,600]（100Mbps）
     *
     * @return $this
     */

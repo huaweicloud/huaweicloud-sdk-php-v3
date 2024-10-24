@@ -22,7 +22,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * state  频道状态 - ON：频道下发成功后，自动启动拉流、转码、录制等功能 - OFF：仅保存频道信息，不启动频道
     *
     * @var string[]
@@ -314,7 +314,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    *  频道ID。频道唯一标识，为必填项。
     *
     * @return string
     */
@@ -326,7 +326,7 @@ class ModifyOttChannelState implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string $id 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * @param string $id 频道ID。频道唯一标识，为必填项。
     *
     * @return $this
     */

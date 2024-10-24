@@ -28,7 +28,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     * isFlexus  是否是基础版的形象训练
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -62,7 +62,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     * isFlexus  是否是基础版的形象训练
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -117,7 +117,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     * isFlexus  是否是基础版的形象训练
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -151,7 +151,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     * isFlexus  是否是基础版的形象训练
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -185,7 +185,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
-    * modelVersion  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    * modelVersion  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     * isFlexus  是否是基础版的形象训练
     * audioSourceType  声音来源类型 * VIDEO：视频中抽取音频 * AUDIO：单独上传的音频
     * voiceProperties  voiceProperties
@@ -606,7 +606,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets modelVersion
-    *  分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    *  分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     *
     * @return string|null
     */
@@ -618,7 +618,7 @@ class Create2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     /**
     * Sets modelVersion
     *
-    * @param string|null $modelVersion 分身数字人模型版本。默认是V3版本模型。 * V2: V2版本模型 * V3：V3版本模型 * V3.2：V3.2版本模型 > * V2版本已废弃不用
+    * @param string|null $modelVersion 分身数字人模型版本。默认是V3.2版本模型。 * V3.2：V3.2版本模型 > * V3和V2版本已废弃不用
     *
     * @return $this
     */

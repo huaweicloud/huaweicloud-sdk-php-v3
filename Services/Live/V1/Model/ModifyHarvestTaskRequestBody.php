@@ -22,7 +22,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间戳，单位为秒
     * endTime  结束时间。Unix时间戳，单位为秒
     * eventName  事件名称。必选配置
@@ -48,7 +48,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间戳，单位为秒
     * endTime  结束时间。Unix时间戳，单位为秒
     * eventName  事件名称。必选配置
@@ -95,7 +95,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
     * and the value is the original name
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间戳，单位为秒
     * endTime  结束时间。Unix时间戳，单位为秒
     * eventName  事件名称。必选配置
@@ -121,7 +121,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间戳，单位为秒
     * endTime  结束时间。Unix时间戳，单位为秒
     * eventName  事件名称。必选配置
@@ -147,7 +147,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * domain  频道推流域名
     * appName  组名或应用名
-    * id  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * id  频道ID。频道唯一标识，为必填项。
     * startTime  开始时间。Unix时间戳，单位为秒
     * endTime  结束时间。Unix时间戳，单位为秒
     * eventName  事件名称。必选配置
@@ -361,7 +361,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    *  频道ID。频道唯一标识，为必填项。
     *
     * @return string|null
     */
@@ -373,7 +373,7 @@ class ModifyHarvestTaskRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 频道ID。频道唯一标识，为必填项。频道ID不建议输入下划线“_”，否则会影响转码和截图任务
+    * @param string|null $id 频道ID。频道唯一标识，为必填项。
     *
     * @return $this
     */
