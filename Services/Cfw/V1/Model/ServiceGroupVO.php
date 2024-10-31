@@ -21,9 +21,9 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  服务组名称
-    * protocols  协议列表
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
-    * setId  服务组ID
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -37,9 +37,9 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  服务组名称
-    * protocols  协议列表
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
-    * setId  服务组ID
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -74,9 +74,9 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  服务组名称
-    * protocols  协议列表
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
-    * setId  服务组ID
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -90,9 +90,9 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  服务组名称
-    * protocols  协议列表
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
-    * setId  服务组ID
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -106,9 +106,9 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  服务组名称
-    * protocols  协议列表
-    * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
-    * setId  服务组ID
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
+    * serviceSetType  服务组类型，0表示自定义服务组，1表示预定义服务组
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -231,7 +231,7 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocols
-    *  协议列表
+    *  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     *
     * @return int[]|null
     */
@@ -243,7 +243,7 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Sets protocols
     *
-    * @param int[]|null $protocols 协议列表
+    * @param int[]|null $protocols 协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceSetType
-    *  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
+    *  服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Sets serviceSetType
     *
-    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
+    * @param int|null $serviceSetType 服务组类型，0表示自定义服务组，1表示预定义服务组
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  服务组ID
+    *  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -291,7 +291,7 @@ class ServiceGroupVO implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string|null $setId 服务组ID
+    * @param string|null $setId 服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

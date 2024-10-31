@@ -20,8 +20,8 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * setId  服务组id
-    * serviceItems  添加服务组成员
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItems  服务组成员列表
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * setId  服务组id
-    * serviceItems  添加服务组成员
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItems  服务组成员列表
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * setId  服务组id
-    * serviceItems  添加服务组成员
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItems  服务组成员列表
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * setId  服务组id
-    * serviceItems  添加服务组成员
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItems  服务组成员列表
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * setId  服务组id
-    * serviceItems  添加服务组成员
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItems  服务组成员列表
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  服务组id
+    *  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -206,7 +206,7 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string $setId 服务组id
+    * @param string $setId 服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceItems
-    *  添加服务组成员
+    *  服务组成员列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddServiceItemsUsingPOSTRequestBodyServiceItems[]
     */
@@ -230,7 +230,7 @@ class AddServiceItemsUsingPOSTRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets serviceItems
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddServiceItemsUsingPOSTRequestBodyServiceItems[] $serviceItems 添加服务组成员
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddServiceItemsUsingPOSTRequestBodyServiceItems[] $serviceItems 服务组成员列表
     *
     * @return $this
     */

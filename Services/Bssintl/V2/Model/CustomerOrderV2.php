@@ -35,6 +35,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * currency  货币编码。
     * contractId  合同ID。
     * amountInfo  amountInfo
+    * enterpriseProjects  |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'paymentTime' => 'string',
             'currency' => 'string',
             'contractId' => 'string',
-            'amountInfo' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AmountInfomationV2'
+            'amountInfo' => '\HuaweiCloud\SDK\Bssintl\V2\Model\AmountInfomationV2',
+            'enterpriseProjects' => '\HuaweiCloud\SDK\Bssintl\V2\Model\EnterpriseProject[]'
     ];
 
     /**
@@ -73,6 +75,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * currency  货币编码。
     * contractId  合同ID。
     * amountInfo  amountInfo
+    * enterpriseProjects  |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
         'paymentTime' => null,
         'currency' => null,
         'contractId' => null,
-        'amountInfo' => null
+        'amountInfo' => null,
+        'enterpriseProjects' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * currency  货币编码。
     * contractId  合同ID。
     * amountInfo  amountInfo
+    * enterpriseProjects  |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'paymentTime' => 'payment_time',
             'currency' => 'currency',
             'contractId' => 'contract_id',
-            'amountInfo' => 'amount_info'
+            'amountInfo' => 'amount_info',
+            'enterpriseProjects' => 'enterprise_projects'
     ];
 
     /**
@@ -170,6 +176,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * currency  货币编码。
     * contractId  合同ID。
     * amountInfo  amountInfo
+    * enterpriseProjects  |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'paymentTime' => 'setPaymentTime',
             'currency' => 'setCurrency',
             'contractId' => 'setContractId',
-            'amountInfo' => 'setAmountInfo'
+            'amountInfo' => 'setAmountInfo',
+            'enterpriseProjects' => 'setEnterpriseProjects'
     ];
 
     /**
@@ -208,6 +216,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     * currency  货币编码。
     * contractId  合同ID。
     * amountInfo  amountInfo
+    * enterpriseProjects  |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
             'paymentTime' => 'getPaymentTime',
             'currency' => 'getCurrency',
             'contractId' => 'getContractId',
-            'amountInfo' => 'getAmountInfo'
+            'amountInfo' => 'getAmountInfo',
+            'enterpriseProjects' => 'getEnterpriseProjects'
     ];
 
     /**
@@ -302,6 +312,7 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['contractId'] = isset($data['contractId']) ? $data['contractId'] : null;
         $this->container['amountInfo'] = isset($data['amountInfo']) ? $data['amountInfo'] : null;
+        $this->container['enterpriseProjects'] = isset($data['enterpriseProjects']) ? $data['enterpriseProjects'] : null;
     }
 
     /**
@@ -683,6 +694,30 @@ class CustomerOrderV2 implements ModelInterface, ArrayAccess
     public function setAmountInfo($amountInfo)
     {
         $this->container['amountInfo'] = $amountInfo;
+        return $this;
+    }
+
+    /**
+    * Gets enterpriseProjects
+    *  |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
+    *
+    * @return \HuaweiCloud\SDK\Bssintl\V2\Model\EnterpriseProject[]|null
+    */
+    public function getEnterpriseProjects()
+    {
+        return $this->container['enterpriseProjects'];
+    }
+
+    /**
+    * Sets enterpriseProjects
+    *
+    * @param \HuaweiCloud\SDK\Bssintl\V2\Model\EnterpriseProject[]|null $enterpriseProjects |参数名称：客户订单企业项目信息。| |参数约束及描述： 客户订单企业项目信息。具体请参见表 EnterpriseProject。|
+    *
+    * @return $this
+    */
+    public function setEnterpriseProjects($enterpriseProjects)
+    {
+        $this->container['enterpriseProjects'] = $enterpriseProjects;
         return $this;
     }
 

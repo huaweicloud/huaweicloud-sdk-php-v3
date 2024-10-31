@@ -26,7 +26,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
     * memberType  VPC通道的成员类型。 - ip - ecs
     * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-    * memberGroups  VPC通道后端服务器组列表
+    * memberGroups  VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     * members  VPC后端实例列表。
     * vpcHealthConfig  vpcHealthConfig
     * microserviceInfo  microserviceInfo
@@ -54,7 +54,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
     * memberType  VPC通道的成员类型。 - ip - ecs
     * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-    * memberGroups  VPC通道后端服务器组列表
+    * memberGroups  VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     * members  VPC后端实例列表。
     * vpcHealthConfig  vpcHealthConfig
     * microserviceInfo  microserviceInfo
@@ -103,7 +103,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
     * memberType  VPC通道的成员类型。 - ip - ecs
     * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-    * memberGroups  VPC通道后端服务器组列表
+    * memberGroups  VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     * members  VPC后端实例列表。
     * vpcHealthConfig  vpcHealthConfig
     * microserviceInfo  microserviceInfo
@@ -131,7 +131,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
     * memberType  VPC通道的成员类型。 - ip - ecs
     * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-    * memberGroups  VPC通道后端服务器组列表
+    * memberGroups  VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     * members  VPC后端实例列表。
     * vpcHealthConfig  vpcHealthConfig
     * microserviceInfo  microserviceInfo
@@ -159,7 +159,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
     * memberType  VPC通道的成员类型。 - ip - ecs
     * type  vpc通道类型，默认为服务器类型。 - 2：服务器类型 - 3：微服务类型
     * dictCode  VPC通道的字典编码  支持英文，数字，特殊字符（-_.）  暂不支持
-    * memberGroups  VPC通道后端服务器组列表
+    * memberGroups  VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     * members  VPC后端实例列表。
     * vpcHealthConfig  vpcHealthConfig
     * microserviceInfo  microserviceInfo
@@ -491,7 +491,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets memberGroups
-    *  VPC通道后端服务器组列表
+    *  VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     *
     * @return \HuaweiCloud\SDK\Apig\V2\Model\MemberGroupCreate[]|null
     */
@@ -503,7 +503,7 @@ class VpcCreate implements ModelInterface, ArrayAccess
     /**
     * Sets memberGroups
     *
-    * @param \HuaweiCloud\SDK\Apig\V2\Model\MemberGroupCreate[]|null $memberGroups VPC通道后端服务器组列表
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\MemberGroupCreate[]|null $memberGroups VPC通道后端服务器组列表。当microservice_info中service_type为NACOS类型时，服务器组的权重不支持手动设置。
     *
     * @return $this
     */

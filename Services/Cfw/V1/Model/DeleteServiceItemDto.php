@@ -20,8 +20,8 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * setId  服务组id
-    * serviceItemIds  服务组成员id列表
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItemIds  服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * setId  服务组id
-    * serviceItemIds  服务组成员id列表
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItemIds  服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * setId  服务组id
-    * serviceItemIds  服务组成员id列表
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItemIds  服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * setId  服务组id
-    * serviceItemIds  服务组成员id列表
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItemIds  服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * setId  服务组id
-    * serviceItemIds  服务组成员id列表
+    * setId  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceItemIds  服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  服务组id
+    *  服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string $setId 服务组id
+    * @param string $setId 服务组id，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceItemIds
-    *  服务组成员id列表
+    *  服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class DeleteServiceItemDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceItemIds
     *
-    * @param string[] $serviceItemIds 服务组成员id列表
+    * @param string[] $serviceItemIds 服务组成员id列表，服务组成员id可通过[查询服务成员列表接口](ListServiceItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

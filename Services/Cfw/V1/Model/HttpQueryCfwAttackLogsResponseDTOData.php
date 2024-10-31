@@ -20,9 +20,9 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  返回数量
+    * total  返回攻击数据总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  攻击日志记录列表
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  返回数量
+    * total  返回攻击数据总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  攻击日志记录列表
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  返回数量
+    * total  返回攻击数据总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  攻击日志记录列表
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  返回数量
+    * total  返回攻击数据总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  攻击日志记录列表
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  返回数量
+    * total  返回攻击数据总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  攻击日志记录列表
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
 
     /**
     * Gets total
-    *  返回数量
+    *  返回攻击数据总数
     *
     * @return int|null
     */
@@ -208,7 +208,7 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
     /**
     * Sets total
     *
-    * @param int|null $total 返回数量
+    * @param int|null $total 返回攻击数据总数
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
 
     /**
     * Gets records
-    *  记录
+    *  攻击日志记录列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCfwAttackLogsResponseDTODataRecords[]|null
     */
@@ -256,7 +256,7 @@ class HttpQueryCfwAttackLogsResponseDTOData implements ModelInterface, ArrayAcce
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCfwAttackLogsResponseDTODataRecords[]|null $records 记录
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCfwAttackLogsResponseDTODataRecords[]|null $records 攻击日志记录列表
     *
     * @return $this
     */

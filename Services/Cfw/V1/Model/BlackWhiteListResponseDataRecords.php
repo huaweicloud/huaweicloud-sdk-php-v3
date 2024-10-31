@@ -22,7 +22,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  IP地址类型0：ipv4,1:ipv6
+    * addressType  ip地址类型0：ipv4，1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
@@ -44,7 +44,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  IP地址类型0：ipv4,1:ipv6
+    * addressType  ip地址类型0：ipv4，1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
@@ -87,7 +87,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * and the value is the original name
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  IP地址类型0：ipv4,1:ipv6
+    * addressType  ip地址类型0：ipv4，1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
@@ -109,7 +109,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  IP地址类型0：ipv4,1:ipv6
+    * addressType  ip地址类型0：ipv4，1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
@@ -131,7 +131,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * listId  黑白名单列表id
     * direction  黑白地址方向0：源地址1：目的地址
-    * addressType  IP地址类型0：ipv4,1:ipv6
+    * addressType  ip地址类型0：ipv4，1:ipv6
     * address  ip地址
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * port  端口
@@ -288,7 +288,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  IP地址类型0：ipv4,1:ipv6
+    *  ip地址类型0：ipv4，1:ipv6
     *
     * @return int|null
     */
@@ -300,7 +300,7 @@ class BlackWhiteListResponseDataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType IP地址类型0：ipv4,1:ipv6
+    * @param int|null $addressType ip地址类型0：ipv4，1:ipv6
     *
     * @return $this
     */

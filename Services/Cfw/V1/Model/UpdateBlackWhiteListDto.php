@@ -21,9 +21,9 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6
+    * addressType  地址类型0：ipv4，1:ipv6
     * address  ip地址
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
     *
@@ -41,9 +41,9 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6
+    * addressType  地址类型0：ipv4，1:ipv6
     * address  ip地址
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
     *
@@ -82,9 +82,9 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6
+    * addressType  地址类型0：ipv4，1:ipv6
     * address  ip地址
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
     *
@@ -102,9 +102,9 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6
+    * addressType  地址类型0：ipv4，1:ipv6
     * address  ip地址
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
     *
@@ -122,9 +122,9 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * direction  地址方向0：源地址1：目的地址
-    * addressType  地址类型0：ipv4,1:ipv6
+    * addressType  地址类型0：ipv4，1:ipv6
     * address  ip地址
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     * port  端口
     * description  描述
     *
@@ -256,7 +256,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型0：ipv4,1:ipv6
+    *  地址类型0：ipv4，1:ipv6
     *
     * @return int|null
     */
@@ -268,7 +268,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0：ipv4,1:ipv6
+    * @param int|null $addressType 地址类型0：ipv4，1:ipv6
     *
     * @return $this
     */
@@ -304,7 +304,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    *  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     *
     * @return int|null
     */
@@ -316,7 +316,7 @@ class UpdateBlackWhiteListDto implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param int|null $protocol 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1
+    * @param int|null $protocol 协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1
     *
     * @return $this
     */

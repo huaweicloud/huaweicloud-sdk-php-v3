@@ -20,22 +20,22 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * captureSize  抓包大小
-    * createdDate  抓包创建时间
+    * captureSize  抓包大小,如500kb,500mb
+    * createdDate  抓包创建时间,如2024/08/31 10:17:30
     * destAddress  目的地址
-    * destAddressType  目的地址类型0 ipv4,1 ipv6
+    * destAddressType  目的地址类型0 ipv4，1 ipv6
     * destPort  目的端口
-    * duration  抓包时长
+    * duration  抓包时长，以分钟为单位
     * isDeleted  是否被删除，0否 1是
-    * maxPackets  最大抓包数
-    * modifiedDate  修改日期
+    * maxPackets  最大抓包数，以个为单位
+    * modifiedDate  修改日期,如2024/08/31 10:17:30
     * name  抓包任务名称
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * remainingDays  剩余保留天数
     * sourceAddress  源地址
-    * sourceAddressType  源地址类型0 ipv4,1 ipv6
+    * sourceAddressType  源地址类型0 ipv4，1 ipv6
     * sourcePort  源端口
-    * status  抓包任务状态
+    * status  抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     * taskId  抓包任务id
     *
     * @var string[]
@@ -62,22 +62,22 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * captureSize  抓包大小
-    * createdDate  抓包创建时间
+    * captureSize  抓包大小,如500kb,500mb
+    * createdDate  抓包创建时间,如2024/08/31 10:17:30
     * destAddress  目的地址
-    * destAddressType  目的地址类型0 ipv4,1 ipv6
+    * destAddressType  目的地址类型0 ipv4，1 ipv6
     * destPort  目的端口
-    * duration  抓包时长
+    * duration  抓包时长，以分钟为单位
     * isDeleted  是否被删除，0否 1是
-    * maxPackets  最大抓包数
-    * modifiedDate  修改日期
+    * maxPackets  最大抓包数，以个为单位
+    * modifiedDate  修改日期,如2024/08/31 10:17:30
     * name  抓包任务名称
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * remainingDays  剩余保留天数
     * sourceAddress  源地址
-    * sourceAddressType  源地址类型0 ipv4,1 ipv6
+    * sourceAddressType  源地址类型0 ipv4，1 ipv6
     * sourcePort  源端口
-    * status  抓包任务状态
+    * status  抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     * taskId  抓包任务id
     *
     * @var string[]
@@ -125,22 +125,22 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * captureSize  抓包大小
-    * createdDate  抓包创建时间
+    * captureSize  抓包大小,如500kb,500mb
+    * createdDate  抓包创建时间,如2024/08/31 10:17:30
     * destAddress  目的地址
-    * destAddressType  目的地址类型0 ipv4,1 ipv6
+    * destAddressType  目的地址类型0 ipv4，1 ipv6
     * destPort  目的端口
-    * duration  抓包时长
+    * duration  抓包时长，以分钟为单位
     * isDeleted  是否被删除，0否 1是
-    * maxPackets  最大抓包数
-    * modifiedDate  修改日期
+    * maxPackets  最大抓包数，以个为单位
+    * modifiedDate  修改日期,如2024/08/31 10:17:30
     * name  抓包任务名称
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * remainingDays  剩余保留天数
     * sourceAddress  源地址
-    * sourceAddressType  源地址类型0 ipv4,1 ipv6
+    * sourceAddressType  源地址类型0 ipv4，1 ipv6
     * sourcePort  源端口
-    * status  抓包任务状态
+    * status  抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     * taskId  抓包任务id
     *
     * @var string[]
@@ -167,22 +167,22 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * captureSize  抓包大小
-    * createdDate  抓包创建时间
+    * captureSize  抓包大小,如500kb,500mb
+    * createdDate  抓包创建时间,如2024/08/31 10:17:30
     * destAddress  目的地址
-    * destAddressType  目的地址类型0 ipv4,1 ipv6
+    * destAddressType  目的地址类型0 ipv4，1 ipv6
     * destPort  目的端口
-    * duration  抓包时长
+    * duration  抓包时长，以分钟为单位
     * isDeleted  是否被删除，0否 1是
-    * maxPackets  最大抓包数
-    * modifiedDate  修改日期
+    * maxPackets  最大抓包数，以个为单位
+    * modifiedDate  修改日期,如2024/08/31 10:17:30
     * name  抓包任务名称
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * remainingDays  剩余保留天数
     * sourceAddress  源地址
-    * sourceAddressType  源地址类型0 ipv4,1 ipv6
+    * sourceAddressType  源地址类型0 ipv4，1 ipv6
     * sourcePort  源端口
-    * status  抓包任务状态
+    * status  抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     * taskId  抓包任务id
     *
     * @var string[]
@@ -209,22 +209,22 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * captureSize  抓包大小
-    * createdDate  抓包创建时间
+    * captureSize  抓包大小,如500kb,500mb
+    * createdDate  抓包创建时间,如2024/08/31 10:17:30
     * destAddress  目的地址
-    * destAddressType  目的地址类型0 ipv4,1 ipv6
+    * destAddressType  目的地址类型0 ipv4，1 ipv6
     * destPort  目的端口
-    * duration  抓包时长
+    * duration  抓包时长，以分钟为单位
     * isDeleted  是否被删除，0否 1是
-    * maxPackets  最大抓包数
-    * modifiedDate  修改日期
+    * maxPackets  最大抓包数，以个为单位
+    * modifiedDate  修改日期,如2024/08/31 10:17:30
     * name  抓包任务名称
     * protocol  协议类型:TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1，手动类型不为空，自动类型为空
     * remainingDays  剩余保留天数
     * sourceAddress  源地址
-    * sourceAddressType  源地址类型0 ipv4,1 ipv6
+    * sourceAddressType  源地址类型0 ipv4，1 ipv6
     * sourcePort  源端口
-    * status  抓包任务状态
+    * status  抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     * taskId  抓包任务id
     *
     * @var string[]
@@ -350,7 +350,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets captureSize
-    *  抓包大小
+    *  抓包大小,如500kb,500mb
     *
     * @return string|null
     */
@@ -362,7 +362,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets captureSize
     *
-    * @param string|null $captureSize 抓包大小
+    * @param string|null $captureSize 抓包大小,如500kb,500mb
     *
     * @return $this
     */
@@ -374,7 +374,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdDate
-    *  抓包创建时间
+    *  抓包创建时间,如2024/08/31 10:17:30
     *
     * @return string|null
     */
@@ -386,7 +386,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets createdDate
     *
-    * @param string|null $createdDate 抓包创建时间
+    * @param string|null $createdDate 抓包创建时间,如2024/08/31 10:17:30
     *
     * @return $this
     */
@@ -422,7 +422,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets destAddressType
-    *  目的地址类型0 ipv4,1 ipv6
+    *  目的地址类型0 ipv4，1 ipv6
     *
     * @return int|null
     */
@@ -434,7 +434,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets destAddressType
     *
-    * @param int|null $destAddressType 目的地址类型0 ipv4,1 ipv6
+    * @param int|null $destAddressType 目的地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */
@@ -470,7 +470,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  抓包时长
+    *  抓包时长，以分钟为单位
     *
     * @return int|null
     */
@@ -482,7 +482,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int|null $duration 抓包时长
+    * @param int|null $duration 抓包时长，以分钟为单位
     *
     * @return $this
     */
@@ -518,7 +518,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPackets
-    *  最大抓包数
+    *  最大抓包数，以个为单位
     *
     * @return int|null
     */
@@ -530,7 +530,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets maxPackets
     *
-    * @param int|null $maxPackets 最大抓包数
+    * @param int|null $maxPackets 最大抓包数，以个为单位
     *
     * @return $this
     */
@@ -542,7 +542,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets modifiedDate
-    *  修改日期
+    *  修改日期,如2024/08/31 10:17:30
     *
     * @return string|null
     */
@@ -554,7 +554,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets modifiedDate
     *
-    * @param string|null $modifiedDate 修改日期
+    * @param string|null $modifiedDate 修改日期,如2024/08/31 10:17:30
     *
     * @return $this
     */
@@ -662,7 +662,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets sourceAddressType
-    *  源地址类型0 ipv4,1 ipv6
+    *  源地址类型0 ipv4，1 ipv6
     *
     * @return int|null
     */
@@ -674,7 +674,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets sourceAddressType
     *
-    * @param int|null $sourceAddressType 源地址类型0 ipv4,1 ipv6
+    * @param int|null $sourceAddressType 源地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */
@@ -710,7 +710,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  抓包任务状态
+    *  抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     *
     * @return int|null
     */
@@ -722,7 +722,7 @@ class CaptureTaskVO implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 抓包任务状态
+    * @param int|null $status 抓包任务状态，如成功（1），运行中（2），已截止（4），截止中（5）
     *
     * @return $this
     */

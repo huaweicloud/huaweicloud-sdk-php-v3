@@ -20,8 +20,8 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * erId  出方向关联ER实例id
-    * inspectionCidr  inspection cidr
+    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    * inspectionCidr  创建引流VPC时使用的网段
     * mode  东西向防火墙模式，填写er
     *
     * @var string[]
@@ -34,8 +34,8 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * erId  出方向关联ER实例id
-    * inspectionCidr  inspection cidr
+    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    * inspectionCidr  创建引流VPC时使用的网段
     * mode  东西向防火墙模式，填写er
     *
     * @var string[]
@@ -69,8 +69,8 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * erId  出方向关联ER实例id
-    * inspectionCidr  inspection cidr
+    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    * inspectionCidr  创建引流VPC时使用的网段
     * mode  东西向防火墙模式，填写er
     *
     * @var string[]
@@ -83,8 +83,8 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * erId  出方向关联ER实例id
-    * inspectionCidr  inspection cidr
+    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    * inspectionCidr  创建引流VPC时使用的网段
     * mode  东西向防火墙模式，填写er
     *
     * @var string[]
@@ -97,8 +97,8 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * erId  出方向关联ER实例id
-    * inspectionCidr  inspection cidr
+    * erId  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
+    * inspectionCidr  创建引流VPC时使用的网段
     * mode  东西向防火墙模式，填写er
     *
     * @var string[]
@@ -180,7 +180,10 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['erId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['erId'])) {
+        if ($this->container['erId'] === null) {
+            $invalidProperties[] = "'erId' can't be null";
+        }
+            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['erId'])) {
                 $invalidProperties[] = "invalid value for 'erId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
             }
         if ($this->container['inspectionCidr'] === null) {
@@ -205,9 +208,9 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets erId
-    *  出方向关联ER实例id
+    *  出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
     *
-    * @return string|null
+    * @return string
     */
     public function getErId()
     {
@@ -217,7 +220,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets erId
     *
-    * @param string|null $erId 出方向关联ER实例id
+    * @param string $erId 出方向关联ER ID,可通过ER服务查询企业路由器列表接口获得，返回值中instances.id即为erid（.表示各对象之间层级的区分）
     *
     * @return $this
     */
@@ -229,7 +232,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets inspectionCidr
-    *  inspection cidr
+    *  创建引流VPC时使用的网段
     *
     * @return string
     */
@@ -241,7 +244,7 @@ class CreateEastWestFirewallRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets inspectionCidr
     *
-    * @param string $inspectionCidr inspection cidr
+    * @param string $inspectionCidr 创建引流VPC时使用的网段
     *
     * @return $this
     */

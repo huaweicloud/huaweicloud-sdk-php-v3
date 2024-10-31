@@ -22,10 +22,10 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目id
+    * projectId  项目ID
     * records  域名信息列表
     * setId  域名组id
-    * total  总数
+    * total  域名总数
     *
     * @var string[]
     */
@@ -42,10 +42,10 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目id
+    * projectId  项目ID
     * records  域名信息列表
     * setId  域名组id
-    * total  总数
+    * total  域名总数
     *
     * @var string[]
     */
@@ -83,10 +83,10 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目id
+    * projectId  项目ID
     * records  域名信息列表
     * setId  域名组id
-    * total  总数
+    * total  域名总数
     *
     * @var string[]
     */
@@ -103,10 +103,10 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目id
+    * projectId  项目ID
     * records  域名信息列表
     * setId  域名组id
-    * total  总数
+    * total  域名总数
     *
     * @var string[]
     */
@@ -123,10 +123,10 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户项目id
+    * projectId  项目ID
     * records  域名信息列表
     * setId  域名组id
-    * total  总数
+    * total  域名总数
     *
     * @var string[]
     */
@@ -277,7 +277,7 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户项目id
+    *  项目ID
     *
     * @return string|null
     */
@@ -289,7 +289,7 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户项目id
+    * @param string|null $projectId 项目ID
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  域名总数
     *
     * @return int|null
     */
@@ -361,7 +361,7 @@ class ListDomainResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 域名总数
     *
     * @return $this
     */

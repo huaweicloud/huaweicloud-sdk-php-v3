@@ -23,20 +23,19 @@ class EipResource implements ModelInterface, ArrayAccess
     * id  弹性公网ID
     * publicIp  弹性公网IP
     * status  EIP防护状态，0表示防护中，1表示未防护
-    * publicIpv6  弹性公网IP,IPV6
-    * enterpriseProjectId  企业项目id
-    * deviceId  设备id
-    * deviceName  设备名称
-    * deviceOwner  设备拥有者
-    * associateInstanceType  关联实例类型
+    * publicIpv6  弹性公网IP,IPV6类型
+    * enterpriseProjectId  Eip所在账户企业项目id
+    * deviceId  EIP绑定设备（如ecs，nat）id
+    * deviceName  EIP绑定设备（如ecs，nat）名称
+    * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
+    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
-    * domainId  EIP所属用户
-    * owner  所属用户的名称
-    * fwDomainId  防火墙所属用户
+    * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @var string[]
     */
@@ -56,7 +55,6 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'string',
             'tags' => 'string',
             'domainId' => 'string',
-            'owner' => 'string',
             'fwDomainId' => 'string'
     ];
 
@@ -65,20 +63,19 @@ class EipResource implements ModelInterface, ArrayAccess
     * id  弹性公网ID
     * publicIp  弹性公网IP
     * status  EIP防护状态，0表示防护中，1表示未防护
-    * publicIpv6  弹性公网IP,IPV6
-    * enterpriseProjectId  企业项目id
-    * deviceId  设备id
-    * deviceName  设备名称
-    * deviceOwner  设备拥有者
-    * associateInstanceType  关联实例类型
+    * publicIpv6  弹性公网IP,IPV6类型
+    * enterpriseProjectId  Eip所在账户企业项目id
+    * deviceId  EIP绑定设备（如ecs，nat）id
+    * deviceName  EIP绑定设备（如ecs，nat）名称
+    * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
+    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
-    * domainId  EIP所属用户
-    * owner  所属用户的名称
-    * fwDomainId  防火墙所属用户
+    * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @var string[]
     */
@@ -98,7 +95,6 @@ class EipResource implements ModelInterface, ArrayAccess
         'objectId' => null,
         'tags' => null,
         'domainId' => null,
-        'owner' => null,
         'fwDomainId' => null
     ];
 
@@ -128,20 +124,19 @@ class EipResource implements ModelInterface, ArrayAccess
     * id  弹性公网ID
     * publicIp  弹性公网IP
     * status  EIP防护状态，0表示防护中，1表示未防护
-    * publicIpv6  弹性公网IP,IPV6
-    * enterpriseProjectId  企业项目id
-    * deviceId  设备id
-    * deviceName  设备名称
-    * deviceOwner  设备拥有者
-    * associateInstanceType  关联实例类型
+    * publicIpv6  弹性公网IP,IPV6类型
+    * enterpriseProjectId  Eip所在账户企业项目id
+    * deviceId  EIP绑定设备（如ecs，nat）id
+    * deviceName  EIP绑定设备（如ecs，nat）名称
+    * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
+    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
-    * domainId  EIP所属用户
-    * owner  所属用户的名称
-    * fwDomainId  防火墙所属用户
+    * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @var string[]
     */
@@ -161,7 +156,6 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'object_id',
             'tags' => 'tags',
             'domainId' => 'domain_id',
-            'owner' => 'owner',
             'fwDomainId' => 'fw_domain_id'
     ];
 
@@ -170,20 +164,19 @@ class EipResource implements ModelInterface, ArrayAccess
     * id  弹性公网ID
     * publicIp  弹性公网IP
     * status  EIP防护状态，0表示防护中，1表示未防护
-    * publicIpv6  弹性公网IP,IPV6
-    * enterpriseProjectId  企业项目id
-    * deviceId  设备id
-    * deviceName  设备名称
-    * deviceOwner  设备拥有者
-    * associateInstanceType  关联实例类型
+    * publicIpv6  弹性公网IP,IPV6类型
+    * enterpriseProjectId  Eip所在账户企业项目id
+    * deviceId  EIP绑定设备（如ecs，nat）id
+    * deviceName  EIP绑定设备（如ecs，nat）名称
+    * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
+    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
-    * domainId  EIP所属用户
-    * owner  所属用户的名称
-    * fwDomainId  防火墙所属用户
+    * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @var string[]
     */
@@ -203,7 +196,6 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'setObjectId',
             'tags' => 'setTags',
             'domainId' => 'setDomainId',
-            'owner' => 'setOwner',
             'fwDomainId' => 'setFwDomainId'
     ];
 
@@ -212,20 +204,19 @@ class EipResource implements ModelInterface, ArrayAccess
     * id  弹性公网ID
     * publicIp  弹性公网IP
     * status  EIP防护状态，0表示防护中，1表示未防护
-    * publicIpv6  弹性公网IP,IPV6
-    * enterpriseProjectId  企业项目id
-    * deviceId  设备id
-    * deviceName  设备名称
-    * deviceOwner  设备拥有者
-    * associateInstanceType  关联实例类型
+    * publicIpv6  弹性公网IP,IPV6类型
+    * enterpriseProjectId  Eip所在账户企业项目id
+    * deviceId  EIP绑定设备（如ecs，nat）id
+    * deviceName  EIP绑定设备（如ecs，nat）名称
+    * deviceOwner  EIP绑定设备（如ecs，nat）拥有者
+    * associateInstanceType  关联实例类型，包括：NATGW，ELB，PORT等。
     * fwInstanceName  防火墙名称
     * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
     * fwEnterpriseProjectId  Eip绑定的防火墙企业项目id
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     * tags  标签列表
-    * domainId  EIP所属用户
-    * owner  所属用户的名称
-    * fwDomainId  防火墙所属用户
+    * domainId  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * fwDomainId  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @var string[]
     */
@@ -245,7 +236,6 @@ class EipResource implements ModelInterface, ArrayAccess
             'objectId' => 'getObjectId',
             'tags' => 'getTags',
             'domainId' => 'getDomainId',
-            'owner' => 'getOwner',
             'fwDomainId' => 'getFwDomainId'
     ];
 
@@ -337,7 +327,6 @@ class EipResource implements ModelInterface, ArrayAccess
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['domainId'] = isset($data['domainId']) ? $data['domainId'] : null;
-        $this->container['owner'] = isset($data['owner']) ? $data['owner'] : null;
         $this->container['fwDomainId'] = isset($data['fwDomainId']) ? $data['fwDomainId'] : null;
     }
 
@@ -445,7 +434,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpv6
-    *  弹性公网IP,IPV6
+    *  弹性公网IP,IPV6类型
     *
     * @return string|null
     */
@@ -457,7 +446,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpv6
     *
-    * @param string|null $publicIpv6 弹性公网IP,IPV6
+    * @param string|null $publicIpv6 弹性公网IP,IPV6类型
     *
     * @return $this
     */
@@ -469,7 +458,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id
+    *  Eip所在账户企业项目id
     *
     * @return string|null
     */
@@ -481,7 +470,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id
+    * @param string|null $enterpriseProjectId Eip所在账户企业项目id
     *
     * @return $this
     */
@@ -493,7 +482,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceId
-    *  设备id
+    *  EIP绑定设备（如ecs，nat）id
     *
     * @return string|null
     */
@@ -505,7 +494,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets deviceId
     *
-    * @param string|null $deviceId 设备id
+    * @param string|null $deviceId EIP绑定设备（如ecs，nat）id
     *
     * @return $this
     */
@@ -517,7 +506,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceName
-    *  设备名称
+    *  EIP绑定设备（如ecs，nat）名称
     *
     * @return string|null
     */
@@ -529,7 +518,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets deviceName
     *
-    * @param string|null $deviceName 设备名称
+    * @param string|null $deviceName EIP绑定设备（如ecs，nat）名称
     *
     * @return $this
     */
@@ -541,7 +530,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets deviceOwner
-    *  设备拥有者
+    *  EIP绑定设备（如ecs，nat）拥有者
     *
     * @return string|null
     */
@@ -553,7 +542,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets deviceOwner
     *
-    * @param string|null $deviceOwner 设备拥有者
+    * @param string|null $deviceOwner EIP绑定设备（如ecs，nat）拥有者
     *
     * @return $this
     */
@@ -565,7 +554,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets associateInstanceType
-    *  关联实例类型
+    *  关联实例类型，包括：NATGW，ELB，PORT等。
     *
     * @return string|null
     */
@@ -577,7 +566,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets associateInstanceType
     *
-    * @param string|null $associateInstanceType 关联实例类型
+    * @param string|null $associateInstanceType 关联实例类型，包括：NATGW，ELB，PORT等。
     *
     * @return $this
     */
@@ -661,7 +650,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -673,7 +662,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -709,7 +698,7 @@ class EipResource implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainId
-    *  EIP所属用户
+    *  EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @return string|null
     */
@@ -721,7 +710,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets domainId
     *
-    * @param string|null $domainId EIP所属用户
+    * @param string|null $domainId EIP所属用户id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @return $this
     */
@@ -732,32 +721,8 @@ class EipResource implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets owner
-    *  所属用户的名称
-    *
-    * @return string|null
-    */
-    public function getOwner()
-    {
-        return $this->container['owner'];
-    }
-
-    /**
-    * Sets owner
-    *
-    * @param string|null $owner 所属用户的名称
-    *
-    * @return $this
-    */
-    public function setOwner($owner)
-    {
-        $this->container['owner'] = $owner;
-        return $this;
-    }
-
-    /**
     * Gets fwDomainId
-    *  防火墙所属用户
+    *  防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @return string|null
     */
@@ -769,7 +734,7 @@ class EipResource implements ModelInterface, ArrayAccess
     /**
     * Sets fwDomainId
     *
-    * @param string|null $fwDomainId 防火墙所属用户
+    * @param string|null $fwDomainId 防火墙所属用户，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @return $this
     */

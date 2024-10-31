@@ -20,18 +20,18 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息
+    * addressSetId  关联IP地址组ID
     * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
+    * domainAddressName  域名地址名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
     * domainSetId  域名组id
     * domainSetName  域名组名称
     * ipAddress  IP地址列表
-    * addressGroup  地址组列表
+    * addressGroup  地址组id列表
     * addressGroupNames  地址组名称列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
@@ -56,18 +56,18 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息
+    * addressSetId  关联IP地址组ID
     * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
+    * domainAddressName  域名地址名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
     * domainSetId  域名组id
     * domainSetName  域名组名称
     * ipAddress  IP地址列表
-    * addressGroup  地址组列表
+    * addressGroup  地址组id列表
     * addressGroupNames  地址组名称列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
@@ -113,18 +113,18 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息
+    * addressSetId  关联IP地址组ID
     * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
+    * domainAddressName  域名地址名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
     * domainSetId  域名组id
     * domainSetName  域名组名称
     * ipAddress  IP地址列表
-    * addressGroup  地址组列表
+    * addressGroup  地址组id列表
     * addressGroupNames  地址组名称列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
@@ -149,18 +149,18 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息
+    * addressSetId  关联IP地址组ID
     * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
+    * domainAddressName  域名地址名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
     * domainSetId  域名组id
     * domainSetName  域名组名称
     * ipAddress  IP地址列表
-    * addressGroup  地址组列表
+    * addressGroup  地址组id列表
     * addressGroupNames  地址组名称列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
@@ -185,18 +185,18 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * type  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息
+    * addressSetId  关联IP地址组ID
     * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
+    * domainAddressName  域名地址名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
     * domainSetId  域名组id
     * domainSetName  域名组名称
     * ipAddress  IP地址列表
-    * addressGroup  地址组列表
+    * addressGroup  地址组id列表
     * addressGroupNames  地址组名称列表
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
@@ -320,7 +320,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
+    *  地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
     *
     * @return int
     */
@@ -332,7 +332,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type 源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
+    * @param int $type 地址类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-应用型。
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  源类型0 ipv4,1 ipv6
+    *  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 源类型0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  源IP，手动类型不能为空，自动及domain类型为空
+    *  IP地址信息
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 源IP，手动类型不能为空，自动及domain类型为空
+    * @param string|null $address IP地址信息
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetId
-    *  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    *  关联IP地址组ID
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetId
     *
-    * @param string|null $addressSetId 关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * @param string|null $addressSetId 关联IP地址组ID
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainAddressName
-    *  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    *  域名地址名称
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets domainAddressName
     *
-    * @param string|null $domainAddressName 域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * @param string|null $domainAddressName 域名地址名称
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionListJson
-    *  规则region列表json值
+    *  规则地域列表json值
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regionListJson
     *
-    * @param string|null $regionListJson 规则region列表json值
+    * @param string|null $regionListJson 规则地域列表json值
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionList
-    *  规则region列表
+    *  规则地域列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null
     */
@@ -500,7 +500,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets regionList
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList 规则region列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList 规则地域列表
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressGroup
-    *  地址组列表
+    *  地址组id列表
     *
     * @return string[]|null
     */
@@ -596,7 +596,7 @@ class RuleAddressDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets addressGroup
     *
-    * @param string[]|null $addressGroup 地址组列表
+    * @param string[]|null $addressGroup 地址组id列表
     *
     * @return $this
     */

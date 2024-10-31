@@ -20,7 +20,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serverIp  DNS服务器IP
+    * serverIp  DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * isApplied  是否应用，0否 1是
     *
@@ -34,7 +34,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serverIp  DNS服务器IP
+    * serverIp  DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * isApplied  是否应用，0否 1是
     *
@@ -69,7 +69,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serverIp  DNS服务器IP
+    * serverIp  DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * isApplied  是否应用，0否 1是
     *
@@ -83,7 +83,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serverIp  DNS服务器IP
+    * serverIp  DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * isApplied  是否应用，0否 1是
     *
@@ -97,7 +97,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serverIp  DNS服务器IP
+    * serverIp  DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     * isCustomized  是否是用户自定义的dns服务器，0否 1是
     * isApplied  是否应用，0否 1是
     *
@@ -180,6 +180,15 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['serverIp'] === null) {
+            $invalidProperties[] = "'serverIp' can't be null";
+        }
+        if ($this->container['isCustomized'] === null) {
+            $invalidProperties[] = "'isCustomized' can't be null";
+        }
+        if ($this->container['isApplied'] === null) {
+            $invalidProperties[] = "'isApplied' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,9 +205,9 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
 
     /**
     * Gets serverIp
-    *  DNS服务器IP
+    *  DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     *
-    * @return string|null
+    * @return string
     */
     public function getServerIp()
     {
@@ -208,7 +217,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     /**
     * Sets serverIp
     *
-    * @param string|null $serverIp DNS服务器IP
+    * @param string $serverIp DNS服务器IP，可通过[查询dns服务器列表接口](ListDnsServers.xml)查询获得，通过返回值中的data.server_ip（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -222,7 +231,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     * Gets isCustomized
     *  是否是用户自定义的dns服务器，0否 1是
     *
-    * @return int|null
+    * @return int
     */
     public function getIsCustomized()
     {
@@ -232,7 +241,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     /**
     * Sets isCustomized
     *
-    * @param int|null $isCustomized 是否是用户自定义的dns服务器，0否 1是
+    * @param int $isCustomized 是否是用户自定义的dns服务器，0否 1是
     *
     * @return $this
     */
@@ -246,7 +255,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     * Gets isApplied
     *  是否应用，0否 1是
     *
-    * @return int|null
+    * @return int
     */
     public function getIsApplied()
     {
@@ -256,7 +265,7 @@ class UpdateDnsServersRequestBodyDnsServer implements ModelInterface, ArrayAcces
     /**
     * Sets isApplied
     *
-    * @param int|null $isApplied 是否应用，0否 1是
+    * @param int $isApplied 是否应用，0否 1是
     *
     * @return $this
     */

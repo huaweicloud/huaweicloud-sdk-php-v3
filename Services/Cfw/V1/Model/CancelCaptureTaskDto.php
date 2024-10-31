@@ -20,7 +20,7 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskId  抓包任务id
+    * taskId  抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskId  抓包任务id
+    * taskId  抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskId  抓包任务id
+    * taskId  抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskId  抓包任务id
+    * taskId  抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskId  抓包任务id
+    * taskId  抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -158,6 +158,9 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+        if ($this->container['taskId'] === null) {
+            $invalidProperties[] = "'taskId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -174,9 +177,9 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskId
-    *  抓包任务id
+    *  抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
-    * @return string|null
+    * @return string
     */
     public function getTaskId()
     {
@@ -186,7 +189,7 @@ class CancelCaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Sets taskId
     *
-    * @param string|null $taskId 抓包任务id
+    * @param string $taskId 抓包任务id，可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

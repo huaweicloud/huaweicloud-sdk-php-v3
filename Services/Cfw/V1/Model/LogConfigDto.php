@@ -20,15 +20,15 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * fwInstanceId  防火墙id
-    * ltsEnable  是否开启LTS
-    * ltsLogGroupId  LTS日志分组id
-    * ltsAttackLogStreamId  攻击日志流id
-    * ltsAttackLogStreamEnable  是否开启攻击日志流
-    * ltsAccessLogStreamId  访问控制日志流id
-    * ltsAccessLogStreamEnable  是否开启访问控制流
-    * ltsFlowLogStreamId  流量日志id
-    * ltsFlowLogStreamEnable  是否开启流量日志
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ltsEnable  是否开启LTS，1表示是，0表示不是
+    * ltsLogGroupId  LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamId  攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamEnable  是否开启攻击日志流，1表示是，0表示不是
+    * ltsAccessLogStreamId  访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAccessLogStreamEnable  是否开启访问控制流，1表示是，0表示不是
+    * ltsFlowLogStreamId  流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsFlowLogStreamEnable  是否开启流量日志，1表示是，0表示不是
     *
     * @var string[]
     */
@@ -46,15 +46,15 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * fwInstanceId  防火墙id
-    * ltsEnable  是否开启LTS
-    * ltsLogGroupId  LTS日志分组id
-    * ltsAttackLogStreamId  攻击日志流id
-    * ltsAttackLogStreamEnable  是否开启攻击日志流
-    * ltsAccessLogStreamId  访问控制日志流id
-    * ltsAccessLogStreamEnable  是否开启访问控制流
-    * ltsFlowLogStreamId  流量日志id
-    * ltsFlowLogStreamEnable  是否开启流量日志
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ltsEnable  是否开启LTS，1表示是，0表示不是
+    * ltsLogGroupId  LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamId  攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamEnable  是否开启攻击日志流，1表示是，0表示不是
+    * ltsAccessLogStreamId  访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAccessLogStreamEnable  是否开启访问控制流，1表示是，0表示不是
+    * ltsFlowLogStreamId  流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsFlowLogStreamEnable  是否开启流量日志，1表示是，0表示不是
     *
     * @var string[]
     */
@@ -93,15 +93,15 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * fwInstanceId  防火墙id
-    * ltsEnable  是否开启LTS
-    * ltsLogGroupId  LTS日志分组id
-    * ltsAttackLogStreamId  攻击日志流id
-    * ltsAttackLogStreamEnable  是否开启攻击日志流
-    * ltsAccessLogStreamId  访问控制日志流id
-    * ltsAccessLogStreamEnable  是否开启访问控制流
-    * ltsFlowLogStreamId  流量日志id
-    * ltsFlowLogStreamEnable  是否开启流量日志
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ltsEnable  是否开启LTS，1表示是，0表示不是
+    * ltsLogGroupId  LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamId  攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamEnable  是否开启攻击日志流，1表示是，0表示不是
+    * ltsAccessLogStreamId  访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAccessLogStreamEnable  是否开启访问控制流，1表示是，0表示不是
+    * ltsFlowLogStreamId  流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsFlowLogStreamEnable  是否开启流量日志，1表示是，0表示不是
     *
     * @var string[]
     */
@@ -119,15 +119,15 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * fwInstanceId  防火墙id
-    * ltsEnable  是否开启LTS
-    * ltsLogGroupId  LTS日志分组id
-    * ltsAttackLogStreamId  攻击日志流id
-    * ltsAttackLogStreamEnable  是否开启攻击日志流
-    * ltsAccessLogStreamId  访问控制日志流id
-    * ltsAccessLogStreamEnable  是否开启访问控制流
-    * ltsFlowLogStreamId  流量日志id
-    * ltsFlowLogStreamEnable  是否开启流量日志
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ltsEnable  是否开启LTS，1表示是，0表示不是
+    * ltsLogGroupId  LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamId  攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamEnable  是否开启攻击日志流，1表示是，0表示不是
+    * ltsAccessLogStreamId  访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAccessLogStreamEnable  是否开启访问控制流，1表示是，0表示不是
+    * ltsFlowLogStreamId  流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsFlowLogStreamEnable  是否开启流量日志，1表示是，0表示不是
     *
     * @var string[]
     */
@@ -145,15 +145,15 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * fwInstanceId  防火墙id
-    * ltsEnable  是否开启LTS
-    * ltsLogGroupId  LTS日志分组id
-    * ltsAttackLogStreamId  攻击日志流id
-    * ltsAttackLogStreamEnable  是否开启攻击日志流
-    * ltsAccessLogStreamId  访问控制日志流id
-    * ltsAccessLogStreamEnable  是否开启访问控制流
-    * ltsFlowLogStreamId  流量日志id
-    * ltsFlowLogStreamEnable  是否开启流量日志
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
+    * ltsEnable  是否开启LTS，1表示是，0表示不是
+    * ltsLogGroupId  LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamId  攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAttackLogStreamEnable  是否开启攻击日志流，1表示是，0表示不是
+    * ltsAccessLogStreamId  访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsAccessLogStreamEnable  是否开启访问控制流，1表示是，0表示不是
+    * ltsFlowLogStreamId  流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
+    * ltsFlowLogStreamEnable  是否开启流量日志，1表示是，0表示不是
     *
     * @var string[]
     */
@@ -255,15 +255,6 @@ class LogConfigDto implements ModelInterface, ArrayAccess
         if ($this->container['ltsLogGroupId'] === null) {
             $invalidProperties[] = "'ltsLogGroupId' can't be null";
         }
-        if ($this->container['ltsAttackLogStreamEnable'] === null) {
-            $invalidProperties[] = "'ltsAttackLogStreamEnable' can't be null";
-        }
-        if ($this->container['ltsAccessLogStreamEnable'] === null) {
-            $invalidProperties[] = "'ltsAccessLogStreamEnable' can't be null";
-        }
-        if ($this->container['ltsFlowLogStreamEnable'] === null) {
-            $invalidProperties[] = "'ltsFlowLogStreamEnable' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -280,7 +271,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙id
+    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string
     */
@@ -292,7 +283,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙id
+    * @param string $fwInstanceId 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */
@@ -304,7 +295,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsEnable
-    *  是否开启LTS
+    *  是否开启LTS，1表示是，0表示不是
     *
     * @return int
     */
@@ -316,7 +307,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsEnable
     *
-    * @param int $ltsEnable 是否开启LTS
+    * @param int $ltsEnable 是否开启LTS，1表示是，0表示不是
     *
     * @return $this
     */
@@ -328,7 +319,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsLogGroupId
-    *  LTS日志分组id
+    *  LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
     *
     * @return string
     */
@@ -340,7 +331,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsLogGroupId
     *
-    * @param string $ltsLogGroupId LTS日志分组id
+    * @param string $ltsLogGroupId LTS日志分组id,可通过查询LTS（云日志服务）下查询账号下所有日志组接口获得，通过返回值中的log_groups.log_group_id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -352,7 +343,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsAttackLogStreamId
-    *  攻击日志流id
+    *  攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -364,7 +355,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAttackLogStreamId
     *
-    * @param string|null $ltsAttackLogStreamId 攻击日志流id
+    * @param string|null $ltsAttackLogStreamId 攻击日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -376,9 +367,9 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsAttackLogStreamEnable
-    *  是否开启攻击日志流
+    *  是否开启攻击日志流，1表示是，0表示不是
     *
-    * @return int
+    * @return int|null
     */
     public function getLtsAttackLogStreamEnable()
     {
@@ -388,7 +379,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAttackLogStreamEnable
     *
-    * @param int $ltsAttackLogStreamEnable 是否开启攻击日志流
+    * @param int|null $ltsAttackLogStreamEnable 是否开启攻击日志流，1表示是，0表示不是
     *
     * @return $this
     */
@@ -400,7 +391,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsAccessLogStreamId
-    *  访问控制日志流id
+    *  访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -412,7 +403,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAccessLogStreamId
     *
-    * @param string|null $ltsAccessLogStreamId 访问控制日志流id
+    * @param string|null $ltsAccessLogStreamId 访问控制日志流id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -424,9 +415,9 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsAccessLogStreamEnable
-    *  是否开启访问控制流
+    *  是否开启访问控制流，1表示是，0表示不是
     *
-    * @return int
+    * @return int|null
     */
     public function getLtsAccessLogStreamEnable()
     {
@@ -436,7 +427,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsAccessLogStreamEnable
     *
-    * @param int $ltsAccessLogStreamEnable 是否开启访问控制流
+    * @param int|null $ltsAccessLogStreamEnable 是否开启访问控制流，1表示是，0表示不是
     *
     * @return $this
     */
@@ -448,7 +439,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsFlowLogStreamId
-    *  流量日志id
+    *  流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -460,7 +451,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsFlowLogStreamId
     *
-    * @param string|null $ltsFlowLogStreamId 流量日志id
+    * @param string|null $ltsFlowLogStreamId 流量日志id,可通过查询LTS（云日志服务）下查询指定日志组下的所有日志流接口获得，通过返回值中的log_streams.log_stream_id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -472,9 +463,9 @@ class LogConfigDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets ltsFlowLogStreamEnable
-    *  是否开启流量日志
+    *  是否开启流量日志，1表示是，0表示不是
     *
-    * @return int
+    * @return int|null
     */
     public function getLtsFlowLogStreamEnable()
     {
@@ -484,7 +475,7 @@ class LogConfigDto implements ModelInterface, ArrayAccess
     /**
     * Sets ltsFlowLogStreamEnable
     *
-    * @param int $ltsFlowLogStreamEnable 是否开启流量日志
+    * @param int|null $ltsFlowLogStreamEnable 是否开启流量日志，1表示是，0表示不是
     *
     * @return $this
     */

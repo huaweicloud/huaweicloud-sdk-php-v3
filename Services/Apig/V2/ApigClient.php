@@ -4265,6 +4265,9 @@ class ApigClient extends Client
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
         }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -4347,6 +4350,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -6308,6 +6314,9 @@ class ApigClient extends Client
         if ($localVarParams['reqUri'] !== null) {
             $queryParams['req_uri'] = $localVarParams['reqUri'];
         }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -6400,6 +6409,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['reqUri'] !== null) {
             $queryParams['req_uri'] = $localVarParams['reqUri'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -11400,6 +11412,9 @@ class ApigClient extends Client
         if ($localVarParams['apiName'] !== null) {
             $queryParams['api_name'] = $localVarParams['apiName'];
         }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -11482,6 +11497,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['apiName'] !== null) {
             $queryParams['api_name'] = $localVarParams['apiName'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -11586,6 +11604,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['returnDataMode'] !== null) {
             $queryParams['return_data_mode'] = $localVarParams['returnDataMode'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -12299,6 +12320,9 @@ class ApigClient extends Client
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
         }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -12381,6 +12405,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['groupId'] !== null) {
             $queryParams['group_id'] = $localVarParams['groupId'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -12598,6 +12625,9 @@ class ApigClient extends Client
         if ($localVarParams['envId'] !== null) {
             $queryParams['env_id'] = $localVarParams['envId'];
         }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
+        }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
         }
@@ -12680,6 +12710,9 @@ class ApigClient extends Client
         }
         if ($localVarParams['apiName'] !== null) {
             $queryParams['api_name'] = $localVarParams['apiName'];
+        }
+        if ($localVarParams['tags'] !== null) {
+            $queryParams['tags'] = $localVarParams['tags'];
         }
         if ($localVarParams['instanceId'] !== null) {
             $pathParams['instance_id'] = $localVarParams['instanceId'];
@@ -14674,7 +14707,7 @@ class ApigClient extends Client
     /**
      * 更新VPC通道后端服务器组
      *
-     * 更新指定VPC通道后端服务器组
+     * 更新指定VPC通道后端服务器组。当负载通道为nacos微服务类型时，不支持修改服务器组权重。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

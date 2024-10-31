@@ -23,7 +23,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * projectId  租户项目ID
-    * total  总数
+    * total  防火墙总数量
     * records  查询防火墙列表记录
     *
     * @var string[]
@@ -41,7 +41,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * projectId  租户项目ID
-    * total  总数
+    * total  防火墙总数量
     * records  查询防火墙列表记录
     *
     * @var string[]
@@ -80,7 +80,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * projectId  租户项目ID
-    * total  总数
+    * total  防火墙总数量
     * records  查询防火墙列表记录
     *
     * @var string[]
@@ -98,7 +98,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * projectId  租户项目ID
-    * total  总数
+    * total  防火墙总数量
     * records  查询防火墙列表记录
     *
     * @var string[]
@@ -116,7 +116,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * projectId  租户项目ID
-    * total  总数
+    * total  防火墙总数量
     * records  查询防火墙列表记录
     *
     * @var string[]
@@ -290,7 +290,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
 
     /**
     * Gets total
-    *  总数
+    *  防火墙总数量
     *
     * @return int|null
     */
@@ -302,7 +302,7 @@ class HttpFirewallInstanceListResponseData implements ModelInterface, ArrayAcces
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 防火墙总数量
     *
     * @return $this
     */

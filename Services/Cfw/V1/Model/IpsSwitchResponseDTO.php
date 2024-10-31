@@ -20,9 +20,9 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ips开关id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStatus  虚拟补丁状态
+    * id  ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
+    * basicDefenseStatus  基础防御状态，0表示关闭，1表示开启
+    * virtualPatchesStatus  虚拟补丁状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ips开关id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStatus  虚拟补丁状态
+    * id  ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
+    * basicDefenseStatus  基础防御状态，0表示关闭，1表示开启
+    * virtualPatchesStatus  虚拟补丁状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ips开关id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStatus  虚拟补丁状态
+    * id  ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
+    * basicDefenseStatus  基础防御状态，0表示关闭，1表示开启
+    * virtualPatchesStatus  虚拟补丁状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ips开关id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStatus  虚拟补丁状态
+    * id  ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
+    * basicDefenseStatus  基础防御状态，0表示关闭，1表示开启
+    * virtualPatchesStatus  虚拟补丁状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ips开关id
-    * basicDefenseStatus  基础防御状态
-    * virtualPatchesStatus  虚拟补丁状态
+    * id  ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
+    * basicDefenseStatus  基础防御状态，0表示关闭，1表示开启
+    * virtualPatchesStatus  虚拟补丁状态，0表示关闭，1表示开启
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ips开关id
+    *  ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ips开关id
+    * @param string|null $id ips开关id，此处为互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets basicDefenseStatus
-    *  基础防御状态
+    *  基础防御状态，0表示关闭，1表示开启
     *
     * @return int|null
     */
@@ -232,7 +232,7 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets basicDefenseStatus
     *
-    * @param int|null $basicDefenseStatus 基础防御状态
+    * @param int|null $basicDefenseStatus 基础防御状态，0表示关闭，1表示开启
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets virtualPatchesStatus
-    *  虚拟补丁状态
+    *  虚拟补丁状态，0表示关闭，1表示开启
     *
     * @return int|null
     */
@@ -256,7 +256,7 @@ class IpsSwitchResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets virtualPatchesStatus
     *
-    * @param int|null $virtualPatchesStatus 虚拟补丁状态
+    * @param int|null $virtualPatchesStatus 虚拟补丁状态，0表示关闭，1表示开启
     *
     * @return $this
     */

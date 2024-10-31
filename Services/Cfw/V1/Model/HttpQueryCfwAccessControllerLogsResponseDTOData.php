@@ -20,9 +20,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  返回数量
+    * total  查询访问控制日志记录总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  查询访问控制日志记录
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  返回数量
+    * total  查询访问控制日志记录总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  查询访问控制日志记录
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  返回数量
+    * total  查询访问控制日志记录总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  查询访问控制日志记录
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  返回数量
+    * total  查询访问控制日志记录总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  查询访问控制日志记录
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  返回数量
+    * total  查询访问控制日志记录总数
     * limit  每页显示个数，范围为1-1024
-    * records  记录
+    * records  查询访问控制日志记录
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
 
     /**
     * Gets total
-    *  返回数量
+    *  查询访问控制日志记录总数
     *
     * @return int|null
     */
@@ -208,7 +208,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
     /**
     * Sets total
     *
-    * @param int|null $total 返回数量
+    * @param int|null $total 查询访问控制日志记录总数
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
 
     /**
     * Gets records
-    *  记录
+    *  查询访问控制日志记录
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCfwAccessControllerLogsResponseDTODataRecords[]|null
     */
@@ -256,7 +256,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTOData implements ModelInterface,
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCfwAccessControllerLogsResponseDTODataRecords[]|null $records 记录
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCfwAccessControllerLogsResponseDTODataRecords[]|null $records 查询访问控制日志记录
     *
     * @return $this
     */

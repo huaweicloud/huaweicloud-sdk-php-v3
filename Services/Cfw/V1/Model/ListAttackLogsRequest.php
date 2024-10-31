@@ -20,7 +20,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  租户项目id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
@@ -28,18 +28,18 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * dstIp  目的IP
     * dstPort  目的端口号
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
@@ -86,7 +86,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  租户项目id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
@@ -94,18 +94,18 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * dstIp  目的IP
     * dstPort  目的端口号
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
@@ -173,7 +173,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  租户项目id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
@@ -181,18 +181,18 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * dstIp  目的IP
     * dstPort  目的端口号
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
@@ -239,7 +239,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  租户项目id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
@@ -247,18 +247,18 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * dstIp  目的IP
     * dstPort  目的端口号
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
@@ -305,7 +305,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  租户项目id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * srcIp  源IP
@@ -313,18 +313,18 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     * dstIp  目的IP
     * dstPort  目的端口号
     * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * logId  文档ID,第一页为空，其他页不为空，其他页可取上一次查询最后一条数据的log_id
     * nextDate  下个日期，当是第一页时为空，不是第一页时不为空，其他页可取上一次查询最后一条数据的event_time
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于0，首页时为空，非首页时不为空
     * limit  每页显示个数，范围为1-1024
-    * fwInstanceId  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * fwInstanceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     * action  动作包含permit，deny
     * direction  方向，包含in2out，out2in
     * attackType  入侵事件类型
     * attackRule  入侵事件规则
     * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
-    * enterpriseProjectId  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     * dstHost  目标主机
     * logType  日志类型包括：internet，vpc，nat
     * attackRuleId  入侵事件id
@@ -534,7 +534,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户项目id
+    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string
     */
@@ -546,7 +546,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 租户项目id
+    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -726,7 +726,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets app
-    *  应用协议
+    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string|null
     */
@@ -738,7 +738,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets app
     *
-    * @param string|null $app 应用协议
+    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */
@@ -846,7 +846,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets fwInstanceId
-    *  防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string
     */
@@ -858,7 +858,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets fwInstanceId
     *
-    * @param string $fwInstanceId 防火墙实例id，创建云防火墙后用于标志防火墙由系统自动生成的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)。
+    * @param string $fwInstanceId 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */
@@ -990,7 +990,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目id，用户支持企业项目后，由企业项目生成的id。
+    *  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @return string|null
     */
@@ -1002,7 +1002,7 @@ class ListAttackLogsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id，用户支持企业项目后，由企业项目生成的id。
+    * @param string|null $enterpriseProjectId 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @return $this
     */

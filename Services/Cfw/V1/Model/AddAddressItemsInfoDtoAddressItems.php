@@ -20,15 +20,13 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  地址名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * address  地址组ip信息
+    * addressType  地址类型0 ipv4，1 ipv6
+    * address  ip
     * description  地址组成员描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string',
             'addressType' => 'int',
             'address' => 'string',
             'description' => 'string'
@@ -36,15 +34,13 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  地址名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * address  地址组ip信息
+    * addressType  地址类型0 ipv4，1 ipv6
+    * address  ip
     * description  地址组成员描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null,
         'addressType' => null,
         'address' => null,
         'description' => null
@@ -73,15 +69,13 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  地址名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * address  地址组ip信息
+    * addressType  地址类型0 ipv4，1 ipv6
+    * address  ip
     * description  地址组成员描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name',
             'addressType' => 'address_type',
             'address' => 'address',
             'description' => 'description'
@@ -89,15 +83,13 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  地址名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * address  地址组ip信息
+    * addressType  地址类型0 ipv4，1 ipv6
+    * address  ip
     * description  地址组成员描述
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName',
             'addressType' => 'setAddressType',
             'address' => 'setAddress',
             'description' => 'setDescription'
@@ -105,15 +97,13 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  地址名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * address  地址组ip信息
+    * addressType  地址类型0 ipv4，1 ipv6
+    * address  ip
     * description  地址组成员描述
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName',
             'addressType' => 'getAddressType',
             'address' => 'getAddress',
             'description' => 'getDescription'
@@ -177,7 +167,6 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
@@ -191,8 +180,8 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
+        if ($this->container['address'] === null) {
+            $invalidProperties[] = "'address' can't be null";
         }
         return $invalidProperties;
     }
@@ -209,32 +198,8 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets name
-    *  地址名称
-    *
-    * @return string
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string $name 地址名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
     * Gets addressType
-    *  地址类型0 ipv4,1 ipv6
+    *  地址类型0 ipv4，1 ipv6
     *
     * @return int|null
     */
@@ -246,7 +211,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */
@@ -258,9 +223,9 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  地址组ip信息
+    *  ip
     *
-    * @return string|null
+    * @return string
     */
     public function getAddress()
     {
@@ -270,7 +235,7 @@ class AddAddressItemsInfoDtoAddressItems implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 地址组ip信息
+    * @param string $address ip
     *
     * @return $this
     */

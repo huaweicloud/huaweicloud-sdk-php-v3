@@ -20,9 +20,9 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  键
-    * value  值
-    * updateTime  更新时间
+    * key  标签键
+    * value  标签值
+    * updateTime  标签更新时间
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  键
-    * value  值
-    * updateTime  更新时间
+    * key  标签键
+    * value  标签值
+    * updateTime  标签更新时间
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  键
-    * value  值
-    * updateTime  更新时间
+    * key  标签键
+    * value  标签值
+    * updateTime  标签更新时间
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  键
-    * value  值
-    * updateTime  更新时间
+    * key  标签键
+    * value  标签值
+    * updateTime  标签更新时间
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  键
-    * value  值
-    * updateTime  更新时间
+    * key  标签键
+    * value  标签值
+    * updateTime  标签更新时间
     *
     * @var string[]
     */
@@ -196,7 +196,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  键
+    *  标签键
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string|null $key 键
+    * @param string|null $key 标签键
     *
     * @return $this
     */
@@ -220,7 +220,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  值
+    *  标签值
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string|null $value 值
+    * @param string|null $value 标签值
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets updateTime
-    *  更新时间
+    *  标签更新时间
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets updateTime
     *
-    * @param string|null $updateTime 更新时间
+    * @param string|null $updateTime 标签更新时间
     *
     * @return $this
     */

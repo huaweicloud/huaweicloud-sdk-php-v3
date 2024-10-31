@@ -275,10 +275,13 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
             if (!is_null($this->container['verificationCode']) && (mb_strlen($this->container['verificationCode']) < 1)) {
                 $invalidProperties[] = "invalid value for 'verificationCode', the character length must be bigger than or equal to 1.";
             }
-            if (!is_null($this->container['domainArea']) && (mb_strlen($this->container['domainArea']) > 2)) {
+        if ($this->container['domainArea'] === null) {
+            $invalidProperties[] = "'domainArea' can't be null";
+        }
+            if ((mb_strlen($this->container['domainArea']) > 2)) {
                 $invalidProperties[] = "invalid value for 'domainArea', the character length must be smaller than or equal to 2.";
             }
-            if (!is_null($this->container['domainArea']) && (mb_strlen($this->container['domainArea']) < 0)) {
+            if ((mb_strlen($this->container['domainArea']) < 0)) {
                 $invalidProperties[] = "invalid value for 'domainArea', the character length must be bigger than or equal to 0.";
             }
         if ($this->container['xaccountId'] === null) {
@@ -407,7 +410,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     * Gets domainArea
     *  客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
     *
-    * @return string|null
+    * @return string
     */
     public function getDomainArea()
     {
@@ -417,7 +420,7 @@ class CreateCustomerV2Req implements ModelInterface, ArrayAccess
     /**
     * Sets domainArea
     *
-    * @param string|null $domainArea 客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
+    * @param string $domainArea 客户所属国家地区的两位字母编号。该字母编号遵循ISO 3166标准。 例如：墨西哥 MX
     *
     * @return $this
     */

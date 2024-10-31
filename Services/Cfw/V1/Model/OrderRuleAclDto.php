@@ -20,7 +20,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * top  是否置顶，0代表非置顶，1代表置顶
     * bottom  是否置底，0代表非置底，1代表置底
     *
@@ -34,7 +34,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * top  是否置顶，0代表非置顶，1代表置顶
     * bottom  是否置底，0代表非置底，1代表置底
     *
@@ -69,7 +69,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * top  是否置顶，0代表非置顶，1代表置顶
     * bottom  是否置底，0代表非置底，1代表置底
     *
@@ -83,7 +83,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * top  是否置顶，0代表非置顶，1代表置顶
     * bottom  是否置底，0代表非置底，1代表置底
     *
@@ -97,7 +97,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    * destRuleId  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     * top  是否置顶，0代表非置顶，1代表置顶
     * bottom  是否置底，0代表非置底，1代表置底
     *
@@ -196,7 +196,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets destRuleId
-    *  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    *  目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class OrderRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets destRuleId
     *
-    * @param string|null $destRuleId 目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空
+    * @param string|null $destRuleId 目标规则id，添加规则位于此规则之后，非置顶时不能为空，置顶时为空，目标规则id可以通过[查询防护规则接口](ListAclRules.xml)获得，通过返回值中的data.records.rule_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

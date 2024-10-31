@@ -20,8 +20,8 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * name  域名组名称UUID
-    * description  描述
+    * name  域名组名称
+    * description  域名组描述
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * name  域名组名称UUID
-    * description  描述
+    * name  域名组名称
+    * description  域名组描述
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * name  域名组名称UUID
-    * description  描述
+    * name  域名组名称
+    * description  域名组描述
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * name  域名组名称UUID
-    * description  描述
+    * name  域名组名称
+    * description  域名组描述
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * name  域名组名称UUID
-    * description  描述
+    * name  域名组名称
+    * description  域名组描述
     *
     * @var string[]
     */
@@ -188,7 +188,7 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  域名组名称UUID
+    *  域名组名称
     *
     * @return string
     */
@@ -200,7 +200,7 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string $name 域名组名称UUID
+    * @param string $name 域名组名称
     *
     * @return $this
     */
@@ -212,7 +212,7 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  域名组描述
     *
     * @return string|null
     */
@@ -224,7 +224,7 @@ class UpdateDomainSetInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 域名组描述
     *
     * @return $this
     */

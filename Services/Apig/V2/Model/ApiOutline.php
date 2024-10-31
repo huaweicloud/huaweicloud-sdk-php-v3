@@ -30,6 +30,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ApiOutline implements ModelInterface, ArrayAccess
             'remark' => 'string',
             'runEnvId' => 'string',
             'id' => 'string',
-            'reqUri' => 'string'
+            'reqUri' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ApiOutline implements ModelInterface, ArrayAccess
         'remark' => null,
         'runEnvId' => null,
         'id' => null,
-        'reqUri' => null
+        'reqUri' => null,
+        'tags' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ApiOutline implements ModelInterface, ArrayAccess
             'remark' => 'remark',
             'runEnvId' => 'run_env_id',
             'id' => 'id',
-            'reqUri' => 'req_uri'
+            'reqUri' => 'req_uri',
+            'tags' => 'tags'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ApiOutline implements ModelInterface, ArrayAccess
             'remark' => 'setRemark',
             'runEnvId' => 'setRunEnvId',
             'id' => 'setId',
-            'reqUri' => 'setReqUri'
+            'reqUri' => 'setReqUri',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ApiOutline implements ModelInterface, ArrayAccess
             'remark' => 'getRemark',
             'runEnvId' => 'getRunEnvId',
             'id' => 'getId',
-            'reqUri' => 'getReqUri'
+            'reqUri' => 'getReqUri',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ApiOutline implements ModelInterface, ArrayAccess
         $this->container['runEnvId'] = isset($data['runEnvId']) ? $data['runEnvId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['reqUri'] = isset($data['reqUri']) ? $data['reqUri'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -508,6 +519,30 @@ class ApiOutline implements ModelInterface, ArrayAccess
     public function setReqUri($reqUri)
     {
         $this->container['reqUri'] = $reqUri;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

@@ -7,7 +7,7 @@ use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class SuccessRspData implements ModelInterface, ArrayAccess
+class FailedEipInfo implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,26 +16,30 @@ class SuccessRspData implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'SuccessRsp_data';
+    protected static $openAPIModelName = 'FailedEipInfo';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  标识ID
+    * id  修改状态失败的eipId。
+    * errorMessage  修改状态失败的错误码。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'id' => 'string',
+            'errorMessage' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  标识ID
+    * id  修改状态失败的eipId。
+    * errorMessage  修改状态失败的错误码。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null
+        'id' => null,
+        'errorMessage' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class SuccessRspData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  标识ID
+    * id  修改状态失败的eipId。
+    * errorMessage  修改状态失败的错误码。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'id' => 'id',
+            'errorMessage' => 'error_message'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  标识ID
+    * id  修改状态失败的eipId。
+    * errorMessage  修改状态失败的错误码。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'id' => 'setId',
+            'errorMessage' => 'setErrorMessage'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  标识ID
+    * id  修改状态失败的eipId。
+    * errorMessage  修改状态失败的错误码。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'id' => 'getId',
+            'errorMessage' => 'getErrorMessage'
     ];
 
     /**
@@ -148,6 +158,7 @@ class SuccessRspData implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['errorMessage'] = isset($data['errorMessage']) ? $data['errorMessage'] : null;
     }
 
     /**
@@ -174,7 +185,7 @@ class SuccessRspData implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  标识ID
+    *  修改状态失败的eipId。
     *
     * @return string|null
     */
@@ -186,13 +197,37 @@ class SuccessRspData implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 标识ID
+    * @param string|null $id 修改状态失败的eipId。
     *
     * @return $this
     */
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets errorMessage
+    *  修改状态失败的错误码。
+    *
+    * @return string|null
+    */
+    public function getErrorMessage()
+    {
+        return $this->container['errorMessage'];
+    }
+
+    /**
+    * Sets errorMessage
+    *
+    * @param string|null $errorMessage 修改状态失败的错误码。
+    *
+    * @return $this
+    */
+    public function setErrorMessage($errorMessage)
+    {
+        $this->container['errorMessage'] = $errorMessage;
         return $this;
     }
 

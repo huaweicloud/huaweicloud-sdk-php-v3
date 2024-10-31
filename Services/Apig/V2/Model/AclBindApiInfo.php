@@ -31,6 +31,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * bindTime  绑定时间
     * publishId  API发布记录编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -45,7 +46,8 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
             'groupName' => 'string',
             'bindTime' => '\DateTime',
             'publishId' => 'string',
-            'reqMethod' => 'string'
+            'reqMethod' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -61,6 +63,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * bindTime  绑定时间
     * publishId  API发布记录编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -75,7 +78,8 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
         'groupName' => null,
         'bindTime' => 'date-time',
         'publishId' => null,
-        'reqMethod' => null
+        'reqMethod' => null,
+        'tags' => null
     ];
 
     /**
@@ -112,6 +116,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * bindTime  绑定时间
     * publishId  API发布记录编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -126,7 +131,8 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
             'groupName' => 'group_name',
             'bindTime' => 'bind_time',
             'publishId' => 'publish_id',
-            'reqMethod' => 'req_method'
+            'reqMethod' => 'req_method',
+            'tags' => 'tags'
     ];
 
     /**
@@ -142,6 +148,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * bindTime  绑定时间
     * publishId  API发布记录编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -156,7 +163,8 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
             'groupName' => 'setGroupName',
             'bindTime' => 'setBindTime',
             'publishId' => 'setPublishId',
-            'reqMethod' => 'setReqMethod'
+            'reqMethod' => 'setReqMethod',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -172,6 +180,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     * bindTime  绑定时间
     * publishId  API发布记录编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -186,7 +195,8 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
             'groupName' => 'getGroupName',
             'bindTime' => 'getBindTime',
             'publishId' => 'getPublishId',
-            'reqMethod' => 'getReqMethod'
+            'reqMethod' => 'getReqMethod',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -285,6 +295,7 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
         $this->container['bindTime'] = isset($data['bindTime']) ? $data['bindTime'] : null;
         $this->container['publishId'] = isset($data['publishId']) ? $data['publishId'] : null;
         $this->container['reqMethod'] = isset($data['reqMethod']) ? $data['reqMethod'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -578,6 +589,30 @@ class AclBindApiInfo implements ModelInterface, ArrayAccess
     public function setReqMethod($reqMethod)
     {
         $this->container['reqMethod'] = $reqMethod;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

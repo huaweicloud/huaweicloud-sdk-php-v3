@@ -20,9 +20,9 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * isApplied  是否应用，0否 1是
-    * isCustomized  是否是用户自定义的dns服务器，0否 1是
+    * id  域名服务器id
+    * isApplied  域名服务器是否应用，0否 1是
+    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
     * healthCheckDomainName  健康检查域名
     *
@@ -38,9 +38,9 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * isApplied  是否应用，0否 1是
-    * isCustomized  是否是用户自定义的dns服务器，0否 1是
+    * id  域名服务器id
+    * isApplied  域名服务器是否应用，0否 1是
+    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
     * healthCheckDomainName  健康检查域名
     *
@@ -77,9 +77,9 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * isApplied  是否应用，0否 1是
-    * isCustomized  是否是用户自定义的dns服务器，0否 1是
+    * id  域名服务器id
+    * isApplied  域名服务器是否应用，0否 1是
+    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
     * healthCheckDomainName  健康检查域名
     *
@@ -95,9 +95,9 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * isApplied  是否应用，0否 1是
-    * isCustomized  是否是用户自定义的dns服务器，0否 1是
+    * id  域名服务器id
+    * isApplied  域名服务器是否应用，0否 1是
+    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
     * healthCheckDomainName  健康检查域名
     *
@@ -113,9 +113,9 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * isApplied  是否应用，0否 1是
-    * isCustomized  是否是用户自定义的dns服务器，0否 1是
+    * id  域名服务器id
+    * isApplied  域名服务器是否应用，0否 1是
+    * isCustomized  域名服务器是否是用户自定义的dns服务器，0否 1是
     * serverIp  DNS服务器IP
     * healthCheckDomainName  健康检查域名
     *
@@ -218,7 +218,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  域名服务器id
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param int|null $id id
+    * @param int|null $id 域名服务器id
     *
     * @return $this
     */
@@ -242,7 +242,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isApplied
-    *  是否应用，0否 1是
+    *  域名服务器是否应用，0否 1是
     *
     * @return int|null
     */
@@ -254,7 +254,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isApplied
     *
-    * @param int|null $isApplied 是否应用，0否 1是
+    * @param int|null $isApplied 域名服务器是否应用，0否 1是
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
 
     /**
     * Gets isCustomized
-    *  是否是用户自定义的dns服务器，0否 1是
+    *  域名服务器是否是用户自定义的dns服务器，0否 1是
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class DnsServersResponseDTO implements ModelInterface, ArrayAccess
     /**
     * Sets isCustomized
     *
-    * @param int|null $isCustomized 是否是用户自定义的dns服务器，0否 1是
+    * @param int|null $isCustomized 域名服务器是否是用户自定义的dns服务器，0否 1是
     *
     * @return $this
     */

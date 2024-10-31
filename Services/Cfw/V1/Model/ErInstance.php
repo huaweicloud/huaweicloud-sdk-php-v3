@@ -20,45 +20,33 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ER实例id
+    * id  ER ID，创建ER时产生的ID
     * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
-    * attachmentId  连接id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'state' => 'string',
-            'enterpriseProjectId' => 'string',
             'projectId' => 'string',
-            'enableIpv6' => 'string',
             'attachmentId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ER实例id
+    * id  ER ID，创建ER时产生的ID
     * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
-    * attachmentId  连接id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'state' => null,
-        'enterpriseProjectId' => null,
         'projectId' => null,
-        'enableIpv6' => null,
         'attachmentId' => null
     ];
 
@@ -85,67 +73,49 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ER实例id
+    * id  ER ID，创建ER时产生的ID
     * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
-    * attachmentId  连接id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'state' => 'state',
-            'enterpriseProjectId' => 'enterprise_project_id',
             'projectId' => 'project_id',
-            'enableIpv6' => 'enable_ipv6',
             'attachmentId' => 'attachment_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ER实例id
+    * id  ER ID，创建ER时产生的ID
     * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
-    * attachmentId  连接id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
-            'state' => 'setState',
-            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'projectId' => 'setProjectId',
-            'enableIpv6' => 'setEnableIpv6',
             'attachmentId' => 'setAttachmentId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ER实例id
+    * id  ER ID，创建ER时产生的ID
     * name  ER名称
-    * state  ER状态
-    * enterpriseProjectId  企业租户id
-    * projectId  租户id
-    * enableIpv6  是否开启ipv6
-    * attachmentId  连接id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * attachmentId  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
-            'state' => 'getState',
-            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'projectId' => 'getProjectId',
-            'enableIpv6' => 'getEnableIpv6',
             'attachmentId' => 'getAttachmentId'
     ];
 
@@ -209,10 +179,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
-        $this->container['enableIpv6'] = isset($data['enableIpv6']) ? $data['enableIpv6'] : null;
         $this->container['attachmentId'] = isset($data['attachmentId']) ? $data['attachmentId'] : null;
     }
 
@@ -240,7 +207,7 @@ class ErInstance implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ER实例id
+    *  ER ID，创建ER时产生的ID
     *
     * @return string|null
     */
@@ -252,7 +219,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ER实例id
+    * @param string|null $id ER ID，创建ER时产生的ID
     *
     * @return $this
     */
@@ -287,56 +254,8 @@ class ErInstance implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets state
-    *  ER状态
-    *
-    * @return string|null
-    */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-    * Sets state
-    *
-    * @param string|null $state ER状态
-    *
-    * @return $this
-    */
-    public function setState($state)
-    {
-        $this->container['state'] = $state;
-        return $this;
-    }
-
-    /**
-    * Gets enterpriseProjectId
-    *  企业租户id
-    *
-    * @return string|null
-    */
-    public function getEnterpriseProjectId()
-    {
-        return $this->container['enterpriseProjectId'];
-    }
-
-    /**
-    * Sets enterpriseProjectId
-    *
-    * @param string|null $enterpriseProjectId 企业租户id
-    *
-    * @return $this
-    */
-    public function setEnterpriseProjectId($enterpriseProjectId)
-    {
-        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
-        return $this;
-    }
-
-    /**
     * Gets projectId
-    *  租户id
+    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string|null
     */
@@ -348,7 +267,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户id
+    * @param string|null $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -359,32 +278,8 @@ class ErInstance implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets enableIpv6
-    *  是否开启ipv6
-    *
-    * @return string|null
-    */
-    public function getEnableIpv6()
-    {
-        return $this->container['enableIpv6'];
-    }
-
-    /**
-    * Sets enableIpv6
-    *
-    * @param string|null $enableIpv6 是否开启ipv6
-    *
-    * @return $this
-    */
-    public function setEnableIpv6($enableIpv6)
-    {
-        $this->container['enableIpv6'] = $enableIpv6;
-        return $this;
-    }
-
-    /**
     * Gets attachmentId
-    *  连接id
+    *  企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @return string|null
     */
@@ -396,7 +291,7 @@ class ErInstance implements ModelInterface, ArrayAccess
     /**
     * Sets attachmentId
     *
-    * @param string|null $attachmentId 连接id
+    * @param string|null $attachmentId 企业路由器连接id，该连接用于连接防火墙和企业路由器，此字段可在通过id在ER界面查询指定er后在管理连接界面查询连接了解连接具体情况。
     *
     * @return $this
     */

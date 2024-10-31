@@ -20,8 +20,8 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * vpcId  vpc id
-    * subnetIds  子网列表
+    * vpcId  引流VPC的ID
+    * subnetIds  创建的引流VPC的子网ID列表
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * vpcId  vpc id
-    * subnetIds  子网列表
+    * vpcId  引流VPC的ID
+    * subnetIds  创建的引流VPC的子网ID列表
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * vpcId  vpc id
-    * subnetIds  子网列表
+    * vpcId  引流VPC的ID
+    * subnetIds  创建的引流VPC的子网ID列表
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * vpcId  vpc id
-    * subnetIds  子网列表
+    * vpcId  引流VPC的ID
+    * subnetIds  创建的引流VPC的子网ID列表
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * vpcId  vpc id
-    * subnetIds  子网列表
+    * vpcId  引流VPC的ID
+    * subnetIds  创建的引流VPC的子网ID列表
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets vpcId
-    *  vpc id
+    *  引流VPC的ID
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
     /**
     * Sets vpcId
     *
-    * @param string|null $vpcId vpc id
+    * @param string|null $vpcId 引流VPC的ID
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets subnetIds
-    *  子网列表
+    *  创建的引流VPC的子网ID列表
     *
     * @return string[]|null
     */
@@ -221,7 +221,7 @@ class CreateEWFirewallInspectVpcResp implements ModelInterface, ArrayAccess
     /**
     * Sets subnetIds
     *
-    * @param string[]|null $subnetIds 子网列表
+    * @param string[]|null $subnetIds 创建的引流VPC的子网ID列表
     *
     * @return $this
     */

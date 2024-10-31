@@ -40,6 +40,7 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
     * authBlacklist  绿色通道的黑名单配置
     * visitParam  访问参数。
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -63,7 +64,8 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
             'authWhitelist' => 'string[]',
             'authBlacklist' => 'string[]',
             'visitParam' => 'string',
-            'romaAppType' => 'string'
+            'romaAppType' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -88,6 +90,7 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
     * authBlacklist  绿色通道的黑名单配置
     * visitParam  访问参数。
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -111,7 +114,8 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
         'authWhitelist' => null,
         'authBlacklist' => null,
         'visitParam' => null,
-        'romaAppType' => null
+        'romaAppType' => null,
+        'tags' => null
     ];
 
     /**
@@ -157,6 +161,7 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
     * authBlacklist  绿色通道的黑名单配置
     * visitParam  访问参数。
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -180,7 +185,8 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
             'authWhitelist' => 'auth_whitelist',
             'authBlacklist' => 'auth_blacklist',
             'visitParam' => 'visit_param',
-            'romaAppType' => 'roma_app_type'
+            'romaAppType' => 'roma_app_type',
+            'tags' => 'tags'
     ];
 
     /**
@@ -205,6 +211,7 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
     * authBlacklist  绿色通道的黑名单配置
     * visitParam  访问参数。
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -228,7 +235,8 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
             'authWhitelist' => 'setAuthWhitelist',
             'authBlacklist' => 'setAuthBlacklist',
             'visitParam' => 'setVisitParam',
-            'romaAppType' => 'setRomaAppType'
+            'romaAppType' => 'setRomaAppType',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -253,6 +261,7 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
     * authBlacklist  绿色通道的黑名单配置
     * visitParam  访问参数。
     * romaAppType  ROMA_APP的类型： - subscription：订阅应用 - integration：集成应用  暂不支持
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -276,7 +285,8 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
             'authWhitelist' => 'getAuthWhitelist',
             'authBlacklist' => 'getAuthBlacklist',
             'visitParam' => 'getVisitParam',
-            'romaAppType' => 'getRomaAppType'
+            'romaAppType' => 'getRomaAppType',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -387,6 +397,7 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
         $this->container['authBlacklist'] = isset($data['authBlacklist']) ? $data['authBlacklist'] : null;
         $this->container['visitParam'] = isset($data['visitParam']) ? $data['visitParam'] : null;
         $this->container['romaAppType'] = isset($data['romaAppType']) ? $data['romaAppType'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -904,6 +915,30 @@ class ApiAuthBase implements ModelInterface, ArrayAccess
     public function setRomaAppType($romaAppType)
     {
         $this->container['romaAppType'] = $romaAppType;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

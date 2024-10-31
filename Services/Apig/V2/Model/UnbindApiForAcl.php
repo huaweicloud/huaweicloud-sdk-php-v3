@@ -33,6 +33,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * reqUri  API的请求地址
     * authType  API的认证方式
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
             'aclName' => 'string',
             'reqUri' => 'string',
             'authType' => 'string',
-            'reqMethod' => 'string'
+            'reqMethod' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -67,6 +69,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * reqUri  API的请求地址
     * authType  API的认证方式
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
         'aclName' => null,
         'reqUri' => null,
         'authType' => null,
-        'reqMethod' => null
+        'reqMethod' => null,
+        'tags' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * reqUri  API的请求地址
     * authType  API的认证方式
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
             'aclName' => 'acl_name',
             'reqUri' => 'req_uri',
             'authType' => 'auth_type',
-            'reqMethod' => 'req_method'
+            'reqMethod' => 'req_method',
+            'tags' => 'tags'
     ];
 
     /**
@@ -156,6 +162,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * reqUri  API的请求地址
     * authType  API的认证方式
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
             'aclName' => 'setAclName',
             'reqUri' => 'setReqUri',
             'authType' => 'setAuthType',
-            'reqMethod' => 'setReqMethod'
+            'reqMethod' => 'setReqMethod',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -190,6 +198,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     * reqUri  API的请求地址
     * authType  API的认证方式
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
             'aclName' => 'getAclName',
             'reqUri' => 'getReqUri',
             'authType' => 'getAuthType',
-            'reqMethod' => 'getReqMethod'
+            'reqMethod' => 'getReqMethod',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -307,6 +317,7 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
         $this->container['reqUri'] = isset($data['reqUri']) ? $data['reqUri'] : null;
         $this->container['authType'] = isset($data['authType']) ? $data['authType'] : null;
         $this->container['reqMethod'] = isset($data['reqMethod']) ? $data['reqMethod'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -648,6 +659,30 @@ class UnbindApiForAcl implements ModelInterface, ArrayAccess
     public function setReqMethod($reqMethod)
     {
         $this->container['reqMethod'] = $reqMethod;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

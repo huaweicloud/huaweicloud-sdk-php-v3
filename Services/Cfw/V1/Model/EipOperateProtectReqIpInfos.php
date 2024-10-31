@@ -20,9 +20,9 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  弹性公网IP数据ID
-    * publicIp  弹性公网IP地址
-    * publicIpv6  弹性公网IP地址IPV6
+    * id  弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
+    * publicIp  弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
+    * publicIpv6  弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  弹性公网IP数据ID
-    * publicIp  弹性公网IP地址
-    * publicIpv6  弹性公网IP地址IPV6
+    * id  弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
+    * publicIp  弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
+    * publicIpv6  弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  弹性公网IP数据ID
-    * publicIp  弹性公网IP地址
-    * publicIpv6  弹性公网IP地址IPV6
+    * id  弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
+    * publicIp  弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
+    * publicIpv6  弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  弹性公网IP数据ID
-    * publicIp  弹性公网IP地址
-    * publicIpv6  弹性公网IP地址IPV6
+    * id  弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
+    * publicIp  弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
+    * publicIpv6  弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  弹性公网IP数据ID
-    * publicIp  弹性公网IP地址
-    * publicIpv6  弹性公网IP地址IPV6
+    * id  弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
+    * publicIp  弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
+    * publicIpv6  弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -180,20 +180,8 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) > 36)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['id']) && (mb_strlen($this->container['id']) < 36)) {
-                $invalidProperties[] = "invalid value for 'id', the character length must be bigger than or equal to 36.";
-            }
             if (!is_null($this->container['id']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['id'])) {
                 $invalidProperties[] = "invalid value for 'id', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
-            }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) > 255)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be smaller than or equal to 255.";
-            }
-            if (!is_null($this->container['publicIp']) && (mb_strlen($this->container['publicIp']) < 0)) {
-                $invalidProperties[] = "invalid value for 'publicIp', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -211,7 +199,7 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  弹性公网IP数据ID
+    *  弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -223,7 +211,7 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 弹性公网IP数据ID
+    * @param string|null $id 弹性公网IP ID，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -235,7 +223,7 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIp
-    *  弹性公网IP地址
+    *  弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -247,7 +235,7 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
     /**
     * Sets publicIp
     *
-    * @param string|null $publicIp 弹性公网IP地址
+    * @param string|null $publicIp 弹性公网IP IPv4地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ip（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -259,7 +247,7 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
 
     /**
     * Gets publicIpv6
-    *  弹性公网IP地址IPV6
+    *  弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -271,7 +259,7 @@ class EipOperateProtectReqIpInfos implements ModelInterface, ArrayAccess
     /**
     * Sets publicIpv6
     *
-    * @param string|null $publicIpv6 弹性公网IP地址IPV6
+    * @param string|null $publicIpv6 弹性公网IP IPv6地址，可通过调用弹性IP列表查询接口获得，通过返回值中的data.records.public_ipv6（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

@@ -169,9 +169,15 @@ class IpsProtectDTO implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['objectId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['objectId'])) {
+        if ($this->container['objectId'] === null) {
+            $invalidProperties[] = "'objectId' can't be null";
+        }
+            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['objectId'])) {
                 $invalidProperties[] = "invalid value for 'objectId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
             }
+        if ($this->container['mode'] === null) {
+            $invalidProperties[] = "'mode' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -190,7 +196,7 @@ class IpsProtectDTO implements ModelInterface, ArrayAccess
     * Gets objectId
     *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     *
-    * @return string|null
+    * @return string
     */
     public function getObjectId()
     {
@@ -200,7 +206,7 @@ class IpsProtectDTO implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     *
     * @return $this
     */
@@ -214,7 +220,7 @@ class IpsProtectDTO implements ModelInterface, ArrayAccess
     * Gets mode
     *  ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
-    * @return int|null
+    * @return int
     */
     public function getMode()
     {
@@ -224,7 +230,7 @@ class IpsProtectDTO implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param int|null $mode ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
+    * @param int $mode ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @return $this
     */

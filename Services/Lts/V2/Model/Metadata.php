@@ -28,6 +28,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * resourceId  日志组/流名称
     * resourceProvider  告警源
     * ltsAlarmType  告警规则类型(SQL/关键词)
+    * logGroupName  日志组原始名称
+    * logStreamName  日志流原始名称
     *
     * @var string[]
     */
@@ -39,7 +41,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceType' => 'string',
             'resourceId' => 'string',
             'resourceProvider' => 'string',
-            'ltsAlarmType' => 'string'
+            'ltsAlarmType' => 'string',
+            'logGroupName' => 'string',
+            'logStreamName' => 'string'
     ];
 
     /**
@@ -52,6 +56,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * resourceId  日志组/流名称
     * resourceProvider  告警源
     * ltsAlarmType  告警规则类型(SQL/关键词)
+    * logGroupName  日志组原始名称
+    * logStreamName  日志流原始名称
     *
     * @var string[]
     */
@@ -63,7 +69,9 @@ class Metadata implements ModelInterface, ArrayAccess
         'resourceType' => null,
         'resourceId' => null,
         'resourceProvider' => null,
-        'ltsAlarmType' => null
+        'ltsAlarmType' => null,
+        'logGroupName' => null,
+        'logStreamName' => null
     ];
 
     /**
@@ -97,6 +105,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * resourceId  日志组/流名称
     * resourceProvider  告警源
     * ltsAlarmType  告警规则类型(SQL/关键词)
+    * logGroupName  日志组原始名称
+    * logStreamName  日志流原始名称
     *
     * @var string[]
     */
@@ -108,7 +118,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceType' => 'resource_type',
             'resourceId' => 'resource_id',
             'resourceProvider' => 'resource_provider',
-            'ltsAlarmType' => 'lts_alarm_type'
+            'ltsAlarmType' => 'lts_alarm_type',
+            'logGroupName' => 'log_group_name',
+            'logStreamName' => 'log_stream_name'
     ];
 
     /**
@@ -121,6 +133,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * resourceId  日志组/流名称
     * resourceProvider  告警源
     * ltsAlarmType  告警规则类型(SQL/关键词)
+    * logGroupName  日志组原始名称
+    * logStreamName  日志流原始名称
     *
     * @var string[]
     */
@@ -132,7 +146,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceType' => 'setResourceType',
             'resourceId' => 'setResourceId',
             'resourceProvider' => 'setResourceProvider',
-            'ltsAlarmType' => 'setLtsAlarmType'
+            'ltsAlarmType' => 'setLtsAlarmType',
+            'logGroupName' => 'setLogGroupName',
+            'logStreamName' => 'setLogStreamName'
     ];
 
     /**
@@ -145,6 +161,8 @@ class Metadata implements ModelInterface, ArrayAccess
     * resourceId  日志组/流名称
     * resourceProvider  告警源
     * ltsAlarmType  告警规则类型(SQL/关键词)
+    * logGroupName  日志组原始名称
+    * logStreamName  日志流原始名称
     *
     * @var string[]
     */
@@ -156,7 +174,9 @@ class Metadata implements ModelInterface, ArrayAccess
             'resourceType' => 'getResourceType',
             'resourceId' => 'getResourceId',
             'resourceProvider' => 'getResourceProvider',
-            'ltsAlarmType' => 'getLtsAlarmType'
+            'ltsAlarmType' => 'getLtsAlarmType',
+            'logGroupName' => 'getLogGroupName',
+            'logStreamName' => 'getLogStreamName'
     ];
 
     /**
@@ -225,6 +245,8 @@ class Metadata implements ModelInterface, ArrayAccess
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['resourceProvider'] = isset($data['resourceProvider']) ? $data['resourceProvider'] : null;
         $this->container['ltsAlarmType'] = isset($data['ltsAlarmType']) ? $data['ltsAlarmType'] : null;
+        $this->container['logGroupName'] = isset($data['logGroupName']) ? $data['logGroupName'] : null;
+        $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
     }
 
     /**
@@ -510,6 +532,54 @@ class Metadata implements ModelInterface, ArrayAccess
     public function setLtsAlarmType($ltsAlarmType)
     {
         $this->container['ltsAlarmType'] = $ltsAlarmType;
+        return $this;
+    }
+
+    /**
+    * Gets logGroupName
+    *  日志组原始名称
+    *
+    * @return string|null
+    */
+    public function getLogGroupName()
+    {
+        return $this->container['logGroupName'];
+    }
+
+    /**
+    * Sets logGroupName
+    *
+    * @param string|null $logGroupName 日志组原始名称
+    *
+    * @return $this
+    */
+    public function setLogGroupName($logGroupName)
+    {
+        $this->container['logGroupName'] = $logGroupName;
+        return $this;
+    }
+
+    /**
+    * Gets logStreamName
+    *  日志流原始名称
+    *
+    * @return string|null
+    */
+    public function getLogStreamName()
+    {
+        return $this->container['logStreamName'];
+    }
+
+    /**
+    * Sets logStreamName
+    *
+    * @param string|null $logStreamName 日志流原始名称
+    *
+    * @return $this
+    */
+    public function setLogStreamName($logStreamName)
+    {
+        $this->container['logStreamName'] = $logStreamName;
         return $this;
     }
 

@@ -27,6 +27,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
     * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
     * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
     *
     * @var string[]
     */
@@ -37,7 +38,8 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
             'to' => 'int',
             'hosts' => 'string',
             'instances' => 'string',
-            'groupBy' => 'string'
+            'groupBy' => 'string',
+            'displayOption' => 'int'
     ];
 
     /**
@@ -49,6 +51,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
     * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
     * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
     *
     * @var string[]
     */
@@ -59,7 +62,8 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
         'to' => 'int64',
         'hosts' => null,
         'instances' => null,
-        'groupBy' => null
+        'groupBy' => null,
+        'displayOption' => null
     ];
 
     /**
@@ -92,6 +96,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
     * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
     * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
     *
     * @var string[]
     */
@@ -102,7 +107,8 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
             'to' => 'to',
             'hosts' => 'hosts',
             'instances' => 'instances',
-            'groupBy' => 'group_by'
+            'groupBy' => 'group_by',
+            'displayOption' => 'display_option'
     ];
 
     /**
@@ -114,6 +120,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
     * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
     * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
     *
     * @var string[]
     */
@@ -124,7 +131,8 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
             'to' => 'setTo',
             'hosts' => 'setHosts',
             'instances' => 'setInstances',
-            'groupBy' => 'setGroupBy'
+            'groupBy' => 'setGroupBy',
+            'displayOption' => 'setDisplayOption'
     ];
 
     /**
@@ -136,6 +144,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     * hosts  域名id，用于查询指定的防护域名在from到to这段时间内的带宽数据。通过查询云模式防护域名列表（ListHost）获取域名id或者通过独享模式域名列表（ListPremiumHost）获取域名id
     * instances  引擎实例id，用于查询指定的独享引擎实例所防护的域名在from到to这段时间内的带宽数据。
     * groupBy  展示维度，按天展示时传\"DAY\"；默认不传，按照分钟展示。
+    * displayOption  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
     *
     * @var string[]
     */
@@ -146,7 +155,8 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
             'to' => 'getTo',
             'hosts' => 'getHosts',
             'instances' => 'getInstances',
-            'groupBy' => 'getGroupBy'
+            'groupBy' => 'getGroupBy',
+            'displayOption' => 'getDisplayOption'
     ];
 
     /**
@@ -214,6 +224,7 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
         $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
         $this->container['instances'] = isset($data['instances']) ? $data['instances'] : null;
         $this->container['groupBy'] = isset($data['groupBy']) ? $data['groupBy'] : null;
+        $this->container['displayOption'] = isset($data['displayOption']) ? $data['displayOption'] : null;
     }
 
     /**
@@ -412,6 +423,30 @@ class ListBandwidthTimelineRequest implements ModelInterface, ArrayAccess
     public function setGroupBy($groupBy)
     {
         $this->container['groupBy'] = $groupBy;
+        return $this;
+    }
+
+    /**
+    * Gets displayOption
+    *  发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    *
+    * @return int|null
+    */
+    public function getDisplayOption()
+    {
+        return $this->container['displayOption'];
+    }
+
+    /**
+    * Sets displayOption
+    *
+    * @param int|null $displayOption 发送/接受字节数，查看峰值请输入1，查看平均值请输入0
+    *
+    * @return $this
+    */
+    public function setDisplayOption($displayOption)
+    {
+        $this->container['displayOption'] = $displayOption;
         return $this;
     }
 

@@ -35,6 +35,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'type' => 'int',
             'preciseSearch' => 'string',
             'vpcChannelName' => 'string',
-            'returnDataMode' => 'string'
+            'returnDataMode' => 'string',
+            'tags' => 'string'
     ];
 
     /**
@@ -73,6 +75,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
         'type' => null,
         'preciseSearch' => null,
         'vpcChannelName' => null,
-        'returnDataMode' => null
+        'returnDataMode' => null,
+        'tags' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'type' => 'type',
             'preciseSearch' => 'precise_search',
             'vpcChannelName' => 'vpc_channel_name',
-            'returnDataMode' => 'return_data_mode'
+            'returnDataMode' => 'return_data_mode',
+            'tags' => 'tags'
     ];
 
     /**
@@ -170,6 +176,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'preciseSearch' => 'setPreciseSearch',
             'vpcChannelName' => 'setVpcChannelName',
-            'returnDataMode' => 'setReturnDataMode'
+            'returnDataMode' => 'setReturnDataMode',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -208,6 +216,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     * preciseSearch  指定需要精确匹配查找的参数名称，目前仅支持name、req_uri
     * vpcChannelName  负载通道名称
     * returnDataMode  指定API详情中需要包含的额外返回结果，多个参数之间使用“,”隔开，当brief和其他include参数共同使用时，brief不生效。 目前仅支持brief，include_group，include_group_backend。 brief：默认值，不包含额外信息。 include_group：返回结果中包含api_group_info。 include_group_backend：返回结果中包含backend_api。
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'preciseSearch' => 'getPreciseSearch',
             'vpcChannelName' => 'getVpcChannelName',
-            'returnDataMode' => 'getReturnDataMode'
+            'returnDataMode' => 'getReturnDataMode',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -302,6 +312,7 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
         $this->container['preciseSearch'] = isset($data['preciseSearch']) ? $data['preciseSearch'] : null;
         $this->container['vpcChannelName'] = isset($data['vpcChannelName']) ? $data['vpcChannelName'] : null;
         $this->container['returnDataMode'] = isset($data['returnDataMode']) ? $data['returnDataMode'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -320,6 +331,15 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['limit']) && ($this->container['limit'] < 1)) {
                 $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) > 128)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['tags']) && !preg_match("/^$|^#no_tags#$|^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9]|[\\u4e00-\\u9fa5]|[-#%.:_]){0,127}$/", $this->container['tags'])) {
+                $invalidProperties[] = "invalid value for 'tags', must be conform to the pattern /^$|^#no_tags#$|^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9]|[\\u4e00-\\u9fa5]|[-#%.:_]){0,127}$/.";
             }
         return $invalidProperties;
     }
@@ -692,6 +712,30 @@ class ListApisV2Request implements ModelInterface, ArrayAccess
     public function setReturnDataMode($returnDataMode)
     {
         $this->container['returnDataMode'] = $returnDataMode;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

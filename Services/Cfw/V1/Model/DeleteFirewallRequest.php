@@ -20,8 +20,8 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * resourceId  资源id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * resourceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * projectId  租户项目id
-    * resourceId  资源id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * resourceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * projectId  租户项目id
-    * resourceId  资源id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * resourceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * projectId  租户项目id
-    * resourceId  资源id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * resourceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * projectId  租户项目id
-    * resourceId  资源id
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
+    * resourceId  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户项目id
+    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string $projectId 租户项目id
+    * @param string $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceId
-    *  资源id
+    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string
     */
@@ -227,7 +227,7 @@ class DeleteFirewallRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceId
     *
-    * @param string $resourceId 资源id
+    * @param string $resourceId 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */

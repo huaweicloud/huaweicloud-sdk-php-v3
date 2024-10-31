@@ -21,8 +21,8 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * name  地址组名称
-    * setId  地址组id
+    * name  关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * setId  关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -35,8 +35,8 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * name  地址组名称
-    * setId  地址组id
+    * name  关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * setId  关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -70,8 +70,8 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * name  地址组名称
-    * setId  地址组id
+    * name  关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * setId  关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -84,8 +84,8 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * name  地址组名称
-    * setId  地址组id
+    * name  关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * setId  关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -98,8 +98,8 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * name  地址组名称
-    * setId  地址组id
+    * name  关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * setId  关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -220,7 +220,7 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  地址组名称
+    *  关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -232,7 +232,7 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 地址组名称
+    * @param string|null $name 关联IP地址组名称，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -244,7 +244,7 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  地址组id
+    *  关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -256,7 +256,7 @@ class AddressGroupVO implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string|null $setId 地址组id
+    * @param string|null $setId 关联IP地址组ID，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

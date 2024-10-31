@@ -20,7 +20,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * total  返回数量
+    * total  查询流日志返回值记录总数
     * limit  每页显示个数，范围为1-1024
     * records  记录
     *
@@ -34,7 +34,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * total  返回数量
+    * total  查询流日志返回值记录总数
     * limit  每页显示个数，范围为1-1024
     * records  记录
     *
@@ -69,7 +69,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * total  返回数量
+    * total  查询流日志返回值记录总数
     * limit  每页显示个数，范围为1-1024
     * records  记录
     *
@@ -83,7 +83,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * total  返回数量
+    * total  查询流日志返回值记录总数
     * limit  每页显示个数，范围为1-1024
     * records  记录
     *
@@ -97,7 +97,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * total  返回数量
+    * total  查询流日志返回值记录总数
     * limit  每页显示个数，范围为1-1024
     * records  记录
     *
@@ -196,7 +196,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  返回数量
+    *  查询流日志返回值记录总数
     *
     * @return int|null
     */
@@ -208,7 +208,7 @@ class HttpQueryCfwFlowLogsResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 返回数量
+    * @param int|null $total 查询流日志返回值记录总数
     *
     * @return $this
     */

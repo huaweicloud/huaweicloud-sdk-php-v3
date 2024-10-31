@@ -32,6 +32,15 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
     * logSplit  二进制采集
     * binaryCollect  日志拆分
     * clusterId  CCE集群ID
+    * encodingFormat  编码格式，默认UTF-8
+    * incrementalCollect  采集策略：增量/全量
+    * processorType  IC结构化解析类型
+    * demoLog  示例日志
+    * demoFields  示例日志解析字段
+    * processors  IC结构化解析器
+    * applicationId  ServiceStage应用ID
+    * environmentId  ServiceStage环境ID
+    * componentId  ServiceStage组件ID
     *
     * @var string[]
     */
@@ -46,7 +55,16 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
             'accessConfigTag' => '\HuaweiCloud\SDK\Lts\V2\Model\AccessConfigTag[]',
             'logSplit' => 'bool',
             'binaryCollect' => 'bool',
-            'clusterId' => 'string'
+            'clusterId' => 'string',
+            'encodingFormat' => 'string',
+            'incrementalCollect' => 'bool',
+            'processorType' => 'string',
+            'demoLog' => 'string',
+            'demoFields' => '\HuaweiCloud\SDK\Lts\V2\Model\DemoFieldAccess[]',
+            'processors' => '\HuaweiCloud\SDK\Lts\V2\Model\Processor[]',
+            'applicationId' => 'string',
+            'environmentId' => 'string',
+            'componentId' => 'string[]'
     ];
 
     /**
@@ -62,6 +80,15 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
     * logSplit  二进制采集
     * binaryCollect  日志拆分
     * clusterId  CCE集群ID
+    * encodingFormat  编码格式，默认UTF-8
+    * incrementalCollect  采集策略：增量/全量
+    * processorType  IC结构化解析类型
+    * demoLog  示例日志
+    * demoFields  示例日志解析字段
+    * processors  IC结构化解析器
+    * applicationId  ServiceStage应用ID
+    * environmentId  ServiceStage环境ID
+    * componentId  ServiceStage组件ID
     *
     * @var string[]
     */
@@ -76,7 +103,16 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
         'accessConfigTag' => null,
         'logSplit' => null,
         'binaryCollect' => null,
-        'clusterId' => null
+        'clusterId' => null,
+        'encodingFormat' => null,
+        'incrementalCollect' => null,
+        'processorType' => null,
+        'demoLog' => null,
+        'demoFields' => null,
+        'processors' => null,
+        'applicationId' => null,
+        'environmentId' => null,
+        'componentId' => null
     ];
 
     /**
@@ -113,6 +149,15 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
     * logSplit  二进制采集
     * binaryCollect  日志拆分
     * clusterId  CCE集群ID
+    * encodingFormat  编码格式，默认UTF-8
+    * incrementalCollect  采集策略：增量/全量
+    * processorType  IC结构化解析类型
+    * demoLog  示例日志
+    * demoFields  示例日志解析字段
+    * processors  IC结构化解析器
+    * applicationId  ServiceStage应用ID
+    * environmentId  ServiceStage环境ID
+    * componentId  ServiceStage组件ID
     *
     * @var string[]
     */
@@ -127,7 +172,16 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
             'accessConfigTag' => 'access_config_tag',
             'logSplit' => 'log_split',
             'binaryCollect' => 'binary_collect',
-            'clusterId' => 'cluster_id'
+            'clusterId' => 'cluster_id',
+            'encodingFormat' => 'encoding_format',
+            'incrementalCollect' => 'incremental_collect',
+            'processorType' => 'processor_type',
+            'demoLog' => 'demo_log',
+            'demoFields' => 'demo_fields',
+            'processors' => 'processors',
+            'applicationId' => 'application_id',
+            'environmentId' => 'environment_id',
+            'componentId' => 'component_id'
     ];
 
     /**
@@ -143,6 +197,15 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
     * logSplit  二进制采集
     * binaryCollect  日志拆分
     * clusterId  CCE集群ID
+    * encodingFormat  编码格式，默认UTF-8
+    * incrementalCollect  采集策略：增量/全量
+    * processorType  IC结构化解析类型
+    * demoLog  示例日志
+    * demoFields  示例日志解析字段
+    * processors  IC结构化解析器
+    * applicationId  ServiceStage应用ID
+    * environmentId  ServiceStage环境ID
+    * componentId  ServiceStage组件ID
     *
     * @var string[]
     */
@@ -157,7 +220,16 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
             'accessConfigTag' => 'setAccessConfigTag',
             'logSplit' => 'setLogSplit',
             'binaryCollect' => 'setBinaryCollect',
-            'clusterId' => 'setClusterId'
+            'clusterId' => 'setClusterId',
+            'encodingFormat' => 'setEncodingFormat',
+            'incrementalCollect' => 'setIncrementalCollect',
+            'processorType' => 'setProcessorType',
+            'demoLog' => 'setDemoLog',
+            'demoFields' => 'setDemoFields',
+            'processors' => 'setProcessors',
+            'applicationId' => 'setApplicationId',
+            'environmentId' => 'setEnvironmentId',
+            'componentId' => 'setComponentId'
     ];
 
     /**
@@ -173,6 +245,15 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
     * logSplit  二进制采集
     * binaryCollect  日志拆分
     * clusterId  CCE集群ID
+    * encodingFormat  编码格式，默认UTF-8
+    * incrementalCollect  采集策略：增量/全量
+    * processorType  IC结构化解析类型
+    * demoLog  示例日志
+    * demoFields  示例日志解析字段
+    * processors  IC结构化解析器
+    * applicationId  ServiceStage应用ID
+    * environmentId  ServiceStage环境ID
+    * componentId  ServiceStage组件ID
     *
     * @var string[]
     */
@@ -187,7 +268,16 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
             'accessConfigTag' => 'getAccessConfigTag',
             'logSplit' => 'getLogSplit',
             'binaryCollect' => 'getBinaryCollect',
-            'clusterId' => 'getClusterId'
+            'clusterId' => 'getClusterId',
+            'encodingFormat' => 'getEncodingFormat',
+            'incrementalCollect' => 'getIncrementalCollect',
+            'processorType' => 'getProcessorType',
+            'demoLog' => 'getDemoLog',
+            'demoFields' => 'getDemoFields',
+            'processors' => 'getProcessors',
+            'applicationId' => 'getApplicationId',
+            'environmentId' => 'getEnvironmentId',
+            'componentId' => 'getComponentId'
     ];
 
     /**
@@ -274,6 +364,15 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
         $this->container['logSplit'] = isset($data['logSplit']) ? $data['logSplit'] : null;
         $this->container['binaryCollect'] = isset($data['binaryCollect']) ? $data['binaryCollect'] : null;
         $this->container['clusterId'] = isset($data['clusterId']) ? $data['clusterId'] : null;
+        $this->container['encodingFormat'] = isset($data['encodingFormat']) ? $data['encodingFormat'] : null;
+        $this->container['incrementalCollect'] = isset($data['incrementalCollect']) ? $data['incrementalCollect'] : null;
+        $this->container['processorType'] = isset($data['processorType']) ? $data['processorType'] : null;
+        $this->container['demoLog'] = isset($data['demoLog']) ? $data['demoLog'] : null;
+        $this->container['demoFields'] = isset($data['demoFields']) ? $data['demoFields'] : null;
+        $this->container['processors'] = isset($data['processors']) ? $data['processors'] : null;
+        $this->container['applicationId'] = isset($data['applicationId']) ? $data['applicationId'] : null;
+        $this->container['environmentId'] = isset($data['environmentId']) ? $data['environmentId'] : null;
+        $this->container['componentId'] = isset($data['componentId']) ? $data['componentId'] : null;
     }
 
     /**
@@ -588,6 +687,222 @@ class CreateAccessConfigResponse implements ModelInterface, ArrayAccess
     public function setClusterId($clusterId)
     {
         $this->container['clusterId'] = $clusterId;
+        return $this;
+    }
+
+    /**
+    * Gets encodingFormat
+    *  编码格式，默认UTF-8
+    *
+    * @return string|null
+    */
+    public function getEncodingFormat()
+    {
+        return $this->container['encodingFormat'];
+    }
+
+    /**
+    * Sets encodingFormat
+    *
+    * @param string|null $encodingFormat 编码格式，默认UTF-8
+    *
+    * @return $this
+    */
+    public function setEncodingFormat($encodingFormat)
+    {
+        $this->container['encodingFormat'] = $encodingFormat;
+        return $this;
+    }
+
+    /**
+    * Gets incrementalCollect
+    *  采集策略：增量/全量
+    *
+    * @return bool|null
+    */
+    public function getIncrementalCollect()
+    {
+        return $this->container['incrementalCollect'];
+    }
+
+    /**
+    * Sets incrementalCollect
+    *
+    * @param bool|null $incrementalCollect 采集策略：增量/全量
+    *
+    * @return $this
+    */
+    public function setIncrementalCollect($incrementalCollect)
+    {
+        $this->container['incrementalCollect'] = $incrementalCollect;
+        return $this;
+    }
+
+    /**
+    * Gets processorType
+    *  IC结构化解析类型
+    *
+    * @return string|null
+    */
+    public function getProcessorType()
+    {
+        return $this->container['processorType'];
+    }
+
+    /**
+    * Sets processorType
+    *
+    * @param string|null $processorType IC结构化解析类型
+    *
+    * @return $this
+    */
+    public function setProcessorType($processorType)
+    {
+        $this->container['processorType'] = $processorType;
+        return $this;
+    }
+
+    /**
+    * Gets demoLog
+    *  示例日志
+    *
+    * @return string|null
+    */
+    public function getDemoLog()
+    {
+        return $this->container['demoLog'];
+    }
+
+    /**
+    * Sets demoLog
+    *
+    * @param string|null $demoLog 示例日志
+    *
+    * @return $this
+    */
+    public function setDemoLog($demoLog)
+    {
+        $this->container['demoLog'] = $demoLog;
+        return $this;
+    }
+
+    /**
+    * Gets demoFields
+    *  示例日志解析字段
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\DemoFieldAccess[]|null
+    */
+    public function getDemoFields()
+    {
+        return $this->container['demoFields'];
+    }
+
+    /**
+    * Sets demoFields
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\DemoFieldAccess[]|null $demoFields 示例日志解析字段
+    *
+    * @return $this
+    */
+    public function setDemoFields($demoFields)
+    {
+        $this->container['demoFields'] = $demoFields;
+        return $this;
+    }
+
+    /**
+    * Gets processors
+    *  IC结构化解析器
+    *
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\Processor[]|null
+    */
+    public function getProcessors()
+    {
+        return $this->container['processors'];
+    }
+
+    /**
+    * Sets processors
+    *
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Processor[]|null $processors IC结构化解析器
+    *
+    * @return $this
+    */
+    public function setProcessors($processors)
+    {
+        $this->container['processors'] = $processors;
+        return $this;
+    }
+
+    /**
+    * Gets applicationId
+    *  ServiceStage应用ID
+    *
+    * @return string|null
+    */
+    public function getApplicationId()
+    {
+        return $this->container['applicationId'];
+    }
+
+    /**
+    * Sets applicationId
+    *
+    * @param string|null $applicationId ServiceStage应用ID
+    *
+    * @return $this
+    */
+    public function setApplicationId($applicationId)
+    {
+        $this->container['applicationId'] = $applicationId;
+        return $this;
+    }
+
+    /**
+    * Gets environmentId
+    *  ServiceStage环境ID
+    *
+    * @return string|null
+    */
+    public function getEnvironmentId()
+    {
+        return $this->container['environmentId'];
+    }
+
+    /**
+    * Sets environmentId
+    *
+    * @param string|null $environmentId ServiceStage环境ID
+    *
+    * @return $this
+    */
+    public function setEnvironmentId($environmentId)
+    {
+        $this->container['environmentId'] = $environmentId;
+        return $this;
+    }
+
+    /**
+    * Gets componentId
+    *  ServiceStage组件ID
+    *
+    * @return string[]|null
+    */
+    public function getComponentId()
+    {
+        return $this->container['componentId'];
+    }
+
+    /**
+    * Sets componentId
+    *
+    * @param string[]|null $componentId ServiceStage组件ID
+    *
+    * @return $this
+    */
+    public function setComponentId($componentId)
+    {
+        $this->container['componentId'] = $componentId;
         return $this;
     }
 

@@ -65,6 +65,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * sortKeyType  持久化版图边数据的sortKey类型
+    * enableLts  对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
     *
     * @var string[]
     */
@@ -113,7 +114,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'resizeTime' => 'string',
             'enableMultiLabel' => 'bool',
             'capacityRatio' => 'int',
-            'sortKeyType' => 'string'
+            'sortKeyType' => 'string',
+            'enableLts' => 'bool'
     ];
 
     /**
@@ -163,6 +165,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * sortKeyType  持久化版图边数据的sortKey类型
+    * enableLts  对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
     *
     * @var string[]
     */
@@ -211,7 +214,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         'resizeTime' => null,
         'enableMultiLabel' => null,
         'capacityRatio' => 'int32',
-        'sortKeyType' => null
+        'sortKeyType' => null,
+        'enableLts' => null
     ];
 
     /**
@@ -282,6 +286,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * sortKeyType  持久化版图边数据的sortKey类型
+    * enableLts  对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
     *
     * @var string[]
     */
@@ -330,7 +335,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'resizeTime' => 'resize_time',
             'enableMultiLabel' => 'enable_multi_label',
             'capacityRatio' => 'capacity_ratio',
-            'sortKeyType' => 'sort_key_type'
+            'sortKeyType' => 'sort_key_type',
+            'enableLts' => 'enable_lts'
     ];
 
     /**
@@ -380,6 +386,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * sortKeyType  持久化版图边数据的sortKey类型
+    * enableLts  对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
     *
     * @var string[]
     */
@@ -428,7 +435,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'resizeTime' => 'setResizeTime',
             'enableMultiLabel' => 'setEnableMultiLabel',
             'capacityRatio' => 'setCapacityRatio',
-            'sortKeyType' => 'setSortKeyType'
+            'sortKeyType' => 'setSortKeyType',
+            'enableLts' => 'setEnableLts'
     ];
 
     /**
@@ -478,6 +486,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     * enableMultiLabel  是否启用多标签。
     * capacityRatio  图的容量倍率。该参数只有持久化版百亿规格图支持，且从2.3.18版本后开始支持。
     * sortKeyType  持久化版图边数据的sortKey类型
+    * enableLts  对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
     *
     * @var string[]
     */
@@ -526,7 +535,8 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
             'resizeTime' => 'getResizeTime',
             'enableMultiLabel' => 'getEnableMultiLabel',
             'capacityRatio' => 'getCapacityRatio',
-            'sortKeyType' => 'getSortKeyType'
+            'sortKeyType' => 'getSortKeyType',
+            'enableLts' => 'getEnableLts'
     ];
 
     /**
@@ -632,6 +642,7 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
         $this->container['enableMultiLabel'] = isset($data['enableMultiLabel']) ? $data['enableMultiLabel'] : null;
         $this->container['capacityRatio'] = isset($data['capacityRatio']) ? $data['capacityRatio'] : null;
         $this->container['sortKeyType'] = isset($data['sortKeyType']) ? $data['sortKeyType'] : null;
+        $this->container['enableLts'] = isset($data['enableLts']) ? $data['enableLts'] : null;
     }
 
     /**
@@ -1733,6 +1744,30 @@ class ShowGraphRespGraph implements ModelInterface, ArrayAccess
     public function setSortKeyType($sortKeyType)
     {
         $this->container['sortKeyType'] = $sortKeyType;
+        return $this;
+    }
+
+    /**
+    * Gets enableLts
+    *  对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
+    *
+    * @return bool|null
+    */
+    public function getEnableLts()
+    {
+        return $this->container['enableLts'];
+    }
+
+    /**
+    * Sets enableLts
+    *
+    * @param bool|null $enableLts 对接云服务LTS日志开启状态。  - true：日志对接开启中。 - false：日志对接关闭中。
+    *
+    * @return $this
+    */
+    public function setEnableLts($enableLts)
+    {
+        $this->container['enableLts'] = $enableLts;
         return $this;
     }
 

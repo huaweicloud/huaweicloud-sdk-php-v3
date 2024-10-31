@@ -21,21 +21,29 @@ class UserForList implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  数据库用户名称。
+    * databases  数据库及其权限。
+    * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'name' => 'string'
+            'name' => 'string',
+            'databases' => '\HuaweiCloud\SDK\Rds\V3\Model\DatabaseWithPrivilegeObject[]',
+            'hosts' => 'string[]'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  数据库用户名称。
+    * databases  数据库及其权限。
+    * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'name' => null
+        'name' => null,
+        'databases' => null,
+        'hosts' => null
     ];
 
     /**
@@ -62,31 +70,43 @@ class UserForList implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  数据库用户名称。
+    * databases  数据库及其权限。
+    * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'name' => 'name'
+            'name' => 'name',
+            'databases' => 'databases',
+            'hosts' => 'hosts'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  数据库用户名称。
+    * databases  数据库及其权限。
+    * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
     *
     * @var string[]
     */
     protected static $setters = [
-            'name' => 'setName'
+            'name' => 'setName',
+            'databases' => 'setDatabases',
+            'hosts' => 'setHosts'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  数据库用户名称。
+    * databases  数据库及其权限。
+    * hosts  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
     *
     * @var string[]
     */
     protected static $getters = [
-            'name' => 'getName'
+            'name' => 'getName',
+            'databases' => 'getDatabases',
+            'hosts' => 'getHosts'
     ];
 
     /**
@@ -148,6 +168,8 @@ class UserForList implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['databases'] = isset($data['databases']) ? $data['databases'] : null;
+        $this->container['hosts'] = isset($data['hosts']) ? $data['hosts'] : null;
     }
 
     /**
@@ -160,6 +182,12 @@ class UserForList implements ModelInterface, ArrayAccess
         $invalidProperties = [];
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['databases'] === null) {
+            $invalidProperties[] = "'databases' can't be null";
+        }
+        if ($this->container['hosts'] === null) {
+            $invalidProperties[] = "'hosts' can't be null";
         }
         return $invalidProperties;
     }
@@ -196,6 +224,54 @@ class UserForList implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+        return $this;
+    }
+
+    /**
+    * Gets databases
+    *  数据库及其权限。
+    *
+    * @return \HuaweiCloud\SDK\Rds\V3\Model\DatabaseWithPrivilegeObject[]
+    */
+    public function getDatabases()
+    {
+        return $this->container['databases'];
+    }
+
+    /**
+    * Sets databases
+    *
+    * @param \HuaweiCloud\SDK\Rds\V3\Model\DatabaseWithPrivilegeObject[] $databases 数据库及其权限。
+    *
+    * @return $this
+    */
+    public function setDatabases($databases)
+    {
+        $this->container['databases'] = $databases;
+        return $this;
+    }
+
+    /**
+    * Gets hosts
+    *  授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    *
+    * @return string[]
+    */
+    public function getHosts()
+    {
+        return $this->container['hosts'];
+    }
+
+    /**
+    * Sets hosts
+    *
+    * @param string[] $hosts 授权用户登录主机IP列表 • 若IP地址为%，则表示允许所有地址访问MySQL实例。 • 若IP地址为“10.10.10.%”，则表示10.10.10.X的IP地址都可以访问该MySQL实例。 • 支持添加多个IP地址。
+    *
+    * @return $this
+    */
+    public function setHosts($hosts)
+    {
+        $this->container['hosts'] = $hosts;
         return $this;
     }
 

@@ -28,6 +28,7 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
     * apiId  API编号
     * apiName  API名称
     * groupId  API分组编号
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -39,7 +40,8 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
             'envId' => 'string',
             'apiId' => 'string',
             'apiName' => 'string',
-            'groupId' => 'string'
+            'groupId' => 'string',
+            'tags' => 'string'
     ];
 
     /**
@@ -52,6 +54,7 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
     * apiId  API编号
     * apiName  API名称
     * groupId  API分组编号
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -63,7 +66,8 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
         'envId' => null,
         'apiId' => null,
         'apiName' => null,
-        'groupId' => null
+        'groupId' => null,
+        'tags' => null
     ];
 
     /**
@@ -97,6 +101,7 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
     * apiId  API编号
     * apiName  API名称
     * groupId  API分组编号
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -108,7 +113,8 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
             'envId' => 'env_id',
             'apiId' => 'api_id',
             'apiName' => 'api_name',
-            'groupId' => 'group_id'
+            'groupId' => 'group_id',
+            'tags' => 'tags'
     ];
 
     /**
@@ -121,6 +127,7 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
     * apiId  API编号
     * apiName  API名称
     * groupId  API分组编号
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -132,7 +139,8 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
             'envId' => 'setEnvId',
             'apiId' => 'setApiId',
             'apiName' => 'setApiName',
-            'groupId' => 'setGroupId'
+            'groupId' => 'setGroupId',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -145,6 +153,7 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
     * apiId  API编号
     * apiName  API名称
     * groupId  API分组编号
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -156,7 +165,8 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
             'envId' => 'getEnvId',
             'apiId' => 'getApiId',
             'apiName' => 'getApiName',
-            'groupId' => 'getGroupId'
+            'groupId' => 'getGroupId',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -225,6 +235,7 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
         $this->container['apiId'] = isset($data['apiId']) ? $data['apiId'] : null;
         $this->container['apiName'] = isset($data['apiName']) ? $data['apiName'] : null;
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -247,6 +258,15 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
         if ($this->container['signId'] === null) {
             $invalidProperties[] = "'signId' can't be null";
         }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) > 128)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['tags']) && !preg_match("/^$|^#no_tags#$|^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9]|[\\u4e00-\\u9fa5]|[-#%.:_]){0,127}$/", $this->container['tags'])) {
+                $invalidProperties[] = "invalid value for 'tags', must be conform to the pattern /^$|^#no_tags#$|^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9]|[\\u4e00-\\u9fa5]|[-#%.:_]){0,127}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -450,6 +470,30 @@ class ListApisNotBoundWithSignatureKeyV2Request implements ModelInterface, Array
     public function setGroupId($groupId)
     {
         $this->container['groupId'] = $groupId;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

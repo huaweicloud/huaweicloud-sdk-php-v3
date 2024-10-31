@@ -20,14 +20,14 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * protectedResourceType  防护资源类型：0 VPC，1 VGW
+    * protectedResourceType  防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     * protectedResourceName  防护资源名称
     * protectedResourceId  防护资源id
-    * protectedResourceNatName  防护资源nat网关名称
-    * protectedResourceNatId  防护资源nat网关id
-    * protectedResourceProjectId  防护资源租户id
-    * protectedResourceMode  防护资源模式
-    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
+    * protectedResourceNatName  防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
+    * protectedResourceNatId  防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
+    * protectedResourceProjectId  防火墙支持跨账户防护，此处为防护资源租户id
+    * protectedResourceMode  防护资源模式，为er
+    * status  防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -44,14 +44,14 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * protectedResourceType  防护资源类型：0 VPC，1 VGW
+    * protectedResourceType  防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     * protectedResourceName  防护资源名称
     * protectedResourceId  防护资源id
-    * protectedResourceNatName  防护资源nat网关名称
-    * protectedResourceNatId  防护资源nat网关id
-    * protectedResourceProjectId  防护资源租户id
-    * protectedResourceMode  防护资源模式
-    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
+    * protectedResourceNatName  防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
+    * protectedResourceNatId  防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
+    * protectedResourceProjectId  防火墙支持跨账户防护，此处为防护资源租户id
+    * protectedResourceMode  防护资源模式，为er
+    * status  防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -89,14 +89,14 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * protectedResourceType  防护资源类型：0 VPC，1 VGW
+    * protectedResourceType  防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     * protectedResourceName  防护资源名称
     * protectedResourceId  防护资源id
-    * protectedResourceNatName  防护资源nat网关名称
-    * protectedResourceNatId  防护资源nat网关id
-    * protectedResourceProjectId  防护资源租户id
-    * protectedResourceMode  防护资源模式
-    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
+    * protectedResourceNatName  防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
+    * protectedResourceNatId  防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
+    * protectedResourceProjectId  防火墙支持跨账户防护，此处为防护资源租户id
+    * protectedResourceMode  防护资源模式，为er
+    * status  防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -113,14 +113,14 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * protectedResourceType  防护资源类型：0 VPC，1 VGW
+    * protectedResourceType  防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     * protectedResourceName  防护资源名称
     * protectedResourceId  防护资源id
-    * protectedResourceNatName  防护资源nat网关名称
-    * protectedResourceNatId  防护资源nat网关id
-    * protectedResourceProjectId  防护资源租户id
-    * protectedResourceMode  防护资源模式
-    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
+    * protectedResourceNatName  防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
+    * protectedResourceNatId  防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
+    * protectedResourceProjectId  防火墙支持跨账户防护，此处为防护资源租户id
+    * protectedResourceMode  防护资源模式，为er
+    * status  防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -137,14 +137,14 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * protectedResourceType  防护资源类型：0 VPC，1 VGW
+    * protectedResourceType  防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     * protectedResourceName  防护资源名称
     * protectedResourceId  防护资源id
-    * protectedResourceNatName  防护资源nat网关名称
-    * protectedResourceNatId  防护资源nat网关id
-    * protectedResourceProjectId  防护资源租户id
-    * protectedResourceMode  防护资源模式
-    * status  防护VPC的防护状态，0表示已关联，1表示未关联。
+    * protectedResourceNatName  防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
+    * protectedResourceNatId  防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
+    * protectedResourceProjectId  防火墙支持跨账户防护，此处为防护资源租户id
+    * protectedResourceMode  防护资源模式，为er
+    * status  防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @var string[]
     */
@@ -260,7 +260,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectedResourceType
-    *  防护资源类型：0 VPC，1 VGW
+    *  防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     *
     * @return int
     */
@@ -272,7 +272,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectedResourceType
     *
-    * @param int $protectedResourceType 防护资源类型：0 VPC，1 VGW
+    * @param int $protectedResourceType 防护资源类型：0 VPC，1 VGW，2 VPN，3 PEERING
     *
     * @return $this
     */
@@ -332,7 +332,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectedResourceNatName
-    *  防护资源nat网关名称
+    *  防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
     *
     * @return string|null
     */
@@ -344,7 +344,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectedResourceNatName
     *
-    * @param string|null $protectedResourceNatName 防护资源nat网关名称
+    * @param string|null $protectedResourceNatName 防护资源nat网关名称，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的名称。
     *
     * @return $this
     */
@@ -356,7 +356,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectedResourceNatId
-    *  防护资源nat网关id
+    *  防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
     *
     * @return string|null
     */
@@ -368,7 +368,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectedResourceNatId
     *
-    * @param string|null $protectedResourceNatId 防护资源nat网关id
+    * @param string|null $protectedResourceNatId 防护资源nat网关id，专业版防火墙支持NAT规则，此字段表示防护连接的NAT的id。
     *
     * @return $this
     */
@@ -380,7 +380,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectedResourceProjectId
-    *  防护资源租户id
+    *  防火墙支持跨账户防护，此处为防护资源租户id
     *
     * @return string|null
     */
@@ -392,7 +392,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectedResourceProjectId
     *
-    * @param string|null $protectedResourceProjectId 防护资源租户id
+    * @param string|null $protectedResourceProjectId 防火墙支持跨账户防护，此处为防护资源租户id
     *
     * @return $this
     */
@@ -404,7 +404,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets protectedResourceMode
-    *  防护资源模式
+    *  防护资源模式，为er
     *
     * @return string|null
     */
@@ -416,7 +416,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets protectedResourceMode
     *
-    * @param string|null $protectedResourceMode 防护资源模式
+    * @param string|null $protectedResourceMode 防护资源模式，为er
     *
     * @return $this
     */
@@ -428,7 +428,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  防护VPC的防护状态，0表示已关联，1表示未关联。
+    *  防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @return int|null
     */
@@ -440,7 +440,7 @@ class EwProtectResourceInfo implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 防护VPC的防护状态，0表示已关联，1表示未关联。
+    * @param int|null $status 防护资源的防护状态，0表示已关联，1表示未关联。
     *
     * @return $this
     */

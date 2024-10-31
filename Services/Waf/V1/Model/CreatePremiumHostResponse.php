@@ -32,6 +32,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * cipher  对外协议为https时才有cipher参数，加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_5：加密算法为AES128-SHA:AES256-SHA:AES128-SHA256:AES256-SHA256:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4:!DHE:@STRENGTH    cipher_6：加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
     * extend  扩展字段，用于保存防护域名的一些配置信息。
     * flag  flag
+    * mode  云模式elb接入域名返回此字段：elb-shared
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * listenerId  云模式elb接入域名返回此字段，表示监听器id
+    * protocolPort  云模式elb接入域名返回此字段， 表示业务端口
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
@@ -56,6 +60,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'cipher' => 'string',
             'extend' => 'map[string,string]',
             'flag' => '\HuaweiCloud\SDK\Waf\V1\Model\Flag',
+            'mode' => 'string',
+            'loadbalancerId' => 'string',
+            'listenerId' => 'string',
+            'protocolPort' => 'int',
             'description' => 'string',
             'policyid' => 'string',
             'domainid' => 'string',
@@ -80,6 +88,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * cipher  对外协议为https时才有cipher参数，加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_5：加密算法为AES128-SHA:AES256-SHA:AES128-SHA256:AES256-SHA256:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4:!DHE:@STRENGTH    cipher_6：加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
     * extend  扩展字段，用于保存防护域名的一些配置信息。
     * flag  flag
+    * mode  云模式elb接入域名返回此字段：elb-shared
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * listenerId  云模式elb接入域名返回此字段，表示监听器id
+    * protocolPort  云模式elb接入域名返回此字段， 表示业务端口
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
@@ -104,6 +116,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
         'cipher' => null,
         'extend' => null,
         'flag' => null,
+        'mode' => null,
+        'loadbalancerId' => null,
+        'listenerId' => null,
+        'protocolPort' => null,
         'description' => null,
         'policyid' => null,
         'domainid' => null,
@@ -149,6 +165,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * cipher  对外协议为https时才有cipher参数，加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_5：加密算法为AES128-SHA:AES256-SHA:AES128-SHA256:AES256-SHA256:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4:!DHE:@STRENGTH    cipher_6：加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
     * extend  扩展字段，用于保存防护域名的一些配置信息。
     * flag  flag
+    * mode  云模式elb接入域名返回此字段：elb-shared
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * listenerId  云模式elb接入域名返回此字段，表示监听器id
+    * protocolPort  云模式elb接入域名返回此字段， 表示业务端口
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
@@ -173,6 +193,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'cipher' => 'cipher',
             'extend' => 'extend',
             'flag' => 'flag',
+            'mode' => 'mode',
+            'loadbalancerId' => 'loadbalancer_id',
+            'listenerId' => 'listener_id',
+            'protocolPort' => 'protocol_port',
             'description' => 'description',
             'policyid' => 'policyid',
             'domainid' => 'domainid',
@@ -197,6 +221,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * cipher  对外协议为https时才有cipher参数，加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_5：加密算法为AES128-SHA:AES256-SHA:AES128-SHA256:AES256-SHA256:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4:!DHE:@STRENGTH    cipher_6：加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
     * extend  扩展字段，用于保存防护域名的一些配置信息。
     * flag  flag
+    * mode  云模式elb接入域名返回此字段：elb-shared
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * listenerId  云模式elb接入域名返回此字段，表示监听器id
+    * protocolPort  云模式elb接入域名返回此字段， 表示业务端口
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
@@ -221,6 +249,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'cipher' => 'setCipher',
             'extend' => 'setExtend',
             'flag' => 'setFlag',
+            'mode' => 'setMode',
+            'loadbalancerId' => 'setLoadbalancerId',
+            'listenerId' => 'setListenerId',
+            'protocolPort' => 'setProtocolPort',
             'description' => 'setDescription',
             'policyid' => 'setPolicyid',
             'domainid' => 'setDomainid',
@@ -245,6 +277,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     * cipher  对外协议为https时才有cipher参数，加密套件（cipher_1，cipher_2，cipher_3，cipher_4，cipher_default）：  - cipher_1： 加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!DES:!MD5:!PSK:!RC4:!kRSA:!SRP:!3DES:!DSS:!EXP:!CAMELLIA:@STRENGTH   - cipher_2：加密算法为EECDH+AESGCM:EDH+AESGCM   - cipher_3：加密算法为ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH   - cipher_4：加密算法为ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!EDH    cipher_5：加密算法为AES128-SHA:AES256-SHA:AES128-SHA256:AES256-SHA256:HIGH:!MEDIUM:!LOW:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4:!DHE:@STRENGTH    cipher_6：加密算法为ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256   - cipher_default： 加密算法为ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!eNULL:!NULL:!DH:!EDH:!AESGCM
     * extend  扩展字段，用于保存防护域名的一些配置信息。
     * flag  flag
+    * mode  云模式elb接入域名返回此字段：elb-shared
+    * loadbalancerId  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    * listenerId  云模式elb接入域名返回此字段，表示监听器id
+    * protocolPort  云模式elb接入域名返回此字段， 表示业务端口
     * description  域名描述
     * policyid  防护域名初始绑定的防护策略ID,可以通过策略名称调用查询防护策略列表（ListPolicy）接口查询到对应的策略id
     * domainid  账号ID,对应华为云控制台用户名->我的凭证->账号ID
@@ -269,6 +305,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
             'cipher' => 'getCipher',
             'extend' => 'getExtend',
             'flag' => 'getFlag',
+            'mode' => 'getMode',
+            'loadbalancerId' => 'getLoadbalancerId',
+            'listenerId' => 'getListenerId',
+            'protocolPort' => 'getProtocolPort',
             'description' => 'getDescription',
             'policyid' => 'getPolicyid',
             'domainid' => 'getDomainid',
@@ -408,6 +448,10 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
         $this->container['cipher'] = isset($data['cipher']) ? $data['cipher'] : null;
         $this->container['extend'] = isset($data['extend']) ? $data['extend'] : null;
         $this->container['flag'] = isset($data['flag']) ? $data['flag'] : null;
+        $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['loadbalancerId'] = isset($data['loadbalancerId']) ? $data['loadbalancerId'] : null;
+        $this->container['listenerId'] = isset($data['listenerId']) ? $data['listenerId'] : null;
+        $this->container['protocolPort'] = isset($data['protocolPort']) ? $data['protocolPort'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['policyid'] = isset($data['policyid']) ? $data['policyid'] : null;
         $this->container['domainid'] = isset($data['domainid']) ? $data['domainid'] : null;
@@ -726,6 +770,102 @@ class CreatePremiumHostResponse implements ModelInterface, ArrayAccess
     public function setFlag($flag)
     {
         $this->container['flag'] = $flag;
+        return $this;
+    }
+
+    /**
+    * Gets mode
+    *  云模式elb接入域名返回此字段：elb-shared
+    *
+    * @return string|null
+    */
+    public function getMode()
+    {
+        return $this->container['mode'];
+    }
+
+    /**
+    * Sets mode
+    *
+    * @param string|null $mode 云模式elb接入域名返回此字段：elb-shared
+    *
+    * @return $this
+    */
+    public function setMode($mode)
+    {
+        $this->container['mode'] = $mode;
+        return $this;
+    }
+
+    /**
+    * Gets loadbalancerId
+    *  云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    *
+    * @return string|null
+    */
+    public function getLoadbalancerId()
+    {
+        return $this->container['loadbalancerId'];
+    }
+
+    /**
+    * Sets loadbalancerId
+    *
+    * @param string|null $loadbalancerId 云模式elb接入域名返回此字段，表示负载均衡器（ELB）id
+    *
+    * @return $this
+    */
+    public function setLoadbalancerId($loadbalancerId)
+    {
+        $this->container['loadbalancerId'] = $loadbalancerId;
+        return $this;
+    }
+
+    /**
+    * Gets listenerId
+    *  云模式elb接入域名返回此字段，表示监听器id
+    *
+    * @return string|null
+    */
+    public function getListenerId()
+    {
+        return $this->container['listenerId'];
+    }
+
+    /**
+    * Sets listenerId
+    *
+    * @param string|null $listenerId 云模式elb接入域名返回此字段，表示监听器id
+    *
+    * @return $this
+    */
+    public function setListenerId($listenerId)
+    {
+        $this->container['listenerId'] = $listenerId;
+        return $this;
+    }
+
+    /**
+    * Gets protocolPort
+    *  云模式elb接入域名返回此字段， 表示业务端口
+    *
+    * @return int|null
+    */
+    public function getProtocolPort()
+    {
+        return $this->container['protocolPort'];
+    }
+
+    /**
+    * Sets protocolPort
+    *
+    * @param int|null $protocolPort 云模式elb接入域名返回此字段， 表示业务端口
+    *
+    * @return $this
+    */
+    public function setProtocolPort($protocolPort)
+    {
+        $this->container['protocolPort'] = $protocolPort;
         return $this;
     }
 

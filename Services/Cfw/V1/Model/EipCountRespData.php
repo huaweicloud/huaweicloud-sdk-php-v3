@@ -20,15 +20,13 @@ class EipCountRespData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * eipTotal  EIP总数
+    * eipTotal  总体EIP数
     * eipProtected  该账号下所有墙防护EIP总数量
-    * eipProtectedSelf  该当前防火墙防护EIP数量
+    * eipProtectedSelf  当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'objectId' => 'string',
             'eipTotal' => 'int',
             'eipProtected' => 'int',
             'eipProtectedSelf' => 'int'
@@ -36,15 +34,13 @@ class EipCountRespData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * eipTotal  EIP总数
+    * eipTotal  总体EIP数
     * eipProtected  该账号下所有墙防护EIP总数量
-    * eipProtectedSelf  该当前防火墙防护EIP数量
+    * eipProtectedSelf  当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'objectId' => null,
         'eipTotal' => 'int32',
         'eipProtected' => 'int32',
         'eipProtectedSelf' => 'int32'
@@ -73,15 +69,13 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * eipTotal  EIP总数
+    * eipTotal  总体EIP数
     * eipProtected  该账号下所有墙防护EIP总数量
-    * eipProtectedSelf  该当前防火墙防护EIP数量
+    * eipProtectedSelf  当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'objectId' => 'object_id',
             'eipTotal' => 'eip_total',
             'eipProtected' => 'eip_protected',
             'eipProtectedSelf' => 'eip_protected_self'
@@ -89,15 +83,13 @@ class EipCountRespData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * eipTotal  EIP总数
+    * eipTotal  总体EIP数
     * eipProtected  该账号下所有墙防护EIP总数量
-    * eipProtectedSelf  该当前防火墙防护EIP数量
+    * eipProtectedSelf  当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $setters = [
-            'objectId' => 'setObjectId',
             'eipTotal' => 'setEipTotal',
             'eipProtected' => 'setEipProtected',
             'eipProtectedSelf' => 'setEipProtectedSelf'
@@ -105,15 +97,13 @@ class EipCountRespData implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * eipTotal  EIP总数
+    * eipTotal  总体EIP数
     * eipProtected  该账号下所有墙防护EIP总数量
-    * eipProtectedSelf  该当前防火墙防护EIP数量
+    * eipProtectedSelf  当前防火墙防护EIP数量
     *
     * @var string[]
     */
     protected static $getters = [
-            'objectId' => 'getObjectId',
             'eipTotal' => 'getEipTotal',
             'eipProtected' => 'getEipProtected',
             'eipProtectedSelf' => 'getEipProtectedSelf'
@@ -177,7 +167,6 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['eipTotal'] = isset($data['eipTotal']) ? $data['eipTotal'] : null;
         $this->container['eipProtected'] = isset($data['eipProtected']) ? $data['eipProtected'] : null;
         $this->container['eipProtectedSelf'] = isset($data['eipProtectedSelf']) ? $data['eipProtectedSelf'] : null;
@@ -191,21 +180,6 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['objectId']) && (mb_strlen($this->container['objectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'objectId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['objectId']) && (mb_strlen($this->container['objectId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'objectId', the character length must be bigger than or equal to 36.";
-            }
-            if (!is_null($this->container['objectId']) && !preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['objectId'])) {
-                $invalidProperties[] = "invalid value for 'objectId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
-            }
-            if (!is_null($this->container['eipTotal']) && ($this->container['eipTotal'] < 0)) {
-                $invalidProperties[] = "invalid value for 'eipTotal', must be bigger than or equal to 0.";
-            }
-            if (!is_null($this->container['eipProtected']) && ($this->container['eipProtected'] < 0)) {
-                $invalidProperties[] = "invalid value for 'eipProtected', must be bigger than or equal to 0.";
-            }
         return $invalidProperties;
     }
 
@@ -221,32 +195,8 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    *
-    * @return string|null
-    */
-    public function getObjectId()
-    {
-        return $this->container['objectId'];
-    }
-
-    /**
-    * Sets objectId
-    *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    *
-    * @return $this
-    */
-    public function setObjectId($objectId)
-    {
-        $this->container['objectId'] = $objectId;
-        return $this;
-    }
-
-    /**
     * Gets eipTotal
-    *  EIP总数
+    *  总体EIP数
     *
     * @return int|null
     */
@@ -258,7 +208,7 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     /**
     * Sets eipTotal
     *
-    * @param int|null $eipTotal EIP总数
+    * @param int|null $eipTotal 总体EIP数
     *
     * @return $this
     */
@@ -294,7 +244,7 @@ class EipCountRespData implements ModelInterface, ArrayAccess
 
     /**
     * Gets eipProtectedSelf
-    *  该当前防火墙防护EIP数量
+    *  当前防火墙防护EIP数量
     *
     * @return int|null
     */
@@ -306,7 +256,7 @@ class EipCountRespData implements ModelInterface, ArrayAccess
     /**
     * Sets eipProtectedSelf
     *
-    * @param int|null $eipProtectedSelf 该当前防火墙防护EIP数量
+    * @param int|null $eipProtectedSelf 当前防火墙防护EIP数量
     *
     * @return $this
     */

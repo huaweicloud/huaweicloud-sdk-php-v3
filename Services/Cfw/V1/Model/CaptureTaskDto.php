@@ -21,8 +21,8 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * destination  destination
-    * duration  抓包时长
-    * maxPackets  最大抓包数
+    * duration  抓包时长，以分钟为单位
+    * maxPackets  最大抓包数，以个为单位
     * name  抓包任务名称
     * service  service
     * source  source
@@ -41,8 +41,8 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * destination  destination
-    * duration  抓包时长
-    * maxPackets  最大抓包数
+    * duration  抓包时长，以分钟为单位
+    * maxPackets  最大抓包数，以个为单位
     * name  抓包任务名称
     * service  service
     * source  source
@@ -82,8 +82,8 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * destination  destination
-    * duration  抓包时长
-    * maxPackets  最大抓包数
+    * duration  抓包时长，以分钟为单位
+    * maxPackets  最大抓包数，以个为单位
     * name  抓包任务名称
     * service  service
     * source  source
@@ -102,8 +102,8 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * destination  destination
-    * duration  抓包时长
-    * maxPackets  最大抓包数
+    * duration  抓包时长，以分钟为单位
+    * maxPackets  最大抓包数，以个为单位
     * name  抓包任务名称
     * service  service
     * source  source
@@ -122,8 +122,8 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * destination  destination
-    * duration  抓包时长
-    * maxPackets  最大抓包数
+    * duration  抓包时长，以分钟为单位
+    * maxPackets  最大抓包数，以个为单位
     * name  抓包任务名称
     * service  service
     * source  source
@@ -274,7 +274,7 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets duration
-    *  抓包时长
+    *  抓包时长，以分钟为单位
     *
     * @return int
     */
@@ -286,7 +286,7 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Sets duration
     *
-    * @param int $duration 抓包时长
+    * @param int $duration 抓包时长，以分钟为单位
     *
     * @return $this
     */
@@ -298,7 +298,7 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets maxPackets
-    *  最大抓包数
+    *  最大抓包数，以个为单位
     *
     * @return int
     */
@@ -310,7 +310,7 @@ class CaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Sets maxPackets
     *
-    * @param int $maxPackets 最大抓包数
+    * @param int $maxPackets 最大抓包数，以个为单位
     *
     * @return $this
     */

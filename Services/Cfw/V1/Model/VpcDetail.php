@@ -20,34 +20,30 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * name  名称
-    * cidr  vpc cidr
-    * status  状态
+    * id  创建引流VPC产生的随机UUID
+    * name  引流VPC名称
+    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'id' => 'string',
             'name' => 'string',
-            'cidr' => 'string',
-            'status' => 'string'
+            'cidr' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * name  名称
-    * cidr  vpc cidr
-    * status  状态
+    * id  创建引流VPC产生的随机UUID
+    * name  引流VPC名称
+    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'cidr' => null,
-        'status' => null
+        'cidr' => null
     ];
 
     /**
@@ -73,50 +69,44 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * name  名称
-    * cidr  vpc cidr
-    * status  状态
+    * id  创建引流VPC产生的随机UUID
+    * name  引流VPC名称
+    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'id' => 'id',
             'name' => 'name',
-            'cidr' => 'cidr',
-            'status' => 'status'
+            'cidr' => 'cidr'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * name  名称
-    * cidr  vpc cidr
-    * status  状态
+    * id  创建引流VPC产生的随机UUID
+    * name  引流VPC名称
+    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @var string[]
     */
     protected static $setters = [
             'id' => 'setId',
             'name' => 'setName',
-            'cidr' => 'setCidr',
-            'status' => 'setStatus'
+            'cidr' => 'setCidr'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * name  名称
-    * cidr  vpc cidr
-    * status  状态
+    * id  创建引流VPC产生的随机UUID
+    * name  引流VPC名称
+    * cidr  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @var string[]
     */
     protected static $getters = [
             'id' => 'getId',
             'name' => 'getName',
-            'cidr' => 'getCidr',
-            'status' => 'getStatus'
+            'cidr' => 'getCidr'
     ];
 
     /**
@@ -180,7 +170,6 @@ class VpcDetail implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['cidr'] = isset($data['cidr']) ? $data['cidr'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
     /**
@@ -207,7 +196,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  创建引流VPC产生的随机UUID
     *
     * @return string|null
     */
@@ -219,7 +208,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 创建引流VPC产生的随机UUID
     *
     * @return $this
     */
@@ -231,7 +220,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  引流VPC名称
     *
     * @return string|null
     */
@@ -243,7 +232,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name 引流VPC名称
     *
     * @return $this
     */
@@ -255,7 +244,7 @@ class VpcDetail implements ModelInterface, ArrayAccess
 
     /**
     * Gets cidr
-    *  vpc cidr
+    *  功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @return string|null
     */
@@ -267,37 +256,13 @@ class VpcDetail implements ModelInterface, ArrayAccess
     /**
     * Sets cidr
     *
-    * @param string|null $cidr vpc cidr
+    * @param string|null $cidr 功能说明：虚拟私有云下可用子网的范围 取值范围： 10.0.0.0/8~24 172.16.0.0/12~24 192.168.0.0/16~24 不指定cidr时，默认值为空 约束：必须是cidr格式，例如:192.168.0.0/16
     *
     * @return $this
     */
     public function setCidr($cidr)
     {
         $this->container['cidr'] = $cidr;
-        return $this;
-    }
-
-    /**
-    * Gets status
-    *  状态
-    *
-    * @return string|null
-    */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-    * Sets status
-    *
-    * @param string|null $status 状态
-    *
-    * @return $this
-    */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
         return $this;
     }
 

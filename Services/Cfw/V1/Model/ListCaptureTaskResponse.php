@@ -21,17 +21,17 @@ class ListCaptureTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * data  查询抓包任务返回值。
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCaptureTaskResponseData[]'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCaptureTaskResponseData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * data  查询抓包任务返回值。
+    * data  data
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class ListCaptureTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * data  查询抓包任务返回值。
+    * data  data
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class ListCaptureTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * data  查询抓包任务返回值。
+    * data  data
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class ListCaptureTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * data  查询抓包任务返回值。
+    * data  data
     *
     * @var string[]
     */
@@ -175,9 +175,9 @@ class ListCaptureTaskResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets data
-    *  查询抓包任务返回值。
+    *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCaptureTaskResponseData[]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCaptureTaskResponseData|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class ListCaptureTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCaptureTaskResponseData[]|null $data 查询抓包任务返回值。
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\HttpQueryCaptureTaskResponseData|null $data data
     *
     * @return $this
     */

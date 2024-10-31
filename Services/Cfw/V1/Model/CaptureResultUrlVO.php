@@ -20,9 +20,9 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * captcha  下载链接提取码
+    * captcha  下载链接提取码，用于打开下载链接时使用。
     * expires  下载链接过期时间
-    * fileList  抓包文件列表
+    * fileList  抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     * requestHeader  requestHeader
     * url  下载链接
     *
@@ -38,9 +38,9 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * captcha  下载链接提取码
+    * captcha  下载链接提取码，用于打开下载链接时使用。
     * expires  下载链接过期时间
-    * fileList  抓包文件列表
+    * fileList  抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     * requestHeader  requestHeader
     * url  下载链接
     *
@@ -77,9 +77,9 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * captcha  下载链接提取码
+    * captcha  下载链接提取码，用于打开下载链接时使用。
     * expires  下载链接过期时间
-    * fileList  抓包文件列表
+    * fileList  抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     * requestHeader  requestHeader
     * url  下载链接
     *
@@ -95,9 +95,9 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * captcha  下载链接提取码
+    * captcha  下载链接提取码，用于打开下载链接时使用。
     * expires  下载链接过期时间
-    * fileList  抓包文件列表
+    * fileList  抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     * requestHeader  requestHeader
     * url  下载链接
     *
@@ -113,9 +113,9 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * captcha  下载链接提取码
+    * captcha  下载链接提取码，用于打开下载链接时使用。
     * expires  下载链接过期时间
-    * fileList  抓包文件列表
+    * fileList  抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     * requestHeader  requestHeader
     * url  下载链接
     *
@@ -218,7 +218,7 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets captcha
-    *  下载链接提取码
+    *  下载链接提取码，用于打开下载链接时使用。
     *
     * @return string|null
     */
@@ -230,7 +230,7 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
     /**
     * Sets captcha
     *
-    * @param string|null $captcha 下载链接提取码
+    * @param string|null $captcha 下载链接提取码，用于打开下载链接时使用。
     *
     * @return $this
     */
@@ -266,7 +266,7 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets fileList
-    *  抓包文件列表
+    *  抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\CaptureFile[]|null
     */
@@ -278,7 +278,7 @@ class CaptureResultUrlVO implements ModelInterface, ArrayAccess
     /**
     * Sets fileList
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CaptureFile[]|null $fileList 抓包文件列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CaptureFile[]|null $fileList 抓包文件列表，当环境不支持obs文件夹分享时使用。当此字段存在时，无captch，expires，url返回值。
     *
     * @return $this
     */

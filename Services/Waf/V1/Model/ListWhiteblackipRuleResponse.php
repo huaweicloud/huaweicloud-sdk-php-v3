@@ -23,24 +23,28 @@ class ListWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * total  黑白名单规则条数
     * items  黑白名单规则列表信息
+    * size  ip地址总数
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'total' => 'int',
-            'items' => '\HuaweiCloud\SDK\Waf\V1\Model\WhiteBlackIpResponseBody[]'
+            'items' => '\HuaweiCloud\SDK\Waf\V1\Model\WhiteBlackIpResponseBody[]',
+            'size' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * total  黑白名单规则条数
     * items  黑白名单规则列表信息
+    * size  ip地址总数
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'total' => null,
-        'items' => null
+        'items' => null,
+        'size' => null
     ];
 
     /**
@@ -68,36 +72,42 @@ class ListWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * total  黑白名单规则条数
     * items  黑白名单规则列表信息
+    * size  ip地址总数
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'total' => 'total',
-            'items' => 'items'
+            'items' => 'items',
+            'size' => 'size'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * total  黑白名单规则条数
     * items  黑白名单规则列表信息
+    * size  ip地址总数
     *
     * @var string[]
     */
     protected static $setters = [
             'total' => 'setTotal',
-            'items' => 'setItems'
+            'items' => 'setItems',
+            'size' => 'setSize'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * total  黑白名单规则条数
     * items  黑白名单规则列表信息
+    * size  ip地址总数
     *
     * @var string[]
     */
     protected static $getters = [
             'total' => 'getTotal',
-            'items' => 'getItems'
+            'items' => 'getItems',
+            'size' => 'getSize'
     ];
 
     /**
@@ -160,6 +170,7 @@ class ListWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     {
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
     }
 
     /**
@@ -229,6 +240,30 @@ class ListWhiteblackipRuleResponse implements ModelInterface, ArrayAccess
     public function setItems($items)
     {
         $this->container['items'] = $items;
+        return $this;
+    }
+
+    /**
+    * Gets size
+    *  ip地址总数
+    *
+    * @return int|null
+    */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+    * Sets size
+    *
+    * @param int|null $size ip地址总数
+    *
+    * @return $this
+    */
+    public function setSize($size)
+    {
+        $this->container['size'] = $size;
         return $this;
     }
 

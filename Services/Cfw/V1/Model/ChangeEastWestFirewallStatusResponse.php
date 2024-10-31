@@ -22,25 +22,21 @@ class ChangeEastWestFirewallStatusResponse implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * data  data
-    * traceId  trace id
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\SuccessRspData',
-            'traceId' => 'string'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ChangeEastWestFirewallStatusResponseData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * data  data
-    * traceId  trace id
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'data' => null,
-        'traceId' => null
+        'data' => null
     ];
 
     /**
@@ -67,37 +63,31 @@ class ChangeEastWestFirewallStatusResponse implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * data  data
-    * traceId  trace id
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'data' => 'data',
-            'traceId' => 'trace_id'
+            'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * data  data
-    * traceId  trace id
     *
     * @var string[]
     */
     protected static $setters = [
-            'data' => 'setData',
-            'traceId' => 'setTraceId'
+            'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * data  data
-    * traceId  trace id
     *
     * @var string[]
     */
     protected static $getters = [
-            'data' => 'getData',
-            'traceId' => 'getTraceId'
+            'data' => 'getData'
     ];
 
     /**
@@ -159,7 +149,6 @@ class ChangeEastWestFirewallStatusResponse implements ModelInterface, ArrayAcces
     public function __construct(array $data = null)
     {
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['traceId'] = isset($data['traceId']) ? $data['traceId'] : null;
     }
 
     /**
@@ -188,7 +177,7 @@ class ChangeEastWestFirewallStatusResponse implements ModelInterface, ArrayAcces
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\SuccessRspData|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ChangeEastWestFirewallStatusResponseData|null
     */
     public function getData()
     {
@@ -198,37 +187,13 @@ class ChangeEastWestFirewallStatusResponse implements ModelInterface, ArrayAcces
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\SuccessRspData|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ChangeEastWestFirewallStatusResponseData|null $data data
     *
     * @return $this
     */
     public function setData($data)
     {
         $this->container['data'] = $data;
-        return $this;
-    }
-
-    /**
-    * Gets traceId
-    *  trace id
-    *
-    * @return string|null
-    */
-    public function getTraceId()
-    {
-        return $this->container['traceId'];
-    }
-
-    /**
-    * Sets traceId
-    *
-    * @param string|null $traceId trace id
-    *
-    * @return $this
-    */
-    public function setTraceId($traceId)
-    {
-        $this->container['traceId'] = $traceId;
         return $this;
     }
 

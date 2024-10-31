@@ -22,7 +22,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  总数
+    * total  域名组总数
     * records  域名组列表
     *
     * @var string[]
@@ -38,7 +38,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  总数
+    * total  域名组总数
     * records  域名组列表
     *
     * @var string[]
@@ -75,7 +75,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  总数
+    * total  域名组总数
     * records  域名组列表
     *
     * @var string[]
@@ -91,7 +91,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  总数
+    * total  域名组总数
     * records  域名组列表
     *
     * @var string[]
@@ -107,7 +107,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页显示个数，范围为1-1024
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * total  总数
+    * total  域名组总数
     * records  域名组列表
     *
     * @var string[]
@@ -255,7 +255,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  域名组总数
     *
     * @return int|null
     */
@@ -267,7 +267,7 @@ class ListDomainsetsResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 域名组总数
     *
     * @return $this
     */

@@ -22,9 +22,9 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  总数
+    * total  地址组成员总数
     * setId  地址组id
-    * records  成员信息
+    * records  地址组成员记录列表
     *
     * @var string[]
     */
@@ -40,9 +40,9 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  总数
+    * total  地址组成员总数
     * setId  地址组id
-    * records  成员信息
+    * records  地址组成员记录列表
     *
     * @var string[]
     */
@@ -79,9 +79,9 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  总数
+    * total  地址组成员总数
     * setId  地址组id
-    * records  成员信息
+    * records  地址组成员记录列表
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  总数
+    * total  地址组成员总数
     * setId  地址组id
-    * records  成员信息
+    * records  地址组成员记录列表
     *
     * @var string[]
     */
@@ -115,9 +115,9 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  总数
+    * total  地址组成员总数
     * setId  地址组id
-    * records  成员信息
+    * records  地址组成员记录列表
     *
     * @var string[]
     */
@@ -266,7 +266,7 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  总数
+    *  地址组成员总数
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 总数
+    * @param int|null $total 地址组成员总数
     *
     * @return $this
     */
@@ -314,7 +314,7 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets records
-    *  成员信息
+    *  地址组成员记录列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddressItemListResponseDTODataRecords[]|null
     */
@@ -326,7 +326,7 @@ class AddressItemListResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets records
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressItemListResponseDTODataRecords[]|null $records 成员信息
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressItemListResponseDTODataRecords[]|null $records 地址组成员记录列表
     *
     * @return $this
     */

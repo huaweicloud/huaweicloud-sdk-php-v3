@@ -24,7 +24,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * name  地址组名称
     * description  地址组描述
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * name  地址组名称
     * description  地址组描述
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * name  地址组名称
     * description  地址组描述
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * name  地址组名称
     * description  地址组描述
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     * name  地址组名称
     * description  地址组描述
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     *
     * @var string[]
     */
@@ -169,22 +169,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
-    const ADDRESS_TYPE_0 = 0;
-    const ADDRESS_TYPE_1 = 1;
     
-
-    /**
-    * Gets allowable values of the enum
-    *
-    * @return string[]
-    */
-    public function getAddressTypeAllowableValues()
-    {
-        return [
-            self::ADDRESS_TYPE_0,
-            self::ADDRESS_TYPE_1,
-        ];
-    }
 
 
     /**
@@ -217,14 +202,6 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            $allowedValues = $this->getAddressTypeAllowableValues();
-                if (!is_null($this->container['addressType']) && !in_array($this->container['addressType'], $allowedValues, true)) {
-                $invalidProperties[] = sprintf(
-                "invalid value for 'addressType', must be one of '%s'",
-                implode("', '", $allowedValues)
-                );
-            }
-
         return $invalidProperties;
     }
 
@@ -337,7 +314,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型0 ipv4,1 ipv6
+    *  地址类型0 ipv4，1 ipv6
     *
     * @return int|null
     */
@@ -349,7 +326,7 @@ class AddressSetDetailResponseDTOData implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */

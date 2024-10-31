@@ -21,7 +21,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * address  地址
-    * addressType  目的地址类型0 ipv4,1 ipv6
+    * addressType  目的地址类型0 ipv4，1 ipv6
     * type  输入地址类型，目前只支持0，手工输入类型
     *
     * @var string[]
@@ -35,7 +35,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * address  地址
-    * addressType  目的地址类型0 ipv4,1 ipv6
+    * addressType  目的地址类型0 ipv4，1 ipv6
     * type  输入地址类型，目前只支持0，手工输入类型
     *
     * @var string[]
@@ -70,7 +70,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * address  地址
-    * addressType  目的地址类型0 ipv4,1 ipv6
+    * addressType  目的地址类型0 ipv4，1 ipv6
     * type  输入地址类型，目前只支持0，手工输入类型
     *
     * @var string[]
@@ -84,7 +84,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * address  地址
-    * addressType  目的地址类型0 ipv4,1 ipv6
+    * addressType  目的地址类型0 ipv4，1 ipv6
     * type  输入地址类型，目前只支持0，手工输入类型
     *
     * @var string[]
@@ -98,7 +98,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * address  地址
-    * addressType  目的地址类型0 ipv4,1 ipv6
+    * addressType  目的地址类型0 ipv4，1 ipv6
     * type  输入地址类型，目前只支持0，手工输入类型
     *
     * @var string[]
@@ -229,7 +229,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  目的地址类型0 ipv4,1 ipv6
+    *  目的地址类型0 ipv4，1 ipv6
     *
     * @return int
     */
@@ -241,7 +241,7 @@ class CaptureRuleAddressDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int $addressType 目的地址类型0 ipv4,1 ipv6
+    * @param int $addressType 目的地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */

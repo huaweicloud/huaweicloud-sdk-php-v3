@@ -20,7 +20,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  东西向防护id
+    * id  东西向防护id，对应object_id字段
     * er  er
     * inspertionVpc  inspertionVpc
     *
@@ -34,7 +34,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  东西向防护id
+    * id  东西向防护id，对应object_id字段
     * er  er
     * inspertionVpc  inspertionVpc
     *
@@ -69,7 +69,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  东西向防护id
+    * id  东西向防护id，对应object_id字段
     * er  er
     * inspertionVpc  inspertionVpc
     *
@@ -83,7 +83,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  东西向防护id
+    * id  东西向防护id，对应object_id字段
     * er  er
     * inspertionVpc  inspertionVpc
     *
@@ -97,7 +97,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  东西向防护id
+    * id  东西向防护id，对应object_id字段
     * er  er
     * inspertionVpc  inspertionVpc
     *
@@ -196,7 +196,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  东西向防护id
+    *  东西向防护id，对应object_id字段
     *
     * @return string|null
     */
@@ -208,7 +208,7 @@ class CreateEWFirewallResp implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id 东西向防护id
+    * @param string|null $id 东西向防护id，对应object_id字段
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  规则id
-    * ruleHitCount  规则击中次数
+    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @var string[]
     */
@@ -33,7 +33,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  规则id
-    * ruleHitCount  规则击中次数
+    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @var string[]
     */
@@ -66,7 +66,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ruleId  规则id
-    * ruleHitCount  规则击中次数
+    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @var string[]
     */
@@ -78,7 +78,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  规则id
-    * ruleHitCount  规则击中次数
+    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @var string[]
     */
@@ -90,7 +90,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  规则id
-    * ruleHitCount  规则击中次数
+    * ruleHitCount  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @var string[]
     */
@@ -209,7 +209,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets ruleHitCount
-    *  规则击中次数
+    *  规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @return int|null
     */
@@ -221,7 +221,7 @@ class RuleHitCountObject implements ModelInterface, ArrayAccess
     /**
     * Sets ruleHitCount
     *
-    * @param int|null $ruleHitCount 规则击中次数
+    * @param int|null $ruleHitCount 规则击中次数，当acl规则被触发时，对应规则id的击中次数会添加一次。
     *
     * @return $this
     */

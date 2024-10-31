@@ -21,7 +21,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * customer  实名认证名称。
-    * accountName  客户经理登录名称。
+    * accountName  客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     * associationType  关联类型： 1：顾问销售2：代售
@@ -59,7 +59,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * customer  实名认证名称。
-    * accountName  客户经理登录名称。
+    * accountName  客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     * associationType  关联类型： 1：顾问销售2：代售
@@ -118,7 +118,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * customer  实名认证名称。
-    * accountName  客户经理登录名称。
+    * accountName  客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     * associationType  关联类型： 1：顾问销售2：代售
@@ -156,7 +156,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * customer  实名认证名称。
-    * accountName  客户经理登录名称。
+    * accountName  客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     * associationType  关联类型： 1：顾问销售2：代售
@@ -194,7 +194,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * customer  实名认证名称。
-    * accountName  客户经理登录名称。
+    * accountName  客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     * customerId  客户账号ID。
     * associatedOn  客户和伙伴关联时间。 UTC时间，格式：yyyy-MM-dd'T'HH:mm:ss'Z'，如“2019-05-06T08:05:01Z”，其中，HH范围是0～23，mm和ss范围是0～59。
     * associationType  关联类型： 1：顾问销售2：代售
@@ -358,7 +358,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
 
     /**
     * Gets accountName
-    *  客户经理登录名称。
+    *  客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     *
     * @return string
     */
@@ -370,7 +370,7 @@ class CustomerInformation implements ModelInterface, ArrayAccess
     /**
     * Sets accountName
     *
-    * @param string $accountName 客户经理登录名称。
+    * @param string $accountName 客户登录名称（如果客户创建了子用户，此处返回主账号登录名称）。
     *
     * @return $this
     */

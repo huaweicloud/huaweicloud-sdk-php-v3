@@ -21,12 +21,12 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     /**
     * Array of property to type mappings. Used for (de)serialization
     * setId  地址组id
-    * refCount  引用次数
+    * refCount  地址组被规则引用次数
     * description  描述信息
-    * name  地址组名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    * addressType  地址类型0 ipv4，1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * name  地址组名称
     *
     * @var string[]
     */
@@ -34,21 +34,21 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'setId' => 'string',
             'refCount' => 'int',
             'description' => 'string',
-            'name' => 'string',
             'addressType' => 'int',
             'objectId' => 'string',
-            'addressSetType' => 'int'
+            'addressSetType' => 'int',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * setId  地址组id
-    * refCount  引用次数
+    * refCount  地址组被规则引用次数
     * description  描述信息
-    * name  地址组名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    * addressType  地址类型0 ipv4，1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * name  地址组名称
     *
     * @var string[]
     */
@@ -56,10 +56,10 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
         'setId' => null,
         'refCount' => null,
         'description' => null,
-        'name' => null,
         'addressType' => 'int32',
         'objectId' => null,
-        'addressSetType' => 'int32'
+        'addressSetType' => 'int32',
+        'name' => null
     ];
 
     /**
@@ -86,12 +86,12 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * setId  地址组id
-    * refCount  引用次数
+    * refCount  地址组被规则引用次数
     * description  描述信息
-    * name  地址组名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    * addressType  地址类型0 ipv4，1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * name  地址组名称
     *
     * @var string[]
     */
@@ -99,21 +99,21 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'setId' => 'set_id',
             'refCount' => 'ref_count',
             'description' => 'description',
-            'name' => 'name',
             'addressType' => 'address_type',
             'objectId' => 'object_id',
-            'addressSetType' => 'address_set_type'
+            'addressSetType' => 'address_set_type',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * setId  地址组id
-    * refCount  引用次数
+    * refCount  地址组被规则引用次数
     * description  描述信息
-    * name  地址组名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    * addressType  地址类型0 ipv4，1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * name  地址组名称
     *
     * @var string[]
     */
@@ -121,21 +121,21 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'setId' => 'setSetId',
             'refCount' => 'setRefCount',
             'description' => 'setDescription',
-            'name' => 'setName',
             'addressType' => 'setAddressType',
             'objectId' => 'setObjectId',
-            'addressSetType' => 'setAddressSetType'
+            'addressSetType' => 'setAddressSetType',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * setId  地址组id
-    * refCount  引用次数
+    * refCount  地址组被规则引用次数
     * description  描述信息
-    * name  地址组名称
-    * addressType  地址类型0 ipv4,1 ipv6
-    * objectId  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    * addressType  地址类型0 ipv4，1 ipv6
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * name  地址组名称
     *
     * @var string[]
     */
@@ -143,10 +143,10 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
             'setId' => 'getSetId',
             'refCount' => 'getRefCount',
             'description' => 'getDescription',
-            'name' => 'getName',
             'addressType' => 'getAddressType',
             'objectId' => 'getObjectId',
-            'addressSetType' => 'getAddressSetType'
+            'addressSetType' => 'getAddressSetType',
+            'name' => 'getName'
     ];
 
     /**
@@ -210,10 +210,10 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
         $this->container['setId'] = isset($data['setId']) ? $data['setId'] : null;
         $this->container['refCount'] = isset($data['refCount']) ? $data['refCount'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['addressSetType'] = isset($data['addressSetType']) ? $data['addressSetType'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -264,7 +264,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
 
     /**
     * Gets refCount
-    *  引用次数
+    *  地址组被规则引用次数
     *
     * @return int|null
     */
@@ -276,7 +276,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     /**
     * Sets refCount
     *
-    * @param int|null $refCount 引用次数
+    * @param int|null $refCount 地址组被规则引用次数
     *
     * @return $this
     */
@@ -311,32 +311,8 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     }
 
     /**
-    * Gets name
-    *  地址组名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 地址组名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-        return $this;
-    }
-
-    /**
     * Gets addressType
-    *  地址类型0 ipv4,1 ipv6
+    *  地址类型0 ipv4，1 ipv6
     *
     * @return int|null
     */
@@ -348,7 +324,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */
@@ -360,7 +336,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
 
     /**
     * Gets objectId
-    *  互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -372,7 +348,7 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 互联网边界防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，type为0的为互联网边界防护对象id。
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id，type可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -403,6 +379,30 @@ class AddressSetListResponseDTODataRecords implements ModelInterface, ArrayAcces
     public function setAddressSetType($addressSetType)
     {
         $this->container['addressSetType'] = $addressSetType;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  地址组名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 地址组名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

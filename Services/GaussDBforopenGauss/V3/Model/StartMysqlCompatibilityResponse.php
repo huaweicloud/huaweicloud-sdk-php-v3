@@ -1,14 +1,15 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\GaussDBforopenGauss\V3\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class IdObject implements ModelInterface, ArrayAccess
+class StartMysqlCompatibilityResponse implements ModelInterface, ArrayAccess
 {
+    use SdkResponse;
     const DISCRIMINATOR = null;
 
     /**
@@ -16,30 +17,26 @@ class IdObject implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'IdObject';
+    protected static $openAPIModelName = 'StartMysqlCompatibilityResponse';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id值
-    * name  名称
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string',
-            'name' => 'string'
+            'jobId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id值
-    * name  名称
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null
+        'jobId' => null
     ];
 
     /**
@@ -65,38 +62,32 @@ class IdObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id值
-    * name  名称
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id',
-            'name' => 'name'
+            'jobId' => 'job_id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id值
-    * name  名称
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId',
-            'name' => 'setName'
+            'jobId' => 'setJobId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id值
-    * name  名称
+    * jobId  任务ID。
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId',
-            'name' => 'getName'
+            'jobId' => 'getJobId'
     ];
 
     /**
@@ -157,8 +148,7 @@ class IdObject implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['jobId'] = isset($data['jobId']) ? $data['jobId'] : null;
     }
 
     /**
@@ -184,50 +174,26 @@ class IdObject implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets id
-    *  id值
+    * Gets jobId
+    *  任务ID。
     *
     * @return string|null
     */
-    public function getId()
+    public function getJobId()
     {
-        return $this->container['id'];
+        return $this->container['jobId'];
     }
 
     /**
-    * Sets id
+    * Sets jobId
     *
-    * @param string|null $id id值
+    * @param string|null $jobId 任务ID。
     *
     * @return $this
     */
-    public function setId($id)
+    public function setJobId($jobId)
     {
-        $this->container['id'] = $id;
-        return $this;
-    }
-
-    /**
-    * Gets name
-    *  名称
-    *
-    * @return string|null
-    */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-    * Sets name
-    *
-    * @param string|null $name 名称
-    *
-    * @return $this
-    */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
+        $this->container['jobId'] = $jobId;
         return $this;
     }
 

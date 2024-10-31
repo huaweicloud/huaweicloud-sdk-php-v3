@@ -20,9 +20,9 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * status  EIP状态，0表示防护中，1表示未防护
-    * ipInfos  EIP信息列表
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * status  EIP切换的状态，0表示防护中，1表示未防护
+    * ipInfos  切换防护状态的EIP信息列表
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * status  EIP状态，0表示防护中，1表示未防护
-    * ipInfos  EIP信息列表
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * status  EIP切换的状态，0表示防护中，1表示未防护
+    * ipInfos  切换防护状态的EIP信息列表
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * status  EIP状态，0表示防护中，1表示未防护
-    * ipInfos  EIP信息列表
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * status  EIP切换的状态，0表示防护中，1表示未防护
+    * ipInfos  切换防护状态的EIP信息列表
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * status  EIP状态，0表示防护中，1表示未防护
-    * ipInfos  EIP信息列表
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * status  EIP切换的状态，0表示防护中，1表示未防护
+    * ipInfos  切换防护状态的EIP信息列表
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * status  EIP状态，0表示防护中，1表示未防护
-    * ipInfos  EIP信息列表
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * status  EIP切换的状态，0表示防护中，1表示未防护
+    * ipInfos  切换防护状态的EIP信息列表
     *
     * @var string[]
     */
@@ -183,24 +183,9 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
         if ($this->container['objectId'] === null) {
             $invalidProperties[] = "'objectId' can't be null";
         }
-            if ((mb_strlen($this->container['objectId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'objectId', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['objectId']) < 36)) {
-                $invalidProperties[] = "invalid value for 'objectId', the character length must be bigger than or equal to 36.";
-            }
-            if (!preg_match("/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/", $this->container['objectId'])) {
-                $invalidProperties[] = "invalid value for 'objectId', must be conform to the pattern /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/.";
-            }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-            if (($this->container['status'] > 1)) {
-                $invalidProperties[] = "invalid value for 'status', must be smaller than or equal to 1.";
-            }
-            if (($this->container['status'] < 0)) {
-                $invalidProperties[] = "invalid value for 'status', must be bigger than or equal to 0.";
-            }
         if ($this->container['ipInfos'] === null) {
             $invalidProperties[] = "'ipInfos' can't be null";
         }
@@ -220,7 +205,7 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -232,7 +217,7 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * @param string $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -244,7 +229,7 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  EIP状态，0表示防护中，1表示未防护
+    *  EIP切换的状态，0表示防护中，1表示未防护
     *
     * @return int
     */
@@ -256,7 +241,7 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int $status EIP状态，0表示防护中，1表示未防护
+    * @param int $status EIP切换的状态，0表示防护中，1表示未防护
     *
     * @return $this
     */
@@ -268,7 +253,7 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipInfos
-    *  EIP信息列表
+    *  切换防护状态的EIP信息列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\EipOperateProtectReqIpInfos[]
     */
@@ -280,7 +265,7 @@ class EipOperateProtectReq implements ModelInterface, ArrayAccess
     /**
     * Sets ipInfos
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EipOperateProtectReqIpInfos[] $ipInfos EIP信息列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\EipOperateProtectReqIpInfos[] $ipInfos 切换防护状态的EIP信息列表
     *
     * @return $this
     */

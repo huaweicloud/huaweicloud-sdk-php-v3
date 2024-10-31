@@ -35,6 +35,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     * name  API名称
     * id  API编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -53,7 +54,8 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
             'groupId' => 'string',
             'name' => 'string',
             'id' => 'string',
-            'reqMethod' => 'string'
+            'reqMethod' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -73,6 +75,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     * name  API名称
     * id  API编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -91,7 +94,8 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
         'groupId' => null,
         'name' => null,
         'id' => null,
-        'reqMethod' => null
+        'reqMethod' => null,
+        'tags' => null
     ];
 
     /**
@@ -132,6 +136,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     * name  API名称
     * id  API编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -150,7 +155,8 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
             'groupId' => 'group_id',
             'name' => 'name',
             'id' => 'id',
-            'reqMethod' => 'req_method'
+            'reqMethod' => 'req_method',
+            'tags' => 'tags'
     ];
 
     /**
@@ -170,6 +176,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     * name  API名称
     * id  API编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -188,7 +195,8 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
             'groupId' => 'setGroupId',
             'name' => 'setName',
             'id' => 'setId',
-            'reqMethod' => 'setReqMethod'
+            'reqMethod' => 'setReqMethod',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -208,6 +216,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     * name  API名称
     * id  API编号
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -226,7 +235,8 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
             'groupId' => 'getGroupId',
             'name' => 'getName',
             'id' => 'getId',
-            'reqMethod' => 'getReqMethod'
+            'reqMethod' => 'getReqMethod',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -329,6 +339,7 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['reqMethod'] = isset($data['reqMethod']) ? $data['reqMethod'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -718,6 +729,30 @@ class ApiForThrottle implements ModelInterface, ArrayAccess
     public function setReqMethod($reqMethod)
     {
         $this->container['reqMethod'] = $reqMethod;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

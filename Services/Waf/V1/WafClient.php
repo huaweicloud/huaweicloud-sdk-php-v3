@@ -3024,6 +3024,9 @@ class WafClient extends Client
         if ($localVarParams['groupBy'] !== null) {
             $queryParams['group_by'] = $localVarParams['groupBy'];
         }
+        if ($localVarParams['displayOption'] !== null) {
+            $queryParams['display_option'] = $localVarParams['displayOption'];
+        }
         if ($localVarParams['contentType'] !== null) {
             $headerParams[$arr['contentType']] = $localVarParams['contentType'];
         }

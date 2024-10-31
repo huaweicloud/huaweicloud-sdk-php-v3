@@ -20,8 +20,8 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * setId  地址组id
-    * addressItemIds  地址组成员id列表
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItemIds  地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * setId  地址组id
-    * addressItemIds  地址组成员id列表
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItemIds  地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * setId  地址组id
-    * addressItemIds  地址组成员id列表
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItemIds  地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * setId  地址组id
-    * addressItemIds  地址组成员id列表
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItemIds  地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * setId  地址组id
-    * addressItemIds  地址组成员id列表
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItemIds  地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -191,7 +191,7 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  地址组id
+    *  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string
     */
@@ -203,7 +203,7 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string $setId 地址组id
+    * @param string $setId 地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -215,7 +215,7 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressItemIds
-    *  地址组成员id列表
+    *  地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @return string[]
     */
@@ -227,7 +227,7 @@ class DeleteAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressItemIds
     *
-    * @param string[] $addressItemIds 地址组成员id列表
+    * @param string[] $addressItemIds 地址组成员id列表，地址组成员id可通过[查询地址组成员接口](ListAddressItems.xml)查询获得，通过返回值中的data.records.item_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

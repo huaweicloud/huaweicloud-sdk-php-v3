@@ -20,12 +20,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * direction  方向，有内到外和外到内两种
-    * action  动作
+    * direction  方向，包含in2out，out2in
+    * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
-    * level  威胁等级
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
@@ -35,9 +35,9 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -90,12 +90,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * direction  方向，有内到外和外到内两种
-    * action  动作
+    * direction  方向，包含in2out，out2in
+    * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
-    * level  威胁等级
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
@@ -105,9 +105,9 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -181,12 +181,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * direction  方向，有内到外和外到内两种
-    * action  动作
+    * direction  方向，包含in2out，out2in
+    * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
-    * level  威胁等级
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
@@ -196,9 +196,9 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -251,12 +251,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * direction  方向，有内到外和外到内两种
-    * action  动作
+    * direction  方向，包含in2out，out2in
+    * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
-    * level  威胁等级
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
@@ -266,9 +266,9 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -321,12 +321,12 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * direction  方向，有内到外和外到内两种
-    * action  动作
+    * direction  方向，包含in2out，out2in
+    * action  动作包含permit，deny
     * eventTime  事件时间，以毫秒为单位的时间戳，如1718936272648
     * attackType  攻击类型
     * attackRule  攻击规则
-    * level  威胁等级
+    * level  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     * source  来源
     * packetLength  报文长度
     * attackRuleId  攻击规则id
@@ -336,9 +336,9 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     * srcPort  源端口
     * dstIp  目的IP
     * dstPort  目的端口
-    * protocol  协议
+    * protocol  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     * packet  攻击日志报文
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * packetMessages  攻击报文信息
     * srcRegionId  源区域id
     * srcRegionName  源区域名称
@@ -539,7 +539,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets direction
-    *  方向，有内到外和外到内两种
+    *  方向，包含in2out，out2in
     *
     * @return string|null
     */
@@ -551,7 +551,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets direction
     *
-    * @param string|null $direction 方向，有内到外和外到内两种
+    * @param string|null $direction 方向，包含in2out，out2in
     *
     * @return $this
     */
@@ -563,7 +563,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets action
-    *  动作
+    *  动作包含permit，deny
     *
     * @return string|null
     */
@@ -575,7 +575,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets action
     *
-    * @param string|null $action 动作
+    * @param string|null $action 动作包含permit，deny
     *
     * @return $this
     */
@@ -659,7 +659,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets level
-    *  威胁等级
+    *  威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     *
     * @return string|null
     */
@@ -671,7 +671,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets level
     *
-    * @param string|null $level 威胁等级
+    * @param string|null $level 威胁等级，包括CRITICAL、HIGH、MEDIUM、LOW
     *
     * @return $this
     */
@@ -899,7 +899,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets protocol
-    *  协议
+    *  协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     *
     * @return string|null
     */
@@ -911,7 +911,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets protocol
     *
-    * @param string|null $protocol 协议
+    * @param string|null $protocol 协议类型，包含TCP, UDP,ICMP,ICMPV6等。
     *
     * @return $this
     */
@@ -947,7 +947,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
 
     /**
     * Gets app
-    *  应用协议
+    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string|null
     */
@@ -959,7 +959,7 @@ class HttpQueryCfwAttackLogsResponseDTODataRecords implements ModelInterface, Ar
     /**
     * Sets app
     *
-    * @param string|null $app 应用协议
+    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */

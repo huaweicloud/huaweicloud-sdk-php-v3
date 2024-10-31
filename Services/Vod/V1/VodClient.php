@@ -2855,6 +2855,65 @@ class VodClient extends Client
     }
 
     /**
+     * 查询媒资降冷配置
+     *
+     * 查询媒资降冷配置。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showStorageModeType($request)
+    {
+        return $this->showStorageModeTypeWithHttpInfo($request);
+    }
+
+    public function showStorageModeTypeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/storage-mode-type';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\ShowStorageModeTypeResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\ShowStorageModeTypeRequest');
+    }
+
+    /**
      * 查询取回数据信息
      *
      * ## 典型场景 ##
@@ -3454,6 +3513,70 @@ class VodClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeResponse',
             $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeRequest');
+    }
+
+    /**
+     * 修改媒资降冷粒度
+     *
+     * 修改媒资降冷粒度。
+     * 
+     * 默认为整个媒资粒度，支持转为仅原文件。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateStorageModeType($request)
+    {
+        return $this->updateStorageModeTypeWithHttpInfo($request);
+    }
+
+    public function updateStorageModeTypeWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/asset/storage-mode-type';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json', 'application/json; charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeTypeResponse',
+            $requestType='\HuaweiCloud\SDK\Vod\V1\Model\UpdateStorageModeTypeRequest');
     }
 
     /**

@@ -26,7 +26,7 @@ class UpdateAclRuleOrderResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\RuleId'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleId'
     ];
 
     /**
@@ -177,7 +177,7 @@ class UpdateAclRuleOrderResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\RuleId|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleId|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class UpdateAclRuleOrderResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\RuleId|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleId|null $data data
     *
     * @return $this
     */

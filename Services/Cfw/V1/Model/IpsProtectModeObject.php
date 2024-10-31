@@ -20,7 +20,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  ips防护模式id
+    * id  ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     * mode  ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @var string[]
@@ -32,7 +32,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  ips防护模式id
+    * id  ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     * mode  ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @var string[]
@@ -65,7 +65,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  ips防护模式id
+    * id  ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     * mode  ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @var string[]
@@ -77,7 +77,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  ips防护模式id
+    * id  ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     * mode  ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @var string[]
@@ -89,7 +89,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  ips防护模式id
+    * id  ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     * mode  ips防护模式，0：观察模式，1：严格模式，2：中等模式，3：宽松模式
     *
     * @var string[]
@@ -185,7 +185,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  ips防护模式id
+    *  ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class IpsProtectModeObject implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ips防护模式id
+    * @param string|null $id ips防护模式id，此处为防护对象id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */

@@ -21,9 +21,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * limit  每页显示个数，范围为1-1024
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户project_id
     * total  抓包任务总数
     * records  抓包任务列表
     *
@@ -31,9 +29,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'limit' => 'int',
-            'objectId' => 'string',
             'offset' => 'int',
-            'projectId' => 'string',
             'total' => 'int',
             'records' => '\HuaweiCloud\SDK\Cfw\V1\Model\CaptureTaskVO[]'
     ];
@@ -41,9 +37,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * limit  每页显示个数，范围为1-1024
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户project_id
     * total  抓包任务总数
     * records  抓包任务列表
     *
@@ -51,9 +45,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'limit' => 'int32',
-        'objectId' => null,
         'offset' => 'int32',
-        'projectId' => null,
         'total' => 'int64',
         'records' => null
     ];
@@ -82,9 +74,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * limit  每页显示个数，范围为1-1024
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户project_id
     * total  抓包任务总数
     * records  抓包任务列表
     *
@@ -92,9 +82,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'limit' => 'limit',
-            'objectId' => 'object_id',
             'offset' => 'offset',
-            'projectId' => 'project_id',
             'total' => 'total',
             'records' => 'records'
     ];
@@ -102,9 +90,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * limit  每页显示个数，范围为1-1024
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户project_id
     * total  抓包任务总数
     * records  抓包任务列表
     *
@@ -112,9 +98,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'limit' => 'setLimit',
-            'objectId' => 'setObjectId',
             'offset' => 'setOffset',
-            'projectId' => 'setProjectId',
             'total' => 'setTotal',
             'records' => 'setRecords'
     ];
@@ -122,9 +106,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * limit  每页显示个数，范围为1-1024
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
-    * projectId  租户project_id
     * total  抓包任务总数
     * records  抓包任务列表
     *
@@ -132,9 +114,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'limit' => 'getLimit',
-            'objectId' => 'getObjectId',
             'offset' => 'getOffset',
-            'projectId' => 'getProjectId',
             'total' => 'getTotal',
             'records' => 'getRecords'
     ];
@@ -198,9 +178,7 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
-        $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
-        $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
         $this->container['records'] = isset($data['records']) ? $data['records'] : null;
     }
@@ -252,30 +230,6 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    *
-    * @return string|null
-    */
-    public function getObjectId()
-    {
-        return $this->container['objectId'];
-    }
-
-    /**
-    * Sets objectId
-    *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    *
-    * @return $this
-    */
-    public function setObjectId($objectId)
-    {
-        $this->container['objectId'] = $objectId;
-        return $this;
-    }
-
-    /**
     * Gets offset
     *  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     *
@@ -296,30 +250,6 @@ class HttpQueryCaptureTaskResponseData implements ModelInterface, ArrayAccess
     public function setOffset($offset)
     {
         $this->container['offset'] = $offset;
-        return $this;
-    }
-
-    /**
-    * Gets projectId
-    *  租户project_id
-    *
-    * @return string|null
-    */
-    public function getProjectId()
-    {
-        return $this->container['projectId'];
-    }
-
-    /**
-    * Sets projectId
-    *
-    * @param string|null $projectId 租户project_id
-    *
-    * @return $this
-    */
-    public function setProjectId($projectId)
-    {
-        $this->container['projectId'] = $projectId;
         return $this;
     }
 

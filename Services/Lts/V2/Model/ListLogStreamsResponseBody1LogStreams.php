@@ -23,8 +23,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * creationTime  日志流创建时间
     * logStreamId  日志流ID
     * logStreamName  日志流名称
+    * logStreamNameAlias  日志流别名
     * tag  日志流所属标签
     * filterCount  过滤器个数
+    * whetherLogStorage  是否日志存储
+    * hotColdSeparation  是否冷存储
+    * authWebTracking  匿名写入开关
+    * ttlInDays  存储时间
+    * hotStorageDays  标准存储时间
     *
     * @var string[]
     */
@@ -32,8 +38,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'creationTime' => 'int',
             'logStreamId' => 'string',
             'logStreamName' => 'string',
+            'logStreamNameAlias' => 'string',
             'tag' => 'map[string,string]',
-            'filterCount' => 'int'
+            'filterCount' => 'int',
+            'whetherLogStorage' => 'bool',
+            'hotColdSeparation' => 'bool',
+            'authWebTracking' => 'bool',
+            'ttlInDays' => 'int',
+            'hotStorageDays' => 'int'
     ];
 
     /**
@@ -41,8 +53,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * creationTime  日志流创建时间
     * logStreamId  日志流ID
     * logStreamName  日志流名称
+    * logStreamNameAlias  日志流别名
     * tag  日志流所属标签
     * filterCount  过滤器个数
+    * whetherLogStorage  是否日志存储
+    * hotColdSeparation  是否冷存储
+    * authWebTracking  匿名写入开关
+    * ttlInDays  存储时间
+    * hotStorageDays  标准存储时间
     *
     * @var string[]
     */
@@ -50,8 +68,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
         'creationTime' => 'int64',
         'logStreamId' => null,
         'logStreamName' => null,
+        'logStreamNameAlias' => null,
         'tag' => null,
-        'filterCount' => 'int32'
+        'filterCount' => 'int32',
+        'whetherLogStorage' => null,
+        'hotColdSeparation' => null,
+        'authWebTracking' => null,
+        'ttlInDays' => 'int32',
+        'hotStorageDays' => 'int32'
     ];
 
     /**
@@ -80,8 +104,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * creationTime  日志流创建时间
     * logStreamId  日志流ID
     * logStreamName  日志流名称
+    * logStreamNameAlias  日志流别名
     * tag  日志流所属标签
     * filterCount  过滤器个数
+    * whetherLogStorage  是否日志存储
+    * hotColdSeparation  是否冷存储
+    * authWebTracking  匿名写入开关
+    * ttlInDays  存储时间
+    * hotStorageDays  标准存储时间
     *
     * @var string[]
     */
@@ -89,8 +119,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'creationTime' => 'creation_time',
             'logStreamId' => 'log_stream_id',
             'logStreamName' => 'log_stream_name',
+            'logStreamNameAlias' => 'log_stream_name_alias',
             'tag' => 'tag',
-            'filterCount' => 'filter_count'
+            'filterCount' => 'filter_count',
+            'whetherLogStorage' => 'whether_log_storage',
+            'hotColdSeparation' => 'hot_cold_separation',
+            'authWebTracking' => 'auth_web_tracking',
+            'ttlInDays' => 'ttl_in_days',
+            'hotStorageDays' => 'hot_storage_days'
     ];
 
     /**
@@ -98,8 +134,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * creationTime  日志流创建时间
     * logStreamId  日志流ID
     * logStreamName  日志流名称
+    * logStreamNameAlias  日志流别名
     * tag  日志流所属标签
     * filterCount  过滤器个数
+    * whetherLogStorage  是否日志存储
+    * hotColdSeparation  是否冷存储
+    * authWebTracking  匿名写入开关
+    * ttlInDays  存储时间
+    * hotStorageDays  标准存储时间
     *
     * @var string[]
     */
@@ -107,8 +149,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'creationTime' => 'setCreationTime',
             'logStreamId' => 'setLogStreamId',
             'logStreamName' => 'setLogStreamName',
+            'logStreamNameAlias' => 'setLogStreamNameAlias',
             'tag' => 'setTag',
-            'filterCount' => 'setFilterCount'
+            'filterCount' => 'setFilterCount',
+            'whetherLogStorage' => 'setWhetherLogStorage',
+            'hotColdSeparation' => 'setHotColdSeparation',
+            'authWebTracking' => 'setAuthWebTracking',
+            'ttlInDays' => 'setTtlInDays',
+            'hotStorageDays' => 'setHotStorageDays'
     ];
 
     /**
@@ -116,8 +164,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     * creationTime  日志流创建时间
     * logStreamId  日志流ID
     * logStreamName  日志流名称
+    * logStreamNameAlias  日志流别名
     * tag  日志流所属标签
     * filterCount  过滤器个数
+    * whetherLogStorage  是否日志存储
+    * hotColdSeparation  是否冷存储
+    * authWebTracking  匿名写入开关
+    * ttlInDays  存储时间
+    * hotStorageDays  标准存储时间
     *
     * @var string[]
     */
@@ -125,8 +179,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
             'creationTime' => 'getCreationTime',
             'logStreamId' => 'getLogStreamId',
             'logStreamName' => 'getLogStreamName',
+            'logStreamNameAlias' => 'getLogStreamNameAlias',
             'tag' => 'getTag',
-            'filterCount' => 'getFilterCount'
+            'filterCount' => 'getFilterCount',
+            'whetherLogStorage' => 'getWhetherLogStorage',
+            'hotColdSeparation' => 'getHotColdSeparation',
+            'authWebTracking' => 'getAuthWebTracking',
+            'ttlInDays' => 'getTtlInDays',
+            'hotStorageDays' => 'getHotStorageDays'
     ];
 
     /**
@@ -190,8 +250,14 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
         $this->container['creationTime'] = isset($data['creationTime']) ? $data['creationTime'] : null;
         $this->container['logStreamId'] = isset($data['logStreamId']) ? $data['logStreamId'] : null;
         $this->container['logStreamName'] = isset($data['logStreamName']) ? $data['logStreamName'] : null;
+        $this->container['logStreamNameAlias'] = isset($data['logStreamNameAlias']) ? $data['logStreamNameAlias'] : null;
         $this->container['tag'] = isset($data['tag']) ? $data['tag'] : null;
         $this->container['filterCount'] = isset($data['filterCount']) ? $data['filterCount'] : null;
+        $this->container['whetherLogStorage'] = isset($data['whetherLogStorage']) ? $data['whetherLogStorage'] : null;
+        $this->container['hotColdSeparation'] = isset($data['hotColdSeparation']) ? $data['hotColdSeparation'] : null;
+        $this->container['authWebTracking'] = isset($data['authWebTracking']) ? $data['authWebTracking'] : null;
+        $this->container['ttlInDays'] = isset($data['ttlInDays']) ? $data['ttlInDays'] : null;
+        $this->container['hotStorageDays'] = isset($data['hotStorageDays']) ? $data['hotStorageDays'] : null;
     }
 
     /**
@@ -328,6 +394,30 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     }
 
     /**
+    * Gets logStreamNameAlias
+    *  日志流别名
+    *
+    * @return string|null
+    */
+    public function getLogStreamNameAlias()
+    {
+        return $this->container['logStreamNameAlias'];
+    }
+
+    /**
+    * Sets logStreamNameAlias
+    *
+    * @param string|null $logStreamNameAlias 日志流别名
+    *
+    * @return $this
+    */
+    public function setLogStreamNameAlias($logStreamNameAlias)
+    {
+        $this->container['logStreamNameAlias'] = $logStreamNameAlias;
+        return $this;
+    }
+
+    /**
     * Gets tag
     *  日志流所属标签
     *
@@ -372,6 +462,126 @@ class ListLogStreamsResponseBody1LogStreams implements ModelInterface, ArrayAcce
     public function setFilterCount($filterCount)
     {
         $this->container['filterCount'] = $filterCount;
+        return $this;
+    }
+
+    /**
+    * Gets whetherLogStorage
+    *  是否日志存储
+    *
+    * @return bool|null
+    */
+    public function getWhetherLogStorage()
+    {
+        return $this->container['whetherLogStorage'];
+    }
+
+    /**
+    * Sets whetherLogStorage
+    *
+    * @param bool|null $whetherLogStorage 是否日志存储
+    *
+    * @return $this
+    */
+    public function setWhetherLogStorage($whetherLogStorage)
+    {
+        $this->container['whetherLogStorage'] = $whetherLogStorage;
+        return $this;
+    }
+
+    /**
+    * Gets hotColdSeparation
+    *  是否冷存储
+    *
+    * @return bool|null
+    */
+    public function getHotColdSeparation()
+    {
+        return $this->container['hotColdSeparation'];
+    }
+
+    /**
+    * Sets hotColdSeparation
+    *
+    * @param bool|null $hotColdSeparation 是否冷存储
+    *
+    * @return $this
+    */
+    public function setHotColdSeparation($hotColdSeparation)
+    {
+        $this->container['hotColdSeparation'] = $hotColdSeparation;
+        return $this;
+    }
+
+    /**
+    * Gets authWebTracking
+    *  匿名写入开关
+    *
+    * @return bool|null
+    */
+    public function getAuthWebTracking()
+    {
+        return $this->container['authWebTracking'];
+    }
+
+    /**
+    * Sets authWebTracking
+    *
+    * @param bool|null $authWebTracking 匿名写入开关
+    *
+    * @return $this
+    */
+    public function setAuthWebTracking($authWebTracking)
+    {
+        $this->container['authWebTracking'] = $authWebTracking;
+        return $this;
+    }
+
+    /**
+    * Gets ttlInDays
+    *  存储时间
+    *
+    * @return int|null
+    */
+    public function getTtlInDays()
+    {
+        return $this->container['ttlInDays'];
+    }
+
+    /**
+    * Sets ttlInDays
+    *
+    * @param int|null $ttlInDays 存储时间
+    *
+    * @return $this
+    */
+    public function setTtlInDays($ttlInDays)
+    {
+        $this->container['ttlInDays'] = $ttlInDays;
+        return $this;
+    }
+
+    /**
+    * Gets hotStorageDays
+    *  标准存储时间
+    *
+    * @return int|null
+    */
+    public function getHotStorageDays()
+    {
+        return $this->container['hotStorageDays'];
+    }
+
+    /**
+    * Sets hotStorageDays
+    *
+    * @param int|null $hotStorageDays 标准存储时间
+    *
+    * @return $this
+    */
+    public function setHotStorageDays($hotStorageDays)
+    {
+        $this->container['hotStorageDays'] = $hotStorageDays;
         return $this;
     }
 

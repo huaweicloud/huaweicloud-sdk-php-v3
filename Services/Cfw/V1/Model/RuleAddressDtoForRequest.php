@@ -20,20 +20,20 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * predefinedGroup  预定义地址组列表
-    * addressGroup  地址组列表
+    * type  输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息，当type为0手动输入类型时不能为空
+    * addressSetId  关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressSetName  关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * domainAddressName  type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
+    * domainSetId  域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * domainSetName  域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * ipAddress  IP地址列表，当type为5（多对象）时不能为空。
+    * addressSetType  地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
+    * addressGroup  地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @var string[]
     */
@@ -56,20 +56,20 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * predefinedGroup  预定义地址组列表
-    * addressGroup  地址组列表
+    * type  输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息，当type为0手动输入类型时不能为空
+    * addressSetId  关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressSetName  关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * domainAddressName  type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
+    * domainSetId  域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * domainSetName  域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * ipAddress  IP地址列表，当type为5（多对象）时不能为空。
+    * addressSetType  地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
+    * addressGroup  地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @var string[]
     */
@@ -113,20 +113,20 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * predefinedGroup  预定义地址组列表
-    * addressGroup  地址组列表
+    * type  输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息，当type为0手动输入类型时不能为空
+    * addressSetId  关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressSetName  关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * domainAddressName  type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
+    * domainSetId  域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * domainSetName  域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * ipAddress  IP地址列表，当type为5（多对象）时不能为空。
+    * addressSetType  地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
+    * addressGroup  地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @var string[]
     */
@@ -149,20 +149,20 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * predefinedGroup  预定义地址组列表
-    * addressGroup  地址组列表
+    * type  输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息，当type为0手动输入类型时不能为空
+    * addressSetId  关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressSetName  关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * domainAddressName  type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
+    * domainSetId  域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * domainSetName  域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * ipAddress  IP地址列表，当type为5（多对象）时不能为空。
+    * addressSetType  地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
+    * addressGroup  地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @var string[]
     */
@@ -185,20 +185,20 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
-    * addressType  源类型0 ipv4,1 ipv6
-    * address  源IP，手动类型不能为空，自动及domain类型为空
-    * addressSetId  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
-    * addressSetName  地址组名称
-    * domainAddressName  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
-    * regionListJson  规则region列表json值
-    * regionList  规则region列表
-    * domainSetId  域名组id
-    * domainSetName  域名组名称
-    * ipAddress  IP地址列表
-    * addressSetType  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
-    * predefinedGroup  预定义地址组列表
-    * addressGroup  地址组列表
+    * type  输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
+    * addressType  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
+    * address  IP地址信息，当type为0手动输入类型时不能为空
+    * addressSetId  关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressSetName  关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * domainAddressName  type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
+    * regionListJson  规则地域列表json值
+    * regionList  规则地域列表
+    * domainSetId  域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * domainSetName  域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
+    * ipAddress  IP地址列表，当type为5（多对象）时不能为空。
+    * addressSetType  地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * predefinedGroup  预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
+    * addressGroup  地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @var string[]
     */
@@ -320,7 +320,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
+    *  输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
     *
     * @return int
     */
@@ -332,7 +332,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int $type 源类型0手工输入,1关联IP地址组,2域名，3地理位置，4域名组，5多对象，6域名组-DNS解析，7域名组-URL过滤。
+    * @param int $type 输入类型0手工输入，1关联IP地址组，2域名，3地理位置，4域名组，5多对象，6域名组-网络型，7域名组-应用型。
     *
     * @return $this
     */
@@ -344,7 +344,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  源类型0 ipv4,1 ipv6
+    *  地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
     *
     * @return int|null
     */
@@ -356,7 +356,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 源类型0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型0 ipv4，1 ipv6，当type为0手动输入类型时不能为空
     *
     * @return $this
     */
@@ -368,7 +368,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets address
-    *  源IP，手动类型不能为空，自动及domain类型为空
+    *  IP地址信息，当type为0手动输入类型时不能为空
     *
     * @return string|null
     */
@@ -380,7 +380,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets address
     *
-    * @param string|null $address 源IP，手动类型不能为空，自动及domain类型为空
+    * @param string|null $address IP地址信息，当type为0手动输入类型时不能为空
     *
     * @return $this
     */
@@ -392,7 +392,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetId
-    *  关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    *  关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -404,7 +404,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetId
     *
-    * @param string|null $addressSetId 关联IP地址组ID，自动类型不能为空，手动类型合domain类型为空
+    * @param string|null $addressSetId 关联IP地址组ID，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -416,7 +416,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetName
-    *  地址组名称
+    *  关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -428,7 +428,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetName
     *
-    * @param string|null $addressSetName 地址组名称
+    * @param string|null $addressSetName 关联IP地址组名称，当type为1关联IP地址组类型时不能为空，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -440,7 +440,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainAddressName
-    *  域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    *  type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
     *
     * @return string|null
     */
@@ -452,7 +452,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainAddressName
     *
-    * @param string|null $domainAddressName 域名地址名称，域名类型时不能为空，手动类型及自动类型时为空
+    * @param string|null $domainAddressName type为2（域名）和7（应用域名组）具体内容根据type中7修改后的类型名称
     *
     * @return $this
     */
@@ -464,7 +464,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionListJson
-    *  规则region列表json值
+    *  规则地域列表json值
     *
     * @return string|null
     */
@@ -476,7 +476,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets regionListJson
     *
-    * @param string|null $regionListJson 规则region列表json值
+    * @param string|null $regionListJson 规则地域列表json值
     *
     * @return $this
     */
@@ -488,7 +488,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionList
-    *  规则region列表
+    *  规则地域列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null
     */
@@ -500,7 +500,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets regionList
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList 规则region列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IpRegionDto[]|null $regionList 规则地域列表
     *
     * @return $this
     */
@@ -512,7 +512,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetId
-    *  域名组id
+    *  域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -524,7 +524,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetId
     *
-    * @param string|null $domainSetId 域名组id
+    * @param string|null $domainSetId 域名组id，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -536,7 +536,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainSetName
-    *  域名组名称
+    *  域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -548,7 +548,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets domainSetName
     *
-    * @param string|null $domainSetName 域名组名称
+    * @param string|null $domainSetName 域名组名称，type为4（域名组）或7（域名组-应用型）时不能为空。可通过[查询域名组列表接口](ListDomainSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -560,7 +560,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets ipAddress
-    *  IP地址列表
+    *  IP地址列表，当type为5（多对象）时不能为空。
     *
     * @return string[]|null
     */
@@ -572,7 +572,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets ipAddress
     *
-    * @param string[]|null $ipAddress IP地址列表
+    * @param string[]|null $ipAddress IP地址列表，当type为5（多对象）时不能为空。
     *
     * @return $this
     */
@@ -584,7 +584,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressSetType
-    *  地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    *  地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @return int|null
     */
@@ -596,7 +596,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressSetType
     *
-    * @param int|null $addressSetType 地址组类型，0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
+    * @param int|null $addressSetType 地址组类型，当type为1（关联IP地址组）时不能为空。0表示自定义地址组，1表示WAF回源IP地址组，2表示DDoS回源IP地址组，3表示NAT64转换地址组
     *
     * @return $this
     */
@@ -608,7 +608,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets predefinedGroup
-    *  预定义地址组列表
+    *  预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
     *
     * @return string[]|null
     */
@@ -620,7 +620,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets predefinedGroup
     *
-    * @param string[]|null $predefinedGroup 预定义地址组列表
+    * @param string[]|null $predefinedGroup 预定义地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为1预定义地址组。
     *
     * @return $this
     */
@@ -632,7 +632,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressGroup
-    *  地址组列表
+    *  地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @return string[]|null
     */
@@ -644,7 +644,7 @@ class RuleAddressDtoForRequest implements ModelInterface, ArrayAccess
     /**
     * Sets addressGroup
     *
-    * @param string[]|null $addressGroup 地址组列表
+    * @param string[]|null $addressGroup 地址组id列表，当type为5（多对象）时不能为空。地址组id可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_address_set_type需要设置为0自定义地址组。
     *
     * @return $this
     */

@@ -21,29 +21,21 @@ class ListJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误描述
-    * data  执行结果
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'string',
-            'errorMsg' => 'string',
-            'data' => 'object'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\GetCreateFirewallJobResponseData'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误描述
-    * data  执行结果
+    * data  data
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => null,
-        'errorMsg' => null,
         'data' => null
     ];
 
@@ -70,43 +62,31 @@ class ListJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码
-    * errorMsg  错误描述
-    * data  执行结果
+    * data  data
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'errorMsg' => 'error_msg',
             'data' => 'data'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码
-    * errorMsg  错误描述
-    * data  执行结果
+    * data  data
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'errorMsg' => 'setErrorMsg',
             'data' => 'setData'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码
-    * errorMsg  错误描述
-    * data  执行结果
+    * data  data
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'errorMsg' => 'getErrorMsg',
             'data' => 'getData'
     ];
 
@@ -168,8 +148,6 @@ class ListJobResponse implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -181,24 +159,6 @@ class ListJobResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-            if ((mb_strlen($this->container['errorCode']) > 36)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['errorCode']) < 8)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 8.";
-            }
-        if ($this->container['errorMsg'] === null) {
-            $invalidProperties[] = "'errorMsg' can't be null";
-        }
-            if ((mb_strlen($this->container['errorMsg']) > 512)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 512.";
-            }
-            if ((mb_strlen($this->container['errorMsg']) < 2)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -214,58 +174,10 @@ class ListJobResponse implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  错误码
-    *
-    * @return string
-    */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-    * Sets errorCode
-    *
-    * @param string $errorCode 错误码
-    *
-    * @return $this
-    */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
-        return $this;
-    }
-
-    /**
-    * Gets errorMsg
-    *  错误描述
-    *
-    * @return string
-    */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-    * Sets errorMsg
-    *
-    * @param string $errorMsg 错误描述
-    *
-    * @return $this
-    */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
-        return $this;
-    }
-
-    /**
     * Gets data
-    *  执行结果
+    *  data
     *
-    * @return object|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\GetCreateFirewallJobResponseData|null
     */
     public function getData()
     {
@@ -275,7 +187,7 @@ class ListJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param object|null $data 执行结果
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\GetCreateFirewallJobResponseData|null $data data
     *
     * @return $this
     */

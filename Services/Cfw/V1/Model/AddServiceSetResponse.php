@@ -26,7 +26,7 @@ class AddServiceSetResponse implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\CommonResponseDTOData'
+            'data' => '\HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetId'
     ];
 
     /**
@@ -177,7 +177,7 @@ class AddServiceSetResponse implements ModelInterface, ArrayAccess
     * Gets data
     *  data
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\CommonResponseDTOData|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetId|null
     */
     public function getData()
     {
@@ -187,7 +187,7 @@ class AddServiceSetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets data
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CommonResponseDTOData|null $data data
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\ServiceSetId|null $data data
     *
     * @return $this
     */

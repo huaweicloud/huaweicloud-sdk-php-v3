@@ -21,23 +21,23 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * ruleId  规则id
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
+    * actionType  动作0：permit，1：deny
+    * status  规则下发状态 0：禁用，1：启用
     * description  描述
     * longConnectTime  长连接时长
     * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  创建时间
-    * lastOpenTime  最后开启时间
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
+    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     * tag  tag
     *
     * @var string[]
@@ -67,23 +67,23 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * ruleId  规则id
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
+    * actionType  动作0：permit，1：deny
+    * status  规则下发状态 0：禁用，1：启用
     * description  描述
     * longConnectTime  长连接时长
     * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  创建时间
-    * lastOpenTime  最后开启时间
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
+    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     * tag  tag
     *
     * @var string[]
@@ -134,23 +134,23 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * ruleId  规则id
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
+    * actionType  动作0：permit，1：deny
+    * status  规则下发状态 0：禁用，1：启用
     * description  描述
     * longConnectTime  长连接时长
     * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  创建时间
-    * lastOpenTime  最后开启时间
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
+    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     * tag  tag
     *
     * @var string[]
@@ -180,23 +180,23 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * ruleId  规则id
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
+    * actionType  动作0：permit，1：deny
+    * status  规则下发状态 0：禁用，1：启用
     * description  描述
     * longConnectTime  长连接时长
     * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  创建时间
-    * lastOpenTime  最后开启时间
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
+    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     * tag  tag
     *
     * @var string[]
@@ -226,23 +226,23 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * ruleId  规则id
-    * addressType  地址类型0 ipv4,1 ipv6
+    * addressType  地址类型0 ipv4，1 ipv6
     * name  规则名称
     * direction  规则方向0：外到内1：内到外
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
+    * actionType  动作0：permit，1：deny
+    * status  规则下发状态 0：禁用，1：启用
     * description  描述
     * longConnectTime  长连接时长
     * longConnectEnable  长连接支持
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
-    * createdDate  创建时间
-    * lastOpenTime  最后开启时间
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
+    * createdDate  规则创建时间，例如：\"2024-08-12 08:40:00\"
+    * lastOpenTime  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     * tag  tag
     *
     * @var string[]
@@ -447,7 +447,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型0 ipv4,1 ipv6
+    *  地址类型0 ipv4，1 ipv6
     *
     * @return int|null
     */
@@ -459,7 +459,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型0 ipv4，1 ipv6
     *
     * @return $this
     */
@@ -519,7 +519,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionType
-    *  动作0：permit,1：deny
+    *  动作0：permit，1：deny
     *
     * @return int|null
     */
@@ -531,7 +531,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets actionType
     *
-    * @param int|null $actionType 动作0：permit,1：deny
+    * @param int|null $actionType 动作0：permit，1：deny
     *
     * @return $this
     */
@@ -543,7 +543,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则下发状态 0：禁用,1：启用
+    *  规则下发状态 0：禁用，1：启用
     *
     * @return int|null
     */
@@ -555,7 +555,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 规则下发状态 0：禁用,1：启用
+    * @param int|null $status 规则下发状态 0：禁用，1：启用
     *
     * @return $this
     */
@@ -639,7 +639,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeHour
-    *  长连接时长小时
+    *  长连接时长对应小时
     *
     * @return int|null
     */
@@ -651,7 +651,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeHour
     *
-    * @param int|null $longConnectTimeHour 长连接时长小时
+    * @param int|null $longConnectTimeHour 长连接时长对应小时
     *
     * @return $this
     */
@@ -663,7 +663,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeMinute
-    *  长连接时长分钟
+    *  长连接时长对应分钟
     *
     * @return int|null
     */
@@ -675,7 +675,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeMinute
     *
-    * @param int|null $longConnectTimeMinute 长连接时长分钟
+    * @param int|null $longConnectTimeMinute 长连接时长对应分钟
     *
     * @return $this
     */
@@ -783,7 +783,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    *  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return int|null
     */
@@ -795,7 +795,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * @param int|null $type 规则类型，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return $this
     */
@@ -807,7 +807,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdDate
-    *  创建时间
+    *  规则创建时间，例如：\"2024-08-12 08:40:00\"
     *
     * @return string|null
     */
@@ -819,7 +819,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets createdDate
     *
-    * @param string|null $createdDate 创建时间
+    * @param string|null $createdDate 规则创建时间，例如：\"2024-08-12 08:40:00\"
     *
     * @return $this
     */
@@ -831,7 +831,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
 
     /**
     * Gets lastOpenTime
-    *  最后开启时间
+    *  规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     *
     * @return string|null
     */
@@ -843,7 +843,7 @@ class RuleAclListResponseDTODataRecords implements ModelInterface, ArrayAccess
     /**
     * Sets lastOpenTime
     *
-    * @param string|null $lastOpenTime 最后开启时间
+    * @param string|null $lastOpenTime 规则最后开启时间，例如：\"2024-08-12 08:40:00\"
     *
     * @return $this
     */

@@ -20,22 +20,26 @@ class UpdateAddressSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  Id
+    * id  地址组id
+    * name  地址组名称
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'id' => 'string'
+            'id' => 'string',
+            'name' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  Id
+    * id  地址组id
+    * name  地址组名称
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'id' => null
+        'id' => null,
+        'name' => null
     ];
 
     /**
@@ -61,32 +65,38 @@ class UpdateAddressSetResponseData implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  Id
+    * id  地址组id
+    * name  地址组名称
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'id' => 'id'
+            'id' => 'id',
+            'name' => 'name'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  Id
+    * id  地址组id
+    * name  地址组名称
     *
     * @var string[]
     */
     protected static $setters = [
-            'id' => 'setId'
+            'id' => 'setId',
+            'name' => 'setName'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  Id
+    * id  地址组id
+    * name  地址组名称
     *
     * @var string[]
     */
     protected static $getters = [
-            'id' => 'getId'
+            'id' => 'getId',
+            'name' => 'getName'
     ];
 
     /**
@@ -148,6 +158,7 @@ class UpdateAddressSetResponseData implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -174,7 +185,7 @@ class UpdateAddressSetResponseData implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  Id
+    *  地址组id
     *
     * @return string|null
     */
@@ -186,13 +197,37 @@ class UpdateAddressSetResponseData implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id Id
+    * @param string|null $id 地址组id
     *
     * @return $this
     */
     public function setId($id)
     {
         $this->container['id'] = $id;
+        return $this;
+    }
+
+    /**
+    * Gets name
+    *  地址组名称
+    *
+    * @return string|null
+    */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+    * Sets name
+    *
+    * @param string|null $name 地址组名称
+    *
+    * @return $this
+    */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
         return $this;
     }
 

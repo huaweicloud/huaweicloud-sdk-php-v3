@@ -21,15 +21,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Array of property to type mappings. Used for (de)serialization
     * bytes  字节
-    * direction  方向，有内到外和外到内两种
-    * packets  包
+    * direction  方向，有内到外（in2out）和外到内（out2in）两种
+    * packets  字节包数
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
@@ -79,15 +79,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bytes  字节
-    * direction  方向，有内到外和外到内两种
-    * packets  包
+    * direction  方向，有内到外（in2out）和外到内（out2in）两种
+    * packets  字节包数
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
@@ -158,15 +158,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * bytes  字节
-    * direction  方向，有内到外和外到内两种
-    * packets  包
+    * direction  方向，有内到外（in2out）和外到内（out2in）两种
+    * packets  字节包数
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
@@ -216,15 +216,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bytes  字节
-    * direction  方向，有内到外和外到内两种
-    * packets  包
+    * direction  方向，有内到外（in2out）和外到内（out2in）两种
+    * packets  字节包数
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
@@ -274,15 +274,15 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bytes  字节
-    * direction  方向，有内到外和外到内两种
-    * packets  包
+    * direction  方向，有内到外（in2out）和外到内（out2in）两种
+    * packets  字节包数
     * startTime  开始时间，以毫秒为单位的时间戳，如1718936272648
     * endTime  结束时间，以毫秒为单位的时间戳，如1718936272648
     * logId  文档ID
     * srcIp  源IP
     * srcPort  源端口
     * dstIp  目的IP
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
     * dstHost  目标主机
@@ -485,7 +485,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
 
     /**
     * Gets direction
-    *  方向，有内到外和外到内两种
+    *  方向，有内到外（in2out）和外到内（out2in）两种
     *
     * @return string|null
     */
@@ -497,7 +497,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets direction
     *
-    * @param string|null $direction 方向，有内到外和外到内两种
+    * @param string|null $direction 方向，有内到外（in2out）和外到内（out2in）两种
     *
     * @return $this
     */
@@ -509,7 +509,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
 
     /**
     * Gets packets
-    *  包
+    *  字节包数
     *
     * @return int|null
     */
@@ -521,7 +521,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets packets
     *
-    * @param int|null $packets 包
+    * @param int|null $packets 字节包数
     *
     * @return $this
     */
@@ -677,7 +677,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
 
     /**
     * Gets app
-    *  应用协议
+    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string|null
     */
@@ -689,7 +689,7 @@ class HttpQueryCfwFlowLogsResponseDTODataRecords implements ModelInterface, Arra
     /**
     * Sets app
     *
-    * @param string|null $app 应用协议
+    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */

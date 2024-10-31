@@ -21,15 +21,15 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
-    * serviceSetName  服务组名称
+    * serviceSetId  服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceSetName  服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     * customService  自定义服务
-    * predefinedGroup  预定义服务组列表
-    * serviceGroup  服务组列表
+    * predefinedGroup  预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
+    * serviceGroup  服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -53,15 +53,15 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
-    * serviceSetName  服务组名称
+    * serviceSetId  服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceSetName  服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     * customService  自定义服务
-    * predefinedGroup  预定义服务组列表
-    * serviceGroup  服务组列表
+    * predefinedGroup  预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
+    * serviceGroup  服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -106,15 +106,15 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
-    * serviceSetName  服务组名称
+    * serviceSetId  服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceSetName  服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     * customService  自定义服务
-    * predefinedGroup  预定义服务组列表
-    * serviceGroup  服务组列表
+    * predefinedGroup  预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
+    * serviceGroup  服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -138,15 +138,15 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
-    * serviceSetName  服务组名称
+    * serviceSetId  服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceSetName  服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     * customService  自定义服务
-    * predefinedGroup  预定义服务组列表
-    * serviceGroup  服务组列表
+    * predefinedGroup  预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
+    * serviceGroup  服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -170,15 +170,15 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
-    * serviceSetName  服务组名称
+    * serviceSetId  服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * serviceSetName  服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     * customService  自定义服务
-    * predefinedGroup  预定义服务组列表
-    * serviceGroup  服务组列表
+    * predefinedGroup  预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
+    * serviceGroup  服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -325,7 +325,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     *
     * @return int|null
     */
@@ -337,7 +337,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param int|null $protocol 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * @param int|null $protocol 协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     *
     * @return $this
     */
@@ -349,7 +349,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocols
-    *  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     *
     * @return int[]|null
     */
@@ -361,7 +361,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets protocols
     *
-    * @param int[]|null $protocols 协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * @param int[]|null $protocols 协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,type为0手动类型时不能为空。
     *
     * @return $this
     */
@@ -421,7 +421,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceSetId
-    *  服务组id，手动类型为空，自动类型为非空
+    *  服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -433,7 +433,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceSetId
     *
-    * @param string|null $serviceSetId 服务组id，手动类型为空，自动类型为非空
+    * @param string|null $serviceSetId 服务组id，当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -445,7 +445,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceSetName
-    *  服务组名称
+    *  服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -457,7 +457,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceSetName
     *
-    * @param string|null $serviceSetName 服务组名称
+    * @param string|null $serviceSetName 服务组名称,当type为1（关联IP地址组）时不能为空，可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.name（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -493,7 +493,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets predefinedGroup
-    *  预定义服务组列表
+    *  预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
     *
     * @return string[]|null
     */
@@ -505,7 +505,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets predefinedGroup
     *
-    * @param string[]|null $predefinedGroup 预定义服务组列表
+    * @param string[]|null $predefinedGroup 预定义服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为1预定义服务组。
     *
     * @return $this
     */
@@ -517,7 +517,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceGroup
-    *  服务组列表
+    *  服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     *
     * @return string[]|null
     */
@@ -529,7 +529,7 @@ class RuleServiceDto implements ModelInterface, ArrayAccess
     /**
     * Sets serviceGroup
     *
-    * @param string[]|null $serviceGroup 服务组列表
+    * @param string[]|null $serviceGroup 服务组id列表，服务组id可通过[获取服务组列表接口](ListServiceSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。查询条件中query_service_set_type需要设置为0自定义服务组。
     *
     * @return $this
     */

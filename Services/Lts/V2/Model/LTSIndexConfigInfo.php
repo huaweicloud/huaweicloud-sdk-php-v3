@@ -194,10 +194,13 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
         if ($this->container['fullTextIndex'] === null) {
             $invalidProperties[] = "'fullTextIndex' can't be null";
         }
-            if (!is_null($this->container['logStreamId']) && (mb_strlen($this->container['logStreamId']) > 36)) {
+        if ($this->container['logStreamId'] === null) {
+            $invalidProperties[] = "'logStreamId' can't be null";
+        }
+            if ((mb_strlen($this->container['logStreamId']) > 36)) {
                 $invalidProperties[] = "invalid value for 'logStreamId', the character length must be smaller than or equal to 36.";
             }
-            if (!is_null($this->container['logStreamId']) && (mb_strlen($this->container['logStreamId']) < 36)) {
+            if ((mb_strlen($this->container['logStreamId']) < 36)) {
                 $invalidProperties[] = "invalid value for 'logStreamId', the character length must be bigger than or equal to 36.";
             }
         return $invalidProperties;
@@ -290,7 +293,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     * Gets logStreamId
     *  日志流id
     *
-    * @return string|null
+    * @return string
     */
     public function getLogStreamId()
     {
@@ -300,7 +303,7 @@ class LTSIndexConfigInfo implements ModelInterface, ArrayAccess
     /**
     * Sets logStreamId
     *
-    * @param string|null $logStreamId 日志流id
+    * @param string $logStreamId 日志流id
     *
     * @return $this
     */

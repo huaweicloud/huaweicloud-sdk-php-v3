@@ -21,7 +21,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -29,6 +29,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
@@ -41,13 +42,14 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'string',
             'cors' => 'bool',
             'cseInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCSECreate',
-            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCECreate'
+            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCECreate',
+            'nacosInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -55,6 +57,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
@@ -67,7 +70,8 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
         'authType' => null,
         'cors' => null,
         'cseInfo' => null,
-        'cceInfo' => null
+        'cceInfo' => null,
+        'nacosInfo' => null
     ];
 
     /**
@@ -94,7 +98,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -102,6 +106,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
@@ -114,13 +119,14 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'auth_type',
             'cors' => 'cors',
             'cseInfo' => 'cse_info',
-            'cceInfo' => 'cce_info'
+            'cceInfo' => 'cce_info',
+            'nacosInfo' => 'nacos_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -128,6 +134,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
@@ -140,13 +147,14 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'setAuthType',
             'cors' => 'setCors',
             'cseInfo' => 'setCseInfo',
-            'cceInfo' => 'setCceInfo'
+            'cceInfo' => 'setCceInfo',
+            'nacosInfo' => 'setNacosInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * groupInfo  groupInfo
-    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     * protocol  API网关访问微服务的请求协议 - HTTP - HTTPS
     * apis  导入的api列表
     * backendTimeout  APIG请求后端服务的超时时间。最大超时时间可通过实例特性backend_timeout配置修改，可修改的上限为600000，默认5000  单位：毫秒。
@@ -154,6 +162,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     * cors  是否支持跨域，默认不支持 - true：支持 - false：不支持
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
@@ -166,7 +175,8 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             'authType' => 'getAuthType',
             'cors' => 'getCors',
             'cseInfo' => 'getCseInfo',
-            'cceInfo' => 'getCceInfo'
+            'cceInfo' => 'getCceInfo',
+            'nacosInfo' => 'getNacosInfo'
     ];
 
     /**
@@ -212,6 +222,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     const SERVICE_TYPE_CSE = 'CSE';
     const SERVICE_TYPE_CCE = 'CCE';
     const SERVICE_TYPE_CCE_SERVICE = 'CCE_SERVICE';
+    const SERVICE_TYPE_NACOS = 'NACOS';
     const PROTOCOL_HTTP = 'HTTP';
     const PROTOCOL_HTTPS = 'HTTPS';
     const AUTH_TYPE_NONE = 'NONE';
@@ -230,6 +241,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
             self::SERVICE_TYPE_CSE,
             self::SERVICE_TYPE_CCE,
             self::SERVICE_TYPE_CCE_SERVICE,
+            self::SERVICE_TYPE_NACOS,
         ];
     }
 
@@ -285,6 +297,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
         $this->container['cors'] = isset($data['cors']) ? $data['cors'] : null;
         $this->container['cseInfo'] = isset($data['cseInfo']) ? $data['cseInfo'] : null;
         $this->container['cceInfo'] = isset($data['cceInfo']) ? $data['cceInfo'] : null;
+        $this->container['nacosInfo'] = isset($data['nacosInfo']) ? $data['nacosInfo'] : null;
     }
 
     /**
@@ -371,7 +384,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    *  微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     *
     * @return string
     */
@@ -383,7 +396,7 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string $serviceType 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * @param string $serviceType 微服务中心类型。 - CSE：CSE微服务注册中心 - CCE: CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填。
     *
     * @return $this
     */
@@ -558,6 +571,30 @@ class MicroserviceImportReq implements ModelInterface, ArrayAccess
     public function setCceInfo($cceInfo)
     {
         $this->container['cceInfo'] = $cceInfo;
+        return $this;
+    }
+
+    /**
+    * Gets nacosInfo
+    *  nacosInfo
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase|null
+    */
+    public function getNacosInfo()
+    {
+        return $this->container['nacosInfo'];
+    }
+
+    /**
+    * Sets nacosInfo
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase|null $nacosInfo nacosInfo
+    *
+    * @return $this
+    */
+    public function setNacosInfo($nacosInfo)
+    {
+        $this->container['nacosInfo'] = $nacosInfo;
         return $this;
     }
 

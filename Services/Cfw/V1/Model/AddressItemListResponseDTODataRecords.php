@@ -24,7 +24,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
     * name  地址组成员name
     * description  描述
     * addressType  地址组类型，0 ipv4,1 ipv6
-    * address  地址组
+    * address  地址信息
     *
     * @var string[]
     */
@@ -42,7 +42,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
     * name  地址组成员name
     * description  描述
     * addressType  地址组类型，0 ipv4,1 ipv6
-    * address  地址组
+    * address  地址信息
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
     * name  地址组成员name
     * description  描述
     * addressType  地址组类型，0 ipv4,1 ipv6
-    * address  地址组
+    * address  地址信息
     *
     * @var string[]
     */
@@ -99,7 +99,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
     * name  地址组成员name
     * description  描述
     * addressType  地址组类型，0 ipv4,1 ipv6
-    * address  地址组
+    * address  地址信息
     *
     * @var string[]
     */
@@ -117,7 +117,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
     * name  地址组成员name
     * description  描述
     * addressType  地址组类型，0 ipv4,1 ipv6
-    * address  地址组
+    * address  地址信息
     *
     * @var string[]
     */
@@ -314,7 +314,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
 
     /**
     * Gets address
-    *  地址组
+    *  地址信息
     *
     * @return string|null
     */
@@ -326,7 +326,7 @@ class AddressItemListResponseDTODataRecords implements ModelInterface, ArrayAcce
     /**
     * Sets address
     *
-    * @param string|null $address 地址组
+    * @param string|null $address 地址信息
     *
     * @return $this
     */

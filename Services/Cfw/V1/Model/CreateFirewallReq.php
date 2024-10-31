@@ -21,8 +21,8 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，租户未开启企业项目时传0
-    * tags  资源标签
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -39,8 +39,8 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，租户未开启企业项目时传0
-    * tags  资源标签
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -78,8 +78,8 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，租户未开启企业项目时传0
-    * tags  资源标签
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -96,8 +96,8 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，租户未开启企业项目时传0
-    * tags  资源标签
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -114,8 +114,8 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * name  防火墙名称
-    * enterpriseProjectId  企业项目ID，租户未开启企业项目时传0
-    * tags  资源标签
+    * enterpriseProjectId  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
+    * tags  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     * flavor  flavor
     * chargeInfo  chargeInfo
     *
@@ -251,7 +251,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets enterpriseProjectId
-    *  企业项目ID，租户未开启企业项目时传0
+    *  企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @return string|null
     */
@@ -263,7 +263,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目ID，租户未开启企业项目时传0
+    * @param string|null $enterpriseProjectId 企业项目ID，用户根据组织规划企业项目，对应的ID为企业项目ID，可通过[如何获取企业项目ID](cfw_02_0027.xml)获取，用户未开启企业项目时为0
     *
     * @return $this
     */
@@ -275,7 +275,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets tags
-    *  资源标签
+    *  服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqTags[]|null
     */
@@ -287,7 +287,7 @@ class CreateFirewallReq implements ModelInterface, ArrayAccess
     /**
     * Sets tags
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqTags[]|null $tags 资源标签
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\CreateFirewallReqTags[]|null $tags 服务资源标签列表，防火墙资源添加标签后，可根据键、值组合查询资源，同时可根据键、值组合进行话单合并统计。
     *
     * @return $this
     */

@@ -813,7 +813,7 @@ class CfwClient extends Client
     /**
      * 修改东西向防火墙防护状态
      *
-     * 东西向防护资源防护开启/关闭
+     * 东西向防护开启/关闭
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -884,7 +884,7 @@ class CfwClient extends Client
     /**
      * 创建抓包任务
      *
-     * 创建抓包任务
+     * 创建抓包任务，每个任务只能执行一次。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1373,9 +1373,9 @@ class CfwClient extends Client
     }
 
     /**
-     * 删除抓包任务
+     * 批量删除抓包任务
      *
-     * 删除抓包任务
+     * 批量删除抓包任务
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1547,6 +1547,9 @@ class CfwClient extends Client
         }
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
         }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
@@ -4363,6 +4366,9 @@ class CfwClient extends Client
         if ($localVarParams['enterpriseProjectId'] !== null) {
             $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
         }
+        if ($localVarParams['fwInstanceId'] !== null) {
+            $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
+        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -5296,9 +5302,6 @@ class CfwClient extends Client
         if ($localVarParams['fwInstanceId'] !== null) {
             $queryParams['fw_instance_id'] = $localVarParams['fwInstanceId'];
         }
-        if ($localVarParams['xLanguage'] !== null) {
-            $headerParams[$arr['xLanguage']] = $localVarParams['xLanguage'];
-        }
         if ($localVarParams['projectId'] !== null) {
             $pathParams['project_id'] = $localVarParams['projectId'];
         }
@@ -5378,11 +5381,11 @@ class CfwClient extends Client
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['*/*']
+                ['*/*', 'application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['*/*'],
+                ['*/*', 'application/json'],
                 []
             );
         }

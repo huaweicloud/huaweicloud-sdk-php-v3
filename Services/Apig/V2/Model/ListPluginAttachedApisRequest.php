@@ -30,6 +30,7 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
     * groupId  分组编号
     * reqMethod  请求方法
     * reqUri  请求路径
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -43,7 +44,8 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
             'apiId' => 'string',
             'groupId' => 'string',
             'reqMethod' => 'string',
-            'reqUri' => 'string'
+            'reqUri' => 'string',
+            'tags' => 'string'
     ];
 
     /**
@@ -58,6 +60,7 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
     * groupId  分组编号
     * reqMethod  请求方法
     * reqUri  请求路径
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -71,7 +74,8 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
         'apiId' => null,
         'groupId' => null,
         'reqMethod' => null,
-        'reqUri' => null
+        'reqUri' => null,
+        'tags' => null
     ];
 
     /**
@@ -107,6 +111,7 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
     * groupId  分组编号
     * reqMethod  请求方法
     * reqUri  请求路径
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -120,7 +125,8 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
             'apiId' => 'api_id',
             'groupId' => 'group_id',
             'reqMethod' => 'req_method',
-            'reqUri' => 'req_uri'
+            'reqUri' => 'req_uri',
+            'tags' => 'tags'
     ];
 
     /**
@@ -135,6 +141,7 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
     * groupId  分组编号
     * reqMethod  请求方法
     * reqUri  请求路径
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -148,7 +155,8 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
             'apiId' => 'setApiId',
             'groupId' => 'setGroupId',
             'reqMethod' => 'setReqMethod',
-            'reqUri' => 'setReqUri'
+            'reqUri' => 'setReqUri',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -163,6 +171,7 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
     * groupId  分组编号
     * reqMethod  请求方法
     * reqUri  请求路径
+    * tags  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
     *
     * @var string[]
     */
@@ -176,7 +185,8 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
             'apiId' => 'getApiId',
             'groupId' => 'getGroupId',
             'reqMethod' => 'getReqMethod',
-            'reqUri' => 'getReqUri'
+            'reqUri' => 'getReqUri',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -247,6 +257,7 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
         $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
         $this->container['reqMethod'] = isset($data['reqMethod']) ? $data['reqMethod'] : null;
         $this->container['reqUri'] = isset($data['reqUri']) ? $data['reqUri'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -269,6 +280,15 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
         if ($this->container['pluginId'] === null) {
             $invalidProperties[] = "'pluginId' can't be null";
         }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) > 128)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be smaller than or equal to 128.";
+            }
+            if (!is_null($this->container['tags']) && (mb_strlen($this->container['tags']) < 0)) {
+                $invalidProperties[] = "invalid value for 'tags', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['tags']) && !preg_match("/^$|^#no_tags#$|^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9]|[\\u4e00-\\u9fa5]|[-#%.:_]){0,127}$/", $this->container['tags'])) {
+                $invalidProperties[] = "invalid value for 'tags', must be conform to the pattern /^$|^#no_tags#$|^([a-zA-Z]|[\\u4e00-\\u9fa5])([a-zA-Z0-9]|[\\u4e00-\\u9fa5]|[-#%.:_]){0,127}$/.";
+            }
         return $invalidProperties;
     }
 
@@ -520,6 +540,30 @@ class ListPluginAttachedApisRequest implements ModelInterface, ArrayAccess
     public function setReqUri($reqUri)
     {
         $this->container['reqUri'] = $reqUri;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+    *
+    * @return string|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string|null $tags API标签，该参数可指定多个，多个不同的参数值为或关系；不指定或为空时，表示不筛选标签；指定为#no_tags#时，表示筛选无标签API。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

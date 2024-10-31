@@ -22,24 +22,28 @@ class AudioStreamCreateRequestData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * url  音频流url地址，支持rtmp、rtmps、hls、http、https等主流协议。
     * language  指定音频流中语种类型 zh: 中文,默认值为zh
+    * returnAllResults  返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'url' => 'string',
-            'language' => 'string'
+            'language' => 'string',
+            'returnAllResults' => 'bool'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * url  音频流url地址，支持rtmp、rtmps、hls、http、https等主流协议。
     * language  指定音频流中语种类型 zh: 中文,默认值为zh
+    * returnAllResults  返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'url' => null,
-        'language' => null
+        'language' => null,
+        'returnAllResults' => null
     ];
 
     /**
@@ -67,36 +71,42 @@ class AudioStreamCreateRequestData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * url  音频流url地址，支持rtmp、rtmps、hls、http、https等主流协议。
     * language  指定音频流中语种类型 zh: 中文,默认值为zh
+    * returnAllResults  返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'url' => 'url',
-            'language' => 'language'
+            'language' => 'language',
+            'returnAllResults' => 'return_all_results'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * url  音频流url地址，支持rtmp、rtmps、hls、http、https等主流协议。
     * language  指定音频流中语种类型 zh: 中文,默认值为zh
+    * returnAllResults  返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
     *
     * @var string[]
     */
     protected static $setters = [
             'url' => 'setUrl',
-            'language' => 'setLanguage'
+            'language' => 'setLanguage',
+            'returnAllResults' => 'setReturnAllResults'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * url  音频流url地址，支持rtmp、rtmps、hls、http、https等主流协议。
     * language  指定音频流中语种类型 zh: 中文,默认值为zh
+    * returnAllResults  返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
     *
     * @var string[]
     */
     protected static $getters = [
             'url' => 'getUrl',
-            'language' => 'getLanguage'
+            'language' => 'getLanguage',
+            'returnAllResults' => 'getReturnAllResults'
     ];
 
     /**
@@ -159,6 +169,7 @@ class AudioStreamCreateRequestData implements ModelInterface, ArrayAccess
     {
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['returnAllResults'] = isset($data['returnAllResults']) ? $data['returnAllResults'] : null;
     }
 
     /**
@@ -231,6 +242,30 @@ class AudioStreamCreateRequestData implements ModelInterface, ArrayAccess
     public function setLanguage($language)
     {
         $this->container['language'] = $language;
+        return $this;
+    }
+
+    /**
+    * Gets returnAllResults
+    *  返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
+    *
+    * @return bool|null
+    */
+    public function getReturnAllResults()
+    {
+        return $this->container['returnAllResults'];
+    }
+
+    /**
+    * Sets returnAllResults
+    *
+    * @param bool|null $returnAllResults 返回音频片段结果的策略。可选值如下： false：返回风险等级为非pass的音频片段结果 true：返回所有风险等级的音频片段结果 说明： 1. 默认值为false； 2. 每隔10秒返回一次最近10秒音频流的审核结果。
+    *
+    * @return $this
+    */
+    public function setReturnAllResults($returnAllResults)
+    {
+        $this->container['returnAllResults'] = $returnAllResults;
         return $this;
     }
 

@@ -20,8 +20,8 @@ class RuleId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * id  id
-    * name  名称
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class RuleId implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * id  id
-    * name  名称
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class RuleId implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * id  id
-    * name  名称
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class RuleId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * id  id
-    * name  名称
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class RuleId implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * id  id
-    * name  名称
+    * id  规则id
+    * name  规则名称
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class RuleId implements ModelInterface, ArrayAccess
 
     /**
     * Gets id
-    *  id
+    *  规则id
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class RuleId implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id id
+    * @param string|null $id 规则id
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class RuleId implements ModelInterface, ArrayAccess
 
     /**
     * Gets name
-    *  名称
+    *  规则名称
     *
     * @return string|null
     */
@@ -221,7 +221,7 @@ class RuleId implements ModelInterface, ArrayAccess
     /**
     * Sets name
     *
-    * @param string|null $name 名称
+    * @param string|null $name 规则名称
     *
     * @return $this
     */

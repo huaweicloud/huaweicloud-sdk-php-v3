@@ -37,6 +37,7 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
     * publishId  发布编码。
     * pluginAttachId  插件绑定编码。
     * attachedTime  绑定时间。
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -57,7 +58,8 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
             'envName' => 'string',
             'publishId' => 'string',
             'pluginAttachId' => 'string',
-            'attachedTime' => '\DateTime'
+            'attachedTime' => '\DateTime',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -79,6 +81,7 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
     * publishId  发布编码。
     * pluginAttachId  插件绑定编码。
     * attachedTime  绑定时间。
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -99,7 +102,8 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
         'envName' => null,
         'publishId' => null,
         'pluginAttachId' => null,
-        'attachedTime' => 'date-time'
+        'attachedTime' => 'date-time',
+        'tags' => null
     ];
 
     /**
@@ -142,6 +146,7 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
     * publishId  发布编码。
     * pluginAttachId  插件绑定编码。
     * attachedTime  绑定时间。
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -162,7 +167,8 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
             'envName' => 'env_name',
             'publishId' => 'publish_id',
             'pluginAttachId' => 'plugin_attach_id',
-            'attachedTime' => 'attached_time'
+            'attachedTime' => 'attached_time',
+            'tags' => 'tags'
     ];
 
     /**
@@ -184,6 +190,7 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
     * publishId  发布编码。
     * pluginAttachId  插件绑定编码。
     * attachedTime  绑定时间。
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -204,7 +211,8 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
             'envName' => 'setEnvName',
             'publishId' => 'setPublishId',
             'pluginAttachId' => 'setPluginAttachId',
-            'attachedTime' => 'setAttachedTime'
+            'attachedTime' => 'setAttachedTime',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -226,6 +234,7 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
     * publishId  发布编码。
     * pluginAttachId  插件绑定编码。
     * attachedTime  绑定时间。
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -246,7 +255,8 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
             'envName' => 'getEnvName',
             'publishId' => 'getPublishId',
             'pluginAttachId' => 'getPluginAttachId',
-            'attachedTime' => 'getAttachedTime'
+            'attachedTime' => 'getAttachedTime',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -402,6 +412,7 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
         $this->container['publishId'] = isset($data['publishId']) ? $data['publishId'] : null;
         $this->container['pluginAttachId'] = isset($data['pluginAttachId']) ? $data['pluginAttachId'] : null;
         $this->container['attachedTime'] = isset($data['attachedTime']) ? $data['attachedTime'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -863,6 +874,30 @@ class PluginApiInfo implements ModelInterface, ArrayAccess
     public function setAttachedTime($attachedTime)
     {
         $this->container['attachedTime'] = $attachedTime;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

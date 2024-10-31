@@ -20,8 +20,8 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * setId  地址组id
-    * addressItems  地址组成员信息
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItems  地址组成员列表
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * setId  地址组id
-    * addressItems  地址组成员信息
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItems  地址组成员列表
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * setId  地址组id
-    * addressItems  地址组成员信息
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItems  地址组成员列表
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * setId  地址组id
-    * addressItems  地址组成员信息
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItems  地址组成员列表
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * setId  地址组id
-    * addressItems  地址组成员信息
+    * setId  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
+    * addressItems  地址组成员列表
     *
     * @var string[]
     */
@@ -185,7 +185,7 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets setId
-    *  地址组id
+    *  地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -197,7 +197,7 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets setId
     *
-    * @param string|null $setId 地址组id
+    * @param string|null $setId 地址组id，可通过[查询地址组列表接口](ListAddressSets.xml)查询获得，通过返回值中的data.records.set_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -209,7 +209,7 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressItems
-    *  地址组成员信息
+    *  地址组成员列表
     *
     * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddAddressItemsInfoDtoAddressItems[]|null
     */
@@ -221,7 +221,7 @@ class AddAddressItemsInfoDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressItems
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddAddressItemsInfoDtoAddressItems[]|null $addressItems 地址组成员信息
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddAddressItemsInfoDtoAddressItems[]|null $addressItems 地址组成员列表
     *
     * @return $this
     */

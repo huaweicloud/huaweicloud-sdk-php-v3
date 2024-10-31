@@ -32,7 +32,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
             'count' => 'int',
             'logs' => '\HuaweiCloud\SDK\Lts\V2\Model\LogContents[]',
             'isQueryComplete' => 'bool',
-            'analysisLogs' => 'map[string,string][]'
+            'analysisLogs' => 'object[]'
     ];
 
     /**
@@ -282,7 +282,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     * Gets analysisLogs
     *  分析日志返回响应体
     *
-    * @return map[string,string][]|null
+    * @return object[]|null
     */
     public function getAnalysisLogs()
     {
@@ -292,7 +292,7 @@ class ListLogsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets analysisLogs
     *
-    * @param map[string,string][]|null $analysisLogs 分析日志返回响应体
+    * @param object[]|null $analysisLogs 分析日志返回响应体
     *
     * @return $this
     */

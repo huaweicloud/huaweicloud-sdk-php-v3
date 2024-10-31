@@ -22,7 +22,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  记录的总数
+    * total  服务组成员总数
     * setId  服务组id
     * records  记录
     *
@@ -40,7 +40,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  记录的总数
+    * total  服务组成员总数
     * setId  服务组id
     * records  记录
     *
@@ -79,7 +79,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * and the value is the original name
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  记录的总数
+    * total  服务组成员总数
     * setId  服务组id
     * records  记录
     *
@@ -97,7 +97,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  记录的总数
+    * total  服务组成员总数
     * setId  服务组id
     * records  记录
     *
@@ -115,7 +115,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * total  记录的总数
+    * total  服务组成员总数
     * setId  服务组id
     * records  记录
     *
@@ -266,7 +266,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
 
     /**
     * Gets total
-    *  记录的总数
+    *  服务组成员总数
     *
     * @return int|null
     */
@@ -278,7 +278,7 @@ class ServiceItemListResponseDtoData implements ModelInterface, ArrayAccess
     /**
     * Sets total
     *
-    * @param int|null $total 记录的总数
+    * @param int|null $total 服务组成员总数
     *
     * @return $this
     */

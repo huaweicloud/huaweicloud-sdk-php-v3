@@ -1,13 +1,13 @@
 <?php
 
-namespace HuaweiCloud\SDK\Cfw\V1\Model;
+namespace HuaweiCloud\SDK\Lts\V2\Model;
 
 use \ArrayAccess;
 use HuaweiCloud\SDK\Core\Utils\ObjectSerializer;
 use HuaweiCloud\SDK\Core\Utils\ModelInterface;
 use HuaweiCloud\SDK\Core\SdkResponse;
 
-class ErrorRsp implements ModelInterface, ArrayAccess
+class Processor implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -16,30 +16,30 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     *
     * @var string
     */
-    protected static $openAPIModelName = 'ErrorRsp';
+    protected static $openAPIModelName = 'Processor';
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误描述
+    * type  解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
+    * detail  detail
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'errorCode' => 'string',
-            'errorMsg' => 'string'
+            'type' => 'string',
+            'detail' => '\HuaweiCloud\SDK\Lts\V2\Model\Detail'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * errorCode  错误码
-    * errorMsg  错误描述
+    * type  解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
+    * detail  detail
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'errorCode' => null,
-        'errorMsg' => null
+        'type' => null,
+        'detail' => null
     ];
 
     /**
@@ -65,38 +65,38 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * errorCode  错误码
-    * errorMsg  错误描述
+    * type  解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
+    * detail  detail
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'errorCode' => 'error_code',
-            'errorMsg' => 'error_msg'
+            'type' => 'type',
+            'detail' => 'detail'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * errorCode  错误码
-    * errorMsg  错误描述
+    * type  解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
+    * detail  detail
     *
     * @var string[]
     */
     protected static $setters = [
-            'errorCode' => 'setErrorCode',
-            'errorMsg' => 'setErrorMsg'
+            'type' => 'setType',
+            'detail' => 'setDetail'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * errorCode  错误码
-    * errorMsg  错误描述
+    * type  解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
+    * detail  detail
     *
     * @var string[]
     */
     protected static $getters = [
-            'errorCode' => 'getErrorCode',
-            'errorMsg' => 'getErrorMsg'
+            'type' => 'getType',
+            'detail' => 'getDetail'
     ];
 
     /**
@@ -157,8 +157,8 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
     }
 
     /**
@@ -169,24 +169,6 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['errorCode'] === null) {
-            $invalidProperties[] = "'errorCode' can't be null";
-        }
-            if ((mb_strlen($this->container['errorCode']) > 36)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be smaller than or equal to 36.";
-            }
-            if ((mb_strlen($this->container['errorCode']) < 8)) {
-                $invalidProperties[] = "invalid value for 'errorCode', the character length must be bigger than or equal to 8.";
-            }
-        if ($this->container['errorMsg'] === null) {
-            $invalidProperties[] = "'errorMsg' can't be null";
-        }
-            if ((mb_strlen($this->container['errorMsg']) > 512)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be smaller than or equal to 512.";
-            }
-            if ((mb_strlen($this->container['errorMsg']) < 2)) {
-                $invalidProperties[] = "invalid value for 'errorMsg', the character length must be bigger than or equal to 2.";
-            }
         return $invalidProperties;
     }
 
@@ -202,50 +184,50 @@ class ErrorRsp implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets errorCode
-    *  错误码
+    * Gets type
+    *  解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
     *
-    * @return string
+    * @return string|null
     */
-    public function getErrorCode()
+    public function getType()
     {
-        return $this->container['errorCode'];
+        return $this->container['type'];
     }
 
     /**
-    * Sets errorCode
+    * Sets type
     *
-    * @param string $errorCode 错误码
+    * @param string|null $type 解析器类型 processor_regex 正则解析 processor_split_string 分词符 processor_json json解析器类型 processor_gotime自定义时间类型 processor_filter_regex日志过滤 processor_drop删除字段类型 processor_rename修改字段类型
     *
     * @return $this
     */
-    public function setErrorCode($errorCode)
+    public function setType($type)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['type'] = $type;
         return $this;
     }
 
     /**
-    * Gets errorMsg
-    *  错误描述
+    * Gets detail
+    *  detail
     *
-    * @return string
+    * @return \HuaweiCloud\SDK\Lts\V2\Model\Detail|null
     */
-    public function getErrorMsg()
+    public function getDetail()
     {
-        return $this->container['errorMsg'];
+        return $this->container['detail'];
     }
 
     /**
-    * Sets errorMsg
+    * Sets detail
     *
-    * @param string $errorMsg 错误描述
+    * @param \HuaweiCloud\SDK\Lts\V2\Model\Detail|null $detail detail
     *
     * @return $this
     */
-    public function setErrorMsg($errorMsg)
+    public function setDetail($detail)
     {
-        $this->container['errorMsg'] = $errorMsg;
+        $this->container['detail'] = $detail;
         return $this;
     }
 

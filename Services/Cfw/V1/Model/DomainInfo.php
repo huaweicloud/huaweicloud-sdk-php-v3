@@ -21,33 +21,29 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * domainAddressId  域名地址id
-    * domainName  域名
-    * description  描述
-    * dnsIps  域名服务器列表
+    * domainName  域名，如www.test.com
+    * description  域名描述
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'domainAddressId' => 'string',
             'domainName' => 'string',
-            'description' => 'string',
-            'dnsIps' => 'string[]'
+            'description' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * domainAddressId  域名地址id
-    * domainName  域名
-    * description  描述
-    * dnsIps  域名服务器列表
+    * domainName  域名，如www.test.com
+    * description  域名描述
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'domainAddressId' => null,
         'domainName' => null,
-        'description' => null,
-        'dnsIps' => null
+        'description' => null
     ];
 
     /**
@@ -74,49 +70,43 @@ class DomainInfo implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * domainAddressId  域名地址id
-    * domainName  域名
-    * description  描述
-    * dnsIps  域名服务器列表
+    * domainName  域名，如www.test.com
+    * description  域名描述
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'domainAddressId' => 'domain_address_id',
             'domainName' => 'domain_name',
-            'description' => 'description',
-            'dnsIps' => 'dns_ips'
+            'description' => 'description'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * domainAddressId  域名地址id
-    * domainName  域名
-    * description  描述
-    * dnsIps  域名服务器列表
+    * domainName  域名，如www.test.com
+    * description  域名描述
     *
     * @var string[]
     */
     protected static $setters = [
             'domainAddressId' => 'setDomainAddressId',
             'domainName' => 'setDomainName',
-            'description' => 'setDescription',
-            'dnsIps' => 'setDnsIps'
+            'description' => 'setDescription'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * domainAddressId  域名地址id
-    * domainName  域名
-    * description  描述
-    * dnsIps  域名服务器列表
+    * domainName  域名，如www.test.com
+    * description  域名描述
     *
     * @var string[]
     */
     protected static $getters = [
             'domainAddressId' => 'getDomainAddressId',
             'domainName' => 'getDomainName',
-            'description' => 'getDescription',
-            'dnsIps' => 'getDnsIps'
+            'description' => 'getDescription'
     ];
 
     /**
@@ -180,7 +170,6 @@ class DomainInfo implements ModelInterface, ArrayAccess
         $this->container['domainAddressId'] = isset($data['domainAddressId']) ? $data['domainAddressId'] : null;
         $this->container['domainName'] = isset($data['domainName']) ? $data['domainName'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['dnsIps'] = isset($data['dnsIps']) ? $data['dnsIps'] : null;
     }
 
     /**
@@ -231,7 +220,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets domainName
-    *  域名
+    *  域名，如www.test.com
     *
     * @return string|null
     */
@@ -243,7 +232,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets domainName
     *
-    * @param string|null $domainName 域名
+    * @param string|null $domainName 域名，如www.test.com
     *
     * @return $this
     */
@@ -255,7 +244,7 @@ class DomainInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  域名描述
     *
     * @return string|null
     */
@@ -267,37 +256,13 @@ class DomainInfo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 域名描述
     *
     * @return $this
     */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
-        return $this;
-    }
-
-    /**
-    * Gets dnsIps
-    *  域名服务器列表
-    *
-    * @return string[]|null
-    */
-    public function getDnsIps()
-    {
-        return $this->container['dnsIps'];
-    }
-
-    /**
-    * Sets dnsIps
-    *
-    * @param string[]|null $dnsIps 域名服务器列表
-    *
-    * @return $this
-    */
-    public function setDnsIps($dnsIps)
-    {
-        $this->container['dnsIps'] = $dnsIps;
         return $this;
     }
 

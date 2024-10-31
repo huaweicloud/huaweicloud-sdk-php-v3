@@ -20,7 +20,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * taskIds  抓包任务id列表
+    * taskIds  抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -30,7 +30,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * taskIds  抓包任务id列表
+    * taskIds  抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -61,7 +61,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * taskIds  抓包任务id列表
+    * taskIds  抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -71,7 +71,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * taskIds  抓包任务id列表
+    * taskIds  抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -81,7 +81,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * taskIds  抓包任务id列表
+    * taskIds  抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @var string[]
     */
@@ -177,7 +177,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets taskIds
-    *  抓包任务id列表
+    *  抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @return string[]
     */
@@ -189,7 +189,7 @@ class DeleteCaptureTaskDto implements ModelInterface, ArrayAccess
     /**
     * Sets taskIds
     *
-    * @param string[] $taskIds 抓包任务id列表
+    * @param string[] $taskIds 抓包任务id列表，抓包任务id可通过[查询抓包任务接口](ListCaptureTask.xml)查询获得，通过返回值中的data.records.task_id（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */

@@ -21,7 +21,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  实例创建的任务id。 仅创建按需实例时会返回该参数。
+    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
     * data  data
     *
@@ -35,7 +35,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  实例创建的任务id。 仅创建按需实例时会返回该参数。
+    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
     * data  data
     *
@@ -70,7 +70,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  实例创建的任务id。 仅创建按需实例时会返回该参数。
+    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
     * data  data
     *
@@ -84,7 +84,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  实例创建的任务id。 仅创建按需实例时会返回该参数。
+    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
     * data  data
     *
@@ -98,7 +98,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  实例创建的任务id。 仅创建按需实例时会返回该参数。
+    * jobId  实例创建的任务id。仅创建按需实例时会返回该参数。
     * orderId  订单号，创建包年包月时返回该参数。
     * data  data
     *
@@ -197,7 +197,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  实例创建的任务id。 仅创建按需实例时会返回该参数。
+    *  实例创建的任务id。仅创建按需实例时会返回该参数。
     *
     * @return string|null
     */
@@ -209,7 +209,7 @@ class CreateFirewallResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 实例创建的任务id。 仅创建按需实例时会返回该参数。
+    * @param string|null $jobId 实例创建的任务id。仅创建按需实例时会返回该参数。
     *
     * @return $this
     */

@@ -20,30 +20,34 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'serviceType' => 'string',
             'cseInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCSEBase',
-            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEBase'
+            'cceInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoCCEBase',
+            'nacosInfo' => '\HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'serviceType' => null,
         'cseInfo' => null,
-        'cceInfo' => null
+        'cceInfo' => null,
+        'nacosInfo' => null
     ];
 
     /**
@@ -69,44 +73,50 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'serviceType' => 'service_type',
             'cseInfo' => 'cse_info',
-            'cceInfo' => 'cce_info'
+            'cceInfo' => 'cce_info',
+            'nacosInfo' => 'nacos_info'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
     protected static $setters = [
             'serviceType' => 'setServiceType',
             'cseInfo' => 'setCseInfo',
-            'cceInfo' => 'setCceInfo'
+            'cceInfo' => 'setCceInfo',
+            'nacosInfo' => 'setNacosInfo'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * serviceType  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     * cseInfo  cseInfo
     * cceInfo  cceInfo
+    * nacosInfo  nacosInfo
     *
     * @var string[]
     */
     protected static $getters = [
             'serviceType' => 'getServiceType',
             'cseInfo' => 'getCseInfo',
-            'cceInfo' => 'getCceInfo'
+            'cceInfo' => 'getCceInfo',
+            'nacosInfo' => 'getNacosInfo'
     ];
 
     /**
@@ -152,6 +162,7 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     const SERVICE_TYPE_CSE = 'CSE';
     const SERVICE_TYPE_CCE = 'CCE';
     const SERVICE_TYPE_CCE_SERVICE = 'CCE_SERVICE';
+    const SERVICE_TYPE_NACOS = 'NACOS';
     
 
     /**
@@ -165,6 +176,7 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
             self::SERVICE_TYPE_CSE,
             self::SERVICE_TYPE_CCE,
             self::SERVICE_TYPE_CCE_SERVICE,
+            self::SERVICE_TYPE_NACOS,
         ];
     }
 
@@ -187,6 +199,7 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
         $this->container['serviceType'] = isset($data['serviceType']) ? $data['serviceType'] : null;
         $this->container['cseInfo'] = isset($data['cseInfo']) ? $data['cseInfo'] : null;
         $this->container['cceInfo'] = isset($data['cceInfo']) ? $data['cceInfo'] : null;
+        $this->container['nacosInfo'] = isset($data['nacosInfo']) ? $data['nacosInfo'] : null;
     }
 
     /**
@@ -221,7 +234,7 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceType
-    *  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    *  微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     *
     * @return string|null
     */
@@ -233,7 +246,7 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     /**
     * Sets serviceType
     *
-    * @param string|null $serviceType 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service）
+    * @param string|null $serviceType 微服务类型： - CSE：CSE微服务注册中心 - CCE：CCE云容器引擎（工作负载） - CCE_SERVICE: CCE云容器引擎（Service） - NACOS: Nacos注册中心，nacos_info必填
     *
     * @return $this
     */
@@ -288,6 +301,30 @@ class MicroServiceCreate implements ModelInterface, ArrayAccess
     public function setCceInfo($cceInfo)
     {
         $this->container['cceInfo'] = $cceInfo;
+        return $this;
+    }
+
+    /**
+    * Gets nacosInfo
+    *  nacosInfo
+    *
+    * @return \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase|null
+    */
+    public function getNacosInfo()
+    {
+        return $this->container['nacosInfo'];
+    }
+
+    /**
+    * Sets nacosInfo
+    *
+    * @param \HuaweiCloud\SDK\Apig\V2\Model\MicroServiceInfoNacosBase|null $nacosInfo nacosInfo
+    *
+    * @return $this
+    */
+    public function setNacosInfo($nacosInfo)
+    {
+        $this->container['nacosInfo'] = $nacosInfo;
         return $this;
     }
 

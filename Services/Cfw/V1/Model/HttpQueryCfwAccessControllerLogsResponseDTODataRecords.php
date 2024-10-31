@@ -20,9 +20,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * action  动作0：permit,1：deny
+    * action  动作0：permit，1：deny
     * ruleName  规则名称
-    * ruleId  规则ID
+    * ruleId  规则id
     * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
@@ -34,7 +34,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     * dstHost  目标主机
     * srcProvinceId  源省份id
     * srcProvinceName  源省份名称
@@ -76,9 +76,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * action  动作0：permit,1：deny
+    * action  动作0：permit，1：deny
     * ruleName  规则名称
-    * ruleId  规则ID
+    * ruleId  规则id
     * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
@@ -90,7 +90,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     * dstHost  目标主机
     * srcProvinceId  源省份id
     * srcProvinceName  源省份名称
@@ -153,9 +153,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * action  动作0：permit,1：deny
+    * action  动作0：permit，1：deny
     * ruleName  规则名称
-    * ruleId  规则ID
+    * ruleId  规则id
     * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
@@ -167,7 +167,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     * dstHost  目标主机
     * srcProvinceId  源省份id
     * srcProvinceName  源省份名称
@@ -209,9 +209,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * action  动作0：permit,1：deny
+    * action  动作0：permit，1：deny
     * ruleName  规则名称
-    * ruleId  规则ID
+    * ruleId  规则id
     * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
@@ -223,7 +223,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     * dstHost  目标主机
     * srcProvinceId  源省份id
     * srcProvinceName  源省份名称
@@ -265,9 +265,9 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * action  动作0：permit,1：deny
+    * action  动作0：permit，1：deny
     * ruleName  规则名称
-    * ruleId  规则ID
+    * ruleId  规则id
     * hitTime  命中时间，以毫秒为单位的时间戳，如1718936272648
     * srcRegionId  源区域id
     * srcRegionName  源区域name
@@ -279,7 +279,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     * dstIp  目的IP
     * dstPort  目的端口
     * protocol  协议类型:TCP为6,UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * app  应用协议
+    * app  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     * dstHost  目标主机
     * srcProvinceId  源省份id
     * srcProvinceName  源省份名称
@@ -427,7 +427,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Gets action
-    *  动作0：permit,1：deny
+    *  动作0：permit，1：deny
     *
     * @return string|null
     */
@@ -439,7 +439,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Sets action
     *
-    * @param string|null $action 动作0：permit,1：deny
+    * @param string|null $action 动作0：permit，1：deny
     *
     * @return $this
     */
@@ -475,7 +475,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Gets ruleId
-    *  规则ID
+    *  规则id
     *
     * @return string|null
     */
@@ -487,7 +487,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Sets ruleId
     *
-    * @param string|null $ruleId 规则ID
+    * @param string|null $ruleId 规则id
     *
     * @return $this
     */
@@ -763,7 +763,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
 
     /**
     * Gets app
-    *  应用协议
+    *  规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     *
     * @return string|null
     */
@@ -775,7 +775,7 @@ class HttpQueryCfwAccessControllerLogsResponseDTODataRecords implements ModelInt
     /**
     * Sets app
     *
-    * @param string|null $app 应用协议
+    * @param string|null $app 规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”，“BGP”等。
     *
     * @return $this
     */

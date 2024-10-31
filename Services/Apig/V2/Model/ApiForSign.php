@@ -30,6 +30,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     * type  API类型
     * signatureName  已绑定的签名密钥名称
     * reqMethod  API请求方法
@@ -47,6 +48,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
             'runEnvId' => 'string',
             'id' => 'string',
             'reqUri' => 'string',
+            'tags' => 'string[]',
             'type' => 'int',
             'signatureName' => 'string',
             'reqMethod' => 'string'
@@ -64,6 +66,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     * type  API类型
     * signatureName  已绑定的签名密钥名称
     * reqMethod  API请求方法
@@ -81,6 +84,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
         'runEnvId' => null,
         'id' => null,
         'reqUri' => null,
+        'tags' => null,
         'type' => 'int32',
         'signatureName' => null,
         'reqMethod' => null
@@ -119,6 +123,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     * type  API类型
     * signatureName  已绑定的签名密钥名称
     * reqMethod  API请求方法
@@ -136,6 +141,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
             'runEnvId' => 'run_env_id',
             'id' => 'id',
             'reqUri' => 'req_uri',
+            'tags' => 'tags',
             'type' => 'type',
             'signatureName' => 'signature_name',
             'reqMethod' => 'req_method'
@@ -153,6 +159,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     * type  API类型
     * signatureName  已绑定的签名密钥名称
     * reqMethod  API请求方法
@@ -170,6 +177,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
             'runEnvId' => 'setRunEnvId',
             'id' => 'setId',
             'reqUri' => 'setReqUri',
+            'tags' => 'setTags',
             'type' => 'setType',
             'signatureName' => 'setSignatureName',
             'reqMethod' => 'setReqMethod'
@@ -187,6 +195,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
     * runEnvId  发布的环境id
     * id  API编号
     * reqUri  API的请求地址
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     * type  API类型
     * signatureName  已绑定的签名密钥名称
     * reqMethod  API请求方法
@@ -204,6 +213,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
             'runEnvId' => 'getRunEnvId',
             'id' => 'getId',
             'reqUri' => 'getReqUri',
+            'tags' => 'getTags',
             'type' => 'getType',
             'signatureName' => 'getSignatureName',
             'reqMethod' => 'getReqMethod'
@@ -304,6 +314,7 @@ class ApiForSign implements ModelInterface, ArrayAccess
         $this->container['runEnvId'] = isset($data['runEnvId']) ? $data['runEnvId'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['reqUri'] = isset($data['reqUri']) ? $data['reqUri'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['signatureName'] = isset($data['signatureName']) ? $data['signatureName'] : null;
         $this->container['reqMethod'] = isset($data['reqMethod']) ? $data['reqMethod'] : null;
@@ -576,6 +587,30 @@ class ApiForSign implements ModelInterface, ArrayAccess
     public function setReqUri($reqUri)
     {
         $this->container['reqUri'] = $reqUri;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

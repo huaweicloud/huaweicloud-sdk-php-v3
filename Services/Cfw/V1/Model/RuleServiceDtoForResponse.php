@@ -21,14 +21,14 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
+    * serviceSetId  服务组id
     * serviceSetName  服务组名称
     * customService  自定义服务
-    * serviceGroup  服务组列表
+    * serviceGroup  服务组id列表
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -51,14 +51,14 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
+    * serviceSetId  服务组id
     * serviceSetName  服务组名称
     * customService  自定义服务
-    * serviceGroup  服务组列表
+    * serviceGroup  服务组id列表
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -102,14 +102,14 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
+    * serviceSetId  服务组id
     * serviceSetName  服务组名称
     * customService  自定义服务
-    * serviceGroup  服务组列表
+    * serviceGroup  服务组id列表
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -132,14 +132,14 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
+    * serviceSetId  服务组id
     * serviceSetName  服务组名称
     * customService  自定义服务
-    * serviceGroup  服务组列表
+    * serviceGroup  服务组id列表
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -162,14 +162,14 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * type  服务输入类型，0为手动输入类型，1为自动输入类型
-    * protocol  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
-    * protocols  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * protocol  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
+    * protocols  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     * sourcePort  源端口
     * destPort  目的端口
-    * serviceSetId  服务组id，手动类型为空，自动类型为非空
+    * serviceSetId  服务组id
     * serviceSetName  服务组名称
     * customService  自定义服务
-    * serviceGroup  服务组列表
+    * serviceGroup  服务组id列表
     * serviceGroupNames  服务组名称列表
     * serviceSetType  服务组类型，0表示自定义服务组，1表示常用WEB服务，2表示常用远程登录和PING，3表示常用数据库
     *
@@ -314,7 +314,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocol
-    *  协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *  协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     *
     * @return int|null
     */
@@ -326,7 +326,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocol
     *
-    * @param int|null $protocol 协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * @param int|null $protocol 协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     *
     * @return $this
     */
@@ -338,7 +338,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets protocols
-    *  协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    *  协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     *
     * @return int[]|null
     */
@@ -350,7 +350,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets protocols
     *
-    * @param int[]|null $protocols 协议列表，协议类型:TCP为6, UDP为17,ICMP为1,ICMPV6为58,ANY为-1,手动类型不为空，自动类型为空
+    * @param int[]|null $protocols 协议列表，协议类型：TCP为6，UDP为17，ICMP为1，ICMPV6为58，ANY为-1,手动类型不为空，自动类型为空
     *
     * @return $this
     */
@@ -410,7 +410,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceSetId
-    *  服务组id，手动类型为空，自动类型为非空
+    *  服务组id
     *
     * @return string|null
     */
@@ -422,7 +422,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceSetId
     *
-    * @param string|null $serviceSetId 服务组id，手动类型为空，自动类型为非空
+    * @param string|null $serviceSetId 服务组id
     *
     * @return $this
     */
@@ -482,7 +482,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets serviceGroup
-    *  服务组列表
+    *  服务组id列表
     *
     * @return string[]|null
     */
@@ -494,7 +494,7 @@ class RuleServiceDtoForResponse implements ModelInterface, ArrayAccess
     /**
     * Sets serviceGroup
     *
-    * @param string[]|null $serviceGroup 服务组列表
+    * @param string[]|null $serviceGroup 服务组id列表
     *
     * @return $this
     */

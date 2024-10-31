@@ -22,11 +22,10 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * setId  域名组id
     * name  域名组名称
-    * description  描述
-    * refCount  引用次数
+    * description  域名组描述
+    * refCount  域名组被规则引用次数
     * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态
-    * message  异常信息
+    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     * rules  使用规则id列表
     *
     * @var string[]
@@ -38,7 +37,6 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'int',
             'domainSetType' => 'int',
             'configStatus' => 'int',
-            'message' => 'string',
             'rules' => '\HuaweiCloud\SDK\Cfw\V1\Model\UseRuleVO[]'
     ];
 
@@ -46,11 +44,10 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * setId  域名组id
     * name  域名组名称
-    * description  描述
-    * refCount  引用次数
+    * description  域名组描述
+    * refCount  域名组被规则引用次数
     * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态
-    * message  异常信息
+    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     * rules  使用规则id列表
     *
     * @var string[]
@@ -62,7 +59,6 @@ class DomainSetVo implements ModelInterface, ArrayAccess
         'refCount' => 'int32',
         'domainSetType' => 'int32',
         'configStatus' => 'int32',
-        'message' => null,
         'rules' => null
     ];
 
@@ -91,11 +87,10 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * setId  域名组id
     * name  域名组名称
-    * description  描述
-    * refCount  引用次数
+    * description  域名组描述
+    * refCount  域名组被规则引用次数
     * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态
-    * message  异常信息
+    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     * rules  使用规则id列表
     *
     * @var string[]
@@ -107,7 +102,6 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'ref_count',
             'domainSetType' => 'domain_set_type',
             'configStatus' => 'config_status',
-            'message' => 'message',
             'rules' => 'rules'
     ];
 
@@ -115,11 +109,10 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * setId  域名组id
     * name  域名组名称
-    * description  描述
-    * refCount  引用次数
+    * description  域名组描述
+    * refCount  域名组被规则引用次数
     * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态
-    * message  异常信息
+    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     * rules  使用规则id列表
     *
     * @var string[]
@@ -131,7 +124,6 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'setRefCount',
             'domainSetType' => 'setDomainSetType',
             'configStatus' => 'setConfigStatus',
-            'message' => 'setMessage',
             'rules' => 'setRules'
     ];
 
@@ -139,11 +131,10 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * setId  域名组id
     * name  域名组名称
-    * description  描述
-    * refCount  引用次数
+    * description  域名组描述
+    * refCount  域名组被规则引用次数
     * domainSetType  域名组类型，0表示应用域名组，1表示网络域名组
-    * configStatus  配置状态
-    * message  异常信息
+    * configStatus  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     * rules  使用规则id列表
     *
     * @var string[]
@@ -155,7 +146,6 @@ class DomainSetVo implements ModelInterface, ArrayAccess
             'refCount' => 'getRefCount',
             'domainSetType' => 'getDomainSetType',
             'configStatus' => 'getConfigStatus',
-            'message' => 'getMessage',
             'rules' => 'getRules'
     ];
 
@@ -223,7 +213,6 @@ class DomainSetVo implements ModelInterface, ArrayAccess
         $this->container['refCount'] = isset($data['refCount']) ? $data['refCount'] : null;
         $this->container['domainSetType'] = isset($data['domainSetType']) ? $data['domainSetType'] : null;
         $this->container['configStatus'] = isset($data['configStatus']) ? $data['configStatus'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['rules'] = isset($data['rules']) ? $data['rules'] : null;
     }
 
@@ -299,7 +288,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets description
-    *  描述
+    *  域名组描述
     *
     * @return string|null
     */
@@ -311,7 +300,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 域名组描述
     *
     * @return $this
     */
@@ -323,7 +312,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets refCount
-    *  引用次数
+    *  域名组被规则引用次数
     *
     * @return int|null
     */
@@ -335,7 +324,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets refCount
     *
-    * @param int|null $refCount 引用次数
+    * @param int|null $refCount 域名组被规则引用次数
     *
     * @return $this
     */
@@ -371,7 +360,7 @@ class DomainSetVo implements ModelInterface, ArrayAccess
 
     /**
     * Gets configStatus
-    *  配置状态
+    *  配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     *
     * @return int|null
     */
@@ -383,37 +372,13 @@ class DomainSetVo implements ModelInterface, ArrayAccess
     /**
     * Sets configStatus
     *
-    * @param int|null $configStatus 配置状态
+    * @param int|null $configStatus 配置状态，-1表示未配置态，0表示配置失败，1表示配置成功，2表示配置中，3表示正常，4表示配置异常
     *
     * @return $this
     */
     public function setConfigStatus($configStatus)
     {
         $this->container['configStatus'] = $configStatus;
-        return $this;
-    }
-
-    /**
-    * Gets message
-    *  异常信息
-    *
-    * @return string|null
-    */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-    * Sets message
-    *
-    * @param string|null $message 异常信息
-    *
-    * @return $this
-    */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
         return $this;
     }
 

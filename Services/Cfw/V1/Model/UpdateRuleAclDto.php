@@ -20,24 +20,22 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * addressType  地址类型，0 ipv4,1 ipv6
+    * addressType  地址类型，0表示ipv4，1表示ipv6
     * name  规则名称
-    * sequence  sequence
-    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
-    * applications  应用列表
-    * applicationsJsonString  应用列表转化为字符串
-    * description  描述
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * direction  方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
+    * actionType  规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  规则启用状态，0表示禁用，1表示启用
+    * applications  规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * description  规则描述
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -45,12 +43,10 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'addressType' => 'int',
             'name' => 'string',
-            'sequence' => '\HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleAclDto',
             'direction' => 'int',
             'actionType' => 'int',
             'status' => 'int',
             'applications' => 'string[]',
-            'applicationsJsonString' => 'string',
             'description' => 'string',
             'longConnectTimeHour' => 'int',
             'longConnectTimeMinute' => 'int',
@@ -66,24 +62,22 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * addressType  地址类型，0 ipv4,1 ipv6
+    * addressType  地址类型，0表示ipv4，1表示ipv6
     * name  规则名称
-    * sequence  sequence
-    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
-    * applications  应用列表
-    * applicationsJsonString  应用列表转化为字符串
-    * description  描述
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * direction  方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
+    * actionType  规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  规则启用状态，0表示禁用，1表示启用
+    * applications  规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * description  规则描述
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -91,12 +85,10 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'addressType' => 'int32',
         'name' => null,
-        'sequence' => null,
         'direction' => 'int32',
         'actionType' => 'int32',
         'status' => null,
         'applications' => null,
-        'applicationsJsonString' => null,
         'description' => null,
         'longConnectTimeHour' => 'int64',
         'longConnectTimeMinute' => 'int64',
@@ -133,24 +125,22 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * addressType  地址类型，0 ipv4,1 ipv6
+    * addressType  地址类型，0表示ipv4，1表示ipv6
     * name  规则名称
-    * sequence  sequence
-    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
-    * applications  应用列表
-    * applicationsJsonString  应用列表转化为字符串
-    * description  描述
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * direction  方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
+    * actionType  规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  规则启用状态，0表示禁用，1表示启用
+    * applications  规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * description  规则描述
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -158,12 +148,10 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'addressType' => 'address_type',
             'name' => 'name',
-            'sequence' => 'sequence',
             'direction' => 'direction',
             'actionType' => 'action_type',
             'status' => 'status',
             'applications' => 'applications',
-            'applicationsJsonString' => 'applicationsJsonString',
             'description' => 'description',
             'longConnectTimeHour' => 'long_connect_time_hour',
             'longConnectTimeMinute' => 'long_connect_time_minute',
@@ -179,24 +167,22 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * addressType  地址类型，0 ipv4,1 ipv6
+    * addressType  地址类型，0表示ipv4，1表示ipv6
     * name  规则名称
-    * sequence  sequence
-    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
-    * applications  应用列表
-    * applicationsJsonString  应用列表转化为字符串
-    * description  描述
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * direction  方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
+    * actionType  规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  规则启用状态，0表示禁用，1表示启用
+    * applications  规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * description  规则描述
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -204,12 +190,10 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     protected static $setters = [
             'addressType' => 'setAddressType',
             'name' => 'setName',
-            'sequence' => 'setSequence',
             'direction' => 'setDirection',
             'actionType' => 'setActionType',
             'status' => 'setStatus',
             'applications' => 'setApplications',
-            'applicationsJsonString' => 'setApplicationsJsonString',
             'description' => 'setDescription',
             'longConnectTimeHour' => 'setLongConnectTimeHour',
             'longConnectTimeMinute' => 'setLongConnectTimeMinute',
@@ -225,24 +209,22 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * addressType  地址类型，0 ipv4,1 ipv6
+    * addressType  地址类型，0表示ipv4，1表示ipv6
     * name  规则名称
-    * sequence  sequence
-    * direction  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
-    * actionType  动作0：permit,1：deny
-    * status  规则下发状态 0：禁用,1：启用
-    * applications  应用列表
-    * applicationsJsonString  应用列表转化为字符串
-    * description  描述
-    * longConnectTimeHour  长连接时长小时
-    * longConnectTimeMinute  长连接时长分钟
+    * direction  方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
+    * actionType  规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
+    * status  规则启用状态，0表示禁用，1表示启用
+    * applications  规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
+    * description  规则描述
+    * longConnectTimeHour  长连接时长对应小时
+    * longConnectTimeMinute  长连接时长对应分钟
     * longConnectTimeSecond  长连接时长秒
     * longConnectTime  长连接时长
     * longConnectEnable  是否支持长连接，0表示不支持，1表示支持
     * source  source
     * destination  destination
     * service  service
-    * type  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * type  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     * tag  tag
     *
     * @var string[]
@@ -250,12 +232,10 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     protected static $getters = [
             'addressType' => 'getAddressType',
             'name' => 'getName',
-            'sequence' => 'getSequence',
             'direction' => 'getDirection',
             'actionType' => 'getActionType',
             'status' => 'getStatus',
             'applications' => 'getApplications',
-            'applicationsJsonString' => 'getApplicationsJsonString',
             'description' => 'getDescription',
             'longConnectTimeHour' => 'getLongConnectTimeHour',
             'longConnectTimeMinute' => 'getLongConnectTimeMinute',
@@ -406,12 +386,10 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     {
         $this->container['addressType'] = isset($data['addressType']) ? $data['addressType'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['sequence'] = isset($data['sequence']) ? $data['sequence'] : null;
         $this->container['direction'] = isset($data['direction']) ? $data['direction'] : null;
         $this->container['actionType'] = isset($data['actionType']) ? $data['actionType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['applications'] = isset($data['applications']) ? $data['applications'] : null;
-        $this->container['applicationsJsonString'] = isset($data['applicationsJsonString']) ? $data['applicationsJsonString'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['longConnectTimeHour'] = isset($data['longConnectTimeHour']) ? $data['longConnectTimeHour'] : null;
         $this->container['longConnectTimeMinute'] = isset($data['longConnectTimeMinute']) ? $data['longConnectTimeMinute'] : null;
@@ -489,7 +467,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets addressType
-    *  地址类型，0 ipv4,1 ipv6
+    *  地址类型，0表示ipv4，1表示ipv6
     *
     * @return int|null
     */
@@ -501,7 +479,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets addressType
     *
-    * @param int|null $addressType 地址类型，0 ipv4,1 ipv6
+    * @param int|null $addressType 地址类型，0表示ipv4，1表示ipv6
     *
     * @return $this
     */
@@ -536,32 +514,8 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets sequence
-    *  sequence
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleAclDto|null
-    */
-    public function getSequence()
-    {
-        return $this->container['sequence'];
-    }
-
-    /**
-    * Sets sequence
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\OrderRuleAclDto|null $sequence sequence
-    *
-    * @return $this
-    */
-    public function setSequence($sequence)
-    {
-        $this->container['sequence'] = $sequence;
-        return $this;
-    }
-
-    /**
     * Gets direction
-    *  方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    *  方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
     *
     * @return int|null
     */
@@ -573,7 +527,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets direction
     *
-    * @param int|null $direction 方向：0表示外到内，1表示内到外【说明：规则type=0：互联网规则 | 2：nat规则时方向值必填】
+    * @param int|null $direction 方向：0表示外到内，1表示内到外,规则type=0（互联网规则）或者type= 2（nat规则）时方向值必填
     *
     * @return $this
     */
@@ -585,7 +539,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionType
-    *  动作0：permit,1：deny
+    *  规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
     *
     * @return int|null
     */
@@ -597,7 +551,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets actionType
     *
-    * @param int|null $actionType 动作0：permit,1：deny
+    * @param int|null $actionType 规则动作，0表示允许通行（permit），1表示拒绝通行（deny）
     *
     * @return $this
     */
@@ -609,7 +563,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  规则下发状态 0：禁用,1：启用
+    *  规则启用状态，0表示禁用，1表示启用
     *
     * @return int|null
     */
@@ -621,7 +575,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param int|null $status 规则下发状态 0：禁用,1：启用
+    * @param int|null $status 规则启用状态，0表示禁用，1表示启用
     *
     * @return $this
     */
@@ -633,7 +587,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets applications
-    *  应用列表
+    *  规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return string[]|null
     */
@@ -645,7 +599,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets applications
     *
-    * @param string[]|null $applications 应用列表
+    * @param string[]|null $applications 规则应用列表，规则应用类型包括：“HTTP”，\"HTTPS\"，\"TLS1\"，“DNS”，“SSH”，“MYSQL”，“SMTP”，“RDP”，“RDPS”，“VNC”，“POP3”，“IMAP4”，“SMTPS”，“POP3S”，“FTPS”，“ANY”,“BGP”等。
     *
     * @return $this
     */
@@ -656,32 +610,8 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets applicationsJsonString
-    *  应用列表转化为字符串
-    *
-    * @return string|null
-    */
-    public function getApplicationsJsonString()
-    {
-        return $this->container['applicationsJsonString'];
-    }
-
-    /**
-    * Sets applicationsJsonString
-    *
-    * @param string|null $applicationsJsonString 应用列表转化为字符串
-    *
-    * @return $this
-    */
-    public function setApplicationsJsonString($applicationsJsonString)
-    {
-        $this->container['applicationsJsonString'] = $applicationsJsonString;
-        return $this;
-    }
-
-    /**
     * Gets description
-    *  描述
+    *  规则描述
     *
     * @return string|null
     */
@@ -693,7 +623,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets description
     *
-    * @param string|null $description 描述
+    * @param string|null $description 规则描述
     *
     * @return $this
     */
@@ -705,7 +635,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeHour
-    *  长连接时长小时
+    *  长连接时长对应小时
     *
     * @return int|null
     */
@@ -717,7 +647,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeHour
     *
-    * @param int|null $longConnectTimeHour 长连接时长小时
+    * @param int|null $longConnectTimeHour 长连接时长对应小时
     *
     * @return $this
     */
@@ -729,7 +659,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets longConnectTimeMinute
-    *  长连接时长分钟
+    *  长连接时长对应分钟
     *
     * @return int|null
     */
@@ -741,7 +671,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets longConnectTimeMinute
     *
-    * @param int|null $longConnectTimeMinute 长连接时长分钟
+    * @param int|null $longConnectTimeMinute 长连接时长对应分钟
     *
     * @return $this
     */
@@ -897,7 +827,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  规则type，0：互联网规则，1：vpc规则，2：nat规则
+    *  规则类型，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return int|null
     */
@@ -909,7 +839,7 @@ class UpdateRuleAclDto implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param int|null $type 规则type，0：互联网规则，1：vpc规则，2：nat规则
+    * @param int|null $type 规则类型，0：互联网规则，1：vpc规则，2：nat规则
     *
     * @return $this
     */

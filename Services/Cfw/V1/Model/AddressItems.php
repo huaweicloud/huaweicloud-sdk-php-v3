@@ -26,7 +26,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     * @var string[]
     */
     protected static $openAPITypes = [
-            'items' => '\HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]',
+            'items' => '\HuaweiCloud\SDK\Cfw\V1\Model\AddressItemIdWithoutName[]',
             'coveredIp' => '\HuaweiCloud\SDK\Cfw\V1\Model\CoveredIPVO[]'
     ];
 
@@ -187,7 +187,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     * Gets items
     *  地址组成员id列表
     *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]|null
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\AddressItemIdWithoutName[]|null
     */
     public function getItems()
     {
@@ -197,7 +197,7 @@ class AddressItems implements ModelInterface, ArrayAccess
     /**
     * Sets items
     *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\IdObject[]|null $items 地址组成员id列表
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\AddressItemIdWithoutName[]|null $items 地址组成员id列表
     *
     * @return $this
     */

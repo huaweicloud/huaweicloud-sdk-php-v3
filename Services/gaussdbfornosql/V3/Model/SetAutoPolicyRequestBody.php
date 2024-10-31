@@ -183,6 +183,9 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
         if ($this->container['instanceIds'] === null) {
             $invalidProperties[] = "'instanceIds' can't be null";
         }
+        if ($this->container['policy'] === null) {
+            $invalidProperties[] = "'policy' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -249,7 +252,7 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     * Gets policy
     *  磁盘自动扩容策略
     *
-    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[]|null
+    * @return \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[]
     */
     public function getPolicy()
     {
@@ -259,7 +262,7 @@ class SetAutoPolicyRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets policy
     *
-    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[]|null $policy 磁盘自动扩容策略
+    * @param \HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\DiskAutoExpansionPolicy[] $policy 磁盘自动扩容策略
     *
     * @return $this
     */

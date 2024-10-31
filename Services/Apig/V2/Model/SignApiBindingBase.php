@@ -33,6 +33,7 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
     * signId  签名密钥的编号
     * signName  签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -49,7 +50,8 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
             'apiRemark' => 'string',
             'signId' => 'string',
             'signName' => 'string',
-            'reqMethod' => 'string'
+            'reqMethod' => 'string',
+            'tags' => 'string[]'
     ];
 
     /**
@@ -67,6 +69,7 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
     * signId  签名密钥的编号
     * signName  签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -83,7 +86,8 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
         'apiRemark' => null,
         'signId' => null,
         'signName' => null,
-        'reqMethod' => null
+        'reqMethod' => null,
+        'tags' => null
     ];
 
     /**
@@ -122,6 +126,7 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
     * signId  签名密钥的编号
     * signName  签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -138,7 +143,8 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
             'apiRemark' => 'api_remark',
             'signId' => 'sign_id',
             'signName' => 'sign_name',
-            'reqMethod' => 'req_method'
+            'reqMethod' => 'req_method',
+            'tags' => 'tags'
     ];
 
     /**
@@ -156,6 +162,7 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
     * signId  签名密钥的编号
     * signName  签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -172,7 +179,8 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
             'apiRemark' => 'setApiRemark',
             'signId' => 'setSignId',
             'signName' => 'setSignName',
-            'reqMethod' => 'setReqMethod'
+            'reqMethod' => 'setReqMethod',
+            'tags' => 'setTags'
     ];
 
     /**
@@ -190,6 +198,7 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
     * signId  签名密钥的编号
     * signName  签名密钥的名称。支持汉字，英文，数字，下划线，且只能以英文和汉字开头，3 ~ 64字符。 > 中文字符必须为UTF-8或者unicode编码。
     * reqMethod  API请求方法
+    * tags  API绑定的标签，标签配额默认10条，可以联系技术调整。
     *
     * @var string[]
     */
@@ -206,7 +215,8 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
             'apiRemark' => 'getApiRemark',
             'signId' => 'getSignId',
             'signName' => 'getSignName',
-            'reqMethod' => 'getReqMethod'
+            'reqMethod' => 'getReqMethod',
+            'tags' => 'getTags'
     ];
 
     /**
@@ -307,6 +317,7 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
         $this->container['signId'] = isset($data['signId']) ? $data['signId'] : null;
         $this->container['signName'] = isset($data['signName']) ? $data['signName'] : null;
         $this->container['reqMethod'] = isset($data['reqMethod']) ? $data['reqMethod'] : null;
+        $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
     }
 
     /**
@@ -648,6 +659,30 @@ class SignApiBindingBase implements ModelInterface, ArrayAccess
     public function setReqMethod($reqMethod)
     {
         $this->container['reqMethod'] = $reqMethod;
+        return $this;
+    }
+
+    /**
+    * Gets tags
+    *  API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return string[]|null
+    */
+    public function getTags()
+    {
+        return $this->container['tags'];
+    }
+
+    /**
+    * Sets tags
+    *
+    * @param string[]|null $tags API绑定的标签，标签配额默认10条，可以联系技术调整。
+    *
+    * @return $this
+    */
+    public function setTags($tags)
+    {
+        $this->container['tags'] = $tags;
         return $this;
     }
 

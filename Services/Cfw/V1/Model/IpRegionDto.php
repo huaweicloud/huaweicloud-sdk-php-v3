@@ -20,10 +20,10 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * regionId  区域id
-    * descriptionCn  中文描述
-    * descriptionEn  英文描述
-    * regionType  区域类型，0表示国家，1表示省份，2表示大洲
+    * regionId  区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * descriptionCn  区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * descriptionEn  区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * regionType  区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @var string[]
     */
@@ -36,10 +36,10 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * regionId  区域id
-    * descriptionCn  中文描述
-    * descriptionEn  英文描述
-    * regionType  区域类型，0表示国家，1表示省份，2表示大洲
+    * regionId  区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * descriptionCn  区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * descriptionEn  区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * regionType  区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @var string[]
     */
@@ -73,10 +73,10 @@ class IpRegionDto implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * regionId  区域id
-    * descriptionCn  中文描述
-    * descriptionEn  英文描述
-    * regionType  区域类型，0表示国家，1表示省份，2表示大洲
+    * regionId  区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * descriptionCn  区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * descriptionEn  区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * regionType  区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @var string[]
     */
@@ -89,10 +89,10 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * regionId  区域id
-    * descriptionCn  中文描述
-    * descriptionEn  英文描述
-    * regionType  区域类型，0表示国家，1表示省份，2表示大洲
+    * regionId  区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * descriptionCn  区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * descriptionEn  区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * regionType  区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @var string[]
     */
@@ -105,10 +105,10 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * regionId  区域id
-    * descriptionCn  中文描述
-    * descriptionEn  英文描述
-    * regionType  区域类型，0表示国家，1表示省份，2表示大洲
+    * regionId  区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
+    * descriptionCn  区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * descriptionEn  区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
+    * regionType  区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @var string[]
     */
@@ -207,7 +207,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionId
-    *  区域id
+    *  区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @return string|null
     */
@@ -219,7 +219,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
     /**
     * Sets regionId
     *
-    * @param string|null $regionId 区域id
+    * @param string|null $regionId 区域id，可通过[获取账号、IAM用户、项目、用户组、区域、委托的名称和ID](cfw_02_0030.xml)获取。
     *
     * @return $this
     */
@@ -231,7 +231,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets descriptionCn
-    *  中文描述
+    *  区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @return string|null
     */
@@ -243,7 +243,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
     /**
     * Sets descriptionCn
     *
-    * @param string|null $descriptionCn 中文描述
+    * @param string|null $descriptionCn 区域中文描述，仅当区域为中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @return $this
     */
@@ -255,7 +255,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets descriptionEn
-    *  英文描述
+    *  区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @return string|null
     */
@@ -267,7 +267,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
     /**
     * Sets descriptionEn
     *
-    * @param string|null $descriptionEn 英文描述
+    * @param string|null $descriptionEn 区域英文描述，仅当区域为非中国区域时使用，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @return $this
     */
@@ -279,7 +279,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
 
     /**
     * Gets regionType
-    *  区域类型，0表示国家，1表示省份，2表示大洲
+    *  区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @return int|null
     */
@@ -291,7 +291,7 @@ class IpRegionDto implements ModelInterface, ArrayAccess
     /**
     * Sets regionType
     *
-    * @param int|null $regionType 区域类型，0表示国家，1表示省份，2表示大洲
+    * @param int|null $regionType 区域类型，0表示国家，1表示省份，2表示大洲，可通过[地域信息表](cfw_02_0031.xml)获取。
     *
     * @return $this
     */

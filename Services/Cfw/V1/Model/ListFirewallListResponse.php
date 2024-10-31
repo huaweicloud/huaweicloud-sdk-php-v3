@@ -21,11 +21,11 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * userSupportEps  是否支持eps
-    * hasNdr  是否存在ndr
-    * isSupportPostpaid  是否支持按需购买
-    * isSupportBasicVersion  是否支持基础版
-    * isSupportBuyProfessional  是否支持购买专业版
+    * userSupportEps  是否支持企业项目，true表示是，false表示不是
+    * hasNdr  是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
+    * isSupportPostpaid  是否支持按需购买，true表示是，false表示不是
+    * isSupportBasicVersion  是否支持基础版，true表示是，false表示不是
+    * isSupportBuyProfessional  是否支持购买专业版，true表示是，false表示不是
     * data  data
     *
     * @var string[]
@@ -41,11 +41,11 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * userSupportEps  是否支持eps
-    * hasNdr  是否存在ndr
-    * isSupportPostpaid  是否支持按需购买
-    * isSupportBasicVersion  是否支持基础版
-    * isSupportBuyProfessional  是否支持购买专业版
+    * userSupportEps  是否支持企业项目，true表示是，false表示不是
+    * hasNdr  是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
+    * isSupportPostpaid  是否支持按需购买，true表示是，false表示不是
+    * isSupportBasicVersion  是否支持基础版，true表示是，false表示不是
+    * isSupportBuyProfessional  是否支持购买专业版，true表示是，false表示不是
     * data  data
     *
     * @var string[]
@@ -82,11 +82,11 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * userSupportEps  是否支持eps
-    * hasNdr  是否存在ndr
-    * isSupportPostpaid  是否支持按需购买
-    * isSupportBasicVersion  是否支持基础版
-    * isSupportBuyProfessional  是否支持购买专业版
+    * userSupportEps  是否支持企业项目，true表示是，false表示不是
+    * hasNdr  是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
+    * isSupportPostpaid  是否支持按需购买，true表示是，false表示不是
+    * isSupportBasicVersion  是否支持基础版，true表示是，false表示不是
+    * isSupportBuyProfessional  是否支持购买专业版，true表示是，false表示不是
     * data  data
     *
     * @var string[]
@@ -102,11 +102,11 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * userSupportEps  是否支持eps
-    * hasNdr  是否存在ndr
-    * isSupportPostpaid  是否支持按需购买
-    * isSupportBasicVersion  是否支持基础版
-    * isSupportBuyProfessional  是否支持购买专业版
+    * userSupportEps  是否支持企业项目，true表示是，false表示不是
+    * hasNdr  是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
+    * isSupportPostpaid  是否支持按需购买，true表示是，false表示不是
+    * isSupportBasicVersion  是否支持基础版，true表示是，false表示不是
+    * isSupportBuyProfessional  是否支持购买专业版，true表示是，false表示不是
     * data  data
     *
     * @var string[]
@@ -122,11 +122,11 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * userSupportEps  是否支持eps
-    * hasNdr  是否存在ndr
-    * isSupportPostpaid  是否支持按需购买
-    * isSupportBasicVersion  是否支持基础版
-    * isSupportBuyProfessional  是否支持购买专业版
+    * userSupportEps  是否支持企业项目，true表示是，false表示不是
+    * hasNdr  是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
+    * isSupportPostpaid  是否支持按需购买，true表示是，false表示不是
+    * isSupportBasicVersion  是否支持基础版，true表示是，false表示不是
+    * isSupportBuyProfessional  是否支持购买专业版，true表示是，false表示不是
     * data  data
     *
     * @var string[]
@@ -230,7 +230,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userSupportEps
-    *  是否支持eps
+    *  是否支持企业项目，true表示是，false表示不是
     *
     * @return bool|null
     */
@@ -242,7 +242,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userSupportEps
     *
-    * @param bool|null $userSupportEps 是否支持eps
+    * @param bool|null $userSupportEps 是否支持企业项目，true表示是，false表示不是
     *
     * @return $this
     */
@@ -254,7 +254,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets hasNdr
-    *  是否存在ndr
+    *  是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
     *
     * @return bool|null
     */
@@ -266,7 +266,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets hasNdr
     *
-    * @param bool|null $hasNdr 是否存在ndr
+    * @param bool|null $hasNdr 是否存在ndr，true表示是，false表示不是，NDR为原旁路版防火墙，现已停止售卖。
     *
     * @return $this
     */
@@ -278,7 +278,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportPostpaid
-    *  是否支持按需购买
+    *  是否支持按需购买，true表示是，false表示不是
     *
     * @return bool|null
     */
@@ -290,7 +290,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportPostpaid
     *
-    * @param bool|null $isSupportPostpaid 是否支持按需购买
+    * @param bool|null $isSupportPostpaid 是否支持按需购买，true表示是，false表示不是
     *
     * @return $this
     */
@@ -302,7 +302,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportBasicVersion
-    *  是否支持基础版
+    *  是否支持基础版，true表示是，false表示不是
     *
     * @return bool|null
     */
@@ -314,7 +314,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportBasicVersion
     *
-    * @param bool|null $isSupportBasicVersion 是否支持基础版
+    * @param bool|null $isSupportBasicVersion 是否支持基础版，true表示是，false表示不是
     *
     * @return $this
     */
@@ -326,7 +326,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets isSupportBuyProfessional
-    *  是否支持购买专业版
+    *  是否支持购买专业版，true表示是，false表示不是
     *
     * @return bool|null
     */
@@ -338,7 +338,7 @@ class ListFirewallListResponse implements ModelInterface, ArrayAccess
     /**
     * Sets isSupportBuyProfessional
     *
-    * @param bool|null $isSupportBuyProfessional 是否支持购买专业版
+    * @param bool|null $isSupportBuyProfessional 是否支持购买专业版，true表示是，false表示不是
     *
     * @return $this
     */

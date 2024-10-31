@@ -20,29 +20,33 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * failEipIdList  修改eip防护状态失败列表。
-    * id  ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
+    * failEipIdList  修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
+    * failEipList  修改eip防护状态失败信息列表
+    * id  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'objectId' => 'string',
             'failEipIdList' => 'string[]',
+            'failEipList' => '\HuaweiCloud\SDK\Cfw\V1\Model\FailedEipInfo[]',
             'id' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * failEipIdList  修改eip防护状态失败列表。
-    * id  ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
+    * failEipIdList  修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
+    * failEipList  修改eip防护状态失败信息列表
+    * id  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'objectId' => null,
         'failEipIdList' => null,
+        'failEipList' => null,
         'id' => null
     ];
 
@@ -69,43 +73,49 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * failEipIdList  修改eip防护状态失败列表。
-    * id  ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
+    * failEipIdList  修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
+    * failEipList  修改eip防护状态失败信息列表
+    * id  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'objectId' => 'object_id',
             'failEipIdList' => 'fail_eip_id_list',
+            'failEipList' => 'fail_eip_list',
             'id' => 'id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * failEipIdList  修改eip防护状态失败列表。
-    * id  ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
+    * failEipIdList  修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
+    * failEipList  修改eip防护状态失败信息列表
+    * id  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
     protected static $setters = [
             'objectId' => 'setObjectId',
             'failEipIdList' => 'setFailEipIdList',
+            'failEipList' => 'setFailEipList',
             'id' => 'setId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * failEipIdList  修改eip防护状态失败列表。
-    * id  ID
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
+    * failEipIdList  修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
+    * failEipList  修改eip防护状态失败信息列表
+    * id  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @var string[]
     */
     protected static $getters = [
             'objectId' => 'getObjectId',
             'failEipIdList' => 'getFailEipIdList',
+            'failEipList' => 'getFailEipList',
             'id' => 'getId'
     ];
 
@@ -169,6 +179,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     {
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['failEipIdList'] = isset($data['failEipIdList']) ? $data['failEipIdList'] : null;
+        $this->container['failEipList'] = isset($data['failEipList']) ? $data['failEipList'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
     }
 
@@ -196,7 +207,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     *
     * @return string|null
     */
@@ -208,7 +219,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为0的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得
     *
     * @return $this
     */
@@ -220,7 +231,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
 
     /**
     * Gets failEipIdList
-    *  修改eip防护状态失败列表。
+    *  修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
     *
     * @return string[]|null
     */
@@ -232,7 +243,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     /**
     * Sets failEipIdList
     *
-    * @param string[]|null $failEipIdList 修改eip防护状态失败列表。
+    * @param string[]|null $failEipIdList 修改eip防护状态失败状态列表，状态包括成功\"successful\"，失败“fail”
     *
     * @return $this
     */
@@ -243,8 +254,32 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets failEipList
+    *  修改eip防护状态失败信息列表
+    *
+    * @return \HuaweiCloud\SDK\Cfw\V1\Model\FailedEipInfo[]|null
+    */
+    public function getFailEipList()
+    {
+        return $this->container['failEipList'];
+    }
+
+    /**
+    * Sets failEipList
+    *
+    * @param \HuaweiCloud\SDK\Cfw\V1\Model\FailedEipInfo[]|null $failEipList 修改eip防护状态失败信息列表
+    *
+    * @return $this
+    */
+    public function setFailEipList($failEipList)
+    {
+        $this->container['failEipList'] = $failEipList;
+        return $this;
+    }
+
+    /**
     * Gets id
-    *  ID
+    *  防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return string|null
     */
@@ -256,7 +291,7 @@ class EIPSwitchStatusVO implements ModelInterface, ArrayAccess
     /**
     * Sets id
     *
-    * @param string|null $id ID
+    * @param string|null $id 防火墙id，可通过[防火墙ID获取方式](cfw_02_0028.xml)获取
     *
     * @return $this
     */

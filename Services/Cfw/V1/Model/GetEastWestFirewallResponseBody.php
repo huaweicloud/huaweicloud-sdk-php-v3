@@ -20,10 +20,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * projectId  租户project_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * status  防护状态：0 已开启防护， 1 未开启防护
-    * erAssociatedSubnet  erAssociatedSubnet
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
@@ -31,8 +30,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * mode  防护模式
-    * ewVpcRouteLimit  东西向路由限制
+    * mode  防护模式，值为er
     *
     * @var string[]
     */
@@ -40,7 +38,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'objectId' => 'string',
             'projectId' => 'string',
             'status' => 'int',
-            'erAssociatedSubnet' => '\HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo',
             'firewallAssociatedSubnets' => '\HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo[]',
             'er' => '\HuaweiCloud\SDK\Cfw\V1\Model\ErInstance',
             'inspectionVpc' => '\HuaweiCloud\SDK\Cfw\V1\Model\VpcDetail',
@@ -48,16 +45,14 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'total' => 'int',
             'offset' => 'int',
             'limit' => 'int',
-            'mode' => 'string',
-            'ewVpcRouteLimit' => 'int'
+            'mode' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * projectId  租户project_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * status  防护状态：0 已开启防护， 1 未开启防护
-    * erAssociatedSubnet  erAssociatedSubnet
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
@@ -65,8 +60,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * mode  防护模式
-    * ewVpcRouteLimit  东西向路由限制
+    * mode  防护模式，值为er
     *
     * @var string[]
     */
@@ -74,7 +68,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         'objectId' => null,
         'projectId' => null,
         'status' => 'int32',
-        'erAssociatedSubnet' => null,
         'firewallAssociatedSubnets' => null,
         'er' => null,
         'inspectionVpc' => null,
@@ -82,8 +75,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         'total' => 'int32',
         'offset' => 'int32',
         'limit' => 'int32',
-        'mode' => null,
-        'ewVpcRouteLimit' => 'int32'
+        'mode' => null
     ];
 
     /**
@@ -109,10 +101,9 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * projectId  租户project_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * status  防护状态：0 已开启防护， 1 未开启防护
-    * erAssociatedSubnet  erAssociatedSubnet
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
@@ -120,8 +111,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * mode  防护模式
-    * ewVpcRouteLimit  东西向路由限制
+    * mode  防护模式，值为er
     *
     * @var string[]
     */
@@ -129,7 +119,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'objectId' => 'object_id',
             'projectId' => 'project_id',
             'status' => 'status',
-            'erAssociatedSubnet' => 'er_associated_subnet',
             'firewallAssociatedSubnets' => 'firewall_associated_subnets',
             'er' => 'er',
             'inspectionVpc' => 'inspection_vpc',
@@ -137,16 +126,14 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'total' => 'total',
             'offset' => 'offset',
             'limit' => 'limit',
-            'mode' => 'mode',
-            'ewVpcRouteLimit' => 'ew_vpc_route_limit'
+            'mode' => 'mode'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * projectId  租户project_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * status  防护状态：0 已开启防护， 1 未开启防护
-    * erAssociatedSubnet  erAssociatedSubnet
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
@@ -154,8 +141,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * mode  防护模式
-    * ewVpcRouteLimit  东西向路由限制
+    * mode  防护模式，值为er
     *
     * @var string[]
     */
@@ -163,7 +149,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'objectId' => 'setObjectId',
             'projectId' => 'setProjectId',
             'status' => 'setStatus',
-            'erAssociatedSubnet' => 'setErAssociatedSubnet',
             'firewallAssociatedSubnets' => 'setFirewallAssociatedSubnets',
             'er' => 'setEr',
             'inspectionVpc' => 'setInspectionVpc',
@@ -171,16 +156,14 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'total' => 'setTotal',
             'offset' => 'setOffset',
             'limit' => 'setLimit',
-            'mode' => 'setMode',
-            'ewVpcRouteLimit' => 'setEwVpcRouteLimit'
+            'mode' => 'setMode'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
-    * projectId  租户project_id
+    * objectId  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
+    * projectId  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     * status  防护状态：0 已开启防护， 1 未开启防护
-    * erAssociatedSubnet  erAssociatedSubnet
     * firewallAssociatedSubnets  云防火墙关联子网信息
     * er  er
     * inspectionVpc  inspectionVpc
@@ -188,8 +171,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     * total  防护VPC总数
     * offset  偏移量：指定返回记录的开始位置，必须为数字，取值范围为大于或等于0，默认0
     * limit  每页显示个数，范围为1-1024
-    * mode  防护模式
-    * ewVpcRouteLimit  东西向路由限制
+    * mode  防护模式，值为er
     *
     * @var string[]
     */
@@ -197,7 +179,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'objectId' => 'getObjectId',
             'projectId' => 'getProjectId',
             'status' => 'getStatus',
-            'erAssociatedSubnet' => 'getErAssociatedSubnet',
             'firewallAssociatedSubnets' => 'getFirewallAssociatedSubnets',
             'er' => 'getEr',
             'inspectionVpc' => 'getInspectionVpc',
@@ -205,8 +186,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
             'total' => 'getTotal',
             'offset' => 'getOffset',
             'limit' => 'getLimit',
-            'mode' => 'getMode',
-            'ewVpcRouteLimit' => 'getEwVpcRouteLimit'
+            'mode' => 'getMode'
     ];
 
     /**
@@ -270,7 +250,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         $this->container['objectId'] = isset($data['objectId']) ? $data['objectId'] : null;
         $this->container['projectId'] = isset($data['projectId']) ? $data['projectId'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['erAssociatedSubnet'] = isset($data['erAssociatedSubnet']) ? $data['erAssociatedSubnet'] : null;
         $this->container['firewallAssociatedSubnets'] = isset($data['firewallAssociatedSubnets']) ? $data['firewallAssociatedSubnets'] : null;
         $this->container['er'] = isset($data['er']) ? $data['er'] : null;
         $this->container['inspectionVpc'] = isset($data['inspectionVpc']) ? $data['inspectionVpc'] : null;
@@ -279,7 +258,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
-        $this->container['ewVpcRouteLimit'] = isset($data['ewVpcRouteLimit']) ? $data['ewVpcRouteLimit'] : null;
     }
 
     /**
@@ -306,7 +284,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets objectId
-    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    *  防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return string|null
     */
@@ -318,7 +296,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets objectId
     *
-    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。
+    * @param string|null $objectId 防护对象id，是创建云防火墙后用于区分互联网边界防护和VPC边界防护的标志id，可通过调用[查询防火墙实例接口](ListFirewallDetail.xml)获得，通过返回值中的data.records.protect_objects.object_id（.表示各对象之间层级的区分）获得，注意type为0的为互联网边界防护对象id，type为1的为VPC边界防护对象id。此处仅取type为1的防护对象id，可通过data.records.protect_objects.type（.表示各对象之间层级的区分）获得。
     *
     * @return $this
     */
@@ -330,7 +308,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets projectId
-    *  租户project_id
+    *  项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return string|null
     */
@@ -342,7 +320,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets projectId
     *
-    * @param string|null $projectId 租户project_id
+    * @param string|null $projectId 项目ID, 可以从调API处获取，也可以从控制台获取。[项目ID获取方式](cfw_02_0015.xml)
     *
     * @return $this
     */
@@ -373,30 +351,6 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     public function setStatus($status)
     {
         $this->container['status'] = $status;
-        return $this;
-    }
-
-    /**
-    * Gets erAssociatedSubnet
-    *  erAssociatedSubnet
-    *
-    * @return \HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo|null
-    */
-    public function getErAssociatedSubnet()
-    {
-        return $this->container['erAssociatedSubnet'];
-    }
-
-    /**
-    * Sets erAssociatedSubnet
-    *
-    * @param \HuaweiCloud\SDK\Cfw\V1\Model\SubnetInfo|null $erAssociatedSubnet erAssociatedSubnet
-    *
-    * @return $this
-    */
-    public function setErAssociatedSubnet($erAssociatedSubnet)
-    {
-        $this->container['erAssociatedSubnet'] = $erAssociatedSubnet;
         return $this;
     }
 
@@ -570,7 +524,7 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  防护模式
+    *  防护模式，值为er
     *
     * @return string|null
     */
@@ -582,37 +536,13 @@ class GetEastWestFirewallResponseBody implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param string|null $mode 防护模式
+    * @param string|null $mode 防护模式，值为er
     *
     * @return $this
     */
     public function setMode($mode)
     {
         $this->container['mode'] = $mode;
-        return $this;
-    }
-
-    /**
-    * Gets ewVpcRouteLimit
-    *  东西向路由限制
-    *
-    * @return int|null
-    */
-    public function getEwVpcRouteLimit()
-    {
-        return $this->container['ewVpcRouteLimit'];
-    }
-
-    /**
-    * Sets ewVpcRouteLimit
-    *
-    * @param int|null $ewVpcRouteLimit 东西向路由限制
-    *
-    * @return $this
-    */
-    public function setEwVpcRouteLimit($ewVpcRouteLimit)
-    {
-        $this->container['ewVpcRouteLimit'] = $ewVpcRouteLimit;
         return $this;
     }
 
