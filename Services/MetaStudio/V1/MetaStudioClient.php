@@ -6762,6 +6762,80 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 校验应用
+     *
+     * 该接口用于校验应用。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function validateRobot($request)
+    {
+        return $this->validateRobotWithHttpInfo($request);
+    }
+
+    public function validateRobotWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-chat/robot/validate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ValidateRobotResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ValidateRobotRequest');
+    }
+
+    /**
      * 创建智能交互对话
      *
      * 该接口用于创建智能交互对话。
@@ -8543,9 +8617,9 @@ class MetaStudioClient extends Client
     }
 
     /**
-     * 统计时间段内资源数量
+     * 统计时间段内过期的资源数量
      *
-     * 统计时间段内资源数量
+     * 统计指定时间段内即将过期的包周期与一次性资源数量。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8622,7 +8696,9 @@ class MetaStudioClient extends Client
     /**
      * 查看租户资源列表
      *
-     * 查看租户资源列表
+     * 查看租户资源列表。
+     * &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+     * &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -8664,9 +8740,6 @@ class MetaStudioClient extends Client
         }
         if ($localVarParams['resourceSource'] !== null) {
             $queryParams['resource_source'] = $localVarParams['resourceSource'];
-        }
-        if ($localVarParams['resourceName'] !== null) {
-            $queryParams['resource_name'] = $localVarParams['resourceName'];
         }
         if ($localVarParams['resourceId'] !== null) {
             $queryParams['resource_id'] = $localVarParams['resourceId'];
@@ -8726,7 +8799,9 @@ class MetaStudioClient extends Client
     /**
      * 查看租户资源用量信息
      *
-     * 查看租户资源用量信息
+     * 查询租户一次性和包周期（包年/包月）资源用量信息。
+     * &gt; 按需套餐包用量本接口无法查询，需要调用CBC接口查询。[按需套餐包用量查询](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0001239.html)和[查询资源包信息](https://cbc.huaweicloud.com/bm/support/api-apidt/CBCInterface_0000511.html)。
+     * &gt; 各种资源的计费方式请参考[计费说明](https://support.huaweicloud.com/productdesc-metastudio/metastudio_01_0006.html)。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *

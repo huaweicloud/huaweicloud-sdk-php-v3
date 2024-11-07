@@ -71,7 +71,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
             'updatedAt' => '\DateTime',
             'projectId' => 'string',
             'tags' => '\HuaweiCloud\SDK\Vpcep\V1\Model\TagList[]',
-            'error' => '\HuaweiCloud\SDK\Vpcep\V1\Model\QueryError',
+            'error' => '\HuaweiCloud\SDK\Vpcep\V1\Model\QueryError[]',
             'whitelist' => 'string[]',
             'enableWhitelist' => 'bool',
             'routetables' => 'string[]',
@@ -954,7 +954,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     * Gets error
     *  error
     *
-    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\QueryError|null
+    * @return \HuaweiCloud\SDK\Vpcep\V1\Model\QueryError[]|null
     */
     public function getError()
     {
@@ -964,7 +964,7 @@ class ListEndpointInfoDetailsResponse implements ModelInterface, ArrayAccess
     /**
     * Sets error
     *
-    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\QueryError|null $error error
+    * @param \HuaweiCloud\SDK\Vpcep\V1\Model\QueryError[]|null $error error
     *
     * @return $this
     */

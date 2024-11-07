@@ -13,6 +13,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     const EXTERNAL_ACCESS = 'external_access';
     const UNUSED_IAM_USER_ACCESS_KEY = 'unused_iam_user_access_key';
     const UNUSED_IAM_USER_PASSWORD = 'unused_iam_user_password';
+    const UNUSED_PERMISSION = 'unused_permission';
     
     /**
      * Gets allowable values of the enum
@@ -24,6 +25,7 @@ use HuaweiCloud\SDK\Core\SdkResponse;
             self::EXTERNAL_ACCESS,
             self::UNUSED_IAM_USER_ACCESS_KEY,
             self::UNUSED_IAM_USER_PASSWORD,
+            self::UNUSED_PERMISSION,
         ];
     }
 }

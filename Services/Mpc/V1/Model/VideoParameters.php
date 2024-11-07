@@ -22,6 +22,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * outputPolicy  输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
     * codec  视频编码格式。  取值如下： - 1：VIDEO_CODEC_H264 - 2：VIDEO_CODEC_H265
+    * crf  视频恒定码率控制因子。  取值范围为[0, 51]
+    * maxBitrate  输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
     * profile  编码档次  取值如下： - 1：VIDEO_PROFILE_H264_BASE - 2：VIDEO_PROFILE_H264_MAIN - 3：VIDEO_PROFILE_H264_HIGH - 4：VIDEO_PROFILE_H265_MAIN
     * level  编码级别  取值如下： - 1：VIDEO_LEVEL_1_0 - 2：VIDEO_LEVEL_1_1 - 3：VIDEO_LEVEL_1_2 - 4：VIDEO_LEVEL_1_3 - 5：VIDEO_LEVEL_2_0 - 6：VIDEO_LEVEL_2_1 - 7：VIDEO_LEVEL_2_2 - 8：VIDEO_LEVEL_3_0 - 9：VIDEO_LEVEL_3_1 - 10：VIDEO_LEVEL_3_2 - 11：VIDEO_LEVEL_4_0 - 12：VIDEO_LEVEL_4_1 - 13：VIDEO_LEVEL_4_2 - 14：VIDEO_LEVEL_5_0 - 15：VIDEO_LEVEL_5_1 - 16：VIDEO_LEVEL_x_x
@@ -38,6 +40,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
             'outputPolicy' => 'string',
             'codec' => 'int',
+            'crf' => 'object',
+            'maxBitrate' => 'int',
             'bitrate' => 'int',
             'profile' => 'int',
             'level' => 'int',
@@ -54,6 +58,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * outputPolicy  输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
     * codec  视频编码格式。  取值如下： - 1：VIDEO_CODEC_H264 - 2：VIDEO_CODEC_H265
+    * crf  视频恒定码率控制因子。  取值范围为[0, 51]
+    * maxBitrate  输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
     * profile  编码档次  取值如下： - 1：VIDEO_PROFILE_H264_BASE - 2：VIDEO_PROFILE_H264_MAIN - 3：VIDEO_PROFILE_H264_HIGH - 4：VIDEO_PROFILE_H265_MAIN
     * level  编码级别  取值如下： - 1：VIDEO_LEVEL_1_0 - 2：VIDEO_LEVEL_1_1 - 3：VIDEO_LEVEL_1_2 - 4：VIDEO_LEVEL_1_3 - 5：VIDEO_LEVEL_2_0 - 6：VIDEO_LEVEL_2_1 - 7：VIDEO_LEVEL_2_2 - 8：VIDEO_LEVEL_3_0 - 9：VIDEO_LEVEL_3_1 - 10：VIDEO_LEVEL_3_2 - 11：VIDEO_LEVEL_4_0 - 12：VIDEO_LEVEL_4_1 - 13：VIDEO_LEVEL_4_2 - 14：VIDEO_LEVEL_5_0 - 15：VIDEO_LEVEL_5_1 - 16：VIDEO_LEVEL_x_x
@@ -70,6 +76,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'outputPolicy' => null,
         'codec' => 'int32',
+        'crf' => null,
+        'maxBitrate' => 'int32',
         'bitrate' => 'int32',
         'profile' => 'int32',
         'level' => 'int32',
@@ -107,6 +115,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * and the value is the original name
     * outputPolicy  输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
     * codec  视频编码格式。  取值如下： - 1：VIDEO_CODEC_H264 - 2：VIDEO_CODEC_H265
+    * crf  视频恒定码率控制因子。  取值范围为[0, 51]
+    * maxBitrate  输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
     * profile  编码档次  取值如下： - 1：VIDEO_PROFILE_H264_BASE - 2：VIDEO_PROFILE_H264_MAIN - 3：VIDEO_PROFILE_H264_HIGH - 4：VIDEO_PROFILE_H265_MAIN
     * level  编码级别  取值如下： - 1：VIDEO_LEVEL_1_0 - 2：VIDEO_LEVEL_1_1 - 3：VIDEO_LEVEL_1_2 - 4：VIDEO_LEVEL_1_3 - 5：VIDEO_LEVEL_2_0 - 6：VIDEO_LEVEL_2_1 - 7：VIDEO_LEVEL_2_2 - 8：VIDEO_LEVEL_3_0 - 9：VIDEO_LEVEL_3_1 - 10：VIDEO_LEVEL_3_2 - 11：VIDEO_LEVEL_4_0 - 12：VIDEO_LEVEL_4_1 - 13：VIDEO_LEVEL_4_2 - 14：VIDEO_LEVEL_5_0 - 15：VIDEO_LEVEL_5_1 - 16：VIDEO_LEVEL_x_x
@@ -123,6 +133,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
             'outputPolicy' => 'output_policy',
             'codec' => 'codec',
+            'crf' => 'crf',
+            'maxBitrate' => 'max_bitrate',
             'bitrate' => 'bitrate',
             'profile' => 'profile',
             'level' => 'level',
@@ -139,6 +151,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * outputPolicy  输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
     * codec  视频编码格式。  取值如下： - 1：VIDEO_CODEC_H264 - 2：VIDEO_CODEC_H265
+    * crf  视频恒定码率控制因子。  取值范围为[0, 51]
+    * maxBitrate  输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
     * profile  编码档次  取值如下： - 1：VIDEO_PROFILE_H264_BASE - 2：VIDEO_PROFILE_H264_MAIN - 3：VIDEO_PROFILE_H264_HIGH - 4：VIDEO_PROFILE_H265_MAIN
     * level  编码级别  取值如下： - 1：VIDEO_LEVEL_1_0 - 2：VIDEO_LEVEL_1_1 - 3：VIDEO_LEVEL_1_2 - 4：VIDEO_LEVEL_1_3 - 5：VIDEO_LEVEL_2_0 - 6：VIDEO_LEVEL_2_1 - 7：VIDEO_LEVEL_2_2 - 8：VIDEO_LEVEL_3_0 - 9：VIDEO_LEVEL_3_1 - 10：VIDEO_LEVEL_3_2 - 11：VIDEO_LEVEL_4_0 - 12：VIDEO_LEVEL_4_1 - 13：VIDEO_LEVEL_4_2 - 14：VIDEO_LEVEL_5_0 - 15：VIDEO_LEVEL_5_1 - 16：VIDEO_LEVEL_x_x
@@ -155,6 +169,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     protected static $setters = [
             'outputPolicy' => 'setOutputPolicy',
             'codec' => 'setCodec',
+            'crf' => 'setCrf',
+            'maxBitrate' => 'setMaxBitrate',
             'bitrate' => 'setBitrate',
             'profile' => 'setProfile',
             'level' => 'setLevel',
@@ -171,6 +187,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * outputPolicy  输出策略。  取值如下： - discard - transcode  >- 当视频参数中的“output_policy”为\"discard\"，且音频参数中的“output_policy”为“transcode”时，表示只输出音频。 >- 当视频参数中的“output_policy”为\"transcode\"，且音频参数中的“output_policy”为“discard”时，表示只输出视频。 >- 同时为\"discard\"时不合法。 >- 同时为“transcode”时，表示输出音视频。
     * codec  视频编码格式。  取值如下： - 1：VIDEO_CODEC_H264 - 2：VIDEO_CODEC_H265
+    * crf  视频恒定码率控制因子。  取值范围为[0, 51]
+    * maxBitrate  输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
     * bitrate  输出平均码率。  取值范围：0或[40,30000]之间的整数。  单位：kbit/s  若设置为0，则输出平均码率为自适应值。
     * profile  编码档次  取值如下： - 1：VIDEO_PROFILE_H264_BASE - 2：VIDEO_PROFILE_H264_MAIN - 3：VIDEO_PROFILE_H264_HIGH - 4：VIDEO_PROFILE_H265_MAIN
     * level  编码级别  取值如下： - 1：VIDEO_LEVEL_1_0 - 2：VIDEO_LEVEL_1_1 - 3：VIDEO_LEVEL_1_2 - 4：VIDEO_LEVEL_1_3 - 5：VIDEO_LEVEL_2_0 - 6：VIDEO_LEVEL_2_1 - 7：VIDEO_LEVEL_2_2 - 8：VIDEO_LEVEL_3_0 - 9：VIDEO_LEVEL_3_1 - 10：VIDEO_LEVEL_3_2 - 11：VIDEO_LEVEL_4_0 - 12：VIDEO_LEVEL_4_1 - 13：VIDEO_LEVEL_4_2 - 14：VIDEO_LEVEL_5_0 - 15：VIDEO_LEVEL_5_1 - 16：VIDEO_LEVEL_x_x
@@ -187,6 +205,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     protected static $getters = [
             'outputPolicy' => 'getOutputPolicy',
             'codec' => 'getCodec',
+            'crf' => 'getCrf',
+            'maxBitrate' => 'getMaxBitrate',
             'bitrate' => 'getBitrate',
             'profile' => 'getProfile',
             'level' => 'getLevel',
@@ -276,6 +296,8 @@ class VideoParameters implements ModelInterface, ArrayAccess
     {
         $this->container['outputPolicy'] = isset($data['outputPolicy']) ? $data['outputPolicy'] : null;
         $this->container['codec'] = isset($data['codec']) ? $data['codec'] : null;
+        $this->container['crf'] = isset($data['crf']) ? $data['crf'] : null;
+        $this->container['maxBitrate'] = isset($data['maxBitrate']) ? $data['maxBitrate'] : null;
         $this->container['bitrate'] = isset($data['bitrate']) ? $data['bitrate'] : null;
         $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
         $this->container['level'] = isset($data['level']) ? $data['level'] : null;
@@ -315,6 +337,12 @@ class VideoParameters implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['codec']) && ($this->container['codec'] < 0)) {
                 $invalidProperties[] = "invalid value for 'codec', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['maxBitrate']) && ($this->container['maxBitrate'] > 500000)) {
+                $invalidProperties[] = "invalid value for 'maxBitrate', must be smaller than or equal to 500000.";
+            }
+            if (!is_null($this->container['maxBitrate']) && ($this->container['maxBitrate'] < 0)) {
+                $invalidProperties[] = "invalid value for 'maxBitrate', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['bitrate']) && ($this->container['bitrate'] > 30000)) {
                 $invalidProperties[] = "invalid value for 'bitrate', must be smaller than or equal to 30000.";
@@ -435,6 +463,54 @@ class VideoParameters implements ModelInterface, ArrayAccess
     public function setCodec($codec)
     {
         $this->container['codec'] = $codec;
+        return $this;
+    }
+
+    /**
+    * Gets crf
+    *  视频恒定码率控制因子。  取值范围为[0, 51]
+    *
+    * @return object|null
+    */
+    public function getCrf()
+    {
+        return $this->container['crf'];
+    }
+
+    /**
+    * Sets crf
+    *
+    * @param object|null $crf 视频恒定码率控制因子。  取值范围为[0, 51]
+    *
+    * @return $this
+    */
+    public function setCrf($crf)
+    {
+        $this->container['crf'] = $crf;
+        return $this;
+    }
+
+    /**
+    * Gets maxBitrate
+    *  输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
+    *
+    * @return int|null
+    */
+    public function getMaxBitrate()
+    {
+        return $this->container['maxBitrate'];
+    }
+
+    /**
+    * Sets maxBitrate
+    *
+    * @param int|null $maxBitrate 输出最大码率  单位：kbit/s  带crf时使用，参考原片的平均码率进行设置（一般为1.5倍）
+    *
+    * @return $this
+    */
+    public function setMaxBitrate($maxBitrate)
+    {
+        $this->container['maxBitrate'] = $maxBitrate;
         return $this;
     }
 

@@ -25,6 +25,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * portNum  端口数
     * bindDomainNum  域名数
+    * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
+    * elasticServiceBandwidth  弹性业务带宽增加值
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'elasticBandwidth' => 'string',
             'serviceBandwidth' => 'int',
             'portNum' => 'int',
-            'bindDomainNum' => 'int'
+            'bindDomainNum' => 'int',
+            'elasticServiceBandwidthType' => 'int',
+            'elasticServiceBandwidth' => 'int'
     ];
 
     /**
@@ -43,6 +47,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * portNum  端口数
     * bindDomainNum  域名数
+    * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
+    * elasticServiceBandwidth  弹性业务带宽增加值
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
         'elasticBandwidth' => null,
         'serviceBandwidth' => 'int32',
         'portNum' => 'int32',
-        'bindDomainNum' => 'int32'
+        'bindDomainNum' => 'int32',
+        'elasticServiceBandwidthType' => 'int32',
+        'elasticServiceBandwidth' => 'int32'
     ];
 
     /**
@@ -82,6 +90,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * portNum  端口数
     * bindDomainNum  域名数
+    * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
+    * elasticServiceBandwidth  弹性业务带宽增加值
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'elasticBandwidth' => 'elastic_bandwidth',
             'serviceBandwidth' => 'service_bandwidth',
             'portNum' => 'port_num',
-            'bindDomainNum' => 'bind_domain_num'
+            'bindDomainNum' => 'bind_domain_num',
+            'elasticServiceBandwidthType' => 'elastic_service_bandwidth_type',
+            'elasticServiceBandwidth' => 'elastic_service_bandwidth'
     ];
 
     /**
@@ -100,6 +112,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * portNum  端口数
     * bindDomainNum  域名数
+    * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
+    * elasticServiceBandwidth  弹性业务带宽增加值
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'elasticBandwidth' => 'setElasticBandwidth',
             'serviceBandwidth' => 'setServiceBandwidth',
             'portNum' => 'setPortNum',
-            'bindDomainNum' => 'setBindDomainNum'
+            'bindDomainNum' => 'setBindDomainNum',
+            'elasticServiceBandwidthType' => 'setElasticServiceBandwidthType',
+            'elasticServiceBandwidth' => 'setElasticServiceBandwidth'
     ];
 
     /**
@@ -118,6 +134,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     * serviceBandwidth  业务带宽
     * portNum  端口数
     * bindDomainNum  域名数
+    * elasticServiceBandwidthType  弹性业务带宽,0-关闭，3-月95
+    * elasticServiceBandwidth  弹性业务带宽增加值
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
             'elasticBandwidth' => 'getElasticBandwidth',
             'serviceBandwidth' => 'getServiceBandwidth',
             'portNum' => 'getPortNum',
-            'bindDomainNum' => 'getBindDomainNum'
+            'bindDomainNum' => 'getBindDomainNum',
+            'elasticServiceBandwidthType' => 'getElasticServiceBandwidthType',
+            'elasticServiceBandwidth' => 'getElasticServiceBandwidth'
     ];
 
     /**
@@ -192,6 +212,8 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
         $this->container['serviceBandwidth'] = isset($data['serviceBandwidth']) ? $data['serviceBandwidth'] : null;
         $this->container['portNum'] = isset($data['portNum']) ? $data['portNum'] : null;
         $this->container['bindDomainNum'] = isset($data['bindDomainNum']) ? $data['bindDomainNum'] : null;
+        $this->container['elasticServiceBandwidthType'] = isset($data['elasticServiceBandwidthType']) ? $data['elasticServiceBandwidthType'] : null;
+        $this->container['elasticServiceBandwidth'] = isset($data['elasticServiceBandwidth']) ? $data['elasticServiceBandwidth'] : null;
     }
 
     /**
@@ -333,6 +355,54 @@ class UpgradeInstanceData implements ModelInterface, ArrayAccess
     public function setBindDomainNum($bindDomainNum)
     {
         $this->container['bindDomainNum'] = $bindDomainNum;
+        return $this;
+    }
+
+    /**
+    * Gets elasticServiceBandwidthType
+    *  弹性业务带宽,0-关闭，3-月95
+    *
+    * @return int|null
+    */
+    public function getElasticServiceBandwidthType()
+    {
+        return $this->container['elasticServiceBandwidthType'];
+    }
+
+    /**
+    * Sets elasticServiceBandwidthType
+    *
+    * @param int|null $elasticServiceBandwidthType 弹性业务带宽,0-关闭，3-月95
+    *
+    * @return $this
+    */
+    public function setElasticServiceBandwidthType($elasticServiceBandwidthType)
+    {
+        $this->container['elasticServiceBandwidthType'] = $elasticServiceBandwidthType;
+        return $this;
+    }
+
+    /**
+    * Gets elasticServiceBandwidth
+    *  弹性业务带宽增加值
+    *
+    * @return int|null
+    */
+    public function getElasticServiceBandwidth()
+    {
+        return $this->container['elasticServiceBandwidth'];
+    }
+
+    /**
+    * Sets elasticServiceBandwidth
+    *
+    * @param int|null $elasticServiceBandwidth 弹性业务带宽增加值
+    *
+    * @return $this
+    */
+    public function setElasticServiceBandwidth($elasticServiceBandwidth)
+    {
+        $this->container['elasticServiceBandwidth'] = $elasticServiceBandwidth;
         return $this;
     }
 

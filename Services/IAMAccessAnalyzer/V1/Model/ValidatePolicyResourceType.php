@@ -10,7 +10,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     /**
      * Possible values of this enum
      */
-    const OBSBUCKET = 'obs:bucket';
     const IAMAGENCY = 'iam:agency';
     
     /**
@@ -20,7 +19,6 @@ use HuaweiCloud\SDK\Core\SdkResponse;
     public static function getAllowableEnumValues()
     {
         return [
-            self::OBSBUCKET,
             self::IAMAGENCY,
         ];
     }

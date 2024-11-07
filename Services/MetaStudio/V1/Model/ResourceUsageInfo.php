@@ -20,7 +20,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * resourceType  资源类型。resource_spec_code/quota字段。
+    * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     * subResourceType  子资源类型。
     * isSubResource  是否子资源。子资源描述的是子资源的数量和单位
@@ -46,7 +46,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * resourceType  资源类型。resource_spec_code/quota字段。
+    * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     * subResourceType  子资源类型。
     * isSubResource  是否子资源。子资源描述的是子资源的数量和单位
@@ -93,7 +93,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * resourceType  资源类型。resource_spec_code/quota字段。
+    * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     * subResourceType  子资源类型。
     * isSubResource  是否子资源。子资源描述的是子资源的数量和单位
@@ -119,7 +119,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * resourceType  资源类型。resource_spec_code/quota字段。
+    * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     * subResourceType  子资源类型。
     * isSubResource  是否子资源。子资源描述的是子资源的数量和单位
@@ -145,7 +145,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * resourceType  资源类型。resource_spec_code/quota字段。
+    * resourceType  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     * businessType  业务类型。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     * subResourceType  子资源类型。
     * isSubResource  是否子资源。子资源描述的是子资源的数量和单位
@@ -409,7 +409,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceType
-    *  资源类型。resource_spec_code/quota字段。
+    *  资源类型。详见[资源类型](metastudio_02_0042.xml)。
     *
     * @return string|null
     */
@@ -421,7 +421,7 @@ class ResourceUsageInfo implements ModelInterface, ArrayAccess
     /**
     * Sets resourceType
     *
-    * @param string|null $resourceType 资源类型。resource_spec_code/quota字段。
+    * @param string|null $resourceType 资源类型。详见[资源类型](metastudio_02_0042.xml)。
     *
     * @return $this
     */

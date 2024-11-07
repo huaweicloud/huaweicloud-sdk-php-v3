@@ -89,6 +89,68 @@ class AadClient extends Client
     }
 
     /**
+     * 删除防护域名
+     *
+     * 删除防护域名
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteDomain($request)
+    {
+        return $this->deleteDomainWithHttpInfo($request);
+    }
+
+    public function deleteDomainWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/aad/domains';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteDomainResponse',
+            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteDomainRequest');
+    }
+
+    /**
      * 查询DDoS攻击事件列表
      *
      * 查询DDoS攻击事件列表
@@ -1242,68 +1304,6 @@ class AadClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Aad\V2\Model\UpgradeInstanceSpecResponse',
             $requestType='\HuaweiCloud\SDK\Aad\V2\Model\UpgradeInstanceSpecRequest');
-    }
-
-    /**
-     * 删除防护域名
-     *
-     * 删除防护域名
-     * 
-     * Please refer to HUAWEI cloud API Explorer for details.
-     *
-     * @param $request 请求对象
-     * @return response
-     */
-    public function deleteDomain($request)
-    {
-        return $this->deleteDomainWithHttpInfo($request);
-    }
-
-    public function deleteDomainWithHttpInfo($request)
-    {
-        $resourcePath = '/v2/aad/domains';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $pathParams = [];
-        $httpBody = null;
-        $multipart = false;
-        $localVarParams = [];
-        $arr = $request::attributeMap();
-        foreach ($arr as $k => $v) {
-            $getter = $request::getters()[$k];
-            $value = $request->$getter();
-            $localVarParams[$k] = $value;
-        }
-        if ($localVarParams['body'] !== null) {
-            $httpBody= $localVarParams['body'];
-        }
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-        $headers = array_merge(
-            $headerParams,
-            $headers
-        );
-
-        return $this->callApi(
-            $method='DELETE',
-            $resourcePath,
-            $pathParams,
-            $queryParams,
-            $headerParams=$headers,
-            $body=$httpBody,
-            $multipart = $multipart,
-            $postParams=$formParams,
-            $responseType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteDomainResponse',
-            $requestType='\HuaweiCloud\SDK\Aad\V2\Model\DeleteDomainRequest');
     }
 
     protected function callApi(

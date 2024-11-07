@@ -157,6 +157,68 @@ class GaussDBforNoSQLClient extends Client
     }
 
     /**
+     * 批量数据库补丁升级
+     *
+     * 批量升级数据库补丁版本。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function batchUpgradeDatabaseVersion($request)
+    {
+        return $this->batchUpgradeDatabaseVersionWithHttpInfo($request);
+    }
+
+    public function batchUpgradeDatabaseVersionWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{project_id}/instances/db-upgrade';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\BatchUpgradeDatabaseVersionResponse',
+            $requestType='\HuaweiCloud\SDK\GaussDBforNoSQL\V3\Model\BatchUpgradeDatabaseVersionRequest');
+    }
+
+    /**
      * 校验实例是否可以与指定实例建立/解除容灾关系
      *
      * 校验实例是否可以与指定实例建立/解除容灾关系。若接口返回成功，表示可以与指定实例建立/解除容灾关系。

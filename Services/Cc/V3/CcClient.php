@@ -5898,6 +5898,947 @@ class CcClient extends Client
             $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateNetworkInstanceRequest');
     }
 
+    /**
+     * 关联分支连接带宽
+     *
+     * 关联分支连接带宽。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function associateSiteNetworkBandwidth($request)
+    {
+        return $this->associateSiteNetworkBandwidthWithHttpInfo($request);
+    }
+
+    public function associateSiteNetworkBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-network/{site_network_id}/connections/{site_connection_id}/associate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['siteConnectionId'] !== null) {
+            $pathParams['site_connection_id'] = $localVarParams['siteConnectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\AssociateSiteNetworkBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\AssociateSiteNetworkBandwidthRequest');
+    }
+
+    /**
+     * 解关联分支连接带宽
+     *
+     * 解关联分支连接带宽。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function disassociateSiteNetworkBandwidth($request)
+    {
+        return $this->disassociateSiteNetworkBandwidthWithHttpInfo($request);
+    }
+
+    public function disassociateSiteNetworkBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-network/{site_network_id}/connections/{site_connection_id}/disassociate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['siteConnectionId'] !== null) {
+            $pathParams['site_connection_id'] = $localVarParams['siteConnectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DisassociateSiteNetworkBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DisassociateSiteNetworkBandwidthRequest');
+    }
+
+    /**
+     * 更改分支连接带宽包
+     *
+     * 更改分支连接带宽包。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSiteNetworkBandwidth($request)
+    {
+        return $this->updateSiteNetworkBandwidthWithHttpInfo($request);
+    }
+
+    public function updateSiteNetworkBandwidthWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-network/{site_network_id}/connections/{site_connection_id}/update-bandwidth';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['siteConnectionId'] !== null) {
+            $pathParams['site_connection_id'] = $localVarParams['siteConnectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteNetworkBandwidthResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteNetworkBandwidthRequest');
+    }
+
+    /**
+     * 更改分支连接带宽大小
+     *
+     * 更改分支连接带宽大小。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSiteNetworkBandwidthSize($request)
+    {
+        return $this->updateSiteNetworkBandwidthSizeWithHttpInfo($request);
+    }
+
+    public function updateSiteNetworkBandwidthSizeWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-network/{site_network_id}/connections/{site_connection_id}/update-bandwidth-size';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['siteConnectionId'] !== null) {
+            $pathParams['site_connection_id'] = $localVarParams['siteConnectionId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteNetworkBandwidthSizeResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteNetworkBandwidthSizeRequest');
+    }
+
+    /**
+     * 创建P2P类型的分支网络
+     *
+     * 创建P2P类型的分支网络。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createP2PSiteNetwork($request)
+    {
+        return $this->createP2PSiteNetworkWithHttpInfo($request);
+    }
+
+    public function createP2PSiteNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/p2p-site-networks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\CreateP2PSiteNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\CreateP2PSiteNetworkRequest');
+    }
+
+    /**
+     * 删除分支网络
+     *
+     * 删除分支网络。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteSiteNetwork($request)
+    {
+        return $this->deleteSiteNetworkWithHttpInfo($request);
+    }
+
+    public function deleteSiteNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-networks/{site_network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteSiteNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\DeleteSiteNetworkRequest');
+    }
+
+    /**
+     * 查询分支网络列表
+     *
+     * 查询分支网络列表。
+     * 分页查询使用的参数为marker、limit。limit默认值为0，没有指定marker时返回第一条数据。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSiteNetworks($request)
+    {
+        return $this->listSiteNetworksWithHttpInfo($request);
+    }
+
+    public function listSiteNetworksWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-networks';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($localVarParams['sortKey'] !== null) {
+            $queryParams['sort_key'] = $localVarParams['sortKey'];
+        }
+        if ($localVarParams['sortDir'] !== null) {
+            $queryParams['sort_dir'] = $localVarParams['sortDir'];
+        }
+        if ($localVarParams['id'] !== null) {
+            $queryParams['id'] = $localVarParams['id'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($localVarParams['state'] !== null) {
+            $queryParams['state'] = $localVarParams['state'];
+        }
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $queryParams['enterprise_project_id'] = $localVarParams['enterpriseProjectId'];
+        }
+        if ($localVarParams['globalDcGatewayId'] !== null) {
+            $queryParams['global_dc_gateway_id'] = $localVarParams['globalDcGatewayId'];
+        }
+        if ($localVarParams['globalConnectionBandwidthId'] !== null) {
+            $queryParams['global_connection_bandwidth_id'] = $localVarParams['globalConnectionBandwidthId'];
+        }
+        if ($localVarParams['connectionId'] !== null) {
+            $queryParams['connection_id'] = $localVarParams['connectionId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListSiteNetworksResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListSiteNetworksRequest');
+    }
+
+    /**
+     * 查询分支网络详情
+     *
+     * 查询分支网络详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showSiteNetwork($request)
+    {
+        return $this->showSiteNetworkWithHttpInfo($request);
+    }
+
+    public function showSiteNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-networks/{site_network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ShowSiteNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ShowSiteNetworkRequest');
+    }
+
+    /**
+     * 更新分支网络详情
+     *
+     * 更新分支网络详情。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateSiteNetwork($request)
+    {
+        return $this->updateSiteNetworkWithHttpInfo($request);
+    }
+
+    public function updateSiteNetworkWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-networks/{site_network_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteNetworkId'] !== null) {
+            $pathParams['site_network_id'] = $localVarParams['siteNetworkId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteNetworkResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\UpdateSiteNetworkRequest');
+    }
+
+    /**
+     * 查询分支网络的能力列表
+     *
+     * 查询分支网络的能力列表。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSiteNetworkCapabilities($request)
+    {
+        return $this->listSiteNetworkCapabilitiesWithHttpInfo($request);
+    }
+
+    public function listSiteNetworkCapabilitiesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-network/capabilities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['specification'] !== null) {
+            $queryParams['specification'] = $localVarParams['specification'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListSiteNetworkCapabilitiesResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListSiteNetworkCapabilitiesRequest');
+    }
+
+    /**
+     * 查询分支网络配额
+     *
+     * 查询分支网络配额。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listSiteNetworkQuotas($request)
+    {
+        return $this->listSiteNetworkQuotasWithHttpInfo($request);
+    }
+
+    public function listSiteNetworkQuotasWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/dcaas/site-network/quotas';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['quotaType'] !== null) {
+            $queryParams['quota_type'] = $localVarParams['quotaType'];
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['marker'] !== null) {
+            $queryParams['marker'] = $localVarParams['marker'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListSiteNetworkQuotasResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListSiteNetworkQuotasRequest');
+    }
+
+    /**
+     * 查询带宽包等级列表
+     *
+     * 查询带宽包等级列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthPackageLevels($request)
+    {
+        return $this->listBandwidthPackageLevelsWithHttpInfo($request);
+    }
+
+    public function listBandwidthPackageLevelsWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/levels';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['level'] !== null) {
+            $queryParams['level'] = $localVarParams['level'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageLevelsResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageLevelsRequest');
+    }
+
+    /**
+     * 查询带宽包线路列表
+     *
+     * 查询带宽包线路列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthPackageLines($request)
+    {
+        return $this->listBandwidthPackageLinesWithHttpInfo($request);
+    }
+
+    public function listBandwidthPackageLinesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/lines';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['level'] !== null) {
+            $queryParams['level'] = $localVarParams['level'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageLinesResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageLinesRequest');
+    }
+
+    /**
+     * 查询带宽包站点列表
+     *
+     * 查询带宽包站点列表
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listBandwidthPackageSites($request)
+    {
+        return $this->listBandwidthPackageSitesWithHttpInfo($request);
+    }
+
+    public function listBandwidthPackageSitesWithHttpInfo($request)
+    {
+        $resourcePath = '/v3/{domain_id}/ccaas/bandwidth-packages/sites';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['siteCode'] !== null) {
+            $queryParams['site_code'] = $localVarParams['siteCode'];
+        }
+        if ($localVarParams['regionId'] !== null) {
+            $queryParams['region_id'] = $localVarParams['regionId'];
+        }
+        if ($localVarParams['name'] !== null) {
+            $queryParams['name'] = $localVarParams['name'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageSitesResponse',
+            $requestType='\HuaweiCloud\SDK\Cc\V3\Model\ListBandwidthPackageSitesRequest');
+    }
+
     protected function callApi(
         $method,
         $resourcePath,

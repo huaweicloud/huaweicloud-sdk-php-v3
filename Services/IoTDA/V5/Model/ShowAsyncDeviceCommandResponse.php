@@ -31,9 +31,9 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     * result  设备命令执行的详细结果，由设备返回，Json格式。
     * createdTime  命令的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sentTime  物联网平台发送命令的时间，如果命令是立即下发， 则该时间与命令创建时间一致， 如果是缓存命令， 则是命令实际下发的时间。\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
-    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sendStrategy  下发策略， immediately表示立即下发，delay表示缓存起来，等数据上报或者设备上线之后下发。
-    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @var string[]
     */
@@ -65,9 +65,9 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     * result  设备命令执行的详细结果，由设备返回，Json格式。
     * createdTime  命令的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sentTime  物联网平台发送命令的时间，如果命令是立即下发， 则该时间与命令创建时间一致， 如果是缓存命令， 则是命令实际下发的时间。\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
-    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sendStrategy  下发策略， immediately表示立即下发，delay表示缓存起来，等数据上报或者设备上线之后下发。
-    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @var string[]
     */
@@ -120,9 +120,9 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     * result  设备命令执行的详细结果，由设备返回，Json格式。
     * createdTime  命令的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sentTime  物联网平台发送命令的时间，如果命令是立即下发， 则该时间与命令创建时间一致， 如果是缓存命令， 则是命令实际下发的时间。\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
-    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sendStrategy  下发策略， immediately表示立即下发，delay表示缓存起来，等数据上报或者设备上线之后下发。
-    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @var string[]
     */
@@ -154,9 +154,9 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     * result  设备命令执行的详细结果，由设备返回，Json格式。
     * createdTime  命令的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sentTime  物联网平台发送命令的时间，如果命令是立即下发， 则该时间与命令创建时间一致， 如果是缓存命令， 则是命令实际下发的时间。\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
-    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sendStrategy  下发策略， immediately表示立即下发，delay表示缓存起来，等数据上报或者设备上线之后下发。
-    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @var string[]
     */
@@ -188,9 +188,9 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     * result  设备命令执行的详细结果，由设备返回，Json格式。
     * createdTime  命令的创建时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sentTime  物联网平台发送命令的时间，如果命令是立即下发， 则该时间与命令创建时间一致， 如果是缓存命令， 则是命令实际下发的时间。\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
-    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * deliveredTime  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     * sendStrategy  下发策略， immediately表示立即下发，delay表示缓存起来，等数据上报或者设备上线之后下发。
-    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * responseTime  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @var string[]
     */
@@ -547,7 +547,7 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets deliveredTime
-    *  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    *  物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @return string|null
     */
@@ -559,7 +559,7 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets deliveredTime
     *
-    * @param string|null $deliveredTime 物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * @param string|null $deliveredTime 物联网平台将命令送达到设备的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @return $this
     */
@@ -595,7 +595,7 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets responseTime
-    *  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    *  设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @return string|null
     */
@@ -607,7 +607,7 @@ class ShowAsyncDeviceCommandResponse implements ModelInterface, ArrayAccess
     /**
     * Sets responseTime
     *
-    * @param string|null $responseTime 设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串
+    * @param string|null $responseTime 设备响应命令的时间，\"yyyyMMdd'T'HHmmss'Z'\"格式的UTC字符串。
     *
     * @return $this
     */

@@ -24,6 +24,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * hostid  域名id
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * description  域名描述信息，可选参数。
+    * server  防护域名的源站服务器配置信息
     * type  WAF部署模式，默认是1，目前仅支持反代模式，冗余参数
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * hostname  创建的云模式防护域名
@@ -44,6 +45,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'hostid' => 'string',
             'region' => 'string',
             'description' => 'string',
+            'server' => '\HuaweiCloud\SDK\Waf\V1\Model\CloudWafServer[]',
             'type' => 'int',
             'proxy' => 'bool',
             'hostname' => 'string',
@@ -64,6 +66,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * hostid  域名id
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * description  域名描述信息，可选参数。
+    * server  防护域名的源站服务器配置信息
     * type  WAF部署模式，默认是1，目前仅支持反代模式，冗余参数
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * hostname  创建的云模式防护域名
@@ -84,6 +87,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
         'hostid' => null,
         'region' => null,
         'description' => null,
+        'server' => null,
         'type' => null,
         'proxy' => null,
         'hostname' => null,
@@ -125,6 +129,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * hostid  域名id
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * description  域名描述信息，可选参数。
+    * server  防护域名的源站服务器配置信息
     * type  WAF部署模式，默认是1，目前仅支持反代模式，冗余参数
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * hostname  创建的云模式防护域名
@@ -145,6 +150,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'hostid' => 'hostid',
             'region' => 'region',
             'description' => 'description',
+            'server' => 'server',
             'type' => 'type',
             'proxy' => 'proxy',
             'hostname' => 'hostname',
@@ -165,6 +171,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * hostid  域名id
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * description  域名描述信息，可选参数。
+    * server  防护域名的源站服务器配置信息
     * type  WAF部署模式，默认是1，目前仅支持反代模式，冗余参数
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * hostname  创建的云模式防护域名
@@ -185,6 +192,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'hostid' => 'setHostid',
             'region' => 'setRegion',
             'description' => 'setDescription',
+            'server' => 'setServer',
             'type' => 'setType',
             'proxy' => 'setProxy',
             'hostname' => 'setHostname',
@@ -205,6 +213,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     * hostid  域名id
     * region  华为云区域ID，控制台创建的域名会携带此参数，api调用创建的域名此参数为空，可以通过华为云上地区和终端节点文档查询区域ID对应的中文名称
     * description  域名描述信息，可选参数。
+    * server  防护域名的源站服务器配置信息
     * type  WAF部署模式，默认是1，目前仅支持反代模式，冗余参数
     * proxy  防护域名是否使用代理   - false：不使用代理   - true：使用代理
     * hostname  创建的云模式防护域名
@@ -225,6 +234,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
             'hostid' => 'getHostid',
             'region' => 'getRegion',
             'description' => 'getDescription',
+            'server' => 'getServer',
             'type' => 'getType',
             'proxy' => 'getProxy',
             'hostname' => 'getHostname',
@@ -301,6 +311,7 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
         $this->container['hostid'] = isset($data['hostid']) ? $data['hostid'] : null;
         $this->container['region'] = isset($data['region']) ? $data['region'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['server'] = isset($data['server']) ? $data['server'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['proxy'] = isset($data['proxy']) ? $data['proxy'] : null;
         $this->container['hostname'] = isset($data['hostname']) ? $data['hostname'] : null;
@@ -430,6 +441,30 @@ class CloudWafHostItem implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+        return $this;
+    }
+
+    /**
+    * Gets server
+    *  防护域名的源站服务器配置信息
+    *
+    * @return \HuaweiCloud\SDK\Waf\V1\Model\CloudWafServer[]|null
+    */
+    public function getServer()
+    {
+        return $this->container['server'];
+    }
+
+    /**
+    * Sets server
+    *
+    * @param \HuaweiCloud\SDK\Waf\V1\Model\CloudWafServer[]|null $server 防护域名的源站服务器配置信息
+    *
+    * @return $this
+    */
+    public function setServer($server)
+    {
+        $this->container['server'] = $server;
         return $this;
     }
 

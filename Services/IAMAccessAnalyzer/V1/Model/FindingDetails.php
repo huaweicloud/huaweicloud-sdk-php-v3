@@ -23,13 +23,15 @@ class FindingDetails implements ModelInterface, ArrayAccess
     * externalAccessDetails  externalAccessDetails
     * unusedIamUserAccessKeyDetails  unusedIamUserAccessKeyDetails
     * unusedIamUserPasswordDetails  unusedIamUserPasswordDetails
+    * unusedPermissionDetails  unusedPermissionDetails
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'externalAccessDetails' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\ExternalAccessDetails',
             'unusedIamUserAccessKeyDetails' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedIamUserAccessKeyDetails',
-            'unusedIamUserPasswordDetails' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedIamUserPasswordDetails'
+            'unusedIamUserPasswordDetails' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedIamUserPasswordDetails',
+            'unusedPermissionDetails' => '\HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedPermissionDetails'
     ];
 
     /**
@@ -37,13 +39,15 @@ class FindingDetails implements ModelInterface, ArrayAccess
     * externalAccessDetails  externalAccessDetails
     * unusedIamUserAccessKeyDetails  unusedIamUserAccessKeyDetails
     * unusedIamUserPasswordDetails  unusedIamUserPasswordDetails
+    * unusedPermissionDetails  unusedPermissionDetails
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'externalAccessDetails' => null,
         'unusedIamUserAccessKeyDetails' => null,
-        'unusedIamUserPasswordDetails' => null
+        'unusedIamUserPasswordDetails' => null,
+        'unusedPermissionDetails' => null
     ];
 
     /**
@@ -72,13 +76,15 @@ class FindingDetails implements ModelInterface, ArrayAccess
     * externalAccessDetails  externalAccessDetails
     * unusedIamUserAccessKeyDetails  unusedIamUserAccessKeyDetails
     * unusedIamUserPasswordDetails  unusedIamUserPasswordDetails
+    * unusedPermissionDetails  unusedPermissionDetails
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'externalAccessDetails' => 'external_access_details',
             'unusedIamUserAccessKeyDetails' => 'unused_iam_user_access_key_details',
-            'unusedIamUserPasswordDetails' => 'unused_iam_user_password_details'
+            'unusedIamUserPasswordDetails' => 'unused_iam_user_password_details',
+            'unusedPermissionDetails' => 'unused_permission_details'
     ];
 
     /**
@@ -86,13 +92,15 @@ class FindingDetails implements ModelInterface, ArrayAccess
     * externalAccessDetails  externalAccessDetails
     * unusedIamUserAccessKeyDetails  unusedIamUserAccessKeyDetails
     * unusedIamUserPasswordDetails  unusedIamUserPasswordDetails
+    * unusedPermissionDetails  unusedPermissionDetails
     *
     * @var string[]
     */
     protected static $setters = [
             'externalAccessDetails' => 'setExternalAccessDetails',
             'unusedIamUserAccessKeyDetails' => 'setUnusedIamUserAccessKeyDetails',
-            'unusedIamUserPasswordDetails' => 'setUnusedIamUserPasswordDetails'
+            'unusedIamUserPasswordDetails' => 'setUnusedIamUserPasswordDetails',
+            'unusedPermissionDetails' => 'setUnusedPermissionDetails'
     ];
 
     /**
@@ -100,13 +108,15 @@ class FindingDetails implements ModelInterface, ArrayAccess
     * externalAccessDetails  externalAccessDetails
     * unusedIamUserAccessKeyDetails  unusedIamUserAccessKeyDetails
     * unusedIamUserPasswordDetails  unusedIamUserPasswordDetails
+    * unusedPermissionDetails  unusedPermissionDetails
     *
     * @var string[]
     */
     protected static $getters = [
             'externalAccessDetails' => 'getExternalAccessDetails',
             'unusedIamUserAccessKeyDetails' => 'getUnusedIamUserAccessKeyDetails',
-            'unusedIamUserPasswordDetails' => 'getUnusedIamUserPasswordDetails'
+            'unusedIamUserPasswordDetails' => 'getUnusedIamUserPasswordDetails',
+            'unusedPermissionDetails' => 'getUnusedPermissionDetails'
     ];
 
     /**
@@ -170,6 +180,7 @@ class FindingDetails implements ModelInterface, ArrayAccess
         $this->container['externalAccessDetails'] = isset($data['externalAccessDetails']) ? $data['externalAccessDetails'] : null;
         $this->container['unusedIamUserAccessKeyDetails'] = isset($data['unusedIamUserAccessKeyDetails']) ? $data['unusedIamUserAccessKeyDetails'] : null;
         $this->container['unusedIamUserPasswordDetails'] = isset($data['unusedIamUserPasswordDetails']) ? $data['unusedIamUserPasswordDetails'] : null;
+        $this->container['unusedPermissionDetails'] = isset($data['unusedPermissionDetails']) ? $data['unusedPermissionDetails'] : null;
     }
 
     /**
@@ -263,6 +274,30 @@ class FindingDetails implements ModelInterface, ArrayAccess
     public function setUnusedIamUserPasswordDetails($unusedIamUserPasswordDetails)
     {
         $this->container['unusedIamUserPasswordDetails'] = $unusedIamUserPasswordDetails;
+        return $this;
+    }
+
+    /**
+    * Gets unusedPermissionDetails
+    *  unusedPermissionDetails
+    *
+    * @return \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedPermissionDetails|null
+    */
+    public function getUnusedPermissionDetails()
+    {
+        return $this->container['unusedPermissionDetails'];
+    }
+
+    /**
+    * Sets unusedPermissionDetails
+    *
+    * @param \HuaweiCloud\SDK\IAMAccessAnalyzer\V1\Model\UnusedPermissionDetails|null $unusedPermissionDetails unusedPermissionDetails
+    *
+    * @return $this
+    */
+    public function setUnusedPermissionDetails($unusedPermissionDetails)
+    {
+        $this->container['unusedPermissionDetails'] = $unusedPermissionDetails;
         return $this;
     }
 

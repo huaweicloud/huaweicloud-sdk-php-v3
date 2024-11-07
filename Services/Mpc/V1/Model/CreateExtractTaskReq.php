@@ -24,6 +24,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
     * output  output
     * userData  用户自定义数据。
     * sync  是否同步处理, - 0：排队处理 - 1：同步处理  默认值：0
+    * encryption  encryption
     *
     * @var string[]
     */
@@ -31,7 +32,8 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
             'input' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
             'output' => '\HuaweiCloud\SDK\Mpc\V1\Model\ObsObjInfo',
             'userData' => 'string',
-            'sync' => 'int'
+            'sync' => 'int',
+            'encryption' => '\HuaweiCloud\SDK\Mpc\V1\Model\Encryption'
     ];
 
     /**
@@ -40,6 +42,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
     * output  output
     * userData  用户自定义数据。
     * sync  是否同步处理, - 0：排队处理 - 1：同步处理  默认值：0
+    * encryption  encryption
     *
     * @var string[]
     */
@@ -47,7 +50,8 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
         'input' => null,
         'output' => null,
         'userData' => null,
-        'sync' => 'int32'
+        'sync' => 'int32',
+        'encryption' => null
     ];
 
     /**
@@ -77,6 +81,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
     * output  output
     * userData  用户自定义数据。
     * sync  是否同步处理, - 0：排队处理 - 1：同步处理  默认值：0
+    * encryption  encryption
     *
     * @var string[]
     */
@@ -84,7 +89,8 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
             'input' => 'input',
             'output' => 'output',
             'userData' => 'user_data',
-            'sync' => 'sync'
+            'sync' => 'sync',
+            'encryption' => 'encryption'
     ];
 
     /**
@@ -93,6 +99,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
     * output  output
     * userData  用户自定义数据。
     * sync  是否同步处理, - 0：排队处理 - 1：同步处理  默认值：0
+    * encryption  encryption
     *
     * @var string[]
     */
@@ -100,7 +107,8 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
             'input' => 'setInput',
             'output' => 'setOutput',
             'userData' => 'setUserData',
-            'sync' => 'setSync'
+            'sync' => 'setSync',
+            'encryption' => 'setEncryption'
     ];
 
     /**
@@ -109,6 +117,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
     * output  output
     * userData  用户自定义数据。
     * sync  是否同步处理, - 0：排队处理 - 1：同步处理  默认值：0
+    * encryption  encryption
     *
     * @var string[]
     */
@@ -116,7 +125,8 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
             'input' => 'getInput',
             'output' => 'getOutput',
             'userData' => 'getUserData',
-            'sync' => 'getSync'
+            'sync' => 'getSync',
+            'encryption' => 'getEncryption'
     ];
 
     /**
@@ -181,6 +191,7 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
         $this->container['output'] = isset($data['output']) ? $data['output'] : null;
         $this->container['userData'] = isset($data['userData']) ? $data['userData'] : null;
         $this->container['sync'] = isset($data['sync']) ? $data['sync'] : null;
+        $this->container['encryption'] = isset($data['encryption']) ? $data['encryption'] : null;
     }
 
     /**
@@ -310,6 +321,30 @@ class CreateExtractTaskReq implements ModelInterface, ArrayAccess
     public function setSync($sync)
     {
         $this->container['sync'] = $sync;
+        return $this;
+    }
+
+    /**
+    * Gets encryption
+    *  encryption
+    *
+    * @return \HuaweiCloud\SDK\Mpc\V1\Model\Encryption|null
+    */
+    public function getEncryption()
+    {
+        return $this->container['encryption'];
+    }
+
+    /**
+    * Sets encryption
+    *
+    * @param \HuaweiCloud\SDK\Mpc\V1\Model\Encryption|null $encryption encryption
+    *
+    * @return $this
+    */
+    public function setEncryption($encryption)
+    {
+        $this->container['encryption'] = $encryption;
         return $this;
     }
 

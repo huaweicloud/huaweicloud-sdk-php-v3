@@ -25,16 +25,15 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
-    * resource  资源类型。
-    * business  业务类型。
-    * resourceSource  资源来源。
-    * resourceName  资源名称。
+    * resource  资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
+    * business  业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
+    * resourceSource  资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     * resourceId  资源id。
     * orderId  订单id。
-    * chargingMode  计费模式。
+    * chargingMode  计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
-    * subResource  子资源类型。
+    * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @var string[]
     */
@@ -47,7 +46,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'resource' => 'string',
             'business' => 'string',
             'resourceSource' => 'string',
-            'resourceName' => 'string',
             'resourceId' => 'string',
             'orderId' => 'string',
             'chargingMode' => 'string',
@@ -63,16 +61,15 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
-    * resource  资源类型。
-    * business  业务类型。
-    * resourceSource  资源来源。
-    * resourceName  资源名称。
+    * resource  资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
+    * business  业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
+    * resourceSource  资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     * resourceId  资源id。
     * orderId  订单id。
-    * chargingMode  计费模式。
+    * chargingMode  计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
-    * subResource  子资源类型。
+    * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @var string[]
     */
@@ -85,7 +82,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
         'resource' => null,
         'business' => null,
         'resourceSource' => null,
-        'resourceName' => null,
         'resourceId' => null,
         'orderId' => null,
         'chargingMode' => null,
@@ -122,16 +118,15 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
-    * resource  资源类型。
-    * business  业务类型。
-    * resourceSource  资源来源。
-    * resourceName  资源名称。
+    * resource  资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
+    * business  业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
+    * resourceSource  资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     * resourceId  资源id。
     * orderId  订单id。
-    * chargingMode  计费模式。
+    * chargingMode  计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
-    * subResource  子资源类型。
+    * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @var string[]
     */
@@ -144,7 +139,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'resource' => 'resource',
             'business' => 'business',
             'resourceSource' => 'resource_source',
-            'resourceName' => 'resource_name',
             'resourceId' => 'resource_id',
             'orderId' => 'order_id',
             'chargingMode' => 'charging_mode',
@@ -160,16 +154,15 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
-    * resource  资源类型。
-    * business  业务类型。
-    * resourceSource  资源来源。
-    * resourceName  资源名称。
+    * resource  资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
+    * business  业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
+    * resourceSource  资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     * resourceId  资源id。
     * orderId  订单id。
-    * chargingMode  计费模式。
+    * chargingMode  计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
-    * subResource  子资源类型。
+    * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @var string[]
     */
@@ -182,7 +175,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'resource' => 'setResource',
             'business' => 'setBusiness',
             'resourceSource' => 'setResourceSource',
-            'resourceName' => 'setResourceName',
             'resourceId' => 'setResourceId',
             'orderId' => 'setOrderId',
             'chargingMode' => 'setChargingMode',
@@ -198,16 +190,15 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     * xProjectId  使用AK/SK方式认证时必选，携带项目ID信息。
     * limit  每页显示的条目数量。
     * offset  偏移量，表示从此偏移量开始查询。
-    * resource  资源类型。
-    * business  业务类型。
-    * resourceSource  资源来源。
-    * resourceName  资源名称。
+    * resource  资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
+    * business  业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
+    * resourceSource  资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     * resourceId  资源id。
     * orderId  订单id。
-    * chargingMode  计费模式。
+    * chargingMode  计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     * resourceExpireStartTime  资源过期时间段 开始时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
     * resourceExpireEndTime  资源过期时间段 结束时间。格式遵循：RFC 3339 如\"2021-01-10T08:43:17Z\"
-    * subResource  子资源类型。
+    * subResource  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @var string[]
     */
@@ -220,7 +211,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             'resource' => 'getResource',
             'business' => 'getBusiness',
             'resourceSource' => 'getResourceSource',
-            'resourceName' => 'getResourceName',
             'resourceId' => 'getResourceId',
             'orderId' => 'getOrderId',
             'chargingMode' => 'getChargingMode',
@@ -295,7 +285,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
         $this->container['resource'] = isset($data['resource']) ? $data['resource'] : null;
         $this->container['business'] = isset($data['business']) ? $data['business'] : null;
         $this->container['resourceSource'] = isset($data['resourceSource']) ? $data['resourceSource'] : null;
-        $this->container['resourceName'] = isset($data['resourceName']) ? $data['resourceName'] : null;
         $this->container['resourceId'] = isset($data['resourceId']) ? $data['resourceId'] : null;
         $this->container['orderId'] = isset($data['orderId']) ? $data['orderId'] : null;
         $this->container['chargingMode'] = isset($data['chargingMode']) ? $data['chargingMode'] : null;
@@ -362,12 +351,6 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
             }
             if ((mb_strlen($this->container['resourceSource']) < 1)) {
                 $invalidProperties[] = "invalid value for 'resourceSource', the character length must be bigger than or equal to 1.";
-            }
-            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) > 128)) {
-                $invalidProperties[] = "invalid value for 'resourceName', the character length must be smaller than or equal to 128.";
-            }
-            if (!is_null($this->container['resourceName']) && (mb_strlen($this->container['resourceName']) < 0)) {
-                $invalidProperties[] = "invalid value for 'resourceName', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['resourceId']) && (mb_strlen($this->container['resourceId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'resourceId', the character length must be smaller than or equal to 128.";
@@ -541,7 +524,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resource
-    *  资源类型。
+    *  资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
     *
     * @return string|null
     */
@@ -553,7 +536,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resource
     *
-    * @param string|null $resource 资源类型。
+    * @param string|null $resource 资源类型。可填多个，用\",\"分隔。详见[资源类型](metastudio_02_0042.xml)。
     *
     * @return $this
     */
@@ -565,7 +548,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets business
-    *  业务类型。
+    *  业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     *
     * @return string|null
     */
@@ -577,7 +560,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets business
     *
-    * @param string|null $business 业务类型。
+    * @param string|null $business 业务类型。可填多个，用\",\"分隔。 * VOICE_CLONE：声音制作 * SYNTHETICS_SOUND：声音合成 * ASSET_MANAGER：资产管理 * MODELING_2D：形象制作 * LIVE_2D：分身数字人视频直播 * VIDEO_2D：分身数字人视频制作 * CHAT_2D：分身数字人智能交互 * BUSINESS_CARD_2D：分身数字人名片 * PICTURE_2D：照片数字人视频 * MODELING_3D：3D照片建模 * VDS_3D：3D视觉驱动 * TTSA_3D：3D语音驱动 * FLEXUS_2D：FLEXUS版本资源
     *
     * @return $this
     */
@@ -589,7 +572,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets resourceSource
-    *  资源来源。
+    *  资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     *
     * @return string
     */
@@ -601,37 +584,13 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets resourceSource
     *
-    * @param string $resourceSource 资源来源。
+    * @param string $resourceSource 资源来源,可填多个 例如:PURCHASED,ADMIN_ALLOCATED,将返回商用资源与管理员分配资源。 * PURCHASED: 用户购买的资源 * SP_ALLOCATED: SP分配的资源 * ADMIN_ALLOCATED: 系统管理员分配的资源
     *
     * @return $this
     */
     public function setResourceSource($resourceSource)
     {
         $this->container['resourceSource'] = $resourceSource;
-        return $this;
-    }
-
-    /**
-    * Gets resourceName
-    *  资源名称。
-    *
-    * @return string|null
-    */
-    public function getResourceName()
-    {
-        return $this->container['resourceName'];
-    }
-
-    /**
-    * Sets resourceName
-    *
-    * @param string|null $resourceName 资源名称。
-    *
-    * @return $this
-    */
-    public function setResourceName($resourceName)
-    {
-        $this->container['resourceName'] = $resourceName;
         return $this;
     }
 
@@ -685,7 +644,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets chargingMode
-    *  计费模式。
+    *  计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     *
     * @return string|null
     */
@@ -697,7 +656,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets chargingMode
     *
-    * @param string|null $chargingMode 计费模式。
+    * @param string|null $chargingMode 计费类型。  * PERIODIC: 包周期  * ONE_TIME：一次性  * ON_DEMAND：按需 计费模式。
     *
     * @return $this
     */
@@ -757,7 +716,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets subResource
-    *  子资源类型。
+    *  子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @return string|null
     */
@@ -769,7 +728,7 @@ class ListTenantResourcesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets subResource
     *
-    * @param string|null $subResource 子资源类型。
+    * @param string|null $subResource 子资源类型。当前只有flexus套餐包存在该字段 * voice_clone_flexus: 语音克隆Flexus版 * modeling_count_2d_model_flexus: 分身数字人形象制作Flexus版 * video_time_flexus_2d_model: 分身数字人Flexus版本视频制作
     *
     * @return $this
     */
