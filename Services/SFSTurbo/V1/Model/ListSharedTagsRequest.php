@@ -20,20 +20,26 @@ class ListSharedTagsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * 
+    * limit  返回的标签个数
+    * offset  标签查询个数的偏移量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * 
+    * limit  返回的标签个数
+    * offset  标签查询个数的偏移量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
+        'limit' => 'int32',
+        'offset' => 'int32'
     ];
 
     /**
@@ -59,29 +65,38 @@ class ListSharedTagsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * 
+    * limit  返回的标签个数
+    * offset  标签查询个数的偏移量
     *
     * @var string[]
     */
     protected static $attributeMap = [
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * 
+    * limit  返回的标签个数
+    * offset  标签查询个数的偏移量
     *
     * @var string[]
     */
     protected static $setters = [
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * 
+    * limit  返回的标签个数
+    * offset  标签查询个数的偏移量
     *
     * @var string[]
     */
     protected static $getters = [
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -142,6 +157,8 @@ class ListSharedTagsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -152,6 +169,15 @@ class ListSharedTagsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            if (!is_null($this->container['limit']) && ($this->container['limit'] >= 1000)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than 1000.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -164,6 +190,54 @@ class ListSharedTagsRequest implements ModelInterface, ArrayAccess
     public function valid()
     {
         return count($this->listInvalidProperties()) === 0;
+    }
+
+    /**
+    * Gets limit
+    *  返回的标签个数
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 返回的标签个数
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  标签查询个数的偏移量
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 标签查询个数的偏移量
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+        return $this;
     }
 
     /**

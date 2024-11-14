@@ -22,13 +22,15 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * jobId  任务ID。
-    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
-    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
-    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
+    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * preBeautyImageUploadUrl  美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * postBeautyImageUploadUrl  美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -42,19 +44,23 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'idCardImage1UploadUrl' => 'string',
             'idCardImage2UploadUrl' => 'string',
             'grantFileUploadUrl' => 'string',
+            'preBeautyImageUploadUrl' => 'string',
+            'postBeautyImageUploadUrl' => 'string',
             'xRequestId' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * jobId  任务ID。
-    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
-    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
-    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
+    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * preBeautyImageUploadUrl  美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * postBeautyImageUploadUrl  美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -68,6 +74,8 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         'idCardImage1UploadUrl' => null,
         'idCardImage2UploadUrl' => null,
         'grantFileUploadUrl' => null,
+        'preBeautyImageUploadUrl' => null,
+        'postBeautyImageUploadUrl' => null,
         'xRequestId' => null
     ];
 
@@ -95,13 +103,15 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * jobId  任务ID。
-    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
-    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
-    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
+    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * preBeautyImageUploadUrl  美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * postBeautyImageUploadUrl  美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -115,19 +125,23 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'idCardImage1UploadUrl' => 'id_card_image1_upload_url',
             'idCardImage2UploadUrl' => 'id_card_image2_upload_url',
             'grantFileUploadUrl' => 'grant_file_upload_url',
+            'preBeautyImageUploadUrl' => 'pre_beauty_image_upload_url',
+            'postBeautyImageUploadUrl' => 'post_beauty_image_upload_url',
             'xRequestId' => 'X-Request-Id'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * jobId  任务ID。
-    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
-    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
-    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
+    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * preBeautyImageUploadUrl  美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * postBeautyImageUploadUrl  美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -141,19 +155,23 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'idCardImage1UploadUrl' => 'setIdCardImage1UploadUrl',
             'idCardImage2UploadUrl' => 'setIdCardImage2UploadUrl',
             'grantFileUploadUrl' => 'setGrantFileUploadUrl',
+            'preBeautyImageUploadUrl' => 'setPreBeautyImageUploadUrl',
+            'postBeautyImageUploadUrl' => 'setPostBeautyImageUploadUrl',
             'xRequestId' => 'setXRequestId'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * jobId  任务ID。
-    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
-    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
-    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
-    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
-    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * trainingVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * actionVideoUploadUrl  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * audioUploadUrl  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
+    * coverUploadUrl  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage1UploadUrl  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * idCardImage2UploadUrl  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * grantFileUploadUrl  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * preBeautyImageUploadUrl  美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    * postBeautyImageUploadUrl  美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
     * xRequestId  xRequestId
     *
     * @var string[]
@@ -167,6 +185,8 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             'idCardImage1UploadUrl' => 'getIdCardImage1UploadUrl',
             'idCardImage2UploadUrl' => 'getIdCardImage2UploadUrl',
             'grantFileUploadUrl' => 'getGrantFileUploadUrl',
+            'preBeautyImageUploadUrl' => 'getPreBeautyImageUploadUrl',
+            'postBeautyImageUploadUrl' => 'getPostBeautyImageUploadUrl',
             'xRequestId' => 'getXRequestId'
     ];
 
@@ -236,6 +256,8 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
         $this->container['idCardImage1UploadUrl'] = isset($data['idCardImage1UploadUrl']) ? $data['idCardImage1UploadUrl'] : null;
         $this->container['idCardImage2UploadUrl'] = isset($data['idCardImage2UploadUrl']) ? $data['idCardImage2UploadUrl'] : null;
         $this->container['grantFileUploadUrl'] = isset($data['grantFileUploadUrl']) ? $data['grantFileUploadUrl'] : null;
+        $this->container['preBeautyImageUploadUrl'] = isset($data['preBeautyImageUploadUrl']) ? $data['preBeautyImageUploadUrl'] : null;
+        $this->container['postBeautyImageUploadUrl'] = isset($data['postBeautyImageUploadUrl']) ? $data['postBeautyImageUploadUrl'] : null;
         $this->container['xRequestId'] = isset($data['xRequestId']) ? $data['xRequestId'] : null;
     }
 
@@ -283,6 +305,18 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
             if (!is_null($this->container['grantFileUploadUrl']) && (mb_strlen($this->container['grantFileUploadUrl']) < 1)) {
                 $invalidProperties[] = "invalid value for 'grantFileUploadUrl', the character length must be bigger than or equal to 1.";
             }
+            if (!is_null($this->container['preBeautyImageUploadUrl']) && (mb_strlen($this->container['preBeautyImageUploadUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'preBeautyImageUploadUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['preBeautyImageUploadUrl']) && (mb_strlen($this->container['preBeautyImageUploadUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'preBeautyImageUploadUrl', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['postBeautyImageUploadUrl']) && (mb_strlen($this->container['postBeautyImageUploadUrl']) > 2048)) {
+                $invalidProperties[] = "invalid value for 'postBeautyImageUploadUrl', the character length must be smaller than or equal to 2048.";
+            }
+            if (!is_null($this->container['postBeautyImageUploadUrl']) && (mb_strlen($this->container['postBeautyImageUploadUrl']) < 1)) {
+                $invalidProperties[] = "invalid value for 'postBeautyImageUploadUrl', the character length must be bigger than or equal to 1.";
+            }
         return $invalidProperties;
     }
 
@@ -323,7 +357,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets trainingVideoUploadUrl
-    *  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    *  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return string[]|null
     */
@@ -335,7 +369,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets trainingVideoUploadUrl
     *
-    * @param string[]|null $trainingVideoUploadUrl 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * @param string[]|null $trainingVideoUploadUrl 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return $this
     */
@@ -347,7 +381,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets actionVideoUploadUrl
-    *  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    *  分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return string[]|null
     */
@@ -359,7 +393,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets actionVideoUploadUrl
     *
-    * @param string[]|null $actionVideoUploadUrl 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。
+    * @param string[]|null $actionVideoUploadUrl 分身数字人训练视频上传URL。该url在文件上传成功后失效，只能上传一次。注意：视频必须是1080p或者4K分辨率（横、竖屏皆可）的mp4格式，视频长度须大于等于3分钟且小于等于10分钟，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return $this
     */
@@ -371,7 +405,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets audioUploadUrl
-    *  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
+    *  音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
     *
     * @return string|null
     */
@@ -383,7 +417,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets audioUploadUrl
     *
-    * @param string|null $audioUploadUrl 音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次
+    * @param string|null $audioUploadUrl 音频数据训练上传URL。该url在文件上传成功后失效，只能上传一次 > 通过该地址上传时，需设置content-type为application/zip。
     *
     * @return $this
     */
@@ -395,7 +429,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets coverUploadUrl
-    *  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
+    *  模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return string|null
     */
@@ -407,7 +441,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets coverUploadUrl
     *
-    * @param string|null $coverUploadUrl 模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。
+    * @param string|null $coverUploadUrl 模型封面上传URL。该URL在文件上传成功后失效，只能上传一次。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return $this
     */
@@ -419,7 +453,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets idCardImage1UploadUrl
-    *  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    *  身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return string|null
     */
@@ -431,7 +465,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets idCardImage1UploadUrl
     *
-    * @param string|null $idCardImage1UploadUrl 身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * @param string|null $idCardImage1UploadUrl 身份证正面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return $this
     */
@@ -443,7 +477,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets idCardImage2UploadUrl
-    *  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    *  身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return string|null
     */
@@ -455,7 +489,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets idCardImage2UploadUrl
     *
-    * @param string|null $idCardImage2UploadUrl 身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * @param string|null $idCardImage2UploadUrl 身份证反面照片上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return $this
     */
@@ -467,7 +501,7 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets grantFileUploadUrl
-    *  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    *  授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return string|null
     */
@@ -479,13 +513,61 @@ class Update2dModelTrainingJobResponse implements ModelInterface, ArrayAccess
     /**
     * Sets grantFileUploadUrl
     *
-    * @param string|null $grantFileUploadUrl 授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。
+    * @param string|null $grantFileUploadUrl 授权书上传URL。该URL在文件上传成功后失效，只能上传一次。注意：非NA用户必须上传，否则审核会不通过。 > 通过该地址上传时，需设置content-type为application/octet-stream
     *
     * @return $this
     */
     public function setGrantFileUploadUrl($grantFileUploadUrl)
     {
         $this->container['grantFileUploadUrl'] = $grantFileUploadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets preBeautyImageUploadUrl
+    *  美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    *
+    * @return string|null
+    */
+    public function getPreBeautyImageUploadUrl()
+    {
+        return $this->container['preBeautyImageUploadUrl'];
+    }
+
+    /**
+    * Sets preBeautyImageUploadUrl
+    *
+    * @param string|null $preBeautyImageUploadUrl 美白前图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    *
+    * @return $this
+    */
+    public function setPreBeautyImageUploadUrl($preBeautyImageUploadUrl)
+    {
+        $this->container['preBeautyImageUploadUrl'] = $preBeautyImageUploadUrl;
+        return $this;
+    }
+
+    /**
+    * Gets postBeautyImageUploadUrl
+    *  美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    *
+    * @return string|null
+    */
+    public function getPostBeautyImageUploadUrl()
+    {
+        return $this->container['postBeautyImageUploadUrl'];
+    }
+
+    /**
+    * Sets postBeautyImageUploadUrl
+    *
+    * @param string|null $postBeautyImageUploadUrl 美白后图片上传url。 > 通过该地址上传时，需设置content-type为application/octet-stream
+    *
+    * @return $this
+    */
+    public function setPostBeautyImageUploadUrl($postBeautyImageUploadUrl)
+    {
+        $this->container['postBeautyImageUploadUrl'] = $postBeautyImageUploadUrl;
         return $this;
     }
 

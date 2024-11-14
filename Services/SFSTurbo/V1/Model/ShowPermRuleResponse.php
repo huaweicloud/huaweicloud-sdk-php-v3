@@ -23,8 +23,8 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * id  权限规格的id
     * ipCidr  授权对象的IP地址或网段
-    * rwType  -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
-    * userType  -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * rwType  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
+    * userType  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @var string[]
     */
@@ -39,8 +39,8 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     * Array of property to format mappings. Used for (de)serialization
     * id  权限规格的id
     * ipCidr  授权对象的IP地址或网段
-    * rwType  -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
-    * userType  -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * rwType  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
+    * userType  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @var string[]
     */
@@ -76,8 +76,8 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     * and the value is the original name
     * id  权限规格的id
     * ipCidr  授权对象的IP地址或网段
-    * rwType  -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
-    * userType  -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * rwType  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
+    * userType  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @var string[]
     */
@@ -92,8 +92,8 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     * Array of attributes to setter functions (for deserialization of responses)
     * id  权限规格的id
     * ipCidr  授权对象的IP地址或网段
-    * rwType  -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
-    * userType  -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * rwType  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
+    * userType  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @var string[]
     */
@@ -108,8 +108,8 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     * Array of attributes to getter functions (for serialization of requests)
     * id  权限规格的id
     * ipCidr  授权对象的IP地址或网段
-    * rwType  -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
-    * userType  -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * rwType  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
+    * userType  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @var string[]
     */
@@ -256,7 +256,7 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets rwType
-    *  -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
+    *  授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
     *
     * @return string|null
     */
@@ -268,7 +268,7 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets rwType
     *
-    * @param string|null $rwType -| 授权对象的读写权限 rw：默认选项，以读写的方式共享 ro：以只读的方式共享
+    * @param string|null $rwType 授权对象的读写权限   - rw：默认选项，以读写的方式共享   - ro：以只读的方式共享   - none: 没有权限
     *
     * @return $this
     */
@@ -280,7 +280,7 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets userType
-    *  -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    *  授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @return string|null
     */
@@ -292,7 +292,7 @@ class ShowPermRuleResponse implements ModelInterface, ArrayAccess
     /**
     * Sets userType
     *
-    * @param string|null $userType -| 授权对象的系统用户对文件系统的访问权限。取值如下： no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。 root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。 all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。
+    * @param string|null $userType 授权对象的系统用户对文件系统的访问权限。取值如下：  - no_root_squash：客户端使用的是root用户时，映射到NFS服务器的用户依然为root用户。  - root_squash：客户端使用的是root用户时，映射到NFS服务器的用户为NFS的匿名用户（nfsnobody）。  - all_squash：默认选项。所有访问NFS服务器的客户端的用户都映射为匿名用户。'
     *
     * @return $this
     */

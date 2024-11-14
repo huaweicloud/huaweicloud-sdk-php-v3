@@ -20,22 +20,30 @@ class RetypeVolume implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * newType  磁盘变更至指定的磁盘类型
+    * newType  变更至指定的云硬盘类型
+    * iops  云硬盘iops大小。
+    * throughput  云硬盘的吞吐量大小。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'newType' => 'string'
+            'newType' => 'string',
+            'iops' => 'int',
+            'throughput' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * newType  磁盘变更至指定的磁盘类型
+    * newType  变更至指定的云硬盘类型
+    * iops  云硬盘iops大小。
+    * throughput  云硬盘的吞吐量大小。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'newType' => null
+        'newType' => null,
+        'iops' => 'int32',
+        'throughput' => 'int32'
     ];
 
     /**
@@ -61,32 +69,44 @@ class RetypeVolume implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * newType  磁盘变更至指定的磁盘类型
+    * newType  变更至指定的云硬盘类型
+    * iops  云硬盘iops大小。
+    * throughput  云硬盘的吞吐量大小。
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'newType' => 'new_type'
+            'newType' => 'new_type',
+            'iops' => 'iops',
+            'throughput' => 'throughput'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * newType  磁盘变更至指定的磁盘类型
+    * newType  变更至指定的云硬盘类型
+    * iops  云硬盘iops大小。
+    * throughput  云硬盘的吞吐量大小。
     *
     * @var string[]
     */
     protected static $setters = [
-            'newType' => 'setNewType'
+            'newType' => 'setNewType',
+            'iops' => 'setIops',
+            'throughput' => 'setThroughput'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * newType  磁盘变更至指定的磁盘类型
+    * newType  变更至指定的云硬盘类型
+    * iops  云硬盘iops大小。
+    * throughput  云硬盘的吞吐量大小。
     *
     * @var string[]
     */
     protected static $getters = [
-            'newType' => 'getNewType'
+            'newType' => 'getNewType',
+            'iops' => 'getIops',
+            'throughput' => 'getThroughput'
     ];
 
     /**
@@ -148,6 +168,8 @@ class RetypeVolume implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['newType'] = isset($data['newType']) ? $data['newType'] : null;
+        $this->container['iops'] = isset($data['iops']) ? $data['iops'] : null;
+        $this->container['throughput'] = isset($data['throughput']) ? $data['throughput'] : null;
     }
 
     /**
@@ -177,7 +199,7 @@ class RetypeVolume implements ModelInterface, ArrayAccess
 
     /**
     * Gets newType
-    *  磁盘变更至指定的磁盘类型
+    *  变更至指定的云硬盘类型
     *
     * @return string
     */
@@ -189,13 +211,61 @@ class RetypeVolume implements ModelInterface, ArrayAccess
     /**
     * Sets newType
     *
-    * @param string $newType 磁盘变更至指定的磁盘类型
+    * @param string $newType 变更至指定的云硬盘类型
     *
     * @return $this
     */
     public function setNewType($newType)
     {
         $this->container['newType'] = $newType;
+        return $this;
+    }
+
+    /**
+    * Gets iops
+    *  云硬盘iops大小。
+    *
+    * @return int|null
+    */
+    public function getIops()
+    {
+        return $this->container['iops'];
+    }
+
+    /**
+    * Sets iops
+    *
+    * @param int|null $iops 云硬盘iops大小。
+    *
+    * @return $this
+    */
+    public function setIops($iops)
+    {
+        $this->container['iops'] = $iops;
+        return $this;
+    }
+
+    /**
+    * Gets throughput
+    *  云硬盘的吞吐量大小。
+    *
+    * @return int|null
+    */
+    public function getThroughput()
+    {
+        return $this->container['throughput'];
+    }
+
+    /**
+    * Sets throughput
+    *
+    * @param int|null $throughput 云硬盘的吞吐量大小。
+    *
+    * @return $this
+    */
+    public function setThroughput($throughput)
+    {
+        $this->container['throughput'] = $throughput;
         return $this;
     }
 

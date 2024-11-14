@@ -285,6 +285,9 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
                 );
             }
 
+        if ($this->container['enterpriseProjectId'] === null) {
+            $invalidProperties[] = "'enterpriseProjectId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -399,7 +402,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     * Gets enterpriseProjectId
     *  企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
-    * @return string|null
+    * @return string
     */
     public function getEnterpriseProjectId()
     {
@@ -409,7 +412,7 @@ class ListPromInstanceRequest implements ModelInterface, ArrayAccess
     /**
     * Sets enterpriseProjectId
     *
-    * @param string|null $enterpriseProjectId 企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
+    * @param string $enterpriseProjectId 企业项目id。 - 查询单个企业项目下实例，填写企业项目id。 - 查询所有企业项目下实例，填写“all_granted_eps”。
     *
     * @return $this
     */

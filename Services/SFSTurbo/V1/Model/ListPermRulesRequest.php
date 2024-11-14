@@ -21,21 +21,29 @@ class ListPermRulesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * shareId  文件系统id
+    * limit  返回的权限规则个数
+    * offset  返回的权限规则的偏移量
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'shareId' => 'string'
+            'shareId' => 'string',
+            'limit' => 'int',
+            'offset' => 'int'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * shareId  文件系统id
+    * limit  返回的权限规则个数
+    * offset  返回的权限规则的偏移量
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'shareId' => null
+        'shareId' => null,
+        'limit' => 'int64',
+        'offset' => 'int64'
     ];
 
     /**
@@ -62,31 +70,43 @@ class ListPermRulesRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * shareId  文件系统id
+    * limit  返回的权限规则个数
+    * offset  返回的权限规则的偏移量
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'shareId' => 'share_id'
+            'shareId' => 'share_id',
+            'limit' => 'limit',
+            'offset' => 'offset'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * shareId  文件系统id
+    * limit  返回的权限规则个数
+    * offset  返回的权限规则的偏移量
     *
     * @var string[]
     */
     protected static $setters = [
-            'shareId' => 'setShareId'
+            'shareId' => 'setShareId',
+            'limit' => 'setLimit',
+            'offset' => 'setOffset'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * shareId  文件系统id
+    * limit  返回的权限规则个数
+    * offset  返回的权限规则的偏移量
     *
     * @var string[]
     */
     protected static $getters = [
-            'shareId' => 'getShareId'
+            'shareId' => 'getShareId',
+            'limit' => 'getLimit',
+            'offset' => 'getOffset'
     ];
 
     /**
@@ -148,6 +168,8 @@ class ListPermRulesRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['shareId'] = isset($data['shareId']) ? $data['shareId'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
     }
 
     /**
@@ -161,6 +183,15 @@ class ListPermRulesRequest implements ModelInterface, ArrayAccess
         if ($this->container['shareId'] === null) {
             $invalidProperties[] = "'shareId' can't be null";
         }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] > 64)) {
+                $invalidProperties[] = "invalid value for 'limit', must be smaller than or equal to 64.";
+            }
+            if (!is_null($this->container['limit']) && ($this->container['limit'] < 0)) {
+                $invalidProperties[] = "invalid value for 'limit', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['offset']) && ($this->container['offset'] < 0)) {
+                $invalidProperties[] = "invalid value for 'offset', must be bigger than or equal to 0.";
+            }
         return $invalidProperties;
     }
 
@@ -196,6 +227,54 @@ class ListPermRulesRequest implements ModelInterface, ArrayAccess
     public function setShareId($shareId)
     {
         $this->container['shareId'] = $shareId;
+        return $this;
+    }
+
+    /**
+    * Gets limit
+    *  返回的权限规则个数
+    *
+    * @return int|null
+    */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+    * Sets limit
+    *
+    * @param int|null $limit 返回的权限规则个数
+    *
+    * @return $this
+    */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets offset
+    *  返回的权限规则的偏移量
+    *
+    * @return int|null
+    */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+    * Sets offset
+    *
+    * @param int|null $offset 返回的权限规则的偏移量
+    *
+    * @return $this
+    */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
         return $this;
     }
 

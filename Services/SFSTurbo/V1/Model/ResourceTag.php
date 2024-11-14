@@ -20,8 +20,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * key  标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
-    * value  标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * key  标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * value  标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * key  标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
-    * value  标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * key  标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * value  标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * key  标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
-    * value  标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * key  标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * value  标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * key  标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
-    * value  标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * key  标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * value  标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * key  标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
-    * value  标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * key  标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * value  标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @var string[]
     */
@@ -172,8 +172,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
         if ($this->container['key'] === null) {
             $invalidProperties[] = "'key' can't be null";
         }
-            if ((mb_strlen($this->container['key']) > 36)) {
-                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 36.";
+            if ((mb_strlen($this->container['key']) > 128)) {
+                $invalidProperties[] = "invalid value for 'key', the character length must be smaller than or equal to 128.";
             }
             if ((mb_strlen($this->container['key']) < 1)) {
                 $invalidProperties[] = "invalid value for 'key', the character length must be bigger than or equal to 1.";
@@ -181,8 +181,8 @@ class ResourceTag implements ModelInterface, ArrayAccess
         if ($this->container['value'] === null) {
             $invalidProperties[] = "'value' can't be null";
         }
-            if ((mb_strlen($this->container['value']) > 43)) {
-                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 43.";
+            if ((mb_strlen($this->container['value']) > 255)) {
+                $invalidProperties[] = "invalid value for 'value', the character length must be smaller than or equal to 255.";
             }
             if ((mb_strlen($this->container['value']) < 0)) {
                 $invalidProperties[] = "invalid value for 'value', the character length must be bigger than or equal to 0.";
@@ -203,7 +203,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets key
-    *  标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    *  标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @return string
     */
@@ -215,7 +215,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets key
     *
-    * @param string $key 标签的键。  最大长度36个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * @param string $key 标签的键。  最大长度128个字符。   key不能为空，不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @return $this
     */
@@ -227,7 +227,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
 
     /**
     * Gets value
-    *  标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    *  标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @return string
     */
@@ -239,7 +239,7 @@ class ResourceTag implements ModelInterface, ArrayAccess
     /**
     * Sets value
     *
-    * @param string $value 标签的值。  每个值最大长度43个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
+    * @param string $value 标签的值。  每个值最大长度255个字符，可以为空字符串。  不能包含非打印字符ASCII(0-31)，“=”,“*”,“<”,“>”,“\\”,“,”,“|”,“/”。只能包含大写字母、小写字母、数字，特殊字符\"-\"和\"_\"。
     *
     * @return $this
     */

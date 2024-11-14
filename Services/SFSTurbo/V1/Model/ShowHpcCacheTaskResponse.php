@@ -230,7 +230,24 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_SUCCESS = 'SUCCESS';
+    const STATUS_DOING = 'DOING';
+    const STATUS_FAIL = 'FAIL';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_SUCCESS,
+            self::STATUS_DOING,
+            self::STATUS_FAIL,
+        ];
+    }
 
 
     /**
@@ -269,6 +286,14 @@ class ShowHpcCacheTaskResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 

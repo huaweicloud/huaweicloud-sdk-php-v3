@@ -21,8 +21,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，建议携带该参数，在使用专业版时必须携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID，具体获取方式请参考[[查看实例详情](https://support.huaweicloud.com/usermanual-iothub/iot_01_0079.html#section1)](tag:hws) [[查看实例详情](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0079.html#section1)](tag:hws_hk)。
-    * spAuthToken  **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    * stageAuthToken  **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的产品列表，不携带该参数则会查询该用户下所有产品列表。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
@@ -30,8 +28,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPITypes = [
             'instanceId' => 'string',
-            'spAuthToken' => 'string',
-            'stageAuthToken' => 'string',
             'appId' => 'string',
             'productId' => 'string'
     ];
@@ -39,8 +35,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，建议携带该参数，在使用专业版时必须携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID，具体获取方式请参考[[查看实例详情](https://support.huaweicloud.com/usermanual-iothub/iot_01_0079.html#section1)](tag:hws) [[查看实例详情](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0079.html#section1)](tag:hws_hk)。
-    * spAuthToken  **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    * stageAuthToken  **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的产品列表，不携带该参数则会查询该用户下所有产品列表。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
@@ -48,8 +42,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $openAPIFormats = [
         'instanceId' => null,
-        'spAuthToken' => null,
-        'stageAuthToken' => null,
         'appId' => null,
         'productId' => null
     ];
@@ -78,8 +70,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，建议携带该参数，在使用专业版时必须携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID，具体获取方式请参考[[查看实例详情](https://support.huaweicloud.com/usermanual-iothub/iot_01_0079.html#section1)](tag:hws) [[查看实例详情](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0079.html#section1)](tag:hws_hk)。
-    * spAuthToken  **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    * stageAuthToken  **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的产品列表，不携带该参数则会查询该用户下所有产品列表。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
@@ -87,8 +77,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $attributeMap = [
             'instanceId' => 'Instance-Id',
-            'spAuthToken' => 'Sp-Auth-Token',
-            'stageAuthToken' => 'Stage-Auth-Token',
             'appId' => 'app_id',
             'productId' => 'product_id'
     ];
@@ -96,8 +84,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，建议携带该参数，在使用专业版时必须携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID，具体获取方式请参考[[查看实例详情](https://support.huaweicloud.com/usermanual-iothub/iot_01_0079.html#section1)](tag:hws) [[查看实例详情](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0079.html#section1)](tag:hws_hk)。
-    * spAuthToken  **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    * stageAuthToken  **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的产品列表，不携带该参数则会查询该用户下所有产品列表。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
@@ -105,8 +91,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $setters = [
             'instanceId' => 'setInstanceId',
-            'spAuthToken' => 'setSpAuthToken',
-            'stageAuthToken' => 'setStageAuthToken',
             'appId' => 'setAppId',
             'productId' => 'setProductId'
     ];
@@ -114,8 +98,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * instanceId  **参数说明**：实例ID。物理多租下各实例的唯一标识，建议携带该参数，在使用专业版时必须携带该参数。您可以在IoTDA管理控制台界面，选择左侧导航栏“总览”页签查看当前实例的ID，具体获取方式请参考[[查看实例详情](https://support.huaweicloud.com/usermanual-iothub/iot_01_0079.html#section1)](tag:hws) [[查看实例详情](https://support.huaweicloud.com/intl/zh-cn/usermanual-iothub/iot_01_0079.html#section1)](tag:hws_hk)。
-    * spAuthToken  **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    * stageAuthToken  **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
     * appId  **参数说明**：资源空间ID。此参数为非必选参数，存在多资源空间的用户需要使用该接口时，可以携带该参数查询指定资源空间下的产品列表，不携带该参数则会查询该用户下所有产品列表。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     * productId  **参数说明**：设备关联的产品ID，用于唯一标识一个产品模型，创建产品后获得。方法请参见 [[创建产品](https://support.huaweicloud.com/api-iothub/iot_06_v5_0050.html)](tag:hws)[[创建产品](https://support.huaweicloud.com/intl/zh-cn/api-iothub/iot_06_v5_0050.html)](tag:hws_hk)。 **取值范围**：长度不超过36，只允许字母、数字、下划线（_）、连接符（-）的组合。
     *
@@ -123,8 +105,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     */
     protected static $getters = [
             'instanceId' => 'getInstanceId',
-            'spAuthToken' => 'getSpAuthToken',
-            'stageAuthToken' => 'getStageAuthToken',
             'appId' => 'getAppId',
             'productId' => 'getProductId'
     ];
@@ -188,8 +168,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
-        $this->container['spAuthToken'] = isset($data['spAuthToken']) ? $data['spAuthToken'] : null;
-        $this->container['stageAuthToken'] = isset($data['stageAuthToken']) ? $data['stageAuthToken'] : null;
         $this->container['appId'] = isset($data['appId']) ? $data['appId'] : null;
         $this->container['productId'] = isset($data['productId']) ? $data['productId'] : null;
     }
@@ -202,12 +180,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) > 36)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be smaller than or equal to 36.";
-            }
-            if (!is_null($this->container['instanceId']) && (mb_strlen($this->container['instanceId']) < 0)) {
-                $invalidProperties[] = "invalid value for 'instanceId', the character length must be bigger than or equal to 0.";
-            }
             if (!is_null($this->container['instanceId']) && !preg_match("/[0-9a-f-]{1,36}/", $this->container['instanceId'])) {
                 $invalidProperties[] = "invalid value for 'instanceId', must be conform to the pattern /[0-9a-f-]{1,36}/.";
             }
@@ -255,54 +227,6 @@ class ListFunctionsRequest implements ModelInterface, ArrayAccess
     public function setInstanceId($instanceId)
     {
         $this->container['instanceId'] = $instanceId;
-        return $this;
-    }
-
-    /**
-    * Gets spAuthToken
-    *  **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    *
-    * @return string|null
-    */
-    public function getSpAuthToken()
-    {
-        return $this->container['spAuthToken'];
-    }
-
-    /**
-    * Sets spAuthToken
-    *
-    * @param string|null $spAuthToken **参数说明**：Sp用户Token。通过调用IoBPS服务获取SP用户Token。
-    *
-    * @return $this
-    */
-    public function setSpAuthToken($spAuthToken)
-    {
-        $this->container['spAuthToken'] = $spAuthToken;
-        return $this;
-    }
-
-    /**
-    * Gets stageAuthToken
-    *  **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
-    *
-    * @return string|null
-    */
-    public function getStageAuthToken()
-    {
-        return $this->container['stageAuthToken'];
-    }
-
-    /**
-    * Sets stageAuthToken
-    *
-    * @param string|null $stageAuthToken **参数说明**：Stage用户的Token, 仅提供给IoStage服务使用。
-    *
-    * @return $this
-    */
-    public function setStageAuthToken($stageAuthToken)
-    {
-        $this->container['stageAuthToken'] = $stageAuthToken;
         return $this;
     }
 

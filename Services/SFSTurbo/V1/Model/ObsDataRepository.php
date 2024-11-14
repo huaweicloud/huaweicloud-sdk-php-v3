@@ -22,24 +22,32 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * bucket  OBS桶名称
     * endpoint  OBS桶所在的区域域名
+    * policy  policy
+    * attributes  attributes
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'bucket' => 'string',
-            'endpoint' => 'string'
+            'endpoint' => 'string',
+            'policy' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsDataRepositoryPolicy',
+            'attributes' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsTargetAttributes'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * bucket  OBS桶名称
     * endpoint  OBS桶所在的区域域名
+    * policy  policy
+    * attributes  attributes
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'bucket' => null,
-        'endpoint' => null
+        'endpoint' => null,
+        'policy' => null,
+        'attributes' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     * and the value is the original name
     * bucket  OBS桶名称
     * endpoint  OBS桶所在的区域域名
+    * policy  policy
+    * attributes  attributes
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'bucket' => 'bucket',
-            'endpoint' => 'endpoint'
+            'endpoint' => 'endpoint',
+            'policy' => 'policy',
+            'attributes' => 'attributes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * bucket  OBS桶名称
     * endpoint  OBS桶所在的区域域名
+    * policy  policy
+    * attributes  attributes
     *
     * @var string[]
     */
     protected static $setters = [
             'bucket' => 'setBucket',
-            'endpoint' => 'setEndpoint'
+            'endpoint' => 'setEndpoint',
+            'policy' => 'setPolicy',
+            'attributes' => 'setAttributes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * bucket  OBS桶名称
     * endpoint  OBS桶所在的区域域名
+    * policy  policy
+    * attributes  attributes
     *
     * @var string[]
     */
     protected static $getters = [
             'bucket' => 'getBucket',
-            'endpoint' => 'getEndpoint'
+            'endpoint' => 'getEndpoint',
+            'policy' => 'getPolicy',
+            'attributes' => 'getAttributes'
     ];
 
     /**
@@ -159,6 +179,8 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     {
         $this->container['bucket'] = isset($data['bucket']) ? $data['bucket'] : null;
         $this->container['endpoint'] = isset($data['endpoint']) ? $data['endpoint'] : null;
+        $this->container['policy'] = isset($data['policy']) ? $data['policy'] : null;
+        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
     }
 
     /**
@@ -234,6 +256,54 @@ class ObsDataRepository implements ModelInterface, ArrayAccess
     public function setEndpoint($endpoint)
     {
         $this->container['endpoint'] = $endpoint;
+        return $this;
+    }
+
+    /**
+    * Gets policy
+    *  policy
+    *
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsDataRepositoryPolicy|null
+    */
+    public function getPolicy()
+    {
+        return $this->container['policy'];
+    }
+
+    /**
+    * Sets policy
+    *
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsDataRepositoryPolicy|null $policy policy
+    *
+    * @return $this
+    */
+    public function setPolicy($policy)
+    {
+        $this->container['policy'] = $policy;
+        return $this;
+    }
+
+    /**
+    * Gets attributes
+    *  attributes
+    *
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsTargetAttributes|null
+    */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+    * Sets attributes
+    *
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsTargetAttributes|null $attributes attributes
+    *
+    * @return $this
+    */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
         return $this;
     }
 

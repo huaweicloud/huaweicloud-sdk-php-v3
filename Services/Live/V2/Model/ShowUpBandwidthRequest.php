@@ -23,7 +23,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * publishDomains  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔，若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
     * type  类型： - RELAY：转推 不填默认查询推流
@@ -49,7 +49,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * publishDomains  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔，若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
     * type  类型： - RELAY：转推 不填默认查询推流
@@ -96,7 +96,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * publishDomains  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔，若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
     * type  类型： - RELAY：转推 不填默认查询推流
@@ -122,7 +122,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * publishDomains  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔，若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
     * type  类型： - RELAY：转推 不填默认查询推流
@@ -148,7 +148,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     * publishDomains  推流域名列表，最多支持查询100个域名，多个域名以逗号分隔，若查询多个域名，则返回的是多个域名合并数据。
     * app  应用名称。
     * stream  流名。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ： 电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * interval  查询数据的时间粒度。支持300（默认值），3600和86400秒。不传值时，使用默认值300秒。
     * type  类型： - RELAY：转推 不填默认查询推流
@@ -419,7 +419,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    *  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     *
     * @return string[]|null
     */
@@ -431,7 +431,7 @@ class ShowUpBandwidthRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string[]|null $region 区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * @param string[]|null $region 区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     *
     * @return $this
     */

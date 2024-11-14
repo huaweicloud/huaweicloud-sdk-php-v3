@@ -24,6 +24,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  动作Tag。
     * catalog  动作分类名称。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     * sampleDownloadUrl  原子动作样例文件下载地址。24小时内有效。
     *
@@ -34,6 +35,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'string',
             'actionTag' => 'string',
             'catalog' => 'string',
+            'recommendedValue' => 'int',
             'isSelected' => 'bool',
             'sampleDownloadUrl' => 'string'
     ];
@@ -44,6 +46,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  动作Tag。
     * catalog  动作分类名称。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     * sampleDownloadUrl  原子动作样例文件下载地址。24小时内有效。
     *
@@ -54,6 +57,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
         'actionNameEn' => null,
         'actionTag' => null,
         'catalog' => null,
+        'recommendedValue' => 'int32',
         'isSelected' => null,
         'sampleDownloadUrl' => null
     ];
@@ -85,6 +89,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  动作Tag。
     * catalog  动作分类名称。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     * sampleDownloadUrl  原子动作样例文件下载地址。24小时内有效。
     *
@@ -95,6 +100,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'action_name_en',
             'actionTag' => 'action_tag',
             'catalog' => 'catalog',
+            'recommendedValue' => 'recommended_value',
             'isSelected' => 'is_selected',
             'sampleDownloadUrl' => 'sample_download_url'
     ];
@@ -105,6 +111,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  动作Tag。
     * catalog  动作分类名称。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     * sampleDownloadUrl  原子动作样例文件下载地址。24小时内有效。
     *
@@ -115,6 +122,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'setActionNameEn',
             'actionTag' => 'setActionTag',
             'catalog' => 'setCatalog',
+            'recommendedValue' => 'setRecommendedValue',
             'isSelected' => 'setIsSelected',
             'sampleDownloadUrl' => 'setSampleDownloadUrl'
     ];
@@ -125,6 +133,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  动作Tag。
     * catalog  动作分类名称。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     * sampleDownloadUrl  原子动作样例文件下载地址。24小时内有效。
     *
@@ -135,6 +144,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'getActionNameEn',
             'actionTag' => 'getActionTag',
             'catalog' => 'getCatalog',
+            'recommendedValue' => 'getRecommendedValue',
             'isSelected' => 'getIsSelected',
             'sampleDownloadUrl' => 'getSampleDownloadUrl'
     ];
@@ -201,6 +211,7 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
         $this->container['actionNameEn'] = isset($data['actionNameEn']) ? $data['actionNameEn'] : null;
         $this->container['actionTag'] = isset($data['actionTag']) ? $data['actionTag'] : null;
         $this->container['catalog'] = isset($data['catalog']) ? $data['catalog'] : null;
+        $this->container['recommendedValue'] = isset($data['recommendedValue']) ? $data['recommendedValue'] : null;
         $this->container['isSelected'] = isset($data['isSelected']) ? $data['isSelected'] : null;
         $this->container['sampleDownloadUrl'] = isset($data['sampleDownloadUrl']) ? $data['sampleDownloadUrl'] : null;
     }
@@ -239,6 +250,12 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['catalog']) && (mb_strlen($this->container['catalog']) < 0)) {
                 $invalidProperties[] = "invalid value for 'catalog', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['recommendedValue']) && ($this->container['recommendedValue'] > 100)) {
+                $invalidProperties[] = "invalid value for 'recommendedValue', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['recommendedValue']) && ($this->container['recommendedValue'] < 0)) {
+                $invalidProperties[] = "invalid value for 'recommendedValue', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['sampleDownloadUrl']) && (mb_strlen($this->container['sampleDownloadUrl']) > 2048)) {
                 $invalidProperties[] = "invalid value for 'sampleDownloadUrl', the character length must be smaller than or equal to 2048.";
@@ -353,6 +370,30 @@ class ActionSampleInfo implements ModelInterface, ArrayAccess
     public function setCatalog($catalog)
     {
         $this->container['catalog'] = $catalog;
+        return $this;
+    }
+
+    /**
+    * Gets recommendedValue
+    *  推荐等级。
+    *
+    * @return int|null
+    */
+    public function getRecommendedValue()
+    {
+        return $this->container['recommendedValue'];
+    }
+
+    /**
+    * Sets recommendedValue
+    *
+    * @param int|null $recommendedValue 推荐等级。
+    *
+    * @return $this
+    */
+    public function setRecommendedValue($recommendedValue)
+    {
+        $this->container['recommendedValue'] = $recommendedValue;
         return $this;
     }
 

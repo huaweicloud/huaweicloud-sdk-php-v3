@@ -219,7 +219,24 @@ class OneHpcCacheTaskInfoResp implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_SUCCESS = 'SUCCESS';
+    const STATUS_DOING = 'DOING';
+    const STATUS_FAIL = 'FAIL';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_SUCCESS,
+            self::STATUS_DOING,
+            self::STATUS_FAIL,
+        ];
+    }
 
 
     /**
@@ -266,6 +283,14 @@ class OneHpcCacheTaskInfoResp implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         if ($this->container['srcTarget'] === null) {
             $invalidProperties[] = "'srcTarget' can't be null";
         }

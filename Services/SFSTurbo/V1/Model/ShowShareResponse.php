@@ -28,22 +28,28 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * azName  SFS Turbo文件系统所在可用区名称。
     * createdAt  创建时间。UTC时间，例如：2018-11-19T04:02:03
     * cryptKeyId  用户指定的加密密钥ID，非加密盘时不返回。
-    * expandType  如果是增强型文件系统，该字段返回bandwidth，否则不返回。
-    * exportLocation  SFS Turbo文件系统的挂载端点。
+    * expandType  如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
+    * exportLocation  SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     * id  SFS Turbo的文件系统ID。
     * name  创建时指定的SFS Turbo文件系统名称。
-    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
-    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    * subStatus  SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
     * tags  tag标签的列表。
+    * optionalEndpoint  可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    * hpcBw  文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    * instanceId  文件系统规格的节点id，为预留字段，不具备实际含义。
+    * instanceType  文件系统规格的节点类型，为预留字段，不具备实际含义。
+    * statusDetail  文件系统的请求ID，为预留字段，不具备实际含义。
+    * features  features
     *
     * @var string[]
     */
@@ -70,7 +76,13 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
             'subnetId' => 'string',
             'vpcId' => 'string',
             'enterpriseProjectId' => 'string',
-            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]'
+            'tags' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ResourceTag[]',
+            'optionalEndpoint' => 'string',
+            'hpcBw' => 'string',
+            'instanceId' => 'string',
+            'instanceType' => 'string',
+            'statusDetail' => 'string',
+            'features' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ShareInfoFeatures'
     ];
 
     /**
@@ -82,22 +94,28 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * azName  SFS Turbo文件系统所在可用区名称。
     * createdAt  创建时间。UTC时间，例如：2018-11-19T04:02:03
     * cryptKeyId  用户指定的加密密钥ID，非加密盘时不返回。
-    * expandType  如果是增强型文件系统，该字段返回bandwidth，否则不返回。
-    * exportLocation  SFS Turbo文件系统的挂载端点。
+    * expandType  如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
+    * exportLocation  SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     * id  SFS Turbo的文件系统ID。
     * name  创建时指定的SFS Turbo文件系统名称。
-    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
-    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    * subStatus  SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
     * tags  tag标签的列表。
+    * optionalEndpoint  可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    * hpcBw  文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    * instanceId  文件系统规格的节点id，为预留字段，不具备实际含义。
+    * instanceType  文件系统规格的节点类型，为预留字段，不具备实际含义。
+    * statusDetail  文件系统的请求ID，为预留字段，不具备实际含义。
+    * features  features
     *
     * @var string[]
     */
@@ -124,7 +142,13 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
         'subnetId' => null,
         'vpcId' => null,
         'enterpriseProjectId' => null,
-        'tags' => null
+        'tags' => null,
+        'optionalEndpoint' => null,
+        'hpcBw' => null,
+        'instanceId' => null,
+        'instanceType' => null,
+        'statusDetail' => null,
+        'features' => null
     ];
 
     /**
@@ -157,22 +181,28 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * azName  SFS Turbo文件系统所在可用区名称。
     * createdAt  创建时间。UTC时间，例如：2018-11-19T04:02:03
     * cryptKeyId  用户指定的加密密钥ID，非加密盘时不返回。
-    * expandType  如果是增强型文件系统，该字段返回bandwidth，否则不返回。
-    * exportLocation  SFS Turbo文件系统的挂载端点。
+    * expandType  如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
+    * exportLocation  SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     * id  SFS Turbo的文件系统ID。
     * name  创建时指定的SFS Turbo文件系统名称。
-    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
-    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    * subStatus  SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
     * tags  tag标签的列表。
+    * optionalEndpoint  可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    * hpcBw  文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    * instanceId  文件系统规格的节点id，为预留字段，不具备实际含义。
+    * instanceType  文件系统规格的节点类型，为预留字段，不具备实际含义。
+    * statusDetail  文件系统的请求ID，为预留字段，不具备实际含义。
+    * features  features
     *
     * @var string[]
     */
@@ -199,7 +229,13 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
             'subnetId' => 'subnet_id',
             'vpcId' => 'vpc_id',
             'enterpriseProjectId' => 'enterprise_project_id',
-            'tags' => 'tags'
+            'tags' => 'tags',
+            'optionalEndpoint' => 'optional_endpoint',
+            'hpcBw' => 'hpc_bw',
+            'instanceId' => 'instanceId',
+            'instanceType' => 'instanceType',
+            'statusDetail' => 'statusDetail',
+            'features' => 'features'
     ];
 
     /**
@@ -211,22 +247,28 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * azName  SFS Turbo文件系统所在可用区名称。
     * createdAt  创建时间。UTC时间，例如：2018-11-19T04:02:03
     * cryptKeyId  用户指定的加密密钥ID，非加密盘时不返回。
-    * expandType  如果是增强型文件系统，该字段返回bandwidth，否则不返回。
-    * exportLocation  SFS Turbo文件系统的挂载端点。
+    * expandType  如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
+    * exportLocation  SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     * id  SFS Turbo的文件系统ID。
     * name  创建时指定的SFS Turbo文件系统名称。
-    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
-    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    * subStatus  SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
     * tags  tag标签的列表。
+    * optionalEndpoint  可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    * hpcBw  文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    * instanceId  文件系统规格的节点id，为预留字段，不具备实际含义。
+    * instanceType  文件系统规格的节点类型，为预留字段，不具备实际含义。
+    * statusDetail  文件系统的请求ID，为预留字段，不具备实际含义。
+    * features  features
     *
     * @var string[]
     */
@@ -253,7 +295,13 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
             'subnetId' => 'setSubnetId',
             'vpcId' => 'setVpcId',
             'enterpriseProjectId' => 'setEnterpriseProjectId',
-            'tags' => 'setTags'
+            'tags' => 'setTags',
+            'optionalEndpoint' => 'setOptionalEndpoint',
+            'hpcBw' => 'setHpcBw',
+            'instanceId' => 'setInstanceId',
+            'instanceType' => 'setInstanceType',
+            'statusDetail' => 'setStatusDetail',
+            'features' => 'setFeatures'
     ];
 
     /**
@@ -265,22 +313,28 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     * azName  SFS Turbo文件系统所在可用区名称。
     * createdAt  创建时间。UTC时间，例如：2018-11-19T04:02:03
     * cryptKeyId  用户指定的加密密钥ID，非加密盘时不返回。
-    * expandType  如果是增强型文件系统，该字段返回bandwidth，否则不返回。
-    * exportLocation  SFS Turbo文件系统的挂载端点。
+    * expandType  如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
+    * exportLocation  SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     * id  SFS Turbo的文件系统ID。
     * name  创建时指定的SFS Turbo文件系统名称。
-    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    * payModel  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     * region  SFS Turbo文件系统所在区域。
     * securityGroupId  用户指定的安全组ID。
     * shareProto  SFS Turbo文件系统的协议类型，当前为NFS
     * shareType  SFS Turbo文件系统性能类型，包括“STANDARD”标准型和“PERFORMANCE”性能型。
     * size  SFS Turbo文件系统总容量，单位GB。
     * status  SFS Turbo文件系统的状态。'100'表示创建中，'200'表示可用，'303'表示创建失败，'800'表示实例被冻结。
-    * subStatus  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    * subStatus  SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     * subnetId  用户指定的子网的网络ID。
     * vpcId  用户指定的VPC ID。
     * enterpriseProjectId  SFS Turbo文件系统绑定的企业项目ID。
     * tags  tag标签的列表。
+    * optionalEndpoint  可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    * hpcBw  文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    * instanceId  文件系统规格的节点id，为预留字段，不具备实际含义。
+    * instanceType  文件系统规格的节点类型，为预留字段，不具备实际含义。
+    * statusDetail  文件系统的请求ID，为预留字段，不具备实际含义。
+    * features  features
     *
     * @var string[]
     */
@@ -307,7 +361,13 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
             'subnetId' => 'getSubnetId',
             'vpcId' => 'getVpcId',
             'enterpriseProjectId' => 'getEnterpriseProjectId',
-            'tags' => 'getTags'
+            'tags' => 'getTags',
+            'optionalEndpoint' => 'getOptionalEndpoint',
+            'hpcBw' => 'getHpcBw',
+            'instanceId' => 'getInstanceId',
+            'instanceType' => 'getInstanceType',
+            'statusDetail' => 'getStatusDetail',
+            'features' => 'getFeatures'
     ];
 
     /**
@@ -406,6 +466,12 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
         $this->container['vpcId'] = isset($data['vpcId']) ? $data['vpcId'] : null;
         $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
+        $this->container['optionalEndpoint'] = isset($data['optionalEndpoint']) ? $data['optionalEndpoint'] : null;
+        $this->container['hpcBw'] = isset($data['hpcBw']) ? $data['hpcBw'] : null;
+        $this->container['instanceId'] = isset($data['instanceId']) ? $data['instanceId'] : null;
+        $this->container['instanceType'] = isset($data['instanceType']) ? $data['instanceType'] : null;
+        $this->container['statusDetail'] = isset($data['statusDetail']) ? $data['statusDetail'] : null;
+        $this->container['features'] = isset($data['features']) ? $data['features'] : null;
     }
 
     /**
@@ -608,7 +674,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets expandType
-    *  如果是增强型文件系统，该字段返回bandwidth，否则不返回。
+    *  如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
     *
     * @return string|null
     */
@@ -620,7 +686,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets expandType
     *
-    * @param string|null $expandType 如果是增强型文件系统，该字段返回bandwidth，否则不返回。
+    * @param string|null $expandType 如果是增强版文件系统，该字段返回bandwidth；如果是20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB，该字段返回hpc；否则不返回。
     *
     * @return $this
     */
@@ -632,7 +698,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets exportLocation
-    *  SFS Turbo文件系统的挂载端点。
+    *  SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     *
     * @return string|null
     */
@@ -644,7 +710,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets exportLocation
     *
-    * @param string|null $exportLocation SFS Turbo文件系统的挂载端点。
+    * @param string|null $exportLocation SFS Turbo文件系统的挂载端点。例如\"192.168.0.90:/\"。如果文件系统正在创建，该字段不返回。
     *
     * @return $this
     */
@@ -704,7 +770,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets payModel
-    *  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    *  SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     *
     * @return string|null
     */
@@ -716,7 +782,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets payModel
     *
-    * @param string|null $payModel SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。
+    * @param string|null $payModel SFS Turbo文件系统的计费模式。'0'代表按需付费，'1'代表包周期计费。如果文件系统正在创建，该字段不返回。
     *
     * @return $this
     */
@@ -872,7 +938,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets subStatus
-    *  SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    *  SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     *
     * @return string|null
     */
@@ -884,7 +950,7 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     /**
     * Sets subStatus
     *
-    * @param string|null $subStatus SFS Turbo文件系统的子状态。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中； '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功； '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败；
+    * @param string|null $subStatus SFS Turbo文件系统的子状态。当用户未对文件系统有修改类操作时，该字段不返回。 '121'表示扩容中；'132'表示修改安全组中；'137'表示添加VPC中；'138'表示删除VPC中；'150'表示配置联动后端中；'151'表示删除联动后端配置中。 '221'表示扩容成功；'232'表示修改安全组成功；'237'表示添加VPC成功；'238'表示删除VPC成功；'250'表示配置联动后端成功；'251'表示删除联动后端配置成功。 '321'表示扩容失败；'332'表示修改安全组失败；'337'表示添加VPC失败；'338'表示删除VPC失败；'350'表示配置联动后端失败；'351'表示删除联动后端配置失败。
     *
     * @return $this
     */
@@ -987,6 +1053,150 @@ class ShowShareResponse implements ModelInterface, ArrayAccess
     public function setTags($tags)
     {
         $this->container['tags'] = $tags;
+        return $this;
+    }
+
+    /**
+    * Gets optionalEndpoint
+    *  可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    *
+    * @return string|null
+    */
+    public function getOptionalEndpoint()
+    {
+        return $this->container['optionalEndpoint'];
+    }
+
+    /**
+    * Sets optionalEndpoint
+    *
+    * @param string|null $optionalEndpoint 可选的挂载IP地址。上一代文件系统规格类型不返回该字段。
+    *
+    * @return $this
+    */
+    public function setOptionalEndpoint($optionalEndpoint)
+    {
+        $this->container['optionalEndpoint'] = $optionalEndpoint;
+        return $this;
+    }
+
+    /**
+    * Gets hpcBw
+    *  文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    *
+    * @return string|null
+    */
+    public function getHpcBw()
+    {
+        return $this->container['hpcBw'];
+    }
+
+    /**
+    * Sets hpcBw
+    *
+    * @param string|null $hpcBw 文件系统的带宽规格。 - \"20M\"表示20MB/s/TiB - \"40M\"表示40MB/s/TiB - \"125M\"表示125MB/s/TiB - \"250M\"表示250MB/s/TiB - \"500M\"表示500MB/s/TiB  - \"1000M\"表示1000MB/s/TiB  - \"2G\"、\"4G\"、\"8G\"、\"16G\"、\"24G\"、\"32G\"或\"48G\"表示HPC缓存型的带宽规格。
+    *
+    * @return $this
+    */
+    public function setHpcBw($hpcBw)
+    {
+        $this->container['hpcBw'] = $hpcBw;
+        return $this;
+    }
+
+    /**
+    * Gets instanceId
+    *  文件系统规格的节点id，为预留字段，不具备实际含义。
+    *
+    * @return string|null
+    */
+    public function getInstanceId()
+    {
+        return $this->container['instanceId'];
+    }
+
+    /**
+    * Sets instanceId
+    *
+    * @param string|null $instanceId 文件系统规格的节点id，为预留字段，不具备实际含义。
+    *
+    * @return $this
+    */
+    public function setInstanceId($instanceId)
+    {
+        $this->container['instanceId'] = $instanceId;
+        return $this;
+    }
+
+    /**
+    * Gets instanceType
+    *  文件系统规格的节点类型，为预留字段，不具备实际含义。
+    *
+    * @return string|null
+    */
+    public function getInstanceType()
+    {
+        return $this->container['instanceType'];
+    }
+
+    /**
+    * Sets instanceType
+    *
+    * @param string|null $instanceType 文件系统规格的节点类型，为预留字段，不具备实际含义。
+    *
+    * @return $this
+    */
+    public function setInstanceType($instanceType)
+    {
+        $this->container['instanceType'] = $instanceType;
+        return $this;
+    }
+
+    /**
+    * Gets statusDetail
+    *  文件系统的请求ID，为预留字段，不具备实际含义。
+    *
+    * @return string|null
+    */
+    public function getStatusDetail()
+    {
+        return $this->container['statusDetail'];
+    }
+
+    /**
+    * Sets statusDetail
+    *
+    * @param string|null $statusDetail 文件系统的请求ID，为预留字段，不具备实际含义。
+    *
+    * @return $this
+    */
+    public function setStatusDetail($statusDetail)
+    {
+        $this->container['statusDetail'] = $statusDetail;
+        return $this;
+    }
+
+    /**
+    * Gets features
+    *  features
+    *
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShareInfoFeatures|null
+    */
+    public function getFeatures()
+    {
+        return $this->container['features'];
+    }
+
+    /**
+    * Sets features
+    *
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ShareInfoFeatures|null $features features
+    *
+    * @return $this
+    */
+    public function setFeatures($features)
+    {
+        $this->container['features'] = $features;
         return $this;
     }
 

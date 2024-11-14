@@ -20,11 +20,12 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     * srcTarget  联动目录名称
-    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     * destTarget  目前只支持和src_target保持一致
     * destPrefix  目前只支持和src_prefix保持一致
+    * attributes  attributes
     *
     * @var string[]
     */
@@ -33,16 +34,18 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
             'srcTarget' => 'string',
             'srcPrefix' => 'string',
             'destTarget' => 'string',
-            'destPrefix' => 'string'
+            'destPrefix' => 'string',
+            'attributes' => '\HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsTargetAttributes'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     * srcTarget  联动目录名称
-    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     * destTarget  目前只支持和src_target保持一致
     * destPrefix  目前只支持和src_prefix保持一致
+    * attributes  attributes
     *
     * @var string[]
     */
@@ -51,7 +54,8 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
         'srcTarget' => null,
         'srcPrefix' => null,
         'destTarget' => null,
-        'destPrefix' => null
+        'destPrefix' => null,
+        'attributes' => null
     ];
 
     /**
@@ -77,11 +81,12 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     * srcTarget  联动目录名称
-    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     * destTarget  目前只支持和src_target保持一致
     * destPrefix  目前只支持和src_prefix保持一致
+    * attributes  attributes
     *
     * @var string[]
     */
@@ -90,16 +95,18 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
             'srcTarget' => 'src_target',
             'srcPrefix' => 'src_prefix',
             'destTarget' => 'dest_target',
-            'destPrefix' => 'dest_prefix'
+            'destPrefix' => 'dest_prefix',
+            'attributes' => 'attributes'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     * srcTarget  联动目录名称
-    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     * destTarget  目前只支持和src_target保持一致
     * destPrefix  目前只支持和src_prefix保持一致
+    * attributes  attributes
     *
     * @var string[]
     */
@@ -108,16 +115,18 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
             'srcTarget' => 'setSrcTarget',
             'srcPrefix' => 'setSrcPrefix',
             'destTarget' => 'setDestTarget',
-            'destPrefix' => 'setDestPrefix'
+            'destPrefix' => 'setDestPrefix',
+            'attributes' => 'setAttributes'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    * type  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     * srcTarget  联动目录名称
-    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    * srcPrefix  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     * destTarget  目前只支持和src_target保持一致
     * destPrefix  目前只支持和src_prefix保持一致
+    * attributes  attributes
     *
     * @var string[]
     */
@@ -126,7 +135,8 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
             'srcTarget' => 'getSrcTarget',
             'srcPrefix' => 'getSrcPrefix',
             'destTarget' => 'getDestTarget',
-            'destPrefix' => 'getDestPrefix'
+            'destPrefix' => 'getDestPrefix',
+            'attributes' => 'getAttributes'
     ];
 
     /**
@@ -211,6 +221,7 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
         $this->container['srcPrefix'] = isset($data['srcPrefix']) ? $data['srcPrefix'] : null;
         $this->container['destTarget'] = isset($data['destTarget']) ? $data['destTarget'] : null;
         $this->container['destPrefix'] = isset($data['destPrefix']) ? $data['destPrefix'] : null;
+        $this->container['attributes'] = isset($data['attributes']) ? $data['attributes'] : null;
     }
 
     /**
@@ -254,7 +265,7 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets type
-    *  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    *  任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     *
     * @return string
     */
@@ -266,7 +277,7 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets type
     *
-    * @param string $type 任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。 附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo HPC型导出时的附加元数据（如uid、gid、mode）。 快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据（uid:0、gid:0、目录权限:755、文件权限:644）。 数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。 数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
+    * @param string $type 任务类型，当前支持import(附加元数据导入)，import_metadata(快速导入)，preload(数据预热)，export(导出)。  附加元数据导入方式会导入OBS对象的元数据（名称、大小、最后修改时间）以及来源于SFS Turbo 导出时的附加元数据（如uid、gid、mode）。  快速导入方式仅会导入OBS对象的元数据（名称、大小、最后修改时间），不会导入其它附加元数据（如uid、gid、mode），SFS Turbo会生成默认的附加元数据。  数据预热功能会同时导入元数据和数据内容，数据预热中的元数据导入采用快速导入方式，不会导入其它附加元数据（如uid、gid、mode）。  数据导出功能会将您在联动目录里创建的文件，以及对从OBS导入后又做过修改的文件导出存储到OBS桶里。
     *
     * @return $this
     */
@@ -302,7 +313,7 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets srcPrefix
-    *  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    *  导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     *
     * @return string|null
     */
@@ -314,7 +325,7 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
     /**
     * Sets srcPrefix
     *
-    * @param string|null $srcPrefix 导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。 对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。 如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
+    * @param string|null $srcPrefix 导入导出任务的源端路径前缀，导入时不需要包含OBS桶名，导出时不需要包含联动目录名称。  对于数据预热导入，携带源端路径前缀时必须是以“/”结尾的目录或具体到某个对象。  如果不带该字段，导入时会导入绑定OBS桶内的所有对象，导出时会导出联动目录下的所有文件。
     *
     * @return $this
     */
@@ -369,6 +380,30 @@ class CreateHpcCacheTaskReq implements ModelInterface, ArrayAccess
     public function setDestPrefix($destPrefix)
     {
         $this->container['destPrefix'] = $destPrefix;
+        return $this;
+    }
+
+    /**
+    * Gets attributes
+    *  attributes
+    *
+    * @return \HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsTargetAttributes|null
+    */
+    public function getAttributes()
+    {
+        return $this->container['attributes'];
+    }
+
+    /**
+    * Sets attributes
+    *
+    * @param \HuaweiCloud\SDK\SFSTurbo\V1\Model\ObsTargetAttributes|null $attributes attributes
+    *
+    * @return $this
+    */
+    public function setAttributes($attributes)
+    {
+        $this->container['attributes'] = $attributes;
         return $this;
     }
 

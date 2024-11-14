@@ -24,8 +24,8 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     * path  合法的已存在的目录的全路径
     * capacity  目录的容量大小，单位：MB
     * inode  目录的inode数量限制
-    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
-    * usedInode  目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
+    * usedInode  目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @var string[]
     */
@@ -42,8 +42,8 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     * path  合法的已存在的目录的全路径
     * capacity  目录的容量大小，单位：MB
     * inode  目录的inode数量限制
-    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
-    * usedInode  目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
+    * usedInode  目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @var string[]
     */
@@ -81,8 +81,8 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     * path  合法的已存在的目录的全路径
     * capacity  目录的容量大小，单位：MB
     * inode  目录的inode数量限制
-    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
-    * usedInode  目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
+    * usedInode  目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @var string[]
     */
@@ -99,8 +99,8 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     * path  合法的已存在的目录的全路径
     * capacity  目录的容量大小，单位：MB
     * inode  目录的inode数量限制
-    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
-    * usedInode  目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
+    * usedInode  目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @var string[]
     */
@@ -117,8 +117,8 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     * path  合法的已存在的目录的全路径
     * capacity  目录的容量大小，单位：MB
     * inode  目录的inode数量限制
-    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
-    * usedInode  目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    * usedCapacity  目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
+    * usedInode  目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @var string[]
     */
@@ -291,7 +291,7 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedCapacity
-    *  目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
+    *  目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @return int|null
     */
@@ -303,7 +303,7 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedCapacity
     *
-    * @param int|null $usedCapacity 目录已使用的容量大小，单位：MB。仅SFSTurbo HPC型返回该字段
+    * @param int|null $usedCapacity 目录已使用的容量大小，单位：MB。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @return $this
     */
@@ -315,7 +315,7 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets usedInode
-    *  目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    *  目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @return int|null
     */
@@ -327,7 +327,7 @@ class CreateFsDirQuotaResponse implements ModelInterface, ArrayAccess
     /**
     * Sets usedInode
     *
-    * @param int|null $usedInode 目录的已使用的inode数量。仅SFSTurbo HPC型返回该字段
+    * @param int|null $usedInode 目录的已使用的inode数量。仅SFSTurbo 20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB返回该字段
     *
     * @return $this
     */

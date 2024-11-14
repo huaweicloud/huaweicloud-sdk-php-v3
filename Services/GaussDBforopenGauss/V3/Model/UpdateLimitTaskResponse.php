@@ -127,7 +127,7 @@ class UpdateLimitTaskResponse implements ModelInterface, ArrayAccess
             'cpuUtilization' => 'cpu_utilization',
             'memoryUtilization' => 'memory_utilization',
             'ruleName' => 'rule_name',
-            'jobId' => 'jobId'
+            'jobId' => 'job_id'
     ];
 
     /**

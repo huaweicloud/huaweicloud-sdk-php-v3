@@ -210,7 +210,26 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     {
         return self::$openAPIModelName;
     }
+    const STATUS_SUCCESS = 'success';
+    const STATUS_FAILED = 'failed';
+    const STATUS_WAITING = 'waiting';
+    const STATUS_RUNNING = 'running';
     
+
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_SUCCESS,
+            self::STATUS_FAILED,
+            self::STATUS_WAITING,
+            self::STATUS_RUNNING,
+        ];
+    }
 
 
     /**
@@ -247,6 +266,14 @@ class ShowJobDetailResponse implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 

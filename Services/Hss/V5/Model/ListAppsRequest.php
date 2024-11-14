@@ -268,13 +268,10 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-        if ($this->container['hostId'] === null) {
-            $invalidProperties[] = "'hostId' can't be null";
-        }
-            if ((mb_strlen($this->container['hostId']) > 128)) {
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) > 128)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be smaller than or equal to 128.";
             }
-            if ((mb_strlen($this->container['hostId']) < 0)) {
+            if (!is_null($this->container['hostId']) && (mb_strlen($this->container['hostId']) < 0)) {
                 $invalidProperties[] = "invalid value for 'hostId', the character length must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['hostName']) && (mb_strlen($this->container['hostName']) > 128)) {
@@ -349,7 +346,7 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     * Gets hostId
     *  主机id
     *
-    * @return string
+    * @return string|null
     */
     public function getHostId()
     {
@@ -359,7 +356,7 @@ class ListAppsRequest implements ModelInterface, ArrayAccess
     /**
     * Sets hostId
     *
-    * @param string $hostId 主机id
+    * @param string|null $hostId 主机id
     *
     * @return $this
     */

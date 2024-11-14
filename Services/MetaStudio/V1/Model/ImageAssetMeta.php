@@ -33,7 +33,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
             'codec' => 'string',
             'width' => 'int',
             'height' => 'int',
-            'size' => 'float',
+            'size' => 'int',
             'mode' => 'string',
             'errorInfo' => '\HuaweiCloud\SDK\MetaStudio\V1\Model\ErrorResponse'
     ];
@@ -350,7 +350,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     * Gets size
     *  **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
-    * @return float|null
+    * @return int|null
     */
     public function getSize()
     {
@@ -360,7 +360,7 @@ class ImageAssetMeta implements ModelInterface, ArrayAccess
     /**
     * Sets size
     *
-    * @param float|null $size **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
+    * @param int|null $size **参数解释**： 图片大小。 **约束限制**： 用户无需填写，系统自行提取。 **默认取值**： 不涉及。
     *
     * @return $this
     */

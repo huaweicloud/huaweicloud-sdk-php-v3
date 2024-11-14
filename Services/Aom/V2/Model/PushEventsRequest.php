@@ -20,28 +20,28 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * xEnterprisePrjectId  告警所属的企业项目id。
+    * enterpriseProjectId  告警所属的企业项目id。
     * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPITypes = [
-            'xEnterprisePrjectId' => 'string',
+            'enterpriseProjectId' => 'string',
             'action' => 'string',
             'body' => '\HuaweiCloud\SDK\Aom\V2\Model\EventList'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * xEnterprisePrjectId  告警所属的企业项目id。
+    * enterpriseProjectId  告警所属的企业项目id。
     * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
     * body  body
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
-        'xEnterprisePrjectId' => null,
+        'enterpriseProjectId' => null,
         'action' => null,
         'body' => null
     ];
@@ -69,42 +69,42 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * xEnterprisePrjectId  告警所属的企业项目id。
+    * enterpriseProjectId  告警所属的企业项目id。
     * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
     * body  body
     *
     * @var string[]
     */
     protected static $attributeMap = [
-            'xEnterprisePrjectId' => 'x-enterprise-prject-id',
+            'enterpriseProjectId' => 'enterprise-project-id',
             'action' => 'action',
             'body' => 'body'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * xEnterprisePrjectId  告警所属的企业项目id。
+    * enterpriseProjectId  告警所属的企业项目id。
     * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
     * body  body
     *
     * @var string[]
     */
     protected static $setters = [
-            'xEnterprisePrjectId' => 'setXEnterprisePrjectId',
+            'enterpriseProjectId' => 'setEnterpriseProjectId',
             'action' => 'setAction',
             'body' => 'setBody'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * xEnterprisePrjectId  告警所属的企业项目id。
+    * enterpriseProjectId  告警所属的企业项目id。
     * action  接口请求动作。action=clear代表清除告警，不传或者传其他值默认为上报动作。
     * body  body
     *
     * @var string[]
     */
     protected static $getters = [
-            'xEnterprisePrjectId' => 'getXEnterprisePrjectId',
+            'enterpriseProjectId' => 'getEnterpriseProjectId',
             'action' => 'getAction',
             'body' => 'getBody'
     ];
@@ -180,7 +180,7 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
     */
     public function __construct(array $data = null)
     {
-        $this->container['xEnterprisePrjectId'] = isset($data['xEnterprisePrjectId']) ? $data['xEnterprisePrjectId'] : null;
+        $this->container['enterpriseProjectId'] = isset($data['enterpriseProjectId']) ? $data['enterpriseProjectId'] : null;
         $this->container['action'] = isset($data['action']) ? $data['action'] : null;
         $this->container['body'] = isset($data['body']) ? $data['body'] : null;
     }
@@ -216,26 +216,26 @@ class PushEventsRequest implements ModelInterface, ArrayAccess
     }
 
     /**
-    * Gets xEnterprisePrjectId
+    * Gets enterpriseProjectId
     *  告警所属的企业项目id。
     *
     * @return string|null
     */
-    public function getXEnterprisePrjectId()
+    public function getEnterpriseProjectId()
     {
-        return $this->container['xEnterprisePrjectId'];
+        return $this->container['enterpriseProjectId'];
     }
 
     /**
-    * Sets xEnterprisePrjectId
+    * Sets enterpriseProjectId
     *
-    * @param string|null $xEnterprisePrjectId 告警所属的企业项目id。
+    * @param string|null $enterpriseProjectId 告警所属的企业项目id。
     *
     * @return $this
     */
-    public function setXEnterprisePrjectId($xEnterprisePrjectId)
+    public function setEnterpriseProjectId($enterpriseProjectId)
     {
-        $this->container['xEnterprisePrjectId'] = $xEnterprisePrjectId;
+        $this->container['enterpriseProjectId'] = $enterpriseProjectId;
         return $this;
     }
 

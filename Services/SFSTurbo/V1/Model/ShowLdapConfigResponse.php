@@ -25,6 +25,10 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
     * baseDn  数据库中的域
     * userDn  用户区别名
     * filterCondition  过滤条件。保留字段，暂不支持
+    * backupUrl  ldap备节点的url
+    * schema  ldap的schema，不填写则默认为RFC2307
+    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
     *
     * @var string[]
     */
@@ -32,7 +36,11 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
             'url' => 'string',
             'baseDn' => 'string',
             'userDn' => 'string',
-            'filterCondition' => 'string'
+            'filterCondition' => 'string',
+            'backupUrl' => 'string',
+            'schema' => 'string',
+            'searchTimeout' => 'int',
+            'allowLocalUser' => 'string'
     ];
 
     /**
@@ -41,6 +49,10 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
     * baseDn  数据库中的域
     * userDn  用户区别名
     * filterCondition  过滤条件。保留字段，暂不支持
+    * backupUrl  ldap备节点的url
+    * schema  ldap的schema，不填写则默认为RFC2307
+    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
     *
     * @var string[]
     */
@@ -48,7 +60,11 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
         'url' => null,
         'baseDn' => null,
         'userDn' => null,
-        'filterCondition' => null
+        'filterCondition' => null,
+        'backupUrl' => null,
+        'schema' => null,
+        'searchTimeout' => null,
+        'allowLocalUser' => null
     ];
 
     /**
@@ -78,6 +94,10 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
     * baseDn  数据库中的域
     * userDn  用户区别名
     * filterCondition  过滤条件。保留字段，暂不支持
+    * backupUrl  ldap备节点的url
+    * schema  ldap的schema，不填写则默认为RFC2307
+    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
     *
     * @var string[]
     */
@@ -85,7 +105,11 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
             'url' => 'url',
             'baseDn' => 'base_dn',
             'userDn' => 'user_dn',
-            'filterCondition' => 'filter_condition'
+            'filterCondition' => 'filter_condition',
+            'backupUrl' => 'backup_url',
+            'schema' => 'schema',
+            'searchTimeout' => 'search_timeout',
+            'allowLocalUser' => 'allow_local_user'
     ];
 
     /**
@@ -94,6 +118,10 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
     * baseDn  数据库中的域
     * userDn  用户区别名
     * filterCondition  过滤条件。保留字段，暂不支持
+    * backupUrl  ldap备节点的url
+    * schema  ldap的schema，不填写则默认为RFC2307
+    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
     *
     * @var string[]
     */
@@ -101,7 +129,11 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
             'url' => 'setUrl',
             'baseDn' => 'setBaseDn',
             'userDn' => 'setUserDn',
-            'filterCondition' => 'setFilterCondition'
+            'filterCondition' => 'setFilterCondition',
+            'backupUrl' => 'setBackupUrl',
+            'schema' => 'setSchema',
+            'searchTimeout' => 'setSearchTimeout',
+            'allowLocalUser' => 'setAllowLocalUser'
     ];
 
     /**
@@ -110,6 +142,10 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
     * baseDn  数据库中的域
     * userDn  用户区别名
     * filterCondition  过滤条件。保留字段，暂不支持
+    * backupUrl  ldap备节点的url
+    * schema  ldap的schema，不填写则默认为RFC2307
+    * searchTimeout  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    * allowLocalUser  访问ldap服务器失败后是否允许使用本地用户鉴权
     *
     * @var string[]
     */
@@ -117,7 +153,11 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
             'url' => 'getUrl',
             'baseDn' => 'getBaseDn',
             'userDn' => 'getUserDn',
-            'filterCondition' => 'getFilterCondition'
+            'filterCondition' => 'getFilterCondition',
+            'backupUrl' => 'getBackupUrl',
+            'schema' => 'getSchema',
+            'searchTimeout' => 'getSearchTimeout',
+            'allowLocalUser' => 'getAllowLocalUser'
     ];
 
     /**
@@ -182,6 +222,10 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
         $this->container['baseDn'] = isset($data['baseDn']) ? $data['baseDn'] : null;
         $this->container['userDn'] = isset($data['userDn']) ? $data['userDn'] : null;
         $this->container['filterCondition'] = isset($data['filterCondition']) ? $data['filterCondition'] : null;
+        $this->container['backupUrl'] = isset($data['backupUrl']) ? $data['backupUrl'] : null;
+        $this->container['schema'] = isset($data['schema']) ? $data['schema'] : null;
+        $this->container['searchTimeout'] = isset($data['searchTimeout']) ? $data['searchTimeout'] : null;
+        $this->container['allowLocalUser'] = isset($data['allowLocalUser']) ? $data['allowLocalUser'] : null;
     }
 
     /**
@@ -299,6 +343,102 @@ class ShowLdapConfigResponse implements ModelInterface, ArrayAccess
     public function setFilterCondition($filterCondition)
     {
         $this->container['filterCondition'] = $filterCondition;
+        return $this;
+    }
+
+    /**
+    * Gets backupUrl
+    *  ldap备节点的url
+    *
+    * @return string|null
+    */
+    public function getBackupUrl()
+    {
+        return $this->container['backupUrl'];
+    }
+
+    /**
+    * Sets backupUrl
+    *
+    * @param string|null $backupUrl ldap备节点的url
+    *
+    * @return $this
+    */
+    public function setBackupUrl($backupUrl)
+    {
+        $this->container['backupUrl'] = $backupUrl;
+        return $this;
+    }
+
+    /**
+    * Gets schema
+    *  ldap的schema，不填写则默认为RFC2307
+    *
+    * @return string|null
+    */
+    public function getSchema()
+    {
+        return $this->container['schema'];
+    }
+
+    /**
+    * Sets schema
+    *
+    * @param string|null $schema ldap的schema，不填写则默认为RFC2307
+    *
+    * @return $this
+    */
+    public function setSchema($schema)
+    {
+        $this->container['schema'] = $schema;
+        return $this;
+    }
+
+    /**
+    * Gets searchTimeout
+    *  ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    *
+    * @return int|null
+    */
+    public function getSearchTimeout()
+    {
+        return $this->container['searchTimeout'];
+    }
+
+    /**
+    * Sets searchTimeout
+    *
+    * @param int|null $searchTimeout ldap搜索的超时时间，单位为秒。不填写则默认为3秒
+    *
+    * @return $this
+    */
+    public function setSearchTimeout($searchTimeout)
+    {
+        $this->container['searchTimeout'] = $searchTimeout;
+        return $this;
+    }
+
+    /**
+    * Gets allowLocalUser
+    *  访问ldap服务器失败后是否允许使用本地用户鉴权
+    *
+    * @return string|null
+    */
+    public function getAllowLocalUser()
+    {
+        return $this->container['allowLocalUser'];
+    }
+
+    /**
+    * Sets allowLocalUser
+    *
+    * @param string|null $allowLocalUser 访问ldap服务器失败后是否允许使用本地用户鉴权
+    *
+    * @return $this
+    */
+    public function setAllowLocalUser($allowLocalUser)
+    {
+        $this->container['allowLocalUser'] = $allowLocalUser;
         return $this;
     }
 

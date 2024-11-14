@@ -21,7 +21,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobId  创建ldap异步任务的id
+    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @var string[]
     */
@@ -31,7 +31,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobId  创建ldap异步任务的id
+    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @var string[]
     */
@@ -62,7 +62,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobId  创建ldap异步任务的id
+    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @var string[]
     */
@@ -72,7 +72,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobId  创建ldap异步任务的id
+    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @var string[]
     */
@@ -82,7 +82,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobId  创建ldap异步任务的id
+    * jobId  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @var string[]
     */
@@ -175,7 +175,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobId
-    *  创建ldap异步任务的id
+    *  ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @return string|null
     */
@@ -187,7 +187,7 @@ class CreateLdapConfigResponse implements ModelInterface, ArrayAccess
     /**
     * Sets jobId
     *
-    * @param string|null $jobId 创建ldap异步任务的id
+    * @param string|null $jobId ldap异步任务的id。可通过查询job的状态详情接口查询job的执行状态。
     *
     * @return $this
     */

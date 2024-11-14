@@ -5543,12 +5543,6 @@ class IoTDAAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
         }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
-        }
-        if ($localVarParams['stageAuthToken'] !== null) {
-            $headerParams['stage_auth_token'] = $localVarParams['stageAuthToken'];
-        }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];
         }
@@ -5617,23 +5611,17 @@ class IoTDAAsyncClient extends Client
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
         }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
-        }
-        if ($localVarParams['stageAuthToken'] !== null) {
-            $headerParams['stage_auth_token'] = $localVarParams['stageAuthToken'];
-        }
         if ($localVarParams['functionId'] !== null) {
             $pathParams['function_id'] = $localVarParams['functionId'];
         }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
+                []
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
+                [],
                 []
             );
         }
@@ -5696,12 +5684,6 @@ class IoTDAAsyncClient extends Client
         }
         if ($localVarParams['instanceId'] !== null) {
             $headerParams['instance_id'] = $localVarParams['instanceId'];
-        }
-        if ($localVarParams['spAuthToken'] !== null) {
-            $headerParams['sp_auth_token'] = $localVarParams['spAuthToken'];
-        }
-        if ($localVarParams['stageAuthToken'] !== null) {
-            $headerParams['stage_auth_token'] = $localVarParams['stageAuthToken'];
         }
 
         if ($multipart) {

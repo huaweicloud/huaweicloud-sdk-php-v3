@@ -28,7 +28,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -58,7 +58,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -109,7 +109,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -139,7 +139,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -169,7 +169,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     * pitch  基频。  取值范围[50,200]  默认值：100
     * volume  音量。  取值范围[90,240]   默认值：100
     * emotion  情感标签。 * ANGER：愤怒 * HAPPY：开心 * SAD：悲伤 * CALM：平静
-    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    * styleId  风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     * cameraPosition  人位置及相机位置。由如下4组浮点数组成的字符：人位置的X/Y/Z值，人角度的Pitch/Yaw/Roll值；相机位置的X/Y/Z值，相机角度的Pitch/Yaw/Roll值。
     * jobType  任务类型。 * REAL_JOB：实时任务。如数字人交互。 * UNREAL_JOB：非实时任务。如数字人视频制作
     *
@@ -594,7 +594,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
 
     /**
     * Gets styleId
-    *  风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    *  风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     *
     * @return string
     */
@@ -606,7 +606,7 @@ class CreateTTSAReq implements ModelInterface, ArrayAccess
     /**
     * Sets styleId
     *
-    * @param string $styleId 风格化ID。需要调用数字人风格管理相关接口，从系统重查得。
+    * @param string $styleId 风格化ID。需要调用数字人风格管理相关接口，从系统中查得。
     *
     * @return $this
     */

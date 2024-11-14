@@ -2193,6 +2193,68 @@ class MeetingClient extends Client
     }
 
     /**
+     * 根据号码，查询是否在会议中
+     *
+     * 通过该接口查询号码，是否在会议中
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function checkCallNumberInConf($request)
+    {
+        return $this->checkCallNumberInConfWithHttpInfo($request);
+    }
+
+    public function checkCallNumberInConfWithHttpInfo($request)
+    {
+        $resourcePath = '/v2/mms/ncms/conferences/online/check-callnumber-in-conf';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['callNumber'] !== null) {
+            $queryParams['call_number'] = $localVarParams['callNumber'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['*/*', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['*/*', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Meeting\V1\Model\CheckCallNumberInConfResponse',
+            $requestType='\HuaweiCloud\SDK\Meeting\V1\Model\CheckCallNumberInConfRequest');
+    }
+
+    /**
      * 校验滑块验证码
      *
      * 该接口提供校验滑块验证码。服务器收到请求，返回校验结果。用户在前台界面通过滑块操作匹配图形，使得抠图和原图吻合。然后服务器进行校验滑块验证码。

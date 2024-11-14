@@ -1927,8 +1927,8 @@ class AomClient extends Client
         if ($localVarParams['action'] !== null) {
             $queryParams['action'] = $localVarParams['action'];
         }
-        if ($localVarParams['xEnterprisePrjectId'] !== null) {
-            $headerParams[$arr['xEnterprisePrjectId']] = $localVarParams['xEnterprisePrjectId'];
+        if ($localVarParams['enterpriseProjectId'] !== null) {
+            $headerParams[$arr['enterpriseProjectId']] = $localVarParams['enterpriseProjectId'];
         }
         if ($localVarParams['body'] !== null) {
             $httpBody= $localVarParams['body'];

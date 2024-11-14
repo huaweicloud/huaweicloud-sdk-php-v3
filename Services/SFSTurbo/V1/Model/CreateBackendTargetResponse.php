@@ -25,7 +25,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
     * creationTime  绑定关系创建时间
     * failureDetails  failureDetails
     * fileSystemPath  联动目录名称
-    * lifecycle  绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    * lifecycle  绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -47,7 +47,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
     * creationTime  绑定关系创建时间
     * failureDetails  failureDetails
     * fileSystemPath  联动目录名称
-    * lifecycle  绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    * lifecycle  绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -90,7 +90,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
     * creationTime  绑定关系创建时间
     * failureDetails  failureDetails
     * fileSystemPath  联动目录名称
-    * lifecycle  绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    * lifecycle  绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -112,7 +112,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
     * creationTime  绑定关系创建时间
     * failureDetails  failureDetails
     * fileSystemPath  联动目录名称
-    * lifecycle  绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    * lifecycle  绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -134,7 +134,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
     * creationTime  绑定关系创建时间
     * failureDetails  failureDetails
     * fileSystemPath  联动目录名称
-    * lifecycle  绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    * lifecycle  绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     * obs  obs
     * xRequestId  xRequestId
     *
@@ -364,7 +364,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets lifecycle
-    *  绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    *  绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     *
     * @return string|null
     */
@@ -376,7 +376,7 @@ class CreateBackendTargetResponse implements ModelInterface, ArrayAccess
     /**
     * Sets lifecycle
     *
-    * @param string|null $lifecycle 绑定状态。如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。 如果返回状态为AVAILABLE，代表绑定后端存储成功。如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
+    * @param string|null $lifecycle 绑定状态。  如果返回状态为CREATING，您需要通过获取后端存储详细信息接口去轮询绑定完成状态。  如果返回状态为AVAILABLE，代表绑定后端存储成功。  如果返回状态MISCONFIGURED，代表绑定后端存储失败。DELETING 状态暂不支持。
     *
     * @return $this
     */

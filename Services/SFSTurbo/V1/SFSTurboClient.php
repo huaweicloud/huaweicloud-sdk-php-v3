@@ -31,7 +31,7 @@ class SFSTurboClient extends Client
      *
      * 指定共享批量添加标签。
      * 
-     * 一个共享上最多有10个标签。
+     * 一个共享上最多有20个标签。
      * 一个共享上的多个标签的key不允许重复。
      * 此接口为幂等接口：如果要添加的key在共享上已存在，则覆盖更新标签。
      * 
@@ -228,7 +228,7 @@ class SFSTurboClient extends Client
     /**
      * 绑定后端存储
      *
-     * 为SFS Turbo HPC型文件系统绑定后端存储
+     * 为SFS Turbo 文件系统绑定后端存储
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -423,7 +423,7 @@ class SFSTurboClient extends Client
     /**
      * 创建文件系统异步任务
      *
-     * 创建文件系统异步任务
+     * 创建文件系统异步任务，仅支持异步查询目录资源使用情况，API请求路径的feature取值为dir-usage，以下简称为DU任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -556,7 +556,11 @@ class SFSTurboClient extends Client
     /**
      * 创建并绑定ldap配置
      *
-     * 创建并绑定ldap配置
+     * 创建并绑定ldap配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
+     * 1. RFC2307（Openldap通常选择此Schema）
+     * 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
+     * 
+     * SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -749,7 +753,7 @@ class SFSTurboClient extends Client
      * 创建共享标签
      *
      * 指定共享添加一个标签。
-     * 一个共享上最多有10个标签。
+     * 一个共享上最多有20个标签。
      * 一个共享上的多个标签的key不允许重复。
      * 此接口为幂等接口：如果要添加的key在共享上已存在，则覆盖更新标签。
      * 
@@ -1014,7 +1018,7 @@ class SFSTurboClient extends Client
     /**
      * 取消/删除文件系统异步任务
      *
-     * 如果异步任务正在执行，则取消并删除任务；否则，删除任务。
+     * 如果异步任务正在执行，则取消并删除任务；否则，删除任务。仅支持删除目录资源使用情况的任务，API请求路径的feature取值为dir-usage，以下简称为DU任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1080,9 +1084,78 @@ class SFSTurboClient extends Client
     }
 
     /**
+     * 删除数据导入导出任务
+     *
+     * 删除数据导入导出任务
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function deleteHpcCacheTask($request)
+    {
+        return $this->deleteHpcCacheTaskWithHttpInfo($request);
+    }
+
+    public function deleteHpcCacheTaskWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/{share_id}/hpc-cache/task/{task_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['taskId'] !== null) {
+            $pathParams['task_id'] = $localVarParams['taskId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='DELETE',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteHpcCacheTaskResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\DeleteHpcCacheTaskRequest');
+    }
+
+    /**
      * 删除ldap配置
      *
-     * 删除ldap配置
+     * 删除ldap配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
+     * 1. RFC2307（Openldap通常选择此Schema）
+     * 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
+     * 
+     * SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1469,7 +1542,7 @@ class SFSTurboClient extends Client
     /**
      * 获取文件系统异步任务列表
      *
-     * 获取文件系统异步任务列表
+     * 获取文件系统异步任务列表。仅支持查询目录资源使用情况的任务，API请求路径的feature取值为dir-usage，以下简称为DU任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -1580,6 +1653,12 @@ class SFSTurboClient extends Client
         if ($localVarParams['limit'] !== null) {
             $queryParams['limit'] = $localVarParams['limit'];
         }
+        if ($localVarParams['startTime'] !== null) {
+            $queryParams['start_time'] = $localVarParams['startTime'];
+        }
+        if ($localVarParams['endTime'] !== null) {
+            $queryParams['end_time'] = $localVarParams['endTime'];
+        }
         if ($localVarParams['shareId'] !== null) {
             $pathParams['share_id'] = $localVarParams['shareId'];
         }
@@ -1642,6 +1721,12 @@ class SFSTurboClient extends Client
             $value = $request->$getter();
             $localVarParams[$k] = $value;
         }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
+        }
         if ($localVarParams['shareId'] !== null) {
             $pathParams['share_id'] = $localVarParams['shareId'];
         }
@@ -1703,6 +1788,12 @@ class SFSTurboClient extends Client
             $getter = $request::getters()[$k];
             $value = $request->$getter();
             $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['limit'] !== null) {
+            $queryParams['limit'] = $localVarParams['limit'];
+        }
+        if ($localVarParams['offset'] !== null) {
+            $queryParams['offset'] = $localVarParams['offset'];
         }
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -1995,7 +2086,7 @@ class SFSTurboClient extends Client
     /**
      * 查询目标文件夹quota
      *
-     * 查询目标文件夹quota
+     * 查询目标文件夹quota。查询的used_capacity、used_inode数据可能有延迟。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2125,7 +2216,7 @@ class SFSTurboClient extends Client
     /**
      * 获取文件系统异步任务详情
      *
-     * 获取文件系统异步任务详情
+     * 获取文件系统异步任务详情。仅支持查询目录资源使用情况的任务，API请求路径的feature取值为dir-usage，以下简称为DU任务。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2258,7 +2349,7 @@ class SFSTurboClient extends Client
     /**
      * 查询job的状态详情
      *
-     * 查询job的执行状态。 可用于查询SFS Turbo异步API的执行状态。
+     * 查询job的执行状态。 可用于查询SFS Turbo异步API的执行状态。例如：可使用调用创建并绑定ldap配置接口时返回的jobId，通过该接口查询job的执行状态。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2320,7 +2411,11 @@ class SFSTurboClient extends Client
     /**
      * 查询Ldap的配置
      *
-     * 查询Ldap的配置
+     * 查询Ldap的配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
+     * 1. RFC2307（Openldap通常选择此Schema）
+     * 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
+     * 
+     * SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2701,7 +2796,11 @@ class SFSTurboClient extends Client
     /**
      * 修改ldap配置
      *
-     * 修改ldap配置
+     * 修改ldap配置。LDAP（Lightweight Directory Access Protocol），中文名称轻量级目录访问协议，是对目录服务器（Directory Server）进行访问、控制的一种标准协议。LDAP服务器可以集中式地管理用户和群组的归属关系，通过绑定LDAP服务器，当一个用户访问您的文件系统的文件时，SFS Turbo将会访问您的LDAP服务器以进行用户身份验证，并且获取用户和群组的归属关系，从而进行Linux标准的文件UGO权限的检查。要使用此功能，首先您需要搭建好LDAP服务器（当前SFS Turbo仅支持LDAP v3协议），常见提供LDAP协议访问的目录服务器实现有OpenLdap(Linux)，Active Directory(Windows)等，不同目录服务器的实现细节有所差别，绑定时需要指定对应的Schema（Schema配置错误将会导致SFS Turbo无法正确获取用户以及群组信息，可能导致无权限访问文件系统内文件），当前SFS Turbo支持的Schema有：
+     * 1. RFC2307（Openldap通常选择此Schema）
+     * 2. MS-AD-BIS（Active Directory通常选择此Schema，支持RFC2307bis，支持嵌套的群组）
+     * 
+     * SFS Turbo还支持配置主备LDAP服务器，当您的一台LDAP服务器故障无法访问后，SFS Turbo将会自动切换到备LDAP服务器访问，以免影响您的业务。同时，若您还选择将allow_local_user配置为Yes（默认为No），那么当您的LDAP服务器全部故障无法访问时，SFS Turbo将会使用您的本地用户以及群组信息，而非LDAP服务器中配置的信息进行身份验证和UGO权限检查，以最大程度减少故障影响面。
      * 
      * Please refer to HUAWEI cloud API Explorer for details.
      *
@@ -2761,6 +2860,142 @@ class SFSTurboClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateLdapConfigResponse',
             $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateLdapConfigRequest');
+    }
+
+    /**
+     * 更新后端存储属性
+     *
+     * 更新后端存储属性
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateObsTargetAttributes($request)
+    {
+        return $this->updateObsTargetAttributesWithHttpInfo($request);
+    }
+
+    public function updateObsTargetAttributesWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/targets/{target_id}/attributes';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['targetId'] !== null) {
+            $pathParams['target_id'] = $localVarParams['targetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateObsTargetAttributesResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateObsTargetAttributesRequest');
+    }
+
+    /**
+     * 更新后端存储自动同步策略
+     *
+     * 更新后端存储自动同步策略
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function updateObsTargetPolicy($request)
+    {
+        return $this->updateObsTargetPolicyWithHttpInfo($request);
+    }
+
+    public function updateObsTargetPolicyWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/sfs-turbo/shares/{share_id}/targets/{target_id}/policy';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['shareId'] !== null) {
+            $pathParams['share_id'] = $localVarParams['shareId'];
+        }
+        if ($localVarParams['targetId'] !== null) {
+            $pathParams['target_id'] = $localVarParams['targetId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json;charset=UTF-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='PUT',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateObsTargetPolicyResponse',
+            $requestType='\HuaweiCloud\SDK\SFSTurbo\V1\Model\UpdateObsTargetPolicyRequest');
     }
 
     /**

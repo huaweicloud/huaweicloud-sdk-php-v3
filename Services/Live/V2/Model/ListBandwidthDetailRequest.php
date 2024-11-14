@@ -23,8 +23,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
-    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * country  国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
@@ -53,8 +53,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
-    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * country  国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
@@ -104,8 +104,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
-    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * country  国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
@@ -134,8 +134,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
-    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * country  国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
@@ -164,8 +164,8 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     * playDomains  播放域名列表，最多支持查询100个域名，多个域名以逗号分隔。  如果不传入域名，则查询租户下所有播放域名的带宽数据。
     * app  应用名称。
     * stream  流名。
-    * country  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
-    * region  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * country  国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
+    * region  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     * isp  运营商列表，取值如下： - CMCC ：移动 - CTCC ：电信 - CUCC ：联通 - OTHER ：其他  不填写查询所有运营商。
     * protocol  请求协议
     * interval  查询数据的时间粒度。支持300（默认值）, 3600和86400秒。不传值时，使用默认值300秒。
@@ -471,7 +471,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets country
-    *  国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+    *  国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
     *
     * @return string[]|null
     */
@@ -483,7 +483,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets country
     *
-    * @param string[]|null $country 国家列表。具体取值请参考[国家名称缩写](vod_08_0172.xml)，不填写查询所有国家。
+    * @param string[]|null $country 国家列表。具体取值请参考[国家名称缩写](https://support.huaweicloud.com/api-live/vod_08_0172.html)，不填写查询所有国家。
     *
     * @return $this
     */
@@ -495,7 +495,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets region
-    *  区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    *  区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     *
     * @return string[]|null
     */
@@ -507,7 +507,7 @@ class ListBandwidthDetailRequest implements ModelInterface, ArrayAccess
     /**
     * Sets region
     *
-    * @param string[]|null $region 区域列表。具体取值请参考[省份名称缩写](live_03_0043.xml)，不填写查询所有区域。
+    * @param string[]|null $region 区域列表。具体取值请参考[省份名称缩写](https://support.huaweicloud.com/api-live/live_03_0043.html)，不填写查询所有区域。
     *
     * @return $this
     */

@@ -13323,6 +13323,74 @@ class DataArtsStudioAsyncClient extends Client
     }
 
     /**
+     * 获取指定用户所有的工作空间集合
+     *
+     * 获取指定用户所有的工作空间集合
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function listWorkspacesForUserAsync($request)
+    {
+        return $this->listWorkspacesForUserAsyncWithHttpInfo($request);
+    }
+    
+    public function listWorkspacesForUserAsyncWithHttpInfo($request){
+        $collection_formats = [];
+        $resourcePath = '/v1/{project_id}/{instance_id}/workspaces/{user_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['instanceId'] !== null) {
+            $pathParams['instance_id'] = $localVarParams['instanceId'];
+        }
+        if ($localVarParams['userId'] !== null) {
+            $pathParams['user_id'] = $localVarParams['userId'];
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListWorkspacesForUserResponse',
+            $collectionFormats=$collection_formats,
+            $requestType='\HuaweiCloud\SDK\DataArtsStudio\V1\Model\ListWorkspacesForUserRequest',
+            $asyncRequest = true);
+    }
+
+    /**
      * 获取工作空间用户信息
      *
      * 获取工作空间用户信息

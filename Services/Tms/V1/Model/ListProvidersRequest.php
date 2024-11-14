@@ -21,7 +21,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * locale  指定显示语言
-    * limit  查询记录数默认为200，limit最多为200，最小值为1。
+    * limit  查询记录数默认为10，limit最多为200，最小值为1。
     * offset  索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * provider  云服务名称
     *
@@ -37,7 +37,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * locale  指定显示语言
-    * limit  查询记录数默认为200，limit最多为200，最小值为1。
+    * limit  查询记录数默认为10，limit最多为200，最小值为1。
     * offset  索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * provider  云服务名称
     *
@@ -74,7 +74,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * locale  指定显示语言
-    * limit  查询记录数默认为200，limit最多为200，最小值为1。
+    * limit  查询记录数默认为10，limit最多为200，最小值为1。
     * offset  索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * provider  云服务名称
     *
@@ -90,7 +90,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * locale  指定显示语言
-    * limit  查询记录数默认为200，limit最多为200，最小值为1。
+    * limit  查询记录数默认为10，limit最多为200，最小值为1。
     * offset  索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * provider  云服务名称
     *
@@ -106,7 +106,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * locale  指定显示语言
-    * limit  查询记录数默认为200，limit最多为200，最小值为1。
+    * limit  查询记录数默认为10，limit最多为200，最小值为1。
     * offset  索引位置，从offset指定的下一条数据开始查询，必须为数字，不能为负数，默认为0。
     * provider  云服务名称
     *
@@ -254,7 +254,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  查询记录数默认为200，limit最多为200，最小值为1。
+    *  查询记录数默认为10，limit最多为200，最小值为1。
     *
     * @return int|null
     */
@@ -266,7 +266,7 @@ class ListProvidersRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 查询记录数默认为200，limit最多为200，最小值为1。
+    * @param int|null $limit 查询记录数默认为10，limit最多为200，最小值为1。
     *
     * @return $this
     */

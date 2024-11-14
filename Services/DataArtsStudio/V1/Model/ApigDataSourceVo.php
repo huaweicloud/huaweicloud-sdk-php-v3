@@ -26,6 +26,7 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentId  代理id（若使用代理连接则必填）
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
+    * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
     *
     * @var string[]
     */
@@ -35,7 +36,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'dwConfig' => 'object',
             'agentId' => 'string',
             'agentName' => 'string',
-            'envType' => 'int'
+            'envType' => 'int',
+            'supportService' => 'int'
     ];
 
     /**
@@ -46,6 +48,7 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentId  代理id（若使用代理连接则必填）
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
+    * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
     *
     * @var string[]
     */
@@ -55,7 +58,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
         'dwConfig' => null,
         'agentId' => null,
         'agentName' => null,
-        'envType' => null
+        'envType' => null,
+        'supportService' => null
     ];
 
     /**
@@ -87,6 +91,7 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentId  代理id（若使用代理连接则必填）
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
+    * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
     *
     * @var string[]
     */
@@ -96,7 +101,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'dwConfig' => 'dw_config',
             'agentId' => 'agent_id',
             'agentName' => 'agent_name',
-            'envType' => 'env_type'
+            'envType' => 'env_type',
+            'supportService' => 'supportService'
     ];
 
     /**
@@ -107,6 +113,7 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentId  代理id（若使用代理连接则必填）
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
+    * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
     *
     * @var string[]
     */
@@ -116,7 +123,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'dwConfig' => 'setDwConfig',
             'agentId' => 'setAgentId',
             'agentName' => 'setAgentName',
-            'envType' => 'setEnvType'
+            'envType' => 'setEnvType',
+            'supportService' => 'setSupportService'
     ];
 
     /**
@@ -127,6 +135,7 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     * agentId  代理id（若使用代理连接则必填）
     * agentName  代理名称id（若使用代理连接则必填）
     * envType  0：开发模式 1：生产模式。默认为0
+    * supportService  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
     *
     * @var string[]
     */
@@ -136,7 +145,8 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             'dwConfig' => 'getDwConfig',
             'agentId' => 'getAgentId',
             'agentName' => 'getAgentName',
-            'envType' => 'getEnvType'
+            'envType' => 'getEnvType',
+            'supportService' => 'getSupportService'
     ];
 
     /**
@@ -203,6 +213,7 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
         $this->container['agentId'] = isset($data['agentId']) ? $data['agentId'] : null;
         $this->container['agentName'] = isset($data['agentName']) ? $data['agentName'] : null;
         $this->container['envType'] = isset($data['envType']) ? $data['envType'] : null;
+        $this->container['supportService'] = isset($data['supportService']) ? $data['supportService'] : null;
     }
 
     /**
@@ -248,6 +259,12 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['envType']) && ($this->container['envType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'envType', must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['supportService']) && ($this->container['supportService'] > 127)) {
+                $invalidProperties[] = "invalid value for 'supportService', must be smaller than or equal to 127.";
+            }
+            if (!is_null($this->container['supportService']) && ($this->container['supportService'] < 1)) {
+                $invalidProperties[] = "invalid value for 'supportService', must be bigger than or equal to 1.";
             }
         return $invalidProperties;
     }
@@ -404,6 +421,30 @@ class ApigDataSourceVo implements ModelInterface, ArrayAccess
     public function setEnvType($envType)
     {
         $this->container['envType'] = $envType;
+        return $this;
+    }
+
+    /**
+    * Gets supportService
+    *  1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    *
+    * @return int|null
+    */
+    public function getSupportService()
+    {
+        return $this->container['supportService'];
+    }
+
+    /**
+    * Sets supportService
+    *
+    * @param int|null $supportService 1：cdm 2：数据架构 4:数据开发 8：数据质量 16：数据目录 32：数据安全 64：数据服务
+    *
+    * @return $this
+    */
+    public function setSupportService($supportService)
+    {
+        $this->container['supportService'] = $supportService;
         return $this;
     }
 

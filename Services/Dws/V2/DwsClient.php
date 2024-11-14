@@ -9080,6 +9080,68 @@ class DwsClient extends Client
     }
 
     /**
+     * 启动集群
+     *
+     * 集群管理-启动集群
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startCluster($request)
+    {
+        return $this->startClusterWithHttpInfo($request);
+    }
+
+    public function startClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/start';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\StartClusterResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\StartClusterRequest');
+    }
+
+    /**
      * 启动容灾
      *
      * 该接口用于启动容灾操作。
@@ -9208,6 +9270,68 @@ class DwsClient extends Client
             $postParams=$formParams,
             $responseType='\HuaweiCloud\SDK\Dws\V2\Model\StartWorkloadPlanResponse',
             $requestType='\HuaweiCloud\SDK\Dws\V2\Model\StartWorkloadPlanRequest');
+    }
+
+    /**
+     * 停止集群
+     *
+     * 集群管理-停止集群
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function stopCluster($request)
+    {
+        return $this->stopClusterWithHttpInfo($request);
+    }
+
+    public function stopClusterWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/clusters/{cluster_id}/stop';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['clusterId'] !== null) {
+            $pathParams['cluster_id'] = $localVarParams['clusterId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json;charset=UTF-8', 'application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json;charset=UTF-8', 'application/json'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\Dws\V2\Model\StopClusterResponse',
+            $requestType='\HuaweiCloud\SDK\Dws\V2\Model\StopClusterRequest');
     }
 
     /**

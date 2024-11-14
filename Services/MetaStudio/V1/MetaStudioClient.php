@@ -669,6 +669,228 @@ class MetaStudioClient extends Client
     }
 
     /**
+     * 创建美白预览任务
+     *
+     * 该接口用于创建美白预览任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function createBeautyPreviewJob($request)
+    {
+        return $this->createBeautyPreviewJobWithHttpInfo($request);
+    }
+
+    public function createBeautyPreviewJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-training-manage/beauty-preview/jobs';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['body'] !== null) {
+            $httpBody= $localVarParams['body'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateBeautyPreviewJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\CreateBeautyPreviewJobRequest');
+    }
+
+    /**
+     * 查询美白预览任务
+     *
+     * 该接口用于查询美白预览任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function showBeautyPreviewJob($request)
+    {
+        return $this->showBeautyPreviewJobWithHttpInfo($request);
+    }
+
+    public function showBeautyPreviewJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-training-manage/beauty-preview/jobs/{job_id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json', 'application/json;charset=utf-8']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json', 'application/json;charset=utf-8'],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='GET',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowBeautyPreviewJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\ShowBeautyPreviewJobRequest');
+    }
+
+    /**
+     * 启动美白预览任务
+     *
+     * 该接口用于启动美白预览任务。
+     * 
+     * Please refer to HUAWEI cloud API Explorer for details.
+     *
+     * @param $request 请求对象
+     * @return response
+     */
+    public function startBeautyPreviewJob($request)
+    {
+        return $this->startBeautyPreviewJobWithHttpInfo($request);
+    }
+
+    public function startBeautyPreviewJobWithHttpInfo($request)
+    {
+        $resourcePath = '/v1/{project_id}/digital-human-training-manage/beauty-preview/jobs/{job_id}/start';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $pathParams = [];
+        $httpBody = null;
+        $multipart = false;
+        $localVarParams = [];
+        $arr = $request::attributeMap();
+        foreach ($arr as $k => $v) {
+            $getter = $request::getters()[$k];
+            $value = $request->$getter();
+            $localVarParams[$k] = $value;
+        }
+        if ($localVarParams['authorization'] !== null) {
+            $headerParams[$arr['authorization']] = $localVarParams['authorization'];
+        }
+        if ($localVarParams['xSdkDate'] !== null) {
+            $headerParams[$arr['xSdkDate']] = $localVarParams['xSdkDate'];
+        }
+        if ($localVarParams['xProjectId'] !== null) {
+            $headerParams[$arr['xProjectId']] = $localVarParams['xProjectId'];
+        }
+        if ($localVarParams['xAppUserId'] !== null) {
+            $headerParams[$arr['xAppUserId']] = $localVarParams['xAppUserId'];
+        }
+        if ($localVarParams['jobId'] !== null) {
+            $pathParams['job_id'] = $localVarParams['jobId'];
+        }
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                []
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                [],
+                []
+            );
+        }
+        $headers = array_merge(
+            $headerParams,
+            $headers
+        );
+
+        return $this->callApi(
+            $method='POST',
+            $resourcePath,
+            $pathParams,
+            $queryParams,
+            $headerParams=$headers,
+            $body=$httpBody,
+            $multipart = $multipart,
+            $postParams=$formParams,
+            $responseType='\HuaweiCloud\SDK\MetaStudio\V1\Model\StartBeautyPreviewJobResponse',
+            $requestType='\HuaweiCloud\SDK\MetaStudio\V1\Model\StartBeautyPreviewJobRequest');
+    }
+
+    /**
      * 创建对话链接
      *
      * 该接口用于创建对话链接。

@@ -213,10 +213,13 @@ class ValidateRobotReq implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-            if (!is_null($this->container['appType']) && ($this->container['appType'] > 32)) {
+        if ($this->container['appType'] === null) {
+            $invalidProperties[] = "'appType' can't be null";
+        }
+            if (($this->container['appType'] > 32)) {
                 $invalidProperties[] = "invalid value for 'appType', must be smaller than or equal to 32.";
             }
-            if (!is_null($this->container['appType']) && ($this->container['appType'] < 0)) {
+            if (($this->container['appType'] < 0)) {
                 $invalidProperties[] = "invalid value for 'appType', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
@@ -237,7 +240,7 @@ class ValidateRobotReq implements ModelInterface, ArrayAccess
     * Gets appType
     *  对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；6：第三方语言模型；8：奇妙问
     *
-    * @return int|null
+    * @return int
     */
     public function getAppType()
     {
@@ -247,7 +250,7 @@ class ValidateRobotReq implements ModelInterface, ArrayAccess
     /**
     * Sets appType
     *
-    * @param int|null $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；6：第三方语言模型；8：奇妙问
+    * @param int $appType 对接第三方应用厂商类型。 > 0：科大讯飞AIUI；1：华为云CBS；2：科大讯飞星火交互认知大模型；6：第三方语言模型；8：奇妙问
     *
     * @return $this
     */

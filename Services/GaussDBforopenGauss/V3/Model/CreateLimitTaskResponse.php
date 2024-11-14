@@ -54,7 +54,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
             'databases' => 'string',
             'taskName' => 'string',
             'sqlModel' => 'string',
-            'keyWords' => 'string[]',
+            'keyWords' => 'string',
             'status' => 'string',
             'instanceId' => 'string',
             'ruleName' => 'string',
@@ -193,7 +193,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
             'creator' => 'creator',
             'modifier' => 'modifier',
             'nodeInfos' => 'node_infos',
-            'jobId' => 'jobId'
+            'jobId' => 'job_id'
     ];
 
     /**
@@ -576,7 +576,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     * Gets keyWords
     *  关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     *
-    * @return string[]|null
+    * @return string|null
     */
     public function getKeyWords()
     {
@@ -586,7 +586,7 @@ class CreateLimitTaskResponse implements ModelInterface, ArrayAccess
     /**
     * Sets keyWords
     *
-    * @param string[]|null $keyWords 关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
+    * @param string|null $keyWords 关键词，仅当任务类型为SQL_TYPE时，返回该值且与请求参数相同。
     *
     * @return $this
     */

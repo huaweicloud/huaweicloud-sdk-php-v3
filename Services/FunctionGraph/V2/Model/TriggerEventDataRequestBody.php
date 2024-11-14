@@ -69,13 +69,15 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
-    * keyEncode  EG obs触发器是否对对象加密。
-    * agency  使用的代理
-    * channelName  通道名称
-    * sourceName  事件源名称
-    * createdTime  创建时间
-    * status  触发器状态
-    * triggerName  触发器名称
+    * keyEncode  EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
+    * agency  使用的代理（EVENTGRID触发器参数）。
+    * channelName  通道名称（EVENTGRID触发器参数）。
+    * channelId  通道id（EVENTGRID触发器参数）。
+    * sourceName  事件源名称（EVENTGRID触发器参数）。
+    * createdTime  创建时间（EVENTGRID触发器参数）。
+    * status  触发器状态（EVENTGRID触发器参数）。
+    * triggerName  触发器名称（EVENTGRID触发器参数）。
+    * eventTypes  事件类型（EVENTGRID触发器参数）。
     *
     * @var string[]
     */
@@ -132,10 +134,12 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'keyEncode' => 'bool',
             'agency' => 'string',
             'channelName' => 'string',
+            'channelId' => 'string',
             'sourceName' => 'string',
             'createdTime' => '\DateTime',
             'status' => 'string',
-            'triggerName' => 'string'
+            'triggerName' => 'string',
+            'eventTypes' => 'string[]'
     ];
 
     /**
@@ -189,13 +193,15 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
-    * keyEncode  EG obs触发器是否对对象加密。
-    * agency  使用的代理
-    * channelName  通道名称
-    * sourceName  事件源名称
-    * createdTime  创建时间
-    * status  触发器状态
-    * triggerName  触发器名称
+    * keyEncode  EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
+    * agency  使用的代理（EVENTGRID触发器参数）。
+    * channelName  通道名称（EVENTGRID触发器参数）。
+    * channelId  通道id（EVENTGRID触发器参数）。
+    * sourceName  事件源名称（EVENTGRID触发器参数）。
+    * createdTime  创建时间（EVENTGRID触发器参数）。
+    * status  触发器状态（EVENTGRID触发器参数）。
+    * triggerName  触发器名称（EVENTGRID触发器参数）。
+    * eventTypes  事件类型（EVENTGRID触发器参数）。
     *
     * @var string[]
     */
@@ -252,10 +258,12 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
         'keyEncode' => null,
         'agency' => null,
         'channelName' => null,
+        'channelId' => null,
         'sourceName' => null,
         'createdTime' => 'date-time',
         'status' => null,
-        'triggerName' => null
+        'triggerName' => null,
+        'eventTypes' => null
     ];
 
     /**
@@ -330,13 +338,15 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
-    * keyEncode  EG obs触发器是否对对象加密。
-    * agency  使用的代理
-    * channelName  通道名称
-    * sourceName  事件源名称
-    * createdTime  创建时间
-    * status  触发器状态
-    * triggerName  触发器名称
+    * keyEncode  EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
+    * agency  使用的代理（EVENTGRID触发器参数）。
+    * channelName  通道名称（EVENTGRID触发器参数）。
+    * channelId  通道id（EVENTGRID触发器参数）。
+    * sourceName  事件源名称（EVENTGRID触发器参数）。
+    * createdTime  创建时间（EVENTGRID触发器参数）。
+    * status  触发器状态（EVENTGRID触发器参数）。
+    * triggerName  触发器名称（EVENTGRID触发器参数）。
+    * eventTypes  事件类型（EVENTGRID触发器参数）。
     *
     * @var string[]
     */
@@ -393,10 +403,12 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'keyEncode' => 'Key_encode',
             'agency' => 'agency',
             'channelName' => 'channel_name',
+            'channelId' => 'channel_id',
             'sourceName' => 'source_name',
             'createdTime' => 'created_time',
             'status' => 'status',
-            'triggerName' => 'trigger_name'
+            'triggerName' => 'trigger_name',
+            'eventTypes' => 'event_types'
     ];
 
     /**
@@ -450,13 +462,15 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
-    * keyEncode  EG obs触发器是否对对象加密。
-    * agency  使用的代理
-    * channelName  通道名称
-    * sourceName  事件源名称
-    * createdTime  创建时间
-    * status  触发器状态
-    * triggerName  触发器名称
+    * keyEncode  EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
+    * agency  使用的代理（EVENTGRID触发器参数）。
+    * channelName  通道名称（EVENTGRID触发器参数）。
+    * channelId  通道id（EVENTGRID触发器参数）。
+    * sourceName  事件源名称（EVENTGRID触发器参数）。
+    * createdTime  创建时间（EVENTGRID触发器参数）。
+    * status  触发器状态（EVENTGRID触发器参数）。
+    * triggerName  触发器名称（EVENTGRID触发器参数）。
+    * eventTypes  事件类型（EVENTGRID触发器参数）。
     *
     * @var string[]
     */
@@ -513,10 +527,12 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'keyEncode' => 'setKeyEncode',
             'agency' => 'setAgency',
             'channelName' => 'setChannelName',
+            'channelId' => 'setChannelId',
             'sourceName' => 'setSourceName',
             'createdTime' => 'setCreatedTime',
             'status' => 'setStatus',
-            'triggerName' => 'setTriggerName'
+            'triggerName' => 'setTriggerName',
+            'eventTypes' => 'setEventTypes'
     ];
 
     /**
@@ -570,13 +586,15 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     * exchangeName  交换机名称（RABBITMQ触发器参数）。RABBITMQ触发器此参数必填。
     * vhost  虚拟机名称（RABBITMQ触发器参数）。
     * sslEnable  RABBITMQ连接是否开启安全认证（RABBITMQ触发器参数）。
-    * keyEncode  EG obs触发器是否对对象加密。
-    * agency  使用的代理
-    * channelName  通道名称
-    * sourceName  事件源名称
-    * createdTime  创建时间
-    * status  触发器状态
-    * triggerName  触发器名称
+    * keyEncode  EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
+    * agency  使用的代理（EVENTGRID触发器参数）。
+    * channelName  通道名称（EVENTGRID触发器参数）。
+    * channelId  通道id（EVENTGRID触发器参数）。
+    * sourceName  事件源名称（EVENTGRID触发器参数）。
+    * createdTime  创建时间（EVENTGRID触发器参数）。
+    * status  触发器状态（EVENTGRID触发器参数）。
+    * triggerName  触发器名称（EVENTGRID触发器参数）。
+    * eventTypes  事件类型（EVENTGRID触发器参数）。
     *
     * @var string[]
     */
@@ -633,10 +651,12 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             'keyEncode' => 'getKeyEncode',
             'agency' => 'getAgency',
             'channelName' => 'getChannelName',
+            'channelId' => 'getChannelId',
             'sourceName' => 'getSourceName',
             'createdTime' => 'getCreatedTime',
             'status' => 'getStatus',
-            'triggerName' => 'getTriggerName'
+            'triggerName' => 'getTriggerName',
+            'eventTypes' => 'getEventTypes'
     ];
 
     /**
@@ -703,6 +723,8 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     const POLLING_UNIT_MS = 'ms';
     const IS_SERIAL_TRUE = 'true';
     const IS_SERIAL_FALSE = 'false';
+    const STATUS_ACTIVE = 'ACTIVE';
+    const STATUS_DISABLE = 'DISABLE';
     
 
     /**
@@ -828,6 +850,19 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
         ];
     }
 
+    /**
+    * Gets allowable values of the enum
+    *
+    * @return string[]
+    */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_DISABLE,
+        ];
+    }
+
 
     /**
     * Associative array for storing property values
@@ -896,10 +931,12 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
         $this->container['keyEncode'] = isset($data['keyEncode']) ? $data['keyEncode'] : null;
         $this->container['agency'] = isset($data['agency']) ? $data['agency'] : null;
         $this->container['channelName'] = isset($data['channelName']) ? $data['channelName'] : null;
+        $this->container['channelId'] = isset($data['channelId']) ? $data['channelId'] : null;
         $this->container['sourceName'] = isset($data['sourceName']) ? $data['sourceName'] : null;
         $this->container['createdTime'] = isset($data['createdTime']) ? $data['createdTime'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['triggerName'] = isset($data['triggerName']) ? $data['triggerName'] : null;
+        $this->container['eventTypes'] = isset($data['eventTypes']) ? $data['eventTypes'] : null;
     }
 
     /**
@@ -1018,6 +1055,14 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
             if (!is_null($this->container['topicUrn']) && (mb_strlen($this->container['topicUrn']) < 1)) {
                 $invalidProperties[] = "invalid value for 'topicUrn', the character length must be bigger than or equal to 1.";
             }
+            $allowedValues = $this->getStatusAllowableValues();
+                if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
+                $invalidProperties[] = sprintf(
+                "invalid value for 'status', must be one of '%s'",
+                implode("', '", $allowedValues)
+                );
+            }
+
         return $invalidProperties;
     }
 
@@ -2210,7 +2255,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets keyEncode
-    *  EG obs触发器是否对对象加密。
+    *  EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
     *
     * @return bool|null
     */
@@ -2222,7 +2267,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets keyEncode
     *
-    * @param bool|null $keyEncode EG obs触发器是否对对象加密。
+    * @param bool|null $keyEncode EG obs触发器是否对对象加密（EVENTGRID触发器参数）。
     *
     * @return $this
     */
@@ -2234,7 +2279,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets agency
-    *  使用的代理
+    *  使用的代理（EVENTGRID触发器参数）。
     *
     * @return string|null
     */
@@ -2246,7 +2291,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets agency
     *
-    * @param string|null $agency 使用的代理
+    * @param string|null $agency 使用的代理（EVENTGRID触发器参数）。
     *
     * @return $this
     */
@@ -2258,7 +2303,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets channelName
-    *  通道名称
+    *  通道名称（EVENTGRID触发器参数）。
     *
     * @return string|null
     */
@@ -2270,7 +2315,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets channelName
     *
-    * @param string|null $channelName 通道名称
+    * @param string|null $channelName 通道名称（EVENTGRID触发器参数）。
     *
     * @return $this
     */
@@ -2281,8 +2326,32 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     }
 
     /**
+    * Gets channelId
+    *  通道id（EVENTGRID触发器参数）。
+    *
+    * @return string|null
+    */
+    public function getChannelId()
+    {
+        return $this->container['channelId'];
+    }
+
+    /**
+    * Sets channelId
+    *
+    * @param string|null $channelId 通道id（EVENTGRID触发器参数）。
+    *
+    * @return $this
+    */
+    public function setChannelId($channelId)
+    {
+        $this->container['channelId'] = $channelId;
+        return $this;
+    }
+
+    /**
     * Gets sourceName
-    *  事件源名称
+    *  事件源名称（EVENTGRID触发器参数）。
     *
     * @return string|null
     */
@@ -2294,7 +2363,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets sourceName
     *
-    * @param string|null $sourceName 事件源名称
+    * @param string|null $sourceName 事件源名称（EVENTGRID触发器参数）。
     *
     * @return $this
     */
@@ -2306,7 +2375,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets createdTime
-    *  创建时间
+    *  创建时间（EVENTGRID触发器参数）。
     *
     * @return \DateTime|null
     */
@@ -2318,7 +2387,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets createdTime
     *
-    * @param \DateTime|null $createdTime 创建时间
+    * @param \DateTime|null $createdTime 创建时间（EVENTGRID触发器参数）。
     *
     * @return $this
     */
@@ -2330,7 +2399,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets status
-    *  触发器状态
+    *  触发器状态（EVENTGRID触发器参数）。
     *
     * @return string|null
     */
@@ -2342,7 +2411,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets status
     *
-    * @param string|null $status 触发器状态
+    * @param string|null $status 触发器状态（EVENTGRID触发器参数）。
     *
     * @return $this
     */
@@ -2354,7 +2423,7 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
 
     /**
     * Gets triggerName
-    *  触发器名称
+    *  触发器名称（EVENTGRID触发器参数）。
     *
     * @return string|null
     */
@@ -2366,13 +2435,37 @@ class TriggerEventDataRequestBody implements ModelInterface, ArrayAccess
     /**
     * Sets triggerName
     *
-    * @param string|null $triggerName 触发器名称
+    * @param string|null $triggerName 触发器名称（EVENTGRID触发器参数）。
     *
     * @return $this
     */
     public function setTriggerName($triggerName)
     {
         $this->container['triggerName'] = $triggerName;
+        return $this;
+    }
+
+    /**
+    * Gets eventTypes
+    *  事件类型（EVENTGRID触发器参数）。
+    *
+    * @return string[]|null
+    */
+    public function getEventTypes()
+    {
+        return $this->container['eventTypes'];
+    }
+
+    /**
+    * Sets eventTypes
+    *
+    * @param string[]|null $eventTypes 事件类型（EVENTGRID触发器参数）。
+    *
+    * @return $this
+    */
+    public function setEventTypes($eventTypes)
+    {
+        $this->container['eventTypes'] = $eventTypes;
         return $this;
     }
 

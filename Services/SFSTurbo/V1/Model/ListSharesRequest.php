@@ -20,8 +20,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * limit  返回的文件系统个数，最大值为200。
-    * offset  文件系统查询个数的偏移量。
+    * limit  设置返回的文件系统个数的最大值，不填默认为1000个
+    * offset  设置返回的文件系统的偏移量。
     *
     * @var string[]
     */
@@ -32,8 +32,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * limit  返回的文件系统个数，最大值为200。
-    * offset  文件系统查询个数的偏移量。
+    * limit  设置返回的文件系统个数的最大值，不填默认为1000个
+    * offset  设置返回的文件系统的偏移量。
     *
     * @var string[]
     */
@@ -65,8 +65,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * limit  返回的文件系统个数，最大值为200。
-    * offset  文件系统查询个数的偏移量。
+    * limit  设置返回的文件系统个数的最大值，不填默认为1000个
+    * offset  设置返回的文件系统的偏移量。
     *
     * @var string[]
     */
@@ -77,8 +77,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * limit  返回的文件系统个数，最大值为200。
-    * offset  文件系统查询个数的偏移量。
+    * limit  设置返回的文件系统个数的最大值，不填默认为1000个
+    * offset  设置返回的文件系统的偏移量。
     *
     * @var string[]
     */
@@ -89,8 +89,8 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * limit  返回的文件系统个数，最大值为200。
-    * offset  文件系统查询个数的偏移量。
+    * limit  设置返回的文件系统个数的最大值，不填默认为1000个
+    * offset  设置返回的文件系统的偏移量。
     *
     * @var string[]
     */
@@ -194,7 +194,7 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets limit
-    *  返回的文件系统个数，最大值为200。
+    *  设置返回的文件系统个数的最大值，不填默认为1000个
     *
     * @return int|null
     */
@@ -206,7 +206,7 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets limit
     *
-    * @param int|null $limit 返回的文件系统个数，最大值为200。
+    * @param int|null $limit 设置返回的文件系统个数的最大值，不填默认为1000个
     *
     * @return $this
     */
@@ -218,7 +218,7 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
 
     /**
     * Gets offset
-    *  文件系统查询个数的偏移量。
+    *  设置返回的文件系统的偏移量。
     *
     * @return int|null
     */
@@ -230,7 +230,7 @@ class ListSharesRequest implements ModelInterface, ArrayAccess
     /**
     * Sets offset
     *
-    * @param int|null $offset 文件系统查询个数的偏移量。
+    * @param int|null $offset 设置返回的文件系统的偏移量。
     *
     * @return $this
     */

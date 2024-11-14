@@ -24,6 +24,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  原子动作标签。
     * catalog  原子动作标签。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     *
     * @var string[]
@@ -33,6 +34,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'string',
             'actionTag' => 'string',
             'catalog' => 'string',
+            'recommendedValue' => 'int',
             'isSelected' => 'bool'
     ];
 
@@ -42,6 +44,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  原子动作标签。
     * catalog  原子动作标签。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     *
     * @var string[]
@@ -51,6 +54,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
         'actionNameEn' => null,
         'actionTag' => null,
         'catalog' => null,
+        'recommendedValue' => 'int32',
         'isSelected' => null
     ];
 
@@ -81,6 +85,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  原子动作标签。
     * catalog  原子动作标签。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     *
     * @var string[]
@@ -90,6 +95,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'action_name_en',
             'actionTag' => 'action_tag',
             'catalog' => 'catalog',
+            'recommendedValue' => 'recommended_value',
             'isSelected' => 'is_selected'
     ];
 
@@ -99,6 +105,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  原子动作标签。
     * catalog  原子动作标签。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     *
     * @var string[]
@@ -108,6 +115,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'setActionNameEn',
             'actionTag' => 'setActionTag',
             'catalog' => 'setCatalog',
+            'recommendedValue' => 'setRecommendedValue',
             'isSelected' => 'setIsSelected'
     ];
 
@@ -117,6 +125,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
     * actionNameEn  原子动作英文名称。
     * actionTag  原子动作标签。
     * catalog  原子动作标签。
+    * recommendedValue  推荐等级。
     * isSelected  是否选择此动作。
     *
     * @var string[]
@@ -126,6 +135,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
             'actionNameEn' => 'getActionNameEn',
             'actionTag' => 'getActionTag',
             'catalog' => 'getCatalog',
+            'recommendedValue' => 'getRecommendedValue',
             'isSelected' => 'getIsSelected'
     ];
 
@@ -191,6 +201,7 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
         $this->container['actionNameEn'] = isset($data['actionNameEn']) ? $data['actionNameEn'] : null;
         $this->container['actionTag'] = isset($data['actionTag']) ? $data['actionTag'] : null;
         $this->container['catalog'] = isset($data['catalog']) ? $data['catalog'] : null;
+        $this->container['recommendedValue'] = isset($data['recommendedValue']) ? $data['recommendedValue'] : null;
         $this->container['isSelected'] = isset($data['isSelected']) ? $data['isSelected'] : null;
     }
 
@@ -228,6 +239,12 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['catalog']) && (mb_strlen($this->container['catalog']) < 1)) {
                 $invalidProperties[] = "invalid value for 'catalog', the character length must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['recommendedValue']) && ($this->container['recommendedValue'] > 100)) {
+                $invalidProperties[] = "invalid value for 'recommendedValue', must be smaller than or equal to 100.";
+            }
+            if (!is_null($this->container['recommendedValue']) && ($this->container['recommendedValue'] < 0)) {
+                $invalidProperties[] = "invalid value for 'recommendedValue', must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -336,6 +353,30 @@ class ActionBasicSampleInfo implements ModelInterface, ArrayAccess
     public function setCatalog($catalog)
     {
         $this->container['catalog'] = $catalog;
+        return $this;
+    }
+
+    /**
+    * Gets recommendedValue
+    *  推荐等级。
+    *
+    * @return int|null
+    */
+    public function getRecommendedValue()
+    {
+        return $this->container['recommendedValue'];
+    }
+
+    /**
+    * Sets recommendedValue
+    *
+    * @param int|null $recommendedValue 推荐等级。
+    *
+    * @return $this
+    */
+    public function setRecommendedValue($recommendedValue)
+    {
+        $this->container['recommendedValue'] = $recommendedValue;
         return $this;
     }
 

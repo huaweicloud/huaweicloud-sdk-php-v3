@@ -22,9 +22,9 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to type mappings. Used for (de)serialization
     * path  目录全路径
-    * mode  目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
-    * uid  目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
-    * gid  目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    * mode  目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
+    * gid  目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @var string[]
     */
@@ -38,9 +38,9 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Array of property to format mappings. Used for (de)serialization
     * path  目录全路径
-    * mode  目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
-    * uid  目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
-    * gid  目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    * mode  目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
+    * gid  目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @var string[]
     */
@@ -75,9 +75,9 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     * Array of attributes where the key is the local name,
     * and the value is the original name
     * path  目录全路径
-    * mode  目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
-    * uid  目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
-    * gid  目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    * mode  目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
+    * gid  目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @var string[]
     */
@@ -91,9 +91,9 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * path  目录全路径
-    * mode  目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
-    * uid  目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
-    * gid  目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    * mode  目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
+    * gid  目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @var string[]
     */
@@ -107,9 +107,9 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * path  目录全路径
-    * mode  目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
-    * uid  目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
-    * gid  目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    * mode  目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    * uid  目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
+    * gid  目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @var string[]
     */
@@ -241,7 +241,7 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets mode
-    *  目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    *  目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
     *
     * @return int|null
     */
@@ -253,7 +253,7 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Sets mode
     *
-    * @param int|null $mode 目录权限，仅HPC型、缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
+    * @param int|null $mode 目录权限，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。第三位表示目录所有者的权限，第四位表示目录所属用户组的权限，第五位表示其他用户的权限。目录所有者由uid指定，目录所属用户组由gid指定，不是目录所有者且不在目录所属用户组的用户为其他用户。例如：40755中第三位7代表目录所有者对该目录具有读、写、执行权限；第四位5代表目录所属用户组对该目录具有读、执行权限；第五位5代表其他用户对该目录具有读、执行权限。
     *
     * @return $this
     */
@@ -265,7 +265,7 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets uid
-    *  目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
+    *  目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @return int|null
     */
@@ -277,7 +277,7 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Sets uid
     *
-    * @param int|null $uid 目录所有者的用户id，仅HPC型、缓存型文件系统返回该字段。
+    * @param int|null $uid 目录所有者的用户id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @return $this
     */
@@ -289,7 +289,7 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
 
     /**
     * Gets gid
-    *  目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    *  目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @return int|null
     */
@@ -301,7 +301,7 @@ class ShowFsDirResponse implements ModelInterface, ArrayAccess
     /**
     * Sets gid
     *
-    * @param int|null $gid 目录所属用户组id，仅HPC型、缓存型文件系统返回该字段。
+    * @param int|null $gid 目录所属用户组id，仅20MB/s/TiB、40MB/s/TiB、125MB/s/TiB、250MB/s/TiB、500MB/s/TiB、1000MB/s/TiB、HPC缓存型文件系统返回该字段。
     *
     * @return $this
     */

@@ -25,6 +25,8 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
+    * startTime  start_time
+    * endTime  end_time
     *
     * @var string[]
     */
@@ -33,7 +35,9 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
             'type' => 'string',
             'status' => 'string',
             'offset' => 'int',
-            'limit' => 'int'
+            'limit' => 'int',
+            'startTime' => 'string',
+            'endTime' => 'string'
     ];
 
     /**
@@ -43,6 +47,8 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
+    * startTime  start_time
+    * endTime  end_time
     *
     * @var string[]
     */
@@ -51,7 +57,9 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
         'type' => null,
         'status' => null,
         'offset' => 'int64',
-        'limit' => 'int64'
+        'limit' => 'int64',
+        'startTime' => null,
+        'endTime' => null
     ];
 
     /**
@@ -82,6 +90,8 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
+    * startTime  start_time
+    * endTime  end_time
     *
     * @var string[]
     */
@@ -90,7 +100,9 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
             'type' => 'type',
             'status' => 'status',
             'offset' => 'offset',
-            'limit' => 'limit'
+            'limit' => 'limit',
+            'startTime' => 'start_time',
+            'endTime' => 'end_time'
     ];
 
     /**
@@ -100,6 +112,8 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
+    * startTime  start_time
+    * endTime  end_time
     *
     * @var string[]
     */
@@ -108,7 +122,9 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
             'type' => 'setType',
             'status' => 'setStatus',
             'offset' => 'setOffset',
-            'limit' => 'setLimit'
+            'limit' => 'setLimit',
+            'startTime' => 'setStartTime',
+            'endTime' => 'setEndTime'
     ];
 
     /**
@@ -118,6 +134,8 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     * status  任务状态
     * offset  offset，默认值为 0
     * limit  limit，默认值为 20
+    * startTime  start_time
+    * endTime  end_time
     *
     * @var string[]
     */
@@ -126,7 +144,9 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
             'type' => 'getType',
             'status' => 'getStatus',
             'offset' => 'getOffset',
-            'limit' => 'getLimit'
+            'limit' => 'getLimit',
+            'startTime' => 'getStartTime',
+            'endTime' => 'getEndTime'
     ];
 
     /**
@@ -192,6 +212,8 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['startTime'] = isset($data['startTime']) ? $data['startTime'] : null;
+        $this->container['endTime'] = isset($data['endTime']) ? $data['endTime'] : null;
     }
 
     /**
@@ -336,6 +358,54 @@ class ListHpcCacheTasksRequest implements ModelInterface, ArrayAccess
     public function setLimit($limit)
     {
         $this->container['limit'] = $limit;
+        return $this;
+    }
+
+    /**
+    * Gets startTime
+    *  start_time
+    *
+    * @return string|null
+    */
+    public function getStartTime()
+    {
+        return $this->container['startTime'];
+    }
+
+    /**
+    * Sets startTime
+    *
+    * @param string|null $startTime start_time
+    *
+    * @return $this
+    */
+    public function setStartTime($startTime)
+    {
+        $this->container['startTime'] = $startTime;
+        return $this;
+    }
+
+    /**
+    * Gets endTime
+    *  end_time
+    *
+    * @return string|null
+    */
+    public function getEndTime()
+    {
+        return $this->container['endTime'];
+    }
+
+    /**
+    * Sets endTime
+    *
+    * @param string|null $endTime end_time
+    *
+    * @return $this
+    */
+    public function setEndTime($endTime)
+    {
+        $this->container['endTime'] = $endTime;
         return $this;
     }
 

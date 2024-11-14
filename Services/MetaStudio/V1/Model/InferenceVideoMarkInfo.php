@@ -22,24 +22,32 @@ class InferenceVideoMarkInfo implements ModelInterface, ArrayAccess
     * Array of property to type mappings. Used for (de)serialization
     * videoStartTime  选取推理数据预处理视频起始时间。格式：“HH:MM:SS.mmm”。
     * videoEndTime  选取推理数据预处理视频结束时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoStartTime  选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoEndTime  选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $openAPITypes = [
             'videoStartTime' => 'string',
-            'videoEndTime' => 'string'
+            'videoEndTime' => 'string',
+            'chatVideoStartTime' => 'string',
+            'chatVideoEndTime' => 'string'
     ];
 
     /**
     * Array of property to format mappings. Used for (de)serialization
     * videoStartTime  选取推理数据预处理视频起始时间。格式：“HH:MM:SS.mmm”。
     * videoEndTime  选取推理数据预处理视频结束时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoStartTime  选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoEndTime  选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $openAPIFormats = [
         'videoStartTime' => null,
-        'videoEndTime' => null
+        'videoEndTime' => null,
+        'chatVideoStartTime' => null,
+        'chatVideoEndTime' => null
     ];
 
     /**
@@ -67,36 +75,48 @@ class InferenceVideoMarkInfo implements ModelInterface, ArrayAccess
     * and the value is the original name
     * videoStartTime  选取推理数据预处理视频起始时间。格式：“HH:MM:SS.mmm”。
     * videoEndTime  选取推理数据预处理视频结束时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoStartTime  选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoEndTime  选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $attributeMap = [
             'videoStartTime' => 'video_start_time',
-            'videoEndTime' => 'video_end_time'
+            'videoEndTime' => 'video_end_time',
+            'chatVideoStartTime' => 'chat_video_start_time',
+            'chatVideoEndTime' => 'chat_video_end_time'
     ];
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
     * videoStartTime  选取推理数据预处理视频起始时间。格式：“HH:MM:SS.mmm”。
     * videoEndTime  选取推理数据预处理视频结束时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoStartTime  选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoEndTime  选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $setters = [
             'videoStartTime' => 'setVideoStartTime',
-            'videoEndTime' => 'setVideoEndTime'
+            'videoEndTime' => 'setVideoEndTime',
+            'chatVideoStartTime' => 'setChatVideoStartTime',
+            'chatVideoEndTime' => 'setChatVideoEndTime'
     ];
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
     * videoStartTime  选取推理数据预处理视频起始时间。格式：“HH:MM:SS.mmm”。
     * videoEndTime  选取推理数据预处理视频结束时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoStartTime  选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    * chatVideoEndTime  选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
     *
     * @var string[]
     */
     protected static $getters = [
             'videoStartTime' => 'getVideoStartTime',
-            'videoEndTime' => 'getVideoEndTime'
+            'videoEndTime' => 'getVideoEndTime',
+            'chatVideoStartTime' => 'getChatVideoStartTime',
+            'chatVideoEndTime' => 'getChatVideoEndTime'
     ];
 
     /**
@@ -159,6 +179,8 @@ class InferenceVideoMarkInfo implements ModelInterface, ArrayAccess
     {
         $this->container['videoStartTime'] = isset($data['videoStartTime']) ? $data['videoStartTime'] : null;
         $this->container['videoEndTime'] = isset($data['videoEndTime']) ? $data['videoEndTime'] : null;
+        $this->container['chatVideoStartTime'] = isset($data['chatVideoStartTime']) ? $data['chatVideoStartTime'] : null;
+        $this->container['chatVideoEndTime'] = isset($data['chatVideoEndTime']) ? $data['chatVideoEndTime'] : null;
     }
 
     /**
@@ -180,6 +202,18 @@ class InferenceVideoMarkInfo implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['videoEndTime']) && (mb_strlen($this->container['videoEndTime']) < 0)) {
                 $invalidProperties[] = "invalid value for 'videoEndTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['chatVideoStartTime']) && (mb_strlen($this->container['chatVideoStartTime']) > 12)) {
+                $invalidProperties[] = "invalid value for 'chatVideoStartTime', the character length must be smaller than or equal to 12.";
+            }
+            if (!is_null($this->container['chatVideoStartTime']) && (mb_strlen($this->container['chatVideoStartTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'chatVideoStartTime', the character length must be bigger than or equal to 0.";
+            }
+            if (!is_null($this->container['chatVideoEndTime']) && (mb_strlen($this->container['chatVideoEndTime']) > 12)) {
+                $invalidProperties[] = "invalid value for 'chatVideoEndTime', the character length must be smaller than or equal to 12.";
+            }
+            if (!is_null($this->container['chatVideoEndTime']) && (mb_strlen($this->container['chatVideoEndTime']) < 0)) {
+                $invalidProperties[] = "invalid value for 'chatVideoEndTime', the character length must be bigger than or equal to 0.";
             }
         return $invalidProperties;
     }
@@ -240,6 +274,54 @@ class InferenceVideoMarkInfo implements ModelInterface, ArrayAccess
     public function setVideoEndTime($videoEndTime)
     {
         $this->container['videoEndTime'] = $videoEndTime;
+        return $this;
+    }
+
+    /**
+    * Gets chatVideoStartTime
+    *  选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    *
+    * @return string|null
+    */
+    public function getChatVideoStartTime()
+    {
+        return $this->container['chatVideoStartTime'];
+    }
+
+    /**
+    * Sets chatVideoStartTime
+    *
+    * @param string|null $chatVideoStartTime 选取推理数据预处理智能交互视频起始时间。格式：“HH:MM:SS.mmm”。
+    *
+    * @return $this
+    */
+    public function setChatVideoStartTime($chatVideoStartTime)
+    {
+        $this->container['chatVideoStartTime'] = $chatVideoStartTime;
+        return $this;
+    }
+
+    /**
+    * Gets chatVideoEndTime
+    *  选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
+    *
+    * @return string|null
+    */
+    public function getChatVideoEndTime()
+    {
+        return $this->container['chatVideoEndTime'];
+    }
+
+    /**
+    * Sets chatVideoEndTime
+    *
+    * @param string|null $chatVideoEndTime 选取推理数据预处理智能交互视频结束时间。格式：“HH:MM:SS.mmm”。
+    *
+    * @return $this
+    */
+    public function setChatVideoEndTime($chatVideoEndTime)
+    {
+        $this->container['chatVideoEndTime'] = $chatVideoEndTime;
         return $this;
     }
 

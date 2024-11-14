@@ -25,6 +25,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
+    * beautyLevel  美白等级。默认值0，不美白。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
@@ -40,6 +41,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'commandMessage' => 'string',
             'videoMultipartCount' => 'int',
             'actionVideoMultipartCount' => 'int',
+            'beautyLevel' => 'int',
             'isBackgroundReplacement' => 'bool',
             'batchName' => 'string',
             'tags' => 'string[]',
@@ -55,6 +57,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
+    * beautyLevel  美白等级。默认值0，不美白。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
@@ -70,6 +73,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         'commandMessage' => null,
         'videoMultipartCount' => 'int32',
         'actionVideoMultipartCount' => 'int32',
+        'beautyLevel' => 'int32',
         'isBackgroundReplacement' => null,
         'batchName' => null,
         'tags' => null,
@@ -106,6 +110,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
+    * beautyLevel  美白等级。默认值0，不美白。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
@@ -121,6 +126,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'commandMessage' => 'command_message',
             'videoMultipartCount' => 'video_multipart_count',
             'actionVideoMultipartCount' => 'action_video_multipart_count',
+            'beautyLevel' => 'beauty_level',
             'isBackgroundReplacement' => 'is_background_replacement',
             'batchName' => 'batch_name',
             'tags' => 'tags',
@@ -136,6 +142,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
+    * beautyLevel  美白等级。默认值0，不美白。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
@@ -151,6 +158,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'commandMessage' => 'setCommandMessage',
             'videoMultipartCount' => 'setVideoMultipartCount',
             'actionVideoMultipartCount' => 'setActionVideoMultipartCount',
+            'beautyLevel' => 'setBeautyLevel',
             'isBackgroundReplacement' => 'setIsBackgroundReplacement',
             'batchName' => 'setBatchName',
             'tags' => 'setTags',
@@ -166,6 +174,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     * commandMessage  命令类型： * UPDATE_VIDEO: 更新视频 * UPLOAD_VIDEO：上传视频 * CONFIRM_ACTION_VIDEO: 确认动作编排视频 * GET_ACTION_VIDEO_MULTIPART: 获取动作编排视频分片
     * videoMultipartCount  训练视频上传分片数（上传时对唯一训练视频文件的数据分片，用于对该文件的并发上传，不是分多个视频文件上传）。
     * actionVideoMultipartCount  动作视频上传分片数。
+    * beautyLevel  美白等级。默认值0，不美白。
     * isBackgroundReplacement  分身数字人是否需要背景替换。需要背景替换的分身数字人训练视频需要绿幕拍摄。
     * batchName  分身数字人训练任务的批次名称。
     * tags  分身数字人训练任务标签。
@@ -181,6 +190,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             'commandMessage' => 'getCommandMessage',
             'videoMultipartCount' => 'getVideoMultipartCount',
             'actionVideoMultipartCount' => 'getActionVideoMultipartCount',
+            'beautyLevel' => 'getBeautyLevel',
             'isBackgroundReplacement' => 'getIsBackgroundReplacement',
             'batchName' => 'getBatchName',
             'tags' => 'getTags',
@@ -286,6 +296,7 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
         $this->container['commandMessage'] = isset($data['commandMessage']) ? $data['commandMessage'] : null;
         $this->container['videoMultipartCount'] = isset($data['videoMultipartCount']) ? $data['videoMultipartCount'] : null;
         $this->container['actionVideoMultipartCount'] = isset($data['actionVideoMultipartCount']) ? $data['actionVideoMultipartCount'] : null;
+        $this->container['beautyLevel'] = isset($data['beautyLevel']) ? $data['beautyLevel'] : null;
         $this->container['isBackgroundReplacement'] = isset($data['isBackgroundReplacement']) ? $data['isBackgroundReplacement'] : null;
         $this->container['batchName'] = isset($data['batchName']) ? $data['batchName'] : null;
         $this->container['tags'] = isset($data['tags']) ? $data['tags'] : null;
@@ -333,6 +344,12 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
             }
             if (!is_null($this->container['actionVideoMultipartCount']) && ($this->container['actionVideoMultipartCount'] < 1)) {
                 $invalidProperties[] = "invalid value for 'actionVideoMultipartCount', must be bigger than or equal to 1.";
+            }
+            if (!is_null($this->container['beautyLevel']) && ($this->container['beautyLevel'] > 3)) {
+                $invalidProperties[] = "invalid value for 'beautyLevel', must be smaller than or equal to 3.";
+            }
+            if (!is_null($this->container['beautyLevel']) && ($this->container['beautyLevel'] < 0)) {
+                $invalidProperties[] = "invalid value for 'beautyLevel', must be bigger than or equal to 0.";
             }
             if (!is_null($this->container['batchName']) && (mb_strlen($this->container['batchName']) > 256)) {
                 $invalidProperties[] = "invalid value for 'batchName', the character length must be smaller than or equal to 256.";
@@ -479,6 +496,30 @@ class Update2dModelTrainingJobReq implements ModelInterface, ArrayAccess
     public function setActionVideoMultipartCount($actionVideoMultipartCount)
     {
         $this->container['actionVideoMultipartCount'] = $actionVideoMultipartCount;
+        return $this;
+    }
+
+    /**
+    * Gets beautyLevel
+    *  美白等级。默认值0，不美白。
+    *
+    * @return int|null
+    */
+    public function getBeautyLevel()
+    {
+        return $this->container['beautyLevel'];
+    }
+
+    /**
+    * Sets beautyLevel
+    *
+    * @param int|null $beautyLevel 美白等级。默认值0，不美白。
+    *
+    * @return $this
+    */
+    public function setBeautyLevel($beautyLevel)
+    {
+        $this->container['beautyLevel'] = $beautyLevel;
         return $this;
     }
 

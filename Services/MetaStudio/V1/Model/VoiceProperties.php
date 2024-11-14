@@ -20,9 +20,9 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to type mappings. Used for (de)serialization
-    * jobTag  任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
-    * sex  语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
-    * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    * jobTag  任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    * sex  语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
+    * language  训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @var string[]
     */
@@ -34,9 +34,9 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of property to format mappings. Used for (de)serialization
-    * jobTag  任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
-    * sex  语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
-    * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    * jobTag  任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    * sex  语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
+    * language  训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @var string[]
     */
@@ -69,9 +69,9 @@ class VoiceProperties implements ModelInterface, ArrayAccess
     /**
     * Array of attributes where the key is the local name,
     * and the value is the original name
-    * jobTag  任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
-    * sex  语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
-    * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    * jobTag  任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    * sex  语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
+    * language  训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @var string[]
     */
@@ -83,9 +83,9 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to setter functions (for deserialization of responses)
-    * jobTag  任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
-    * sex  语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
-    * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    * jobTag  任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    * sex  语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
+    * language  训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @var string[]
     */
@@ -97,9 +97,9 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Array of attributes to getter functions (for serialization of requests)
-    * jobTag  任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
-    * sex  语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
-    * language  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    * jobTag  任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    * sex  语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
+    * language  训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @var string[]
     */
@@ -276,7 +276,7 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets jobTag
-    *  任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    *  任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
     *
     * @return string
     */
@@ -288,7 +288,7 @@ class VoiceProperties implements ModelInterface, ArrayAccess
     /**
     * Sets jobTag
     *
-    * @param string $jobTag 任务标签。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
+    * @param string $jobTag 任务标签，为Flexus版声音的配置。   * ECOMMERCE: 电商   * NEWS: 新闻   * MARKETING: 营销
     *
     * @return $this
     */
@@ -300,7 +300,7 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets sex
-    *  语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
+    *  语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
     *
     * @return string
     */
@@ -312,7 +312,7 @@ class VoiceProperties implements ModelInterface, ArrayAccess
     /**
     * Sets sex
     *
-    * @param string $sex 语音性别,是男性声音还是女性声音。 * FEMALE: 女性 * MALE: 男性
+    * @param string $sex 语音性别，是男性声音还是女性声音，为Flexus版声音的配置。 * FEMALE: 女性 * MALE: 男性
     *
     * @return $this
     */
@@ -324,7 +324,7 @@ class VoiceProperties implements ModelInterface, ArrayAccess
 
     /**
     * Gets language
-    *  训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    *  训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @return string
     */
@@ -336,7 +336,7 @@ class VoiceProperties implements ModelInterface, ArrayAccess
     /**
     * Sets language
     *
-    * @param string $language 训练语言,当前仅支持中文。 * CN: 中文 * EN: 英文
+    * @param string $language 训练语言，当前仅支持中文，为Flexus版声音的配置。 * CN: 中文 * EN: 英文
     *
     * @return $this
     */
